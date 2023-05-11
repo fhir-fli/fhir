@@ -1,4 +1,4 @@
-//ignore_for_file: always_specify_types
+//ignore_for_file: always_specify_types, avoid_print
 import 'package:fhir/r4.dart';
 
 void main() {
