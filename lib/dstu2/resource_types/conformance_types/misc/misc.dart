@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -79,7 +79,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   /// Acts like a constructor, returns a [ImplementationGuide], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuide.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideFromJson(json);
     } else {
@@ -121,7 +121,7 @@ class ImplementationGuideContact with _$ImplementationGuideContact {
   /// Acts like a constructor, returns a [ImplementationGuideContact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuideContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideContactFromJson(json);
     } else {
@@ -165,7 +165,7 @@ class ImplementationGuideDependency with _$ImplementationGuideDependency {
   /// Acts like a constructor, returns a [ImplementationGuideDependency], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuideDependency.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideDependencyFromJson(json);
     } else {
@@ -209,7 +209,7 @@ class ImplementationGuidePackage with _$ImplementationGuidePackage {
   /// Acts like a constructor, returns a [ImplementationGuidePackage], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuidePackage.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuidePackageFromJson(json);
     } else {
@@ -252,7 +252,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   /// Acts like a constructor, returns a [ImplementationGuideGlobal], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuideGlobal.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuideGlobalFromJson(json);
     } else {
@@ -299,7 +299,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
   /// Acts like a constructor, returns a [ImplementationGuidePage], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImplementationGuidePage.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImplementationGuidePageFromJson(json);
     } else {
@@ -415,7 +415,7 @@ class TestScript with Resource, _$TestScript {
   /// Acts like a constructor, returns a [TestScript], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScript.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptFromJson(json);
     } else {
@@ -457,7 +457,7 @@ class TestScriptContact with _$TestScriptContact {
   /// Acts like a constructor, returns a [TestScriptContact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScriptContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptContactFromJson(json);
     } else {
@@ -500,7 +500,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
   /// Acts like a constructor, returns a [TestScriptMetadata], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScriptMetadata.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptMetadataFromJson(json);
     } else {
@@ -544,7 +544,7 @@ class TestScriptMetadataLink with _$TestScriptMetadataLink {
   /// Acts like a constructor, returns a [TestScriptMetadataLink], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScriptMetadataLink.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptMetadataLinkFromJson(json);
     } else {
@@ -595,7 +595,7 @@ class TestScriptMetadataCapability with _$TestScriptMetadataCapability {
   /// Acts like a constructor, returns a [TestScriptMetadataCapability], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScriptMetadataCapability.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptMetadataCapabilityFromJson(json);
     } else {
@@ -640,7 +640,7 @@ class TestScriptFixture with _$TestScriptFixture {
   /// Acts like a constructor, returns a [TestScriptFixture], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScriptFixture.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptFixtureFromJson(json);
     } else {
@@ -688,7 +688,7 @@ class TestScriptVariable with _$TestScriptVariable {
   /// Acts like a constructor, returns a [TestScriptVariable], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScriptVariable.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptVariableFromJson(json);
     } else {
@@ -730,7 +730,7 @@ class TestScriptSetup with _$TestScriptSetup {
   /// Acts like a constructor, returns a [TestScriptSetup], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScriptSetup.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptSetupFromJson(json);
     } else {
@@ -773,7 +773,7 @@ class TestScriptSetupAction with _$TestScriptSetupAction {
   /// Acts like a constructor, returns a [TestScriptSetupAction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScriptSetupAction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptSetupActionFromJson(json);
     } else {
@@ -841,7 +841,7 @@ class TestScriptActionOperation with _$TestScriptActionOperation {
   /// Acts like a constructor, returns a [TestScriptActionOperation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScriptActionOperation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptActionOperationFromJson(json);
     } else {
@@ -952,7 +952,7 @@ class TestScriptActionAssert with _$TestScriptActionAssert {
   /// Acts like a constructor, returns a [TestScriptActionAssert], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScriptActionAssert.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptActionAssertFromJson(json);
     } else {
@@ -998,7 +998,7 @@ class TestScriptTest with _$TestScriptTest {
   /// Acts like a constructor, returns a [TestScriptTest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScriptTest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptTestFromJson(json);
     } else {
@@ -1039,7 +1039,7 @@ class TestScriptTeardown with _$TestScriptTeardown {
   /// Acts like a constructor, returns a [TestScriptTeardown], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScriptTeardown.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptTeardownFromJson(json);
     } else {
@@ -1081,7 +1081,7 @@ class TestScriptTeardownAction with _$TestScriptTeardownAction {
   /// Acts like a constructor, returns a [TestScriptTeardownAction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TestScriptTeardownAction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TestScriptTeardownActionFromJson(json);
     } else {

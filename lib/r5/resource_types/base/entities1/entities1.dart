@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -268,6 +268,7 @@ class Endpoint with Resource, _$Endpoint {
   }) = _Endpoint;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -288,7 +289,7 @@ class Endpoint with Resource, _$Endpoint {
   /// Acts like a constructor, returns a [Endpoint], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Endpoint.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EndpointFromJson(json);
     } else {
@@ -413,7 +414,7 @@ class EndpointPayload with _$EndpointPayload {
   /// Acts like a constructor, returns a [EndpointPayload], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EndpointPayload.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EndpointPayloadFromJson(json);
     } else {
@@ -757,6 +758,7 @@ class HealthcareService with Resource, _$HealthcareService {
   }) = _HealthcareService;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -777,7 +779,7 @@ class HealthcareService with Resource, _$HealthcareService {
   /// Acts like a constructor, returns a [HealthcareService], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory HealthcareService.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceFromJson(json);
     } else {
@@ -889,7 +891,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory HealthcareServiceEligibility.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceEligibilityFromJson(json);
     } else {
@@ -1194,6 +1196,7 @@ class Location with Resource, _$Location {
   }) = _Location;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1214,7 +1217,7 @@ class Location with Resource, _$Location {
   /// Acts like a constructor, returns a [Location], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Location.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$LocationFromJson(json);
     } else {
@@ -1355,7 +1358,7 @@ class LocationPosition with _$LocationPosition {
   /// Acts like a constructor, returns a [LocationPosition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory LocationPosition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$LocationPositionFromJson(json);
     } else {
@@ -1604,6 +1607,7 @@ class Organization with Resource, _$Organization {
   }) = _Organization;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1624,7 +1628,7 @@ class Organization with Resource, _$Organization {
   /// Acts like a constructor, returns a [Organization], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Organization.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OrganizationFromJson(json);
     } else {
@@ -1751,7 +1755,7 @@ class OrganizationQualification with _$OrganizationQualification {
   /// Acts like a constructor, returns a [OrganizationQualification], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory OrganizationQualification.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OrganizationQualificationFromJson(json);
     } else {
@@ -1986,6 +1990,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   }) = _OrganizationAffiliation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2006,7 +2011,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   /// Acts like a constructor, returns a [OrganizationAffiliation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory OrganizationAffiliation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OrganizationAffiliationFromJson(json);
     } else {

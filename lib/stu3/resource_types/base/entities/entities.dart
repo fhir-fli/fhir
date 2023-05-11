@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -75,7 +75,7 @@ class Device with Resource, _$Device {
   /// Acts like a constructor, returns a [Device], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Device.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceFromJson(json);
     } else {
@@ -126,7 +126,7 @@ class DeviceUdi with _$DeviceUdi {
   /// Acts like a constructor, returns a [DeviceUdi], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceUdi.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceUdiFromJson(json);
     } else {
@@ -186,7 +186,7 @@ class DeviceComponent with Resource, _$DeviceComponent {
   /// Acts like a constructor, returns a [DeviceComponent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceComponent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceComponentFromJson(json);
     } else {
@@ -277,7 +277,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
   /// Acts like a constructor, returns a [DeviceMetric], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceMetric.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceMetricFromJson(json);
     } else {
@@ -320,7 +320,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   /// Acts like a constructor, returns a [DeviceMetricCalibration], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceMetricCalibration.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceMetricCalibrationFromJson(json);
     } else {
@@ -383,7 +383,7 @@ class Endpoint with Resource, _$Endpoint {
   /// Acts like a constructor, returns a [Endpoint], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Endpoint.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EndpointFromJson(json);
     } else {
@@ -463,7 +463,7 @@ class HealthcareService with Resource, _$HealthcareService {
   /// Acts like a constructor, returns a [HealthcareService], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory HealthcareService.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceFromJson(json);
     } else {
@@ -509,7 +509,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   /// Acts like a constructor, returns a [HealthcareServiceAvailableTime], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory HealthcareServiceAvailableTime.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceAvailableTimeFromJson(json);
     } else {
@@ -549,7 +549,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   /// Acts like a constructor, returns a [HealthcareServiceNotAvailable], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory HealthcareServiceNotAvailable.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceNotAvailableFromJson(json);
     } else {
@@ -616,7 +616,7 @@ class Location with Resource, _$Location {
   /// Acts like a constructor, returns a [Location], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Location.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$LocationFromJson(json);
     } else {
@@ -659,7 +659,7 @@ class LocationPosition with _$LocationPosition {
   /// Acts like a constructor, returns a [LocationPosition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory LocationPosition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$LocationPositionFromJson(json);
     } else {
@@ -719,7 +719,7 @@ class Organization with Resource, _$Organization {
   /// Acts like a constructor, returns a [Organization], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Organization.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OrganizationFromJson(json);
     } else {
@@ -760,7 +760,7 @@ class OrganizationContact with _$OrganizationContact {
   /// Acts like a constructor, returns a [OrganizationContact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory OrganizationContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OrganizationContactFromJson(json);
     } else {
@@ -816,7 +816,7 @@ class Substance with Resource, _$Substance {
   /// Acts like a constructor, returns a [Substance], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Substance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SubstanceFromJson(json);
     } else {
@@ -857,7 +857,7 @@ class SubstanceInstance with _$SubstanceInstance {
   /// Acts like a constructor, returns a [SubstanceInstance], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SubstanceInstance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SubstanceInstanceFromJson(json);
     } else {
@@ -897,7 +897,7 @@ class SubstanceIngredient with _$SubstanceIngredient {
   /// Acts like a constructor, returns a [SubstanceIngredient], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SubstanceIngredient.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SubstanceIngredientFromJson(json);
     } else {

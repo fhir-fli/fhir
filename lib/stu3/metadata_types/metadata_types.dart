@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -44,7 +44,7 @@ class ContactDetail with _$ContactDetail {
   /// Acts like a constructor, returns a [ContactDetail], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ContactDetail.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ContactDetailFromJson(json);
     } else {
@@ -86,7 +86,7 @@ class Contributor with _$Contributor {
   /// Acts like a constructor, returns a [Contributor], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Contributor.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ContributorFromJson(json);
     } else {
@@ -133,7 +133,7 @@ class RelatedArtifact with _$RelatedArtifact {
   /// Acts like a constructor, returns a [RelatedArtifact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory RelatedArtifact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$RelatedArtifactFromJson(json);
     } else {
@@ -174,7 +174,7 @@ class UsageContext with _$UsageContext {
   /// Acts like a constructor, returns a [UsageContext], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory UsageContext.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$UsageContextFromJson(json);
     } else {
@@ -219,7 +219,7 @@ class DataRequirement with _$DataRequirement {
   /// Acts like a constructor, returns a [DataRequirement], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DataRequirement.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DataRequirementFromJson(json);
     } else {
@@ -265,7 +265,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// Acts like a constructor, returns a [DataRequirementCodeFilter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DataRequirementCodeFilter.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DataRequirementCodeFilterFromJson(json);
     } else {
@@ -308,7 +308,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// Acts like a constructor, returns a [DataRequirementDateFilter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DataRequirementDateFilter.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DataRequirementDateFilterFromJson(json);
     } else {
@@ -358,7 +358,7 @@ class ParameterDefinition with _$ParameterDefinition {
   /// Acts like a constructor, returns a [ParameterDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ParameterDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ParameterDefinitionFromJson(json);
     } else {
@@ -406,7 +406,7 @@ class TriggerDefinition with _$TriggerDefinition {
   /// Acts like a constructor, returns a [TriggerDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TriggerDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TriggerDefinitionFromJson(json);
     } else {

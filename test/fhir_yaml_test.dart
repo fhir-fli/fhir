@@ -1,23 +1,20 @@
-/// From Package: https://github.com/alexei-sintotski/json2yaml
-/// https://github.com/alexei-sintotski/json2yaml/blob/master/test/json2yaml_test.dart
-// ignore_for_file: use_raw_strings
-
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: use_raw_strings, ignore_for_file: invalid_annotation_target
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
+import 'package:fhir/yaml/fhir_yaml.dart';
 import 'package:test/test.dart';
 import 'package:yaml/yaml.dart';
 
-// Project imports:
-import 'package:fhir/yaml/fhir_yaml.dart';
+/// From Package: https://github.com/alexei-sintotski/json2yaml
+/// https://github.com/alexei-sintotski/json2yaml/blob/master/test/json2yaml_test.dart
 
 void main() {
   group('$json2yaml', () {
     group('given basic string entry', () {
-      final result = json2yaml(basicStringJson);
+      final String result = json2yaml(basicStringJson);
       test('it produces correct basic string field', () {
         expect(result, basicStringYaml);
       });
@@ -27,7 +24,7 @@ void main() {
     });
 
     group('given structured data', () {
-      final result = json2yaml(structuredDataJson);
+      final String result = json2yaml(structuredDataJson);
       test('it produces YAML with correct structured data', () {
         expect(result, structuredDataYaml);
       });
@@ -37,7 +34,7 @@ void main() {
     });
 
     group('given data with list', () {
-      final result = json2yaml(dataWithListJson);
+      final String result = json2yaml(dataWithListJson);
       test('it produces YAML with correct list', () {
         expect(result, dataWithListYaml);
       });
@@ -47,7 +44,7 @@ void main() {
     });
 
     group('given data with boolean value', () {
-      final result = json2yaml(boolJson);
+      final String result = json2yaml(boolJson);
       test('it produces YAML with correct boolean value', () {
         expect(result, boolYaml);
       });
@@ -57,7 +54,7 @@ void main() {
     });
 
     group('given data with multiline string', () {
-      final result = json2yaml(multilineStringJson);
+      final String result = json2yaml(multilineStringJson);
       test('it produces YAML with multiline string', () {
         expect(result, multilineStringYaml);
       });
@@ -67,7 +64,7 @@ void main() {
     });
 
     group('given complex data structure', () {
-      final result = json2yaml(complexExampleJson);
+      final String result = json2yaml(complexExampleJson);
       test('it produces correct YAML', () {
         expect(result, complexExampleYaml);
       });
@@ -98,7 +95,7 @@ void main() {
     });
 
     group('given string with special characters', () {
-      final result = json2yaml(stringWithSpecialCharactersJson);
+      final String result = json2yaml(stringWithSpecialCharactersJson);
       test('it produces correct YAML', () {
         expect(result, stringWithSpecialCharactersYaml);
       });
@@ -108,7 +105,7 @@ void main() {
     });
 
     group('given json with null value', () {
-      final result = json2yaml(jsonWithNullValue);
+      final String result = json2yaml(jsonWithNullValue);
       test('it produces correct YAML', () {
         expect(result, yamlWithNullValue);
       });
@@ -121,30 +118,32 @@ void main() {
 
 dynamic loadAsJson(String result) => jsonDecode(jsonEncode(loadYaml(result)));
 
-const basicStringJson = {'basic_string': 'basic string'};
-const basicStringYaml = 'basic_string: basic string';
+const Map<String, String> basicStringJson = <String, String>{
+  'basic_string': 'basic string'
+};
+const String basicStringYaml = 'basic_string: basic string';
 
-const structuredDataJson = {
-  'martin': {
+const Map<String, dynamic> structuredDataJson = <String, dynamic>{
+  'martin': <String, String>{
     'name': "Martin D'vloper",
     'job': 'Developer',
     'skill': 'Elite',
   }
 };
-const structuredDataYaml = '''
+const String structuredDataYaml = '''
 martin:
   name: "Martin D'vloper"
   job: Developer
   skill: Elite''';
 
-const dataWithListJson = {
-  'martin': {
+const Map<String, dynamic> dataWithListJson = <String, dynamic>{
+  'martin': <String, dynamic>{
     'name': "Martin D'vloper",
     'job': 'Developer',
-    'skills': ['python', 'perl', 'pascal']
+    'skills': <String>['python', 'perl', 'pascal']
   },
 };
-const dataWithListYaml = '''
+const String dataWithListYaml = '''
 martin:
   name: "Martin D'vloper"
   job: Developer
@@ -153,26 +152,28 @@ martin:
     - perl
     - pascal''';
 
-const boolJson = {'dart_is_cool': true};
-const boolYaml = 'dart_is_cool: true';
+const Map<String, dynamic> boolJson = <String, dynamic>{'dart_is_cool': true};
+const String boolYaml = 'dart_is_cool: true';
 
-const multilineStringJson = {'fold_newlines': 'a b\nc d\n  e\nf'};
-const multilineStringYaml = '''fold_newlines: "a b\\nc d\\n  e\\nf"''';
+const Map<String, dynamic> multilineStringJson = <String, dynamic>{
+  'fold_newlines': 'a b\nc d\n  e\nf'
+};
+const String multilineStringYaml = '''fold_newlines: "a b\\nc d\\n  e\\nf"''';
 
-const complexExampleJson = {
+const Map<String, dynamic> complexExampleJson = <String, dynamic>{
   'name': "Martin D'vloper",
   'job': 'Developer',
   'skill': 'Elite',
   'employed': true,
-  'foods': ['Apple', 'Orange', 'Strawberry', 'Mango'],
-  'languages': {
+  'foods': <String>['Apple', 'Orange', 'Strawberry', 'Mango'],
+  'languages': <String, String>{
     'perl': 'Elite',
     'python': 'Elite',
     'pascal': 'Lame',
   },
   'education': '4 GCSEs\n3 A-Levels\nBSc in the Internet of Things'
 };
-const complexExampleYaml = '''
+const String complexExampleYaml = '''
 name: "Martin D'vloper"
 job: Developer
 skill: Elite
@@ -188,12 +189,17 @@ languages:
   pascal: Lame
 education: "4 GCSEs\\n3 A-Levels\\nBSc in the Internet of Things"''';
 
-const stringWithDotJson = {'dot': '1.5.0'};
-const stringWithDotWithQuotesYaml = 'dot: "1.5.0"';
-const stringWithDotWithoutQuotesYaml = 'dot: 1.5.0';
+const Map<String, dynamic> stringWithDotJson = <String, dynamic>{
+  'dot': '1.5.0'
+};
+const String stringWithDotWithQuotesYaml = 'dot: "1.5.0"';
+const String stringWithDotWithoutQuotesYaml = 'dot: 1.5.0';
 
-const stringWithSpecialCharactersJson = {'url': 'https://pub.dartlang.org'};
-const stringWithSpecialCharactersYaml = 'url: "https://pub.dartlang.org"';
+const Map<String, dynamic> stringWithSpecialCharactersJson = <String, dynamic>{
+  'url': 'https://pub.dartlang.org'
+};
+const String stringWithSpecialCharactersYaml =
+    'url: "https://pub.dartlang.org"';
 
-const jsonWithNullValue = {'entry': null};
-const yamlWithNullValue = 'entry: null';
+const Map<String, dynamic> jsonWithNullValue = <String, dynamic>{'entry': null};
+const String yamlWithNullValue = 'entry: null';

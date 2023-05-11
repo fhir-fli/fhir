@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -416,6 +416,7 @@ class Claim with Resource, _$Claim {
   }) = _Claim;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -434,7 +435,7 @@ class Claim with Resource, _$Claim {
   /// Acts like a constructor, returns a [Claim], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Claim.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimFromJson(json);
     } else {
@@ -550,7 +551,7 @@ class ClaimRelated with _$ClaimRelated {
   /// Acts like a constructor, returns a [ClaimRelated], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimRelated.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimRelatedFromJson(json);
     } else {
@@ -661,7 +662,7 @@ class ClaimPayee with _$ClaimPayee {
   /// Acts like a constructor, returns a [ClaimPayee], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimPayee.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimPayeeFromJson(json);
     } else {
@@ -785,7 +786,7 @@ class ClaimEvent with _$ClaimEvent {
   /// Acts like a constructor, returns a [ClaimEvent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimEvent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimEventFromJson(json);
     } else {
@@ -925,7 +926,7 @@ class ClaimCareTeam with _$ClaimCareTeam {
   /// Acts like a constructor, returns a [ClaimCareTeam], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimCareTeam.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimCareTeamFromJson(json);
     } else {
@@ -1136,7 +1137,7 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
   /// Acts like a constructor, returns a [ClaimSupportingInfo], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimSupportingInfo.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimSupportingInfoFromJson(json);
     } else {
@@ -1271,7 +1272,7 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
   /// Acts like a constructor, returns a [ClaimDiagnosis], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimDiagnosis.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimDiagnosisFromJson(json);
     } else {
@@ -1414,7 +1415,7 @@ class ClaimProcedure with _$ClaimProcedure {
   /// Acts like a constructor, returns a [ClaimProcedure], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimProcedure.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimProcedureFromJson(json);
     } else {
@@ -1590,7 +1591,7 @@ class ClaimInsurance with _$ClaimInsurance {
   /// Acts like a constructor, returns a [ClaimInsurance], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimInsurance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimInsuranceFromJson(json);
     } else {
@@ -1720,7 +1721,7 @@ class ClaimAccident with _$ClaimAccident {
   /// Acts like a constructor, returns a [ClaimAccident], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimAccident.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimAccidentFromJson(json);
     } else {
@@ -2057,7 +2058,7 @@ class ClaimItem with _$ClaimItem {
   /// Acts like a constructor, returns a [ClaimItem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimItemFromJson(json);
     } else {
@@ -2168,7 +2169,7 @@ class ClaimBodySite with _$ClaimBodySite {
   /// Acts like a constructor, returns a [ClaimBodySite], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimBodySite.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimBodySiteFromJson(json);
     } else {
@@ -2403,7 +2404,7 @@ class ClaimDetail with _$ClaimDetail {
   /// Acts like a constructor, returns a [ClaimDetail], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimDetail.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimDetailFromJson(json);
     } else {
@@ -2631,7 +2632,7 @@ class ClaimSubDetail with _$ClaimSubDetail {
   /// Acts like a constructor, returns a [ClaimSubDetail], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimSubDetail.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimSubDetailFromJson(json);
     } else {
@@ -3042,6 +3043,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
   }) = _ClaimResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3062,7 +3064,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
   /// Acts like a constructor, returns a [ClaimResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseFromJson(json);
     } else {
@@ -3183,7 +3185,7 @@ class ClaimResponseEvent with _$ClaimResponseEvent {
   /// Acts like a constructor, returns a [ClaimResponseEvent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseEvent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseEventFromJson(json);
     } else {
@@ -3333,7 +3335,7 @@ class ClaimResponseItem with _$ClaimResponseItem {
   /// Acts like a constructor, returns a [ClaimResponseItem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseItemFromJson(json);
     } else {
@@ -3462,7 +3464,7 @@ class ClaimResponseReviewOutcome with _$ClaimResponseReviewOutcome {
   /// Acts like a constructor, returns a [ClaimResponseReviewOutcome], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseReviewOutcome.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseReviewOutcomeFromJson(json);
     } else {
@@ -3591,7 +3593,7 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
   /// Acts like a constructor, returns a [ClaimResponseAdjudication], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseAdjudication.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseAdjudicationFromJson(json);
     } else {
@@ -3734,7 +3736,7 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
   /// Acts like a constructor, returns a [ClaimResponseDetail], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseDetail.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseDetailFromJson(json);
     } else {
@@ -3875,7 +3877,7 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   /// Acts like a constructor, returns a [ClaimResponseSubDetail], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseSubDetail.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseSubDetailFromJson(json);
     } else {
@@ -4188,7 +4190,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
   /// Acts like a constructor, returns a [ClaimResponseAddItem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseAddItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseAddItemFromJson(json);
     } else {
@@ -4296,7 +4298,7 @@ class ClaimResponseBodySite with _$ClaimResponseBodySite {
   /// Acts like a constructor, returns a [ClaimResponseBodySite], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseBodySite.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseBodySiteFromJson(json);
     } else {
@@ -4515,7 +4517,7 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
   /// Acts like a constructor, returns a [ClaimResponseDetail1], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseDetail1.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseDetail1FromJson(json);
     } else {
@@ -4728,7 +4730,7 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
   /// Acts like a constructor, returns a [ClaimResponseSubDetail1], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseSubDetail1.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseSubDetail1FromJson(json);
     } else {
@@ -4843,7 +4845,7 @@ class ClaimResponseTotal with _$ClaimResponseTotal {
   /// Acts like a constructor, returns a [ClaimResponseTotal], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseTotal.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseTotalFromJson(json);
     } else {
@@ -4980,7 +4982,7 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
   /// Acts like a constructor, returns a [ClaimResponsePayment], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponsePayment.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponsePaymentFromJson(json);
     } else {
@@ -5106,7 +5108,7 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
   /// Acts like a constructor, returns a [ClaimResponseProcessNote], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseProcessNote.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseProcessNoteFromJson(json);
     } else {
@@ -5258,7 +5260,7 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
   /// Acts like a constructor, returns a [ClaimResponseInsurance], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseInsurance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseInsuranceFromJson(json);
     } else {
@@ -5422,7 +5424,7 @@ class ClaimResponseError with _$ClaimResponseError {
   /// Acts like a constructor, returns a [ClaimResponseError], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClaimResponseError.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClaimResponseErrorFromJson(json);
     } else {
@@ -5725,6 +5727,7 @@ class Invoice with Resource, _$Invoice {
   }) = _Invoice;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5745,7 +5748,7 @@ class Invoice with Resource, _$Invoice {
   /// Acts like a constructor, returns a [Invoice], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Invoice.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$InvoiceFromJson(json);
     } else {
@@ -5857,7 +5860,7 @@ class InvoiceParticipant with _$InvoiceParticipant {
   /// Acts like a constructor, returns a [InvoiceParticipant], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory InvoiceParticipant.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$InvoiceParticipantFromJson(json);
     } else {
@@ -6020,7 +6023,7 @@ class InvoiceLineItem with _$InvoiceLineItem {
   /// Acts like a constructor, returns a [InvoiceLineItem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory InvoiceLineItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$InvoiceLineItemFromJson(json);
     } else {

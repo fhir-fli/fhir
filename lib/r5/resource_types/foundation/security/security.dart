@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -271,6 +271,7 @@ class AuditEvent with Resource, _$AuditEvent {
   }) = _AuditEvent;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -291,7 +292,7 @@ class AuditEvent with Resource, _$AuditEvent {
   /// Acts like a constructor, returns a [AuditEvent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AuditEvent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventFromJson(json);
     } else {
@@ -399,7 +400,7 @@ class AuditEventOutcome with _$AuditEventOutcome {
   /// Acts like a constructor, returns a [AuditEventOutcome], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AuditEventOutcome.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventOutcomeFromJson(json);
     } else {
@@ -593,7 +594,7 @@ class AuditEventAgent with _$AuditEventAgent {
   /// Acts like a constructor, returns a [AuditEventAgent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AuditEventAgent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventAgentFromJson(json);
     } else {
@@ -708,7 +709,7 @@ class AuditEventSource with _$AuditEventSource {
   /// Acts like a constructor, returns a [AuditEventSource], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AuditEventSource.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventSourceFromJson(json);
     } else {
@@ -856,7 +857,7 @@ class AuditEventEntity with _$AuditEventEntity {
   /// Acts like a constructor, returns a [AuditEventEntity], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AuditEventEntity.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventEntityFromJson(json);
     } else {
@@ -1044,7 +1045,7 @@ class AuditEventDetail with _$AuditEventDetail {
   /// Acts like a constructor, returns a [AuditEventDetail], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AuditEventDetail.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventDetailFromJson(json);
     } else {
@@ -1341,6 +1342,7 @@ class Consent with Resource, _$Consent {
   }) = _Consent;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1361,7 +1363,7 @@ class Consent with Resource, _$Consent {
   /// Acts like a constructor, returns a [Consent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Consent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConsentFromJson(json);
     } else {
@@ -1485,7 +1487,7 @@ class ConsentPolicyBasis with _$ConsentPolicyBasis {
   /// Acts like a constructor, returns a [ConsentPolicyBasis], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConsentPolicyBasis.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConsentPolicyBasisFromJson(json);
     } else {
@@ -1633,7 +1635,7 @@ class ConsentVerification with _$ConsentVerification {
   /// Acts like a constructor, returns a [ConsentVerification], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConsentVerification.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConsentVerificationFromJson(json);
     } else {
@@ -1823,7 +1825,7 @@ class ConsentProvision with _$ConsentProvision {
   /// Acts like a constructor, returns a [ConsentProvision], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConsentProvision.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConsentProvisionFromJson(json);
     } else {
@@ -1943,7 +1945,7 @@ class ConsentActor with _$ConsentActor {
   /// Acts like a constructor, returns a [ConsentActor], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConsentActor.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConsentActorFromJson(json);
     } else {
@@ -2066,7 +2068,7 @@ class ConsentData with _$ConsentData {
   /// Acts like a constructor, returns a [ConsentData], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConsentData.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConsentDataFromJson(json);
     } else {
@@ -2266,6 +2268,7 @@ class Permission with Resource, _$Permission {
   }) = _Permission;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2286,7 +2289,7 @@ class Permission with Resource, _$Permission {
   /// Acts like a constructor, returns a [Permission], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Permission.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PermissionFromJson(json);
     } else {
@@ -2394,7 +2397,7 @@ class PermissionJustification with _$PermissionJustification {
   /// Acts like a constructor, returns a [PermissionJustification], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PermissionJustification.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PermissionJustificationFromJson(json);
     } else {
@@ -2519,7 +2522,7 @@ class PermissionRule with _$PermissionRule {
   /// Acts like a constructor, returns a [PermissionRule], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PermissionRule.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PermissionRuleFromJson(json);
     } else {
@@ -2639,7 +2642,7 @@ class PermissionData with _$PermissionData {
   /// Acts like a constructor, returns a [PermissionData], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PermissionData.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PermissionDataFromJson(json);
     } else {
@@ -2754,7 +2757,7 @@ class PermissionResource with _$PermissionResource {
   /// Acts like a constructor, returns a [PermissionResource], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PermissionResource.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PermissionResourceFromJson(json);
     } else {
@@ -2865,7 +2868,7 @@ class PermissionActivity with _$PermissionActivity {
   /// Acts like a constructor, returns a [PermissionActivity], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PermissionActivity.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PermissionActivityFromJson(json);
     } else {
@@ -3159,6 +3162,7 @@ class Provenance with Resource, _$Provenance {
   }) = _Provenance;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3179,7 +3183,7 @@ class Provenance with Resource, _$Provenance {
   /// Acts like a constructor, returns a [Provenance], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Provenance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProvenanceFromJson(json);
     } else {
@@ -3327,7 +3331,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
   /// Acts like a constructor, returns a [ProvenanceAgent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProvenanceAgent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProvenanceAgentFromJson(json);
     } else {
@@ -3477,7 +3481,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
   /// Acts like a constructor, returns a [ProvenanceEntity], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProvenanceEntity.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProvenanceEntityFromJson(json);
     } else {

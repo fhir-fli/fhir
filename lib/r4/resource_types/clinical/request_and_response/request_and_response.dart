@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -362,7 +362,7 @@ class Communication with Resource, _$Communication {
   /// Acts like a constructor, returns a [Communication], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Communication.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CommunicationFromJson(json);
     } else {
@@ -481,7 +481,7 @@ class CommunicationPayload with _$CommunicationPayload {
   /// Acts like a constructor, returns a [CommunicationPayload], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CommunicationPayload.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CommunicationPayloadFromJson(json);
     } else {
@@ -835,7 +835,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   /// Acts like a constructor, returns a [CommunicationRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CommunicationRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CommunicationRequestFromJson(json);
     } else {
@@ -955,7 +955,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
   /// Acts like a constructor, returns a [CommunicationRequestPayload], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CommunicationRequestPayload.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CommunicationRequestPayloadFromJson(json);
     } else {
@@ -1344,7 +1344,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
   /// Acts like a constructor, returns a [DeviceRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceRequestFromJson(json);
     } else {
@@ -1467,7 +1467,7 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
   /// Acts like a constructor, returns a [DeviceRequestParameter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceRequestParameter.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceRequestParameterFromJson(json);
     } else {
@@ -1742,7 +1742,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
   /// Acts like a constructor, returns a [DeviceUseStatement], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceUseStatement.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceUseStatementFromJson(json);
     } else {
@@ -2082,7 +2082,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   /// Acts like a constructor, returns a [GuidanceResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory GuidanceResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$GuidanceResponseFromJson(json);
     } else {
@@ -2335,7 +2335,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   /// Acts like a constructor, returns a [SupplyDelivery], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SupplyDelivery.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SupplyDeliveryFromJson(json);
     } else {
@@ -2451,7 +2451,7 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   /// Acts like a constructor, returns a [SupplyDeliverySuppliedItem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SupplyDeliverySuppliedItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SupplyDeliverySuppliedItemFromJson(json);
     } else {
@@ -2744,7 +2744,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   /// Acts like a constructor, returns a [SupplyRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SupplyRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SupplyRequestFromJson(json);
     } else {
@@ -2866,7 +2866,7 @@ class SupplyRequestParameter with _$SupplyRequestParameter {
   /// Acts like a constructor, returns a [SupplyRequestParameter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SupplyRequestParameter.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SupplyRequestParameterFromJson(json);
     } else {

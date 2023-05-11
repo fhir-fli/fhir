@@ -294,8 +294,7 @@ Resource _newId(Resource resource) {
       return (resource as VerificationResult).copyWith(id: newIdString());
     case R4ResourceType.VisionPrescription:
       return (resource as VisionPrescription).copyWith(id: newIdString());
-
-    default:
+    case null:
       throw FormatException(
           '${resource.resourceType} is not a defined resourceType');
   }

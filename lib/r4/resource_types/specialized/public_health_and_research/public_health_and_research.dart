@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -361,7 +361,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   /// Acts like a constructor, returns a [ResearchStudy], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchStudy.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchStudyFromJson(json);
     } else {
@@ -487,7 +487,7 @@ class ResearchStudyArm with _$ResearchStudyArm {
   /// Acts like a constructor, returns a [ResearchStudyArm], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchStudyArm.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchStudyArmFromJson(json);
     } else {
@@ -599,7 +599,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
   /// Acts like a constructor, returns a [ResearchStudyObjective], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchStudyObjective.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchStudyObjectiveFromJson(json);
     } else {
@@ -828,7 +828,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
   /// Acts like a constructor, returns a [ResearchSubject], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchSubject.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchSubjectFromJson(json);
     } else {

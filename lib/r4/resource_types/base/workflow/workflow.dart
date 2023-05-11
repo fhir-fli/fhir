@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -409,7 +409,7 @@ class Appointment with Resource, _$Appointment {
   /// Acts like a constructor, returns a [Appointment], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Appointment.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AppointmentFromJson(json);
     } else {
@@ -545,7 +545,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
   /// Acts like a constructor, returns a [AppointmentParticipant], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AppointmentParticipant.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AppointmentParticipantFromJson(json);
     } else {
@@ -792,7 +792,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
   /// Acts like a constructor, returns a [AppointmentResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AppointmentResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AppointmentResponseFromJson(json);
     } else {
@@ -1027,7 +1027,7 @@ class Schedule with Resource, _$Schedule {
   /// Acts like a constructor, returns a [Schedule], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Schedule.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ScheduleFromJson(json);
     } else {
@@ -1291,7 +1291,7 @@ class Slot with Resource, _$Slot {
   /// Acts like a constructor, returns a [Slot], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Slot.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SlotFromJson(json);
     } else {
@@ -1711,7 +1711,7 @@ class Task with Resource, _$Task {
   /// Acts like a constructor, returns a [Task], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Task.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TaskFromJson(json);
     } else {
@@ -1826,7 +1826,7 @@ class TaskRestriction with _$TaskRestriction {
   /// Acts like a constructor, returns a [TaskRestriction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TaskRestriction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TaskRestrictionFromJson(json);
     } else {
@@ -2273,7 +2273,7 @@ class TaskInput with _$TaskInput {
   /// Acts like a constructor, returns a [TaskInput], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TaskInput.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TaskInputFromJson(json);
     } else {
@@ -2718,7 +2718,7 @@ class TaskOutput with _$TaskOutput {
   /// Acts like a constructor, returns a [TaskOutput], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TaskOutput.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TaskOutputFromJson(json);
     } else {
@@ -2997,7 +2997,7 @@ class VerificationResult with Resource, _$VerificationResult {
   /// Acts like a constructor, returns a [VerificationResult], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory VerificationResult.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$VerificationResultFromJson(json);
     } else {
@@ -3144,7 +3144,7 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   /// Acts like a constructor, returns a [VerificationResultPrimarySource], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory VerificationResultPrimarySource.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$VerificationResultPrimarySourceFromJson(json);
     } else {
@@ -3311,7 +3311,7 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
   /// Acts like a constructor, returns a [VerificationResultAttestation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory VerificationResultAttestation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$VerificationResultAttestationFromJson(json);
     } else {
@@ -3427,7 +3427,7 @@ class VerificationResultValidator with _$VerificationResultValidator {
   /// Acts like a constructor, returns a [VerificationResultValidator], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory VerificationResultValidator.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$VerificationResultValidatorFromJson(json);
     } else {

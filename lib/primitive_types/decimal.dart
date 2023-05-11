@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -7,17 +7,13 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'number.dart';
 import 'integer.dart';
+import 'number.dart';
 import 'primitive_type_exceptions.dart';
 
 class FhirDecimal extends FhirNumber {
   const FhirDecimal._(
-    String valueString,
-    double? valueNumber,
-    bool isValid,
-    this.isInt,
-  ) : super(valueString, valueNumber, isValid);
+      super.valueString, super.valueNumber, super.isValid, this.isInt);
 
   factory FhirDecimal(dynamic inValue) {
     if (inValue is FhirDecimal) {

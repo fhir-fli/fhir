@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -66,7 +66,7 @@ class Questionnaire with Resource, _$Questionnaire {
   /// Acts like a constructor, returns a [Questionnaire], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Questionnaire.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$QuestionnaireFromJson(json);
     } else {
@@ -117,7 +117,7 @@ class QuestionnaireGroup with _$QuestionnaireGroup {
   /// Acts like a constructor, returns a [QuestionnaireGroup], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory QuestionnaireGroup.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$QuestionnaireGroupFromJson(json);
     } else {
@@ -168,7 +168,7 @@ class QuestionnaireGroupQuestion with _$QuestionnaireGroupQuestion {
   /// Acts like a constructor, returns a [QuestionnaireGroupQuestion], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory QuestionnaireGroupQuestion.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$QuestionnaireGroupQuestionFromJson(json);
     } else {
@@ -228,7 +228,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   /// Acts like a constructor, returns a [QuestionnaireResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory QuestionnaireResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$QuestionnaireResponseFromJson(json);
     } else {
@@ -277,7 +277,7 @@ class QuestionnaireResponseGroup with _$QuestionnaireResponseGroup {
   /// Acts like a constructor, returns a [QuestionnaireResponseGroup], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory QuestionnaireResponseGroup.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$QuestionnaireResponseGroupFromJson(json);
     } else {
@@ -425,7 +425,7 @@ class Provenance with Resource, _$Provenance {
   /// Acts like a constructor, returns a [Provenance], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Provenance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProvenanceFromJson(json);
     } else {
@@ -470,7 +470,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
   /// Acts like a constructor, returns a [ProvenanceAgent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProvenanceAgent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProvenanceAgentFromJson(json);
     } else {
@@ -518,7 +518,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
   /// Acts like a constructor, returns a [ProvenanceEntity], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProvenanceEntity.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProvenanceEntityFromJson(json);
     } else {
@@ -560,7 +560,7 @@ class ProvenanceAgentRelatedAgent with _$ProvenanceAgentRelatedAgent {
   /// Acts like a constructor, returns a [ProvenanceAgentRelatedAgent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProvenanceAgentRelatedAgent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProvenanceAgentRelatedAgentFromJson(json);
     } else {
@@ -611,7 +611,7 @@ class AuditEvent with Resource, _$AuditEvent {
   /// Acts like a constructor, returns a [AuditEvent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AuditEvent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventFromJson(json);
     } else {
@@ -658,7 +658,7 @@ class AuditEventEvent with _$AuditEventEvent {
   /// Acts like a constructor, returns a [AuditEventEvent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AuditEventEvent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventEventFromJson(json);
     } else {
@@ -710,7 +710,7 @@ class AuditEventParticipant with _$AuditEventParticipant {
   /// Acts like a constructor, returns a [AuditEventParticipant], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AuditEventParticipant.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventParticipantFromJson(json);
     } else {
@@ -754,7 +754,7 @@ class AuditEventSource with _$AuditEventSource {
   /// Acts like a constructor, returns a [AuditEventSource], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AuditEventSource.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventSourceFromJson(json);
     } else {
@@ -805,7 +805,7 @@ class AuditEventObject with _$AuditEventObject {
   /// Acts like a constructor, returns a [AuditEventObject], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AuditEventObject.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventObjectFromJson(json);
     } else {
@@ -849,7 +849,7 @@ class AuditEventParticipantNetwork with _$AuditEventParticipantNetwork {
   /// Acts like a constructor, returns a [AuditEventParticipantNetwork], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AuditEventParticipantNetwork.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventParticipantNetworkFromJson(json);
     } else {
@@ -892,7 +892,7 @@ class AuditEventObjectDetail with _$AuditEventObjectDetail {
   /// Acts like a constructor, returns a [AuditEventObjectDetail], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AuditEventObjectDetail.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AuditEventObjectDetailFromJson(json);
     } else {

@@ -42,7 +42,7 @@ abstract class FhirDateTimeBase {
     }
 
     /// create a right-hand-side value
-    final rhs = o is FhirDateTimeBase
+    final FhirDateTimeBase? rhs = o is FhirDateTimeBase
         ? o
         : o is String
             ? FhirDateTime(o)
@@ -70,15 +70,15 @@ abstract class FhirDateTimeBase {
     /// to consider. The first is about precisions. We have to remember that
     /// with TimeZone offsets, we can actually have 3 hyphens in a date
     /// (2020-01-01T12:01:01-05:00)
-    var lhsDatePrecision = '-'.allMatches(toString()).length;
+    int lhsDatePrecision = '-'.allMatches(toString()).length;
     lhsDatePrecision = lhsDatePrecision > 2 ? 3 : lhsDatePrecision + 1;
-    var rhsDatePrecision = '-'.allMatches(o.toString()).length;
+    int rhsDatePrecision = '-'.allMatches(o.toString()).length;
     rhsDatePrecision = rhsDatePrecision > 2 ? 3 : rhsDatePrecision + 1;
 
     /// Likewise we can have 3 semi-colons (2020-01-01T12:01:01-05:00)
-    var lhsTimePrecision = ':'.allMatches(toString()).length;
+    int lhsTimePrecision = ':'.allMatches(toString()).length;
     lhsTimePrecision = lhsTimePrecision > 2 ? 3 : lhsTimePrecision + 1;
-    var rhsTimePrecision = ':'.allMatches(o.toString()).length;
+    int rhsTimePrecision = ':'.allMatches(o.toString()).length;
     rhsTimePrecision = rhsTimePrecision > 2 ? 3 : rhsTimePrecision + 1;
 
     /// if the precisions for the dates and times are unequal, the whole value
@@ -91,12 +91,13 @@ abstract class FhirDateTimeBase {
 
     /// At this point both values are FhirDateTimes and are both valid. We first
     /// take their iso8601String to account for any timezones
-    final lhsList = iso8601String!.replaceAll('Z', '').split('T');
-    final rhsList = rhs.iso8601String!.replaceAll('Z', '').split('T');
-    final lhsDate = lhsList.first.split('-');
-    final rhsDate = rhsList.first.split('-');
-    final lhsTime = lhsList.last.split(':');
-    final rhsTime = rhsList.last.split(':');
+    final List<String> lhsList = iso8601String!.replaceAll('Z', '').split('T');
+    final List<String> rhsList =
+        rhs.iso8601String!.replaceAll('Z', '').split('T');
+    final List<String> lhsDate = lhsList.first.split('-');
+    final List<String> rhsDate = rhsList.first.split('-');
+    final List<String> lhsTime = lhsList.last.split(':');
+    final List<String> rhsTime = rhsList.last.split(':');
 
     /// NOTE: this differs from the official FHIR (or at least FHIRPath) spec.
     /// Officially if they are not defined to the same level of precision it's
@@ -179,13 +180,13 @@ abstract class FhirDateTimeBase {
     }
 
     /// We pick the shorter of the two lists
-    final datePrecision = lhsDatePrecision > rhsDatePrecision
+    final int datePrecision = lhsDatePrecision > rhsDatePrecision
         ? rhsDatePrecision
         : lhsDatePrecision;
 
     /// and compare what we can
-    for (var i = 0; i < datePrecision; i++) {
-      final comparedValue =
+    for (int i = 0; i < datePrecision; i++) {
+      final bool? comparedValue =
           comparePrecisionValue(comparator, lhsDate[i], rhsDate[i]);
       if (comparedValue != null) {
         return comparedValue;
@@ -204,13 +205,13 @@ abstract class FhirDateTimeBase {
     }
 
     /// We pick the shorter of the two lists
-    final timePrecision = lhsTimePrecision > rhsTimePrecision
+    final int timePrecision = lhsTimePrecision > rhsTimePrecision
         ? rhsTimePrecision
         : lhsTimePrecision;
 
     /// And compare what we can
-    for (var i = 0; i < timePrecision; i++) {
-      final comparedValue =
+    for (int i = 0; i < timePrecision; i++) {
+      final bool? comparedValue =
           comparePrecisionValue(comparator, lhsTime[i], rhsTime[i]);
       if (comparedValue != null) {
         return comparedValue;

@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -63,7 +63,7 @@ class Organization with Resource, _$Organization {
   /// Acts like a constructor, returns a [Organization], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Organization.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OrganizationFromJson(json);
     } else {
@@ -108,7 +108,7 @@ class OrganizationContact with _$OrganizationContact {
   /// Acts like a constructor, returns a [OrganizationContact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory OrganizationContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OrganizationContactFromJson(json);
     } else {
@@ -182,7 +182,7 @@ class HealthcareService with Resource, _$HealthcareService {
   /// Acts like a constructor, returns a [HealthcareService], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory HealthcareService.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceFromJson(json);
     } else {
@@ -224,7 +224,7 @@ class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
   /// Acts like a constructor, returns a [HealthcareServiceServiceType], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory HealthcareServiceServiceType.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceServiceTypeFromJson(json);
     } else {
@@ -273,7 +273,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   /// Acts like a constructor, returns a [HealthcareServiceAvailableTime], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory HealthcareServiceAvailableTime.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceAvailableTimeFromJson(json);
     } else {
@@ -316,7 +316,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   /// Acts like a constructor, returns a [HealthcareServiceNotAvailable], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory HealthcareServiceNotAvailable.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceNotAvailableFromJson(json);
     } else {
@@ -373,7 +373,7 @@ class Group with Resource, _$Group {
   /// Acts like a constructor, returns a [Group], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Group.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$GroupFromJson(json);
     } else {
@@ -421,7 +421,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
   /// Acts like a constructor, returns a [GroupCharacteristic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory GroupCharacteristic.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$GroupCharacteristicFromJson(json);
     } else {
@@ -465,7 +465,7 @@ class GroupMember with _$GroupMember {
   /// Acts like a constructor, returns a [GroupMember], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory GroupMember.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$GroupMemberFromJson(json);
     } else {

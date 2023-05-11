@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -68,7 +68,7 @@ class Coverage with Resource, _$Coverage {
   /// Acts like a constructor, returns a [Coverage], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Coverage.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageFromJson(json);
     } else {
@@ -123,7 +123,7 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
   /// Acts like a constructor, returns a [EligibilityRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EligibilityRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EligibilityRequestFromJson(json);
     } else {
@@ -184,7 +184,7 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
   /// Acts like a constructor, returns a [EligibilityResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EligibilityResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EligibilityResponseFromJson(json);
     } else {
@@ -242,7 +242,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   /// Acts like a constructor, returns a [EnrollmentRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EnrollmentRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EnrollmentRequestFromJson(json);
     } else {
@@ -303,7 +303,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   /// Acts like a constructor, returns a [EnrollmentResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EnrollmentResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EnrollmentResponseFromJson(json);
     } else {

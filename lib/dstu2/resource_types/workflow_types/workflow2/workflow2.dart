@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -66,7 +66,7 @@ class ProcessRequest with Resource, _$ProcessRequest {
   /// Acts like a constructor, returns a [ProcessRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProcessRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProcessRequestFromJson(json);
     } else {
@@ -107,7 +107,7 @@ class ProcessRequestItem with _$ProcessRequestItem {
   /// Acts like a constructor, returns a [ProcessRequestItem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProcessRequestItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProcessRequestItemFromJson(json);
     } else {
@@ -165,7 +165,7 @@ class ProcessResponse with Resource, _$ProcessResponse {
   /// Acts like a constructor, returns a [ProcessResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProcessResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProcessResponseFromJson(json);
     } else {
@@ -207,7 +207,7 @@ class ProcessResponseNotes with _$ProcessResponseNotes {
   /// Acts like a constructor, returns a [ProcessResponseNotes], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProcessResponseNotes.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProcessResponseNotesFromJson(json);
     } else {
@@ -267,7 +267,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   /// Acts like a constructor, returns a [SupplyRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SupplyRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SupplyRequestFromJson(json);
     } else {
@@ -309,7 +309,7 @@ class SupplyRequestWhen with _$SupplyRequestWhen {
   /// Acts like a constructor, returns a [SupplyRequestWhen], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SupplyRequestWhen.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SupplyRequestWhenFromJson(json);
     } else {
@@ -369,7 +369,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   /// Acts like a constructor, returns a [SupplyDelivery], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SupplyDelivery.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SupplyDeliveryFromJson(json);
     } else {

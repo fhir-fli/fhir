@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -62,7 +62,7 @@ class MessageHeader with Resource, _$MessageHeader {
   /// Acts like a constructor, returns a [MessageHeader], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MessageHeader.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MessageHeaderFromJson(json);
     } else {
@@ -107,7 +107,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   /// Acts like a constructor, returns a [MessageHeaderResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MessageHeaderResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MessageHeaderResponseFromJson(json);
     } else {
@@ -156,7 +156,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
   /// Acts like a constructor, returns a [MessageHeaderSource], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MessageHeaderSource.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MessageHeaderSourceFromJson(json);
     } else {
@@ -201,7 +201,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   /// Acts like a constructor, returns a [MessageHeaderDestination], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MessageHeaderDestination.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MessageHeaderDestinationFromJson(json);
     } else {
@@ -253,7 +253,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
   /// Acts like a constructor, returns a [OperationOutcome], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory OperationOutcome.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OperationOutcomeFromJson(json);
     } else {
@@ -299,7 +299,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
   /// Acts like a constructor, returns a [OperationOutcomeIssue], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory OperationOutcomeIssue.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OperationOutcomeIssueFromJson(json);
     } else {
@@ -343,7 +343,7 @@ class Parameters with Resource, _$Parameters {
   /// Acts like a constructor, returns a [Parameters], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Parameters.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ParametersFromJson(json);
     } else {
@@ -420,7 +420,7 @@ class ParametersParameter with _$ParametersParameter {
   /// Acts like a constructor, returns a [ParametersParameter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ParametersParameter.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ParametersParameterFromJson(json);
     } else {
@@ -481,7 +481,7 @@ class Subscription with Resource, _$Subscription {
   /// Acts like a constructor, returns a [Subscription], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Subscription.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SubscriptionFromJson(json);
     } else {
@@ -529,7 +529,7 @@ class SubscriptionChannel with _$SubscriptionChannel {
   /// Acts like a constructor, returns a [SubscriptionChannel], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SubscriptionChannel.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SubscriptionChannelFromJson(json);
     } else {

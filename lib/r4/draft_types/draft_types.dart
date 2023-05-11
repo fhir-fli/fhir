@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -121,7 +121,7 @@ class Population with _$Population {
   /// Acts like a constructor, returns a [Population], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Population.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PopulationFromJson(json);
     } else {
@@ -190,7 +190,7 @@ class ProductShelfLife with _$ProductShelfLife {
   /// Acts like a constructor, returns a [ProductShelfLife], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProductShelfLife.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProductShelfLifeFromJson(json);
     } else {
@@ -403,7 +403,7 @@ class ProdCharacteristic with _$ProdCharacteristic {
   /// Acts like a constructor, returns a [ProdCharacteristic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProdCharacteristic.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProdCharacteristicFromJson(json);
     } else {
@@ -566,7 +566,7 @@ class MarketingStatus with _$MarketingStatus {
   /// Acts like a constructor, returns a [MarketingStatus], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MarketingStatus.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MarketingStatusFromJson(json);
     } else {

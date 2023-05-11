@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -11,9 +11,8 @@ import 'date_time_base.dart';
 import 'primitive_type_exceptions.dart';
 
 class FhirInstant extends FhirDateTimeBase {
-  const FhirInstant._(String valueString, DateTime? valueDateTime, bool isValid,
-      Exception? parseError)
-      : super(valueString, valueDateTime, isValid, parseError);
+  const FhirInstant._(
+      super.valueString, super.valueDateTime, super.isValid, super.parseError);
 
   factory FhirInstant(dynamic inValue) {
     if (inValue is DateTime) {
@@ -26,7 +25,8 @@ class FhirInstant extends FhirDateTimeBase {
         return FhirInstant._(inValue, null, false, e);
       }
     } else {
-      throw CannotBeConstructed('Instant cannot be constructed from $inValue.');
+      throw CannotBeConstructed<dynamic>(
+          'Instant cannot be constructed from $inValue.');
     }
   }
 

@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -336,6 +336,7 @@ class Coverage with Resource, _$Coverage {
   }) = _Coverage;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -356,7 +357,7 @@ class Coverage with Resource, _$Coverage {
   /// Acts like a constructor, returns a [Coverage], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Coverage.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageFromJson(json);
     } else {
@@ -473,7 +474,7 @@ class CoveragePaymentBy with _$CoveragePaymentBy {
   /// Acts like a constructor, returns a [CoveragePaymentBy], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoveragePaymentBy.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoveragePaymentByFromJson(json);
     } else {
@@ -599,7 +600,7 @@ class CoverageClass with _$CoverageClass {
   /// Acts like a constructor, returns a [CoverageClass], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageClass.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageClassFromJson(json);
     } else {
@@ -747,7 +748,7 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   /// Acts like a constructor, returns a [CoverageCostToBeneficiary], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageCostToBeneficiary.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageCostToBeneficiaryFromJson(json);
     } else {
@@ -856,7 +857,7 @@ class CoverageException with _$CoverageException {
   /// Acts like a constructor, returns a [CoverageException], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageException.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageExceptionFromJson(json);
     } else {
@@ -1145,6 +1146,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   }) = _CoverageEligibilityRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1165,7 +1167,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   /// Acts like a constructor, returns a [CoverageEligibilityRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityRequestFromJson(json);
     } else {
@@ -1297,7 +1299,7 @@ class CoverageEligibilityRequestEvent with _$CoverageEligibilityRequestEvent {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityRequestEvent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityRequestEventFromJson(json);
     } else {
@@ -1438,7 +1440,7 @@ class CoverageEligibilityRequestSupportingInfo
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityRequestSupportingInfo.fromJsonString(
       String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityRequestSupportingInfoFromJson(json);
     } else {
@@ -1584,7 +1586,7 @@ class CoverageEligibilityRequestInsurance
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityRequestInsurance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityRequestInsuranceFromJson(json);
     } else {
@@ -1763,7 +1765,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityRequestItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityRequestItemFromJson(json);
     } else {
@@ -1886,7 +1888,7 @@ class CoverageEligibilityRequestDiagnosis
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityRequestDiagnosis.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityRequestDiagnosisFromJson(json);
     } else {
@@ -2182,6 +2184,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   }) = _CoverageEligibilityResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2203,7 +2206,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityResponseFromJson(json);
     } else {
@@ -2329,7 +2332,7 @@ class CoverageEligibilityResponseEvent with _$CoverageEligibilityResponseEvent {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityResponseEvent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityResponseEventFromJson(json);
     } else {
@@ -2469,7 +2472,7 @@ class CoverageEligibilityResponseInsurance
   ///  [CoverageEligibilityResponseInsurance], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityResponseInsurance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityResponseInsuranceFromJson(json);
     } else {
@@ -2692,7 +2695,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityResponseItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityResponseItemFromJson(json);
     } else {
@@ -2863,7 +2866,7 @@ class CoverageEligibilityResponseBenefit
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityResponseBenefit.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityResponseBenefitFromJson(json);
     } else {
@@ -2987,7 +2990,7 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityResponseError.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityResponseErrorFromJson(json);
     } else {
@@ -3184,6 +3187,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   }) = _EnrollmentRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3204,7 +3208,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   /// Acts like a constructor, returns a [EnrollmentRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EnrollmentRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EnrollmentRequestFromJson(json);
     } else {
@@ -3416,6 +3420,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   }) = _EnrollmentResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3436,7 +3441,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   /// Acts like a constructor, returns a [EnrollmentResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EnrollmentResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EnrollmentResponseFromJson(json);
     } else {

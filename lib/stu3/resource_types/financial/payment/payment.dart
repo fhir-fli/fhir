@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -64,7 +64,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   /// Acts like a constructor, returns a [PaymentNotice], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PaymentNotice.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PaymentNoticeFromJson(json);
     } else {
@@ -128,7 +128,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   /// Acts like a constructor, returns a [PaymentReconciliation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PaymentReconciliation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PaymentReconciliationFromJson(json);
     } else {
@@ -173,7 +173,7 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   /// Acts like a constructor, returns a [PaymentReconciliationDetail], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PaymentReconciliationDetail.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PaymentReconciliationDetailFromJson(json);
     } else {

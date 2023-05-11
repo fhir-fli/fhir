@@ -450,7 +450,7 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
     case R4ResourceType.VisionPrescription:
       return (resource as VisionPrescription)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
-    default:
+    case null:
       throw FormatException(
           '${resource.resourceType} is not a defined resourceType');
   }

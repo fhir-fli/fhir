@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -83,7 +83,7 @@ class ValueSet with Resource, _$ValueSet {
   /// Acts like a constructor, returns a [ValueSet], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ValueSet.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ValueSetFromJson(json);
     } else {
@@ -126,7 +126,7 @@ class ValueSetContact with _$ValueSetContact {
   /// Acts like a constructor, returns a [ValueSetContact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ValueSetContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ValueSetContactFromJson(json);
     } else {
@@ -174,7 +174,7 @@ class ValueSetCodeSystem with _$ValueSetCodeSystem {
   /// Acts like a constructor, returns a [ValueSetCodeSystem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ValueSetCodeSystem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ValueSetCodeSystemFromJson(json);
     } else {
@@ -223,7 +223,7 @@ class ValueSetCodeSystemConcept with _$ValueSetCodeSystemConcept {
   /// Acts like a constructor, returns a [ValueSetCodeSystemConcept], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ValueSetCodeSystemConcept.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ValueSetCodeSystemConceptFromJson(json);
     } else {
@@ -268,7 +268,7 @@ class ValueSetConceptDesignation with _$ValueSetConceptDesignation {
   /// Acts like a constructor, returns a [ValueSetConceptDesignation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ValueSetConceptDesignation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ValueSetConceptDesignationFromJson(json);
     } else {
@@ -312,7 +312,7 @@ class ValueSetCompose with _$ValueSetCompose {
   /// Acts like a constructor, returns a [ValueSetCompose], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ValueSetCompose.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ValueSetComposeFromJson(json);
     } else {
@@ -359,7 +359,7 @@ class ValueSetComposeInclude with _$ValueSetComposeInclude {
   /// Acts like a constructor, returns a [ValueSetComposeInclude], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ValueSetComposeInclude.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ValueSetComposeIncludeFromJson(json);
     } else {
@@ -405,7 +405,7 @@ class ValueSetIncludeConcept with _$ValueSetIncludeConcept {
   /// Acts like a constructor, returns a [ValueSetIncludeConcept], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ValueSetIncludeConcept.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ValueSetIncludeConceptFromJson(json);
     } else {
@@ -452,7 +452,7 @@ class ValueSetIncludeFilter with _$ValueSetIncludeFilter {
   /// Acts like a constructor, returns a [ValueSetIncludeFilter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ValueSetIncludeFilter.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ValueSetIncludeFilterFromJson(json);
     } else {
@@ -503,7 +503,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
   /// Acts like a constructor, returns a [ValueSetExpansion], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ValueSetExpansion.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ValueSetExpansionFromJson(json);
     } else {
@@ -558,7 +558,7 @@ class ValueSetExpansionParameter with _$ValueSetExpansionParameter {
   /// Acts like a constructor, returns a [ValueSetExpansionParameter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ValueSetExpansionParameter.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ValueSetExpansionParameterFromJson(json);
     } else {
@@ -610,7 +610,7 @@ class ValueSetExpansionContains with _$ValueSetExpansionContains {
   /// Acts like a constructor, returns a [ValueSetExpansionContains], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ValueSetExpansionContains.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ValueSetExpansionContainsFromJson(json);
     } else {
@@ -687,7 +687,7 @@ class ConceptMap with Resource, _$ConceptMap {
   /// Acts like a constructor, returns a [ConceptMap], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConceptMap.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConceptMapFromJson(json);
     } else {
@@ -729,7 +729,7 @@ class ConceptMapContact with _$ConceptMapContact {
   /// Acts like a constructor, returns a [ConceptMapContact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConceptMapContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConceptMapContactFromJson(json);
     } else {
@@ -773,7 +773,7 @@ class ConceptMapElement with _$ConceptMapElement {
   /// Acts like a constructor, returns a [ConceptMapElement], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConceptMapElement.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConceptMapElementFromJson(json);
     } else {
@@ -823,7 +823,7 @@ class ConceptMapElementTarget with _$ConceptMapElementTarget {
   /// Acts like a constructor, returns a [ConceptMapElementTarget], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConceptMapElementTarget.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConceptMapElementTargetFromJson(json);
     } else {
@@ -866,7 +866,7 @@ class ConceptMapTargetDependsOn with _$ConceptMapTargetDependsOn {
   /// Acts like a constructor, returns a [ConceptMapTargetDependsOn], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConceptMapTargetDependsOn.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConceptMapTargetDependsOnFromJson(json);
     } else {
@@ -936,7 +936,7 @@ class NamingSystem with Resource, _$NamingSystem {
   /// Acts like a constructor, returns a [NamingSystem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory NamingSystem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$NamingSystemFromJson(json);
     } else {
@@ -978,7 +978,7 @@ class NamingSystemContact with _$NamingSystemContact {
   /// Acts like a constructor, returns a [NamingSystemContact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory NamingSystemContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$NamingSystemContactFromJson(json);
     } else {
@@ -1025,7 +1025,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
   /// Acts like a constructor, returns a [NamingSystemUniqueId], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory NamingSystemUniqueId.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$NamingSystemUniqueIdFromJson(json);
     } else {

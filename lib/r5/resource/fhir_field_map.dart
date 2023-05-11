@@ -8,12 +8,13 @@ class FhirField {
 
 /// Because I don't want to root around in StructureDefinitions just to see
 /// what kind of an object something is or if it's a list, I'm using this
-final fhirFieldMap = {
-  'Element': {
+final Map<String, Map<String, FhirField>> fhirFieldMap =
+    <String, Map<String, FhirField>>{
+  'Element': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
   },
-  'FhirExtension': {
+  'FhirExtension': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'url': const FhirField(false, 'FhirUri'),
@@ -94,14 +95,14 @@ final fhirFieldMap = {
     'valueDosage': const FhirField(false, 'Dosage'),
     'valueMeta': const FhirField(false, 'Meta'),
   },
-  'Narrative': {
+  'Narrative': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'status': const FhirField(false, 'Code'),
     'statusElement': const FhirField(false, 'Element'),
     'div': const FhirField(false, 'Markdown'),
   },
-  'Annotation': {
+  'Annotation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'authorReference': const FhirField(false, 'Reference'),
@@ -112,7 +113,7 @@ final fhirFieldMap = {
     'text': const FhirField(false, 'Markdown'),
     'textElement': const FhirField(false, 'Element'),
   },
-  'Attachment': {
+  'Attachment': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'contentType': const FhirField(false, 'Code'),
@@ -142,7 +143,7 @@ final fhirFieldMap = {
     'pages': const FhirField(false, 'PositiveInt'),
     'pagesElement': const FhirField(false, 'Element'),
   },
-  'Identifier': {
+  'Identifier': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'use': const FhirField(false, 'Code'),
@@ -155,20 +156,20 @@ final fhirFieldMap = {
     'period': const FhirField(false, 'Period'),
     'assigner': const FhirField(false, 'Reference'),
   },
-  'CodeableConcept': {
+  'CodeableConcept': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'coding': const FhirField(true, 'Coding'),
     'text': const FhirField(false, 'String'),
     'textElement': const FhirField(false, 'Element'),
   },
-  'CodeableReference': {
+  'CodeableReference': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'concept': const FhirField(false, 'CodeableConcept'),
     'reference': const FhirField(false, 'Reference'),
   },
-  'Coding': {
+  'Coding': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'system': const FhirField(false, 'FhirUri'),
@@ -182,7 +183,7 @@ final fhirFieldMap = {
     'userSelected': const FhirField(false, 'Boolean'),
     'userSelectedElement': const FhirField(false, 'Element'),
   },
-  'Quantity': {
+  'Quantity': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'value': const FhirField(false, 'Decimal'),
@@ -196,7 +197,7 @@ final fhirFieldMap = {
     'code': const FhirField(false, 'Code'),
     'codeElement': const FhirField(false, 'Element'),
   },
-  'Distance': {
+  'Distance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'value': const FhirField(false, 'Decimal'),
@@ -210,7 +211,7 @@ final fhirFieldMap = {
     'code': const FhirField(false, 'Code'),
     'codeElement': const FhirField(false, 'Element'),
   },
-  'Count': {
+  'Count': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'value': const FhirField(false, 'Decimal'),
@@ -224,7 +225,7 @@ final fhirFieldMap = {
     'code': const FhirField(false, 'Code'),
     'codeElement': const FhirField(false, 'Element'),
   },
-  'FhirDuration': {
+  'FhirDuration': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'value': const FhirField(false, 'Decimal'),
@@ -237,7 +238,7 @@ final fhirFieldMap = {
     'code': const FhirField(false, 'Code'),
     'codeElement': const FhirField(false, 'Element'),
   },
-  'Money': {
+  'Money': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'value': const FhirField(false, 'Decimal'),
@@ -245,7 +246,7 @@ final fhirFieldMap = {
     'currency': const FhirField(false, 'Code'),
     'currencyElement': const FhirField(false, 'Element'),
   },
-  'Age': {
+  'Age': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'value': const FhirField(false, 'Decimal'),
@@ -259,13 +260,13 @@ final fhirFieldMap = {
     'code': const FhirField(false, 'Code'),
     'codeElement': const FhirField(false, 'Element'),
   },
-  'Range': {
+  'Range': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'low': const FhirField(false, 'Quantity'),
     'high': const FhirField(false, 'Quantity'),
   },
-  'Period': {
+  'Period': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'start': const FhirField(false, 'FhirDateTime'),
@@ -273,20 +274,20 @@ final fhirFieldMap = {
     'end': const FhirField(false, 'FhirDateTime'),
     'endElement': const FhirField(false, 'Element'),
   },
-  'Ratio': {
+  'Ratio': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'numerator': const FhirField(false, 'Quantity'),
     'denominator': const FhirField(false, 'Quantity'),
   },
-  'RatioRange': {
+  'RatioRange': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'lowNumerator': const FhirField(false, 'Quantity'),
     'highNumerator': const FhirField(false, 'Quantity'),
     'denominator': const FhirField(false, 'Quantity'),
   },
-  'Reference': {
+  'Reference': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'reference': const FhirField(false, 'String'),
@@ -297,7 +298,7 @@ final fhirFieldMap = {
     'display': const FhirField(false, 'String'),
     'displayElement': const FhirField(false, 'Element'),
   },
-  'SampledData': {
+  'SampledData': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'origin': const FhirField(false, 'Quantity'),
@@ -319,7 +320,7 @@ final fhirFieldMap = {
     'data': const FhirField(false, 'String'),
     'dataElement': const FhirField(false, 'Element'),
   },
-  'Signature': {
+  'Signature': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(true, 'Coding'),
@@ -334,7 +335,7 @@ final fhirFieldMap = {
     'data': const FhirField(false, 'Base64Binary'),
     'dataElement': const FhirField(false, 'Element'),
   },
-  'HumanName': {
+  'HumanName': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'use': const FhirField(false, 'Code'),
@@ -351,7 +352,7 @@ final fhirFieldMap = {
     'suffixElement': const FhirField(true, 'Element'),
     'period': const FhirField(false, 'Period'),
   },
-  'Address': {
+  'Address': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'use': const FhirField(false, 'Code'),
@@ -374,7 +375,7 @@ final fhirFieldMap = {
     'countryElement': const FhirField(false, 'Element'),
     'period': const FhirField(false, 'Period'),
   },
-  'ContactPoint': {
+  'ContactPoint': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'system': const FhirField(false, 'Code'),
@@ -387,7 +388,7 @@ final fhirFieldMap = {
     'rankElement': const FhirField(false, 'Element'),
     'period': const FhirField(false, 'Period'),
   },
-  'Timing': {
+  'Timing': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -396,7 +397,7 @@ final fhirFieldMap = {
     'repeat': const FhirField(false, 'TimingRepeat'),
     'code': const FhirField(false, 'CodeableConcept'),
   },
-  'TimingRepeat': {
+  'TimingRepeat': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -432,7 +433,7 @@ final fhirFieldMap = {
     'offset': const FhirField(false, 'UnsignedInt'),
     'offsetElement': const FhirField(false, 'Element'),
   },
-  'Meta': {
+  'Meta': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'versionId': const FhirField(false, 'Id'),
@@ -445,14 +446,14 @@ final fhirFieldMap = {
     'security': const FhirField(true, 'Coding'),
     'tag': const FhirField(true, 'Coding'),
   },
-  'ContactDetail': {
+  'ContactDetail': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'name': const FhirField(false, 'String'),
     'nameElement': const FhirField(false, 'Element'),
     'telecom': const FhirField(true, 'ContactPoint'),
   },
-  'ExtendedContactDetail': {
+  'ExtendedContactDetail': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'purpose': const FhirField(false, 'CodeableConcept'),
@@ -462,7 +463,7 @@ final fhirFieldMap = {
     'organization': const FhirField(false, 'Reference'),
     'period': const FhirField(false, 'Period'),
   },
-  'VirtualServiceDetail': {
+  'VirtualServiceDetail': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'channelType': const FhirField(false, 'Coding'),
@@ -480,13 +481,13 @@ final fhirFieldMap = {
     'sessionKey': const FhirField(false, 'String'),
     'sessionKeyElement': const FhirField(false, 'Element'),
   },
-  'Availability': {
+  'Availability': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'availableTime': const FhirField(true, 'Time'),
     'notAvailableTime': const FhirField(true, 'Time'),
   },
-  'AvailabilityAvailableTime': {
+  'AvailabilityAvailableTime': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -499,7 +500,7 @@ final fhirFieldMap = {
     'availableEndTime': const FhirField(false, 'Time'),
     'availableEndTimeElement': const FhirField(false, 'Element'),
   },
-  'AvailabilityNotAvailableTime': {
+  'AvailabilityNotAvailableTime': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -507,7 +508,7 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'during': const FhirField(false, 'Period'),
   },
-  'MonetaryComponent': {
+  'MonetaryComponent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'Code'),
@@ -517,7 +518,7 @@ final fhirFieldMap = {
     'factorElement': const FhirField(false, 'Element'),
     'amount': const FhirField(false, 'Money'),
   },
-  'Contributor': {
+  'Contributor': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'Code'),
@@ -526,7 +527,7 @@ final fhirFieldMap = {
     'nameElement': const FhirField(false, 'Element'),
     'contact': const FhirField(true, 'ContactDetail'),
   },
-  'DataRequirement': {
+  'DataRequirement': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'Code'),
@@ -543,7 +544,7 @@ final fhirFieldMap = {
     'limitElement': const FhirField(false, 'Element'),
     'sort': const FhirField(true, 'DataRequirementSort'),
   },
-  'DataRequirementCodeFilter': {
+  'DataRequirementCodeFilter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -554,7 +555,7 @@ final fhirFieldMap = {
     'valueSet': const FhirField(false, 'Canonical'),
     'code': const FhirField(true, 'Coding'),
   },
-  'DataRequirementDateFilter': {
+  'DataRequirementDateFilter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -567,7 +568,7 @@ final fhirFieldMap = {
     'valuePeriod': const FhirField(false, 'Period'),
     'valueDuration': const FhirField(false, 'FhirDuration'),
   },
-  'DataRequirementValueFilter': {
+  'DataRequirementValueFilter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -582,7 +583,7 @@ final fhirFieldMap = {
     'valuePeriod': const FhirField(false, 'Period'),
     'valueDuration': const FhirField(false, 'FhirDuration'),
   },
-  'DataRequirementSort': {
+  'DataRequirementSort': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -591,7 +592,7 @@ final fhirFieldMap = {
     'direction': const FhirField(false, 'Code'),
     'directionElement': const FhirField(false, 'Element'),
   },
-  'ParameterDefinition': {
+  'ParameterDefinition': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'name': const FhirField(false, 'Code'),
@@ -608,7 +609,7 @@ final fhirFieldMap = {
     'typeElement': const FhirField(false, 'Element'),
     'profile': const FhirField(false, 'Canonical'),
   },
-  'RelatedArtifact': {
+  'RelatedArtifact': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'Code'),
@@ -628,7 +629,7 @@ final fhirFieldMap = {
     'publicationDate': const FhirField(false, 'Date'),
     'publicationDateElement': const FhirField(false, 'Element'),
   },
-  'TriggerDefinition': {
+  'TriggerDefinition': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'Code'),
@@ -646,7 +647,7 @@ final fhirFieldMap = {
     'data': const FhirField(true, 'DataRequirement'),
     'condition': const FhirField(false, 'Expression'),
   },
-  'UsageContext': {
+  'UsageContext': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'code': const FhirField(false, 'Coding'),
@@ -655,7 +656,7 @@ final fhirFieldMap = {
     'valueRange': const FhirField(false, 'Range'),
     'valueReference': const FhirField(false, 'Reference'),
   },
-  'Dosage': {
+  'Dosage': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -678,7 +679,7 @@ final fhirFieldMap = {
     'maxDosePerAdministration': const FhirField(false, 'Quantity'),
     'maxDosePerLifetime': const FhirField(false, 'Quantity'),
   },
-  'DosageDoseAndRate': {
+  'DosageDoseAndRate': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -689,7 +690,7 @@ final fhirFieldMap = {
     'rateRange': const FhirField(false, 'Range'),
     'rateQuantity': const FhirField(false, 'Quantity'),
   },
-  'Population': {
+  'Population': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -699,7 +700,7 @@ final fhirFieldMap = {
     'race': const FhirField(false, 'CodeableConcept'),
     'physiologicalCondition': const FhirField(false, 'CodeableConcept'),
   },
-  'ProductShelfLife': {
+  'ProductShelfLife': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -709,7 +710,7 @@ final fhirFieldMap = {
     'periodStringElement': const FhirField(false, 'Element'),
     'specialPrecautionsForStorage': const FhirField(true, 'CodeableConcept'),
   },
-  'MarketingStatus': {
+  'MarketingStatus': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -720,7 +721,7 @@ final fhirFieldMap = {
     'restoreDate': const FhirField(false, 'FhirDateTime'),
     'restoreDateElement': const FhirField(false, 'Element'),
   },
-  'Expression': {
+  'Expression': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'description': const FhirField(false, 'String'),
@@ -734,7 +735,7 @@ final fhirFieldMap = {
     'reference': const FhirField(false, 'FhirUri'),
     'referenceElement': const FhirField(false, 'Element'),
   },
-  'ElementDefinition': {
+  'ElementDefinition': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1058,7 +1059,7 @@ final fhirFieldMap = {
     'binding': const FhirField(false, 'ElementDefinitionBinding'),
     'mapping': const FhirField(true, 'ElementDefinitionMapping'),
   },
-  'ElementDefinitionSlicing': {
+  'ElementDefinitionSlicing': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1070,7 +1071,7 @@ final fhirFieldMap = {
     'rules': const FhirField(false, 'Code'),
     'rulesElement': const FhirField(false, 'Element'),
   },
-  'ElementDefinitionDiscriminator': {
+  'ElementDefinitionDiscriminator': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1079,7 +1080,7 @@ final fhirFieldMap = {
     'path': const FhirField(false, 'String'),
     'pathElement': const FhirField(false, 'Element'),
   },
-  'ElementDefinitionBase': {
+  'ElementDefinitionBase': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1090,7 +1091,7 @@ final fhirFieldMap = {
     'max': const FhirField(false, 'String'),
     'maxElement': const FhirField(false, 'Element'),
   },
-  'ElementDefinitionType': {
+  'ElementDefinitionType': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1103,7 +1104,7 @@ final fhirFieldMap = {
     'versioning': const FhirField(false, 'Code'),
     'versioningElement': const FhirField(false, 'Element'),
   },
-  'ElementDefinitionExample': {
+  'ElementDefinitionExample': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1185,7 +1186,7 @@ final fhirFieldMap = {
     'valueDosage': const FhirField(false, 'Dosage'),
     'valueMeta': const FhirField(false, 'Meta'),
   },
-  'ElementDefinitionConstraint': {
+  'ElementDefinitionConstraint': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1203,7 +1204,7 @@ final fhirFieldMap = {
     'expressionElement': const FhirField(false, 'Element'),
     'source': const FhirField(false, 'Canonical'),
   },
-  'ElementDefinitionObligation': {
+  'ElementDefinitionObligation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1219,7 +1220,7 @@ final fhirFieldMap = {
     'process': const FhirField(true, 'FhirUri'),
     'processElement': const FhirField(true, 'Element'),
   },
-  'ElementDefinitionBinding': {
+  'ElementDefinitionBinding': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1230,7 +1231,7 @@ final fhirFieldMap = {
     'valueSet': const FhirField(false, 'Canonical'),
     'additional': const FhirField(true, 'ElementDefinitionAdditional'),
   },
-  'ElementDefinitionAdditional': {
+  'ElementDefinitionAdditional': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1245,7 +1246,7 @@ final fhirFieldMap = {
     'any': const FhirField(false, 'Boolean'),
     'anyElement': const FhirField(false, 'Element'),
   },
-  'ElementDefinitionMapping': {
+  'ElementDefinitionMapping': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1258,7 +1259,7 @@ final fhirFieldMap = {
     'comment': const FhirField(false, 'Markdown'),
     'commentElement': const FhirField(false, 'Element'),
   },
-  'Account': {
+  'Account': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -1291,7 +1292,7 @@ final fhirFieldMap = {
     'calculatedAt': const FhirField(false, 'Instant'),
     'calculatedAtElement': const FhirField(false, 'Element'),
   },
-  'AccountCoverage': {
+  'AccountCoverage': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1299,7 +1300,7 @@ final fhirFieldMap = {
     'priority': const FhirField(false, 'PositiveInt'),
     'priorityElement': const FhirField(false, 'Element'),
   },
-  'AccountGuarantor': {
+  'AccountGuarantor': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1308,7 +1309,7 @@ final fhirFieldMap = {
     'onHoldElement': const FhirField(false, 'Element'),
     'period': const FhirField(false, 'Period'),
   },
-  'AccountDiagnosis': {
+  'AccountDiagnosis': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1322,7 +1323,7 @@ final fhirFieldMap = {
     'onAdmissionElement': const FhirField(false, 'Element'),
     'packageCode': const FhirField(true, 'CodeableConcept'),
   },
-  'AccountProcedure': {
+  'AccountProcedure': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1335,14 +1336,14 @@ final fhirFieldMap = {
     'packageCode': const FhirField(true, 'CodeableConcept'),
     'device': const FhirField(true, 'Reference'),
   },
-  'AccountRelatedAccount': {
+  'AccountRelatedAccount': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'relationship': const FhirField(false, 'CodeableConcept'),
     'account': const FhirField(false, 'Reference'),
   },
-  'AccountBalance': {
+  'AccountBalance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1352,7 +1353,7 @@ final fhirFieldMap = {
     'estimateElement': const FhirField(false, 'Element'),
     'amount': const FhirField(false, 'Money'),
   },
-  'ActivityDefinition': {
+  'ActivityDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -1444,7 +1445,7 @@ final fhirFieldMap = {
     'transform': const FhirField(false, 'Canonical'),
     'dynamicValue': const FhirField(true, 'ActivityDefinitionDynamicValue'),
   },
-  'ActivityDefinitionParticipant': {
+  'ActivityDefinitionParticipant': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1455,7 +1456,7 @@ final fhirFieldMap = {
     'role': const FhirField(false, 'CodeableConcept'),
     'function': const FhirField(false, 'CodeableConcept'),
   },
-  'ActivityDefinitionDynamicValue': {
+  'ActivityDefinitionDynamicValue': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1463,7 +1464,7 @@ final fhirFieldMap = {
     'pathElement': const FhirField(false, 'Element'),
     'expression': const FhirField(false, 'Expression'),
   },
-  'ActorDefinition': {
+  'ActorDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -1514,7 +1515,7 @@ final fhirFieldMap = {
     'capabilities': const FhirField(false, 'Canonical'),
     'derivedFrom': const FhirField(true, 'Canonical'),
   },
-  'AdministrableProductDefinition': {
+  'AdministrableProductDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -1540,7 +1541,7 @@ final fhirFieldMap = {
     'routeOfAdministration': const FhirField(
         true, 'AdministrableProductDefinitionRouteOfAdministration'),
   },
-  'AdministrableProductDefinitionProperty': {
+  'AdministrableProductDefinitionProperty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1557,7 +1558,7 @@ final fhirFieldMap = {
     'valueReference': const FhirField(false, 'Reference'),
     'status': const FhirField(false, 'CodeableConcept'),
   },
-  'AdministrableProductDefinitionRouteOfAdministration': {
+  'AdministrableProductDefinitionRouteOfAdministration': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1570,7 +1571,7 @@ final fhirFieldMap = {
     'targetSpecies':
         const FhirField(true, 'AdministrableProductDefinitionTargetSpecies'),
   },
-  'AdministrableProductDefinitionTargetSpecies': {
+  'AdministrableProductDefinitionTargetSpecies': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1578,7 +1579,7 @@ final fhirFieldMap = {
     'withdrawalPeriod':
         const FhirField(true, 'AdministrableProductDefinitionWithdrawalPeriod'),
   },
-  'AdministrableProductDefinitionWithdrawalPeriod': {
+  'AdministrableProductDefinitionWithdrawalPeriod': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1587,7 +1588,7 @@ final fhirFieldMap = {
     'supportingInformation': const FhirField(false, 'String'),
     'supportingInformationElement': const FhirField(false, 'Element'),
   },
-  'AdverseEvent': {
+  'AdverseEvent': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -1632,14 +1633,14 @@ final fhirFieldMap = {
     'supportingInfo': const FhirField(true, 'AdverseEventSupportingInfo'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'AdverseEventParticipant': {
+  'AdverseEventParticipant': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'AdverseEventSuspectEntity': {
+  'AdverseEventSuspectEntity': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1647,7 +1648,7 @@ final fhirFieldMap = {
     'instanceReference': const FhirField(false, 'Reference'),
     'causality': const FhirField(false, 'AdverseEventCausality'),
   },
-  'AdverseEventCausality': {
+  'AdverseEventCausality': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1655,35 +1656,35 @@ final fhirFieldMap = {
     'entityRelatedness': const FhirField(false, 'CodeableConcept'),
     'author': const FhirField(false, 'Reference'),
   },
-  'AdverseEventContributingFactor': {
+  'AdverseEventContributingFactor': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'itemReference': const FhirField(false, 'Reference'),
     'itemCodeableConcept': const FhirField(false, 'CodeableConcept'),
   },
-  'AdverseEventPreventiveAction': {
+  'AdverseEventPreventiveAction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'itemReference': const FhirField(false, 'Reference'),
     'itemCodeableConcept': const FhirField(false, 'CodeableConcept'),
   },
-  'AdverseEventMitigatingAction': {
+  'AdverseEventMitigatingAction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'itemReference': const FhirField(false, 'Reference'),
     'itemCodeableConcept': const FhirField(false, 'CodeableConcept'),
   },
-  'AdverseEventSupportingInfo': {
+  'AdverseEventSupportingInfo': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'itemReference': const FhirField(false, 'Reference'),
     'itemCodeableConcept': const FhirField(false, 'CodeableConcept'),
   },
-  'AllergyIntolerance': {
+  'AllergyIntolerance': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -1720,14 +1721,14 @@ final fhirFieldMap = {
     'note': const FhirField(true, 'Annotation'),
     'reaction': const FhirField(true, 'AllergyIntoleranceReaction'),
   },
-  'AllergyIntoleranceParticipant': {
+  'AllergyIntoleranceParticipant': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'AllergyIntoleranceReaction': {
+  'AllergyIntoleranceReaction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1742,7 +1743,7 @@ final fhirFieldMap = {
     'exposureRoute': const FhirField(false, 'CodeableConcept'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'Appointment': {
+  'Appointment': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -1796,7 +1797,7 @@ final fhirFieldMap = {
     'recurrenceTemplate':
         const FhirField(true, 'AppointmentRecurrenceTemplate'),
   },
-  'AppointmentParticipant': {
+  'AppointmentParticipant': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1808,7 +1809,7 @@ final fhirFieldMap = {
     'status': const FhirField(false, 'Code'),
     'statusElement': const FhirField(false, 'Element'),
   },
-  'AppointmentRecurrenceTemplate': {
+  'AppointmentRecurrenceTemplate': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1828,7 +1829,7 @@ final fhirFieldMap = {
     'excludingRecurrenceId': const FhirField(true, 'PositiveInt'),
     'excludingRecurrenceIdElement': const FhirField(true, 'Element'),
   },
-  'AppointmentWeeklyTemplate': {
+  'AppointmentWeeklyTemplate': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1849,7 +1850,7 @@ final fhirFieldMap = {
     'weekInterval': const FhirField(false, 'PositiveInt'),
     'weekIntervalElement': const FhirField(false, 'Element'),
   },
-  'AppointmentMonthlyTemplate': {
+  'AppointmentMonthlyTemplate': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1860,14 +1861,14 @@ final fhirFieldMap = {
     'monthInterval': const FhirField(false, 'PositiveInt'),
     'monthIntervalElement': const FhirField(false, 'Element'),
   },
-  'AppointmentYearlyTemplate': {
+  'AppointmentYearlyTemplate': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'yearInterval': const FhirField(false, 'PositiveInt'),
     'yearIntervalElement': const FhirField(false, 'Element'),
   },
-  'AppointmentResponse': {
+  'AppointmentResponse': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -1899,7 +1900,7 @@ final fhirFieldMap = {
     'recurrenceId': const FhirField(false, 'PositiveInt'),
     'recurrenceIdElement': const FhirField(false, 'Element'),
   },
-  'ArtifactAssessment': {
+  'ArtifactAssessment': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -1935,7 +1936,7 @@ final fhirFieldMap = {
     'disposition': const FhirField(false, 'Code'),
     'dispositionElement': const FhirField(false, 'Element'),
   },
-  'ArtifactAssessmentContent': {
+  'ArtifactAssessmentContent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -1954,7 +1955,7 @@ final fhirFieldMap = {
     'freeToShareElement': const FhirField(false, 'Element'),
     'component': const FhirField(true, 'ArtifactAssessmentContent'),
   },
-  'AuditEvent': {
+  'AuditEvent': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -1985,14 +1986,14 @@ final fhirFieldMap = {
     'source': const FhirField(false, 'AuditEventSource'),
     'entity': const FhirField(true, 'AuditEventEntity'),
   },
-  'AuditEventOutcome': {
+  'AuditEventOutcome': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'code': const FhirField(false, 'Coding'),
     'detail': const FhirField(true, 'CodeableConcept'),
   },
-  'AuditEventAgent': {
+  'AuditEventAgent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2011,7 +2012,7 @@ final fhirFieldMap = {
     'networkStringElement': const FhirField(false, 'Element'),
     'authorization': const FhirField(true, 'CodeableConcept'),
   },
-  'AuditEventSource': {
+  'AuditEventSource': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2019,7 +2020,7 @@ final fhirFieldMap = {
     'observer': const FhirField(false, 'Reference'),
     'type': const FhirField(true, 'CodeableConcept'),
   },
-  'AuditEventEntity': {
+  'AuditEventEntity': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2031,7 +2032,7 @@ final fhirFieldMap = {
     'detail': const FhirField(true, 'AuditEventDetail'),
     'agent': const FhirField(true, 'AuditEventAgent'),
   },
-  'AuditEventDetail': {
+  'AuditEventDetail': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2054,7 +2055,7 @@ final fhirFieldMap = {
     'valueBase64Binary': const FhirField(false, 'Base64Binary'),
     'valueBase64BinaryElement': const FhirField(false, 'Element'),
   },
-  'Basic': {
+  'Basic': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -2072,7 +2073,7 @@ final fhirFieldMap = {
     'createdElement': const FhirField(false, 'Element'),
     'author': const FhirField(false, 'Reference'),
   },
-  'Binary': {
+  'Binary': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -2085,7 +2086,7 @@ final fhirFieldMap = {
     'data': const FhirField(false, 'Base64Binary'),
     'dataElement': const FhirField(false, 'Element'),
   },
-  'BiologicallyDerivedProduct': {
+  'BiologicallyDerivedProduct': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -2113,7 +2114,7 @@ final fhirFieldMap = {
     'storageTempRequirements': const FhirField(false, 'Range'),
     'property': const FhirField(true, 'BiologicallyDerivedProductProperty'),
   },
-  'BiologicallyDerivedProductCollection': {
+  'BiologicallyDerivedProductCollection': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2123,7 +2124,7 @@ final fhirFieldMap = {
     'collectedDateTimeElement': const FhirField(false, 'Element'),
     'collectedPeriod': const FhirField(false, 'Period'),
   },
-  'BiologicallyDerivedProductProperty': {
+  'BiologicallyDerivedProductProperty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2141,7 +2142,7 @@ final fhirFieldMap = {
     'valueStringElement': const FhirField(false, 'Element'),
     'valueAttachment': const FhirField(false, 'Attachment'),
   },
-  'BiologicallyDerivedProductDispense': {
+  'BiologicallyDerivedProductDispense': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -2174,14 +2175,14 @@ final fhirFieldMap = {
     'usageInstruction': const FhirField(false, 'String'),
     'usageInstructionElement': const FhirField(false, 'Element'),
   },
-  'BiologicallyDerivedProductDispensePerformer': {
+  'BiologicallyDerivedProductDispensePerformer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'BodyStructure': {
+  'BodyStructure': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -2205,7 +2206,7 @@ final fhirFieldMap = {
     'image': const FhirField(true, 'Attachment'),
     'patient': const FhirField(false, 'Reference'),
   },
-  'BodyStructureIncludedStructure': {
+  'BodyStructureIncludedStructure': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2216,7 +2217,7 @@ final fhirFieldMap = {
     'spatialReference': const FhirField(true, 'Reference'),
     'qualifier': const FhirField(true, 'CodeableConcept'),
   },
-  'BodyStructureBodyLandmarkOrientation': {
+  'BodyStructureBodyLandmarkOrientation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2226,14 +2227,14 @@ final fhirFieldMap = {
         const FhirField(true, 'BodyStructureDistanceFromLandmark'),
     'surfaceOrientation': const FhirField(true, 'CodeableConcept'),
   },
-  'BodyStructureDistanceFromLandmark': {
+  'BodyStructureDistanceFromLandmark': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'device': const FhirField(true, 'CodeableReference'),
     'value': const FhirField(true, 'Quantity'),
   },
-  'Bundle': {
+  'Bundle': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -2252,7 +2253,7 @@ final fhirFieldMap = {
     'signature': const FhirField(false, 'Signature'),
     'issues': const FhirField(false, 'ResourceList'),
   },
-  'BundleLink': {
+  'BundleLink': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2261,7 +2262,7 @@ final fhirFieldMap = {
     'url': const FhirField(false, 'FhirUri'),
     'urlElement': const FhirField(false, 'Element'),
   },
-  'BundleEntry': {
+  'BundleEntry': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2273,7 +2274,7 @@ final fhirFieldMap = {
     'request': const FhirField(false, 'BundleRequest'),
     'response': const FhirField(false, 'BundleResponse'),
   },
-  'BundleSearch': {
+  'BundleSearch': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2282,7 +2283,7 @@ final fhirFieldMap = {
     'score': const FhirField(false, 'Decimal'),
     'scoreElement': const FhirField(false, 'Element'),
   },
-  'BundleRequest': {
+  'BundleRequest': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2299,7 +2300,7 @@ final fhirFieldMap = {
     'ifNoneExist': const FhirField(false, 'String'),
     'ifNoneExistElement': const FhirField(false, 'Element'),
   },
-  'BundleResponse': {
+  'BundleResponse': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2313,7 +2314,7 @@ final fhirFieldMap = {
     'lastModifiedElement': const FhirField(false, 'Element'),
     'outcome': const FhirField(false, 'ResourceList'),
   },
-  'CapabilityStatement': {
+  'CapabilityStatement': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -2375,7 +2376,7 @@ final fhirFieldMap = {
     'messaging': const FhirField(true, 'CapabilityStatementMessaging'),
     'document': const FhirField(true, 'CapabilityStatementDocument'),
   },
-  'CapabilityStatementSoftware': {
+  'CapabilityStatementSoftware': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2386,7 +2387,7 @@ final fhirFieldMap = {
     'releaseDate': const FhirField(false, 'FhirDateTime'),
     'releaseDateElement': const FhirField(false, 'Element'),
   },
-  'CapabilityStatementImplementation': {
+  'CapabilityStatementImplementation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2396,7 +2397,7 @@ final fhirFieldMap = {
     'urlElement': const FhirField(false, 'Element'),
     'custodian': const FhirField(false, 'Reference'),
   },
-  'CapabilityStatementRest': {
+  'CapabilityStatementRest': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2411,7 +2412,7 @@ final fhirFieldMap = {
     'operation': const FhirField(true, 'CapabilityStatementOperation'),
     'compartment': const FhirField(true, 'Canonical'),
   },
-  'CapabilityStatementSecurity': {
+  'CapabilityStatementSecurity': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2421,7 +2422,7 @@ final fhirFieldMap = {
     'description': const FhirField(false, 'Markdown'),
     'descriptionElement': const FhirField(false, 'Element'),
   },
-  'CapabilityStatementResource': {
+  'CapabilityStatementResource': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2457,7 +2458,7 @@ final fhirFieldMap = {
     'searchParam': const FhirField(true, 'CapabilityStatementSearchParam'),
     'operation': const FhirField(true, 'CapabilityStatementOperation'),
   },
-  'CapabilityStatementInteraction': {
+  'CapabilityStatementInteraction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2466,7 +2467,7 @@ final fhirFieldMap = {
     'documentation': const FhirField(false, 'Markdown'),
     'documentationElement': const FhirField(false, 'Element'),
   },
-  'CapabilityStatementSearchParam': {
+  'CapabilityStatementSearchParam': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2478,7 +2479,7 @@ final fhirFieldMap = {
     'documentation': const FhirField(false, 'Markdown'),
     'documentationElement': const FhirField(false, 'Element'),
   },
-  'CapabilityStatementOperation': {
+  'CapabilityStatementOperation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2488,7 +2489,7 @@ final fhirFieldMap = {
     'documentation': const FhirField(false, 'Markdown'),
     'documentationElement': const FhirField(false, 'Element'),
   },
-  'CapabilityStatementInteraction1': {
+  'CapabilityStatementInteraction1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2497,7 +2498,7 @@ final fhirFieldMap = {
     'documentation': const FhirField(false, 'Markdown'),
     'documentationElement': const FhirField(false, 'Element'),
   },
-  'CapabilityStatementMessaging': {
+  'CapabilityStatementMessaging': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2509,7 +2510,7 @@ final fhirFieldMap = {
     'supportedMessage':
         const FhirField(true, 'CapabilityStatementSupportedMessage'),
   },
-  'CapabilityStatementEndpoint': {
+  'CapabilityStatementEndpoint': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2517,7 +2518,7 @@ final fhirFieldMap = {
     'address': const FhirField(false, 'FhirUrl'),
     'addressElement': const FhirField(false, 'Element'),
   },
-  'CapabilityStatementSupportedMessage': {
+  'CapabilityStatementSupportedMessage': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2525,7 +2526,7 @@ final fhirFieldMap = {
     'modeElement': const FhirField(false, 'Element'),
     'definition': const FhirField(false, 'Canonical'),
   },
-  'CapabilityStatementDocument': {
+  'CapabilityStatementDocument': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2535,7 +2536,7 @@ final fhirFieldMap = {
     'documentationElement': const FhirField(false, 'Element'),
     'profile': const FhirField(false, 'Canonical'),
   },
-  'CarePlan': {
+  'CarePlan': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -2576,7 +2577,7 @@ final fhirFieldMap = {
     'activity': const FhirField(true, 'CarePlanActivity'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'CarePlanActivity': {
+  'CarePlanActivity': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2584,7 +2585,7 @@ final fhirFieldMap = {
     'progress': const FhirField(true, 'Annotation'),
     'plannedActivityReference': const FhirField(false, 'Reference'),
   },
-  'CarePlanPlannedActivityDetail': {
+  'CarePlanPlannedActivityDetail': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2617,7 +2618,7 @@ final fhirFieldMap = {
     'description': const FhirField(false, 'String'),
     'descriptionElement': const FhirField(false, 'Element'),
   },
-  'CareTeam': {
+  'CareTeam': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -2642,7 +2643,7 @@ final fhirFieldMap = {
     'telecom': const FhirField(true, 'ContactPoint'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'CareTeamParticipant': {
+  'CareTeamParticipant': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2652,7 +2653,7 @@ final fhirFieldMap = {
     'coveragePeriod': const FhirField(false, 'Period'),
     'coverageTiming': const FhirField(false, 'Timing'),
   },
-  'ChargeItem': {
+  'ChargeItem': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -2696,14 +2697,14 @@ final fhirFieldMap = {
     'note': const FhirField(true, 'Annotation'),
     'supportingInformation': const FhirField(true, 'Reference'),
   },
-  'ChargeItemPerformer': {
+  'ChargeItemPerformer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'ChargeItemDefinition': {
+  'ChargeItemDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -2765,7 +2766,7 @@ final fhirFieldMap = {
     'applicability': const FhirField(true, 'ChargeItemDefinitionApplicability'),
     'propertyGroup': const FhirField(true, 'ChargeItemDefinitionPropertyGroup'),
   },
-  'ChargeItemDefinitionApplicability': {
+  'ChargeItemDefinitionApplicability': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2773,14 +2774,14 @@ final fhirFieldMap = {
     'effectivePeriod': const FhirField(false, 'Period'),
     'relatedArtifact': const FhirField(false, 'RelatedArtifact'),
   },
-  'ChargeItemDefinitionPropertyGroup': {
+  'ChargeItemDefinitionPropertyGroup': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'applicability': const FhirField(true, 'ChargeItemDefinitionApplicability'),
     'priceComponent': const FhirField(true, 'MonetaryComponent'),
   },
-  'Citation': {
+  'Citation': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -2840,7 +2841,7 @@ final fhirFieldMap = {
     'statusDate': const FhirField(true, 'Date'),
     'citedArtifact': const FhirField(false, 'CitationCitedArtifact'),
   },
-  'CitationSummary': {
+  'CitationSummary': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2848,14 +2849,14 @@ final fhirFieldMap = {
     'text': const FhirField(false, 'Markdown'),
     'textElement': const FhirField(false, 'Element'),
   },
-  'CitationClassification': {
+  'CitationClassification': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'CodeableConcept'),
     'classifier': const FhirField(true, 'CodeableConcept'),
   },
-  'CitationStatusDate': {
+  'CitationStatusDate': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2864,7 +2865,7 @@ final fhirFieldMap = {
     'actualElement': const FhirField(false, 'Element'),
     'period': const FhirField(false, 'Period'),
   },
-  'CitationCitedArtifact': {
+  'CitationCitedArtifact': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2885,7 +2886,7 @@ final fhirFieldMap = {
     'contributorship': const FhirField(false, 'CitationContributorship'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'CitationVersion': {
+  'CitationVersion': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2893,7 +2894,7 @@ final fhirFieldMap = {
     'valueElement': const FhirField(false, 'Element'),
     'baseCitation': const FhirField(false, 'Reference'),
   },
-  'CitationStatusDate1': {
+  'CitationStatusDate1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2902,7 +2903,7 @@ final fhirFieldMap = {
     'actualElement': const FhirField(false, 'Element'),
     'period': const FhirField(false, 'Period'),
   },
-  'CitationTitle': {
+  'CitationTitle': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2911,7 +2912,7 @@ final fhirFieldMap = {
     'text': const FhirField(false, 'Markdown'),
     'textElement': const FhirField(false, 'Element'),
   },
-  'CitationAbstract': {
+  'CitationAbstract': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2922,7 +2923,7 @@ final fhirFieldMap = {
     'copyright': const FhirField(false, 'Markdown'),
     'copyrightElement': const FhirField(false, 'Element'),
   },
-  'CitationPart': {
+  'CitationPart': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2931,7 +2932,7 @@ final fhirFieldMap = {
     'valueElement': const FhirField(false, 'Element'),
     'baseCitation': const FhirField(false, 'Reference'),
   },
-  'CitationRelatesTo': {
+  'CitationRelatesTo': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2949,7 +2950,7 @@ final fhirFieldMap = {
     'resourceElement': const FhirField(false, 'Element'),
     'resourceReference': const FhirField(false, 'Reference'),
   },
-  'CitationPublicationForm': {
+  'CitationPublicationForm': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2981,7 +2982,7 @@ final fhirFieldMap = {
     'copyright': const FhirField(false, 'Markdown'),
     'copyrightElement': const FhirField(false, 'Element'),
   },
-  'CitationPublishedIn': {
+  'CitationPublishedIn': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -2993,7 +2994,7 @@ final fhirFieldMap = {
     'publisherLocation': const FhirField(false, 'String'),
     'publisherLocationElement': const FhirField(false, 'Element'),
   },
-  'CitationWebLocation': {
+  'CitationWebLocation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3001,7 +3002,7 @@ final fhirFieldMap = {
     'url': const FhirField(false, 'FhirUri'),
     'urlElement': const FhirField(false, 'Element'),
   },
-  'CitationClassification1': {
+  'CitationClassification1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3009,7 +3010,7 @@ final fhirFieldMap = {
     'classifier': const FhirField(true, 'CodeableConcept'),
     'artifactAssessment': const FhirField(true, 'Reference'),
   },
-  'CitationContributorship': {
+  'CitationContributorship': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3018,7 +3019,7 @@ final fhirFieldMap = {
     'entry': const FhirField(true, 'CitationEntry'),
     'summary': const FhirField(true, 'CitationSummary1'),
   },
-  'CitationEntry': {
+  'CitationEntry': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3035,7 +3036,7 @@ final fhirFieldMap = {
     'rankingOrder': const FhirField(false, 'PositiveInt'),
     'rankingOrderElement': const FhirField(false, 'Element'),
   },
-  'CitationContributionInstance': {
+  'CitationContributionInstance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3043,7 +3044,7 @@ final fhirFieldMap = {
     'time': const FhirField(false, 'FhirDateTime'),
     'timeElement': const FhirField(false, 'Element'),
   },
-  'CitationSummary1': {
+  'CitationSummary1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3053,7 +3054,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'Markdown'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'Claim': {
+  'Claim': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -3100,7 +3101,7 @@ final fhirFieldMap = {
     'item': const FhirField(true, 'ClaimItem'),
     'total': const FhirField(false, 'Money'),
   },
-  'ClaimRelated': {
+  'ClaimRelated': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3108,14 +3109,14 @@ final fhirFieldMap = {
     'relationship': const FhirField(false, 'CodeableConcept'),
     'reference': const FhirField(false, 'Identifier'),
   },
-  'ClaimPayee': {
+  'ClaimPayee': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'CodeableConcept'),
     'party': const FhirField(false, 'Reference'),
   },
-  'ClaimEvent': {
+  'ClaimEvent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3124,7 +3125,7 @@ final fhirFieldMap = {
     'whenDateTimeElement': const FhirField(false, 'Element'),
     'whenPeriod': const FhirField(false, 'Period'),
   },
-  'ClaimCareTeam': {
+  'ClaimCareTeam': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3136,7 +3137,7 @@ final fhirFieldMap = {
     'role': const FhirField(false, 'CodeableConcept'),
     'specialty': const FhirField(false, 'CodeableConcept'),
   },
-  'ClaimSupportingInfo': {
+  'ClaimSupportingInfo': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3157,7 +3158,7 @@ final fhirFieldMap = {
     'valueIdentifier': const FhirField(false, 'Identifier'),
     'reason': const FhirField(false, 'CodeableConcept'),
   },
-  'ClaimDiagnosis': {
+  'ClaimDiagnosis': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3168,7 +3169,7 @@ final fhirFieldMap = {
     'type': const FhirField(true, 'CodeableConcept'),
     'onAdmission': const FhirField(false, 'CodeableConcept'),
   },
-  'ClaimProcedure': {
+  'ClaimProcedure': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3181,7 +3182,7 @@ final fhirFieldMap = {
     'procedureReference': const FhirField(false, 'Reference'),
     'udi': const FhirField(true, 'Reference'),
   },
-  'ClaimInsurance': {
+  'ClaimInsurance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3197,7 +3198,7 @@ final fhirFieldMap = {
     'preAuthRefElement': const FhirField(true, 'Element'),
     'claimResponse': const FhirField(false, 'Reference'),
   },
-  'ClaimAccident': {
+  'ClaimAccident': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3207,7 +3208,7 @@ final fhirFieldMap = {
     'locationAddress': const FhirField(false, 'Address'),
     'locationReference': const FhirField(false, 'Reference'),
   },
-  'ClaimItem': {
+  'ClaimItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3247,14 +3248,14 @@ final fhirFieldMap = {
     'encounter': const FhirField(true, 'Reference'),
     'detail': const FhirField(true, 'ClaimDetail'),
   },
-  'ClaimBodySite': {
+  'ClaimBodySite': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'site': const FhirField(true, 'CodeableReference'),
     'subSite': const FhirField(true, 'CodeableConcept'),
   },
-  'ClaimDetail': {
+  'ClaimDetail': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3277,7 +3278,7 @@ final fhirFieldMap = {
     'udi': const FhirField(true, 'Reference'),
     'subDetail': const FhirField(true, 'ClaimSubDetail'),
   },
-  'ClaimSubDetail': {
+  'ClaimSubDetail': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3299,7 +3300,7 @@ final fhirFieldMap = {
     'net': const FhirField(false, 'Money'),
     'udi': const FhirField(true, 'Reference'),
   },
-  'ClaimResponse': {
+  'ClaimResponse': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -3349,7 +3350,7 @@ final fhirFieldMap = {
     'insurance': const FhirField(true, 'ClaimResponseInsurance'),
     'error': const FhirField(true, 'ClaimResponseError'),
   },
-  'ClaimResponseEvent': {
+  'ClaimResponseEvent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3358,7 +3359,7 @@ final fhirFieldMap = {
     'whenDateTimeElement': const FhirField(false, 'Element'),
     'whenPeriod': const FhirField(false, 'Period'),
   },
-  'ClaimResponseItem': {
+  'ClaimResponseItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3371,7 +3372,7 @@ final fhirFieldMap = {
     'adjudication': const FhirField(true, 'ClaimResponseAdjudication'),
     'detail': const FhirField(true, 'ClaimResponseDetail'),
   },
-  'ClaimResponseReviewOutcome': {
+  'ClaimResponseReviewOutcome': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3381,7 +3382,7 @@ final fhirFieldMap = {
     'preAuthRefElement': const FhirField(false, 'Element'),
     'preAuthPeriod': const FhirField(false, 'Period'),
   },
-  'ClaimResponseAdjudication': {
+  'ClaimResponseAdjudication': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3390,7 +3391,7 @@ final fhirFieldMap = {
     'amount': const FhirField(false, 'Money'),
     'quantity': const FhirField(false, 'Quantity'),
   },
-  'ClaimResponseDetail': {
+  'ClaimResponseDetail': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3403,7 +3404,7 @@ final fhirFieldMap = {
     'adjudication': const FhirField(true, 'ClaimResponseAdjudication'),
     'subDetail': const FhirField(true, 'ClaimResponseSubDetail'),
   },
-  'ClaimResponseSubDetail': {
+  'ClaimResponseSubDetail': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3415,7 +3416,7 @@ final fhirFieldMap = {
     'reviewOutcome': const FhirField(false, 'ClaimResponseReviewOutcome'),
     'adjudication': const FhirField(true, 'ClaimResponseAdjudication'),
   },
-  'ClaimResponseAddItem': {
+  'ClaimResponseAddItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3452,14 +3453,14 @@ final fhirFieldMap = {
     'adjudication': const FhirField(true, 'ClaimResponseAdjudication'),
     'detail': const FhirField(true, 'ClaimResponseDetail1'),
   },
-  'ClaimResponseBodySite': {
+  'ClaimResponseBodySite': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'site': const FhirField(true, 'CodeableReference'),
     'subSite': const FhirField(true, 'CodeableConcept'),
   },
-  'ClaimResponseDetail1': {
+  'ClaimResponseDetail1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3480,7 +3481,7 @@ final fhirFieldMap = {
     'adjudication': const FhirField(true, 'ClaimResponseAdjudication'),
     'subDetail': const FhirField(true, 'ClaimResponseSubDetail1'),
   },
-  'ClaimResponseSubDetail1': {
+  'ClaimResponseSubDetail1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3500,14 +3501,14 @@ final fhirFieldMap = {
     'reviewOutcome': const FhirField(false, 'ClaimResponseReviewOutcome'),
     'adjudication': const FhirField(true, 'ClaimResponseAdjudication'),
   },
-  'ClaimResponseTotal': {
+  'ClaimResponseTotal': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'category': const FhirField(false, 'CodeableConcept'),
     'amount': const FhirField(false, 'Money'),
   },
-  'ClaimResponsePayment': {
+  'ClaimResponsePayment': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3519,7 +3520,7 @@ final fhirFieldMap = {
     'amount': const FhirField(false, 'Money'),
     'identifier': const FhirField(false, 'Identifier'),
   },
-  'ClaimResponseProcessNote': {
+  'ClaimResponseProcessNote': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3530,7 +3531,7 @@ final fhirFieldMap = {
     'textElement': const FhirField(false, 'Element'),
     'language': const FhirField(false, 'CodeableConcept'),
   },
-  'ClaimResponseInsurance': {
+  'ClaimResponseInsurance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3543,7 +3544,7 @@ final fhirFieldMap = {
     'businessArrangementElement': const FhirField(false, 'Element'),
     'claimResponse': const FhirField(false, 'Reference'),
   },
-  'ClaimResponseError': {
+  'ClaimResponseError': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3557,7 +3558,7 @@ final fhirFieldMap = {
     'expression': const FhirField(true, 'String'),
     'expressionElement': const FhirField(true, 'Element'),
   },
-  'ClinicalImpression': {
+  'ClinicalImpression': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -3595,7 +3596,7 @@ final fhirFieldMap = {
     'supportingInfo': const FhirField(true, 'Reference'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'ClinicalImpressionFinding': {
+  'ClinicalImpressionFinding': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3603,7 +3604,7 @@ final fhirFieldMap = {
     'basis': const FhirField(false, 'String'),
     'basisElement': const FhirField(false, 'Element'),
   },
-  'ClinicalUseDefinition': {
+  'ClinicalUseDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -3630,7 +3631,7 @@ final fhirFieldMap = {
         const FhirField(false, 'ClinicalUseDefinitionUndesirableEffect'),
     'warning': const FhirField(false, 'ClinicalUseDefinitionWarning'),
   },
-  'ClinicalUseDefinitionContraindication': {
+  'ClinicalUseDefinitionContraindication': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3641,14 +3642,14 @@ final fhirFieldMap = {
     'applicability': const FhirField(false, 'Expression'),
     'otherTherapy': const FhirField(true, 'ClinicalUseDefinitionOtherTherapy'),
   },
-  'ClinicalUseDefinitionOtherTherapy': {
+  'ClinicalUseDefinitionOtherTherapy': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'relationshipType': const FhirField(false, 'CodeableConcept'),
     'treatment': const FhirField(false, 'CodeableReference'),
   },
-  'ClinicalUseDefinitionIndication': {
+  'ClinicalUseDefinitionIndication': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3663,7 +3664,7 @@ final fhirFieldMap = {
     'applicability': const FhirField(false, 'Expression'),
     'otherTherapy': const FhirField(true, 'ClinicalUseDefinitionOtherTherapy'),
   },
-  'ClinicalUseDefinitionInteraction': {
+  'ClinicalUseDefinitionInteraction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3673,14 +3674,14 @@ final fhirFieldMap = {
     'incidence': const FhirField(false, 'CodeableConcept'),
     'management': const FhirField(true, 'CodeableConcept'),
   },
-  'ClinicalUseDefinitionInteractant': {
+  'ClinicalUseDefinitionInteractant': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'itemReference': const FhirField(false, 'Reference'),
     'itemCodeableConcept': const FhirField(false, 'CodeableConcept'),
   },
-  'ClinicalUseDefinitionUndesirableEffect': {
+  'ClinicalUseDefinitionUndesirableEffect': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3688,7 +3689,7 @@ final fhirFieldMap = {
     'classification': const FhirField(false, 'CodeableConcept'),
     'frequencyOfOccurrence': const FhirField(false, 'CodeableConcept'),
   },
-  'ClinicalUseDefinitionWarning': {
+  'ClinicalUseDefinitionWarning': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3696,7 +3697,7 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'code': const FhirField(false, 'CodeableConcept'),
   },
-  'CodeSystem': {
+  'CodeSystem': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -3767,7 +3768,7 @@ final fhirFieldMap = {
     'property': const FhirField(true, 'CodeSystemProperty'),
     'concept': const FhirField(true, 'CodeSystemConcept'),
   },
-  'CodeSystemFilter': {
+  'CodeSystemFilter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3780,7 +3781,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'String'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'CodeSystemProperty': {
+  'CodeSystemProperty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3793,7 +3794,7 @@ final fhirFieldMap = {
     'type': const FhirField(false, 'Code'),
     'typeElement': const FhirField(false, 'Element'),
   },
-  'CodeSystemConcept': {
+  'CodeSystemConcept': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3807,7 +3808,7 @@ final fhirFieldMap = {
     'property': const FhirField(true, 'CodeSystemProperty1'),
     'concept': const FhirField(true, 'CodeSystemConcept'),
   },
-  'CodeSystemDesignation': {
+  'CodeSystemDesignation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3818,7 +3819,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'String'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'CodeSystemProperty1': {
+  'CodeSystemProperty1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3838,7 +3839,7 @@ final fhirFieldMap = {
     'valueDecimal': const FhirField(false, 'Decimal'),
     'valueDecimalElement': const FhirField(false, 'Element'),
   },
-  'Communication': {
+  'Communication': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -3877,7 +3878,7 @@ final fhirFieldMap = {
     'payload': const FhirField(true, 'CommunicationPayload'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'CommunicationPayload': {
+  'CommunicationPayload': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3885,7 +3886,7 @@ final fhirFieldMap = {
     'contentReference': const FhirField(false, 'Reference'),
     'contentCodeableConcept': const FhirField(false, 'CodeableConcept'),
   },
-  'CommunicationRequest': {
+  'CommunicationRequest': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -3926,7 +3927,7 @@ final fhirFieldMap = {
     'reason': const FhirField(true, 'CodeableReference'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'CommunicationRequestPayload': {
+  'CommunicationRequestPayload': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3934,7 +3935,7 @@ final fhirFieldMap = {
     'contentReference': const FhirField(false, 'Reference'),
     'contentCodeableConcept': const FhirField(false, 'CodeableConcept'),
   },
-  'CompartmentDefinition': {
+  'CompartmentDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -3982,7 +3983,7 @@ final fhirFieldMap = {
     'searchElement': const FhirField(false, 'Element'),
     'resource': const FhirField(true, 'CompartmentDefinitionResource'),
   },
-  'CompartmentDefinitionResource': {
+  'CompartmentDefinitionResource': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -3997,7 +3998,7 @@ final fhirFieldMap = {
     'endParam': const FhirField(false, 'FhirUri'),
     'endParamElement': const FhirField(false, 'Element'),
   },
-  'Composition': {
+  'Composition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -4034,7 +4035,7 @@ final fhirFieldMap = {
     'event': const FhirField(true, 'CompositionEvent'),
     'section': const FhirField(true, 'CompositionSection'),
   },
-  'CompositionAttester': {
+  'CompositionAttester': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4043,14 +4044,14 @@ final fhirFieldMap = {
     'timeElement': const FhirField(false, 'Element'),
     'party': const FhirField(false, 'Reference'),
   },
-  'CompositionEvent': {
+  'CompositionEvent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'period': const FhirField(false, 'Period'),
     'detail': const FhirField(true, 'CodeableReference'),
   },
-  'CompositionSection': {
+  'CompositionSection': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4065,7 +4066,7 @@ final fhirFieldMap = {
     'emptyReason': const FhirField(false, 'CodeableConcept'),
     'section': const FhirField(true, 'CompositionSection'),
   },
-  'ConceptMap': {
+  'ConceptMap': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -4131,7 +4132,7 @@ final fhirFieldMap = {
     'targetScopeCanonicalElement': const FhirField(false, 'Element'),
     'group': const FhirField(true, 'ConceptMapGroup'),
   },
-  'ConceptMapProperty': {
+  'ConceptMapProperty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4145,7 +4146,7 @@ final fhirFieldMap = {
     'typeElement': const FhirField(false, 'Element'),
     'system': const FhirField(false, 'Canonical'),
   },
-  'ConceptMapAdditionalAttribute': {
+  'ConceptMapAdditionalAttribute': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4158,7 +4159,7 @@ final fhirFieldMap = {
     'type': const FhirField(false, 'Code'),
     'typeElement': const FhirField(false, 'Element'),
   },
-  'ConceptMapGroup': {
+  'ConceptMapGroup': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4167,7 +4168,7 @@ final fhirFieldMap = {
     'element': const FhirField(true, 'ConceptMapElement'),
     'unmapped': const FhirField(false, 'ConceptMapUnmapped'),
   },
-  'ConceptMapElement': {
+  'ConceptMapElement': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4180,7 +4181,7 @@ final fhirFieldMap = {
     'noMapElement': const FhirField(false, 'Element'),
     'target': const FhirField(true, 'ConceptMapTarget'),
   },
-  'ConceptMapTarget': {
+  'ConceptMapTarget': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4197,7 +4198,7 @@ final fhirFieldMap = {
     'dependsOn': const FhirField(true, 'ConceptMapDependsOn'),
     'product': const FhirField(true, 'ConceptMapDependsOn'),
   },
-  'ConceptMapProperty1': {
+  'ConceptMapProperty1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4217,7 +4218,7 @@ final fhirFieldMap = {
     'valueCode': const FhirField(false, 'Code'),
     'valueCodeElement': const FhirField(false, 'Element'),
   },
-  'ConceptMapDependsOn': {
+  'ConceptMapDependsOn': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4233,7 +4234,7 @@ final fhirFieldMap = {
     'valueQuantity': const FhirField(false, 'Quantity'),
     'valueSet': const FhirField(false, 'Canonical'),
   },
-  'ConceptMapUnmapped': {
+  'ConceptMapUnmapped': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4248,7 +4249,7 @@ final fhirFieldMap = {
     'relationshipElement': const FhirField(false, 'Element'),
     'otherMap': const FhirField(false, 'Canonical'),
   },
-  'Condition': {
+  'Condition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -4289,14 +4290,14 @@ final fhirFieldMap = {
     'evidence': const FhirField(true, 'CodeableReference'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'ConditionParticipant': {
+  'ConditionParticipant': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'ConditionStage': {
+  'ConditionStage': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4304,7 +4305,7 @@ final fhirFieldMap = {
     'assessment': const FhirField(true, 'Reference'),
     'type': const FhirField(false, 'CodeableConcept'),
   },
-  'ConditionDefinition': {
+  'ConditionDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -4378,21 +4379,21 @@ final fhirFieldMap = {
     'questionnaire': const FhirField(true, 'ConditionDefinitionQuestionnaire'),
     'plan': const FhirField(true, 'ConditionDefinitionPlan'),
   },
-  'ConditionDefinitionObservation': {
+  'ConditionDefinitionObservation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'category': const FhirField(false, 'CodeableConcept'),
     'code': const FhirField(false, 'CodeableConcept'),
   },
-  'ConditionDefinitionMedication': {
+  'ConditionDefinitionMedication': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'category': const FhirField(false, 'CodeableConcept'),
     'code': const FhirField(false, 'CodeableConcept'),
   },
-  'ConditionDefinitionPrecondition': {
+  'ConditionDefinitionPrecondition': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4402,7 +4403,7 @@ final fhirFieldMap = {
     'valueCodeableConcept': const FhirField(false, 'CodeableConcept'),
     'valueQuantity': const FhirField(false, 'Quantity'),
   },
-  'ConditionDefinitionQuestionnaire': {
+  'ConditionDefinitionQuestionnaire': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4410,14 +4411,14 @@ final fhirFieldMap = {
     'purposeElement': const FhirField(false, 'Element'),
     'reference': const FhirField(false, 'Reference'),
   },
-  'ConditionDefinitionPlan': {
+  'ConditionDefinitionPlan': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'role': const FhirField(false, 'CodeableConcept'),
     'reference': const FhirField(false, 'Reference'),
   },
-  'Consent': {
+  'Consent': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -4450,7 +4451,7 @@ final fhirFieldMap = {
     'decisionElement': const FhirField(false, 'Element'),
     'provision': const FhirField(true, 'ConsentProvision'),
   },
-  'ConsentPolicyBasis': {
+  'ConsentPolicyBasis': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4458,7 +4459,7 @@ final fhirFieldMap = {
     'url': const FhirField(false, 'FhirUrl'),
     'urlElement': const FhirField(false, 'Element'),
   },
-  'ConsentVerification': {
+  'ConsentVerification': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4470,7 +4471,7 @@ final fhirFieldMap = {
     'verificationDate': const FhirField(true, 'FhirDateTime'),
     'verificationDateElement': const FhirField(true, 'Element'),
   },
-  'ConsentProvision': {
+  'ConsentProvision': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4486,14 +4487,14 @@ final fhirFieldMap = {
     'expression': const FhirField(false, 'Expression'),
     'provision': const FhirField(true, 'ConsentProvision'),
   },
-  'ConsentActor': {
+  'ConsentActor': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'role': const FhirField(false, 'CodeableConcept'),
     'reference': const FhirField(false, 'Reference'),
   },
-  'ConsentData': {
+  'ConsentData': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4501,7 +4502,7 @@ final fhirFieldMap = {
     'meaningElement': const FhirField(false, 'Element'),
     'reference': const FhirField(false, 'Reference'),
   },
-  'Contract': {
+  'Contract': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -4557,7 +4558,7 @@ final fhirFieldMap = {
     'legallyBindingAttachment': const FhirField(false, 'Attachment'),
     'legallyBindingReference': const FhirField(false, 'Reference'),
   },
-  'ContractContentDefinition': {
+  'ContractContentDefinition': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4571,7 +4572,7 @@ final fhirFieldMap = {
     'copyright': const FhirField(false, 'Markdown'),
     'copyrightElement': const FhirField(false, 'Element'),
   },
-  'ContractTerm': {
+  'ContractTerm': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4591,7 +4592,7 @@ final fhirFieldMap = {
     'action': const FhirField(true, 'ContractAction'),
     'group': const FhirField(true, 'ContractTerm'),
   },
-  'ContractSecurityLabel': {
+  'ContractSecurityLabel': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4601,7 +4602,7 @@ final fhirFieldMap = {
     'category': const FhirField(true, 'Coding'),
     'control': const FhirField(true, 'Coding'),
   },
-  'ContractOffer': {
+  'ContractOffer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4619,14 +4620,14 @@ final fhirFieldMap = {
     'securityLabelNumber': const FhirField(true, 'UnsignedInt'),
     'securityLabelNumberElement': const FhirField(true, 'Element'),
   },
-  'ContractParty': {
+  'ContractParty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'reference': const FhirField(true, 'Reference'),
     'role': const FhirField(false, 'CodeableConcept'),
   },
-  'ContractAnswer': {
+  'ContractAnswer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4651,7 +4652,7 @@ final fhirFieldMap = {
     'valueQuantity': const FhirField(false, 'Quantity'),
     'valueReference': const FhirField(false, 'Reference'),
   },
-  'ContractAsset': {
+  'ContractAsset': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4675,7 +4676,7 @@ final fhirFieldMap = {
     'securityLabelNumberElement': const FhirField(true, 'Element'),
     'valuedItem': const FhirField(true, 'ContractValuedItem'),
   },
-  'ContractContext': {
+  'ContractContext': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4684,7 +4685,7 @@ final fhirFieldMap = {
     'text': const FhirField(false, 'String'),
     'textElement': const FhirField(false, 'Element'),
   },
-  'ContractValuedItem': {
+  'ContractValuedItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4711,7 +4712,7 @@ final fhirFieldMap = {
     'securityLabelNumber': const FhirField(true, 'UnsignedInt'),
     'securityLabelNumberElement': const FhirField(true, 'Element'),
   },
-  'ContractAction': {
+  'ContractAction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4745,14 +4746,14 @@ final fhirFieldMap = {
     'securityLabelNumber': const FhirField(true, 'UnsignedInt'),
     'securityLabelNumberElement': const FhirField(true, 'Element'),
   },
-  'ContractSubject': {
+  'ContractSubject': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'reference': const FhirField(true, 'Reference'),
     'role': const FhirField(false, 'CodeableConcept'),
   },
-  'ContractSigner': {
+  'ContractSigner': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4760,28 +4761,28 @@ final fhirFieldMap = {
     'party': const FhirField(false, 'Reference'),
     'signature': const FhirField(true, 'Signature'),
   },
-  'ContractFriendly': {
+  'ContractFriendly': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'contentAttachment': const FhirField(false, 'Attachment'),
     'contentReference': const FhirField(false, 'Reference'),
   },
-  'ContractLegal': {
+  'ContractLegal': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'contentAttachment': const FhirField(false, 'Attachment'),
     'contentReference': const FhirField(false, 'Reference'),
   },
-  'ContractRule': {
+  'ContractRule': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'contentAttachment': const FhirField(false, 'Attachment'),
     'contentReference': const FhirField(false, 'Reference'),
   },
-  'Coverage': {
+  'Coverage': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -4819,7 +4820,7 @@ final fhirFieldMap = {
     'contract': const FhirField(true, 'Reference'),
     'insurancePlan': const FhirField(false, 'Reference'),
   },
-  'CoveragePaymentBy': {
+  'CoveragePaymentBy': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4827,7 +4828,7 @@ final fhirFieldMap = {
     'responsibility': const FhirField(false, 'String'),
     'responsibilityElement': const FhirField(false, 'Element'),
   },
-  'CoverageClass': {
+  'CoverageClass': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4836,7 +4837,7 @@ final fhirFieldMap = {
     'name': const FhirField(false, 'String'),
     'nameElement': const FhirField(false, 'Element'),
   },
-  'CoverageCostToBeneficiary': {
+  'CoverageCostToBeneficiary': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4849,14 +4850,14 @@ final fhirFieldMap = {
     'valueMoney': const FhirField(false, 'Money'),
     'exception': const FhirField(true, 'CoverageException'),
   },
-  'CoverageException': {
+  'CoverageException': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'CodeableConcept'),
     'period': const FhirField(false, 'Period'),
   },
-  'CoverageEligibilityRequest': {
+  'CoverageEligibilityRequest': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -4889,7 +4890,7 @@ final fhirFieldMap = {
     'insurance': const FhirField(true, 'CoverageEligibilityRequestInsurance'),
     'item': const FhirField(true, 'CoverageEligibilityRequestItem'),
   },
-  'CoverageEligibilityRequestEvent': {
+  'CoverageEligibilityRequestEvent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4898,7 +4899,7 @@ final fhirFieldMap = {
     'whenDateTimeElement': const FhirField(false, 'Element'),
     'whenPeriod': const FhirField(false, 'Period'),
   },
-  'CoverageEligibilityRequestSupportingInfo': {
+  'CoverageEligibilityRequestSupportingInfo': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4908,7 +4909,7 @@ final fhirFieldMap = {
     'appliesToAll': const FhirField(false, 'Boolean'),
     'appliesToAllElement': const FhirField(false, 'Element'),
   },
-  'CoverageEligibilityRequestInsurance': {
+  'CoverageEligibilityRequestInsurance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4918,7 +4919,7 @@ final fhirFieldMap = {
     'businessArrangement': const FhirField(false, 'String'),
     'businessArrangementElement': const FhirField(false, 'Element'),
   },
-  'CoverageEligibilityRequestItem': {
+  'CoverageEligibilityRequestItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4934,14 +4935,14 @@ final fhirFieldMap = {
     'diagnosis': const FhirField(true, 'CoverageEligibilityRequestDiagnosis'),
     'detail': const FhirField(true, 'Reference'),
   },
-  'CoverageEligibilityRequestDiagnosis': {
+  'CoverageEligibilityRequestDiagnosis': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'diagnosisCodeableConcept': const FhirField(false, 'CodeableConcept'),
     'diagnosisReference': const FhirField(false, 'Reference'),
   },
-  'CoverageEligibilityResponse': {
+  'CoverageEligibilityResponse': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -4977,7 +4978,7 @@ final fhirFieldMap = {
     'form': const FhirField(false, 'CodeableConcept'),
     'error': const FhirField(true, 'CoverageEligibilityResponseError'),
   },
-  'CoverageEligibilityResponseEvent': {
+  'CoverageEligibilityResponseEvent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4986,7 +4987,7 @@ final fhirFieldMap = {
     'whenDateTimeElement': const FhirField(false, 'Element'),
     'whenPeriod': const FhirField(false, 'Period'),
   },
-  'CoverageEligibilityResponseInsurance': {
+  'CoverageEligibilityResponseInsurance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -4996,7 +4997,7 @@ final fhirFieldMap = {
     'benefitPeriod': const FhirField(false, 'Period'),
     'item': const FhirField(true, 'CoverageEligibilityResponseItem'),
   },
-  'CoverageEligibilityResponseItem': {
+  'CoverageEligibilityResponseItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5020,7 +5021,7 @@ final fhirFieldMap = {
     'authorizationUrl': const FhirField(false, 'FhirUri'),
     'authorizationUrlElement': const FhirField(false, 'Element'),
   },
-  'CoverageEligibilityResponseBenefit': {
+  'CoverageEligibilityResponseBenefit': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5036,7 +5037,7 @@ final fhirFieldMap = {
     'usedStringElement': const FhirField(false, 'Element'),
     'usedMoney': const FhirField(false, 'Money'),
   },
-  'CoverageEligibilityResponseError': {
+  'CoverageEligibilityResponseError': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5044,7 +5045,7 @@ final fhirFieldMap = {
     'expression': const FhirField(true, 'String'),
     'expressionElement': const FhirField(true, 'Element'),
   },
-  'DetectedIssue': {
+  'DetectedIssue': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5076,14 +5077,14 @@ final fhirFieldMap = {
     'referenceElement': const FhirField(false, 'Element'),
     'mitigation': const FhirField(true, 'DetectedIssueMitigation'),
   },
-  'DetectedIssueEvidence': {
+  'DetectedIssueEvidence': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'code': const FhirField(true, 'CodeableConcept'),
     'detail': const FhirField(true, 'Reference'),
   },
-  'DetectedIssueMitigation': {
+  'DetectedIssueMitigation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5093,7 +5094,7 @@ final fhirFieldMap = {
     'author': const FhirField(false, 'Reference'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'Device': {
+  'Device': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5147,7 +5148,7 @@ final fhirFieldMap = {
     'safety': const FhirField(true, 'CodeableConcept'),
     'parent': const FhirField(false, 'Reference'),
   },
-  'DeviceUdiCarrier': {
+  'DeviceUdiCarrier': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5164,7 +5165,7 @@ final fhirFieldMap = {
     'entryType': const FhirField(false, 'Code'),
     'entryTypeElement': const FhirField(false, 'Element'),
   },
-  'DeviceName': {
+  'DeviceName': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5175,7 +5176,7 @@ final fhirFieldMap = {
     'display': const FhirField(false, 'Boolean'),
     'displayElement': const FhirField(false, 'Element'),
   },
-  'DeviceVersion': {
+  'DeviceVersion': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5186,7 +5187,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'String'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'DeviceConformsTo': {
+  'DeviceConformsTo': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5195,7 +5196,7 @@ final fhirFieldMap = {
     'version': const FhirField(false, 'String'),
     'versionElement': const FhirField(false, 'Element'),
   },
-  'DeviceProperty': {
+  'DeviceProperty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5211,7 +5212,7 @@ final fhirFieldMap = {
     'valueRange': const FhirField(false, 'Range'),
     'valueAttachment': const FhirField(false, 'Attachment'),
   },
-  'DeviceAssociation': {
+  'DeviceAssociation': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5232,7 +5233,7 @@ final fhirFieldMap = {
     'period': const FhirField(false, 'Period'),
     'operation': const FhirField(true, 'DeviceAssociationOperation'),
   },
-  'DeviceAssociationOperation': {
+  'DeviceAssociationOperation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5240,7 +5241,7 @@ final fhirFieldMap = {
     'operator': const FhirField(true, 'Reference'),
     'period': const FhirField(false, 'Period'),
   },
-  'DeviceDefinition': {
+  'DeviceDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5285,7 +5286,7 @@ final fhirFieldMap = {
         const FhirField(false, 'DeviceDefinitionCorrectiveAction'),
     'chargeItem': const FhirField(true, 'DeviceDefinitionChargeItem'),
   },
-  'DeviceDefinitionUdiDeviceIdentifier': {
+  'DeviceDefinitionUdiDeviceIdentifier': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5298,7 +5299,7 @@ final fhirFieldMap = {
     'marketDistribution':
         const FhirField(true, 'DeviceDefinitionMarketDistribution'),
   },
-  'DeviceDefinitionMarketDistribution': {
+  'DeviceDefinitionMarketDistribution': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5306,7 +5307,7 @@ final fhirFieldMap = {
     'subJurisdiction': const FhirField(false, 'FhirUri'),
     'subJurisdictionElement': const FhirField(false, 'Element'),
   },
-  'DeviceDefinitionRegulatoryIdentifier': {
+  'DeviceDefinitionRegulatoryIdentifier': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5319,7 +5320,7 @@ final fhirFieldMap = {
     'jurisdiction': const FhirField(false, 'FhirUri'),
     'jurisdictionElement': const FhirField(false, 'Element'),
   },
-  'DeviceDefinitionDeviceName': {
+  'DeviceDefinitionDeviceName': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5328,14 +5329,14 @@ final fhirFieldMap = {
     'type': const FhirField(false, 'Code'),
     'typeElement': const FhirField(false, 'Element'),
   },
-  'DeviceDefinitionClassification': {
+  'DeviceDefinitionClassification': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'CodeableConcept'),
     'justification': const FhirField(true, 'RelatedArtifact'),
   },
-  'DeviceDefinitionConformsTo': {
+  'DeviceDefinitionConformsTo': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5345,7 +5346,7 @@ final fhirFieldMap = {
     'versionElement': const FhirField(true, 'Element'),
     'source': const FhirField(true, 'RelatedArtifact'),
   },
-  'DeviceDefinitionHasPart': {
+  'DeviceDefinitionHasPart': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5353,7 +5354,7 @@ final fhirFieldMap = {
     'count': const FhirField(false, 'Integer'),
     'countElement': const FhirField(false, 'Element'),
   },
-  'DeviceDefinitionPackaging': {
+  'DeviceDefinitionPackaging': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5366,7 +5367,7 @@ final fhirFieldMap = {
         const FhirField(true, 'DeviceDefinitionUdiDeviceIdentifier'),
     'packaging': const FhirField(true, 'DeviceDefinitionPackaging'),
   },
-  'DeviceDefinitionDistributor': {
+  'DeviceDefinitionDistributor': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5374,7 +5375,7 @@ final fhirFieldMap = {
     'nameElement': const FhirField(false, 'Element'),
     'organizationReference': const FhirField(true, 'Reference'),
   },
-  'DeviceDefinitionVersion': {
+  'DeviceDefinitionVersion': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5383,7 +5384,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'String'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'DeviceDefinitionProperty': {
+  'DeviceDefinitionProperty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5399,14 +5400,14 @@ final fhirFieldMap = {
     'valueRange': const FhirField(false, 'Range'),
     'valueAttachment': const FhirField(false, 'Attachment'),
   },
-  'DeviceDefinitionLink': {
+  'DeviceDefinitionLink': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'relation': const FhirField(false, 'Coding'),
     'relatedDevice': const FhirField(false, 'CodeableReference'),
   },
-  'DeviceDefinitionMaterial': {
+  'DeviceDefinitionMaterial': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5416,7 +5417,7 @@ final fhirFieldMap = {
     'allergenicIndicator': const FhirField(false, 'Boolean'),
     'allergenicIndicatorElement': const FhirField(false, 'Element'),
   },
-  'DeviceDefinitionGuideline': {
+  'DeviceDefinitionGuideline': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5430,7 +5431,7 @@ final fhirFieldMap = {
     'intendedUse': const FhirField(false, 'String'),
     'intendedUseElement': const FhirField(false, 'Element'),
   },
-  'DeviceDefinitionCorrectiveAction': {
+  'DeviceDefinitionCorrectiveAction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5440,7 +5441,7 @@ final fhirFieldMap = {
     'scopeElement': const FhirField(false, 'Element'),
     'period': const FhirField(false, 'Period'),
   },
-  'DeviceDefinitionChargeItem': {
+  'DeviceDefinitionChargeItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5449,7 +5450,7 @@ final fhirFieldMap = {
     'effectivePeriod': const FhirField(false, 'Period'),
     'useContext': const FhirField(true, 'UsageContext'),
   },
-  'DeviceDispense': {
+  'DeviceDispense': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5486,14 +5487,14 @@ final fhirFieldMap = {
     'usageInstructionElement': const FhirField(false, 'Element'),
     'eventHistory': const FhirField(true, 'Reference'),
   },
-  'DeviceDispensePerformer': {
+  'DeviceDispensePerformer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'DeviceMetric': {
+  'DeviceMetric': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5517,7 +5518,7 @@ final fhirFieldMap = {
     'measurementFrequency': const FhirField(false, 'Quantity'),
     'calibration': const FhirField(true, 'DeviceMetricCalibration'),
   },
-  'DeviceMetricCalibration': {
+  'DeviceMetricCalibration': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5528,7 +5529,7 @@ final fhirFieldMap = {
     'time': const FhirField(false, 'Instant'),
     'timeElement': const FhirField(false, 'Element'),
   },
-  'DeviceRequest': {
+  'DeviceRequest': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5577,7 +5578,7 @@ final fhirFieldMap = {
     'note': const FhirField(true, 'Annotation'),
     'relevantHistory': const FhirField(true, 'Reference'),
   },
-  'DeviceRequestParameter': {
+  'DeviceRequestParameter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5588,7 +5589,7 @@ final fhirFieldMap = {
     'valueBoolean': const FhirField(false, 'Boolean'),
     'valueBooleanElement': const FhirField(false, 'Element'),
   },
-  'DeviceUsage': {
+  'DeviceUsage': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5622,14 +5623,14 @@ final fhirFieldMap = {
     'bodySite': const FhirField(false, 'CodeableReference'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'DeviceUsageAdherence': {
+  'DeviceUsageAdherence': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'code': const FhirField(false, 'CodeableConcept'),
     'reason': const FhirField(true, 'CodeableConcept'),
   },
-  'DiagnosticReport': {
+  'DiagnosticReport': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5667,14 +5668,14 @@ final fhirFieldMap = {
     'conclusionCode': const FhirField(true, 'CodeableConcept'),
     'presentedForm': const FhirField(true, 'Attachment'),
   },
-  'DiagnosticReportSupportingInfo': {
+  'DiagnosticReportSupportingInfo': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'CodeableConcept'),
     'reference': const FhirField(false, 'Reference'),
   },
-  'DiagnosticReportMedia': {
+  'DiagnosticReportMedia': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5682,7 +5683,7 @@ final fhirFieldMap = {
     'commentElement': const FhirField(false, 'Element'),
     'link': const FhirField(false, 'Reference'),
   },
-  'DocumentManifest': {
+  'DocumentManifest': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5710,14 +5711,14 @@ final fhirFieldMap = {
     'content': const FhirField(true, 'Reference'),
     'related': const FhirField(true, 'DocumentManifestRelated'),
   },
-  'DocumentManifestRelated': {
+  'DocumentManifestRelated': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'identifier': const FhirField(false, 'Identifier'),
     'ref': const FhirField(false, 'Reference'),
   },
-  'DocumentReference': {
+  'DocumentReference': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5757,7 +5758,7 @@ final fhirFieldMap = {
     'securityLabel': const FhirField(true, 'CodeableConcept'),
     'content': const FhirField(true, 'DocumentReferenceContent'),
   },
-  'DocumentReferenceAttester': {
+  'DocumentReferenceAttester': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5766,21 +5767,21 @@ final fhirFieldMap = {
     'timeElement': const FhirField(false, 'Element'),
     'party': const FhirField(false, 'Reference'),
   },
-  'DocumentReferenceRelatesTo': {
+  'DocumentReferenceRelatesTo': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'code': const FhirField(false, 'CodeableConcept'),
     'target': const FhirField(false, 'Reference'),
   },
-  'DocumentReferenceContent': {
+  'DocumentReferenceContent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'attachment': const FhirField(false, 'Attachment'),
     'profile': const FhirField(true, 'DocumentReferenceProfile'),
   },
-  'DocumentReferenceProfile': {
+  'DocumentReferenceProfile': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5790,7 +5791,7 @@ final fhirFieldMap = {
     'valueCanonical': const FhirField(false, 'Canonical'),
     'valueCanonicalElement': const FhirField(false, 'Element'),
   },
-  'Encounter': {
+  'Encounter': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5833,7 +5834,7 @@ final fhirFieldMap = {
     'admission': const FhirField(false, 'EncounterAdmission'),
     'location': const FhirField(true, 'EncounterLocation'),
   },
-  'EncounterParticipant': {
+  'EncounterParticipant': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5841,21 +5842,21 @@ final fhirFieldMap = {
     'period': const FhirField(false, 'Period'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'EncounterReason': {
+  'EncounterReason': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'use': const FhirField(true, 'CodeableConcept'),
     'value': const FhirField(true, 'CodeableReference'),
   },
-  'EncounterDiagnosis': {
+  'EncounterDiagnosis': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'condition': const FhirField(true, 'CodeableReference'),
     'use': const FhirField(true, 'CodeableConcept'),
   },
-  'EncounterAdmission': {
+  'EncounterAdmission': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5866,7 +5867,7 @@ final fhirFieldMap = {
     'destination': const FhirField(false, 'Reference'),
     'dischargeDisposition': const FhirField(false, 'CodeableConcept'),
   },
-  'EncounterLocation': {
+  'EncounterLocation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5876,7 +5877,7 @@ final fhirFieldMap = {
     'form': const FhirField(false, 'CodeableConcept'),
     'period': const FhirField(false, 'Period'),
   },
-  'EncounterHistory': {
+  'EncounterHistory': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5904,14 +5905,14 @@ final fhirFieldMap = {
     'length': const FhirField(false, 'FhirDuration'),
     'location': const FhirField(true, 'EncounterHistoryLocation'),
   },
-  'EncounterHistoryLocation': {
+  'EncounterHistoryLocation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'location': const FhirField(false, 'Reference'),
     'form': const FhirField(false, 'CodeableConcept'),
   },
-  'Endpoint': {
+  'Endpoint': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5940,7 +5941,7 @@ final fhirFieldMap = {
     'header': const FhirField(true, 'String'),
     'headerElement': const FhirField(true, 'Element'),
   },
-  'EndpointPayload': {
+  'EndpointPayload': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -5948,7 +5949,7 @@ final fhirFieldMap = {
     'mimeType': const FhirField(true, 'Code'),
     'mimeTypeElement': const FhirField(true, 'Element'),
   },
-  'EnrollmentRequest': {
+  'EnrollmentRequest': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5969,7 +5970,7 @@ final fhirFieldMap = {
     'candidate': const FhirField(false, 'Reference'),
     'coverage': const FhirField(false, 'Reference'),
   },
-  'EnrollmentResponse': {
+  'EnrollmentResponse': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -5993,7 +5994,7 @@ final fhirFieldMap = {
     'organization': const FhirField(false, 'Reference'),
     'requestProvider': const FhirField(false, 'Reference'),
   },
-  'EpisodeOfCare': {
+  'EpisodeOfCare': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -6019,7 +6020,7 @@ final fhirFieldMap = {
     'careTeam': const FhirField(true, 'Reference'),
     'account': const FhirField(true, 'Reference'),
   },
-  'EpisodeOfCareStatusHistory': {
+  'EpisodeOfCareStatusHistory': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6027,21 +6028,21 @@ final fhirFieldMap = {
     'statusElement': const FhirField(false, 'Element'),
     'period': const FhirField(false, 'Period'),
   },
-  'EpisodeOfCareReason': {
+  'EpisodeOfCareReason': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'use': const FhirField(false, 'CodeableConcept'),
     'value': const FhirField(true, 'CodeableReference'),
   },
-  'EpisodeOfCareDiagnosis': {
+  'EpisodeOfCareDiagnosis': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'condition': const FhirField(true, 'CodeableReference'),
     'use': const FhirField(false, 'CodeableConcept'),
   },
-  'EventDefinition': {
+  'EventDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -6102,7 +6103,7 @@ final fhirFieldMap = {
     'usageElement': const FhirField(false, 'Element'),
     'trigger': const FhirField(true, 'TriggerDefinition'),
   },
-  'Evidence': {
+  'Evidence': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -6167,7 +6168,7 @@ final fhirFieldMap = {
     'statistic': const FhirField(true, 'EvidenceStatistic'),
     'certainty': const FhirField(true, 'EvidenceCertainty'),
   },
-  'EvidenceVariableDefinition': {
+  'EvidenceVariableDefinition': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6179,7 +6180,7 @@ final fhirFieldMap = {
     'intended': const FhirField(false, 'Reference'),
     'directnessMatch': const FhirField(false, 'CodeableConcept'),
   },
-  'EvidenceStatistic': {
+  'EvidenceStatistic': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6197,7 +6198,7 @@ final fhirFieldMap = {
     'attributeEstimate': const FhirField(true, 'EvidenceAttributeEstimate'),
     'modelCharacteristic': const FhirField(true, 'EvidenceModelCharacteristic'),
   },
-  'EvidenceSampleSize': {
+  'EvidenceSampleSize': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6211,7 +6212,7 @@ final fhirFieldMap = {
     'knownDataCount': const FhirField(false, 'UnsignedInt'),
     'knownDataCountElement': const FhirField(false, 'Element'),
   },
-  'EvidenceAttributeEstimate': {
+  'EvidenceAttributeEstimate': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6225,7 +6226,7 @@ final fhirFieldMap = {
     'range': const FhirField(false, 'Range'),
     'attributeEstimate': const FhirField(true, 'EvidenceAttributeEstimate'),
   },
-  'EvidenceModelCharacteristic': {
+  'EvidenceModelCharacteristic': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6234,18 +6235,7 @@ final fhirFieldMap = {
     'variable': const FhirField(true, 'EvidenceVariable'),
     'attributeEstimate': const FhirField(true, 'EvidenceAttributeEstimate'),
   },
-  'EvidenceVariable': {
-    'id': const FhirField(false, 'String'),
-    'extension': const FhirField(true, 'FhirExtension'),
-    'modifierExtension': const FhirField(true, 'FhirExtension'),
-    'variableDefinition': const FhirField(false, 'Reference'),
-    'handling': const FhirField(false, 'Code'),
-    'handlingElement': const FhirField(false, 'Element'),
-    'valueCategory': const FhirField(true, 'CodeableConcept'),
-    'valueQuantity': const FhirField(true, 'Quantity'),
-    'valueRange': const FhirField(true, 'Range'),
-  },
-  'EvidenceCertainty': {
+  'EvidenceCertainty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6258,7 +6248,7 @@ final fhirFieldMap = {
     'raterElement': const FhirField(false, 'Element'),
     'subcomponent': const FhirField(true, 'EvidenceCertainty'),
   },
-  'EvidenceReport': {
+  'EvidenceReport': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -6321,14 +6311,14 @@ final fhirFieldMap = {
     'relatesTo': const FhirField(true, 'EvidenceReportRelatesTo'),
     'section': const FhirField(true, 'EvidenceReportSection'),
   },
-  'EvidenceReportSubject': {
+  'EvidenceReportSubject': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'characteristic': const FhirField(true, 'EvidenceReportCharacteristic'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'EvidenceReportCharacteristic': {
+  'EvidenceReportCharacteristic': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6343,7 +6333,7 @@ final fhirFieldMap = {
     'excludeElement': const FhirField(false, 'Element'),
     'period': const FhirField(false, 'Period'),
   },
-  'EvidenceReportRelatesTo': {
+  'EvidenceReportRelatesTo': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6351,7 +6341,7 @@ final fhirFieldMap = {
     'codeElement': const FhirField(false, 'Element'),
     'target': const FhirField(false, 'EvidenceReportTarget'),
   },
-  'EvidenceReportTarget': {
+  'EvidenceReportTarget': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6362,7 +6352,7 @@ final fhirFieldMap = {
     'displayElement': const FhirField(false, 'Element'),
     'resource': const FhirField(false, 'Reference'),
   },
-  'EvidenceReportSection': {
+  'EvidenceReportSection': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6381,7 +6371,7 @@ final fhirFieldMap = {
     'emptyReason': const FhirField(false, 'CodeableConcept'),
     'section': const FhirField(true, 'EvidenceReportSection'),
   },
-  'EvidenceVariable': {
+  'EvidenceVariable': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -6444,7 +6434,7 @@ final fhirFieldMap = {
     'handlingElement': const FhirField(false, 'Element'),
     'category': const FhirField(true, 'EvidenceVariableCategory'),
   },
-  'EvidenceVariableCharacteristic': {
+  'EvidenceVariableCharacteristic': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6471,7 +6461,7 @@ final fhirFieldMap = {
     'durationRange': const FhirField(false, 'Range'),
     'timeFromEvent': const FhirField(true, 'EvidenceVariableTimeFromEvent'),
   },
-  'EvidenceVariableDefinitionByTypeAndValue': {
+  'EvidenceVariableDefinitionByTypeAndValue': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6488,7 +6478,7 @@ final fhirFieldMap = {
     'valueIdElement': const FhirField(false, 'Element'),
     'offset': const FhirField(false, 'CodeableConcept'),
   },
-  'EvidenceVariableDefinitionByCombination': {
+  'EvidenceVariableDefinitionByCombination': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6498,7 +6488,7 @@ final fhirFieldMap = {
     'thresholdElement': const FhirField(false, 'Element'),
     'characteristic': const FhirField(true, 'EvidenceVariableCharacteristic'),
   },
-  'EvidenceVariableTimeFromEvent': {
+  'EvidenceVariableTimeFromEvent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6514,7 +6504,7 @@ final fhirFieldMap = {
     'quantity': const FhirField(false, 'Quantity'),
     'range': const FhirField(false, 'Range'),
   },
-  'EvidenceVariableCategory': {
+  'EvidenceVariableCategory': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6524,7 +6514,7 @@ final fhirFieldMap = {
     'valueQuantity': const FhirField(false, 'Quantity'),
     'valueRange': const FhirField(false, 'Range'),
   },
-  'ExampleScenario': {
+  'ExampleScenario': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -6570,7 +6560,7 @@ final fhirFieldMap = {
     'instance': const FhirField(true, 'ExampleScenarioInstance'),
     'process': const FhirField(true, 'ExampleScenarioProcess'),
   },
-  'ExampleScenarioActor': {
+  'ExampleScenarioActor': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6583,7 +6573,7 @@ final fhirFieldMap = {
     'description': const FhirField(false, 'Markdown'),
     'descriptionElement': const FhirField(false, 'Element'),
   },
-  'ExampleScenarioInstance': {
+  'ExampleScenarioInstance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6605,7 +6595,7 @@ final fhirFieldMap = {
     'containedInstance':
         const FhirField(true, 'ExampleScenarioContainedInstance'),
   },
-  'ExampleScenarioVersion': {
+  'ExampleScenarioVersion': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6617,7 +6607,7 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'content': const FhirField(false, 'Reference'),
   },
-  'ExampleScenarioContainedInstance': {
+  'ExampleScenarioContainedInstance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6626,7 +6616,7 @@ final fhirFieldMap = {
     'versionReference': const FhirField(false, 'String'),
     'versionReferenceElement': const FhirField(false, 'Element'),
   },
-  'ExampleScenarioProcess': {
+  'ExampleScenarioProcess': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6640,7 +6630,7 @@ final fhirFieldMap = {
     'postConditionsElement': const FhirField(false, 'Element'),
     'step': const FhirField(true, 'ExampleScenarioStep'),
   },
-  'ExampleScenarioStep': {
+  'ExampleScenarioStep': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6653,7 +6643,7 @@ final fhirFieldMap = {
     'pause': const FhirField(false, 'Boolean'),
     'pauseElement': const FhirField(false, 'Element'),
   },
-  'ExampleScenarioOperation': {
+  'ExampleScenarioOperation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6673,7 +6663,7 @@ final fhirFieldMap = {
     'request': const FhirField(false, 'ExampleScenarioContainedInstance'),
     'response': const FhirField(false, 'ExampleScenarioContainedInstance'),
   },
-  'ExampleScenarioAlternative': {
+  'ExampleScenarioAlternative': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6683,7 +6673,7 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'step': const FhirField(true, 'ExampleScenarioStep'),
   },
-  'ExplanationOfBenefit': {
+  'ExplanationOfBenefit': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -6753,7 +6743,7 @@ final fhirFieldMap = {
     'benefitBalance':
         const FhirField(true, 'ExplanationOfBenefitBenefitBalance'),
   },
-  'ExplanationOfBenefitRelated': {
+  'ExplanationOfBenefitRelated': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6761,7 +6751,7 @@ final fhirFieldMap = {
     'relationship': const FhirField(false, 'CodeableConcept'),
     'reference': const FhirField(false, 'Identifier'),
   },
-  'ExplanationOfBenefitEvent': {
+  'ExplanationOfBenefitEvent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6770,14 +6760,14 @@ final fhirFieldMap = {
     'whenDateTimeElement': const FhirField(false, 'Element'),
     'whenPeriod': const FhirField(false, 'Period'),
   },
-  'ExplanationOfBenefitPayee': {
+  'ExplanationOfBenefitPayee': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'CodeableConcept'),
     'party': const FhirField(false, 'Reference'),
   },
-  'ExplanationOfBenefitCareTeam': {
+  'ExplanationOfBenefitCareTeam': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6789,7 +6779,7 @@ final fhirFieldMap = {
     'role': const FhirField(false, 'CodeableConcept'),
     'specialty': const FhirField(false, 'CodeableConcept'),
   },
-  'ExplanationOfBenefitSupportingInfo': {
+  'ExplanationOfBenefitSupportingInfo': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6810,7 +6800,7 @@ final fhirFieldMap = {
     'valueIdentifier': const FhirField(false, 'Identifier'),
     'reason': const FhirField(false, 'Coding'),
   },
-  'ExplanationOfBenefitDiagnosis': {
+  'ExplanationOfBenefitDiagnosis': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6821,7 +6811,7 @@ final fhirFieldMap = {
     'type': const FhirField(true, 'CodeableConcept'),
     'onAdmission': const FhirField(false, 'CodeableConcept'),
   },
-  'ExplanationOfBenefitProcedure': {
+  'ExplanationOfBenefitProcedure': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6834,7 +6824,7 @@ final fhirFieldMap = {
     'procedureReference': const FhirField(false, 'Reference'),
     'udi': const FhirField(true, 'Reference'),
   },
-  'ExplanationOfBenefitInsurance': {
+  'ExplanationOfBenefitInsurance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6844,7 +6834,7 @@ final fhirFieldMap = {
     'preAuthRef': const FhirField(true, 'String'),
     'preAuthRefElement': const FhirField(true, 'Element'),
   },
-  'ExplanationOfBenefitAccident': {
+  'ExplanationOfBenefitAccident': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6854,7 +6844,7 @@ final fhirFieldMap = {
     'locationAddress': const FhirField(false, 'Address'),
     'locationReference': const FhirField(false, 'Reference'),
   },
-  'ExplanationOfBenefitItem': {
+  'ExplanationOfBenefitItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6899,14 +6889,14 @@ final fhirFieldMap = {
     'adjudication': const FhirField(true, 'ExplanationOfBenefitAdjudication'),
     'detail': const FhirField(true, 'ExplanationOfBenefitDetail'),
   },
-  'ExplanationOfBenefitBodySite': {
+  'ExplanationOfBenefitBodySite': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'site': const FhirField(true, 'CodeableReference'),
     'subSite': const FhirField(true, 'CodeableConcept'),
   },
-  'ExplanationOfBenefitReviewOutcome': {
+  'ExplanationOfBenefitReviewOutcome': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6916,7 +6906,7 @@ final fhirFieldMap = {
     'preAuthRefElement': const FhirField(false, 'Element'),
     'preAuthPeriod': const FhirField(false, 'Period'),
   },
-  'ExplanationOfBenefitAdjudication': {
+  'ExplanationOfBenefitAdjudication': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6925,7 +6915,7 @@ final fhirFieldMap = {
     'amount': const FhirField(false, 'Money'),
     'quantity': const FhirField(false, 'Quantity'),
   },
-  'ExplanationOfBenefitDetail': {
+  'ExplanationOfBenefitDetail': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6953,7 +6943,7 @@ final fhirFieldMap = {
     'adjudication': const FhirField(true, 'ExplanationOfBenefitAdjudication'),
     'subDetail': const FhirField(true, 'ExplanationOfBenefitSubDetail'),
   },
-  'ExplanationOfBenefitSubDetail': {
+  'ExplanationOfBenefitSubDetail': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -6980,7 +6970,7 @@ final fhirFieldMap = {
         const FhirField(false, 'ExplanationOfBenefitReviewOutcome'),
     'adjudication': const FhirField(true, 'ExplanationOfBenefitAdjudication'),
   },
-  'ExplanationOfBenefitAddItem': {
+  'ExplanationOfBenefitAddItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7019,14 +7009,14 @@ final fhirFieldMap = {
     'adjudication': const FhirField(true, 'ExplanationOfBenefitAdjudication'),
     'detail': const FhirField(true, 'ExplanationOfBenefitDetail1'),
   },
-  'ExplanationOfBenefitBodySite1': {
+  'ExplanationOfBenefitBodySite1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'site': const FhirField(true, 'CodeableReference'),
     'subSite': const FhirField(true, 'CodeableConcept'),
   },
-  'ExplanationOfBenefitDetail1': {
+  'ExplanationOfBenefitDetail1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7049,7 +7039,7 @@ final fhirFieldMap = {
     'adjudication': const FhirField(true, 'ExplanationOfBenefitAdjudication'),
     'subDetail': const FhirField(true, 'ExplanationOfBenefitSubDetail1'),
   },
-  'ExplanationOfBenefitSubDetail1': {
+  'ExplanationOfBenefitSubDetail1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7071,14 +7061,14 @@ final fhirFieldMap = {
         const FhirField(false, 'ExplanationOfBenefitReviewOutcome'),
     'adjudication': const FhirField(true, 'ExplanationOfBenefitAdjudication'),
   },
-  'ExplanationOfBenefitTotal': {
+  'ExplanationOfBenefitTotal': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'category': const FhirField(false, 'CodeableConcept'),
     'amount': const FhirField(false, 'Money'),
   },
-  'ExplanationOfBenefitPayment': {
+  'ExplanationOfBenefitPayment': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7090,7 +7080,7 @@ final fhirFieldMap = {
     'amount': const FhirField(false, 'Money'),
     'identifier': const FhirField(false, 'Identifier'),
   },
-  'ExplanationOfBenefitProcessNote': {
+  'ExplanationOfBenefitProcessNote': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7101,7 +7091,7 @@ final fhirFieldMap = {
     'textElement': const FhirField(false, 'Element'),
     'language': const FhirField(false, 'CodeableConcept'),
   },
-  'ExplanationOfBenefitBenefitBalance': {
+  'ExplanationOfBenefitBenefitBalance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7117,7 +7107,7 @@ final fhirFieldMap = {
     'term': const FhirField(false, 'CodeableConcept'),
     'financial': const FhirField(true, 'ExplanationOfBenefitFinancial'),
   },
-  'ExplanationOfBenefitFinancial': {
+  'ExplanationOfBenefitFinancial': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7131,7 +7121,7 @@ final fhirFieldMap = {
     'usedUnsignedIntElement': const FhirField(false, 'Element'),
     'usedMoney': const FhirField(false, 'Money'),
   },
-  'FamilyMemberHistory': {
+  'FamilyMemberHistory': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7181,14 +7171,14 @@ final fhirFieldMap = {
     'condition': const FhirField(true, 'FamilyMemberHistoryCondition'),
     'procedure': const FhirField(true, 'FamilyMemberHistoryProcedure'),
   },
-  'FamilyMemberHistoryParticipant': {
+  'FamilyMemberHistoryParticipant': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'FamilyMemberHistoryCondition': {
+  'FamilyMemberHistoryCondition': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7203,7 +7193,7 @@ final fhirFieldMap = {
     'onsetStringElement': const FhirField(false, 'Element'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'FamilyMemberHistoryProcedure': {
+  'FamilyMemberHistoryProcedure': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7220,7 +7210,7 @@ final fhirFieldMap = {
     'performedDateTimeElement': const FhirField(false, 'Element'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'Flag': {
+  'Flag': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7241,7 +7231,7 @@ final fhirFieldMap = {
     'encounter': const FhirField(false, 'Reference'),
     'author': const FhirField(false, 'Reference'),
   },
-  'FormularyItem': {
+  'FormularyItem': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7257,7 +7247,7 @@ final fhirFieldMap = {
     'status': const FhirField(false, 'Code'),
     'statusElement': const FhirField(false, 'Element'),
   },
-  'GenomicStudy': {
+  'GenomicStudy': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7288,7 +7278,7 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'analysis': const FhirField(true, 'GenomicStudyAnalysis'),
   },
-  'GenomicStudyAnalysis': {
+  'GenomicStudyAnalysis': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7314,7 +7304,7 @@ final fhirFieldMap = {
     'performer': const FhirField(true, 'GenomicStudyPerformer'),
     'device': const FhirField(true, 'GenomicStudyDevice'),
   },
-  'GenomicStudyInput': {
+  'GenomicStudyInput': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7323,28 +7313,28 @@ final fhirFieldMap = {
     'generatedByIdentifier': const FhirField(false, 'Identifier'),
     'generatedByReference': const FhirField(false, 'Reference'),
   },
-  'GenomicStudyOutput': {
+  'GenomicStudyOutput': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'file': const FhirField(false, 'Reference'),
     'type': const FhirField(false, 'CodeableConcept'),
   },
-  'GenomicStudyPerformer': {
+  'GenomicStudyPerformer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'actor': const FhirField(false, 'Reference'),
     'role': const FhirField(false, 'CodeableConcept'),
   },
-  'GenomicStudyDevice': {
+  'GenomicStudyDevice': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'device': const FhirField(false, 'Reference'),
     'function': const FhirField(false, 'CodeableConcept'),
   },
-  'Goal': {
+  'Goal': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7378,7 +7368,7 @@ final fhirFieldMap = {
     'note': const FhirField(true, 'Annotation'),
     'outcome': const FhirField(true, 'CodeableReference'),
   },
-  'GoalTarget': {
+  'GoalTarget': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7397,7 +7387,7 @@ final fhirFieldMap = {
     'dueDateElement': const FhirField(false, 'Element'),
     'dueDuration': const FhirField(false, 'FhirDuration'),
   },
-  'GraphDefinition': {
+  'GraphDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7444,7 +7434,7 @@ final fhirFieldMap = {
     'node': const FhirField(true, 'GraphDefinitionNode'),
     'link': const FhirField(true, 'GraphDefinitionLink'),
   },
-  'GraphDefinitionNode': {
+  'GraphDefinitionNode': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7456,7 +7446,7 @@ final fhirFieldMap = {
     'typeElement': const FhirField(false, 'Element'),
     'profile': const FhirField(false, 'Canonical'),
   },
-  'GraphDefinitionLink': {
+  'GraphDefinitionLink': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7478,7 +7468,7 @@ final fhirFieldMap = {
     'paramsElement': const FhirField(false, 'Element'),
     'compartment': const FhirField(true, 'GraphDefinitionCompartment'),
   },
-  'GraphDefinitionCompartment': {
+  'GraphDefinitionCompartment': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7493,7 +7483,7 @@ final fhirFieldMap = {
     'description': const FhirField(false, 'String'),
     'descriptionElement': const FhirField(false, 'Element'),
   },
-  'Group': {
+  'Group': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7522,7 +7512,7 @@ final fhirFieldMap = {
     'characteristic': const FhirField(true, 'GroupCharacteristic'),
     'member': const FhirField(true, 'GroupMember'),
   },
-  'GroupCharacteristic': {
+  'GroupCharacteristic': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7537,7 +7527,7 @@ final fhirFieldMap = {
     'excludeElement': const FhirField(false, 'Element'),
     'period': const FhirField(false, 'Period'),
   },
-  'GroupMember': {
+  'GroupMember': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7546,7 +7536,7 @@ final fhirFieldMap = {
     'inactive': const FhirField(false, 'Boolean'),
     'inactiveElement': const FhirField(false, 'Element'),
   },
-  'GuidanceResponse': {
+  'GuidanceResponse': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7578,7 +7568,7 @@ final fhirFieldMap = {
     'result': const FhirField(true, 'Reference'),
     'dataRequirement': const FhirField(true, 'DataRequirement'),
   },
-  'HealthcareService': {
+  'HealthcareService': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7618,7 +7608,7 @@ final fhirFieldMap = {
     'availability': const FhirField(true, 'Availability'),
     'endpoint': const FhirField(true, 'Reference'),
   },
-  'HealthcareServiceEligibility': {
+  'HealthcareServiceEligibility': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7626,7 +7616,7 @@ final fhirFieldMap = {
     'comment': const FhirField(false, 'Markdown'),
     'commentElement': const FhirField(false, 'Element'),
   },
-  'ImagingSelection': {
+  'ImagingSelection': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7661,14 +7651,14 @@ final fhirFieldMap = {
     'focus': const FhirField(true, 'Reference'),
     'instance': const FhirField(true, 'ImagingSelectionInstance'),
   },
-  'ImagingSelectionPerformer': {
+  'ImagingSelectionPerformer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'ImagingSelectionInstance': {
+  'ImagingSelectionInstance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7682,7 +7672,7 @@ final fhirFieldMap = {
     'imageRegion2D': const FhirField(true, 'ImagingSelectionImageRegion2D'),
     'imageRegion3D': const FhirField(true, 'ImagingSelectionImageRegion3D'),
   },
-  'ImagingSelectionImageRegion2D': {
+  'ImagingSelectionImageRegion2D': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7691,7 +7681,7 @@ final fhirFieldMap = {
     'coordinate': const FhirField(true, 'Decimal'),
     'coordinateElement': const FhirField(true, 'Element'),
   },
-  'ImagingSelectionImageRegion3D': {
+  'ImagingSelectionImageRegion3D': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7700,7 +7690,7 @@ final fhirFieldMap = {
     'coordinate': const FhirField(true, 'Decimal'),
     'coordinateElement': const FhirField(true, 'Element'),
   },
-  'ImagingStudy': {
+  'ImagingStudy': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7735,7 +7725,7 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'series': const FhirField(true, 'ImagingStudySeries'),
   },
-  'ImagingStudySeries': {
+  'ImagingStudySeries': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7757,14 +7747,14 @@ final fhirFieldMap = {
     'performer': const FhirField(true, 'ImagingStudyPerformer'),
     'instance': const FhirField(true, 'ImagingStudyInstance'),
   },
-  'ImagingStudyPerformer': {
+  'ImagingStudyPerformer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'ImagingStudyInstance': {
+  'ImagingStudyInstance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7776,7 +7766,7 @@ final fhirFieldMap = {
     'title': const FhirField(false, 'String'),
     'titleElement': const FhirField(false, 'Element'),
   },
-  'Immunization': {
+  'Immunization': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7825,21 +7815,21 @@ final fhirFieldMap = {
     'reaction': const FhirField(true, 'ImmunizationReaction'),
     'protocolApplied': const FhirField(true, 'ImmunizationProtocolApplied'),
   },
-  'ImmunizationPerformer': {
+  'ImmunizationPerformer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'ImmunizationProgramEligibility': {
+  'ImmunizationProgramEligibility': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'program': const FhirField(false, 'CodeableConcept'),
     'programStatus': const FhirField(false, 'CodeableConcept'),
   },
-  'ImmunizationReaction': {
+  'ImmunizationReaction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7849,7 +7839,7 @@ final fhirFieldMap = {
     'reported': const FhirField(false, 'Boolean'),
     'reportedElement': const FhirField(false, 'Element'),
   },
-  'ImmunizationProtocolApplied': {
+  'ImmunizationProtocolApplied': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7862,7 +7852,7 @@ final fhirFieldMap = {
     'seriesDoses': const FhirField(false, 'String'),
     'seriesDosesElement': const FhirField(false, 'Element'),
   },
-  'ImmunizationEvaluation': {
+  'ImmunizationEvaluation': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7893,7 +7883,7 @@ final fhirFieldMap = {
     'seriesDoses': const FhirField(false, 'String'),
     'seriesDosesElement': const FhirField(false, 'Element'),
   },
-  'ImmunizationRecommendation': {
+  'ImmunizationRecommendation': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7912,7 +7902,7 @@ final fhirFieldMap = {
     'recommendation':
         const FhirField(true, 'ImmunizationRecommendationRecommendation'),
   },
-  'ImmunizationRecommendationRecommendation': {
+  'ImmunizationRecommendationRecommendation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7934,7 +7924,7 @@ final fhirFieldMap = {
     'supportingImmunization': const FhirField(true, 'Reference'),
     'supportingPatientInformation': const FhirField(true, 'Reference'),
   },
-  'ImmunizationRecommendationDateCriterion': {
+  'ImmunizationRecommendationDateCriterion': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -7942,7 +7932,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'FhirDateTime'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'ImplementationGuide': {
+  'ImplementationGuide': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -7995,7 +7985,7 @@ final fhirFieldMap = {
     'definition': const FhirField(false, 'ImplementationGuideDefinition'),
     'manifest': const FhirField(false, 'ImplementationGuideManifest'),
   },
-  'ImplementationGuideDependsOn': {
+  'ImplementationGuideDependsOn': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8007,7 +7997,7 @@ final fhirFieldMap = {
     'reason': const FhirField(false, 'Markdown'),
     'reasonElement': const FhirField(false, 'Element'),
   },
-  'ImplementationGuideGlobal': {
+  'ImplementationGuideGlobal': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8015,7 +8005,7 @@ final fhirFieldMap = {
     'typeElement': const FhirField(false, 'Element'),
     'profile': const FhirField(false, 'Canonical'),
   },
-  'ImplementationGuideDefinition': {
+  'ImplementationGuideDefinition': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8025,7 +8015,7 @@ final fhirFieldMap = {
     'parameter': const FhirField(true, 'ImplementationGuideParameter'),
     'template': const FhirField(true, 'ImplementationGuideTemplate'),
   },
-  'ImplementationGuideGrouping': {
+  'ImplementationGuideGrouping': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8034,7 +8024,7 @@ final fhirFieldMap = {
     'description': const FhirField(false, 'Markdown'),
     'descriptionElement': const FhirField(false, 'Element'),
   },
-  'ImplementationGuideResource': {
+  'ImplementationGuideResource': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8051,7 +8041,7 @@ final fhirFieldMap = {
     'groupingId': const FhirField(false, 'Id'),
     'groupingIdElement': const FhirField(false, 'Element'),
   },
-  'ImplementationGuidePage': {
+  'ImplementationGuidePage': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8069,7 +8059,7 @@ final fhirFieldMap = {
     'generationElement': const FhirField(false, 'Element'),
     'page': const FhirField(true, 'ImplementationGuidePage'),
   },
-  'ImplementationGuideParameter': {
+  'ImplementationGuideParameter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8077,7 +8067,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'String'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'ImplementationGuideTemplate': {
+  'ImplementationGuideTemplate': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8088,7 +8078,7 @@ final fhirFieldMap = {
     'scope': const FhirField(false, 'String'),
     'scopeElement': const FhirField(false, 'Element'),
   },
-  'ImplementationGuideManifest': {
+  'ImplementationGuideManifest': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8101,7 +8091,7 @@ final fhirFieldMap = {
     'other': const FhirField(true, 'String'),
     'otherElement': const FhirField(true, 'Element'),
   },
-  'ImplementationGuideResource1': {
+  'ImplementationGuideResource1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8112,7 +8102,7 @@ final fhirFieldMap = {
     'relativePath': const FhirField(false, 'FhirUrl'),
     'relativePathElement': const FhirField(false, 'Element'),
   },
-  'ImplementationGuidePage1': {
+  'ImplementationGuidePage1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8123,7 +8113,7 @@ final fhirFieldMap = {
     'anchor': const FhirField(true, 'String'),
     'anchorElement': const FhirField(true, 'Element'),
   },
-  'Ingredient': {
+  'Ingredient': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -8148,7 +8138,7 @@ final fhirFieldMap = {
     'manufacturer': const FhirField(true, 'IngredientManufacturer'),
     'substance': const FhirField(false, 'IngredientSubstance'),
   },
-  'IngredientManufacturer': {
+  'IngredientManufacturer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8156,14 +8146,14 @@ final fhirFieldMap = {
     'roleElement': const FhirField(false, 'Element'),
     'manufacturer': const FhirField(false, 'Reference'),
   },
-  'IngredientSubstance': {
+  'IngredientSubstance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'code': const FhirField(false, 'CodeableReference'),
     'strength': const FhirField(true, 'IngredientStrength'),
   },
-  'IngredientStrength': {
+  'IngredientStrength': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8185,7 +8175,7 @@ final fhirFieldMap = {
     'country': const FhirField(true, 'CodeableConcept'),
     'referenceStrength': const FhirField(true, 'IngredientReferenceStrength'),
   },
-  'IngredientReferenceStrength': {
+  'IngredientReferenceStrength': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8197,7 +8187,7 @@ final fhirFieldMap = {
     'measurementPointElement': const FhirField(false, 'Element'),
     'country': const FhirField(true, 'CodeableConcept'),
   },
-  'InsurancePlan': {
+  'InsurancePlan': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -8226,7 +8216,7 @@ final fhirFieldMap = {
     'coverage': const FhirField(true, 'InsurancePlanCoverage'),
     'plan': const FhirField(true, 'InsurancePlanPlan'),
   },
-  'InsurancePlanCoverage': {
+  'InsurancePlanCoverage': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8234,7 +8224,7 @@ final fhirFieldMap = {
     'network': const FhirField(true, 'Reference'),
     'benefit': const FhirField(true, 'InsurancePlanBenefit'),
   },
-  'InsurancePlanBenefit': {
+  'InsurancePlanBenefit': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8243,14 +8233,14 @@ final fhirFieldMap = {
     'requirementElement': const FhirField(false, 'Element'),
     'limit': const FhirField(true, 'InsurancePlanLimit'),
   },
-  'InsurancePlanLimit': {
+  'InsurancePlanLimit': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'value': const FhirField(false, 'Quantity'),
     'code': const FhirField(false, 'CodeableConcept'),
   },
-  'InsurancePlanPlan': {
+  'InsurancePlanPlan': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8261,7 +8251,7 @@ final fhirFieldMap = {
     'generalCost': const FhirField(true, 'InsurancePlanGeneralCost'),
     'specificCost': const FhirField(true, 'InsurancePlanSpecificCost'),
   },
-  'InsurancePlanGeneralCost': {
+  'InsurancePlanGeneralCost': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8272,21 +8262,21 @@ final fhirFieldMap = {
     'comment': const FhirField(false, 'String'),
     'commentElement': const FhirField(false, 'Element'),
   },
-  'InsurancePlanSpecificCost': {
+  'InsurancePlanSpecificCost': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'category': const FhirField(false, 'CodeableConcept'),
     'benefit': const FhirField(true, 'InsurancePlanBenefit1'),
   },
-  'InsurancePlanBenefit1': {
+  'InsurancePlanBenefit1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'CodeableConcept'),
     'cost': const FhirField(true, 'InsurancePlanCost'),
   },
-  'InsurancePlanCost': {
+  'InsurancePlanCost': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8295,7 +8285,7 @@ final fhirFieldMap = {
     'qualifiers': const FhirField(true, 'CodeableConcept'),
     'value': const FhirField(false, 'Quantity'),
   },
-  'InventoryItem': {
+  'InventoryItem': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -8323,7 +8313,7 @@ final fhirFieldMap = {
     'instance': const FhirField(false, 'InventoryItemInstance'),
     'productReference': const FhirField(false, 'Reference'),
   },
-  'InventoryItemName': {
+  'InventoryItemName': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8333,14 +8323,14 @@ final fhirFieldMap = {
     'name': const FhirField(false, 'String'),
     'nameElement': const FhirField(false, 'Element'),
   },
-  'InventoryItemResponsibleOrganization': {
+  'InventoryItemResponsibleOrganization': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'role': const FhirField(false, 'CodeableConcept'),
     'organization': const FhirField(false, 'Reference'),
   },
-  'InventoryItemDescription': {
+  'InventoryItemDescription': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8349,7 +8339,7 @@ final fhirFieldMap = {
     'description': const FhirField(false, 'String'),
     'descriptionElement': const FhirField(false, 'Element'),
   },
-  'InventoryItemAssociation': {
+  'InventoryItemAssociation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8357,7 +8347,7 @@ final fhirFieldMap = {
     'relatedItem': const FhirField(false, 'Reference'),
     'quantity': const FhirField(false, 'Ratio'),
   },
-  'InventoryItemCharacteristic': {
+  'InventoryItemCharacteristic': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8382,7 +8372,7 @@ final fhirFieldMap = {
     'valueDuration': const FhirField(false, 'FhirDuration'),
     'valueCodeableConcept': const FhirField(false, 'CodeableConcept'),
   },
-  'InventoryItemInstance': {
+  'InventoryItemInstance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8394,7 +8384,7 @@ final fhirFieldMap = {
     'subject': const FhirField(false, 'Reference'),
     'location': const FhirField(false, 'Reference'),
   },
-  'InventoryReport': {
+  'InventoryReport': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -8420,7 +8410,7 @@ final fhirFieldMap = {
         const FhirField(true, 'InventoryReportInventoryListing'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'InventoryReportInventoryListing': {
+  'InventoryReportInventoryListing': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8430,7 +8420,7 @@ final fhirFieldMap = {
     'countingDateTimeElement': const FhirField(false, 'Element'),
     'item': const FhirField(true, 'InventoryReportItem'),
   },
-  'InventoryReportItem': {
+  'InventoryReportItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8438,7 +8428,7 @@ final fhirFieldMap = {
     'quantity': const FhirField(false, 'Quantity'),
     'item': const FhirField(false, 'CodeableReference'),
   },
-  'Invoice': {
+  'Invoice': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -8475,14 +8465,14 @@ final fhirFieldMap = {
     'paymentTermsElement': const FhirField(false, 'Element'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'InvoiceParticipant': {
+  'InvoiceParticipant': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'role': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'InvoiceLineItem': {
+  'InvoiceLineItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8495,7 +8485,7 @@ final fhirFieldMap = {
     'chargeItemCodeableConcept': const FhirField(false, 'CodeableConcept'),
     'priceComponent': const FhirField(true, 'MonetaryComponent'),
   },
-  'Library': {
+  'Library': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -8559,7 +8549,7 @@ final fhirFieldMap = {
     'dataRequirement': const FhirField(true, 'DataRequirement'),
     'content': const FhirField(true, 'Attachment'),
   },
-  'Linkage': {
+  'Linkage': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -8575,7 +8565,7 @@ final fhirFieldMap = {
     'author': const FhirField(false, 'Reference'),
     'item': const FhirField(true, 'LinkageItem'),
   },
-  'LinkageItem': {
+  'LinkageItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8583,7 +8573,7 @@ final fhirFieldMap = {
     'typeElement': const FhirField(false, 'Element'),
     'resource': const FhirField(false, 'Reference'),
   },
-  'List': {
+  'List': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -8612,7 +8602,7 @@ final fhirFieldMap = {
     'entry': const FhirField(true, 'ListEntry'),
     'emptyReason': const FhirField(false, 'CodeableConcept'),
   },
-  'ListEntry': {
+  'ListEntry': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8623,7 +8613,7 @@ final fhirFieldMap = {
     'dateElement': const FhirField(false, 'Element'),
     'item': const FhirField(false, 'Reference'),
   },
-  'Location': {
+  'Location': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -8658,7 +8648,7 @@ final fhirFieldMap = {
     'virtualService': const FhirField(true, 'VirtualServiceDetail'),
     'endpoint': const FhirField(true, 'Reference'),
   },
-  'LocationPosition': {
+  'LocationPosition': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8669,7 +8659,7 @@ final fhirFieldMap = {
     'altitude': const FhirField(false, 'Decimal'),
     'altitudeElement': const FhirField(false, 'Element'),
   },
-  'ManufacturedItemDefinition': {
+  'ManufacturedItemDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -8693,7 +8683,7 @@ final fhirFieldMap = {
     'property': const FhirField(true, 'ManufacturedItemDefinitionProperty'),
     'component': const FhirField(true, 'ManufacturedItemDefinitionComponent'),
   },
-  'ManufacturedItemDefinitionProperty': {
+  'ManufacturedItemDefinitionProperty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8709,7 +8699,7 @@ final fhirFieldMap = {
     'valueAttachment': const FhirField(false, 'Attachment'),
     'valueReference': const FhirField(false, 'Reference'),
   },
-  'ManufacturedItemDefinitionComponent': {
+  'ManufacturedItemDefinitionComponent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8721,7 +8711,7 @@ final fhirFieldMap = {
     'property': const FhirField(true, 'ManufacturedItemDefinitionProperty'),
     'component': const FhirField(true, 'ManufacturedItemDefinitionComponent'),
   },
-  'ManufacturedItemDefinitionConstituent': {
+  'ManufacturedItemDefinitionConstituent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8730,7 +8720,7 @@ final fhirFieldMap = {
     'function': const FhirField(true, 'CodeableConcept'),
     'hasIngredient': const FhirField(true, 'CodeableReference'),
   },
-  'Measure': {
+  'Measure': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -8813,7 +8803,7 @@ final fhirFieldMap = {
     'group': const FhirField(true, 'MeasureGroup'),
     'supplementalData': const FhirField(true, 'MeasureSupplementalData'),
   },
-  'MeasureTerm': {
+  'MeasureTerm': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8821,7 +8811,7 @@ final fhirFieldMap = {
     'definition': const FhirField(false, 'Markdown'),
     'definitionElement': const FhirField(false, 'Element'),
   },
-  'MeasureGroup': {
+  'MeasureGroup': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8844,7 +8834,7 @@ final fhirFieldMap = {
     'population': const FhirField(true, 'MeasurePopulation'),
     'stratifier': const FhirField(true, 'MeasureStratifier'),
   },
-  'MeasurePopulation': {
+  'MeasurePopulation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8859,7 +8849,7 @@ final fhirFieldMap = {
     'inputPopulationIdElement': const FhirField(false, 'Element'),
     'aggregateMethod': const FhirField(false, 'CodeableConcept'),
   },
-  'MeasureStratifier': {
+  'MeasureStratifier': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8872,7 +8862,7 @@ final fhirFieldMap = {
     'groupDefinition': const FhirField(false, 'Reference'),
     'component': const FhirField(true, 'MeasureComponent'),
   },
-  'MeasureComponent': {
+  'MeasureComponent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8884,7 +8874,7 @@ final fhirFieldMap = {
     'criteria': const FhirField(false, 'Expression'),
     'groupDefinition': const FhirField(false, 'Reference'),
   },
-  'MeasureSupplementalData': {
+  'MeasureSupplementalData': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8896,7 +8886,7 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'criteria': const FhirField(false, 'Expression'),
   },
-  'MeasureReport': {
+  'MeasureReport': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -8929,7 +8919,7 @@ final fhirFieldMap = {
     'supplementalData': const FhirField(true, 'Reference'),
     'evaluatedResource': const FhirField(true, 'Reference'),
   },
-  'MeasureReportGroup': {
+  'MeasureReportGroup': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8947,7 +8937,7 @@ final fhirFieldMap = {
     'measureScoreDuration': const FhirField(false, 'FhirDuration'),
     'stratifier': const FhirField(true, 'MeasureReportStratifier'),
   },
-  'MeasureReportPopulation': {
+  'MeasureReportPopulation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8960,7 +8950,7 @@ final fhirFieldMap = {
     'subjectReport': const FhirField(true, 'Reference'),
     'subjects': const FhirField(false, 'Reference'),
   },
-  'MeasureReportStratifier': {
+  'MeasureReportStratifier': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8969,7 +8959,7 @@ final fhirFieldMap = {
     'code': const FhirField(false, 'CodeableConcept'),
     'stratum': const FhirField(true, 'MeasureReportStratum'),
   },
-  'MeasureReportStratum': {
+  'MeasureReportStratum': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -8989,7 +8979,7 @@ final fhirFieldMap = {
     'measureScoreRange': const FhirField(false, 'Range'),
     'measureScoreDuration': const FhirField(false, 'FhirDuration'),
   },
-  'MeasureReportComponent': {
+  'MeasureReportComponent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9003,7 +8993,7 @@ final fhirFieldMap = {
     'valueRange': const FhirField(false, 'Range'),
     'valueReference': const FhirField(false, 'Reference'),
   },
-  'MeasureReportPopulation1': {
+  'MeasureReportPopulation1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9016,7 +9006,7 @@ final fhirFieldMap = {
     'subjectReport': const FhirField(true, 'Reference'),
     'subjects': const FhirField(false, 'Reference'),
   },
-  'Medication': {
+  'Medication': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -9038,7 +9028,7 @@ final fhirFieldMap = {
     'batch': const FhirField(false, 'MedicationBatch'),
     'definition': const FhirField(false, 'Reference'),
   },
-  'MedicationIngredient': {
+  'MedicationIngredient': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9049,7 +9039,7 @@ final fhirFieldMap = {
     'strengthCodeableConcept': const FhirField(false, 'CodeableConcept'),
     'strengthQuantity': const FhirField(false, 'Quantity'),
   },
-  'MedicationBatch': {
+  'MedicationBatch': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9058,7 +9048,7 @@ final fhirFieldMap = {
     'expirationDate': const FhirField(false, 'FhirDateTime'),
     'expirationDateElement': const FhirField(false, 'Element'),
   },
-  'MedicationAdministration': {
+  'MedicationAdministration': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -9097,14 +9087,14 @@ final fhirFieldMap = {
     'dosage': const FhirField(false, 'MedicationAdministrationDosage'),
     'eventHistory': const FhirField(true, 'Reference'),
   },
-  'MedicationAdministrationPerformer': {
+  'MedicationAdministrationPerformer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'CodeableReference'),
   },
-  'MedicationAdministrationDosage': {
+  'MedicationAdministrationDosage': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9117,7 +9107,7 @@ final fhirFieldMap = {
     'rateRatio': const FhirField(false, 'Ratio'),
     'rateQuantity': const FhirField(false, 'Quantity'),
   },
-  'MedicationDispense': {
+  'MedicationDispense': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -9162,14 +9152,14 @@ final fhirFieldMap = {
     'substitution': const FhirField(false, 'MedicationDispenseSubstitution'),
     'eventHistory': const FhirField(true, 'Reference'),
   },
-  'MedicationDispensePerformer': {
+  'MedicationDispensePerformer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'MedicationDispenseSubstitution': {
+  'MedicationDispenseSubstitution': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9179,7 +9169,7 @@ final fhirFieldMap = {
     'reason': const FhirField(true, 'CodeableConcept'),
     'responsibleParty': const FhirField(false, 'Reference'),
   },
-  'MedicationKnowledge': {
+  'MedicationKnowledge': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -9255,21 +9245,21 @@ final fhirFieldMap = {
     'regulatory': const FhirField(true, 'MedicationKnowledgeRegulatory'),
     'definitional': const FhirField(false, 'MedicationKnowledgeDefinitional'),
   },
-  'MedicationKnowledgeRelatedMedicationKnowledge': {
+  'MedicationKnowledgeRelatedMedicationKnowledge': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'CodeableConcept'),
     'reference': const FhirField(true, 'Reference'),
   },
-  'MedicationKnowledgeMonograph': {
+  'MedicationKnowledgeMonograph': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'CodeableConcept'),
     'source': const FhirField(false, 'Reference'),
   },
-  'MedicationKnowledgeCost': {
+  'MedicationKnowledgeCost': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9280,7 +9270,7 @@ final fhirFieldMap = {
     'costMoney': const FhirField(false, 'Money'),
     'costCodeableConcept': const FhirField(false, 'CodeableConcept'),
   },
-  'MedicationKnowledgeMonitoringProgram': {
+  'MedicationKnowledgeMonitoringProgram': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9288,7 +9278,7 @@ final fhirFieldMap = {
     'name': const FhirField(false, 'String'),
     'nameElement': const FhirField(false, 'Element'),
   },
-  'MedicationKnowledgeIndicationGuideline': {
+  'MedicationKnowledgeIndicationGuideline': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9296,7 +9286,7 @@ final fhirFieldMap = {
     'dosingGuideline':
         const FhirField(true, 'MedicationKnowledgeDosingGuideline'),
   },
-  'MedicationKnowledgeDosingGuideline': {
+  'MedicationKnowledgeDosingGuideline': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9306,14 +9296,14 @@ final fhirFieldMap = {
     'patientCharacteristic':
         const FhirField(true, 'MedicationKnowledgePatientCharacteristic'),
   },
-  'MedicationKnowledgeDosage': {
+  'MedicationKnowledgeDosage': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'CodeableConcept'),
     'dosage': const FhirField(true, 'Dosage'),
   },
-  'MedicationKnowledgePatientCharacteristic': {
+  'MedicationKnowledgePatientCharacteristic': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9322,7 +9312,7 @@ final fhirFieldMap = {
     'valueQuantity': const FhirField(false, 'Quantity'),
     'valueRange': const FhirField(false, 'Range'),
   },
-  'MedicationKnowledgeMedicineClassification': {
+  'MedicationKnowledgeMedicineClassification': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9333,14 +9323,14 @@ final fhirFieldMap = {
     'sourceUriElement': const FhirField(false, 'Element'),
     'classification': const FhirField(true, 'CodeableConcept'),
   },
-  'MedicationKnowledgePackaging': {
+  'MedicationKnowledgePackaging': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'cost': const FhirField(true, 'MedicationKnowledgeCost'),
     'packagedProduct': const FhirField(false, 'Reference'),
   },
-  'MedicationKnowledgeStorageGuideline': {
+  'MedicationKnowledgeStorageGuideline': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9351,7 +9341,7 @@ final fhirFieldMap = {
     'environmentalSetting':
         const FhirField(true, 'MedicationKnowledgeEnvironmentalSetting'),
   },
-  'MedicationKnowledgeEnvironmentalSetting': {
+  'MedicationKnowledgeEnvironmentalSetting': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9360,7 +9350,7 @@ final fhirFieldMap = {
     'valueRange': const FhirField(false, 'Range'),
     'valueCodeableConcept': const FhirField(false, 'CodeableConcept'),
   },
-  'MedicationKnowledgeRegulatory': {
+  'MedicationKnowledgeRegulatory': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9369,7 +9359,7 @@ final fhirFieldMap = {
     'schedule': const FhirField(true, 'CodeableConcept'),
     'maxDispense': const FhirField(false, 'MedicationKnowledgeMaxDispense'),
   },
-  'MedicationKnowledgeSubstitution': {
+  'MedicationKnowledgeSubstitution': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9377,14 +9367,14 @@ final fhirFieldMap = {
     'allowed': const FhirField(false, 'Boolean'),
     'allowedElement': const FhirField(false, 'Element'),
   },
-  'MedicationKnowledgeMaxDispense': {
+  'MedicationKnowledgeMaxDispense': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'quantity': const FhirField(false, 'Quantity'),
     'period': const FhirField(false, 'FhirDuration'),
   },
-  'MedicationKnowledgeDefinitional': {
+  'MedicationKnowledgeDefinitional': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9395,7 +9385,7 @@ final fhirFieldMap = {
     'drugCharacteristic':
         const FhirField(true, 'MedicationKnowledgeDrugCharacteristic'),
   },
-  'MedicationKnowledgeIngredient': {
+  'MedicationKnowledgeIngredient': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9405,7 +9395,7 @@ final fhirFieldMap = {
     'strengthCodeableConcept': const FhirField(false, 'CodeableConcept'),
     'strengthQuantity': const FhirField(false, 'Quantity'),
   },
-  'MedicationKnowledgeDrugCharacteristic': {
+  'MedicationKnowledgeDrugCharacteristic': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9418,7 +9408,7 @@ final fhirFieldMap = {
     'valueBase64BinaryElement': const FhirField(false, 'Element'),
     'valueAttachment': const FhirField(false, 'Attachment'),
   },
-  'MedicationRequest': {
+  'MedicationRequest': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -9472,7 +9462,7 @@ final fhirFieldMap = {
     'substitution': const FhirField(false, 'MedicationRequestSubstitution'),
     'eventHistory': const FhirField(true, 'Reference'),
   },
-  'MedicationRequestDose': {
+  'MedicationRequestDose': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9481,7 +9471,7 @@ final fhirFieldMap = {
     'effectiveDosePeriod': const FhirField(false, 'Period'),
     'dosageInstruction': const FhirField(true, 'Dosage'),
   },
-  'MedicationRequestDispenseRequest': {
+  'MedicationRequestDispenseRequest': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9496,14 +9486,14 @@ final fhirFieldMap = {
     'dispenserInstruction': const FhirField(true, 'Annotation'),
     'doseAdministrationAid': const FhirField(false, 'CodeableConcept'),
   },
-  'MedicationRequestInitialFill': {
+  'MedicationRequestInitialFill': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'quantity': const FhirField(false, 'Quantity'),
     'duration': const FhirField(false, 'FhirDuration'),
   },
-  'MedicationRequestSubstitution': {
+  'MedicationRequestSubstitution': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9512,7 +9502,7 @@ final fhirFieldMap = {
     'allowedCodeableConcept': const FhirField(false, 'CodeableConcept'),
     'reason': const FhirField(false, 'CodeableConcept'),
   },
-  'MedicationStatement': {
+  'MedicationStatement': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -9547,14 +9537,14 @@ final fhirFieldMap = {
     'dosage': const FhirField(true, 'Dosage'),
     'adherence': const FhirField(false, 'MedicationStatementAdherence'),
   },
-  'MedicationStatementAdherence': {
+  'MedicationStatementAdherence': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'code': const FhirField(false, 'CodeableConcept'),
     'reason': const FhirField(false, 'CodeableConcept'),
   },
-  'MedicinalProductDefinition': {
+  'MedicinalProductDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -9601,14 +9591,14 @@ final fhirFieldMap = {
     'characteristic':
         const FhirField(true, 'MedicinalProductDefinitionCharacteristic'),
   },
-  'MedicinalProductDefinitionContact': {
+  'MedicinalProductDefinitionContact': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'type': const FhirField(false, 'CodeableConcept'),
     'contact': const FhirField(false, 'Reference'),
   },
-  'MedicinalProductDefinitionName': {
+  'MedicinalProductDefinitionName': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9618,7 +9608,7 @@ final fhirFieldMap = {
     'part': const FhirField(true, 'MedicinalProductDefinitionPart'),
     'usage': const FhirField(true, 'MedicinalProductDefinitionUsage'),
   },
-  'MedicinalProductDefinitionPart': {
+  'MedicinalProductDefinitionPart': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9626,7 +9616,7 @@ final fhirFieldMap = {
     'partElement': const FhirField(false, 'Element'),
     'type': const FhirField(false, 'CodeableConcept'),
   },
-  'MedicinalProductDefinitionUsage': {
+  'MedicinalProductDefinitionUsage': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9634,14 +9624,14 @@ final fhirFieldMap = {
     'jurisdiction': const FhirField(false, 'CodeableConcept'),
     'language': const FhirField(false, 'CodeableConcept'),
   },
-  'MedicinalProductDefinitionCrossReference': {
+  'MedicinalProductDefinitionCrossReference': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'product': const FhirField(false, 'CodeableReference'),
     'type': const FhirField(false, 'CodeableConcept'),
   },
-  'MedicinalProductDefinitionOperation': {
+  'MedicinalProductDefinitionOperation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9650,7 +9640,7 @@ final fhirFieldMap = {
     'organization': const FhirField(true, 'Reference'),
     'confidentialityIndicator': const FhirField(false, 'CodeableConcept'),
   },
-  'MedicinalProductDefinitionCharacteristic': {
+  'MedicinalProductDefinitionCharacteristic': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9667,7 +9657,7 @@ final fhirFieldMap = {
     'valueBooleanElement': const FhirField(false, 'Element'),
     'valueAttachment': const FhirField(false, 'Attachment'),
   },
-  'MessageDefinition': {
+  'MessageDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -9724,7 +9714,7 @@ final fhirFieldMap = {
         const FhirField(true, 'MessageDefinitionAllowedResponse'),
     'graph': const FhirField(false, 'Canonical'),
   },
-  'MessageDefinitionFocus': {
+  'MessageDefinitionFocus': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9736,7 +9726,7 @@ final fhirFieldMap = {
     'max': const FhirField(false, 'String'),
     'maxElement': const FhirField(false, 'Element'),
   },
-  'MessageDefinitionAllowedResponse': {
+  'MessageDefinitionAllowedResponse': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9744,7 +9734,7 @@ final fhirFieldMap = {
     'situation': const FhirField(false, 'Markdown'),
     'situationElement': const FhirField(false, 'Element'),
   },
-  'MessageHeader': {
+  'MessageHeader': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -9768,7 +9758,7 @@ final fhirFieldMap = {
     'focus': const FhirField(true, 'Reference'),
     'definition': const FhirField(false, 'Canonical'),
   },
-  'MessageHeaderDestination': {
+  'MessageHeaderDestination': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9780,7 +9770,7 @@ final fhirFieldMap = {
     'target': const FhirField(false, 'Reference'),
     'receiver': const FhirField(false, 'Reference'),
   },
-  'MessageHeaderSource': {
+  'MessageHeaderSource': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9795,7 +9785,7 @@ final fhirFieldMap = {
     'versionElement': const FhirField(false, 'Element'),
     'contact': const FhirField(false, 'ContactPoint'),
   },
-  'MessageHeaderResponse': {
+  'MessageHeaderResponse': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9804,7 +9794,7 @@ final fhirFieldMap = {
     'codeElement': const FhirField(false, 'Element'),
     'details': const FhirField(false, 'Reference'),
   },
-  'MolecularSequence': {
+  'MolecularSequence': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -9828,7 +9818,7 @@ final fhirFieldMap = {
     'formatted': const FhirField(true, 'Attachment'),
     'relative': const FhirField(true, 'MolecularSequenceRelative'),
   },
-  'MolecularSequenceRelative': {
+  'MolecularSequenceRelative': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9840,7 +9830,7 @@ final fhirFieldMap = {
         const FhirField(false, 'MolecularSequenceStartingSequence'),
     'edit': const FhirField(true, 'MolecularSequenceEdit'),
   },
-  'MolecularSequenceStartingSequence': {
+  'MolecularSequenceStartingSequence': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9859,7 +9849,7 @@ final fhirFieldMap = {
     'strand': const FhirField(false, 'Code'),
     'strandElement': const FhirField(false, 'Element'),
   },
-  'MolecularSequenceEdit': {
+  'MolecularSequenceEdit': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9872,7 +9862,7 @@ final fhirFieldMap = {
     'replacedSequence': const FhirField(false, 'String'),
     'replacedSequenceElement': const FhirField(false, 'Element'),
   },
-  'NamingSystem': {
+  'NamingSystem': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -9934,7 +9924,7 @@ final fhirFieldMap = {
     'usageElement': const FhirField(false, 'Element'),
     'uniqueId': const FhirField(true, 'Id'),
   },
-  'NamingSystemUniqueId': {
+  'NamingSystemUniqueId': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -9950,7 +9940,7 @@ final fhirFieldMap = {
     'authoritative': const FhirField(false, 'Boolean'),
     'authoritativeElement': const FhirField(false, 'Element'),
   },
-  'NutritionIntake': {
+  'NutritionIntake': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -9989,7 +9979,7 @@ final fhirFieldMap = {
     'reason': const FhirField(true, 'CodeableReference'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'NutritionIntakeConsumedItem': {
+  'NutritionIntakeConsumedItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10002,21 +9992,21 @@ final fhirFieldMap = {
     'notConsumedElement': const FhirField(false, 'Element'),
     'notConsumedReason': const FhirField(false, 'CodeableConcept'),
   },
-  'NutritionIntakeIngredientLabel': {
+  'NutritionIntakeIngredientLabel': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'nutrient': const FhirField(false, 'CodeableReference'),
     'amount': const FhirField(false, 'Quantity'),
   },
-  'NutritionIntakePerformer': {
+  'NutritionIntakePerformer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'NutritionOrder': {
+  'NutritionOrder': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -10058,7 +10048,7 @@ final fhirFieldMap = {
     'enteralFormula': const FhirField(false, 'NutritionOrderEnteralFormula'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'NutritionOrderOralDiet': {
+  'NutritionOrderOralDiet': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10070,7 +10060,7 @@ final fhirFieldMap = {
     'instruction': const FhirField(false, 'String'),
     'instructionElement': const FhirField(false, 'Element'),
   },
-  'NutritionOrderSchedule': {
+  'NutritionOrderSchedule': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10079,21 +10069,21 @@ final fhirFieldMap = {
     'asNeededElement': const FhirField(false, 'Element'),
     'asNeededFor': const FhirField(false, 'CodeableConcept'),
   },
-  'NutritionOrderNutrient': {
+  'NutritionOrderNutrient': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'modifier': const FhirField(false, 'CodeableConcept'),
     'amount': const FhirField(false, 'Quantity'),
   },
-  'NutritionOrderTexture': {
+  'NutritionOrderTexture': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'modifier': const FhirField(false, 'CodeableConcept'),
     'foodType': const FhirField(false, 'CodeableConcept'),
   },
-  'NutritionOrderSupplement': {
+  'NutritionOrderSupplement': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10105,7 +10095,7 @@ final fhirFieldMap = {
     'instruction': const FhirField(false, 'String'),
     'instructionElement': const FhirField(false, 'Element'),
   },
-  'NutritionOrderSchedule1': {
+  'NutritionOrderSchedule1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10114,7 +10104,7 @@ final fhirFieldMap = {
     'asNeededElement': const FhirField(false, 'Element'),
     'asNeededFor': const FhirField(false, 'CodeableConcept'),
   },
-  'NutritionOrderEnteralFormula': {
+  'NutritionOrderEnteralFormula': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10130,7 +10120,7 @@ final fhirFieldMap = {
     'administrationInstruction': const FhirField(false, 'Markdown'),
     'administrationInstructionElement': const FhirField(false, 'Element'),
   },
-  'NutritionOrderAdditive': {
+  'NutritionOrderAdditive': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10139,7 +10129,7 @@ final fhirFieldMap = {
     'productNameElement': const FhirField(false, 'Element'),
     'quantity': const FhirField(false, 'Quantity'),
   },
-  'NutritionOrderAdministration': {
+  'NutritionOrderAdministration': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10148,7 +10138,7 @@ final fhirFieldMap = {
     'rateQuantity': const FhirField(false, 'Quantity'),
     'rateRatio': const FhirField(false, 'Ratio'),
   },
-  'NutritionOrderSchedule2': {
+  'NutritionOrderSchedule2': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10157,7 +10147,7 @@ final fhirFieldMap = {
     'asNeededElement': const FhirField(false, 'Element'),
     'asNeededFor': const FhirField(false, 'CodeableConcept'),
   },
-  'NutritionProduct': {
+  'NutritionProduct': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -10180,21 +10170,21 @@ final fhirFieldMap = {
     'instance': const FhirField(true, 'NutritionProductInstance'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'NutritionProductNutrient': {
+  'NutritionProductNutrient': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'item': const FhirField(false, 'CodeableReference'),
     'amount': const FhirField(true, 'Ratio'),
   },
-  'NutritionProductIngredient': {
+  'NutritionProductIngredient': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'item': const FhirField(false, 'CodeableReference'),
     'amount': const FhirField(true, 'Ratio'),
   },
-  'NutritionProductCharacteristic': {
+  'NutritionProductCharacteristic': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10209,7 +10199,7 @@ final fhirFieldMap = {
     'valueBoolean': const FhirField(false, 'Boolean'),
     'valueBooleanElement': const FhirField(false, 'Element'),
   },
-  'NutritionProductInstance': {
+  'NutritionProductInstance': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10225,7 +10215,7 @@ final fhirFieldMap = {
     'useByElement': const FhirField(false, 'Element'),
     'biologicalSourceEvent': const FhirField(false, 'Identifier'),
   },
-  'Observation': {
+  'Observation': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -10290,7 +10280,7 @@ final fhirFieldMap = {
     'derivedFrom': const FhirField(true, 'Reference'),
     'component': const FhirField(true, 'ObservationComponent'),
   },
-  'ObservationTriggeredBy': {
+  'ObservationTriggeredBy': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10300,7 +10290,7 @@ final fhirFieldMap = {
     'reason': const FhirField(false, 'String'),
     'reasonElement': const FhirField(false, 'Element'),
   },
-  'ObservationReferenceRange': {
+  'ObservationReferenceRange': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10313,7 +10303,7 @@ final fhirFieldMap = {
     'text': const FhirField(false, 'Markdown'),
     'textElement': const FhirField(false, 'Element'),
   },
-  'ObservationComponent': {
+  'ObservationComponent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10340,7 +10330,7 @@ final fhirFieldMap = {
     'interpretation': const FhirField(true, 'CodeableConcept'),
     'referenceRange': const FhirField(true, 'ObservationReferenceRange'),
   },
-  'ObservationDefinition': {
+  'ObservationDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -10416,7 +10406,7 @@ final fhirFieldMap = {
     'hasMember': const FhirField(true, 'Reference'),
     'component': const FhirField(true, 'ObservationDefinitionComponent'),
   },
-  'ObservationDefinitionQuantitativeDetails': {
+  'ObservationDefinitionQuantitativeDetails': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10427,7 +10417,7 @@ final fhirFieldMap = {
     'decimalPrecision': const FhirField(false, 'Integer'),
     'decimalPrecisionElement': const FhirField(false, 'Element'),
   },
-  'ObservationDefinitionQualifiedValue': {
+  'ObservationDefinitionQualifiedValue': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10447,7 +10437,7 @@ final fhirFieldMap = {
     'abnormalCodedValueSet': const FhirField(false, 'Canonical'),
     'criticalCodedValueSet': const FhirField(false, 'Canonical'),
   },
-  'ObservationDefinitionComponent': {
+  'ObservationDefinitionComponent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10458,7 +10448,7 @@ final fhirFieldMap = {
     'qualifiedValue':
         const FhirField(true, 'ObservationDefinitionQualifiedValue'),
   },
-  'OperationDefinition': {
+  'OperationDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -10522,7 +10512,7 @@ final fhirFieldMap = {
     'parameter': const FhirField(true, 'OperationDefinitionParameter'),
     'overload': const FhirField(true, 'OperationDefinitionOverload'),
   },
-  'OperationDefinitionParameter': {
+  'OperationDefinitionParameter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10550,7 +10540,7 @@ final fhirFieldMap = {
         const FhirField(true, 'OperationDefinitionReferencedFrom'),
     'part': const FhirField(true, 'OperationDefinitionParameter'),
   },
-  'OperationDefinitionBinding': {
+  'OperationDefinitionBinding': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10558,7 +10548,7 @@ final fhirFieldMap = {
     'strengthElement': const FhirField(false, 'Element'),
     'valueSet': const FhirField(false, 'Canonical'),
   },
-  'OperationDefinitionReferencedFrom': {
+  'OperationDefinitionReferencedFrom': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10567,7 +10557,7 @@ final fhirFieldMap = {
     'sourceId': const FhirField(false, 'String'),
     'sourceIdElement': const FhirField(false, 'Element'),
   },
-  'OperationDefinitionOverload': {
+  'OperationDefinitionOverload': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10576,7 +10566,7 @@ final fhirFieldMap = {
     'comment': const FhirField(false, 'String'),
     'commentElement': const FhirField(false, 'Element'),
   },
-  'OperationOutcome': {
+  'OperationOutcome': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -10589,7 +10579,7 @@ final fhirFieldMap = {
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'issue': const FhirField(true, 'OperationOutcomeIssue'),
   },
-  'OperationOutcomeIssue': {
+  'OperationOutcomeIssue': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10605,7 +10595,7 @@ final fhirFieldMap = {
     'expression': const FhirField(true, 'String'),
     'expressionElement': const FhirField(true, 'Element'),
   },
-  'Organization': {
+  'Organization': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -10631,7 +10621,7 @@ final fhirFieldMap = {
     'endpoint': const FhirField(true, 'Reference'),
     'qualification': const FhirField(true, 'OrganizationQualification'),
   },
-  'OrganizationQualification': {
+  'OrganizationQualification': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10640,7 +10630,7 @@ final fhirFieldMap = {
     'period': const FhirField(false, 'Period'),
     'issuer': const FhirField(false, 'Reference'),
   },
-  'OrganizationAffiliation': {
+  'OrganizationAffiliation': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -10665,7 +10655,7 @@ final fhirFieldMap = {
     'contact': const FhirField(true, 'ExtendedContactDetail'),
     'endpoint': const FhirField(true, 'Reference'),
   },
-  'PackagedProductDefinition': {
+  'PackagedProductDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -10698,14 +10688,14 @@ final fhirFieldMap = {
     'characteristic':
         const FhirField(true, 'PackagedProductDefinitionProperty'),
   },
-  'PackagedProductDefinitionLegalStatusOfSupply': {
+  'PackagedProductDefinitionLegalStatusOfSupply': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'code': const FhirField(false, 'CodeableConcept'),
     'jurisdiction': const FhirField(false, 'CodeableConcept'),
   },
-  'PackagedProductDefinitionPackaging': {
+  'PackagedProductDefinitionPackaging': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10724,7 +10714,7 @@ final fhirFieldMap = {
         const FhirField(true, 'PackagedProductDefinitionContainedItem'),
     'packaging': const FhirField(true, 'PackagedProductDefinitionPackaging'),
   },
-  'PackagedProductDefinitionProperty': {
+  'PackagedProductDefinitionProperty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10737,14 +10727,14 @@ final fhirFieldMap = {
     'valueBooleanElement': const FhirField(false, 'Element'),
     'valueAttachment': const FhirField(false, 'Attachment'),
   },
-  'PackagedProductDefinitionContainedItem': {
+  'PackagedProductDefinitionContainedItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'item': const FhirField(false, 'CodeableReference'),
     'amount': const FhirField(false, 'Quantity'),
   },
-  'Parameters': {
+  'Parameters': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -10753,7 +10743,7 @@ final fhirFieldMap = {
     'languageElement': const FhirField(false, 'Element'),
     'parameter': const FhirField(true, 'ParametersParameter'),
   },
-  'ParametersParameter': {
+  'ParametersParameter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10837,7 +10827,7 @@ final fhirFieldMap = {
     'resource': const FhirField(false, 'ResourceList'),
     'part': const FhirField(true, 'ParametersParameter'),
   },
-  'Patient': {
+  'Patient': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -10874,7 +10864,7 @@ final fhirFieldMap = {
     'managingOrganization': const FhirField(false, 'Reference'),
     'link': const FhirField(true, 'PatientLink'),
   },
-  'PatientContact': {
+  'PatientContact': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10887,7 +10877,7 @@ final fhirFieldMap = {
     'organization': const FhirField(false, 'Reference'),
     'period': const FhirField(false, 'Period'),
   },
-  'PatientCommunication': {
+  'PatientCommunication': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10895,7 +10885,7 @@ final fhirFieldMap = {
     'preferred': const FhirField(false, 'Boolean'),
     'preferredElement': const FhirField(false, 'Element'),
   },
-  'PatientLink': {
+  'PatientLink': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -10903,7 +10893,7 @@ final fhirFieldMap = {
     'type': const FhirField(false, 'Code'),
     'typeElement': const FhirField(false, 'Element'),
   },
-  'PaymentNotice': {
+  'PaymentNotice': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -10930,7 +10920,7 @@ final fhirFieldMap = {
     'amount': const FhirField(false, 'Money'),
     'paymentStatus': const FhirField(false, 'CodeableConcept'),
   },
-  'PaymentReconciliation': {
+  'PaymentReconciliation': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -10982,7 +10972,7 @@ final fhirFieldMap = {
     'formCode': const FhirField(false, 'CodeableConcept'),
     'processNote': const FhirField(true, 'PaymentReconciliationProcessNote'),
   },
-  'PaymentReconciliationAllocation': {
+  'PaymentReconciliationAllocation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11005,7 +10995,7 @@ final fhirFieldMap = {
     'payee': const FhirField(false, 'Reference'),
     'amount': const FhirField(false, 'Money'),
   },
-  'PaymentReconciliationProcessNote': {
+  'PaymentReconciliationProcessNote': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11014,7 +11004,7 @@ final fhirFieldMap = {
     'text': const FhirField(false, 'String'),
     'textElement': const FhirField(false, 'Element'),
   },
-  'Permission': {
+  'Permission': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -11036,14 +11026,14 @@ final fhirFieldMap = {
     'combiningElement': const FhirField(false, 'Element'),
     'rule': const FhirField(true, 'PermissionRule'),
   },
-  'PermissionJustification': {
+  'PermissionJustification': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'basis': const FhirField(true, 'CodeableConcept'),
     'evidence': const FhirField(true, 'Reference'),
   },
-  'PermissionRule': {
+  'PermissionRule': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11053,7 +11043,7 @@ final fhirFieldMap = {
     'activity': const FhirField(true, 'PermissionActivity'),
     'limit': const FhirField(true, 'CodeableConcept'),
   },
-  'PermissionData': {
+  'PermissionData': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11062,7 +11052,7 @@ final fhirFieldMap = {
     'period': const FhirField(true, 'Period'),
     'expression': const FhirField(false, 'Expression'),
   },
-  'PermissionResource': {
+  'PermissionResource': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11070,7 +11060,7 @@ final fhirFieldMap = {
     'meaningElement': const FhirField(false, 'Element'),
     'reference': const FhirField(false, 'Reference'),
   },
-  'PermissionActivity': {
+  'PermissionActivity': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11078,7 +11068,7 @@ final fhirFieldMap = {
     'action': const FhirField(true, 'CodeableConcept'),
     'purpose': const FhirField(true, 'CodeableConcept'),
   },
-  'Person': {
+  'Person': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -11109,7 +11099,7 @@ final fhirFieldMap = {
     'managingOrganization': const FhirField(false, 'Reference'),
     'link': const FhirField(true, 'PersonLink'),
   },
-  'PersonCommunication': {
+  'PersonCommunication': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11117,7 +11107,7 @@ final fhirFieldMap = {
     'preferred': const FhirField(false, 'Boolean'),
     'preferredElement': const FhirField(false, 'Element'),
   },
-  'PersonLink': {
+  'PersonLink': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11125,7 +11115,7 @@ final fhirFieldMap = {
     'assurance': const FhirField(false, 'Code'),
     'assuranceElement': const FhirField(false, 'Element'),
   },
-  'PlanDefinition': {
+  'PlanDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -11195,7 +11185,7 @@ final fhirFieldMap = {
     'asNeededBooleanElement': const FhirField(false, 'Element'),
     'asNeededCodeableConcept': const FhirField(false, 'CodeableConcept'),
   },
-  'PlanDefinitionGoal': {
+  'PlanDefinitionGoal': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11207,7 +11197,7 @@ final fhirFieldMap = {
     'documentation': const FhirField(true, 'RelatedArtifact'),
     'target': const FhirField(true, 'PlanDefinitionTarget'),
   },
-  'PlanDefinitionTarget': {
+  'PlanDefinitionTarget': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11224,7 +11214,7 @@ final fhirFieldMap = {
     'detailRatio': const FhirField(false, 'Ratio'),
     'due': const FhirField(false, 'FhirDuration'),
   },
-  'PlanDefinitionActor': {
+  'PlanDefinitionActor': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11234,7 +11224,7 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'option': const FhirField(true, 'PlanDefinitionOption'),
   },
-  'PlanDefinitionOption': {
+  'PlanDefinitionOption': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11244,7 +11234,7 @@ final fhirFieldMap = {
     'typeReference': const FhirField(false, 'Reference'),
     'role': const FhirField(false, 'CodeableConcept'),
   },
-  'PlanDefinitionAction': {
+  'PlanDefinitionAction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11299,7 +11289,7 @@ final fhirFieldMap = {
     'dynamicValue': const FhirField(true, 'PlanDefinitionDynamicValue'),
     'action': const FhirField(true, 'PlanDefinitionAction'),
   },
-  'PlanDefinitionCondition': {
+  'PlanDefinitionCondition': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11307,7 +11297,7 @@ final fhirFieldMap = {
     'kindElement': const FhirField(false, 'Element'),
     'expression': const FhirField(false, 'Expression'),
   },
-  'PlanDefinitionInput': {
+  'PlanDefinitionInput': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11317,7 +11307,7 @@ final fhirFieldMap = {
     'relatedData': const FhirField(false, 'Id'),
     'relatedDataElement': const FhirField(false, 'Element'),
   },
-  'PlanDefinitionOutput': {
+  'PlanDefinitionOutput': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11327,7 +11317,7 @@ final fhirFieldMap = {
     'relatedData': const FhirField(false, 'String'),
     'relatedDataElement': const FhirField(false, 'Element'),
   },
-  'PlanDefinitionRelatedAction': {
+  'PlanDefinitionRelatedAction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11340,7 +11330,7 @@ final fhirFieldMap = {
     'offsetDuration': const FhirField(false, 'FhirDuration'),
     'offsetRange': const FhirField(false, 'Range'),
   },
-  'PlanDefinitionParticipant': {
+  'PlanDefinitionParticipant': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11353,7 +11343,7 @@ final fhirFieldMap = {
     'role': const FhirField(false, 'CodeableConcept'),
     'function': const FhirField(false, 'CodeableConcept'),
   },
-  'PlanDefinitionDynamicValue': {
+  'PlanDefinitionDynamicValue': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11361,7 +11351,7 @@ final fhirFieldMap = {
     'pathElement': const FhirField(false, 'Element'),
     'expression': const FhirField(false, 'Expression'),
   },
-  'Practitioner': {
+  'Practitioner': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -11390,7 +11380,7 @@ final fhirFieldMap = {
     'qualification': const FhirField(true, 'PractitionerQualification'),
     'communication': const FhirField(true, 'PractitionerCommunication'),
   },
-  'PractitionerQualification': {
+  'PractitionerQualification': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11399,7 +11389,7 @@ final fhirFieldMap = {
     'period': const FhirField(false, 'Period'),
     'issuer': const FhirField(false, 'Reference'),
   },
-  'PractitionerCommunication': {
+  'PractitionerCommunication': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11407,7 +11397,7 @@ final fhirFieldMap = {
     'preferred': const FhirField(false, 'Boolean'),
     'preferredElement': const FhirField(false, 'Element'),
   },
-  'PractitionerRole': {
+  'PractitionerRole': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -11434,7 +11424,7 @@ final fhirFieldMap = {
     'availability': const FhirField(true, 'Availability'),
     'endpoint': const FhirField(true, 'Reference'),
   },
-  'Procedure': {
+  'Procedure': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -11486,7 +11476,7 @@ final fhirFieldMap = {
     'used': const FhirField(true, 'CodeableReference'),
     'supportingInfo': const FhirField(true, 'Reference'),
   },
-  'ProcedurePerformer': {
+  'ProcedurePerformer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11495,14 +11485,14 @@ final fhirFieldMap = {
     'onBehalfOf': const FhirField(false, 'Reference'),
     'period': const FhirField(false, 'Period'),
   },
-  'ProcedureFocalDevice': {
+  'ProcedureFocalDevice': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'action': const FhirField(false, 'CodeableConcept'),
     'manipulated': const FhirField(false, 'Reference'),
   },
-  'Provenance': {
+  'Provenance': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -11531,7 +11521,7 @@ final fhirFieldMap = {
     'entity': const FhirField(true, 'ProvenanceEntity'),
     'signature': const FhirField(true, 'Signature'),
   },
-  'ProvenanceAgent': {
+  'ProvenanceAgent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11540,7 +11530,7 @@ final fhirFieldMap = {
     'who': const FhirField(false, 'Reference'),
     'onBehalfOf': const FhirField(false, 'Reference'),
   },
-  'ProvenanceEntity': {
+  'ProvenanceEntity': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11549,7 +11539,7 @@ final fhirFieldMap = {
     'what': const FhirField(false, 'Reference'),
     'agent': const FhirField(true, 'ProvenanceAgent'),
   },
-  'Questionnaire': {
+  'Questionnaire': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -11608,7 +11598,7 @@ final fhirFieldMap = {
     'code': const FhirField(true, 'Coding'),
     'item': const FhirField(true, 'QuestionnaireItem'),
   },
-  'QuestionnaireItem': {
+  'QuestionnaireItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11643,7 +11633,7 @@ final fhirFieldMap = {
     'initial': const FhirField(true, 'QuestionnaireInitial'),
     'item': const FhirField(true, 'QuestionnaireItem'),
   },
-  'QuestionnaireEnableWhen': {
+  'QuestionnaireEnableWhen': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11669,7 +11659,7 @@ final fhirFieldMap = {
     'answerQuantity': const FhirField(false, 'Quantity'),
     'answerReference': const FhirField(false, 'Reference'),
   },
-  'QuestionnaireAnswerOption': {
+  'QuestionnaireAnswerOption': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11686,7 +11676,7 @@ final fhirFieldMap = {
     'initialSelected': const FhirField(false, 'Boolean'),
     'initialSelectedElement': const FhirField(false, 'Element'),
   },
-  'QuestionnaireInitial': {
+  'QuestionnaireInitial': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11711,7 +11701,7 @@ final fhirFieldMap = {
     'valueQuantity': const FhirField(false, 'Quantity'),
     'valueReference': const FhirField(false, 'Reference'),
   },
-  'QuestionnaireResponse': {
+  'QuestionnaireResponse': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -11736,7 +11726,7 @@ final fhirFieldMap = {
     'source': const FhirField(false, 'Reference'),
     'item': const FhirField(true, 'QuestionnaireResponseItem'),
   },
-  'QuestionnaireResponseItem': {
+  'QuestionnaireResponseItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11749,7 +11739,7 @@ final fhirFieldMap = {
     'answer': const FhirField(true, 'QuestionnaireResponseAnswer'),
     'item': const FhirField(true, 'QuestionnaireResponseItem'),
   },
-  'QuestionnaireResponseAnswer': {
+  'QuestionnaireResponseAnswer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11775,7 +11765,7 @@ final fhirFieldMap = {
     'valueReference': const FhirField(false, 'Reference'),
     'item': const FhirField(true, 'QuestionnaireResponseItem'),
   },
-  'RegulatedAuthorization': {
+  'RegulatedAuthorization': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -11804,7 +11794,7 @@ final fhirFieldMap = {
     'attachedDocument': const FhirField(true, 'Reference'),
     'case': const FhirField(false, 'RegulatedAuthorizationCase'),
   },
-  'RegulatedAuthorizationCase': {
+  'RegulatedAuthorizationCase': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11816,7 +11806,7 @@ final fhirFieldMap = {
     'dateDateTimeElement': const FhirField(false, 'Element'),
     'application': const FhirField(true, 'RegulatedAuthorizationCase'),
   },
-  'RelatedPerson': {
+  'RelatedPerson': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -11843,7 +11833,7 @@ final fhirFieldMap = {
     'period': const FhirField(false, 'Period'),
     'communication': const FhirField(true, 'RelatedPersonCommunication'),
   },
-  'RelatedPersonCommunication': {
+  'RelatedPersonCommunication': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11851,7 +11841,7 @@ final fhirFieldMap = {
     'preferred': const FhirField(false, 'Boolean'),
     'preferredElement': const FhirField(false, 'Element'),
   },
-  'RequestOrchestration': {
+  'RequestOrchestration': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -11887,7 +11877,7 @@ final fhirFieldMap = {
     'note': const FhirField(true, 'Annotation'),
     'action': const FhirField(true, 'RequestOrchestrationAction'),
   },
-  'RequestOrchestrationAction': {
+  'RequestOrchestrationAction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11939,7 +11929,7 @@ final fhirFieldMap = {
     'dynamicValue': const FhirField(true, 'RequestOrchestrationDynamicValue'),
     'action': const FhirField(true, 'RequestOrchestrationAction'),
   },
-  'RequestOrchestrationCondition': {
+  'RequestOrchestrationCondition': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11947,7 +11937,7 @@ final fhirFieldMap = {
     'kindElement': const FhirField(false, 'Element'),
     'expression': const FhirField(false, 'Expression'),
   },
-  'RequestOrchestrationInput': {
+  'RequestOrchestrationInput': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11957,7 +11947,7 @@ final fhirFieldMap = {
     'relatedData': const FhirField(false, 'Id'),
     'relatedDataElement': const FhirField(false, 'Element'),
   },
-  'RequestOrchestrationOutput': {
+  'RequestOrchestrationOutput': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11967,7 +11957,7 @@ final fhirFieldMap = {
     'relatedData': const FhirField(false, 'String'),
     'relatedDataElement': const FhirField(false, 'Element'),
   },
-  'RequestOrchestrationRelatedAction': {
+  'RequestOrchestrationRelatedAction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11980,7 +11970,7 @@ final fhirFieldMap = {
     'offsetDuration': const FhirField(false, 'FhirDuration'),
     'offsetRange': const FhirField(false, 'Range'),
   },
-  'RequestOrchestrationParticipant': {
+  'RequestOrchestrationParticipant': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -11994,7 +11984,7 @@ final fhirFieldMap = {
     'actorCanonicalElement': const FhirField(false, 'Element'),
     'actorReference': const FhirField(false, 'Reference'),
   },
-  'RequestOrchestrationDynamicValue': {
+  'RequestOrchestrationDynamicValue': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12002,7 +11992,7 @@ final fhirFieldMap = {
     'pathElement': const FhirField(false, 'Element'),
     'expression': const FhirField(false, 'Expression'),
   },
-  'Requirements': {
+  'Requirements': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -12050,7 +12040,7 @@ final fhirFieldMap = {
     'actor': const FhirField(true, 'Canonical'),
     'statement': const FhirField(true, 'RequirementsStatement'),
   },
-  'RequirementsStatement': {
+  'RequirementsStatement': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12074,7 +12064,7 @@ final fhirFieldMap = {
     'referenceElement': const FhirField(true, 'Element'),
     'source': const FhirField(true, 'Reference'),
   },
-  'ResearchStudy': {
+  'ResearchStudy': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -12126,7 +12116,7 @@ final fhirFieldMap = {
     'outcomeMeasure': const FhirField(true, 'ResearchStudyOutcomeMeasure'),
     'result': const FhirField(true, 'Reference'),
   },
-  'ResearchStudyLabel': {
+  'ResearchStudyLabel': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12134,7 +12124,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'String'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'ResearchStudyAssociatedParty': {
+  'ResearchStudyAssociatedParty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12145,7 +12135,7 @@ final fhirFieldMap = {
     'classifier': const FhirField(true, 'CodeableConcept'),
     'party': const FhirField(false, 'Reference'),
   },
-  'ResearchStudyProgressStatus': {
+  'ResearchStudyProgressStatus': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12154,7 +12144,7 @@ final fhirFieldMap = {
     'actualElement': const FhirField(false, 'Element'),
     'period': const FhirField(false, 'Period'),
   },
-  'ResearchStudyRecruitment': {
+  'ResearchStudyRecruitment': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12165,7 +12155,7 @@ final fhirFieldMap = {
     'eligibility': const FhirField(false, 'Reference'),
     'actualGroup': const FhirField(false, 'Reference'),
   },
-  'ResearchStudyComparisonGroup': {
+  'ResearchStudyComparisonGroup': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12179,7 +12169,7 @@ final fhirFieldMap = {
     'intendedExposure': const FhirField(true, 'Reference'),
     'observedGroup': const FhirField(false, 'Reference'),
   },
-  'ResearchStudyObjective': {
+  'ResearchStudyObjective': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12189,7 +12179,7 @@ final fhirFieldMap = {
     'description': const FhirField(false, 'Markdown'),
     'descriptionElement': const FhirField(false, 'Element'),
   },
-  'ResearchStudyOutcomeMeasure': {
+  'ResearchStudyOutcomeMeasure': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12200,7 +12190,7 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'reference': const FhirField(false, 'Reference'),
   },
-  'ResearchSubject': {
+  'ResearchSubject': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -12224,7 +12214,7 @@ final fhirFieldMap = {
     'actualComparisonGroupElement': const FhirField(false, 'Element'),
     'consent': const FhirField(true, 'Reference'),
   },
-  'ResearchSubjectProgress': {
+  'ResearchSubjectProgress': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12237,7 +12227,7 @@ final fhirFieldMap = {
     'endDate': const FhirField(false, 'FhirDateTime'),
     'endDateElement': const FhirField(false, 'Element'),
   },
-  'RiskAssessment': {
+  'RiskAssessment': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -12269,7 +12259,7 @@ final fhirFieldMap = {
     'mitigationElement': const FhirField(false, 'Element'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'RiskAssessmentPrediction': {
+  'RiskAssessmentPrediction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12285,7 +12275,7 @@ final fhirFieldMap = {
     'rationale': const FhirField(false, 'String'),
     'rationaleElement': const FhirField(false, 'Element'),
   },
-  'Schedule': {
+  'Schedule': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -12309,7 +12299,7 @@ final fhirFieldMap = {
     'comment': const FhirField(false, 'Markdown'),
     'commentElement': const FhirField(false, 'Element'),
   },
-  'SearchParameter': {
+  'SearchParameter': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -12378,7 +12368,7 @@ final fhirFieldMap = {
     'chainElement': const FhirField(true, 'Element'),
     'component': const FhirField(true, 'SearchParameterComponent'),
   },
-  'SearchParameterComponent': {
+  'SearchParameterComponent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12386,7 +12376,7 @@ final fhirFieldMap = {
     'expression': const FhirField(false, 'String'),
     'expressionElement': const FhirField(false, 'Element'),
   },
-  'ServiceRequest': {
+  'ServiceRequest': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -12445,14 +12435,14 @@ final fhirFieldMap = {
         const FhirField(true, 'ServiceRequestPatientInstruction'),
     'relevantHistory': const FhirField(true, 'Reference'),
   },
-  'ServiceRequestOrderDetail': {
+  'ServiceRequestOrderDetail': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'parameterFocus': const FhirField(false, 'CodeableReference'),
     'parameter': const FhirField(true, 'ServiceRequestParameter'),
   },
-  'ServiceRequestParameter': {
+  'ServiceRequestParameter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12467,7 +12457,7 @@ final fhirFieldMap = {
     'valueStringElement': const FhirField(false, 'Element'),
     'valuePeriod': const FhirField(false, 'Period'),
   },
-  'ServiceRequestPatientInstruction': {
+  'ServiceRequestPatientInstruction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12475,7 +12465,7 @@ final fhirFieldMap = {
     'instructionMarkdownElement': const FhirField(false, 'Element'),
     'instructionReference': const FhirField(false, 'Reference'),
   },
-  'Slot': {
+  'Slot': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -12503,7 +12493,7 @@ final fhirFieldMap = {
     'comment': const FhirField(false, 'String'),
     'commentElement': const FhirField(false, 'Element'),
   },
-  'Specimen': {
+  'Specimen': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -12534,7 +12524,7 @@ final fhirFieldMap = {
     'condition': const FhirField(true, 'CodeableConcept'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'SpecimenFeature': {
+  'SpecimenFeature': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12542,7 +12532,7 @@ final fhirFieldMap = {
     'description': const FhirField(false, 'String'),
     'descriptionElement': const FhirField(false, 'Element'),
   },
-  'SpecimenCollection': {
+  'SpecimenCollection': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12559,7 +12549,7 @@ final fhirFieldMap = {
     'fastingStatusCodeableConcept': const FhirField(false, 'CodeableConcept'),
     'fastingStatusDuration': const FhirField(false, 'FhirDuration'),
   },
-  'SpecimenProcessing': {
+  'SpecimenProcessing': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12571,7 +12561,7 @@ final fhirFieldMap = {
     'timeDateTimeElement': const FhirField(false, 'Element'),
     'timePeriod': const FhirField(false, 'Period'),
   },
-  'SpecimenContainer': {
+  'SpecimenContainer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12579,7 +12569,7 @@ final fhirFieldMap = {
     'location': const FhirField(false, 'Reference'),
     'specimenQuantity': const FhirField(false, 'Quantity'),
   },
-  'SpecimenDefinition': {
+  'SpecimenDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -12644,7 +12634,7 @@ final fhirFieldMap = {
     'collection': const FhirField(true, 'CodeableConcept'),
     'typeTested': const FhirField(true, 'SpecimenDefinitionTypeTested'),
   },
-  'SpecimenDefinitionTypeTested': {
+  'SpecimenDefinitionTypeTested': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12663,7 +12653,7 @@ final fhirFieldMap = {
     'handling': const FhirField(true, 'SpecimenDefinitionHandling'),
     'testingDestination': const FhirField(true, 'CodeableConcept'),
   },
-  'SpecimenDefinitionContainer': {
+  'SpecimenDefinitionContainer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12680,14 +12670,14 @@ final fhirFieldMap = {
     'preparation': const FhirField(false, 'Markdown'),
     'preparationElement': const FhirField(false, 'Element'),
   },
-  'SpecimenDefinitionAdditive': {
+  'SpecimenDefinitionAdditive': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'additiveCodeableConcept': const FhirField(false, 'CodeableConcept'),
     'additiveReference': const FhirField(false, 'Reference'),
   },
-  'SpecimenDefinitionHandling': {
+  'SpecimenDefinitionHandling': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12697,7 +12687,7 @@ final fhirFieldMap = {
     'instruction': const FhirField(false, 'Markdown'),
     'instructionElement': const FhirField(false, 'Element'),
   },
-  'StructureDefinition': {
+  'StructureDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -12758,7 +12748,7 @@ final fhirFieldMap = {
     'snapshot': const FhirField(false, 'StructureDefinitionSnapshot'),
     'differential': const FhirField(false, 'StructureDefinitionDifferential'),
   },
-  'StructureDefinitionMapping': {
+  'StructureDefinitionMapping': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12771,7 +12761,7 @@ final fhirFieldMap = {
     'comment': const FhirField(false, 'String'),
     'commentElement': const FhirField(false, 'Element'),
   },
-  'StructureDefinitionContext': {
+  'StructureDefinitionContext': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12780,19 +12770,19 @@ final fhirFieldMap = {
     'expression': const FhirField(false, 'String'),
     'expressionElement': const FhirField(false, 'Element'),
   },
-  'StructureDefinitionSnapshot': {
+  'StructureDefinitionSnapshot': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'element': const FhirField(true, 'ElementDefinition'),
   },
-  'StructureDefinitionDifferential': {
+  'StructureDefinitionDifferential': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'element': const FhirField(true, 'ElementDefinition'),
   },
-  'StructureMap': {
+  'StructureMap': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -12839,7 +12829,7 @@ final fhirFieldMap = {
     'const': const FhirField(true, 'StructureMapConst'),
     'group': const FhirField(true, 'StructureMapGroup'),
   },
-  'StructureMapStructure': {
+  'StructureMapStructure': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12851,7 +12841,7 @@ final fhirFieldMap = {
     'documentation': const FhirField(false, 'String'),
     'documentationElement': const FhirField(false, 'Element'),
   },
-  'StructureMapConst': {
+  'StructureMapConst': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12860,7 +12850,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'String'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'StructureMapGroup': {
+  'StructureMapGroup': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12875,7 +12865,7 @@ final fhirFieldMap = {
     'input': const FhirField(true, 'StructureMapInput'),
     'rule': const FhirField(true, 'StructureMapRule'),
   },
-  'StructureMapInput': {
+  'StructureMapInput': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12888,7 +12878,7 @@ final fhirFieldMap = {
     'documentation': const FhirField(false, 'String'),
     'documentationElement': const FhirField(false, 'Element'),
   },
-  'StructureMapRule': {
+  'StructureMapRule': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12901,7 +12891,7 @@ final fhirFieldMap = {
     'documentation': const FhirField(false, 'String'),
     'documentationElement': const FhirField(false, 'Element'),
   },
-  'StructureMapSource': {
+  'StructureMapSource': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12928,7 +12918,7 @@ final fhirFieldMap = {
     'logMessage': const FhirField(false, 'String'),
     'logMessageElement': const FhirField(false, 'Element'),
   },
-  'StructureMapTarget': {
+  'StructureMapTarget': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12946,7 +12936,7 @@ final fhirFieldMap = {
     'transformElement': const FhirField(false, 'Element'),
     'parameter': const FhirField(true, 'StructureMapParameter'),
   },
-  'StructureMapParameter': {
+  'StructureMapParameter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12967,7 +12957,7 @@ final fhirFieldMap = {
     'valueDateTime': const FhirField(false, 'FhirDateTime'),
     'valueDateTimeElement': const FhirField(false, 'Element'),
   },
-  'StructureMapDependent': {
+  'StructureMapDependent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -12975,7 +12965,7 @@ final fhirFieldMap = {
     'nameElement': const FhirField(false, 'Element'),
     'parameter': const FhirField(true, 'StructureMapParameter'),
   },
-  'Subscription': {
+  'Subscription': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -13014,7 +13004,7 @@ final fhirFieldMap = {
     'maxCount': const FhirField(false, 'PositiveInt'),
     'maxCountElement': const FhirField(false, 'Element'),
   },
-  'SubscriptionFilterBy': {
+  'SubscriptionFilterBy': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13028,7 +13018,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'String'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'SubscriptionParameter': {
+  'SubscriptionParameter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13037,7 +13027,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'String'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'SubscriptionStatus': {
+  'SubscriptionStatus': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -13060,7 +13050,7 @@ final fhirFieldMap = {
     'topic': const FhirField(false, 'Canonical'),
     'error': const FhirField(true, 'CodeableConcept'),
   },
-  'SubscriptionStatusNotificationEvent': {
+  'SubscriptionStatusNotificationEvent': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13071,7 +13061,7 @@ final fhirFieldMap = {
     'focus': const FhirField(false, 'Reference'),
     'additionalContext': const FhirField(true, 'Reference'),
   },
-  'SubscriptionTopic': {
+  'SubscriptionTopic': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -13126,7 +13116,7 @@ final fhirFieldMap = {
     'notificationShape':
         const FhirField(true, 'SubscriptionTopicNotificationShape'),
   },
-  'SubscriptionTopicResourceTrigger': {
+  'SubscriptionTopicResourceTrigger': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13140,7 +13130,7 @@ final fhirFieldMap = {
     'fhirPathCriteria': const FhirField(false, 'String'),
     'fhirPathCriteriaElement': const FhirField(false, 'Element'),
   },
-  'SubscriptionTopicQueryCriteria': {
+  'SubscriptionTopicQueryCriteria': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13155,7 +13145,7 @@ final fhirFieldMap = {
     'requireBoth': const FhirField(false, 'Boolean'),
     'requireBothElement': const FhirField(false, 'Element'),
   },
-  'SubscriptionTopicEventTrigger': {
+  'SubscriptionTopicEventTrigger': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13165,7 +13155,7 @@ final fhirFieldMap = {
     'resource': const FhirField(false, 'FhirUri'),
     'resourceElement': const FhirField(false, 'Element'),
   },
-  'SubscriptionTopicCanFilterBy': {
+  'SubscriptionTopicCanFilterBy': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13182,7 +13172,7 @@ final fhirFieldMap = {
     'modifier': const FhirField(true, 'Code'),
     'modifierElement': const FhirField(true, 'Element'),
   },
-  'SubscriptionTopicNotificationShape': {
+  'SubscriptionTopicNotificationShape': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13193,7 +13183,7 @@ final fhirFieldMap = {
     'revInclude': const FhirField(true, 'String'),
     'revIncludeElement': const FhirField(true, 'Element'),
   },
-  'Substance': {
+  'Substance': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -13218,7 +13208,7 @@ final fhirFieldMap = {
     'quantity': const FhirField(false, 'Quantity'),
     'ingredient': const FhirField(true, 'SubstanceIngredient'),
   },
-  'SubstanceIngredient': {
+  'SubstanceIngredient': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13226,7 +13216,7 @@ final fhirFieldMap = {
     'substanceCodeableConcept': const FhirField(false, 'CodeableConcept'),
     'substanceReference': const FhirField(false, 'Reference'),
   },
-  'SubstanceDefinition': {
+  'SubstanceDefinition': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -13267,7 +13257,7 @@ final fhirFieldMap = {
     'sourceMaterial':
         const FhirField(false, 'SubstanceDefinitionSourceMaterial'),
   },
-  'SubstanceDefinitionMoiety': {
+  'SubstanceDefinitionMoiety': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13284,7 +13274,7 @@ final fhirFieldMap = {
     'amountStringElement': const FhirField(false, 'Element'),
     'measurementType': const FhirField(false, 'CodeableConcept'),
   },
-  'SubstanceDefinitionCharacterization': {
+  'SubstanceDefinitionCharacterization': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13294,7 +13284,7 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'file': const FhirField(true, 'Attachment'),
   },
-  'SubstanceDefinitionProperty': {
+  'SubstanceDefinitionProperty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13307,7 +13297,7 @@ final fhirFieldMap = {
     'valueBooleanElement': const FhirField(false, 'Element'),
     'valueAttachment': const FhirField(false, 'Attachment'),
   },
-  'SubstanceDefinitionMolecularWeight': {
+  'SubstanceDefinitionMolecularWeight': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13315,7 +13305,7 @@ final fhirFieldMap = {
     'type': const FhirField(false, 'CodeableConcept'),
     'amount': const FhirField(false, 'Quantity'),
   },
-  'SubstanceDefinitionStructure': {
+  'SubstanceDefinitionStructure': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13332,7 +13322,7 @@ final fhirFieldMap = {
     'representation':
         const FhirField(true, 'SubstanceDefinitionRepresentation'),
   },
-  'SubstanceDefinitionRepresentation': {
+  'SubstanceDefinitionRepresentation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13342,7 +13332,7 @@ final fhirFieldMap = {
     'format': const FhirField(false, 'CodeableConcept'),
     'document': const FhirField(false, 'Reference'),
   },
-  'SubstanceDefinitionCode': {
+  'SubstanceDefinitionCode': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13353,7 +13343,7 @@ final fhirFieldMap = {
     'note': const FhirField(true, 'Annotation'),
     'source': const FhirField(true, 'Reference'),
   },
-  'SubstanceDefinitionName': {
+  'SubstanceDefinitionName': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13371,7 +13361,7 @@ final fhirFieldMap = {
     'official': const FhirField(true, 'SubstanceDefinitionOfficial'),
     'source': const FhirField(true, 'Reference'),
   },
-  'SubstanceDefinitionOfficial': {
+  'SubstanceDefinitionOfficial': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13380,7 +13370,7 @@ final fhirFieldMap = {
     'date': const FhirField(false, 'FhirDateTime'),
     'dateElement': const FhirField(false, 'Element'),
   },
-  'SubstanceDefinitionRelationship': {
+  'SubstanceDefinitionRelationship': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13398,7 +13388,7 @@ final fhirFieldMap = {
     'comparator': const FhirField(false, 'CodeableConcept'),
     'source': const FhirField(true, 'Reference'),
   },
-  'SubstanceDefinitionSourceMaterial': {
+  'SubstanceDefinitionSourceMaterial': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13408,7 +13398,7 @@ final fhirFieldMap = {
     'part': const FhirField(false, 'CodeableConcept'),
     'countryOfOrigin': const FhirField(true, 'CodeableConcept'),
   },
-  'SubstanceNucleicAcid': {
+  'SubstanceNucleicAcid': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -13427,7 +13417,7 @@ final fhirFieldMap = {
     'oligoNucleotideType': const FhirField(false, 'CodeableConcept'),
     'subunit': const FhirField(true, 'SubstanceNucleicAcidSubunit'),
   },
-  'SubstanceNucleicAcidSubunit': {
+  'SubstanceNucleicAcidSubunit': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13443,7 +13433,7 @@ final fhirFieldMap = {
     'linkage': const FhirField(true, 'SubstanceNucleicAcidLinkage'),
     'sugar': const FhirField(true, 'SubstanceNucleicAcidSugar'),
   },
-  'SubstanceNucleicAcidLinkage': {
+  'SubstanceNucleicAcidLinkage': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13455,7 +13445,7 @@ final fhirFieldMap = {
     'residueSite': const FhirField(false, 'String'),
     'residueSiteElement': const FhirField(false, 'Element'),
   },
-  'SubstanceNucleicAcidSugar': {
+  'SubstanceNucleicAcidSugar': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13465,7 +13455,7 @@ final fhirFieldMap = {
     'residueSite': const FhirField(false, 'String'),
     'residueSiteElement': const FhirField(false, 'Element'),
   },
-  'SubstancePolymer': {
+  'SubstancePolymer': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -13485,7 +13475,7 @@ final fhirFieldMap = {
     'monomerSet': const FhirField(true, 'SubstancePolymerMonomerSet'),
     'repeat': const FhirField(true, 'SubstancePolymerRepeat'),
   },
-  'SubstancePolymerMonomerSet': {
+  'SubstancePolymerMonomerSet': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13493,7 +13483,7 @@ final fhirFieldMap = {
     'startingMaterial':
         const FhirField(true, 'SubstancePolymerStartingMaterial'),
   },
-  'SubstancePolymerStartingMaterial': {
+  'SubstancePolymerStartingMaterial': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13503,7 +13493,7 @@ final fhirFieldMap = {
     'isDefiningElement': const FhirField(false, 'Element'),
     'amount': const FhirField(false, 'Quantity'),
   },
-  'SubstancePolymerRepeat': {
+  'SubstancePolymerRepeat': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13512,7 +13502,7 @@ final fhirFieldMap = {
     'repeatUnitAmountType': const FhirField(false, 'CodeableConcept'),
     'repeatUnit': const FhirField(true, 'SubstancePolymerRepeatUnit'),
   },
-  'SubstancePolymerRepeatUnit': {
+  'SubstancePolymerRepeatUnit': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13526,7 +13516,7 @@ final fhirFieldMap = {
     'structuralRepresentation':
         const FhirField(true, 'SubstancePolymerStructuralRepresentation'),
   },
-  'SubstancePolymerDegreeOfPolymerisation': {
+  'SubstancePolymerDegreeOfPolymerisation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13538,7 +13528,7 @@ final fhirFieldMap = {
     'high': const FhirField(false, 'Integer'),
     'highElement': const FhirField(false, 'Element'),
   },
-  'SubstancePolymerStructuralRepresentation': {
+  'SubstancePolymerStructuralRepresentation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13548,7 +13538,7 @@ final fhirFieldMap = {
     'format': const FhirField(false, 'CodeableConcept'),
     'attachment': const FhirField(false, 'Attachment'),
   },
-  'SubstanceProtein': {
+  'SubstanceProtein': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -13566,7 +13556,7 @@ final fhirFieldMap = {
     'disulfideLinkageElement': const FhirField(true, 'Element'),
     'subunit': const FhirField(true, 'SubstanceProteinSubunit'),
   },
-  'SubstanceProteinSubunit': {
+  'SubstanceProteinSubunit': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13584,7 +13574,7 @@ final fhirFieldMap = {
     'cTerminalModification': const FhirField(false, 'String'),
     'cTerminalModificationElement': const FhirField(false, 'Element'),
   },
-  'SubstanceReferenceInformation': {
+  'SubstanceReferenceInformation': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -13602,7 +13592,7 @@ final fhirFieldMap = {
         const FhirField(true, 'SubstanceReferenceInformationGeneElement'),
     'target': const FhirField(true, 'SubstanceReferenceInformationTarget'),
   },
-  'SubstanceReferenceInformationGene': {
+  'SubstanceReferenceInformationGene': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13610,7 +13600,7 @@ final fhirFieldMap = {
     'gene': const FhirField(false, 'CodeableConcept'),
     'source': const FhirField(true, 'Reference'),
   },
-  'SubstanceReferenceInformationGeneElement': {
+  'SubstanceReferenceInformationGeneElement': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13618,7 +13608,7 @@ final fhirFieldMap = {
     'element': const FhirField(false, 'Identifier'),
     'source': const FhirField(true, 'Reference'),
   },
-  'SubstanceReferenceInformationTarget': {
+  'SubstanceReferenceInformationTarget': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13634,7 +13624,7 @@ final fhirFieldMap = {
     'amountType': const FhirField(false, 'CodeableConcept'),
     'source': const FhirField(true, 'Reference'),
   },
-  'SubstanceSourceMaterial': {
+  'SubstanceSourceMaterial': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -13664,7 +13654,7 @@ final fhirFieldMap = {
     'partDescription':
         const FhirField(true, 'SubstanceSourceMaterialPartDescription'),
   },
-  'SubstanceSourceMaterialFractionDescription': {
+  'SubstanceSourceMaterialFractionDescription': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13672,7 +13662,7 @@ final fhirFieldMap = {
     'fractionElement': const FhirField(false, 'Element'),
     'materialType': const FhirField(false, 'CodeableConcept'),
   },
-  'SubstanceSourceMaterialOrganism': {
+  'SubstanceSourceMaterialOrganism': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13687,7 +13677,7 @@ final fhirFieldMap = {
     'organismGeneral':
         const FhirField(false, 'SubstanceSourceMaterialOrganismGeneral'),
   },
-  'SubstanceSourceMaterialAuthor': {
+  'SubstanceSourceMaterialAuthor': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13695,7 +13685,7 @@ final fhirFieldMap = {
     'authorDescription': const FhirField(false, 'String'),
     'authorDescriptionElement': const FhirField(false, 'Element'),
   },
-  'SubstanceSourceMaterialHybrid': {
+  'SubstanceSourceMaterialHybrid': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13709,7 +13699,7 @@ final fhirFieldMap = {
     'paternalOrganismNameElement': const FhirField(false, 'Element'),
     'hybridType': const FhirField(false, 'CodeableConcept'),
   },
-  'SubstanceSourceMaterialOrganismGeneral': {
+  'SubstanceSourceMaterialOrganismGeneral': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13718,14 +13708,14 @@ final fhirFieldMap = {
     'class': const FhirField(false, 'CodeableConcept'),
     'order': const FhirField(false, 'CodeableConcept'),
   },
-  'SubstanceSourceMaterialPartDescription': {
+  'SubstanceSourceMaterialPartDescription': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'part': const FhirField(false, 'CodeableConcept'),
     'partLocation': const FhirField(false, 'CodeableConcept'),
   },
-  'SupplyDelivery': {
+  'SupplyDelivery': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -13752,7 +13742,7 @@ final fhirFieldMap = {
     'destination': const FhirField(false, 'Reference'),
     'receiver': const FhirField(true, 'Reference'),
   },
-  'SupplyDeliverySuppliedItem': {
+  'SupplyDeliverySuppliedItem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13760,7 +13750,7 @@ final fhirFieldMap = {
     'itemCodeableConcept': const FhirField(false, 'CodeableConcept'),
     'itemReference': const FhirField(false, 'Reference'),
   },
-  'SupplyRequest': {
+  'SupplyRequest': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -13794,7 +13784,7 @@ final fhirFieldMap = {
     'deliverFrom': const FhirField(false, 'Reference'),
     'deliverTo': const FhirField(false, 'Reference'),
   },
-  'SupplyRequestParameter': {
+  'SupplyRequestParameter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13805,7 +13795,7 @@ final fhirFieldMap = {
     'valueBoolean': const FhirField(false, 'Boolean'),
     'valueBooleanElement': const FhirField(false, 'Element'),
   },
-  'Task': {
+  'Task': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -13858,14 +13848,14 @@ final fhirFieldMap = {
     'input': const FhirField(true, 'TaskInput'),
     'output': const FhirField(true, 'TaskOutput'),
   },
-  'TaskPerformer': {
+  'TaskPerformer': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'function': const FhirField(false, 'CodeableConcept'),
     'actor': const FhirField(false, 'Reference'),
   },
-  'TaskRestriction': {
+  'TaskRestriction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13874,7 +13864,7 @@ final fhirFieldMap = {
     'period': const FhirField(false, 'Period'),
     'recipient': const FhirField(true, 'Reference'),
   },
-  'TaskInput': {
+  'TaskInput': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -13955,7 +13945,7 @@ final fhirFieldMap = {
     'valueDosage': const FhirField(false, 'Dosage'),
     'valueMeta': const FhirField(false, 'Meta'),
   },
-  'TaskOutput': {
+  'TaskOutput': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14036,7 +14026,7 @@ final fhirFieldMap = {
     'valueDosage': const FhirField(false, 'Dosage'),
     'valueMeta': const FhirField(false, 'Meta'),
   },
-  'TerminologyCapabilities': {
+  'TerminologyCapabilities': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -14093,7 +14083,7 @@ final fhirFieldMap = {
     'translation': const FhirField(false, 'TerminologyCapabilitiesTranslation'),
     'closure': const FhirField(false, 'TerminologyCapabilitiesClosure'),
   },
-  'TerminologyCapabilitiesSoftware': {
+  'TerminologyCapabilitiesSoftware': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14102,7 +14092,7 @@ final fhirFieldMap = {
     'version': const FhirField(false, 'String'),
     'versionElement': const FhirField(false, 'Element'),
   },
-  'TerminologyCapabilitiesImplementation': {
+  'TerminologyCapabilitiesImplementation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14111,7 +14101,7 @@ final fhirFieldMap = {
     'url': const FhirField(false, 'FhirUrl'),
     'urlElement': const FhirField(false, 'Element'),
   },
-  'TerminologyCapabilitiesCodeSystem': {
+  'TerminologyCapabilitiesCodeSystem': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14122,7 +14112,7 @@ final fhirFieldMap = {
     'subsumption': const FhirField(false, 'Boolean'),
     'subsumptionElement': const FhirField(false, 'Element'),
   },
-  'TerminologyCapabilitiesVersion': {
+  'TerminologyCapabilitiesVersion': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14138,7 +14128,7 @@ final fhirFieldMap = {
     'property': const FhirField(true, 'Code'),
     'propertyElement': const FhirField(true, 'Element'),
   },
-  'TerminologyCapabilitiesFilter': {
+  'TerminologyCapabilitiesFilter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14147,7 +14137,7 @@ final fhirFieldMap = {
     'op': const FhirField(true, 'Code'),
     'opElement': const FhirField(true, 'Element'),
   },
-  'TerminologyCapabilitiesExpansion': {
+  'TerminologyCapabilitiesExpansion': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14161,7 +14151,7 @@ final fhirFieldMap = {
     'textFilter': const FhirField(false, 'Markdown'),
     'textFilterElement': const FhirField(false, 'Element'),
   },
-  'TerminologyCapabilitiesParameter': {
+  'TerminologyCapabilitiesParameter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14170,28 +14160,28 @@ final fhirFieldMap = {
     'documentation': const FhirField(false, 'String'),
     'documentationElement': const FhirField(false, 'Element'),
   },
-  'TerminologyCapabilitiesValidateCode': {
+  'TerminologyCapabilitiesValidateCode': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'translations': const FhirField(false, 'Boolean'),
     'translationsElement': const FhirField(false, 'Element'),
   },
-  'TerminologyCapabilitiesTranslation': {
+  'TerminologyCapabilitiesTranslation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'needsMap': const FhirField(false, 'Boolean'),
     'needsMapElement': const FhirField(false, 'Element'),
   },
-  'TerminologyCapabilitiesClosure': {
+  'TerminologyCapabilitiesClosure': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'translation': const FhirField(false, 'Boolean'),
     'translationElement': const FhirField(false, 'Element'),
   },
-  'TestPlan': {
+  'TestPlan': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -14242,7 +14232,7 @@ final fhirFieldMap = {
     'exitCriteriaElement': const FhirField(false, 'Element'),
     'testCase': const FhirField(true, 'TestPlanTestCase'),
   },
-  'TestPlanDependency': {
+  'TestPlanDependency': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14250,7 +14240,7 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'predecessor': const FhirField(false, 'Reference'),
   },
-  'TestPlanTestCase': {
+  'TestPlanTestCase': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14262,7 +14252,7 @@ final fhirFieldMap = {
     'testData': const FhirField(true, 'TestPlanTestData'),
     'assertion': const FhirField(true, 'TestPlanAssertion'),
   },
-  'TestPlanDependency1': {
+  'TestPlanDependency1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14270,7 +14260,7 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'predecessor': const FhirField(false, 'Reference'),
   },
-  'TestPlanTestRun': {
+  'TestPlanTestRun': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14278,7 +14268,7 @@ final fhirFieldMap = {
     'narrativeElement': const FhirField(false, 'Element'),
     'script': const FhirField(false, 'TestPlanScript'),
   },
-  'TestPlanScript': {
+  'TestPlanScript': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14287,7 +14277,7 @@ final fhirFieldMap = {
     'sourceStringElement': const FhirField(false, 'Element'),
     'sourceReference': const FhirField(false, 'Reference'),
   },
-  'TestPlanTestData': {
+  'TestPlanTestData': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14297,7 +14287,7 @@ final fhirFieldMap = {
     'sourceStringElement': const FhirField(false, 'Element'),
     'sourceReference': const FhirField(false, 'Reference'),
   },
-  'TestPlanAssertion': {
+  'TestPlanAssertion': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14305,7 +14295,7 @@ final fhirFieldMap = {
     'object': const FhirField(true, 'CodeableReference'),
     'result': const FhirField(true, 'CodeableReference'),
   },
-  'TestReport': {
+  'TestReport': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -14335,7 +14325,7 @@ final fhirFieldMap = {
     'test': const FhirField(true, 'TestReportTest'),
     'teardown': const FhirField(false, 'TestReportTeardown'),
   },
-  'TestReportParticipant': {
+  'TestReportParticipant': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14346,20 +14336,20 @@ final fhirFieldMap = {
     'display': const FhirField(false, 'String'),
     'displayElement': const FhirField(false, 'Element'),
   },
-  'TestReportSetup': {
+  'TestReportSetup': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'action': const FhirField(true, 'TestReportAction'),
   },
-  'TestReportAction': {
+  'TestReportAction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'operation': const FhirField(false, 'TestReportOperation'),
     'assert': const FhirField(false, 'TestReportAssert'),
   },
-  'TestReportOperation': {
+  'TestReportOperation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14370,7 +14360,7 @@ final fhirFieldMap = {
     'detail': const FhirField(false, 'FhirUri'),
     'detailElement': const FhirField(false, 'Element'),
   },
-  'TestReportAssert': {
+  'TestReportAssert': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14382,7 +14372,7 @@ final fhirFieldMap = {
     'detailElement': const FhirField(false, 'Element'),
     'requirement': const FhirField(true, 'TestReportRequirement'),
   },
-  'TestReportRequirement': {
+  'TestReportRequirement': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14391,7 +14381,7 @@ final fhirFieldMap = {
     'linkCanonical': const FhirField(false, 'Canonical'),
     'linkCanonicalElement': const FhirField(false, 'Element'),
   },
-  'TestReportTest': {
+  'TestReportTest': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14401,26 +14391,26 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'action': const FhirField(true, 'TestReportAction1'),
   },
-  'TestReportAction1': {
+  'TestReportAction1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'operation': const FhirField(false, 'TestReportOperation'),
     'assert': const FhirField(false, 'TestReportAssert'),
   },
-  'TestReportTeardown': {
+  'TestReportTeardown': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'action': const FhirField(true, 'TestReportAction2'),
   },
-  'TestReportAction2': {
+  'TestReportAction2': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'operation': const FhirField(false, 'TestReportOperation'),
   },
-  'TestScript': {
+  'TestScript': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -14473,7 +14463,7 @@ final fhirFieldMap = {
     'test': const FhirField(true, 'TestScriptTest'),
     'teardown': const FhirField(false, 'TestScriptTeardown'),
   },
-  'TestScriptOrigin': {
+  'TestScriptOrigin': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14483,7 +14473,7 @@ final fhirFieldMap = {
     'url': const FhirField(false, 'FhirUrl'),
     'urlElement': const FhirField(false, 'Element'),
   },
-  'TestScriptDestination': {
+  'TestScriptDestination': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14493,14 +14483,14 @@ final fhirFieldMap = {
     'url': const FhirField(false, 'FhirUrl'),
     'urlElement': const FhirField(false, 'Element'),
   },
-  'TestScriptMetadata': {
+  'TestScriptMetadata': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'link': const FhirField(true, 'TestScriptLink'),
     'capability': const FhirField(true, 'TestScriptCapability'),
   },
-  'TestScriptLink': {
+  'TestScriptLink': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14509,7 +14499,7 @@ final fhirFieldMap = {
     'description': const FhirField(false, 'String'),
     'descriptionElement': const FhirField(false, 'Element'),
   },
-  'TestScriptCapability': {
+  'TestScriptCapability': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14527,7 +14517,7 @@ final fhirFieldMap = {
     'linkElement': const FhirField(true, 'Element'),
     'capabilities': const FhirField(false, 'Canonical'),
   },
-  'TestScriptScope': {
+  'TestScriptScope': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14535,7 +14525,7 @@ final fhirFieldMap = {
     'conformance': const FhirField(false, 'CodeableConcept'),
     'phase': const FhirField(false, 'CodeableConcept'),
   },
-  'TestScriptFixture': {
+  'TestScriptFixture': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14545,7 +14535,7 @@ final fhirFieldMap = {
     'autodeleteElement': const FhirField(false, 'Element'),
     'resource': const FhirField(false, 'Reference'),
   },
-  'TestScriptVariable': {
+  'TestScriptVariable': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14566,20 +14556,20 @@ final fhirFieldMap = {
     'sourceId': const FhirField(false, 'Id'),
     'sourceIdElement': const FhirField(false, 'Element'),
   },
-  'TestScriptSetup': {
+  'TestScriptSetup': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'action': const FhirField(true, 'TestScriptAction'),
   },
-  'TestScriptAction': {
+  'TestScriptAction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'operation': const FhirField(false, 'TestScriptOperation'),
     'assert': const FhirField(false, 'TestScriptAssert'),
   },
-  'TestScriptOperation': {
+  'TestScriptOperation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14616,7 +14606,7 @@ final fhirFieldMap = {
     'url': const FhirField(false, 'String'),
     'urlElement': const FhirField(false, 'Element'),
   },
-  'TestScriptRequestHeader': {
+  'TestScriptRequestHeader': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14625,7 +14615,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'String'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'TestScriptAssert': {
+  'TestScriptAssert': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14679,7 +14669,7 @@ final fhirFieldMap = {
     'warningOnlyElement': const FhirField(false, 'Element'),
     'requirement': const FhirField(true, 'TestScriptRequirement'),
   },
-  'TestScriptRequirement': {
+  'TestScriptRequirement': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14688,7 +14678,7 @@ final fhirFieldMap = {
     'linkCanonical': const FhirField(false, 'Canonical'),
     'linkCanonicalElement': const FhirField(false, 'Element'),
   },
-  'TestScriptTest': {
+  'TestScriptTest': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14698,26 +14688,26 @@ final fhirFieldMap = {
     'descriptionElement': const FhirField(false, 'Element'),
     'action': const FhirField(true, 'TestScriptAction1'),
   },
-  'TestScriptAction1': {
+  'TestScriptAction1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'operation': const FhirField(false, 'TestScriptOperation'),
     'assert': const FhirField(false, 'TestScriptAssert'),
   },
-  'TestScriptTeardown': {
+  'TestScriptTeardown': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'action': const FhirField(true, 'TestScriptAction2'),
   },
-  'TestScriptAction2': {
+  'TestScriptAction2': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'operation': const FhirField(false, 'TestScriptOperation'),
   },
-  'Transport': {
+  'Transport': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -14769,7 +14759,7 @@ final fhirFieldMap = {
     'reason': const FhirField(false, 'CodeableReference'),
     'history': const FhirField(false, 'Reference'),
   },
-  'TransportRestriction': {
+  'TransportRestriction': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14778,7 +14768,7 @@ final fhirFieldMap = {
     'period': const FhirField(false, 'Period'),
     'recipient': const FhirField(true, 'Reference'),
   },
-  'TransportInput': {
+  'TransportInput': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14859,7 +14849,7 @@ final fhirFieldMap = {
     'valueDosage': const FhirField(false, 'Dosage'),
     'valueMeta': const FhirField(false, 'Meta'),
   },
-  'TransportOutput': {
+  'TransportOutput': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -14940,7 +14930,7 @@ final fhirFieldMap = {
     'valueDosage': const FhirField(false, 'Dosage'),
     'valueMeta': const FhirField(false, 'Meta'),
   },
-  'ValueSet': {
+  'ValueSet': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -14999,7 +14989,7 @@ final fhirFieldMap = {
     'expansion': const FhirField(false, 'ValueSetExpansion'),
     'scope': const FhirField(false, 'ValueSetScope'),
   },
-  'ValueSetCompose': {
+  'ValueSetCompose': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15012,7 +15002,7 @@ final fhirFieldMap = {
     'property': const FhirField(true, 'String'),
     'propertyElement': const FhirField(true, 'Element'),
   },
-  'ValueSetInclude': {
+  'ValueSetInclude': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15026,7 +15016,7 @@ final fhirFieldMap = {
     'copyright': const FhirField(false, 'String'),
     'copyrightElement': const FhirField(false, 'Element'),
   },
-  'ValueSetConcept': {
+  'ValueSetConcept': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15036,7 +15026,7 @@ final fhirFieldMap = {
     'displayElement': const FhirField(false, 'Element'),
     'designation': const FhirField(true, 'ValueSetDesignation'),
   },
-  'ValueSetDesignation': {
+  'ValueSetDesignation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15047,7 +15037,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'String'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'ValueSetFilter': {
+  'ValueSetFilter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15058,7 +15048,7 @@ final fhirFieldMap = {
     'value': const FhirField(false, 'String'),
     'valueElement': const FhirField(false, 'Element'),
   },
-  'ValueSetExpansion': {
+  'ValueSetExpansion': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15076,7 +15066,7 @@ final fhirFieldMap = {
     'property': const FhirField(true, 'ValueSetProperty'),
     'contains': const FhirField(true, 'ValueSetContains'),
   },
-  'ValueSetParameter': {
+  'ValueSetParameter': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15097,7 +15087,7 @@ final fhirFieldMap = {
     'valueDateTime': const FhirField(false, 'FhirDateTime'),
     'valueDateTimeElement': const FhirField(false, 'Element'),
   },
-  'ValueSetProperty': {
+  'ValueSetProperty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15106,7 +15096,7 @@ final fhirFieldMap = {
     'uri': const FhirField(false, 'FhirUri'),
     'uriElement': const FhirField(false, 'Element'),
   },
-  'ValueSetContains': {
+  'ValueSetContains': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15126,7 +15116,7 @@ final fhirFieldMap = {
     'property': const FhirField(true, 'ValueSetProperty1'),
     'contains': const FhirField(true, 'ValueSetContains'),
   },
-  'ValueSetProperty1': {
+  'ValueSetProperty1': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15147,7 +15137,7 @@ final fhirFieldMap = {
     'valueDecimalElement': const FhirField(false, 'Element'),
     'subProperty': const FhirField(true, 'ValueSetSubProperty'),
   },
-  'ValueSetSubProperty': {
+  'ValueSetSubProperty': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15167,7 +15157,7 @@ final fhirFieldMap = {
     'valueDecimal': const FhirField(false, 'Decimal'),
     'valueDecimalElement': const FhirField(false, 'Element'),
   },
-  'ValueSetScope': {
+  'ValueSetScope': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15176,7 +15166,7 @@ final fhirFieldMap = {
     'exclusionCriteria': const FhirField(false, 'String'),
     'exclusionCriteriaElement': const FhirField(false, 'Element'),
   },
-  'VerificationResult': {
+  'VerificationResult': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -15207,7 +15197,7 @@ final fhirFieldMap = {
     'attestation': const FhirField(false, 'VerificationResultAttestation'),
     'validator': const FhirField(true, 'VerificationResultValidator'),
   },
-  'VerificationResultPrimarySource': {
+  'VerificationResultPrimarySource': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15220,7 +15210,7 @@ final fhirFieldMap = {
     'canPushUpdates': const FhirField(false, 'CodeableConcept'),
     'pushTypeAvailable': const FhirField(true, 'CodeableConcept'),
   },
-  'VerificationResultAttestation': {
+  'VerificationResultAttestation': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15236,7 +15226,7 @@ final fhirFieldMap = {
     'proxySignature': const FhirField(false, 'Signature'),
     'sourceSignature': const FhirField(false, 'Signature'),
   },
-  'VerificationResultValidator': {
+  'VerificationResultValidator': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15245,7 +15235,7 @@ final fhirFieldMap = {
     'identityCertificateElement': const FhirField(false, 'Element'),
     'attestationSignature': const FhirField(false, 'Signature'),
   },
-  'VisionPrescription': {
+  'VisionPrescription': <String, FhirField>{
     'id': const FhirField(false, 'Id'),
     'meta': const FhirField(false, 'Meta'),
     'implicitRules': const FhirField(false, 'FhirUri'),
@@ -15269,7 +15259,7 @@ final fhirFieldMap = {
     'lensSpecification':
         const FhirField(true, 'VisionPrescriptionLensSpecification'),
   },
-  'VisionPrescriptionLensSpecification': {
+  'VisionPrescriptionLensSpecification': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),
@@ -15298,7 +15288,7 @@ final fhirFieldMap = {
     'brandElement': const FhirField(false, 'Element'),
     'note': const FhirField(true, 'Annotation'),
   },
-  'VisionPrescriptionPrism': {
+  'VisionPrescriptionPrism': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),

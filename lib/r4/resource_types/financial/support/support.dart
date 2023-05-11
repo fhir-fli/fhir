@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -325,7 +325,7 @@ class Coverage with Resource, _$Coverage {
   /// Acts like a constructor, returns a [Coverage], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Coverage.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageFromJson(json);
     } else {
@@ -449,7 +449,7 @@ class CoverageClass with _$CoverageClass {
   /// Acts like a constructor, returns a [CoverageClass], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageClass.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageClassFromJson(json);
     } else {
@@ -564,7 +564,7 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   /// Acts like a constructor, returns a [CoverageCostToBeneficiary], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageCostToBeneficiary.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageCostToBeneficiaryFromJson(json);
     } else {
@@ -667,7 +667,7 @@ class CoverageException with _$CoverageException {
   /// Acts like a constructor, returns a [CoverageException], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageException.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageExceptionFromJson(json);
     } else {
@@ -960,7 +960,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   /// Acts like a constructor, returns a [CoverageEligibilityRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityRequestFromJson(json);
     } else {
@@ -1360,7 +1360,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   /// Acts like a constructor, returns a [CoverageEligibilityRequestItem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityRequestItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityRequestItemFromJson(json);
     } else {
@@ -1766,7 +1766,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   /// Acts like a constructor, returns a [CoverageEligibilityResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityResponseFromJson(json);
     } else {
@@ -2101,7 +2101,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   /// Acts like a constructor, returns a [CoverageEligibilityResponseItem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CoverageEligibilityResponseItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CoverageEligibilityResponseItemFromJson(json);
     } else {
@@ -2548,7 +2548,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   /// Acts like a constructor, returns a [EnrollmentRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EnrollmentRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EnrollmentRequestFromJson(json);
     } else {
@@ -2777,7 +2777,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   /// Acts like a constructor, returns a [EnrollmentResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EnrollmentResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EnrollmentResponseFromJson(json);
     } else {

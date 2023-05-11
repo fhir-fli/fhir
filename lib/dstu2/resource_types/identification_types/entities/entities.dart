@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -67,7 +67,7 @@ class Location with Resource, _$Location {
   /// Acts like a constructor, returns a [Location], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Location.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$LocationFromJson(json);
     } else {
@@ -113,7 +113,7 @@ class LocationPosition with _$LocationPosition {
   /// Acts like a constructor, returns a [LocationPosition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory LocationPosition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$LocationPositionFromJson(json);
     } else {
@@ -167,7 +167,7 @@ class Substance with Resource, _$Substance {
   /// Acts like a constructor, returns a [Substance], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Substance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SubstanceFromJson(json);
     } else {
@@ -211,7 +211,7 @@ class SubstanceInstance with _$SubstanceInstance {
   /// Acts like a constructor, returns a [SubstanceInstance], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SubstanceInstance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SubstanceInstanceFromJson(json);
     } else {
@@ -253,7 +253,7 @@ class SubstanceIngredient with _$SubstanceIngredient {
   /// Acts like a constructor, returns a [SubstanceIngredient], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SubstanceIngredient.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SubstanceIngredientFromJson(json);
     } else {
@@ -312,7 +312,7 @@ class Person with Resource, _$Person {
   /// Acts like a constructor, returns a [Person], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Person.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PersonFromJson(json);
     } else {
@@ -355,7 +355,7 @@ class PersonLink with _$PersonLink {
   /// Acts like a constructor, returns a [PersonLink], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PersonLink.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PersonLinkFromJson(json);
     } else {
@@ -422,7 +422,7 @@ class Contract with Resource, _$Contract {
   /// Acts like a constructor, returns a [Contract], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Contract.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ContractFromJson(json);
     } else {
@@ -464,7 +464,7 @@ class ContractActor with _$ContractActor {
   /// Acts like a constructor, returns a [ContractActor], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ContractActor.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ContractActorFromJson(json);
     } else {
@@ -517,7 +517,7 @@ class ContractValuedItem with _$ContractValuedItem {
   /// Acts like a constructor, returns a [ContractValuedItem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ContractValuedItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ContractValuedItemFromJson(json);
     } else {
@@ -560,7 +560,7 @@ class ContractSigner with _$ContractSigner {
   /// Acts like a constructor, returns a [ContractSigner], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ContractSigner.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ContractSignerFromJson(json);
     } else {
@@ -614,7 +614,7 @@ class ContractTerm with _$ContractTerm {
   /// Acts like a constructor, returns a [ContractTerm], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ContractTerm.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ContractTermFromJson(json);
     } else {
@@ -656,7 +656,7 @@ class ContractTermActor with _$ContractTermActor {
   /// Acts like a constructor, returns a [ContractTermActor], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ContractTermActor.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ContractTermActorFromJson(json);
     } else {
@@ -698,7 +698,7 @@ class ContractFriendly with _$ContractFriendly {
   /// Acts like a constructor, returns a [ContractFriendly], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ContractFriendly.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ContractFriendlyFromJson(json);
     } else {
@@ -740,7 +740,7 @@ class ContractLegal with _$ContractLegal {
   /// Acts like a constructor, returns a [ContractLegal], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ContractLegal.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ContractLegalFromJson(json);
     } else {
@@ -782,7 +782,7 @@ class ContractRule with _$ContractRule {
   /// Acts like a constructor, returns a [ContractRule], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ContractRule.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ContractRuleFromJson(json);
     } else {

@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -112,7 +112,7 @@ class Measure with Resource, _$Measure {
   /// Acts like a constructor, returns a [Measure], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Measure.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MeasureFromJson(json);
     } else {
@@ -156,7 +156,7 @@ class MeasureGroup with _$MeasureGroup {
   /// Acts like a constructor, returns a [MeasureGroup], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MeasureGroup.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MeasureGroupFromJson(json);
     } else {
@@ -201,7 +201,7 @@ class MeasurePopulation with _$MeasurePopulation {
   /// Acts like a constructor, returns a [MeasurePopulation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MeasurePopulation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MeasurePopulationFromJson(json);
     } else {
@@ -243,7 +243,7 @@ class MeasureStratifier with _$MeasureStratifier {
   /// Acts like a constructor, returns a [MeasureStratifier], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MeasureStratifier.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MeasureStratifierFromJson(json);
     } else {
@@ -286,7 +286,7 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
   /// Acts like a constructor, returns a [MeasureSupplementalData], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MeasureSupplementalData.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MeasureSupplementalDataFromJson(json);
     } else {
@@ -346,7 +346,7 @@ class MeasureReport with Resource, _$MeasureReport {
   /// Acts like a constructor, returns a [MeasureReport], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MeasureReport.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MeasureReportFromJson(json);
     } else {
@@ -388,7 +388,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
   /// Acts like a constructor, returns a [MeasureReportGroup], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MeasureReportGroup.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MeasureReportGroupFromJson(json);
     } else {
@@ -430,7 +430,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   /// Acts like a constructor, returns a [MeasureReportPopulation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MeasureReportPopulation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MeasureReportPopulationFromJson(json);
     } else {
@@ -469,7 +469,7 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
   /// Acts like a constructor, returns a [MeasureReportStratifier], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MeasureReportStratifier.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MeasureReportStratifierFromJson(json);
     } else {
@@ -511,7 +511,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
   /// Acts like a constructor, returns a [MeasureReportStratum], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MeasureReportStratum.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MeasureReportStratumFromJson(json);
     } else {
@@ -553,7 +553,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   /// Acts like a constructor, returns a [MeasureReportPopulation1], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MeasureReportPopulation1.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MeasureReportPopulation1FromJson(json);
     } else {

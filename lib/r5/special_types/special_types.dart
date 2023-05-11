@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -91,7 +91,7 @@ class Narrative with _$Narrative {
   /// Acts like a constructor, returns a [Narrative], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Narrative.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$NarrativeFromJson(json);
     } else {
@@ -174,7 +174,7 @@ class CodeableReference with _$CodeableReference {
   /// Acts like a constructor, returns a [CodeableReference], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CodeableReference.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CodeableReferenceFromJson(json);
     } else {
@@ -321,7 +321,7 @@ class Reference with _$Reference {
   /// Acts like a constructor, returns a [Reference], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Reference.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ReferenceFromJson(json);
     } else {
@@ -463,7 +463,7 @@ class FhirMeta with _$FhirMeta {
   /// Acts like a constructor, returns a [Meta], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory FhirMeta.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$FhirMetaFromJson(json);
     } else {
@@ -672,7 +672,7 @@ class Dosage with _$Dosage {
   /// Acts like a constructor, returns a [Dosage], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Dosage.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DosageFromJson(json);
     } else {
@@ -801,7 +801,7 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
   /// Acts like a constructor, returns a [DosageDoseAndRate], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DosageDoseAndRate.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DosageDoseAndRateFromJson(json);
     } else {
@@ -6151,7 +6151,7 @@ class ElementDefinition with _$ElementDefinition {
   /// Acts like a constructor, returns a [ElementDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ElementDefinitionFromJson(json);
     } else {
@@ -6305,7 +6305,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   /// Acts like a constructor, returns a [ElementDefinitionSlicing], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinitionSlicing.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ElementDefinitionSlicingFromJson(json);
     } else {
@@ -6430,7 +6430,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinitionDiscriminator.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ElementDefinitionDiscriminatorFromJson(json);
     } else {
@@ -6563,7 +6563,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
   /// Acts like a constructor, returns a [ElementDefinitionBase], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinitionBase.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ElementDefinitionBaseFromJson(json);
     } else {
@@ -6744,7 +6744,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
   /// Acts like a constructor, returns a [ElementDefinitionType], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinitionType.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ElementDefinitionTypeFromJson(json);
     } else {
@@ -7337,7 +7337,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
   /// Acts like a constructor, returns a [ElementDefinitionExample], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinitionExample.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ElementDefinitionExampleFromJson(json);
     } else {
@@ -7516,7 +7516,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinitionConstraint.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ElementDefinitionConstraintFromJson(json);
     } else {
@@ -7654,7 +7654,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
   /// Acts like a constructor, returns a [ElementDefinitionBinding], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinitionBinding.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ElementDefinitionBindingFromJson(json);
     } else {
@@ -7817,7 +7817,7 @@ class ElementDefinitionAdditional with _$ElementDefinitionAdditional {
   ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinitionAdditional.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ElementDefinitionAdditionalFromJson(json);
     } else {
@@ -7959,7 +7959,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
   /// Acts like a constructor, returns a [ElementDefinitionMapping], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ElementDefinitionMapping.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ElementDefinitionMappingFromJson(json);
     } else {

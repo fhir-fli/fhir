@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -184,6 +184,7 @@ class FormularyItem with Resource, _$FormularyItem {
   }) = _FormularyItem;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -204,7 +205,7 @@ class FormularyItem with Resource, _$FormularyItem {
   /// Acts like a constructor, returns a [FormularyItem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory FormularyItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$FormularyItemFromJson(json);
     } else {
@@ -607,6 +608,7 @@ class Immunization with Resource, _$Immunization {
   }) = _Immunization;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -627,7 +629,7 @@ class Immunization with Resource, _$Immunization {
   /// Acts like a constructor, returns a [Immunization], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Immunization.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationFromJson(json);
     } else {
@@ -738,7 +740,7 @@ class ImmunizationPerformer with _$ImmunizationPerformer {
   /// Acts like a constructor, returns a [ImmunizationPerformer], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImmunizationPerformer.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationPerformerFromJson(json);
     } else {
@@ -853,7 +855,7 @@ class ImmunizationProgramEligibility with _$ImmunizationProgramEligibility {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImmunizationProgramEligibility.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationProgramEligibilityFromJson(json);
     } else {
@@ -977,7 +979,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
   /// Acts like a constructor, returns a [ImmunizationReaction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImmunizationReaction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationReactionFromJson(json);
     } else {
@@ -1127,7 +1129,7 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImmunizationProtocolApplied.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationProtocolAppliedFromJson(json);
     } else {
@@ -1395,6 +1397,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   }) = _ImmunizationEvaluation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1415,7 +1418,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   /// Acts like a constructor, returns a [ImmunizationEvaluation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImmunizationEvaluation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationEvaluationFromJson(json);
     } else {
@@ -1600,6 +1603,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   }) = _ImmunizationRecommendation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1620,7 +1624,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   /// Acts like a constructor, returns a [ImmunizationRecommendation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImmunizationRecommendation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationRecommendationFromJson(json);
     } else {
@@ -1828,7 +1832,7 @@ class ImmunizationRecommendationRecommendation
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImmunizationRecommendationRecommendation.fromJsonString(
       String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationRecommendationRecommendationFromJson(json);
     } else {
@@ -1949,7 +1953,7 @@ class ImmunizationRecommendationDateCriterion
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImmunizationRecommendationDateCriterion.fromJsonString(
       String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationRecommendationDateCriterionFromJson(json);
     } else {
@@ -2184,6 +2188,7 @@ class Medication with Resource, _$Medication {
   }) = _Medication;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2204,7 +2209,7 @@ class Medication with Resource, _$Medication {
   /// Acts like a constructor, returns a [Medication], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Medication.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationFromJson(json);
     } else {
@@ -2367,7 +2372,7 @@ class MedicationIngredient with _$MedicationIngredient {
   /// Acts like a constructor, returns a [MedicationIngredient], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationIngredient.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationIngredientFromJson(json);
     } else {
@@ -2490,7 +2495,7 @@ class MedicationBatch with _$MedicationBatch {
   /// Acts like a constructor, returns a [MedicationBatch], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationBatch.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationBatchFromJson(json);
     } else {
@@ -2873,6 +2878,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   }) = _MedicationAdministration;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2893,7 +2899,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   /// Acts like a constructor, returns a [MedicationAdministration], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationAdministration.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationAdministrationFromJson(json);
     } else {
@@ -3014,7 +3020,7 @@ class MedicationAdministrationPerformer
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationAdministrationPerformer.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationAdministrationPerformerFromJson(json);
     } else {
@@ -3202,7 +3208,7 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationAdministrationDosage.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationAdministrationDosageFromJson(json);
     } else {
@@ -3608,6 +3614,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
   }) = _MedicationDispense;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3628,7 +3635,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
   /// Acts like a constructor, returns a [MedicationDispense], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationDispense.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationDispenseFromJson(json);
     } else {
@@ -3748,7 +3755,7 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
   ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationDispensePerformer.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationDispensePerformerFromJson(json);
     } else {
@@ -3889,7 +3896,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationDispenseSubstitution.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationDispenseSubstitutionFromJson(json);
     } else {
@@ -4486,6 +4493,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   }) = _MedicationKnowledge;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4506,7 +4514,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   /// Acts like a constructor, returns a [MedicationKnowledge], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledge.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeFromJson(json);
     } else {
@@ -4620,7 +4628,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeRelatedMedicationKnowledge.fromJsonString(
       String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeRelatedMedicationKnowledgeFromJson(json);
     } else {
@@ -4729,7 +4737,7 @@ class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeMonograph.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeMonographFromJson(json);
     } else {
@@ -4864,7 +4872,7 @@ class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
   /// Acts like a constructor, returns a [MedicationKnowledgeCost], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeCost.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeCostFromJson(json);
     } else {
@@ -4979,7 +4987,7 @@ class MedicationKnowledgeMonitoringProgram
   ///  [MedicationKnowledgeMonitoringProgram], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeMonitoringProgram.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeMonitoringProgramFromJson(json);
     } else {
@@ -5093,7 +5101,7 @@ class MedicationKnowledgeIndicationGuideline
   ///  [MedicationKnowledgeIndicationGuideline], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeIndicationGuideline.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeIndicationGuidelineFromJson(json);
     } else {
@@ -5221,7 +5229,7 @@ class MedicationKnowledgeDosingGuideline
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeDosingGuideline.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeDosingGuidelineFromJson(json);
     } else {
@@ -5329,7 +5337,7 @@ class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
   /// Acts like a constructor, returns a [MedicationKnowledgeDosage], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeDosage.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeDosageFromJson(json);
     } else {
@@ -5458,7 +5466,7 @@ class MedicationKnowledgePatientCharacteristic
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgePatientCharacteristic.fromJsonString(
       String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgePatientCharacteristicFromJson(json);
     } else {
@@ -5597,7 +5605,7 @@ class MedicationKnowledgeMedicineClassification
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeMedicineClassification.fromJsonString(
       String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeMedicineClassificationFromJson(json);
     } else {
@@ -5708,7 +5716,7 @@ class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgePackaging.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgePackagingFromJson(json);
     } else {
@@ -5843,7 +5851,7 @@ class MedicationKnowledgeStorageGuideline
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeStorageGuideline.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeStorageGuidelineFromJson(json);
     } else {
@@ -5972,7 +5980,7 @@ class MedicationKnowledgeEnvironmentalSetting
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeEnvironmentalSetting.fromJsonString(
       String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeEnvironmentalSettingFromJson(json);
     } else {
@@ -6093,7 +6101,7 @@ class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeRegulatory.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeRegulatoryFromJson(json);
     } else {
@@ -6208,7 +6216,7 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeSubstitution.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeSubstitutionFromJson(json);
     } else {
@@ -6318,7 +6326,7 @@ class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeMaxDispense.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeMaxDispenseFromJson(json);
     } else {
@@ -6445,7 +6453,7 @@ class MedicationKnowledgeDefinitional with _$MedicationKnowledgeDefinitional {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeDefinitional.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeDefinitionalFromJson(json);
     } else {
@@ -6595,7 +6603,7 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeIngredient.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeIngredientFromJson(json);
     } else {
@@ -6739,7 +6747,7 @@ class MedicationKnowledgeDrugCharacteristic
   ///  [MedicationKnowledgeDrugCharacteristic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationKnowledgeDrugCharacteristic.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationKnowledgeDrugCharacteristicFromJson(json);
     } else {
@@ -7246,6 +7254,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
   }) = _MedicationRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -7266,7 +7275,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
   /// Acts like a constructor, returns a [MedicationRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationRequestFromJson(json);
     } else {
@@ -7460,7 +7469,7 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationRequestDispenseRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationRequestDispenseRequestFromJson(json);
     } else {
@@ -7582,7 +7591,7 @@ class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationRequestInitialFill.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationRequestInitialFillFromJson(json);
     } else {
@@ -7718,7 +7727,7 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationRequestSubstitution.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationRequestSubstitutionFromJson(json);
     } else {
@@ -8125,6 +8134,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
   }) = _MedicationStatement;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -8145,7 +8155,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
   /// Acts like a constructor, returns a [MedicationStatement], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationStatement.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationStatementFromJson(json);
     } else {
@@ -8322,7 +8332,7 @@ class MedicationStatementAdherence with _$MedicationStatementAdherence {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationStatementAdherence.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationStatementAdherenceFromJson(json);
     } else {

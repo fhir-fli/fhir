@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -70,7 +70,7 @@ class Composition with Resource, _$Composition {
   /// Acts like a constructor, returns a [Composition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Composition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CompositionFromJson(json);
     } else {
@@ -112,7 +112,7 @@ class CompositionAttester with _$CompositionAttester {
   /// Acts like a constructor, returns a [CompositionAttester], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CompositionAttester.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CompositionAttesterFromJson(json);
     } else {
@@ -153,7 +153,7 @@ class CompositionRelatesTo with _$CompositionRelatesTo {
   /// Acts like a constructor, returns a [CompositionRelatesTo], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CompositionRelatesTo.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CompositionRelatesToFromJson(json);
     } else {
@@ -193,7 +193,7 @@ class CompositionEvent with _$CompositionEvent {
   /// Acts like a constructor, returns a [CompositionEvent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CompositionEvent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CompositionEventFromJson(json);
     } else {
@@ -240,7 +240,7 @@ class CompositionSection with _$CompositionSection {
   /// Acts like a constructor, returns a [CompositionSection], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CompositionSection.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CompositionSectionFromJson(json);
     } else {
@@ -303,7 +303,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
   /// Acts like a constructor, returns a [DocumentManifest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DocumentManifest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DocumentManifestFromJson(json);
     } else {
@@ -342,7 +342,7 @@ class DocumentManifestContent with _$DocumentManifestContent {
   /// Acts like a constructor, returns a [DocumentManifestContent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DocumentManifestContent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DocumentManifestContentFromJson(json);
     } else {
@@ -381,7 +381,7 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
   /// Acts like a constructor, returns a [DocumentManifestRelated], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DocumentManifestRelated.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DocumentManifestRelatedFromJson(json);
     } else {
@@ -450,7 +450,7 @@ class DocumentReference with Resource, _$DocumentReference {
   /// Acts like a constructor, returns a [DocumentReference], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DocumentReference.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DocumentReferenceFromJson(json);
     } else {
@@ -490,7 +490,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   /// Acts like a constructor, returns a [DocumentReferenceRelatesTo], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DocumentReferenceRelatesTo.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DocumentReferenceRelatesToFromJson(json);
     } else {
@@ -529,7 +529,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
   /// Acts like a constructor, returns a [DocumentReferenceContent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DocumentReferenceContent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DocumentReferenceContentFromJson(json);
     } else {
@@ -573,7 +573,7 @@ class DocumentReferenceContext with _$DocumentReferenceContext {
   /// Acts like a constructor, returns a [DocumentReferenceContext], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DocumentReferenceContext.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DocumentReferenceContextFromJson(json);
     } else {
@@ -612,7 +612,7 @@ class DocumentReferenceRelated with _$DocumentReferenceRelated {
   /// Acts like a constructor, returns a [DocumentReferenceRelated], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DocumentReferenceRelated.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DocumentReferenceRelatedFromJson(json);
     } else {

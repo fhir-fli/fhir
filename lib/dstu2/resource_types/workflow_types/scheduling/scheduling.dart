@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -71,7 +71,7 @@ class Appointment with Resource, _$Appointment {
   /// Acts like a constructor, returns a [Appointment], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Appointment.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AppointmentFromJson(json);
     } else {
@@ -119,7 +119,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
   /// Acts like a constructor, returns a [AppointmentParticipant], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AppointmentParticipant.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AppointmentParticipantFromJson(json);
     } else {
@@ -179,7 +179,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
   /// Acts like a constructor, returns a [AppointmentResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AppointmentResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AppointmentResponseFromJson(json);
     } else {
@@ -232,7 +232,7 @@ class Schedule with Resource, _$Schedule {
   /// Acts like a constructor, returns a [Schedule], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Schedule.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ScheduleFromJson(json);
     } else {
@@ -290,7 +290,7 @@ class Slot with Resource, _$Slot {
   /// Acts like a constructor, returns a [Slot], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Slot.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SlotFromJson(json);
     } else {

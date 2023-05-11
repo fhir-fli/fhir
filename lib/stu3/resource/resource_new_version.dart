@@ -378,8 +378,7 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
     case Stu3ResourceType.VisionPrescription:
       return (resource as VisionPrescription)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
-    default:
-      throw FormatException(
-          '${resource.resourceType} is not a defined resourceType');
+    case null:
+      throw const FormatException('The resource passed had no resourceType.');
   }
 }

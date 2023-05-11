@@ -21,6 +21,8 @@ Resource _newId(Resource resource) {
       return (resource as BodySite).copyWith(id: newId());
     case Dstu2ResourceType.Bundle:
       return (resource as Bundle).copyWith(id: newId());
+    case Dstu2ResourceType.CapabilityStatement:
+      return (resource as CapabilityStatement).copyWith(id: newId());
     case Dstu2ResourceType.CarePlan:
       return (resource as CarePlan).copyWith(id: newId());
     case Dstu2ResourceType.Claim:
@@ -191,7 +193,7 @@ Resource _newId(Resource resource) {
       return (resource as ValueSet).copyWith(id: newId());
     case Dstu2ResourceType.VisionPrescription:
       return (resource as VisionPrescription).copyWith(id: newId());
-    default:
+    case null:
       throw FormatException(
           '${resource.resourceType} is not a defined resourceType');
   }

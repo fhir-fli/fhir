@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -66,7 +66,7 @@ class Media with Resource, _$Media {
   /// Acts like a constructor, returns a [Media], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Media.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MediaFromJson(json);
     } else {
@@ -111,7 +111,7 @@ class Binary with Resource, _$Binary {
   /// Acts like a constructor, returns a [Binary], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Binary.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$BinaryFromJson(json);
     } else {
@@ -160,7 +160,7 @@ class Bundle with Resource, _$Bundle {
   /// Acts like a constructor, returns a [Bundle], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Bundle.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$BundleFromJson(json);
     } else {
@@ -205,7 +205,7 @@ class BundleLink with _$BundleLink {
   /// Acts like a constructor, returns a [BundleLink], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory BundleLink.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$BundleLinkFromJson(json);
     } else {
@@ -296,7 +296,7 @@ class BundleEntry with _$BundleEntry {
   /// Acts like a constructor, returns a [BundleEntry], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory BundleEntry.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$BundleEntryFromJson(json);
     } else {
@@ -341,7 +341,7 @@ class BundleEntrySearch with _$BundleEntrySearch {
   /// Acts like a constructor, returns a [BundleEntrySearch], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory BundleEntrySearch.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$BundleEntrySearchFromJson(json);
     } else {
@@ -395,7 +395,7 @@ class BundleEntryRequest with _$BundleEntryRequest {
   /// Acts like a constructor, returns a [BundleEntryRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory BundleEntryRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$BundleEntryRequestFromJson(json);
     } else {
@@ -444,7 +444,7 @@ class BundleEntryResponse with _$BundleEntryResponse {
   /// Acts like a constructor, returns a [BundleEntryResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory BundleEntryResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$BundleEntryResponseFromJson(json);
     } else {
@@ -495,7 +495,7 @@ class Basic with Resource, _$Basic {
   /// Acts like a constructor, returns a [Basic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Basic.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$BasicFromJson(json);
     } else {

@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -72,7 +72,7 @@ class Device with Resource, _$Device {
   /// Acts like a constructor, returns a [Device], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Device.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceFromJson(json);
     } else {
@@ -129,7 +129,7 @@ class DeviceComponent with Resource, _$DeviceComponent {
   /// Acts like a constructor, returns a [DeviceComponent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceComponent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceComponentFromJson(json);
     } else {
@@ -225,7 +225,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
   /// Acts like a constructor, returns a [DeviceMetric], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceMetric.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceMetricFromJson(json);
     } else {
@@ -272,7 +272,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   /// Acts like a constructor, returns a [DeviceMetricCalibration], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceMetricCalibration.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceMetricCalibrationFromJson(json);
     } else {

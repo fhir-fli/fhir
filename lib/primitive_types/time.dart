@@ -1,6 +1,6 @@
 //ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
 
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -63,7 +63,7 @@ class FhirTime {
     }
 
     /// create a right-hand-side value
-    final rhs = o is FhirTime
+    final FhirTime? rhs = o is FhirTime
         ? o
         : o is String
             ? FhirTime(o)
@@ -89,13 +89,13 @@ class FhirTime {
     /// Because dates really suck to compare, there's a bunch of extra overhead
     /// to consider. The first is about precisions, we check the number of
     /// semi-colons to calculate the precision (T12:01:01-05:00)
-    var lhsTimePrecision = ':'.allMatches(toString()).length;
+    int lhsTimePrecision = ':'.allMatches(toString()).length;
     lhsTimePrecision = lhsTimePrecision > 2 ? 3 : lhsTimePrecision + 1;
-    var rhsTimePrecision = ':'.allMatches(o.toString()).length;
+    int rhsTimePrecision = ':'.allMatches(o.toString()).length;
     rhsTimePrecision = rhsTimePrecision > 2 ? 3 : rhsTimePrecision + 1;
 
-    final lhsTime = toString().split(':');
-    final rhsTime = o.toString().split(':');
+    final List<String> lhsTime = toString().split(':');
+    final List<String> rhsTime = o.toString().split(':');
 
     /// NOTE: this differs from the official FHIR (or at least FHIRPath) spec.
     /// Officially if they are not defined to the same level of precision it's
@@ -177,13 +177,13 @@ class FhirTime {
     }
 
     /// We pick the shorter of the two lists
-    final timePrecision = lhsTimePrecision > rhsTimePrecision
+    final int timePrecision = lhsTimePrecision > rhsTimePrecision
         ? rhsTimePrecision
         : lhsTimePrecision;
 
     /// And compare what we can
-    for (var i = 0; i < timePrecision; i++) {
-      final comparedValue =
+    for (int i = 0; i < timePrecision; i++) {
+      final bool? comparedValue =
           comparePrecisionValue(comparator, lhsTime[i], rhsTime[i]);
       if (comparedValue != null) {
         return comparedValue;

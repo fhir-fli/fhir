@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -573,7 +573,7 @@ class FhirExtension with _$FhirExtension {
   /// Acts like a constructor, returns a [FhirExtension], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory FhirExtension.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$FhirExtensionFromJson(json);
     } else {

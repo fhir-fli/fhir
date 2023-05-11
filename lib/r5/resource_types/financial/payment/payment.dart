@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -235,6 +235,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   }) = _PaymentNotice;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -255,7 +256,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   /// Acts like a constructor, returns a [PaymentNotice], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PaymentNotice.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PaymentNoticeFromJson(json);
     } else {
@@ -646,6 +647,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   }) = _PaymentReconciliation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -666,7 +668,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   /// Acts like a constructor, returns a [PaymentReconciliation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PaymentReconciliation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PaymentReconciliationFromJson(json);
     } else {
@@ -889,7 +891,7 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PaymentReconciliationAllocation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PaymentReconciliationAllocationFromJson(json);
     } else {
@@ -1008,7 +1010,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PaymentReconciliationProcessNote.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PaymentReconciliationProcessNoteFromJson(json);
     } else {

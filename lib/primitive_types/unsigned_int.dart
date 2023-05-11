@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -11,8 +11,7 @@ import 'number.dart';
 import 'primitive_type_exceptions.dart';
 
 class FhirUnsignedInt extends FhirNumber {
-  const FhirUnsignedInt._(String valueString, int? valueNumber, bool isValid)
-      : super(valueString, valueNumber, isValid);
+  const FhirUnsignedInt._(super.valueString, super.valueNumber, super.isValid);
 
   factory FhirUnsignedInt(dynamic inValue) {
     if (inValue is int) {

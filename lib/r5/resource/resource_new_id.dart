@@ -320,9 +320,7 @@ Resource _newId(Resource resource) {
       return (resource as VerificationResult).copyWith(id: newId());
     case R5ResourceType.VisionPrescription:
       return (resource as VisionPrescription).copyWith(id: newId());
-
-    default:
-      throw FormatException(
-          '${resource.resourceType} is not a defined resourceType');
+    case null:
+      throw const FormatException('The resource passed had no resourceType.');
   }
 }

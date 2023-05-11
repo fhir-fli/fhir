@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -454,6 +454,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   }) = _ResearchStudy;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -474,7 +475,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   /// Acts like a constructor, returns a [ResearchStudy], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchStudy.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchStudyFromJson(json);
     } else {
@@ -597,7 +598,7 @@ class ResearchStudyLabel with _$ResearchStudyLabel {
   /// Acts like a constructor, returns a [ResearchStudyLabel], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchStudyLabel.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchStudyLabelFromJson(json);
     } else {
@@ -740,7 +741,7 @@ class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchStudyAssociatedParty.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchStudyAssociatedPartyFromJson(json);
     } else {
@@ -873,7 +874,7 @@ class ResearchStudyProgressStatus with _$ResearchStudyProgressStatus {
   ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchStudyProgressStatus.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchStudyProgressStatusFromJson(json);
     } else {
@@ -1011,7 +1012,7 @@ class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
   /// Acts like a constructor, returns a [ResearchStudyRecruitment], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchStudyRecruitment.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchStudyRecruitmentFromJson(json);
     } else {
@@ -1176,7 +1177,7 @@ class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchStudyComparisonGroup.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchStudyComparisonGroupFromJson(json);
     } else {
@@ -1313,7 +1314,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
   /// Acts like a constructor, returns a [ResearchStudyObjective], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchStudyObjective.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchStudyObjectiveFromJson(json);
     } else {
@@ -1454,7 +1455,7 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
   ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchStudyOutcomeMeasure.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchStudyOutcomeMeasureFromJson(json);
     } else {
@@ -1680,6 +1681,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
   }) = _ResearchSubject;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1700,7 +1702,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
   /// Acts like a constructor, returns a [ResearchSubject], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchSubject.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchSubjectFromJson(json);
     } else {
@@ -1840,7 +1842,7 @@ class ResearchSubjectProgress with _$ResearchSubjectProgress {
   /// Acts like a constructor, returns a [ResearchSubjectProgress], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchSubjectProgress.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchSubjectProgressFromJson(json);
     } else {

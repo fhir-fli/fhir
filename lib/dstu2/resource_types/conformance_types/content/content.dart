@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -92,7 +92,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// Acts like a constructor, returns a [StructureDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory StructureDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$StructureDefinitionFromJson(json);
     } else {
@@ -134,7 +134,7 @@ class StructureDefinitionContact with _$StructureDefinitionContact {
   /// Acts like a constructor, returns a [StructureDefinitionContact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory StructureDefinitionContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$StructureDefinitionContactFromJson(json);
     } else {
@@ -183,7 +183,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
   /// Acts like a constructor, returns a [StructureDefinitionMapping], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory StructureDefinitionMapping.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$StructureDefinitionMappingFromJson(json);
     } else {
@@ -224,7 +224,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   /// Acts like a constructor, returns a [StructureDefinitionSnapshot], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory StructureDefinitionSnapshot.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$StructureDefinitionSnapshotFromJson(json);
     } else {
@@ -266,7 +266,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   /// Acts like a constructor, returns a [StructureDefinitionDifferential], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory StructureDefinitionDifferential.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$StructureDefinitionDifferentialFromJson(json);
     } else {
@@ -327,7 +327,7 @@ class DataElement with Resource, _$DataElement {
   /// Acts like a constructor, returns a [DataElement], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DataElement.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DataElementFromJson(json);
     } else {
@@ -369,7 +369,7 @@ class DataElementContact with _$DataElementContact {
   /// Acts like a constructor, returns a [DataElementContact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DataElementContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DataElementContactFromJson(json);
     } else {
@@ -418,7 +418,7 @@ class DataElementMapping with _$DataElementMapping {
   /// Acts like a constructor, returns a [DataElementMapping], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DataElementMapping.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DataElementMappingFromJson(json);
     } else {

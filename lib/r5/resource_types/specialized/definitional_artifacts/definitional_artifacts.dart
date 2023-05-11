@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -792,6 +792,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   }) = _ActivityDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -812,7 +813,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// Acts like a constructor, returns a [ActivityDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ActivityDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ActivityDefinitionFromJson(json);
     } else {
@@ -946,7 +947,7 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ActivityDefinitionParticipant.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ActivityDefinitionParticipantFromJson(json);
     } else {
@@ -1079,7 +1080,7 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ActivityDefinitionDynamicValue.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ActivityDefinitionDynamicValueFromJson(json);
     } else {
@@ -1516,6 +1517,7 @@ class ActorDefinition with Resource, _$ActorDefinition {
   }) = _ActorDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1536,7 +1538,7 @@ class ActorDefinition with Resource, _$ActorDefinition {
   /// Acts like a constructor, returns a [ActorDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ActorDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ActorDefinitionFromJson(json);
     } else {
@@ -2124,6 +2126,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
   }) = _ConditionDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2144,7 +2147,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
   /// Acts like a constructor, returns a [ConditionDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConditionDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConditionDefinitionFromJson(json);
     } else {
@@ -2252,7 +2255,7 @@ class ConditionDefinitionObservation with _$ConditionDefinitionObservation {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConditionDefinitionObservation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConditionDefinitionObservationFromJson(json);
     } else {
@@ -2359,7 +2362,7 @@ class ConditionDefinitionMedication with _$ConditionDefinitionMedication {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConditionDefinitionMedication.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConditionDefinitionMedicationFromJson(json);
     } else {
@@ -2482,7 +2485,7 @@ class ConditionDefinitionPrecondition with _$ConditionDefinitionPrecondition {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConditionDefinitionPrecondition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConditionDefinitionPreconditionFromJson(json);
     } else {
@@ -2596,7 +2599,7 @@ class ConditionDefinitionQuestionnaire with _$ConditionDefinitionQuestionnaire {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConditionDefinitionQuestionnaire.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConditionDefinitionQuestionnaireFromJson(json);
     } else {
@@ -2702,7 +2705,7 @@ class ConditionDefinitionPlan with _$ConditionDefinitionPlan {
   /// Acts like a constructor, returns a [ConditionDefinitionPlan], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConditionDefinitionPlan.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConditionDefinitionPlanFromJson(json);
     } else {
@@ -3071,6 +3074,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   }) = _DeviceDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3091,7 +3095,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   /// Acts like a constructor, returns a [DeviceDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionFromJson(json);
     } else {
@@ -3236,7 +3240,7 @@ class DeviceDefinitionUdiDeviceIdentifier
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionUdiDeviceIdentifier.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionUdiDeviceIdentifierFromJson(json);
     } else {
@@ -3360,7 +3364,7 @@ class DeviceDefinitionMarketDistribution
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionMarketDistribution.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionMarketDistributionFromJson(json);
     } else {
@@ -3504,7 +3508,7 @@ class DeviceDefinitionRegulatoryIdentifier
   ///  [DeviceDefinitionRegulatoryIdentifier], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionRegulatoryIdentifier.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionRegulatoryIdentifierFromJson(json);
     } else {
@@ -3626,7 +3630,7 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
   /// Acts like a constructor, returns a [DeviceDefinitionDeviceName], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionDeviceName.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionDeviceNameFromJson(json);
     } else {
@@ -3736,7 +3740,7 @@ class DeviceDefinitionClassification with _$DeviceDefinitionClassification {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionClassification.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionClassificationFromJson(json);
     } else {
@@ -3869,7 +3873,7 @@ class DeviceDefinitionConformsTo with _$DeviceDefinitionConformsTo {
   /// Acts like a constructor, returns a [DeviceDefinitionConformsTo], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionConformsTo.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionConformsToFromJson(json);
     } else {
@@ -3981,7 +3985,7 @@ class DeviceDefinitionHasPart with _$DeviceDefinitionHasPart {
   /// Acts like a constructor, returns a [DeviceDefinitionHasPart], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionHasPart.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionHasPartFromJson(json);
     } else {
@@ -4116,7 +4120,7 @@ class DeviceDefinitionPackaging with _$DeviceDefinitionPackaging {
   /// Acts like a constructor, returns a [DeviceDefinitionPackaging], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionPackaging.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionPackagingFromJson(json);
     } else {
@@ -4228,7 +4232,7 @@ class DeviceDefinitionDistributor with _$DeviceDefinitionDistributor {
   ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionDistributor.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionDistributorFromJson(json);
     } else {
@@ -4348,7 +4352,7 @@ class DeviceDefinitionVersion with _$DeviceDefinitionVersion {
   /// Acts like a constructor, returns a [DeviceDefinitionVersion], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionVersion.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionVersionFromJson(json);
     } else {
@@ -4515,7 +4519,7 @@ class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
   /// Acts like a constructor, returns a [DeviceDefinitionProperty], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionProperty.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionPropertyFromJson(json);
     } else {
@@ -4623,7 +4627,7 @@ class DeviceDefinitionLink with _$DeviceDefinitionLink {
   /// Acts like a constructor, returns a [DeviceDefinitionLink], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionLink.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionLinkFromJson(json);
     } else {
@@ -4754,7 +4758,7 @@ class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
   /// Acts like a constructor, returns a [DeviceDefinitionMaterial], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionMaterial.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionMaterialFromJson(json);
     } else {
@@ -4909,7 +4913,7 @@ class DeviceDefinitionGuideline with _$DeviceDefinitionGuideline {
   /// Acts like a constructor, returns a [DeviceDefinitionGuideline], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionGuideline.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionGuidelineFromJson(json);
     } else {
@@ -5043,7 +5047,7 @@ class DeviceDefinitionCorrectiveAction with _$DeviceDefinitionCorrectiveAction {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionCorrectiveAction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionCorrectiveActionFromJson(json);
     } else {
@@ -5161,7 +5165,7 @@ class DeviceDefinitionChargeItem with _$DeviceDefinitionChargeItem {
   /// Acts like a constructor, returns a [DeviceDefinitionChargeItem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DeviceDefinitionChargeItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DeviceDefinitionChargeItemFromJson(json);
     } else {
@@ -5677,6 +5681,7 @@ class EventDefinition with Resource, _$EventDefinition {
   }) = _EventDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5697,7 +5702,7 @@ class EventDefinition with Resource, _$EventDefinition {
   /// Acts like a constructor, returns a [EventDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EventDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EventDefinitionFromJson(json);
     } else {
@@ -6100,6 +6105,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
   }) = _ExampleScenario;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -6120,7 +6126,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
   /// Acts like a constructor, returns a [ExampleScenario], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ExampleScenario.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ExampleScenarioFromJson(json);
     } else {
@@ -6259,7 +6265,7 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
   /// Acts like a constructor, returns a [ExampleScenarioActor], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ExampleScenarioActor.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ExampleScenarioActorFromJson(json);
     } else {
@@ -6459,7 +6465,7 @@ class ExampleScenarioInstance with _$ExampleScenarioInstance {
   /// Acts like a constructor, returns a [ExampleScenarioInstance], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ExampleScenarioInstance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ExampleScenarioInstanceFromJson(json);
     } else {
@@ -6595,7 +6601,7 @@ class ExampleScenarioVersion with _$ExampleScenarioVersion {
   /// Acts like a constructor, returns a [ExampleScenarioVersion], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ExampleScenarioVersion.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ExampleScenarioVersionFromJson(json);
     } else {
@@ -6719,7 +6725,7 @@ class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ExampleScenarioContainedInstance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ExampleScenarioContainedInstanceFromJson(json);
     } else {
@@ -6866,7 +6872,7 @@ class ExampleScenarioProcess with _$ExampleScenarioProcess {
   /// Acts like a constructor, returns a [ExampleScenarioProcess], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ExampleScenarioProcess.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ExampleScenarioProcessFromJson(json);
     } else {
@@ -7013,7 +7019,7 @@ class ExampleScenarioStep with _$ExampleScenarioStep {
   /// Acts like a constructor, returns a [ExampleScenarioStep], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ExampleScenarioStep.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ExampleScenarioStepFromJson(json);
     } else {
@@ -7197,7 +7203,7 @@ class ExampleScenarioOperation with _$ExampleScenarioOperation {
   /// Acts like a constructor, returns a [ExampleScenarioOperation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ExampleScenarioOperation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ExampleScenarioOperationFromJson(json);
     } else {
@@ -7321,7 +7327,7 @@ class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
   /// Acts like a constructor, returns a [ExampleScenarioAlternative], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ExampleScenarioAlternative.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ExampleScenarioAlternativeFromJson(json);
     } else {
@@ -7947,6 +7953,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
   }) = _ObservationDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -7967,7 +7974,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
   /// Acts like a constructor, returns a [ObservationDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ObservationDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ObservationDefinitionFromJson(json);
     } else {
@@ -8167,7 +8174,7 @@ class ObservationDefinitionQualifiedValue
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ObservationDefinitionQualifiedValue.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ObservationDefinitionQualifiedValueFromJson(json);
     } else {
@@ -8305,7 +8312,7 @@ class ObservationDefinitionComponent with _$ObservationDefinitionComponent {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ObservationDefinitionComponent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ObservationDefinitionComponentFromJson(json);
     } else {
@@ -8946,6 +8953,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
   }) = _PlanDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -8966,7 +8974,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
   /// Acts like a constructor, returns a [PlanDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PlanDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PlanDefinitionFromJson(json);
     } else {
@@ -9120,7 +9128,7 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
   /// Acts like a constructor, returns a [PlanDefinitionGoal], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PlanDefinitionGoal.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PlanDefinitionGoalFromJson(json);
     } else {
@@ -9382,7 +9390,7 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
   /// Acts like a constructor, returns a [PlanDefinitionTarget], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PlanDefinitionTarget.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PlanDefinitionTargetFromJson(json);
     } else {
@@ -9516,7 +9524,7 @@ class PlanDefinitionActor with _$PlanDefinitionActor {
   /// Acts like a constructor, returns a [PlanDefinitionActor], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PlanDefinitionActor.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PlanDefinitionActorFromJson(json);
     } else {
@@ -9648,7 +9656,7 @@ class PlanDefinitionOption with _$PlanDefinitionOption {
   /// Acts like a constructor, returns a [PlanDefinitionOption], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PlanDefinitionOption.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PlanDefinitionOptionFromJson(json);
     } else {
@@ -10162,7 +10170,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
   /// Acts like a constructor, returns a [PlanDefinitionAction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PlanDefinitionAction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PlanDefinitionActionFromJson(json);
     } else {
@@ -10286,7 +10294,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
   /// Acts like a constructor, returns a [PlanDefinitionCondition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PlanDefinitionCondition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PlanDefinitionConditionFromJson(json);
     } else {
@@ -10426,7 +10434,7 @@ class PlanDefinitionInput with _$PlanDefinitionInput {
   /// Acts like a constructor, returns a [PlanDefinitionInput], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PlanDefinitionInput.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PlanDefinitionInputFromJson(json);
     } else {
@@ -10564,7 +10572,7 @@ class PlanDefinitionOutput with _$PlanDefinitionOutput {
   /// Acts like a constructor, returns a [PlanDefinitionOutput], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PlanDefinitionOutput.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PlanDefinitionOutputFromJson(json);
     } else {
@@ -10722,7 +10730,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PlanDefinitionRelatedAction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PlanDefinitionRelatedActionFromJson(json);
     } else {
@@ -10875,7 +10883,7 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   /// Acts like a constructor, returns a [PlanDefinitionParticipant], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PlanDefinitionParticipant.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PlanDefinitionParticipantFromJson(json);
     } else {
@@ -11014,7 +11022,7 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   /// Acts like a constructor, returns a [PlanDefinitionDynamicValue], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory PlanDefinitionDynamicValue.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$PlanDefinitionDynamicValueFromJson(json);
     } else {
@@ -11519,6 +11527,7 @@ class Questionnaire with Resource, _$Questionnaire {
   }) = _Questionnaire;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -11539,7 +11548,7 @@ class Questionnaire with Resource, _$Questionnaire {
   /// Acts like a constructor, returns a [Questionnaire], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Questionnaire.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$QuestionnaireFromJson(json);
     } else {
@@ -11854,7 +11863,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
   /// Acts like a constructor, returns a [QuestionnaireItem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory QuestionnaireItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$QuestionnaireItemFromJson(json);
     } else {
@@ -12146,7 +12155,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   /// Acts like a constructor, returns a [QuestionnaireEnableWhen], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory QuestionnaireEnableWhen.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$QuestionnaireEnableWhenFromJson(json);
     } else {
@@ -12324,7 +12333,7 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   /// Acts like a constructor, returns a [QuestionnaireAnswerOption], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory QuestionnaireAnswerOption.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$QuestionnaireAnswerOptionFromJson(json);
     } else {
@@ -12526,7 +12535,7 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
   /// Acts like a constructor, returns a [QuestionnaireInitial], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory QuestionnaireInitial.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$QuestionnaireInitialFromJson(json);
     } else {
@@ -12943,6 +12952,7 @@ class Requirements with Resource, _$Requirements {
   }) = _Requirements;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -12963,7 +12973,7 @@ class Requirements with Resource, _$Requirements {
   /// Acts like a constructor, returns a [Requirements], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Requirements.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$RequirementsFromJson(json);
     } else {
@@ -13180,7 +13190,7 @@ class RequirementsStatement with _$RequirementsStatement {
   /// Acts like a constructor, returns a [RequirementsStatement], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory RequirementsStatement.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$RequirementsStatementFromJson(json);
     } else {
@@ -13697,6 +13707,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
   }) = _SpecimenDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -13717,7 +13728,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
   /// Acts like a constructor, returns a [SpecimenDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SpecimenDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SpecimenDefinitionFromJson(json);
     } else {
@@ -13898,7 +13909,7 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SpecimenDefinitionTypeTested.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SpecimenDefinitionTypeTestedFromJson(json);
     } else {
@@ -14067,7 +14078,7 @@ class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   ///  a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SpecimenDefinitionContainer.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SpecimenDefinitionContainerFromJson(json);
     } else {
@@ -14181,7 +14192,7 @@ class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
   /// Acts like a constructor, returns a [SpecimenDefinitionAdditive], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SpecimenDefinitionAdditive.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SpecimenDefinitionAdditiveFromJson(json);
     } else {
@@ -14312,7 +14323,7 @@ class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
   /// Acts like a constructor, returns a [SpecimenDefinitionHandling], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SpecimenDefinitionHandling.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SpecimenDefinitionHandlingFromJson(json);
     } else {

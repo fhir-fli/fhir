@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -88,7 +88,7 @@ class ContactDetail with _$ContactDetail {
   /// Acts like a constructor, returns a [ContactDetail], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ContactDetail.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ContactDetailFromJson(json);
     } else {
@@ -195,7 +195,7 @@ class ExtendedContactDetail with _$ExtendedContactDetail {
   /// Acts like a constructor, returns a [ExtendedContactDetail], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ExtendedContactDetail.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ExtendedContactDetailFromJson(json);
     } else {
@@ -356,7 +356,7 @@ class VirtualServiceDetail with _$VirtualServiceDetail {
   /// Acts like a constructor, returns a [VirtualServiceDetail], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory VirtualServiceDetail.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$VirtualServiceDetailFromJson(json);
     } else {
@@ -432,7 +432,7 @@ class Availability with _$Availability {
   /// Acts like a constructor, returns a [Availability], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Availability.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AvailabilityFromJson(json);
     } else {
@@ -570,7 +570,7 @@ class AvailabilityAvailableTime with _$AvailabilityAvailableTime {
   /// Acts like a constructor, returns a [AvailabilityAvailableTime], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AvailabilityAvailableTime.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AvailabilityAvailableTimeFromJson(json);
     } else {
@@ -682,7 +682,7 @@ class AvailabilityNotAvailableTime with _$AvailabilityNotAvailableTime {
   ///  accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AvailabilityNotAvailableTime.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AvailabilityNotAvailableTimeFromJson(json);
     } else {
@@ -779,7 +779,7 @@ class MonetaryComponent with _$MonetaryComponent {
   /// Acts like a constructor, returns a [MonetaryComponent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MonetaryComponent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MonetaryComponentFromJson(json);
     } else {
@@ -876,7 +876,7 @@ class Contributor with _$Contributor {
   /// Acts like a constructor, returns a [Contributor], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Contributor.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ContributorFromJson(json);
     } else {
@@ -1056,7 +1056,7 @@ class DataRequirement with _$DataRequirement {
   /// Acts like a constructor, returns a [DataRequirement], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DataRequirement.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DataRequirementFromJson(json);
     } else {
@@ -1219,7 +1219,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// Acts like a constructor, returns a [DataRequirementCodeFilter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DataRequirementCodeFilter.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DataRequirementCodeFilterFromJson(json);
     } else {
@@ -1415,7 +1415,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// Acts like a constructor, returns a [DataRequirementDateFilter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DataRequirementDateFilter.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DataRequirementDateFilterFromJson(json);
     } else {
@@ -1588,7 +1588,7 @@ class DataRequirementValueFilter with _$DataRequirementValueFilter {
   /// Acts like a constructor, returns a [DataRequirementValueFilter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DataRequirementValueFilter.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DataRequirementValueFilterFromJson(json);
     } else {
@@ -1716,7 +1716,7 @@ class DataRequirementSort with _$DataRequirementSort {
   /// Acts like a constructor, returns a [DataRequirementSort], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DataRequirementSort.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DataRequirementSortFromJson(json);
     } else {
@@ -1865,7 +1865,7 @@ class ParameterDefinition with _$ParameterDefinition {
   /// Acts like a constructor, returns a [ParameterDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ParameterDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ParameterDefinitionFromJson(json);
     } else {
@@ -2033,7 +2033,7 @@ class RelatedArtifact with _$RelatedArtifact {
   /// Acts like a constructor, returns a [RelatedArtifact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory RelatedArtifact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$RelatedArtifactFromJson(json);
     } else {
@@ -2193,7 +2193,7 @@ class TriggerDefinition with _$TriggerDefinition {
   /// Acts like a constructor, returns a [TriggerDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TriggerDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TriggerDefinitionFromJson(json);
     } else {
@@ -2305,7 +2305,7 @@ class UsageContext with _$UsageContext {
   /// Acts like a constructor, returns a [UsageContext], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory UsageContext.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$UsageContextFromJson(json);
     } else {
@@ -2434,7 +2434,7 @@ class Expression with _$Expression {
   /// Acts like a constructor, returns a [Expression], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Expression.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ExpressionFromJson(json);
     } else {

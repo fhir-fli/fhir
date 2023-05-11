@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -79,7 +79,7 @@ class Appointment with Resource, _$Appointment {
   /// Acts like a constructor, returns a [Appointment], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Appointment.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AppointmentFromJson(json);
     } else {
@@ -122,7 +122,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
   /// Acts like a constructor, returns a [AppointmentParticipant], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AppointmentParticipant.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AppointmentParticipantFromJson(json);
     } else {
@@ -181,7 +181,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
   /// Acts like a constructor, returns a [AppointmentResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AppointmentResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AppointmentResponseFromJson(json);
     } else {
@@ -250,7 +250,7 @@ class ProcessRequest with Resource, _$ProcessRequest {
   /// Acts like a constructor, returns a [ProcessRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProcessRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProcessRequestFromJson(json);
     } else {
@@ -289,7 +289,7 @@ class ProcessRequestItem with _$ProcessRequestItem {
   /// Acts like a constructor, returns a [ProcessRequestItem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProcessRequestItem.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProcessRequestItemFromJson(json);
     } else {
@@ -352,7 +352,7 @@ class ProcessResponse with Resource, _$ProcessResponse {
   /// Acts like a constructor, returns a [ProcessResponse], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProcessResponse.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProcessResponseFromJson(json);
     } else {
@@ -392,7 +392,7 @@ class ProcessResponseProcessNote with _$ProcessResponseProcessNote {
   /// Acts like a constructor, returns a [ProcessResponseProcessNote], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProcessResponseProcessNote.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProcessResponseProcessNoteFromJson(json);
     } else {
@@ -459,7 +459,7 @@ class RequestGroup with Resource, _$RequestGroup {
   /// Acts like a constructor, returns a [RequestGroup], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory RequestGroup.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$RequestGroupFromJson(json);
     } else {
@@ -528,7 +528,7 @@ class RequestGroupAction with _$RequestGroupAction {
   /// Acts like a constructor, returns a [RequestGroupAction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory RequestGroupAction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$RequestGroupActionFromJson(json);
     } else {
@@ -573,7 +573,7 @@ class RequestGroupCondition with _$RequestGroupCondition {
   /// Acts like a constructor, returns a [RequestGroupCondition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory RequestGroupCondition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$RequestGroupConditionFromJson(json);
     } else {
@@ -616,7 +616,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   /// Acts like a constructor, returns a [RequestGroupRelatedAction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory RequestGroupRelatedAction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$RequestGroupRelatedActionFromJson(json);
     } else {
@@ -673,7 +673,7 @@ class Schedule with Resource, _$Schedule {
   /// Acts like a constructor, returns a [Schedule], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Schedule.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ScheduleFromJson(json);
     } else {
@@ -734,7 +734,7 @@ class Slot with Resource, _$Slot {
   /// Acts like a constructor, returns a [Slot], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Slot.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SlotFromJson(json);
     } else {
@@ -814,7 +814,7 @@ class Task with Resource, _$Task {
   /// Acts like a constructor, returns a [Task], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Task.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TaskFromJson(json);
     } else {
@@ -853,7 +853,7 @@ class TaskRequester with _$TaskRequester {
   /// Acts like a constructor, returns a [TaskRequester], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TaskRequester.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TaskRequesterFromJson(json);
     } else {
@@ -894,7 +894,7 @@ class TaskRestriction with _$TaskRestriction {
   /// Acts like a constructor, returns a [TaskRestriction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TaskRestriction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TaskRestrictionFromJson(json);
     } else {
@@ -1002,7 +1002,7 @@ class TaskInput with _$TaskInput {
   /// Acts like a constructor, returns a [TaskInput], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TaskInput.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TaskInputFromJson(json);
     } else {
@@ -1110,7 +1110,7 @@ class TaskOutput with _$TaskOutput {
   /// Acts like a constructor, returns a [TaskOutput], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory TaskOutput.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$TaskOutputFromJson(json);
     } else {

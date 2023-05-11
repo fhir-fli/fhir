@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -76,7 +76,7 @@ class Conformance with Resource, _$Conformance {
   /// Acts like a constructor, returns a [Conformance], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Conformance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceFromJson(json);
     } else {
@@ -148,7 +148,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   /// Acts like a constructor, returns a [CapabilityStatement], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CapabilityStatement.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CapabilityStatementFromJson(json);
     } else {
@@ -190,7 +190,7 @@ class ConformanceContact with _$ConformanceContact {
   /// Acts like a constructor, returns a [ConformanceContact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceContactFromJson(json);
     } else {
@@ -233,7 +233,7 @@ class ConformanceSoftware with _$ConformanceSoftware {
   /// Acts like a constructor, returns a [ConformanceSoftware], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceSoftware.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceSoftwareFromJson(json);
     } else {
@@ -275,7 +275,7 @@ class ConformanceImplementation with _$ConformanceImplementation {
   /// Acts like a constructor, returns a [ConformanceImplementation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceImplementation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceImplementationFromJson(json);
     } else {
@@ -327,7 +327,7 @@ class ConformanceRest with _$ConformanceRest {
   /// Acts like a constructor, returns a [ConformanceRest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceRest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceRestFromJson(json);
     } else {
@@ -372,7 +372,7 @@ class ConformanceMessaging with _$ConformanceMessaging {
   /// Acts like a constructor, returns a [ConformanceMessaging], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceMessaging.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceMessagingFromJson(json);
     } else {
@@ -416,7 +416,7 @@ class ConformanceDocument with _$ConformanceDocument {
   /// Acts like a constructor, returns a [ConformanceDocument], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceDocument.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceDocumentFromJson(json);
     } else {
@@ -461,7 +461,7 @@ class ConformanceRestSecurity with _$ConformanceRestSecurity {
   /// Acts like a constructor, returns a [ConformanceRestSecurity], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceRestSecurity.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceRestSecurityFromJson(json);
     } else {
@@ -521,7 +521,7 @@ class ConformanceRestResource with _$ConformanceRestResource {
   /// Acts like a constructor, returns a [ConformanceRestResource], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceRestResource.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceRestResourceFromJson(json);
     } else {
@@ -565,7 +565,7 @@ class ConformanceResourceInteraction with _$ConformanceResourceInteraction {
   /// Acts like a constructor, returns a [ConformanceResourceInteraction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceResourceInteraction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceResourceInteractionFromJson(json);
     } else {
@@ -608,7 +608,7 @@ class ConformanceRestOperation with _$ConformanceRestOperation {
   /// Acts like a constructor, returns a [ConformanceRestOperation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceRestOperation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceRestOperationFromJson(json);
     } else {
@@ -651,7 +651,7 @@ class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint {
   /// Acts like a constructor, returns a [ConformanceMessagingEndpoint], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceMessagingEndpoint.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceMessagingEndpointFromJson(json);
     } else {
@@ -699,7 +699,7 @@ class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
   /// Acts like a constructor, returns a [ConformanceMessagingEvent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceMessagingEvent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceMessagingEventFromJson(json);
     } else {
@@ -743,7 +743,7 @@ class ConformanceSecurityCertificate with _$ConformanceSecurityCertificate {
   /// Acts like a constructor, returns a [ConformanceSecurityCertificate], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceSecurityCertificate.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceSecurityCertificateFromJson(json);
     } else {
@@ -786,7 +786,7 @@ class ConformanceRestInteraction with _$ConformanceRestInteraction {
   /// Acts like a constructor, returns a [ConformanceRestInteraction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceRestInteraction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceRestInteractionFromJson(json);
     } else {
@@ -836,7 +836,7 @@ class ConformanceResourceSearchParam with _$ConformanceResourceSearchParam {
   /// Acts like a constructor, returns a [ConformanceResourceSearchParam], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConformanceResourceSearchParam.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConformanceResourceSearchParamFromJson(json);
     } else {
@@ -902,7 +902,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
   /// Acts like a constructor, returns a [OperationDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory OperationDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OperationDefinitionFromJson(json);
     } else {
@@ -944,7 +944,7 @@ class OperationDefinitionContact with _$OperationDefinitionContact {
   /// Acts like a constructor, returns a [OperationDefinitionContact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory OperationDefinitionContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OperationDefinitionContactFromJson(json);
     } else {
@@ -994,7 +994,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
   /// Acts like a constructor, returns a [OperationDefinitionParameter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory OperationDefinitionParameter.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$OperationDefinitionParameterFromJson(json);
     } else {
@@ -1095,7 +1095,7 @@ class SearchParameter with Resource, _$SearchParameter {
   /// Acts like a constructor, returns a [SearchParameter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SearchParameter.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SearchParameterFromJson(json);
     } else {
@@ -1137,7 +1137,7 @@ class SearchParameterContact with _$SearchParameterContact {
   /// Acts like a constructor, returns a [SearchParameterContact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory SearchParameterContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$SearchParameterContactFromJson(json);
     } else {

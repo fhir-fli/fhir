@@ -63,6 +63,10 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
       return (resource as Bundle)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
 
+    case Dstu2ResourceType.CapabilityStatement:
+      return (resource as CapabilityStatement)
+          .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
+
     case Dstu2ResourceType.CarePlan:
       return (resource as CarePlan)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
@@ -401,8 +405,7 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
     case Dstu2ResourceType.VisionPrescription:
       return (resource as VisionPrescription)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
-
-    default:
+    case null:
       throw FormatException(
           '${resource.resourceType} is not a defined resourceType');
   }

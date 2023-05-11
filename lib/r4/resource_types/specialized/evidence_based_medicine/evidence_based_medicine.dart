@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -270,7 +270,7 @@ class Citation with Resource, _$Citation {
   /// Acts like a constructor, returns a [Citation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Citation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationFromJson(json);
     } else {
@@ -350,7 +350,7 @@ class CitationSummary with _$CitationSummary {
   /// Acts like a constructor, returns a [CitationSummary], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationSummary.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationSummaryFromJson(json);
     } else {
@@ -427,7 +427,7 @@ class CitationClassification with _$CitationClassification {
   /// Acts like a constructor, returns a [CitationClassification], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationClassification.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationClassificationFromJson(json);
     } else {
@@ -510,7 +510,7 @@ class CitationStatusDate with _$CitationStatusDate {
   /// Acts like a constructor, returns a [CitationStatusDate], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationStatusDate.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationStatusDateFromJson(json);
     } else {
@@ -606,7 +606,7 @@ class CitationRelatesTo with _$CitationRelatesTo {
   /// Acts like a constructor, returns a [CitationRelatesTo], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationRelatesTo.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationRelatesToFromJson(json);
     } else {
@@ -731,7 +731,7 @@ class CitationCitedArtifact with _$CitationCitedArtifact {
   /// Acts like a constructor, returns a [CitationCitedArtifact], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationCitedArtifact.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationCitedArtifactFromJson(json);
     } else {
@@ -811,7 +811,7 @@ class CitationVersion with _$CitationVersion {
   /// Acts like a constructor, returns a [CitationVersion], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationVersion.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationVersionFromJson(json);
     } else {
@@ -894,7 +894,7 @@ class CitationStatusDate1 with _$CitationStatusDate1 {
   /// Acts like a constructor, returns a [CitationStatusDate1], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationStatusDate1.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationStatusDate1FromJson(json);
     } else {
@@ -977,7 +977,7 @@ class CitationTitle with _$CitationTitle {
   /// Acts like a constructor, returns a [CitationTitle], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationTitle.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationTitleFromJson(json);
     } else {
@@ -1066,7 +1066,7 @@ class CitationAbstract with _$CitationAbstract {
   /// Acts like a constructor, returns a [CitationAbstract], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationAbstract.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationAbstractFromJson(json);
     } else {
@@ -1149,7 +1149,7 @@ class CitationPart with _$CitationPart {
   /// Acts like a constructor, returns a [CitationPart], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationPart.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationPartFromJson(json);
     } else {
@@ -1244,7 +1244,7 @@ class CitationRelatesTo1 with _$CitationRelatesTo1 {
   /// Acts like a constructor, returns a [CitationRelatesTo1], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationRelatesTo1.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationRelatesTo1FromJson(json);
     } else {
@@ -1376,7 +1376,7 @@ class CitationPublicationForm with _$CitationPublicationForm {
   /// Acts like a constructor, returns a [CitationPublicationForm], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationPublicationForm.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationPublicationFormFromJson(json);
     } else {
@@ -1470,7 +1470,7 @@ class CitationPublishedIn with _$CitationPublishedIn {
   /// Acts like a constructor, returns a [CitationPublishedIn], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationPublishedIn.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationPublishedInFromJson(json);
     } else {
@@ -1562,7 +1562,7 @@ class CitationPeriodicRelease with _$CitationPeriodicRelease {
   /// Acts like a constructor, returns a [CitationPeriodicRelease], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationPeriodicRelease.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationPeriodicReleaseFromJson(json);
     } else {
@@ -1670,7 +1670,7 @@ class CitationDateOfPublication with _$CitationDateOfPublication {
   /// Acts like a constructor, returns a [CitationDateOfPublication], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationDateOfPublication.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationDateOfPublicationFromJson(json);
     } else {
@@ -1750,7 +1750,7 @@ class CitationWebLocation with _$CitationWebLocation {
   /// Acts like a constructor, returns a [CitationWebLocation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationWebLocation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationWebLocationFromJson(json);
     } else {
@@ -1831,7 +1831,7 @@ class CitationClassification1 with _$CitationClassification1 {
   /// Acts like a constructor, returns a [CitationClassification1], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationClassification1.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationClassification1FromJson(json);
     } else {
@@ -1925,7 +1925,7 @@ class CitationWhoClassified with _$CitationWhoClassified {
   /// Acts like a constructor, returns a [CitationWhoClassified], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationWhoClassified.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationWhoClassifiedFromJson(json);
     } else {
@@ -2009,7 +2009,7 @@ class CitationContributorship with _$CitationContributorship {
   /// Acts like a constructor, returns a [CitationContributorship], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationContributorship.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationContributorshipFromJson(json);
     } else {
@@ -2132,7 +2132,7 @@ class CitationEntry with _$CitationEntry {
   /// Acts like a constructor, returns a [CitationEntry], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationEntry.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationEntryFromJson(json);
     } else {
@@ -2218,7 +2218,7 @@ class CitationAffiliationInfo with _$CitationAffiliationInfo {
   /// Acts like a constructor, returns a [CitationAffiliationInfo], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationAffiliationInfo.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationAffiliationInfoFromJson(json);
     } else {
@@ -2298,7 +2298,7 @@ class CitationContributionInstance with _$CitationContributionInstance {
   /// Acts like a constructor, returns a [CitationContributionInstance], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationContributionInstance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationContributionInstanceFromJson(json);
     } else {
@@ -2386,7 +2386,7 @@ class CitationSummary1 with _$CitationSummary1 {
   /// Acts like a constructor, returns a [CitationSummary1], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory CitationSummary1.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$CitationSummary1FromJson(json);
     } else {
@@ -2665,7 +2665,7 @@ class Evidence with Resource, _$Evidence {
   /// Acts like a constructor, returns a [Evidence], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Evidence.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceFromJson(json);
     } else {
@@ -2739,7 +2739,7 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
   /// Acts like a constructor, returns a [EvidenceVariableDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceVariableDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceVariableDefinitionFromJson(json);
     } else {
@@ -2829,7 +2829,7 @@ class EvidenceStatistic with _$EvidenceStatistic {
   /// Acts like a constructor, returns a [EvidenceStatistic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceStatistic.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceStatisticFromJson(json);
     } else {
@@ -2908,7 +2908,7 @@ class EvidenceSampleSize with _$EvidenceSampleSize {
   /// Acts like a constructor, returns a [EvidenceSampleSize], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceSampleSize.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceSampleSizeFromJson(json);
     } else {
@@ -2986,7 +2986,7 @@ class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
   /// Acts like a constructor, returns a [EvidenceAttributeEstimate], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceAttributeEstimate.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceAttributeEstimateFromJson(json);
     } else {
@@ -3049,7 +3049,7 @@ class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
   /// Acts like a constructor, returns a [EvidenceModelCharacteristic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceModelCharacteristic.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceModelCharacteristicFromJson(json);
     } else {
@@ -3123,7 +3123,7 @@ class EvidenceVar with _$EvidenceVar {
   /// Acts like a constructor, returns a [EvidenceVar], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceVar.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceVarFromJson(json);
     } else {
@@ -3200,7 +3200,7 @@ class EvidenceCertainty with _$EvidenceCertainty {
   /// Acts like a constructor, returns a [EvidenceCertainty], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceCertainty.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceCertaintyFromJson(json);
     } else {
@@ -3389,7 +3389,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
   /// Acts like a constructor, returns a [EvidenceReport], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceReport.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceReportFromJson(json);
     } else {
@@ -3448,7 +3448,7 @@ class EvidenceReportSubject with _$EvidenceReportSubject {
   /// Acts like a constructor, returns a [EvidenceReportSubject], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceReportSubject.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceReportSubjectFromJson(json);
     } else {
@@ -3531,7 +3531,7 @@ class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
   /// Acts like a constructor, returns a [EvidenceReportCharacteristic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceReportCharacteristic.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceReportCharacteristicFromJson(json);
     } else {
@@ -3594,7 +3594,7 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
   /// Acts like a constructor, returns a [EvidenceReportRelatesTo], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceReportRelatesTo.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceReportRelatesToFromJson(json);
     } else {
@@ -3689,7 +3689,7 @@ class EvidenceReportSection with _$EvidenceReportSection {
   /// Acts like a constructor, returns a [EvidenceReportSection], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceReportSection.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceReportSectionFromJson(json);
     } else {
@@ -3969,7 +3969,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// Acts like a constructor, returns a [EvidenceVariable], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceVariable.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceVariableFromJson(json);
     } else {
@@ -4119,7 +4119,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// Acts like a constructor, returns a [EvidenceVariableCharacteristic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceVariableCharacteristic.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceVariableCharacteristicFromJson(json);
     } else {
@@ -4204,7 +4204,7 @@ class EvidenceVariableTimeFromStart with _$EvidenceVariableTimeFromStart {
   /// Acts like a constructor, returns a [EvidenceVariableTimeFromStart], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceVariableTimeFromStart.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceVariableTimeFromStartFromJson(json);
     } else {
@@ -4272,7 +4272,7 @@ class EvidenceVariableCategory with _$EvidenceVariableCategory {
   /// Acts like a constructor, returns a [EvidenceVariableCategory], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory EvidenceVariableCategory.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$EvidenceVariableCategoryFromJson(json);
     } else {
@@ -4600,7 +4600,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// Acts like a constructor, returns a [ResearchDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchDefinitionFromJson(json);
     } else {
@@ -4936,7 +4936,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// Acts like a constructor, returns a [ResearchElementDefinition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ResearchElementDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ResearchElementDefinitionFromJson(json);
     } else {

@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -25,7 +25,7 @@ class FhirDate extends FhirDateTimeBase {
 
   factory FhirDate(dynamic inValue) {
     if (inValue is DateTime) {
-      return FhirDate.fromDateTime(inValue, DatePrecision.YYYYMMDD);
+      return FhirDate.fromDateTime(inValue);
     } else if (inValue is String) {
       try {
         final DateTime dateTimeValue = _parseDate(inValue);

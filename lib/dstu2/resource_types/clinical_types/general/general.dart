@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -75,7 +75,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
   /// Acts like a constructor, returns a [AllergyIntolerance], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AllergyIntolerance.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AllergyIntoleranceFromJson(json);
     } else {
@@ -130,7 +130,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   /// Acts like a constructor, returns a [AllergyIntoleranceReaction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory AllergyIntoleranceReaction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$AllergyIntoleranceReactionFromJson(json);
     } else {
@@ -209,7 +209,7 @@ class Condition with Resource, _$Condition {
   /// Acts like a constructor, returns a [Condition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Condition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConditionFromJson(json);
     } else {
@@ -252,7 +252,7 @@ class ConditionStage with _$ConditionStage {
   /// Acts like a constructor, returns a [ConditionStage], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConditionStage.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConditionStageFromJson(json);
     } else {
@@ -295,7 +295,7 @@ class ConditionEvidence with _$ConditionEvidence {
   /// Acts like a constructor, returns a [ConditionEvidence], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ConditionEvidence.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ConditionEvidenceFromJson(json);
     } else {
@@ -368,7 +368,7 @@ class Procedure with Resource, _$Procedure {
   /// Acts like a constructor, returns a [Procedure], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Procedure.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProcedureFromJson(json);
     } else {
@@ -411,7 +411,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
   /// Acts like a constructor, returns a [ProcedurePerformer], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProcedurePerformer.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProcedurePerformerFromJson(json);
     } else {
@@ -453,7 +453,7 @@ class ProcedureFocalDevice with _$ProcedureFocalDevice {
   /// Acts like a constructor, returns a [ProcedureFocalDevice], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ProcedureFocalDevice.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ProcedureFocalDeviceFromJson(json);
     } else {
@@ -524,7 +524,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
   /// Acts like a constructor, returns a [ClinicalImpression], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClinicalImpression.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClinicalImpressionFromJson(json);
     } else {
@@ -597,7 +597,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   /// Acts like a constructor, returns a [ClinicalImpressionFinding], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClinicalImpressionFinding.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClinicalImpressionFindingFromJson(json);
     } else {
@@ -639,7 +639,7 @@ class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
   /// Acts like a constructor, returns a [ClinicalImpressionRuledOut], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ClinicalImpressionRuledOut.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ClinicalImpressionRuledOutFromJson(json);
     } else {
@@ -717,7 +717,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   /// Acts like a constructor, returns a [FamilyMemberHistory], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory FamilyMemberHistory.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$FamilyMemberHistoryFromJson(json);
     } else {
@@ -765,7 +765,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   /// Acts like a constructor, returns a [FamilyMemberHistoryCondition], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory FamilyMemberHistoryCondition.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$FamilyMemberHistoryConditionFromJson(json);
     } else {
@@ -823,7 +823,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
   /// Acts like a constructor, returns a [RiskAssessment], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory RiskAssessment.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$RiskAssessmentFromJson(json);
     } else {
@@ -874,7 +874,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   /// Acts like a constructor, returns a [RiskAssessmentPrediction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory RiskAssessmentPrediction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$RiskAssessmentPredictionFromJson(json);
     } else {
@@ -935,7 +935,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
   /// Acts like a constructor, returns a [DetectedIssue], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DetectedIssue.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DetectedIssueFromJson(json);
     } else {
@@ -978,7 +978,7 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
   /// Acts like a constructor, returns a [DetectedIssueMitigation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory DetectedIssueMitigation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$DetectedIssueMitigationFromJson(json);
     } else {

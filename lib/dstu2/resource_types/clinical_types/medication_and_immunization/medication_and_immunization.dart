@@ -1,4 +1,4 @@
-// ignore_for_file: invalid_annotation_target
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -56,7 +56,7 @@ class Medication with Resource, _$Medication {
   /// Acts like a constructor, returns a [Medication], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Medication.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationFromJson(json);
     } else {
@@ -100,7 +100,7 @@ class MedicationProduct with _$MedicationProduct {
   /// Acts like a constructor, returns a [MedicationProduct], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationProduct.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationProductFromJson(json);
     } else {
@@ -142,7 +142,7 @@ class MedicationProductIngredient with _$MedicationProductIngredient {
   /// Acts like a constructor, returns a [MedicationProductIngredient], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationProductIngredient.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationProductIngredientFromJson(json);
     } else {
@@ -186,7 +186,7 @@ class MedicationProductBatch with _$MedicationProductBatch {
   /// Acts like a constructor, returns a [MedicationProductBatch], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationProductBatch.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationProductBatchFromJson(json);
     } else {
@@ -229,7 +229,7 @@ class MedicationPackage with _$MedicationPackage {
   /// Acts like a constructor, returns a [MedicationPackage], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationPackage.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationPackageFromJson(json);
     } else {
@@ -271,7 +271,7 @@ class MedicationPackageContent with _$MedicationPackageContent {
   /// Acts like a constructor, returns a [MedicationPackageContent], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationPackageContent.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationPackageContentFromJson(json);
     } else {
@@ -336,7 +336,7 @@ class MedicationOrder with Resource, _$MedicationOrder {
   /// Acts like a constructor, returns a [MedicationOrder], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationOrder.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationOrderFromJson(json);
     } else {
@@ -426,7 +426,7 @@ class MedicationOrderDispenseRequest with _$MedicationOrderDispenseRequest {
   /// Acts like a constructor, returns a [MedicationOrderDispenseRequest], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationOrderDispenseRequest.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationOrderDispenseRequestFromJson(json);
     } else {
@@ -468,7 +468,7 @@ class MedicationOrderSubstitution with _$MedicationOrderSubstitution {
   /// Acts like a constructor, returns a [MedicationOrderSubstitution], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationOrderSubstitution.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationOrderSubstitutionFromJson(json);
     } else {
@@ -534,7 +534,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   /// Acts like a constructor, returns a [MedicationAdministration], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationAdministration.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationAdministrationFromJson(json);
     } else {
@@ -584,7 +584,7 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   /// Acts like a constructor, returns a [MedicationAdministrationDosage], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationAdministrationDosage.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationAdministrationDosageFromJson(json);
     } else {
@@ -652,7 +652,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
   /// Acts like a constructor, returns a [MedicationDispense], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationDispense.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationDispenseFromJson(json);
     } else {
@@ -740,7 +740,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   /// Acts like a constructor, returns a [MedicationDispenseSubstitution], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationDispenseSubstitution.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationDispenseSubstitutionFromJson(json);
     } else {
@@ -807,7 +807,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
   /// Acts like a constructor, returns a [MedicationStatement], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationStatement.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationStatementFromJson(json);
     } else {
@@ -860,7 +860,7 @@ class MedicationStatementDosage with _$MedicationStatementDosage {
   /// Acts like a constructor, returns a [MedicationStatementDosage], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory MedicationStatementDosage.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$MedicationStatementDosageFromJson(json);
     } else {
@@ -932,7 +932,7 @@ class Immunization with Resource, _$Immunization {
   /// Acts like a constructor, returns a [Immunization], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Immunization.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationFromJson(json);
     } else {
@@ -974,7 +974,7 @@ class ImmunizationExplanation with _$ImmunizationExplanation {
   /// Acts like a constructor, returns a [ImmunizationExplanation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImmunizationExplanation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationExplanationFromJson(json);
     } else {
@@ -1019,7 +1019,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
   /// Acts like a constructor, returns a [ImmunizationReaction], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImmunizationReaction.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationReactionFromJson(json);
     } else {
@@ -1069,7 +1069,7 @@ class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol {
   /// Acts like a constructor, returns a [ImmunizationVaccinationProtocol], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImmunizationVaccinationProtocol.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationVaccinationProtocolFromJson(json);
     } else {
@@ -1120,7 +1120,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   /// Acts like a constructor, returns a [ImmunizationRecommendation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory ImmunizationRecommendation.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _$ImmunizationRecommendationFromJson(json);
     } else {

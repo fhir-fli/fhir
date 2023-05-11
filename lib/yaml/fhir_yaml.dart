@@ -1,6 +1,3 @@
-/// From Package: https://github.com/alexei-sintotski/json2yaml
-/// https://github.com/alexei-sintotski/json2yaml/blob/master/lib/src/json2yaml.dart
-
 // ignore_for_file: prefer_if_elements_to_conditional_expressions, noop_primitive_operations
 
 /// Yaml formatting control options
@@ -14,6 +11,9 @@ enum YamlStyle {
   /// YAML formatting style following pubspec.lock formatting conventions
   pubspecLock,
 }
+
+/// From Package: https://github.com/alexei-sintotski/json2yaml
+/// https://github.com/alexei-sintotski/json2yaml/blob/master/lib/src/json2yaml.dart
 
 /// Converts JSON to YAML representation
 String json2yaml(
@@ -31,7 +31,7 @@ String _renderToYaml(
   YamlStyle style,
 ) =>
     json.entries
-        .map((entry) => _formatEntry(
+        .map((MapEntry<String, dynamic> entry) => _formatEntry(
               entry,
               nestingLevel,
               style,
@@ -62,13 +62,13 @@ String _formatValue(
       if (_containsEscapeCharacters(value)) {
         return ' "${_withEscapes(value)}"';
       } else {
-        var finalString = ' |2';
-        final split = value.split('\n');
+        String finalString = ' |2';
+        final List<String> split = value.split('\n');
 
         /// otherwise, we go ahead and format the string into more easily
         /// readable lines
-        for (var s = 0; s < split.length; s++) {
-          finalString = [
+        for (int s = 0; s < split.length; s++) {
+          finalString = <String>[
             finalString,
             '\n',
             _indentation(nesting + 1),
@@ -138,14 +138,14 @@ bool _isBooleanOrNullString(String s) =>
     s.toLowerCase() == 'null';
 
 bool _containsSpecialCharacters(String s) =>
-    _specialCharacters.any((c) => s.contains(c));
+    _specialCharacters.any((String c) => s.contains(c));
 
-final _specialCharacters = r':{}[],&*#?|-<>=!%@\$'.split('');
+final List<String> _specialCharacters = r':{}[],&*#?|-<>=!%@\$'.split('');
 
 bool _containsEscapeCharacters(String s) =>
-    _escapeCharacters.any((c) => s.contains(c));
+    _escapeCharacters.any((String c) => s.contains(c));
 
-final _escapeCharacters = [
+final List<String> _escapeCharacters = <String>[
   r'\',
   '\r',
   '\t',

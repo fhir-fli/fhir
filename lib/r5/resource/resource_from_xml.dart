@@ -1,19 +1,19 @@
 part of 'resource.dart';
 
 Resource _resourceFromXml(String xmlString) {
-  final myTransformer = Xml2Json();
+  final Xml2Json myTransformer = Xml2Json();
   myTransformer.parse(xmlString);
-  final json = myTransformer.toBadgerfish();
-  final map = jsonDecode(json) as Map<String, dynamic>;
+  final String json = myTransformer.toBadgerfish();
+  final Map<String, dynamic> map = jsonDecode(json) as Map<String, dynamic>;
   if (map.keys.length == 1 &&
       resourceTypeFromStringMap.keys.contains(map.keys.first)) {
     (map[map.keys.first] as Map<String, dynamic>)['resourceType'] =
         map.keys.first;
-    final fhirObjectMap = fhirFieldMap[map.keys.first];
+    final Map<String, FhirField>? fhirObjectMap = fhirFieldMap[map.keys.first];
     if (fhirObjectMap == null) {
       throw Exception('No Resource was found');
     } else {
-      final newMap = reformatXmlJsonMap(
+      final Map<String, dynamic> newMap = reformatXmlJsonMap(
         map[map.keys.first] as Map<String, dynamic>,
         fhirObjectMap,
       );
@@ -26,7 +26,7 @@ Resource _resourceFromXml(String xmlString) {
 
 Map<String, dynamic> reformatXmlJsonMap(
     Map<String, dynamic> map, Map<String, FhirField> fhirObjectMap) {
-  final newMap = <String, dynamic>{};
+  final Map<String, dynamic> newMap = <String, dynamic>{};
   if (map.keys.contains('xmlns')) {
     map.remove('xmlns');
   }
@@ -38,15 +38,16 @@ Map<String, dynamic> reformatXmlJsonMap(
       Map<String, dynamic> oldValue, String key, FhirField? fhirField) {
     if (oldValue.keys.contains('@value')) {
       newMap[key.replaceAll('@', '')] = fhirField != null && fhirField.isList
-          ? [primitiveValue(fhirField.type, oldValue['@value'], key)]
+          ? <dynamic>[primitiveValue(fhirField.type, oldValue['@value'], key)]
           : primitiveValue(fhirField!.type, oldValue['@value'], key);
     }
     if (oldValue.keys.contains('extension') ||
         oldValue.keys.contains('@extension') ||
         oldValue.keys.contains('id') ||
         oldValue.keys.contains('@id')) {
-      final id = oldValue['id'] ?? oldValue['@id'];
-      final fhirExtension = oldValue['extension'] ?? oldValue['@extension'];
+      final dynamic id = oldValue['id'] ?? oldValue['@id'];
+      final dynamic fhirExtension =
+          oldValue['extension'] ?? oldValue['@extension'];
       newMap['_${key.replaceAll('@', '')}'] =
 
           /// Is there a List?
@@ -59,27 +60,30 @@ Map<String, dynamic> reformatXmlJsonMap(
                   ? fhirExtension != null
 
                       /// +List, +ID, +Extension
-                      ? [
+                      ? <Map<String, dynamic>>[
                           reformatXmlJsonMap(
-                            {'id': id, 'extension': fhirExtension},
+                            <String, dynamic>{
+                              'id': id,
+                              'extension': fhirExtension
+                            },
                             fhirFieldMap['Element']!,
                           )
                         ]
                       :
 
                       /// +List, +ID, -Extension
-                      [
+                      <Map<String, dynamic>>[
                           reformatXmlJsonMap(
-                            {'id': id},
+                            <String, dynamic>{'id': id},
                             fhirFieldMap['Element']!,
                           )
                         ]
                   :
 
                   /// +List, -ID, +Extension
-                  [
+                  <Map<String, dynamic>>[
                       reformatXmlJsonMap(
-                        {'extension': fhirExtension},
+                        <String, dynamic>{'extension': fhirExtension},
                         fhirFieldMap['Element']!,
                       )
                     ]
@@ -92,7 +96,10 @@ Map<String, dynamic> reformatXmlJsonMap(
 
                       /// -List, +ID, +Extension
                       ? reformatXmlJsonMap(
-                          {'id': id, 'extension': fhirExtension},
+                          <String, dynamic>{
+                            'id': id,
+                            'extension': fhirExtension
+                          },
                           fhirFieldMap['Element']!,
                         )
                       :
@@ -100,7 +107,7 @@ Map<String, dynamic> reformatXmlJsonMap(
                       /// -List, +ID, -Extension
 
                       reformatXmlJsonMap(
-                          {'id': id},
+                          <String, dynamic>{'id': id},
                           fhirFieldMap['Element']!,
                         )
                   :
@@ -108,17 +115,17 @@ Map<String, dynamic> reformatXmlJsonMap(
                   /// -List, -ID, +Extension
 
                   reformatXmlJsonMap(
-                      {'extension': fhirExtension},
+                      <String, dynamic>{'extension': fhirExtension},
                       fhirFieldMap['Element']!,
                     );
     }
   }
 
-  for (final key in map.keys) {
+  for (final String key in map.keys) {
     final String replacedKey = key.replaceAll('@', '');
-    final fhirField = fhirObjectMap[replacedKey];
-    var oldValue = map[key];
-    var oldType = fhirField?.type;
+    final FhirField? fhirField = fhirObjectMap[replacedKey];
+    dynamic oldValue = map[key];
+    String? oldType = fhirField?.type;
 
     if (!(oldType == 'Narrative' && key == 'text')) {
       if (oldType == null) {
@@ -152,45 +159,48 @@ Map<String, dynamic> reformatXmlJsonMap(
               throw Exception(
                   'The field named $key (which is a Map) was not found in the FHIR Spec');
             } else {
-              final ifResource = checkIfResource(oldValue, oldType);
+              final Map<String, dynamic> ifResource =
+                  checkIfResource(oldValue, oldType);
               oldType = ifResource.keys.first;
               oldValue = ifResource.values.first;
               if (isPrimitive(oldType, oldValue as Map<String, dynamic>)) {
                 addIfPrimitive(oldValue, key, fhirField);
               } else {
                 // print('168: $oldType $oldValue');
-                newMap[replacedKey] = fhirField != null && fhirField.isList
-                    ? [reformatXmlJsonMap(oldValue, fhirFieldMap[oldType]!)]
+                newMap[replacedKey] = fhirField.isList
+                    ? <Map<String, dynamic>>[
+                        reformatXmlJsonMap(oldValue, fhirFieldMap[oldType]!)
+                      ]
                     : reformatXmlJsonMap(oldValue, fhirFieldMap[oldType]!);
               }
             }
           }
         } else if (oldValue is List) {
-          newMap[replacedKey] = [];
-          for (final entry in oldValue) {
+          newMap[replacedKey] = <dynamic>[];
+          for (final dynamic entry in oldValue) {
             if (entry is Map) {
               if (fhirField == null) {
                 throw Exception(
                     'The field named $key (which is a List) was not found in the FHIR Spec');
               } else {
                 if (isPrimitive(oldType!, entry as Map<String, dynamic>)) {
-                  (newMap[replacedKey] as List).add(primitiveValue(
+                  (newMap[replacedKey] as List<dynamic>).add(primitiveValue(
                       fhirField.type, entry.values.first, replacedKey));
                 } else {
                   oldValue = entry;
-                  final ifResource = checkIfResource(
+                  final Map<String, dynamic> ifResource = checkIfResource(
                       oldValue as Map<String, dynamic>, oldType);
                   oldType = ifResource.keys.first;
                   oldValue = ifResource.values.first;
                   // print('192: $oldType');
-                  (newMap[replacedKey] as List).add(reformatXmlJsonMap(
+                  (newMap[replacedKey] as List<dynamic>).add(reformatXmlJsonMap(
                     oldValue as Map<String, dynamic>,
                     fhirFieldMap[oldType]!,
                   ));
                 }
               }
             } else {
-              (newMap[replacedKey] as List).add(entry);
+              (newMap[replacedKey] as List<dynamic>).add(entry);
             }
           }
         } else {
@@ -202,8 +212,8 @@ Map<String, dynamic> reformatXmlJsonMap(
                   'The field named $key (which is a primitive) was not found in the FHIR Spec');
             }
           } else {
-            final value = primitiveValue(fhirField.type, oldValue, key);
-            newMap[replacedKey] = fhirField.isList ? [value] : value;
+            final dynamic value = primitiveValue(fhirField.type, oldValue, key);
+            newMap[replacedKey] = fhirField.isList ? <dynamic>[value] : value;
           }
         }
       }
@@ -221,18 +231,18 @@ Map<String, dynamic> checkIfResource(
     oldValue = oldValue.values.first as Map<String, dynamic>;
     oldValue['resourceType'] = oldType;
   }
-  return {oldType: oldValue};
+  return <String, dynamic>{oldType: oldValue};
 }
 
 bool isPrimitive(String oldType, Map<String, dynamic> oldValue) {
-  final keyLength = oldValue.keys.length;
-  final containsId =
+  final int keyLength = oldValue.keys.length;
+  final bool containsId =
       oldValue.keys.contains('id') || oldValue.keys.contains('@id');
-  final containsValue =
+  final bool containsValue =
       oldValue.keys.contains('value') || oldValue.keys.contains('@value');
-  final containsExtension = oldValue.keys.contains('extension') ||
+  final bool containsExtension = oldValue.keys.contains('extension') ||
       oldValue.keys.contains('@extension');
-  if ([
+  if (<String>[
     'String',
     'Base64Binary',
     'Boolean',
