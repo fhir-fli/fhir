@@ -6,6 +6,7 @@ Future<void> main() async {
       .list(recursive: true)
       .map((FileSystemEntity event) => event.path)
       .toList();
+  String yaml = '';
   for (final String file in fileList) {
     if (file.contains('.dart') &&
         !file.contains('.g.') &&
@@ -13,7 +14,6 @@ Future<void> main() async {
         !file.contains('enum')) {
       final String fileString = await File(file).readAsString();
       final List<String> stringList = fileString.split('\n');
-      String yaml = '';
       bool isClass = false;
       String className = '';
       for (final String line in stringList) {
@@ -21,49 +21,42 @@ Future<void> main() async {
           if (line.trim().startsWith('///')) {
           } else if (line.endsWith(',')) {
             final List<String> splitLine = line.split(' ');
-            yaml += '  ';
-            yaml +=
+            String field =
                 changeFieldName(splitLine.last.replaceAll(',', ''), className);
-            yaml += ': ';
-            if (changeFieldName(
-                        splitLine.last.replaceAll(',', ''), className) ==
-                    'routeOfAdministration' &&
-                className == 'AdministrableProductDefinition') {
+            String type = changeYamlTypes(splitLine[splitLine.length - 2]);
+            if (field.contains('Element') && type.contains('Element')) {
               yaml +=
-                  'List<AdministrableProductDefinitionRouteOfAdministration>';
-            } else if (changeFieldName(
-                        splitLine.last.replaceAll(',', ''), className) ==
-                    'relatedMedicationKnowledge' &&
-                className == 'MedicationKnowledge') {
-              yaml += 'List<MedicationKnowledgeRelatedMedicationKnowledge>?';
+                  '  _${field.replaceAll('Element', '')} jsonb${type.contains("?") ? "" : " not null,"},\n';
+            } else if (field.contains('resourceType') || field == 'fhirId') {
+            } else if (field.contains('routeOfAdministration')) {
+              yaml += '  routeOfAdministration jsonb[] not null,\n';
+            } else if (field.contains('relatedMedicationKnowledge')) {
+              yaml += '  relatedMedicationKnowledge jsonb[],\n';
             } else {
-              yaml += changeYamlTypes(splitLine[splitLine.length - 2]);
+              yaml += '  $field ${postgresTypes(type)},\n';
             }
-
-            yaml += '\n';
           } else if (line.contains('}) = _')) {
             isClass = false;
-            await File(
-                    '../../../fhirpod/fhirpod_server/lib/src/protocol/${className.toLowerCase()}.yaml')
-                .writeAsString(yaml);
-            yaml = '';
+            yaml += ');\n\n';
           }
-        }
-        if (line.contains('factory') && line.contains('({')) {
-          isClass = true;
+        } else if (line.contains('factory') && line.contains('({')) {
           className =
               line.replaceAll('factory ', '').replaceAll('({', '').trim();
-          yaml += 'class: $className\n';
           if (resourceTypes.contains(className)) {
-            yaml += 'table: ${className.toLowerCase()}\n';
+            isClass = true;
+            yaml +=
+                'create table if not exists internal.${className.toLowerCase()} (\n';
+            yaml += '  id text primary key,\n';
+            yaml += '  versionid int not null,\n';
+            yaml +=
+                "  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,\n";
+            yaml += '  resource jsonb not null,\n';
           }
-          yaml += 'fields: \n';
         }
       }
     }
+    await File('supabase.sql').writeAsString(yaml);
   }
-  await File('../../../fhirpod/fhirpod_server/lib/src/protocol/resource.yaml')
-      .writeAsString(resourceYaml);
 }
 
 const String resourceYaml = '''
@@ -110,6 +103,45 @@ String changeFieldName(String name, String className) {
   }
   return newName;
 }
+
+String postgresTypes(String typeString) {
+  final bool isList = typeString.contains('List<');
+  final bool nullable = typeString.contains('?');
+  typeString = typeString
+      .replaceAll('List<', '')
+      .replaceAll('>', '')
+      .replaceAll('?', '');
+  typeString = textStrings.contains(typeString)
+      ? 'text'
+      : jsonbStrings.contains(typeString)
+          ? 'jsonb'
+          : boolStrings.contains(typeString)
+              ? 'boolean'
+              : dateTimeStrings.contains(typeString)
+                  ? "timestamp with time zone default timezone('utc'::text, now()) not null"
+                  : typeString;
+  return '$typeString${isList ? "[]" : ""}${nullable ? "" : " not null"}';
+}
+
+const List<String> dateTimeStrings = <String>[
+  'DateTime',
+];
+
+const List<String> boolStrings = <String>['bool'];
+
+const List<String> textStrings = <String>[
+  'String',
+];
+
+const List<String> jsonbStrings = <String>[
+  'FhirMeta',
+  'Narrative',
+  'FhirExtension',
+  'Resource',
+  'Identifier',
+  'CodeableConcept',
+  'Reference',
+];
 
 const Map<String, String> yamlTypes = <String, String>{
   'R5ResourceType': 'String',
