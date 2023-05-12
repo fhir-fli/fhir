@@ -3022,8 +3022,8 @@ class FhirList with Resource, _$FhirList {
   ///
   factory FhirList({
     /// [resourceType] This is a List resource
-    @Default(R5ResourceType.FhirList)
-    @JsonKey(unknownEnumValue: R5ResourceType.FhirList)
+    @Default(R5ResourceType.List)
+    @JsonKey(unknownEnumValue: R5ResourceType.List)
         R5ResourceType resourceType,
 
     /// [id] The logical id of the resource, as used in the URL for the

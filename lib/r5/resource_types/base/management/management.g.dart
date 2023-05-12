@@ -287,7 +287,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Invoice: 'Invoice',
   R5ResourceType.Library: 'Library',
   R5ResourceType.Linkage: 'Linkage',
-  R5ResourceType.FhirList: 'List',
+  R5ResourceType.List: 'List',
   R5ResourceType.Location: 'Location',
   R5ResourceType.ManufacturedItemDefinition: 'ManufacturedItemDefinition',
   R5ResourceType.Measure: 'Measure',
@@ -1337,8 +1337,8 @@ Map<String, dynamic> _$$_LibraryToJson(_$_Library instance) {
 _$_FhirList _$$_FhirListFromJson(Map<String, dynamic> json) => _$_FhirList(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.FhirList) ??
-          R5ResourceType.FhirList,
+              unknownValue: R5ResourceType.List) ??
+          R5ResourceType.List,
       id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

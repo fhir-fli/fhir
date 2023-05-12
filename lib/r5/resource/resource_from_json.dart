@@ -171,7 +171,7 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return Library.fromJson(json);
     case 'Linkage':
       return Linkage.fromJson(json);
-    case 'FhirList':
+    case 'List':
       return FhirList.fromJson(json);
     case 'Location':
       return Location.fromJson(json);

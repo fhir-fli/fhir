@@ -12637,7 +12637,7 @@ FhirList _$FhirListFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$FhirList {
   /// [resourceType] This is a List resource
-  @JsonKey(unknownEnumValue: R5ResourceType.FhirList)
+  @JsonKey(unknownEnumValue: R5ResourceType.List)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -12786,7 +12786,7 @@ abstract class $FhirListCopyWith<$Res> {
       _$FhirListCopyWithImpl<$Res, FhirList>;
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.FhirList)
+      {@JsonKey(unknownEnumValue: R5ResourceType.List)
           R5ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
@@ -13161,7 +13161,7 @@ abstract class _$$_FhirListCopyWith<$Res> implements $FhirListCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.FhirList)
+      {@JsonKey(unknownEnumValue: R5ResourceType.List)
           R5ResourceType resourceType,
       FhirId? id,
       FhirMeta? meta,
@@ -13387,8 +13387,8 @@ class __$$_FhirListCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_FhirList extends _FhirList {
   _$_FhirList(
-      {@JsonKey(unknownEnumValue: R5ResourceType.FhirList)
-          this.resourceType = R5ResourceType.FhirList,
+      {@JsonKey(unknownEnumValue: R5ResourceType.List)
+          this.resourceType = R5ResourceType.List,
       this.id,
       this.meta,
       this.implicitRules,
@@ -13437,7 +13437,7 @@ class _$_FhirList extends _FhirList {
 
   /// [resourceType] This is a List resource
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.FhirList)
+  @JsonKey(unknownEnumValue: R5ResourceType.List)
   final R5ResourceType resourceType;
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -13794,7 +13794,7 @@ class _$_FhirList extends _FhirList {
 
 abstract class _FhirList extends FhirList {
   factory _FhirList(
-      {@JsonKey(unknownEnumValue: R5ResourceType.FhirList)
+      {@JsonKey(unknownEnumValue: R5ResourceType.List)
           final R5ResourceType resourceType,
       final FhirId? id,
       final FhirMeta? meta,
@@ -13837,7 +13837,7 @@ abstract class _FhirList extends FhirList {
   @override
 
   /// [resourceType] This is a List resource
-  @JsonKey(unknownEnumValue: R5ResourceType.FhirList)
+  @JsonKey(unknownEnumValue: R5ResourceType.List)
   R5ResourceType get resourceType;
   @override
 

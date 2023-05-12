@@ -2319,13 +2319,13 @@ class Library with Resource, _$Library {
   }
 }
 
-/// [List] A list is a curated collection of resources.
+/// [FhirList] A list is a curated collection of resources.
 @freezed
 class FhirList with Resource, _$FhirList {
-  /// [List] A list is a curated collection of resources.
+  /// [FhirList] A list is a curated collection of resources.
   FhirList._();
 
-  /// [List] A list is a curated collection of resources.
+  /// [FhirList] A list is a curated collection of resources.
   ///
   /// [resourceType] This is a List resource
   ///
@@ -2422,8 +2422,8 @@ class FhirList with Resource, _$FhirList {
   ///
   /// [emptyReason] If the list is empty, why the list is empty.
   factory FhirList({
-    @Default(R4ResourceType.FhirList)
-    @JsonKey(unknownEnumValue: R4ResourceType.FhirList)
+    @Default(R4ResourceType.List)
+    @JsonKey(unknownEnumValue: R4ResourceType.List)
 
         /// [resourceType] This is a List resource
         R4ResourceType resourceType,
