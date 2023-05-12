@@ -21,9 +21,10 @@ Future<void> main() async {
           if (line.trim().startsWith('///')) {
           } else if (line.endsWith(',')) {
             final List<String> splitLine = line.split(' ');
-            String field =
+            final String field =
                 changeFieldName(splitLine.last.replaceAll(',', ''), className);
-            String type = changeYamlTypes(splitLine[splitLine.length - 2]);
+            final String type =
+                changeYamlTypes(splitLine[splitLine.length - 2]);
             if (field.contains('Element') && type.contains('Element')) {
               yaml +=
                   '  _${field.replaceAll('Element', '')} jsonb${type.contains("?") ? "" : " not null,"},\n';
@@ -33,11 +34,12 @@ Future<void> main() async {
             } else if (field.contains('relatedMedicationKnowledge')) {
               yaml += '  relatedMedicationKnowledge jsonb[],\n';
             } else {
-              yaml += '  $field ${postgresTypes(type)},\n';
+              yaml += '  ${reservedFields(field)} ${postgresTypes(type)},\n';
             }
           } else if (line.contains('}) = _')) {
             isClass = false;
-            yaml += ');\n\n';
+            yaml = yaml.substring(0, yaml.length - 2);
+            yaml += '\n);\n\n';
           }
         } else if (line.contains('factory') && line.contains('({')) {
           className =
@@ -50,7 +52,7 @@ Future<void> main() async {
             yaml += '  versionid int not null,\n';
             yaml +=
                 "  updatedat timestamp with time zone default timezone('utc'::text, now()) not null,\n";
-            yaml += '  resource jsonb not null,\n';
+            yaml += '  fhirresource jsonb not null,\n';
           }
         }
       }
@@ -58,6 +60,16 @@ Future<void> main() async {
     await File('supabase.sql').writeAsString(yaml);
   }
 }
+
+String reservedFields(String field) => <String>[
+      'constraint',
+      'group',
+      'authorization',
+      'end',
+      'order',
+    ].contains(field)
+        ? '${field}_'
+        : field;
 
 const String resourceYaml = '''
 class: Resource
@@ -111,29 +123,31 @@ String postgresTypes(String typeString) {
       .replaceAll('List<', '')
       .replaceAll('>', '')
       .replaceAll('?', '');
-  typeString = textStrings.contains(typeString)
+  typeString = typeString == 'String'
       ? 'text'
-      : jsonbStrings.contains(typeString)
-          ? 'jsonb'
-          : boolStrings.contains(typeString)
+      : typeString == 'DateTime'
+          ? "timestamp with time zone default timezone('utc'::text, now())"
+          : typeString == 'bool'
               ? 'boolean'
-              : dateTimeStrings.contains(typeString)
-                  ? "timestamp with time zone default timezone('utc'::text, now()) not null"
-                  : typeString;
-  return '$typeString${isList ? "[]" : ""}${nullable ? "" : " not null"}';
+              // TODO(Dokotela) - in case you want to pull out these datatypes more easily
+              : specialTypes.contains(typeString)
+                  ? 'jsonb'
+                  : 'jsonb';
+  if (isList) {
+    if (typeString.contains('timestamp with time zone')) {
+      typeString =
+          "timestamp with time zone[] default timezone('utc'::text, now())";
+    } else {
+      typeString = '$typeString[]';
+    }
+  }
+  if (!nullable) {
+    typeString = '$typeString not null';
+  }
+  return typeString;
 }
 
-const List<String> dateTimeStrings = <String>[
-  'DateTime',
-];
-
-const List<String> boolStrings = <String>['bool'];
-
-const List<String> textStrings = <String>[
-  'String',
-];
-
-const List<String> jsonbStrings = <String>[
+const Set<String> specialTypes = <String>{
   'FhirMeta',
   'Narrative',
   'FhirExtension',
@@ -141,7 +155,48 @@ const List<String> jsonbStrings = <String>[
   'Identifier',
   'CodeableConcept',
   'Reference',
-];
+  'Coding',
+  'ContactDetail',
+  'Address',
+  'Age',
+  'Annotation',
+  'Attachment',
+  'Availability',
+  'Base',
+  'CodeableReference',
+  'ContactPoint',
+  'Contributor',
+  'Count',
+  'DataRequirement',
+  'Distance',
+  'Dosage',
+  'Duration',
+  'ElementDefinition',
+  'Expression',
+  'ExtendedContactDetail',
+  'HumanName',
+  'MarketingStatus',
+  'Meta',
+  'Money',
+  'MonetaryComponent',
+  'MoneyQuantity',
+  'ParameterDefinition',
+  'Period',
+  'Population',
+  'ProductShelfLife',
+  'Quantity',
+  'Range',
+  'Ratio',
+  'RatioRange',
+  'RelatedArtifact',
+  'SampledData',
+  'Signature',
+  'SimpleQuantity',
+  'Timing',
+  'TriggerDefinition',
+  'UsageContext',
+  'VirtualServiceDetail',
+};
 
 const Map<String, String> yamlTypes = <String, String>{
   'R5ResourceType': 'String',
