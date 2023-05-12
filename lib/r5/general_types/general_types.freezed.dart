@@ -12354,7 +12354,7 @@ mixin _$TimingRepeat {
 
   /// [when] An approximate time period during the day, potentially linked to
   ///  an event of daily living that indicates when the action should occur.
-  TimingRepeatWhen? get when => throw _privateConstructorUsedError;
+  List<TimingRepeatWhen>? get when => throw _privateConstructorUsedError;
 
   /// [whenElement] ("_when") Extensions for when
   @JsonKey(name: '_when')
@@ -12412,7 +12412,7 @@ abstract class $TimingRepeatCopyWith<$Res> {
       @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
       List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
-      TimingRepeatWhen? when,
+      List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') List<Element>? whenElement,
       FhirUnsignedInt? offset,
       @JsonKey(name: '_offset') Element? offsetElement});
@@ -12605,7 +12605,7 @@ class _$TimingRepeatCopyWithImpl<$Res, $Val extends TimingRepeat>
       when: freezed == when
           ? _value.when
           : when // ignore: cast_nullable_to_non_nullable
-              as TimingRepeatWhen?,
+              as List<TimingRepeatWhen>?,
       whenElement: freezed == whenElement
           ? _value.whenElement
           : whenElement // ignore: cast_nullable_to_non_nullable
@@ -12829,7 +12829,7 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
       @JsonKey(name: '_dayOfWeek') List<Element>? dayOfWeekElement,
       List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') List<Element>? timeOfDayElement,
-      TimingRepeatWhen? when,
+      List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') List<Element>? whenElement,
       FhirUnsignedInt? offset,
       @JsonKey(name: '_offset') Element? offsetElement});
@@ -13032,9 +13032,9 @@ class __$$_TimingRepeatCopyWithImpl<$Res>
           : timeOfDayElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
       when: freezed == when
-          ? _value.when
+          ? _value._when
           : when // ignore: cast_nullable_to_non_nullable
-              as TimingRepeatWhen?,
+              as List<TimingRepeatWhen>?,
       whenElement: freezed == whenElement
           ? _value._whenElement
           : whenElement // ignore: cast_nullable_to_non_nullable
@@ -13085,7 +13085,7 @@ class _$_TimingRepeat extends _TimingRepeat {
       @JsonKey(name: '_dayOfWeek') final List<Element>? dayOfWeekElement,
       final List<FhirTime>? timeOfDay,
       @JsonKey(name: '_timeOfDay') final List<Element>? timeOfDayElement,
-      this.when,
+      final List<TimingRepeatWhen>? when,
       @JsonKey(name: '_when') final List<Element>? whenElement,
       this.offset,
       @JsonKey(name: '_offset') this.offsetElement})
@@ -13095,6 +13095,7 @@ class _$_TimingRepeat extends _TimingRepeat {
         _dayOfWeekElement = dayOfWeekElement,
         _timeOfDay = timeOfDay,
         _timeOfDayElement = timeOfDayElement,
+        _when = when,
         _whenElement = whenElement,
         super._();
 
@@ -13358,8 +13359,18 @@ class _$_TimingRepeat extends _TimingRepeat {
 
   /// [when] An approximate time period during the day, potentially linked to
   ///  an event of daily living that indicates when the action should occur.
+  final List<TimingRepeatWhen>? _when;
+
+  /// [when] An approximate time period during the day, potentially linked to
+  ///  an event of daily living that indicates when the action should occur.
   @override
-  final TimingRepeatWhen? when;
+  List<TimingRepeatWhen>? get when {
+    final value = _when;
+    if (value == null) return null;
+    if (_when is EqualUnmodifiableListView) return _when;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   /// [whenElement] ("_when") Extensions for when
   final List<Element>? _whenElement;
@@ -13453,7 +13464,7 @@ class _$_TimingRepeat extends _TimingRepeat {
                 .equals(other._timeOfDay, _timeOfDay) &&
             const DeepCollectionEquality()
                 .equals(other._timeOfDayElement, _timeOfDayElement) &&
-            (identical(other.when, when) || other.when == when) &&
+            const DeepCollectionEquality().equals(other._when, _when) &&
             const DeepCollectionEquality()
                 .equals(other._whenElement, _whenElement) &&
             (identical(other.offset, offset) || other.offset == offset) &&
@@ -13495,7 +13506,7 @@ class _$_TimingRepeat extends _TimingRepeat {
         const DeepCollectionEquality().hash(_dayOfWeekElement),
         const DeepCollectionEquality().hash(_timeOfDay),
         const DeepCollectionEquality().hash(_timeOfDayElement),
-        when,
+        const DeepCollectionEquality().hash(_when),
         const DeepCollectionEquality().hash(_whenElement),
         offset,
         offsetElement
@@ -13547,7 +13558,7 @@ abstract class _TimingRepeat extends TimingRepeat {
           @JsonKey(name: '_dayOfWeek') final List<Element>? dayOfWeekElement,
           final List<FhirTime>? timeOfDay,
           @JsonKey(name: '_timeOfDay') final List<Element>? timeOfDayElement,
-          final TimingRepeatWhen? when,
+          final List<TimingRepeatWhen>? when,
           @JsonKey(name: '_when') final List<Element>? whenElement,
           final FhirUnsignedInt? offset,
           @JsonKey(name: '_offset') final Element? offsetElement}) =
@@ -13740,7 +13751,7 @@ abstract class _TimingRepeat extends TimingRepeat {
 
   /// [when] An approximate time period during the day, potentially linked to
   ///  an event of daily living that indicates when the action should occur.
-  TimingRepeatWhen? get when;
+  List<TimingRepeatWhen>? get when;
   @override
 
   /// [whenElement] ("_when") Extensions for when
