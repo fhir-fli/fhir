@@ -151,7 +151,7 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
       return (resource as Encounter)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case Stu3ResourceType.Endpoint:
-      return (resource as Endpoint)
+      return (resource as FhirEndpoint)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case Stu3ResourceType.EnrollmentRequest:
       return (resource as EnrollmentRequest)

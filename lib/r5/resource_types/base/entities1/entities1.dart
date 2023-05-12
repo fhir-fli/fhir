@@ -13,19 +13,19 @@ import '../../../../r5.dart';
 part 'entities1.freezed.dart';
 part 'entities1.g.dart';
 
-/// [Endpoint] The technical details of an endpoint that can be used for
+/// [FhirEndpoint] The technical details of an endpoint that can be used for
 ///  electronic services, such as for web services providing XDS.b, a REST
 ///  endpoint for another FHIR server, or a s/Mime email address. This may
 ///  include any security context information.
 @freezed
-class Endpoint with Resource, _$Endpoint {
-  /// [Endpoint] The technical details of an endpoint that can be used for
+class FhirEndpoint with Resource, _$FhirEndpoint {
+  /// [FhirEndpoint] The technical details of an endpoint that can be used for
   ///  electronic services, such as for web services providing XDS.b, a REST
   ///  endpoint for another FHIR server, or a s/Mime email address. This may
   ///  include any security context information.
-  Endpoint._();
+  FhirEndpoint._();
 
-  /// [Endpoint] The technical details of an endpoint that can be used for
+  /// [FhirEndpoint] The technical details of an endpoint that can be used for
   ///  electronic services, such as for web services providing XDS.b, a REST
   ///  endpoint for another FHIR server, or a s/Mime email address. This may
   ///  include any security context information.
@@ -131,7 +131,7 @@ class Endpoint with Resource, _$Endpoint {
   ///
   /// [headerElement] ("_header") Extensions for header
   ///
-  factory Endpoint({
+  factory FhirEndpoint({
     /// [resourceType] This is a Endpoint resource
     @Default(R5ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
@@ -251,7 +251,7 @@ class Endpoint with Resource, _$Endpoint {
 
     /// [payload] The set of payloads that are provided/available at this
     ///  endpoint.
-    List<EndpointPayload>? payload,
+    List<FhirEndpointPayload>? payload,
 
     /// [address] The uri that describes the actual end-point to connect to.
     FhirUrl? address,
@@ -265,33 +265,33 @@ class Endpoint with Resource, _$Endpoint {
 
     /// [headerElement] ("_header") Extensions for header
     @JsonKey(name: '_header') List<Element>? headerElement,
-  }) = _Endpoint;
+  }) = _FhirEndpoint;
 
   /// Produces a Yaml formatted String version of the object
   @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Endpoint.fromYaml(dynamic yaml) => yaml is String
-      ? Endpoint.fromJson(
+  factory FhirEndpoint.fromYaml(dynamic yaml) => yaml is String
+      ? FhirEndpoint.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Endpoint.fromJson(
+          ? FhirEndpoint.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'Endpoint cannot be constructed from input provided,'
+              'FhirEndpoint cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Endpoint.fromJson(Map<String, dynamic> json) =>
-      _$EndpointFromJson(json);
+  factory FhirEndpoint.fromJson(Map<String, dynamic> json) =>
+      _$FhirEndpointFromJson(json);
 
-  /// Acts like a constructor, returns a [Endpoint], accepts a
+  /// Acts like a constructor, returns a [FhirEndpoint], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory Endpoint.fromJsonString(String source) {
+  factory FhirEndpoint.fromJsonString(String source) {
     final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$EndpointFromJson(json);
+      return _$FhirEndpointFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -299,19 +299,19 @@ class Endpoint with Resource, _$Endpoint {
   }
 }
 
-/// [EndpointPayload] The technical details of an endpoint that can be used for
+/// [FhirEndpointPayload] The technical details of an endpoint that can be used for
 ///  electronic services, such as for web services providing XDS.b, a REST
 ///  endpoint for another FHIR server, or a s/Mime email address. This may
 ///  include any security context information.
 @freezed
-class EndpointPayload with _$EndpointPayload {
-  /// [EndpointPayload] The technical details of an endpoint that can be used
+class FhirEndpointPayload with _$FhirEndpointPayload {
+  /// [FhirEndpointPayload] The technical details of an endpoint that can be used
   ///  for electronic services, such as for web services providing XDS.b, a
   ///  REST endpoint for another FHIR server, or a s/Mime email address. This
   ///  may include any security context information.
-  EndpointPayload._();
+  FhirEndpointPayload._();
 
-  /// [EndpointPayload] The technical details of an endpoint that can be used
+  /// [FhirEndpointPayload] The technical details of an endpoint that can be used
   ///  for electronic services, such as for web services providing XDS.b, a
   ///  REST endpoint for another FHIR server, or a s/Mime email address. This
   ///  may include any security context information.
@@ -350,7 +350,7 @@ class EndpointPayload with _$EndpointPayload {
   ///
   /// [mimeTypeElement] ("_mimeType") Extensions for mimeType
   ///
-  factory EndpointPayload({
+  factory FhirEndpointPayload({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     String? id,
@@ -391,32 +391,32 @@ class EndpointPayload with _$EndpointPayload {
 
     /// [mimeTypeElement] ("_mimeType") Extensions for mimeType
     @JsonKey(name: '_mimeType') List<Element>? mimeTypeElement,
-  }) = _EndpointPayload;
+  }) = _FhirEndpointPayload;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory EndpointPayload.fromYaml(dynamic yaml) => yaml is String
-      ? EndpointPayload.fromJson(
+  factory FhirEndpointPayload.fromYaml(dynamic yaml) => yaml is String
+      ? FhirEndpointPayload.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EndpointPayload.fromJson(
+          ? FhirEndpointPayload.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'EndpointPayload cannot be constructed from input provided,'
+              'FhirEndpointPayload cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EndpointPayload.fromJson(Map<String, dynamic> json) =>
-      _$EndpointPayloadFromJson(json);
+  factory FhirEndpointPayload.fromJson(Map<String, dynamic> json) =>
+      _$FhirEndpointPayloadFromJson(json);
 
-  /// Acts like a constructor, returns a [EndpointPayload], accepts a
+  /// Acts like a constructor, returns a [FhirEndpointPayload], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory EndpointPayload.fromJsonString(String source) {
+  factory FhirEndpointPayload.fromJsonString(String source) {
     final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$EndpointPayloadFromJson(json);
+      return _$FhirEndpointPayloadFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');

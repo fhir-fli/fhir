@@ -126,7 +126,7 @@ enum DeviceMetricCalibrationState {
   unknown,
 }
 
-enum EndpointStatus {
+enum FhirEndpointStatus {
   @JsonValue('active')
   active,
   @JsonValue('suspended')

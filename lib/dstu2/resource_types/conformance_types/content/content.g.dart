@@ -547,12 +547,16 @@ _$_DataElement _$$_DataElementFromJson(Map<String, dynamic> json) =>
       element: (json['element'] as List<dynamic>)
           .map((e) => ElementDefinition.fromJson(e as Map<String, dynamic>))
           .toList(),
-    );
+    )
+      ..implicitRulesElement = json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
+      ..languageElement = json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$$_DataElementToJson(_$_DataElement instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -560,6 +564,9 @@ Map<String, dynamic> _$$_DataElementToJson(_$_DataElement instance) {
     }
   }
 
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

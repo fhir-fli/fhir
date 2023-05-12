@@ -711,7 +711,8 @@ const _$DeviceMetricCalibrationStateEnumMap = {
   DeviceMetricCalibrationState.unknown: 'unknown',
 };
 
-_$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
+_$_FhirEndpoint _$$_FhirEndpointFromJson(Map<String, dynamic> json) =>
+    _$_FhirEndpoint(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Endpoint) ??
@@ -746,7 +747,7 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$EndpointStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$FhirEndpointStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -788,7 +789,7 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
           .toList(),
     );
 
-Map<String, dynamic> _$$_EndpointToJson(_$_Endpoint instance) {
+Map<String, dynamic> _$$_FhirEndpointToJson(_$_FhirEndpoint instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -814,7 +815,7 @@ Map<String, dynamic> _$$_EndpointToJson(_$_Endpoint instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$EndpointStatusEnumMap[instance.status]);
+  writeNotNull('status', _$FhirEndpointStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   val['connectionType'] = instance.connectionType.toJson();
   writeNotNull('name', instance.name);
@@ -834,14 +835,14 @@ Map<String, dynamic> _$$_EndpointToJson(_$_Endpoint instance) {
   return val;
 }
 
-const _$EndpointStatusEnumMap = {
-  EndpointStatus.active: 'active',
-  EndpointStatus.suspended: 'suspended',
-  EndpointStatus.error: 'error',
-  EndpointStatus.off: 'off',
-  EndpointStatus.entered_in_error: 'entered-in-error',
-  EndpointStatus.test: 'test',
-  EndpointStatus.unknown: 'unknown',
+const _$FhirEndpointStatusEnumMap = {
+  FhirEndpointStatus.active: 'active',
+  FhirEndpointStatus.suspended: 'suspended',
+  FhirEndpointStatus.error: 'error',
+  FhirEndpointStatus.off: 'off',
+  FhirEndpointStatus.entered_in_error: 'entered-in-error',
+  FhirEndpointStatus.test: 'test',
+  FhirEndpointStatus.unknown: 'unknown',
 };
 
 _$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>

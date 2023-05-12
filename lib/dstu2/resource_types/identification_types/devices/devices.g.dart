@@ -305,12 +305,16 @@ _$_DeviceComponent _$$_DeviceComponentFromJson(Map<String, dynamic> json) =>
           ? null
           : CodeableConcept.fromJson(
               json['languageCode'] as Map<String, dynamic>),
-    );
+    )
+      ..implicitRulesElement = json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
+      ..languageElement = json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$$_DeviceComponentToJson(_$_DeviceComponent instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -318,6 +322,9 @@ Map<String, dynamic> _$$_DeviceComponentToJson(_$_DeviceComponent instance) {
     }
   }
 
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('_id', instance.idElement?.toJson());
   writeNotNull('meta', instance.meta?.toJson());

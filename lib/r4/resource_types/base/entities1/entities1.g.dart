@@ -6,7 +6,8 @@ part of 'entities1.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
+_$_FhirEndpoint _$$_FhirEndpointFromJson(Map<String, dynamic> json) =>
+    _$_FhirEndpoint(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Endpoint) ??
@@ -84,7 +85,7 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
           .toList(),
     );
 
-Map<String, dynamic> _$$_EndpointToJson(_$_Endpoint instance) {
+Map<String, dynamic> _$$_FhirEndpointToJson(_$_FhirEndpoint instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };

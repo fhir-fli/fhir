@@ -98,7 +98,7 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     case 'Encounter':
       return Encounter.fromJson(json);
     case 'Endpoint':
-      return Endpoint.fromJson(json);
+      return FhirEndpoint.fromJson(json);
     case 'EnrollmentRequest':
       return EnrollmentRequest.fromJson(json);
     case 'EnrollmentResponse':

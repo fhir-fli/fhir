@@ -6,7 +6,8 @@ part of 'entities1.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
+_$_FhirEndpoint _$$_FhirEndpointFromJson(Map<String, dynamic> json) =>
+    _$_FhirEndpoint(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Endpoint) ??
@@ -70,7 +71,7 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
           ? null
           : Period.fromJson(json['period'] as Map<String, dynamic>),
       payload: (json['payload'] as List<dynamic>?)
-          ?.map((e) => EndpointPayload.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => FhirEndpointPayload.fromJson(e as Map<String, dynamic>))
           .toList(),
       address:
           json['address'] == null ? null : FhirUrl.fromJson(json['address']),
@@ -84,7 +85,7 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
           .toList(),
     );
 
-Map<String, dynamic> _$$_EndpointToJson(_$_Endpoint instance) {
+Map<String, dynamic> _$$_FhirEndpointToJson(_$_FhirEndpoint instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -295,8 +296,9 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_EndpointPayload _$$_EndpointPayloadFromJson(Map<String, dynamic> json) =>
-    _$_EndpointPayload(
+_$_FhirEndpointPayload _$$_FhirEndpointPayloadFromJson(
+        Map<String, dynamic> json) =>
+    _$_FhirEndpointPayload(
       id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -314,7 +316,8 @@ _$_EndpointPayload _$$_EndpointPayloadFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_EndpointPayloadToJson(_$_EndpointPayload instance) {
+Map<String, dynamic> _$$_FhirEndpointPayloadToJson(
+    _$_FhirEndpointPayload instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

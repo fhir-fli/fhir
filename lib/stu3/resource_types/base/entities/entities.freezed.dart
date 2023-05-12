@@ -4281,12 +4281,12 @@ abstract class _DeviceMetricCalibration extends DeviceMetricCalibration {
       get copyWith => throw _privateConstructorUsedError;
 }
 
-Endpoint _$EndpointFromJson(Map<String, dynamic> json) {
-  return _Endpoint.fromJson(json);
+FhirEndpoint _$FhirEndpointFromJson(Map<String, dynamic> json) {
+  return _FhirEndpoint.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Endpoint {
+mixin _$FhirEndpoint {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
   FhirId? get id => throw _privateConstructorUsedError;
@@ -4304,7 +4304,7 @@ mixin _$Endpoint {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  EndpointStatus? get status => throw _privateConstructorUsedError;
+  FhirEndpointStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Coding get connectionType => throw _privateConstructorUsedError;
@@ -4328,14 +4328,15 @@ mixin _$Endpoint {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EndpointCopyWith<Endpoint> get copyWith =>
+  $FhirEndpointCopyWith<FhirEndpoint> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EndpointCopyWith<$Res> {
-  factory $EndpointCopyWith(Endpoint value, $Res Function(Endpoint) then) =
-      _$EndpointCopyWithImpl<$Res, Endpoint>;
+abstract class $FhirEndpointCopyWith<$Res> {
+  factory $FhirEndpointCopyWith(
+          FhirEndpoint value, $Res Function(FhirEndpoint) then) =
+      _$FhirEndpointCopyWithImpl<$Res, FhirEndpoint>;
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
@@ -4354,7 +4355,7 @@ abstract class $EndpointCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      EndpointStatus? status,
+      FhirEndpointStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding connectionType,
@@ -4388,9 +4389,9 @@ abstract class $EndpointCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EndpointCopyWithImpl<$Res, $Val extends Endpoint>
-    implements $EndpointCopyWith<$Res> {
-  _$EndpointCopyWithImpl(this._value, this._then);
+class _$FhirEndpointCopyWithImpl<$Res, $Val extends FhirEndpoint>
+    implements $FhirEndpointCopyWith<$Res> {
+  _$FhirEndpointCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -4480,7 +4481,7 @@ class _$EndpointCopyWithImpl<$Res, $Val extends Endpoint>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EndpointStatus?,
+              as FhirEndpointStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4658,10 +4659,11 @@ class _$EndpointCopyWithImpl<$Res, $Val extends Endpoint>
 }
 
 /// @nodoc
-abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
-  factory _$$_EndpointCopyWith(
-          _$_Endpoint value, $Res Function(_$_Endpoint) then) =
-      __$$_EndpointCopyWithImpl<$Res>;
+abstract class _$$_FhirEndpointCopyWith<$Res>
+    implements $FhirEndpointCopyWith<$Res> {
+  factory _$$_FhirEndpointCopyWith(
+          _$_FhirEndpoint value, $Res Function(_$_FhirEndpoint) then) =
+      __$$_FhirEndpointCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4681,7 +4683,7 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      EndpointStatus? status,
+      FhirEndpointStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding connectionType,
@@ -4725,11 +4727,11 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_EndpointCopyWithImpl<$Res>
-    extends _$EndpointCopyWithImpl<$Res, _$_Endpoint>
-    implements _$$_EndpointCopyWith<$Res> {
-  __$$_EndpointCopyWithImpl(
-      _$_Endpoint _value, $Res Function(_$_Endpoint) _then)
+class __$$_FhirEndpointCopyWithImpl<$Res>
+    extends _$FhirEndpointCopyWithImpl<$Res, _$_FhirEndpoint>
+    implements _$$_FhirEndpointCopyWith<$Res> {
+  __$$_FhirEndpointCopyWithImpl(
+      _$_FhirEndpoint _value, $Res Function(_$_FhirEndpoint) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4763,7 +4765,7 @@ class __$$_EndpointCopyWithImpl<$Res>
     Object? header = freezed,
     Object? headerElement = freezed,
   }) {
-    return _then(_$_Endpoint(
+    return _then(_$_FhirEndpoint(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -4815,7 +4817,7 @@ class __$$_EndpointCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EndpointStatus?,
+              as FhirEndpointStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4878,8 +4880,8 @@ class __$$_EndpointCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Endpoint extends _Endpoint {
-  _$_Endpoint(
+class _$_FhirEndpoint extends _FhirEndpoint {
+  _$_FhirEndpoint(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
           this.resourceType = Stu3ResourceType.Endpoint,
       this.id,
@@ -4928,8 +4930,8 @@ class _$_Endpoint extends _Endpoint {
         _headerElement = headerElement,
         super._();
 
-  factory _$_Endpoint.fromJson(Map<String, dynamic> json) =>
-      _$$_EndpointFromJson(json);
+  factory _$_FhirEndpoint.fromJson(Map<String, dynamic> json) =>
+      _$$_FhirEndpointFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
@@ -4993,7 +4995,7 @@ class _$_Endpoint extends _Endpoint {
   }
 
   @override
-  final EndpointStatus? status;
+  final FhirEndpointStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -5076,14 +5078,14 @@ class _$_Endpoint extends _Endpoint {
 
   @override
   String toString() {
-    return 'Endpoint(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, connectionType: $connectionType, name: $name, nameElement: $nameElement, managingOrganization: $managingOrganization, contact: $contact, period: $period, payloadType: $payloadType, payloadMimeType: $payloadMimeType, payloadMimeTypeElement: $payloadMimeTypeElement, address: $address, addressElement: $addressElement, header: $header, headerElement: $headerElement)';
+    return 'FhirEndpoint(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, connectionType: $connectionType, name: $name, nameElement: $nameElement, managingOrganization: $managingOrganization, contact: $contact, period: $period, payloadType: $payloadType, payloadMimeType: $payloadMimeType, payloadMimeTypeElement: $payloadMimeTypeElement, address: $address, addressElement: $addressElement, header: $header, headerElement: $headerElement)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Endpoint &&
+            other is _$_FhirEndpoint &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -5167,19 +5169,19 @@ class _$_Endpoint extends _Endpoint {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EndpointCopyWith<_$_Endpoint> get copyWith =>
-      __$$_EndpointCopyWithImpl<_$_Endpoint>(this, _$identity);
+  _$$_FhirEndpointCopyWith<_$_FhirEndpoint> get copyWith =>
+      __$$_FhirEndpointCopyWithImpl<_$_FhirEndpoint>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EndpointToJson(
+    return _$$_FhirEndpointToJson(
       this,
     );
   }
 }
 
-abstract class _Endpoint extends Endpoint {
-  factory _Endpoint(
+abstract class _FhirEndpoint extends FhirEndpoint {
+  factory _FhirEndpoint(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
           final Stu3ResourceType resourceType,
       final FhirId? id,
@@ -5196,7 +5198,7 @@ abstract class _Endpoint extends Endpoint {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final EndpointStatus? status,
+      final FhirEndpointStatus? status,
       @JsonKey(name: '_status')
           final Element? statusElement,
       required final Coding connectionType,
@@ -5215,10 +5217,11 @@ abstract class _Endpoint extends Endpoint {
           final Element? addressElement,
       final List<String>? header,
       @JsonKey(name: '_header')
-          final List<Element?>? headerElement}) = _$_Endpoint;
-  _Endpoint._() : super._();
+          final List<Element?>? headerElement}) = _$_FhirEndpoint;
+  _FhirEndpoint._() : super._();
 
-  factory _Endpoint.fromJson(Map<String, dynamic> json) = _$_Endpoint.fromJson;
+  factory _FhirEndpoint.fromJson(Map<String, dynamic> json) =
+      _$_FhirEndpoint.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
@@ -5249,7 +5252,7 @@ abstract class _Endpoint extends Endpoint {
   @override
   List<Identifier>? get identifier;
   @override
-  EndpointStatus? get status;
+  FhirEndpointStatus? get status;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -5285,7 +5288,7 @@ abstract class _Endpoint extends Endpoint {
   List<Element?>? get headerElement;
   @override
   @JsonKey(ignore: true)
-  _$$_EndpointCopyWith<_$_Endpoint> get copyWith =>
+  _$$_FhirEndpointCopyWith<_$_FhirEndpoint> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

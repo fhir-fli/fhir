@@ -100,7 +100,7 @@ Resource _newId(Resource resource) {
     case R4ResourceType.Encounter:
       return (resource as Encounter).copyWith(id: newIdString());
     case R4ResourceType.Endpoint:
-      return (resource as Endpoint).copyWith(id: newIdString());
+      return (resource as FhirEndpoint).copyWith(id: newIdString());
     case R4ResourceType.EnrollmentRequest:
       return (resource as EnrollmentRequest).copyWith(id: newIdString());
     case R4ResourceType.EnrollmentResponse:

@@ -34,7 +34,11 @@ class Resource {
   R5ResourceType? resourceType;
   FhirMeta? meta;
   FhirUri? implicitRules;
+  @JsonKey(name: '_implicitRules')
+  Element? implicitRulesElement;
   FhirCode? language;
+  @JsonKey(name: '_language')
+  Element? languageElement;
   Narrative? text;
   List<Resource>? contained;
   @JsonKey(name: 'extension')

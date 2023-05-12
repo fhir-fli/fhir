@@ -87,12 +87,16 @@ _$_Conformance _$$_ConformanceFromJson(Map<String, dynamic> json) =>
       document: (json['document'] as List<dynamic>?)
           ?.map((e) => ConformanceDocument.fromJson(e as Map<String, dynamic>))
           .toList(),
-    );
+    )
+      ..implicitRulesElement = json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
+      ..languageElement = json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$$_ConformanceToJson(_$_Conformance instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -100,6 +104,9 @@ Map<String, dynamic> _$$_ConformanceToJson(_$_Conformance instance) {
     }
   }
 
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -354,13 +361,17 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
       document: (json['document'] as List<dynamic>?)
           ?.map((e) => ConformanceDocument.fromJson(e as Map<String, dynamic>))
           .toList(),
-    );
+    )
+      ..implicitRulesElement = json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
+      ..languageElement = json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$$_CapabilityStatementToJson(
     _$_CapabilityStatement instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -368,6 +379,9 @@ Map<String, dynamic> _$$_CapabilityStatementToJson(
     }
   }
 
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1292,14 +1306,18 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
         ?.map((e) =>
             OperationDefinitionParameter.fromJson(e as Map<String, dynamic>))
         .toList(),
-  );
+  )
+    ..implicitRulesElement = json['_implicitRules'] == null
+        ? null
+        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
+    ..languageElement = json['_language'] == null
+        ? null
+        : Element.fromJson(json['_language'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$$_OperationDefinitionToJson(
     _$_OperationDefinition instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1307,6 +1325,9 @@ Map<String, dynamic> _$$_OperationDefinitionToJson(
     }
   }
 
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1569,12 +1590,16 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
           unknownValue: SearchParameterXpathUsage.unknown),
       target:
           (json['target'] as List<dynamic>?)?.map(FhirCode.fromJson).toList(),
-    );
+    )
+      ..implicitRulesElement = json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
+      ..languageElement = json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$$_SearchParameterToJson(_$_SearchParameter instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1582,6 +1607,9 @@ Map<String, dynamic> _$$_SearchParameterToJson(_$_SearchParameter instance) {
     }
   }
 
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

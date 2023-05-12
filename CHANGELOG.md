@@ -2,9 +2,10 @@
 
 ## [0.10.0]
 
-* I've been playing with some Db packages, and there's some overlap with a number of the primitive types. To avoid any difficulties, I'm renaming all primitive classes to start with Fhir, and also Meta and List
+* I've been playing with some Db packages, and there's some overlap with a number of the primitive types.
+* In response and to avoid any difficulties, I'm renaming all primitive classes to start with Fhir.
+* Other classes that I've added Fhir to are: Meta, List, and Endpoint
 * Dependencies updated
-* Added hive annotations to ResourceType enums
 * Updated R5 to current official version
 
 ## [0.9.5]

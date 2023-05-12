@@ -331,9 +331,9 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
 }
 
 @freezed
-class Endpoint with Resource, _$Endpoint {
-  Endpoint._();
-  factory Endpoint({
+class FhirEndpoint with Resource, _$FhirEndpoint {
+  FhirEndpoint._();
+  factory FhirEndpoint({
     @Default(Stu3ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
         Stu3ResourceType resourceType,
@@ -348,7 +348,7 @@ class Endpoint with Resource, _$Endpoint {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    EndpointStatus? status,
+    FhirEndpointStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Coding connectionType,
     String? name,
@@ -363,29 +363,29 @@ class Endpoint with Resource, _$Endpoint {
     @JsonKey(name: '_address') Element? addressElement,
     List<String>? header,
     @JsonKey(name: '_header') List<Element?>? headerElement,
-  }) = _Endpoint;
+  }) = _FhirEndpoint;
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
-  factory Endpoint.fromYaml(dynamic yaml) => yaml is String
-      ? Endpoint.fromJson(
+  factory FhirEndpoint.fromYaml(dynamic yaml) => yaml is String
+      ? FhirEndpoint.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Endpoint.fromJson(
+          ? FhirEndpoint.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'Endpoint cannot be constructed from input provided,'
+              'FhirEndpoint cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Endpoint.fromJson(Map<String, dynamic> json) =>
-      _$EndpointFromJson(json);
+  factory FhirEndpoint.fromJson(Map<String, dynamic> json) =>
+      _$FhirEndpointFromJson(json);
 
-  /// Acts like a constructor, returns a [Endpoint], accepts a
+  /// Acts like a constructor, returns a [FhirEndpoint], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory Endpoint.fromJsonString(String source) {
+  factory FhirEndpoint.fromJsonString(String source) {
     final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$EndpointFromJson(json);
+      return _$FhirEndpointFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');

@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Endpoint _$EndpointFromJson(Map<String, dynamic> json) {
-  return _Endpoint.fromJson(json);
+FhirEndpoint _$FhirEndpointFromJson(Map<String, dynamic> json) {
+  return _FhirEndpoint.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Endpoint {
+mixin _$FhirEndpoint {
   /// [resourceType] This is a Endpoint resource
   @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
@@ -147,7 +147,7 @@ mixin _$Endpoint {
 
   /// [payload] The set of payloads that are provided/available at this
   ///  endpoint.
-  List<EndpointPayload>? get payload => throw _privateConstructorUsedError;
+  List<FhirEndpointPayload>? get payload => throw _privateConstructorUsedError;
 
   /// [address] The uri that describes the actual end-point to connect to.
   FhirUrl? get address => throw _privateConstructorUsedError;
@@ -166,14 +166,15 @@ mixin _$Endpoint {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EndpointCopyWith<Endpoint> get copyWith =>
+  $FhirEndpointCopyWith<FhirEndpoint> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EndpointCopyWith<$Res> {
-  factory $EndpointCopyWith(Endpoint value, $Res Function(Endpoint) then) =
-      _$EndpointCopyWithImpl<$Res, Endpoint>;
+abstract class $FhirEndpointCopyWith<$Res> {
+  factory $FhirEndpointCopyWith(
+          FhirEndpoint value, $Res Function(FhirEndpoint) then) =
+      _$FhirEndpointCopyWithImpl<$Res, FhirEndpoint>;
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
@@ -206,7 +207,7 @@ abstract class $EndpointCopyWith<$Res> {
       Reference? managingOrganization,
       List<ContactPoint>? contact,
       Period? period,
-      List<EndpointPayload>? payload,
+      List<FhirEndpointPayload>? payload,
       FhirUrl? address,
       @JsonKey(name: '_address')
           Element? addressElement,
@@ -227,9 +228,9 @@ abstract class $EndpointCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EndpointCopyWithImpl<$Res, $Val extends Endpoint>
-    implements $EndpointCopyWith<$Res> {
-  _$EndpointCopyWithImpl(this._value, this._then);
+class _$FhirEndpointCopyWithImpl<$Res, $Val extends FhirEndpoint>
+    implements $FhirEndpointCopyWith<$Res> {
+  _$FhirEndpointCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -364,7 +365,7 @@ class _$EndpointCopyWithImpl<$Res, $Val extends Endpoint>
       payload: freezed == payload
           ? _value.payload
           : payload // ignore: cast_nullable_to_non_nullable
-              as List<EndpointPayload>?,
+              as List<FhirEndpointPayload>?,
       address: freezed == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -506,10 +507,11 @@ class _$EndpointCopyWithImpl<$Res, $Val extends Endpoint>
 }
 
 /// @nodoc
-abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
-  factory _$$_EndpointCopyWith(
-          _$_Endpoint value, $Res Function(_$_Endpoint) then) =
-      __$$_EndpointCopyWithImpl<$Res>;
+abstract class _$$_FhirEndpointCopyWith<$Res>
+    implements $FhirEndpointCopyWith<$Res> {
+  factory _$$_FhirEndpointCopyWith(
+          _$_FhirEndpoint value, $Res Function(_$_FhirEndpoint) then) =
+      __$$_FhirEndpointCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -543,7 +545,7 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       Reference? managingOrganization,
       List<ContactPoint>? contact,
       Period? period,
-      List<EndpointPayload>? payload,
+      List<FhirEndpointPayload>? payload,
       FhirUrl? address,
       @JsonKey(name: '_address')
           Element? addressElement,
@@ -574,11 +576,11 @@ abstract class _$$_EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_EndpointCopyWithImpl<$Res>
-    extends _$EndpointCopyWithImpl<$Res, _$_Endpoint>
-    implements _$$_EndpointCopyWith<$Res> {
-  __$$_EndpointCopyWithImpl(
-      _$_Endpoint _value, $Res Function(_$_Endpoint) _then)
+class __$$_FhirEndpointCopyWithImpl<$Res>
+    extends _$FhirEndpointCopyWithImpl<$Res, _$_FhirEndpoint>
+    implements _$$_FhirEndpointCopyWith<$Res> {
+  __$$_FhirEndpointCopyWithImpl(
+      _$_FhirEndpoint _value, $Res Function(_$_FhirEndpoint) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -613,7 +615,7 @@ class __$$_EndpointCopyWithImpl<$Res>
     Object? header = freezed,
     Object? headerElement = freezed,
   }) {
-    return _then(_$_Endpoint(
+    return _then(_$_FhirEndpoint(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -709,7 +711,7 @@ class __$$_EndpointCopyWithImpl<$Res>
       payload: freezed == payload
           ? _value._payload
           : payload // ignore: cast_nullable_to_non_nullable
-              as List<EndpointPayload>?,
+              as List<FhirEndpointPayload>?,
       address: freezed == address
           ? _value.address
           : address // ignore: cast_nullable_to_non_nullable
@@ -732,8 +734,8 @@ class __$$_EndpointCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Endpoint extends _Endpoint {
-  _$_Endpoint(
+class _$_FhirEndpoint extends _FhirEndpoint {
+  _$_FhirEndpoint(
       {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
           this.resourceType = R5ResourceType.Endpoint,
       this.id,
@@ -764,7 +766,7 @@ class _$_Endpoint extends _Endpoint {
       this.managingOrganization,
       final List<ContactPoint>? contact,
       this.period,
-      final List<EndpointPayload>? payload,
+      final List<FhirEndpointPayload>? payload,
       this.address,
       @JsonKey(name: '_address')
           this.addressElement,
@@ -783,8 +785,8 @@ class _$_Endpoint extends _Endpoint {
         _headerElement = headerElement,
         super._();
 
-  factory _$_Endpoint.fromJson(Map<String, dynamic> json) =>
-      _$$_EndpointFromJson(json);
+  factory _$_FhirEndpoint.fromJson(Map<String, dynamic> json) =>
+      _$$_FhirEndpointFromJson(json);
 
   /// [resourceType] This is a Endpoint resource
   @override
@@ -1022,12 +1024,12 @@ class _$_Endpoint extends _Endpoint {
 
   /// [payload] The set of payloads that are provided/available at this
   ///  endpoint.
-  final List<EndpointPayload>? _payload;
+  final List<FhirEndpointPayload>? _payload;
 
   /// [payload] The set of payloads that are provided/available at this
   ///  endpoint.
   @override
-  List<EndpointPayload>? get payload {
+  List<FhirEndpointPayload>? get payload {
     final value = _payload;
     if (value == null) return null;
     if (_payload is EqualUnmodifiableListView) return _payload;
@@ -1075,14 +1077,14 @@ class _$_Endpoint extends _Endpoint {
 
   @override
   String toString() {
-    return 'Endpoint(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, connectionType: $connectionType, name: $name, nameElement: $nameElement, description: $description, descriptionElement: $descriptionElement, environmentType: $environmentType, managingOrganization: $managingOrganization, contact: $contact, period: $period, payload: $payload, address: $address, addressElement: $addressElement, header: $header, headerElement: $headerElement)';
+    return 'FhirEndpoint(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, connectionType: $connectionType, name: $name, nameElement: $nameElement, description: $description, descriptionElement: $descriptionElement, environmentType: $environmentType, managingOrganization: $managingOrganization, contact: $contact, period: $period, payload: $payload, address: $address, addressElement: $addressElement, header: $header, headerElement: $headerElement)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Endpoint &&
+            other is _$_FhirEndpoint &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.id, id) || other.id == id) &&
@@ -1168,19 +1170,19 @@ class _$_Endpoint extends _Endpoint {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EndpointCopyWith<_$_Endpoint> get copyWith =>
-      __$$_EndpointCopyWithImpl<_$_Endpoint>(this, _$identity);
+  _$$_FhirEndpointCopyWith<_$_FhirEndpoint> get copyWith =>
+      __$$_FhirEndpointCopyWithImpl<_$_FhirEndpoint>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EndpointToJson(
+    return _$$_FhirEndpointToJson(
       this,
     );
   }
 }
 
-abstract class _Endpoint extends Endpoint {
-  factory _Endpoint(
+abstract class _FhirEndpoint extends FhirEndpoint {
+  factory _FhirEndpoint(
       {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
           final R5ResourceType resourceType,
       final FhirId? id,
@@ -1211,16 +1213,17 @@ abstract class _Endpoint extends Endpoint {
       final Reference? managingOrganization,
       final List<ContactPoint>? contact,
       final Period? period,
-      final List<EndpointPayload>? payload,
+      final List<FhirEndpointPayload>? payload,
       final FhirUrl? address,
       @JsonKey(name: '_address')
           final Element? addressElement,
       final List<String>? header,
       @JsonKey(name: '_header')
-          final List<Element>? headerElement}) = _$_Endpoint;
-  _Endpoint._() : super._();
+          final List<Element>? headerElement}) = _$_FhirEndpoint;
+  _FhirEndpoint._() : super._();
 
-  factory _Endpoint.fromJson(Map<String, dynamic> json) = _$_Endpoint.fromJson;
+  factory _FhirEndpoint.fromJson(Map<String, dynamic> json) =
+      _$_FhirEndpoint.fromJson;
 
   @override
 
@@ -1371,7 +1374,7 @@ abstract class _Endpoint extends Endpoint {
 
   /// [payload] The set of payloads that are provided/available at this
   ///  endpoint.
-  List<EndpointPayload>? get payload;
+  List<FhirEndpointPayload>? get payload;
   @override
 
   /// [address] The uri that describes the actual end-point to connect to.
@@ -1393,16 +1396,16 @@ abstract class _Endpoint extends Endpoint {
   List<Element>? get headerElement;
   @override
   @JsonKey(ignore: true)
-  _$$_EndpointCopyWith<_$_Endpoint> get copyWith =>
+  _$$_FhirEndpointCopyWith<_$_FhirEndpoint> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-EndpointPayload _$EndpointPayloadFromJson(Map<String, dynamic> json) {
-  return _EndpointPayload.fromJson(json);
+FhirEndpointPayload _$FhirEndpointPayloadFromJson(Map<String, dynamic> json) {
+  return _FhirEndpointPayload.fromJson(json);
 }
 
 /// @nodoc
-mixin _$EndpointPayload {
+mixin _$FhirEndpointPayload {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   String? get id => throw _privateConstructorUsedError;
@@ -1449,15 +1452,15 @@ mixin _$EndpointPayload {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EndpointPayloadCopyWith<EndpointPayload> get copyWith =>
+  $FhirEndpointPayloadCopyWith<FhirEndpointPayload> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EndpointPayloadCopyWith<$Res> {
-  factory $EndpointPayloadCopyWith(
-          EndpointPayload value, $Res Function(EndpointPayload) then) =
-      _$EndpointPayloadCopyWithImpl<$Res, EndpointPayload>;
+abstract class $FhirEndpointPayloadCopyWith<$Res> {
+  factory $FhirEndpointPayloadCopyWith(
+          FhirEndpointPayload value, $Res Function(FhirEndpointPayload) then) =
+      _$FhirEndpointPayloadCopyWithImpl<$Res, FhirEndpointPayload>;
   @useResult
   $Res call(
       {String? id,
@@ -1469,9 +1472,9 @@ abstract class $EndpointPayloadCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$EndpointPayloadCopyWithImpl<$Res, $Val extends EndpointPayload>
-    implements $EndpointPayloadCopyWith<$Res> {
-  _$EndpointPayloadCopyWithImpl(this._value, this._then);
+class _$FhirEndpointPayloadCopyWithImpl<$Res, $Val extends FhirEndpointPayload>
+    implements $FhirEndpointPayloadCopyWith<$Res> {
+  _$FhirEndpointPayloadCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -1518,11 +1521,11 @@ class _$EndpointPayloadCopyWithImpl<$Res, $Val extends EndpointPayload>
 }
 
 /// @nodoc
-abstract class _$$_EndpointPayloadCopyWith<$Res>
-    implements $EndpointPayloadCopyWith<$Res> {
-  factory _$$_EndpointPayloadCopyWith(
-          _$_EndpointPayload value, $Res Function(_$_EndpointPayload) then) =
-      __$$_EndpointPayloadCopyWithImpl<$Res>;
+abstract class _$$_FhirEndpointPayloadCopyWith<$Res>
+    implements $FhirEndpointPayloadCopyWith<$Res> {
+  factory _$$_FhirEndpointPayloadCopyWith(_$_FhirEndpointPayload value,
+          $Res Function(_$_FhirEndpointPayload) then) =
+      __$$_FhirEndpointPayloadCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1535,11 +1538,11 @@ abstract class _$$_EndpointPayloadCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EndpointPayloadCopyWithImpl<$Res>
-    extends _$EndpointPayloadCopyWithImpl<$Res, _$_EndpointPayload>
-    implements _$$_EndpointPayloadCopyWith<$Res> {
-  __$$_EndpointPayloadCopyWithImpl(
-      _$_EndpointPayload _value, $Res Function(_$_EndpointPayload) _then)
+class __$$_FhirEndpointPayloadCopyWithImpl<$Res>
+    extends _$FhirEndpointPayloadCopyWithImpl<$Res, _$_FhirEndpointPayload>
+    implements _$$_FhirEndpointPayloadCopyWith<$Res> {
+  __$$_FhirEndpointPayloadCopyWithImpl(_$_FhirEndpointPayload _value,
+      $Res Function(_$_FhirEndpointPayload) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1552,7 +1555,7 @@ class __$$_EndpointPayloadCopyWithImpl<$Res>
     Object? mimeType = freezed,
     Object? mimeTypeElement = freezed,
   }) {
-    return _then(_$_EndpointPayload(
+    return _then(_$_FhirEndpointPayload(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -1583,8 +1586,8 @@ class __$$_EndpointPayloadCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EndpointPayload extends _EndpointPayload {
-  _$_EndpointPayload(
+class _$_FhirEndpointPayload extends _FhirEndpointPayload {
+  _$_FhirEndpointPayload(
       {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1598,8 +1601,8 @@ class _$_EndpointPayload extends _EndpointPayload {
         _mimeTypeElement = mimeTypeElement,
         super._();
 
-  factory _$_EndpointPayload.fromJson(Map<String, dynamic> json) =>
-      _$$_EndpointPayloadFromJson(json);
+  factory _$_FhirEndpointPayload.fromJson(Map<String, dynamic> json) =>
+      _$$_FhirEndpointPayloadFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -1720,14 +1723,14 @@ class _$_EndpointPayload extends _EndpointPayload {
 
   @override
   String toString() {
-    return 'EndpointPayload(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, mimeType: $mimeType, mimeTypeElement: $mimeTypeElement)';
+    return 'FhirEndpointPayload(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, mimeType: $mimeType, mimeTypeElement: $mimeTypeElement)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EndpointPayload &&
+            other is _$_FhirEndpointPayload &&
             (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -1753,30 +1756,31 @@ class _$_EndpointPayload extends _EndpointPayload {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EndpointPayloadCopyWith<_$_EndpointPayload> get copyWith =>
-      __$$_EndpointPayloadCopyWithImpl<_$_EndpointPayload>(this, _$identity);
+  _$$_FhirEndpointPayloadCopyWith<_$_FhirEndpointPayload> get copyWith =>
+      __$$_FhirEndpointPayloadCopyWithImpl<_$_FhirEndpointPayload>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EndpointPayloadToJson(
+    return _$$_FhirEndpointPayloadToJson(
       this,
     );
   }
 }
 
-abstract class _EndpointPayload extends EndpointPayload {
-  factory _EndpointPayload(
+abstract class _FhirEndpointPayload extends FhirEndpointPayload {
+  factory _FhirEndpointPayload(
           {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<CodeableConcept>? type,
           final List<FhirCode>? mimeType,
           @JsonKey(name: '_mimeType') final List<Element>? mimeTypeElement}) =
-      _$_EndpointPayload;
-  _EndpointPayload._() : super._();
+      _$_FhirEndpointPayload;
+  _FhirEndpointPayload._() : super._();
 
-  factory _EndpointPayload.fromJson(Map<String, dynamic> json) =
-      _$_EndpointPayload.fromJson;
+  factory _FhirEndpointPayload.fromJson(Map<String, dynamic> json) =
+      _$_FhirEndpointPayload.fromJson;
 
   @override
 
@@ -1829,7 +1833,7 @@ abstract class _EndpointPayload extends EndpointPayload {
   List<Element>? get mimeTypeElement;
   @override
   @JsonKey(ignore: true)
-  _$$_EndpointPayloadCopyWith<_$_EndpointPayload> get copyWith =>
+  _$$_FhirEndpointPayloadCopyWith<_$_FhirEndpointPayload> get copyWith =>
       throw _privateConstructorUsedError;
 }
 

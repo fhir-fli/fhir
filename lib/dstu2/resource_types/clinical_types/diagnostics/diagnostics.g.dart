@@ -789,12 +789,16 @@ _$_DiagnosticOrder _$$_DiagnosticOrderFromJson(Map<String, dynamic> json) =>
       note: (json['note'] as List<dynamic>?)
           ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
           .toList(),
-    );
+    )
+      ..implicitRulesElement = json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
+      ..languageElement = json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$$_DiagnosticOrderToJson(_$_DiagnosticOrder instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -802,6 +806,9 @@ Map<String, dynamic> _$$_DiagnosticOrderToJson(_$_DiagnosticOrder instance) {
     }
   }
 
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1308,12 +1315,16 @@ _$_BodySite _$$_BodySiteFromJson(Map<String, dynamic> json) => _$_BodySite(
       image: (json['image'] as List<dynamic>?)
           ?.map((e) => Attachment.fromJson(e as Map<String, dynamic>))
           .toList(),
-    );
+    )
+      ..implicitRulesElement = json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
+      ..languageElement = json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$$_BodySiteToJson(_$_BodySite instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1321,6 +1332,9 @@ Map<String, dynamic> _$$_BodySiteToJson(_$_BodySite instance) {
     }
   }
 
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
@@ -1682,13 +1696,17 @@ _$_ImagingObjectSelection _$$_ImagingObjectSelectionFromJson(
           .map((e) =>
               ImagingObjectSelectionStudy.fromJson(e as Map<String, dynamic>))
           .toList(),
-    );
+    )
+      ..implicitRulesElement = json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
+      ..languageElement = json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>);
 
 Map<String, dynamic> _$$_ImagingObjectSelectionToJson(
     _$_ImagingObjectSelection instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
-  };
+  final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -1696,6 +1714,9 @@ Map<String, dynamic> _$$_ImagingObjectSelectionToJson(
     }
   }
 
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

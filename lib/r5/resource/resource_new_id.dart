@@ -107,7 +107,7 @@ Resource _newId(Resource resource) {
     case R5ResourceType.EncounterHistory:
       return (resource as EncounterHistory).copyWith(id: newId());
     case R5ResourceType.Endpoint:
-      return (resource as Endpoint).copyWith(id: newId());
+      return (resource as FhirEndpoint).copyWith(id: newId());
     case R5ResourceType.EnrollmentRequest:
       return (resource as EnrollmentRequest).copyWith(id: newId());
     case R5ResourceType.EnrollmentResponse:

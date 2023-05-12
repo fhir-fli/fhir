@@ -13,13 +13,13 @@ import '../../../../r4.dart';
 part 'entities1.freezed.dart';
 part 'entities1.g.dart';
 
-/// [Endpoint] The technical details of an endpoint that can be used for
+/// [FhirEndpoint] The technical details of an endpoint that can be used for
 @freezed
-class Endpoint with Resource, _$Endpoint {
-  /// [Endpoint] The technical details of an endpoint that can be used for
-  Endpoint._();
+class FhirEndpoint with Resource, _$FhirEndpoint {
+  /// [FhirEndpoint] The technical details of an endpoint that can be used for
+  FhirEndpoint._();
 
-  /// [Endpoint] The technical details of an endpoint that can be used for
+  /// [FhirEndpoint] The technical details of an endpoint that can be used for
   /// electronic services, such as for web services providing XDS.b or a REST
   /// endpoint for another FHIR server. This may include any security context
   ///  information.
@@ -120,7 +120,7 @@ class Endpoint with Resource, _$Endpoint {
   ///  notification.
   ///
   /// [headerElement] Extensions for header
-  factory Endpoint({
+  factory FhirEndpoint({
     @Default(R4ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
 
@@ -255,29 +255,29 @@ class Endpoint with Resource, _$Endpoint {
     /// [headerElement] Extensions for header
     @JsonKey(name: '_header')
         List<Element?>? headerElement,
-  }) = _Endpoint;
+  }) = _FhirEndpoint;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Endpoint.fromYaml(dynamic yaml) => yaml is String
-      ? Endpoint.fromJson(
+  factory FhirEndpoint.fromYaml(dynamic yaml) => yaml is String
+      ? FhirEndpoint.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Endpoint.fromJson(
+          ? FhirEndpoint.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'Endpoint cannot be constructed from input provided,'
+              'FhirEndpoint cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Endpoint.fromJson(Map<String, dynamic> json) =>
-      _$EndpointFromJson(json);
+  factory FhirEndpoint.fromJson(Map<String, dynamic> json) =>
+      _$FhirEndpointFromJson(json);
 
-  /// Acts like a constructor, returns a [Endpoint], accepts a
+  /// Acts like a constructor, returns a [FhirEndpoint], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory Endpoint.fromJsonString(String source) {
+  factory FhirEndpoint.fromJsonString(String source) {
     final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$EndpointFromJson(json);
+      return _$FhirEndpointFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');

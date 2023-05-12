@@ -16,8 +16,14 @@ Resource _$ResourceFromJson(Map<String, dynamic> json) => Resource()
   ..implicitRules = json['implicitRules'] == null
       ? null
       : FhirUri.fromJson(json['implicitRules'])
+  ..implicitRulesElement = json['_implicitRules'] == null
+      ? null
+      : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
   ..language =
       json['language'] == null ? null : FhirCode.fromJson(json['language'])
+  ..languageElement = json['_language'] == null
+      ? null
+      : Element.fromJson(json['_language'] as Map<String, dynamic>)
   ..text = json['text'] == null
       ? null
       : Narrative.fromJson(json['text'] as Map<String, dynamic>)
@@ -44,7 +50,9 @@ Map<String, dynamic> _$ResourceToJson(Resource instance) {
   writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e.toJson()).toList());
