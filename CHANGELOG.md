@@ -5,6 +5,7 @@
 * I've been playing with some Db packages, and there's some overlap with a number of the primitive types.
 * In response and to avoid any difficulties, I'm renaming all primitive classes to start with Fhir.
 * Other classes that I've added Fhir to are: Meta, List, and Endpoint
+* I've decided as well to change an id field to fhirId because lots of other databases have an id field
 * Dependencies updated
 * Updated R5 to current official version
 
