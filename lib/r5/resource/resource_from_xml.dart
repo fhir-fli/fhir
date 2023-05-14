@@ -166,7 +166,7 @@ Map<String, dynamic> reformatXmlJsonMap(
               if (isPrimitive(oldType, oldValue as Map<String, dynamic>)) {
                 addIfPrimitive(oldValue, key, fhirField);
               } else {
-                // print('168: $oldType $oldValue');
+                print('168: $oldType $oldValue');
                 newMap[replacedKey] = fhirField.isList
                     ? <Map<String, dynamic>>[
                         reformatXmlJsonMap(oldValue, fhirFieldMap[oldType]!)

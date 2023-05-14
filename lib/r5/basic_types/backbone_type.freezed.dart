@@ -114,11 +114,6 @@ class _$_BackboneType extends _BackboneType {
   final String? fhirId;
 
   @override
-  String toString() {
-    return 'BackboneType(fhirId: $fhirId)';
-  }
-
-  @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&

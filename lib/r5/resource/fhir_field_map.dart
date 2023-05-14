@@ -13249,7 +13249,7 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'molecularWeight':
         const FhirField(true, 'SubstanceDefinitionMolecularWeight'),
     'structure': const FhirField(false, 'SubstanceDefinitionStructure'),
-    'code': const FhirField(true, 'Code'),
+    'code': const FhirField(true, 'SubstanceDefinitionCode'),
     'name': const FhirField(true, 'SubstanceDefinitionName'),
     'relationship': const FhirField(true, 'SubstanceDefinitionRelationship'),
     'nucleicAcid': const FhirField(false, 'Reference'),
