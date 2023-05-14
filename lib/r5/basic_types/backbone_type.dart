@@ -17,7 +17,7 @@ part 'backbone_type.g.dart';
 /// [BackboneType] Base definition for the few data types that are allowed to
 /// carry modifier extensions.
 @freezed
-class BackboneType extends TableRow with _$BackboneType {
+class BackboneType with _$BackboneType {
   BackboneType._();
 
   /// [BackboneType] Base definition for the few data types that are allowed to
@@ -60,7 +60,7 @@ class BackboneType extends TableRow with _$BackboneType {
     /// extension, there is a set of requirements that SHALL be met as part of
     ///  the
     /// definition of the extension.;
-    // @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -75,7 +75,7 @@ class BackboneType extends TableRow with _$BackboneType {
     /// required to check for modifier extensions. Modifier extensions SHALL NOT
     /// change the meaning of any elements on Resource or DomainResource
     /// (including cannot change the meaning of modifierExtension itself).
-    // List<FhirExtension>? modifierExtension,
+    List<FhirExtension>? modifierExtension,
   }) = _BackboneType;
 
   /// Produces a Yaml formatted String version of the object

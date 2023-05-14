@@ -129,7 +129,7 @@ String postgresTypes(String typeString) {
           ? "timestamp with time zone default timezone('utc'::text, now())"
           : typeString == 'bool'
               ? 'boolean'
-              // TODO(Dokotela) - in case you want to pull out these datatypes more easily
+              // TODO(Dokotela): in case you want to pull out these datatypes more easily
               : specialTypes.contains(typeString)
                   ? 'jsonb'
                   : 'jsonb';

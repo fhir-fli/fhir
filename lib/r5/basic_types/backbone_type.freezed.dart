@@ -26,6 +26,33 @@ mixin _$BackboneType {
   @JsonKey(name: 'id')
   String? get fhirId => throw _privateConstructorUsedError;
 
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of
+  ///  extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  ///  the
+  /// definition of the extension.;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of
+  ///  extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions. Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $BackboneTypeCopyWith<BackboneType> get copyWith =>
@@ -38,7 +65,10 @@ abstract class $BackboneTypeCopyWith<$Res> {
           BackboneType value, $Res Function(BackboneType) then) =
       _$BackboneTypeCopyWithImpl<$Res, BackboneType>;
   @useResult
-  $Res call({@JsonKey(name: 'id') String? fhirId});
+  $Res call(
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension});
 }
 
 /// @nodoc
@@ -55,12 +85,22 @@ class _$BackboneTypeCopyWithImpl<$Res, $Val extends BackboneType>
   @override
   $Res call({
     Object? fhirId = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
   }) {
     return _then(_value.copyWith(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
               as String?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
     ) as $Val);
   }
 }
@@ -73,7 +113,10 @@ abstract class _$$_BackboneTypeCopyWith<$Res>
       __$$_BackboneTypeCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({@JsonKey(name: 'id') String? fhirId});
+  $Res call(
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension});
 }
 
 /// @nodoc
@@ -88,12 +131,22 @@ class __$$_BackboneTypeCopyWithImpl<$Res>
   @override
   $Res call({
     Object? fhirId = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
   }) {
     return _then(_$_BackboneType(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
               as String?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
     ));
   }
 }
@@ -101,7 +154,13 @@ class __$$_BackboneTypeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BackboneType extends _BackboneType {
-  _$_BackboneType({@JsonKey(name: 'id') this.fhirId}) : super._();
+  _$_BackboneType(
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
 
   factory _$_BackboneType.fromJson(Map<String, dynamic> json) =>
       _$$_BackboneTypeFromJson(json);
@@ -113,17 +172,96 @@ class _$_BackboneType extends _BackboneType {
   @JsonKey(name: 'id')
   final String? fhirId;
 
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of
+  ///  extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  ///  the
+  /// definition of the extension.;
+  final List<FhirExtension>? _extension_;
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of
+  ///  extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  ///  the
+  /// definition of the extension.;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of
+  ///  extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions. Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
+  final List<FhirExtension>? _modifierExtension;
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of
+  ///  extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions. Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'BackboneType(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension)';
+  }
+
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_BackboneType &&
-            (identical(other.fhirId, fhirId) || other.fhirId == fhirId));
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, fhirId);
+  int get hashCode => Object.hash(
+      runtimeType,
+      fhirId,
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension));
 
   @JsonKey(ignore: true)
   @override
@@ -140,8 +278,10 @@ class _$_BackboneType extends _BackboneType {
 }
 
 abstract class _BackboneType extends BackboneType {
-  factory _BackboneType({@JsonKey(name: 'id') final String? fhirId}) =
-      _$_BackboneType;
+  factory _BackboneType(
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension}) = _$_BackboneType;
   _BackboneType._() : super._();
 
   factory _BackboneType.fromJson(Map<String, dynamic> json) =
@@ -154,6 +294,34 @@ abstract class _BackboneType extends BackboneType {
   /// This may be any string value that does not contain spaces.;
   @JsonKey(name: 'id')
   String? get fhirId;
+  @override
+
+  /// [extension_] May be used to represent additional information that is not
+  /// part of the basic definition of the element. To make the use of
+  ///  extensions
+  /// safe and manageable, there is a strict set of governance  applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  ///  the
+  /// definition of the extension.;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+
+  /// [modifierExtension] May be used to represent additional information that
+  /// is not part of the basic definition of the element and that modifies the
+  /// understanding of the element in which it is contained and/or the
+  /// understanding of the containing element's descendants. Usually modifier
+  /// elements provide negation or qualification. To make the use of
+  ///  extensions
+  /// safe and manageable, there is a strict set of governance applied to the
+  /// definition and use of extensions. Though any implementer can define an
+  /// extension, there is a set of requirements that SHALL be met as part of
+  /// the definition of the extension. Applications processing a resource are
+  /// required to check for modifier extensions. Modifier extensions SHALL NOT
+  /// change the meaning of any elements on Resource or DomainResource
+  /// (including cannot change the meaning of modifierExtension itself).
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(ignore: true)
   _$$_BackboneTypeCopyWith<_$_BackboneType> get copyWith =>
