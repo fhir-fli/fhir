@@ -22,7 +22,8 @@ Account _$AccountFromJson(Map<String, dynamic> json) {
 mixin _$Account {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -68,7 +69,8 @@ abstract class $AccountCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
           Stu3ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -129,7 +131,7 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
@@ -160,9 +162,9 @@ class _$AccountCopyWithImpl<$Res, $Val extends Account>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -430,7 +432,8 @@ abstract class _$$_AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
           Stu3ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -501,7 +504,7 @@ class __$$_AccountCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
@@ -532,9 +535,9 @@ class __$$_AccountCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -642,7 +645,8 @@ class _$_Account extends _Account {
   _$_Account(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
           this.resourceType = Stu3ResourceType.Account,
-      this.id,
+      @JsonKey(name: 'id')
+          this.fhirId,
       this.meta,
       this.implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -688,7 +692,8 @@ class _$_Account extends _Account {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
   final Stu3ResourceType resourceType;
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   @override
   final FhirMeta? meta;
   @override
@@ -794,7 +799,7 @@ class _$_Account extends _Account {
 
   @override
   String toString() {
-    return 'Account(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, name: $name, nameElement: $nameElement, subject: $subject, period: $period, active: $active, balance: $balance, coverage: $coverage, owner: $owner, description: $description, descriptionElement: $descriptionElement, guarantor: $guarantor)';
+    return 'Account(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, name: $name, nameElement: $nameElement, subject: $subject, period: $period, active: $active, balance: $balance, coverage: $coverage, owner: $owner, description: $description, descriptionElement: $descriptionElement, guarantor: $guarantor)';
   }
 
   @override
@@ -804,7 +809,7 @@ class _$_Account extends _Account {
             other is _$_Account &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
@@ -849,7 +854,7 @@ class _$_Account extends _Account {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
+        fhirId,
         meta,
         implicitRules,
         implicitRulesElement,
@@ -894,7 +899,8 @@ abstract class _Account extends Account {
   factory _Account(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Account)
           final Stu3ResourceType resourceType,
-      final FhirId? id,
+      @JsonKey(name: 'id')
+          final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -933,7 +939,8 @@ abstract class _Account extends Account {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
   Stu3ResourceType get resourceType;
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   FhirMeta? get meta;
   @override
@@ -1470,7 +1477,8 @@ ChargeItem _$ChargeItemFromJson(Map<String, dynamic> json) {
 mixin _$ChargeItem {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -1539,7 +1547,8 @@ abstract class $ChargeItemCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
           Stu3ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -1626,7 +1635,7 @@ class _$ChargeItemCopyWithImpl<$Res, $Val extends ChargeItem>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
@@ -1673,9 +1682,9 @@ class _$ChargeItemCopyWithImpl<$Res, $Val extends ChargeItem>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -2084,7 +2093,8 @@ abstract class _$$_ChargeItemCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
           Stu3ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2189,7 +2199,7 @@ class __$$_ChargeItemCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
@@ -2236,9 +2246,9 @@ class __$$_ChargeItemCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -2410,7 +2420,8 @@ class _$_ChargeItem extends _ChargeItem {
   _$_ChargeItem(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
           this.resourceType = Stu3ResourceType.ChargeItem,
-      this.id,
+      @JsonKey(name: 'id')
+          this.fhirId,
       this.meta,
       this.implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2482,7 +2493,8 @@ class _$_ChargeItem extends _ChargeItem {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
   final Stu3ResourceType resourceType;
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   @override
   final FhirMeta? meta;
   @override
@@ -2681,7 +2693,7 @@ class _$_ChargeItem extends _ChargeItem {
 
   @override
   String toString() {
-    return 'ChargeItem(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, definition: $definition, definitionElement: $definitionElement, status: $status, statusElement: $statusElement, partOf: $partOf, code: $code, subject: $subject, context: $context, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, participant: $participant, performingOrganization: $performingOrganization, requestingOrganization: $requestingOrganization, quantity: $quantity, bodysite: $bodysite, factorOverride: $factorOverride, factorOverrideElement: $factorOverrideElement, priceOverride: $priceOverride, overrideReason: $overrideReason, overrideReasonElement: $overrideReasonElement, enterer: $enterer, enteredDate: $enteredDate, enteredDateElement: $enteredDateElement, reason: $reason, service: $service, account: $account, note: $note, supportingInformation: $supportingInformation)';
+    return 'ChargeItem(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, definition: $definition, definitionElement: $definitionElement, status: $status, statusElement: $statusElement, partOf: $partOf, code: $code, subject: $subject, context: $context, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, participant: $participant, performingOrganization: $performingOrganization, requestingOrganization: $requestingOrganization, quantity: $quantity, bodysite: $bodysite, factorOverride: $factorOverride, factorOverrideElement: $factorOverrideElement, priceOverride: $priceOverride, overrideReason: $overrideReason, overrideReasonElement: $overrideReasonElement, enterer: $enterer, enteredDate: $enteredDate, enteredDateElement: $enteredDateElement, reason: $reason, service: $service, account: $account, note: $note, supportingInformation: $supportingInformation)';
   }
 
   @override
@@ -2691,7 +2703,7 @@ class _$_ChargeItem extends _ChargeItem {
             other is _$_ChargeItem &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
@@ -2767,7 +2779,7 @@ class _$_ChargeItem extends _ChargeItem {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
+        fhirId,
         meta,
         implicitRules,
         implicitRulesElement,
@@ -2828,7 +2840,8 @@ abstract class _ChargeItem extends ChargeItem {
   factory _ChargeItem(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
           final Stu3ResourceType resourceType,
-      final FhirId? id,
+      @JsonKey(name: 'id')
+          final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -2887,7 +2900,8 @@ abstract class _ChargeItem extends ChargeItem {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
   Stu3ResourceType get resourceType;
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   FhirMeta? get meta;
   @override
@@ -3177,7 +3191,8 @@ Contract _$ContractFromJson(Map<String, dynamic> json) {
 mixin _$Contract {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -3235,7 +3250,8 @@ abstract class $ContractCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
           Stu3ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3306,7 +3322,7 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
@@ -3348,9 +3364,9 @@ class _$ContractCopyWithImpl<$Res, $Val extends Contract>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -3662,7 +3678,8 @@ abstract class _$$_ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
           Stu3ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -3744,7 +3761,7 @@ class __$$_ContractCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
@@ -3786,9 +3803,9 @@ class __$$_ContractCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -3940,7 +3957,8 @@ class _$_Contract extends _Contract {
   _$_Contract(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
           this.resourceType = Stu3ResourceType.Contract,
-      this.id,
+      @JsonKey(name: 'id')
+          this.fhirId,
       this.meta,
       this.implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4008,7 +4026,8 @@ class _$_Contract extends _Contract {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
   final Stu3ResourceType resourceType;
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   @override
   final FhirMeta? meta;
   @override
@@ -4231,7 +4250,7 @@ class _$_Contract extends _Contract {
 
   @override
   String toString() {
-    return 'Contract(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, issued: $issued, issuedElement: $issuedElement, applies: $applies, subject: $subject, topic: $topic, authority: $authority, domain: $domain, type: $type, subType: $subType, action: $action, actionReason: $actionReason, decisionType: $decisionType, contentDerivative: $contentDerivative, securityLabel: $securityLabel, agent: $agent, signer: $signer, valuedItem: $valuedItem, term: $term, bindingAttachment: $bindingAttachment, bindingReference: $bindingReference, friendly: $friendly, legal: $legal, rule: $rule)';
+    return 'Contract(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, issued: $issued, issuedElement: $issuedElement, applies: $applies, subject: $subject, topic: $topic, authority: $authority, domain: $domain, type: $type, subType: $subType, action: $action, actionReason: $actionReason, decisionType: $decisionType, contentDerivative: $contentDerivative, securityLabel: $securityLabel, agent: $agent, signer: $signer, valuedItem: $valuedItem, term: $term, bindingAttachment: $bindingAttachment, bindingReference: $bindingReference, friendly: $friendly, legal: $legal, rule: $rule)';
   }
 
   @override
@@ -4241,7 +4260,7 @@ class _$_Contract extends _Contract {
             other is _$_Contract &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
@@ -4302,7 +4321,7 @@ class _$_Contract extends _Contract {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
+        fhirId,
         meta,
         implicitRules,
         implicitRulesElement,
@@ -4358,7 +4377,8 @@ abstract class _Contract extends Contract {
   factory _Contract(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
           final Stu3ResourceType resourceType,
-      final FhirId? id,
+      @JsonKey(name: 'id')
+          final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -4407,7 +4427,8 @@ abstract class _Contract extends Contract {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
   Stu3ResourceType get resourceType;
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   FhirMeta? get meta;
   @override
@@ -7303,7 +7324,8 @@ ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
 mixin _$ExplanationOfBenefit {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
@@ -7392,7 +7414,8 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
           Stu3ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -7502,7 +7525,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
@@ -7561,9 +7584,9 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -8174,7 +8197,8 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
           Stu3ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8313,7 +8337,7 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
@@ -8372,9 +8396,9 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -8594,7 +8618,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
           this.resourceType = Stu3ResourceType.ExplanationOfBenefit,
-      this.id,
+      @JsonKey(name: 'id')
+          this.fhirId,
       this.meta,
       this.implicitRules,
       @JsonKey(name: '_implicitRules')
@@ -8677,7 +8702,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
   final Stu3ResourceType resourceType;
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   @override
   final FhirMeta? meta;
   @override
@@ -8904,7 +8930,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 
   @override
   String toString() {
-    return 'ExplanationOfBenefit(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, subType: $subType, patient: $patient, billablePeriod: $billablePeriod, created: $created, createdElement: $createdElement, enterer: $enterer, insurer: $insurer, provider: $provider, organization: $organization, referral: $referral, facility: $facility, claim: $claim, claimResponse: $claimResponse, outcome: $outcome, disposition: $disposition, dispositionElement: $dispositionElement, related: $related, prescription: $prescription, originalPrescription: $originalPrescription, payee: $payee, information: $information, careTeam: $careTeam, diagnosis: $diagnosis, procedure: $procedure, precedence: $precedence, precedenceElement: $precedenceElement, insurance: $insurance, accident: $accident, employmentImpacted: $employmentImpacted, hospitalization: $hospitalization, item: $item, addItem: $addItem, totalCost: $totalCost, unallocDeductable: $unallocDeductable, totalBenefit: $totalBenefit, payment: $payment, form: $form, processNote: $processNote, benefitBalance: $benefitBalance)';
+    return 'ExplanationOfBenefit(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, subType: $subType, patient: $patient, billablePeriod: $billablePeriod, created: $created, createdElement: $createdElement, enterer: $enterer, insurer: $insurer, provider: $provider, organization: $organization, referral: $referral, facility: $facility, claim: $claim, claimResponse: $claimResponse, outcome: $outcome, disposition: $disposition, dispositionElement: $dispositionElement, related: $related, prescription: $prescription, originalPrescription: $originalPrescription, payee: $payee, information: $information, careTeam: $careTeam, diagnosis: $diagnosis, procedure: $procedure, precedence: $precedence, precedenceElement: $precedenceElement, insurance: $insurance, accident: $accident, employmentImpacted: $employmentImpacted, hospitalization: $hospitalization, item: $item, addItem: $addItem, totalCost: $totalCost, unallocDeductable: $unallocDeductable, totalBenefit: $totalBenefit, payment: $payment, form: $form, processNote: $processNote, benefitBalance: $benefitBalance)';
   }
 
   @override
@@ -8914,7 +8940,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
             other is _$_ExplanationOfBenefit &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
@@ -9008,7 +9034,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
+        fhirId,
         meta,
         implicitRules,
         implicitRulesElement,
@@ -9082,7 +9108,8 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   factory _ExplanationOfBenefit(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
               final Stu3ResourceType resourceType,
-          final FhirId? id,
+          @JsonKey(name: 'id')
+              final FhirId? fhirId,
           final FhirMeta? meta,
           final FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
@@ -9152,7 +9179,8 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
   Stu3ResourceType get resourceType;
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   FhirMeta? get meta;
   @override

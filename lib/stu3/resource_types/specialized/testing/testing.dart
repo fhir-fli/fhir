@@ -21,7 +21,7 @@ class TestReport with Resource, _$TestReport {
     @Default(Stu3ResourceType.TestReport)
     @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
         Stu3ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -449,7 +449,7 @@ class TestScript with Resource, _$TestScript {
     @Default(Stu3ResourceType.TestScript)
     @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
         Stu3ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,

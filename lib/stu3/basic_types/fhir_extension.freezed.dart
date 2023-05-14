@@ -20,7 +20,8 @@ FhirExtension _$FhirExtensionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FhirExtension {
-  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  String? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   FhirUri? get url => throw _privateConstructorUsedError;
@@ -134,7 +135,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       _$FhirExtensionCopyWithImpl<$Res, FhirExtension>;
   @useResult
   $Res call(
-      {String? id,
+      {@JsonKey(name: 'id') String? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
@@ -278,7 +279,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? url = freezed,
     Object? urlElement = freezed,
@@ -354,9 +355,9 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
     Object? valueTriggerDefinition = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -1318,7 +1319,7 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? id,
+      {@JsonKey(name: 'id') String? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement,
@@ -1514,7 +1515,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? url = freezed,
     Object? urlElement = freezed,
@@ -1590,9 +1591,9 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
     Object? valueTriggerDefinition = freezed,
   }) {
     return _then(_$_FhirExtension(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -1894,7 +1895,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_FhirExtension extends _FhirExtension {
   _$_FhirExtension(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.url,
       @JsonKey(name: '_url') this.urlElement,
@@ -1975,7 +1976,8 @@ class _$_FhirExtension extends _FhirExtension {
       _$$_FhirExtensionFromJson(json);
 
   @override
-  final String? id;
+  @JsonKey(name: 'id')
+  final String? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2152,7 +2154,7 @@ class _$_FhirExtension extends _FhirExtension {
 
   @override
   String toString() {
-    return 'FhirExtension(id: $id, extension_: $extension_, url: $url, urlElement: $urlElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueString: $valueString, valueStringElement: $valueStringElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueId: $valueId, valueIdElement: $valueIdElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueElement: $valueElement, valueExtension: $valueExtension, valueBackboneElement: $valueBackboneElement, valueNarrative: $valueNarrative, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueIdentifier: $valueIdentifier, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueDuration: $valueDuration, valueSimpleQuantity: $valueSimpleQuantity, valueDistance: $valueDistance, valueCount: $valueCount, valueMoney: $valueMoney, valueAge: $valueAge, valueRange: $valueRange, valuePeriod: $valuePeriod, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueHumanName: $valueHumanName, valueAddress: $valueAddress, valueContactPoint: $valueContactPoint, valueTiming: $valueTiming, valueMeta: $valueMeta, valueElementDefinition: $valueElementDefinition, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDosage: $valueDosage, valueRelatedArtifact: $valueRelatedArtifact, valueUsageContext: $valueUsageContext, valueDataRequirement: $valueDataRequirement, valueParameterDefinition: $valueParameterDefinition, valueTriggerDefinition: $valueTriggerDefinition)';
+    return 'FhirExtension(fhirId: $fhirId, extension_: $extension_, url: $url, urlElement: $urlElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueString: $valueString, valueStringElement: $valueStringElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueId: $valueId, valueIdElement: $valueIdElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueElement: $valueElement, valueExtension: $valueExtension, valueBackboneElement: $valueBackboneElement, valueNarrative: $valueNarrative, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueIdentifier: $valueIdentifier, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueQuantity: $valueQuantity, valueDuration: $valueDuration, valueSimpleQuantity: $valueSimpleQuantity, valueDistance: $valueDistance, valueCount: $valueCount, valueMoney: $valueMoney, valueAge: $valueAge, valueRange: $valueRange, valuePeriod: $valuePeriod, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueHumanName: $valueHumanName, valueAddress: $valueAddress, valueContactPoint: $valueContactPoint, valueTiming: $valueTiming, valueMeta: $valueMeta, valueElementDefinition: $valueElementDefinition, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDosage: $valueDosage, valueRelatedArtifact: $valueRelatedArtifact, valueUsageContext: $valueUsageContext, valueDataRequirement: $valueDataRequirement, valueParameterDefinition: $valueParameterDefinition, valueTriggerDefinition: $valueTriggerDefinition)';
   }
 
   @override
@@ -2160,7 +2162,7 @@ class _$_FhirExtension extends _FhirExtension {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FhirExtension &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             (identical(other.url, url) || other.url == url) &&
@@ -2274,7 +2276,7 @@ class _$_FhirExtension extends _FhirExtension {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        id,
+        fhirId,
         const DeepCollectionEquality().hash(_extension_),
         url,
         urlElement,
@@ -2366,7 +2368,8 @@ class _$_FhirExtension extends _FhirExtension {
 
 abstract class _FhirExtension extends FhirExtension {
   factory _FhirExtension(
-      {final String? id,
+      {@JsonKey(name: 'id')
+          final String? fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final FhirUri? url,
@@ -2465,7 +2468,8 @@ abstract class _FhirExtension extends FhirExtension {
       _$_FhirExtension.fromJson;
 
   @override
-  String? get id;
+  @JsonKey(name: 'id')
+  String? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;

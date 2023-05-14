@@ -150,7 +150,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
     @Default(R4ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
         R4ResourceType resourceType,
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -256,7 +256,7 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   ///
   /// [causality] Information on the possible cause of the event.
   factory AdverseEventSuspectEntity({
-    String? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference instance,
@@ -341,7 +341,7 @@ class AdverseEventCausality with _$AdverseEventCausality {
   ///
   /// [method] ProbabilityScale | Bayesian | Checklist.
   factory AdverseEventCausality({
-    String? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? assessment,
@@ -535,7 +535,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     @Default(R4ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
         R4ResourceType resourceType,
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -671,7 +671,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   /// [note] Additional text about the adverse reaction event not captured in
   ///  other fields.
   factory AllergyIntoleranceReaction({
-    String? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? substance,
@@ -862,7 +862,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
     @Default(R4ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
         R4ResourceType resourceType,
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -975,7 +975,7 @@ class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
   ///
   /// [item] A record of a specific investigation that was undertaken.
   factory ClinicalImpressionInvestigation({
-    String? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
@@ -1063,7 +1063,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   ///
   /// [basisElement] Extensions for basis
   factory ClinicalImpressionFinding({
-    String? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? itemCodeableConcept,
@@ -1262,7 +1262,7 @@ class Condition with Resource, _$Condition {
     @Default(R4ResourceType.Condition)
     @JsonKey(unknownEnumValue: R4ResourceType.Condition)
         R4ResourceType resourceType,
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1374,7 +1374,7 @@ class ConditionStage with _$ConditionStage {
   ///
   /// [type] The kind of staging, such as pathological or clinical staging.
   factory ConditionStage({
-    String? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? summary,
@@ -1453,7 +1453,7 @@ class ConditionEvidence with _$ConditionEvidence {
   /// [detail] Links to other relevant information, including pathology
   ///  reports.
   factory ConditionEvidence({
-    String? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
@@ -1608,7 +1608,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
     @Default(R4ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
         R4ResourceType resourceType,
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -1706,7 +1706,7 @@ class DetectedIssueEvidence with _$DetectedIssueEvidence {
   /// [detail] Links to resources that constitute evidence for the detected
   ///  issue such as a GuidanceResponse or MeasureReport.
   factory DetectedIssueEvidence({
-    String? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
@@ -1790,7 +1790,7 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
   /// [author] Identifies the practitioner who determined the mitigation and
   ///  takes responsibility for the mitigation step occurring.
   factory DetectedIssueMitigation({
-    String? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept action,
@@ -1996,7 +1996,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     @Default(R4ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
         R4ResourceType resourceType,
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2142,7 +2142,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   /// [note] An area where general notes can be placed about this specific
   ///  condition.
   factory FamilyMemberHistoryCondition({
-    String? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
@@ -2374,7 +2374,7 @@ class Procedure with Resource, _$Procedure {
     @Default(R4ResourceType.Procedure)
     @JsonKey(unknownEnumValue: R4ResourceType.Procedure)
         R4ResourceType resourceType,
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -2492,7 +2492,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
   /// [onBehalfOf] The organization the device or practitioner was acting on
   ///  behalf of.
   factory ProcedurePerformer({
-    String? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? function,
@@ -2571,7 +2571,7 @@ class ProcedureFocalDevice with _$ProcedureFocalDevice {
   /// [manipulated] The device that was manipulated (changed) during the
   ///  procedure.
   factory ProcedureFocalDevice({
-    String? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? action,

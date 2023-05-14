@@ -12,7 +12,7 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CodeSystem) ??
           R4ResourceType.CodeSystem,
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -166,7 +166,7 @@ Map<String, dynamic> _$$_CodeSystemToJson(_$_CodeSystem instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -375,7 +375,7 @@ const _$R4ResourceTypeEnumMap = {
 
 _$_CodeSystemFilter _$$_CodeSystemFilterFromJson(Map<String, dynamic> json) =>
     _$_CodeSystemFilter(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -411,7 +411,7 @@ Map<String, dynamic> _$$_CodeSystemFilterToJson(_$_CodeSystemFilter instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -431,7 +431,7 @@ Map<String, dynamic> _$$_CodeSystemFilterToJson(_$_CodeSystemFilter instance) {
 _$_CodeSystemProperty _$$_CodeSystemPropertyFromJson(
         Map<String, dynamic> json) =>
     _$_CodeSystemProperty(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -466,7 +466,7 @@ Map<String, dynamic> _$$_CodeSystemPropertyToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -484,7 +484,7 @@ Map<String, dynamic> _$$_CodeSystemPropertyToJson(
 
 _$_CodeSystemConcept _$$_CodeSystemConceptFromJson(Map<String, dynamic> json) =>
     _$_CodeSystemConcept(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -525,7 +525,7 @@ Map<String, dynamic> _$$_CodeSystemConceptToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -546,7 +546,7 @@ Map<String, dynamic> _$$_CodeSystemConceptToJson(
 _$_CodeSystemDesignation _$$_CodeSystemDesignationFromJson(
         Map<String, dynamic> json) =>
     _$_CodeSystemDesignation(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -577,7 +577,7 @@ Map<String, dynamic> _$$_CodeSystemDesignationToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -593,7 +593,7 @@ Map<String, dynamic> _$$_CodeSystemDesignationToJson(
 _$_CodeSystemProperty1 _$$_CodeSystemProperty1FromJson(
         Map<String, dynamic> json) =>
     _$_CodeSystemProperty1(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -653,7 +653,7 @@ Map<String, dynamic> _$$_CodeSystemProperty1ToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -682,7 +682,7 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ConceptMap) ??
           R4ResourceType.ConceptMap,
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -813,7 +813,7 @@ Map<String, dynamic> _$$_ConceptMapToJson(_$_ConceptMap instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -868,7 +868,7 @@ Map<String, dynamic> _$$_ConceptMapToJson(_$_ConceptMap instance) {
 
 _$_ConceptMapGroup _$$_ConceptMapGroupFromJson(Map<String, dynamic> json) =>
     _$_ConceptMapGroup(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -909,7 +909,7 @@ Map<String, dynamic> _$$_ConceptMapGroupToJson(_$_ConceptMapGroup instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -929,7 +929,7 @@ Map<String, dynamic> _$$_ConceptMapGroupToJson(_$_ConceptMapGroup instance) {
 
 _$_ConceptMapElement _$$_ConceptMapElementFromJson(Map<String, dynamic> json) =>
     _$_ConceptMapElement(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -959,7 +959,7 @@ Map<String, dynamic> _$$_ConceptMapElementToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -974,7 +974,7 @@ Map<String, dynamic> _$$_ConceptMapElementToJson(
 
 _$_ConceptMapTarget _$$_ConceptMapTargetFromJson(Map<String, dynamic> json) =>
     _$_ConceptMapTarget(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1016,7 +1016,7 @@ Map<String, dynamic> _$$_ConceptMapTargetToJson(_$_ConceptMapTarget instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1038,7 +1038,7 @@ Map<String, dynamic> _$$_ConceptMapTargetToJson(_$_ConceptMapTarget instance) {
 _$_ConceptMapDependsOn _$$_ConceptMapDependsOnFromJson(
         Map<String, dynamic> json) =>
     _$_ConceptMapDependsOn(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1073,7 +1073,7 @@ Map<String, dynamic> _$$_ConceptMapDependsOnToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1091,7 +1091,7 @@ Map<String, dynamic> _$$_ConceptMapDependsOnToJson(
 _$_ConceptMapUnmapped _$$_ConceptMapUnmappedFromJson(
         Map<String, dynamic> json) =>
     _$_ConceptMapUnmapped(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1123,7 +1123,7 @@ Map<String, dynamic> _$$_ConceptMapUnmappedToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1144,7 +1144,7 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.NamingSystem) ??
           R4ResourceType.NamingSystem,
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1233,7 +1233,7 @@ Map<String, dynamic> _$$_NamingSystemToJson(_$_NamingSystem instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -1275,7 +1275,7 @@ Map<String, dynamic> _$$_NamingSystemToJson(_$_NamingSystem instance) {
 _$_NamingSystemUniqueId _$$_NamingSystemUniqueIdFromJson(
         Map<String, dynamic> json) =>
     _$_NamingSystemUniqueId(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1315,7 +1315,7 @@ Map<String, dynamic> _$$_NamingSystemUniqueIdToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1339,7 +1339,7 @@ _$_TerminologyCapabilities _$$_TerminologyCapabilitiesFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.TerminologyCapabilities) ??
           R4ResourceType.TerminologyCapabilities,
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1485,7 +1485,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -1545,7 +1545,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesToJson(
 _$_TerminologyCapabilitiesSoftware _$$_TerminologyCapabilitiesSoftwareFromJson(
         Map<String, dynamic> json) =>
     _$_TerminologyCapabilitiesSoftware(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1572,7 +1572,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesSoftwareToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1588,7 +1588,7 @@ _$_TerminologyCapabilitiesImplementation
     _$$_TerminologyCapabilitiesImplementationFromJson(
             Map<String, dynamic> json) =>
         _$_TerminologyCapabilitiesImplementation(
-          id: json['id'] as String?,
+          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -1615,7 +1615,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesImplementationToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1630,7 +1630,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesImplementationToJson(
 _$_TerminologyCapabilitiesCodeSystem
     _$$_TerminologyCapabilitiesCodeSystemFromJson(Map<String, dynamic> json) =>
         _$_TerminologyCapabilitiesCodeSystem(
-          id: json['id'] as String?,
+          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -1660,7 +1660,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesCodeSystemToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1675,7 +1675,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesCodeSystemToJson(
 _$_TerminologyCapabilitiesVersion _$$_TerminologyCapabilitiesVersionFromJson(
         Map<String, dynamic> json) =>
     _$_TerminologyCapabilitiesVersion(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1726,7 +1726,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesVersionToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1750,7 +1750,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesVersionToJson(
 _$_TerminologyCapabilitiesFilter _$$_TerminologyCapabilitiesFilterFromJson(
         Map<String, dynamic> json) =>
     _$_TerminologyCapabilitiesFilter(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1778,7 +1778,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesFilterToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1793,7 +1793,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesFilterToJson(
 _$_TerminologyCapabilitiesExpansion
     _$$_TerminologyCapabilitiesExpansionFromJson(Map<String, dynamic> json) =>
         _$_TerminologyCapabilitiesExpansion(
-          id: json['id'] as String?,
+          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -1840,7 +1840,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesExpansionToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1861,7 +1861,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesExpansionToJson(
 _$_TerminologyCapabilitiesParameter
     _$$_TerminologyCapabilitiesParameterFromJson(Map<String, dynamic> json) =>
         _$_TerminologyCapabilitiesParameter(
-          id: json['id'] as String?,
+          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -1889,7 +1889,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesParameterToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1905,7 +1905,7 @@ _$_TerminologyCapabilitiesValidateCode
     _$$_TerminologyCapabilitiesValidateCodeFromJson(
             Map<String, dynamic> json) =>
         _$_TerminologyCapabilitiesValidateCode(
-          id: json['id'] as String?,
+          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -1930,7 +1930,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesValidateCodeToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1943,7 +1943,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesValidateCodeToJson(
 _$_TerminologyCapabilitiesTranslation
     _$$_TerminologyCapabilitiesTranslationFromJson(Map<String, dynamic> json) =>
         _$_TerminologyCapabilitiesTranslation(
-          id: json['id'] as String?,
+          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -1968,7 +1968,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesTranslationToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1981,7 +1981,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesTranslationToJson(
 _$_TerminologyCapabilitiesClosure _$$_TerminologyCapabilitiesClosureFromJson(
         Map<String, dynamic> json) =>
     _$_TerminologyCapabilitiesClosure(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2006,7 +2006,7 @@ Map<String, dynamic> _$$_TerminologyCapabilitiesClosureToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2021,7 +2021,7 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ValueSet) ??
           R4ResourceType.ValueSet,
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2138,7 +2138,7 @@ Map<String, dynamic> _$$_ValueSetToJson(_$_ValueSet instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -2189,7 +2189,7 @@ Map<String, dynamic> _$$_ValueSetToJson(_$_ValueSet instance) {
 
 _$_ValueSetCompose _$$_ValueSetComposeFromJson(Map<String, dynamic> json) =>
     _$_ValueSetCompose(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2225,7 +2225,7 @@ Map<String, dynamic> _$$_ValueSetComposeToJson(_$_ValueSetCompose instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2241,7 +2241,7 @@ Map<String, dynamic> _$$_ValueSetComposeToJson(_$_ValueSetCompose instance) {
 
 _$_ValueSetInclude _$$_ValueSetIncludeFromJson(Map<String, dynamic> json) =>
     _$_ValueSetInclude(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2276,7 +2276,7 @@ Map<String, dynamic> _$$_ValueSetIncludeToJson(_$_ValueSetInclude instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2293,7 +2293,7 @@ Map<String, dynamic> _$$_ValueSetIncludeToJson(_$_ValueSetInclude instance) {
 
 _$_ValueSetConcept _$$_ValueSetConceptFromJson(Map<String, dynamic> json) =>
     _$_ValueSetConcept(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2322,7 +2322,7 @@ Map<String, dynamic> _$$_ValueSetConceptToJson(_$_ValueSetConcept instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2339,7 +2339,7 @@ Map<String, dynamic> _$$_ValueSetConceptToJson(_$_ValueSetConcept instance) {
 _$_ValueSetDesignation _$$_ValueSetDesignationFromJson(
         Map<String, dynamic> json) =>
     _$_ValueSetDesignation(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2370,7 +2370,7 @@ Map<String, dynamic> _$$_ValueSetDesignationToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2385,7 +2385,7 @@ Map<String, dynamic> _$$_ValueSetDesignationToJson(
 
 _$_ValueSetFilter _$$_ValueSetFilterFromJson(Map<String, dynamic> json) =>
     _$_ValueSetFilter(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2416,7 +2416,7 @@ Map<String, dynamic> _$$_ValueSetFilterToJson(_$_ValueSetFilter instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2432,7 +2432,7 @@ Map<String, dynamic> _$$_ValueSetFilterToJson(_$_ValueSetFilter instance) {
 
 _$_ValueSetExpansion _$$_ValueSetExpansionFromJson(Map<String, dynamic> json) =>
     _$_ValueSetExpansion(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2478,7 +2478,7 @@ Map<String, dynamic> _$$_ValueSetExpansionToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2499,7 +2499,7 @@ Map<String, dynamic> _$$_ValueSetExpansionToJson(
 
 _$_ValueSetParameter _$$_ValueSetParameterFromJson(Map<String, dynamic> json) =>
     _$_ValueSetParameter(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2561,7 +2561,7 @@ Map<String, dynamic> _$$_ValueSetParameterToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2587,7 +2587,7 @@ Map<String, dynamic> _$$_ValueSetParameterToJson(
 
 _$_ValueSetContains _$$_ValueSetContainsFromJson(Map<String, dynamic> json) =>
     _$_ValueSetContains(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2639,7 +2639,7 @@ Map<String, dynamic> _$$_ValueSetContainsToJson(_$_ValueSetContains instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',

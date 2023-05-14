@@ -49,7 +49,7 @@ class Annotation with _$Annotation {
   factory Annotation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -170,7 +170,7 @@ class Attachment with _$Attachment {
   factory Attachment({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -308,7 +308,7 @@ class Identifier with _$Identifier {
   factory Identifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -409,7 +409,7 @@ class CodeableConcept with _$CodeableConcept {
   factory CodeableConcept({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -512,7 +512,7 @@ class Coding with _$Coding {
   factory Coding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -642,7 +642,8 @@ class Quantity with _$Quantity {
   factory Quantity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id')
+        String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -773,7 +774,8 @@ class FhirDuration with _$FhirDuration {
   factory FhirDuration({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id')
+        String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -904,7 +906,8 @@ class Distance with _$Distance {
   factory Distance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id')
+        String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1038,7 +1041,8 @@ class Count with _$Count {
   factory Count({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id')
+        String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1149,7 +1153,7 @@ class Money with _$Money {
   factory Money({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1248,7 +1252,7 @@ class Age with _$Age {
   factory Age({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1347,7 +1351,7 @@ class Range with _$Range {
   factory Range({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1425,7 +1429,7 @@ class Period with _$Period {
   factory Period({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1506,7 +1510,7 @@ class Ratio with _$Ratio {
   factory Ratio({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1566,7 +1570,7 @@ class RatioRange with _$RatioRange {
   /// [denominator] "The value of the denominator."
   factory RatioRange({
     /// [id] "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1671,7 +1675,7 @@ class SampledData with _$SampledData {
   factory SampledData({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1820,7 +1824,7 @@ class Signature with _$Signature {
   factory Signature({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1959,7 +1963,7 @@ class HumanName with _$HumanName {
   factory HumanName({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2121,7 +2125,7 @@ class Address with _$Address {
   factory Address({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2274,7 +2278,8 @@ class ContactPoint with _$ContactPoint {
   factory ContactPoint({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id')
+        String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2407,7 +2412,7 @@ class Timing with _$Timing {
   factory Timing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2607,7 +2612,8 @@ class TimingRepeat with _$TimingRepeat {
   factory TimingRepeat({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id')
+        String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions

@@ -22,7 +22,8 @@ Conformance _$ConformanceFromJson(Map<String, dynamic> json) {
 mixin _$Conformance {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
@@ -81,7 +82,8 @@ abstract class $ConformanceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
           Dstu2ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
@@ -144,7 +146,7 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? language = freezed,
@@ -182,9 +184,9 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -410,7 +412,8 @@ abstract class _$$_ConformanceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
           Dstu2ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
@@ -478,7 +481,7 @@ class __$$_ConformanceCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? language = freezed,
@@ -516,9 +519,9 @@ class __$$_ConformanceCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -654,7 +657,8 @@ class _$_Conformance extends _Conformance {
   _$_Conformance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
           this.resourceType = Dstu2ResourceType.Conformance,
-      this.id,
+      @JsonKey(name: 'id')
+          this.fhirId,
       this.meta,
       this.implicitRules,
       this.language,
@@ -711,7 +715,8 @@ class _$_Conformance extends _Conformance {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
   final Dstu2ResourceType resourceType;
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   @override
   final FhirMeta? meta;
   @override
@@ -854,7 +859,7 @@ class _$_Conformance extends _Conformance {
 
   @override
   String toString() {
-    return 'Conformance(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, acceptUnknown: $acceptUnknown, acceptUnknownElement: $acceptUnknownElement, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
+    return 'Conformance(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, acceptUnknown: $acceptUnknown, acceptUnknownElement: $acceptUnknownElement, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
   }
 
   @override
@@ -864,7 +869,7 @@ class _$_Conformance extends _Conformance {
             other is _$_Conformance &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
@@ -921,7 +926,7 @@ class _$_Conformance extends _Conformance {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
+        fhirId,
         meta,
         implicitRules,
         language,
@@ -973,7 +978,8 @@ abstract class _Conformance extends Conformance {
   factory _Conformance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
           final Dstu2ResourceType resourceType,
-      final FhirId? id,
+      @JsonKey(name: 'id')
+          final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
       final FhirCode? language,
@@ -1021,7 +1027,8 @@ abstract class _Conformance extends Conformance {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
   Dstu2ResourceType get resourceType;
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   FhirMeta? get meta;
   @override
@@ -1105,7 +1112,8 @@ CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) {
 mixin _$CapabilityStatement {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
@@ -1164,7 +1172,8 @@ abstract class $CapabilityStatementCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
           Dstu2ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
@@ -1227,7 +1236,7 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? language = freezed,
@@ -1265,9 +1274,9 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -1493,7 +1502,8 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
           Dstu2ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
@@ -1561,7 +1571,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? language = freezed,
@@ -1599,9 +1609,9 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -1737,7 +1747,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   _$_CapabilityStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
           this.resourceType = Dstu2ResourceType.CapabilityStatement,
-      this.id,
+      @JsonKey(name: 'id')
+          this.fhirId,
       this.meta,
       this.implicitRules,
       this.language,
@@ -1794,7 +1805,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
   final Dstu2ResourceType resourceType;
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   @override
   final FhirMeta? meta;
   @override
@@ -1937,7 +1949,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   @override
   String toString() {
-    return 'CapabilityStatement(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, acceptUnknown: $acceptUnknown, acceptUnknownElement: $acceptUnknownElement, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
+    return 'CapabilityStatement(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, acceptUnknown: $acceptUnknown, acceptUnknownElement: $acceptUnknownElement, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
   }
 
   @override
@@ -1947,7 +1959,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
             other is _$_CapabilityStatement &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
@@ -2004,7 +2016,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
+        fhirId,
         meta,
         implicitRules,
         language,
@@ -2057,7 +2069,8 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   factory _CapabilityStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
           final Dstu2ResourceType resourceType,
-      final FhirId? id,
+      @JsonKey(name: 'id')
+          final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
       final FhirCode? language,
@@ -2105,7 +2118,8 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
   Dstu2ResourceType get resourceType;
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   FhirMeta? get meta;
   @override
@@ -2187,7 +2201,8 @@ ConformanceContact _$ConformanceContactFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ConformanceContact {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2208,7 +2223,7 @@ abstract class $ConformanceContactCopyWith<$Res> {
       _$ConformanceContactCopyWithImpl<$Res, ConformanceContact>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -2228,16 +2243,16 @@ class _$ConformanceContactCopyWithImpl<$Res, $Val extends ConformanceContact>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -2268,7 +2283,7 @@ abstract class _$$_ConformanceContactCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -2286,16 +2301,16 @@ class __$$_ConformanceContactCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
     return _then(_$_ConformanceContact(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -2321,7 +2336,7 @@ class __$$_ConformanceContactCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceContact extends _ConformanceContact {
   _$_ConformanceContact(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.name,
@@ -2335,7 +2350,8 @@ class _$_ConformanceContact extends _ConformanceContact {
       _$$_ConformanceContactFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2372,7 +2388,7 @@ class _$_ConformanceContact extends _ConformanceContact {
 
   @override
   String toString() {
-    return 'ConformanceContact(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, telecom: $telecom)';
+    return 'ConformanceContact(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, telecom: $telecom)';
   }
 
   @override
@@ -2380,7 +2396,7 @@ class _$_ConformanceContact extends _ConformanceContact {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceContact &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -2393,7 +2409,7 @@ class _$_ConformanceContact extends _ConformanceContact {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       name,
@@ -2416,7 +2432,7 @@ class _$_ConformanceContact extends _ConformanceContact {
 
 abstract class _ConformanceContact extends ConformanceContact {
   factory _ConformanceContact(
-      {final FhirId? id,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
@@ -2427,7 +2443,8 @@ abstract class _ConformanceContact extends ConformanceContact {
       _$_ConformanceContact.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2449,7 +2466,8 @@ ConformanceSoftware _$ConformanceSoftwareFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ConformanceSoftware {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2471,7 +2489,7 @@ abstract class $ConformanceSoftwareCopyWith<$Res> {
       _$ConformanceSoftwareCopyWithImpl<$Res, ConformanceSoftware>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String name,
@@ -2492,7 +2510,7 @@ class _$ConformanceSoftwareCopyWithImpl<$Res, $Val extends ConformanceSoftware>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = null,
@@ -2500,9 +2518,9 @@ class _$ConformanceSoftwareCopyWithImpl<$Res, $Val extends ConformanceSoftware>
     Object? releaseDate = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -2537,7 +2555,7 @@ abstract class _$$_ConformanceSoftwareCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String name,
@@ -2556,7 +2574,7 @@ class __$$_ConformanceSoftwareCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = null,
@@ -2564,9 +2582,9 @@ class __$$_ConformanceSoftwareCopyWithImpl<$Res>
     Object? releaseDate = freezed,
   }) {
     return _then(_$_ConformanceSoftware(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -2596,7 +2614,7 @@ class __$$_ConformanceSoftwareCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceSoftware extends _ConformanceSoftware {
   _$_ConformanceSoftware(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.name,
@@ -2610,7 +2628,8 @@ class _$_ConformanceSoftware extends _ConformanceSoftware {
       _$$_ConformanceSoftwareFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2642,7 +2661,7 @@ class _$_ConformanceSoftware extends _ConformanceSoftware {
 
   @override
   String toString() {
-    return 'ConformanceSoftware(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, version: $version, releaseDate: $releaseDate)';
+    return 'ConformanceSoftware(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, version: $version, releaseDate: $releaseDate)';
   }
 
   @override
@@ -2650,7 +2669,7 @@ class _$_ConformanceSoftware extends _ConformanceSoftware {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceSoftware &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -2665,7 +2684,7 @@ class _$_ConformanceSoftware extends _ConformanceSoftware {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       name,
@@ -2689,7 +2708,7 @@ class _$_ConformanceSoftware extends _ConformanceSoftware {
 
 abstract class _ConformanceSoftware extends ConformanceSoftware {
   factory _ConformanceSoftware(
-      {final FhirId? id,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final String name,
@@ -2701,7 +2720,8 @@ abstract class _ConformanceSoftware extends ConformanceSoftware {
       _$_ConformanceSoftware.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2726,7 +2746,8 @@ ConformanceImplementation _$ConformanceImplementationFromJson(
 
 /// @nodoc
 mixin _$ConformanceImplementation {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -2747,7 +2768,7 @@ abstract class $ConformanceImplementationCopyWith<$Res> {
       _$ConformanceImplementationCopyWithImpl<$Res, ConformanceImplementation>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String description,
@@ -2768,16 +2789,16 @@ class _$ConformanceImplementationCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? description = null,
     Object? url = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -2809,7 +2830,7 @@ abstract class _$$_ConformanceImplementationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String description,
@@ -2829,16 +2850,16 @@ class __$$_ConformanceImplementationCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? description = null,
     Object? url = freezed,
   }) {
     return _then(_$_ConformanceImplementation(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -2864,7 +2885,7 @@ class __$$_ConformanceImplementationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceImplementation extends _ConformanceImplementation {
   _$_ConformanceImplementation(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.description,
@@ -2877,7 +2898,8 @@ class _$_ConformanceImplementation extends _ConformanceImplementation {
       _$$_ConformanceImplementationFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -2907,7 +2929,7 @@ class _$_ConformanceImplementation extends _ConformanceImplementation {
 
   @override
   String toString() {
-    return 'ConformanceImplementation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, url: $url)';
+    return 'ConformanceImplementation(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, description: $description, url: $url)';
   }
 
   @override
@@ -2915,7 +2937,7 @@ class _$_ConformanceImplementation extends _ConformanceImplementation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceImplementation &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -2929,7 +2951,7 @@ class _$_ConformanceImplementation extends _ConformanceImplementation {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       description,
@@ -2952,7 +2974,7 @@ class _$_ConformanceImplementation extends _ConformanceImplementation {
 
 abstract class _ConformanceImplementation extends ConformanceImplementation {
   factory _ConformanceImplementation(
-      {final FhirId? id,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final String description,
@@ -2963,7 +2985,8 @@ abstract class _ConformanceImplementation extends ConformanceImplementation {
       _$_ConformanceImplementation.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -2985,7 +3008,8 @@ ConformanceRest _$ConformanceRestFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ConformanceRest {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3024,7 +3048,8 @@ abstract class $ConformanceRestCopyWith<$Res> {
       _$ConformanceRestCopyWithImpl<$Res, ConformanceRest>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -3061,7 +3086,7 @@ class _$ConformanceRestCopyWithImpl<$Res, $Val extends ConformanceRest>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -3077,9 +3102,9 @@ class _$ConformanceRestCopyWithImpl<$Res, $Val extends ConformanceRest>
     Object? compartment = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -3170,7 +3195,8 @@ abstract class _$$_ConformanceRestCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -3207,7 +3233,7 @@ class __$$_ConformanceRestCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -3223,9 +3249,9 @@ class __$$_ConformanceRestCopyWithImpl<$Res>
     Object? compartment = freezed,
   }) {
     return _then(_$_ConformanceRest(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -3287,7 +3313,8 @@ class __$$_ConformanceRestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceRest extends _ConformanceRest {
   _$_ConformanceRest(
-      {this.id,
+      {@JsonKey(name: 'id')
+          this.fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3320,7 +3347,8 @@ class _$_ConformanceRest extends _ConformanceRest {
       _$$_ConformanceRestFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3417,7 +3445,7 @@ class _$_ConformanceRest extends _ConformanceRest {
 
   @override
   String toString() {
-    return 'ConformanceRest(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, mode: $mode, modeElement: $modeElement, documentation: $documentation, security: $security, resource: $resource, interaction: $interaction, transactionMode: $transactionMode, searchParam: $searchParam, operation: $operation, compartment: $compartment)';
+    return 'ConformanceRest(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, mode: $mode, modeElement: $modeElement, documentation: $documentation, security: $security, resource: $resource, interaction: $interaction, transactionMode: $transactionMode, searchParam: $searchParam, operation: $operation, compartment: $compartment)';
   }
 
   @override
@@ -3425,7 +3453,7 @@ class _$_ConformanceRest extends _ConformanceRest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceRest &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -3456,7 +3484,7 @@ class _$_ConformanceRest extends _ConformanceRest {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(_fhirComments),
@@ -3487,7 +3515,8 @@ class _$_ConformanceRest extends _ConformanceRest {
 
 abstract class _ConformanceRest extends ConformanceRest {
   factory _ConformanceRest(
-      {final FhirId? id,
+      {@JsonKey(name: 'id')
+          final FhirId? fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3512,7 +3541,8 @@ abstract class _ConformanceRest extends ConformanceRest {
       _$_ConformanceRest.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3556,7 +3586,8 @@ ConformanceMessaging _$ConformanceMessagingFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ConformanceMessaging {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3583,7 +3614,7 @@ abstract class $ConformanceMessagingCopyWith<$Res> {
       _$ConformanceMessagingCopyWithImpl<$Res, ConformanceMessaging>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -3607,7 +3638,7 @@ class _$ConformanceMessagingCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -3617,9 +3648,9 @@ class _$ConformanceMessagingCopyWithImpl<$Res,
     Object? event = null,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -3662,7 +3693,7 @@ abstract class _$$_ConformanceMessagingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -3683,7 +3714,7 @@ class __$$_ConformanceMessagingCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -3693,9 +3724,9 @@ class __$$_ConformanceMessagingCopyWithImpl<$Res>
     Object? event = null,
   }) {
     return _then(_$_ConformanceMessaging(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -3733,7 +3764,7 @@ class __$$_ConformanceMessagingCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceMessaging extends _ConformanceMessaging {
   _$_ConformanceMessaging(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -3752,7 +3783,8 @@ class _$_ConformanceMessaging extends _ConformanceMessaging {
       _$$_ConformanceMessagingFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -3810,7 +3842,7 @@ class _$_ConformanceMessaging extends _ConformanceMessaging {
 
   @override
   String toString() {
-    return 'ConformanceMessaging(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, endpoint: $endpoint, reliableCache: $reliableCache, documentation: $documentation, event: $event)';
+    return 'ConformanceMessaging(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, endpoint: $endpoint, reliableCache: $reliableCache, documentation: $documentation, event: $event)';
   }
 
   @override
@@ -3818,7 +3850,7 @@ class _$_ConformanceMessaging extends _ConformanceMessaging {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceMessaging &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -3837,7 +3869,7 @@ class _$_ConformanceMessaging extends _ConformanceMessaging {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(_fhirComments),
@@ -3863,7 +3895,7 @@ class _$_ConformanceMessaging extends _ConformanceMessaging {
 
 abstract class _ConformanceMessaging extends ConformanceMessaging {
   factory _ConformanceMessaging(
-          {final FhirId? id,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -3878,7 +3910,8 @@ abstract class _ConformanceMessaging extends ConformanceMessaging {
       _$_ConformanceMessaging.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -3907,7 +3940,8 @@ ConformanceDocument _$ConformanceDocumentFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ConformanceDocument {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -3932,7 +3966,7 @@ abstract class $ConformanceDocumentCopyWith<$Res> {
       _$ConformanceDocumentCopyWithImpl<$Res, ConformanceDocument>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -3956,7 +3990,7 @@ class _$ConformanceDocumentCopyWithImpl<$Res, $Val extends ConformanceDocument>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -3965,9 +3999,9 @@ class _$ConformanceDocumentCopyWithImpl<$Res, $Val extends ConformanceDocument>
     Object? profile = null,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -4014,7 +4048,7 @@ abstract class _$$_ConformanceDocumentCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -4037,7 +4071,7 @@ class __$$_ConformanceDocumentCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -4046,9 +4080,9 @@ class __$$_ConformanceDocumentCopyWithImpl<$Res>
     Object? profile = null,
   }) {
     return _then(_$_ConformanceDocument(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -4082,7 +4116,7 @@ class __$$_ConformanceDocumentCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceDocument extends _ConformanceDocument {
   _$_ConformanceDocument(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -4098,7 +4132,8 @@ class _$_ConformanceDocument extends _ConformanceDocument {
       _$$_ConformanceDocumentFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -4142,7 +4177,7 @@ class _$_ConformanceDocument extends _ConformanceDocument {
 
   @override
   String toString() {
-    return 'ConformanceDocument(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, mode: $mode, documentation: $documentation, profile: $profile)';
+    return 'ConformanceDocument(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, mode: $mode, documentation: $documentation, profile: $profile)';
   }
 
   @override
@@ -4150,7 +4185,7 @@ class _$_ConformanceDocument extends _ConformanceDocument {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceDocument &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -4167,7 +4202,7 @@ class _$_ConformanceDocument extends _ConformanceDocument {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(_fhirComments),
@@ -4192,7 +4227,8 @@ class _$_ConformanceDocument extends _ConformanceDocument {
 
 abstract class _ConformanceDocument extends ConformanceDocument {
   factory _ConformanceDocument(
-      {final FhirId? id,
+      {@JsonKey(name: 'id')
+          final FhirId? fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4208,7 +4244,8 @@ abstract class _ConformanceDocument extends ConformanceDocument {
       _$_ConformanceDocument.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -4237,7 +4274,8 @@ ConformanceRestSecurity _$ConformanceRestSecurityFromJson(
 
 /// @nodoc
 mixin _$ConformanceRestSecurity {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -4263,7 +4301,7 @@ abstract class $ConformanceRestSecurityCopyWith<$Res> {
       _$ConformanceRestSecurityCopyWithImpl<$Res, ConformanceRestSecurity>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirBoolean? cors,
@@ -4289,7 +4327,7 @@ class _$ConformanceRestSecurityCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? cors = freezed,
@@ -4299,9 +4337,9 @@ class _$ConformanceRestSecurityCopyWithImpl<$Res,
     Object? certificate = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -4356,7 +4394,7 @@ abstract class _$$_ConformanceRestSecurityCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirBoolean? cors,
@@ -4381,7 +4419,7 @@ class __$$_ConformanceRestSecurityCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? cors = freezed,
@@ -4391,9 +4429,9 @@ class __$$_ConformanceRestSecurityCopyWithImpl<$Res>
     Object? certificate = freezed,
   }) {
     return _then(_$_ConformanceRestSecurity(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -4431,7 +4469,7 @@ class __$$_ConformanceRestSecurityCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
   _$_ConformanceRestSecurity(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.cors,
@@ -4449,7 +4487,8 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
       _$$_ConformanceRestSecurityFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -4501,7 +4540,7 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
 
   @override
   String toString() {
-    return 'ConformanceRestSecurity(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, cors: $cors, corsElement: $corsElement, service: $service, description: $description, certificate: $certificate)';
+    return 'ConformanceRestSecurity(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, cors: $cors, corsElement: $corsElement, service: $service, description: $description, certificate: $certificate)';
   }
 
   @override
@@ -4509,7 +4548,7 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceRestSecurity &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -4528,7 +4567,7 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       cors,
@@ -4555,7 +4594,7 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
 
 abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
   factory _ConformanceRestSecurity(
-          {final FhirId? id,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final FhirBoolean? cors,
@@ -4570,7 +4609,8 @@ abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
       _$_ConformanceRestSecurity.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -4600,7 +4640,8 @@ ConformanceRestResource _$ConformanceRestResourceFromJson(
 
 /// @nodoc
 mixin _$ConformanceRestResource {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -4647,7 +4688,8 @@ abstract class $ConformanceRestResourceCopyWith<$Res> {
       _$ConformanceRestResourceCopyWithImpl<$Res, ConformanceRestResource>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -4698,7 +4740,7 @@ class _$ConformanceRestResourceCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -4720,9 +4762,9 @@ class _$ConformanceRestResourceCopyWithImpl<$Res,
     Object? searchParam = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -4873,7 +4915,8 @@ abstract class _$$_ConformanceRestResourceCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -4927,7 +4970,7 @@ class __$$_ConformanceRestResourceCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -4949,9 +4992,9 @@ class __$$_ConformanceRestResourceCopyWithImpl<$Res>
     Object? searchParam = freezed,
   }) {
     return _then(_$_ConformanceRestResource(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -5037,7 +5080,8 @@ class __$$_ConformanceRestResourceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceRestResource extends _ConformanceRestResource {
   _$_ConformanceRestResource(
-      {this.id,
+      {@JsonKey(name: 'id')
+          this.fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5079,7 +5123,8 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
       _$$_ConformanceRestResourceFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5185,7 +5230,7 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
 
   @override
   String toString() {
-    return 'ConformanceRestResource(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, type: $type, typeElement: $typeElement, profile: $profile, interaction: $interaction, versioning: $versioning, readHistory: $readHistory, updateCreate: $updateCreate, updateCreateElement: $updateCreateElement, conditionalCreate: $conditionalCreate, conditionalCreateElement: $conditionalCreateElement, conditionalUpdate: $conditionalUpdate, conditionalDelete: $conditionalDelete, conditionalDeleteElement: $conditionalDeleteElement, searchInclude: $searchInclude, searchRevInclude: $searchRevInclude, searchParam: $searchParam)';
+    return 'ConformanceRestResource(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, type: $type, typeElement: $typeElement, profile: $profile, interaction: $interaction, versioning: $versioning, readHistory: $readHistory, updateCreate: $updateCreate, updateCreateElement: $updateCreateElement, conditionalCreate: $conditionalCreate, conditionalCreateElement: $conditionalCreateElement, conditionalUpdate: $conditionalUpdate, conditionalDelete: $conditionalDelete, conditionalDeleteElement: $conditionalDeleteElement, searchInclude: $searchInclude, searchRevInclude: $searchRevInclude, searchParam: $searchParam)';
   }
 
   @override
@@ -5193,7 +5238,7 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceRestResource &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -5238,7 +5283,7 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        id,
+        fhirId,
         const DeepCollectionEquality().hash(_extension_),
         const DeepCollectionEquality().hash(_modifierExtension),
         const DeepCollectionEquality().hash(_fhirComments),
@@ -5278,7 +5323,8 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
 
 abstract class _ConformanceRestResource extends ConformanceRestResource {
   factory _ConformanceRestResource(
-          {final FhirId? id,
+          {@JsonKey(name: 'id')
+              final FhirId? fhirId,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -5314,7 +5360,8 @@ abstract class _ConformanceRestResource extends ConformanceRestResource {
       _$_ConformanceRestResource.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5375,7 +5422,8 @@ ConformanceResourceInteraction _$ConformanceResourceInteractionFromJson(
 
 /// @nodoc
 mixin _$ConformanceResourceInteraction {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -5399,7 +5447,8 @@ abstract class $ConformanceResourceInteractionCopyWith<$Res> {
           ConformanceResourceInteraction>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -5422,16 +5471,16 @@ class _$ConformanceResourceInteractionCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? code = null,
     Object? documentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -5463,7 +5512,8 @@ abstract class _$$_ConformanceResourceInteractionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -5485,16 +5535,16 @@ class __$$_ConformanceResourceInteractionCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? code = null,
     Object? documentation = freezed,
   }) {
     return _then(_$_ConformanceResourceInteraction(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -5521,7 +5571,8 @@ class __$$_ConformanceResourceInteractionCopyWithImpl<$Res>
 class _$_ConformanceResourceInteraction
     extends _ConformanceResourceInteraction {
   _$_ConformanceResourceInteraction(
-      {this.id,
+      {@JsonKey(name: 'id')
+          this.fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5537,7 +5588,8 @@ class _$_ConformanceResourceInteraction
       _$$_ConformanceResourceInteractionFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5568,7 +5620,7 @@ class _$_ConformanceResourceInteraction
 
   @override
   String toString() {
-    return 'ConformanceResourceInteraction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, documentation: $documentation)';
+    return 'ConformanceResourceInteraction(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, documentation: $documentation)';
   }
 
   @override
@@ -5576,7 +5628,7 @@ class _$_ConformanceResourceInteraction
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceResourceInteraction &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -5590,7 +5642,7 @@ class _$_ConformanceResourceInteraction
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       code,
@@ -5614,7 +5666,8 @@ class _$_ConformanceResourceInteraction
 abstract class _ConformanceResourceInteraction
     extends ConformanceResourceInteraction {
   factory _ConformanceResourceInteraction(
-      {final FhirId? id,
+      {@JsonKey(name: 'id')
+          final FhirId? fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5627,7 +5680,8 @@ abstract class _ConformanceResourceInteraction
       _$_ConformanceResourceInteraction.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5651,7 +5705,8 @@ ConformanceRestOperation _$ConformanceRestOperationFromJson(
 
 /// @nodoc
 mixin _$ConformanceRestOperation {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -5674,7 +5729,7 @@ abstract class $ConformanceRestOperationCopyWith<$Res> {
       _$ConformanceRestOperationCopyWithImpl<$Res, ConformanceRestOperation>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -5698,7 +5753,7 @@ class _$ConformanceRestOperationCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -5706,9 +5761,9 @@ class _$ConformanceRestOperationCopyWithImpl<$Res,
     Object? definition = null,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -5752,7 +5807,7 @@ abstract class _$$_ConformanceRestOperationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -5775,7 +5830,7 @@ class __$$_ConformanceRestOperationCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -5783,9 +5838,9 @@ class __$$_ConformanceRestOperationCopyWithImpl<$Res>
     Object? definition = null,
   }) {
     return _then(_$_ConformanceRestOperation(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -5815,7 +5870,7 @@ class __$$_ConformanceRestOperationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceRestOperation extends _ConformanceRestOperation {
   _$_ConformanceRestOperation(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -5830,7 +5885,8 @@ class _$_ConformanceRestOperation extends _ConformanceRestOperation {
       _$$_ConformanceRestOperationFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -5871,7 +5927,7 @@ class _$_ConformanceRestOperation extends _ConformanceRestOperation {
 
   @override
   String toString() {
-    return 'ConformanceRestOperation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, name: $name, definition: $definition)';
+    return 'ConformanceRestOperation(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, name: $name, definition: $definition)';
   }
 
   @override
@@ -5879,7 +5935,7 @@ class _$_ConformanceRestOperation extends _ConformanceRestOperation {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceRestOperation &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -5895,7 +5951,7 @@ class _$_ConformanceRestOperation extends _ConformanceRestOperation {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(_fhirComments),
@@ -5919,7 +5975,7 @@ class _$_ConformanceRestOperation extends _ConformanceRestOperation {
 
 abstract class _ConformanceRestOperation extends ConformanceRestOperation {
   factory _ConformanceRestOperation(
-      {final FhirId? id,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -5931,7 +5987,8 @@ abstract class _ConformanceRestOperation extends ConformanceRestOperation {
       _$_ConformanceRestOperation.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -5957,7 +6014,8 @@ ConformanceMessagingEndpoint _$ConformanceMessagingEndpointFromJson(
 
 /// @nodoc
 mixin _$ConformanceMessagingEndpoint {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -5982,7 +6040,7 @@ abstract class $ConformanceMessagingEndpointCopyWith<$Res> {
           ConformanceMessagingEndpoint>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding protocol,
@@ -6007,7 +6065,7 @@ class _$ConformanceMessagingEndpointCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? protocol = null,
@@ -6015,9 +6073,9 @@ class _$ConformanceMessagingEndpointCopyWithImpl<$Res,
     Object? addressElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -6073,7 +6131,7 @@ abstract class _$$_ConformanceMessagingEndpointCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding protocol,
@@ -6099,7 +6157,7 @@ class __$$_ConformanceMessagingEndpointCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? protocol = null,
@@ -6107,9 +6165,9 @@ class __$$_ConformanceMessagingEndpointCopyWithImpl<$Res>
     Object? addressElement = freezed,
   }) {
     return _then(_$_ConformanceMessagingEndpoint(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -6139,7 +6197,7 @@ class __$$_ConformanceMessagingEndpointCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
   _$_ConformanceMessagingEndpoint(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.protocol,
@@ -6153,7 +6211,8 @@ class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
       _$$_ConformanceMessagingEndpointFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6186,7 +6245,7 @@ class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
 
   @override
   String toString() {
-    return 'ConformanceMessagingEndpoint(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, protocol: $protocol, address: $address, addressElement: $addressElement)';
+    return 'ConformanceMessagingEndpoint(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, protocol: $protocol, address: $address, addressElement: $addressElement)';
   }
 
   @override
@@ -6194,7 +6253,7 @@ class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceMessagingEndpoint &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -6210,7 +6269,7 @@ class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       protocol,
@@ -6235,7 +6294,7 @@ class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
 abstract class _ConformanceMessagingEndpoint
     extends ConformanceMessagingEndpoint {
   factory _ConformanceMessagingEndpoint(
-          {final FhirId? id,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final Coding protocol,
@@ -6248,7 +6307,8 @@ abstract class _ConformanceMessagingEndpoint
       _$_ConformanceMessagingEndpoint.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -6274,7 +6334,8 @@ ConformanceMessagingEvent _$ConformanceMessagingEventFromJson(
 
 /// @nodoc
 mixin _$ConformanceMessagingEvent {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -6304,7 +6365,7 @@ abstract class $ConformanceMessagingEventCopyWith<$Res> {
       _$ConformanceMessagingEventCopyWithImpl<$Res, ConformanceMessagingEvent>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding code,
@@ -6336,7 +6397,7 @@ class _$ConformanceMessagingEventCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? code = null,
@@ -6349,9 +6410,9 @@ class _$ConformanceMessagingEventCopyWithImpl<$Res,
     Object? documentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -6443,7 +6504,7 @@ abstract class _$$_ConformanceMessagingEventCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding code,
@@ -6478,7 +6539,7 @@ class __$$_ConformanceMessagingEventCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? code = null,
@@ -6491,9 +6552,9 @@ class __$$_ConformanceMessagingEventCopyWithImpl<$Res>
     Object? documentation = freezed,
   }) {
     return _then(_$_ConformanceMessagingEvent(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -6543,7 +6604,7 @@ class __$$_ConformanceMessagingEventCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
   _$_ConformanceMessagingEvent(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.code,
@@ -6562,7 +6623,8 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
       _$$_ConformanceMessagingEventFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6607,7 +6669,7 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
 
   @override
   String toString() {
-    return 'ConformanceMessagingEvent(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, category: $category, mode: $mode, modeElement: $modeElement, focus: $focus, request: $request, response: $response, documentation: $documentation)';
+    return 'ConformanceMessagingEvent(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, category: $category, mode: $mode, modeElement: $modeElement, focus: $focus, request: $request, response: $response, documentation: $documentation)';
   }
 
   @override
@@ -6615,7 +6677,7 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceMessagingEvent &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -6638,7 +6700,7 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       code,
@@ -6667,7 +6729,8 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
 
 abstract class _ConformanceMessagingEvent extends ConformanceMessagingEvent {
   factory _ConformanceMessagingEvent(
-      {final FhirId? id,
+      {@JsonKey(name: 'id')
+          final FhirId? fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6688,7 +6751,8 @@ abstract class _ConformanceMessagingEvent extends ConformanceMessagingEvent {
       _$_ConformanceMessagingEvent.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -6726,7 +6790,8 @@ ConformanceSecurityCertificate _$ConformanceSecurityCertificateFromJson(
 
 /// @nodoc
 mixin _$ConformanceSecurityCertificate {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -6751,7 +6816,7 @@ abstract class $ConformanceSecurityCertificateCopyWith<$Res> {
           ConformanceSecurityCertificate>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirCode? type,
@@ -6775,7 +6840,7 @@ class _$ConformanceSecurityCertificateCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? type = freezed,
@@ -6783,9 +6848,9 @@ class _$ConformanceSecurityCertificateCopyWithImpl<$Res,
     Object? blobElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -6833,7 +6898,7 @@ abstract class _$$_ConformanceSecurityCertificateCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirCode? type,
@@ -6857,7 +6922,7 @@ class __$$_ConformanceSecurityCertificateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? type = freezed,
@@ -6865,9 +6930,9 @@ class __$$_ConformanceSecurityCertificateCopyWithImpl<$Res>
     Object? blobElement = freezed,
   }) {
     return _then(_$_ConformanceSecurityCertificate(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -6898,7 +6963,7 @@ class __$$_ConformanceSecurityCertificateCopyWithImpl<$Res>
 class _$_ConformanceSecurityCertificate
     extends _ConformanceSecurityCertificate {
   _$_ConformanceSecurityCertificate(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.type,
@@ -6913,7 +6978,8 @@ class _$_ConformanceSecurityCertificate
       _$$_ConformanceSecurityCertificateFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -6946,7 +7012,7 @@ class _$_ConformanceSecurityCertificate
 
   @override
   String toString() {
-    return 'ConformanceSecurityCertificate(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, blob: $blob, blobElement: $blobElement)';
+    return 'ConformanceSecurityCertificate(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, blob: $blob, blobElement: $blobElement)';
   }
 
   @override
@@ -6954,7 +7020,7 @@ class _$_ConformanceSecurityCertificate
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceSecurityCertificate &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -6969,7 +7035,7 @@ class _$_ConformanceSecurityCertificate
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       type,
@@ -6994,7 +7060,7 @@ class _$_ConformanceSecurityCertificate
 abstract class _ConformanceSecurityCertificate
     extends ConformanceSecurityCertificate {
   factory _ConformanceSecurityCertificate(
-          {final FhirId? id,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final FhirCode? type,
@@ -7007,7 +7073,8 @@ abstract class _ConformanceSecurityCertificate
       _$_ConformanceSecurityCertificate.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -7033,7 +7100,8 @@ ConformanceRestInteraction _$ConformanceRestInteractionFromJson(
 
 /// @nodoc
 mixin _$ConformanceRestInteraction {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -7056,7 +7124,8 @@ abstract class $ConformanceRestInteractionCopyWith<$Res> {
           ConformanceRestInteraction>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -7079,16 +7148,16 @@ class _$ConformanceRestInteractionCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? code = null,
     Object? documentation = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -7120,7 +7189,8 @@ abstract class _$$_ConformanceRestInteractionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -7142,16 +7212,16 @@ class __$$_ConformanceRestInteractionCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? code = null,
     Object? documentation = freezed,
   }) {
     return _then(_$_ConformanceRestInteraction(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -7177,7 +7247,8 @@ class __$$_ConformanceRestInteractionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
   _$_ConformanceRestInteraction(
-      {this.id,
+      {@JsonKey(name: 'id')
+          this.fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7192,7 +7263,8 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
       _$$_ConformanceRestInteractionFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -7223,7 +7295,7 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
 
   @override
   String toString() {
-    return 'ConformanceRestInteraction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, documentation: $documentation)';
+    return 'ConformanceRestInteraction(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, documentation: $documentation)';
   }
 
   @override
@@ -7231,7 +7303,7 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceRestInteraction &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -7245,7 +7317,7 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       code,
@@ -7268,7 +7340,8 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
 
 abstract class _ConformanceRestInteraction extends ConformanceRestInteraction {
   factory _ConformanceRestInteraction(
-      {final FhirId? id,
+      {@JsonKey(name: 'id')
+          final FhirId? fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7281,7 +7354,8 @@ abstract class _ConformanceRestInteraction extends ConformanceRestInteraction {
       _$_ConformanceRestInteraction.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -7305,7 +7379,8 @@ ConformanceResourceSearchParam _$ConformanceResourceSearchParamFromJson(
 
 /// @nodoc
 mixin _$ConformanceResourceSearchParam {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -7336,7 +7411,7 @@ abstract class $ConformanceResourceSearchParamCopyWith<$Res> {
           ConformanceResourceSearchParam>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -7363,7 +7438,7 @@ class _$ConformanceResourceSearchParamCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -7376,9 +7451,9 @@ class _$ConformanceResourceSearchParamCopyWithImpl<$Res,
     Object? chain = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -7434,7 +7509,7 @@ abstract class _$$_ConformanceResourceSearchParamCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -7460,7 +7535,7 @@ class __$$_ConformanceResourceSearchParamCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -7473,9 +7548,9 @@ class __$$_ConformanceResourceSearchParamCopyWithImpl<$Res>
     Object? chain = freezed,
   }) {
     return _then(_$_ConformanceResourceSearchParam(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -7526,7 +7601,7 @@ class __$$_ConformanceResourceSearchParamCopyWithImpl<$Res>
 class _$_ConformanceResourceSearchParam
     extends _ConformanceResourceSearchParam {
   _$_ConformanceResourceSearchParam(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -7550,7 +7625,8 @@ class _$_ConformanceResourceSearchParam
       _$$_ConformanceResourceSearchParamFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -7625,7 +7701,7 @@ class _$_ConformanceResourceSearchParam
 
   @override
   String toString() {
-    return 'ConformanceResourceSearchParam(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, name: $name, definition: $definition, type: $type, documentation: $documentation, target: $target, modifier: $modifier, chain: $chain)';
+    return 'ConformanceResourceSearchParam(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, name: $name, definition: $definition, type: $type, documentation: $documentation, target: $target, modifier: $modifier, chain: $chain)';
   }
 
   @override
@@ -7633,7 +7709,7 @@ class _$_ConformanceResourceSearchParam
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ConformanceResourceSearchParam &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -7655,7 +7731,7 @@ class _$_ConformanceResourceSearchParam
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(_fhirComments),
@@ -7685,7 +7761,8 @@ class _$_ConformanceResourceSearchParam
 abstract class _ConformanceResourceSearchParam
     extends ConformanceResourceSearchParam {
   factory _ConformanceResourceSearchParam(
-      {final FhirId? id,
+      {@JsonKey(name: 'id')
+          final FhirId? fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7705,7 +7782,8 @@ abstract class _ConformanceResourceSearchParam
       _$_ConformanceResourceSearchParam.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -7743,7 +7821,8 @@ OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$OperationDefinition {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
@@ -7792,7 +7871,8 @@ abstract class $OperationDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
           Dstu2ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
@@ -7842,7 +7922,7 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? language = freezed,
@@ -7875,9 +7955,9 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -8034,7 +8114,8 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
           Dstu2ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
@@ -8085,7 +8166,7 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? language = freezed,
@@ -8118,9 +8199,9 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -8236,7 +8317,8 @@ class _$_OperationDefinition extends _OperationDefinition {
   _$_OperationDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
           this.resourceType = Dstu2ResourceType.OperationDefinition,
-      this.id,
+      @JsonKey(name: 'id')
+          this.fhirId,
       this.meta,
       this.implicitRules,
       this.language,
@@ -8281,7 +8363,8 @@ class _$_OperationDefinition extends _OperationDefinition {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
   final Dstu2ResourceType resourceType;
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   @override
   final FhirMeta? meta;
   @override
@@ -8388,7 +8471,7 @@ class _$_OperationDefinition extends _OperationDefinition {
 
   @override
   String toString() {
-    return 'OperationDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, kind: $kind, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, idempotent: $idempotent, code: $code, notes: $notes, base: $base, system: $system, type: $type, instance: $instance, parameter: $parameter)';
+    return 'OperationDefinition(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, kind: $kind, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, idempotent: $idempotent, code: $code, notes: $notes, base: $base, system: $system, type: $type, instance: $instance, parameter: $parameter)';
   }
 
   @override
@@ -8398,7 +8481,7 @@ class _$_OperationDefinition extends _OperationDefinition {
             other is _$_OperationDefinition &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
@@ -8444,7 +8527,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
+        fhirId,
         meta,
         implicitRules,
         language,
@@ -8492,7 +8575,8 @@ abstract class _OperationDefinition extends OperationDefinition {
   factory _OperationDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
           final Dstu2ResourceType resourceType,
-      final FhirId? id,
+      @JsonKey(name: 'id')
+          final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
       final FhirCode? language,
@@ -8531,7 +8615,8 @@ abstract class _OperationDefinition extends OperationDefinition {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
   Dstu2ResourceType get resourceType;
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   FhirMeta? get meta;
   @override
@@ -8600,7 +8685,8 @@ OperationDefinitionContact _$OperationDefinitionContactFromJson(
 
 /// @nodoc
 mixin _$OperationDefinitionContact {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -8622,7 +8708,7 @@ abstract class $OperationDefinitionContactCopyWith<$Res> {
           OperationDefinitionContact>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -8643,16 +8729,16 @@ class _$OperationDefinitionContactCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -8684,7 +8770,7 @@ abstract class _$$_OperationDefinitionContactCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -8704,16 +8790,16 @@ class __$$_OperationDefinitionContactCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
     return _then(_$_OperationDefinitionContact(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -8739,7 +8825,7 @@ class __$$_OperationDefinitionContactCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_OperationDefinitionContact extends _OperationDefinitionContact {
   _$_OperationDefinitionContact(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.name,
@@ -8753,7 +8839,8 @@ class _$_OperationDefinitionContact extends _OperationDefinitionContact {
       _$$_OperationDefinitionContactFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -8790,7 +8877,7 @@ class _$_OperationDefinitionContact extends _OperationDefinitionContact {
 
   @override
   String toString() {
-    return 'OperationDefinitionContact(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, telecom: $telecom)';
+    return 'OperationDefinitionContact(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, telecom: $telecom)';
   }
 
   @override
@@ -8798,7 +8885,7 @@ class _$_OperationDefinitionContact extends _OperationDefinitionContact {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_OperationDefinitionContact &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -8811,7 +8898,7 @@ class _$_OperationDefinitionContact extends _OperationDefinitionContact {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       name,
@@ -8834,7 +8921,7 @@ class _$_OperationDefinitionContact extends _OperationDefinitionContact {
 
 abstract class _OperationDefinitionContact extends OperationDefinitionContact {
   factory _OperationDefinitionContact(
-      {final FhirId? id,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
@@ -8845,7 +8932,8 @@ abstract class _OperationDefinitionContact extends OperationDefinitionContact {
       _$_OperationDefinitionContact.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -8868,7 +8956,8 @@ OperationDefinitionParameter _$OperationDefinitionParameterFromJson(
 
 /// @nodoc
 mixin _$OperationDefinitionParameter {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -8904,7 +8993,7 @@ abstract class $OperationDefinitionParameterCopyWith<$Res> {
           OperationDefinitionParameter>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -8936,7 +9025,7 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -8951,9 +9040,9 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res,
     Object? part_ = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -9042,7 +9131,7 @@ abstract class _$$_OperationDefinitionParameterCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -9075,7 +9164,7 @@ class __$$_OperationDefinitionParameterCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? fhirComments = freezed,
@@ -9090,9 +9179,9 @@ class __$$_OperationDefinitionParameterCopyWithImpl<$Res>
     Object? part_ = freezed,
   }) {
     return _then(_$_OperationDefinitionParameter(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -9150,7 +9239,7 @@ class __$$_OperationDefinitionParameterCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   _$_OperationDefinitionParameter(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
@@ -9173,7 +9262,8 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
       _$$_OperationDefinitionParameterFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -9237,7 +9327,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
 
   @override
   String toString() {
-    return 'OperationDefinitionParameter(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, name: $name, use: $use, min: $min, max: $max, documentation: $documentation, type: $type, profile: $profile, binding: $binding, part_: $part_)';
+    return 'OperationDefinitionParameter(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, fhirComments: $fhirComments, name: $name, use: $use, min: $min, max: $max, documentation: $documentation, type: $type, profile: $profile, binding: $binding, part_: $part_)';
   }
 
   @override
@@ -9245,7 +9335,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_OperationDefinitionParameter &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -9268,7 +9358,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(_fhirComments),
@@ -9300,7 +9390,8 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
 abstract class _OperationDefinitionParameter
     extends OperationDefinitionParameter {
   factory _OperationDefinitionParameter(
-          {final FhirId? id,
+          {@JsonKey(name: 'id')
+              final FhirId? fhirId,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -9324,7 +9415,8 @@ abstract class _OperationDefinitionParameter
       _$_OperationDefinitionParameter.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -9366,7 +9458,8 @@ OperationDefinitionParameterBinding
 
 /// @nodoc
 mixin _$OperationDefinitionParameterBinding {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -9396,7 +9489,8 @@ abstract class $OperationDefinitionParameterBindingCopyWith<$Res> {
           OperationDefinitionParameterBinding>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -9425,7 +9519,7 @@ class _$OperationDefinitionParameterBindingCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? strength = null,
@@ -9433,9 +9527,9 @@ class _$OperationDefinitionParameterBindingCopyWithImpl<$Res,
     Object? valueSetReference = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -9483,7 +9577,8 @@ abstract class _$$_OperationDefinitionParameterBindingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
@@ -9512,7 +9607,7 @@ class __$$_OperationDefinitionParameterBindingCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? strength = null,
@@ -9520,9 +9615,9 @@ class __$$_OperationDefinitionParameterBindingCopyWithImpl<$Res>
     Object? valueSetReference = freezed,
   }) {
     return _then(_$_OperationDefinitionParameterBinding(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -9553,7 +9648,8 @@ class __$$_OperationDefinitionParameterBindingCopyWithImpl<$Res>
 class _$_OperationDefinitionParameterBinding
     extends _OperationDefinitionParameterBinding {
   _$_OperationDefinitionParameterBinding(
-      {this.id,
+      {@JsonKey(name: 'id')
+          this.fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9573,7 +9669,8 @@ class _$_OperationDefinitionParameterBinding
       _$$_OperationDefinitionParameterBindingFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -9609,7 +9706,7 @@ class _$_OperationDefinitionParameterBinding
 
   @override
   String toString() {
-    return 'OperationDefinitionParameterBinding(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, strength: $strength, valueSetUri: $valueSetUri, valueSetReference: $valueSetReference)';
+    return 'OperationDefinitionParameterBinding(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, strength: $strength, valueSetUri: $valueSetUri, valueSetReference: $valueSetReference)';
   }
 
   @override
@@ -9617,7 +9714,7 @@ class _$_OperationDefinitionParameterBinding
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_OperationDefinitionParameterBinding &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -9634,7 +9731,7 @@ class _$_OperationDefinitionParameterBinding
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       strength,
@@ -9660,7 +9757,8 @@ class _$_OperationDefinitionParameterBinding
 abstract class _OperationDefinitionParameterBinding
     extends OperationDefinitionParameterBinding {
   factory _OperationDefinitionParameterBinding(
-          {final FhirId? id,
+          {@JsonKey(name: 'id')
+              final FhirId? fhirId,
           @JsonKey(name: 'extension')
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -9679,7 +9777,8 @@ abstract class _OperationDefinitionParameterBinding
       _$_OperationDefinitionParameterBinding.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -9710,7 +9809,8 @@ SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) {
 mixin _$SearchParameter {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
@@ -9758,7 +9858,8 @@ abstract class $SearchParameterCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
           Dstu2ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
@@ -9807,7 +9908,7 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? language = freezed,
@@ -9837,9 +9938,9 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -9984,7 +10085,8 @@ abstract class _$$_SearchParameterCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
           Dstu2ResourceType resourceType,
-      FhirId? id,
+      @JsonKey(name: 'id')
+          FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
       FhirCode? language,
@@ -10034,7 +10136,7 @@ class __$$_SearchParameterCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? language = freezed,
@@ -10064,9 +10166,9 @@ class __$$_SearchParameterCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -10170,7 +10272,8 @@ class _$_SearchParameter extends _SearchParameter {
   _$_SearchParameter(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
           this.resourceType = Dstu2ResourceType.SearchParameter,
-      this.id,
+      @JsonKey(name: 'id')
+          this.fhirId,
       this.meta,
       this.implicitRules,
       this.language,
@@ -10213,7 +10316,8 @@ class _$_SearchParameter extends _SearchParameter {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
   final Dstu2ResourceType resourceType;
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   @override
   final FhirMeta? meta;
   @override
@@ -10308,7 +10412,7 @@ class _$_SearchParameter extends _SearchParameter {
 
   @override
   String toString() {
-    return 'SearchParameter(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, requirements: $requirements, requirementsElement: $requirementsElement, code: $code, base: $base, type: $type, description: $description, xpath: $xpath, xpathUsage: $xpathUsage, target: $target)';
+    return 'SearchParameter(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, requirements: $requirements, requirementsElement: $requirementsElement, code: $code, base: $base, type: $type, description: $description, xpath: $xpath, xpathUsage: $xpathUsage, target: $target)';
   }
 
   @override
@@ -10318,7 +10422,7 @@ class _$_SearchParameter extends _SearchParameter {
             other is _$_SearchParameter &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
@@ -10360,7 +10464,7 @@ class _$_SearchParameter extends _SearchParameter {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
+        fhirId,
         meta,
         implicitRules,
         language,
@@ -10404,7 +10508,8 @@ abstract class _SearchParameter extends SearchParameter {
   factory _SearchParameter(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
           final Dstu2ResourceType resourceType,
-      final FhirId? id,
+      @JsonKey(name: 'id')
+          final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
       final FhirCode? language,
@@ -10442,7 +10547,8 @@ abstract class _SearchParameter extends SearchParameter {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
   Dstu2ResourceType get resourceType;
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   FhirMeta? get meta;
   @override
@@ -10507,7 +10613,8 @@ SearchParameterContact _$SearchParameterContactFromJson(
 
 /// @nodoc
 mixin _$SearchParameterContact {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
@@ -10528,7 +10635,7 @@ abstract class $SearchParameterContactCopyWith<$Res> {
       _$SearchParameterContactCopyWithImpl<$Res, SearchParameterContact>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -10549,16 +10656,16 @@ class _$SearchParameterContactCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -10589,7 +10696,7 @@ abstract class _$$_SearchParameterContactCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -10608,16 +10715,16 @@ class __$$_SearchParameterContactCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = freezed,
     Object? telecom = freezed,
   }) {
     return _then(_$_SearchParameterContact(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -10643,7 +10750,7 @@ class __$$_SearchParameterContactCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SearchParameterContact extends _SearchParameterContact {
   _$_SearchParameterContact(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.name,
@@ -10657,7 +10764,8 @@ class _$_SearchParameterContact extends _SearchParameterContact {
       _$$_SearchParameterContactFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -10694,7 +10802,7 @@ class _$_SearchParameterContact extends _SearchParameterContact {
 
   @override
   String toString() {
-    return 'SearchParameterContact(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, telecom: $telecom)';
+    return 'SearchParameterContact(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, telecom: $telecom)';
   }
 
   @override
@@ -10702,7 +10810,7 @@ class _$_SearchParameterContact extends _SearchParameterContact {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_SearchParameterContact &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -10715,7 +10823,7 @@ class _$_SearchParameterContact extends _SearchParameterContact {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       name,
@@ -10738,7 +10846,7 @@ class _$_SearchParameterContact extends _SearchParameterContact {
 
 abstract class _SearchParameterContact extends SearchParameterContact {
   factory _SearchParameterContact(
-      {final FhirId? id,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
@@ -10749,7 +10857,8 @@ abstract class _SearchParameterContact extends SearchParameterContact {
       _$_SearchParameterContact.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;

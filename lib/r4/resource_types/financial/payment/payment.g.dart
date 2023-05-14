@@ -12,7 +12,7 @@ _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.PaymentNotice) ??
           R4ResourceType.PaymentNotice,
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -90,7 +90,7 @@ Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -274,7 +274,7 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.PaymentReconciliation) ??
           R4ResourceType.PaymentReconciliation,
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -372,7 +372,7 @@ Map<String, dynamic> _$$_PaymentReconciliationToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -413,7 +413,7 @@ Map<String, dynamic> _$$_PaymentReconciliationToJson(
 _$_PaymentReconciliationDetail _$$_PaymentReconciliationDetailFromJson(
         Map<String, dynamic> json) =>
     _$_PaymentReconciliationDetail(
-      id: json['id'] as String?,
+      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -461,7 +461,7 @@ Map<String, dynamic> _$$_PaymentReconciliationDetailToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -483,7 +483,7 @@ Map<String, dynamic> _$$_PaymentReconciliationDetailToJson(
 _$_PaymentReconciliationProcessNote
     _$$_PaymentReconciliationProcessNoteFromJson(Map<String, dynamic> json) =>
         _$_PaymentReconciliationProcessNote(
-          id: json['id'] as String?,
+          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -510,7 +510,7 @@ Map<String, dynamic> _$$_PaymentReconciliationProcessNoteToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',

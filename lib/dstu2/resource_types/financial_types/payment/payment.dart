@@ -21,7 +21,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     @Default(Dstu2ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentNotice)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -79,7 +79,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     @Default(Dstu2ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentReconciliation)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -142,7 +142,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
 class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   PaymentReconciliationDetail._();
   factory PaymentReconciliationDetail({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding type,
@@ -190,7 +190,7 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
 class PaymentReconciliationNote with _$PaymentReconciliationNote {
   PaymentReconciliationNote._();
   factory PaymentReconciliationNote({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Coding? type,

@@ -20,7 +20,8 @@ Element _$ElementFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Element {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -37,7 +38,7 @@ abstract class $ElementCopyWith<$Res> {
       _$ElementCopyWithImpl<$Res, Element>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments});
 }
@@ -55,14 +56,14 @@ class _$ElementCopyWithImpl<$Res, $Val extends Element>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -84,7 +85,7 @@ abstract class _$$_ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments});
 }
@@ -99,14 +100,14 @@ class __$$_ElementCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
   }) {
     return _then(_$_Element(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -124,7 +125,7 @@ class __$$_ElementCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Element extends _Element {
   _$_Element(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments})
       : _extension_ = extension_,
@@ -135,7 +136,8 @@ class _$_Element extends _Element {
       _$$_ElementFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -160,7 +162,7 @@ class _$_Element extends _Element {
 
   @override
   String toString() {
-    return 'Element(id: $id, extension_: $extension_, fhirComments: $fhirComments)';
+    return 'Element(fhirId: $fhirId, extension_: $extension_, fhirComments: $fhirComments)';
   }
 
   @override
@@ -168,7 +170,7 @@ class _$_Element extends _Element {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Element &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -179,7 +181,7 @@ class _$_Element extends _Element {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_fhirComments));
 
@@ -199,7 +201,7 @@ class _$_Element extends _Element {
 
 abstract class _Element extends Element {
   factory _Element(
-          {final FhirId? id,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments}) =
       _$_Element;
@@ -208,7 +210,8 @@ abstract class _Element extends Element {
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;

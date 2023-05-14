@@ -21,7 +21,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     @Default(Stu3ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
         Stu3ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -81,7 +81,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     @Default(Stu3ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
         Stu3ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,

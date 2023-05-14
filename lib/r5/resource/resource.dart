@@ -30,7 +30,8 @@ part 'resource_utils.dart';
 /// in this class is only used if the resourceType is not previously known
 @JsonSerializable()
 class Resource {
-  FhirId? id;
+  @JsonKey(name: 'id')
+  FhirId? fhirId;
   R5ResourceType? resourceType;
   FhirMeta? meta;
   FhirUri? implicitRules;
@@ -79,7 +80,7 @@ class Resource {
               ' it is neither a yaml string nor a yaml map.');
 
   static Resource copyWith({
-    FhirId? id,
+    FhirId? fhirId,
     R5ResourceType? resourceType,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -90,7 +91,7 @@ class Resource {
     List<FhirExtension>? modifierExtension,
   }) =>
       Resource.fromJson(<String, dynamic>{
-        'id': id?.toString(),
+        'id': fhirId?.toString(),
         'resourceType': resourceType?.toString(),
         'meta': meta?.toString(),
         'implicitRules': implicitRules?.toString(),
@@ -110,7 +111,7 @@ class Resource {
       }
     }
 
-    writeNotNull('id', id?.toJson());
+    writeNotNull('id', fhirId?.toJson());
     writeNotNull('resourceType', resourceType);
     writeNotNull('meta', meta?.toJson());
     writeNotNull('implicitRules', implicitRules?.toJson());
@@ -135,10 +136,10 @@ class Resource {
       type: resourceTypeString == null ? null : FhirUri(resourceTypeString));
 
   /// Local Reference for this Resource, form is "ResourceType/Id"
-  String get path => '$resourceTypeString/$id';
+  String get path => '$resourceTypeString/$fhirId';
 
   /// returns the same resource with a new ID if there is no current ID
-  Resource newIdIfNoId() => id == null ? _newId(this) : this;
+  Resource newIdIfNoId() => fhirId == null ? _newId(this) : this;
 
   /// returns the same resource with a new ID (even if there is already an ID
   /// present)

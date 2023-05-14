@@ -7,7 +7,7 @@ part of 'resource.dart';
 // **************************************************************************
 
 Resource _$ResourceFromJson(Map<String, dynamic> json) => Resource()
-  ..id = json['id'] as String?
+  ..fhirId = json['id'] as String?
   ..resourceType =
       $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType'])
   ..meta = json['meta'] == null
@@ -46,7 +46,7 @@ Map<String, dynamic> _$ResourceToJson(Resource instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull('resourceType', _$R4ResourceTypeEnumMap[instance.resourceType]);
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());

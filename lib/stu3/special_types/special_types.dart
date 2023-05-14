@@ -144,7 +144,7 @@ class FhirMeta with _$FhirMeta {
 class ElementDefinition with _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,

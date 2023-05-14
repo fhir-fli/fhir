@@ -23,7 +23,7 @@ class Composition with Resource, _$Composition {
     @Default(Dstu2ResourceType.Composition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -86,7 +86,7 @@ class Composition with Resource, _$Composition {
 class CompositionAttester with _$CompositionAttester {
   CompositionAttester._();
   factory CompositionAttester({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required List<AttesterMode> mode,
@@ -131,7 +131,7 @@ class CompositionAttester with _$CompositionAttester {
 class CompositionEvent with _$CompositionEvent {
   CompositionEvent._();
   factory CompositionEvent({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? code,
@@ -174,7 +174,7 @@ class CompositionEvent with _$CompositionEvent {
 class CompositionSection with _$CompositionSection {
   CompositionSection._();
   factory CompositionSection({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -228,7 +228,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
     @Default(Dstu2ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -289,7 +289,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
 class DocumentManifestContent with _$DocumentManifestContent {
   DocumentManifestContent._();
   factory DocumentManifestContent({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Attachment? pAttachment,
@@ -331,7 +331,7 @@ class DocumentManifestContent with _$DocumentManifestContent {
 class DocumentManifestRelated with _$DocumentManifestRelated {
   DocumentManifestRelated._();
   factory DocumentManifestRelated({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -376,7 +376,7 @@ class DocumentReference with Resource, _$DocumentReference {
     @Default(Dstu2ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -441,7 +441,7 @@ class DocumentReference with Resource, _$DocumentReference {
 class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   DocumentReferenceRelatesTo._();
   factory DocumentReferenceRelatesTo({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: RelatesToCode.unknown)
@@ -485,7 +485,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
 class DocumentReferenceContent with _$DocumentReferenceContent {
   DocumentReferenceContent._();
   factory DocumentReferenceContent({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Attachment attachment,
@@ -527,7 +527,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
 class DocumentReferenceContext with _$DocumentReferenceContext {
   DocumentReferenceContext._();
   factory DocumentReferenceContext({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? encounter,
@@ -574,7 +574,7 @@ class DocumentReferenceContext with _$DocumentReferenceContext {
 class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated {
   DocumentReferenceContextRelated._();
   factory DocumentReferenceContextRelated({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
@@ -620,7 +620,7 @@ class FhirList with Resource, _$FhirList {
     @Default(Dstu2ResourceType.FhirList)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -681,7 +681,7 @@ class FhirList with Resource, _$FhirList {
 class ListEntry with _$ListEntry {
   ListEntry._();
   factory ListEntry({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,

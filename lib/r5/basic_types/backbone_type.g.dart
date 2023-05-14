@@ -8,13 +8,7 @@ part of 'backbone_type.dart';
 
 _$_BackboneType _$$_BackboneTypeFromJson(Map<String, dynamic> json) =>
     _$_BackboneType(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
+      fhirId: json['id'] as String?,
     );
 
 Map<String, dynamic> _$$_BackboneTypeToJson(_$_BackboneType instance) {
@@ -26,10 +20,6 @@ Map<String, dynamic> _$$_BackboneTypeToJson(_$_BackboneType instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('id', instance.fhirId);
   return val;
 }

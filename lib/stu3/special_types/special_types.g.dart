@@ -117,7 +117,7 @@ Map<String, dynamic> _$$_FhirMetaToJson(_$_FhirMeta instance) {
 
 _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
     _$_ElementDefinition(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1039,7 +1039,7 @@ Map<String, dynamic> _$$_ElementDefinitionToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('path', instance.path);

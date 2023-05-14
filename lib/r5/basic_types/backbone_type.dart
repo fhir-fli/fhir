@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod/serverpod.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -49,7 +50,7 @@ class BackboneType with _$BackboneType {
     /// [id] Unique id for the element within a resource (for internal
     ///  references).
     /// This may be any string value that does not contain spaces.;
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of
@@ -59,7 +60,7 @@ class BackboneType with _$BackboneType {
     /// extension, there is a set of requirements that SHALL be met as part of
     ///  the
     /// definition of the extension.;
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    // @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -74,7 +75,7 @@ class BackboneType with _$BackboneType {
     /// required to check for modifier extensions. Modifier extensions SHALL NOT
     /// change the meaning of any elements on Resource or DomainResource
     /// (including cannot change the meaning of modifierExtension itself).
-    List<FhirExtension>? modifierExtension,
+    // List<FhirExtension>? modifierExtension,
   }) = _BackboneType;
 
   /// Produces a Yaml formatted String version of the object

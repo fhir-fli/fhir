@@ -46,7 +46,7 @@ class Narrative with _$Narrative {
   factory Narrative({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -131,7 +131,7 @@ class CodeableReference with _$CodeableReference {
   factory CodeableReference({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -242,7 +242,7 @@ class Reference with _$Reference {
   factory Reference({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -389,7 +389,7 @@ class FhirMeta with _$FhirMeta {
   factory FhirMeta({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -558,7 +558,7 @@ class Dosage with _$Dosage {
   factory Dosage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -733,7 +733,7 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
   factory DosageDoseAndRate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3279,7 +3279,7 @@ class ElementDefinition with _$ElementDefinition {
   factory ElementDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6224,7 +6224,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   factory ElementDefinitionSlicing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6364,7 +6364,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   factory ElementDefinitionDiscriminator({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6493,7 +6493,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
   factory ElementDefinitionBase({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6648,7 +6648,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
   factory ElementDefinitionType({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6694,6 +6694,9 @@ class ElementDefinitionType with _$ElementDefinitionType {
     ///  guide.
     List<FhirCanonical>? profile,
 
+    /// [profileElement] ("_profile") Extensions for code
+    @JsonKey(name: '_profile') List<Element>? profileElement,
+
     /// [targetProfile] Used when the type is "Reference" or "canonical", and
     ///  identifies a profile structure or implementation Guide that applies to
     ///  the target of the reference this element refers to. If any profiles
@@ -6704,6 +6707,9 @@ class ElementDefinitionType with _$ElementDefinitionType {
     ///  target resource SHALL conform to at least one profile defined in the
     ///  implementation guide.
     List<FhirCanonical>? targetProfile,
+
+    /// [targetProfileElement] ("_targetProfile") Extensions for code
+    @JsonKey(name: '_targetProfile') Element? targetProfileElement,
 
     /// [aggregation] If the type is a reference to another resource, how the
     ///  resource is or can be aggregated - is it a contained resource, or a
@@ -7001,7 +7007,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
   factory ElementDefinitionExample({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -7419,7 +7425,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   factory ElementDefinitionConstraint({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -7581,7 +7587,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
   factory ElementDefinitionBinding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -7729,7 +7735,7 @@ class ElementDefinitionAdditional with _$ElementDefinitionAdditional {
   factory ElementDefinitionAdditional({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -7883,7 +7889,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
   factory ElementDefinitionMapping({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    String? id,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.

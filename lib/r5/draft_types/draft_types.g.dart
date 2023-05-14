@@ -8,7 +8,7 @@ part of 'draft_types.dart';
 
 _$_Population _$$_PopulationFromJson(Map<String, dynamic> json) =>
     _$_Population(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -43,7 +43,7 @@ Map<String, dynamic> _$$_PopulationToJson(_$_Population instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -59,7 +59,7 @@ Map<String, dynamic> _$$_PopulationToJson(_$_Population instance) {
 
 _$_ProductShelfLife _$$_ProductShelfLifeFromJson(Map<String, dynamic> json) =>
     _$_ProductShelfLife(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -92,7 +92,7 @@ Map<String, dynamic> _$$_ProductShelfLifeToJson(_$_ProductShelfLife instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -108,7 +108,7 @@ Map<String, dynamic> _$$_ProductShelfLifeToJson(_$_ProductShelfLife instance) {
 
 _$_MarketingStatus _$$_MarketingStatusFromJson(Map<String, dynamic> json) =>
     _$_MarketingStatus(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -143,7 +143,7 @@ Map<String, dynamic> _$$_MarketingStatusToJson(_$_MarketingStatus instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',

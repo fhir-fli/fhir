@@ -18,7 +18,7 @@ part 'special_types.g.dart';
 class FhirMeta with _$FhirMeta {
   FhirMeta._();
   factory FhirMeta({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     FhirId? versionId,
@@ -65,7 +65,7 @@ class FhirMeta with _$FhirMeta {
 class Reference with _$Reference {
   Reference._();
   factory Reference({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     String? reference,
@@ -109,7 +109,7 @@ class Reference with _$Reference {
 class ElementDefinition with _$ElementDefinition {
   ElementDefinition._();
   factory ElementDefinition({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required String path,
     List<FhirCode>? representation,
@@ -487,7 +487,7 @@ class ElementDefinition with _$ElementDefinition {
 class Narrative with _$Narrative {
   Narrative._();
   factory Narrative({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
@@ -531,7 +531,7 @@ class Narrative with _$Narrative {
 class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
   factory ElementDefinitionSlicing({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<String>? discriminator,
     String? description,
@@ -578,7 +578,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 class ElementDefinitionBase with _$ElementDefinitionBase {
   ElementDefinitionBase._();
   factory ElementDefinitionBase({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required String path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -623,7 +623,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
 class ElementDefinitionType with _$ElementDefinitionType {
   ElementDefinitionType._();
   factory ElementDefinitionType({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirCode? code,
     @JsonKey(name: '_code') TypeCodeExtension? codeExtension,
@@ -706,7 +706,7 @@ class TypeCodeExtension with _$TypeCodeExtension {
 class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ElementDefinitionConstraint._();
   factory ElementDefinitionConstraint({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required FhirId key,
     @JsonKey(name: '_key') Element? keyElement,
@@ -756,7 +756,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
   factory ElementDefinitionBinding({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
         required ElementDefinitionBindingStrength strength,
@@ -802,7 +802,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
 class ElementDefinitionMapping with _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
   factory ElementDefinitionMapping({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     required FhirId identity,

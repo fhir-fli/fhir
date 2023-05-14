@@ -21,7 +21,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     @Default(Stu3ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
         Stu3ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -133,7 +133,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
     @Default(Stu3ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)
         Stu3ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,

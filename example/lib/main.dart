@@ -3,7 +3,7 @@ import 'package:fhir/r4.dart';
 
 void main() {
   final patient = Patient(
-    id: '12345',
+    fhirId: '12345',
     active: FhirBoolean(true),
     name: <HumanName>[
       HumanName(

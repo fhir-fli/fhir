@@ -7,7 +7,7 @@ part of 'special_types.dart';
 // **************************************************************************
 
 _$_Narrative _$$_NarrativeFromJson(Map<String, dynamic> json) => _$_Narrative(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -27,7 +27,7 @@ Map<String, dynamic> _$$_NarrativeToJson(_$_Narrative instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('status', _$NarrativeStatusEnumMap[instance.status]);
@@ -45,7 +45,7 @@ const _$NarrativeStatusEnumMap = {
 
 _$_CodeableReference _$$_CodeableReferenceFromJson(Map<String, dynamic> json) =>
     _$_CodeableReference(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -67,7 +67,7 @@ Map<String, dynamic> _$$_CodeableReferenceToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('concept', instance.concept?.toJson());
@@ -76,7 +76,7 @@ Map<String, dynamic> _$$_CodeableReferenceToJson(
 }
 
 _$_Reference _$$_ReferenceFromJson(Map<String, dynamic> json) => _$_Reference(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -106,7 +106,7 @@ Map<String, dynamic> _$$_ReferenceToJson(_$_Reference instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('reference', instance.reference);
@@ -120,7 +120,7 @@ Map<String, dynamic> _$$_ReferenceToJson(_$_Reference instance) {
 }
 
 _$_FhirMeta _$$_FhirMetaFromJson(Map<String, dynamic> json) => _$_FhirMeta(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -159,7 +159,7 @@ Map<String, dynamic> _$$_FhirMetaToJson(_$_FhirMeta instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('versionId', instance.versionId?.toJson());
@@ -175,7 +175,7 @@ Map<String, dynamic> _$$_FhirMetaToJson(_$_FhirMeta instance) {
 }
 
 _$_Dosage _$$_DosageFromJson(Map<String, dynamic> json) => _$_Dosage(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -246,7 +246,7 @@ Map<String, dynamic> _$$_DosageToJson(_$_Dosage instance) {
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -280,7 +280,7 @@ Map<String, dynamic> _$$_DosageToJson(_$_Dosage instance) {
 
 _$_DosageDoseAndRate _$$_DosageDoseAndRateFromJson(Map<String, dynamic> json) =>
     _$_DosageDoseAndRate(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -317,7 +317,7 @@ Map<String, dynamic> _$$_DosageDoseAndRateToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -333,7 +333,7 @@ Map<String, dynamic> _$$_DosageDoseAndRateToJson(
 
 _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
     _$_ElementDefinition(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1361,7 +1361,7 @@ Map<String, dynamic> _$$_ElementDefinitionToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1763,7 +1763,7 @@ const _$ElementDefinitionRepresentationEnumMap = {
 _$_ElementDefinitionSlicing _$$_ElementDefinitionSlicingFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionSlicing(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1801,7 +1801,7 @@ Map<String, dynamic> _$$_ElementDefinitionSlicingToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1826,7 +1826,7 @@ const _$ElementDefinitionSlicingRulesEnumMap = {
 _$_ElementDefinitionDiscriminator _$$_ElementDefinitionDiscriminatorFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionDiscriminator(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1854,7 +1854,7 @@ Map<String, dynamic> _$$_ElementDefinitionDiscriminatorToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1878,7 +1878,7 @@ const _$ElementDefinitionDiscriminatorTypeEnumMap = {
 _$_ElementDefinitionBase _$$_ElementDefinitionBaseFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionBase(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1909,7 +1909,7 @@ Map<String, dynamic> _$$_ElementDefinitionBaseToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1926,7 +1926,7 @@ Map<String, dynamic> _$$_ElementDefinitionBaseToJson(
 _$_ElementDefinitionType _$$_ElementDefinitionTypeFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionType(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1940,9 +1940,15 @@ _$_ElementDefinitionType _$$_ElementDefinitionTypeFromJson(
       profile: (json['profile'] as List<dynamic>?)
           ?.map(FhirCanonical.fromJson)
           .toList(),
+      profileElement: (json['_profile'] as List<dynamic>?)
+          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          .toList(),
       targetProfile: (json['targetProfile'] as List<dynamic>?)
           ?.map(FhirCanonical.fromJson)
           .toList(),
+      targetProfileElement: json['_targetProfile'] == null
+          ? null
+          : Element.fromJson(json['_targetProfile'] as Map<String, dynamic>),
       aggregation: $enumDecodeNullable(
           _$ElementDefinitionTypeAggregationEnumMap, json['aggregation']),
       aggregationElement: (json['_aggregation'] as List<dynamic>?)
@@ -1965,7 +1971,7 @@ Map<String, dynamic> _$$_ElementDefinitionTypeToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1974,7 +1980,10 @@ Map<String, dynamic> _$$_ElementDefinitionTypeToJson(
   writeNotNull('_code', instance.codeElement?.toJson());
   writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
   writeNotNull(
+      '_profile', instance.profileElement?.map((e) => e.toJson()).toList());
+  writeNotNull(
       'targetProfile', instance.targetProfile?.map((e) => e.toJson()).toList());
+  writeNotNull('_targetProfile', instance.targetProfileElement?.toJson());
   writeNotNull('aggregation',
       _$ElementDefinitionTypeAggregationEnumMap[instance.aggregation]);
   writeNotNull('_aggregation',
@@ -2000,7 +2009,7 @@ const _$ElementDefinitionTypeVersioningEnumMap = {
 _$_ElementDefinitionExample _$$_ElementDefinitionExampleFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionExample(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2257,7 +2266,7 @@ Map<String, dynamic> _$$_ElementDefinitionExampleToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2349,7 +2358,7 @@ Map<String, dynamic> _$$_ElementDefinitionExampleToJson(
 _$_ElementDefinitionConstraint _$$_ElementDefinitionConstraintFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionConstraint(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2400,7 +2409,7 @@ Map<String, dynamic> _$$_ElementDefinitionConstraintToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2430,7 +2439,7 @@ const _$ElementDefinitionConstraintSeverityEnumMap = {
 _$_ElementDefinitionBinding _$$_ElementDefinitionBindingFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionBinding(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2467,7 +2476,7 @@ Map<String, dynamic> _$$_ElementDefinitionBindingToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2493,7 +2502,7 @@ const _$ElementDefinitionBindingStrengthEnumMap = {
 _$_ElementDefinitionAdditional _$$_ElementDefinitionAdditionalFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionAdditional(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2535,7 +2544,7 @@ Map<String, dynamic> _$$_ElementDefinitionAdditionalToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2556,7 +2565,7 @@ Map<String, dynamic> _$$_ElementDefinitionAdditionalToJson(
 _$_ElementDefinitionMapping _$$_ElementDefinitionMappingFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionMapping(
-      id: json['id'] as String?,
+      fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2595,7 +2604,7 @@ Map<String, dynamic> _$$_ElementDefinitionMappingToJson(
     }
   }
 
-  writeNotNull('id', instance.id);
+  writeNotNull('id', instance.fhirId);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',

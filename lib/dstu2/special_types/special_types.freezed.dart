@@ -20,7 +20,8 @@ FhirMeta _$FhirMetaFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$FhirMeta {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -47,7 +48,7 @@ abstract class $FhirMetaCopyWith<$Res> {
       _$FhirMetaCopyWithImpl<$Res, FhirMeta>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       FhirId? versionId,
@@ -75,7 +76,7 @@ class _$FhirMetaCopyWithImpl<$Res, $Val extends FhirMeta>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
     Object? versionId = freezed,
@@ -87,9 +88,9 @@ class _$FhirMetaCopyWithImpl<$Res, $Val extends FhirMeta>
     Object? tag = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -163,7 +164,7 @@ abstract class _$$_FhirMetaCopyWith<$Res> implements $FhirMetaCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       FhirId? versionId,
@@ -191,7 +192,7 @@ class __$$_FhirMetaCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
     Object? versionId = freezed,
@@ -203,9 +204,9 @@ class __$$_FhirMetaCopyWithImpl<$Res>
     Object? tag = freezed,
   }) {
     return _then(_$_FhirMeta(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -251,7 +252,7 @@ class __$$_FhirMetaCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_FhirMeta extends _FhirMeta {
   _$_FhirMeta(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       this.versionId,
@@ -272,7 +273,8 @@ class _$_FhirMeta extends _FhirMeta {
       _$$_FhirMetaFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -337,7 +339,7 @@ class _$_FhirMeta extends _FhirMeta {
 
   @override
   String toString() {
-    return 'FhirMeta(id: $id, extension_: $extension_, fhirComments: $fhirComments, versionId: $versionId, versionIdElement: $versionIdElement, lastUpdated: $lastUpdated, lastUpdatedElement: $lastUpdatedElement, profile: $profile, security: $security, tag: $tag)';
+    return 'FhirMeta(fhirId: $fhirId, extension_: $extension_, fhirComments: $fhirComments, versionId: $versionId, versionIdElement: $versionIdElement, lastUpdated: $lastUpdated, lastUpdatedElement: $lastUpdatedElement, profile: $profile, security: $security, tag: $tag)';
   }
 
   @override
@@ -345,7 +347,7 @@ class _$_FhirMeta extends _FhirMeta {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_FhirMeta &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -367,7 +369,7 @@ class _$_FhirMeta extends _FhirMeta {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_fhirComments),
       versionId,
@@ -394,7 +396,7 @@ class _$_FhirMeta extends _FhirMeta {
 
 abstract class _FhirMeta extends FhirMeta {
   factory _FhirMeta(
-      {final FhirId? id,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       final FhirId? versionId,
@@ -409,7 +411,8 @@ abstract class _FhirMeta extends FhirMeta {
   factory _FhirMeta.fromJson(Map<String, dynamic> json) = _$_FhirMeta.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -444,7 +447,8 @@ Reference _$ReferenceFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Reference {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -468,7 +472,7 @@ abstract class $ReferenceCopyWith<$Res> {
       _$ReferenceCopyWithImpl<$Res, Reference>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? reference,
@@ -493,7 +497,7 @@ class _$ReferenceCopyWithImpl<$Res, $Val extends Reference>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
     Object? reference = freezed,
@@ -502,9 +506,9 @@ class _$ReferenceCopyWithImpl<$Res, $Val extends Reference>
     Object? displayElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -566,7 +570,7 @@ abstract class _$$_ReferenceCopyWith<$Res> implements $ReferenceCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       String? reference,
@@ -591,7 +595,7 @@ class __$$_ReferenceCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
     Object? reference = freezed,
@@ -600,9 +604,9 @@ class __$$_ReferenceCopyWithImpl<$Res>
     Object? displayElement = freezed,
   }) {
     return _then(_$_Reference(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -636,7 +640,7 @@ class __$$_ReferenceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Reference extends _Reference {
   _$_Reference(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       this.reference,
@@ -651,7 +655,8 @@ class _$_Reference extends _Reference {
       _$$_ReferenceFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -687,7 +692,7 @@ class _$_Reference extends _Reference {
 
   @override
   String toString() {
-    return 'Reference(id: $id, extension_: $extension_, fhirComments: $fhirComments, reference: $reference, referenceElement: $referenceElement, display: $display, displayElement: $displayElement)';
+    return 'Reference(fhirId: $fhirId, extension_: $extension_, fhirComments: $fhirComments, reference: $reference, referenceElement: $referenceElement, display: $display, displayElement: $displayElement)';
   }
 
   @override
@@ -695,7 +700,7 @@ class _$_Reference extends _Reference {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Reference &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -713,7 +718,7 @@ class _$_Reference extends _Reference {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_fhirComments),
       reference,
@@ -737,7 +742,7 @@ class _$_Reference extends _Reference {
 
 abstract class _Reference extends Reference {
   factory _Reference(
-      {final FhirId? id,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       final String? reference,
@@ -750,7 +755,8 @@ abstract class _Reference extends Reference {
       _$_Reference.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -779,7 +785,8 @@ ElementDefinition _$ElementDefinitionFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ElementDefinition {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   String get path => throw _privateConstructorUsedError;
@@ -1266,7 +1273,8 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       _$ElementDefinitionCopyWithImpl<$Res, ElementDefinition>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       String path,
@@ -1942,7 +1950,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? path = null,
     Object? representation = freezed,
@@ -2278,9 +2286,9 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
     Object? mapping = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -6221,7 +6229,8 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       String path,
@@ -7110,7 +7119,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? path = null,
     Object? representation = freezed,
@@ -7446,9 +7455,9 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
     Object? mapping = freezed,
   }) {
     return _then(_$_ElementDefinition(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -8791,7 +8800,8 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinition extends _ElementDefinition {
   _$_ElementDefinition(
-      {this.id,
+      {@JsonKey(name: 'id')
+          this.fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       required this.path,
@@ -9250,7 +9260,8 @@ class _$_ElementDefinition extends _ElementDefinition {
       _$$_ElementDefinitionFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -10094,7 +10105,7 @@ class _$_ElementDefinition extends _ElementDefinition {
 
   @override
   String toString() {
-    return 'ElementDefinition(id: $id, extension_: $extension_, path: $path, representation: $representation, representationElement: $representationElement, name: $name, label: $label, labelElement: $labelElement, code: $code, slicing: $slicing, short: $short, shortElement: $shortElement, definition: $definition, definitionElement: $definitionElement, comments: $comments, commentElement: $commentElement, requirements: $requirements, requirementsElement: $requirementsElement, alias: $alias, aliasElement: $aliasElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, base: $base, type: $type, nameReference: $nameReference, defaultValueBoolean: $defaultValueBoolean, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueInteger: $defaultValueInteger, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueDecimal: $defaultValueDecimal, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueInstant: $defaultValueInstant, defaultValueInstantElement: $defaultValueInstantElement, defaultValueString: $defaultValueString, defaultValueStringElement: $defaultValueStringElement, defaultValueUri: $defaultValueUri, defaultValueUriElement: $defaultValueUriElement, defaultValueDate: $defaultValueDate, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTime: $defaultValueDateTime, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueTime: $defaultValueTime, defaultValueTimeElement: $defaultValueTimeElement, defaultValueCode: $defaultValueCode, defaultValueCodeElement: $defaultValueCodeElement, defaultValueOid: $defaultValueOid, defaultValueOidElement: $defaultValueOidElement, defaultValueId: $defaultValueId, defaultValueIdElement: $defaultValueIdElement, defaultValueUnsignedInt: $defaultValueUnsignedInt, defaultValueUnsignedIntElement: $defaultValueUnsignedIntElement, defaultValuePositiveInt: $defaultValuePositiveInt, defaultValuePositiveIntElement: $defaultValuePositiveIntElement, defaultValueMarkdown: $defaultValueMarkdown, defaultValueMarkDownElement: $defaultValueMarkDownElement, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueIdentifier: $defaultValueIdentifier, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCoding: $defaultValueCoding, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValuePeriod: $defaultValuePeriod, defaultValueRatio: $defaultValueRatio, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueHumanName: $defaultValueHumanName, defaultValueAddress: $defaultValueAddress, defaultValueContactPoint: $defaultValueContactPoint, defaultValueTiming: $defaultValueTiming, defaultValueReference: $defaultValueReference, defaultValueMeta: $defaultValueMeta, meaningWhenMissing: $meaningWhenMissing, meaningWhenMissingElement: $meaningWhenMissingElement, fixedBoolean: $fixedBoolean, fixedBooleanElement: $fixedBooleanElement, fixedInteger: $fixedInteger, fixedIntegerElement: $fixedIntegerElement, fixedDecimal: $fixedDecimal, fixedDecimalElement: $fixedDecimalElement, fixedBase64Binary: $fixedBase64Binary, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedInstant: $fixedInstant, fixedInstantElement: $fixedInstantElement, fixedString: $fixedString, fixedStringElement: $fixedStringElement, fixedUri: $fixedUri, fixedUriElement: $fixedUriElement, fixedDate: $fixedDate, fixedDateElement: $fixedDateElement, fixedDateTime: $fixedDateTime, fixedDateTimeElement: $fixedDateTimeElement, fixedCode: $fixedCode, fixedCodeElement: $fixedCodeElement, fixedOid: $fixedOid, fixedOidElement: $fixedOidElement, fixedId: $fixedId, fixedIdElement: $fixedIdElement, fixedUnsignedInt: $fixedUnsignedInt, fixedUnsignedIntElement: $fixedUnsignedIntElement, fixedPositiveInt: $fixedPositiveInt, fixedPositiveIntElement: $fixedPositiveIntElement, fixedMarkdown: $fixedMarkdown, fixedMarkdownElement: $fixedMarkdownElement, fixedAnnotation: $fixedAnnotation, fixedAttachment: $fixedAttachment, fixedIdentifier: $fixedIdentifier, fixedCodeableConcept: $fixedCodeableConcept, fixedCoding: $fixedCoding, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedPeriod: $fixedPeriod, fixedRatio: $fixedRatio, fixedSampledData: $fixedSampledData, fixedSignature: $fixedSignature, fixedHumanName: $fixedHumanName, fixedAddress: $fixedAddress, fixedContactPoint: $fixedContactPoint, fixedTiming: $fixedTiming, fixedReference: $fixedReference, fixedMeta: $fixedMeta, patternBoolean: $patternBoolean, patternBooleanElement: $patternBooleanElement, patternInteger: $patternInteger, patternIntegerElement: $patternIntegerElement, patternDecimal: $patternDecimal, patternDecimalElement: $patternDecimalElement, patternBase64Binary: $patternBase64Binary, patternBase64BinaryElement: $patternBase64BinaryElement, patternInstant: $patternInstant, patternInstantElement: $patternInstantElement, patternString: $patternString, patternStringElement: $patternStringElement, patternUri: $patternUri, patternUriElement: $patternUriElement, patternDate: $patternDate, patternDateElement: $patternDateElement, patternDateTime: $patternDateTime, patternDateTimeElement: $patternDateTimeElement, patternTime: $patternTime, patternTimeElement: $patternTimeElement, patternCode: $patternCode, patternCodeElement: $patternCodeElement, patternOid: $patternOid, patternOidElement: $patternOidElement, patternId: $patternId, patternIdElement: $patternIdElement, patternUnsignedInt: $patternUnsignedInt, patternUnsignedIntElement: $patternUnsignedIntElement, patternPositiveInt: $patternPositiveInt, patternPositiveIntElement: $patternPositiveIntElement, patternMarkdown: $patternMarkdown, patternMarkdownElement: $patternMarkdownElement, patternAnnotation: $patternAnnotation, patternAttachment: $patternAttachment, patternIdentifier: $patternIdentifier, patternCodeableConcept: $patternCodeableConcept, patternCoding: $patternCoding, patternQuantity: $patternQuantity, patternRange: $patternRange, patternPeriod: $patternPeriod, patternRatio: $patternRatio, patternSampledData: $patternSampledData, patternSignature: $patternSignature, patternHumanName: $patternHumanName, patternAddress: $patternAddress, patternContactPoint: $patternContactPoint, patternTiming: $patternTiming, patternReference: $patternReference, patternMeta: $patternMeta, exampleBoolean: $exampleBoolean, exampleBooleanElement: $exampleBooleanElement, exampleInteger: $exampleInteger, exampleIntegerElement: $exampleIntegerElement, exampleDecimal: $exampleDecimal, exampleDecimalElement: $exampleDecimalElement, exampleBase64Binary: $exampleBase64Binary, exampleBase64BinaryElement: $exampleBase64BinaryElement, exampleInstant: $exampleInstant, exampleInstantElement: $exampleInstantElement, exampleString: $exampleString, exampleStringElement: $exampleStringElement, exampleUri: $exampleUri, exampleUriElement: $exampleUriElement, exampleDate: $exampleDate, exampleDateElement: $exampleDateElement, exampleDateTime: $exampleDateTime, exampleDateTimeElement: $exampleDateTimeElement, exampleTime: $exampleTime, exampleTimeElement: $exampleTimeElement, exampleCode: $exampleCode, exampleCodeElement: $exampleCodeElement, exampleOid: $exampleOid, exampleOidElement: $exampleOidElement, exampleId: $exampleId, exampleIdElement: $exampleIdElement, exampleUnsignedInt: $exampleUnsignedInt, exampleUnsignedIntElement: $exampleUnsignedIntElement, examplePositiveInt: $examplePositiveInt, examplePositiveIntElement: $examplePositiveIntElement, exampleMarkdown: $exampleMarkdown, exampleMarkdownElement: $exampleMarkdownElement, exampleAnnotation: $exampleAnnotation, exampleAttachment: $exampleAttachment, exampleIdentifier: $exampleIdentifier, exampleCodeableConcept: $exampleCodeableConcept, exampleCoding: $exampleCoding, exampleQuantity: $exampleQuantity, exampleRange: $exampleRange, examplePeriod: $examplePeriod, exampleRatio: $exampleRatio, exampleSampleData: $exampleSampleData, exampleSignature: $exampleSignature, exampleHumanName: $exampleHumanName, exampleAddress: $exampleAddress, exampleContactPoint: $exampleContactPoint, exampleTiming: $exampleTiming, exampleReference: $exampleReference, exampleMeta: $exampleMeta, minValueBoolean: $minValueBoolean, minValueBooleanElement: $minValueBooleanElement, minValueInteger: $minValueInteger, minValueIntegerElement: $minValueIntegerElement, minValueDecimal: $minValueDecimal, minValueDecimalElement: $minValueDecimalElement, minValueBase64Binary: $minValueBase64Binary, minValueBase64BinaryElement: $minValueBase64BinaryElement, minValueInstant: $minValueInstant, minValueInstantElement: $minValueInstantElement, minValueString: $minValueString, minValueStringElement: $minValueStringElement, minValueUri: $minValueUri, minValueUriElement: $minValueUriElement, minValueDate: $minValueDate, minValueDateElement: $minValueDateElement, minValueDateTime: $minValueDateTime, minValueDateTimeElement: $minValueDateTimeElement, minValueTime: $minValueTime, minValueTimeElement: $minValueTimeElement, minValueCode: $minValueCode, minValueCodeElement: $minValueCodeElement, minValueOid: $minValueOid, minValueOidElement: $minValueOidElement, minValueId: $minValueId, minValueIdElement: $minValueIdElement, minValueUnsignedInt: $minValueUnsignedInt, minValueUnsignedIntElement: $minValueUnsignedIntElement, minValuePositiveInt: $minValuePositiveInt, minValuePositiveIntElement: $minValuePositiveIntElement, minValueMarkdown: $minValueMarkdown, minValueMarkdownElement: $minValueMarkdownElement, minValueAnnotation: $minValueAnnotation, minValueAttachment: $minValueAttachment, minValueIdentifier: $minValueIdentifier, minValueCodeableConcept: $minValueCodeableConcept, minValueCoding: $minValueCoding, minValueQuantity: $minValueQuantity, minValueRange: $minValueRange, minValuePeriod: $minValuePeriod, minValueRatio: $minValueRatio, minValueSampledData: $minValueSampledData, minValueSignature: $minValueSignature, minValueHumanName: $minValueHumanName, minValueAddress: $minValueAddress, minValueContactPoint: $minValueContactPoint, minValueTiming: $minValueTiming, minValueReference: $minValueReference, minValueMeta: $minValueMeta, maxValueBoolean: $maxValueBoolean, maxValueBooleanElement: $maxValueBooleanElement, maxValueInteger: $maxValueInteger, maxValueIntegerElement: $maxValueIntegerElement, maxValueDecimal: $maxValueDecimal, maxValueDecimalElement: $maxValueDecimalElement, maxValueBase64Binary: $maxValueBase64Binary, maxValueBase64BinaryElement: $maxValueBase64BinaryElement, maxValueInstant: $maxValueInstant, maxValueInstantElement: $maxValueInstantElement, maxValueString: $maxValueString, maxValueStringElement: $maxValueStringElement, maxValueUri: $maxValueUri, maxValueUriElement: $maxValueUriElement, maxValueDate: $maxValueDate, maxValueDateElement: $maxValueDateElement, maxValueDateTime: $maxValueDateTime, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueTime: $maxValueTime, maxValueTimeElement: $maxValueTimeElement, maxValueCode: $maxValueCode, maxValueCodeElement: $maxValueCodeElement, maxValueOid: $maxValueOid, maxValueOidElement: $maxValueOidElement, maxValueId: $maxValueId, maxValueIdElement: $maxValueIdElement, maxValueUnsignedInt: $maxValueUnsignedInt, maxValueUnsignedIntElement: $maxValueUnsignedIntElement, maxValuePositiveInt: $maxValuePositiveInt, maxValuePositiveIntElement: $maxValuePositiveIntElement, maxValueMarkdown: $maxValueMarkdown, maxValueMarkdownElement: $maxValueMarkdownElement, maxValueAnnotation: $maxValueAnnotation, maxValueAttachment: $maxValueAttachment, maxValueIdentifier: $maxValueIdentifier, maxValueCodeableConcept: $maxValueCodeableConcept, maxValueCoding: $maxValueCoding, maxValueQuantity: $maxValueQuantity, maxValueRange: $maxValueRange, maxValuePeriod: $maxValuePeriod, maxValueRatio: $maxValueRatio, maxValueSampledData: $maxValueSampledData, maxValueSignature: $maxValueSignature, maxValueHumanName: $maxValueHumanName, maxValueAddress: $maxValueAddress, maxValueContactPoint: $maxValueContactPoint, maxValueTiming: $maxValueTiming, maxValueReference: $maxValueReference, maxValueMeta: $maxValueMeta, maxLength: $maxLength, maxLengthElement: $maxLengthElement, condition: $condition, conditionElement: $conditionElement, constraint: $constraint, mustSupport: $mustSupport, mustSupportElement: $mustSupportElement, isModifier: $isModifier, isModifierElement: $isModifierElement, isSummary: $isSummary, isSummaryElement: $isSummaryElement, binding: $binding, mapping: $mapping)';
+    return 'ElementDefinition(fhirId: $fhirId, extension_: $extension_, path: $path, representation: $representation, representationElement: $representationElement, name: $name, label: $label, labelElement: $labelElement, code: $code, slicing: $slicing, short: $short, shortElement: $shortElement, definition: $definition, definitionElement: $definitionElement, comments: $comments, commentElement: $commentElement, requirements: $requirements, requirementsElement: $requirementsElement, alias: $alias, aliasElement: $aliasElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement, base: $base, type: $type, nameReference: $nameReference, defaultValueBoolean: $defaultValueBoolean, defaultValueBooleanElement: $defaultValueBooleanElement, defaultValueInteger: $defaultValueInteger, defaultValueIntegerElement: $defaultValueIntegerElement, defaultValueDecimal: $defaultValueDecimal, defaultValueDecimalElement: $defaultValueDecimalElement, defaultValueBase64Binary: $defaultValueBase64Binary, defaultValueBase64BinaryElement: $defaultValueBase64BinaryElement, defaultValueInstant: $defaultValueInstant, defaultValueInstantElement: $defaultValueInstantElement, defaultValueString: $defaultValueString, defaultValueStringElement: $defaultValueStringElement, defaultValueUri: $defaultValueUri, defaultValueUriElement: $defaultValueUriElement, defaultValueDate: $defaultValueDate, defaultValueDateElement: $defaultValueDateElement, defaultValueDateTime: $defaultValueDateTime, defaultValueDateTimeElement: $defaultValueDateTimeElement, defaultValueTime: $defaultValueTime, defaultValueTimeElement: $defaultValueTimeElement, defaultValueCode: $defaultValueCode, defaultValueCodeElement: $defaultValueCodeElement, defaultValueOid: $defaultValueOid, defaultValueOidElement: $defaultValueOidElement, defaultValueId: $defaultValueId, defaultValueIdElement: $defaultValueIdElement, defaultValueUnsignedInt: $defaultValueUnsignedInt, defaultValueUnsignedIntElement: $defaultValueUnsignedIntElement, defaultValuePositiveInt: $defaultValuePositiveInt, defaultValuePositiveIntElement: $defaultValuePositiveIntElement, defaultValueMarkdown: $defaultValueMarkdown, defaultValueMarkDownElement: $defaultValueMarkDownElement, defaultValueAnnotation: $defaultValueAnnotation, defaultValueAttachment: $defaultValueAttachment, defaultValueIdentifier: $defaultValueIdentifier, defaultValueCodeableConcept: $defaultValueCodeableConcept, defaultValueCoding: $defaultValueCoding, defaultValueQuantity: $defaultValueQuantity, defaultValueRange: $defaultValueRange, defaultValuePeriod: $defaultValuePeriod, defaultValueRatio: $defaultValueRatio, defaultValueSampledData: $defaultValueSampledData, defaultValueSignature: $defaultValueSignature, defaultValueHumanName: $defaultValueHumanName, defaultValueAddress: $defaultValueAddress, defaultValueContactPoint: $defaultValueContactPoint, defaultValueTiming: $defaultValueTiming, defaultValueReference: $defaultValueReference, defaultValueMeta: $defaultValueMeta, meaningWhenMissing: $meaningWhenMissing, meaningWhenMissingElement: $meaningWhenMissingElement, fixedBoolean: $fixedBoolean, fixedBooleanElement: $fixedBooleanElement, fixedInteger: $fixedInteger, fixedIntegerElement: $fixedIntegerElement, fixedDecimal: $fixedDecimal, fixedDecimalElement: $fixedDecimalElement, fixedBase64Binary: $fixedBase64Binary, fixedBase64BinaryElement: $fixedBase64BinaryElement, fixedInstant: $fixedInstant, fixedInstantElement: $fixedInstantElement, fixedString: $fixedString, fixedStringElement: $fixedStringElement, fixedUri: $fixedUri, fixedUriElement: $fixedUriElement, fixedDate: $fixedDate, fixedDateElement: $fixedDateElement, fixedDateTime: $fixedDateTime, fixedDateTimeElement: $fixedDateTimeElement, fixedCode: $fixedCode, fixedCodeElement: $fixedCodeElement, fixedOid: $fixedOid, fixedOidElement: $fixedOidElement, fixedId: $fixedId, fixedIdElement: $fixedIdElement, fixedUnsignedInt: $fixedUnsignedInt, fixedUnsignedIntElement: $fixedUnsignedIntElement, fixedPositiveInt: $fixedPositiveInt, fixedPositiveIntElement: $fixedPositiveIntElement, fixedMarkdown: $fixedMarkdown, fixedMarkdownElement: $fixedMarkdownElement, fixedAnnotation: $fixedAnnotation, fixedAttachment: $fixedAttachment, fixedIdentifier: $fixedIdentifier, fixedCodeableConcept: $fixedCodeableConcept, fixedCoding: $fixedCoding, fixedQuantity: $fixedQuantity, fixedRange: $fixedRange, fixedPeriod: $fixedPeriod, fixedRatio: $fixedRatio, fixedSampledData: $fixedSampledData, fixedSignature: $fixedSignature, fixedHumanName: $fixedHumanName, fixedAddress: $fixedAddress, fixedContactPoint: $fixedContactPoint, fixedTiming: $fixedTiming, fixedReference: $fixedReference, fixedMeta: $fixedMeta, patternBoolean: $patternBoolean, patternBooleanElement: $patternBooleanElement, patternInteger: $patternInteger, patternIntegerElement: $patternIntegerElement, patternDecimal: $patternDecimal, patternDecimalElement: $patternDecimalElement, patternBase64Binary: $patternBase64Binary, patternBase64BinaryElement: $patternBase64BinaryElement, patternInstant: $patternInstant, patternInstantElement: $patternInstantElement, patternString: $patternString, patternStringElement: $patternStringElement, patternUri: $patternUri, patternUriElement: $patternUriElement, patternDate: $patternDate, patternDateElement: $patternDateElement, patternDateTime: $patternDateTime, patternDateTimeElement: $patternDateTimeElement, patternTime: $patternTime, patternTimeElement: $patternTimeElement, patternCode: $patternCode, patternCodeElement: $patternCodeElement, patternOid: $patternOid, patternOidElement: $patternOidElement, patternId: $patternId, patternIdElement: $patternIdElement, patternUnsignedInt: $patternUnsignedInt, patternUnsignedIntElement: $patternUnsignedIntElement, patternPositiveInt: $patternPositiveInt, patternPositiveIntElement: $patternPositiveIntElement, patternMarkdown: $patternMarkdown, patternMarkdownElement: $patternMarkdownElement, patternAnnotation: $patternAnnotation, patternAttachment: $patternAttachment, patternIdentifier: $patternIdentifier, patternCodeableConcept: $patternCodeableConcept, patternCoding: $patternCoding, patternQuantity: $patternQuantity, patternRange: $patternRange, patternPeriod: $patternPeriod, patternRatio: $patternRatio, patternSampledData: $patternSampledData, patternSignature: $patternSignature, patternHumanName: $patternHumanName, patternAddress: $patternAddress, patternContactPoint: $patternContactPoint, patternTiming: $patternTiming, patternReference: $patternReference, patternMeta: $patternMeta, exampleBoolean: $exampleBoolean, exampleBooleanElement: $exampleBooleanElement, exampleInteger: $exampleInteger, exampleIntegerElement: $exampleIntegerElement, exampleDecimal: $exampleDecimal, exampleDecimalElement: $exampleDecimalElement, exampleBase64Binary: $exampleBase64Binary, exampleBase64BinaryElement: $exampleBase64BinaryElement, exampleInstant: $exampleInstant, exampleInstantElement: $exampleInstantElement, exampleString: $exampleString, exampleStringElement: $exampleStringElement, exampleUri: $exampleUri, exampleUriElement: $exampleUriElement, exampleDate: $exampleDate, exampleDateElement: $exampleDateElement, exampleDateTime: $exampleDateTime, exampleDateTimeElement: $exampleDateTimeElement, exampleTime: $exampleTime, exampleTimeElement: $exampleTimeElement, exampleCode: $exampleCode, exampleCodeElement: $exampleCodeElement, exampleOid: $exampleOid, exampleOidElement: $exampleOidElement, exampleId: $exampleId, exampleIdElement: $exampleIdElement, exampleUnsignedInt: $exampleUnsignedInt, exampleUnsignedIntElement: $exampleUnsignedIntElement, examplePositiveInt: $examplePositiveInt, examplePositiveIntElement: $examplePositiveIntElement, exampleMarkdown: $exampleMarkdown, exampleMarkdownElement: $exampleMarkdownElement, exampleAnnotation: $exampleAnnotation, exampleAttachment: $exampleAttachment, exampleIdentifier: $exampleIdentifier, exampleCodeableConcept: $exampleCodeableConcept, exampleCoding: $exampleCoding, exampleQuantity: $exampleQuantity, exampleRange: $exampleRange, examplePeriod: $examplePeriod, exampleRatio: $exampleRatio, exampleSampleData: $exampleSampleData, exampleSignature: $exampleSignature, exampleHumanName: $exampleHumanName, exampleAddress: $exampleAddress, exampleContactPoint: $exampleContactPoint, exampleTiming: $exampleTiming, exampleReference: $exampleReference, exampleMeta: $exampleMeta, minValueBoolean: $minValueBoolean, minValueBooleanElement: $minValueBooleanElement, minValueInteger: $minValueInteger, minValueIntegerElement: $minValueIntegerElement, minValueDecimal: $minValueDecimal, minValueDecimalElement: $minValueDecimalElement, minValueBase64Binary: $minValueBase64Binary, minValueBase64BinaryElement: $minValueBase64BinaryElement, minValueInstant: $minValueInstant, minValueInstantElement: $minValueInstantElement, minValueString: $minValueString, minValueStringElement: $minValueStringElement, minValueUri: $minValueUri, minValueUriElement: $minValueUriElement, minValueDate: $minValueDate, minValueDateElement: $minValueDateElement, minValueDateTime: $minValueDateTime, minValueDateTimeElement: $minValueDateTimeElement, minValueTime: $minValueTime, minValueTimeElement: $minValueTimeElement, minValueCode: $minValueCode, minValueCodeElement: $minValueCodeElement, minValueOid: $minValueOid, minValueOidElement: $minValueOidElement, minValueId: $minValueId, minValueIdElement: $minValueIdElement, minValueUnsignedInt: $minValueUnsignedInt, minValueUnsignedIntElement: $minValueUnsignedIntElement, minValuePositiveInt: $minValuePositiveInt, minValuePositiveIntElement: $minValuePositiveIntElement, minValueMarkdown: $minValueMarkdown, minValueMarkdownElement: $minValueMarkdownElement, minValueAnnotation: $minValueAnnotation, minValueAttachment: $minValueAttachment, minValueIdentifier: $minValueIdentifier, minValueCodeableConcept: $minValueCodeableConcept, minValueCoding: $minValueCoding, minValueQuantity: $minValueQuantity, minValueRange: $minValueRange, minValuePeriod: $minValuePeriod, minValueRatio: $minValueRatio, minValueSampledData: $minValueSampledData, minValueSignature: $minValueSignature, minValueHumanName: $minValueHumanName, minValueAddress: $minValueAddress, minValueContactPoint: $minValueContactPoint, minValueTiming: $minValueTiming, minValueReference: $minValueReference, minValueMeta: $minValueMeta, maxValueBoolean: $maxValueBoolean, maxValueBooleanElement: $maxValueBooleanElement, maxValueInteger: $maxValueInteger, maxValueIntegerElement: $maxValueIntegerElement, maxValueDecimal: $maxValueDecimal, maxValueDecimalElement: $maxValueDecimalElement, maxValueBase64Binary: $maxValueBase64Binary, maxValueBase64BinaryElement: $maxValueBase64BinaryElement, maxValueInstant: $maxValueInstant, maxValueInstantElement: $maxValueInstantElement, maxValueString: $maxValueString, maxValueStringElement: $maxValueStringElement, maxValueUri: $maxValueUri, maxValueUriElement: $maxValueUriElement, maxValueDate: $maxValueDate, maxValueDateElement: $maxValueDateElement, maxValueDateTime: $maxValueDateTime, maxValueDateTimeElement: $maxValueDateTimeElement, maxValueTime: $maxValueTime, maxValueTimeElement: $maxValueTimeElement, maxValueCode: $maxValueCode, maxValueCodeElement: $maxValueCodeElement, maxValueOid: $maxValueOid, maxValueOidElement: $maxValueOidElement, maxValueId: $maxValueId, maxValueIdElement: $maxValueIdElement, maxValueUnsignedInt: $maxValueUnsignedInt, maxValueUnsignedIntElement: $maxValueUnsignedIntElement, maxValuePositiveInt: $maxValuePositiveInt, maxValuePositiveIntElement: $maxValuePositiveIntElement, maxValueMarkdown: $maxValueMarkdown, maxValueMarkdownElement: $maxValueMarkdownElement, maxValueAnnotation: $maxValueAnnotation, maxValueAttachment: $maxValueAttachment, maxValueIdentifier: $maxValueIdentifier, maxValueCodeableConcept: $maxValueCodeableConcept, maxValueCoding: $maxValueCoding, maxValueQuantity: $maxValueQuantity, maxValueRange: $maxValueRange, maxValuePeriod: $maxValuePeriod, maxValueRatio: $maxValueRatio, maxValueSampledData: $maxValueSampledData, maxValueSignature: $maxValueSignature, maxValueHumanName: $maxValueHumanName, maxValueAddress: $maxValueAddress, maxValueContactPoint: $maxValueContactPoint, maxValueTiming: $maxValueTiming, maxValueReference: $maxValueReference, maxValueMeta: $maxValueMeta, maxLength: $maxLength, maxLengthElement: $maxLengthElement, condition: $condition, conditionElement: $conditionElement, constraint: $constraint, mustSupport: $mustSupport, mustSupportElement: $mustSupportElement, isModifier: $isModifier, isModifierElement: $isModifierElement, isSummary: $isSummary, isSummaryElement: $isSummaryElement, binding: $binding, mapping: $mapping)';
   }
 
   @override
@@ -10102,7 +10113,7 @@ class _$_ElementDefinition extends _ElementDefinition {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinition &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             (identical(other.path, path) || other.path == path) &&
@@ -10479,7 +10490,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        id,
+        fhirId,
         const DeepCollectionEquality().hash(_extension_),
         path,
         const DeepCollectionEquality().hash(_representation),
@@ -10832,7 +10843,8 @@ class _$_ElementDefinition extends _ElementDefinition {
 
 abstract class _ElementDefinition extends ElementDefinition {
   factory _ElementDefinition(
-      {final FhirId? id,
+      {@JsonKey(name: 'id')
+          final FhirId? fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       required final String path,
@@ -11283,7 +11295,8 @@ abstract class _ElementDefinition extends ElementDefinition {
       _$_ElementDefinition.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -12073,7 +12086,8 @@ Narrative _$NarrativeFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Narrative {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -12096,7 +12110,8 @@ abstract class $NarrativeCopyWith<$Res> {
       _$NarrativeCopyWithImpl<$Res, Narrative>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments')
@@ -12123,7 +12138,7 @@ class _$NarrativeCopyWithImpl<$Res, $Val extends Narrative>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
     Object? status = null,
@@ -12131,9 +12146,9 @@ class _$NarrativeCopyWithImpl<$Res, $Val extends Narrative>
     Object? div = null,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -12179,7 +12194,8 @@ abstract class _$$_NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments')
@@ -12205,7 +12221,7 @@ class __$$_NarrativeCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
     Object? status = null,
@@ -12213,9 +12229,9 @@ class __$$_NarrativeCopyWithImpl<$Res>
     Object? div = null,
   }) {
     return _then(_$_Narrative(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -12245,7 +12261,7 @@ class __$$_NarrativeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Narrative extends _Narrative {
   _$_Narrative(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       @JsonKey(unknownEnumValue: NarrativeStatus.unknown) required this.status,
@@ -12259,7 +12275,8 @@ class _$_Narrative extends _Narrative {
       _$$_NarrativeFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -12293,7 +12310,7 @@ class _$_Narrative extends _Narrative {
 
   @override
   String toString() {
-    return 'Narrative(id: $id, extension_: $extension_, fhirComments: $fhirComments, status: $status, statusElement: $statusElement, div: $div)';
+    return 'Narrative(fhirId: $fhirId, extension_: $extension_, fhirComments: $fhirComments, status: $status, statusElement: $statusElement, div: $div)';
   }
 
   @override
@@ -12301,7 +12318,7 @@ class _$_Narrative extends _Narrative {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_Narrative &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -12316,7 +12333,7 @@ class _$_Narrative extends _Narrative {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_fhirComments),
       status,
@@ -12339,7 +12356,8 @@ class _$_Narrative extends _Narrative {
 
 abstract class _Narrative extends Narrative {
   factory _Narrative(
-      {final FhirId? id,
+      {@JsonKey(name: 'id')
+          final FhirId? fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments')
@@ -12355,7 +12373,8 @@ abstract class _Narrative extends Narrative {
       _$_Narrative.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -12383,7 +12402,8 @@ ElementDefinitionSlicing _$ElementDefinitionSlicingFromJson(
 
 /// @nodoc
 mixin _$ElementDefinitionSlicing {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<String>? get discriminator => throw _privateConstructorUsedError;
@@ -12411,7 +12431,7 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
       _$ElementDefinitionSlicingCopyWithImpl<$Res, ElementDefinitionSlicing>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<String>? discriminator,
       String? description,
@@ -12440,7 +12460,7 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? discriminator = freezed,
     Object? description = freezed,
@@ -12451,9 +12471,9 @@ class _$ElementDefinitionSlicingCopyWithImpl<$Res,
     Object? rulesElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -12537,7 +12557,7 @@ abstract class _$$_ElementDefinitionSlicingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<String>? discriminator,
       String? description,
@@ -12567,7 +12587,7 @@ class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? discriminator = freezed,
     Object? description = freezed,
@@ -12578,9 +12598,9 @@ class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
     Object? rulesElement = freezed,
   }) {
     return _then(_$_ElementDefinitionSlicing(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -12622,7 +12642,7 @@ class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   _$_ElementDefinitionSlicing(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<String>? discriminator,
       this.description,
@@ -12639,7 +12659,8 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
       _$$_ElementDefinitionSlicingFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -12680,7 +12701,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
 
   @override
   String toString() {
-    return 'ElementDefinitionSlicing(id: $id, extension_: $extension_, discriminator: $discriminator, description: $description, descriptionElement: $descriptionElement, ordered: $ordered, orderedElement: $orderedElement, rules: $rules, rulesElement: $rulesElement)';
+    return 'ElementDefinitionSlicing(fhirId: $fhirId, extension_: $extension_, discriminator: $discriminator, description: $description, descriptionElement: $descriptionElement, ordered: $ordered, orderedElement: $orderedElement, rules: $rules, rulesElement: $rulesElement)';
   }
 
   @override
@@ -12688,7 +12709,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionSlicing &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -12709,7 +12730,7 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_discriminator),
       description,
@@ -12736,7 +12757,8 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
 
 abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
   factory _ElementDefinitionSlicing(
-      {final FhirId? id,
+      {@JsonKey(name: 'id')
+          final FhirId? fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       final List<String>? discriminator,
@@ -12756,7 +12778,8 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
       _$_ElementDefinitionSlicing.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -12791,7 +12814,8 @@ ElementDefinitionBase _$ElementDefinitionBaseFromJson(
 
 /// @nodoc
 mixin _$ElementDefinitionBase {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   String get path => throw _privateConstructorUsedError;
@@ -12817,7 +12841,7 @@ abstract class $ElementDefinitionBaseCopyWith<$Res> {
       _$ElementDefinitionBaseCopyWithImpl<$Res, ElementDefinitionBase>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String path,
       @JsonKey(name: '_path') Element? pathElement,
@@ -12845,7 +12869,7 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? path = null,
     Object? pathElement = freezed,
@@ -12855,9 +12879,9 @@ class _$ElementDefinitionBaseCopyWithImpl<$Res,
     Object? maxElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -12936,7 +12960,7 @@ abstract class _$$_ElementDefinitionBaseCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String path,
       @JsonKey(name: '_path') Element? pathElement,
@@ -12964,7 +12988,7 @@ class __$$_ElementDefinitionBaseCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? path = null,
     Object? pathElement = freezed,
@@ -12974,9 +12998,9 @@ class __$$_ElementDefinitionBaseCopyWithImpl<$Res>
     Object? maxElement = freezed,
   }) {
     return _then(_$_ElementDefinitionBase(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -13014,7 +13038,7 @@ class __$$_ElementDefinitionBaseCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionBase extends _ElementDefinitionBase {
   _$_ElementDefinitionBase(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       required this.path,
       @JsonKey(name: '_path') this.pathElement,
@@ -13029,7 +13053,8 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
       _$$_ElementDefinitionBaseFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -13059,7 +13084,7 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
 
   @override
   String toString() {
-    return 'ElementDefinitionBase(id: $id, extension_: $extension_, path: $path, pathElement: $pathElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement)';
+    return 'ElementDefinitionBase(fhirId: $fhirId, extension_: $extension_, path: $path, pathElement: $pathElement, min: $min, minElement: $minElement, max: $max, maxElement: $maxElement)';
   }
 
   @override
@@ -13067,7 +13092,7 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionBase &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             (identical(other.path, path) || other.path == path) &&
@@ -13085,7 +13110,7 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       path,
       pathElement,
@@ -13111,7 +13136,7 @@ class _$_ElementDefinitionBase extends _ElementDefinitionBase {
 
 abstract class _ElementDefinitionBase extends ElementDefinitionBase {
   factory _ElementDefinitionBase(
-          {final FhirId? id,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           required final String path,
           @JsonKey(name: '_path') final Element? pathElement,
@@ -13126,7 +13151,8 @@ abstract class _ElementDefinitionBase extends ElementDefinitionBase {
       _$_ElementDefinitionBase.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -13158,7 +13184,8 @@ ElementDefinitionType _$ElementDefinitionTypeFromJson(
 
 /// @nodoc
 mixin _$ElementDefinitionType {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   FhirCode? get code => throw _privateConstructorUsedError;
@@ -13184,7 +13211,7 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       _$ElementDefinitionTypeCopyWithImpl<$Res, ElementDefinitionType>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirCode? code,
       @JsonKey(name: '_code') TypeCodeExtension? codeExtension,
@@ -13211,7 +13238,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? code = freezed,
     Object? codeExtension = freezed,
@@ -13221,9 +13248,9 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res,
     Object? fhirElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -13290,7 +13317,7 @@ abstract class _$$_ElementDefinitionTypeCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       FhirCode? code,
       @JsonKey(name: '_code') TypeCodeExtension? codeExtension,
@@ -13316,7 +13343,7 @@ class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? code = freezed,
     Object? codeExtension = freezed,
@@ -13326,9 +13353,9 @@ class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
     Object? fhirElement = freezed,
   }) {
     return _then(_$_ElementDefinitionType(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -13366,7 +13393,7 @@ class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionType extends _ElementDefinitionType {
   _$_ElementDefinitionType(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.code,
       @JsonKey(name: '_code') this.codeExtension,
@@ -13384,7 +13411,8 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
       _$$_ElementDefinitionTypeFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -13437,7 +13465,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 
   @override
   String toString() {
-    return 'ElementDefinitionType(id: $id, extension_: $extension_, code: $code, codeExtension: $codeExtension, profile: $profile, aggregation: $aggregation, aggregationElement: $aggregationElement, fhirElement: $fhirElement)';
+    return 'ElementDefinitionType(fhirId: $fhirId, extension_: $extension_, code: $code, codeExtension: $codeExtension, profile: $profile, aggregation: $aggregation, aggregationElement: $aggregationElement, fhirElement: $fhirElement)';
   }
 
   @override
@@ -13445,7 +13473,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionType &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             (identical(other.code, code) || other.code == code) &&
@@ -13464,7 +13492,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       code,
       codeExtension,
@@ -13490,7 +13518,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 
 abstract class _ElementDefinitionType extends ElementDefinitionType {
   factory _ElementDefinitionType(
-          {final FhirId? id,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final FhirCode? code,
           @JsonKey(name: '_code') final TypeCodeExtension? codeExtension,
@@ -13505,7 +13533,8 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       _$_ElementDefinitionType.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -13692,7 +13721,8 @@ ElementDefinitionConstraint _$ElementDefinitionConstraintFromJson(
 
 /// @nodoc
 mixin _$ElementDefinitionConstraint {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   FhirId get key => throw _privateConstructorUsedError;
@@ -13727,7 +13757,8 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
           ElementDefinitionConstraint>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       FhirId key,
@@ -13768,7 +13799,7 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? key = null,
     Object? keyElement = freezed,
@@ -13782,9 +13813,9 @@ class _$ElementDefinitionConstraintCopyWithImpl<$Res,
     Object? xpathElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -13904,7 +13935,8 @@ abstract class _$$_ElementDefinitionConstraintCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       FhirId key,
@@ -13949,7 +13981,7 @@ class __$$_ElementDefinitionConstraintCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? key = null,
     Object? keyElement = freezed,
@@ -13963,9 +13995,9 @@ class __$$_ElementDefinitionConstraintCopyWithImpl<$Res>
     Object? xpathElement = freezed,
   }) {
     return _then(_$_ElementDefinitionConstraint(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -14019,7 +14051,8 @@ class __$$_ElementDefinitionConstraintCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   _$_ElementDefinitionConstraint(
-      {this.id,
+      {@JsonKey(name: 'id')
+          this.fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       required this.key,
@@ -14045,7 +14078,8 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
       _$$_ElementDefinitionConstraintFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -14086,7 +14120,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
 
   @override
   String toString() {
-    return 'ElementDefinitionConstraint(id: $id, extension_: $extension_, key: $key, keyElement: $keyElement, requirements: $requirements, requirementsElement: $requirementsElement, severity: $severity, severityElement: $severityElement, human: $human, humanElement: $humanElement, xpath: $xpath, xpathElement: $xpathElement)';
+    return 'ElementDefinitionConstraint(fhirId: $fhirId, extension_: $extension_, key: $key, keyElement: $keyElement, requirements: $requirements, requirementsElement: $requirementsElement, severity: $severity, severityElement: $severityElement, human: $human, humanElement: $humanElement, xpath: $xpath, xpathElement: $xpathElement)';
   }
 
   @override
@@ -14094,7 +14128,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionConstraint &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             (identical(other.key, key) || other.key == key) &&
@@ -14120,7 +14154,7 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       key,
       keyElement,
@@ -14151,7 +14185,8 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
 abstract class _ElementDefinitionConstraint
     extends ElementDefinitionConstraint {
   factory _ElementDefinitionConstraint(
-      {final FhirId? id,
+      {@JsonKey(name: 'id')
+          final FhirId? fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       required final FhirId key,
@@ -14176,7 +14211,8 @@ abstract class _ElementDefinitionConstraint
       _$_ElementDefinitionConstraint.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -14219,7 +14255,8 @@ ElementDefinitionBinding _$ElementDefinitionBindingFromJson(
 
 /// @nodoc
 mixin _$ElementDefinitionBinding {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(
@@ -14248,7 +14285,8 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
       _$ElementDefinitionBindingCopyWithImpl<$Res, ElementDefinitionBinding>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
@@ -14280,7 +14318,7 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? strength = null,
     Object? strengthElement = freezed,
@@ -14290,9 +14328,9 @@ class _$ElementDefinitionBindingCopyWithImpl<$Res,
     Object? valueSetReference = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -14372,7 +14410,8 @@ abstract class _$$_ElementDefinitionBindingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id')
+          FhirId? fhirId,
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
@@ -14405,7 +14444,7 @@ class __$$_ElementDefinitionBindingCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? strength = null,
     Object? strengthElement = freezed,
@@ -14415,9 +14454,9 @@ class __$$_ElementDefinitionBindingCopyWithImpl<$Res>
     Object? valueSetReference = freezed,
   }) {
     return _then(_$_ElementDefinitionBinding(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -14455,7 +14494,8 @@ class __$$_ElementDefinitionBindingCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   _$_ElementDefinitionBinding(
-      {this.id,
+      {@JsonKey(name: 'id')
+          this.fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
@@ -14474,7 +14514,8 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
       _$$_ElementDefinitionBindingFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -14506,7 +14547,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 
   @override
   String toString() {
-    return 'ElementDefinitionBinding(id: $id, extension_: $extension_, strength: $strength, strengthElement: $strengthElement, description: $description, descriptionElement: $descriptionElement, valueSetUri: $valueSetUri, valueSetReference: $valueSetReference)';
+    return 'ElementDefinitionBinding(fhirId: $fhirId, extension_: $extension_, strength: $strength, strengthElement: $strengthElement, description: $description, descriptionElement: $descriptionElement, valueSetUri: $valueSetUri, valueSetReference: $valueSetReference)';
   }
 
   @override
@@ -14514,7 +14555,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionBinding &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             (identical(other.strength, strength) ||
@@ -14535,7 +14576,7 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       strength,
       strengthElement,
@@ -14561,7 +14602,8 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 
 abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
   factory _ElementDefinitionBinding(
-      {final FhirId? id,
+      {@JsonKey(name: 'id')
+          final FhirId? fhirId,
       @JsonKey(name: 'extension')
           final List<FhirExtension>? extension_,
       @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
@@ -14579,7 +14621,8 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
       _$_ElementDefinitionBinding.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
@@ -14613,7 +14656,8 @@ ElementDefinitionMapping _$ElementDefinitionMappingFromJson(
 
 /// @nodoc
 mixin _$ElementDefinitionMapping {
-  FhirId? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
@@ -14641,7 +14685,7 @@ abstract class $ElementDefinitionMappingCopyWith<$Res> {
       _$ElementDefinitionMappingCopyWithImpl<$Res, ElementDefinitionMapping>;
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       FhirId identity,
@@ -14670,7 +14714,7 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
     Object? identity = null,
@@ -14681,9 +14725,9 @@ class _$ElementDefinitionMappingCopyWithImpl<$Res,
     Object? mapElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -14767,7 +14811,7 @@ abstract class _$$_ElementDefinitionMappingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {FhirId? id,
+      {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       FhirId identity,
@@ -14797,7 +14841,7 @@ class __$$_ElementDefinitionMappingCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
     Object? identity = null,
@@ -14808,9 +14852,9 @@ class __$$_ElementDefinitionMappingCopyWithImpl<$Res>
     Object? mapElement = freezed,
   }) {
     return _then(_$_ElementDefinitionMapping(
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
+      fhirId: freezed == fhirId
+          ? _value.fhirId
+          : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -14852,7 +14896,7 @@ class __$$_ElementDefinitionMappingCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   _$_ElementDefinitionMapping(
-      {this.id,
+      {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.identity,
@@ -14869,7 +14913,8 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
       _$$_ElementDefinitionMappingFromJson(json);
 
   @override
-  final FhirId? id;
+  @JsonKey(name: 'id')
+  final FhirId? fhirId;
   final List<FhirExtension>? _extension_;
   @override
   @JsonKey(name: 'extension')
@@ -14910,7 +14955,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
 
   @override
   String toString() {
-    return 'ElementDefinitionMapping(id: $id, extension_: $extension_, fhirComments: $fhirComments, identity: $identity, identityElement: $identityElement, language: $language, languageElement: $languageElement, map: $map, mapElement: $mapElement)';
+    return 'ElementDefinitionMapping(fhirId: $fhirId, extension_: $extension_, fhirComments: $fhirComments, identity: $identity, identityElement: $identityElement, language: $language, languageElement: $languageElement, map: $map, mapElement: $mapElement)';
   }
 
   @override
@@ -14918,7 +14963,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_ElementDefinitionMapping &&
-            (identical(other.id, id) || other.id == id) &&
+            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -14940,7 +14985,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      fhirId,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_fhirComments),
       identity,
@@ -14967,7 +15012,7 @@ class _$_ElementDefinitionMapping extends _ElementDefinitionMapping {
 
 abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
   factory _ElementDefinitionMapping(
-          {final FhirId? id,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
           required final FhirId identity,
@@ -14983,7 +15028,8 @@ abstract class _ElementDefinitionMapping extends ElementDefinitionMapping {
       _$_ElementDefinitionMapping.fromJson;
 
   @override
-  FhirId? get id;
+  @JsonKey(name: 'id')
+  FhirId? get fhirId;
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;

@@ -21,7 +21,7 @@ class Account with Resource, _$Account {
     @Default(Dstu2ResourceType.Account)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -82,7 +82,7 @@ class Claim with Resource, _$Claim {
     @Default(Dstu2ResourceType.Claim)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -155,7 +155,7 @@ class Claim with Resource, _$Claim {
 class ClaimPayee with _$ClaimPayee {
   ClaimPayee._();
   factory ClaimPayee({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Coding? type,
@@ -199,7 +199,7 @@ class ClaimPayee with _$ClaimPayee {
 class ClaimDiagnosis with _$ClaimDiagnosis {
   ClaimDiagnosis._();
   factory ClaimDiagnosis({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirPositiveInt sequence,
@@ -242,7 +242,7 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
 class ClaimCoverage with _$ClaimCoverage {
   ClaimCoverage._();
   factory ClaimCoverage({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirPositiveInt sequence,
@@ -290,7 +290,7 @@ class ClaimCoverage with _$ClaimCoverage {
 class ClaimItem with _$ClaimItem {
   ClaimItem._();
   factory ClaimItem({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirPositiveInt sequence,
@@ -350,7 +350,7 @@ class ClaimItem with _$ClaimItem {
 class ClaimItemDetail with _$ClaimItemDetail {
   ClaimItemDetail._();
   factory ClaimItemDetail({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirPositiveInt sequence,
@@ -402,7 +402,7 @@ class ClaimItemDetail with _$ClaimItemDetail {
 class ClaimDetailSubDetail with _$ClaimDetailSubDetail {
   ClaimDetailSubDetail._();
   factory ClaimDetailSubDetail({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirPositiveInt sequence,
@@ -453,7 +453,7 @@ class ClaimDetailSubDetail with _$ClaimDetailSubDetail {
 class ClaimItemProsthesis with _$ClaimItemProsthesis {
   ClaimItemProsthesis._();
   factory ClaimItemProsthesis({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirBoolean? initial,
@@ -496,7 +496,7 @@ class ClaimItemProsthesis with _$ClaimItemProsthesis {
 class ClaimMissingTeeth with _$ClaimMissingTeeth {
   ClaimMissingTeeth._();
   factory ClaimMissingTeeth({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding tooth,
@@ -542,7 +542,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
     @Default(Dstu2ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
         Dstu2ResourceType resourceType,
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -617,7 +617,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
 class ClaimResponseItem with _$ClaimResponseItem {
   ClaimResponseItem._();
   factory ClaimResponseItem({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -663,7 +663,7 @@ class ClaimResponseItem with _$ClaimResponseItem {
 class ClaimResponseItemAdjudication with _$ClaimResponseItemAdjudication {
   ClaimResponseItemAdjudication._();
   factory ClaimResponseItemAdjudication({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding code,
@@ -707,7 +707,7 @@ class ClaimResponseItemAdjudication with _$ClaimResponseItemAdjudication {
 class ClaimResponseItemDetail with _$ClaimResponseItemDetail {
   ClaimResponseItemDetail._();
   factory ClaimResponseItemDetail({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirPositiveInt sequenceLinkId,
@@ -750,7 +750,7 @@ class ClaimResponseItemDetail with _$ClaimResponseItemDetail {
 class ClaimResponseDetailSubDetail with _$ClaimResponseDetailSubDetail {
   ClaimResponseDetailSubDetail._();
   factory ClaimResponseDetailSubDetail({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirPositiveInt sequenceLinkId,
@@ -792,7 +792,7 @@ class ClaimResponseDetailSubDetail with _$ClaimResponseDetailSubDetail {
 class ClaimResponseAddItem with _$ClaimResponseAddItem {
   ClaimResponseAddItem._();
   factory ClaimResponseAddItem({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<FhirPositiveInt>? sequenceLinkId,
@@ -838,7 +838,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
 class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail {
   ClaimResponseAddItemDetail._();
   factory ClaimResponseAddItemDetail({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Coding service,
@@ -881,7 +881,7 @@ class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail {
 class ClaimResponseError with _$ClaimResponseError {
   ClaimResponseError._();
   factory ClaimResponseError({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirPositiveInt? sequenceLinkId,
@@ -925,7 +925,7 @@ class ClaimResponseError with _$ClaimResponseError {
 class ClaimResponseNote with _$ClaimResponseNote {
   ClaimResponseNote._();
   factory ClaimResponseNote({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirPositiveInt? number,
@@ -971,7 +971,7 @@ class ClaimResponseNote with _$ClaimResponseNote {
 class ClaimResponseCoverage with _$ClaimResponseCoverage {
   ClaimResponseCoverage._();
   factory ClaimResponseCoverage({
-    FhirId? id,
+    @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required FhirPositiveInt sequence,
