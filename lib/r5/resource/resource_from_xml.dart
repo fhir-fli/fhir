@@ -183,6 +183,8 @@ Map<String, dynamic> reformatXmlJsonMap(
                 throw Exception(
                     'The field named $key (which is a List) was not found in the FHIR Spec');
               } else {
+                print('OldType: $oldType');
+                print('entry: ${entry.runtimeType}');
                 if (isPrimitive(oldType!, entry as Map<String, dynamic>)) {
                   (newMap[replacedKey] as List<dynamic>).add(primitiveValue(
                       fhirField.type, entry.values.first, replacedKey));
@@ -192,7 +194,7 @@ Map<String, dynamic> reformatXmlJsonMap(
                       oldValue as Map<String, dynamic>, oldType);
                   oldType = ifResource.keys.first;
                   oldValue = ifResource.values.first;
-                  // print('192: $oldType');
+                  print('195: $oldType');
                   (newMap[replacedKey] as List<dynamic>).add(reformatXmlJsonMap(
                     oldValue as Map<String, dynamic>,
                     fhirFieldMap[oldType]!,
@@ -236,6 +238,7 @@ Map<String, dynamic> checkIfResource(
 
 bool isPrimitive(String oldType, Map<String, dynamic> oldValue) {
   final int keyLength = oldValue.keys.length;
+  // print(oldValue.keys);
   final bool containsId =
       oldValue.keys.contains('id') || oldValue.keys.contains('@id');
   final bool containsValue =
@@ -251,6 +254,7 @@ bool isPrimitive(String oldType, Map<String, dynamic> oldValue) {
     'Date',
     'FhirDateTime',
     'Decimal',
+    'FhirId',
     'Id',
     'Instant',
     'Integer',
@@ -263,6 +267,21 @@ bool isPrimitive(String oldType, Map<String, dynamic> oldValue) {
     'FhirUri',
     'FhirUrl',
     'Uuid',
+    'FhirBase64Binary',
+    'FhirBoolean',
+    'FhirCanonical',
+    'FhirCode',
+    'FhirDate',
+    'FhirDecimal',
+    'FhirInstant',
+    'FhirInteger',
+    'FhirInteger64',
+    'FhirMarkdown',
+    'FhirOid',
+    'FhirPositiveInt',
+    'FhirTime',
+    'FhirUnsignedInt',
+    'FhirUuid',
   ].contains(oldType)) {
     if (keyLength == 1 && (containsValue || containsId || containsExtension)) {
       return true;

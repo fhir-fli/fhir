@@ -741,7 +741,7 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'modifierExtension': const FhirField(true, 'FhirExtension'),
     'path': const FhirField(false, 'String'),
     'pathElement': const FhirField(false, 'Element'),
-    'representation': const FhirField(true, 'ElementDefinitionRepresentation'),
+    'representation': const FhirField(true, 'Code'),
     'representationElement': const FhirField(true, 'Element'),
     'sliceName': const FhirField(false, 'String'),
     'sliceNameElement': const FhirField(false, 'Element'),
@@ -9922,7 +9922,7 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'type': const FhirField(false, 'CodeableConcept'),
     'usage': const FhirField(false, 'String'),
     'usageElement': const FhirField(false, 'Element'),
-    'uniqueId': const FhirField(true, 'Id'),
+    'uniqueId': const FhirField(true, 'NamingSystemUniqueId'),
   },
   'NamingSystemUniqueId': <String, FhirField>{
     'id': const FhirField(false, 'String'),
