@@ -484,8 +484,8 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
   'Availability': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
-    'availableTime': const FhirField(true, 'Time'),
-    'notAvailableTime': const FhirField(true, 'Time'),
+    'availableTime': const FhirField(true, 'AvailabilityAvailableTime'),
+    'notAvailableTime': const FhirField(true, 'AvailabilityNotAvailableTime'),
   },
   'AvailabilityAvailableTime': <String, FhirField>{
     'id': const FhirField(false, 'String'),
@@ -4481,6 +4481,7 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'securityLabel': const FhirField(true, 'Coding'),
     'purpose': const FhirField(true, 'Coding'),
     'documentType': const FhirField(true, 'Coding'),
+    'resourceType': const FhirField(true, 'Coding'),
     'code': const FhirField(true, 'CodeableConcept'),
     'dataPeriod': const FhirField(false, 'Period'),
     'data': const FhirField(true, 'ConsentData'),

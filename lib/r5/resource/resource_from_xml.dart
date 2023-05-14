@@ -183,8 +183,7 @@ Map<String, dynamic> reformatXmlJsonMap(
                 throw Exception(
                     'The field named $key (which is a List) was not found in the FHIR Spec');
               } else {
-                print('OldType: $oldType');
-                print('entry: ${entry.runtimeType}');
+                // print('${entry.runtimeType} $oldType');
                 if (isPrimitive(oldType!, entry as Map<String, dynamic>)) {
                   (newMap[replacedKey] as List<dynamic>).add(primitiveValue(
                       fhirField.type, entry.values.first, replacedKey));
@@ -194,7 +193,7 @@ Map<String, dynamic> reformatXmlJsonMap(
                       oldValue as Map<String, dynamic>, oldType);
                   oldType = ifResource.keys.first;
                   oldValue = ifResource.values.first;
-                  print('195: $oldType');
+                  // print('195: $oldType');
                   (newMap[replacedKey] as List<dynamic>).add(reformatXmlJsonMap(
                     oldValue as Map<String, dynamic>,
                     fhirFieldMap[oldType]!,
