@@ -3,9 +3,7 @@
 // ignore_for_file: invalid_annotation_target
 // ignore_for_file: sort_unnamed_constructors_first
 // ignore_for_file: sort_constructors_first
-// ignore_for_file: prefer_mixin
-// ignore_file_file: avoid_unused_constructor_parameters
-
+// ignore_for_file: avoid_unused_constructor_parameters
 // Dart imports:
 import 'dart:convert';
 
@@ -62,7 +60,7 @@ class Resource {
     Map<String, dynamic> json, [
     SerializationManager? serializationManager,
   ]) =>
-      _resourceFromJson(json, serializationManager);
+      _resourceFromJson(json);
 
   /// Acts like a constructor, returns a [Resource], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out

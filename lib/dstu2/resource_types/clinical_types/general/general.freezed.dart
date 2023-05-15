@@ -811,10 +811,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
         _reaction = reaction,
         super._();
 
-  factory _$_AllergyIntolerance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$$_AllergyIntoleranceFromJson(json);
 
   @override
@@ -1103,10 +1100,8 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
       _$_AllergyIntolerance;
   _AllergyIntolerance._() : super._();
 
-  factory _AllergyIntolerance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AllergyIntolerance.fromJson;
+  factory _AllergyIntolerance.fromJson(Map<String, dynamic> json) =
+      _$_AllergyIntolerance.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AllergyIntolerance)
@@ -1635,10 +1630,7 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
         _manifestation = manifestation,
         super._();
 
-  factory _$_AllergyIntoleranceReaction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
       _$$_AllergyIntoleranceReactionFromJson(json);
 
   @override
@@ -1820,10 +1812,8 @@ abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
       final Annotation? note}) = _$_AllergyIntoleranceReaction;
   _AllergyIntoleranceReaction._() : super._();
 
-  factory _AllergyIntoleranceReaction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AllergyIntoleranceReaction.fromJson;
+  factory _AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =
+      _$_AllergyIntoleranceReaction.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2901,10 +2891,7 @@ class _$_Condition extends _Condition {
         _bodySite = bodySite,
         super._();
 
-  factory _$_Condition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Condition.fromJson(Map<String, dynamic> json) =>
       _$$_ConditionFromJson(json);
 
   @override
@@ -3256,10 +3243,8 @@ abstract class _Condition extends Condition {
       final String? notes}) = _$_Condition;
   _Condition._() : super._();
 
-  factory _Condition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Condition.fromJson;
+  factory _Condition.fromJson(Map<String, dynamic> json) =
+      _$_Condition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Condition)
@@ -3546,10 +3531,7 @@ class _$_ConditionStage extends _ConditionStage {
         _assessment = assessment,
         super._();
 
-  factory _$_ConditionStage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ConditionStage.fromJson(Map<String, dynamic> json) =>
       _$$_ConditionStageFromJson(json);
 
   @override
@@ -3657,10 +3639,8 @@ abstract class _ConditionStage extends ConditionStage {
       final List<Reference>? assessment}) = _$_ConditionStage;
   _ConditionStage._() : super._();
 
-  factory _ConditionStage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ConditionStage.fromJson;
+  factory _ConditionStage.fromJson(Map<String, dynamic> json) =
+      _$_ConditionStage.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3867,10 +3847,7 @@ class _$_ConditionEvidence extends _ConditionEvidence {
         _detail = detail,
         super._();
 
-  factory _$_ConditionEvidence.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ConditionEvidence.fromJson(Map<String, dynamic> json) =>
       _$$_ConditionEvidenceFromJson(json);
 
   @override
@@ -3978,10 +3955,8 @@ abstract class _ConditionEvidence extends ConditionEvidence {
       final List<Reference>? detail}) = _$_ConditionEvidence;
   _ConditionEvidence._() : super._();
 
-  factory _ConditionEvidence.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ConditionEvidence.fromJson;
+  factory _ConditionEvidence.fromJson(Map<String, dynamic> json) =
+      _$_ConditionEvidence.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4865,10 +4840,7 @@ class _$_Procedure extends _Procedure {
         _used = used,
         super._();
 
-  factory _$_Procedure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Procedure.fromJson(Map<String, dynamic> json) =>
       _$$_ProcedureFromJson(json);
 
   @override
@@ -5233,10 +5205,8 @@ abstract class _Procedure extends Procedure {
       final List<Reference>? used}) = _$_Procedure;
   _Procedure._() : super._();
 
-  factory _Procedure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Procedure.fromJson;
+  factory _Procedure.fromJson(Map<String, dynamic> json) =
+      _$_Procedure.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Procedure)
@@ -5522,10 +5492,7 @@ class _$_ProcedurePerformer extends _ProcedurePerformer {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_ProcedurePerformer.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
       _$$_ProcedurePerformerFromJson(json);
 
   @override
@@ -5626,10 +5593,8 @@ abstract class _ProcedurePerformer extends ProcedurePerformer {
       final CodeableConcept? role}) = _$_ProcedurePerformer;
   _ProcedurePerformer._() : super._();
 
-  factory _ProcedurePerformer.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ProcedurePerformer.fromJson;
+  factory _ProcedurePerformer.fromJson(Map<String, dynamic> json) =
+      _$_ProcedurePerformer.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -5831,10 +5796,7 @@ class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ProcedureFocalDevice.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
       _$$_ProcedureFocalDeviceFromJson(json);
 
   @override
@@ -5921,10 +5883,8 @@ abstract class _ProcedureFocalDevice extends ProcedureFocalDevice {
       required final Reference manipulated}) = _$_ProcedureFocalDevice;
   _ProcedureFocalDevice._() : super._();
 
-  factory _ProcedureFocalDevice.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ProcedureFocalDevice.fromJson;
+  factory _ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =
+      _$_ProcedureFocalDevice.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6749,10 +6709,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
         _action = action,
         super._();
 
-  factory _$_ClinicalImpression.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ClinicalImpression.fromJson(Map<String, dynamic> json) =>
       _$$_ClinicalImpressionFromJson(json);
 
   @override
@@ -7094,10 +7051,8 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       final List<Reference>? action}) = _$_ClinicalImpression;
   _ClinicalImpression._() : super._();
 
-  factory _ClinicalImpression.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ClinicalImpression.fromJson;
+  factory _ClinicalImpression.fromJson(Map<String, dynamic> json) =
+      _$_ClinicalImpression.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ClinicalImpression)
@@ -7357,9 +7312,8 @@ class _$_ClinicalImpressionInvestigations
         super._();
 
   factory _$_ClinicalImpressionInvestigations.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ClinicalImpressionInvestigationsFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ClinicalImpressionInvestigationsFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -7643,10 +7597,7 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClinicalImpressionFinding.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
       _$$_ClinicalImpressionFindingFromJson(json);
 
   @override
@@ -7732,10 +7683,8 @@ abstract class _ClinicalImpressionFinding extends ClinicalImpressionFinding {
       final String? cause}) = _$_ClinicalImpressionFinding;
   _ClinicalImpressionFinding._() : super._();
 
-  factory _ClinicalImpressionFinding.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ClinicalImpressionFinding.fromJson;
+  factory _ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =
+      _$_ClinicalImpressionFinding.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -7924,10 +7873,7 @@ class _$_ClinicalImpressionRuledOut extends _ClinicalImpressionRuledOut {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClinicalImpressionRuledOut.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ClinicalImpressionRuledOut.fromJson(Map<String, dynamic> json) =>
       _$$_ClinicalImpressionRuledOutFromJson(json);
 
   @override
@@ -8013,10 +7959,8 @@ abstract class _ClinicalImpressionRuledOut extends ClinicalImpressionRuledOut {
       final String? reason}) = _$_ClinicalImpressionRuledOut;
   _ClinicalImpressionRuledOut._() : super._();
 
-  factory _ClinicalImpressionRuledOut.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ClinicalImpressionRuledOut.fromJson;
+  factory _ClinicalImpressionRuledOut.fromJson(Map<String, dynamic> json) =
+      _$_ClinicalImpressionRuledOut.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -9051,10 +8995,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
         _condition = condition,
         super._();
 
-  factory _$_FamilyMemberHistory.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
       _$$_FamilyMemberHistoryFromJson(json);
 
   @override
@@ -9398,10 +9339,8 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
       final List<FamilyMemberHistoryCondition>? condition}) = _$_FamilyMemberHistory;
   _FamilyMemberHistory._() : super._();
 
-  factory _FamilyMemberHistory.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_FamilyMemberHistory.fromJson;
+  factory _FamilyMemberHistory.fromJson(Map<String, dynamic> json) =
+      _$_FamilyMemberHistory.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.FamilyMemberHistory)
@@ -9850,10 +9789,7 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_FamilyMemberHistoryCondition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
       _$$_FamilyMemberHistoryConditionFromJson(json);
 
   @override
@@ -9976,10 +9912,8 @@ abstract class _FamilyMemberHistoryCondition
       final Annotation? note}) = _$_FamilyMemberHistoryCondition;
   _FamilyMemberHistoryCondition._() : super._();
 
-  factory _FamilyMemberHistoryCondition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_FamilyMemberHistoryCondition.fromJson;
+  factory _FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =
+      _$_FamilyMemberHistoryCondition.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -10593,10 +10527,7 @@ class _$_RiskAssessment extends _RiskAssessment {
         _prediction = prediction,
         super._();
 
-  factory _$_RiskAssessment.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_RiskAssessment.fromJson(Map<String, dynamic> json) =>
       _$$_RiskAssessmentFromJson(json);
 
   @override
@@ -10814,10 +10745,8 @@ abstract class _RiskAssessment extends RiskAssessment {
           final Element? mitigationElement}) = _$_RiskAssessment;
   _RiskAssessment._() : super._();
 
-  factory _RiskAssessment.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_RiskAssessment.fromJson;
+  factory _RiskAssessment.fromJson(Map<String, dynamic> json) =
+      _$_RiskAssessment.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.RiskAssessment)
@@ -11278,10 +11207,7 @@ class _$_RiskAssessmentPrediction extends _RiskAssessmentPrediction {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_RiskAssessmentPrediction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =>
       _$$_RiskAssessmentPredictionFromJson(json);
 
   @override
@@ -11433,10 +11359,8 @@ abstract class _RiskAssessmentPrediction extends RiskAssessmentPrediction {
           final Element? rationaleElement}) = _$_RiskAssessmentPrediction;
   _RiskAssessmentPrediction._() : super._();
 
-  factory _RiskAssessmentPrediction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_RiskAssessmentPrediction.fromJson;
+  factory _RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =
+      _$_RiskAssessmentPrediction.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -12098,10 +12022,7 @@ class _$_DetectedIssue extends _DetectedIssue {
         _mitigation = mitigation,
         super._();
 
-  factory _$_DetectedIssue.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$$_DetectedIssueFromJson(json);
 
   @override
@@ -12336,10 +12257,8 @@ abstract class _DetectedIssue extends DetectedIssue {
       final List<DetectedIssueMitigation>? mitigation}) = _$_DetectedIssue;
   _DetectedIssue._() : super._();
 
-  factory _DetectedIssue.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DetectedIssue.fromJson;
+  factory _DetectedIssue.fromJson(Map<String, dynamic> json) =
+      _$_DetectedIssue.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DetectedIssue)
@@ -12599,10 +12518,7 @@ class _$_DetectedIssueMitigation extends _DetectedIssueMitigation {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DetectedIssueMitigation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
       _$$_DetectedIssueMitigationFromJson(json);
 
   @override
@@ -12694,10 +12610,8 @@ abstract class _DetectedIssueMitigation extends DetectedIssueMitigation {
       final Reference? author}) = _$_DetectedIssueMitigation;
   _DetectedIssueMitigation._() : super._();
 
-  factory _DetectedIssueMitigation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DetectedIssueMitigation.fromJson;
+  factory _DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =
+      _$_DetectedIssueMitigation.fromJson;
 
   @override
   @JsonKey(name: 'id')

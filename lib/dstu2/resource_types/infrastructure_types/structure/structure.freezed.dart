@@ -736,10 +736,7 @@ class _$_Media extends _Media {
         _identifier = identifier,
         super._();
 
-  factory _$_Media.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Media.fromJson(Map<String, dynamic> json) =>
       _$$_MediaFromJson(json);
 
   @override
@@ -993,10 +990,7 @@ abstract class _Media extends Media {
       required final Attachment content}) = _$_Media;
   _Media._() : super._();
 
-  factory _Media.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Media.fromJson;
+  factory _Media.fromJson(Map<String, dynamic> json) = _$_Media.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
@@ -1364,10 +1358,7 @@ class _$_Binary extends _Binary {
       this.content})
       : super._();
 
-  factory _$_Binary.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Binary.fromJson(Map<String, dynamic> json) =>
       _$$_BinaryFromJson(json);
 
   @override
@@ -1473,10 +1464,7 @@ abstract class _Binary extends Binary {
       final FhirBase64Binary? content}) = _$_Binary;
   _Binary._() : super._();
 
-  factory _Binary.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Binary.fromJson;
+  factory _Binary.fromJson(Map<String, dynamic> json) = _$_Binary.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
@@ -1897,10 +1885,7 @@ class _$_Bundle extends _Bundle {
         _entry = entry,
         super._();
 
-  factory _$_Bundle.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Bundle.fromJson(Map<String, dynamic> json) =>
       _$$_BundleFromJson(json);
 
   @override
@@ -2047,10 +2032,7 @@ abstract class _Bundle extends Bundle {
       final Signature? signature}) = _$_Bundle;
   _Bundle._() : super._();
 
-  factory _Bundle.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Bundle.fromJson;
+  factory _Bundle.fromJson(Map<String, dynamic> json) = _$_Bundle.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
@@ -2321,10 +2303,7 @@ class _$_BundleLink extends _BundleLink {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_BundleLink.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_BundleLink.fromJson(Map<String, dynamic> json) =>
       _$$_BundleLinkFromJson(json);
 
   @override
@@ -2439,10 +2418,8 @@ abstract class _BundleLink extends BundleLink {
       @JsonKey(name: '_url') final Element? urlElement}) = _$_BundleLink;
   _BundleLink._() : super._();
 
-  factory _BundleLink.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_BundleLink.fromJson;
+  factory _BundleLink.fromJson(Map<String, dynamic> json) =
+      _$_BundleLink.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2771,10 +2748,7 @@ class _$_BundleEntry extends _BundleEntry {
         _link = link,
         super._();
 
-  factory _$_BundleEntry.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$$_BundleEntryFromJson(json);
 
   @override
@@ -2911,10 +2885,8 @@ abstract class _BundleEntry extends BundleEntry {
       final BundleEntryResponse? response}) = _$_BundleEntry;
   _BundleEntry._() : super._();
 
-  factory _BundleEntry.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_BundleEntry.fromJson;
+  factory _BundleEntry.fromJson(Map<String, dynamic> json) =
+      _$_BundleEntry.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3177,10 +3149,7 @@ class _$_BundleEntrySearch extends _BundleEntrySearch {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_BundleEntrySearch.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_BundleEntrySearch.fromJson(Map<String, dynamic> json) =>
       _$$_BundleEntrySearchFromJson(json);
 
   @override
@@ -3297,10 +3266,8 @@ abstract class _BundleEntrySearch extends BundleEntrySearch {
       _$_BundleEntrySearch;
   _BundleEntrySearch._() : super._();
 
-  factory _BundleEntrySearch.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_BundleEntrySearch.fromJson;
+  factory _BundleEntrySearch.fromJson(Map<String, dynamic> json) =
+      _$_BundleEntrySearch.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3735,10 +3702,7 @@ class _$_BundleEntryRequest extends _BundleEntryRequest {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_BundleEntryRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_BundleEntryRequest.fromJson(Map<String, dynamic> json) =>
       _$$_BundleEntryRequestFromJson(json);
 
   @override
@@ -3915,10 +3879,8 @@ abstract class _BundleEntryRequest extends BundleEntryRequest {
           final Element? ifNoneExistElement}) = _$_BundleEntryRequest;
   _BundleEntryRequest._() : super._();
 
-  factory _BundleEntryRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_BundleEntryRequest.fromJson;
+  factory _BundleEntryRequest.fromJson(Map<String, dynamic> json) =
+      _$_BundleEntryRequest.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4284,10 +4246,7 @@ class _$_BundleEntryResponse extends _BundleEntryResponse {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_BundleEntryResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_BundleEntryResponse.fromJson(Map<String, dynamic> json) =>
       _$$_BundleEntryResponseFromJson(json);
 
   @override
@@ -4429,10 +4388,8 @@ abstract class _BundleEntryResponse extends BundleEntryResponse {
       _$_BundleEntryResponse;
   _BundleEntryResponse._() : super._();
 
-  factory _BundleEntryResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_BundleEntryResponse.fromJson;
+  factory _BundleEntryResponse.fromJson(Map<String, dynamic> json) =
+      _$_BundleEntryResponse.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4925,10 +4882,7 @@ class _$_Basic extends _Basic {
         _identifier = identifier,
         super._();
 
-  factory _$_Basic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Basic.fromJson(Map<String, dynamic> json) =>
       _$$_BasicFromJson(json);
 
   @override
@@ -5107,10 +5061,7 @@ abstract class _Basic extends Basic {
           final Element? createdElement}) = _$_Basic;
   _Basic._() : super._();
 
-  factory _Basic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Basic.fromJson;
+  factory _Basic.fromJson(Map<String, dynamic> json) = _$_Basic.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)

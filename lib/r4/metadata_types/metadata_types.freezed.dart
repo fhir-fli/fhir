@@ -197,10 +197,7 @@ class _$_ContactDetail extends _ContactDetail {
         _telecom = telecom,
         super._();
 
-  factory _$_ContactDetail.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContactDetail.fromJson(Map<String, dynamic> json) =>
       _$$_ContactDetailFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -309,10 +306,8 @@ abstract class _ContactDetail extends ContactDetail {
       final List<ContactPoint>? telecom}) = _$_ContactDetail;
   _ContactDetail._() : super._();
 
-  factory _ContactDetail.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContactDetail.fromJson;
+  factory _ContactDetail.fromJson(Map<String, dynamic> json) =
+      _$_ContactDetail.fromJson;
 
   @override
 
@@ -583,10 +578,7 @@ class _$_Contributor extends _Contributor {
         _contact = contact,
         super._();
 
-  factory _$_Contributor.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Contributor.fromJson(Map<String, dynamic> json) =>
       _$$_ContributorFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -718,10 +710,8 @@ abstract class _Contributor extends Contributor {
       final List<ContactDetail>? contact}) = _$_Contributor;
   _Contributor._() : super._();
 
-  factory _Contributor.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Contributor.fromJson;
+  factory _Contributor.fromJson(Map<String, dynamic> json) =
+      _$_Contributor.fromJson;
 
   @override
 
@@ -1172,10 +1162,7 @@ class _$_DataRequirement extends _DataRequirement {
         _sort = sort,
         super._();
 
-  factory _$_DataRequirement.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DataRequirement.fromJson(Map<String, dynamic> json) =>
       _$$_DataRequirementFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -1435,10 +1422,8 @@ abstract class _DataRequirement extends DataRequirement {
       final List<DataRequirementSort>? sort}) = _$_DataRequirement;
   _DataRequirement._() : super._();
 
-  factory _DataRequirement.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DataRequirement.fromJson;
+  factory _DataRequirement.fromJson(Map<String, dynamic> json) =
+      _$_DataRequirement.fromJson;
 
   @override
 
@@ -1830,10 +1815,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
         _code = code,
         super._();
 
-  factory _$_DataRequirementCodeFilter.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
       _$$_DataRequirementCodeFilterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2028,10 +2010,8 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
       final List<Coding>? code}) = _$_DataRequirementCodeFilter;
   _DataRequirementCodeFilter._() : super._();
 
-  factory _DataRequirementCodeFilter.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DataRequirementCodeFilter.fromJson;
+  factory _DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =
+      _$_DataRequirementCodeFilter.fromJson;
 
   @override
 
@@ -2495,10 +2475,7 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DataRequirementDateFilter.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
       _$$_DataRequirementDateFilterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2706,10 +2683,8 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
       final FhirDuration? valueDuration}) = _$_DataRequirementDateFilter;
   _DataRequirementDateFilter._() : super._();
 
-  factory _DataRequirementDateFilter.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DataRequirementDateFilter.fromJson;
+  factory _DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =
+      _$_DataRequirementDateFilter.fromJson;
 
   @override
 
@@ -3070,10 +3045,7 @@ class _$_DataRequirementSort extends _DataRequirementSort {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DataRequirementSort.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DataRequirementSort.fromJson(Map<String, dynamic> json) =>
       _$$_DataRequirementSortFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3232,10 +3204,8 @@ abstract class _DataRequirementSort extends DataRequirementSort {
           final Element? directionElement}) = _$_DataRequirementSort;
   _DataRequirementSort._() : super._();
 
-  factory _DataRequirementSort.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DataRequirementSort.fromJson;
+  factory _DataRequirementSort.fromJson(Map<String, dynamic> json) =
+      _$_DataRequirementSort.fromJson;
 
   @override
 
@@ -3722,10 +3692,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
       : _extension_ = extension_,
         super._();
 
-  factory _$_ParameterDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ParameterDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ParameterDefinitionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3910,10 +3877,8 @@ abstract class _ParameterDefinition extends ParameterDefinition {
       final FhirCanonical? profile}) = _$_ParameterDefinition;
   _ParameterDefinition._() : super._();
 
-  factory _ParameterDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ParameterDefinition.fromJson;
+  factory _ParameterDefinition.fromJson(Map<String, dynamic> json) =
+      _$_ParameterDefinition.fromJson;
 
   @override
 
@@ -4425,10 +4390,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
       : _extension_ = extension_,
         super._();
 
-  factory _$_RelatedArtifact.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_RelatedArtifact.fromJson(Map<String, dynamic> json) =>
       _$$_RelatedArtifactFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4614,10 +4576,8 @@ abstract class _RelatedArtifact extends RelatedArtifact {
       final FhirCanonical? resource}) = _$_RelatedArtifact;
   _RelatedArtifact._() : super._();
 
-  factory _RelatedArtifact.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_RelatedArtifact.fromJson;
+  factory _RelatedArtifact.fromJson(Map<String, dynamic> json) =
+      _$_RelatedArtifact.fromJson;
 
   @override
 
@@ -5138,10 +5098,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
         _data = data,
         super._();
 
-  factory _$_TriggerDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_TriggerDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_TriggerDefinitionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5339,10 +5296,8 @@ abstract class _TriggerDefinition extends TriggerDefinition {
       final FhirExpression? condition}) = _$_TriggerDefinition;
   _TriggerDefinition._() : super._();
 
-  factory _TriggerDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_TriggerDefinition.fromJson;
+  factory _TriggerDefinition.fromJson(Map<String, dynamic> json) =
+      _$_TriggerDefinition.fromJson;
 
   @override
 
@@ -5699,10 +5654,7 @@ class _$_UsageContext extends _UsageContext {
       : _extension_ = extension_,
         super._();
 
-  factory _$_UsageContext.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_UsageContext.fromJson(Map<String, dynamic> json) =>
       _$$_UsageContextFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5821,10 +5773,8 @@ abstract class _UsageContext extends UsageContext {
       final Reference? valueReference}) = _$_UsageContext;
   _UsageContext._() : super._();
 
-  factory _UsageContext.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_UsageContext.fromJson;
+  factory _UsageContext.fromJson(Map<String, dynamic> json) =
+      _$_UsageContext.fromJson;
 
   @override
 
@@ -6248,10 +6198,7 @@ class _$_FhirExpression extends _FhirExpression {
       : _extension_ = extension_,
         super._();
 
-  factory _$_FhirExpression.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_FhirExpression.fromJson(Map<String, dynamic> json) =>
       _$$_FhirExpressionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -6420,10 +6367,8 @@ abstract class _FhirExpression extends FhirExpression {
           final Element? referenceElement}) = _$_FhirExpression;
   _FhirExpression._() : super._();
 
-  factory _FhirExpression.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_FhirExpression.fromJson;
+  factory _FhirExpression.fromJson(Map<String, dynamic> json) =
+      _$_FhirExpression.fromJson;
 
   @override
 

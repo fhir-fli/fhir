@@ -685,10 +685,7 @@ class _$_Account extends _Account {
         _guarantor = guarantor,
         super._();
 
-  factory _$_Account.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Account.fromJson(Map<String, dynamic> json) =>
       _$$_AccountFromJson(json);
 
   @override
@@ -936,10 +933,7 @@ abstract class _Account extends Account {
       final List<AccountGuarantor>? guarantor}) = _$_Account;
   _Account._() : super._();
 
-  factory _Account.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Account.fromJson;
+  factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
@@ -1153,10 +1147,7 @@ class _$_AccountCoverage extends _AccountCoverage {
       @JsonKey(name: '_priority') this.priorityElement})
       : super._();
 
-  factory _$_AccountCoverage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AccountCoverage.fromJson(Map<String, dynamic> json) =>
       _$$_AccountCoverageFromJson(json);
 
   @override
@@ -1212,10 +1203,8 @@ abstract class _AccountCoverage extends AccountCoverage {
       _$_AccountCoverage;
   _AccountCoverage._() : super._();
 
-  factory _AccountCoverage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AccountCoverage.fromJson;
+  factory _AccountCoverage.fromJson(Map<String, dynamic> json) =
+      _$_AccountCoverage.fromJson;
 
   @override
   Reference get coverage;
@@ -1405,10 +1394,7 @@ class _$_AccountGuarantor extends _AccountGuarantor {
       this.period})
       : super._();
 
-  factory _$_AccountGuarantor.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AccountGuarantor.fromJson(Map<String, dynamic> json) =>
       _$$_AccountGuarantorFromJson(json);
 
   @override
@@ -1465,10 +1451,8 @@ abstract class _AccountGuarantor extends AccountGuarantor {
       final Period? period}) = _$_AccountGuarantor;
   _AccountGuarantor._() : super._();
 
-  factory _AccountGuarantor.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AccountGuarantor.fromJson;
+  factory _AccountGuarantor.fromJson(Map<String, dynamic> json) =
+      _$_AccountGuarantor.fromJson;
 
   @override
   Reference get party;
@@ -2502,10 +2486,7 @@ class _$_ChargeItem extends _ChargeItem {
         _supportingInformation = supportingInformation,
         super._();
 
-  factory _$_ChargeItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ChargeItem.fromJson(Map<String, dynamic> json) =>
       _$$_ChargeItemFromJson(json);
 
   @override
@@ -2912,10 +2893,8 @@ abstract class _ChargeItem extends ChargeItem {
       final List<Reference>? supportingInformation}) = _$_ChargeItem;
   _ChargeItem._() : super._();
 
-  factory _ChargeItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ChargeItem.fromJson;
+  factory _ChargeItem.fromJson(Map<String, dynamic> json) =
+      _$_ChargeItem.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
@@ -3144,10 +3123,7 @@ class __$$_ChargeItemParticipantCopyWithImpl<$Res>
 class _$_ChargeItemParticipant extends _ChargeItemParticipant {
   _$_ChargeItemParticipant({this.role, required this.actor}) : super._();
 
-  factory _$_ChargeItemParticipant.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ChargeItemParticipant.fromJson(Map<String, dynamic> json) =>
       _$$_ChargeItemParticipantFromJson(json);
 
   @override
@@ -3194,10 +3170,8 @@ abstract class _ChargeItemParticipant extends ChargeItemParticipant {
       required final Reference actor}) = _$_ChargeItemParticipant;
   _ChargeItemParticipant._() : super._();
 
-  factory _ChargeItemParticipant.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ChargeItemParticipant.fromJson;
+  factory _ChargeItemParticipant.fromJson(Map<String, dynamic> json) =
+      _$_ChargeItemParticipant.fromJson;
 
   @override
   CodeableConcept? get role;
@@ -4045,10 +4019,7 @@ class _$_Contract extends _Contract {
         _rule = rule,
         super._();
 
-  factory _$_Contract.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Contract.fromJson(Map<String, dynamic> json) =>
       _$$_ContractFromJson(json);
 
   @override
@@ -4450,10 +4421,7 @@ abstract class _Contract extends Contract {
       final List<ContractRule>? rule}) = _$_Contract;
   _Contract._() : super._();
 
-  factory _Contract.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Contract.fromJson;
+  factory _Contract.fromJson(Map<String, dynamic> json) = _$_Contract.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
@@ -4653,10 +4621,7 @@ class _$_ContractAgent extends _ContractAgent {
       : _role = role,
         super._();
 
-  factory _$_ContractAgent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractAgent.fromJson(Map<String, dynamic> json) =>
       _$$_ContractAgentFromJson(json);
 
   @override
@@ -4710,10 +4675,8 @@ abstract class _ContractAgent extends ContractAgent {
       final List<CodeableConcept>? role}) = _$_ContractAgent;
   _ContractAgent._() : super._();
 
-  factory _ContractAgent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractAgent.fromJson;
+  factory _ContractAgent.fromJson(Map<String, dynamic> json) =
+      _$_ContractAgent.fromJson;
 
   @override
   Reference get actor;
@@ -4861,10 +4824,7 @@ class _$_ContractSigner extends _ContractSigner {
       : _signature = signature,
         super._();
 
-  factory _$_ContractSigner.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractSigner.fromJson(Map<String, dynamic> json) =>
       _$$_ContractSignerFromJson(json);
 
   @override
@@ -4921,10 +4881,8 @@ abstract class _ContractSigner extends ContractSigner {
       required final List<Signature> signature}) = _$_ContractSigner;
   _ContractSigner._() : super._();
 
-  factory _ContractSigner.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractSigner.fromJson;
+  factory _ContractSigner.fromJson(Map<String, dynamic> json) =
+      _$_ContractSigner.fromJson;
 
   @override
   Coding get type;
@@ -5323,10 +5281,7 @@ class _$_ContractValuedItem extends _ContractValuedItem {
       this.net})
       : super._();
 
-  factory _$_ContractValuedItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractValuedItem.fromJson(Map<String, dynamic> json) =>
       _$$_ContractValuedItemFromJson(json);
 
   @override
@@ -5438,10 +5393,8 @@ abstract class _ContractValuedItem extends ContractValuedItem {
       final Money? net}) = _$_ContractValuedItem;
   _ContractValuedItem._() : super._();
 
-  factory _ContractValuedItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractValuedItem.fromJson;
+  factory _ContractValuedItem.fromJson(Map<String, dynamic> json) =
+      _$_ContractValuedItem.fromJson;
 
   @override
   CodeableConcept? get entityCodeableConcept;
@@ -5863,10 +5816,7 @@ class _$_ContractTerm extends _ContractTerm {
         _group = group,
         super._();
 
-  factory _$_ContractTerm.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$$_ContractTermFromJson(json);
 
   @override
@@ -6043,10 +5993,8 @@ abstract class _ContractTerm extends ContractTerm {
       final List<ContractTerm>? group}) = _$_ContractTerm;
   _ContractTerm._() : super._();
 
-  factory _ContractTerm.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractTerm.fromJson;
+  factory _ContractTerm.fromJson(Map<String, dynamic> json) =
+      _$_ContractTerm.fromJson;
 
   @override
   Identifier? get identifier;
@@ -6197,10 +6145,7 @@ class _$_ContractAgent1 extends _ContractAgent1 {
       : _role = role,
         super._();
 
-  factory _$_ContractAgent1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractAgent1.fromJson(Map<String, dynamic> json) =>
       _$$_ContractAgent1FromJson(json);
 
   @override
@@ -6254,10 +6199,8 @@ abstract class _ContractAgent1 extends ContractAgent1 {
       final List<CodeableConcept>? role}) = _$_ContractAgent1;
   _ContractAgent1._() : super._();
 
-  factory _ContractAgent1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractAgent1.fromJson;
+  factory _ContractAgent1.fromJson(Map<String, dynamic> json) =
+      _$_ContractAgent1.fromJson;
 
   @override
   Reference get actor;
@@ -6654,10 +6597,7 @@ class _$_ContractValuedItem1 extends _ContractValuedItem1 {
       this.net})
       : super._();
 
-  factory _$_ContractValuedItem1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractValuedItem1.fromJson(Map<String, dynamic> json) =>
       _$$_ContractValuedItem1FromJson(json);
 
   @override
@@ -6769,10 +6709,8 @@ abstract class _ContractValuedItem1 extends ContractValuedItem1 {
       final Money? net}) = _$_ContractValuedItem1;
   _ContractValuedItem1._() : super._();
 
-  factory _ContractValuedItem1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractValuedItem1.fromJson;
+  factory _ContractValuedItem1.fromJson(Map<String, dynamic> json) =
+      _$_ContractValuedItem1.fromJson;
 
   @override
   CodeableConcept? get entityCodeableConcept;
@@ -6936,10 +6874,7 @@ class _$_ContractFriendly extends _ContractFriendly {
   _$_ContractFriendly({this.contentAttachment, this.contentReference})
       : super._();
 
-  factory _$_ContractFriendly.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$$_ContractFriendlyFromJson(json);
 
   @override
@@ -6988,10 +6923,8 @@ abstract class _ContractFriendly extends ContractFriendly {
       final Reference? contentReference}) = _$_ContractFriendly;
   _ContractFriendly._() : super._();
 
-  factory _ContractFriendly.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractFriendly.fromJson;
+  factory _ContractFriendly.fromJson(Map<String, dynamic> json) =
+      _$_ContractFriendly.fromJson;
 
   @override
   Attachment? get contentAttachment;
@@ -7131,10 +7064,7 @@ class __$$_ContractLegalCopyWithImpl<$Res>
 class _$_ContractLegal extends _ContractLegal {
   _$_ContractLegal({this.contentAttachment, this.contentReference}) : super._();
 
-  factory _$_ContractLegal.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$$_ContractLegalFromJson(json);
 
   @override
@@ -7183,10 +7113,8 @@ abstract class _ContractLegal extends ContractLegal {
       final Reference? contentReference}) = _$_ContractLegal;
   _ContractLegal._() : super._();
 
-  factory _ContractLegal.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractLegal.fromJson;
+  factory _ContractLegal.fromJson(Map<String, dynamic> json) =
+      _$_ContractLegal.fromJson;
 
   @override
   Attachment? get contentAttachment;
@@ -7326,10 +7254,7 @@ class __$$_ContractRuleCopyWithImpl<$Res>
 class _$_ContractRule extends _ContractRule {
   _$_ContractRule({this.contentAttachment, this.contentReference}) : super._();
 
-  factory _$_ContractRule.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractRule.fromJson(Map<String, dynamic> json) =>
       _$$_ContractRuleFromJson(json);
 
   @override
@@ -7378,10 +7303,8 @@ abstract class _ContractRule extends ContractRule {
       final Reference? contentReference}) = _$_ContractRule;
   _ContractRule._() : super._();
 
-  factory _ContractRule.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractRule.fromJson;
+  factory _ContractRule.fromJson(Map<String, dynamic> json) =
+      _$_ContractRule.fromJson;
 
   @override
   Attachment? get contentAttachment;
@@ -8772,10 +8695,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
         _benefitBalance = benefitBalance,
         super._();
 
-  factory _$_ExplanationOfBenefit.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitFromJson(json);
 
   @override
@@ -9252,10 +9172,8 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
       _$_ExplanationOfBenefit;
   _ExplanationOfBenefit._() : super._();
 
-  factory _ExplanationOfBenefit.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefit.fromJson;
+  factory _ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefit.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
@@ -9545,10 +9463,7 @@ class _$_ExplanationOfBenefitRelated extends _ExplanationOfBenefitRelated {
       {this.claim, this.relationship, this.reference})
       : super._();
 
-  factory _$_ExplanationOfBenefitRelated.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitRelatedFromJson(json);
 
   @override
@@ -9602,10 +9517,8 @@ abstract class _ExplanationOfBenefitRelated
       final Identifier? reference}) = _$_ExplanationOfBenefitRelated;
   _ExplanationOfBenefitRelated._() : super._();
 
-  factory _ExplanationOfBenefitRelated.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitRelated.fromJson;
+  factory _ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitRelated.fromJson;
 
   @override
   Reference? get claim;
@@ -9752,10 +9665,7 @@ class __$$_ExplanationOfBenefitPayeeCopyWithImpl<$Res>
 class _$_ExplanationOfBenefitPayee extends _ExplanationOfBenefitPayee {
   _$_ExplanationOfBenefitPayee({this.type, this.party}) : super._();
 
-  factory _$_ExplanationOfBenefitPayee.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitPayeeFromJson(json);
 
   @override
@@ -9802,10 +9712,8 @@ abstract class _ExplanationOfBenefitPayee extends ExplanationOfBenefitPayee {
       final Reference? party}) = _$_ExplanationOfBenefitPayee;
   _ExplanationOfBenefitPayee._() : super._();
 
-  factory _ExplanationOfBenefitPayee.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitPayee.fromJson;
+  factory _ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitPayee.fromJson;
 
   @override
   CodeableConcept? get type;
@@ -10234,9 +10142,8 @@ class _$_ExplanationOfBenefitInformation
       : super._();
 
   factory _$_ExplanationOfBenefitInformation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitInformationFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitInformationFromJson(json);
 
   @override
   final FhirDecimal? sequence;
@@ -10356,10 +10263,8 @@ abstract class _ExplanationOfBenefitInformation
       final Coding? reason}) = _$_ExplanationOfBenefitInformation;
   _ExplanationOfBenefitInformation._() : super._();
 
-  factory _ExplanationOfBenefitInformation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitInformation.fromJson;
+  factory _ExplanationOfBenefitInformation.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitInformation.fromJson;
 
   @override
   FhirDecimal? get sequence;
@@ -10652,10 +10557,7 @@ class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
       this.qualification})
       : super._();
 
-  factory _$_ExplanationOfBenefitCareTeam.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitCareTeamFromJson(json);
 
   @override
@@ -10732,10 +10634,8 @@ abstract class _ExplanationOfBenefitCareTeam
       final CodeableConcept? qualification}) = _$_ExplanationOfBenefitCareTeam;
   _ExplanationOfBenefitCareTeam._() : super._();
 
-  factory _ExplanationOfBenefitCareTeam.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitCareTeam.fromJson;
+  factory _ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitCareTeam.fromJson;
 
   @override
   FhirDecimal? get sequence;
@@ -10992,9 +10892,8 @@ class _$_ExplanationOfBenefitDiagnosis extends _ExplanationOfBenefitDiagnosis {
         super._();
 
   factory _$_ExplanationOfBenefitDiagnosis.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitDiagnosisFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitDiagnosisFromJson(json);
 
   @override
   final FhirDecimal? sequence;
@@ -11079,10 +10978,8 @@ abstract class _ExplanationOfBenefitDiagnosis
       final CodeableConcept? packageCode}) = _$_ExplanationOfBenefitDiagnosis;
   _ExplanationOfBenefitDiagnosis._() : super._();
 
-  factory _ExplanationOfBenefitDiagnosis.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitDiagnosis.fromJson;
+  factory _ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitDiagnosis.fromJson;
 
   @override
   FhirDecimal? get sequence;
@@ -11336,9 +11233,8 @@ class _$_ExplanationOfBenefitProcedure extends _ExplanationOfBenefitProcedure {
       : super._();
 
   factory _$_ExplanationOfBenefitProcedure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitProcedureFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitProcedureFromJson(json);
 
   @override
   final FhirDecimal? sequence;
@@ -11410,10 +11306,8 @@ abstract class _ExplanationOfBenefitProcedure
       final Reference? procedureReference}) = _$_ExplanationOfBenefitProcedure;
   _ExplanationOfBenefitProcedure._() : super._();
 
-  factory _ExplanationOfBenefitProcedure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitProcedure.fromJson;
+  factory _ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitProcedure.fromJson;
 
   @override
   FhirDecimal? get sequence;
@@ -11580,9 +11474,8 @@ class _$_ExplanationOfBenefitInsurance extends _ExplanationOfBenefitInsurance {
         super._();
 
   factory _$_ExplanationOfBenefitInsurance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitInsuranceFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitInsuranceFromJson(json);
 
   @override
   final Reference? coverage;
@@ -11659,10 +11552,8 @@ abstract class _ExplanationOfBenefitInsurance
       _$_ExplanationOfBenefitInsurance;
   _ExplanationOfBenefitInsurance._() : super._();
 
-  factory _ExplanationOfBenefitInsurance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitInsurance.fromJson;
+  factory _ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitInsurance.fromJson;
 
   @override
   Reference? get coverage;
@@ -11892,10 +11783,7 @@ class _$_ExplanationOfBenefitAccident extends _ExplanationOfBenefitAccident {
       this.locationReference})
       : super._();
 
-  factory _$_ExplanationOfBenefitAccident.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitAccidentFromJson(json);
 
   @override
@@ -11960,10 +11848,8 @@ abstract class _ExplanationOfBenefitAccident
       final Reference? locationReference}) = _$_ExplanationOfBenefitAccident;
   _ExplanationOfBenefitAccident._() : super._();
 
-  factory _ExplanationOfBenefitAccident.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitAccident.fromJson;
+  factory _ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitAccident.fromJson;
 
   @override
   FhirDate? get date;
@@ -12810,10 +12696,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
         _detail = detail,
         super._();
 
-  factory _$_ExplanationOfBenefitItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitItemFromJson(json);
 
   @override
@@ -13209,10 +13092,8 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
       _$_ExplanationOfBenefitItem;
   _ExplanationOfBenefitItem._() : super._();
 
-  factory _ExplanationOfBenefitItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitItem.fromJson;
+  factory _ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitItem.fromJson;
 
   @override
   FhirDecimal? get sequence;
@@ -13509,9 +13390,8 @@ class _$_ExplanationOfBenefitAdjudication
       : super._();
 
   factory _$_ExplanationOfBenefitAdjudication.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitAdjudicationFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitAdjudicationFromJson(json);
 
   @override
   final CodeableConcept category;
@@ -14075,10 +13955,7 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
         _subDetail = subDetail,
         super._();
 
-  factory _$_ExplanationOfBenefitDetail.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitDetailFromJson(json);
 
   @override
@@ -14279,10 +14156,8 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
       _$_ExplanationOfBenefitDetail;
   _ExplanationOfBenefitDetail._() : super._();
 
-  factory _ExplanationOfBenefitDetail.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitDetail.fromJson;
+  factory _ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitDetail.fromJson;
 
   @override
   FhirDecimal? get sequence;
@@ -14793,9 +14668,8 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
         super._();
 
   factory _$_ExplanationOfBenefitSubDetail.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitSubDetailFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitSubDetailFromJson(json);
 
   @override
   final FhirDecimal? sequence;
@@ -14982,10 +14856,8 @@ abstract class _ExplanationOfBenefitSubDetail
       _$_ExplanationOfBenefitSubDetail;
   _ExplanationOfBenefitSubDetail._() : super._();
 
-  factory _ExplanationOfBenefitSubDetail.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitSubDetail.fromJson;
+  factory _ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitSubDetail.fromJson;
 
   @override
   FhirDecimal? get sequence;
@@ -15342,10 +15214,7 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
         _detail = detail,
         super._();
 
-  factory _$_ExplanationOfBenefitAddItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitAddItemFromJson(json);
 
   final List<FhirId>? _sequenceLinkId;
@@ -15509,10 +15378,8 @@ abstract class _ExplanationOfBenefitAddItem
       _$_ExplanationOfBenefitAddItem;
   _ExplanationOfBenefitAddItem._() : super._();
 
-  factory _ExplanationOfBenefitAddItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitAddItem.fromJson;
+  factory _ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitAddItem.fromJson;
 
   @override
   List<FhirId>? get sequenceLinkId;
@@ -15806,10 +15673,7 @@ class _$_ExplanationOfBenefitDetail1 extends _ExplanationOfBenefitDetail1 {
         _adjudication = adjudication,
         super._();
 
-  factory _$_ExplanationOfBenefitDetail1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitDetail1FromJson(json);
 
   @override
@@ -15928,10 +15792,8 @@ abstract class _ExplanationOfBenefitDetail1
       _$_ExplanationOfBenefitDetail1;
   _ExplanationOfBenefitDetail1._() : super._();
 
-  factory _ExplanationOfBenefitDetail1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitDetail1.fromJson;
+  factory _ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitDetail1.fromJson;
 
   @override
   CodeableConcept? get revenue;
@@ -16229,10 +16091,7 @@ class _$_ExplanationOfBenefitPayment extends _ExplanationOfBenefitPayment {
       this.identifier})
       : super._();
 
-  factory _$_ExplanationOfBenefitPayment.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitPaymentFromJson(json);
 
   @override
@@ -16306,10 +16165,8 @@ abstract class _ExplanationOfBenefitPayment
       final Identifier? identifier}) = _$_ExplanationOfBenefitPayment;
   _ExplanationOfBenefitPayment._() : super._();
 
-  factory _ExplanationOfBenefitPayment.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitPayment.fromJson;
+  factory _ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitPayment.fromJson;
 
   @override
   CodeableConcept? get type;
@@ -16564,9 +16421,8 @@ class _$_ExplanationOfBenefitProcessNote
       : super._();
 
   factory _$_ExplanationOfBenefitProcessNote.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitProcessNoteFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitProcessNoteFromJson(json);
 
   @override
   final FhirDecimal? number;
@@ -16636,10 +16492,8 @@ abstract class _ExplanationOfBenefitProcessNote
       final CodeableConcept? language}) = _$_ExplanationOfBenefitProcessNote;
   _ExplanationOfBenefitProcessNote._() : super._();
 
-  factory _ExplanationOfBenefitProcessNote.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitProcessNote.fromJson;
+  factory _ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitProcessNote.fromJson;
 
   @override
   FhirDecimal? get number;
@@ -17038,9 +16892,8 @@ class _$_ExplanationOfBenefitBenefitBalance
         super._();
 
   factory _$_ExplanationOfBenefitBenefitBalance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitBenefitBalanceFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitBenefitBalanceFromJson(json);
 
   @override
   final CodeableConcept category;
@@ -17498,9 +17351,8 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
       : super._();
 
   factory _$_ExplanationOfBenefitFinancial.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitFinancialFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitFinancialFromJson(json);
 
   @override
   final CodeableConcept type;
@@ -17600,10 +17452,8 @@ abstract class _ExplanationOfBenefitFinancial
       final Money? usedMoney}) = _$_ExplanationOfBenefitFinancial;
   _ExplanationOfBenefitFinancial._() : super._();
 
-  factory _ExplanationOfBenefitFinancial.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitFinancial.fromJson;
+  factory _ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitFinancial.fromJson;
 
   @override
   CodeableConcept get type;

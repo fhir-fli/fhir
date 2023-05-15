@@ -459,10 +459,7 @@ class _$_Medication extends _Medication {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_Medication.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Medication.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationFromJson(json);
 
   @override
@@ -625,10 +622,8 @@ abstract class _Medication extends Medication {
       final MedicationPackage? package}) = _$_Medication;
   _Medication._() : super._();
 
-  factory _Medication.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Medication.fromJson;
+  factory _Medication.fromJson(Map<String, dynamic> json) =
+      _$_Medication.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
@@ -873,10 +868,7 @@ class _$_MedicationProduct extends _MedicationProduct {
         _batch = batch,
         super._();
 
-  factory _$_MedicationProduct.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MedicationProduct.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationProductFromJson(json);
 
   @override
@@ -998,10 +990,8 @@ abstract class _MedicationProduct extends MedicationProduct {
       final List<MedicationProductBatch>? batch}) = _$_MedicationProduct;
   _MedicationProduct._() : super._();
 
-  factory _MedicationProduct.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationProduct.fromJson;
+  factory _MedicationProduct.fromJson(Map<String, dynamic> json) =
+      _$_MedicationProduct.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1211,10 +1201,7 @@ class _$_MedicationProductIngredient extends _MedicationProductIngredient {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MedicationProductIngredient.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MedicationProductIngredient.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationProductIngredientFromJson(json);
 
   @override
@@ -1301,10 +1288,8 @@ abstract class _MedicationProductIngredient
       final Ratio? amount}) = _$_MedicationProductIngredient;
   _MedicationProductIngredient._() : super._();
 
-  factory _MedicationProductIngredient.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationProductIngredient.fromJson;
+  factory _MedicationProductIngredient.fromJson(Map<String, dynamic> json) =
+      _$_MedicationProductIngredient.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1539,10 +1524,7 @@ class _$_MedicationProductBatch extends _MedicationProductBatch {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MedicationProductBatch.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MedicationProductBatch.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationProductBatchFromJson(json);
 
   @override
@@ -1648,10 +1630,8 @@ abstract class _MedicationProductBatch extends MedicationProductBatch {
           final Element? expirationDateElement}) = _$_MedicationProductBatch;
   _MedicationProductBatch._() : super._();
 
-  factory _MedicationProductBatch.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationProductBatch.fromJson;
+  factory _MedicationProductBatch.fromJson(Map<String, dynamic> json) =
+      _$_MedicationProductBatch.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1862,10 +1842,7 @@ class _$_MedicationPackage extends _MedicationPackage {
         _content = content,
         super._();
 
-  factory _$_MedicationPackage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MedicationPackage.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationPackageFromJson(json);
 
   @override
@@ -1974,10 +1951,8 @@ abstract class _MedicationPackage extends MedicationPackage {
       final List<MedicationPackageContent>? content}) = _$_MedicationPackage;
   _MedicationPackage._() : super._();
 
-  factory _MedicationPackage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationPackage.fromJson;
+  factory _MedicationPackage.fromJson(Map<String, dynamic> json) =
+      _$_MedicationPackage.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2182,10 +2157,7 @@ class _$_MedicationPackageContent extends _MedicationPackageContent {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MedicationPackageContent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MedicationPackageContent.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationPackageContentFromJson(json);
 
   @override
@@ -2271,10 +2243,8 @@ abstract class _MedicationPackageContent extends MedicationPackageContent {
       final Quantity? amount}) = _$_MedicationPackageContent;
   _MedicationPackageContent._() : super._();
 
-  factory _MedicationPackageContent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationPackageContent.fromJson;
+  factory _MedicationPackageContent.fromJson(Map<String, dynamic> json) =
+      _$_MedicationPackageContent.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3027,10 +2997,7 @@ class _$_MedicationOrder extends _MedicationOrder {
         _dosageInstruction = dosageInstruction,
         super._();
 
-  factory _$_MedicationOrder.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MedicationOrder.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationOrderFromJson(json);
 
   @override
@@ -3287,10 +3254,8 @@ abstract class _MedicationOrder extends MedicationOrder {
       final Reference? priorPrescription}) = _$_MedicationOrder;
   _MedicationOrder._() : super._();
 
-  factory _MedicationOrder.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationOrder.fromJson;
+  factory _MedicationOrder.fromJson(Map<String, dynamic> json) =
+      _$_MedicationOrder.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
@@ -3874,9 +3839,8 @@ class _$_MedicationOrderDosageInstruction
         super._();
 
   factory _$_MedicationOrderDosageInstruction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_MedicationOrderDosageInstructionFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_MedicationOrderDosageInstructionFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -4375,9 +4339,8 @@ class _$_MedicationOrderDispenseRequest
         super._();
 
   factory _$_MedicationOrderDispenseRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_MedicationOrderDispenseRequestFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_MedicationOrderDispenseRequestFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -4491,10 +4454,8 @@ abstract class _MedicationOrderDispenseRequest
       _$_MedicationOrderDispenseRequest;
   _MedicationOrderDispenseRequest._() : super._();
 
-  factory _MedicationOrderDispenseRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationOrderDispenseRequest.fromJson;
+  factory _MedicationOrderDispenseRequest.fromJson(Map<String, dynamic> json) =
+      _$_MedicationOrderDispenseRequest.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4707,10 +4668,7 @@ class _$_MedicationOrderSubstitution extends _MedicationOrderSubstitution {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MedicationOrderSubstitution.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MedicationOrderSubstitution.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationOrderSubstitutionFromJson(json);
 
   @override
@@ -4797,10 +4755,8 @@ abstract class _MedicationOrderSubstitution
       final CodeableConcept? reason}) = _$_MedicationOrderSubstitution;
   _MedicationOrderSubstitution._() : super._();
 
-  factory _MedicationOrderSubstitution.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationOrderSubstitution.fromJson;
+  factory _MedicationOrderSubstitution.fromJson(Map<String, dynamic> json) =
+      _$_MedicationOrderSubstitution.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -5560,10 +5516,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
         _device = device,
         super._();
 
-  factory _$_MedicationAdministration.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MedicationAdministration.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationAdministrationFromJson(json);
 
   @override
@@ -5846,10 +5799,8 @@ abstract class _MedicationAdministration extends MedicationAdministration {
       final MedicationAdministrationDosage? dosage}) = _$_MedicationAdministration;
   _MedicationAdministration._() : super._();
 
-  factory _MedicationAdministration.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationAdministration.fromJson;
+  factory _MedicationAdministration.fromJson(Map<String, dynamic> json) =
+      _$_MedicationAdministration.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
@@ -6305,9 +6256,8 @@ class _$_MedicationAdministrationDosage
         super._();
 
   factory _$_MedicationAdministrationDosage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_MedicationAdministrationDosageFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_MedicationAdministrationDosageFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -6435,10 +6385,8 @@ abstract class _MedicationAdministrationDosage
       final Range? rateRange}) = _$_MedicationAdministrationDosage;
   _MedicationAdministrationDosage._() : super._();
 
-  factory _MedicationAdministrationDosage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationAdministrationDosage.fromJson;
+  factory _MedicationAdministrationDosage.fromJson(Map<String, dynamic> json) =
+      _$_MedicationAdministrationDosage.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -7288,10 +7236,7 @@ class _$_MedicationDispense extends _MedicationDispense {
         _dosageInstruction = dosageInstruction,
         super._();
 
-  factory _$_MedicationDispense.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MedicationDispense.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationDispenseFromJson(json);
 
   @override
@@ -7581,10 +7526,8 @@ abstract class _MedicationDispense extends MedicationDispense {
       _$_MedicationDispense;
   _MedicationDispense._() : super._();
 
-  factory _MedicationDispense.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationDispense.fromJson;
+  factory _MedicationDispense.fromJson(Map<String, dynamic> json) =
+      _$_MedicationDispense.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
@@ -8178,9 +8121,8 @@ class _$_MedicationDispenseDosageInstruction
         super._();
 
   factory _$_MedicationDispenseDosageInstruction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_MedicationDispenseDosageInstructionFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_MedicationDispenseDosageInstructionFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -8573,9 +8515,8 @@ class _$_MedicationDispenseSubstitution
         super._();
 
   factory _$_MedicationDispenseSubstitution.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_MedicationDispenseSubstitutionFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_MedicationDispenseSubstitutionFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -8684,10 +8625,8 @@ abstract class _MedicationDispenseSubstitution
       _$_MedicationDispenseSubstitution;
   _MedicationDispenseSubstitution._() : super._();
 
-  factory _MedicationDispenseSubstitution.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationDispenseSubstitution.fromJson;
+  factory _MedicationDispenseSubstitution.fromJson(Map<String, dynamic> json) =
+      _$_MedicationDispenseSubstitution.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -9463,10 +9402,7 @@ class _$_MedicationStatement extends _MedicationStatement {
         _dosage = dosage,
         super._();
 
-  factory _$_MedicationStatement.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MedicationStatement.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationStatementFromJson(json);
 
   @override
@@ -9759,10 +9695,8 @@ abstract class _MedicationStatement extends MedicationStatement {
       final List<MedicationStatementDosage>? dosage}) = _$_MedicationStatement;
   _MedicationStatement._() : super._();
 
-  factory _MedicationStatement.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationStatement.fromJson;
+  factory _MedicationStatement.fromJson(Map<String, dynamic> json) =
+      _$_MedicationStatement.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
@@ -10318,10 +10252,7 @@ class _$_MedicationStatementDosage extends _MedicationStatementDosage {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MedicationStatementDosage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MedicationStatementDosage.fromJson(Map<String, dynamic> json) =>
       _$$_MedicationStatementDosageFromJson(json);
 
   @override
@@ -10472,10 +10403,8 @@ abstract class _MedicationStatementDosage extends MedicationStatementDosage {
       final Ratio? maxDosePerPeriod}) = _$_MedicationStatementDosage;
   _MedicationStatementDosage._() : super._();
 
-  factory _MedicationStatementDosage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MedicationStatementDosage.fromJson;
+  factory _MedicationStatementDosage.fromJson(Map<String, dynamic> json) =
+      _$_MedicationStatementDosage.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -11393,10 +11322,7 @@ class _$_Immunization extends _Immunization {
         _vaccinationProtocol = vaccinationProtocol,
         super._();
 
-  factory _$_Immunization.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Immunization.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationFromJson(json);
 
   @override
@@ -11712,10 +11638,8 @@ abstract class _Immunization extends Immunization {
       _$_Immunization;
   _Immunization._() : super._();
 
-  factory _Immunization.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Immunization.fromJson;
+  factory _Immunization.fromJson(Map<String, dynamic> json) =
+      _$_Immunization.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
@@ -11958,10 +11882,7 @@ class _$_ImmunizationExplanation extends _ImmunizationExplanation {
         _reasonNotGiven = reasonNotGiven,
         super._();
 
-  factory _$_ImmunizationExplanation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ImmunizationExplanation.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationExplanationFromJson(json);
 
   @override
@@ -12065,10 +11986,8 @@ abstract class _ImmunizationExplanation extends ImmunizationExplanation {
       _$_ImmunizationExplanation;
   _ImmunizationExplanation._() : super._();
 
-  factory _ImmunizationExplanation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ImmunizationExplanation.fromJson;
+  factory _ImmunizationExplanation.fromJson(Map<String, dynamic> json) =
+      _$_ImmunizationExplanation.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -12330,10 +12249,7 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ImmunizationReaction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationReactionFromJson(json);
 
   @override
@@ -12440,10 +12356,8 @@ abstract class _ImmunizationReaction extends ImmunizationReaction {
       _$_ImmunizationReaction;
   _ImmunizationReaction._() : super._();
 
-  factory _ImmunizationReaction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ImmunizationReaction.fromJson;
+  factory _ImmunizationReaction.fromJson(Map<String, dynamic> json) =
+      _$_ImmunizationReaction.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -12789,9 +12703,8 @@ class _$_ImmunizationVaccinationProtocol
         super._();
 
   factory _$_ImmunizationVaccinationProtocol.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ImmunizationVaccinationProtocolFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ImmunizationVaccinationProtocolFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -12931,10 +12844,8 @@ abstract class _ImmunizationVaccinationProtocol
       _$_ImmunizationVaccinationProtocol;
   _ImmunizationVaccinationProtocol._() : super._();
 
-  factory _ImmunizationVaccinationProtocol.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ImmunizationVaccinationProtocol.fromJson;
+  factory _ImmunizationVaccinationProtocol.fromJson(Map<String, dynamic> json) =
+      _$_ImmunizationVaccinationProtocol.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -13352,10 +13263,7 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
         _recommendation = recommendation,
         super._();
 
-  factory _$_ImmunizationRecommendation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
       _$$_ImmunizationRecommendationFromJson(json);
 
   @override
@@ -13526,10 +13434,8 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
               recommendation}) = _$_ImmunizationRecommendation;
   _ImmunizationRecommendation._() : super._();
 
-  factory _ImmunizationRecommendation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ImmunizationRecommendation.fromJson;
+  factory _ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =
+      _$_ImmunizationRecommendation.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
@@ -13868,9 +13774,8 @@ class _$_ImmunizationRecommendationRecommendation
         super._();
 
   factory _$_ImmunizationRecommendationRecommendation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ImmunizationRecommendationRecommendationFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ImmunizationRecommendationRecommendationFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -14303,9 +14208,8 @@ class _$_ImmunizationRecommendationRecommendationDateCriterion
       : super._();
 
   factory _$_ImmunizationRecommendationRecommendationDateCriterion.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ImmunizationRecommendationRecommendationDateCriterionFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ImmunizationRecommendationRecommendationDateCriterionFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -14657,9 +14561,8 @@ class _$_ImmunizationRecommendationRecommendationProtocol
         super._();
 
   factory _$_ImmunizationRecommendationRecommendationProtocol.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ImmunizationRecommendationRecommendationProtocolFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ImmunizationRecommendationRecommendationProtocolFromJson(json);
 
   @override
   @JsonKey(name: 'id')

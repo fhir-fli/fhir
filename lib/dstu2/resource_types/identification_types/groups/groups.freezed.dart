@@ -541,10 +541,7 @@ class _$_Organization extends _Organization {
         _contact = contact,
         super._();
 
-  factory _$_Organization.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Organization.fromJson(Map<String, dynamic> json) =>
       _$$_OrganizationFromJson(json);
 
   @override
@@ -770,10 +767,8 @@ abstract class _Organization extends Organization {
       final List<OrganizationContact>? contact}) = _$_Organization;
   _Organization._() : super._();
 
-  factory _Organization.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Organization.fromJson;
+  factory _Organization.fromJson(Map<String, dynamic> json) =
+      _$_Organization.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
@@ -1072,10 +1067,7 @@ class _$_OrganizationContact extends _OrganizationContact {
         _telecom = telecom,
         super._();
 
-  factory _$_OrganizationContact.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_OrganizationContact.fromJson(Map<String, dynamic> json) =>
       _$$_OrganizationContactFromJson(json);
 
   @override
@@ -1194,10 +1186,8 @@ abstract class _OrganizationContact extends OrganizationContact {
       final Address? address}) = _$_OrganizationContact;
   _OrganizationContact._() : super._();
 
-  factory _OrganizationContact.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_OrganizationContact.fromJson;
+  factory _OrganizationContact.fromJson(Map<String, dynamic> json) =
+      _$_OrganizationContact.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2069,10 +2059,7 @@ class _$_HealthcareService extends _HealthcareService {
         _notAvailable = notAvailable,
         super._();
 
-  factory _$_HealthcareService.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$$_HealthcareServiceFromJson(json);
 
   @override
@@ -2457,10 +2444,8 @@ abstract class _HealthcareService extends HealthcareService {
           final Element? availabilityExceptionsElement}) = _$_HealthcareService;
   _HealthcareService._() : super._();
 
-  factory _HealthcareService.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_HealthcareService.fromJson;
+  factory _HealthcareService.fromJson(Map<String, dynamic> json) =
+      _$_HealthcareService.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
@@ -2722,10 +2707,7 @@ class _$_HealthcareServiceServiceType extends _HealthcareServiceServiceType {
         _specialty = specialty,
         super._();
 
-  factory _$_HealthcareServiceServiceType.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_HealthcareServiceServiceType.fromJson(Map<String, dynamic> json) =>
       _$$_HealthcareServiceServiceTypeFromJson(json);
 
   @override
@@ -2821,10 +2803,8 @@ abstract class _HealthcareServiceServiceType
       _$_HealthcareServiceServiceType;
   _HealthcareServiceServiceType._() : super._();
 
-  factory _HealthcareServiceServiceType.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_HealthcareServiceServiceType.fromJson;
+  factory _HealthcareServiceServiceType.fromJson(Map<String, dynamic> json) =
+      _$_HealthcareServiceServiceType.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3155,9 +3135,8 @@ class _$_HealthcareServiceAvailableTime
         super._();
 
   factory _$_HealthcareServiceAvailableTime.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_HealthcareServiceAvailableTimeFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_HealthcareServiceAvailableTimeFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -3301,10 +3280,8 @@ abstract class _HealthcareServiceAvailableTime
       _$_HealthcareServiceAvailableTime;
   _HealthcareServiceAvailableTime._() : super._();
 
-  factory _HealthcareServiceAvailableTime.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_HealthcareServiceAvailableTime.fromJson;
+  factory _HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =
+      _$_HealthcareServiceAvailableTime.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3545,9 +3522,8 @@ class _$_HealthcareServiceNotAvailable extends _HealthcareServiceNotAvailable {
         super._();
 
   factory _$_HealthcareServiceNotAvailable.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_HealthcareServiceNotAvailableFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_HealthcareServiceNotAvailableFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -3641,10 +3617,8 @@ abstract class _HealthcareServiceNotAvailable
       final Period? during}) = _$_HealthcareServiceNotAvailable;
   _HealthcareServiceNotAvailable._() : super._();
 
-  factory _HealthcareServiceNotAvailable.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_HealthcareServiceNotAvailable.fromJson;
+  factory _HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =
+      _$_HealthcareServiceNotAvailable.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4243,10 +4217,7 @@ class _$_Group extends _Group {
         _member = member,
         super._();
 
-  factory _$_Group.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Group.fromJson(Map<String, dynamic> json) =>
       _$$_GroupFromJson(json);
 
   @override
@@ -4484,10 +4455,7 @@ abstract class _Group extends Group {
       final List<GroupMember>? member}) = _$_Group;
   _Group._() : super._();
 
-  factory _Group.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Group.fromJson;
+  factory _Group.fromJson(Map<String, dynamic> json) = _$_Group.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
@@ -4876,10 +4844,7 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_GroupCharacteristic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$$_GroupCharacteristicFromJson(json);
 
   @override
@@ -5001,10 +4966,8 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
       final Period? period}) = _$_GroupCharacteristic;
   _GroupCharacteristic._() : super._();
 
-  factory _GroupCharacteristic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_GroupCharacteristic.fromJson;
+  factory _GroupCharacteristic.fromJson(Map<String, dynamic> json) =
+      _$_GroupCharacteristic.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -5259,10 +5222,7 @@ class _$_GroupMember extends _GroupMember {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_GroupMember.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_GroupMember.fromJson(Map<String, dynamic> json) =>
       _$$_GroupMemberFromJson(json);
 
   @override
@@ -5361,10 +5321,8 @@ abstract class _GroupMember extends GroupMember {
       _$_GroupMember;
   _GroupMember._() : super._();
 
-  factory _GroupMember.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_GroupMember.fromJson;
+  factory _GroupMember.fromJson(Map<String, dynamic> json) =
+      _$_GroupMember.fromJson;
 
   @override
   @JsonKey(name: 'id')

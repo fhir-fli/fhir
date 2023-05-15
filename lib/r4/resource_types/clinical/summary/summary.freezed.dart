@@ -881,10 +881,7 @@ class _$_AdverseEvent extends _AdverseEvent {
         _study = study,
         super._();
 
-  factory _$_AdverseEvent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AdverseEvent.fromJson(Map<String, dynamic> json) =>
       _$$_AdverseEventFromJson(json);
 
   @override
@@ -1226,10 +1223,8 @@ abstract class _AdverseEvent extends AdverseEvent {
       final List<Reference>? study}) = _$_AdverseEvent;
   _AdverseEvent._() : super._();
 
-  factory _AdverseEvent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AdverseEvent.fromJson;
+  factory _AdverseEvent.fromJson(Map<String, dynamic> json) =
+      _$_AdverseEvent.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AdverseEvent)
@@ -1486,10 +1481,7 @@ class _$_AdverseEventSuspectEntity extends _AdverseEventSuspectEntity {
         _causality = causality,
         super._();
 
-  factory _$_AdverseEventSuspectEntity.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =>
       _$$_AdverseEventSuspectEntityFromJson(json);
 
   @override
@@ -1585,10 +1577,8 @@ abstract class _AdverseEventSuspectEntity extends AdverseEventSuspectEntity {
       _$_AdverseEventSuspectEntity;
   _AdverseEventSuspectEntity._() : super._();
 
-  factory _AdverseEventSuspectEntity.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AdverseEventSuspectEntity.fromJson;
+  factory _AdverseEventSuspectEntity.fromJson(Map<String, dynamic> json) =
+      _$_AdverseEventSuspectEntity.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1865,10 +1855,7 @@ class _$_AdverseEventCausality extends _AdverseEventCausality {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AdverseEventCausality.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AdverseEventCausality.fromJson(Map<String, dynamic> json) =>
       _$$_AdverseEventCausalityFromJson(json);
 
   @override
@@ -1977,10 +1964,8 @@ abstract class _AdverseEventCausality extends AdverseEventCausality {
       final CodeableConcept? method}) = _$_AdverseEventCausality;
   _AdverseEventCausality._() : super._();
 
-  factory _AdverseEventCausality.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AdverseEventCausality.fromJson;
+  factory _AdverseEventCausality.fromJson(Map<String, dynamic> json) =
+      _$_AdverseEventCausality.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2970,10 +2955,7 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
         _reaction = reaction,
         super._();
 
-  factory _$_AllergyIntolerance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$$_AllergyIntoleranceFromJson(json);
 
   @override
@@ -3322,10 +3304,8 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
       _$_AllergyIntolerance;
   _AllergyIntolerance._() : super._();
 
-  factory _AllergyIntolerance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AllergyIntolerance.fromJson;
+  factory _AllergyIntolerance.fromJson(Map<String, dynamic> json) =
+      _$_AllergyIntolerance.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AllergyIntolerance)
@@ -3771,10 +3751,7 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
         _note = note,
         super._();
 
-  factory _$_AllergyIntoleranceReaction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
       _$$_AllergyIntoleranceReactionFromJson(json);
 
   @override
@@ -3924,10 +3901,8 @@ abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
       final List<Annotation>? note}) = _$_AllergyIntoleranceReaction;
   _AllergyIntoleranceReaction._() : super._();
 
-  factory _AllergyIntoleranceReaction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AllergyIntoleranceReaction.fromJson;
+  factory _AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =
+      _$_AllergyIntoleranceReaction.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4872,10 +4847,7 @@ class _$_ClinicalImpression extends _ClinicalImpression {
         _note = note,
         super._();
 
-  factory _$_ClinicalImpression.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ClinicalImpression.fromJson(Map<String, dynamic> json) =>
       _$$_ClinicalImpressionFromJson(json);
 
   @override
@@ -5261,10 +5233,8 @@ abstract class _ClinicalImpression extends ClinicalImpression {
       final List<Annotation>? note}) = _$_ClinicalImpression;
   _ClinicalImpression._() : super._();
 
-  factory _ClinicalImpression.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ClinicalImpression.fromJson;
+  factory _ClinicalImpression.fromJson(Map<String, dynamic> json) =
+      _$_ClinicalImpression.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ClinicalImpression)
@@ -5532,9 +5502,8 @@ class _$_ClinicalImpressionInvestigation
         super._();
 
   factory _$_ClinicalImpressionInvestigation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ClinicalImpressionInvestigationFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ClinicalImpressionInvestigationFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -5628,10 +5597,8 @@ abstract class _ClinicalImpressionInvestigation
       final List<Reference>? item}) = _$_ClinicalImpressionInvestigation;
   _ClinicalImpressionInvestigation._() : super._();
 
-  factory _ClinicalImpressionInvestigation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ClinicalImpressionInvestigation.fromJson;
+  factory _ClinicalImpressionInvestigation.fromJson(Map<String, dynamic> json) =
+      _$_ClinicalImpressionInvestigation.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -5884,10 +5851,7 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClinicalImpressionFinding.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
       _$$_ClinicalImpressionFindingFromJson(json);
 
   @override
@@ -5988,10 +5952,8 @@ abstract class _ClinicalImpressionFinding extends ClinicalImpressionFinding {
       _$_ClinicalImpressionFinding;
   _ClinicalImpressionFinding._() : super._();
 
-  factory _ClinicalImpressionFinding.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ClinicalImpressionFinding.fromJson;
+  factory _ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =
+      _$_ClinicalImpressionFinding.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -7056,10 +7018,7 @@ class _$_Condition extends _Condition {
         _note = note,
         super._();
 
-  factory _$_Condition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Condition.fromJson(Map<String, dynamic> json) =>
       _$$_ConditionFromJson(json);
 
   @override
@@ -7428,10 +7387,8 @@ abstract class _Condition extends Condition {
       final List<Annotation>? note}) = _$_Condition;
   _Condition._() : super._();
 
-  factory _Condition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Condition.fromJson;
+  factory _Condition.fromJson(Map<String, dynamic> json) =
+      _$_Condition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Condition)
@@ -7728,10 +7685,7 @@ class _$_ConditionStage extends _ConditionStage {
         _assessment = assessment,
         super._();
 
-  factory _$_ConditionStage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ConditionStage.fromJson(Map<String, dynamic> json) =>
       _$$_ConditionStageFromJson(json);
 
   @override
@@ -7830,10 +7784,8 @@ abstract class _ConditionStage extends ConditionStage {
       final CodeableConcept? type}) = _$_ConditionStage;
   _ConditionStage._() : super._();
 
-  factory _ConditionStage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ConditionStage.fromJson;
+  factory _ConditionStage.fromJson(Map<String, dynamic> json) =
+      _$_ConditionStage.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -8007,10 +7959,7 @@ class _$_ConditionEvidence extends _ConditionEvidence {
         _detail = detail,
         super._();
 
-  factory _$_ConditionEvidence.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ConditionEvidence.fromJson(Map<String, dynamic> json) =>
       _$$_ConditionEvidenceFromJson(json);
 
   @override
@@ -8111,10 +8060,8 @@ abstract class _ConditionEvidence extends ConditionEvidence {
       final List<Reference>? detail}) = _$_ConditionEvidence;
   _ConditionEvidence._() : super._();
 
-  factory _ConditionEvidence.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ConditionEvidence.fromJson;
+  factory _ConditionEvidence.fromJson(Map<String, dynamic> json) =
+      _$_ConditionEvidence.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -8862,10 +8809,7 @@ class _$_DetectedIssue extends _DetectedIssue {
         _mitigation = mitigation,
         super._();
 
-  factory _$_DetectedIssue.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$$_DetectedIssueFromJson(json);
 
   @override
@@ -9147,10 +9091,8 @@ abstract class _DetectedIssue extends DetectedIssue {
       final List<DetectedIssueMitigation>? mitigation}) = _$_DetectedIssue;
   _DetectedIssue._() : super._();
 
-  factory _DetectedIssue.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DetectedIssue.fromJson;
+  factory _DetectedIssue.fromJson(Map<String, dynamic> json) =
+      _$_DetectedIssue.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DetectedIssue)
@@ -9380,10 +9322,7 @@ class _$_DetectedIssueEvidence extends _DetectedIssueEvidence {
         _detail = detail,
         super._();
 
-  factory _$_DetectedIssueEvidence.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DetectedIssueEvidence.fromJson(Map<String, dynamic> json) =>
       _$$_DetectedIssueEvidenceFromJson(json);
 
   @override
@@ -9484,10 +9423,8 @@ abstract class _DetectedIssueEvidence extends DetectedIssueEvidence {
       final List<Reference>? detail}) = _$_DetectedIssueEvidence;
   _DetectedIssueEvidence._() : super._();
 
-  factory _DetectedIssueEvidence.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DetectedIssueEvidence.fromJson;
+  factory _DetectedIssueEvidence.fromJson(Map<String, dynamic> json) =
+      _$_DetectedIssueEvidence.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -9732,10 +9669,7 @@ class _$_DetectedIssueMitigation extends _DetectedIssueMitigation {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DetectedIssueMitigation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
       _$$_DetectedIssueMitigationFromJson(json);
 
   @override
@@ -9834,10 +9768,8 @@ abstract class _DetectedIssueMitigation extends DetectedIssueMitigation {
       final Reference? author}) = _$_DetectedIssueMitigation;
   _DetectedIssueMitigation._() : super._();
 
-  factory _DetectedIssueMitigation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DetectedIssueMitigation.fromJson;
+  factory _DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =
+      _$_DetectedIssueMitigation.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -11027,10 +10959,7 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
         _condition = condition,
         super._();
 
-  factory _$_FamilyMemberHistory.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
       _$$_FamilyMemberHistoryFromJson(json);
 
   @override
@@ -11472,10 +11401,8 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
       _$_FamilyMemberHistory;
   _FamilyMemberHistory._() : super._();
 
-  factory _FamilyMemberHistory.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_FamilyMemberHistory.fromJson;
+  factory _FamilyMemberHistory.fromJson(Map<String, dynamic> json) =
+      _$_FamilyMemberHistory.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.FamilyMemberHistory)
@@ -11970,10 +11897,7 @@ class _$_FamilyMemberHistoryCondition extends _FamilyMemberHistoryCondition {
         _note = note,
         super._();
 
-  factory _$_FamilyMemberHistoryCondition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
       _$$_FamilyMemberHistoryConditionFromJson(json);
 
   @override
@@ -12121,10 +12045,8 @@ abstract class _FamilyMemberHistoryCondition
       final List<Annotation>? note}) = _$_FamilyMemberHistoryCondition;
   _FamilyMemberHistoryCondition._() : super._();
 
-  factory _FamilyMemberHistoryCondition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_FamilyMemberHistoryCondition.fromJson;
+  factory _FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =
+      _$_FamilyMemberHistoryCondition.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -13237,10 +13159,7 @@ class _$_Procedure extends _Procedure {
         _usedCode = usedCode,
         super._();
 
-  factory _$_Procedure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Procedure.fromJson(Map<String, dynamic> json) =>
       _$$_ProcedureFromJson(json);
 
   @override
@@ -13738,10 +13657,8 @@ abstract class _Procedure extends Procedure {
       final List<CodeableConcept>? usedCode}) = _$_Procedure;
   _Procedure._() : super._();
 
-  factory _Procedure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Procedure.fromJson;
+  factory _Procedure.fromJson(Map<String, dynamic> json) =
+      _$_Procedure.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Procedure)
@@ -14059,10 +13976,7 @@ class _$_ProcedurePerformer extends _ProcedurePerformer {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ProcedurePerformer.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
       _$$_ProcedurePerformerFromJson(json);
 
   @override
@@ -14155,10 +14069,8 @@ abstract class _ProcedurePerformer extends ProcedurePerformer {
       final Reference? onBehalfOf}) = _$_ProcedurePerformer;
   _ProcedurePerformer._() : super._();
 
-  factory _ProcedurePerformer.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ProcedurePerformer.fromJson;
+  factory _ProcedurePerformer.fromJson(Map<String, dynamic> json) =
+      _$_ProcedurePerformer.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -14359,10 +14271,7 @@ class _$_ProcedureFocalDevice extends _ProcedureFocalDevice {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ProcedureFocalDevice.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
       _$$_ProcedureFocalDeviceFromJson(json);
 
   @override
@@ -14449,10 +14358,8 @@ abstract class _ProcedureFocalDevice extends ProcedureFocalDevice {
       required final Reference manipulated}) = _$_ProcedureFocalDevice;
   _ProcedureFocalDevice._() : super._();
 
-  factory _ProcedureFocalDevice.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ProcedureFocalDevice.fromJson;
+  factory _ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =
+      _$_ProcedureFocalDevice.fromJson;
 
   @override
   @JsonKey(name: 'id')

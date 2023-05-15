@@ -2,330 +2,325 @@ part of 'resource.dart';
 
 /// Acts like a constructor, returns a [Resource], accepts a
 /// [Map<String, Dynamic>] as an argument
-Resource _resourceFromJson(
-  Map<String, dynamic> json, [
-  SerializationManager? serializationManager,
-]) {
+Resource _resourceFromJson(Map<String, dynamic> json) {
   final dynamic resourceType = json['resourceType'];
   switch (resourceType) {
     case 'Account':
-      return Account.fromJson(json, serializationManager);
+      return Account.fromJson(json);
     case 'ActivityDefinition':
-      return ActivityDefinition.fromJson(json, serializationManager);
+      return ActivityDefinition.fromJson(json);
     case 'ActorDefinition':
-      return ActorDefinition.fromJson(json, serializationManager);
+      return ActorDefinition.fromJson(json);
     case 'AdministrableProductDefinition':
-      return AdministrableProductDefinition.fromJson(
-          json, serializationManager);
+      return AdministrableProductDefinition.fromJson(json);
     case 'AdverseEvent':
-      return AdverseEvent.fromJson(json, serializationManager);
+      return AdverseEvent.fromJson(json);
     case 'AllergyIntolerance':
-      return AllergyIntolerance.fromJson(json, serializationManager);
+      return AllergyIntolerance.fromJson(json);
     case 'Appointment':
-      return Appointment.fromJson(json, serializationManager);
+      return Appointment.fromJson(json);
     case 'AppointmentResponse':
-      return AppointmentResponse.fromJson(json, serializationManager);
+      return AppointmentResponse.fromJson(json);
     case 'ArtifactAssessment':
-      return ArtifactAssessment.fromJson(json, serializationManager);
+      return ArtifactAssessment.fromJson(json);
     case 'AuditEvent':
-      return AuditEvent.fromJson(json, serializationManager);
+      return AuditEvent.fromJson(json);
     case 'Basic':
-      return Basic.fromJson(json, serializationManager);
+      return Basic.fromJson(json);
     case 'Binary':
-      return Binary.fromJson(json, serializationManager);
+      return Binary.fromJson(json);
     case 'BiologicallyDerivedProduct':
-      return BiologicallyDerivedProduct.fromJson(json, serializationManager);
+      return BiologicallyDerivedProduct.fromJson(json);
     case 'BiologicallyDerivedProductDispense':
-      return BiologicallyDerivedProductDispense.fromJson(
-          json, serializationManager);
+      return BiologicallyDerivedProductDispense.fromJson(json);
     case 'BodyStructure':
-      return BodyStructure.fromJson(json, serializationManager);
+      return BodyStructure.fromJson(json);
     case 'Bundle':
-      return Bundle.fromJson(json, serializationManager);
+      return Bundle.fromJson(json);
     case 'CapabilityStatement':
-      return CapabilityStatement.fromJson(json, serializationManager);
+      return CapabilityStatement.fromJson(json);
     case 'CarePlan':
-      return CarePlan.fromJson(json, serializationManager);
+      return CarePlan.fromJson(json);
     case 'CareTeam':
-      return CareTeam.fromJson(json, serializationManager);
+      return CareTeam.fromJson(json);
     case 'ChargeItem':
-      return ChargeItem.fromJson(json, serializationManager);
+      return ChargeItem.fromJson(json);
     case 'ChargeItemDefinition':
-      return ChargeItemDefinition.fromJson(json, serializationManager);
+      return ChargeItemDefinition.fromJson(json);
     case 'Citation':
-      return Citation.fromJson(json, serializationManager);
+      return Citation.fromJson(json);
     case 'Claim':
-      return Claim.fromJson(json, serializationManager);
+      return Claim.fromJson(json);
     case 'ClaimResponse':
-      return ClaimResponse.fromJson(json, serializationManager);
+      return ClaimResponse.fromJson(json);
     case 'ClinicalImpression':
-      return ClinicalImpression.fromJson(json, serializationManager);
+      return ClinicalImpression.fromJson(json);
     case 'ClinicalUseDefinition':
-      return ClinicalUseDefinition.fromJson(json, serializationManager);
+      return ClinicalUseDefinition.fromJson(json);
     case 'CodeSystem':
-      return CodeSystem.fromJson(json, serializationManager);
+      return CodeSystem.fromJson(json);
     case 'Communication':
-      return Communication.fromJson(json, serializationManager);
+      return Communication.fromJson(json);
     case 'CommunicationRequest':
-      return CommunicationRequest.fromJson(json, serializationManager);
+      return CommunicationRequest.fromJson(json);
     case 'CompartmentDefinition':
-      return CompartmentDefinition.fromJson(json, serializationManager);
+      return CompartmentDefinition.fromJson(json);
     case 'Composition':
-      return Composition.fromJson(json, serializationManager);
+      return Composition.fromJson(json);
     case 'ConceptMap':
-      return ConceptMap.fromJson(json, serializationManager);
+      return ConceptMap.fromJson(json);
     case 'Condition':
-      return Condition.fromJson(json, serializationManager);
+      return Condition.fromJson(json);
     case 'ConditionDefinition':
-      return ConditionDefinition.fromJson(json, serializationManager);
+      return ConditionDefinition.fromJson(json);
     case 'Consent':
-      return Consent.fromJson(json, serializationManager);
+      return Consent.fromJson(json);
     case 'Contract':
-      return Contract.fromJson(json, serializationManager);
+      return Contract.fromJson(json);
     case 'Coverage':
-      return Coverage.fromJson(json, serializationManager);
+      return Coverage.fromJson(json);
     case 'CoverageEligibilityRequest':
-      return CoverageEligibilityRequest.fromJson(json, serializationManager);
+      return CoverageEligibilityRequest.fromJson(json);
     case 'CoverageEligibilityResponse':
-      return CoverageEligibilityResponse.fromJson(json, serializationManager);
+      return CoverageEligibilityResponse.fromJson(json);
     case 'DetectedIssue':
-      return DetectedIssue.fromJson(json, serializationManager);
+      return DetectedIssue.fromJson(json);
     case 'Device':
-      return Device.fromJson(json, serializationManager);
+      return Device.fromJson(json);
     case 'DeviceAssociation':
-      return DeviceAssociation.fromJson(json, serializationManager);
+      return DeviceAssociation.fromJson(json);
     case 'DeviceDefinition':
-      return DeviceDefinition.fromJson(json, serializationManager);
+      return DeviceDefinition.fromJson(json);
     case 'DeviceDispense':
-      return DeviceDispense.fromJson(json, serializationManager);
+      return DeviceDispense.fromJson(json);
     case 'DeviceMetric':
-      return DeviceMetric.fromJson(json, serializationManager);
+      return DeviceMetric.fromJson(json);
     case 'DeviceRequest':
-      return DeviceRequest.fromJson(json, serializationManager);
+      return DeviceRequest.fromJson(json);
     case 'DeviceUsage':
-      return DeviceUsage.fromJson(json, serializationManager);
+      return DeviceUsage.fromJson(json);
     case 'DiagnosticReport':
-      return DiagnosticReport.fromJson(json, serializationManager);
+      return DiagnosticReport.fromJson(json);
     case 'DocumentReference':
-      return DocumentReference.fromJson(json, serializationManager);
+      return DocumentReference.fromJson(json);
     case 'Encounter':
-      return Encounter.fromJson(json, serializationManager);
+      return Encounter.fromJson(json);
     case 'EncounterHistory':
-      return EncounterHistory.fromJson(json, serializationManager);
+      return EncounterHistory.fromJson(json);
     case 'Endpoint':
-      return FhirEndpoint.fromJson(json, serializationManager);
+      return FhirEndpoint.fromJson(json);
     case 'EnrollmentRequest':
-      return EnrollmentRequest.fromJson(json, serializationManager);
+      return EnrollmentRequest.fromJson(json);
     case 'EnrollmentResponse':
-      return EnrollmentResponse.fromJson(json, serializationManager);
+      return EnrollmentResponse.fromJson(json);
     case 'EpisodeOfCare':
-      return EpisodeOfCare.fromJson(json, serializationManager);
+      return EpisodeOfCare.fromJson(json);
     case 'EventDefinition':
-      return EventDefinition.fromJson(json, serializationManager);
+      return EventDefinition.fromJson(json);
     case 'Evidence':
-      return Evidence.fromJson(json, serializationManager);
+      return Evidence.fromJson(json);
     case 'EvidenceReport':
-      return EvidenceReport.fromJson(json, serializationManager);
+      return EvidenceReport.fromJson(json);
     case 'EvidenceVariable':
-      return EvidenceVariable.fromJson(json, serializationManager);
+      return EvidenceVariable.fromJson(json);
     case 'ExampleScenario':
-      return ExampleScenario.fromJson(json, serializationManager);
+      return ExampleScenario.fromJson(json);
     case 'ExplanationOfBenefit':
-      return ExplanationOfBenefit.fromJson(json, serializationManager);
+      return ExplanationOfBenefit.fromJson(json);
     case 'FamilyMemberHistory':
-      return FamilyMemberHistory.fromJson(json, serializationManager);
+      return FamilyMemberHistory.fromJson(json);
     case 'Flag':
-      return Flag.fromJson(json, serializationManager);
+      return Flag.fromJson(json);
     case 'FormularyItem':
-      return FormularyItem.fromJson(json, serializationManager);
+      return FormularyItem.fromJson(json);
     case 'GenomicStudy':
-      return GenomicStudy.fromJson(json, serializationManager);
+      return GenomicStudy.fromJson(json);
     case 'Goal':
-      return Goal.fromJson(json, serializationManager);
+      return Goal.fromJson(json);
     case 'GraphDefinition':
-      return GraphDefinition.fromJson(json, serializationManager);
+      return GraphDefinition.fromJson(json);
     case 'Group':
-      return Group.fromJson(json, serializationManager);
+      return Group.fromJson(json);
     case 'GuidanceResponse':
-      return GuidanceResponse.fromJson(json, serializationManager);
+      return GuidanceResponse.fromJson(json);
     case 'HealthcareService':
-      return HealthcareService.fromJson(json, serializationManager);
+      return HealthcareService.fromJson(json);
     case 'ImagingSelection':
-      return ImagingSelection.fromJson(json, serializationManager);
+      return ImagingSelection.fromJson(json);
     case 'ImagingStudy':
-      return ImagingStudy.fromJson(json, serializationManager);
+      return ImagingStudy.fromJson(json);
     case 'Immunization':
-      return Immunization.fromJson(json, serializationManager);
+      return Immunization.fromJson(json);
     case 'ImmunizationEvaluation':
-      return ImmunizationEvaluation.fromJson(json, serializationManager);
+      return ImmunizationEvaluation.fromJson(json);
     case 'ImmunizationRecommendation':
-      return ImmunizationRecommendation.fromJson(json, serializationManager);
+      return ImmunizationRecommendation.fromJson(json);
     case 'ImplementationGuide':
-      return ImplementationGuide.fromJson(json, serializationManager);
+      return ImplementationGuide.fromJson(json);
     case 'Ingredient':
-      return Ingredient.fromJson(json, serializationManager);
+      return Ingredient.fromJson(json);
     case 'InsurancePlan':
-      return InsurancePlan.fromJson(json, serializationManager);
+      return InsurancePlan.fromJson(json);
     case 'InventoryItem':
-      return InventoryItem.fromJson(json, serializationManager);
+      return InventoryItem.fromJson(json);
     case 'InventoryReport':
-      return InventoryReport.fromJson(json, serializationManager);
+      return InventoryReport.fromJson(json);
     case 'Invoice':
-      return Invoice.fromJson(json, serializationManager);
+      return Invoice.fromJson(json);
     case 'Library':
-      return Library.fromJson(json, serializationManager);
+      return Library.fromJson(json);
     case 'Linkage':
-      return Linkage.fromJson(json, serializationManager);
+      return Linkage.fromJson(json);
     case 'List':
-      return FhirList.fromJson(json, serializationManager);
+      return FhirList.fromJson(json);
     case 'Location':
-      return Location.fromJson(json, serializationManager);
+      return Location.fromJson(json);
     case 'ManufacturedItemDefinition':
-      return ManufacturedItemDefinition.fromJson(json, serializationManager);
+      return ManufacturedItemDefinition.fromJson(json);
     case 'Measure':
-      return Measure.fromJson(json, serializationManager);
+      return Measure.fromJson(json);
     case 'MeasureReport':
-      return MeasureReport.fromJson(json, serializationManager);
+      return MeasureReport.fromJson(json);
     case 'Medication':
-      return Medication.fromJson(json, serializationManager);
+      return Medication.fromJson(json);
     case 'MedicationAdministration':
-      return MedicationAdministration.fromJson(json, serializationManager);
+      return MedicationAdministration.fromJson(json);
     case 'MedicationDispense':
-      return MedicationDispense.fromJson(json, serializationManager);
+      return MedicationDispense.fromJson(json);
     case 'MedicationKnowledge':
-      return MedicationKnowledge.fromJson(json, serializationManager);
+      return MedicationKnowledge.fromJson(json);
     case 'MedicationRequest':
-      return MedicationRequest.fromJson(json, serializationManager);
+      return MedicationRequest.fromJson(json);
     case 'MedicationStatement':
-      return MedicationStatement.fromJson(json, serializationManager);
+      return MedicationStatement.fromJson(json);
     case 'MedicinalProductDefinition':
-      return MedicinalProductDefinition.fromJson(json, serializationManager);
+      return MedicinalProductDefinition.fromJson(json);
     case 'MessageDefinition':
-      return MessageDefinition.fromJson(json, serializationManager);
+      return MessageDefinition.fromJson(json);
     case 'MessageHeader':
-      return MessageHeader.fromJson(json, serializationManager);
+      return MessageHeader.fromJson(json);
     case 'MolecularSequence':
-      return MolecularSequence.fromJson(json, serializationManager);
+      return MolecularSequence.fromJson(json);
     case 'NamingSystem':
-      return NamingSystem.fromJson(json, serializationManager);
+      return NamingSystem.fromJson(json);
     case 'NutritionIntake':
-      return NutritionIntake.fromJson(json, serializationManager);
+      return NutritionIntake.fromJson(json);
     case 'NutritionOrder':
-      return NutritionOrder.fromJson(json, serializationManager);
+      return NutritionOrder.fromJson(json);
     case 'NutritionProduct':
-      return NutritionProduct.fromJson(json, serializationManager);
+      return NutritionProduct.fromJson(json);
     case 'Observation':
-      return Observation.fromJson(json, serializationManager);
+      return Observation.fromJson(json);
     case 'ObservationDefinition':
-      return ObservationDefinition.fromJson(json, serializationManager);
+      return ObservationDefinition.fromJson(json);
     case 'OperationDefinition':
-      return OperationDefinition.fromJson(json, serializationManager);
+      return OperationDefinition.fromJson(json);
     case 'OperationOutcome':
-      return OperationOutcome.fromJson(json, serializationManager);
+      return OperationOutcome.fromJson(json);
     case 'Organization':
-      return Organization.fromJson(json, serializationManager);
+      return Organization.fromJson(json);
     case 'OrganizationAffiliation':
-      return OrganizationAffiliation.fromJson(json, serializationManager);
+      return OrganizationAffiliation.fromJson(json);
     case 'PackagedProductDefinition':
-      return PackagedProductDefinition.fromJson(json, serializationManager);
+      return PackagedProductDefinition.fromJson(json);
     case 'Parameters':
-      return Parameters.fromJson(json, serializationManager);
+      return Parameters.fromJson(json);
     case 'Patient':
-      return Patient.fromJson(json, serializationManager);
+      return Patient.fromJson(json);
     case 'PaymentNotice':
-      return PaymentNotice.fromJson(json, serializationManager);
+      return PaymentNotice.fromJson(json);
     case 'PaymentReconciliation':
-      return PaymentReconciliation.fromJson(json, serializationManager);
+      return PaymentReconciliation.fromJson(json);
     case 'Permission':
-      return Permission.fromJson(json, serializationManager);
+      return Permission.fromJson(json);
     case 'Person':
-      return Person.fromJson(json, serializationManager);
+      return Person.fromJson(json);
     case 'PlanDefinition':
-      return PlanDefinition.fromJson(json, serializationManager);
+      return PlanDefinition.fromJson(json);
     case 'Practitioner':
-      return Practitioner.fromJson(json, serializationManager);
+      return Practitioner.fromJson(json);
     case 'PractitionerRole':
-      return PractitionerRole.fromJson(json, serializationManager);
+      return PractitionerRole.fromJson(json);
     case 'Procedure':
-      return Procedure.fromJson(json, serializationManager);
+      return Procedure.fromJson(json);
     case 'Provenance':
-      return Provenance.fromJson(json, serializationManager);
+      return Provenance.fromJson(json);
     case 'Questionnaire':
-      return Questionnaire.fromJson(json, serializationManager);
+      return Questionnaire.fromJson(json);
     case 'QuestionnaireResponse':
-      return QuestionnaireResponse.fromJson(json, serializationManager);
+      return QuestionnaireResponse.fromJson(json);
     case 'RegulatedAuthorization':
-      return RegulatedAuthorization.fromJson(json, serializationManager);
+      return RegulatedAuthorization.fromJson(json);
     case 'RelatedPerson':
-      return RelatedPerson.fromJson(json, serializationManager);
+      return RelatedPerson.fromJson(json);
     case 'RequestOrchestration':
-      return RequestOrchestration.fromJson(json, serializationManager);
+      return RequestOrchestration.fromJson(json);
     case 'Requirements':
-      return Requirements.fromJson(json, serializationManager);
+      return Requirements.fromJson(json);
     case 'ResearchStudy':
-      return ResearchStudy.fromJson(json, serializationManager);
+      return ResearchStudy.fromJson(json);
     case 'ResearchSubject':
-      return ResearchSubject.fromJson(json, serializationManager);
+      return ResearchSubject.fromJson(json);
     case 'RiskAssessment':
-      return RiskAssessment.fromJson(json, serializationManager);
+      return RiskAssessment.fromJson(json);
     case 'Schedule':
-      return Schedule.fromJson(json, serializationManager);
+      return Schedule.fromJson(json);
     case 'SearchParameter':
-      return SearchParameter.fromJson(json, serializationManager);
+      return SearchParameter.fromJson(json);
     case 'ServiceRequest':
-      return ServiceRequest.fromJson(json, serializationManager);
+      return ServiceRequest.fromJson(json);
     case 'Slot':
-      return Slot.fromJson(json, serializationManager);
+      return Slot.fromJson(json);
     case 'Specimen':
-      return Specimen.fromJson(json, serializationManager);
+      return Specimen.fromJson(json);
     case 'SpecimenDefinition':
-      return SpecimenDefinition.fromJson(json, serializationManager);
+      return SpecimenDefinition.fromJson(json);
     case 'StructureDefinition':
-      return StructureDefinition.fromJson(json, serializationManager);
+      return StructureDefinition.fromJson(json);
     case 'StructureMap':
-      return StructureMap.fromJson(json, serializationManager);
+      return StructureMap.fromJson(json);
     case 'Subscription':
-      return Subscription.fromJson(json, serializationManager);
+      return Subscription.fromJson(json);
     case 'SubscriptionStatus':
-      return SubscriptionStatus.fromJson(json, serializationManager);
+      return SubscriptionStatus.fromJson(json);
     case 'SubscriptionTopic':
-      return SubscriptionTopic.fromJson(json, serializationManager);
+      return SubscriptionTopic.fromJson(json);
     case 'Substance':
-      return Substance.fromJson(json, serializationManager);
+      return Substance.fromJson(json);
     case 'SubstanceDefinition':
-      return SubstanceDefinition.fromJson(json, serializationManager);
+      return SubstanceDefinition.fromJson(json);
     case 'SubstanceNucleicAcid':
-      return SubstanceNucleicAcid.fromJson(json, serializationManager);
+      return SubstanceNucleicAcid.fromJson(json);
     case 'SubstancePolymer':
-      return SubstancePolymer.fromJson(json, serializationManager);
+      return SubstancePolymer.fromJson(json);
     case 'SubstanceProtein':
-      return SubstanceProtein.fromJson(json, serializationManager);
+      return SubstanceProtein.fromJson(json);
     case 'SubstanceReferenceInformation':
-      return SubstanceReferenceInformation.fromJson(json, serializationManager);
+      return SubstanceReferenceInformation.fromJson(json);
     case 'SubstanceSourceMaterial':
-      return SubstanceSourceMaterial.fromJson(json, serializationManager);
+      return SubstanceSourceMaterial.fromJson(json);
     case 'SupplyDelivery':
-      return SupplyDelivery.fromJson(json, serializationManager);
+      return SupplyDelivery.fromJson(json);
     case 'SupplyRequest':
-      return SupplyRequest.fromJson(json, serializationManager);
+      return SupplyRequest.fromJson(json);
     case 'Task':
-      return Task.fromJson(json, serializationManager);
+      return Task.fromJson(json);
     case 'TerminologyCapabilities':
-      return TerminologyCapabilities.fromJson(json, serializationManager);
+      return TerminologyCapabilities.fromJson(json);
     case 'TestPlan':
-      return TestPlan.fromJson(json, serializationManager);
+      return TestPlan.fromJson(json);
     case 'TestReport':
-      return TestReport.fromJson(json, serializationManager);
+      return TestReport.fromJson(json);
     case 'TestScript':
-      return TestScript.fromJson(json, serializationManager);
+      return TestScript.fromJson(json);
     case 'Transport':
-      return Transport.fromJson(json, serializationManager);
+      return Transport.fromJson(json);
     case 'ValueSet':
-      return ValueSet.fromJson(json, serializationManager);
+      return ValueSet.fromJson(json);
     case 'VerificationResult':
-      return VerificationResult.fromJson(json, serializationManager);
+      return VerificationResult.fromJson(json);
     case 'VisionPrescription':
-      return VisionPrescription.fromJson(json, serializationManager);
+      return VisionPrescription.fromJson(json);
   }
 
   return _$ResourceFromJson(json);

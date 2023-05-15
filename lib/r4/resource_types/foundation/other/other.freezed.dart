@@ -535,10 +535,7 @@ class _$_Basic extends _Basic {
         _identifier = identifier,
         super._();
 
-  factory _$_Basic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Basic.fromJson(Map<String, dynamic> json) =>
       _$$_BasicFromJson(json);
 
   @override
@@ -809,10 +806,7 @@ abstract class _Basic extends Basic {
       final Reference? author}) = _$_Basic;
   _Basic._() : super._();
 
-  factory _Basic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Basic.fromJson;
+  factory _Basic.fromJson(Map<String, dynamic> json) = _$_Basic.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Basic)
@@ -1320,10 +1314,7 @@ class _$_Binary extends _Binary {
           this.dataElement})
       : super._();
 
-  factory _$_Binary.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Binary.fromJson(Map<String, dynamic> json) =>
       _$$_BinaryFromJson(json);
 
   @override
@@ -1482,10 +1473,7 @@ abstract class _Binary extends Binary {
           final Element? dataElement}) = _$_Binary;
   _Binary._() : super._();
 
-  factory _Binary.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Binary.fromJson;
+  factory _Binary.fromJson(Map<String, dynamic> json) = _$_Binary.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Binary)
@@ -2067,10 +2055,7 @@ class _$_Bundle extends _Bundle {
         _entry = entry,
         super._();
 
-  factory _$_Bundle.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Bundle.fromJson(Map<String, dynamic> json) =>
       _$$_BundleFromJson(json);
 
   @override
@@ -2283,10 +2268,7 @@ abstract class _Bundle extends Bundle {
       final Signature? signature}) = _$_Bundle;
   _Bundle._() : super._();
 
-  factory _Bundle.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Bundle.fromJson;
+  factory _Bundle.fromJson(Map<String, dynamic> json) = _$_Bundle.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Bundle)
@@ -2624,10 +2606,7 @@ class _$_BundleLink extends _BundleLink {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_BundleLink.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_BundleLink.fromJson(Map<String, dynamic> json) =>
       _$$_BundleLinkFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2778,10 +2757,8 @@ abstract class _BundleLink extends BundleLink {
       @JsonKey(name: '_url') final Element? urlElement}) = _$_BundleLink;
   _BundleLink._() : super._();
 
-  factory _BundleLink.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_BundleLink.fromJson;
+  factory _BundleLink.fromJson(Map<String, dynamic> json) =
+      _$_BundleLink.fromJson;
 
   @override
 
@@ -3174,10 +3151,7 @@ class _$_BundleEntry extends _BundleEntry {
         _link = link,
         super._();
 
-  factory _$_BundleEntry.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$$_BundleEntryFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3369,10 +3343,8 @@ abstract class _BundleEntry extends BundleEntry {
       final BundleResponse? response}) = _$_BundleEntry;
   _BundleEntry._() : super._();
 
-  factory _BundleEntry.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_BundleEntry.fromJson;
+  factory _BundleEntry.fromJson(Map<String, dynamic> json) =
+      _$_BundleEntry.fromJson;
 
   @override
 
@@ -3699,10 +3671,7 @@ class _$_BundleSearch extends _BundleSearch {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_BundleSearch.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_BundleSearch.fromJson(Map<String, dynamic> json) =>
       _$$_BundleSearchFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3853,10 +3822,8 @@ abstract class _BundleSearch extends BundleSearch {
       @JsonKey(name: '_score') final Element? scoreElement}) = _$_BundleSearch;
   _BundleSearch._() : super._();
 
-  factory _BundleSearch.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_BundleSearch.fromJson;
+  factory _BundleSearch.fromJson(Map<String, dynamic> json) =
+      _$_BundleSearch.fromJson;
 
   @override
 
@@ -4363,10 +4330,7 @@ class _$_BundleRequest extends _BundleRequest {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_BundleRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_BundleRequest.fromJson(Map<String, dynamic> json) =>
       _$$_BundleRequestFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4602,10 +4566,8 @@ abstract class _BundleRequest extends BundleRequest {
           final Element? ifNoneExistElement}) = _$_BundleRequest;
   _BundleRequest._() : super._();
 
-  factory _BundleRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_BundleRequest.fromJson;
+  factory _BundleRequest.fromJson(Map<String, dynamic> json) =
+      _$_BundleRequest.fromJson;
 
   @override
 
@@ -5074,10 +5036,7 @@ class _$_BundleResponse extends _BundleResponse {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_BundleResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_BundleResponse.fromJson(Map<String, dynamic> json) =>
       _$$_BundleResponseFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5275,10 +5234,8 @@ abstract class _BundleResponse extends BundleResponse {
       final Resource? outcome}) = _$_BundleResponse;
   _BundleResponse._() : super._();
 
-  factory _BundleResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_BundleResponse.fromJson;
+  factory _BundleResponse.fromJson(Map<String, dynamic> json) =
+      _$_BundleResponse.fromJson;
 
   @override
 
@@ -5832,10 +5789,7 @@ class _$_Linkage extends _Linkage {
         _item = item,
         super._();
 
-  factory _$_Linkage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Linkage.fromJson(Map<String, dynamic> json) =>
       _$$_LinkageFromJson(json);
 
   @override
@@ -6091,10 +6045,7 @@ abstract class _Linkage extends Linkage {
       required final List<LinkageItem> item}) = _$_Linkage;
   _Linkage._() : super._();
 
-  factory _Linkage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Linkage.fromJson;
+  factory _Linkage.fromJson(Map<String, dynamic> json) = _$_Linkage.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Linkage)
@@ -6425,10 +6376,7 @@ class _$_LinkageItem extends _LinkageItem {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_LinkageItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_LinkageItem.fromJson(Map<String, dynamic> json) =>
       _$$_LinkageItemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -6570,10 +6518,8 @@ abstract class _LinkageItem extends LinkageItem {
       required final Reference resource}) = _$_LinkageItem;
   _LinkageItem._() : super._();
 
-  factory _LinkageItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_LinkageItem.fromJson;
+  factory _LinkageItem.fromJson(Map<String, dynamic> json) =
+      _$_LinkageItem.fromJson;
 
   @override
 
@@ -7359,10 +7305,7 @@ class _$_MessageHeader extends _MessageHeader {
         _focus = focus,
         super._();
 
-  factory _$_MessageHeader.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MessageHeader.fromJson(Map<String, dynamic> json) =>
       _$$_MessageHeaderFromJson(json);
 
   @override
@@ -7714,10 +7657,8 @@ abstract class _MessageHeader extends MessageHeader {
       final FhirCanonical? definition}) = _$_MessageHeader;
   _MessageHeader._() : super._();
 
-  factory _MessageHeader.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MessageHeader.fromJson;
+  factory _MessageHeader.fromJson(Map<String, dynamic> json) =
+      _$_MessageHeader.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MessageHeader)
@@ -8188,10 +8129,7 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MessageHeaderDestination.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
       _$$_MessageHeaderDestinationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -8360,10 +8298,8 @@ abstract class _MessageHeaderDestination extends MessageHeaderDestination {
       final Reference? receiver}) = _$_MessageHeaderDestination;
   _MessageHeaderDestination._() : super._();
 
-  factory _MessageHeaderDestination.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MessageHeaderDestination.fromJson;
+  factory _MessageHeaderDestination.fromJson(Map<String, dynamic> json) =
+      _$_MessageHeaderDestination.fromJson;
 
   @override
 
@@ -8805,10 +8741,7 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MessageHeaderSource.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
       _$$_MessageHeaderSourceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -9003,10 +8936,8 @@ abstract class _MessageHeaderSource extends MessageHeaderSource {
       _$_MessageHeaderSource;
   _MessageHeaderSource._() : super._();
 
-  factory _MessageHeaderSource.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MessageHeaderSource.fromJson;
+  factory _MessageHeaderSource.fromJson(Map<String, dynamic> json) =
+      _$_MessageHeaderSource.fromJson;
 
   @override
 
@@ -9367,10 +9298,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MessageHeaderResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
       _$$_MessageHeaderResponseFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -9530,10 +9458,8 @@ abstract class _MessageHeaderResponse extends MessageHeaderResponse {
       final Reference? details}) = _$_MessageHeaderResponse;
   _MessageHeaderResponse._() : super._();
 
-  factory _MessageHeaderResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MessageHeaderResponse.fromJson;
+  factory _MessageHeaderResponse.fromJson(Map<String, dynamic> json) =
+      _$_MessageHeaderResponse.fromJson;
 
   @override
 
@@ -9981,10 +9907,7 @@ class _$_OperationOutcome extends _OperationOutcome {
         _issue = issue,
         super._();
 
-  factory _$_OperationOutcome.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_OperationOutcome.fromJson(Map<String, dynamic> json) =>
       _$$_OperationOutcomeFromJson(json);
 
   @override
@@ -10211,10 +10134,8 @@ abstract class _OperationOutcome extends OperationOutcome {
       required final List<OperationOutcomeIssue> issue}) = _$_OperationOutcome;
   _OperationOutcome._() : super._();
 
-  factory _OperationOutcome.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_OperationOutcome.fromJson;
+  factory _OperationOutcome.fromJson(Map<String, dynamic> json) =
+      _$_OperationOutcome.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.OperationOutcome)
@@ -10713,10 +10634,7 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
         _expressionElement = expressionElement,
         super._();
 
-  factory _$_OperationOutcomeIssue.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
       _$$_OperationOutcomeIssueFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -10991,10 +10909,8 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
           final List<Element?>? expressionElement}) = _$_OperationOutcomeIssue;
   _OperationOutcomeIssue._() : super._();
 
-  factory _OperationOutcomeIssue.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_OperationOutcomeIssue.fromJson;
+  factory _OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =
+      _$_OperationOutcomeIssue.fromJson;
 
   @override
 
@@ -11369,10 +11285,7 @@ class _$_Parameters extends _Parameters {
       : _parameter = parameter,
         super._();
 
-  factory _$_Parameters.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Parameters.fromJson(Map<String, dynamic> json) =>
       _$$_ParametersFromJson(json);
 
   @override
@@ -11494,10 +11407,8 @@ abstract class _Parameters extends Parameters {
       final List<ParametersParameter>? parameter}) = _$_Parameters;
   _Parameters._() : super._();
 
-  factory _Parameters.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Parameters.fromJson;
+  factory _Parameters.fromJson(Map<String, dynamic> json) =
+      _$_Parameters.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Parameters)
@@ -13657,10 +13568,7 @@ class _$_ParametersParameter extends _ParametersParameter {
         _part_ = part_,
         super._();
 
-  factory _$_ParametersParameter.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ParametersParameter.fromJson(Map<String, dynamic> json) =>
       _$$_ParametersParameterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -14374,10 +14282,8 @@ abstract class _ParametersParameter extends ParametersParameter {
           final List<ParametersParameter>? part_}) = _$_ParametersParameter;
   _ParametersParameter._() : super._();
 
-  factory _ParametersParameter.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ParametersParameter.fromJson;
+  factory _ParametersParameter.fromJson(Map<String, dynamic> json) =
+      _$_ParametersParameter.fromJson;
 
   @override
 
@@ -15400,10 +15306,7 @@ class _$_Subscription extends _Subscription {
         _contact = contact,
         super._();
 
-  factory _$_Subscription.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Subscription.fromJson(Map<String, dynamic> json) =>
       _$$_SubscriptionFromJson(json);
 
   @override
@@ -15730,10 +15633,8 @@ abstract class _Subscription extends Subscription {
       required final SubscriptionChannel channel}) = _$_Subscription;
   _Subscription._() : super._();
 
-  factory _Subscription.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Subscription.fromJson;
+  factory _Subscription.fromJson(Map<String, dynamic> json) =
+      _$_Subscription.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Subscription)
@@ -16209,10 +16110,7 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
         _headerElement = headerElement,
         super._();
 
-  factory _$_SubscriptionChannel.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
       _$$_SubscriptionChannelFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -16421,10 +16319,8 @@ abstract class _SubscriptionChannel extends SubscriptionChannel {
       _$_SubscriptionChannel;
   _SubscriptionChannel._() : super._();
 
-  factory _SubscriptionChannel.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_SubscriptionChannel.fromJson;
+  factory _SubscriptionChannel.fromJson(Map<String, dynamic> json) =
+      _$_SubscriptionChannel.fromJson;
 
   @override
 
@@ -17074,10 +16970,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
         _error = error,
         super._();
 
-  factory _$_SubscriptionStatus.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_SubscriptionStatus.fromJson(Map<String, dynamic> json) =>
       _$$_SubscriptionStatusFromJson(json);
 
   /// [resourceType] This is a SubscriptionStatus resource;
@@ -17344,10 +17237,8 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
       final List<CodeableConcept>? error}) = _$_SubscriptionStatus;
   _SubscriptionStatus._() : super._();
 
-  factory _SubscriptionStatus.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_SubscriptionStatus.fromJson;
+  factory _SubscriptionStatus.fromJson(Map<String, dynamic> json) =
+      _$_SubscriptionStatus.fromJson;
 
   @override
 
@@ -17728,9 +17619,8 @@ class _$_SubscriptionStatusNotificationEvent
         super._();
 
   factory _$_SubscriptionStatusNotificationEvent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_SubscriptionStatusNotificationEventFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_SubscriptionStatusNotificationEventFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -18990,10 +18880,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
         _notificationShape = notificationShape,
         super._();
 
-  factory _$_SubscriptionTopic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_SubscriptionTopic.fromJson(Map<String, dynamic> json) =>
       _$$_SubscriptionTopicFromJson(json);
 
   /// [resourceType] This is a SubscriptionTopic resource;
@@ -19486,10 +19373,8 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
           notificationShape}) = _$_SubscriptionTopic;
   _SubscriptionTopic._() : super._();
 
-  factory _SubscriptionTopic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_SubscriptionTopic.fromJson;
+  factory _SubscriptionTopic.fromJson(Map<String, dynamic> json) =
+      _$_SubscriptionTopic.fromJson;
 
   @override
 
@@ -20021,9 +19906,8 @@ class _$_SubscriptionTopicResourceTrigger
         super._();
 
   factory _$_SubscriptionTopicResourceTrigger.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_SubscriptionTopicResourceTriggerFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_SubscriptionTopicResourceTriggerFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -20578,9 +20462,8 @@ class _$_SubscriptionTopicQueryCriteria
         super._();
 
   factory _$_SubscriptionTopicQueryCriteria.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_SubscriptionTopicQueryCriteriaFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_SubscriptionTopicQueryCriteriaFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -20728,10 +20611,8 @@ abstract class _SubscriptionTopicQueryCriteria
       _$_SubscriptionTopicQueryCriteria;
   _SubscriptionTopicQueryCriteria._() : super._();
 
-  factory _SubscriptionTopicQueryCriteria.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_SubscriptionTopicQueryCriteria.fromJson;
+  factory _SubscriptionTopicQueryCriteria.fromJson(Map<String, dynamic> json) =
+      _$_SubscriptionTopicQueryCriteria.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -21017,9 +20898,8 @@ class _$_SubscriptionTopicEventTrigger extends _SubscriptionTopicEventTrigger {
         super._();
 
   factory _$_SubscriptionTopicEventTrigger.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_SubscriptionTopicEventTriggerFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_SubscriptionTopicEventTriggerFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -21127,10 +21007,8 @@ abstract class _SubscriptionTopicEventTrigger
       _$_SubscriptionTopicEventTrigger;
   _SubscriptionTopicEventTrigger._() : super._();
 
-  factory _SubscriptionTopicEventTrigger.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_SubscriptionTopicEventTrigger.fromJson;
+  factory _SubscriptionTopicEventTrigger.fromJson(Map<String, dynamic> json) =
+      _$_SubscriptionTopicEventTrigger.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -21496,10 +21374,7 @@ class _$_SubscriptionTopicCanFilterBy extends _SubscriptionTopicCanFilterBy {
         _modifierElement = modifierElement,
         super._();
 
-  factory _$_SubscriptionTopicCanFilterBy.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_SubscriptionTopicCanFilterBy.fromJson(Map<String, dynamic> json) =>
       _$$_SubscriptionTopicCanFilterByFromJson(json);
 
   @override
@@ -21664,10 +21539,8 @@ abstract class _SubscriptionTopicCanFilterBy
       _$_SubscriptionTopicCanFilterBy;
   _SubscriptionTopicCanFilterBy._() : super._();
 
-  factory _SubscriptionTopicCanFilterBy.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_SubscriptionTopicCanFilterBy.fromJson;
+  factory _SubscriptionTopicCanFilterBy.fromJson(Map<String, dynamic> json) =
+      _$_SubscriptionTopicCanFilterBy.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -21948,9 +21821,8 @@ class _$_SubscriptionTopicNotificationShape
         super._();
 
   factory _$_SubscriptionTopicNotificationShape.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_SubscriptionTopicNotificationShapeFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_SubscriptionTopicNotificationShapeFromJson(json);
 
   @override
   @JsonKey(name: 'id')

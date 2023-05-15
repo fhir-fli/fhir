@@ -788,10 +788,7 @@ class _$_CatalogEntry extends _CatalogEntry {
         _relatedEntry = relatedEntry,
         super._();
 
-  factory _$_CatalogEntry.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_CatalogEntry.fromJson(Map<String, dynamic> json) =>
       _$$_CatalogEntryFromJson(json);
 
   @override
@@ -1213,10 +1210,8 @@ abstract class _CatalogEntry extends CatalogEntry {
       final List<CatalogEntryRelatedEntry>? relatedEntry}) = _$_CatalogEntry;
   _CatalogEntry._() : super._();
 
-  factory _CatalogEntry.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_CatalogEntry.fromJson;
+  factory _CatalogEntry.fromJson(Map<String, dynamic> json) =
+      _$_CatalogEntry.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
@@ -1609,10 +1604,7 @@ class _$_CatalogEntryRelatedEntry extends _CatalogEntryRelatedEntry {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CatalogEntryRelatedEntry.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_CatalogEntryRelatedEntry.fromJson(Map<String, dynamic> json) =>
       _$$_CatalogEntryRelatedEntryFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -1755,10 +1747,8 @@ abstract class _CatalogEntryRelatedEntry extends CatalogEntryRelatedEntry {
       required final Reference item}) = _$_CatalogEntryRelatedEntry;
   _CatalogEntryRelatedEntry._() : super._();
 
-  factory _CatalogEntryRelatedEntry.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_CatalogEntryRelatedEntry.fromJson;
+  factory _CatalogEntryRelatedEntry.fromJson(Map<String, dynamic> json) =
+      _$_CatalogEntryRelatedEntry.fromJson;
 
   @override
 
@@ -2654,10 +2644,7 @@ class _$_Composition extends _Composition {
         _section = section,
         super._();
 
-  factory _$_Composition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Composition.fromJson(Map<String, dynamic> json) =>
       _$$_CompositionFromJson(json);
 
   @override
@@ -3095,10 +3082,8 @@ abstract class _Composition extends Composition {
       final List<CompositionSection>? section}) = _$_Composition;
   _Composition._() : super._();
 
-  factory _Composition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Composition.fromJson;
+  factory _Composition.fromJson(Map<String, dynamic> json) =
+      _$_Composition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Composition)
@@ -3556,10 +3541,7 @@ class _$_CompositionAttester extends _CompositionAttester {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CompositionAttester.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_CompositionAttester.fromJson(Map<String, dynamic> json) =>
       _$$_CompositionAttesterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3716,10 +3698,8 @@ abstract class _CompositionAttester extends CompositionAttester {
       final Reference? party}) = _$_CompositionAttester;
   _CompositionAttester._() : super._();
 
-  factory _CompositionAttester.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_CompositionAttester.fromJson;
+  factory _CompositionAttester.fromJson(Map<String, dynamic> json) =
+      _$_CompositionAttester.fromJson;
 
   @override
 
@@ -4040,10 +4020,7 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CompositionRelatesTo.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_CompositionRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$$_CompositionRelatesToFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4194,10 +4171,8 @@ abstract class _CompositionRelatesTo extends CompositionRelatesTo {
       final Reference? targetReference}) = _$_CompositionRelatesTo;
   _CompositionRelatesTo._() : super._();
 
-  factory _CompositionRelatesTo.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_CompositionRelatesTo.fromJson;
+  factory _CompositionRelatesTo.fromJson(Map<String, dynamic> json) =
+      _$_CompositionRelatesTo.fromJson;
 
   @override
 
@@ -4475,10 +4450,7 @@ class _$_CompositionEvent extends _CompositionEvent {
         _detail = detail,
         super._();
 
-  factory _$_CompositionEvent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_CompositionEvent.fromJson(Map<String, dynamic> json) =>
       _$$_CompositionEventFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4648,10 +4620,8 @@ abstract class _CompositionEvent extends CompositionEvent {
       final List<Reference>? detail}) = _$_CompositionEvent;
   _CompositionEvent._() : super._();
 
-  factory _CompositionEvent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_CompositionEvent.fromJson;
+  factory _CompositionEvent.fromJson(Map<String, dynamic> json) =
+      _$_CompositionEvent.fromJson;
 
   @override
 
@@ -5182,10 +5152,7 @@ class _$_CompositionSection extends _CompositionSection {
         _section = section,
         super._();
 
-  factory _$_CompositionSection.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_CompositionSection.fromJson(Map<String, dynamic> json) =>
       _$$_CompositionSectionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5444,10 +5411,8 @@ abstract class _CompositionSection extends CompositionSection {
       final List<CompositionSection>? section}) = _$_CompositionSection;
   _CompositionSection._() : super._();
 
-  factory _CompositionSection.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_CompositionSection.fromJson;
+  factory _CompositionSection.fromJson(Map<String, dynamic> json) =
+      _$_CompositionSection.fromJson;
 
   @override
 
@@ -6324,10 +6289,7 @@ class _$_DocumentManifest extends _DocumentManifest {
         _related = related,
         super._();
 
-  factory _$_DocumentManifest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$$_DocumentManifestFromJson(json);
 
   @override
@@ -6731,10 +6693,8 @@ abstract class _DocumentManifest extends DocumentManifest {
       final List<DocumentManifestRelated>? related}) = _$_DocumentManifest;
   _DocumentManifest._() : super._();
 
-  factory _DocumentManifest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DocumentManifest.fromJson;
+  factory _DocumentManifest.fromJson(Map<String, dynamic> json) =
+      _$_DocumentManifest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
@@ -7118,10 +7078,7 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DocumentManifestRelated.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
       _$$_DocumentManifestRelatedFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -7257,10 +7214,8 @@ abstract class _DocumentManifestRelated extends DocumentManifestRelated {
       final Reference? ref}) = _$_DocumentManifestRelated;
   _DocumentManifestRelated._() : super._();
 
-  factory _DocumentManifestRelated.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DocumentManifestRelated.fromJson;
+  factory _DocumentManifestRelated.fromJson(Map<String, dynamic> json) =
+      _$_DocumentManifestRelated.fromJson;
 
   @override
 
@@ -8192,10 +8147,7 @@ class _$_DocumentReference extends _DocumentReference {
         _content = content,
         super._();
 
-  factory _$_DocumentReference.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$$_DocumentReferenceFromJson(json);
 
   @override
@@ -8652,10 +8604,8 @@ abstract class _DocumentReference extends DocumentReference {
       final DocumentReferenceContext? context}) = _$_DocumentReference;
   _DocumentReference._() : super._();
 
-  factory _DocumentReference.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DocumentReference.fromJson;
+  factory _DocumentReference.fromJson(Map<String, dynamic> json) =
+      _$_DocumentReference.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
@@ -9075,10 +9025,7 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DocumentReferenceRelatesTo.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$$_DocumentReferenceRelatesToFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -9220,10 +9167,8 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
       required final Reference target}) = _$_DocumentReferenceRelatesTo;
   _DocumentReferenceRelatesTo._() : super._();
 
-  factory _DocumentReferenceRelatesTo.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DocumentReferenceRelatesTo.fromJson;
+  factory _DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =
+      _$_DocumentReferenceRelatesTo.fromJson;
 
   @override
 
@@ -9489,10 +9434,7 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DocumentReferenceContent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
       _$$_DocumentReferenceContentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -9628,10 +9570,8 @@ abstract class _DocumentReferenceContent extends DocumentReferenceContent {
       final Coding? format}) = _$_DocumentReferenceContent;
   _DocumentReferenceContent._() : super._();
 
-  factory _DocumentReferenceContent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DocumentReferenceContent.fromJson;
+  factory _DocumentReferenceContent.fromJson(Map<String, dynamic> json) =
+      _$_DocumentReferenceContent.fromJson;
 
   @override
 
@@ -10018,10 +9958,7 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
         _related = related,
         super._();
 
-  factory _$_DocumentReferenceContext.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
       _$$_DocumentReferenceContextFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -10235,10 +10172,8 @@ abstract class _DocumentReferenceContext extends DocumentReferenceContext {
       final List<Reference>? related}) = _$_DocumentReferenceContext;
   _DocumentReferenceContext._() : super._();
 
-  factory _DocumentReferenceContext.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DocumentReferenceContext.fromJson;
+  factory _DocumentReferenceContext.fromJson(Map<String, dynamic> json) =
+      _$_DocumentReferenceContext.fromJson;
 
   @override
 

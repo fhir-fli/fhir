@@ -127,10 +127,7 @@ class _$_Element extends _Element {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Element.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Element.fromJson(Map<String, dynamic> json) =>
       _$$_ElementFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -208,10 +205,7 @@ abstract class _Element extends Element {
       _$_Element;
   _Element._() : super._();
 
-  factory _Element.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Element.fromJson;
+  factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 
   @override
 

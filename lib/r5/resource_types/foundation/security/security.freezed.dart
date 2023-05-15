@@ -866,10 +866,7 @@ class _$_AuditEvent extends _AuditEvent {
         _entity = entity,
         super._();
 
-  factory _$_AuditEvent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$$_AuditEventFromJson(json);
 
   /// [resourceType] This is a AuditEvent resource
@@ -1299,10 +1296,8 @@ abstract class _AuditEvent extends AuditEvent {
       final List<AuditEventEntity>? entity}) = _$_AuditEvent;
   _AuditEvent._() : super._();
 
-  factory _AuditEvent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AuditEvent.fromJson;
+  factory _AuditEvent.fromJson(Map<String, dynamic> json) =
+      _$_AuditEvent.fromJson;
 
   @override
 
@@ -1680,10 +1675,7 @@ class _$_AuditEventOutcome extends _AuditEventOutcome {
         _detail = detail,
         super._();
 
-  factory _$_AuditEventOutcome.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AuditEventOutcome.fromJson(Map<String, dynamic> json) =>
       _$$_AuditEventOutcomeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -1828,10 +1820,8 @@ abstract class _AuditEventOutcome extends AuditEventOutcome {
       final List<CodeableConcept>? detail}) = _$_AuditEventOutcome;
   _AuditEventOutcome._() : super._();
 
-  factory _AuditEventOutcome.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AuditEventOutcome.fromJson;
+  factory _AuditEventOutcome.fromJson(Map<String, dynamic> json) =
+      _$_AuditEventOutcome.fromJson;
 
   @override
 
@@ -2377,10 +2367,7 @@ class _$_AuditEventAgent extends _AuditEventAgent {
         _authorization = authorization,
         super._();
 
-  factory _$_AuditEventAgent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AuditEventAgent.fromJson(Map<String, dynamic> json) =>
       _$$_AuditEventAgentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2667,10 +2654,8 @@ abstract class _AuditEventAgent extends AuditEventAgent {
       final List<CodeableConcept>? authorization}) = _$_AuditEventAgent;
   _AuditEventAgent._() : super._();
 
-  factory _AuditEventAgent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AuditEventAgent.fromJson;
+  factory _AuditEventAgent.fromJson(Map<String, dynamic> json) =
+      _$_AuditEventAgent.fromJson;
 
   @override
 
@@ -3010,10 +2995,7 @@ class _$_AuditEventSource extends _AuditEventSource {
         _type = type,
         super._();
 
-  factory _$_AuditEventSource.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AuditEventSource.fromJson(Map<String, dynamic> json) =>
       _$$_AuditEventSourceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3165,10 +3147,8 @@ abstract class _AuditEventSource extends AuditEventSource {
       final List<CodeableConcept>? type}) = _$_AuditEventSource;
   _AuditEventSource._() : super._();
 
-  factory _AuditEventSource.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AuditEventSource.fromJson;
+  factory _AuditEventSource.fromJson(Map<String, dynamic> json) =
+      _$_AuditEventSource.fromJson;
 
   @override
 
@@ -3542,10 +3522,7 @@ class _$_AuditEventEntity extends _AuditEventEntity {
         _agent = agent,
         super._();
 
-  factory _$_AuditEventEntity.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AuditEventEntity.fromJson(Map<String, dynamic> json) =>
       _$$_AuditEventEntityFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3758,10 +3735,8 @@ abstract class _AuditEventEntity extends AuditEventEntity {
       final List<AuditEventAgent>? agent}) = _$_AuditEventEntity;
   _AuditEventEntity._() : super._();
 
-  factory _AuditEventEntity.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AuditEventEntity.fromJson;
+  factory _AuditEventEntity.fromJson(Map<String, dynamic> json) =
+      _$_AuditEventEntity.fromJson;
 
   @override
 
@@ -4461,10 +4436,7 @@ class _$_AuditEventDetail extends _AuditEventDetail {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AuditEventDetail.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AuditEventDetail.fromJson(Map<String, dynamic> json) =>
       _$$_AuditEventDetailFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4743,10 +4715,8 @@ abstract class _AuditEventDetail extends AuditEventDetail {
           final Element? valueBase64BinaryElement}) = _$_AuditEventDetail;
   _AuditEventDetail._() : super._();
 
-  factory _AuditEventDetail.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AuditEventDetail.fromJson;
+  factory _AuditEventDetail.fromJson(Map<String, dynamic> json) =
+      _$_AuditEventDetail.fromJson;
 
   @override
 
@@ -5704,10 +5674,7 @@ class _$_Consent extends _Consent {
         _provision = provision,
         super._();
 
-  factory _$_Consent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Consent.fromJson(Map<String, dynamic> json) =>
       _$$_ConsentFromJson(json);
 
   /// [resourceType] This is a Consent resource
@@ -6234,10 +6201,7 @@ abstract class _Consent extends Consent {
       final List<ConsentProvision>? provision}) = _$_Consent;
   _Consent._() : super._();
 
-  factory _Consent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Consent.fromJson;
+  factory _Consent.fromJson(Map<String, dynamic> json) = _$_Consent.fromJson;
 
   @override
 
@@ -6664,10 +6628,7 @@ class _$_ConsentPolicyBasis extends _ConsentPolicyBasis {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConsentPolicyBasis.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ConsentPolicyBasis.fromJson(Map<String, dynamic> json) =>
       _$$_ConsentPolicyBasisFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -6814,10 +6775,8 @@ abstract class _ConsentPolicyBasis extends ConsentPolicyBasis {
       _$_ConsentPolicyBasis;
   _ConsentPolicyBasis._() : super._();
 
-  factory _ConsentPolicyBasis.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ConsentPolicyBasis.fromJson;
+  factory _ConsentPolicyBasis.fromJson(Map<String, dynamic> json) =
+      _$_ConsentPolicyBasis.fromJson;
 
   @override
 
@@ -7215,10 +7174,7 @@ class _$_ConsentVerification extends _ConsentVerification {
         _verificationDateElement = verificationDateElement,
         super._();
 
-  factory _$_ConsentVerification.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ConsentVerification.fromJson(Map<String, dynamic> json) =>
       _$$_ConsentVerificationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -7426,10 +7382,8 @@ abstract class _ConsentVerification extends ConsentVerification {
       _$_ConsentVerification;
   _ConsentVerification._() : super._();
 
-  factory _ConsentVerification.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ConsentVerification.fromJson;
+  factory _ConsentVerification.fromJson(Map<String, dynamic> json) =
+      _$_ConsentVerification.fromJson;
 
   @override
 
@@ -7911,10 +7865,7 @@ class _$_ConsentProvision extends _ConsentProvision {
         _provision = provision,
         super._();
 
-  factory _$_ConsentProvision.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ConsentProvision.fromJson(Map<String, dynamic> json) =>
       _$$_ConsentProvisionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -8228,10 +8179,8 @@ abstract class _ConsentProvision extends ConsentProvision {
       final List<ConsentProvision>? provision}) = _$_ConsentProvision;
   _ConsentProvision._() : super._();
 
-  factory _ConsentProvision.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ConsentProvision.fromJson;
+  factory _ConsentProvision.fromJson(Map<String, dynamic> json) =
+      _$_ConsentProvision.fromJson;
 
   @override
 
@@ -8546,10 +8495,7 @@ class _$_ConsentActor extends _ConsentActor {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConsentActor.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ConsentActor.fromJson(Map<String, dynamic> json) =>
       _$$_ConsentActorFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -8686,10 +8632,8 @@ abstract class _ConsentActor extends ConsentActor {
       final Reference? reference}) = _$_ConsentActor;
   _ConsentActor._() : super._();
 
-  factory _ConsentActor.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ConsentActor.fromJson;
+  factory _ConsentActor.fromJson(Map<String, dynamic> json) =
+      _$_ConsentActor.fromJson;
 
   @override
 
@@ -8966,10 +8910,7 @@ class _$_ConsentData extends _ConsentData {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConsentData.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ConsentData.fromJson(Map<String, dynamic> json) =>
       _$$_ConsentDataFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -9114,10 +9055,8 @@ abstract class _ConsentData extends ConsentData {
       required final Reference reference}) = _$_ConsentData;
   _ConsentData._() : super._();
 
-  factory _ConsentData.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ConsentData.fromJson;
+  factory _ConsentData.fromJson(Map<String, dynamic> json) =
+      _$_ConsentData.fromJson;
 
   @override
 
@@ -9797,10 +9736,7 @@ class _$_Permission extends _Permission {
         _rule = rule,
         super._();
 
-  factory _$_Permission.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Permission.fromJson(Map<String, dynamic> json) =>
       _$$_PermissionFromJson(json);
 
   /// [resourceType] This is a Permission resource
@@ -10130,10 +10066,8 @@ abstract class _Permission extends Permission {
       final List<PermissionRule>? rule}) = _$_Permission;
   _Permission._() : super._();
 
-  factory _Permission.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Permission.fromJson;
+  factory _Permission.fromJson(Map<String, dynamic> json) =
+      _$_Permission.fromJson;
 
   @override
 
@@ -10453,10 +10387,7 @@ class _$_PermissionJustification extends _PermissionJustification {
         _evidence = evidence,
         super._();
 
-  factory _$_PermissionJustification.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PermissionJustification.fromJson(Map<String, dynamic> json) =>
       _$$_PermissionJustificationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -10611,10 +10542,8 @@ abstract class _PermissionJustification extends PermissionJustification {
       final List<Reference>? evidence}) = _$_PermissionJustification;
   _PermissionJustification._() : super._();
 
-  factory _PermissionJustification.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PermissionJustification.fromJson;
+  factory _PermissionJustification.fromJson(Map<String, dynamic> json) =
+      _$_PermissionJustification.fromJson;
 
   @override
 
@@ -10913,10 +10842,7 @@ class _$_PermissionRule extends _PermissionRule {
         _limit = limit,
         super._();
 
-  factory _$_PermissionRule.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PermissionRule.fromJson(Map<String, dynamic> json) =>
       _$$_PermissionRuleFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -11103,10 +11029,8 @@ abstract class _PermissionRule extends PermissionRule {
       final List<CodeableConcept>? limit}) = _$_PermissionRule;
   _PermissionRule._() : super._();
 
-  factory _PermissionRule.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PermissionRule.fromJson;
+  factory _PermissionRule.fromJson(Map<String, dynamic> json) =
+      _$_PermissionRule.fromJson;
 
   @override
 
@@ -11402,10 +11326,7 @@ class _$_PermissionData extends _PermissionData {
         _period = period,
         super._();
 
-  factory _$_PermissionData.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PermissionData.fromJson(Map<String, dynamic> json) =>
       _$$_PermissionDataFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -11584,10 +11505,8 @@ abstract class _PermissionData extends PermissionData {
       final FhirExpression? expression}) = _$_PermissionData;
   _PermissionData._() : super._();
 
-  factory _PermissionData.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PermissionData.fromJson;
+  factory _PermissionData.fromJson(Map<String, dynamic> json) =
+      _$_PermissionData.fromJson;
 
   @override
 
@@ -11871,10 +11790,7 @@ class _$_PermissionResource extends _PermissionResource {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_PermissionResource.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PermissionResource.fromJson(Map<String, dynamic> json) =>
       _$$_PermissionResourceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -12020,10 +11936,8 @@ abstract class _PermissionResource extends PermissionResource {
       required final Reference reference}) = _$_PermissionResource;
   _PermissionResource._() : super._();
 
-  factory _PermissionResource.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PermissionResource.fromJson;
+  factory _PermissionResource.fromJson(Map<String, dynamic> json) =
+      _$_PermissionResource.fromJson;
 
   @override
 
@@ -12276,10 +12190,7 @@ class _$_PermissionActivity extends _PermissionActivity {
         _purpose = purpose,
         super._();
 
-  factory _$_PermissionActivity.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PermissionActivity.fromJson(Map<String, dynamic> json) =>
       _$$_PermissionActivityFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -12447,10 +12358,8 @@ abstract class _PermissionActivity extends PermissionActivity {
       final List<CodeableConcept>? purpose}) = _$_PermissionActivity;
   _PermissionActivity._() : super._();
 
-  factory _PermissionActivity.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PermissionActivity.fromJson;
+  factory _PermissionActivity.fromJson(Map<String, dynamic> json) =
+      _$_PermissionActivity.fromJson;
 
   @override
 
@@ -13290,10 +13199,7 @@ class _$_Provenance extends _Provenance {
         _signature = signature,
         super._();
 
-  factory _$_Provenance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
       _$$_ProvenanceFromJson(json);
 
   /// [resourceType] This is a Provenance resource
@@ -13745,10 +13651,8 @@ abstract class _Provenance extends Provenance {
       final List<Signature>? signature}) = _$_Provenance;
   _Provenance._() : super._();
 
-  factory _Provenance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Provenance.fromJson;
+  factory _Provenance.fromJson(Map<String, dynamic> json) =
+      _$_Provenance.fromJson;
 
   @override
 
@@ -14186,10 +14090,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
         _role = role,
         super._();
 
-  factory _$_ProvenanceAgent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
       _$$_ProvenanceAgentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -14351,10 +14252,8 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
       final Reference? onBehalfOf}) = _$_ProvenanceAgent;
   _ProvenanceAgent._() : super._();
 
-  factory _ProvenanceAgent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ProvenanceAgent.fromJson;
+  factory _ProvenanceAgent.fromJson(Map<String, dynamic> json) =
+      _$_ProvenanceAgent.fromJson;
 
   @override
 
@@ -14658,10 +14557,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
         _agent = agent,
         super._();
 
-  factory _$_ProvenanceEntity.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$$_ProvenanceEntityFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -14826,10 +14722,8 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
       final List<ProvenanceAgent>? agent}) = _$_ProvenanceEntity;
   _ProvenanceEntity._() : super._();
 
-  factory _ProvenanceEntity.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ProvenanceEntity.fromJson;
+  factory _ProvenanceEntity.fromJson(Map<String, dynamic> json) =
+      _$_ProvenanceEntity.fromJson;
 
   @override
 

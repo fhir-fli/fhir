@@ -1560,10 +1560,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
         _dynamicValue = dynamicValue,
         super._();
 
-  factory _$_ActivityDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ActivityDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ActivityDefinitionFromJson(json);
 
   @override
@@ -2137,10 +2134,8 @@ abstract class _ActivityDefinition extends ActivityDefinition {
       _$_ActivityDefinition;
   _ActivityDefinition._() : super._();
 
-  factory _ActivityDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ActivityDefinition.fromJson;
+  factory _ActivityDefinition.fromJson(Map<String, dynamic> json) =
+      _$_ActivityDefinition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
@@ -2456,9 +2451,8 @@ class _$_ActivityDefinitionParticipant extends _ActivityDefinitionParticipant {
       : super._();
 
   factory _$_ActivityDefinitionParticipant.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ActivityDefinitionParticipantFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ActivityDefinitionParticipantFromJson(json);
 
   @override
   final String? type;
@@ -2511,10 +2505,8 @@ abstract class _ActivityDefinitionParticipant
       final CodeableConcept? role}) = _$_ActivityDefinitionParticipant;
   _ActivityDefinitionParticipant._() : super._();
 
-  factory _ActivityDefinitionParticipant.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ActivityDefinitionParticipant.fromJson;
+  factory _ActivityDefinitionParticipant.fromJson(Map<String, dynamic> json) =
+      _$_ActivityDefinitionParticipant.fromJson;
 
   @override
   String? get type;
@@ -2791,9 +2783,8 @@ class _$_ActivityDefinitionDynamicValue
       : super._();
 
   factory _$_ActivityDefinitionDynamicValue.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ActivityDefinitionDynamicValueFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ActivityDefinitionDynamicValueFromJson(json);
 
   @override
   final String? description;
@@ -2885,10 +2876,8 @@ abstract class _ActivityDefinitionDynamicValue
       _$_ActivityDefinitionDynamicValue;
   _ActivityDefinitionDynamicValue._() : super._();
 
-  factory _ActivityDefinitionDynamicValue.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ActivityDefinitionDynamicValue.fromJson;
+  factory _ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =
+      _$_ActivityDefinitionDynamicValue.fromJson;
 
   @override
   String? get description;
@@ -4102,10 +4091,7 @@ class _$_PlanDefinition extends _PlanDefinition {
         _action = action,
         super._();
 
-  factory _$_PlanDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PlanDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_PlanDefinitionFromJson(json);
 
   @override
@@ -4578,10 +4564,8 @@ abstract class _PlanDefinition extends PlanDefinition {
       final List<PlanDefinitionAction>? action}) = _$_PlanDefinition;
   _PlanDefinition._() : super._();
 
-  factory _PlanDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PlanDefinition.fromJson;
+  factory _PlanDefinition.fromJson(Map<String, dynamic> json) =
+      _$_PlanDefinition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
@@ -4946,10 +4930,7 @@ class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
         _target = target,
         super._();
 
-  factory _$_PlanDefinitionGoal.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =>
       _$$_PlanDefinitionGoalFromJson(json);
 
   @override
@@ -5052,10 +5033,8 @@ abstract class _PlanDefinitionGoal extends PlanDefinitionGoal {
       final List<PlanDefinitionTarget>? target}) = _$_PlanDefinitionGoal;
   _PlanDefinitionGoal._() : super._();
 
-  factory _PlanDefinitionGoal.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PlanDefinitionGoal.fromJson;
+  factory _PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =
+      _$_PlanDefinitionGoal.fromJson;
 
   @override
   CodeableConcept? get category;
@@ -5302,10 +5281,7 @@ class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
       this.due})
       : super._();
 
-  factory _$_PlanDefinitionTarget.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =>
       _$$_PlanDefinitionTargetFromJson(json);
 
   @override
@@ -5368,10 +5344,8 @@ abstract class _PlanDefinitionTarget extends PlanDefinitionTarget {
       final FhirDuration? due}) = _$_PlanDefinitionTarget;
   _PlanDefinitionTarget._() : super._();
 
-  factory _PlanDefinitionTarget.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PlanDefinitionTarget.fromJson;
+  factory _PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =
+      _$_PlanDefinitionTarget.fromJson;
 
   @override
   CodeableConcept? get measure;
@@ -6339,10 +6313,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
         _action = action,
         super._();
 
-  factory _$_PlanDefinitionAction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PlanDefinitionAction.fromJson(Map<String, dynamic> json) =>
       _$$_PlanDefinitionActionFromJson(json);
 
   @override
@@ -6742,10 +6713,8 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       final List<PlanDefinitionAction>? action}) = _$_PlanDefinitionAction;
   _PlanDefinitionAction._() : super._();
 
-  factory _PlanDefinitionAction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PlanDefinitionAction.fromJson;
+  factory _PlanDefinitionAction.fromJson(Map<String, dynamic> json) =
+      _$_PlanDefinitionAction.fromJson;
 
   @override
   String? get label;
@@ -7100,10 +7069,7 @@ class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
       @JsonKey(name: '_expression') this.expressionElement})
       : super._();
 
-  factory _$_PlanDefinitionCondition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =>
       _$$_PlanDefinitionConditionFromJson(json);
 
   @override
@@ -7196,10 +7162,8 @@ abstract class _PlanDefinitionCondition extends PlanDefinitionCondition {
       _$_PlanDefinitionCondition;
   _PlanDefinitionCondition._() : super._();
 
-  factory _PlanDefinitionCondition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PlanDefinitionCondition.fromJson;
+  factory _PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =
+      _$_PlanDefinitionCondition.fromJson;
 
   @override
   PlanDefinitionConditionKind? get kind;
@@ -7458,10 +7422,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
       this.offsetRange})
       : super._();
 
-  factory _$_PlanDefinitionRelatedAction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =>
       _$$_PlanDefinitionRelatedActionFromJson(json);
 
   @override
@@ -7534,10 +7495,8 @@ abstract class _PlanDefinitionRelatedAction
       final Range? offsetRange}) = _$_PlanDefinitionRelatedAction;
   _PlanDefinitionRelatedAction._() : super._();
 
-  factory _PlanDefinitionRelatedAction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PlanDefinitionRelatedAction.fromJson;
+  factory _PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =
+      _$_PlanDefinitionRelatedAction.fromJson;
 
   @override
   FhirId? get actionId;
@@ -7712,10 +7671,7 @@ class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
       {this.type, @JsonKey(name: '_type') this.typeElement, this.role})
       : super._();
 
-  factory _$_PlanDefinitionParticipant.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =>
       _$$_PlanDefinitionParticipantFromJson(json);
 
   @override
@@ -7768,10 +7724,8 @@ abstract class _PlanDefinitionParticipant extends PlanDefinitionParticipant {
       final CodeableConcept? role}) = _$_PlanDefinitionParticipant;
   _PlanDefinitionParticipant._() : super._();
 
-  factory _PlanDefinitionParticipant.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PlanDefinitionParticipant.fromJson;
+  factory _PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =
+      _$_PlanDefinitionParticipant.fromJson;
 
   @override
   PlanDefinitionParticipantType? get type;
@@ -8045,10 +7999,7 @@ class _$_PlanDefinitionDynamicValue extends _PlanDefinitionDynamicValue {
       @JsonKey(name: '_expression') this.expressionElement})
       : super._();
 
-  factory _$_PlanDefinitionDynamicValue.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =>
       _$$_PlanDefinitionDynamicValueFromJson(json);
 
   @override
@@ -8140,10 +8091,8 @@ abstract class _PlanDefinitionDynamicValue extends PlanDefinitionDynamicValue {
       _$_PlanDefinitionDynamicValue;
   _PlanDefinitionDynamicValue._() : super._();
 
-  factory _PlanDefinitionDynamicValue.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PlanDefinitionDynamicValue.fromJson;
+  factory _PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =
+      _$_PlanDefinitionDynamicValue.fromJson;
 
   @override
   String? get description;
@@ -9250,10 +9199,7 @@ class _$_Questionnaire extends _Questionnaire {
         _item = item,
         super._();
 
-  factory _$_Questionnaire.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Questionnaire.fromJson(Map<String, dynamic> json) =>
       _$$_QuestionnaireFromJson(json);
 
   @override
@@ -9683,10 +9629,8 @@ abstract class _Questionnaire extends Questionnaire {
       final List<QuestionnaireItem>? item}) = _$_Questionnaire;
   _Questionnaire._() : super._();
 
-  factory _Questionnaire.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Questionnaire.fromJson;
+  factory _Questionnaire.fromJson(Map<String, dynamic> json) =
+      _$_Questionnaire.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
@@ -10853,10 +10797,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
         _item = item,
         super._();
 
-  factory _$_QuestionnaireItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_QuestionnaireItem.fromJson(Map<String, dynamic> json) =>
       _$$_QuestionnaireItemFromJson(json);
 
   @override
@@ -11210,10 +11151,8 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
       final List<QuestionnaireItem>? item}) = _$_QuestionnaireItem;
   _QuestionnaireItem._() : super._();
 
-  factory _QuestionnaireItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_QuestionnaireItem.fromJson;
+  factory _QuestionnaireItem.fromJson(Map<String, dynamic> json) =
+      _$_QuestionnaireItem.fromJson;
 
   @override
   String? get linkId;
@@ -11964,10 +11903,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
       this.answerReference})
       : super._();
 
-  factory _$_QuestionnaireEnableWhen.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =>
       _$$_QuestionnaireEnableWhenFromJson(json);
 
   @override
@@ -12163,10 +12099,8 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
       final Reference? answerReference}) = _$_QuestionnaireEnableWhen;
   _QuestionnaireEnableWhen._() : super._();
 
-  factory _QuestionnaireEnableWhen.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_QuestionnaireEnableWhen.fromJson;
+  factory _QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =
+      _$_QuestionnaireEnableWhen.fromJson;
 
   @override
   String? get question;
@@ -12514,10 +12448,7 @@ class _$_QuestionnaireOption extends _QuestionnaireOption {
       this.valueCoding})
       : super._();
 
-  factory _$_QuestionnaireOption.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_QuestionnaireOption.fromJson(Map<String, dynamic> json) =>
       _$$_QuestionnaireOptionFromJson(json);
 
   @override
@@ -12615,10 +12546,8 @@ abstract class _QuestionnaireOption extends QuestionnaireOption {
       final Coding? valueCoding}) = _$_QuestionnaireOption;
   _QuestionnaireOption._() : super._();
 
-  factory _QuestionnaireOption.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_QuestionnaireOption.fromJson;
+  factory _QuestionnaireOption.fromJson(Map<String, dynamic> json) =
+      _$_QuestionnaireOption.fromJson;
 
   @override
   FhirDecimal? get valueInteger;
@@ -13816,10 +13745,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
         _dataRequirement = dataRequirement,
         super._();
 
-  factory _$_ServiceDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ServiceDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ServiceDefinitionFromJson(json);
 
   @override
@@ -14281,10 +14207,8 @@ abstract class _ServiceDefinition extends ServiceDefinition {
       final Reference? operationDefinition}) = _$_ServiceDefinition;
   _ServiceDefinition._() : super._();
 
-  factory _ServiceDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ServiceDefinition.fromJson;
+  factory _ServiceDefinition.fromJson(Map<String, dynamic> json) =
+      _$_ServiceDefinition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)

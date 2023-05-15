@@ -813,10 +813,7 @@ class _$_Communication extends _Communication {
         _note = note,
         super._();
 
-  factory _$_Communication.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Communication.fromJson(Map<String, dynamic> json) =>
       _$$_CommunicationFromJson(json);
 
   @override
@@ -1188,10 +1185,8 @@ abstract class _Communication extends Communication {
       final List<Annotation>? note}) = _$_Communication;
   _Communication._() : super._();
 
-  factory _Communication.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Communication.fromJson;
+  factory _Communication.fromJson(Map<String, dynamic> json) =
+      _$_Communication.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
@@ -1458,10 +1453,7 @@ class _$_CommunicationPayload extends _CommunicationPayload {
       this.contentReference})
       : super._();
 
-  factory _$_CommunicationPayload.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_CommunicationPayload.fromJson(Map<String, dynamic> json) =>
       _$$_CommunicationPayloadFromJson(json);
 
   @override
@@ -1522,10 +1514,8 @@ abstract class _CommunicationPayload extends CommunicationPayload {
       final Reference? contentReference}) = _$_CommunicationPayload;
   _CommunicationPayload._() : super._();
 
-  factory _CommunicationPayload.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_CommunicationPayload.fromJson;
+  factory _CommunicationPayload.fromJson(Map<String, dynamic> json) =
+      _$_CommunicationPayload.fromJson;
 
   @override
   String? get contentString;
@@ -2388,10 +2378,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
         _note = note,
         super._();
 
-  factory _$_CommunicationRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$$_CommunicationRequestFromJson(json);
 
   @override
@@ -2765,10 +2752,8 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       final List<Annotation>? note}) = _$_CommunicationRequest;
   _CommunicationRequest._() : super._();
 
-  factory _CommunicationRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_CommunicationRequest.fromJson;
+  factory _CommunicationRequest.fromJson(Map<String, dynamic> json) =
+      _$_CommunicationRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
@@ -3043,10 +3028,7 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
       this.contentReference})
       : super._();
 
-  factory _$_CommunicationRequestPayload.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$$_CommunicationRequestPayloadFromJson(json);
 
   @override
@@ -3108,10 +3090,8 @@ abstract class _CommunicationRequestPayload
       final Reference? contentReference}) = _$_CommunicationRequestPayload;
   _CommunicationRequestPayload._() : super._();
 
-  factory _CommunicationRequestPayload.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_CommunicationRequestPayload.fromJson;
+  factory _CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =
+      _$_CommunicationRequestPayload.fromJson;
 
   @override
   String? get contentString;
@@ -3261,9 +3241,8 @@ class _$_CommunicationRequestRequester extends _CommunicationRequestRequester {
       : super._();
 
   factory _$_CommunicationRequestRequester.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_CommunicationRequestRequesterFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_CommunicationRequestRequesterFromJson(json);
 
   @override
   final Reference agent;
@@ -3311,10 +3290,8 @@ abstract class _CommunicationRequestRequester
       final Reference? onBehalfOf}) = _$_CommunicationRequestRequester;
   _CommunicationRequestRequester._() : super._();
 
-  factory _CommunicationRequestRequester.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_CommunicationRequestRequester.fromJson;
+  factory _CommunicationRequestRequester.fromJson(Map<String, dynamic> json) =
+      _$_CommunicationRequestRequester.fromJson;
 
   @override
   Reference get agent;
@@ -4276,10 +4253,7 @@ class _$_DeviceRequest extends _DeviceRequest {
         _relevantHistory = relevantHistory,
         super._();
 
-  factory _$_DeviceRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DeviceRequest.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceRequestFromJson(json);
 
   @override
@@ -4659,10 +4633,8 @@ abstract class _DeviceRequest extends DeviceRequest {
       final List<Reference>? relevantHistory}) = _$_DeviceRequest;
   _DeviceRequest._() : super._();
 
-  factory _DeviceRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DeviceRequest.fromJson;
+  factory _DeviceRequest.fromJson(Map<String, dynamic> json) =
+      _$_DeviceRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
@@ -4884,10 +4856,7 @@ class __$$_DeviceRequestRequesterCopyWithImpl<$Res>
 class _$_DeviceRequestRequester extends _DeviceRequestRequester {
   _$_DeviceRequestRequester({required this.agent, this.onBehalfOf}) : super._();
 
-  factory _$_DeviceRequestRequester.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DeviceRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceRequestRequesterFromJson(json);
 
   @override
@@ -4935,10 +4904,8 @@ abstract class _DeviceRequestRequester extends DeviceRequestRequester {
       final Reference? onBehalfOf}) = _$_DeviceRequestRequester;
   _DeviceRequestRequester._() : super._();
 
-  factory _DeviceRequestRequester.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DeviceRequestRequester.fromJson;
+  factory _DeviceRequestRequester.fromJson(Map<String, dynamic> json) =
+      _$_DeviceRequestRequester.fromJson;
 
   @override
   Reference get agent;
@@ -5646,10 +5613,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
         _note = note,
         super._();
 
-  factory _$_DeviceUseStatement.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$$_DeviceUseStatementFromJson(json);
 
   @override
@@ -5908,10 +5872,8 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
       final List<Annotation>? note}) = _$_DeviceUseStatement;
   _DeviceUseStatement._() : super._();
 
-  factory _DeviceUseStatement.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_DeviceUseStatement.fromJson;
+  factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =
+      _$_DeviceUseStatement.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
@@ -6669,10 +6631,7 @@ class _$_SupplyDelivery extends _SupplyDelivery {
         _receiver = receiver,
         super._();
 
-  factory _$_SupplyDelivery.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$$_SupplyDeliveryFromJson(json);
 
   @override
@@ -6922,10 +6881,8 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       final List<Reference>? receiver}) = _$_SupplyDelivery;
   _SupplyDelivery._() : super._();
 
-  factory _SupplyDelivery.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_SupplyDelivery.fromJson;
+  factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
+      _$_SupplyDelivery.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
@@ -7161,10 +7118,7 @@ class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
       {this.quantity, this.itemCodeableConcept, this.itemReference})
       : super._();
 
-  factory _$_SupplyDeliverySuppliedItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
       _$$_SupplyDeliverySuppliedItemFromJson(json);
 
   @override
@@ -7219,10 +7173,8 @@ abstract class _SupplyDeliverySuppliedItem extends SupplyDeliverySuppliedItem {
       final Reference? itemReference}) = _$_SupplyDeliverySuppliedItem;
   _SupplyDeliverySuppliedItem._() : super._();
 
-  factory _SupplyDeliverySuppliedItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_SupplyDeliverySuppliedItem.fromJson;
+  factory _SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =
+      _$_SupplyDeliverySuppliedItem.fromJson;
 
   @override
   Quantity? get quantity;
@@ -8048,10 +8000,7 @@ class _$_SupplyRequest extends _SupplyRequest {
         _supplier = supplier,
         super._();
 
-  factory _$_SupplyRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$$_SupplyRequestFromJson(json);
 
   @override
@@ -8318,10 +8267,8 @@ abstract class _SupplyRequest extends SupplyRequest {
       final Reference? deliverTo}) = _$_SupplyRequest;
   _SupplyRequest._() : super._();
 
-  factory _SupplyRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_SupplyRequest.fromJson;
+  factory _SupplyRequest.fromJson(Map<String, dynamic> json) =
+      _$_SupplyRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
@@ -8561,10 +8508,7 @@ class _$_SupplyRequestOrderedItem extends _SupplyRequestOrderedItem {
       {required this.quantity, this.itemCodeableConcept, this.itemReference})
       : super._();
 
-  factory _$_SupplyRequestOrderedItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_SupplyRequestOrderedItem.fromJson(Map<String, dynamic> json) =>
       _$$_SupplyRequestOrderedItemFromJson(json);
 
   @override
@@ -8619,10 +8563,8 @@ abstract class _SupplyRequestOrderedItem extends SupplyRequestOrderedItem {
       final Reference? itemReference}) = _$_SupplyRequestOrderedItem;
   _SupplyRequestOrderedItem._() : super._();
 
-  factory _SupplyRequestOrderedItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_SupplyRequestOrderedItem.fromJson;
+  factory _SupplyRequestOrderedItem.fromJson(Map<String, dynamic> json) =
+      _$_SupplyRequestOrderedItem.fromJson;
 
   @override
   Quantity get quantity;
@@ -8763,10 +8705,7 @@ class __$$_SupplyRequestRequesterCopyWithImpl<$Res>
 class _$_SupplyRequestRequester extends _SupplyRequestRequester {
   _$_SupplyRequestRequester({required this.agent, this.onBehalfOf}) : super._();
 
-  factory _$_SupplyRequestRequester.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_SupplyRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$$_SupplyRequestRequesterFromJson(json);
 
   @override
@@ -8814,10 +8753,8 @@ abstract class _SupplyRequestRequester extends SupplyRequestRequester {
       final Reference? onBehalfOf}) = _$_SupplyRequestRequester;
   _SupplyRequestRequester._() : super._();
 
-  factory _SupplyRequestRequester.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_SupplyRequestRequester.fromJson;
+  factory _SupplyRequestRequester.fromJson(Map<String, dynamic> json) =
+      _$_SupplyRequestRequester.fromJson;
 
   @override
   Reference get agent;

@@ -319,10 +319,7 @@ class _$_Population extends _Population {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_Population.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Population.fromJson(Map<String, dynamic> json) =>
       _$$_PopulationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -478,10 +475,8 @@ abstract class _Population extends Population {
       final CodeableConcept? physiologicalCondition}) = _$_Population;
   _Population._() : super._();
 
-  factory _Population.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Population.fromJson;
+  factory _Population.fromJson(Map<String, dynamic> json) =
+      _$_Population.fromJson;
 
   @override
 
@@ -779,10 +774,7 @@ class _$_ProductShelfLife extends _ProductShelfLife {
         _specialPrecautionsForStorage = specialPrecautionsForStorage,
         super._();
 
-  factory _$_ProductShelfLife.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ProductShelfLife.fromJson(Map<String, dynamic> json) =>
       _$$_ProductShelfLifeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
@@ -905,10 +897,8 @@ abstract class _ProductShelfLife extends ProductShelfLife {
       _$_ProductShelfLife;
   _ProductShelfLife._() : super._();
 
-  factory _ProductShelfLife.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ProductShelfLife.fromJson;
+  factory _ProductShelfLife.fromJson(Map<String, dynamic> json) =
+      _$_ProductShelfLife.fromJson;
 
   @override
 
@@ -1467,10 +1457,7 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
         _image = image,
         super._();
 
-  factory _$_ProdCharacteristic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$$_ProdCharacteristicFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -1767,10 +1754,8 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
       final CodeableConcept? scoring}) = _$_ProdCharacteristic;
   _ProdCharacteristic._() : super._();
 
-  factory _ProdCharacteristic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ProdCharacteristic.fromJson;
+  factory _ProdCharacteristic.fromJson(Map<String, dynamic> json) =
+      _$_ProdCharacteristic.fromJson;
 
   @override
 
@@ -2229,10 +2214,7 @@ class _$_MarketingStatus extends _MarketingStatus {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_MarketingStatus.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_MarketingStatus.fromJson(Map<String, dynamic> json) =>
       _$$_MarketingStatusFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2417,10 +2399,8 @@ abstract class _MarketingStatus extends MarketingStatus {
       _$_MarketingStatus;
   _MarketingStatus._() : super._();
 
-  factory _MarketingStatus.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_MarketingStatus.fromJson;
+  factory _MarketingStatus.fromJson(Map<String, dynamic> json) =
+      _$_MarketingStatus.fromJson;
 
   @override
 

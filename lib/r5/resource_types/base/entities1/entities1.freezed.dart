@@ -789,10 +789,7 @@ class _$_FhirEndpoint extends _FhirEndpoint {
         _headerElement = headerElement,
         super._();
 
-  factory _$_FhirEndpoint.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_FhirEndpoint.fromJson(Map<String, dynamic> json) =>
       _$$_FhirEndpointFromJson(json);
 
   /// [resourceType] This is a Endpoint resource
@@ -1231,10 +1228,8 @@ abstract class _FhirEndpoint extends FhirEndpoint {
           final List<Element>? headerElement}) = _$_FhirEndpoint;
   _FhirEndpoint._() : super._();
 
-  factory _FhirEndpoint.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_FhirEndpoint.fromJson;
+  factory _FhirEndpoint.fromJson(Map<String, dynamic> json) =
+      _$_FhirEndpoint.fromJson;
 
   @override
 
@@ -1614,10 +1609,7 @@ class _$_FhirEndpointPayload extends _FhirEndpointPayload {
         _mimeTypeElement = mimeTypeElement,
         super._();
 
-  factory _$_FhirEndpointPayload.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_FhirEndpointPayload.fromJson(Map<String, dynamic> json) =>
       _$$_FhirEndpointPayloadFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -1796,10 +1788,8 @@ abstract class _FhirEndpointPayload extends FhirEndpointPayload {
       _$_FhirEndpointPayload;
   _FhirEndpointPayload._() : super._();
 
-  factory _FhirEndpointPayload.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_FhirEndpointPayload.fromJson;
+  factory _FhirEndpointPayload.fromJson(Map<String, dynamic> json) =
+      _$_FhirEndpointPayload.fromJson;
 
   @override
 
@@ -2852,10 +2842,7 @@ class _$_HealthcareService extends _HealthcareService {
         _endpoint = endpoint,
         super._();
 
-  factory _$_HealthcareService.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$$_HealthcareServiceFromJson(json);
 
   /// [resourceType] This is a HealthcareService resource
@@ -3492,10 +3479,8 @@ abstract class _HealthcareService extends HealthcareService {
       final List<Reference>? endpoint}) = _$_HealthcareService;
   _HealthcareService._() : super._();
 
-  factory _HealthcareService.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_HealthcareService.fromJson;
+  factory _HealthcareService.fromJson(Map<String, dynamic> json) =
+      _$_HealthcareService.fromJson;
 
   @override
 
@@ -3967,10 +3952,7 @@ class _$_HealthcareServiceEligibility extends _HealthcareServiceEligibility {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_HealthcareServiceEligibility.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_HealthcareServiceEligibility.fromJson(Map<String, dynamic> json) =>
       _$$_HealthcareServiceEligibilityFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4115,10 +4097,8 @@ abstract class _HealthcareServiceEligibility
       _$_HealthcareServiceEligibility;
   _HealthcareServiceEligibility._() : super._();
 
-  factory _HealthcareServiceEligibility.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_HealthcareServiceEligibility.fromJson;
+  factory _HealthcareServiceEligibility.fromJson(Map<String, dynamic> json) =
+      _$_HealthcareServiceEligibility.fromJson;
 
   @override
 
@@ -5114,10 +5094,7 @@ class _$_Location extends _Location {
         _endpoint = endpoint,
         super._();
 
-  factory _$_Location.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Location.fromJson(Map<String, dynamic> json) =>
       _$$_LocationFromJson(json);
 
   /// [resourceType] This is a Location resource
@@ -5631,10 +5608,7 @@ abstract class _Location extends Location {
       final List<Reference>? endpoint}) = _$_Location;
   _Location._() : super._();
 
-  factory _Location.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Location.fromJson;
+  factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
   @override
 
@@ -6143,10 +6117,7 @@ class _$_LocationPosition extends _LocationPosition {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_LocationPosition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$$_LocationPositionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -6323,10 +6294,8 @@ abstract class _LocationPosition extends LocationPosition {
       _$_LocationPosition;
   _LocationPosition._() : super._();
 
-  factory _LocationPosition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_LocationPosition.fromJson;
+  factory _LocationPosition.fromJson(Map<String, dynamic> json) =
+      _$_LocationPosition.fromJson;
 
   @override
 
@@ -7092,10 +7061,7 @@ class _$_Organization extends _Organization {
         _qualification = qualification,
         super._();
 
-  factory _$_Organization.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Organization.fromJson(Map<String, dynamic> json) =>
       _$$_OrganizationFromJson(json);
 
   /// [resourceType] This is a Organization resource
@@ -7512,10 +7478,8 @@ abstract class _Organization extends Organization {
       final List<OrganizationQualification>? qualification}) = _$_Organization;
   _Organization._() : super._();
 
-  factory _Organization.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Organization.fromJson;
+  factory _Organization.fromJson(Map<String, dynamic> json) =
+      _$_Organization.fromJson;
 
   @override
 
@@ -7939,10 +7903,7 @@ class _$_OrganizationQualification extends _OrganizationQualification {
         _identifier = identifier,
         super._();
 
-  factory _$_OrganizationQualification.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_OrganizationQualification.fromJson(Map<String, dynamic> json) =>
       _$$_OrganizationQualificationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -8102,10 +8063,8 @@ abstract class _OrganizationQualification extends OrganizationQualification {
       final Reference? issuer}) = _$_OrganizationQualification;
   _OrganizationQualification._() : super._();
 
-  factory _OrganizationQualification.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_OrganizationQualification.fromJson;
+  factory _OrganizationQualification.fromJson(Map<String, dynamic> json) =
+      _$_OrganizationQualification.fromJson;
 
   @override
 
@@ -8829,10 +8788,7 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
         _endpoint = endpoint,
         super._();
 
-  factory _$_OrganizationAffiliation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
       _$$_OrganizationAffiliationFromJson(json);
 
   /// [resourceType] This is a OrganizationAffiliation resource
@@ -9242,10 +9198,8 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
       final List<Reference>? endpoint}) = _$_OrganizationAffiliation;
   _OrganizationAffiliation._() : super._();
 
-  factory _OrganizationAffiliation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_OrganizationAffiliation.fromJson;
+  factory _OrganizationAffiliation.fromJson(Map<String, dynamic> json) =
+      _$_OrganizationAffiliation.fromJson;
 
   @override
 

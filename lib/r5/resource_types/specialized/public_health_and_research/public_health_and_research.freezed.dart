@@ -1325,10 +1325,7 @@ class _$_ResearchStudy extends _ResearchStudy {
         _result = result,
         super._();
 
-  factory _$_ResearchStudy.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyFromJson(json);
 
   /// [resourceType] This is a ResearchStudy resource
@@ -2118,10 +2115,8 @@ abstract class _ResearchStudy extends ResearchStudy {
       final List<Reference>? result}) = _$_ResearchStudy;
   _ResearchStudy._() : super._();
 
-  factory _ResearchStudy.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ResearchStudy.fromJson;
+  factory _ResearchStudy.fromJson(Map<String, dynamic> json) =
+      _$_ResearchStudy.fromJson;
 
   @override
 
@@ -2654,10 +2649,7 @@ class _$_ResearchStudyLabel extends _ResearchStudyLabel {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ResearchStudyLabel.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ResearchStudyLabel.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyLabelFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2801,10 +2793,8 @@ abstract class _ResearchStudyLabel extends ResearchStudyLabel {
       _$_ResearchStudyLabel;
   _ResearchStudyLabel._() : super._();
 
-  factory _ResearchStudyLabel.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ResearchStudyLabel.fromJson;
+  factory _ResearchStudyLabel.fromJson(Map<String, dynamic> json) =
+      _$_ResearchStudyLabel.fromJson;
 
   @override
 
@@ -3155,10 +3145,7 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
         _classifier = classifier,
         super._();
 
-  factory _$_ResearchStudyAssociatedParty.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ResearchStudyAssociatedParty.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyAssociatedPartyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3345,10 +3332,8 @@ abstract class _ResearchStudyAssociatedParty
       final Reference? party}) = _$_ResearchStudyAssociatedParty;
   _ResearchStudyAssociatedParty._() : super._();
 
-  factory _ResearchStudyAssociatedParty.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ResearchStudyAssociatedParty.fromJson;
+  factory _ResearchStudyAssociatedParty.fromJson(Map<String, dynamic> json) =
+      _$_ResearchStudyAssociatedParty.fromJson;
 
   @override
 
@@ -3679,10 +3664,7 @@ class _$_ResearchStudyProgressStatus extends _ResearchStudyProgressStatus {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ResearchStudyProgressStatus.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ResearchStudyProgressStatus.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyProgressStatusFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3835,10 +3817,8 @@ abstract class _ResearchStudyProgressStatus
       final Period? period}) = _$_ResearchStudyProgressStatus;
   _ResearchStudyProgressStatus._() : super._();
 
-  factory _ResearchStudyProgressStatus.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ResearchStudyProgressStatus.fromJson;
+  factory _ResearchStudyProgressStatus.fromJson(Map<String, dynamic> json) =
+      _$_ResearchStudyProgressStatus.fromJson;
 
   @override
 
@@ -4208,10 +4188,7 @@ class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ResearchStudyRecruitment.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ResearchStudyRecruitment.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyRecruitmentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4381,10 +4358,8 @@ abstract class _ResearchStudyRecruitment extends ResearchStudyRecruitment {
       final Reference? actualGroup}) = _$_ResearchStudyRecruitment;
   _ResearchStudyRecruitment._() : super._();
 
-  factory _ResearchStudyRecruitment.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ResearchStudyRecruitment.fromJson;
+  factory _ResearchStudyRecruitment.fromJson(Map<String, dynamic> json) =
+      _$_ResearchStudyRecruitment.fromJson;
 
   @override
 
@@ -4835,10 +4810,7 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
         _intendedExposure = intendedExposure,
         super._();
 
-  factory _$_ResearchStudyComparisonGroup.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ResearchStudyComparisonGroup.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyComparisonGroupFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5048,10 +5020,8 @@ abstract class _ResearchStudyComparisonGroup
       final Reference? observedGroup}) = _$_ResearchStudyComparisonGroup;
   _ResearchStudyComparisonGroup._() : super._();
 
-  factory _ResearchStudyComparisonGroup.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ResearchStudyComparisonGroup.fromJson;
+  factory _ResearchStudyComparisonGroup.fromJson(Map<String, dynamic> json) =
+      _$_ResearchStudyComparisonGroup.fromJson;
 
   @override
 
@@ -5417,10 +5387,7 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ResearchStudyObjective.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyObjectiveFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5583,10 +5550,8 @@ abstract class _ResearchStudyObjective extends ResearchStudyObjective {
       _$_ResearchStudyObjective;
   _ResearchStudyObjective._() : super._();
 
-  factory _ResearchStudyObjective.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ResearchStudyObjective.fromJson;
+  factory _ResearchStudyObjective.fromJson(Map<String, dynamic> json) =
+      _$_ResearchStudyObjective.fromJson;
 
   @override
 
@@ -5951,10 +5916,7 @@ class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
         _type = type,
         super._();
 
-  factory _$_ResearchStudyOutcomeMeasure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ResearchStudyOutcomeMeasure.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyOutcomeMeasureFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -6134,10 +6096,8 @@ abstract class _ResearchStudyOutcomeMeasure
       final Reference? reference}) = _$_ResearchStudyOutcomeMeasure;
   _ResearchStudyOutcomeMeasure._() : super._();
 
-  factory _ResearchStudyOutcomeMeasure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ResearchStudyOutcomeMeasure.fromJson;
+  factory _ResearchStudyOutcomeMeasure.fromJson(Map<String, dynamic> json) =
+      _$_ResearchStudyOutcomeMeasure.fromJson;
 
   @override
 
@@ -6880,10 +6840,7 @@ class _$_ResearchSubject extends _ResearchSubject {
         _consent = consent,
         super._();
 
-  factory _$_ResearchSubject.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchSubjectFromJson(json);
 
   /// [resourceType] This is a ResearchSubject resource
@@ -7240,10 +7197,8 @@ abstract class _ResearchSubject extends ResearchSubject {
       final List<Reference>? consent}) = _$_ResearchSubject;
   _ResearchSubject._() : super._();
 
-  factory _ResearchSubject.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ResearchSubject.fromJson;
+  factory _ResearchSubject.fromJson(Map<String, dynamic> json) =
+      _$_ResearchSubject.fromJson;
 
   @override
 
@@ -7767,10 +7722,7 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ResearchSubjectProgress.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchSubjectProgressFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -7957,10 +7909,8 @@ abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
       _$_ResearchSubjectProgress;
   _ResearchSubjectProgress._() : super._();
 
-  factory _ResearchSubjectProgress.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ResearchSubjectProgress.fromJson;
+  factory _ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =
+      _$_ResearchSubjectProgress.fromJson;
 
   @override
 

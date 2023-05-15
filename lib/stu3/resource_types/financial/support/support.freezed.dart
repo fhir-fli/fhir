@@ -857,10 +857,7 @@ class _$_Coverage extends _Coverage {
         _contract = contract,
         super._();
 
-  factory _$_Coverage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
       _$$_CoverageFromJson(json);
 
   @override
@@ -1158,10 +1155,7 @@ abstract class _Coverage extends Coverage {
       final List<Reference>? contract}) = _$_Coverage;
   _Coverage._() : super._();
 
-  factory _Coverage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Coverage.fromJson;
+  factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
@@ -1852,10 +1846,7 @@ class _$_CoverageGrouping extends _CoverageGrouping {
       @JsonKey(name: '_subClassDisplay') this.subClassDisplayElement})
       : super._();
 
-  factory _$_CoverageGrouping.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_CoverageGrouping.fromJson(Map<String, dynamic> json) =>
       _$$_CoverageGroupingFromJson(json);
 
   @override
@@ -2061,10 +2052,8 @@ abstract class _CoverageGrouping extends CoverageGrouping {
           final Element? subClassDisplayElement}) = _$_CoverageGrouping;
   _CoverageGrouping._() : super._();
 
-  factory _CoverageGrouping.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_CoverageGrouping.fromJson;
+  factory _CoverageGrouping.fromJson(Map<String, dynamic> json) =
+      _$_CoverageGrouping.fromJson;
 
   @override
   String? get group;
@@ -2970,10 +2959,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
         _identifier = identifier,
         super._();
 
-  factory _$_EligibilityRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$$_EligibilityRequestFromJson(json);
 
   @override
@@ -3245,10 +3231,8 @@ abstract class _EligibilityRequest extends EligibilityRequest {
       final CodeableConcept? benefitSubCategory}) = _$_EligibilityRequest;
   _EligibilityRequest._() : super._();
 
-  factory _EligibilityRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EligibilityRequest.fromJson;
+  factory _EligibilityRequest.fromJson(Map<String, dynamic> json) =
+      _$_EligibilityRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
@@ -4051,10 +4035,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
         _error = error,
         super._();
 
-  factory _$_EligibilityResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$$_EligibilityResponseFromJson(json);
 
   @override
@@ -4318,10 +4299,8 @@ abstract class _EligibilityResponse extends EligibilityResponse {
       final List<EligibilityResponseError>? error}) = _$_EligibilityResponse;
   _EligibilityResponse._() : super._();
 
-  factory _EligibilityResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EligibilityResponse.fromJson;
+  factory _EligibilityResponse.fromJson(Map<String, dynamic> json) =
+      _$_EligibilityResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
@@ -4552,10 +4531,7 @@ class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
       : _benefitBalance = benefitBalance,
         super._();
 
-  factory _$_EligibilityResponseInsurance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =>
       _$$_EligibilityResponseInsuranceFromJson(json);
 
   @override
@@ -4619,10 +4595,8 @@ abstract class _EligibilityResponseInsurance
       _$_EligibilityResponseInsurance;
   _EligibilityResponseInsurance._() : super._();
 
-  factory _EligibilityResponseInsurance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EligibilityResponseInsurance.fromJson;
+  factory _EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =
+      _$_EligibilityResponseInsurance.fromJson;
 
   @override
   Reference? get coverage;
@@ -5011,9 +4985,8 @@ class _$_EligibilityResponseBenefitBalance
         super._();
 
   factory _$_EligibilityResponseBenefitBalance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_EligibilityResponseBenefitBalanceFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_EligibilityResponseBenefitBalanceFromJson(json);
 
   @override
   final CodeableConcept category;
@@ -5470,10 +5443,7 @@ class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
       this.usedMoney})
       : super._();
 
-  factory _$_EligibilityResponseFinancial.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =>
       _$$_EligibilityResponseFinancialFromJson(json);
 
   @override
@@ -5574,10 +5544,8 @@ abstract class _EligibilityResponseFinancial
       final Money? usedMoney}) = _$_EligibilityResponseFinancial;
   _EligibilityResponseFinancial._() : super._();
 
-  factory _EligibilityResponseFinancial.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EligibilityResponseFinancial.fromJson;
+  factory _EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =
+      _$_EligibilityResponseFinancial.fromJson;
 
   @override
   CodeableConcept get type;
@@ -5708,10 +5676,7 @@ class __$$_EligibilityResponseErrorCopyWithImpl<$Res>
 class _$_EligibilityResponseError extends _EligibilityResponseError {
   _$_EligibilityResponseError({required this.code}) : super._();
 
-  factory _$_EligibilityResponseError.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EligibilityResponseError.fromJson(Map<String, dynamic> json) =>
       _$$_EligibilityResponseErrorFromJson(json);
 
   @override
@@ -5754,10 +5719,8 @@ abstract class _EligibilityResponseError extends EligibilityResponseError {
       _$_EligibilityResponseError;
   _EligibilityResponseError._() : super._();
 
-  factory _EligibilityResponseError.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EligibilityResponseError.fromJson;
+  factory _EligibilityResponseError.fromJson(Map<String, dynamic> json) =
+      _$_EligibilityResponseError.fromJson;
 
   @override
   CodeableConcept get code;
@@ -6336,10 +6299,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
         _identifier = identifier,
         super._();
 
-  factory _$_EnrollmentRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$$_EnrollmentRequestFromJson(json);
 
   @override
@@ -6546,10 +6506,8 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       final Reference? coverage}) = _$_EnrollmentRequest;
   _EnrollmentRequest._() : super._();
 
-  factory _EnrollmentRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EnrollmentRequest.fromJson;
+  factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
+      _$_EnrollmentRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
@@ -7222,10 +7180,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
         _identifier = identifier,
         super._();
 
-  factory _$_EnrollmentResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$$_EnrollmentResponseFromJson(json);
 
   @override
@@ -7446,10 +7401,8 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       final Reference? requestOrganization}) = _$_EnrollmentResponse;
   _EnrollmentResponse._() : super._();
 
-  factory _EnrollmentResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EnrollmentResponse.fromJson;
+  factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
+      _$_EnrollmentResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)

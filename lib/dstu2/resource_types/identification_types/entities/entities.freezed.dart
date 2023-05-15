@@ -727,10 +727,7 @@ class _$_Location extends _Location {
         _telecom = telecom,
         super._();
 
-  factory _$_Location.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Location.fromJson(Map<String, dynamic> json) =>
       _$$_LocationFromJson(json);
 
   @override
@@ -985,10 +982,7 @@ abstract class _Location extends Location {
       final Reference? partOf}) = _$_Location;
   _Location._() : super._();
 
-  factory _Location.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Location.fromJson;
+  factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
@@ -1317,10 +1311,7 @@ class _$_LocationPosition extends _LocationPosition {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_LocationPosition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$$_LocationPositionFromJson(json);
 
   @override
@@ -1435,10 +1426,8 @@ abstract class _LocationPosition extends LocationPosition {
       _$_LocationPosition;
   _LocationPosition._() : super._();
 
-  factory _LocationPosition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_LocationPosition.fromJson;
+  factory _LocationPosition.fromJson(Map<String, dynamic> json) =
+      _$_LocationPosition.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1915,10 +1904,7 @@ class _$_Substance extends _Substance {
         _ingredient = ingredient,
         super._();
 
-  factory _$_Substance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Substance.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceFromJson(json);
 
   @override
@@ -2127,10 +2113,8 @@ abstract class _Substance extends Substance {
       final List<SubstanceIngredient>? ingredient}) = _$_Substance;
   _Substance._() : super._();
 
-  factory _Substance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Substance.fromJson;
+  factory _Substance.fromJson(Map<String, dynamic> json) =
+      _$_Substance.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
@@ -2406,10 +2390,7 @@ class _$_SubstanceInstance extends _SubstanceInstance {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_SubstanceInstance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_SubstanceInstance.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceInstanceFromJson(json);
 
   @override
@@ -2509,10 +2490,8 @@ abstract class _SubstanceInstance extends SubstanceInstance {
       final Quantity? quantity}) = _$_SubstanceInstance;
   _SubstanceInstance._() : super._();
 
-  factory _SubstanceInstance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_SubstanceInstance.fromJson;
+  factory _SubstanceInstance.fromJson(Map<String, dynamic> json) =
+      _$_SubstanceInstance.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2715,10 +2694,7 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_SubstanceIngredient.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
       _$$_SubstanceIngredientFromJson(json);
 
   @override
@@ -2806,10 +2782,8 @@ abstract class _SubstanceIngredient extends SubstanceIngredient {
       required final Reference substance}) = _$_SubstanceIngredient;
   _SubstanceIngredient._() : super._();
 
-  factory _SubstanceIngredient.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_SubstanceIngredient.fromJson;
+  factory _SubstanceIngredient.fromJson(Map<String, dynamic> json) =
+      _$_SubstanceIngredient.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3417,10 +3391,7 @@ class _$_Person extends _Person {
         _link = link,
         super._();
 
-  factory _$_Person.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Person.fromJson(Map<String, dynamic> json) =>
       _$$_PersonFromJson(json);
 
   @override
@@ -3676,10 +3647,7 @@ abstract class _Person extends Person {
       final List<PersonLink>? link}) = _$_Person;
   _Person._() : super._();
 
-  factory _Person.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Person.fromJson;
+  factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
@@ -3946,10 +3914,7 @@ class _$_PersonLink extends _PersonLink {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_PersonLink.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_PersonLink.fromJson(Map<String, dynamic> json) =>
       _$$_PersonLinkFromJson(json);
 
   @override
@@ -4047,10 +4012,8 @@ abstract class _PersonLink extends PersonLink {
           final Element? assuranceElement}) = _$_PersonLink;
   _PersonLink._() : super._();
 
-  factory _PersonLink.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_PersonLink.fromJson;
+  factory _PersonLink.fromJson(Map<String, dynamic> json) =
+      _$_PersonLink.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4775,10 +4738,7 @@ class _$_Contract extends _Contract {
         _rule = rule,
         super._();
 
-  factory _$_Contract.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Contract.fromJson(Map<String, dynamic> json) =>
       _$$_ContractFromJson(json);
 
   @override
@@ -5128,10 +5088,7 @@ abstract class _Contract extends Contract {
       final List<ContractRule>? rule}) = _$_Contract;
   _Contract._() : super._();
 
-  factory _Contract.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Contract.fromJson;
+  factory _Contract.fromJson(Map<String, dynamic> json) = _$_Contract.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
@@ -5371,10 +5328,7 @@ class _$_ContractActor extends _ContractActor {
         _role = role,
         super._();
 
-  factory _$_ContractActor.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractActor.fromJson(Map<String, dynamic> json) =>
       _$$_ContractActorFromJson(json);
 
   @override
@@ -5466,10 +5420,8 @@ abstract class _ContractActor extends ContractActor {
       final List<CodeableConcept>? role}) = _$_ContractActor;
   _ContractActor._() : super._();
 
-  factory _ContractActor.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractActor.fromJson;
+  factory _ContractActor.fromJson(Map<String, dynamic> json) =
+      _$_ContractActor.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -5937,10 +5889,7 @@ class _$_ContractValuedItem extends _ContractValuedItem {
         _securityLabelNumberElement = securityLabelNumberElement,
         super._();
 
-  factory _$_ContractValuedItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractValuedItem.fromJson(Map<String, dynamic> json) =>
       _$$_ContractValuedItemFromJson(json);
 
   @override
@@ -6103,10 +6052,8 @@ abstract class _ContractValuedItem extends ContractValuedItem {
       final List<Element>? securityLabelNumberElement}) = _$_ContractValuedItem;
   _ContractValuedItem._() : super._();
 
-  factory _ContractValuedItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractValuedItem.fromJson;
+  factory _ContractValuedItem.fromJson(Map<String, dynamic> json) =
+      _$_ContractValuedItem.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6339,10 +6286,7 @@ class _$_ContractSigner extends _ContractSigner {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ContractSigner.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractSigner.fromJson(Map<String, dynamic> json) =>
       _$$_ContractSignerFromJson(json);
 
   @override
@@ -6433,10 +6377,8 @@ abstract class _ContractSigner extends ContractSigner {
       required final String signature}) = _$_ContractSigner;
   _ContractSigner._() : super._();
 
-  factory _ContractSigner.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractSigner.fromJson;
+  factory _ContractSigner.fromJson(Map<String, dynamic> json) =
+      _$_ContractSigner.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6891,10 +6833,7 @@ class _$_ContractTerm extends _ContractTerm {
         _group = group,
         super._();
 
-  factory _$_ContractTerm.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$$_ContractTermFromJson(json);
 
   @override
@@ -7085,10 +7024,8 @@ abstract class _ContractTerm extends ContractTerm {
       final List<ContractTerm>? group}) = _$_ContractTerm;
   _ContractTerm._() : super._();
 
-  factory _ContractTerm.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractTerm.fromJson;
+  factory _ContractTerm.fromJson(Map<String, dynamic> json) =
+      _$_ContractTerm.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -7298,10 +7235,7 @@ class _$_ContractTermActor extends _ContractTermActor {
         _role = role,
         super._();
 
-  factory _$_ContractTermActor.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractTermActor.fromJson(Map<String, dynamic> json) =>
       _$$_ContractTermActorFromJson(json);
 
   @override
@@ -7394,10 +7328,8 @@ abstract class _ContractTermActor extends ContractTermActor {
       final List<CodeableConcept>? role}) = _$_ContractTermActor;
   _ContractTermActor._() : super._();
 
-  factory _ContractTermActor.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractTermActor.fromJson;
+  factory _ContractTermActor.fromJson(Map<String, dynamic> json) =
+      _$_ContractTermActor.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -7599,10 +7531,7 @@ class _$_ContractFriendly extends _ContractFriendly {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ContractFriendly.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$$_ContractFriendlyFromJson(json);
 
   @override
@@ -7689,10 +7618,8 @@ abstract class _ContractFriendly extends ContractFriendly {
       final Reference? contactReference}) = _$_ContractFriendly;
   _ContractFriendly._() : super._();
 
-  factory _ContractFriendly.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractFriendly.fromJson;
+  factory _ContractFriendly.fromJson(Map<String, dynamic> json) =
+      _$_ContractFriendly.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -7894,10 +7821,7 @@ class _$_ContractLegal extends _ContractLegal {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ContractLegal.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$$_ContractLegalFromJson(json);
 
   @override
@@ -7983,10 +7907,8 @@ abstract class _ContractLegal extends ContractLegal {
       final Reference? content}) = _$_ContractLegal;
   _ContractLegal._() : super._();
 
-  factory _ContractLegal.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractLegal.fromJson;
+  factory _ContractLegal.fromJson(Map<String, dynamic> json) =
+      _$_ContractLegal.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -8188,10 +8110,7 @@ class _$_ContractRule extends _ContractRule {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ContractRule.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractRule.fromJson(Map<String, dynamic> json) =>
       _$$_ContractRuleFromJson(json);
 
   @override
@@ -8278,10 +8197,8 @@ abstract class _ContractRule extends ContractRule {
       final Reference? contentReference}) = _$_ContractRule;
   _ContractRule._() : super._();
 
-  factory _ContractRule.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractRule.fromJson;
+  factory _ContractRule.fromJson(Map<String, dynamic> json) =
+      _$_ContractRule.fromJson;
 
   @override
   @JsonKey(name: 'id')

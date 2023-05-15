@@ -775,10 +775,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
         _dataRequirement = dataRequirement,
         super._();
 
-  factory _$_GuidanceResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$$_GuidanceResponseFromJson(json);
 
   @override
@@ -1049,10 +1046,8 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       final List<DataRequirement>? dataRequirement}) = _$_GuidanceResponse;
   _GuidanceResponse._() : super._();
 
-  factory _GuidanceResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_GuidanceResponse.fromJson;
+  factory _GuidanceResponse.fromJson(Map<String, dynamic> json) =
+      _$_GuidanceResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)

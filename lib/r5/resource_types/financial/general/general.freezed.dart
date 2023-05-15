@@ -897,10 +897,7 @@ class _$_Account extends _Account {
         _balance = balance,
         super._();
 
-  factory _$_Account.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Account.fromJson(Map<String, dynamic> json) =>
       _$$_AccountFromJson(json);
 
   /// [resourceType] This is a Account resource
@@ -1395,10 +1392,7 @@ abstract class _Account extends Account {
           final Element? calculatedAtElement}) = _$_Account;
   _Account._() : super._();
 
-  factory _Account.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Account.fromJson;
+  factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
 
   @override
 
@@ -1825,10 +1819,7 @@ class _$_AccountCoverage extends _AccountCoverage {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AccountCoverage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AccountCoverage.fromJson(Map<String, dynamic> json) =>
       _$$_AccountCoverageFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -1977,10 +1968,8 @@ abstract class _AccountCoverage extends AccountCoverage {
       _$_AccountCoverage;
   _AccountCoverage._() : super._();
 
-  factory _AccountCoverage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AccountCoverage.fromJson;
+  factory _AccountCoverage.fromJson(Map<String, dynamic> json) =
+      _$_AccountCoverage.fromJson;
 
   @override
 
@@ -2294,10 +2283,7 @@ class _$_AccountGuarantor extends _AccountGuarantor {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AccountGuarantor.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AccountGuarantor.fromJson(Map<String, dynamic> json) =>
       _$$_AccountGuarantorFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2448,10 +2434,8 @@ abstract class _AccountGuarantor extends AccountGuarantor {
       final Period? period}) = _$_AccountGuarantor;
   _AccountGuarantor._() : super._();
 
-  factory _AccountGuarantor.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AccountGuarantor.fromJson;
+  factory _AccountGuarantor.fromJson(Map<String, dynamic> json) =
+      _$_AccountGuarantor.fromJson;
 
   @override
 
@@ -2868,10 +2852,7 @@ class _$_AccountDiagnosis extends _AccountDiagnosis {
         _packageCode = packageCode,
         super._();
 
-  factory _$_AccountDiagnosis.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AccountDiagnosis.fromJson(Map<String, dynamic> json) =>
       _$$_AccountDiagnosisFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3088,10 +3069,8 @@ abstract class _AccountDiagnosis extends AccountDiagnosis {
       final List<CodeableConcept>? packageCode}) = _$_AccountDiagnosis;
   _AccountDiagnosis._() : super._();
 
-  factory _AccountDiagnosis.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AccountDiagnosis.fromJson;
+  factory _AccountDiagnosis.fromJson(Map<String, dynamic> json) =
+      _$_AccountDiagnosis.fromJson;
 
   @override
 
@@ -3501,10 +3480,7 @@ class _$_AccountProcedure extends _AccountProcedure {
         _device = device,
         super._();
 
-  factory _$_AccountProcedure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AccountProcedure.fromJson(Map<String, dynamic> json) =>
       _$$_AccountProcedureFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3719,10 +3695,8 @@ abstract class _AccountProcedure extends AccountProcedure {
       final List<Reference>? device}) = _$_AccountProcedure;
   _AccountProcedure._() : super._();
 
-  factory _AccountProcedure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AccountProcedure.fromJson;
+  factory _AccountProcedure.fromJson(Map<String, dynamic> json) =
+      _$_AccountProcedure.fromJson;
 
   @override
 
@@ -4009,10 +3983,7 @@ class _$_AccountRelatedAccount extends _AccountRelatedAccount {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AccountRelatedAccount.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AccountRelatedAccount.fromJson(Map<String, dynamic> json) =>
       _$$_AccountRelatedAccountFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4147,10 +4118,8 @@ abstract class _AccountRelatedAccount extends AccountRelatedAccount {
       required final Reference account}) = _$_AccountRelatedAccount;
   _AccountRelatedAccount._() : super._();
 
-  factory _AccountRelatedAccount.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AccountRelatedAccount.fromJson;
+  factory _AccountRelatedAccount.fromJson(Map<String, dynamic> json) =
+      _$_AccountRelatedAccount.fromJson;
 
   @override
 
@@ -4488,10 +4457,7 @@ class _$_AccountBalance extends _AccountBalance {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AccountBalance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_AccountBalance.fromJson(Map<String, dynamic> json) =>
       _$$_AccountBalanceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4653,10 +4619,8 @@ abstract class _AccountBalance extends AccountBalance {
       required final Money amount}) = _$_AccountBalance;
   _AccountBalance._() : super._();
 
-  factory _AccountBalance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_AccountBalance.fromJson;
+  factory _AccountBalance.fromJson(Map<String, dynamic> json) =
+      _$_AccountBalance.fromJson;
 
   @override
 
@@ -5891,10 +5855,7 @@ class _$_ChargeItem extends _ChargeItem {
         _supportingInformation = supportingInformation,
         super._();
 
-  factory _$_ChargeItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ChargeItem.fromJson(Map<String, dynamic> json) =>
       _$$_ChargeItemFromJson(json);
 
   /// [resourceType] This is a ChargeItem resource
@@ -6513,10 +6474,8 @@ abstract class _ChargeItem extends ChargeItem {
       final List<Reference>? supportingInformation}) = _$_ChargeItem;
   _ChargeItem._() : super._();
 
-  factory _ChargeItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ChargeItem.fromJson;
+  factory _ChargeItem.fromJson(Map<String, dynamic> json) =
+      _$_ChargeItem.fromJson;
 
   @override
 
@@ -6967,10 +6926,7 @@ class _$_ChargeItemPerformer extends _ChargeItemPerformer {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ChargeItemPerformer.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ChargeItemPerformer.fromJson(Map<String, dynamic> json) =>
       _$$_ChargeItemPerformerFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -7108,10 +7064,8 @@ abstract class _ChargeItemPerformer extends ChargeItemPerformer {
       required final Reference actor}) = _$_ChargeItemPerformer;
   _ChargeItemPerformer._() : super._();
 
-  factory _ChargeItemPerformer.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ChargeItemPerformer.fromJson;
+  factory _ChargeItemPerformer.fromJson(Map<String, dynamic> json) =
+      _$_ChargeItemPerformer.fromJson;
 
   @override
 
@@ -8767,10 +8721,7 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
         _propertyGroup = propertyGroup,
         super._();
 
-  factory _$_ChargeItemDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ChargeItemDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ChargeItemDefinitionFromJson(json);
 
   /// [resourceType] This is a ChargeItemDefinition resource
@@ -9656,10 +9607,8 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
       _$_ChargeItemDefinition;
   _ChargeItemDefinition._() : super._();
 
-  factory _ChargeItemDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ChargeItemDefinition.fromJson;
+  factory _ChargeItemDefinition.fromJson(Map<String, dynamic> json) =
+      _$_ChargeItemDefinition.fromJson;
 
   @override
 
@@ -10296,9 +10245,8 @@ class _$_ChargeItemDefinitionApplicability
         super._();
 
   factory _$_ChargeItemDefinitionApplicability.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ChargeItemDefinitionApplicabilityFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ChargeItemDefinitionApplicabilityFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -10708,9 +10656,8 @@ class _$_ChargeItemDefinitionPropertyGroup
         super._();
 
   factory _$_ChargeItemDefinitionPropertyGroup.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ChargeItemDefinitionPropertyGroupFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ChargeItemDefinitionPropertyGroupFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -12449,10 +12396,7 @@ class _$_Contract extends _Contract {
         _rule = rule,
         super._();
 
-  factory _$_Contract.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Contract.fromJson(Map<String, dynamic> json) =>
       _$$_ContractFromJson(json);
 
   /// [resourceType] This is a Contract resource
@@ -13256,10 +13200,7 @@ abstract class _Contract extends Contract {
       final Reference? legallyBindingReference}) = _$_Contract;
   _Contract._() : super._();
 
-  factory _Contract.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Contract.fromJson;
+  factory _Contract.fromJson(Map<String, dynamic> json) = _$_Contract.fromJson;
 
   @override
 
@@ -14000,10 +13941,7 @@ class _$_ContractContentDefinition extends _ContractContentDefinition {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ContractContentDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractContentDefinition.fromJson(Map<String, dynamic> json) =>
       _$$_ContractContentDefinitionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -14214,10 +14152,8 @@ abstract class _ContractContentDefinition extends ContractContentDefinition {
           final Element? copyrightElement}) = _$_ContractContentDefinition;
   _ContractContentDefinition._() : super._();
 
-  factory _ContractContentDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractContentDefinition.fromJson;
+  factory _ContractContentDefinition.fromJson(Map<String, dynamic> json) =
+      _$_ContractContentDefinition.fromJson;
 
   @override
 
@@ -14846,10 +14782,7 @@ class _$_ContractTerm extends _ContractTerm {
         _group = group,
         super._();
 
-  factory _$_ContractTerm.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractTerm.fromJson(Map<String, dynamic> json) =>
       _$$_ContractTermFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -15129,10 +15062,8 @@ abstract class _ContractTerm extends ContractTerm {
       final List<ContractTerm>? group}) = _$_ContractTerm;
   _ContractTerm._() : super._();
 
-  factory _ContractTerm.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractTerm.fromJson;
+  factory _ContractTerm.fromJson(Map<String, dynamic> json) =
+      _$_ContractTerm.fromJson;
 
   @override
 
@@ -15494,10 +15425,7 @@ class _$_ContractSecurityLabel extends _ContractSecurityLabel {
         _control = control,
         super._();
 
-  factory _$_ContractSecurityLabel.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractSecurityLabel.fromJson(Map<String, dynamic> json) =>
       _$$_ContractSecurityLabelFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -15698,10 +15626,8 @@ abstract class _ContractSecurityLabel extends ContractSecurityLabel {
       final List<Coding>? control}) = _$_ContractSecurityLabel;
   _ContractSecurityLabel._() : super._();
 
-  factory _ContractSecurityLabel.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractSecurityLabel.fromJson;
+  factory _ContractSecurityLabel.fromJson(Map<String, dynamic> json) =
+      _$_ContractSecurityLabel.fromJson;
 
   @override
 
@@ -16218,10 +16144,7 @@ class _$_ContractOffer extends _ContractOffer {
         _securityLabelNumberElement = securityLabelNumberElement,
         super._();
 
-  factory _$_ContractOffer.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractOffer.fromJson(Map<String, dynamic> json) =>
       _$$_ContractOfferFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -16530,10 +16453,8 @@ abstract class _ContractOffer extends ContractOffer {
           final List<Element>? securityLabelNumberElement}) = _$_ContractOffer;
   _ContractOffer._() : super._();
 
-  factory _ContractOffer.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractOffer.fromJson;
+  factory _ContractOffer.fromJson(Map<String, dynamic> json) =
+      _$_ContractOffer.fromJson;
 
   @override
 
@@ -16828,10 +16749,7 @@ class _$_ContractParty extends _ContractParty {
         _reference = reference,
         super._();
 
-  factory _$_ContractParty.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractParty.fromJson(Map<String, dynamic> json) =>
       _$$_ContractPartyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -16972,10 +16890,8 @@ abstract class _ContractParty extends ContractParty {
       required final CodeableConcept role}) = _$_ContractParty;
   _ContractParty._() : super._();
 
-  factory _ContractParty.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractParty.fromJson;
+  factory _ContractParty.fromJson(Map<String, dynamic> json) =
+      _$_ContractParty.fromJson;
 
   @override
 
@@ -17716,10 +17632,7 @@ class _$_ContractAnswer extends _ContractAnswer {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ContractAnswer.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractAnswer.fromJson(Map<String, dynamic> json) =>
       _$$_ContractAnswerFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -18043,10 +17956,8 @@ abstract class _ContractAnswer extends ContractAnswer {
       final Reference? valueReference}) = _$_ContractAnswer;
   _ContractAnswer._() : super._();
 
-  factory _ContractAnswer.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractAnswer.fromJson;
+  factory _ContractAnswer.fromJson(Map<String, dynamic> json) =
+      _$_ContractAnswer.fromJson;
 
   @override
 
@@ -18768,10 +18679,7 @@ class _$_ContractAsset extends _ContractAsset {
         _valuedItem = valuedItem,
         super._();
 
-  factory _$_ContractAsset.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractAsset.fromJson(Map<String, dynamic> json) =>
       _$$_ContractAssetFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -19174,10 +19082,8 @@ abstract class _ContractAsset extends ContractAsset {
       final List<ContractValuedItem>? valuedItem}) = _$_ContractAsset;
   _ContractAsset._() : super._();
 
-  factory _ContractAsset.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractAsset.fromJson;
+  factory _ContractAsset.fromJson(Map<String, dynamic> json) =
+      _$_ContractAsset.fromJson;
 
   @override
 
@@ -19552,10 +19458,7 @@ class _$_ContractContext extends _ContractContext {
         _code = code,
         super._();
 
-  factory _$_ContractContext.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractContext.fromJson(Map<String, dynamic> json) =>
       _$$_ContractContextFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -19718,10 +19621,8 @@ abstract class _ContractContext extends ContractContext {
       @JsonKey(name: '_text') final Element? textElement}) = _$_ContractContext;
   _ContractContext._() : super._();
 
-  factory _ContractContext.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractContext.fromJson;
+  factory _ContractContext.fromJson(Map<String, dynamic> json) =
+      _$_ContractContext.fromJson;
 
   @override
 
@@ -20537,10 +20438,7 @@ class _$_ContractValuedItem extends _ContractValuedItem {
         _securityLabelNumberElement = securityLabelNumberElement,
         super._();
 
-  factory _$_ContractValuedItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractValuedItem.fromJson(Map<String, dynamic> json) =>
       _$$_ContractValuedItemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -20909,10 +20807,8 @@ abstract class _ContractValuedItem extends ContractValuedItem {
       _$_ContractValuedItem;
   _ContractValuedItem._() : super._();
 
-  factory _ContractValuedItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractValuedItem.fromJson;
+  factory _ContractValuedItem.fromJson(Map<String, dynamic> json) =
+      _$_ContractValuedItem.fromJson;
 
   @override
 
@@ -21900,10 +21796,7 @@ class _$_ContractAction extends _ContractAction {
         _securityLabelNumberElement = securityLabelNumberElement,
         super._();
 
-  factory _$_ContractAction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractAction.fromJson(Map<String, dynamic> json) =>
       _$$_ContractActionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -22468,10 +22361,8 @@ abstract class _ContractAction extends ContractAction {
           final List<Element>? securityLabelNumberElement}) = _$_ContractAction;
   _ContractAction._() : super._();
 
-  factory _ContractAction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractAction.fromJson;
+  factory _ContractAction.fromJson(Map<String, dynamic> json) =
+      _$_ContractAction.fromJson;
 
   @override
 
@@ -22857,10 +22748,7 @@ class _$_ContractSubject extends _ContractSubject {
         _reference = reference,
         super._();
 
-  factory _$_ContractSubject.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractSubject.fromJson(Map<String, dynamic> json) =>
       _$$_ContractSubjectFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -23003,10 +22891,8 @@ abstract class _ContractSubject extends ContractSubject {
       final CodeableConcept? role}) = _$_ContractSubject;
   _ContractSubject._() : super._();
 
-  factory _ContractSubject.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractSubject.fromJson;
+  factory _ContractSubject.fromJson(Map<String, dynamic> json) =
+      _$_ContractSubject.fromJson;
 
   @override
 
@@ -23275,10 +23161,7 @@ class _$_ContractSigner extends _ContractSigner {
         _signature = signature,
         super._();
 
-  factory _$_ContractSigner.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractSigner.fromJson(Map<String, dynamic> json) =>
       _$$_ContractSignerFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -23426,10 +23309,8 @@ abstract class _ContractSigner extends ContractSigner {
       required final List<Signature> signature}) = _$_ContractSigner;
   _ContractSigner._() : super._();
 
-  factory _ContractSigner.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractSigner.fromJson;
+  factory _ContractSigner.fromJson(Map<String, dynamic> json) =
+      _$_ContractSigner.fromJson;
 
   @override
 
@@ -23696,10 +23577,7 @@ class _$_ContractFriendly extends _ContractFriendly {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ContractFriendly.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractFriendly.fromJson(Map<String, dynamic> json) =>
       _$$_ContractFriendlyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -23838,10 +23716,8 @@ abstract class _ContractFriendly extends ContractFriendly {
       final Reference? contentReference}) = _$_ContractFriendly;
   _ContractFriendly._() : super._();
 
-  factory _ContractFriendly.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractFriendly.fromJson;
+  factory _ContractFriendly.fromJson(Map<String, dynamic> json) =
+      _$_ContractFriendly.fromJson;
 
   @override
 
@@ -24104,10 +23980,7 @@ class _$_ContractLegal extends _ContractLegal {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ContractLegal.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractLegal.fromJson(Map<String, dynamic> json) =>
       _$$_ContractLegalFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -24242,10 +24115,8 @@ abstract class _ContractLegal extends ContractLegal {
       final Reference? contentReference}) = _$_ContractLegal;
   _ContractLegal._() : super._();
 
-  factory _ContractLegal.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractLegal.fromJson;
+  factory _ContractLegal.fromJson(Map<String, dynamic> json) =
+      _$_ContractLegal.fromJson;
 
   @override
 
@@ -24506,10 +24377,7 @@ class _$_ContractRule extends _ContractRule {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ContractRule.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ContractRule.fromJson(Map<String, dynamic> json) =>
       _$$_ContractRuleFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -24646,10 +24514,8 @@ abstract class _ContractRule extends ContractRule {
       final Reference? contentReference}) = _$_ContractRule;
   _ContractRule._() : super._();
 
-  factory _ContractRule.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ContractRule.fromJson;
+  factory _ContractRule.fromJson(Map<String, dynamic> json) =
+      _$_ContractRule.fromJson;
 
   @override
 
@@ -26556,10 +26422,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
         _benefitBalance = benefitBalance,
         super._();
 
-  factory _$_ExplanationOfBenefit.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitFromJson(json);
 
   /// [resourceType] This is a ExplanationOfBenefit resource
@@ -27475,10 +27338,8 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
       _$_ExplanationOfBenefit;
   _ExplanationOfBenefit._() : super._();
 
-  factory _ExplanationOfBenefit.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefit.fromJson;
+  factory _ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefit.fromJson;
 
   @override
 
@@ -28114,10 +27975,7 @@ class _$_ExplanationOfBenefitRelated extends _ExplanationOfBenefitRelated {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ExplanationOfBenefitRelated.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitRelatedFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -28262,10 +28120,8 @@ abstract class _ExplanationOfBenefitRelated
       final Identifier? reference}) = _$_ExplanationOfBenefitRelated;
   _ExplanationOfBenefitRelated._() : super._();
 
-  factory _ExplanationOfBenefitRelated.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitRelated.fromJson;
+  factory _ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitRelated.fromJson;
 
   @override
 
@@ -28581,10 +28437,7 @@ class _$_ExplanationOfBenefitEvent extends _ExplanationOfBenefitEvent {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ExplanationOfBenefitEvent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitEvent.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitEventFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -28739,10 +28592,8 @@ abstract class _ExplanationOfBenefitEvent extends ExplanationOfBenefitEvent {
       final Period? whenPeriod}) = _$_ExplanationOfBenefitEvent;
   _ExplanationOfBenefitEvent._() : super._();
 
-  factory _ExplanationOfBenefitEvent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitEvent.fromJson;
+  factory _ExplanationOfBenefitEvent.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitEvent.fromJson;
 
   @override
 
@@ -29019,10 +28870,7 @@ class _$_ExplanationOfBenefitPayee extends _ExplanationOfBenefitPayee {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ExplanationOfBenefitPayee.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitPayeeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -29157,10 +29005,8 @@ abstract class _ExplanationOfBenefitPayee extends ExplanationOfBenefitPayee {
       final Reference? party}) = _$_ExplanationOfBenefitPayee;
   _ExplanationOfBenefitPayee._() : super._();
 
-  factory _ExplanationOfBenefitPayee.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitPayee.fromJson;
+  factory _ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitPayee.fromJson;
 
   @override
 
@@ -29553,10 +29399,7 @@ class _$_ExplanationOfBenefitCareTeam extends _ExplanationOfBenefitCareTeam {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ExplanationOfBenefitCareTeam.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitCareTeamFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -29737,10 +29580,8 @@ abstract class _ExplanationOfBenefitCareTeam
       final CodeableConcept? specialty}) = _$_ExplanationOfBenefitCareTeam;
   _ExplanationOfBenefitCareTeam._() : super._();
 
-  factory _ExplanationOfBenefitCareTeam.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitCareTeam.fromJson;
+  factory _ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitCareTeam.fromJson;
 
   @override
 
@@ -30424,9 +30265,8 @@ class _$_ExplanationOfBenefitSupportingInfo
         super._();
 
   factory _$_ExplanationOfBenefitSupportingInfo.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitSupportingInfoFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitSupportingInfoFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -31141,9 +30981,8 @@ class _$_ExplanationOfBenefitDiagnosis extends _ExplanationOfBenefitDiagnosis {
         super._();
 
   factory _$_ExplanationOfBenefitDiagnosis.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitDiagnosisFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitDiagnosisFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -31324,10 +31163,8 @@ abstract class _ExplanationOfBenefitDiagnosis
       final CodeableConcept? onAdmission}) = _$_ExplanationOfBenefitDiagnosis;
   _ExplanationOfBenefitDiagnosis._() : super._();
 
-  factory _ExplanationOfBenefitDiagnosis.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitDiagnosis.fromJson;
+  factory _ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitDiagnosis.fromJson;
 
   @override
 
@@ -31748,9 +31585,8 @@ class _$_ExplanationOfBenefitProcedure extends _ExplanationOfBenefitProcedure {
         super._();
 
   factory _$_ExplanationOfBenefitProcedure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitProcedureFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitProcedureFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -31954,10 +31790,8 @@ abstract class _ExplanationOfBenefitProcedure
       final List<Reference>? udi}) = _$_ExplanationOfBenefitProcedure;
   _ExplanationOfBenefitProcedure._() : super._();
 
-  factory _ExplanationOfBenefitProcedure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitProcedure.fromJson;
+  factory _ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitProcedure.fromJson;
 
   @override
 
@@ -32306,9 +32140,8 @@ class _$_ExplanationOfBenefitInsurance extends _ExplanationOfBenefitInsurance {
         super._();
 
   factory _$_ExplanationOfBenefitInsurance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitInsuranceFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitInsuranceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -32501,10 +32334,8 @@ abstract class _ExplanationOfBenefitInsurance
       _$_ExplanationOfBenefitInsurance;
   _ExplanationOfBenefitInsurance._() : super._();
 
-  factory _ExplanationOfBenefitInsurance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitInsurance.fromJson;
+  factory _ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitInsurance.fromJson;
 
   @override
 
@@ -32872,10 +32703,7 @@ class _$_ExplanationOfBenefitAccident extends _ExplanationOfBenefitAccident {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ExplanationOfBenefitAccident.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitAccidentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -33038,10 +32866,8 @@ abstract class _ExplanationOfBenefitAccident
       final Reference? locationReference}) = _$_ExplanationOfBenefitAccident;
   _ExplanationOfBenefitAccident._() : super._();
 
-  factory _ExplanationOfBenefitAccident.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitAccident.fromJson;
+  factory _ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitAccident.fromJson;
 
   @override
 
@@ -34244,10 +34070,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
         _detail = detail,
         super._();
 
-  factory _$_ExplanationOfBenefitItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitItemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -34917,10 +34740,8 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
       _$_ExplanationOfBenefitItem;
   _ExplanationOfBenefitItem._() : super._();
 
-  factory _ExplanationOfBenefitItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitItem.fromJson;
+  factory _ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitItem.fromJson;
 
   @override
 
@@ -35347,10 +35168,7 @@ class _$_ExplanationOfBenefitBodySite extends _ExplanationOfBenefitBodySite {
         _subSite = subSite,
         super._();
 
-  factory _$_ExplanationOfBenefitBodySite.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitBodySite.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitBodySiteFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -35503,10 +35321,8 @@ abstract class _ExplanationOfBenefitBodySite
       final List<CodeableConcept>? subSite}) = _$_ExplanationOfBenefitBodySite;
   _ExplanationOfBenefitBodySite._() : super._();
 
-  factory _ExplanationOfBenefitBodySite.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitBodySite.fromJson;
+  factory _ExplanationOfBenefitBodySite.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitBodySite.fromJson;
 
   @override
 
@@ -35844,9 +35660,8 @@ class _$_ExplanationOfBenefitReviewOutcome
         super._();
 
   factory _$_ExplanationOfBenefitReviewOutcome.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitReviewOutcomeFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitReviewOutcomeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -36374,9 +36189,8 @@ class _$_ExplanationOfBenefitAdjudication
         super._();
 
   factory _$_ExplanationOfBenefitAdjudication.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitAdjudicationFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitAdjudicationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -37327,10 +37141,7 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
         _subDetail = subDetail,
         super._();
 
-  factory _$_ExplanationOfBenefitDetail.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitDetailFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -37726,10 +37537,8 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
       _$_ExplanationOfBenefitDetail;
   _ExplanationOfBenefitDetail._() : super._();
 
-  factory _ExplanationOfBenefitDetail.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitDetail.fromJson;
+  factory _ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitDetail.fromJson;
 
   @override
 
@@ -38597,9 +38406,8 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
         super._();
 
   factory _$_ExplanationOfBenefitSubDetail.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitSubDetailFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitSubDetailFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -38978,10 +38786,8 @@ abstract class _ExplanationOfBenefitSubDetail
       _$_ExplanationOfBenefitSubDetail;
   _ExplanationOfBenefitSubDetail._() : super._();
 
-  factory _ExplanationOfBenefitSubDetail.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitSubDetail.fromJson;
+  factory _ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitSubDetail.fromJson;
 
   @override
 
@@ -40131,10 +39937,7 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
         _detail = detail,
         super._();
 
-  factory _$_ExplanationOfBenefitAddItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitAddItemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -40716,10 +40519,8 @@ abstract class _ExplanationOfBenefitAddItem
       _$_ExplanationOfBenefitAddItem;
   _ExplanationOfBenefitAddItem._() : super._();
 
-  factory _ExplanationOfBenefitAddItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitAddItem.fromJson;
+  factory _ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitAddItem.fromJson;
 
   @override
 
@@ -41118,9 +40919,8 @@ class _$_ExplanationOfBenefitBodySite1 extends _ExplanationOfBenefitBodySite1 {
         super._();
 
   factory _$_ExplanationOfBenefitBodySite1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitBodySite1FromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitBodySite1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -41272,10 +41072,8 @@ abstract class _ExplanationOfBenefitBodySite1
       final List<CodeableConcept>? subSite}) = _$_ExplanationOfBenefitBodySite1;
   _ExplanationOfBenefitBodySite1._() : super._();
 
-  factory _ExplanationOfBenefitBodySite1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitBodySite1.fromJson;
+  factory _ExplanationOfBenefitBodySite1.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitBodySite1.fromJson;
 
   @override
 
@@ -41939,10 +41737,7 @@ class _$_ExplanationOfBenefitDetail1 extends _ExplanationOfBenefitDetail1 {
         _subDetail = subDetail,
         super._();
 
-  factory _$_ExplanationOfBenefitDetail1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitDetail1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -42281,10 +42076,8 @@ abstract class _ExplanationOfBenefitDetail1
       _$_ExplanationOfBenefitDetail1;
   _ExplanationOfBenefitDetail1._() : super._();
 
-  factory _ExplanationOfBenefitDetail1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitDetail1.fromJson;
+  factory _ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitDetail1.fromJson;
 
   @override
 
@@ -43016,9 +42809,8 @@ class _$_ExplanationOfBenefitSubDetail1
         super._();
 
   factory _$_ExplanationOfBenefitSubDetail1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitSubDetail1FromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitSubDetail1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -43337,10 +43129,8 @@ abstract class _ExplanationOfBenefitSubDetail1
       _$_ExplanationOfBenefitSubDetail1;
   _ExplanationOfBenefitSubDetail1._() : super._();
 
-  factory _ExplanationOfBenefitSubDetail1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitSubDetail1.fromJson;
+  factory _ExplanationOfBenefitSubDetail1.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitSubDetail1.fromJson;
 
   @override
 
@@ -43682,10 +43472,7 @@ class _$_ExplanationOfBenefitTotal extends _ExplanationOfBenefitTotal {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ExplanationOfBenefitTotal.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitTotal.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitTotalFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -43825,10 +43612,8 @@ abstract class _ExplanationOfBenefitTotal extends ExplanationOfBenefitTotal {
       required final Money amount}) = _$_ExplanationOfBenefitTotal;
   _ExplanationOfBenefitTotal._() : super._();
 
-  factory _ExplanationOfBenefitTotal.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitTotal.fromJson;
+  factory _ExplanationOfBenefitTotal.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitTotal.fromJson;
 
   @override
 
@@ -44243,10 +44028,7 @@ class _$_ExplanationOfBenefitPayment extends _ExplanationOfBenefitPayment {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ExplanationOfBenefitPayment.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =>
       _$$_ExplanationOfBenefitPaymentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -44424,10 +44206,8 @@ abstract class _ExplanationOfBenefitPayment
       final Identifier? identifier}) = _$_ExplanationOfBenefitPayment;
   _ExplanationOfBenefitPayment._() : super._();
 
-  factory _ExplanationOfBenefitPayment.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitPayment.fromJson;
+  factory _ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitPayment.fromJson;
 
   @override
 
@@ -44815,9 +44595,8 @@ class _$_ExplanationOfBenefitProcessNote
         super._();
 
   factory _$_ExplanationOfBenefitProcessNote.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitProcessNoteFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitProcessNoteFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -44985,10 +44764,8 @@ abstract class _ExplanationOfBenefitProcessNote
       final CodeableConcept? language}) = _$_ExplanationOfBenefitProcessNote;
   _ExplanationOfBenefitProcessNote._() : super._();
 
-  factory _ExplanationOfBenefitProcessNote.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitProcessNote.fromJson;
+  factory _ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitProcessNote.fromJson;
 
   @override
 
@@ -45502,9 +45279,8 @@ class _$_ExplanationOfBenefitBenefitBalance
         super._();
 
   factory _$_ExplanationOfBenefitBenefitBalance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitBenefitBalanceFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitBenefitBalanceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -46221,9 +45997,8 @@ class _$_ExplanationOfBenefitFinancial extends _ExplanationOfBenefitFinancial {
         super._();
 
   factory _$_ExplanationOfBenefitFinancial.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>      _$$_ExplanationOfBenefitFinancialFromJson(json);
+          Map<String, dynamic> json) =>
+      _$$_ExplanationOfBenefitFinancialFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -46430,10 +46205,8 @@ abstract class _ExplanationOfBenefitFinancial
       final Money? usedMoney}) = _$_ExplanationOfBenefitFinancial;
   _ExplanationOfBenefitFinancial._() : super._();
 
-  factory _ExplanationOfBenefitFinancial.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_ExplanationOfBenefitFinancial.fromJson;
+  factory _ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =
+      _$_ExplanationOfBenefitFinancial.fromJson;
 
   @override
 
@@ -47278,10 +47051,7 @@ class _$_InsurancePlan extends _InsurancePlan {
         _plan = plan,
         super._();
 
-  factory _$_InsurancePlan.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_InsurancePlan.fromJson(Map<String, dynamic> json) =>
       _$$_InsurancePlanFromJson(json);
 
   /// [resourceType] This is a InsurancePlan resource
@@ -47746,10 +47516,8 @@ abstract class _InsurancePlan extends InsurancePlan {
       final List<InsurancePlanPlan>? plan}) = _$_InsurancePlan;
   _InsurancePlan._() : super._();
 
-  factory _InsurancePlan.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_InsurancePlan.fromJson;
+  factory _InsurancePlan.fromJson(Map<String, dynamic> json) =
+      _$_InsurancePlan.fromJson;
 
   @override
 
@@ -48140,10 +47908,7 @@ class _$_InsurancePlanCoverage extends _InsurancePlanCoverage {
         _benefit = benefit,
         super._();
 
-  factory _$_InsurancePlanCoverage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_InsurancePlanCoverage.fromJson(Map<String, dynamic> json) =>
       _$$_InsurancePlanCoverageFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -48302,10 +48067,8 @@ abstract class _InsurancePlanCoverage extends InsurancePlanCoverage {
       _$_InsurancePlanCoverage;
   _InsurancePlanCoverage._() : super._();
 
-  factory _InsurancePlanCoverage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_InsurancePlanCoverage.fromJson;
+  factory _InsurancePlanCoverage.fromJson(Map<String, dynamic> json) =
+      _$_InsurancePlanCoverage.fromJson;
 
   @override
 
@@ -48602,10 +48365,7 @@ class _$_InsurancePlanBenefit extends _InsurancePlanBenefit {
         _limit = limit,
         super._();
 
-  factory _$_InsurancePlanBenefit.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_InsurancePlanBenefit.fromJson(Map<String, dynamic> json) =>
       _$$_InsurancePlanBenefitFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -48767,10 +48527,8 @@ abstract class _InsurancePlanBenefit extends InsurancePlanBenefit {
       final List<InsurancePlanLimit>? limit}) = _$_InsurancePlanBenefit;
   _InsurancePlanBenefit._() : super._();
 
-  factory _InsurancePlanBenefit.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_InsurancePlanBenefit.fromJson;
+  factory _InsurancePlanBenefit.fromJson(Map<String, dynamic> json) =
+      _$_InsurancePlanBenefit.fromJson;
 
   @override
 
@@ -49041,10 +48799,7 @@ class _$_InsurancePlanLimit extends _InsurancePlanLimit {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_InsurancePlanLimit.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_InsurancePlanLimit.fromJson(Map<String, dynamic> json) =>
       _$$_InsurancePlanLimitFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -49179,10 +48934,8 @@ abstract class _InsurancePlanLimit extends InsurancePlanLimit {
       final CodeableConcept? code}) = _$_InsurancePlanLimit;
   _InsurancePlanLimit._() : super._();
 
-  factory _InsurancePlanLimit.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_InsurancePlanLimit.fromJson;
+  factory _InsurancePlanLimit.fromJson(Map<String, dynamic> json) =
+      _$_InsurancePlanLimit.fromJson;
 
   @override
 
@@ -49502,10 +49255,7 @@ class _$_InsurancePlanPlan extends _InsurancePlanPlan {
         _specificCost = specificCost,
         super._();
 
-  factory _$_InsurancePlanPlan.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_InsurancePlanPlan.fromJson(Map<String, dynamic> json) =>
       _$$_InsurancePlanPlanFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -49725,10 +49475,8 @@ abstract class _InsurancePlanPlan extends InsurancePlanPlan {
       _$_InsurancePlanPlan;
   _InsurancePlanPlan._() : super._();
 
-  factory _InsurancePlanPlan.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_InsurancePlanPlan.fromJson;
+  factory _InsurancePlanPlan.fromJson(Map<String, dynamic> json) =
+      _$_InsurancePlanPlan.fromJson;
 
   @override
 
@@ -50108,10 +49856,7 @@ class _$_InsurancePlanGeneralCost extends _InsurancePlanGeneralCost {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_InsurancePlanGeneralCost.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_InsurancePlanGeneralCost.fromJson(Map<String, dynamic> json) =>
       _$$_InsurancePlanGeneralCostFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -50280,10 +50025,8 @@ abstract class _InsurancePlanGeneralCost extends InsurancePlanGeneralCost {
       _$_InsurancePlanGeneralCost;
   _InsurancePlanGeneralCost._() : super._();
 
-  factory _InsurancePlanGeneralCost.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_InsurancePlanGeneralCost.fromJson;
+  factory _InsurancePlanGeneralCost.fromJson(Map<String, dynamic> json) =
+      _$_InsurancePlanGeneralCost.fromJson;
 
   @override
 
@@ -50550,10 +50293,7 @@ class _$_InsurancePlanSpecificCost extends _InsurancePlanSpecificCost {
         _benefit = benefit,
         super._();
 
-  factory _$_InsurancePlanSpecificCost.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_InsurancePlanSpecificCost.fromJson(Map<String, dynamic> json) =>
       _$$_InsurancePlanSpecificCostFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -50699,10 +50439,8 @@ abstract class _InsurancePlanSpecificCost extends InsurancePlanSpecificCost {
       _$_InsurancePlanSpecificCost;
   _InsurancePlanSpecificCost._() : super._();
 
-  factory _InsurancePlanSpecificCost.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_InsurancePlanSpecificCost.fromJson;
+  factory _InsurancePlanSpecificCost.fromJson(Map<String, dynamic> json) =
+      _$_InsurancePlanSpecificCost.fromJson;
 
   @override
 
@@ -50948,10 +50686,7 @@ class _$_InsurancePlanBenefit1 extends _InsurancePlanBenefit1 {
         _cost = cost,
         super._();
 
-  factory _$_InsurancePlanBenefit1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_InsurancePlanBenefit1.fromJson(Map<String, dynamic> json) =>
       _$$_InsurancePlanBenefit1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -51096,10 +50831,8 @@ abstract class _InsurancePlanBenefit1 extends InsurancePlanBenefit1 {
       final List<InsurancePlanCost>? cost}) = _$_InsurancePlanBenefit1;
   _InsurancePlanBenefit1._() : super._();
 
-  factory _InsurancePlanBenefit1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_InsurancePlanBenefit1.fromJson;
+  factory _InsurancePlanBenefit1.fromJson(Map<String, dynamic> json) =
+      _$_InsurancePlanBenefit1.fromJson;
 
   @override
 
@@ -51408,10 +51141,7 @@ class _$_InsurancePlanCost extends _InsurancePlanCost {
         _qualifiers = qualifiers,
         super._();
 
-  factory _$_InsurancePlanCost.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_InsurancePlanCost.fromJson(Map<String, dynamic> json) =>
       _$$_InsurancePlanCostFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -51575,10 +51305,8 @@ abstract class _InsurancePlanCost extends InsurancePlanCost {
       final Quantity? value}) = _$_InsurancePlanCost;
   _InsurancePlanCost._() : super._();
 
-  factory _InsurancePlanCost.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_InsurancePlanCost.fromJson;
+  factory _InsurancePlanCost.fromJson(Map<String, dynamic> json) =
+      _$_InsurancePlanCost.fromJson;
 
   @override
 

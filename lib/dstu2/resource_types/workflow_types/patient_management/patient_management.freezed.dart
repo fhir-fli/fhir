@@ -800,10 +800,7 @@ class _$_Encounter extends _Encounter {
         _location = location,
         super._();
 
-  factory _$_Encounter.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Encounter.fromJson(Map<String, dynamic> json) =>
       _$$_EncounterFromJson(json);
 
   @override
@@ -1139,10 +1136,8 @@ abstract class _Encounter extends Encounter {
       final Reference? partOf}) = _$_Encounter;
   _Encounter._() : super._();
 
-  factory _Encounter.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Encounter.fromJson;
+  factory _Encounter.fromJson(Map<String, dynamic> json) =
+      _$_Encounter.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
@@ -1432,10 +1427,7 @@ class _$_EncounterStatusHistory extends _EncounterStatusHistory {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_EncounterStatusHistory.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$$_EncounterStatusHistoryFromJson(json);
 
   @override
@@ -1533,10 +1525,8 @@ abstract class _EncounterStatusHistory extends EncounterStatusHistory {
       required final Period period}) = _$_EncounterStatusHistory;
   _EncounterStatusHistory._() : super._();
 
-  factory _EncounterStatusHistory.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EncounterStatusHistory.fromJson;
+  factory _EncounterStatusHistory.fromJson(Map<String, dynamic> json) =
+      _$_EncounterStatusHistory.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1758,10 +1748,7 @@ class _$_EncounterParticipant extends _EncounterParticipant {
         _type = type,
         super._();
 
-  factory _$_EncounterParticipant.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EncounterParticipant.fromJson(Map<String, dynamic> json) =>
       _$$_EncounterParticipantFromJson(json);
 
   @override
@@ -1861,10 +1848,8 @@ abstract class _EncounterParticipant extends EncounterParticipant {
       final Reference? individual}) = _$_EncounterParticipant;
   _EncounterParticipant._() : super._();
 
-  factory _EncounterParticipant.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EncounterParticipant.fromJson;
+  factory _EncounterParticipant.fromJson(Map<String, dynamic> json) =
+      _$_EncounterParticipant.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2284,10 +2269,7 @@ class _$_EncounterHospitalization extends _EncounterHospitalization {
         _dischargeDiagnosis = dischargeDiagnosis,
         super._();
 
-  factory _$_EncounterHospitalization.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
       _$$_EncounterHospitalizationFromJson(json);
 
   @override
@@ -2485,10 +2467,8 @@ abstract class _EncounterHospitalization extends EncounterHospitalization {
       final List<Reference>? dischargeDiagnosis}) = _$_EncounterHospitalization;
   _EncounterHospitalization._() : super._();
 
-  factory _EncounterHospitalization.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EncounterHospitalization.fromJson;
+  factory _EncounterHospitalization.fromJson(Map<String, dynamic> json) =
+      _$_EncounterHospitalization.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2760,10 +2740,7 @@ class _$_EncounterLocation extends _EncounterLocation {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_EncounterLocation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EncounterLocation.fromJson(Map<String, dynamic> json) =>
       _$$_EncounterLocationFromJson(json);
 
   @override
@@ -2867,10 +2844,8 @@ abstract class _EncounterLocation extends EncounterLocation {
       final Period? period}) = _$_EncounterLocation;
   _EncounterLocation._() : super._();
 
-  factory _EncounterLocation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EncounterLocation.fromJson;
+  factory _EncounterLocation.fromJson(Map<String, dynamic> json) =
+      _$_EncounterLocation.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3466,10 +3441,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
         _careTeam = careTeam,
         super._();
 
-  factory _$_EpisodeOfCare.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
       _$$_EpisodeOfCareFromJson(json);
 
   @override
@@ -3725,10 +3697,8 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
       final List<EpisodeOfCareCareTeam>? careTeam}) = _$_EpisodeOfCare;
   _EpisodeOfCare._() : super._();
 
-  factory _EpisodeOfCare.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EpisodeOfCare.fromJson;
+  factory _EpisodeOfCare.fromJson(Map<String, dynamic> json) =
+      _$_EpisodeOfCare.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
@@ -4001,10 +3971,7 @@ class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_EpisodeOfCareStatusHistory.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
       _$$_EpisodeOfCareStatusHistoryFromJson(json);
 
   @override
@@ -4102,10 +4069,8 @@ abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
       required final Period period}) = _$_EpisodeOfCareStatusHistory;
   _EpisodeOfCareStatusHistory._() : super._();
 
-  factory _EpisodeOfCareStatusHistory.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EpisodeOfCareStatusHistory.fromJson;
+  factory _EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =
+      _$_EpisodeOfCareStatusHistory.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4328,10 +4293,7 @@ class _$_EpisodeOfCareCareTeam extends _EpisodeOfCareCareTeam {
         _role = role,
         super._();
 
-  factory _$_EpisodeOfCareCareTeam.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_EpisodeOfCareCareTeam.fromJson(Map<String, dynamic> json) =>
       _$$_EpisodeOfCareCareTeamFromJson(json);
 
   @override
@@ -4430,10 +4392,8 @@ abstract class _EpisodeOfCareCareTeam extends EpisodeOfCareCareTeam {
       final Reference? member}) = _$_EpisodeOfCareCareTeam;
   _EpisodeOfCareCareTeam._() : super._();
 
-  factory _EpisodeOfCareCareTeam.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_EpisodeOfCareCareTeam.fromJson;
+  factory _EpisodeOfCareCareTeam.fromJson(Map<String, dynamic> json) =
+      _$_EpisodeOfCareCareTeam.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -5135,10 +5095,7 @@ class _$_Communication extends _Communication {
         _reason = reason,
         super._();
 
-  factory _$_Communication.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_Communication.fromJson(Map<String, dynamic> json) =>
       _$$_CommunicationFromJson(json);
 
   @override
@@ -5413,10 +5370,8 @@ abstract class _Communication extends Communication {
       final Reference? requestDetail}) = _$_Communication;
   _Communication._() : super._();
 
-  factory _Communication.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Communication.fromJson;
+  factory _Communication.fromJson(Map<String, dynamic> json) =
+      _$_Communication.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
@@ -5714,10 +5669,7 @@ class _$_CommunicationPayload extends _CommunicationPayload {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CommunicationPayload.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory _$_CommunicationPayload.fromJson(Map<String, dynamic> json) =>
       _$$_CommunicationPayloadFromJson(json);
 
   @override
@@ -5818,10 +5770,8 @@ abstract class _CommunicationPayload extends CommunicationPayload {
       final Reference? contentReference}) = _$_CommunicationPayload;
   _CommunicationPayload._() : super._();
 
-  factory _CommunicationPayload.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_CommunicationPayload.fromJson;
+  factory _CommunicationPayload.fromJson(Map<String, dynamic> json) =
+      _$_CommunicationPayload.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6387,11 +6337,7 @@ class _$_Flag extends _Flag {
         _identifier = identifier,
         super._();
 
-  factory _$_Flag.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
-      _$$_FlagFromJson(json);
+  factory _$_Flag.fromJson(Map<String, dynamic> json) => _$$_FlagFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
@@ -6589,10 +6535,7 @@ abstract class _Flag extends Flag {
       required final CodeableConcept code}) = _$_Flag;
   _Flag._() : super._();
 
-  factory _Flag.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) => = _$_Flag.fromJson;
+  factory _Flag.fromJson(Map<String, dynamic> json) = _$_Flag.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
