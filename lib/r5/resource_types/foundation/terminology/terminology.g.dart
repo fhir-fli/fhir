@@ -184,7 +184,7 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
       supplements: json['supplements'] == null
           ? null
           : FhirCanonical.fromJson(json['supplements']),
-      count: json['count'] == null
+      codeSystemCount: json['count'] == null
           ? null
           : FhirUnsignedInt.fromJson(json['count']),
       countElement: json['_count'] == null
@@ -285,7 +285,7 @@ Map<String, dynamic> _$$_CodeSystemToJson(_$_CodeSystem instance) {
   writeNotNull('content', instance.content?.toJson());
   writeNotNull('_content', instance.contentElement?.toJson());
   writeNotNull('supplements', instance.supplements?.toJson());
-  writeNotNull('count', instance.count?.toJson());
+  writeNotNull('count', instance.codeSystemCount?.toJson());
   writeNotNull('_count', instance.countElement?.toJson());
   writeNotNull('filter', instance.filter?.map((e) => e.toJson()).toList());
   writeNotNull('property', instance.property?.map((e) => e.toJson()).toList());

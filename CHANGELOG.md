@@ -5,7 +5,8 @@
 * I've been playing with some Db packages, and there's some overlap with a number of the primitive types.
 * In response and to avoid any difficulties, I'm renaming all primitive classes to start with Fhir.
 * Other classes that I've added Fhir to are: Meta, List, Endpoint, and Expression
-* I've decided as well to change an id field to fhirId because lots of other databases have an id field
+* id fields are now called fhirId because dbs often need to use id (although the json still lists it as id)
+* I've also added another field called dbId which is an int. This is for databases to use, if necessary. It will not be included in the standard toJson() method.
 * Dependencies updated
 * Updated R5 to current official version
 

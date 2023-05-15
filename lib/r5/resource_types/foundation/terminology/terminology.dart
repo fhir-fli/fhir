@@ -571,7 +571,8 @@ class CodeSystem with Resource, _$CodeSystem {
     /// [count] The total number of concepts defined by the code system. Where
     ///  the code system has a compositional grammar, the basis of this count
     ///  is defined by the system steward.
-    FhirUnsignedInt? count,
+    @JsonKey(name: 'count')
+    FhirUnsignedInt? codeSystemCount,
 
     /// [countElement] ("_count") Extensions for count
     @JsonKey(name: '_count') Element? countElement,

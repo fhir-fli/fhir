@@ -347,7 +347,8 @@ mixin _$CodeSystem {
   /// [count] The total number of concepts defined by the code system. Where
   ///  the code system has a compositional grammar, the basis of this count
   ///  is defined by the system steward.
-  FhirUnsignedInt? get count => throw _privateConstructorUsedError;
+  @JsonKey(name: 'count')
+  FhirUnsignedInt? get codeSystemCount => throw _privateConstructorUsedError;
 
   /// [countElement] ("_count") Extensions for count
   @JsonKey(name: '_count')
@@ -469,7 +470,8 @@ abstract class $CodeSystemCopyWith<$Res> {
       @JsonKey(name: '_content')
           Element? contentElement,
       FhirCanonical? supplements,
-      FhirUnsignedInt? count,
+      @JsonKey(name: 'count')
+          FhirUnsignedInt? codeSystemCount,
       @JsonKey(name: '_count')
           Element? countElement,
       List<CodeSystemFilter>? filter,
@@ -583,7 +585,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
     Object? content = freezed,
     Object? contentElement = freezed,
     Object? supplements = freezed,
-    Object? count = freezed,
+    Object? codeSystemCount = freezed,
     Object? countElement = freezed,
     Object? filter = freezed,
     Object? property = freezed,
@@ -850,9 +852,9 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
           ? _value.supplements
           : supplements // ignore: cast_nullable_to_non_nullable
               as FhirCanonical?,
-      count: freezed == count
-          ? _value.count
-          : count // ignore: cast_nullable_to_non_nullable
+      codeSystemCount: freezed == codeSystemCount
+          ? _value.codeSystemCount
+          : codeSystemCount // ignore: cast_nullable_to_non_nullable
               as FhirUnsignedInt?,
       countElement: freezed == countElement
           ? _value.countElement
@@ -1299,7 +1301,8 @@ abstract class _$$_CodeSystemCopyWith<$Res>
       @JsonKey(name: '_content')
           Element? contentElement,
       FhirCanonical? supplements,
-      FhirUnsignedInt? count,
+      @JsonKey(name: 'count')
+          FhirUnsignedInt? codeSystemCount,
       @JsonKey(name: '_count')
           Element? countElement,
       List<CodeSystemFilter>? filter,
@@ -1438,7 +1441,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
     Object? content = freezed,
     Object? contentElement = freezed,
     Object? supplements = freezed,
-    Object? count = freezed,
+    Object? codeSystemCount = freezed,
     Object? countElement = freezed,
     Object? filter = freezed,
     Object? property = freezed,
@@ -1705,9 +1708,9 @@ class __$$_CodeSystemCopyWithImpl<$Res>
           ? _value.supplements
           : supplements // ignore: cast_nullable_to_non_nullable
               as FhirCanonical?,
-      count: freezed == count
-          ? _value.count
-          : count // ignore: cast_nullable_to_non_nullable
+      codeSystemCount: freezed == codeSystemCount
+          ? _value.codeSystemCount
+          : codeSystemCount // ignore: cast_nullable_to_non_nullable
               as FhirUnsignedInt?,
       countElement: freezed == countElement
           ? _value.countElement
@@ -1823,7 +1826,8 @@ class _$_CodeSystem extends _CodeSystem {
       @JsonKey(name: '_content')
           this.contentElement,
       this.supplements,
-      this.count,
+      @JsonKey(name: 'count')
+          this.codeSystemCount,
       @JsonKey(name: '_count')
           this.countElement,
       final List<CodeSystemFilter>? filter,
@@ -2397,7 +2401,8 @@ class _$_CodeSystem extends _CodeSystem {
   ///  the code system has a compositional grammar, the basis of this count
   ///  is defined by the system steward.
   @override
-  final FhirUnsignedInt? count;
+  @JsonKey(name: 'count')
+  final FhirUnsignedInt? codeSystemCount;
 
   /// [countElement] ("_count") Extensions for count
   @override
@@ -2453,7 +2458,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   @override
   String toString() {
-    return 'CodeSystem(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, caseSensitive: $caseSensitive, caseSensitiveElement: $caseSensitiveElement, valueSet: $valueSet, hierarchyMeaning: $hierarchyMeaning, hierarchyMeaningElement: $hierarchyMeaningElement, compositional: $compositional, compositionalElement: $compositionalElement, versionNeeded: $versionNeeded, versionNeededElement: $versionNeededElement, content: $content, contentElement: $contentElement, supplements: $supplements, count: $count, countElement: $countElement, filter: $filter, property: $property, concept: $concept)';
+    return 'CodeSystem(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, caseSensitive: $caseSensitive, caseSensitiveElement: $caseSensitiveElement, valueSet: $valueSet, hierarchyMeaning: $hierarchyMeaning, hierarchyMeaningElement: $hierarchyMeaningElement, compositional: $compositional, compositionalElement: $compositionalElement, versionNeeded: $versionNeeded, versionNeededElement: $versionNeededElement, content: $content, contentElement: $contentElement, supplements: $supplements, codeSystemCount: $codeSystemCount, countElement: $countElement, filter: $filter, property: $property, concept: $concept)';
   }
 
   @override
@@ -2563,7 +2568,7 @@ class _$_CodeSystem extends _CodeSystem {
             (identical(other.content, content) || other.content == content) &&
             (identical(other.contentElement, contentElement) || other.contentElement == contentElement) &&
             (identical(other.supplements, supplements) || other.supplements == supplements) &&
-            (identical(other.count, count) || other.count == count) &&
+            (identical(other.codeSystemCount, codeSystemCount) || other.codeSystemCount == codeSystemCount) &&
             (identical(other.countElement, countElement) || other.countElement == countElement) &&
             const DeepCollectionEquality().equals(other._filter, _filter) &&
             const DeepCollectionEquality().equals(other._property, _property) &&
@@ -2639,7 +2644,7 @@ class _$_CodeSystem extends _CodeSystem {
         content,
         contentElement,
         supplements,
-        count,
+        codeSystemCount,
         countElement,
         const DeepCollectionEquality().hash(_filter),
         const DeepCollectionEquality().hash(_property),
@@ -2752,7 +2757,8 @@ abstract class _CodeSystem extends CodeSystem {
       @JsonKey(name: '_content')
           final Element? contentElement,
       final FhirCanonical? supplements,
-      final FhirUnsignedInt? count,
+      @JsonKey(name: 'count')
+          final FhirUnsignedInt? codeSystemCount,
       @JsonKey(name: '_count')
           final Element? countElement,
       final List<CodeSystemFilter>? filter,
@@ -3154,7 +3160,8 @@ abstract class _CodeSystem extends CodeSystem {
   /// [count] The total number of concepts defined by the code system. Where
   ///  the code system has a compositional grammar, the basis of this count
   ///  is defined by the system steward.
-  FhirUnsignedInt? get count;
+  @JsonKey(name: 'count')
+  FhirUnsignedInt? get codeSystemCount;
   @override
 
   /// [countElement] ("_count") Extensions for count
