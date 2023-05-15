@@ -477,7 +477,10 @@ class _$_Order extends _Order {
         _detail = detail,
         super._();
 
-  factory _$_Order.fromJson(Map<String, dynamic> json) =>
+  factory _$_Order.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_OrderFromJson(json);
 
   @override
@@ -659,7 +662,10 @@ abstract class _Order extends Order {
       required final List<Reference> detail}) = _$_Order;
   _Order._() : super._();
 
-  factory _Order.fromJson(Map<String, dynamic> json) = _$_Order.fromJson;
+  factory _Order.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Order.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
@@ -902,7 +908,10 @@ class _$_OrderWhen extends _OrderWhen {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_OrderWhen.fromJson(Map<String, dynamic> json) =>
+  factory _$_OrderWhen.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_OrderWhenFromJson(json);
 
   @override
@@ -1003,8 +1012,10 @@ abstract class _OrderWhen extends OrderWhen {
       final Timing? schedule}) = _$_OrderWhen;
   _OrderWhen._() : super._();
 
-  factory _OrderWhen.fromJson(Map<String, dynamic> json) =
-      _$_OrderWhen.fromJson;
+  factory _OrderWhen.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_OrderWhen.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1440,7 +1451,10 @@ class _$_OrderResponse extends _OrderResponse {
         _fulfillment = fulfillment,
         super._();
 
-  factory _$_OrderResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_OrderResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_OrderResponseFromJson(json);
 
   @override
@@ -1625,8 +1639,10 @@ abstract class _OrderResponse extends OrderResponse {
       final List<Reference>? fulfillment}) = _$_OrderResponse;
   _OrderResponse._() : super._();
 
-  factory _OrderResponse.fromJson(Map<String, dynamic> json) =
-      _$_OrderResponse.fromJson;
+  factory _OrderResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_OrderResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
@@ -2394,7 +2410,10 @@ class _$_CommunicationRequest extends _CommunicationRequest {
         _reason = reason,
         super._();
 
-  factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_CommunicationRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CommunicationRequestFromJson(json);
 
   @override
@@ -2667,8 +2686,10 @@ abstract class _CommunicationRequest extends CommunicationRequest {
           final Element? priorityElement}) = _$_CommunicationRequest;
   _CommunicationRequest._() : super._();
 
-  factory _CommunicationRequest.fromJson(Map<String, dynamic> json) =
-      _$_CommunicationRequest.fromJson;
+  factory _CommunicationRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CommunicationRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
@@ -2973,7 +2994,10 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
+  factory _$_CommunicationRequestPayload.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CommunicationRequestPayloadFromJson(json);
 
   @override
@@ -3075,8 +3099,10 @@ abstract class _CommunicationRequestPayload
       final Reference? contentReference}) = _$_CommunicationRequestPayload;
   _CommunicationRequestPayload._() : super._();
 
-  factory _CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =
-      _$_CommunicationRequestPayload.fromJson;
+  factory _CommunicationRequestPayload.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CommunicationRequestPayload.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3816,7 +3842,10 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
         _prnReason = prnReason,
         super._();
 
-  factory _$_DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceUseRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DeviceUseRequestFromJson(json);
 
   @override
@@ -4091,8 +4120,10 @@ abstract class _DeviceUseRequest extends DeviceUseRequest {
           final Element? priorityElement}) = _$_DeviceUseRequest;
   _DeviceUseRequest._() : super._();
 
-  factory _DeviceUseRequest.fromJson(Map<String, dynamic> json) =
-      _$_DeviceUseRequest.fromJson;
+  factory _DeviceUseRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DeviceUseRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
@@ -4818,7 +4849,10 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
         _notes = notes,
         super._();
 
-  factory _$_DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceUseStatement.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DeviceUseStatementFromJson(json);
 
   @override
@@ -5067,8 +5101,10 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
           final Element? timingDateTimeElement}) = _$_DeviceUseStatement;
   _DeviceUseStatement._() : super._();
 
-  factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =
-      _$_DeviceUseStatement.fromJson;
+  factory _DeviceUseStatement.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DeviceUseStatement.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)

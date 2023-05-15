@@ -1,10 +1,15 @@
-// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+// ignore_for_file: invalid_annotation_target
+// ignore_for_file: sort_unnamed_constructors_first
+// ignore_for_file: sort_constructors_first
+// ignore_for_file: prefer_mixin
+// ignore_file_file: avoid_unused_constructor_parameters
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -73,7 +78,10 @@ class Appointment with Resource, _$Appointment {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Appointment.fromJson(Map<String, dynamic> json) =>
+  factory Appointment.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$AppointmentFromJson(json);
 
   /// Acts like a constructor, returns a [Appointment], accepts a
@@ -116,7 +124,10 @@ class AppointmentParticipant with _$AppointmentParticipant {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
+  factory AppointmentParticipant.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$AppointmentParticipantFromJson(json);
 
   /// Acts like a constructor, returns a [AppointmentParticipant], accepts a
@@ -175,7 +186,10 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
+  factory AppointmentResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$AppointmentResponseFromJson(json);
 
   /// Acts like a constructor, returns a [AppointmentResponse], accepts a
@@ -244,7 +258,10 @@ class ProcessRequest with Resource, _$ProcessRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProcessRequest.fromJson(Map<String, dynamic> json) =>
+  factory ProcessRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ProcessRequestFromJson(json);
 
   /// Acts like a constructor, returns a [ProcessRequest], accepts a
@@ -283,7 +300,10 @@ class ProcessRequestItem with _$ProcessRequestItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
+  factory ProcessRequestItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ProcessRequestItemFromJson(json);
 
   /// Acts like a constructor, returns a [ProcessRequestItem], accepts a
@@ -346,7 +366,10 @@ class ProcessResponse with Resource, _$ProcessResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProcessResponse.fromJson(Map<String, dynamic> json) =>
+  factory ProcessResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ProcessResponseFromJson(json);
 
   /// Acts like a constructor, returns a [ProcessResponse], accepts a
@@ -386,7 +409,10 @@ class ProcessResponseProcessNote with _$ProcessResponseProcessNote {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =>
+  factory ProcessResponseProcessNote.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ProcessResponseProcessNoteFromJson(json);
 
   /// Acts like a constructor, returns a [ProcessResponseProcessNote], accepts a
@@ -453,7 +479,10 @@ class RequestGroup with Resource, _$RequestGroup {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RequestGroup.fromJson(Map<String, dynamic> json) =>
+  factory RequestGroup.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$RequestGroupFromJson(json);
 
   /// Acts like a constructor, returns a [RequestGroup], accepts a
@@ -522,7 +551,10 @@ class RequestGroupAction with _$RequestGroupAction {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RequestGroupAction.fromJson(Map<String, dynamic> json) =>
+  factory RequestGroupAction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$RequestGroupActionFromJson(json);
 
   /// Acts like a constructor, returns a [RequestGroupAction], accepts a
@@ -567,7 +599,10 @@ class RequestGroupCondition with _$RequestGroupCondition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RequestGroupCondition.fromJson(Map<String, dynamic> json) =>
+  factory RequestGroupCondition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$RequestGroupConditionFromJson(json);
 
   /// Acts like a constructor, returns a [RequestGroupCondition], accepts a
@@ -610,7 +645,10 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
+  factory RequestGroupRelatedAction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$RequestGroupRelatedActionFromJson(json);
 
   /// Acts like a constructor, returns a [RequestGroupRelatedAction], accepts a
@@ -667,7 +705,10 @@ class Schedule with Resource, _$Schedule {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Schedule.fromJson(Map<String, dynamic> json) =>
+  factory Schedule.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ScheduleFromJson(json);
 
   /// Acts like a constructor, returns a [Schedule], accepts a
@@ -729,7 +770,11 @@ class Slot with Resource, _$Slot {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
+  factory Slot.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
+      _$SlotFromJson(json);
 
   /// Acts like a constructor, returns a [Slot], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -809,7 +854,11 @@ class Task with Resource, _$Task {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
+  factory Task.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
+      _$TaskFromJson(json);
 
   /// Acts like a constructor, returns a [Task], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -847,7 +896,10 @@ class TaskRequester with _$TaskRequester {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TaskRequester.fromJson(Map<String, dynamic> json) =>
+  factory TaskRequester.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$TaskRequesterFromJson(json);
 
   /// Acts like a constructor, returns a [TaskRequester], accepts a
@@ -888,7 +940,10 @@ class TaskRestriction with _$TaskRestriction {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
+  factory TaskRestriction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$TaskRestrictionFromJson(json);
 
   /// Acts like a constructor, returns a [TaskRestriction], accepts a
@@ -996,7 +1051,10 @@ class TaskInput with _$TaskInput {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TaskInput.fromJson(Map<String, dynamic> json) =>
+  factory TaskInput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$TaskInputFromJson(json);
 
   /// Acts like a constructor, returns a [TaskInput], accepts a
@@ -1104,7 +1162,10 @@ class TaskOutput with _$TaskOutput {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TaskOutput.fromJson(Map<String, dynamic> json) =>
+  factory TaskOutput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$TaskOutputFromJson(json);
 
   /// Acts like a constructor, returns a [TaskOutput], accepts a

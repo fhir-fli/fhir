@@ -782,7 +782,10 @@ class _$_ResearchStudy extends _ResearchStudy {
         _arm = arm,
         super._();
 
-  factory _$_ResearchStudy.fromJson(Map<String, dynamic> json) =>
+  factory _$_ResearchStudy.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ResearchStudyFromJson(json);
 
   @override
@@ -1154,8 +1157,10 @@ abstract class _ResearchStudy extends ResearchStudy {
       final List<ResearchStudyArm>? arm}) = _$_ResearchStudy;
   _ResearchStudy._() : super._();
 
-  factory _ResearchStudy.fromJson(Map<String, dynamic> json) =
-      _$_ResearchStudy.fromJson;
+  factory _ResearchStudy.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ResearchStudy.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchStudy)
@@ -1433,7 +1438,10 @@ class _$_ResearchStudyArm extends _ResearchStudyArm {
       @JsonKey(name: '_description') this.descriptionElement})
       : super._();
 
-  factory _$_ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
+  factory _$_ResearchStudyArm.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ResearchStudyArmFromJson(json);
 
   @override
@@ -1498,8 +1506,10 @@ abstract class _ResearchStudyArm extends ResearchStudyArm {
       _$_ResearchStudyArm;
   _ResearchStudyArm._() : super._();
 
-  factory _ResearchStudyArm.fromJson(Map<String, dynamic> json) =
-      _$_ResearchStudyArm.fromJson;
+  factory _ResearchStudyArm.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ResearchStudyArm.fromJson;
 
   @override
   String? get name;
@@ -2112,7 +2122,10 @@ class _$_ResearchSubject extends _ResearchSubject {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ResearchSubject.fromJson(Map<String, dynamic> json) =>
+  factory _$_ResearchSubject.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ResearchSubjectFromJson(json);
 
   @override
@@ -2318,8 +2331,10 @@ abstract class _ResearchSubject extends ResearchSubject {
       final Reference? consent}) = _$_ResearchSubject;
   _ResearchSubject._() : super._();
 
-  factory _ResearchSubject.fromJson(Map<String, dynamic> json) =
-      _$_ResearchSubject.fromJson;
+  factory _ResearchSubject.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ResearchSubject.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ResearchSubject)

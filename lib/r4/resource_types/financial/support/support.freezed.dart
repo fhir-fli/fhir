@@ -975,7 +975,10 @@ class _$_Coverage extends _Coverage {
         _contract = contract,
         super._();
 
-  factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
+  factory _$_Coverage.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CoverageFromJson(json);
 
   @override
@@ -1443,7 +1446,10 @@ abstract class _Coverage extends Coverage {
       final List<Reference>? contract}) = _$_Coverage;
   _Coverage._() : super._();
 
-  factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
+  factory _Coverage.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Coverage.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
@@ -1920,7 +1926,10 @@ class _$_CoverageClass extends _CoverageClass {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoverageClass.fromJson(Map<String, dynamic> json) =>
+  factory _$_CoverageClass.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CoverageClassFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2079,8 +2088,10 @@ abstract class _CoverageClass extends CoverageClass {
       @JsonKey(name: '_name') final Element? nameElement}) = _$_CoverageClass;
   _CoverageClass._() : super._();
 
-  factory _CoverageClass.fromJson(Map<String, dynamic> json) =
-      _$_CoverageClass.fromJson;
+  factory _CoverageClass.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CoverageClass.fromJson;
 
   @override
 
@@ -2408,7 +2419,10 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
         _exception = exception,
         super._();
 
-  factory _$_CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =>
+  factory _$_CoverageCostToBeneficiary.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CoverageCostToBeneficiaryFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2568,8 +2582,10 @@ abstract class _CoverageCostToBeneficiary extends CoverageCostToBeneficiary {
       final List<CoverageException>? exception}) = _$_CoverageCostToBeneficiary;
   _CoverageCostToBeneficiary._() : super._();
 
-  factory _CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =
-      _$_CoverageCostToBeneficiary.fromJson;
+  factory _CoverageCostToBeneficiary.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CoverageCostToBeneficiary.fromJson;
 
   @override
 
@@ -2831,7 +2847,10 @@ class _$_CoverageException extends _CoverageException {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoverageException.fromJson(Map<String, dynamic> json) =>
+  factory _$_CoverageException.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CoverageExceptionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2963,8 +2982,10 @@ abstract class _CoverageException extends CoverageException {
       final Period? period}) = _$_CoverageException;
   _CoverageException._() : super._();
 
-  factory _CoverageException.fromJson(Map<String, dynamic> json) =
-      _$_CoverageException.fromJson;
+  factory _CoverageException.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CoverageException.fromJson;
 
   @override
 
@@ -3870,7 +3891,10 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
         _item = item,
         super._();
 
-  factory _$_CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_CoverageEligibilityRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CoverageEligibilityRequestFromJson(json);
 
   @override
@@ -4316,8 +4340,10 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
       _$_CoverageEligibilityRequest;
   _CoverageEligibilityRequest._() : super._();
 
-  factory _CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =
-      _$_CoverageEligibilityRequest.fromJson;
+  factory _CoverageEligibilityRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CoverageEligibilityRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
@@ -4783,8 +4809,9 @@ class _$_CoverageEligibilityRequestSupportingInfo
         super._();
 
   factory _$_CoverageEligibilityRequestSupportingInfo.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityRequestSupportingInfoFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_CoverageEligibilityRequestSupportingInfoFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -5310,8 +5337,9 @@ class _$_CoverageEligibilityRequestInsurance
         super._();
 
   factory _$_CoverageEligibilityRequestInsurance.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityRequestInsuranceFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_CoverageEligibilityRequestInsuranceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -5998,8 +6026,9 @@ class _$_CoverageEligibilityRequestItem
         super._();
 
   factory _$_CoverageEligibilityRequestItem.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityRequestItemFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_CoverageEligibilityRequestItemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -6262,8 +6291,10 @@ abstract class _CoverageEligibilityRequestItem
       final List<Reference>? detail}) = _$_CoverageEligibilityRequestItem;
   _CoverageEligibilityRequestItem._() : super._();
 
-  factory _CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =
-      _$_CoverageEligibilityRequestItem.fromJson;
+  factory _CoverageEligibilityRequestItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CoverageEligibilityRequestItem.fromJson;
 
   @override
 
@@ -6576,8 +6607,9 @@ class _$_CoverageEligibilityRequestDiagnosis
         super._();
 
   factory _$_CoverageEligibilityRequestDiagnosis.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityRequestDiagnosisFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_CoverageEligibilityRequestDiagnosisFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -7726,7 +7758,10 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
         _error = error,
         super._();
 
-  factory _$_CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_CoverageEligibilityResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CoverageEligibilityResponseFromJson(json);
 
   @override
@@ -8194,8 +8229,10 @@ abstract class _CoverageEligibilityResponse
           error}) = _$_CoverageEligibilityResponse;
   _CoverageEligibilityResponse._() : super._();
 
-  factory _CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =
-      _$_CoverageEligibilityResponse.fromJson;
+  factory _CoverageEligibilityResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CoverageEligibilityResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
@@ -8680,8 +8717,9 @@ class _$_CoverageEligibilityResponseInsurance
         super._();
 
   factory _$_CoverageEligibilityResponseInsurance.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityResponseInsuranceFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_CoverageEligibilityResponseInsuranceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -9594,8 +9632,9 @@ class _$_CoverageEligibilityResponseItem
         super._();
 
   factory _$_CoverageEligibilityResponseItem.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityResponseItemFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_CoverageEligibilityResponseItemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -9916,8 +9955,10 @@ abstract class _CoverageEligibilityResponseItem
       _$_CoverageEligibilityResponseItem;
   _CoverageEligibilityResponseItem._() : super._();
 
-  factory _CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =
-      _$_CoverageEligibilityResponseItem.fromJson;
+  factory _CoverageEligibilityResponseItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CoverageEligibilityResponseItem.fromJson;
 
   @override
 
@@ -10491,8 +10532,9 @@ class _$_CoverageEligibilityResponseBenefit
         super._();
 
   factory _$_CoverageEligibilityResponseBenefit.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityResponseBenefitFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_CoverageEligibilityResponseBenefitFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -10994,8 +11036,9 @@ class _$_CoverageEligibilityResponseError
         super._();
 
   factory _$_CoverageEligibilityResponseError.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityResponseErrorFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_CoverageEligibilityResponseErrorFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -11781,7 +11824,10 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
         _identifier = identifier,
         super._();
 
-  factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_EnrollmentRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_EnrollmentRequestFromJson(json);
 
   @override
@@ -12078,8 +12124,10 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       final Reference? coverage}) = _$_EnrollmentRequest;
   _EnrollmentRequest._() : super._();
 
-  factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
-      _$_EnrollmentRequest.fromJson;
+  factory _EnrollmentRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_EnrollmentRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
@@ -12887,7 +12935,10 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
         _identifier = identifier,
         super._();
 
-  factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_EnrollmentResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_EnrollmentResponseFromJson(json);
 
   @override
@@ -13211,8 +13262,10 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       final Reference? requestProvider}) = _$_EnrollmentResponse;
   _EnrollmentResponse._() : super._();
 
-  factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
-      _$_EnrollmentResponse.fromJson;
+  factory _EnrollmentResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_EnrollmentResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)

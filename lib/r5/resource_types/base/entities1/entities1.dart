@@ -1,10 +1,15 @@
-// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+// ignore_for_file: invalid_annotation_target
+// ignore_for_file: sort_unnamed_constructors_first
+// ignore_for_file: sort_constructors_first
+// ignore_for_file: prefer_mixin
+// ignore_file_file: avoid_unused_constructor_parameters
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -139,7 +144,7 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -283,7 +288,10 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FhirEndpoint.fromJson(Map<String, dynamic> json) =>
+  factory FhirEndpoint.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$FhirEndpointFromJson(json);
 
   /// Acts like a constructor, returns a [FhirEndpoint], accepts a
@@ -353,7 +361,7 @@ class FhirEndpointPayload with _$FhirEndpointPayload {
   factory FhirEndpointPayload({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -408,7 +416,10 @@ class FhirEndpointPayload with _$FhirEndpointPayload {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FhirEndpointPayload.fromJson(Map<String, dynamic> json) =>
+  factory FhirEndpointPayload.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$FhirEndpointPayloadFromJson(json);
 
   /// Acts like a constructor, returns a [FhirEndpointPayload], accepts a
@@ -580,7 +591,7 @@ class HealthcareService with Resource, _$HealthcareService {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -773,7 +784,10 @@ class HealthcareService with Resource, _$HealthcareService {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareService.fromJson(Map<String, dynamic> json) =>
+  factory HealthcareService.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$HealthcareServiceFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareService], accepts a
@@ -833,7 +847,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   factory HealthcareServiceEligibility({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -884,7 +898,10 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareServiceEligibility.fromJson(Map<String, dynamic> json) =>
+  factory HealthcareServiceEligibility.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$HealthcareServiceEligibilityFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareServiceEligibility],
@@ -1040,7 +1057,7 @@ class Location with Resource, _$Location {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1211,7 +1228,10 @@ class Location with Resource, _$Location {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Location.fromJson(Map<String, dynamic> json) =>
+  factory Location.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$LocationFromJson(json);
 
   /// Acts like a constructor, returns a [Location], accepts a
@@ -1286,7 +1306,7 @@ class LocationPosition with _$LocationPosition {
   factory LocationPosition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1352,7 +1372,10 @@ class LocationPosition with _$LocationPosition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory LocationPosition.fromJson(Map<String, dynamic> json) =>
+  factory LocationPosition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$LocationPositionFromJson(json);
 
   /// Acts like a constructor, returns a [LocationPosition], accepts a
@@ -1488,7 +1511,7 @@ class Organization with Resource, _$Organization {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1622,7 +1645,10 @@ class Organization with Resource, _$Organization {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Organization.fromJson(Map<String, dynamic> json) =>
+  factory Organization.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$OrganizationFromJson(json);
 
   /// Acts like a constructor, returns a [Organization], accepts a
@@ -1694,7 +1720,7 @@ class OrganizationQualification with _$OrganizationQualification {
   factory OrganizationQualification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1749,7 +1775,10 @@ class OrganizationQualification with _$OrganizationQualification {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrganizationQualification.fromJson(Map<String, dynamic> json) =>
+  factory OrganizationQualification.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$OrganizationQualificationFromJson(json);
 
   /// Acts like a constructor, returns a [OrganizationQualification], accepts a
@@ -1876,7 +1905,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2005,7 +2034,10 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
+  factory OrganizationAffiliation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$OrganizationAffiliationFromJson(json);
 
   /// Acts like a constructor, returns a [OrganizationAffiliation], accepts a

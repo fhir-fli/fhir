@@ -752,7 +752,10 @@ class _$_Group extends _Group {
         _member = member,
         super._();
 
-  factory _$_Group.fromJson(Map<String, dynamic> json) =>
+  factory _$_Group.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_GroupFromJson(json);
 
   @override
@@ -1125,7 +1128,10 @@ abstract class _Group extends Group {
       final List<GroupMember>? member}) = _$_Group;
   _Group._() : super._();
 
-  factory _Group.fromJson(Map<String, dynamic> json) = _$_Group.fromJson;
+  factory _Group.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Group.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Group)
@@ -1719,7 +1725,10 @@ class _$_GroupCharacteristic extends _GroupCharacteristic {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
+  factory _$_GroupCharacteristic.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_GroupCharacteristicFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -1923,8 +1932,10 @@ abstract class _GroupCharacteristic extends GroupCharacteristic {
       final Period? period}) = _$_GroupCharacteristic;
   _GroupCharacteristic._() : super._();
 
-  factory _GroupCharacteristic.fromJson(Map<String, dynamic> json) =
-      _$_GroupCharacteristic.fromJson;
+  factory _GroupCharacteristic.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_GroupCharacteristic.fromJson;
 
   @override
 
@@ -2269,7 +2280,10 @@ class _$_GroupMember extends _GroupMember {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_GroupMember.fromJson(Map<String, dynamic> json) =>
+  factory _$_GroupMember.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_GroupMemberFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2421,8 +2435,10 @@ abstract class _GroupMember extends GroupMember {
       _$_GroupMember;
   _GroupMember._() : super._();
 
-  factory _GroupMember.fromJson(Map<String, dynamic> json) =
-      _$_GroupMember.fromJson;
+  factory _GroupMember.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_GroupMember.fromJson;
 
   @override
 
@@ -3431,7 +3447,10 @@ class _$_Patient extends _Patient {
         _link = link,
         super._();
 
-  factory _$_Patient.fromJson(Map<String, dynamic> json) =>
+  factory _$_Patient.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PatientFromJson(json);
 
   @override
@@ -3951,7 +3970,10 @@ abstract class _Patient extends Patient {
       final List<PatientLink>? link}) = _$_Patient;
   _Patient._() : super._();
 
-  factory _Patient.fromJson(Map<String, dynamic> json) = _$_Patient.fromJson;
+  factory _Patient.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Patient.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Patient)
@@ -4513,7 +4535,10 @@ class _$_PatientContact extends _PatientContact {
         _telecom = telecom,
         super._();
 
-  factory _$_PatientContact.fromJson(Map<String, dynamic> json) =>
+  factory _$_PatientContact.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PatientContactFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4715,8 +4740,10 @@ abstract class _PatientContact extends PatientContact {
       final Period? period}) = _$_PatientContact;
   _PatientContact._() : super._();
 
-  factory _PatientContact.fromJson(Map<String, dynamic> json) =
-      _$_PatientContact.fromJson;
+  factory _PatientContact.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_PatientContact.fromJson;
 
   @override
 
@@ -5021,7 +5048,10 @@ class _$_PatientCommunication extends _PatientCommunication {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_PatientCommunication.fromJson(Map<String, dynamic> json) =>
+  factory _$_PatientCommunication.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PatientCommunicationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5169,8 +5199,10 @@ abstract class _PatientCommunication extends PatientCommunication {
       _$_PatientCommunication;
   _PatientCommunication._() : super._();
 
-  factory _PatientCommunication.fromJson(Map<String, dynamic> json) =
-      _$_PatientCommunication.fromJson;
+  factory _PatientCommunication.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_PatientCommunication.fromJson;
 
   @override
 
@@ -5450,7 +5482,10 @@ class _$_PatientLink extends _PatientLink {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_PatientLink.fromJson(Map<String, dynamic> json) =>
+  factory _$_PatientLink.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PatientLinkFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5591,8 +5626,10 @@ abstract class _PatientLink extends PatientLink {
       @JsonKey(name: '_type') final Element? typeElement}) = _$_PatientLink;
   _PatientLink._() : super._();
 
-  factory _PatientLink.fromJson(Map<String, dynamic> json) =
-      _$_PatientLink.fromJson;
+  factory _PatientLink.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_PatientLink.fromJson;
 
   @override
 
@@ -6310,7 +6347,10 @@ class _$_Person extends _Person {
         _link = link,
         super._();
 
-  factory _$_Person.fromJson(Map<String, dynamic> json) =>
+  factory _$_Person.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PersonFromJson(json);
 
   @override
@@ -6674,7 +6714,10 @@ abstract class _Person extends Person {
       final List<PersonLink>? link}) = _$_Person;
   _Person._() : super._();
 
-  factory _Person.fromJson(Map<String, dynamic> json) = _$_Person.fromJson;
+  factory _Person.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Person.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Person)
@@ -7041,7 +7084,10 @@ class _$_PersonLink extends _PersonLink {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_PersonLink.fromJson(Map<String, dynamic> json) =>
+  factory _$_PersonLink.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PersonLinkFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -7184,8 +7230,10 @@ abstract class _PersonLink extends PersonLink {
       _$_PersonLink;
   _PersonLink._() : super._();
 
-  factory _PersonLink.fromJson(Map<String, dynamic> json) =
-      _$_PersonLink.fromJson;
+  factory _PersonLink.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_PersonLink.fromJson;
 
   @override
 
@@ -7889,7 +7937,10 @@ class _$_Practitioner extends _Practitioner {
         _communication = communication,
         super._();
 
-  factory _$_Practitioner.fromJson(Map<String, dynamic> json) =>
+  factory _$_Practitioner.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PractitionerFromJson(json);
 
   @override
@@ -8287,8 +8338,10 @@ abstract class _Practitioner extends Practitioner {
       final List<CodeableConcept>? communication}) = _$_Practitioner;
   _Practitioner._() : super._();
 
-  factory _Practitioner.fromJson(Map<String, dynamic> json) =
-      _$_Practitioner.fromJson;
+  factory _Practitioner.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Practitioner.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
@@ -8698,7 +8751,10 @@ class _$_PractitionerQualification extends _PractitionerQualification {
         _identifier = identifier,
         super._();
 
-  factory _$_PractitionerQualification.fromJson(Map<String, dynamic> json) =>
+  factory _$_PractitionerQualification.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PractitionerQualificationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -8856,8 +8912,10 @@ abstract class _PractitionerQualification extends PractitionerQualification {
       final Reference? issuer}) = _$_PractitionerQualification;
   _PractitionerQualification._() : super._();
 
-  factory _PractitionerQualification.fromJson(Map<String, dynamic> json) =
-      _$_PractitionerQualification.fromJson;
+  factory _PractitionerQualification.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_PractitionerQualification.fromJson;
 
   @override
 
@@ -9642,7 +9700,10 @@ class _$_PractitionerRole extends _PractitionerRole {
         _endpoint = endpoint,
         super._();
 
-  factory _$_PractitionerRole.fromJson(Map<String, dynamic> json) =>
+  factory _$_PractitionerRole.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PractitionerRoleFromJson(json);
 
   @override
@@ -10078,8 +10139,10 @@ abstract class _PractitionerRole extends PractitionerRole {
       final List<Reference>? endpoint}) = _$_PractitionerRole;
   _PractitionerRole._() : super._();
 
-  factory _PractitionerRole.fromJson(Map<String, dynamic> json) =
-      _$_PractitionerRole.fromJson;
+  factory _PractitionerRole.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_PractitionerRole.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
@@ -10578,8 +10641,9 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
         super._();
 
   factory _$_PractitionerRoleAvailableTime.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_PractitionerRoleAvailableTimeFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_PractitionerRoleAvailableTimeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -10797,8 +10861,10 @@ abstract class _PractitionerRoleAvailableTime
       _$_PractitionerRoleAvailableTime;
   _PractitionerRoleAvailableTime._() : super._();
 
-  factory _PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =
-      _$_PractitionerRoleAvailableTime.fromJson;
+  factory _PractitionerRoleAvailableTime.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_PractitionerRoleAvailableTime.fromJson;
 
   @override
 
@@ -11113,7 +11179,10 @@ class _$_PractitionerRoleNotAvailable extends _PractitionerRoleNotAvailable {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =>
+  factory _$_PractitionerRoleNotAvailable.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PractitionerRoleNotAvailableFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -11258,8 +11327,10 @@ abstract class _PractitionerRoleNotAvailable
       final Period? during}) = _$_PractitionerRoleNotAvailable;
   _PractitionerRoleNotAvailable._() : super._();
 
-  factory _PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =
-      _$_PractitionerRoleNotAvailable.fromJson;
+  factory _PractitionerRoleNotAvailable.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_PractitionerRoleNotAvailable.fromJson;
 
   @override
 
@@ -12016,7 +12087,10 @@ class _$_RelatedPerson extends _RelatedPerson {
         _communication = communication,
         super._();
 
-  factory _$_RelatedPerson.fromJson(Map<String, dynamic> json) =>
+  factory _$_RelatedPerson.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_RelatedPersonFromJson(json);
 
   @override
@@ -12418,8 +12492,10 @@ abstract class _RelatedPerson extends RelatedPerson {
       _$_RelatedPerson;
   _RelatedPerson._() : super._();
 
-  factory _RelatedPerson.fromJson(Map<String, dynamic> json) =
-      _$_RelatedPerson.fromJson;
+  factory _RelatedPerson.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_RelatedPerson.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
@@ -12805,7 +12881,10 @@ class _$_RelatedPersonCommunication extends _RelatedPersonCommunication {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_RelatedPersonCommunication.fromJson(Map<String, dynamic> json) =>
+  factory _$_RelatedPersonCommunication.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_RelatedPersonCommunicationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -12953,8 +13032,10 @@ abstract class _RelatedPersonCommunication extends RelatedPersonCommunication {
       _$_RelatedPersonCommunication;
   _RelatedPersonCommunication._() : super._();
 
-  factory _RelatedPersonCommunication.fromJson(Map<String, dynamic> json) =
-      _$_RelatedPersonCommunication.fromJson;
+  factory _RelatedPersonCommunication.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_RelatedPersonCommunication.fromJson;
 
   @override
 

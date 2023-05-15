@@ -576,8 +576,9 @@ class _$_AdministrableProductDefinition
         super._();
 
   factory _$_AdministrableProductDefinition.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_AdministrableProductDefinitionFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_AdministrableProductDefinitionFromJson(json);
 
   @override
   @JsonKey()
@@ -853,8 +854,10 @@ abstract class _AdministrableProductDefinition
           routeOfAdministration}) = _$_AdministrableProductDefinition;
   _AdministrableProductDefinition._() : super._();
 
-  factory _AdministrableProductDefinition.fromJson(Map<String, dynamic> json) =
-      _$_AdministrableProductDefinition.fromJson;
+  factory _AdministrableProductDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AdministrableProductDefinition.fromJson;
 
   @override
   R4ResourceType get resourceType;
@@ -1328,8 +1331,9 @@ class _$_AdministrableProductDefinitionProperty
         super._();
 
   factory _$_AdministrableProductDefinitionProperty.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_AdministrableProductDefinitionPropertyFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_AdministrableProductDefinitionPropertyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -1903,8 +1907,9 @@ class _$_AdministrableProductDefinitionRouteOfAdministration
         super._();
 
   factory _$_AdministrableProductDefinitionRouteOfAdministration.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_AdministrableProductDefinitionRouteOfAdministrationFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_AdministrableProductDefinitionRouteOfAdministrationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -2301,8 +2306,9 @@ class _$_AdministrableProductDefinitionTargetSpecies
         super._();
 
   factory _$_AdministrableProductDefinitionTargetSpecies.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_AdministrableProductDefinitionTargetSpeciesFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_AdministrableProductDefinitionTargetSpeciesFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -2705,8 +2711,9 @@ class _$_AdministrableProductDefinitionWithdrawalPeriod
         super._();
 
   factory _$_AdministrableProductDefinitionWithdrawalPeriod.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_AdministrableProductDefinitionWithdrawalPeriodFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_AdministrableProductDefinitionWithdrawalPeriodFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -3470,7 +3477,10 @@ class _$_Ingredient extends _Ingredient {
         _manufacturer = manufacturer,
         super._();
 
-  factory _$_Ingredient.fromJson(Map<String, dynamic> json) =>
+  factory _$_Ingredient.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_IngredientFromJson(json);
 
   /// [resourceType] This is a Ingredient resource;
@@ -3751,8 +3761,10 @@ abstract class _Ingredient extends Ingredient {
       required final IngredientSubstance substance}) = _$_Ingredient;
   _Ingredient._() : super._();
 
-  factory _Ingredient.fromJson(Map<String, dynamic> json) =
-      _$_Ingredient.fromJson;
+  factory _Ingredient.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Ingredient.fromJson;
 
   @override
 
@@ -4063,7 +4075,10 @@ class _$_IngredientManufacturer extends _IngredientManufacturer {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_IngredientManufacturer.fromJson(Map<String, dynamic> json) =>
+  factory _$_IngredientManufacturer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_IngredientManufacturerFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
@@ -4170,8 +4185,10 @@ abstract class _IngredientManufacturer extends IngredientManufacturer {
       required final Reference manufacturer}) = _$_IngredientManufacturer;
   _IngredientManufacturer._() : super._();
 
-  factory _IngredientManufacturer.fromJson(Map<String, dynamic> json) =
-      _$_IngredientManufacturer.fromJson;
+  factory _IngredientManufacturer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_IngredientManufacturer.fromJson;
 
   @override
 
@@ -4380,7 +4397,10 @@ class _$_IngredientSubstance extends _IngredientSubstance {
         _strength = strength,
         super._();
 
-  factory _$_IngredientSubstance.fromJson(Map<String, dynamic> json) =>
+  factory _$_IngredientSubstance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_IngredientSubstanceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
@@ -4488,8 +4508,10 @@ abstract class _IngredientSubstance extends IngredientSubstance {
       final List<IngredientStrength>? strength}) = _$_IngredientSubstance;
   _IngredientSubstance._() : super._();
 
-  factory _IngredientSubstance.fromJson(Map<String, dynamic> json) =
-      _$_IngredientSubstance.fromJson;
+  factory _IngredientSubstance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_IngredientSubstance.fromJson;
 
   @override
 
@@ -4953,7 +4975,10 @@ class _$_IngredientStrength extends _IngredientStrength {
         _referenceStrength = referenceStrength,
         super._();
 
-  factory _$_IngredientStrength.fromJson(Map<String, dynamic> json) =>
+  factory _$_IngredientStrength.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_IngredientStrengthFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
@@ -5165,8 +5190,10 @@ abstract class _IngredientStrength extends IngredientStrength {
       _$_IngredientStrength;
   _IngredientStrength._() : super._();
 
-  factory _IngredientStrength.fromJson(Map<String, dynamic> json) =
-      _$_IngredientStrength.fromJson;
+  factory _IngredientStrength.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_IngredientStrength.fromJson;
 
   @override
 
@@ -5566,7 +5593,10 @@ class _$_IngredientReferenceStrength extends _IngredientReferenceStrength {
         _country = country,
         super._();
 
-  factory _$_IngredientReferenceStrength.fromJson(Map<String, dynamic> json) =>
+  factory _$_IngredientReferenceStrength.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_IngredientReferenceStrengthFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
@@ -5721,8 +5751,10 @@ abstract class _IngredientReferenceStrength
       final List<CodeableConcept>? country}) = _$_IngredientReferenceStrength;
   _IngredientReferenceStrength._() : super._();
 
-  factory _IngredientReferenceStrength.fromJson(Map<String, dynamic> json) =
-      _$_IngredientReferenceStrength.fromJson;
+  factory _IngredientReferenceStrength.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_IngredientReferenceStrength.fromJson;
 
   @override
 
@@ -6408,7 +6440,10 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
         _population = population,
         super._();
 
-  factory _$_ClinicalUseDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClinicalUseDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClinicalUseDefinitionFromJson(json);
 
   /// [resourceType] This is a ClinicalUseDefinition resource;
@@ -6694,8 +6729,10 @@ abstract class _ClinicalUseDefinition extends ClinicalUseDefinition {
       final ClinicalUseDefinitionWarning? warning}) = _$_ClinicalUseDefinition;
   _ClinicalUseDefinition._() : super._();
 
-  factory _ClinicalUseDefinition.fromJson(Map<String, dynamic> json) =
-      _$_ClinicalUseDefinition.fromJson;
+  factory _ClinicalUseDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClinicalUseDefinition.fromJson;
 
   @override
 
@@ -7056,8 +7093,9 @@ class _$_ClinicalUseDefinitionContraindication
         super._();
 
   factory _$_ClinicalUseDefinitionContraindication.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_ClinicalUseDefinitionContraindicationFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_ClinicalUseDefinitionContraindicationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -7447,8 +7485,9 @@ class _$_ClinicalUseDefinitionOtherTherapy
         super._();
 
   factory _$_ClinicalUseDefinitionOtherTherapy.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_ClinicalUseDefinitionOtherTherapyFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_ClinicalUseDefinitionOtherTherapyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -7946,8 +7985,9 @@ class _$_ClinicalUseDefinitionIndication
         super._();
 
   factory _$_ClinicalUseDefinitionIndication.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_ClinicalUseDefinitionIndicationFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_ClinicalUseDefinitionIndicationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -8134,8 +8174,10 @@ abstract class _ClinicalUseDefinitionIndication
           otherTherapy}) = _$_ClinicalUseDefinitionIndication;
   _ClinicalUseDefinitionIndication._() : super._();
 
-  factory _ClinicalUseDefinitionIndication.fromJson(Map<String, dynamic> json) =
-      _$_ClinicalUseDefinitionIndication.fromJson;
+  factory _ClinicalUseDefinitionIndication.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClinicalUseDefinitionIndication.fromJson;
 
   @override
 
@@ -8461,8 +8503,9 @@ class _$_ClinicalUseDefinitionInteraction
         super._();
 
   factory _$_ClinicalUseDefinitionInteraction.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_ClinicalUseDefinitionInteractionFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_ClinicalUseDefinitionInteractionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -8848,8 +8891,9 @@ class _$_ClinicalUseDefinitionInteractant
         super._();
 
   factory _$_ClinicalUseDefinitionInteractant.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_ClinicalUseDefinitionInteractantFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_ClinicalUseDefinitionInteractantFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -9219,8 +9263,9 @@ class _$_ClinicalUseDefinitionUndesirableEffect
         super._();
 
   factory _$_ClinicalUseDefinitionUndesirableEffect.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_ClinicalUseDefinitionUndesirableEffectFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_ClinicalUseDefinitionUndesirableEffectFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -9581,7 +9626,10 @@ class _$_ClinicalUseDefinitionWarning extends _ClinicalUseDefinitionWarning {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClinicalUseDefinitionWarning.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClinicalUseDefinitionWarning.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClinicalUseDefinitionWarningFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
@@ -9689,8 +9737,10 @@ abstract class _ClinicalUseDefinitionWarning
       final CodeableConcept? code}) = _$_ClinicalUseDefinitionWarning;
   _ClinicalUseDefinitionWarning._() : super._();
 
-  factory _ClinicalUseDefinitionWarning.fromJson(Map<String, dynamic> json) =
-      _$_ClinicalUseDefinitionWarning.fromJson;
+  factory _ClinicalUseDefinitionWarning.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClinicalUseDefinitionWarning.fromJson;
 
   @override
 
@@ -10227,7 +10277,10 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
         _property = property,
         super._();
 
-  factory _$_ManufacturedItemDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_ManufacturedItemDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ManufacturedItemDefinitionFromJson(json);
 
   @override
@@ -10486,8 +10539,10 @@ abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
       _$_ManufacturedItemDefinition;
   _ManufacturedItemDefinition._() : super._();
 
-  factory _ManufacturedItemDefinition.fromJson(Map<String, dynamic> json) =
-      _$_ManufacturedItemDefinition.fromJson;
+  factory _ManufacturedItemDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ManufacturedItemDefinition.fromJson;
 
   @override
   R4ResourceType get resourceType;
@@ -10933,8 +10988,9 @@ class _$_ManufacturedItemDefinitionProperty
         super._();
 
   factory _$_ManufacturedItemDefinitionProperty.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_ManufacturedItemDefinitionPropertyFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_ManufacturedItemDefinitionPropertyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -12188,7 +12244,10 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
         _characteristic = characteristic,
         super._();
 
-  factory _$_MedicinalProductDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_MedicinalProductDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_MedicinalProductDefinitionFromJson(json);
 
   @override
@@ -12754,8 +12813,10 @@ abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
           characteristic}) = _$_MedicinalProductDefinition;
   _MedicinalProductDefinition._() : super._();
 
-  factory _MedicinalProductDefinition.fromJson(Map<String, dynamic> json) =
-      _$_MedicinalProductDefinition.fromJson;
+  factory _MedicinalProductDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_MedicinalProductDefinition.fromJson;
 
   @override
   R4ResourceType get resourceType;
@@ -13139,8 +13200,9 @@ class _$_MedicinalProductDefinitionContact
         super._();
 
   factory _$_MedicinalProductDefinitionContact.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_MedicinalProductDefinitionContactFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_MedicinalProductDefinitionContactFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -13528,8 +13590,9 @@ class _$_MedicinalProductDefinitionName
         super._();
 
   factory _$_MedicinalProductDefinitionName.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_MedicinalProductDefinitionNameFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_MedicinalProductDefinitionNameFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -13672,8 +13735,10 @@ abstract class _MedicinalProductDefinitionName
           countryLanguage}) = _$_MedicinalProductDefinitionName;
   _MedicinalProductDefinitionName._() : super._();
 
-  factory _MedicinalProductDefinitionName.fromJson(Map<String, dynamic> json) =
-      _$_MedicinalProductDefinitionName.fromJson;
+  factory _MedicinalProductDefinitionName.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_MedicinalProductDefinitionName.fromJson;
 
   @override
 
@@ -13933,8 +13998,9 @@ class _$_MedicinalProductDefinitionNamePart
         super._();
 
   factory _$_MedicinalProductDefinitionNamePart.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_MedicinalProductDefinitionNamePartFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_MedicinalProductDefinitionNamePartFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -14312,8 +14378,9 @@ class _$_MedicinalProductDefinitionCountryLanguage
         super._();
 
   factory _$_MedicinalProductDefinitionCountryLanguage.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_MedicinalProductDefinitionCountryLanguageFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_MedicinalProductDefinitionCountryLanguageFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -14662,8 +14729,9 @@ class _$_MedicinalProductDefinitionCrossReference
         super._();
 
   factory _$_MedicinalProductDefinitionCrossReference.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_MedicinalProductDefinitionCrossReferenceFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_MedicinalProductDefinitionCrossReferenceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -15050,8 +15118,9 @@ class _$_MedicinalProductDefinitionOperation
         super._();
 
   factory _$_MedicinalProductDefinitionOperation.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_MedicinalProductDefinitionOperationFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_MedicinalProductDefinitionOperationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -15581,8 +15650,9 @@ class _$_MedicinalProductDefinitionCharacteristic
         super._();
 
   factory _$_MedicinalProductDefinitionCharacteristic.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_MedicinalProductDefinitionCharacteristicFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_MedicinalProductDefinitionCharacteristicFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -16546,7 +16616,10 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
         _manufacturer = manufacturer,
         super._();
 
-  factory _$_PackagedProductDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_PackagedProductDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PackagedProductDefinitionFromJson(json);
 
   @override
@@ -16918,8 +16991,10 @@ abstract class _PackagedProductDefinition extends PackagedProductDefinition {
       final PackagedProductDefinitionPackage? package}) = _$_PackagedProductDefinition;
   _PackagedProductDefinition._() : super._();
 
-  factory _PackagedProductDefinition.fromJson(Map<String, dynamic> json) =
-      _$_PackagedProductDefinition.fromJson;
+  factory _PackagedProductDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_PackagedProductDefinition.fromJson;
 
   @override
   R4ResourceType get resourceType;
@@ -17254,8 +17329,9 @@ class _$_PackagedProductDefinitionLegalStatusOfSupply
         super._();
 
   factory _$_PackagedProductDefinitionLegalStatusOfSupply.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_PackagedProductDefinitionLegalStatusOfSupplyFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_PackagedProductDefinitionLegalStatusOfSupplyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -17752,8 +17828,9 @@ class _$_PackagedProductDefinitionPackage
         super._();
 
   factory _$_PackagedProductDefinitionPackage.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_PackagedProductDefinitionPackageFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_PackagedProductDefinitionPackageFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -18398,8 +18475,9 @@ class _$_PackagedProductDefinitionShelfLifeStorage
         super._();
 
   factory _$_PackagedProductDefinitionShelfLifeStorage.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_PackagedProductDefinitionShelfLifeStorageFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_PackagedProductDefinitionShelfLifeStorageFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -19036,8 +19114,9 @@ class _$_PackagedProductDefinitionProperty
         super._();
 
   factory _$_PackagedProductDefinitionProperty.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_PackagedProductDefinitionPropertyFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_PackagedProductDefinitionPropertyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -19448,8 +19527,9 @@ class _$_PackagedProductDefinitionContainedItem
         super._();
 
   factory _$_PackagedProductDefinitionContainedItem.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_PackagedProductDefinitionContainedItemFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_PackagedProductDefinitionContainedItemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -20320,7 +20400,10 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
         _basis = basis,
         super._();
 
-  factory _$_RegulatedAuthorization.fromJson(Map<String, dynamic> json) =>
+  factory _$_RegulatedAuthorization.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_RegulatedAuthorizationFromJson(json);
 
   /// [resourceType] This is a RegulatedAuthorization resource;
@@ -20641,8 +20724,10 @@ abstract class _RegulatedAuthorization extends RegulatedAuthorization {
       _$_RegulatedAuthorization;
   _RegulatedAuthorization._() : super._();
 
-  factory _RegulatedAuthorization.fromJson(Map<String, dynamic> json) =
-      _$_RegulatedAuthorization.fromJson;
+  factory _RegulatedAuthorization.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_RegulatedAuthorization.fromJson;
 
   @override
 
@@ -21092,7 +21177,10 @@ class _$_RegulatedAuthorizationCase extends _RegulatedAuthorizationCase {
         _application = application,
         super._();
 
-  factory _$_RegulatedAuthorizationCase.fromJson(Map<String, dynamic> json) =>
+  factory _$_RegulatedAuthorizationCase.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_RegulatedAuthorizationCaseFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
@@ -21242,8 +21330,10 @@ abstract class _RegulatedAuthorizationCase extends RegulatedAuthorizationCase {
       _$_RegulatedAuthorizationCase;
   _RegulatedAuthorizationCase._() : super._();
 
-  factory _RegulatedAuthorizationCase.fromJson(Map<String, dynamic> json) =
-      _$_RegulatedAuthorizationCase.fromJson;
+  factory _RegulatedAuthorizationCase.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_RegulatedAuthorizationCase.fromJson;
 
   @override
 
@@ -22066,7 +22156,10 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
         _relationship = relationship,
         super._();
 
-  factory _$_SubstanceDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_SubstanceDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SubstanceDefinitionFromJson(json);
 
   /// [resourceType] This is a SubstanceDefinition resource;
@@ -22505,8 +22598,10 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
       _$_SubstanceDefinition;
   _SubstanceDefinition._() : super._();
 
-  factory _SubstanceDefinition.fromJson(Map<String, dynamic> json) =
-      _$_SubstanceDefinition.fromJson;
+  factory _SubstanceDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SubstanceDefinition.fromJson;
 
   @override
 
@@ -23114,7 +23209,10 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_SubstanceDefinitionMoiety.fromJson(Map<String, dynamic> json) =>
+  factory _$_SubstanceDefinitionMoiety.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SubstanceDefinitionMoietyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
@@ -23302,8 +23400,10 @@ abstract class _SubstanceDefinitionMoiety extends SubstanceDefinitionMoiety {
       final CodeableConcept? measurementType}) = _$_SubstanceDefinitionMoiety;
   _SubstanceDefinitionMoiety._() : super._();
 
-  factory _SubstanceDefinitionMoiety.fromJson(Map<String, dynamic> json) =
-      _$_SubstanceDefinitionMoiety.fromJson;
+  factory _SubstanceDefinitionMoiety.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SubstanceDefinitionMoiety.fromJson;
 
   @override
 
@@ -23732,7 +23832,10 @@ class _$_SubstanceDefinitionProperty extends _SubstanceDefinitionProperty {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_SubstanceDefinitionProperty.fromJson(Map<String, dynamic> json) =>
+  factory _$_SubstanceDefinitionProperty.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SubstanceDefinitionPropertyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
@@ -23883,8 +23986,10 @@ abstract class _SubstanceDefinitionProperty
       final Attachment? valueAttachment}) = _$_SubstanceDefinitionProperty;
   _SubstanceDefinitionProperty._() : super._();
 
-  factory _SubstanceDefinitionProperty.fromJson(Map<String, dynamic> json) =
-      _$_SubstanceDefinitionProperty.fromJson;
+  factory _SubstanceDefinitionProperty.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SubstanceDefinitionProperty.fromJson;
 
   @override
 
@@ -24170,8 +24275,9 @@ class _$_SubstanceDefinitionMolecularWeight
         super._();
 
   factory _$_SubstanceDefinitionMolecularWeight.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_SubstanceDefinitionMolecularWeightFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_SubstanceDefinitionMolecularWeightFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -24711,7 +24817,10 @@ class _$_SubstanceDefinitionStructure extends _SubstanceDefinitionStructure {
         _representation = representation,
         super._();
 
-  factory _$_SubstanceDefinitionStructure.fromJson(Map<String, dynamic> json) =>
+  factory _$_SubstanceDefinitionStructure.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SubstanceDefinitionStructureFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
@@ -24913,8 +25022,10 @@ abstract class _SubstanceDefinitionStructure
       _$_SubstanceDefinitionStructure;
   _SubstanceDefinitionStructure._() : super._();
 
-  factory _SubstanceDefinitionStructure.fromJson(Map<String, dynamic> json) =
-      _$_SubstanceDefinitionStructure.fromJson;
+  factory _SubstanceDefinitionStructure.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SubstanceDefinitionStructure.fromJson;
 
   @override
 
@@ -25257,8 +25368,9 @@ class _$_SubstanceDefinitionRepresentation
         super._();
 
   factory _$_SubstanceDefinitionRepresentation.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_SubstanceDefinitionRepresentationFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_SubstanceDefinitionRepresentationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -25707,7 +25819,10 @@ class _$_SubstanceDefinitionCode extends _SubstanceDefinitionCode {
         _source = source,
         super._();
 
-  factory _$_SubstanceDefinitionCode.fromJson(Map<String, dynamic> json) =>
+  factory _$_SubstanceDefinitionCode.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SubstanceDefinitionCodeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
@@ -25856,8 +25971,10 @@ abstract class _SubstanceDefinitionCode extends SubstanceDefinitionCode {
       final List<Reference>? source}) = _$_SubstanceDefinitionCode;
   _SubstanceDefinitionCode._() : super._();
 
-  factory _SubstanceDefinitionCode.fromJson(Map<String, dynamic> json) =
-      _$_SubstanceDefinitionCode.fromJson;
+  factory _SubstanceDefinitionCode.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SubstanceDefinitionCode.fromJson;
 
   @override
 
@@ -26318,7 +26435,10 @@ class _$_SubstanceDefinitionName extends _SubstanceDefinitionName {
         _source = source,
         super._();
 
-  factory _$_SubstanceDefinitionName.fromJson(Map<String, dynamic> json) =>
+  factory _$_SubstanceDefinitionName.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SubstanceDefinitionNameFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
@@ -26565,8 +26685,10 @@ abstract class _SubstanceDefinitionName extends SubstanceDefinitionName {
       final List<Reference>? source}) = _$_SubstanceDefinitionName;
   _SubstanceDefinitionName._() : super._();
 
-  factory _SubstanceDefinitionName.fromJson(Map<String, dynamic> json) =
-      _$_SubstanceDefinitionName.fromJson;
+  factory _SubstanceDefinitionName.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SubstanceDefinitionName.fromJson;
 
   @override
 
@@ -26890,7 +27012,10 @@ class _$_SubstanceDefinitionOfficial extends _SubstanceDefinitionOfficial {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_SubstanceDefinitionOfficial.fromJson(Map<String, dynamic> json) =>
+  factory _$_SubstanceDefinitionOfficial.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SubstanceDefinitionOfficialFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
@@ -27008,8 +27133,10 @@ abstract class _SubstanceDefinitionOfficial
       _$_SubstanceDefinitionOfficial;
   _SubstanceDefinitionOfficial._() : super._();
 
-  factory _SubstanceDefinitionOfficial.fromJson(Map<String, dynamic> json) =
-      _$_SubstanceDefinitionOfficial.fromJson;
+  factory _SubstanceDefinitionOfficial.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SubstanceDefinitionOfficial.fromJson;
 
   @override
 
@@ -27522,8 +27649,9 @@ class _$_SubstanceDefinitionRelationship
         super._();
 
   factory _$_SubstanceDefinitionRelationship.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_SubstanceDefinitionRelationshipFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_SubstanceDefinitionRelationshipFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override
@@ -27718,8 +27846,10 @@ abstract class _SubstanceDefinitionRelationship
       final List<Reference>? source}) = _$_SubstanceDefinitionRelationship;
   _SubstanceDefinitionRelationship._() : super._();
 
-  factory _SubstanceDefinitionRelationship.fromJson(Map<String, dynamic> json) =
-      _$_SubstanceDefinitionRelationship.fromJson;
+  factory _SubstanceDefinitionRelationship.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SubstanceDefinitionRelationship.fromJson;
 
   @override
 
@@ -28075,8 +28205,9 @@ class _$_SubstanceDefinitionSourceMaterial
         super._();
 
   factory _$_SubstanceDefinitionSourceMaterial.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_SubstanceDefinitionSourceMaterialFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_SubstanceDefinitionSourceMaterialFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
   @override

@@ -1,10 +1,15 @@
-// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+// ignore_for_file: invalid_annotation_target
+// ignore_for_file: sort_unnamed_constructors_first
+// ignore_for_file: sort_constructors_first
+// ignore_for_file: prefer_mixin
+// ignore_file_file: avoid_unused_constructor_parameters
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -74,7 +79,10 @@ class Patient with Resource, _$Patient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Patient.fromJson(Map<String, dynamic> json) =>
+  factory Patient.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$PatientFromJson(json);
 
   /// Acts like a constructor, returns a [Patient], accepts a
@@ -122,7 +130,10 @@ class PatientContact with _$PatientContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PatientContact.fromJson(Map<String, dynamic> json) =>
+  factory PatientContact.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$PatientContactFromJson(json);
 
   /// Acts like a constructor, returns a [PatientContact], accepts a
@@ -165,7 +176,10 @@ class PatientAnimal with _$PatientAnimal {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PatientAnimal.fromJson(Map<String, dynamic> json) =>
+  factory PatientAnimal.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$PatientAnimalFromJson(json);
 
   /// Acts like a constructor, returns a [PatientAnimal], accepts a
@@ -208,7 +222,10 @@ class PatientCommunication with _$PatientCommunication {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
+  factory PatientCommunication.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$PatientCommunicationFromJson(json);
 
   /// Acts like a constructor, returns a [PatientCommunication], accepts a
@@ -251,7 +268,10 @@ class PatientLink with _$PatientLink {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PatientLink.fromJson(Map<String, dynamic> json) =>
+  factory PatientLink.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$PatientLinkFromJson(json);
 
   /// Acts like a constructor, returns a [PatientLink], accepts a
@@ -313,7 +333,10 @@ class Practitioner with Resource, _$Practitioner {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Practitioner.fromJson(Map<String, dynamic> json) =>
+  factory Practitioner.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$PractitionerFromJson(json);
 
   /// Acts like a constructor, returns a [Practitioner], accepts a
@@ -360,7 +383,10 @@ class PractitionerPractitionerRole with _$PractitionerPractitionerRole {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PractitionerPractitionerRole.fromJson(Map<String, dynamic> json) =>
+  factory PractitionerPractitionerRole.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$PractitionerPractitionerRoleFromJson(json);
 
   /// Acts like a constructor, returns a [PractitionerPractitionerRole], accepts a
@@ -404,7 +430,10 @@ class PractitionerQualification with _$PractitionerQualification {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
+  factory PractitionerQualification.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$PractitionerQualificationFromJson(json);
 
   /// Acts like a constructor, returns a [PractitionerQualification], accepts a
@@ -466,7 +495,10 @@ class RelatedPerson with Resource, _$RelatedPerson {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
+  factory RelatedPerson.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$RelatedPersonFromJson(json);
 
   /// Acts like a constructor, returns a [RelatedPerson], accepts a

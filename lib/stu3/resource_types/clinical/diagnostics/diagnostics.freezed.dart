@@ -520,7 +520,10 @@ class _$_BodySite extends _BodySite {
         _image = image,
         super._();
 
-  factory _$_BodySite.fromJson(Map<String, dynamic> json) =>
+  factory _$_BodySite.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_BodySiteFromJson(json);
 
   @override
@@ -736,7 +739,10 @@ abstract class _BodySite extends BodySite {
       required final Reference patient}) = _$_BodySite;
   _BodySite._() : super._();
 
-  factory _BodySite.fromJson(Map<String, dynamic> json) = _$_BodySite.fromJson;
+  factory _BodySite.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_BodySite.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
@@ -1572,7 +1578,10 @@ class _$_DiagnosticReport extends _DiagnosticReport {
         _presentedForm = presentedForm,
         super._();
 
-  factory _$_DiagnosticReport.fromJson(Map<String, dynamic> json) =>
+  factory _$_DiagnosticReport.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DiagnosticReportFromJson(json);
 
   @override
@@ -1913,8 +1922,10 @@ abstract class _DiagnosticReport extends DiagnosticReport {
       final List<Attachment>? presentedForm}) = _$_DiagnosticReport;
   _DiagnosticReport._() : super._();
 
-  factory _DiagnosticReport.fromJson(Map<String, dynamic> json) =
-      _$_DiagnosticReport.fromJson;
+  factory _DiagnosticReport.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DiagnosticReport.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
@@ -2126,7 +2137,10 @@ class __$$_DiagnosticReportPerformerCopyWithImpl<$Res>
 class _$_DiagnosticReportPerformer extends _DiagnosticReportPerformer {
   _$_DiagnosticReportPerformer({this.role, required this.actor}) : super._();
 
-  factory _$_DiagnosticReportPerformer.fromJson(Map<String, dynamic> json) =>
+  factory _$_DiagnosticReportPerformer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DiagnosticReportPerformerFromJson(json);
 
   @override
@@ -2173,8 +2187,10 @@ abstract class _DiagnosticReportPerformer extends DiagnosticReportPerformer {
       required final Reference actor}) = _$_DiagnosticReportPerformer;
   _DiagnosticReportPerformer._() : super._();
 
-  factory _DiagnosticReportPerformer.fromJson(Map<String, dynamic> json) =
-      _$_DiagnosticReportPerformer.fromJson;
+  factory _DiagnosticReportPerformer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DiagnosticReportPerformer.fromJson;
 
   @override
   CodeableConcept? get role;
@@ -2334,7 +2350,10 @@ class _$_DiagnosticReportImage extends _DiagnosticReportImage {
       required this.link})
       : super._();
 
-  factory _$_DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
+  factory _$_DiagnosticReportImage.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DiagnosticReportImageFromJson(json);
 
   @override
@@ -2387,8 +2406,10 @@ abstract class _DiagnosticReportImage extends DiagnosticReportImage {
       required final Reference link}) = _$_DiagnosticReportImage;
   _DiagnosticReportImage._() : super._();
 
-  factory _DiagnosticReportImage.fromJson(Map<String, dynamic> json) =
-      _$_DiagnosticReportImage.fromJson;
+  factory _DiagnosticReportImage.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DiagnosticReportImage.fromJson;
 
   @override
   String? get comment;
@@ -2910,7 +2931,10 @@ class _$_ImagingManifest extends _ImagingManifest {
         _study = study,
         super._();
 
-  factory _$_ImagingManifest.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImagingManifest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ImagingManifestFromJson(json);
 
   @override
@@ -3102,8 +3126,10 @@ abstract class _ImagingManifest extends ImagingManifest {
       required final List<ImagingManifestStudy> study}) = _$_ImagingManifest;
   _ImagingManifest._() : super._();
 
-  factory _ImagingManifest.fromJson(Map<String, dynamic> json) =
-      _$_ImagingManifest.fromJson;
+  factory _ImagingManifest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ImagingManifest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
@@ -3337,7 +3363,10 @@ class _$_ImagingManifestStudy extends _ImagingManifestStudy {
         _series = series,
         super._();
 
-  factory _$_ImagingManifestStudy.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImagingManifestStudy.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ImagingManifestStudyFromJson(json);
 
   @override
@@ -3419,8 +3448,10 @@ abstract class _ImagingManifestStudy extends ImagingManifestStudy {
       _$_ImagingManifestStudy;
   _ImagingManifestStudy._() : super._();
 
-  factory _ImagingManifestStudy.fromJson(Map<String, dynamic> json) =
-      _$_ImagingManifestStudy.fromJson;
+  factory _ImagingManifestStudy.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ImagingManifestStudy.fromJson;
 
   @override
   FhirId? get uid;
@@ -3593,7 +3624,10 @@ class _$_ImagingManifestSeries extends _ImagingManifestSeries {
         _instance = instance,
         super._();
 
-  factory _$_ImagingManifestSeries.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImagingManifestSeries.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ImagingManifestSeriesFromJson(json);
 
   @override
@@ -3669,8 +3703,10 @@ abstract class _ImagingManifestSeries extends ImagingManifestSeries {
       _$_ImagingManifestSeries;
   _ImagingManifestSeries._() : super._();
 
-  factory _ImagingManifestSeries.fromJson(Map<String, dynamic> json) =
-      _$_ImagingManifestSeries.fromJson;
+  factory _ImagingManifestSeries.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ImagingManifestSeries.fromJson;
 
   @override
   FhirId? get uid;
@@ -3855,7 +3891,10 @@ class _$_ImagingManifestInstance extends _ImagingManifestInstance {
       @JsonKey(name: '_uid') this.uidElement})
       : super._();
 
-  factory _$_ImagingManifestInstance.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImagingManifestInstance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ImagingManifestInstanceFromJson(json);
 
   @override
@@ -3918,8 +3957,10 @@ abstract class _ImagingManifestInstance extends ImagingManifestInstance {
       _$_ImagingManifestInstance;
   _ImagingManifestInstance._() : super._();
 
-  factory _ImagingManifestInstance.fromJson(Map<String, dynamic> json) =
-      _$_ImagingManifestInstance.fromJson;
+  factory _ImagingManifestInstance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ImagingManifestInstance.fromJson;
 
   @override
   String? get sopClass;
@@ -4797,7 +4838,10 @@ class _$_ImagingStudy extends _ImagingStudy {
         _series = series,
         super._();
 
-  factory _$_ImagingStudy.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImagingStudy.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ImagingStudyFromJson(json);
 
   @override
@@ -5154,8 +5198,10 @@ abstract class _ImagingStudy extends ImagingStudy {
       final List<ImagingStudySeries>? series}) = _$_ImagingStudy;
   _ImagingStudy._() : super._();
 
-  factory _ImagingStudy.fromJson(Map<String, dynamic> json) =
-      _$_ImagingStudy.fromJson;
+  factory _ImagingStudy.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ImagingStudy.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
@@ -5717,7 +5763,10 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
         _instance = instance,
         super._();
 
-  factory _$_ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImagingStudySeries.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ImagingStudySeriesFromJson(json);
 
   @override
@@ -5896,8 +5945,10 @@ abstract class _ImagingStudySeries extends ImagingStudySeries {
       final List<ImagingStudyInstance>? instance}) = _$_ImagingStudySeries;
   _ImagingStudySeries._() : super._();
 
-  factory _ImagingStudySeries.fromJson(Map<String, dynamic> json) =
-      _$_ImagingStudySeries.fromJson;
+  factory _ImagingStudySeries.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ImagingStudySeries.fromJson;
 
   @override
   FhirId? get uid;
@@ -6201,7 +6252,10 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
       @JsonKey(name: '_title') this.titleElement})
       : super._();
 
-  factory _$_ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
+  factory _$_ImagingStudyInstance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ImagingStudyInstanceFromJson(json);
 
   @override
@@ -6283,8 +6337,10 @@ abstract class _ImagingStudyInstance extends ImagingStudyInstance {
       _$_ImagingStudyInstance;
   _ImagingStudyInstance._() : super._();
 
-  factory _ImagingStudyInstance.fromJson(Map<String, dynamic> json) =
-      _$_ImagingStudyInstance.fromJson;
+  factory _ImagingStudyInstance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ImagingStudyInstance.fromJson;
 
   @override
   FhirId? get uid;
@@ -7601,7 +7657,10 @@ class _$_Observation extends _Observation {
         _component = component,
         super._();
 
-  factory _$_Observation.fromJson(Map<String, dynamic> json) =>
+  factory _$_Observation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ObservationFromJson(json);
 
   @override
@@ -8037,8 +8096,10 @@ abstract class _Observation extends Observation {
       final List<ObservationComponent>? component}) = _$_Observation;
   _Observation._() : super._();
 
-  factory _Observation.fromJson(Map<String, dynamic> json) =
-      _$_Observation.fromJson;
+  factory _Observation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Observation.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
@@ -8418,7 +8479,10 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
       : _appliesTo = appliesTo,
         super._();
 
-  factory _$_ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
+  factory _$_ObservationReferenceRange.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ObservationReferenceRangeFromJson(json);
 
   @override
@@ -8498,8 +8562,10 @@ abstract class _ObservationReferenceRange extends ObservationReferenceRange {
       _$_ObservationReferenceRange;
   _ObservationReferenceRange._() : super._();
 
-  factory _ObservationReferenceRange.fromJson(Map<String, dynamic> json) =
-      _$_ObservationReferenceRange.fromJson;
+  factory _ObservationReferenceRange.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ObservationReferenceRange.fromJson;
 
   @override
   Quantity? get low;
@@ -8668,7 +8734,10 @@ class _$_ObservationRelated extends _ObservationRelated {
       required this.target})
       : super._();
 
-  factory _$_ObservationRelated.fromJson(Map<String, dynamic> json) =>
+  factory _$_ObservationRelated.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ObservationRelatedFromJson(json);
 
   @override
@@ -8721,8 +8790,10 @@ abstract class _ObservationRelated extends ObservationRelated {
       required final Reference target}) = _$_ObservationRelated;
   _ObservationRelated._() : super._();
 
-  factory _ObservationRelated.fromJson(Map<String, dynamic> json) =
-      _$_ObservationRelated.fromJson;
+  factory _ObservationRelated.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ObservationRelated.fromJson;
 
   @override
   ObservationRelatedType? get type;
@@ -9251,7 +9322,10 @@ class _$_ObservationComponent extends _ObservationComponent {
       : _referenceRange = referenceRange,
         super._();
 
-  factory _$_ObservationComponent.fromJson(Map<String, dynamic> json) =>
+  factory _$_ObservationComponent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ObservationComponentFromJson(json);
 
   @override
@@ -9403,8 +9477,10 @@ abstract class _ObservationComponent extends ObservationComponent {
       _$_ObservationComponent;
   _ObservationComponent._() : super._();
 
-  factory _ObservationComponent.fromJson(Map<String, dynamic> json) =
-      _$_ObservationComponent.fromJson;
+  factory _ObservationComponent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ObservationComponent.fromJson;
 
   @override
   CodeableConcept get code;
@@ -10080,7 +10156,10 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
         _item = item,
         super._();
 
-  factory _$_QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_QuestionnaireResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_QuestionnaireResponseFromJson(json);
 
   @override
@@ -10316,8 +10395,10 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       final List<QuestionnaireResponseItem>? item}) = _$_QuestionnaireResponse;
   _QuestionnaireResponse._() : super._();
 
-  factory _QuestionnaireResponse.fromJson(Map<String, dynamic> json) =
-      _$_QuestionnaireResponse.fromJson;
+  factory _QuestionnaireResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_QuestionnaireResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
@@ -10655,7 +10736,10 @@ class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
         _item = item,
         super._();
 
-  factory _$_QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
+  factory _$_QuestionnaireResponseItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_QuestionnaireResponseItemFromJson(json);
 
   @override
@@ -10763,8 +10847,10 @@ abstract class _QuestionnaireResponseItem extends QuestionnaireResponseItem {
       _$_QuestionnaireResponseItem;
   _QuestionnaireResponseItem._() : super._();
 
-  factory _QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =
-      _$_QuestionnaireResponseItem.fromJson;
+  factory _QuestionnaireResponseItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_QuestionnaireResponseItem.fromJson;
 
   @override
   String? get linkId;
@@ -11361,7 +11447,10 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
       : _item = item,
         super._();
 
-  factory _$_QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
+  factory _$_QuestionnaireResponseAnswer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_QuestionnaireResponseAnswerFromJson(json);
 
   @override
@@ -11544,8 +11633,10 @@ abstract class _QuestionnaireResponseAnswer
       _$_QuestionnaireResponseAnswer;
   _QuestionnaireResponseAnswer._() : super._();
 
-  factory _QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =
-      _$_QuestionnaireResponseAnswer.fromJson;
+  factory _QuestionnaireResponseAnswer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_QuestionnaireResponseAnswer.fromJson;
 
   @override
   FhirBoolean? get valueBoolean;
@@ -12354,7 +12445,10 @@ class _$_Sequence extends _Sequence {
         _pointer = pointer,
         super._();
 
-  factory _$_Sequence.fromJson(Map<String, dynamic> json) =>
+  factory _$_Sequence.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SequenceFromJson(json);
 
   @override
@@ -12648,7 +12742,10 @@ abstract class _Sequence extends Sequence {
       final List<Reference>? pointer}) = _$_Sequence;
   _Sequence._() : super._();
 
-  factory _Sequence.fromJson(Map<String, dynamic> json) = _$_Sequence.fromJson;
+  factory _Sequence.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Sequence.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
@@ -13110,7 +13207,10 @@ class _$_SequenceReferenceSeq extends _SequenceReferenceSeq {
       @JsonKey(name: '_windowEnd') this.windowEndElement})
       : super._();
 
-  factory _$_SequenceReferenceSeq.fromJson(Map<String, dynamic> json) =>
+  factory _$_SequenceReferenceSeq.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SequenceReferenceSeqFromJson(json);
 
   @override
@@ -13238,8 +13338,10 @@ abstract class _SequenceReferenceSeq extends SequenceReferenceSeq {
           final Element? windowEndElement}) = _$_SequenceReferenceSeq;
   _SequenceReferenceSeq._() : super._();
 
-  factory _SequenceReferenceSeq.fromJson(Map<String, dynamic> json) =
-      _$_SequenceReferenceSeq.fromJson;
+  factory _SequenceReferenceSeq.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SequenceReferenceSeq.fromJson;
 
   @override
   CodeableConcept? get chromosome;
@@ -13604,7 +13706,10 @@ class _$_SequenceVariant extends _SequenceVariant {
       this.variantPointer})
       : super._();
 
-  factory _$_SequenceVariant.fromJson(Map<String, dynamic> json) =>
+  factory _$_SequenceVariant.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SequenceVariantFromJson(json);
 
   @override
@@ -13711,8 +13816,10 @@ abstract class _SequenceVariant extends SequenceVariant {
       final Reference? variantPointer}) = _$_SequenceVariant;
   _SequenceVariant._() : super._();
 
-  factory _SequenceVariant.fromJson(Map<String, dynamic> json) =
-      _$_SequenceVariant.fromJson;
+  factory _SequenceVariant.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SequenceVariant.fromJson;
 
   @override
   FhirDecimal? get start;
@@ -14395,7 +14502,10 @@ class _$_SequenceQuality extends _SequenceQuality {
       @JsonKey(name: '_fScore') this.fScoreElement})
       : super._();
 
-  factory _$_SequenceQuality.fromJson(Map<String, dynamic> json) =>
+  factory _$_SequenceQuality.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SequenceQualityFromJson(json);
 
   @override
@@ -14585,8 +14695,10 @@ abstract class _SequenceQuality extends SequenceQuality {
       _$_SequenceQuality;
   _SequenceQuality._() : super._();
 
-  factory _SequenceQuality.fromJson(Map<String, dynamic> json) =
-      _$_SequenceQuality.fromJson;
+  factory _SequenceQuality.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SequenceQuality.fromJson;
 
   @override
   SequenceQualityType? get type;
@@ -14996,7 +15108,10 @@ class _$_SequenceRepository extends _SequenceRepository {
       @JsonKey(name: '_readsetId') this.readsetIdElement})
       : super._();
 
-  factory _$_SequenceRepository.fromJson(Map<String, dynamic> json) =>
+  factory _$_SequenceRepository.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SequenceRepositoryFromJson(json);
 
   @override
@@ -15112,8 +15227,10 @@ abstract class _SequenceRepository extends SequenceRepository {
       _$_SequenceRepository;
   _SequenceRepository._() : super._();
 
-  factory _SequenceRepository.fromJson(Map<String, dynamic> json) =
-      _$_SequenceRepository.fromJson;
+  factory _SequenceRepository.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SequenceRepository.fromJson;
 
   @override
   SequenceRepositoryType? get type;
@@ -15761,7 +15878,10 @@ class _$_Specimen extends _Specimen {
         _note = note,
         super._();
 
-  factory _$_Specimen.fromJson(Map<String, dynamic> json) =>
+  factory _$_Specimen.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SpecimenFromJson(json);
 
   @override
@@ -16028,7 +16148,10 @@ abstract class _Specimen extends Specimen {
       final List<Annotation>? note}) = _$_Specimen;
   _Specimen._() : super._();
 
-  factory _Specimen.fromJson(Map<String, dynamic> json) = _$_Specimen.fromJson;
+  factory _Specimen.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Specimen.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
@@ -16359,7 +16482,10 @@ class _$_SpecimenCollection extends _SpecimenCollection {
       this.bodySite})
       : super._();
 
-  factory _$_SpecimenCollection.fromJson(Map<String, dynamic> json) =>
+  factory _$_SpecimenCollection.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SpecimenCollectionFromJson(json);
 
   @override
@@ -16436,8 +16562,10 @@ abstract class _SpecimenCollection extends SpecimenCollection {
       final CodeableConcept? bodySite}) = _$_SpecimenCollection;
   _SpecimenCollection._() : super._();
 
-  factory _SpecimenCollection.fromJson(Map<String, dynamic> json) =
-      _$_SpecimenCollection.fromJson;
+  factory _SpecimenCollection.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SpecimenCollection.fromJson;
 
   @override
   Reference? get collector;
@@ -16698,7 +16826,10 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
       : _additive = additive,
         super._();
 
-  factory _$_SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
+  factory _$_SpecimenProcessing.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SpecimenProcessingFromJson(json);
 
   @override
@@ -16789,8 +16920,10 @@ abstract class _SpecimenProcessing extends SpecimenProcessing {
       final Period? timePeriod}) = _$_SpecimenProcessing;
   _SpecimenProcessing._() : super._();
 
-  factory _SpecimenProcessing.fromJson(Map<String, dynamic> json) =
-      _$_SpecimenProcessing.fromJson;
+  factory _SpecimenProcessing.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SpecimenProcessing.fromJson;
 
   @override
   String? get description;
@@ -17097,7 +17230,10 @@ class _$_SpecimenContainer extends _SpecimenContainer {
       : _identifier = identifier,
         super._();
 
-  factory _$_SpecimenContainer.fromJson(Map<String, dynamic> json) =>
+  factory _$_SpecimenContainer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SpecimenContainerFromJson(json);
 
   final List<Identifier>? _identifier;
@@ -17194,8 +17330,10 @@ abstract class _SpecimenContainer extends SpecimenContainer {
       final Reference? additiveReference}) = _$_SpecimenContainer;
   _SpecimenContainer._() : super._();
 
-  factory _SpecimenContainer.fromJson(Map<String, dynamic> json) =
-      _$_SpecimenContainer.fromJson;
+  factory _SpecimenContainer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SpecimenContainer.fromJson;
 
   @override
   List<Identifier>? get identifier;

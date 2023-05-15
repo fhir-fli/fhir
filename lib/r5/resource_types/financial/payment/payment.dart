@@ -1,10 +1,15 @@
-// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+// ignore_for_file: invalid_annotation_target
+// ignore_for_file: sort_unnamed_constructors_first
+// ignore_for_file: sort_constructors_first
+// ignore_for_file: prefer_mixin
+// ignore_file_file: avoid_unused_constructor_parameters
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -121,7 +126,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -250,7 +255,10 @@ class PaymentNotice with Resource, _$PaymentNotice {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
+  factory PaymentNotice.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$PaymentNoticeFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentNotice], accepts a
@@ -439,7 +447,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -662,7 +670,10 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
+  factory PaymentReconciliation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$PaymentReconciliationFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliation], accepts a
@@ -768,7 +779,7 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
   factory PaymentReconciliationAllocation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -884,7 +895,10 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliationAllocation.fromJson(Map<String, dynamic> json) =>
+  factory PaymentReconciliationAllocation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$PaymentReconciliationAllocationFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliationAllocation],
@@ -947,7 +961,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   factory PaymentReconciliationProcessNote({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1003,7 +1017,9 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliationProcessNote.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$PaymentReconciliationProcessNoteFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliationProcessNote],

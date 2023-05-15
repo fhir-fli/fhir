@@ -790,7 +790,10 @@ class _$_PaymentNotice extends _PaymentNotice {
         _identifier = identifier,
         super._();
 
-  factory _$_PaymentNotice.fromJson(Map<String, dynamic> json) =>
+  factory _$_PaymentNotice.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PaymentNoticeFromJson(json);
 
   @override
@@ -1135,8 +1138,10 @@ abstract class _PaymentNotice extends PaymentNotice {
       final CodeableConcept? paymentStatus}) = _$_PaymentNotice;
   _PaymentNotice._() : super._();
 
-  factory _PaymentNotice.fromJson(Map<String, dynamic> json) =
-      _$_PaymentNotice.fromJson;
+  factory _PaymentNotice.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_PaymentNotice.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
@@ -2186,7 +2191,10 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
         _processNote = processNote,
         super._();
 
-  factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
+  factory _$_PaymentReconciliation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PaymentReconciliationFromJson(json);
 
   @override
@@ -2601,8 +2609,10 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
       _$_PaymentReconciliation;
   _PaymentReconciliation._() : super._();
 
-  factory _PaymentReconciliation.fromJson(Map<String, dynamic> json) =
-      _$_PaymentReconciliation.fromJson;
+  factory _PaymentReconciliation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_PaymentReconciliation.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
@@ -3265,7 +3275,10 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
+  factory _$_PaymentReconciliationDetail.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PaymentReconciliationDetailFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3475,8 +3488,10 @@ abstract class _PaymentReconciliationDetail
       final Money? amount}) = _$_PaymentReconciliationDetail;
   _PaymentReconciliationDetail._() : super._();
 
-  factory _PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =
-      _$_PaymentReconciliationDetail.fromJson;
+  factory _PaymentReconciliationDetail.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_PaymentReconciliationDetail.fromJson;
 
   @override
 
@@ -3820,8 +3835,9 @@ class _$_PaymentReconciliationProcessNote
         super._();
 
   factory _$_PaymentReconciliationProcessNote.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_PaymentReconciliationProcessNoteFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_PaymentReconciliationProcessNoteFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.

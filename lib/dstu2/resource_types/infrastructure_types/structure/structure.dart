@@ -1,10 +1,15 @@
-// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+// ignore_for_file: invalid_annotation_target
+// ignore_for_file: sort_unnamed_constructors_first
+// ignore_for_file: sort_constructors_first
+// ignore_for_file: prefer_mixin
+// ignore_file_file: avoid_unused_constructor_parameters
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -61,7 +66,11 @@ class Media with Resource, _$Media {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
+  factory Media.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
+      _$MediaFromJson(json);
 
   /// Acts like a constructor, returns a [Media], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -106,7 +115,11 @@ class Binary with Resource, _$Binary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
+  factory Binary.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
+      _$BinaryFromJson(json);
 
   /// Acts like a constructor, returns a [Binary], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -155,7 +168,11 @@ class Bundle with Resource, _$Bundle {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
+  factory Bundle.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
+      _$BundleFromJson(json);
 
   /// Acts like a constructor, returns a [Bundle], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -199,7 +216,10 @@ class BundleLink with _$BundleLink {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleLink.fromJson(Map<String, dynamic> json) =>
+  factory BundleLink.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$BundleLinkFromJson(json);
 
   /// Acts like a constructor, returns a [BundleLink], accepts a
@@ -290,7 +310,10 @@ class BundleEntry with _$BundleEntry {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleEntry.fromJson(Map<String, dynamic> json) =>
+  factory BundleEntry.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$BundleEntryFromJson(json);
 
   /// Acts like a constructor, returns a [BundleEntry], accepts a
@@ -335,7 +358,10 @@ class BundleEntrySearch with _$BundleEntrySearch {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleEntrySearch.fromJson(Map<String, dynamic> json) =>
+  factory BundleEntrySearch.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$BundleEntrySearchFromJson(json);
 
   /// Acts like a constructor, returns a [BundleEntrySearch], accepts a
@@ -389,7 +415,10 @@ class BundleEntryRequest with _$BundleEntryRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleEntryRequest.fromJson(Map<String, dynamic> json) =>
+  factory BundleEntryRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$BundleEntryRequestFromJson(json);
 
   /// Acts like a constructor, returns a [BundleEntryRequest], accepts a
@@ -438,7 +467,10 @@ class BundleEntryResponse with _$BundleEntryResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BundleEntryResponse.fromJson(Map<String, dynamic> json) =>
+  factory BundleEntryResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$BundleEntryResponseFromJson(json);
 
   /// Acts like a constructor, returns a [BundleEntryResponse], accepts a
@@ -490,7 +522,11 @@ class Basic with Resource, _$Basic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
+  factory Basic.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
+      _$BasicFromJson(json);
 
   /// Acts like a constructor, returns a [Basic], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out

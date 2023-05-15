@@ -1,12 +1,17 @@
 //ignore_for_file: always_specify_types
 
-// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+// ignore_for_file: invalid_annotation_target
+// ignore_for_file: sort_unnamed_constructors_first
+// ignore_for_file: sort_constructors_first
+// ignore_for_file: prefer_mixin
+// ignore_file_file: avoid_unused_constructor_parameters
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
 import 'package:json_annotation/json_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:xml2json/xml2json.dart';
 import 'package:yaml/yaml.dart';
 
@@ -52,8 +57,11 @@ class Resource {
 
   /// Acts like a constructor, returns a [Resource], accepts a
   /// [Map<String, Dynamic>] as an argument
-  static Resource fromJson(Map<String, dynamic> json) =>
-      _resourceFromJson(json);
+  static Resource fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
+      _resourceFromJson(json, serializationManager);
 
   /// Acts like a constructor, returns a [Resource], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out

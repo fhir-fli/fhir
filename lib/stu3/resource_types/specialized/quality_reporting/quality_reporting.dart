@@ -1,10 +1,15 @@
-// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+// ignore_for_file: invalid_annotation_target
+// ignore_for_file: sort_unnamed_constructors_first
+// ignore_for_file: sort_constructors_first
+// ignore_for_file: prefer_mixin
+// ignore_file_file: avoid_unused_constructor_parameters
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -106,7 +111,10 @@ class Measure with Resource, _$Measure {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Measure.fromJson(Map<String, dynamic> json) =>
+  factory Measure.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MeasureFromJson(json);
 
   /// Acts like a constructor, returns a [Measure], accepts a
@@ -150,7 +158,10 @@ class MeasureGroup with _$MeasureGroup {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
+  factory MeasureGroup.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MeasureGroupFromJson(json);
 
   /// Acts like a constructor, returns a [MeasureGroup], accepts a
@@ -195,7 +206,10 @@ class MeasurePopulation with _$MeasurePopulation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
+  factory MeasurePopulation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MeasurePopulationFromJson(json);
 
   /// Acts like a constructor, returns a [MeasurePopulation], accepts a
@@ -237,7 +251,10 @@ class MeasureStratifier with _$MeasureStratifier {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
+  factory MeasureStratifier.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MeasureStratifierFromJson(json);
 
   /// Acts like a constructor, returns a [MeasureStratifier], accepts a
@@ -280,7 +297,10 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
+  factory MeasureSupplementalData.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MeasureSupplementalDataFromJson(json);
 
   /// Acts like a constructor, returns a [MeasureSupplementalData], accepts a
@@ -340,7 +360,10 @@ class MeasureReport with Resource, _$MeasureReport {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MeasureReport.fromJson(Map<String, dynamic> json) =>
+  factory MeasureReport.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MeasureReportFromJson(json);
 
   /// Acts like a constructor, returns a [MeasureReport], accepts a
@@ -382,7 +405,10 @@ class MeasureReportGroup with _$MeasureReportGroup {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
+  factory MeasureReportGroup.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MeasureReportGroupFromJson(json);
 
   /// Acts like a constructor, returns a [MeasureReportGroup], accepts a
@@ -424,7 +450,10 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
+  factory MeasureReportPopulation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MeasureReportPopulationFromJson(json);
 
   /// Acts like a constructor, returns a [MeasureReportPopulation], accepts a
@@ -463,7 +492,10 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
+  factory MeasureReportStratifier.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MeasureReportStratifierFromJson(json);
 
   /// Acts like a constructor, returns a [MeasureReportStratifier], accepts a
@@ -505,7 +537,10 @@ class MeasureReportStratum with _$MeasureReportStratum {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
+  factory MeasureReportStratum.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MeasureReportStratumFromJson(json);
 
   /// Acts like a constructor, returns a [MeasureReportStratum], accepts a
@@ -547,7 +582,10 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
+  factory MeasureReportPopulation1.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MeasureReportPopulation1FromJson(json);
 
   /// Acts like a constructor, returns a [MeasureReportPopulation1], accepts a

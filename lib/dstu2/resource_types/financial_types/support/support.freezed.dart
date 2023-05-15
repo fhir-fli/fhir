@@ -729,7 +729,10 @@ class _$_Coverage extends _Coverage {
         _contract = contract,
         super._();
 
-  factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
+  factory _$_Coverage.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CoverageFromJson(json);
 
   @override
@@ -981,7 +984,10 @@ abstract class _Coverage extends Coverage {
       final List<Reference>? contract}) = _$_Coverage;
   _Coverage._() : super._();
 
-  factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
+  factory _Coverage.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Coverage.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
@@ -1575,7 +1581,10 @@ class _$_EligibilityRequest extends _EligibilityRequest {
         _identifier = identifier,
         super._();
 
-  factory _$_EligibilityRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_EligibilityRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_EligibilityRequestFromJson(json);
 
   @override
@@ -1769,8 +1778,10 @@ abstract class _EligibilityRequest extends EligibilityRequest {
       final Reference? organization}) = _$_EligibilityRequest;
   _EligibilityRequest._() : super._();
 
-  factory _EligibilityRequest.fromJson(Map<String, dynamic> json) =
-      _$_EligibilityRequest.fromJson;
+  factory _EligibilityRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_EligibilityRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
@@ -2471,7 +2482,10 @@ class _$_EligibilityResponse extends _EligibilityResponse {
         _identifier = identifier,
         super._();
 
-  factory _$_EligibilityResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_EligibilityResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_EligibilityResponseFromJson(json);
 
   @override
@@ -2700,8 +2714,10 @@ abstract class _EligibilityResponse extends EligibilityResponse {
       final Reference? requestOrganization}) = _$_EligibilityResponse;
   _EligibilityResponse._() : super._();
 
-  factory _EligibilityResponse.fromJson(Map<String, dynamic> json) =
-      _$_EligibilityResponse.fromJson;
+  factory _EligibilityResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_EligibilityResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
@@ -3363,7 +3379,10 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
         _identifier = identifier,
         super._();
 
-  factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_EnrollmentRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_EnrollmentRequestFromJson(json);
 
   @override
@@ -3574,8 +3593,10 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       required final Coding relationship}) = _$_EnrollmentRequest;
   _EnrollmentRequest._() : super._();
 
-  factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
-      _$_EnrollmentRequest.fromJson;
+  factory _EnrollmentRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_EnrollmentRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
@@ -4282,7 +4303,10 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
         _identifier = identifier,
         super._();
 
-  factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_EnrollmentResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_EnrollmentResponseFromJson(json);
 
   @override
@@ -4511,8 +4535,10 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       final Reference? requestOrganization}) = _$_EnrollmentResponse;
   _EnrollmentResponse._() : super._();
 
-  factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
-      _$_EnrollmentResponse.fromJson;
+  factory _EnrollmentResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_EnrollmentResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)

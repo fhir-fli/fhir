@@ -615,7 +615,10 @@ class _$_ProcessRequest extends _ProcessRequest {
         _exclude = exclude,
         super._();
 
-  factory _$_ProcessRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProcessRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ProcessRequestFromJson(json);
 
   @override
@@ -857,8 +860,10 @@ abstract class _ProcessRequest extends ProcessRequest {
       final Period? period}) = _$_ProcessRequest;
   _ProcessRequest._() : super._();
 
-  factory _ProcessRequest.fromJson(Map<String, dynamic> json) =
-      _$_ProcessRequest.fromJson;
+  factory _ProcessRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ProcessRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
@@ -1056,7 +1061,10 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProcessRequestItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ProcessRequestItemFromJson(json);
 
   @override
@@ -1138,8 +1146,10 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
       required final FhirInteger sequenceLinkId}) = _$_ProcessRequestItem;
   _ProcessRequestItem._() : super._();
 
-  factory _ProcessRequestItem.fromJson(Map<String, dynamic> json) =
-      _$_ProcessRequestItem.fromJson;
+  factory _ProcessRequestItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ProcessRequestItem.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1711,7 +1721,10 @@ class _$_ProcessResponse extends _ProcessResponse {
         _error = error,
         super._();
 
-  factory _$_ProcessResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProcessResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ProcessResponseFromJson(json);
 
   @override
@@ -1927,8 +1940,10 @@ abstract class _ProcessResponse extends ProcessResponse {
       final List<Coding>? error}) = _$_ProcessResponse;
   _ProcessResponse._() : super._();
 
-  factory _ProcessResponse.fromJson(Map<String, dynamic> json) =
-      _$_ProcessResponse.fromJson;
+  factory _ProcessResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ProcessResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
@@ -2151,7 +2166,10 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ProcessResponseNotes.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProcessResponseNotes.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ProcessResponseNotesFromJson(json);
 
   @override
@@ -2237,8 +2255,10 @@ abstract class _ProcessResponseNotes extends ProcessResponseNotes {
       final String? text}) = _$_ProcessResponseNotes;
   _ProcessResponseNotes._() : super._();
 
-  factory _ProcessResponseNotes.fromJson(Map<String, dynamic> json) =
-      _$_ProcessResponseNotes.fromJson;
+  factory _ProcessResponseNotes.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ProcessResponseNotes.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2887,7 +2907,10 @@ class _$_SupplyRequest extends _SupplyRequest {
         _supplier = supplier,
         super._();
 
-  factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_SupplyRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SupplyRequestFromJson(json);
 
   @override
@@ -3102,8 +3125,10 @@ abstract class _SupplyRequest extends SupplyRequest {
       final SupplyRequestWhen? when}) = _$_SupplyRequest;
   _SupplyRequest._() : super._();
 
-  factory _SupplyRequest.fromJson(Map<String, dynamic> json) =
-      _$_SupplyRequest.fromJson;
+  factory _SupplyRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SupplyRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
@@ -3346,7 +3371,10 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_SupplyRequestWhen.fromJson(Map<String, dynamic> json) =>
+  factory _$_SupplyRequestWhen.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SupplyRequestWhenFromJson(json);
 
   @override
@@ -3433,8 +3461,10 @@ abstract class _SupplyRequestWhen extends SupplyRequestWhen {
       final Timing? schedule}) = _$_SupplyRequestWhen;
   _SupplyRequestWhen._() : super._();
 
-  factory _SupplyRequestWhen.fromJson(Map<String, dynamic> json) =
-      _$_SupplyRequestWhen.fromJson;
+  factory _SupplyRequestWhen.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SupplyRequestWhen.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4081,7 +4111,10 @@ class _$_SupplyDelivery extends _SupplyDelivery {
         _receiver = receiver,
         super._();
 
-  factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
+  factory _$_SupplyDelivery.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SupplyDeliveryFromJson(json);
 
   @override
@@ -4297,8 +4330,10 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       final List<Reference>? receiver}) = _$_SupplyDelivery;
   _SupplyDelivery._() : super._();
 
-  factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
-      _$_SupplyDelivery.fromJson;
+  factory _SupplyDelivery.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SupplyDelivery.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)

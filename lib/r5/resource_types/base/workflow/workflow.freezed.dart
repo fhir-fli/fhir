@@ -1389,7 +1389,10 @@ class _$_Appointment extends _Appointment {
         _recurrenceTemplate = recurrenceTemplate,
         super._();
 
-  factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
+  factory _$_Appointment.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AppointmentFromJson(json);
 
   /// [resourceType] This is a Appointment resource
@@ -2190,8 +2193,10 @@ abstract class _Appointment extends Appointment {
       _$_Appointment;
   _Appointment._() : super._();
 
-  factory _Appointment.fromJson(Map<String, dynamic> json) =
-      _$_Appointment.fromJson;
+  factory _Appointment.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Appointment.fromJson;
 
   @override
 
@@ -2845,7 +2850,10 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
         _type = type,
         super._();
 
-  factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
+  factory _$_AppointmentParticipant.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AppointmentParticipantFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3032,8 +3040,10 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
       _$_AppointmentParticipant;
   _AppointmentParticipant._() : super._();
 
-  factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
-      _$_AppointmentParticipant.fromJson;
+  factory _AppointmentParticipant.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AppointmentParticipant.fromJson;
 
   @override
 
@@ -3653,8 +3663,9 @@ class _$_AppointmentRecurrenceTemplate extends _AppointmentRecurrenceTemplate {
         super._();
 
   factory _$_AppointmentRecurrenceTemplate.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_AppointmentRecurrenceTemplateFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_AppointmentRecurrenceTemplateFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -3980,8 +3991,10 @@ abstract class _AppointmentRecurrenceTemplate
       _$_AppointmentRecurrenceTemplate;
   _AppointmentRecurrenceTemplate._() : super._();
 
-  factory _AppointmentRecurrenceTemplate.fromJson(Map<String, dynamic> json) =
-      _$_AppointmentRecurrenceTemplate.fromJson;
+  factory _AppointmentRecurrenceTemplate.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AppointmentRecurrenceTemplate.fromJson;
 
   @override
 
@@ -4639,7 +4652,10 @@ class _$_AppointmentWeeklyTemplate extends _AppointmentWeeklyTemplate {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AppointmentWeeklyTemplate.fromJson(Map<String, dynamic> json) =>
+  factory _$_AppointmentWeeklyTemplate.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AppointmentWeeklyTemplateFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4900,8 +4916,10 @@ abstract class _AppointmentWeeklyTemplate extends AppointmentWeeklyTemplate {
       _$_AppointmentWeeklyTemplate;
   _AppointmentWeeklyTemplate._() : super._();
 
-  factory _AppointmentWeeklyTemplate.fromJson(Map<String, dynamic> json) =
-      _$_AppointmentWeeklyTemplate.fromJson;
+  factory _AppointmentWeeklyTemplate.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AppointmentWeeklyTemplate.fromJson;
 
   @override
 
@@ -5337,7 +5355,10 @@ class _$_AppointmentMonthlyTemplate extends _AppointmentMonthlyTemplate {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AppointmentMonthlyTemplate.fromJson(Map<String, dynamic> json) =>
+  factory _$_AppointmentMonthlyTemplate.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AppointmentMonthlyTemplateFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5515,8 +5536,10 @@ abstract class _AppointmentMonthlyTemplate extends AppointmentMonthlyTemplate {
           final Element? monthIntervalElement}) = _$_AppointmentMonthlyTemplate;
   _AppointmentMonthlyTemplate._() : super._();
 
-  factory _AppointmentMonthlyTemplate.fromJson(Map<String, dynamic> json) =
-      _$_AppointmentMonthlyTemplate.fromJson;
+  factory _AppointmentMonthlyTemplate.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AppointmentMonthlyTemplate.fromJson;
 
   @override
 
@@ -5788,7 +5811,10 @@ class _$_AppointmentYearlyTemplate extends _AppointmentYearlyTemplate {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AppointmentYearlyTemplate.fromJson(Map<String, dynamic> json) =>
+  factory _$_AppointmentYearlyTemplate.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AppointmentYearlyTemplateFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5926,8 +5952,10 @@ abstract class _AppointmentYearlyTemplate extends AppointmentYearlyTemplate {
       _$_AppointmentYearlyTemplate;
   _AppointmentYearlyTemplate._() : super._();
 
-  factory _AppointmentYearlyTemplate.fromJson(Map<String, dynamic> json) =
-      _$_AppointmentYearlyTemplate.fromJson;
+  factory _AppointmentYearlyTemplate.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AppointmentYearlyTemplate.fromJson;
 
   @override
 
@@ -6871,7 +6899,10 @@ class _$_AppointmentResponse extends _AppointmentResponse {
         _participantType = participantType,
         super._();
 
-  factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_AppointmentResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AppointmentResponseFromJson(json);
 
   /// [resourceType] This is a AppointmentResponse resource
@@ -7307,8 +7338,10 @@ abstract class _AppointmentResponse extends AppointmentResponse {
           final Element? recurrenceIdElement}) = _$_AppointmentResponse;
   _AppointmentResponse._() : super._();
 
-  factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
-      _$_AppointmentResponse.fromJson;
+  factory _AppointmentResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AppointmentResponse.fromJson;
 
   @override
 
@@ -8162,7 +8195,10 @@ class _$_Schedule extends _Schedule {
         _actor = actor,
         super._();
 
-  factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
+  factory _$_Schedule.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ScheduleFromJson(json);
 
   /// [resourceType] This is a Schedule resource
@@ -8538,7 +8574,10 @@ abstract class _Schedule extends Schedule {
           final Element? commentElement}) = _$_Schedule;
   _Schedule._() : super._();
 
-  factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
+  factory _Schedule.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Schedule.fromJson;
 
   @override
 
@@ -9438,7 +9477,11 @@ class _$_Slot extends _Slot {
         _appointmentType = appointmentType,
         super._();
 
-  factory _$_Slot.fromJson(Map<String, dynamic> json) => _$$_SlotFromJson(json);
+  factory _$_Slot.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
+      _$$_SlotFromJson(json);
 
   /// [resourceType] This is a Slot resource
   @override
@@ -9851,7 +9894,10 @@ abstract class _Slot extends Slot {
           final Element? commentElement}) = _$_Slot;
   _Slot._() : super._();
 
-  factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
+  factory _Slot.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Slot.fromJson;
 
   @override
 
@@ -11446,7 +11492,11 @@ class _$_Task extends _Task {
         _output = output,
         super._();
 
-  factory _$_Task.fromJson(Map<String, dynamic> json) => _$$_TaskFromJson(json);
+  factory _$_Task.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
+      _$$_TaskFromJson(json);
 
   /// [resourceType] This is a Task resource
   @override
@@ -12150,7 +12200,10 @@ abstract class _Task extends Task {
       final List<TaskOutput>? output}) = _$_Task;
   _Task._() : super._();
 
-  factory _Task.fromJson(Map<String, dynamic> json) = _$_Task.fromJson;
+  factory _Task.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Task.fromJson;
 
   @override
 
@@ -12662,7 +12715,10 @@ class _$_TaskPerformer extends _TaskPerformer {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TaskPerformer.fromJson(Map<String, dynamic> json) =>
+  factory _$_TaskPerformer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TaskPerformerFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -12798,8 +12854,10 @@ abstract class _TaskPerformer extends TaskPerformer {
       required final Reference actor}) = _$_TaskPerformer;
   _TaskPerformer._() : super._();
 
-  factory _TaskPerformer.fromJson(Map<String, dynamic> json) =
-      _$_TaskPerformer.fromJson;
+  factory _TaskPerformer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TaskPerformer.fromJson;
 
   @override
 
@@ -13098,7 +13156,10 @@ class _$_TaskRestriction extends _TaskRestriction {
         _recipient = recipient,
         super._();
 
-  factory _$_TaskRestriction.fromJson(Map<String, dynamic> json) =>
+  factory _$_TaskRestriction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TaskRestrictionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -13263,8 +13324,10 @@ abstract class _TaskRestriction extends TaskRestriction {
       final List<Reference>? recipient}) = _$_TaskRestriction;
   _TaskRestriction._() : super._();
 
-  factory _TaskRestriction.fromJson(Map<String, dynamic> json) =
-      _$_TaskRestriction.fromJson;
+  factory _TaskRestriction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TaskRestriction.fromJson;
 
   @override
 
@@ -15537,7 +15600,10 @@ class _$_TaskInput extends _TaskInput {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TaskInput.fromJson(Map<String, dynamic> json) =>
+  factory _$_TaskInput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TaskInputFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -16264,8 +16330,10 @@ abstract class _TaskInput extends TaskInput {
       final FhirMeta? valueMeta}) = _$_TaskInput;
   _TaskInput._() : super._();
 
-  factory _TaskInput.fromJson(Map<String, dynamic> json) =
-      _$_TaskInput.fromJson;
+  factory _TaskInput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TaskInput.fromJson;
 
   @override
 
@@ -18851,7 +18919,10 @@ class _$_TaskOutput extends _TaskOutput {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TaskOutput.fromJson(Map<String, dynamic> json) =>
+  factory _$_TaskOutput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TaskOutputFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -19580,8 +19651,10 @@ abstract class _TaskOutput extends TaskOutput {
       final FhirMeta? valueMeta}) = _$_TaskOutput;
   _TaskOutput._() : super._();
 
-  factory _TaskOutput.fromJson(Map<String, dynamic> json) =
-      _$_TaskOutput.fromJson;
+  factory _TaskOutput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TaskOutput.fromJson;
 
   @override
 
@@ -21375,7 +21448,10 @@ class _$_Transport extends _Transport {
         _output = output,
         super._();
 
-  factory _$_Transport.fromJson(Map<String, dynamic> json) =>
+  factory _$_Transport.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TransportFromJson(json);
 
   /// [resourceType] This is a Transport resource
@@ -22058,8 +22134,10 @@ abstract class _Transport extends Transport {
       final Reference? history}) = _$_Transport;
   _Transport._() : super._();
 
-  factory _Transport.fromJson(Map<String, dynamic> json) =
-      _$_Transport.fromJson;
+  factory _Transport.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Transport.fromJson;
 
   @override
 
@@ -22610,7 +22688,10 @@ class _$_TransportRestriction extends _TransportRestriction {
         _recipient = recipient,
         super._();
 
-  factory _$_TransportRestriction.fromJson(Map<String, dynamic> json) =>
+  factory _$_TransportRestriction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TransportRestrictionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -22774,8 +22855,10 @@ abstract class _TransportRestriction extends TransportRestriction {
       final List<Reference>? recipient}) = _$_TransportRestriction;
   _TransportRestriction._() : super._();
 
-  factory _TransportRestriction.fromJson(Map<String, dynamic> json) =
-      _$_TransportRestriction.fromJson;
+  factory _TransportRestriction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TransportRestriction.fromJson;
 
   @override
 
@@ -25048,7 +25131,10 @@ class _$_TransportInput extends _TransportInput {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TransportInput.fromJson(Map<String, dynamic> json) =>
+  factory _$_TransportInput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TransportInputFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -25775,8 +25861,10 @@ abstract class _TransportInput extends TransportInput {
       final FhirMeta? valueMeta}) = _$_TransportInput;
   _TransportInput._() : super._();
 
-  factory _TransportInput.fromJson(Map<String, dynamic> json) =
-      _$_TransportInput.fromJson;
+  factory _TransportInput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TransportInput.fromJson;
 
   @override
 
@@ -28362,7 +28450,10 @@ class _$_TransportOutput extends _TransportOutput {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_TransportOutput.fromJson(Map<String, dynamic> json) =>
+  factory _$_TransportOutput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TransportOutputFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -29091,8 +29182,10 @@ abstract class _TransportOutput extends TransportOutput {
       final FhirMeta? valueMeta}) = _$_TransportOutput;
   _TransportOutput._() : super._();
 
-  factory _TransportOutput.fromJson(Map<String, dynamic> json) =
-      _$_TransportOutput.fromJson;
+  factory _TransportOutput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TransportOutput.fromJson;
 
   @override
 
@@ -30318,7 +30411,10 @@ class _$_VerificationResult extends _VerificationResult {
         _validator = validator,
         super._();
 
-  factory _$_VerificationResult.fromJson(Map<String, dynamic> json) =>
+  factory _$_VerificationResult.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_VerificationResultFromJson(json);
 
   /// [resourceType] This is a VerificationResult resource
@@ -30770,8 +30866,10 @@ abstract class _VerificationResult extends VerificationResult {
       _$_VerificationResult;
   _VerificationResult._() : super._();
 
-  factory _VerificationResult.fromJson(Map<String, dynamic> json) =
-      _$_VerificationResult.fromJson;
+  factory _VerificationResult.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_VerificationResult.fromJson;
 
   @override
 
@@ -31314,8 +31412,9 @@ class _$_VerificationResultPrimarySource
         super._();
 
   factory _$_VerificationResultPrimarySource.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_VerificationResultPrimarySourceFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_VerificationResultPrimarySourceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -31541,8 +31640,10 @@ abstract class _VerificationResultPrimarySource
           pushTypeAvailable}) = _$_VerificationResultPrimarySource;
   _VerificationResultPrimarySource._() : super._();
 
-  factory _VerificationResultPrimarySource.fromJson(Map<String, dynamic> json) =
-      _$_VerificationResultPrimarySource.fromJson;
+  factory _VerificationResultPrimarySource.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_VerificationResultPrimarySource.fromJson;
 
   @override
 
@@ -32116,8 +32217,9 @@ class _$_VerificationResultAttestation extends _VerificationResultAttestation {
         super._();
 
   factory _$_VerificationResultAttestation.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_VerificationResultAttestationFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_VerificationResultAttestationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -32347,8 +32449,10 @@ abstract class _VerificationResultAttestation
       final Signature? sourceSignature}) = _$_VerificationResultAttestation;
   _VerificationResultAttestation._() : super._();
 
-  factory _VerificationResultAttestation.fromJson(Map<String, dynamic> json) =
-      _$_VerificationResultAttestation.fromJson;
+  factory _VerificationResultAttestation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_VerificationResultAttestation.fromJson;
 
   @override
 
@@ -32716,7 +32820,10 @@ class _$_VerificationResultValidator extends _VerificationResultValidator {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_VerificationResultValidator.fromJson(Map<String, dynamic> json) =>
+  factory _$_VerificationResultValidator.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_VerificationResultValidatorFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -32878,8 +32985,10 @@ abstract class _VerificationResultValidator
       final Signature? attestationSignature}) = _$_VerificationResultValidator;
   _VerificationResultValidator._() : super._();
 
-  factory _VerificationResultValidator.fromJson(Map<String, dynamic> json) =
-      _$_VerificationResultValidator.fromJson;
+  factory _VerificationResultValidator.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_VerificationResultValidator.fromJson;
 
   @override
 

@@ -1,10 +1,15 @@
-// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+// ignore_for_file: invalid_annotation_target
+// ignore_for_file: sort_unnamed_constructors_first
+// ignore_for_file: sort_constructors_first
+// ignore_for_file: prefer_mixin
+// ignore_file_file: avoid_unused_constructor_parameters
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -51,7 +56,11 @@ class Order with Resource, _$Order {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);
+  factory Order.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
+      _$OrderFromJson(json);
 
   /// Acts like a constructor, returns a [Order], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -93,7 +102,10 @@ class OrderWhen with _$OrderWhen {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrderWhen.fromJson(Map<String, dynamic> json) =>
+  factory OrderWhen.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$OrderWhenFromJson(json);
 
   /// Acts like a constructor, returns a [OrderWhen], accepts a
@@ -147,7 +159,10 @@ class OrderResponse with Resource, _$OrderResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrderResponse.fromJson(Map<String, dynamic> json) =>
+  factory OrderResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$OrderResponseFromJson(json);
 
   /// Acts like a constructor, returns a [OrderResponse], accepts a
@@ -212,7 +227,10 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
+  factory CommunicationRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CommunicationRequestFromJson(json);
 
   /// Acts like a constructor, returns a [CommunicationRequest], accepts a
@@ -256,7 +274,10 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
+  factory CommunicationRequestPayload.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CommunicationRequestPayloadFromJson(json);
 
   /// Acts like a constructor, returns a [CommunicationRequestPayload], accepts a
@@ -323,7 +344,10 @@ class DeviceUseRequest with Resource, _$DeviceUseRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
+  factory DeviceUseRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$DeviceUseRequestFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceUseRequest], accepts a
@@ -384,7 +408,10 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
+  factory DeviceUseStatement.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$DeviceUseStatementFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceUseStatement], accepts a

@@ -1,10 +1,15 @@
-// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+// ignore_for_file: invalid_annotation_target
+// ignore_for_file: sort_unnamed_constructors_first
+// ignore_for_file: sort_constructors_first
+// ignore_for_file: prefer_mixin
+// ignore_file_file: avoid_unused_constructor_parameters
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -167,7 +172,7 @@ class Coverage with Resource, _$Coverage {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -351,7 +356,10 @@ class Coverage with Resource, _$Coverage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Coverage.fromJson(Map<String, dynamic> json) =>
+  factory Coverage.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageFromJson(json);
 
   /// Acts like a constructor, returns a [Coverage], accepts a
@@ -415,7 +423,7 @@ class CoveragePaymentBy with _$CoveragePaymentBy {
   factory CoveragePaymentBy({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -468,7 +476,10 @@ class CoveragePaymentBy with _$CoveragePaymentBy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoveragePaymentBy.fromJson(Map<String, dynamic> json) =>
+  factory CoveragePaymentBy.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoveragePaymentByFromJson(json);
 
   /// Acts like a constructor, returns a [CoveragePaymentBy], accepts a
@@ -536,7 +547,7 @@ class CoverageClass with _$CoverageClass {
   factory CoverageClass({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -594,7 +605,10 @@ class CoverageClass with _$CoverageClass {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageClass.fromJson(Map<String, dynamic> json) =>
+  factory CoverageClass.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageClassFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageClass], accepts a
@@ -671,7 +685,7 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   factory CoverageCostToBeneficiary({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -742,7 +756,10 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =>
+  factory CoverageCostToBeneficiary.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageCostToBeneficiaryFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageCostToBeneficiary], accepts a
@@ -803,7 +820,7 @@ class CoverageException with _$CoverageException {
   factory CoverageException({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -851,7 +868,10 @@ class CoverageException with _$CoverageException {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageException.fromJson(Map<String, dynamic> json) =>
+  factory CoverageException.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageExceptionFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageException], accepts a
@@ -1004,7 +1024,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1161,7 +1181,10 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
+  factory CoverageEligibilityRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityRequestFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequest], accepts a
@@ -1234,7 +1257,7 @@ class CoverageEligibilityRequestEvent with _$CoverageEligibilityRequestEvent {
   factory CoverageEligibilityRequestEvent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1292,7 +1315,10 @@ class CoverageEligibilityRequestEvent with _$CoverageEligibilityRequestEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityRequestEvent.fromJson(Map<String, dynamic> json) =>
+  factory CoverageEligibilityRequestEvent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityRequestEventFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequestEvent],
@@ -1370,7 +1396,7 @@ class CoverageEligibilityRequestSupportingInfo
   factory CoverageEligibilityRequestSupportingInfo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1432,7 +1458,9 @@ class CoverageEligibilityRequestSupportingInfo
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestSupportingInfo.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityRequestSupportingInfoFromJson(json);
 
   /// Acts like a constructor, returns a
@@ -1514,7 +1542,7 @@ class CoverageEligibilityRequestInsurance
   factory CoverageEligibilityRequestInsurance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1579,7 +1607,9 @@ class CoverageEligibilityRequestInsurance
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestInsurance.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityRequestInsuranceFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequestInsurance],
@@ -1673,7 +1703,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   factory CoverageEligibilityRequestItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1758,7 +1788,10 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =>
+  factory CoverageEligibilityRequestItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityRequestItemFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequestItem],
@@ -1829,7 +1862,7 @@ class CoverageEligibilityRequestDiagnosis
   factory CoverageEligibilityRequestDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1881,7 +1914,9 @@ class CoverageEligibilityRequestDiagnosis
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestDiagnosis.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityRequestDiagnosisFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequestDiagnosis],
@@ -2032,7 +2067,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2199,7 +2234,10 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
+  factory CoverageEligibilityResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityResponseFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponse], accepts
@@ -2266,7 +2304,7 @@ class CoverageEligibilityResponseEvent with _$CoverageEligibilityResponseEvent {
   factory CoverageEligibilityResponseEvent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2325,7 +2363,9 @@ class CoverageEligibilityResponseEvent with _$CoverageEligibilityResponseEvent {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseEvent.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityResponseEventFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponseEvent],
@@ -2400,7 +2440,7 @@ class CoverageEligibilityResponseInsurance
   factory CoverageEligibilityResponseInsurance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2465,7 +2505,9 @@ class CoverageEligibilityResponseInsurance
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseInsurance.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityResponseInsuranceFromJson(json);
 
   /// Acts like a constructor, returns a
@@ -2573,7 +2615,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   factory CoverageEligibilityResponseItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2688,7 +2730,10 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =>
+  factory CoverageEligibilityResponseItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityResponseItemFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponseItem],
@@ -2774,7 +2819,7 @@ class CoverageEligibilityResponseBenefit
   factory CoverageEligibilityResponseBenefit({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2859,7 +2904,9 @@ class CoverageEligibilityResponseBenefit
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseBenefit.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityResponseBenefitFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponseBenefit],
@@ -2926,7 +2973,7 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   factory CoverageEligibilityResponseError({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2983,7 +3030,9 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseError.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityResponseErrorFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponseError],
@@ -3093,7 +3142,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3202,7 +3251,10 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
+  factory EnrollmentRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$EnrollmentRequestFromJson(json);
 
   /// Acts like a constructor, returns a [EnrollmentRequest], accepts a
@@ -3317,7 +3369,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3435,7 +3487,10 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
+  factory EnrollmentResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$EnrollmentResponseFromJson(json);
 
   /// Acts like a constructor, returns a [EnrollmentResponse], accepts a

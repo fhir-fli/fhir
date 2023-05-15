@@ -306,7 +306,10 @@ class _$_Annotation extends _Annotation {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Annotation.fromJson(Map<String, dynamic> json) =>
+  factory _$_Annotation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AnnotationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -438,8 +441,10 @@ abstract class _Annotation extends Annotation {
       @JsonKey(name: '_text') final Element? textElement}) = _$_Annotation;
   _Annotation._() : super._();
 
-  factory _Annotation.fromJson(Map<String, dynamic> json) =
-      _$_Annotation.fromJson;
+  factory _Annotation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Annotation.fromJson;
 
   @override
 
@@ -1001,7 +1006,10 @@ class _$_Attachment extends _Attachment {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Attachment.fromJson(Map<String, dynamic> json) =>
+  factory _$_Attachment.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AttachmentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -1214,8 +1222,10 @@ abstract class _Attachment extends Attachment {
       _$_Attachment;
   _Attachment._() : super._();
 
-  factory _Attachment.fromJson(Map<String, dynamic> json) =
-      _$_Attachment.fromJson;
+  factory _Attachment.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Attachment.fromJson;
 
   @override
 
@@ -1675,7 +1685,10 @@ class _$_Identifier extends _Identifier {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Identifier.fromJson(Map<String, dynamic> json) =>
+  factory _$_Identifier.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_IdentifierFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -1830,8 +1843,10 @@ abstract class _Identifier extends Identifier {
       final Reference? assigner}) = _$_Identifier;
   _Identifier._() : super._();
 
-  factory _Identifier.fromJson(Map<String, dynamic> json) =
-      _$_Identifier.fromJson;
+  factory _Identifier.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Identifier.fromJson;
 
   @override
 
@@ -2082,7 +2097,10 @@ class _$_CodeableConcept extends _CodeableConcept {
         _coding = coding,
         super._();
 
-  factory _$_CodeableConcept.fromJson(Map<String, dynamic> json) =>
+  factory _$_CodeableConcept.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CodeableConceptFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2191,8 +2209,10 @@ abstract class _CodeableConcept extends CodeableConcept {
       @JsonKey(name: '_text') final Element? textElement}) = _$_CodeableConcept;
   _CodeableConcept._() : super._();
 
-  factory _CodeableConcept.fromJson(Map<String, dynamic> json) =
-      _$_CodeableConcept.fromJson;
+  factory _CodeableConcept.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CodeableConcept.fromJson;
 
   @override
 
@@ -2593,7 +2613,10 @@ class _$_Coding extends _Coding {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Coding.fromJson(Map<String, dynamic> json) =>
+  factory _$_Coding.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CodingFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2760,7 +2783,10 @@ abstract class _Coding extends Coding {
       _$_Coding;
   _Coding._() : super._();
 
-  factory _Coding.fromJson(Map<String, dynamic> json) = _$_Coding.fromJson;
+  factory _Coding.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Coding.fromJson;
 
   @override
 
@@ -3212,7 +3238,10 @@ class _$_Quantity extends _Quantity {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Quantity.fromJson(Map<String, dynamic> json) =>
+  factory _$_Quantity.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_QuantityFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3378,7 +3407,10 @@ abstract class _Quantity extends Quantity {
           final Element? codeElement}) = _$_Quantity;
   _Quantity._() : super._();
 
-  factory _Quantity.fromJson(Map<String, dynamic> json) = _$_Quantity.fromJson;
+  factory _Quantity.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Quantity.fromJson;
 
   @override
 
@@ -3824,7 +3856,10 @@ class _$_FhirDuration extends _FhirDuration {
       : _extension_ = extension_,
         super._();
 
-  factory _$_FhirDuration.fromJson(Map<String, dynamic> json) =>
+  factory _$_FhirDuration.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_FhirDurationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3990,8 +4025,10 @@ abstract class _FhirDuration extends FhirDuration {
           final Element? codeElement}) = _$_FhirDuration;
   _FhirDuration._() : super._();
 
-  factory _FhirDuration.fromJson(Map<String, dynamic> json) =
-      _$_FhirDuration.fromJson;
+  factory _FhirDuration.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_FhirDuration.fromJson;
 
   @override
 
@@ -4435,7 +4472,10 @@ class _$_Distance extends _Distance {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Distance.fromJson(Map<String, dynamic> json) =>
+  factory _$_Distance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DistanceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4601,7 +4641,10 @@ abstract class _Distance extends Distance {
           final Element? codeElement}) = _$_Distance;
   _Distance._() : super._();
 
-  factory _Distance.fromJson(Map<String, dynamic> json) = _$_Distance.fromJson;
+  factory _Distance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Distance.fromJson;
 
   @override
 
@@ -5041,7 +5084,10 @@ class _$_Count extends _Count {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Count.fromJson(Map<String, dynamic> json) =>
+  factory _$_Count.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CountFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5207,7 +5253,10 @@ abstract class _Count extends Count {
           final Element? codeElement}) = _$_Count;
   _Count._() : super._();
 
-  factory _Count.fromJson(Map<String, dynamic> json) = _$_Count.fromJson;
+  factory _Count.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Count.fromJson;
 
   @override
 
@@ -5485,7 +5534,10 @@ class _$_Money extends _Money {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Money.fromJson(Map<String, dynamic> json) =>
+  factory _$_Money.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_MoneyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5593,7 +5645,10 @@ abstract class _Money extends Money {
       @JsonKey(name: '_currency') final Element? currencyElement}) = _$_Money;
   _Money._() : super._();
 
-  factory _Money.fromJson(Map<String, dynamic> json) = _$_Money.fromJson;
+  factory _Money.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Money.fromJson;
 
   @override
 
@@ -6008,7 +6063,11 @@ class _$_Age extends _Age {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Age.fromJson(Map<String, dynamic> json) => _$$_AgeFromJson(json);
+  factory _$_Age.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
+      _$$_AgeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -6178,7 +6237,10 @@ abstract class _Age extends Age {
           final Element? codeElement}) = _$_Age;
   _Age._() : super._();
 
-  factory _Age.fromJson(Map<String, dynamic> json) = _$_Age.fromJson;
+  factory _Age.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Age.fromJson;
 
   @override
 
@@ -6426,7 +6488,10 @@ class _$_Range extends _Range {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Range.fromJson(Map<String, dynamic> json) =>
+  factory _$_Range.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_RangeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -6511,7 +6576,10 @@ abstract class _Range extends Range {
       final Quantity? high}) = _$_Range;
   _Range._() : super._();
 
-  factory _Range.fromJson(Map<String, dynamic> json) = _$_Range.fromJson;
+  factory _Range.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Range.fromJson;
 
   @override
 
@@ -6754,7 +6822,10 @@ class _$_Period extends _Period {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Period.fromJson(Map<String, dynamic> json) =>
+  factory _$_Period.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_PeriodFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -6864,7 +6935,10 @@ abstract class _Period extends Period {
       @JsonKey(name: '_end') final Element? endElement}) = _$_Period;
   _Period._() : super._();
 
-  factory _Period.fromJson(Map<String, dynamic> json) = _$_Period.fromJson;
+  factory _Period.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Period.fromJson;
 
   @override
 
@@ -7082,7 +7156,10 @@ class _$_Ratio extends _Ratio {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Ratio.fromJson(Map<String, dynamic> json) =>
+  factory _$_Ratio.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_RatioFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -7169,7 +7246,10 @@ abstract class _Ratio extends Ratio {
       final Quantity? denominator}) = _$_Ratio;
   _Ratio._() : super._();
 
-  factory _Ratio.fromJson(Map<String, dynamic> json) = _$_Ratio.fromJson;
+  factory _Ratio.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Ratio.fromJson;
 
   @override
 
@@ -7405,7 +7485,10 @@ class _$_RatioRange extends _RatioRange {
       : _extension_ = extension_,
         super._();
 
-  factory _$_RatioRange.fromJson(Map<String, dynamic> json) =>
+  factory _$_RatioRange.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_RatioRangeFromJson(json);
 
   /// [id] "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
@@ -7493,8 +7576,10 @@ abstract class _RatioRange extends RatioRange {
       final Quantity? denominator}) = _$_RatioRange;
   _RatioRange._() : super._();
 
-  factory _RatioRange.fromJson(Map<String, dynamic> json) =
-      _$_RatioRange.fromJson;
+  factory _RatioRange.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_RatioRange.fromJson;
 
   @override
 
@@ -7968,7 +8053,10 @@ class _$_SampledData extends _SampledData {
       : _extension_ = extension_,
         super._();
 
-  factory _$_SampledData.fromJson(Map<String, dynamic> json) =>
+  factory _$_SampledData.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SampledDataFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -8161,8 +8249,10 @@ abstract class _SampledData extends SampledData {
       @JsonKey(name: '_data') final Element? dataElement}) = _$_SampledData;
   _SampledData._() : super._();
 
-  factory _SampledData.fromJson(Map<String, dynamic> json) =
-      _$_SampledData.fromJson;
+  factory _SampledData.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SampledData.fromJson;
 
   @override
 
@@ -8648,7 +8738,10 @@ class _$_Signature extends _Signature {
         _type = type,
         super._();
 
-  factory _$_Signature.fromJson(Map<String, dynamic> json) =>
+  factory _$_Signature.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SignatureFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -8831,8 +8924,10 @@ abstract class _Signature extends Signature {
       @JsonKey(name: '_data') final Element? dataElement}) = _$_Signature;
   _Signature._() : super._();
 
-  factory _Signature.fromJson(Map<String, dynamic> json) =
-      _$_Signature.fromJson;
+  factory _Signature.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Signature.fromJson;
 
   @override
 
@@ -9318,7 +9413,10 @@ class _$_HumanName extends _HumanName {
         _suffixElement = suffixElement,
         super._();
 
-  factory _$_HumanName.fromJson(Map<String, dynamic> json) =>
+  factory _$_HumanName.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_HumanNameFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -9563,8 +9661,10 @@ abstract class _HumanName extends HumanName {
       final Period? period}) = _$_HumanName;
   _HumanName._() : super._();
 
-  factory _HumanName.fromJson(Map<String, dynamic> json) =
-      _$_HumanName.fromJson;
+  factory _HumanName.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_HumanName.fromJson;
 
   @override
 
@@ -10231,7 +10331,10 @@ class _$_Address extends _Address {
         _lineElement = lineElement,
         super._();
 
-  factory _$_Address.fromJson(Map<String, dynamic> json) =>
+  factory _$_Address.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AddressFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -10493,7 +10596,10 @@ abstract class _Address extends Address {
       final Period? period}) = _$_Address;
   _Address._() : super._();
 
-  factory _Address.fromJson(Map<String, dynamic> json) = _$_Address.fromJson;
+  factory _Address.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Address.fromJson;
 
   @override
 
@@ -10974,7 +11080,10 @@ class _$_ContactPoint extends _ContactPoint {
       : _extension_ = extension_,
         super._();
 
-  factory _$_ContactPoint.fromJson(Map<String, dynamic> json) =>
+  factory _$_ContactPoint.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ContactPointFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -11132,8 +11241,10 @@ abstract class _ContactPoint extends ContactPoint {
       final Period? period}) = _$_ContactPoint;
   _ContactPoint._() : super._();
 
-  factory _ContactPoint.fromJson(Map<String, dynamic> json) =
-      _$_ContactPoint.fromJson;
+  factory _ContactPoint.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ContactPoint.fromJson;
 
   @override
 
@@ -11445,7 +11556,10 @@ class _$_Timing extends _Timing {
         _eventElement = eventElement,
         super._();
 
-  factory _$_Timing.fromJson(Map<String, dynamic> json) =>
+  factory _$_Timing.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TimingFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -11616,7 +11730,10 @@ abstract class _Timing extends Timing {
       final CodeableConcept? code}) = _$_Timing;
   _Timing._() : super._();
 
-  factory _Timing.fromJson(Map<String, dynamic> json) = _$_Timing.fromJson;
+  factory _Timing.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Timing.fromJson;
 
   @override
 
@@ -12630,7 +12747,10 @@ class _$_TimingRepeat extends _TimingRepeat {
         _whenElement = whenElement,
         super._();
 
-  factory _$_TimingRepeat.fromJson(Map<String, dynamic> json) =>
+  factory _$_TimingRepeat.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TimingRepeatFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -13105,8 +13225,10 @@ abstract class _TimingRepeat extends TimingRepeat {
           final Element? offsetElement}) = _$_TimingRepeat;
   _TimingRepeat._() : super._();
 
-  factory _TimingRepeat.fromJson(Map<String, dynamic> json) =
-      _$_TimingRepeat.fromJson;
+  factory _TimingRepeat.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TimingRepeat.fromJson;
 
   @override
 

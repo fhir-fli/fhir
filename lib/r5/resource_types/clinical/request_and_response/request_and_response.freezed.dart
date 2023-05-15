@@ -1010,7 +1010,10 @@ class _$_Communication extends _Communication {
         _note = note,
         super._();
 
-  factory _$_Communication.fromJson(Map<String, dynamic> json) =>
+  factory _$_Communication.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CommunicationFromJson(json);
 
   /// [resourceType] This is a Communication resource
@@ -1608,8 +1611,10 @@ abstract class _Communication extends Communication {
       final List<Annotation>? note}) = _$_Communication;
   _Communication._() : super._();
 
-  factory _Communication.fromJson(Map<String, dynamic> json) =
-      _$_Communication.fromJson;
+  factory _Communication.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Communication.fromJson;
 
   @override
 
@@ -2083,7 +2088,10 @@ class _$_CommunicationPayload extends _CommunicationPayload {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CommunicationPayload.fromJson(Map<String, dynamic> json) =>
+  factory _$_CommunicationPayload.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CommunicationPayloadFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2230,8 +2238,10 @@ abstract class _CommunicationPayload extends CommunicationPayload {
       final CodeableConcept? contentCodeableConcept}) = _$_CommunicationPayload;
   _CommunicationPayload._() : super._();
 
-  factory _CommunicationPayload.fromJson(Map<String, dynamic> json) =
-      _$_CommunicationPayload.fromJson;
+  factory _CommunicationPayload.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CommunicationPayload.fromJson;
 
   @override
 
@@ -3372,7 +3382,10 @@ class _$_CommunicationRequest extends _CommunicationRequest {
         _note = note,
         super._();
 
-  factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_CommunicationRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CommunicationRequestFromJson(json);
 
   /// [resourceType] This is a CommunicationRequest resource
@@ -3972,8 +3985,10 @@ abstract class _CommunicationRequest extends CommunicationRequest {
       final List<Annotation>? note}) = _$_CommunicationRequest;
   _CommunicationRequest._() : super._();
 
-  factory _CommunicationRequest.fromJson(Map<String, dynamic> json) =
-      _$_CommunicationRequest.fromJson;
+  factory _CommunicationRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CommunicationRequest.fromJson;
 
   @override
 
@@ -4472,7 +4487,10 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
+  factory _$_CommunicationRequestPayload.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CommunicationRequestPayloadFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4621,8 +4639,10 @@ abstract class _CommunicationRequestPayload
       _$_CommunicationRequestPayload;
   _CommunicationRequestPayload._() : super._();
 
-  factory _CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =
-      _$_CommunicationRequestPayload.fromJson;
+  factory _CommunicationRequestPayload.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CommunicationRequestPayload.fromJson;
 
   @override
 
@@ -5267,7 +5287,10 @@ class _$_DeviceAssociation extends _DeviceAssociation {
         _operation = operation,
         super._();
 
-  factory _$_DeviceAssociation.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceAssociation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DeviceAssociationFromJson(json);
 
   /// [resourceType] This is a DeviceAssociation resource
@@ -5594,8 +5617,10 @@ abstract class _DeviceAssociation extends DeviceAssociation {
       _$_DeviceAssociation;
   _DeviceAssociation._() : super._();
 
-  factory _DeviceAssociation.fromJson(Map<String, dynamic> json) =
-      _$_DeviceAssociation.fromJson;
+  factory _DeviceAssociation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DeviceAssociation.fromJson;
 
   @override
 
@@ -5956,7 +5981,10 @@ class _$_DeviceAssociationOperation extends _DeviceAssociationOperation {
         _operator_ = operator_,
         super._();
 
-  factory _$_DeviceAssociationOperation.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceAssociationOperation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DeviceAssociationOperationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -6110,8 +6138,10 @@ abstract class _DeviceAssociationOperation extends DeviceAssociationOperation {
       final Period? period}) = _$_DeviceAssociationOperation;
   _DeviceAssociationOperation._() : super._();
 
-  factory _DeviceAssociationOperation.fromJson(Map<String, dynamic> json) =
-      _$_DeviceAssociationOperation.fromJson;
+  factory _DeviceAssociationOperation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DeviceAssociationOperation.fromJson;
 
   @override
 
@@ -7167,7 +7197,10 @@ class _$_DeviceDispense extends _DeviceDispense {
         _eventHistory = eventHistory,
         super._();
 
-  factory _$_DeviceDispense.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceDispense.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DeviceDispenseFromJson(json);
 
   /// [resourceType] This is a DeviceDispense resource
@@ -7680,8 +7713,10 @@ abstract class _DeviceDispense extends DeviceDispense {
       final List<Reference>? eventHistory}) = _$_DeviceDispense;
   _DeviceDispense._() : super._();
 
-  factory _DeviceDispense.fromJson(Map<String, dynamic> json) =
-      _$_DeviceDispense.fromJson;
+  factory _DeviceDispense.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DeviceDispense.fromJson;
 
   @override
 
@@ -8106,7 +8141,10 @@ class _$_DeviceDispensePerformer extends _DeviceDispensePerformer {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DeviceDispensePerformer.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceDispensePerformer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DeviceDispensePerformerFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -8245,8 +8283,10 @@ abstract class _DeviceDispensePerformer extends DeviceDispensePerformer {
       required final Reference actor}) = _$_DeviceDispensePerformer;
   _DeviceDispensePerformer._() : super._();
 
-  factory _DeviceDispensePerformer.fromJson(Map<String, dynamic> json) =
-      _$_DeviceDispensePerformer.fromJson;
+  factory _DeviceDispensePerformer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DeviceDispensePerformer.fromJson;
 
   @override
 
@@ -9605,7 +9645,10 @@ class _$_DeviceRequest extends _DeviceRequest {
         _relevantHistory = relevantHistory,
         super._();
 
-  factory _$_DeviceRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DeviceRequestFromJson(json);
 
   /// [resourceType] This is a DeviceRequest resource
@@ -10303,8 +10346,10 @@ abstract class _DeviceRequest extends DeviceRequest {
       final List<Reference>? relevantHistory}) = _$_DeviceRequest;
   _DeviceRequest._() : super._();
 
-  factory _DeviceRequest.fromJson(Map<String, dynamic> json) =
-      _$_DeviceRequest.fromJson;
+  factory _DeviceRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DeviceRequest.fromJson;
 
   @override
 
@@ -10925,7 +10970,10 @@ class _$_DeviceRequestParameter extends _DeviceRequestParameter {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DeviceRequestParameter.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceRequestParameter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DeviceRequestParameterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -11095,8 +11143,10 @@ abstract class _DeviceRequestParameter extends DeviceRequestParameter {
       _$_DeviceRequestParameter;
   _DeviceRequestParameter._() : super._();
 
-  factory _DeviceRequestParameter.fromJson(Map<String, dynamic> json) =
-      _$_DeviceRequestParameter.fromJson;
+  factory _DeviceRequestParameter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DeviceRequestParameter.fromJson;
 
   @override
 
@@ -12096,7 +12146,10 @@ class _$_DeviceUsage extends _DeviceUsage {
         _note = note,
         super._();
 
-  factory _$_DeviceUsage.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceUsage.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DeviceUsageFromJson(json);
 
   /// [resourceType] This is a DeviceUsage resource
@@ -12582,8 +12635,10 @@ abstract class _DeviceUsage extends DeviceUsage {
       final List<Annotation>? note}) = _$_DeviceUsage;
   _DeviceUsage._() : super._();
 
-  factory _DeviceUsage.fromJson(Map<String, dynamic> json) =
-      _$_DeviceUsage.fromJson;
+  factory _DeviceUsage.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DeviceUsage.fromJson;
 
   @override
 
@@ -12978,7 +13033,10 @@ class _$_DeviceUsageAdherence extends _DeviceUsageAdherence {
         _reason = reason,
         super._();
 
-  factory _$_DeviceUsageAdherence.fromJson(Map<String, dynamic> json) =>
+  factory _$_DeviceUsageAdherence.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DeviceUsageAdherenceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -13119,8 +13177,10 @@ abstract class _DeviceUsageAdherence extends DeviceUsageAdherence {
       required final List<CodeableConcept> reason}) = _$_DeviceUsageAdherence;
   _DeviceUsageAdherence._() : super._();
 
-  factory _DeviceUsageAdherence.fromJson(Map<String, dynamic> json) =
-      _$_DeviceUsageAdherence.fromJson;
+  factory _DeviceUsageAdherence.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DeviceUsageAdherence.fromJson;
 
   @override
 
@@ -14087,7 +14147,10 @@ class _$_GuidanceResponse extends _GuidanceResponse {
         _dataRequirement = dataRequirement,
         super._();
 
-  factory _$_GuidanceResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_GuidanceResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_GuidanceResponseFromJson(json);
 
   /// [resourceType] This is a GuidanceResponse resource
@@ -14565,8 +14628,10 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       final List<DataRequirement>? dataRequirement}) = _$_GuidanceResponse;
   _GuidanceResponse._() : super._();
 
-  factory _GuidanceResponse.fromJson(Map<String, dynamic> json) =
-      _$_GuidanceResponse.fromJson;
+  factory _GuidanceResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_GuidanceResponse.fromJson;
 
   @override
 
@@ -15505,7 +15570,10 @@ class _$_InventoryItem extends _InventoryItem {
         _characteristic = characteristic,
         super._();
 
-  factory _$_InventoryItem.fromJson(Map<String, dynamic> json) =>
+  factory _$_InventoryItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_InventoryItemFromJson(json);
 
   /// [resourceType] This is a InventoryItem resource
@@ -15925,8 +15993,10 @@ abstract class _InventoryItem extends InventoryItem {
       final Reference? productReference}) = _$_InventoryItem;
   _InventoryItem._() : super._();
 
-  factory _InventoryItem.fromJson(Map<String, dynamic> json) =
-      _$_InventoryItem.fromJson;
+  factory _InventoryItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_InventoryItem.fromJson;
 
   @override
 
@@ -16357,7 +16427,10 @@ class _$_InventoryItemName extends _InventoryItemName {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_InventoryItemName.fromJson(Map<String, dynamic> json) =>
+  factory _$_InventoryItemName.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_InventoryItemNameFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -16520,8 +16593,10 @@ abstract class _InventoryItemName extends InventoryItemName {
       _$_InventoryItemName;
   _InventoryItemName._() : super._();
 
-  factory _InventoryItemName.fromJson(Map<String, dynamic> json) =
-      _$_InventoryItemName.fromJson;
+  factory _InventoryItemName.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_InventoryItemName.fromJson;
 
   @override
 
@@ -16798,8 +16873,9 @@ class _$_InventoryItemResponsibleOrganization
         super._();
 
   factory _$_InventoryItemResponsibleOrganization.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_InventoryItemResponsibleOrganizationFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_InventoryItemResponsibleOrganizationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -17240,7 +17316,10 @@ class _$_InventoryItemDescription extends _InventoryItemDescription {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_InventoryItemDescription.fromJson(Map<String, dynamic> json) =>
+  factory _$_InventoryItemDescription.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_InventoryItemDescriptionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -17397,8 +17476,10 @@ abstract class _InventoryItemDescription extends InventoryItemDescription {
       _$_InventoryItemDescription;
   _InventoryItemDescription._() : super._();
 
-  factory _InventoryItemDescription.fromJson(Map<String, dynamic> json) =
-      _$_InventoryItemDescription.fromJson;
+  factory _InventoryItemDescription.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_InventoryItemDescription.fromJson;
 
   @override
 
@@ -17699,7 +17780,10 @@ class _$_InventoryItemAssociation extends _InventoryItemAssociation {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_InventoryItemAssociation.fromJson(Map<String, dynamic> json) =>
+  factory _$_InventoryItemAssociation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_InventoryItemAssociationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -17850,8 +17934,10 @@ abstract class _InventoryItemAssociation extends InventoryItemAssociation {
       required final Ratio quantity}) = _$_InventoryItemAssociation;
   _InventoryItemAssociation._() : super._();
 
-  factory _InventoryItemAssociation.fromJson(Map<String, dynamic> json) =
-      _$_InventoryItemAssociation.fromJson;
+  factory _InventoryItemAssociation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_InventoryItemAssociation.fromJson;
 
   @override
 
@@ -18600,7 +18686,10 @@ class _$_InventoryItemCharacteristic extends _InventoryItemCharacteristic {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_InventoryItemCharacteristic.fromJson(Map<String, dynamic> json) =>
+  factory _$_InventoryItemCharacteristic.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_InventoryItemCharacteristicFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -18889,8 +18978,10 @@ abstract class _InventoryItemCharacteristic
       _$_InventoryItemCharacteristic;
   _InventoryItemCharacteristic._() : super._();
 
-  factory _InventoryItemCharacteristic.fromJson(Map<String, dynamic> json) =
-      _$_InventoryItemCharacteristic.fromJson;
+  factory _InventoryItemCharacteristic.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_InventoryItemCharacteristic.fromJson;
 
   @override
 
@@ -19343,7 +19434,10 @@ class _$_InventoryItemInstance extends _InventoryItemInstance {
         _identifier = identifier,
         super._();
 
-  factory _$_InventoryItemInstance.fromJson(Map<String, dynamic> json) =>
+  factory _$_InventoryItemInstance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_InventoryItemInstanceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -19530,8 +19624,10 @@ abstract class _InventoryItemInstance extends InventoryItemInstance {
       final Reference? location}) = _$_InventoryItemInstance;
   _InventoryItemInstance._() : super._();
 
-  factory _InventoryItemInstance.fromJson(Map<String, dynamic> json) =
-      _$_InventoryItemInstance.fromJson;
+  factory _InventoryItemInstance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_InventoryItemInstance.fromJson;
 
   @override
 
@@ -20311,7 +20407,10 @@ class _$_InventoryReport extends _InventoryReport {
         _note = note,
         super._();
 
-  factory _$_InventoryReport.fromJson(Map<String, dynamic> json) =>
+  factory _$_InventoryReport.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_InventoryReportFromJson(json);
 
   /// [resourceType] This is a InventoryReport resource
@@ -20675,8 +20774,10 @@ abstract class _InventoryReport extends InventoryReport {
       final List<Annotation>? note}) = _$_InventoryReport;
   _InventoryReport._() : super._();
 
-  factory _InventoryReport.fromJson(Map<String, dynamic> json) =
-      _$_InventoryReport.fromJson;
+  factory _InventoryReport.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_InventoryReport.fromJson;
 
   @override
 
@@ -21115,8 +21216,9 @@ class _$_InventoryReportInventoryListing
         super._();
 
   factory _$_InventoryReportInventoryListing.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_InventoryReportInventoryListingFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_InventoryReportInventoryListingFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -21292,8 +21394,10 @@ abstract class _InventoryReportInventoryListing
       _$_InventoryReportInventoryListing;
   _InventoryReportInventoryListing._() : super._();
 
-  factory _InventoryReportInventoryListing.fromJson(Map<String, dynamic> json) =
-      _$_InventoryReportInventoryListing.fromJson;
+  factory _InventoryReportInventoryListing.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_InventoryReportInventoryListing.fromJson;
 
   @override
 
@@ -21592,7 +21696,10 @@ class _$_InventoryReportItem extends _InventoryReportItem {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_InventoryReportItem.fromJson(Map<String, dynamic> json) =>
+  factory _$_InventoryReportItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_InventoryReportItemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -21737,8 +21844,10 @@ abstract class _InventoryReportItem extends InventoryReportItem {
       required final CodeableReference item}) = _$_InventoryReportItem;
   _InventoryReportItem._() : super._();
 
-  factory _InventoryReportItem.fromJson(Map<String, dynamic> json) =
-      _$_InventoryReportItem.fromJson;
+  factory _InventoryReportItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_InventoryReportItem.fromJson;
 
   @override
 
@@ -22547,7 +22656,10 @@ class _$_SupplyDelivery extends _SupplyDelivery {
         _receiver = receiver,
         super._();
 
-  factory _$_SupplyDelivery.fromJson(Map<String, dynamic> json) =>
+  factory _$_SupplyDelivery.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SupplyDeliveryFromJson(json);
 
   /// [resourceType] This is a SupplyDelivery resource
@@ -22943,8 +23055,10 @@ abstract class _SupplyDelivery extends SupplyDelivery {
       final List<Reference>? receiver}) = _$_SupplyDelivery;
   _SupplyDelivery._() : super._();
 
-  factory _SupplyDelivery.fromJson(Map<String, dynamic> json) =
-      _$_SupplyDelivery.fromJson;
+  factory _SupplyDelivery.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SupplyDelivery.fromJson;
 
   @override
 
@@ -23362,7 +23476,10 @@ class _$_SupplyDeliverySuppliedItem extends _SupplyDeliverySuppliedItem {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
+  factory _$_SupplyDeliverySuppliedItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SupplyDeliverySuppliedItemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -23513,8 +23630,10 @@ abstract class _SupplyDeliverySuppliedItem extends SupplyDeliverySuppliedItem {
       final Reference? itemReference}) = _$_SupplyDeliverySuppliedItem;
   _SupplyDeliverySuppliedItem._() : super._();
 
-  factory _SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =
-      _$_SupplyDeliverySuppliedItem.fromJson;
+  factory _SupplyDeliverySuppliedItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SupplyDeliverySuppliedItem.fromJson;
 
   @override
 
@@ -24515,7 +24634,10 @@ class _$_SupplyRequest extends _SupplyRequest {
         _reason = reason,
         super._();
 
-  factory _$_SupplyRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_SupplyRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SupplyRequestFromJson(json);
 
   /// [resourceType] This is a SupplyRequest resource
@@ -24971,8 +25093,10 @@ abstract class _SupplyRequest extends SupplyRequest {
       final Reference? deliverTo}) = _$_SupplyRequest;
   _SupplyRequest._() : super._();
 
-  factory _SupplyRequest.fromJson(Map<String, dynamic> json) =
-      _$_SupplyRequest.fromJson;
+  factory _SupplyRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SupplyRequest.fromJson;
 
   @override
 
@@ -25491,7 +25615,10 @@ class _$_SupplyRequestParameter extends _SupplyRequestParameter {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_SupplyRequestParameter.fromJson(Map<String, dynamic> json) =>
+  factory _$_SupplyRequestParameter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SupplyRequestParameterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -25661,8 +25788,10 @@ abstract class _SupplyRequestParameter extends SupplyRequestParameter {
       _$_SupplyRequestParameter;
   _SupplyRequestParameter._() : super._();
 
-  factory _SupplyRequestParameter.fromJson(Map<String, dynamic> json) =
-      _$_SupplyRequestParameter.fromJson;
+  factory _SupplyRequestParameter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SupplyRequestParameter.fromJson;
 
   @override
 

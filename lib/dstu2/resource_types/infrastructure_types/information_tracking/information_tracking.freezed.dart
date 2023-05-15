@@ -643,7 +643,10 @@ class _$_Questionnaire extends _Questionnaire {
         _subjectTypeElement = subjectTypeElement,
         super._();
 
-  factory _$_Questionnaire.fromJson(Map<String, dynamic> json) =>
+  factory _$_Questionnaire.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_QuestionnaireFromJson(json);
 
   @override
@@ -907,8 +910,10 @@ abstract class _Questionnaire extends Questionnaire {
       required final QuestionnaireGroup group}) = _$_Questionnaire;
   _Questionnaire._() : super._();
 
-  factory _Questionnaire.fromJson(Map<String, dynamic> json) =
-      _$_Questionnaire.fromJson;
+  factory _Questionnaire.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Questionnaire.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
@@ -1295,7 +1300,10 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
         _question = question,
         super._();
 
-  factory _$_QuestionnaireGroup.fromJson(Map<String, dynamic> json) =>
+  factory _$_QuestionnaireGroup.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_QuestionnaireGroupFromJson(json);
 
   @override
@@ -1466,8 +1474,10 @@ abstract class _QuestionnaireGroup extends QuestionnaireGroup {
       _$_QuestionnaireGroup;
   _QuestionnaireGroup._() : super._();
 
-  factory _QuestionnaireGroup.fromJson(Map<String, dynamic> json) =
-      _$_QuestionnaireGroup.fromJson;
+  factory _QuestionnaireGroup.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_QuestionnaireGroup.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1831,7 +1841,10 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
         _group = group,
         super._();
 
-  factory _$_QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =>
+  factory _$_QuestionnaireGroupQuestion.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_QuestionnaireGroupQuestionFromJson(json);
 
   @override
@@ -2000,8 +2013,10 @@ abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
       final List<QuestionnaireGroup>? group}) = _$_QuestionnaireGroupQuestion;
   _QuestionnaireGroupQuestion._() : super._();
 
-  factory _QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =
-      _$_QuestionnaireGroupQuestion.fromJson;
+  factory _QuestionnaireGroupQuestion.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_QuestionnaireGroupQuestion.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2695,7 +2710,10 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_QuestionnaireResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_QuestionnaireResponseFromJson(json);
 
   @override
@@ -2910,8 +2928,10 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       final QuestionnaireResponseGroup? group}) = _$_QuestionnaireResponse;
   _QuestionnaireResponse._() : super._();
 
-  factory _QuestionnaireResponse.fromJson(Map<String, dynamic> json) =
-      _$_QuestionnaireResponse.fromJson;
+  factory _QuestionnaireResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_QuestionnaireResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
@@ -3284,7 +3304,10 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
         _question = question,
         super._();
 
-  factory _$_QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =>
+  factory _$_QuestionnaireResponseGroup.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_QuestionnaireResponseGroupFromJson(json);
 
   @override
@@ -3435,8 +3458,10 @@ abstract class _QuestionnaireResponseGroup extends QuestionnaireResponseGroup {
       _$_QuestionnaireResponseGroup;
   _QuestionnaireResponseGroup._() : super._();
 
-  factory _QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =
-      _$_QuestionnaireResponseGroup.fromJson;
+  factory _QuestionnaireResponseGroup.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_QuestionnaireResponseGroup.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3697,8 +3722,9 @@ class _$_QuestionnaireResponseGroupQuestion
         super._();
 
   factory _$_QuestionnaireResponseGroupQuestion.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_QuestionnaireResponseGroupQuestionFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_QuestionnaireResponseGroupQuestionFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -4529,8 +4555,9 @@ class _$_QuestionnaireResponseQuestionAnswer
         super._();
 
   factory _$_QuestionnaireResponseQuestionAnswer.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_QuestionnaireResponseQuestionAnswerFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_QuestionnaireResponseQuestionAnswerFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -5412,7 +5439,10 @@ class _$_Provenance extends _Provenance {
         _signature = signature,
         super._();
 
-  factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
+  factory _$_Provenance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ProvenanceFromJson(json);
 
   @override
@@ -5673,8 +5703,10 @@ abstract class _Provenance extends Provenance {
       final List<Signature>? signature}) = _$_Provenance;
   _Provenance._() : super._();
 
-  factory _Provenance.fromJson(Map<String, dynamic> json) =
-      _$_Provenance.fromJson;
+  factory _Provenance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Provenance.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
@@ -5974,7 +6006,10 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
         _relatedAgent = relatedAgent,
         super._();
 
-  factory _$_ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProvenanceAgent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ProvenanceAgentFromJson(json);
 
   @override
@@ -6093,8 +6128,10 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
       _$_ProvenanceAgent;
   _ProvenanceAgent._() : super._();
 
-  factory _ProvenanceAgent.fromJson(Map<String, dynamic> json) =
-      _$_ProvenanceAgent.fromJson;
+  factory _ProvenanceAgent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ProvenanceAgent.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6418,7 +6455,10 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProvenanceEntity.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ProvenanceEntityFromJson(json);
 
   @override
@@ -6555,8 +6595,10 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
       final ProvenanceAgent? agent}) = _$_ProvenanceEntity;
   _ProvenanceEntity._() : super._();
 
-  factory _ProvenanceEntity.fromJson(Map<String, dynamic> json) =
-      _$_ProvenanceEntity.fromJson;
+  factory _ProvenanceEntity.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ProvenanceEntity.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6762,7 +6804,10 @@ class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProvenanceAgentRelatedAgent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ProvenanceAgentRelatedAgentFromJson(json);
 
   @override
@@ -6849,8 +6894,10 @@ abstract class _ProvenanceAgentRelatedAgent
       required final FhirUri target}) = _$_ProvenanceAgentRelatedAgent;
   _ProvenanceAgentRelatedAgent._() : super._();
 
-  factory _ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =
-      _$_ProvenanceAgentRelatedAgent.fromJson;
+  factory _ProvenanceAgentRelatedAgent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ProvenanceAgentRelatedAgent.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -7266,7 +7313,10 @@ class _$_AuditEvent extends _AuditEvent {
         _object = object,
         super._();
 
-  factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
+  factory _$_AuditEvent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AuditEventFromJson(json);
 
   @override
@@ -7437,8 +7487,10 @@ abstract class _AuditEvent extends AuditEvent {
       final List<AuditEventObject>? object}) = _$_AuditEvent;
   _AuditEvent._() : super._();
 
-  factory _AuditEvent.fromJson(Map<String, dynamic> json) =
-      _$_AuditEvent.fromJson;
+  factory _AuditEvent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AuditEvent.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
@@ -7716,7 +7768,10 @@ class _$_AuditEventEvent extends _AuditEventEvent {
         _purposeOfEvent = purposeOfEvent,
         super._();
 
-  factory _$_AuditEventEvent.fromJson(Map<String, dynamic> json) =>
+  factory _$_AuditEventEvent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AuditEventEventFromJson(json);
 
   @override
@@ -7844,8 +7899,10 @@ abstract class _AuditEventEvent extends AuditEventEvent {
       final List<Coding>? purposeOfEvent}) = _$_AuditEventEvent;
   _AuditEventEvent._() : super._();
 
-  factory _AuditEventEvent.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventEvent.fromJson;
+  factory _AuditEventEvent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AuditEventEvent.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -8265,7 +8322,10 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
         _purposeOfUse = purposeOfUse,
         super._();
 
-  factory _$_AuditEventParticipant.fromJson(Map<String, dynamic> json) =>
+  factory _$_AuditEventParticipant.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AuditEventParticipantFromJson(json);
 
   @override
@@ -8430,8 +8490,10 @@ abstract class _AuditEventParticipant extends AuditEventParticipant {
       final List<Coding>? purposeOfUse}) = _$_AuditEventParticipant;
   _AuditEventParticipant._() : super._();
 
-  factory _AuditEventParticipant.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventParticipant.fromJson;
+  factory _AuditEventParticipant.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AuditEventParticipant.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -8680,7 +8742,10 @@ class _$_AuditEventSource extends _AuditEventSource {
         _type = type,
         super._();
 
-  factory _$_AuditEventSource.fromJson(Map<String, dynamic> json) =>
+  factory _$_AuditEventSource.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AuditEventSourceFromJson(json);
 
   @override
@@ -8785,8 +8850,10 @@ abstract class _AuditEventSource extends AuditEventSource {
       final List<Coding>? type}) = _$_AuditEventSource;
   _AuditEventSource._() : super._();
 
-  factory _AuditEventSource.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventSource.fromJson;
+  factory _AuditEventSource.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AuditEventSource.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -9183,7 +9250,10 @@ class _$_AuditEventObject extends _AuditEventObject {
         _detail = detail,
         super._();
 
-  factory _$_AuditEventObject.fromJson(Map<String, dynamic> json) =>
+  factory _$_AuditEventObject.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AuditEventObjectFromJson(json);
 
   @override
@@ -9335,8 +9405,10 @@ abstract class _AuditEventObject extends AuditEventObject {
       final List<AuditEventObjectDetail>? detail}) = _$_AuditEventObject;
   _AuditEventObject._() : super._();
 
-  factory _AuditEventObject.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventObject.fromJson;
+  factory _AuditEventObject.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AuditEventObject.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -9594,7 +9666,10 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =>
+  factory _$_AuditEventParticipantNetwork.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AuditEventParticipantNetworkFromJson(json);
 
   @override
@@ -9696,8 +9771,10 @@ abstract class _AuditEventParticipantNetwork
       _$_AuditEventParticipantNetwork;
   _AuditEventParticipantNetwork._() : super._();
 
-  factory _AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventParticipantNetwork.fromJson;
+  factory _AuditEventParticipantNetwork.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AuditEventParticipantNetwork.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -9908,7 +9985,10 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =>
+  factory _$_AuditEventObjectDetail.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AuditEventObjectDetailFromJson(json);
 
   @override
@@ -10001,8 +10081,10 @@ abstract class _AuditEventObjectDetail extends AuditEventObjectDetail {
       required final FhirBase64Binary? value}) = _$_AuditEventObjectDetail;
   _AuditEventObjectDetail._() : super._();
 
-  factory _AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventObjectDetail.fromJson;
+  factory _AuditEventObjectDetail.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AuditEventObjectDetail.fromJson;
 
   @override
   @JsonKey(name: 'id')

@@ -1,10 +1,15 @@
-// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+// ignore_for_file: invalid_annotation_target
+// ignore_for_file: sort_unnamed_constructors_first
+// ignore_for_file: sort_constructors_first
+// ignore_for_file: prefer_mixin
+// ignore_file_file: avoid_unused_constructor_parameters
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -45,7 +50,10 @@ class FhirMeta with _$FhirMeta {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FhirMeta.fromJson(Map<String, dynamic> json) =>
+  factory FhirMeta.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$FhirMetaFromJson(json);
 
   /// Acts like a constructor, returns a [FhirMeta], accepts a
@@ -89,7 +97,10 @@ class Reference with _$Reference {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Reference.fromJson(Map<String, dynamic> json) =>
+  factory Reference.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ReferenceFromJson(json);
 
   /// Acts like a constructor, returns a [Reference], accepts a
@@ -467,7 +478,10 @@ class ElementDefinition with _$ElementDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinition.fromJson(Map<String, dynamic> json) =>
+  factory ElementDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ElementDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinition], accepts a
@@ -511,7 +525,10 @@ class Narrative with _$Narrative {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Narrative.fromJson(Map<String, dynamic> json) =>
+  factory Narrative.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$NarrativeFromJson(json);
 
   /// Acts like a constructor, returns a [Narrative], accepts a
@@ -558,7 +575,10 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
+  factory ElementDefinitionSlicing.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ElementDefinitionSlicingFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionSlicing], accepts a
@@ -603,7 +623,10 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
+  factory ElementDefinitionBase.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ElementDefinitionBaseFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionBase], accepts a
@@ -648,7 +671,10 @@ class ElementDefinitionType with _$ElementDefinitionType {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
+  factory ElementDefinitionType.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ElementDefinitionTypeFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionType], accepts a
@@ -686,7 +712,10 @@ class TypeCodeExtension with _$TypeCodeExtension {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TypeCodeExtension.fromJson(Map<String, dynamic> json) =>
+  factory TypeCodeExtension.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$TypeCodeExtensionFromJson(json);
 
   /// Acts like a constructor, returns a [TypeCodeExtension], accepts a
@@ -736,7 +765,10 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
+  factory ElementDefinitionConstraint.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ElementDefinitionConstraintFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionConstraint], accepts a
@@ -782,7 +814,10 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
+  factory ElementDefinitionBinding.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ElementDefinitionBindingFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionBinding], accepts a
@@ -828,7 +863,10 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
+  factory ElementDefinitionMapping.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ElementDefinitionMappingFromJson(json);
 
   /// Acts like a constructor, returns a [ElementDefinitionMapping], accepts a

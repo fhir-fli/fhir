@@ -915,7 +915,10 @@ class _$_Appointment extends _Appointment {
         _requestedPeriod = requestedPeriod,
         super._();
 
-  factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
+  factory _$_Appointment.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AppointmentFromJson(json);
 
   @override
@@ -1309,8 +1312,10 @@ abstract class _Appointment extends Appointment {
       final List<Period>? requestedPeriod}) = _$_Appointment;
   _Appointment._() : super._();
 
-  factory _Appointment.fromJson(Map<String, dynamic> json) =
-      _$_Appointment.fromJson;
+  factory _Appointment.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Appointment.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
@@ -1624,7 +1629,10 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       : _type = type,
         super._();
 
-  factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
+  factory _$_AppointmentParticipant.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AppointmentParticipantFromJson(json);
 
   final List<CodeableConcept>? _type;
@@ -1711,8 +1719,10 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
           final Element? statusElement}) = _$_AppointmentParticipant;
   _AppointmentParticipant._() : super._();
 
-  factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
-      _$_AppointmentParticipant.fromJson;
+  factory _AppointmentParticipant.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AppointmentParticipant.fromJson;
 
   @override
   List<CodeableConcept>? get type;
@@ -2323,7 +2333,10 @@ class _$_AppointmentResponse extends _AppointmentResponse {
         _participantType = participantType,
         super._();
 
-  factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_AppointmentResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_AppointmentResponseFromJson(json);
 
   @override
@@ -2555,8 +2568,10 @@ abstract class _AppointmentResponse extends AppointmentResponse {
           final Element? commentElement}) = _$_AppointmentResponse;
   _AppointmentResponse._() : super._();
 
-  factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
-      _$_AppointmentResponse.fromJson;
+  factory _AppointmentResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_AppointmentResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
@@ -3441,7 +3456,10 @@ class _$_ProcessRequest extends _ProcessRequest {
         _excludeElement = excludeElement,
         super._();
 
-  factory _$_ProcessRequest.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProcessRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ProcessRequestFromJson(json);
 
   @override
@@ -3763,8 +3781,10 @@ abstract class _ProcessRequest extends ProcessRequest {
       final Period? period}) = _$_ProcessRequest;
   _ProcessRequest._() : super._();
 
-  factory _ProcessRequest.fromJson(Map<String, dynamic> json) =
-      _$_ProcessRequest.fromJson;
+  factory _ProcessRequest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ProcessRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
@@ -3971,7 +3991,10 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
       @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement})
       : super._();
 
-  factory _$_ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProcessRequestItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ProcessRequestItemFromJson(json);
 
   @override
@@ -4023,8 +4046,10 @@ abstract class _ProcessRequestItem extends ProcessRequestItem {
           final Element? sequenceLinkIdElement}) = _$_ProcessRequestItem;
   _ProcessRequestItem._() : super._();
 
-  factory _ProcessRequestItem.fromJson(Map<String, dynamic> json) =
-      _$_ProcessRequestItem.fromJson;
+  factory _ProcessRequestItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ProcessRequestItem.fromJson;
 
   @override
   FhirId? get sequenceLinkId;
@@ -4729,7 +4754,10 @@ class _$_ProcessResponse extends _ProcessResponse {
         _communicationRequest = communicationRequest,
         super._();
 
-  factory _$_ProcessResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProcessResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ProcessResponseFromJson(json);
 
   @override
@@ -4995,8 +5023,10 @@ abstract class _ProcessResponse extends ProcessResponse {
       final List<Reference>? communicationRequest}) = _$_ProcessResponse;
   _ProcessResponse._() : super._();
 
-  factory _ProcessResponse.fromJson(Map<String, dynamic> json) =
-      _$_ProcessResponse.fromJson;
+  factory _ProcessResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ProcessResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
@@ -5220,7 +5250,10 @@ class _$_ProcessResponseProcessNote extends _ProcessResponseProcessNote {
       {this.type, this.text, @JsonKey(name: '_text') this.textElement})
       : super._();
 
-  factory _$_ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =>
+  factory _$_ProcessResponseProcessNote.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ProcessResponseProcessNoteFromJson(json);
 
   @override
@@ -5274,8 +5307,10 @@ abstract class _ProcessResponseProcessNote extends ProcessResponseProcessNote {
       _$_ProcessResponseProcessNote;
   _ProcessResponseProcessNote._() : super._();
 
-  factory _ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =
-      _$_ProcessResponseProcessNote.fromJson;
+  factory _ProcessResponseProcessNote.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ProcessResponseProcessNote.fromJson;
 
   @override
   CodeableConcept? get type;
@@ -6059,7 +6094,10 @@ class _$_RequestGroup extends _RequestGroup {
         _action = action,
         super._();
 
-  factory _$_RequestGroup.fromJson(Map<String, dynamic> json) =>
+  factory _$_RequestGroup.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_RequestGroupFromJson(json);
 
   @override
@@ -6363,8 +6401,10 @@ abstract class _RequestGroup extends RequestGroup {
       final List<RequestGroupAction>? action}) = _$_RequestGroup;
   _RequestGroup._() : super._();
 
-  factory _RequestGroup.fromJson(Map<String, dynamic> json) =
-      _$_RequestGroup.fromJson;
+  factory _RequestGroup.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_RequestGroup.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
@@ -7247,7 +7287,10 @@ class _$_RequestGroupAction extends _RequestGroupAction {
         _action = action,
         super._();
 
-  factory _$_RequestGroupAction.fromJson(Map<String, dynamic> json) =>
+  factory _$_RequestGroupAction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_RequestGroupActionFromJson(json);
 
   @override
@@ -7546,8 +7589,10 @@ abstract class _RequestGroupAction extends RequestGroupAction {
       final List<RequestGroupAction>? action}) = _$_RequestGroupAction;
   _RequestGroupAction._() : super._();
 
-  factory _RequestGroupAction.fromJson(Map<String, dynamic> json) =
-      _$_RequestGroupAction.fromJson;
+  factory _RequestGroupAction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_RequestGroupAction.fromJson;
 
   @override
   String? get label;
@@ -7884,7 +7929,10 @@ class _$_RequestGroupCondition extends _RequestGroupCondition {
       @JsonKey(name: '_expression') this.expressionElement})
       : super._();
 
-  factory _$_RequestGroupCondition.fromJson(Map<String, dynamic> json) =>
+  factory _$_RequestGroupCondition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_RequestGroupConditionFromJson(json);
 
   @override
@@ -7976,8 +8024,10 @@ abstract class _RequestGroupCondition extends RequestGroupCondition {
       _$_RequestGroupCondition;
   _RequestGroupCondition._() : super._();
 
-  factory _RequestGroupCondition.fromJson(Map<String, dynamic> json) =
-      _$_RequestGroupCondition.fromJson;
+  factory _RequestGroupCondition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_RequestGroupCondition.fromJson;
 
   @override
   String? get kind;
@@ -8233,7 +8283,10 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
       this.offsetRange})
       : super._();
 
-  factory _$_RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
+  factory _$_RequestGroupRelatedAction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_RequestGroupRelatedActionFromJson(json);
 
   @override
@@ -8305,8 +8358,10 @@ abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
       final Range? offsetRange}) = _$_RequestGroupRelatedAction;
   _RequestGroupRelatedAction._() : super._();
 
-  factory _RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =
-      _$_RequestGroupRelatedAction.fromJson;
+  factory _RequestGroupRelatedAction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_RequestGroupRelatedAction.fromJson;
 
   @override
   FhirId? get actionId;
@@ -8853,7 +8908,10 @@ class _$_Schedule extends _Schedule {
         _actor = actor,
         super._();
 
-  factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
+  factory _$_Schedule.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ScheduleFromJson(json);
 
   @override
@@ -9082,7 +9140,10 @@ abstract class _Schedule extends Schedule {
           final Element? commentElement}) = _$_Schedule;
   _Schedule._() : super._();
 
-  factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
+  factory _Schedule.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Schedule.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
@@ -9811,7 +9872,11 @@ class _$_Slot extends _Slot {
         _specialty = specialty,
         super._();
 
-  factory _$_Slot.fromJson(Map<String, dynamic> json) => _$$_SlotFromJson(json);
+  factory _$_Slot.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
+      _$$_SlotFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
@@ -10074,7 +10139,10 @@ abstract class _Slot extends Slot {
           final Element? commentElement}) = _$_Slot;
   _Slot._() : super._();
 
-  factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
+  factory _Slot.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Slot.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
@@ -11285,7 +11353,11 @@ class _$_Task extends _Task {
         _output = output,
         super._();
 
-  factory _$_Task.fromJson(Map<String, dynamic> json) => _$$_TaskFromJson(json);
+  factory _$_Task.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
+      _$$_TaskFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
@@ -11698,7 +11770,10 @@ abstract class _Task extends Task {
       final List<TaskOutput>? output}) = _$_Task;
   _Task._() : super._();
 
-  factory _Task.fromJson(Map<String, dynamic> json) = _$_Task.fromJson;
+  factory _Task.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Task.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
@@ -11934,7 +12009,10 @@ class __$$_TaskRequesterCopyWithImpl<$Res>
 class _$_TaskRequester extends _TaskRequester {
   _$_TaskRequester({required this.agent, this.onBehalfOf}) : super._();
 
-  factory _$_TaskRequester.fromJson(Map<String, dynamic> json) =>
+  factory _$_TaskRequester.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TaskRequesterFromJson(json);
 
   @override
@@ -11981,8 +12059,10 @@ abstract class _TaskRequester extends TaskRequester {
       final Reference? onBehalfOf}) = _$_TaskRequester;
   _TaskRequester._() : super._();
 
-  factory _TaskRequester.fromJson(Map<String, dynamic> json) =
-      _$_TaskRequester.fromJson;
+  factory _TaskRequester.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TaskRequester.fromJson;
 
   @override
   Reference get agent;
@@ -12159,7 +12239,10 @@ class _$_TaskRestriction extends _TaskRestriction {
       : _recipient = recipient,
         super._();
 
-  factory _$_TaskRestriction.fromJson(Map<String, dynamic> json) =>
+  factory _$_TaskRestriction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TaskRestrictionFromJson(json);
 
   @override
@@ -12225,8 +12308,10 @@ abstract class _TaskRestriction extends TaskRestriction {
       final List<Reference>? recipient}) = _$_TaskRestriction;
   _TaskRestriction._() : super._();
 
-  factory _TaskRestriction.fromJson(Map<String, dynamic> json) =
-      _$_TaskRestriction.fromJson;
+  factory _TaskRestriction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TaskRestriction.fromJson;
 
   @override
   FhirDecimal? get repetitions;
@@ -14149,7 +14234,10 @@ class _$_TaskInput extends _TaskInput {
       this.valueTriggerDefinition})
       : super._();
 
-  factory _$_TaskInput.fromJson(Map<String, dynamic> json) =>
+  factory _$_TaskInput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TaskInputFromJson(json);
 
   @override
@@ -14612,8 +14700,10 @@ abstract class _TaskInput extends TaskInput {
       final TriggerDefinition? valueTriggerDefinition}) = _$_TaskInput;
   _TaskInput._() : super._();
 
-  factory _TaskInput.fromJson(Map<String, dynamic> json) =
-      _$_TaskInput.fromJson;
+  factory _TaskInput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TaskInput.fromJson;
 
   @override
   CodeableConcept get type;
@@ -16688,7 +16778,10 @@ class _$_TaskOutput extends _TaskOutput {
       this.valueTriggerDefinition})
       : super._();
 
-  factory _$_TaskOutput.fromJson(Map<String, dynamic> json) =>
+  factory _$_TaskOutput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TaskOutputFromJson(json);
 
   @override
@@ -17151,8 +17244,10 @@ abstract class _TaskOutput extends TaskOutput {
       final TriggerDefinition? valueTriggerDefinition}) = _$_TaskOutput;
   _TaskOutput._() : super._();
 
-  factory _TaskOutput.fromJson(Map<String, dynamic> json) =
-      _$_TaskOutput.fromJson;
+  factory _TaskOutput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TaskOutput.fromJson;
 
   @override
   CodeableConcept get type;

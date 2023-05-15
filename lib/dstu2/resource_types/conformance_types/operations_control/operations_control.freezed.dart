@@ -708,7 +708,10 @@ class _$_Conformance extends _Conformance {
         _document = document,
         super._();
 
-  factory _$_Conformance.fromJson(Map<String, dynamic> json) =>
+  factory _$_Conformance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConformanceFromJson(json);
 
   @override
@@ -1020,8 +1023,10 @@ abstract class _Conformance extends Conformance {
       final List<ConformanceDocument>? document}) = _$_Conformance;
   _Conformance._() : super._();
 
-  factory _Conformance.fromJson(Map<String, dynamic> json) =
-      _$_Conformance.fromJson;
+  factory _Conformance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Conformance.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
@@ -1798,7 +1803,10 @@ class _$_CapabilityStatement extends _CapabilityStatement {
         _document = document,
         super._();
 
-  factory _$_CapabilityStatement.fromJson(Map<String, dynamic> json) =>
+  factory _$_CapabilityStatement.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CapabilityStatementFromJson(json);
 
   @override
@@ -2111,8 +2119,10 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       final List<ConformanceDocument>? document}) = _$_CapabilityStatement;
   _CapabilityStatement._() : super._();
 
-  factory _CapabilityStatement.fromJson(Map<String, dynamic> json) =
-      _$_CapabilityStatement.fromJson;
+  factory _CapabilityStatement.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CapabilityStatement.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
@@ -2346,7 +2356,10 @@ class _$_ConformanceContact extends _ConformanceContact {
         _telecom = telecom,
         super._();
 
-  factory _$_ConformanceContact.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConformanceContact.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConformanceContactFromJson(json);
 
   @override
@@ -2439,8 +2452,10 @@ abstract class _ConformanceContact extends ConformanceContact {
       final List<ContactPoint>? telecom}) = _$_ConformanceContact;
   _ConformanceContact._() : super._();
 
-  factory _ConformanceContact.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceContact.fromJson;
+  factory _ConformanceContact.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceContact.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2624,7 +2639,10 @@ class _$_ConformanceSoftware extends _ConformanceSoftware {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConformanceSoftware.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConformanceSoftware.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConformanceSoftwareFromJson(json);
 
   @override
@@ -2716,8 +2734,10 @@ abstract class _ConformanceSoftware extends ConformanceSoftware {
       final FhirDateTime? releaseDate}) = _$_ConformanceSoftware;
   _ConformanceSoftware._() : super._();
 
-  factory _ConformanceSoftware.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceSoftware.fromJson;
+  factory _ConformanceSoftware.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceSoftware.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2894,7 +2914,10 @@ class _$_ConformanceImplementation extends _ConformanceImplementation {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConformanceImplementation.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConformanceImplementation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConformanceImplementationFromJson(json);
 
   @override
@@ -2981,8 +3004,10 @@ abstract class _ConformanceImplementation extends ConformanceImplementation {
       final FhirUri? url}) = _$_ConformanceImplementation;
   _ConformanceImplementation._() : super._();
 
-  factory _ConformanceImplementation.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceImplementation.fromJson;
+  factory _ConformanceImplementation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceImplementation.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3343,7 +3368,10 @@ class _$_ConformanceRest extends _ConformanceRest {
         _compartment = compartment,
         super._();
 
-  factory _$_ConformanceRest.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConformanceRest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConformanceRestFromJson(json);
 
   @override
@@ -3537,8 +3565,10 @@ abstract class _ConformanceRest extends ConformanceRest {
       final List<FhirUri>? compartment}) = _$_ConformanceRest;
   _ConformanceRest._() : super._();
 
-  factory _ConformanceRest.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceRest.fromJson;
+  factory _ConformanceRest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceRest.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3779,7 +3809,10 @@ class _$_ConformanceMessaging extends _ConformanceMessaging {
         _event = event,
         super._();
 
-  factory _$_ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConformanceMessaging.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConformanceMessagingFromJson(json);
 
   @override
@@ -3906,8 +3939,10 @@ abstract class _ConformanceMessaging extends ConformanceMessaging {
       _$_ConformanceMessaging;
   _ConformanceMessaging._() : super._();
 
-  factory _ConformanceMessaging.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceMessaging.fromJson;
+  factory _ConformanceMessaging.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceMessaging.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4128,7 +4163,10 @@ class _$_ConformanceDocument extends _ConformanceDocument {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_ConformanceDocument.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConformanceDocument.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConformanceDocumentFromJson(json);
 
   @override
@@ -4240,8 +4278,10 @@ abstract class _ConformanceDocument extends ConformanceDocument {
       required final Reference profile}) = _$_ConformanceDocument;
   _ConformanceDocument._() : super._();
 
-  factory _ConformanceDocument.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceDocument.fromJson;
+  factory _ConformanceDocument.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceDocument.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4483,7 +4523,10 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
         _certificate = certificate,
         super._();
 
-  factory _$_ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConformanceRestSecurity.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConformanceRestSecurityFromJson(json);
 
   @override
@@ -4605,8 +4648,10 @@ abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
       _$_ConformanceRestSecurity;
   _ConformanceRestSecurity._() : super._();
 
-  factory _ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceRestSecurity.fromJson;
+  factory _ConformanceRestSecurity.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceRestSecurity.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -5119,7 +5164,10 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
         _searchParam = searchParam,
         super._();
 
-  factory _$_ConformanceRestResource.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConformanceRestResource.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConformanceRestResourceFromJson(json);
 
   @override
@@ -5356,8 +5404,10 @@ abstract class _ConformanceRestResource extends ConformanceRestResource {
       _$_ConformanceRestResource;
   _ConformanceRestResource._() : super._();
 
-  factory _ConformanceRestResource.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceRestResource.fromJson;
+  factory _ConformanceRestResource.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceRestResource.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -5584,8 +5634,9 @@ class _$_ConformanceResourceInteraction
         super._();
 
   factory _$_ConformanceResourceInteraction.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_ConformanceResourceInteractionFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_ConformanceResourceInteractionFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -5676,8 +5727,10 @@ abstract class _ConformanceResourceInteraction
       final String? documentation}) = _$_ConformanceResourceInteraction;
   _ConformanceResourceInteraction._() : super._();
 
-  factory _ConformanceResourceInteraction.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceResourceInteraction.fromJson;
+  factory _ConformanceResourceInteraction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceResourceInteraction.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -5881,7 +5934,10 @@ class _$_ConformanceRestOperation extends _ConformanceRestOperation {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_ConformanceRestOperation.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConformanceRestOperation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConformanceRestOperationFromJson(json);
 
   @override
@@ -5983,8 +6039,10 @@ abstract class _ConformanceRestOperation extends ConformanceRestOperation {
       required final Reference definition}) = _$_ConformanceRestOperation;
   _ConformanceRestOperation._() : super._();
 
-  factory _ConformanceRestOperation.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceRestOperation.fromJson;
+  factory _ConformanceRestOperation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceRestOperation.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6207,7 +6265,10 @@ class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConformanceMessagingEndpoint.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConformanceMessagingEndpointFromJson(json);
 
   @override
@@ -6303,8 +6364,10 @@ abstract class _ConformanceMessagingEndpoint
       _$_ConformanceMessagingEndpoint;
   _ConformanceMessagingEndpoint._() : super._();
 
-  factory _ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceMessagingEndpoint.fromJson;
+  factory _ConformanceMessagingEndpoint.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceMessagingEndpoint.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6619,7 +6682,10 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConformanceMessagingEvent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConformanceMessagingEventFromJson(json);
 
   @override
@@ -6747,8 +6813,10 @@ abstract class _ConformanceMessagingEvent extends ConformanceMessagingEvent {
       final String? documentation}) = _$_ConformanceMessagingEvent;
   _ConformanceMessagingEvent._() : super._();
 
-  factory _ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceMessagingEvent.fromJson;
+  factory _ConformanceMessagingEvent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceMessagingEvent.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6974,8 +7042,9 @@ class _$_ConformanceSecurityCertificate
         super._();
 
   factory _$_ConformanceSecurityCertificate.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_ConformanceSecurityCertificateFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_ConformanceSecurityCertificateFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -7069,8 +7138,10 @@ abstract class _ConformanceSecurityCertificate
       _$_ConformanceSecurityCertificate;
   _ConformanceSecurityCertificate._() : super._();
 
-  factory _ConformanceSecurityCertificate.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceSecurityCertificate.fromJson;
+  factory _ConformanceSecurityCertificate.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceSecurityCertificate.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -7259,7 +7330,10 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConformanceRestInteraction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConformanceRestInteractionFromJson(json);
 
   @override
@@ -7350,8 +7424,10 @@ abstract class _ConformanceRestInteraction extends ConformanceRestInteraction {
       final String? documentation}) = _$_ConformanceRestInteraction;
   _ConformanceRestInteraction._() : super._();
 
-  factory _ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceRestInteraction.fromJson;
+  factory _ConformanceRestInteraction.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceRestInteraction.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -7621,8 +7697,9 @@ class _$_ConformanceResourceSearchParam
         super._();
 
   factory _$_ConformanceResourceSearchParam.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_ConformanceResourceSearchParamFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_ConformanceResourceSearchParamFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -7778,8 +7855,10 @@ abstract class _ConformanceResourceSearchParam
       final List<String>? chain}) = _$_ConformanceResourceSearchParam;
   _ConformanceResourceSearchParam._() : super._();
 
-  factory _ConformanceResourceSearchParam.fromJson(Map<String, dynamic> json) =
-      _$_ConformanceResourceSearchParam.fromJson;
+  factory _ConformanceResourceSearchParam.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConformanceResourceSearchParam.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -8356,7 +8435,10 @@ class _$_OperationDefinition extends _OperationDefinition {
         _parameter = parameter,
         super._();
 
-  factory _$_OperationDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_OperationDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_OperationDefinitionFromJson(json);
 
   @override
@@ -8608,8 +8690,10 @@ abstract class _OperationDefinition extends OperationDefinition {
       final List<OperationDefinitionParameter>? parameter}) = _$_OperationDefinition;
   _OperationDefinition._() : super._();
 
-  factory _OperationDefinition.fromJson(Map<String, dynamic> json) =
-      _$_OperationDefinition.fromJson;
+  factory _OperationDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_OperationDefinition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
@@ -8835,7 +8919,10 @@ class _$_OperationDefinitionContact extends _OperationDefinitionContact {
         _telecom = telecom,
         super._();
 
-  factory _$_OperationDefinitionContact.fromJson(Map<String, dynamic> json) =>
+  factory _$_OperationDefinitionContact.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_OperationDefinitionContactFromJson(json);
 
   @override
@@ -8928,8 +9015,10 @@ abstract class _OperationDefinitionContact extends OperationDefinitionContact {
       final List<ContactPoint>? telecom}) = _$_OperationDefinitionContact;
   _OperationDefinitionContact._() : super._();
 
-  factory _OperationDefinitionContact.fromJson(Map<String, dynamic> json) =
-      _$_OperationDefinitionContact.fromJson;
+  factory _OperationDefinitionContact.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_OperationDefinitionContact.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -9258,7 +9347,10 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
         _part_ = part_,
         super._();
 
-  factory _$_OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
+  factory _$_OperationDefinitionParameter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_OperationDefinitionParameterFromJson(json);
 
   @override
@@ -9411,8 +9503,10 @@ abstract class _OperationDefinitionParameter
       _$_OperationDefinitionParameter;
   _OperationDefinitionParameter._() : super._();
 
-  factory _OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =
-      _$_OperationDefinitionParameter.fromJson;
+  factory _OperationDefinitionParameter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_OperationDefinitionParameter.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -9665,8 +9759,9 @@ class _$_OperationDefinitionParameterBinding
         super._();
 
   factory _$_OperationDefinitionParameterBinding.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_OperationDefinitionParameterBindingFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_OperationDefinitionParameterBindingFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -10309,7 +10404,10 @@ class _$_SearchParameter extends _SearchParameter {
         _target = target,
         super._();
 
-  factory _$_SearchParameter.fromJson(Map<String, dynamic> json) =>
+  factory _$_SearchParameter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SearchParameterFromJson(json);
 
   @override
@@ -10540,8 +10638,10 @@ abstract class _SearchParameter extends SearchParameter {
       final List<FhirCode>? target}) = _$_SearchParameter;
   _SearchParameter._() : super._();
 
-  factory _SearchParameter.fromJson(Map<String, dynamic> json) =
-      _$_SearchParameter.fromJson;
+  factory _SearchParameter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SearchParameter.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
@@ -10760,7 +10860,10 @@ class _$_SearchParameterContact extends _SearchParameterContact {
         _telecom = telecom,
         super._();
 
-  factory _$_SearchParameterContact.fromJson(Map<String, dynamic> json) =>
+  factory _$_SearchParameterContact.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_SearchParameterContactFromJson(json);
 
   @override
@@ -10853,8 +10956,10 @@ abstract class _SearchParameterContact extends SearchParameterContact {
       final List<ContactPoint>? telecom}) = _$_SearchParameterContact;
   _SearchParameterContact._() : super._();
 
-  factory _SearchParameterContact.fromJson(Map<String, dynamic> json) =
-      _$_SearchParameterContact.fromJson;
+  factory _SearchParameterContact.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_SearchParameterContact.fromJson;
 
   @override
   @JsonKey(name: 'id')

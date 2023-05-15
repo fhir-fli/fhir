@@ -8,6 +8,7 @@ Future<void> main() async {
       .list(recursive: true)
       .map((FileSystemEntity event) => event.path)
       .toList();
+  final List<String> classNames = <String>[];
   for (final String file in fileList) {
     if (file.contains('.dart') &&
         !file.contains('.g.') &&
@@ -73,6 +74,7 @@ Future<void> main() async {
         if (line.contains('factory') && line.contains('({')) {
           className =
               line.replaceAll('factory ', '').replaceAll('({', '').trim();
+          classNames.add(className);
           isClass = true;
           converter += '$className _\$${className}ServerPodFromJson'
               '(Map<String, dynamic> json, SerializationManager serializationManager,){\n'
@@ -83,11 +85,17 @@ Future<void> main() async {
           // }
         }
       }
-      await File(file.replaceAll('.dart', '.serverpod.dart'))
-          .writeAsString(converter);
+      // await File(file.replaceAll('.dart', '.serverpod.dart'))
+      //     .writeAsString(converter);
       converter = '';
     }
   }
+  classNames.sort((String a, String b) => a.compareTo(b));
+  String classNamesString = '';
+  for (final String className in classNames) {
+    classNamesString += '  - package:fhir/r5.dart:$className\n';
+  }
+  await File('classNames.yaml').writeAsString(classNamesString);
 }
 
 const String resourceYaml = '''

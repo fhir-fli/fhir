@@ -751,7 +751,10 @@ class _$_Composition extends _Composition {
         _section = section,
         super._();
 
-  factory _$_Composition.fromJson(Map<String, dynamic> json) =>
+  factory _$_Composition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CompositionFromJson(json);
 
   @override
@@ -1028,8 +1031,10 @@ abstract class _Composition extends Composition {
       final List<CompositionSection>? section}) = _$_Composition;
   _Composition._() : super._();
 
-  factory _Composition.fromJson(Map<String, dynamic> json) =
-      _$_Composition.fromJson;
+  factory _Composition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Composition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
@@ -1348,7 +1353,10 @@ class _$_CompositionAttester extends _CompositionAttester {
         _mode = mode,
         super._();
 
-  factory _$_CompositionAttester.fromJson(Map<String, dynamic> json) =>
+  factory _$_CompositionAttester.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CompositionAttesterFromJson(json);
 
   @override
@@ -1459,8 +1467,10 @@ abstract class _CompositionAttester extends CompositionAttester {
       final Reference? party}) = _$_CompositionAttester;
   _CompositionAttester._() : super._();
 
-  factory _CompositionAttester.fromJson(Map<String, dynamic> json) =
-      _$_CompositionAttester.fromJson;
+  factory _CompositionAttester.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CompositionAttester.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1671,7 +1681,10 @@ class _$_CompositionEvent extends _CompositionEvent {
         _detail = detail,
         super._();
 
-  factory _$_CompositionEvent.fromJson(Map<String, dynamic> json) =>
+  factory _$_CompositionEvent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CompositionEventFromJson(json);
 
   @override
@@ -1776,8 +1789,10 @@ abstract class _CompositionEvent extends CompositionEvent {
       final List<Reference>? detail}) = _$_CompositionEvent;
   _CompositionEvent._() : super._();
 
-  factory _CompositionEvent.fromJson(Map<String, dynamic> json) =
-      _$_CompositionEvent.fromJson;
+  factory _CompositionEvent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CompositionEvent.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2174,7 +2189,10 @@ class _$_CompositionSection extends _CompositionSection {
         _section = section,
         super._();
 
-  factory _$_CompositionSection.fromJson(Map<String, dynamic> json) =>
+  factory _$_CompositionSection.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CompositionSectionFromJson(json);
 
   @override
@@ -2337,8 +2355,10 @@ abstract class _CompositionSection extends CompositionSection {
       final List<CompositionSection>? section}) = _$_CompositionSection;
   _CompositionSection._() : super._();
 
-  factory _CompositionSection.fromJson(Map<String, dynamic> json) =
-      _$_CompositionSection.fromJson;
+  factory _CompositionSection.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CompositionSection.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3051,7 +3071,10 @@ class _$_DocumentManifest extends _DocumentManifest {
         _related = related,
         super._();
 
-  factory _$_DocumentManifest.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentManifest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DocumentManifestFromJson(json);
 
   @override
@@ -3324,8 +3347,10 @@ abstract class _DocumentManifest extends DocumentManifest {
       final List<DocumentManifestRelated>? related}) = _$_DocumentManifest;
   _DocumentManifest._() : super._();
 
-  factory _DocumentManifest.fromJson(Map<String, dynamic> json) =
-      _$_DocumentManifest.fromJson;
+  factory _DocumentManifest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DocumentManifest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
@@ -3582,7 +3607,10 @@ class _$_DocumentManifestContent extends _DocumentManifestContent {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentManifestContent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DocumentManifestContentFromJson(json);
 
   @override
@@ -3671,8 +3699,10 @@ abstract class _DocumentManifestContent extends DocumentManifestContent {
       final Reference? pReference}) = _$_DocumentManifestContent;
   _DocumentManifestContent._() : super._();
 
-  factory _DocumentManifestContent.fromJson(Map<String, dynamic> json) =
-      _$_DocumentManifestContent.fromJson;
+  factory _DocumentManifestContent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DocumentManifestContent.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3877,7 +3907,10 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentManifestRelated.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DocumentManifestRelatedFromJson(json);
 
   @override
@@ -3965,8 +3998,10 @@ abstract class _DocumentManifestRelated extends DocumentManifestRelated {
       final Reference? ref}) = _$_DocumentManifestRelated;
   _DocumentManifestRelated._() : super._();
 
-  factory _DocumentManifestRelated.fromJson(Map<String, dynamic> json) =
-      _$_DocumentManifestRelated.fromJson;
+  factory _DocumentManifestRelated.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DocumentManifestRelated.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4770,7 +4805,10 @@ class _$_DocumentReference extends _DocumentReference {
         _content = content,
         super._();
 
-  factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentReference.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DocumentReferenceFromJson(json);
 
   @override
@@ -5068,8 +5106,10 @@ abstract class _DocumentReference extends DocumentReference {
       final DocumentReferenceContext? context}) = _$_DocumentReference;
   _DocumentReference._() : super._();
 
-  factory _DocumentReference.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReference.fromJson;
+  factory _DocumentReference.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DocumentReference.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
@@ -5349,7 +5389,10 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentReferenceRelatesTo.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DocumentReferenceRelatesToFromJson(json);
 
   @override
@@ -5447,8 +5490,10 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
       required final Reference target}) = _$_DocumentReferenceRelatesTo;
   _DocumentReferenceRelatesTo._() : super._();
 
-  factory _DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReferenceRelatesTo.fromJson;
+  factory _DocumentReferenceRelatesTo.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DocumentReferenceRelatesTo.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -5640,7 +5685,10 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
         _format = format,
         super._();
 
-  factory _$_DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentReferenceContent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DocumentReferenceContentFromJson(json);
 
   @override
@@ -5734,8 +5782,10 @@ abstract class _DocumentReferenceContent extends DocumentReferenceContent {
       final List<Coding>? format}) = _$_DocumentReferenceContent;
   _DocumentReferenceContent._() : super._();
 
-  factory _DocumentReferenceContent.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReferenceContent.fromJson;
+  factory _DocumentReferenceContent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DocumentReferenceContent.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6059,7 +6109,10 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
         _related = related,
         super._();
 
-  factory _$_DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
+  factory _$_DocumentReferenceContext.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DocumentReferenceContextFromJson(json);
 
   @override
@@ -6190,8 +6243,10 @@ abstract class _DocumentReferenceContext extends DocumentReferenceContext {
       _$_DocumentReferenceContext;
   _DocumentReferenceContext._() : super._();
 
-  factory _DocumentReferenceContext.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReferenceContext.fromJson;
+  factory _DocumentReferenceContext.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DocumentReferenceContext.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6412,8 +6467,9 @@ class _$_DocumentReferenceContextRelated
         super._();
 
   factory _$_DocumentReferenceContextRelated.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_DocumentReferenceContextRelatedFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_DocumentReferenceContextRelatedFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -6501,8 +6557,10 @@ abstract class _DocumentReferenceContextRelated
       final Reference? ref}) = _$_DocumentReferenceContextRelated;
   _DocumentReferenceContextRelated._() : super._();
 
-  factory _DocumentReferenceContextRelated.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReferenceContextRelated.fromJson;
+  factory _DocumentReferenceContextRelated.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DocumentReferenceContextRelated.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -7250,7 +7308,10 @@ class _$_FhirList extends _FhirList {
         _entry = entry,
         super._();
 
-  factory _$_FhirList.fromJson(Map<String, dynamic> json) =>
+  factory _$_FhirList.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_FhirListFromJson(json);
 
   @override
@@ -7509,7 +7570,10 @@ abstract class _FhirList extends FhirList {
       final CodeableConcept? emptyReason}) = _$_FhirList;
   _FhirList._() : super._();
 
-  factory _FhirList.fromJson(Map<String, dynamic> json) = _$_FhirList.fromJson;
+  factory _FhirList.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_FhirList.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
@@ -7866,7 +7930,10 @@ class _$_FhirListEntry extends _FhirListEntry {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_FhirListEntry.fromJson(Map<String, dynamic> json) =>
+  factory _$_FhirListEntry.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_FhirListEntryFromJson(json);
 
   @override
@@ -7990,8 +8057,10 @@ abstract class _FhirListEntry extends FhirListEntry {
       required final Reference item}) = _$_FhirListEntry;
   _FhirListEntry._() : super._();
 
-  factory _FhirListEntry.fromJson(Map<String, dynamic> json) =
-      _$_FhirListEntry.fromJson;
+  factory _FhirListEntry.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_FhirListEntry.fromJson;
 
   @override
   @JsonKey(name: 'id')

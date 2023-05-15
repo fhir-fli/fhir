@@ -1,10 +1,15 @@
-// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+// ignore_for_file: invalid_annotation_target
+// ignore_for_file: sort_unnamed_constructors_first
+// ignore_for_file: sort_constructors_first
+// ignore_for_file: prefer_mixin
+// ignore_file_file: avoid_unused_constructor_parameters
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -114,7 +119,7 @@ class BodyStructure with Resource, _$BodyStructure {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -229,7 +234,10 @@ class BodyStructure with Resource, _$BodyStructure {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BodyStructure.fromJson(Map<String, dynamic> json) =>
+  factory BodyStructure.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$BodyStructureFromJson(json);
 
   /// Acts like a constructor, returns a [BodyStructure], accepts a
@@ -297,7 +305,7 @@ class BodyStructureIncludedStructure with _$BodyStructureIncludedStructure {
   factory BodyStructureIncludedStructure({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -356,7 +364,10 @@ class BodyStructureIncludedStructure with _$BodyStructureIncludedStructure {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BodyStructureIncludedStructure.fromJson(Map<String, dynamic> json) =>
+  factory BodyStructureIncludedStructure.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$BodyStructureIncludedStructureFromJson(json);
 
   /// Acts like a constructor, returns a [BodyStructureIncludedStructure],
@@ -427,7 +438,7 @@ class BodyStructureBodyLandmarkOrientation
   factory BodyStructureBodyLandmarkOrientation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -487,7 +498,9 @@ class BodyStructureBodyLandmarkOrientation
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BodyStructureBodyLandmarkOrientation.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$BodyStructureBodyLandmarkOrientationFromJson(json);
 
   /// Acts like a constructor, returns a
@@ -550,7 +563,7 @@ class BodyStructureDistanceFromLandmark
   factory BodyStructureDistanceFromLandmark({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -600,7 +613,9 @@ class BodyStructureDistanceFromLandmark
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BodyStructureDistanceFromLandmark.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$BodyStructureDistanceFromLandmarkFromJson(json);
 
   /// Acts like a constructor, returns a [BodyStructureDistanceFromLandmark],
@@ -799,7 +814,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -998,7 +1013,10 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
+  factory DiagnosticReport.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$DiagnosticReportFromJson(json);
 
   /// Acts like a constructor, returns a [DiagnosticReport], accepts a
@@ -1076,7 +1094,7 @@ class DiagnosticReportSupportingInfo with _$DiagnosticReportSupportingInfo {
   factory DiagnosticReportSupportingInfo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1127,7 +1145,10 @@ class DiagnosticReportSupportingInfo with _$DiagnosticReportSupportingInfo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DiagnosticReportSupportingInfo.fromJson(Map<String, dynamic> json) =>
+  factory DiagnosticReportSupportingInfo.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$DiagnosticReportSupportingInfoFromJson(json);
 
   /// Acts like a constructor, returns a [DiagnosticReportSupportingInfo],
@@ -1208,7 +1229,7 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
   factory DiagnosticReportMedia({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1261,7 +1282,10 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DiagnosticReportMedia.fromJson(Map<String, dynamic> json) =>
+  factory DiagnosticReportMedia.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$DiagnosticReportMediaFromJson(json);
 
   /// Acts like a constructor, returns a [DiagnosticReportMedia], accepts a
@@ -1394,7 +1418,7 @@ class GenomicStudy with Resource, _$GenomicStudy {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1538,7 +1562,10 @@ class GenomicStudy with Resource, _$GenomicStudy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GenomicStudy.fromJson(Map<String, dynamic> json) =>
+  factory GenomicStudy.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$GenomicStudyFromJson(json);
 
   /// Acts like a constructor, returns a [GenomicStudy], accepts a
@@ -1647,7 +1674,7 @@ class GenomicStudyAnalysis with _$GenomicStudyAnalysis {
   factory GenomicStudyAnalysis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1766,7 +1793,10 @@ class GenomicStudyAnalysis with _$GenomicStudyAnalysis {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GenomicStudyAnalysis.fromJson(Map<String, dynamic> json) =>
+  factory GenomicStudyAnalysis.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$GenomicStudyAnalysisFromJson(json);
 
   /// Acts like a constructor, returns a [GenomicStudyAnalysis], accepts a
@@ -1830,7 +1860,7 @@ class GenomicStudyInput with _$GenomicStudyInput {
   factory GenomicStudyInput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1886,7 +1916,10 @@ class GenomicStudyInput with _$GenomicStudyInput {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GenomicStudyInput.fromJson(Map<String, dynamic> json) =>
+  factory GenomicStudyInput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$GenomicStudyInputFromJson(json);
 
   /// Acts like a constructor, returns a [GenomicStudyInput], accepts a
@@ -1944,7 +1977,7 @@ class GenomicStudyOutput with _$GenomicStudyOutput {
   factory GenomicStudyOutput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1992,7 +2025,10 @@ class GenomicStudyOutput with _$GenomicStudyOutput {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GenomicStudyOutput.fromJson(Map<String, dynamic> json) =>
+  factory GenomicStudyOutput.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$GenomicStudyOutputFromJson(json);
 
   /// Acts like a constructor, returns a [GenomicStudyOutput], accepts a
@@ -2051,7 +2087,7 @@ class GenomicStudyPerformer with _$GenomicStudyPerformer {
   factory GenomicStudyPerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2100,7 +2136,10 @@ class GenomicStudyPerformer with _$GenomicStudyPerformer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GenomicStudyPerformer.fromJson(Map<String, dynamic> json) =>
+  factory GenomicStudyPerformer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$GenomicStudyPerformerFromJson(json);
 
   /// Acts like a constructor, returns a [GenomicStudyPerformer], accepts a
@@ -2159,7 +2198,7 @@ class GenomicStudyDevice with _$GenomicStudyDevice {
   factory GenomicStudyDevice({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2208,7 +2247,10 @@ class GenomicStudyDevice with _$GenomicStudyDevice {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GenomicStudyDevice.fromJson(Map<String, dynamic> json) =>
+  factory GenomicStudyDevice.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$GenomicStudyDeviceFromJson(json);
 
   /// Acts like a constructor, returns a [GenomicStudyDevice], accepts a
@@ -2377,7 +2419,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2552,7 +2594,10 @@ class ImagingSelection with Resource, _$ImagingSelection {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingSelection.fromJson(Map<String, dynamic> json) =>
+  factory ImagingSelection.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingSelectionFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingSelection], accepts a
@@ -2620,7 +2665,7 @@ class ImagingSelectionPerformer with _$ImagingSelectionPerformer {
   factory ImagingSelectionPerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2669,7 +2714,10 @@ class ImagingSelectionPerformer with _$ImagingSelectionPerformer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingSelectionPerformer.fromJson(Map<String, dynamic> json) =>
+  factory ImagingSelectionPerformer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingSelectionPerformerFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingSelectionPerformer], accepts a
@@ -2763,7 +2811,7 @@ class ImagingSelectionInstance with _$ImagingSelectionInstance {
   factory ImagingSelectionInstance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2846,7 +2894,10 @@ class ImagingSelectionInstance with _$ImagingSelectionInstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingSelectionInstance.fromJson(Map<String, dynamic> json) =>
+  factory ImagingSelectionInstance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingSelectionInstanceFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingSelectionInstance], accepts a
@@ -2923,7 +2974,7 @@ class ImagingSelectionImageRegion2D with _$ImagingSelectionImageRegion2D {
   factory ImagingSelectionImageRegion2D({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2983,7 +3034,10 @@ class ImagingSelectionImageRegion2D with _$ImagingSelectionImageRegion2D {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingSelectionImageRegion2D.fromJson(Map<String, dynamic> json) =>
+  factory ImagingSelectionImageRegion2D.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingSelectionImageRegion2DFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingSelectionImageRegion2D],
@@ -3058,7 +3112,7 @@ class ImagingSelectionImageRegion3D with _$ImagingSelectionImageRegion3D {
   factory ImagingSelectionImageRegion3D({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3116,7 +3170,10 @@ class ImagingSelectionImageRegion3D with _$ImagingSelectionImageRegion3D {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingSelectionImageRegion3D.fromJson(Map<String, dynamic> json) =>
+  factory ImagingSelectionImageRegion3D.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingSelectionImageRegion3DFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingSelectionImageRegion3D],
@@ -3292,7 +3349,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3471,7 +3528,10 @@ class ImagingStudy with Resource, _$ImagingStudy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
+  factory ImagingStudy.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingStudyFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingStudy], accepts a
@@ -3587,7 +3647,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
   factory ImagingStudySeries({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3697,7 +3757,10 @@ class ImagingStudySeries with _$ImagingStudySeries {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
+  factory ImagingStudySeries.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingStudySeriesFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingStudySeries], accepts a
@@ -3768,7 +3831,7 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
   factory ImagingStudyPerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3817,7 +3880,10 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingStudyPerformer.fromJson(Map<String, dynamic> json) =>
+  factory ImagingStudyPerformer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingStudyPerformerFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingStudyPerformer], accepts a
@@ -3897,7 +3963,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
   factory ImagingStudyInstance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3960,7 +4026,10 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
+  factory ImagingStudyInstance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingStudyInstanceFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingStudyInstance], accepts a
@@ -4076,7 +4145,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -4198,7 +4267,10 @@ class MolecularSequence with Resource, _$MolecularSequence {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MolecularSequence.fromJson(Map<String, dynamic> json) =>
+  factory MolecularSequence.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MolecularSequenceFromJson(json);
 
   /// Acts like a constructor, returns a [MolecularSequence], accepts a
@@ -4268,7 +4340,7 @@ class MolecularSequenceRelative with _$MolecularSequenceRelative {
   factory MolecularSequenceRelative({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4335,7 +4407,10 @@ class MolecularSequenceRelative with _$MolecularSequenceRelative {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MolecularSequenceRelative.fromJson(Map<String, dynamic> json) =>
+  factory MolecularSequenceRelative.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MolecularSequenceRelativeFromJson(json);
 
   /// Acts like a constructor, returns a [MolecularSequenceRelative], accepts a
@@ -4432,7 +4507,7 @@ class MolecularSequenceStartingSequence
   factory MolecularSequenceStartingSequence({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4534,7 +4609,9 @@ class MolecularSequenceStartingSequence
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MolecularSequenceStartingSequence.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MolecularSequenceStartingSequenceFromJson(json);
 
   /// Acts like a constructor, returns a [MolecularSequenceStartingSequence],
@@ -4617,7 +4694,7 @@ class MolecularSequenceEdit with _$MolecularSequenceEdit {
   factory MolecularSequenceEdit({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4698,7 +4775,10 @@ class MolecularSequenceEdit with _$MolecularSequenceEdit {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MolecularSequenceEdit.fromJson(Map<String, dynamic> json) =>
+  factory MolecularSequenceEdit.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$MolecularSequenceEditFromJson(json);
 
   /// Acts like a constructor, returns a [MolecularSequenceEdit], accepts a
@@ -4973,7 +5053,7 @@ class Observation with Resource, _$Observation {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -5294,7 +5374,10 @@ class Observation with Resource, _$Observation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Observation.fromJson(Map<String, dynamic> json) =>
+  factory Observation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ObservationFromJson(json);
 
   /// Acts like a constructor, returns a [Observation], accepts a
@@ -5359,7 +5442,7 @@ class ObservationTriggeredBy with _$ObservationTriggeredBy {
   factory ObservationTriggeredBy({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5417,7 +5500,10 @@ class ObservationTriggeredBy with _$ObservationTriggeredBy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ObservationTriggeredBy.fromJson(Map<String, dynamic> json) =>
+  factory ObservationTriggeredBy.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ObservationTriggeredByFromJson(json);
 
   /// Acts like a constructor, returns a [ObservationTriggeredBy], accepts a
@@ -5503,7 +5589,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
   factory ObservationReferenceRange({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5585,7 +5671,10 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
+  factory ObservationReferenceRange.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ObservationReferenceRangeFromJson(json);
 
   /// Acts like a constructor, returns a [ObservationReferenceRange], accepts a
@@ -5700,7 +5789,7 @@ class ObservationComponent with _$ObservationComponent {
   factory ObservationComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5825,7 +5914,10 @@ class ObservationComponent with _$ObservationComponent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
+  factory ObservationComponent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ObservationComponentFromJson(json);
 
   /// Acts like a constructor, returns a [ObservationComponent], accepts a
@@ -5960,7 +6052,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -6098,7 +6190,10 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
+  factory QuestionnaireResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$QuestionnaireResponseFromJson(json);
 
   /// Acts like a constructor, returns a [QuestionnaireResponse], accepts a
@@ -6178,7 +6273,7 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   factory QuestionnaireResponseItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6249,7 +6344,10 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
+  factory QuestionnaireResponseItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$QuestionnaireResponseItemFromJson(json);
 
   /// Acts like a constructor, returns a [QuestionnaireResponseItem], accepts a
@@ -6363,7 +6461,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   factory QuestionnaireResponseAnswer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6481,7 +6579,10 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
+  factory QuestionnaireResponseAnswer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$QuestionnaireResponseAnswerFromJson(json);
 
   /// Acts like a constructor, returns a [QuestionnaireResponseAnswer], accepts
@@ -6623,7 +6724,7 @@ class Specimen with Resource, _$Specimen {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -6780,7 +6881,10 @@ class Specimen with Resource, _$Specimen {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Specimen.fromJson(Map<String, dynamic> json) =>
+  factory Specimen.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SpecimenFromJson(json);
 
   /// Acts like a constructor, returns a [Specimen], accepts a
@@ -6837,7 +6941,7 @@ class SpecimenFeature with _$SpecimenFeature {
   factory SpecimenFeature({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6888,7 +6992,10 @@ class SpecimenFeature with _$SpecimenFeature {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SpecimenFeature.fromJson(Map<String, dynamic> json) =>
+  factory SpecimenFeature.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SpecimenFeatureFromJson(json);
 
   /// Acts like a constructor, returns a [SpecimenFeature], accepts a
@@ -6976,7 +7083,7 @@ class SpecimenCollection with _$SpecimenCollection {
   factory SpecimenCollection({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -7067,7 +7174,10 @@ class SpecimenCollection with _$SpecimenCollection {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
+  factory SpecimenCollection.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SpecimenCollectionFromJson(json);
 
   /// Acts like a constructor, returns a [SpecimenCollection], accepts a
@@ -7136,7 +7246,7 @@ class SpecimenProcessing with _$SpecimenProcessing {
   factory SpecimenProcessing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -7204,7 +7314,10 @@ class SpecimenProcessing with _$SpecimenProcessing {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
+  factory SpecimenProcessing.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SpecimenProcessingFromJson(json);
 
   /// Acts like a constructor, returns a [SpecimenProcessing], accepts a
@@ -7265,7 +7378,7 @@ class SpecimenContainer with _$SpecimenContainer {
   factory SpecimenContainer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -7320,7 +7433,10 @@ class SpecimenContainer with _$SpecimenContainer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
+  factory SpecimenContainer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SpecimenContainerFromJson(json);
 
   /// Acts like a constructor, returns a [SpecimenContainer], accepts a

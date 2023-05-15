@@ -1167,7 +1167,10 @@ class _$_StructureDefinition extends _StructureDefinition {
         _context = context,
         super._();
 
-  factory _$_StructureDefinition.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_StructureDefinitionFromJson(json);
 
   @override
@@ -1604,8 +1607,10 @@ abstract class _StructureDefinition extends StructureDefinition {
       final StructureDefinitionDifferential? differential}) = _$_StructureDefinition;
   _StructureDefinition._() : super._();
 
-  factory _StructureDefinition.fromJson(Map<String, dynamic> json) =
-      _$_StructureDefinition.fromJson;
+  factory _StructureDefinition.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_StructureDefinition.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
@@ -1890,7 +1895,10 @@ class _$_StructureDefinitionContact extends _StructureDefinitionContact {
         _telecom = telecom,
         super._();
 
-  factory _$_StructureDefinitionContact.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureDefinitionContact.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_StructureDefinitionContactFromJson(json);
 
   @override
@@ -1983,8 +1991,10 @@ abstract class _StructureDefinitionContact extends StructureDefinitionContact {
       final List<ContactPoint>? telecom}) = _$_StructureDefinitionContact;
   _StructureDefinitionContact._() : super._();
 
-  factory _StructureDefinitionContact.fromJson(Map<String, dynamic> json) =
-      _$_StructureDefinitionContact.fromJson;
+  factory _StructureDefinitionContact.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_StructureDefinitionContact.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2326,7 +2336,10 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureDefinitionMapping.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_StructureDefinitionMappingFromJson(json);
 
   @override
@@ -2468,8 +2481,10 @@ abstract class _StructureDefinitionMapping extends StructureDefinitionMapping {
       _$_StructureDefinitionMapping;
   _StructureDefinitionMapping._() : super._();
 
-  factory _StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =
-      _$_StructureDefinitionMapping.fromJson;
+  factory _StructureDefinitionMapping.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_StructureDefinitionMapping.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2652,7 +2667,10 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
         _element = element,
         super._();
 
-  factory _$_StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
+  factory _$_StructureDefinitionSnapshot.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_StructureDefinitionSnapshotFromJson(json);
 
   @override
@@ -2740,8 +2758,10 @@ abstract class _StructureDefinitionSnapshot
       _$_StructureDefinitionSnapshot;
   _StructureDefinitionSnapshot._() : super._();
 
-  factory _StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =
-      _$_StructureDefinitionSnapshot.fromJson;
+  factory _StructureDefinitionSnapshot.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_StructureDefinitionSnapshot.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2905,8 +2925,9 @@ class _$_StructureDefinitionDifferential
         super._();
 
   factory _$_StructureDefinitionDifferential.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_StructureDefinitionDifferentialFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_StructureDefinitionDifferentialFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -2994,8 +3015,10 @@ abstract class _StructureDefinitionDifferential
       _$_StructureDefinitionDifferential;
   _StructureDefinitionDifferential._() : super._();
 
-  factory _StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =
-      _$_StructureDefinitionDifferential.fromJson;
+  factory _StructureDefinitionDifferential.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_StructureDefinitionDifferential.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3472,7 +3495,10 @@ class _$_DataElement extends _DataElement {
         _element = element,
         super._();
 
-  factory _$_DataElement.fromJson(Map<String, dynamic> json) =>
+  factory _$_DataElement.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DataElementFromJson(json);
 
   @override
@@ -3711,8 +3737,10 @@ abstract class _DataElement extends DataElement {
       required final List<ElementDefinition> element}) = _$_DataElement;
   _DataElement._() : super._();
 
-  factory _DataElement.fromJson(Map<String, dynamic> json) =
-      _$_DataElement.fromJson;
+  factory _DataElement.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DataElement.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
@@ -3922,7 +3950,10 @@ class _$_DataElementContact extends _DataElementContact {
         _telecom = telecom,
         super._();
 
-  factory _$_DataElementContact.fromJson(Map<String, dynamic> json) =>
+  factory _$_DataElementContact.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DataElementContactFromJson(json);
 
   @override
@@ -4015,8 +4046,10 @@ abstract class _DataElementContact extends DataElementContact {
       final List<ContactPoint>? telecom}) = _$_DataElementContact;
   _DataElementContact._() : super._();
 
-  factory _DataElementContact.fromJson(Map<String, dynamic> json) =
-      _$_DataElementContact.fromJson;
+  factory _DataElementContact.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DataElementContact.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4352,7 +4385,10 @@ class _$_DataElementMapping extends _DataElementMapping {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_DataElementMapping.fromJson(Map<String, dynamic> json) =>
+  factory _$_DataElementMapping.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_DataElementMappingFromJson(json);
 
   @override
@@ -4494,8 +4530,10 @@ abstract class _DataElementMapping extends DataElementMapping {
       _$_DataElementMapping;
   _DataElementMapping._() : super._();
 
-  factory _DataElementMapping.fromJson(Map<String, dynamic> json) =
-      _$_DataElementMapping.fromJson;
+  factory _DataElementMapping.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_DataElementMapping.fromJson;
 
   @override
   @JsonKey(name: 'id')

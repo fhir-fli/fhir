@@ -1317,7 +1317,10 @@ class _$_Claim extends _Claim {
         _item = item,
         super._();
 
-  factory _$_Claim.fromJson(Map<String, dynamic> json) =>
+  factory _$_Claim.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimFromJson(json);
 
   /// [resourceType] This is a Claim resource
@@ -1961,7 +1964,10 @@ abstract class _Claim extends Claim {
       final Money? total}) = _$_Claim;
   _Claim._() : super._();
 
-  factory _Claim.fromJson(Map<String, dynamic> json) = _$_Claim.fromJson;
+  factory _Claim.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Claim.fromJson;
 
   @override
 
@@ -2483,7 +2489,10 @@ class _$_ClaimRelated extends _ClaimRelated {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimRelated.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimRelated.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimRelatedFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -2626,8 +2635,10 @@ abstract class _ClaimRelated extends ClaimRelated {
       final Identifier? reference}) = _$_ClaimRelated;
   _ClaimRelated._() : super._();
 
-  factory _ClaimRelated.fromJson(Map<String, dynamic> json) =
-      _$_ClaimRelated.fromJson;
+  factory _ClaimRelated.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimRelated.fromJson;
 
   @override
 
@@ -2888,7 +2899,10 @@ class _$_ClaimPayee extends _ClaimPayee {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimPayee.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimPayee.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimPayeeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3022,8 +3036,10 @@ abstract class _ClaimPayee extends ClaimPayee {
       final Reference? party}) = _$_ClaimPayee;
   _ClaimPayee._() : super._();
 
-  factory _ClaimPayee.fromJson(Map<String, dynamic> json) =
-      _$_ClaimPayee.fromJson;
+  factory _ClaimPayee.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimPayee.fromJson;
 
   @override
 
@@ -3330,7 +3346,10 @@ class _$_ClaimEvent extends _ClaimEvent {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimEvent.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimEvent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimEventFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3484,8 +3503,10 @@ abstract class _ClaimEvent extends ClaimEvent {
       final Period? whenPeriod}) = _$_ClaimEvent;
   _ClaimEvent._() : super._();
 
-  factory _ClaimEvent.fromJson(Map<String, dynamic> json) =
-      _$_ClaimEvent.fromJson;
+  factory _ClaimEvent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimEvent.fromJson;
 
   @override
 
@@ -3882,7 +3903,10 @@ class _$_ClaimCareTeam extends _ClaimCareTeam {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimCareTeam.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimCareTeam.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimCareTeamFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4061,8 +4085,10 @@ abstract class _ClaimCareTeam extends ClaimCareTeam {
       final CodeableConcept? specialty}) = _$_ClaimCareTeam;
   _ClaimCareTeam._() : super._();
 
-  factory _ClaimCareTeam.fromJson(Map<String, dynamic> json) =
-      _$_ClaimCareTeam.fromJson;
+  factory _ClaimCareTeam.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimCareTeam.fromJson;
 
   @override
 
@@ -4736,7 +4762,10 @@ class _$_ClaimSupportingInfo extends _ClaimSupportingInfo {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimSupportingInfo.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimSupportingInfo.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimSupportingInfoFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5003,8 +5032,10 @@ abstract class _ClaimSupportingInfo extends ClaimSupportingInfo {
       final CodeableConcept? reason}) = _$_ClaimSupportingInfo;
   _ClaimSupportingInfo._() : super._();
 
-  factory _ClaimSupportingInfo.fromJson(Map<String, dynamic> json) =
-      _$_ClaimSupportingInfo.fromJson;
+  factory _ClaimSupportingInfo.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimSupportingInfo.fromJson;
 
   @override
 
@@ -5440,7 +5471,10 @@ class _$_ClaimDiagnosis extends _ClaimDiagnosis {
         _type = type,
         super._();
 
-  factory _$_ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimDiagnosis.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimDiagnosisFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5620,8 +5654,10 @@ abstract class _ClaimDiagnosis extends ClaimDiagnosis {
       final CodeableConcept? onAdmission}) = _$_ClaimDiagnosis;
   _ClaimDiagnosis._() : super._();
 
-  factory _ClaimDiagnosis.fromJson(Map<String, dynamic> json) =
-      _$_ClaimDiagnosis.fromJson;
+  factory _ClaimDiagnosis.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimDiagnosis.fromJson;
 
   @override
 
@@ -6034,7 +6070,10 @@ class _$_ClaimProcedure extends _ClaimProcedure {
         _udi = udi,
         super._();
 
-  factory _$_ClaimProcedure.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimProcedure.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimProcedureFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -6237,8 +6276,10 @@ abstract class _ClaimProcedure extends ClaimProcedure {
       final List<Reference>? udi}) = _$_ClaimProcedure;
   _ClaimProcedure._() : super._();
 
-  factory _ClaimProcedure.fromJson(Map<String, dynamic> json) =
-      _$_ClaimProcedure.fromJson;
+  factory _ClaimProcedure.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimProcedure.fromJson;
 
   @override
 
@@ -6754,7 +6795,10 @@ class _$_ClaimInsurance extends _ClaimInsurance {
         _preAuthRefElement = preAuthRefElement,
         super._();
 
-  factory _$_ClaimInsurance.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimInsurance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimInsuranceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -7004,8 +7048,10 @@ abstract class _ClaimInsurance extends ClaimInsurance {
       final Reference? claimResponse}) = _$_ClaimInsurance;
   _ClaimInsurance._() : super._();
 
-  factory _ClaimInsurance.fromJson(Map<String, dynamic> json) =
-      _$_ClaimInsurance.fromJson;
+  factory _ClaimInsurance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimInsurance.fromJson;
 
   @override
 
@@ -7397,7 +7443,10 @@ class _$_ClaimAccident extends _ClaimAccident {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimAccident.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimAccident.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimAccidentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -7558,8 +7607,10 @@ abstract class _ClaimAccident extends ClaimAccident {
       final Reference? locationReference}) = _$_ClaimAccident;
   _ClaimAccident._() : super._();
 
-  factory _ClaimAccident.fromJson(Map<String, dynamic> json) =
-      _$_ClaimAccident.fromJson;
+  factory _ClaimAccident.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimAccident.fromJson;
 
   @override
 
@@ -8661,7 +8712,10 @@ class _$_ClaimItem extends _ClaimItem {
         _detail = detail,
         super._();
 
-  factory _$_ClaimItem.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimItemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -9260,8 +9314,10 @@ abstract class _ClaimItem extends ClaimItem {
       final List<ClaimDetail>? detail}) = _$_ClaimItem;
   _ClaimItem._() : super._();
 
-  factory _ClaimItem.fromJson(Map<String, dynamic> json) =
-      _$_ClaimItem.fromJson;
+  factory _ClaimItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimItem.fromJson;
 
   @override
 
@@ -9660,7 +9716,10 @@ class _$_ClaimBodySite extends _ClaimBodySite {
         _subSite = subSite,
         super._();
 
-  factory _$_ClaimBodySite.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimBodySite.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimBodySiteFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -9811,8 +9870,10 @@ abstract class _ClaimBodySite extends ClaimBodySite {
       final List<CodeableConcept>? subSite}) = _$_ClaimBodySite;
   _ClaimBodySite._() : super._();
 
-  factory _ClaimBodySite.fromJson(Map<String, dynamic> json) =
-      _$_ClaimBodySite.fromJson;
+  factory _ClaimBodySite.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimBodySite.fromJson;
 
   @override
 
@@ -10494,7 +10555,10 @@ class _$_ClaimDetail extends _ClaimDetail {
         _subDetail = subDetail,
         super._();
 
-  factory _$_ClaimDetail.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimDetail.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimDetailFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -10825,8 +10889,10 @@ abstract class _ClaimDetail extends ClaimDetail {
       final List<ClaimSubDetail>? subDetail}) = _$_ClaimDetail;
   _ClaimDetail._() : super._();
 
-  factory _ClaimDetail.fromJson(Map<String, dynamic> json) =
-      _$_ClaimDetail.fromJson;
+  factory _ClaimDetail.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimDetail.fromJson;
 
   @override
 
@@ -11578,7 +11644,10 @@ class _$_ClaimSubDetail extends _ClaimSubDetail {
         _udi = udi,
         super._();
 
-  factory _$_ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimSubDetail.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimSubDetailFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -11890,8 +11959,10 @@ abstract class _ClaimSubDetail extends ClaimSubDetail {
       final List<Reference>? udi}) = _$_ClaimSubDetail;
   _ClaimSubDetail._() : super._();
 
-  factory _ClaimSubDetail.fromJson(Map<String, dynamic> json) =
-      _$_ClaimSubDetail.fromJson;
+  factory _ClaimSubDetail.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimSubDetail.fromJson;
 
   @override
 
@@ -13375,7 +13446,10 @@ class _$_ClaimResponse extends _ClaimResponse {
         _error = error,
         super._();
 
-  factory _$_ClaimResponse.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseFromJson(json);
 
   /// [resourceType] This is a ClaimResponse resource
@@ -14050,8 +14124,10 @@ abstract class _ClaimResponse extends ClaimResponse {
       final List<ClaimResponseError>? error}) = _$_ClaimResponse;
   _ClaimResponse._() : super._();
 
-  factory _ClaimResponse.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponse.fromJson;
+  factory _ClaimResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponse.fromJson;
 
   @override
 
@@ -14596,7 +14672,10 @@ class _$_ClaimResponseEvent extends _ClaimResponseEvent {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimResponseEvent.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseEvent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseEventFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -14751,8 +14830,10 @@ abstract class _ClaimResponseEvent extends ClaimResponseEvent {
       final Period? whenPeriod}) = _$_ClaimResponseEvent;
   _ClaimResponseEvent._() : super._();
 
-  factory _ClaimResponseEvent.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseEvent.fromJson;
+  factory _ClaimResponseEvent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseEvent.fromJson;
 
   @override
 
@@ -15136,7 +15217,10 @@ class _$_ClaimResponseItem extends _ClaimResponseItem {
         _detail = detail,
         super._();
 
-  factory _$_ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseItemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -15380,8 +15464,10 @@ abstract class _ClaimResponseItem extends ClaimResponseItem {
       final List<ClaimResponseDetail>? detail}) = _$_ClaimResponseItem;
   _ClaimResponseItem._() : super._();
 
-  factory _ClaimResponseItem.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseItem.fromJson;
+  factory _ClaimResponseItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseItem.fromJson;
 
   @override
 
@@ -15748,7 +15834,10 @@ class _$_ClaimResponseReviewOutcome extends _ClaimResponseReviewOutcome {
         _reason = reason,
         super._();
 
-  factory _$_ClaimResponseReviewOutcome.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseReviewOutcome.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseReviewOutcomeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -15922,8 +16011,10 @@ abstract class _ClaimResponseReviewOutcome extends ClaimResponseReviewOutcome {
       final Period? preAuthPeriod}) = _$_ClaimResponseReviewOutcome;
   _ClaimResponseReviewOutcome._() : super._();
 
-  factory _ClaimResponseReviewOutcome.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseReviewOutcome.fromJson;
+  factory _ClaimResponseReviewOutcome.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseReviewOutcome.fromJson;
 
   @override
 
@@ -16269,7 +16360,10 @@ class _$_ClaimResponseAdjudication extends _ClaimResponseAdjudication {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseAdjudication.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseAdjudicationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -16426,8 +16520,10 @@ abstract class _ClaimResponseAdjudication extends ClaimResponseAdjudication {
       final Quantity? quantity}) = _$_ClaimResponseAdjudication;
   _ClaimResponseAdjudication._() : super._();
 
-  factory _ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseAdjudication.fromJson;
+  factory _ClaimResponseAdjudication.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseAdjudication.fromJson;
 
   @override
 
@@ -16812,7 +16908,10 @@ class _$_ClaimResponseDetail extends _ClaimResponseDetail {
         _subDetail = subDetail,
         super._();
 
-  factory _$_ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseDetail.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseDetailFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -17050,8 +17149,10 @@ abstract class _ClaimResponseDetail extends ClaimResponseDetail {
       final List<ClaimResponseSubDetail>? subDetail}) = _$_ClaimResponseDetail;
   _ClaimResponseDetail._() : super._();
 
-  factory _ClaimResponseDetail.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseDetail.fromJson;
+  factory _ClaimResponseDetail.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseDetail.fromJson;
 
   @override
 
@@ -17437,7 +17538,10 @@ class _$_ClaimResponseSubDetail extends _ClaimResponseSubDetail {
         _adjudication = adjudication,
         super._();
 
-  factory _$_ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseSubDetail.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseSubDetailFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -17665,8 +17769,10 @@ abstract class _ClaimResponseSubDetail extends ClaimResponseSubDetail {
       _$_ClaimResponseSubDetail;
   _ClaimResponseSubDetail._() : super._();
 
-  factory _ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseSubDetail.fromJson;
+  factory _ClaimResponseSubDetail.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseSubDetail.fromJson;
 
   @override
 
@@ -18699,7 +18805,10 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
         _detail = detail,
         super._();
 
-  factory _$_ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseAddItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseAddItemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -19269,8 +19378,10 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
       final List<ClaimResponseDetail1>? detail}) = _$_ClaimResponseAddItem;
   _ClaimResponseAddItem._() : super._();
 
-  factory _ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseAddItem.fromJson;
+  factory _ClaimResponseAddItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseAddItem.fromJson;
 
   @override
 
@@ -19657,7 +19768,10 @@ class _$_ClaimResponseBodySite extends _ClaimResponseBodySite {
         _subSite = subSite,
         super._();
 
-  factory _$_ClaimResponseBodySite.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseBodySite.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseBodySiteFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -19809,8 +19923,10 @@ abstract class _ClaimResponseBodySite extends ClaimResponseBodySite {
       final List<CodeableConcept>? subSite}) = _$_ClaimResponseBodySite;
   _ClaimResponseBodySite._() : super._();
 
-  factory _ClaimResponseBodySite.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseBodySite.fromJson;
+  factory _ClaimResponseBodySite.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseBodySite.fromJson;
 
   @override
 
@@ -20435,7 +20551,10 @@ class _$_ClaimResponseDetail1 extends _ClaimResponseDetail1 {
         _subDetail = subDetail,
         super._();
 
-  factory _$_ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseDetail1.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseDetail1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -20763,8 +20882,10 @@ abstract class _ClaimResponseDetail1 extends ClaimResponseDetail1 {
       _$_ClaimResponseDetail1;
   _ClaimResponseDetail1._() : super._();
 
-  factory _ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseDetail1.fromJson;
+  factory _ClaimResponseDetail1.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseDetail1.fromJson;
 
   @override
 
@@ -21451,7 +21572,10 @@ class _$_ClaimResponseSubDetail1 extends _ClaimResponseSubDetail1 {
         _adjudication = adjudication,
         super._();
 
-  factory _$_ClaimResponseSubDetail1.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseSubDetail1.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseSubDetail1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -21760,8 +21884,10 @@ abstract class _ClaimResponseSubDetail1 extends ClaimResponseSubDetail1 {
       _$_ClaimResponseSubDetail1;
   _ClaimResponseSubDetail1._() : super._();
 
-  factory _ClaimResponseSubDetail1.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseSubDetail1.fromJson;
+  factory _ClaimResponseSubDetail1.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseSubDetail1.fromJson;
 
   @override
 
@@ -22092,7 +22218,10 @@ class _$_ClaimResponseTotal extends _ClaimResponseTotal {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimResponseTotal.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseTotal.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseTotalFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -22232,8 +22361,10 @@ abstract class _ClaimResponseTotal extends ClaimResponseTotal {
       required final Money amount}) = _$_ClaimResponseTotal;
   _ClaimResponseTotal._() : super._();
 
-  factory _ClaimResponseTotal.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseTotal.fromJson;
+  factory _ClaimResponseTotal.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseTotal.fromJson;
 
   @override
 
@@ -22634,7 +22765,10 @@ class _$_ClaimResponsePayment extends _ClaimResponsePayment {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimResponsePayment.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponsePayment.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponsePaymentFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -22811,8 +22945,10 @@ abstract class _ClaimResponsePayment extends ClaimResponsePayment {
       final Identifier? identifier}) = _$_ClaimResponsePayment;
   _ClaimResponsePayment._() : super._();
 
-  factory _ClaimResponsePayment.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponsePayment.fromJson;
+  factory _ClaimResponsePayment.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponsePayment.fromJson;
 
   @override
 
@@ -23195,7 +23331,10 @@ class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseProcessNote.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseProcessNoteFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -23362,8 +23501,10 @@ abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
       final CodeableConcept? language}) = _$_ClaimResponseProcessNote;
   _ClaimResponseProcessNote._() : super._();
 
-  factory _ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseProcessNote.fromJson;
+  factory _ClaimResponseProcessNote.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseProcessNote.fromJson;
 
   @override
 
@@ -23801,7 +23942,10 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseInsurance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseInsuranceFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -24002,8 +24146,10 @@ abstract class _ClaimResponseInsurance extends ClaimResponseInsurance {
       final Reference? claimResponse}) = _$_ClaimResponseInsurance;
   _ClaimResponseInsurance._() : super._();
 
-  factory _ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseInsurance.fromJson;
+  factory _ClaimResponseInsurance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseInsurance.fromJson;
 
   @override
 
@@ -24453,7 +24599,10 @@ class _$_ClaimResponseError extends _ClaimResponseError {
         _expressionElement = expressionElement,
         super._();
 
-  factory _$_ClaimResponseError.fromJson(Map<String, dynamic> json) =>
+  factory _$_ClaimResponseError.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ClaimResponseErrorFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -24689,8 +24838,10 @@ abstract class _ClaimResponseError extends ClaimResponseError {
           final List<Element>? expressionElement}) = _$_ClaimResponseError;
   _ClaimResponseError._() : super._();
 
-  factory _ClaimResponseError.fromJson(Map<String, dynamic> json) =
-      _$_ClaimResponseError.fromJson;
+  factory _ClaimResponseError.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ClaimResponseError.fromJson;
 
   @override
 
@@ -25806,7 +25957,10 @@ class _$_Invoice extends _Invoice {
         _note = note,
         super._();
 
-  factory _$_Invoice.fromJson(Map<String, dynamic> json) =>
+  factory _$_Invoice.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_InvoiceFromJson(json);
 
   /// [resourceType] This is a Invoice resource
@@ -26299,7 +26453,10 @@ abstract class _Invoice extends Invoice {
       final List<Annotation>? note}) = _$_Invoice;
   _Invoice._() : super._();
 
-  factory _Invoice.fromJson(Map<String, dynamic> json) = _$_Invoice.fromJson;
+  factory _Invoice.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_Invoice.fromJson;
 
   @override
 
@@ -26721,7 +26878,10 @@ class _$_InvoiceParticipant extends _InvoiceParticipant {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_InvoiceParticipant.fromJson(Map<String, dynamic> json) =>
+  factory _$_InvoiceParticipant.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_InvoiceParticipantFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -26858,8 +27018,10 @@ abstract class _InvoiceParticipant extends InvoiceParticipant {
       required final Reference actor}) = _$_InvoiceParticipant;
   _InvoiceParticipant._() : super._();
 
-  factory _InvoiceParticipant.fromJson(Map<String, dynamic> json) =
-      _$_InvoiceParticipant.fromJson;
+  factory _InvoiceParticipant.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_InvoiceParticipant.fromJson;
 
   @override
 
@@ -27282,7 +27444,10 @@ class _$_InvoiceLineItem extends _InvoiceLineItem {
         _priceComponent = priceComponent,
         super._();
 
-  factory _$_InvoiceLineItem.fromJson(Map<String, dynamic> json) =>
+  factory _$_InvoiceLineItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_InvoiceLineItemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -27497,8 +27662,10 @@ abstract class _InvoiceLineItem extends InvoiceLineItem {
       final List<MonetaryComponent>? priceComponent}) = _$_InvoiceLineItem;
   _InvoiceLineItem._() : super._();
 
-  factory _InvoiceLineItem.fromJson(Map<String, dynamic> json) =
-      _$_InvoiceLineItem.fromJson;
+  factory _InvoiceLineItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_InvoiceLineItem.fromJson;
 
   @override
 

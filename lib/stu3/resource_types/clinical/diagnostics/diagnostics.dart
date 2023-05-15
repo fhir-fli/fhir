@@ -1,10 +1,15 @@
-// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+// ignore_for_file: invalid_annotation_target
+// ignore_for_file: sort_unnamed_constructors_first
+// ignore_for_file: sort_constructors_first
+// ignore_for_file: prefer_mixin
+// ignore_file_file: avoid_unused_constructor_parameters
 
 // Dart imports:
 import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -54,7 +59,10 @@ class BodySite with Resource, _$BodySite {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BodySite.fromJson(Map<String, dynamic> json) =>
+  factory BodySite.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$BodySiteFromJson(json);
 
   /// Acts like a constructor, returns a [BodySite], accepts a
@@ -123,7 +131,10 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DiagnosticReport.fromJson(Map<String, dynamic> json) =>
+  factory DiagnosticReport.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$DiagnosticReportFromJson(json);
 
   /// Acts like a constructor, returns a [DiagnosticReport], accepts a
@@ -162,7 +173,10 @@ class DiagnosticReportPerformer with _$DiagnosticReportPerformer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DiagnosticReportPerformer.fromJson(Map<String, dynamic> json) =>
+  factory DiagnosticReportPerformer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$DiagnosticReportPerformerFromJson(json);
 
   /// Acts like a constructor, returns a [DiagnosticReportPerformer], accepts a
@@ -202,7 +216,10 @@ class DiagnosticReportImage with _$DiagnosticReportImage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DiagnosticReportImage.fromJson(Map<String, dynamic> json) =>
+  factory DiagnosticReportImage.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$DiagnosticReportImageFromJson(json);
 
   /// Acts like a constructor, returns a [DiagnosticReportImage], accepts a
@@ -257,7 +274,10 @@ class ImagingManifest with Resource, _$ImagingManifest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingManifest.fromJson(Map<String, dynamic> json) =>
+  factory ImagingManifest.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingManifestFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingManifest], accepts a
@@ -299,7 +319,10 @@ class ImagingManifestStudy with _$ImagingManifestStudy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingManifestStudy.fromJson(Map<String, dynamic> json) =>
+  factory ImagingManifestStudy.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingManifestStudyFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingManifestStudy], accepts a
@@ -340,7 +363,10 @@ class ImagingManifestSeries with _$ImagingManifestSeries {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingManifestSeries.fromJson(Map<String, dynamic> json) =>
+  factory ImagingManifestSeries.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingManifestSeriesFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingManifestSeries], accepts a
@@ -381,7 +407,10 @@ class ImagingManifestInstance with _$ImagingManifestInstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingManifestInstance.fromJson(Map<String, dynamic> json) =>
+  factory ImagingManifestInstance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingManifestInstanceFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingManifestInstance], accepts a
@@ -453,7 +482,10 @@ class ImagingStudy with Resource, _$ImagingStudy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingStudy.fromJson(Map<String, dynamic> json) =>
+  factory ImagingStudy.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingStudyFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingStudy], accepts a
@@ -508,7 +540,10 @@ class ImagingStudySeries with _$ImagingStudySeries {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
+  factory ImagingStudySeries.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingStudySeriesFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingStudySeries], accepts a
@@ -553,7 +588,10 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
+  factory ImagingStudyInstance.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ImagingStudyInstanceFromJson(json);
 
   /// Acts like a constructor, returns a [ImagingStudyInstance], accepts a
@@ -640,7 +678,10 @@ class Observation with Resource, _$Observation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Observation.fromJson(Map<String, dynamic> json) =>
+  factory Observation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ObservationFromJson(json);
 
   /// Acts like a constructor, returns a [Observation], accepts a
@@ -684,7 +725,10 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
+  factory ObservationReferenceRange.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ObservationReferenceRangeFromJson(json);
 
   /// Acts like a constructor, returns a [ObservationReferenceRange], accepts a
@@ -724,7 +768,10 @@ class ObservationRelated with _$ObservationRelated {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ObservationRelated.fromJson(Map<String, dynamic> json) =>
+  factory ObservationRelated.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ObservationRelatedFromJson(json);
 
   /// Acts like a constructor, returns a [ObservationRelated], accepts a
@@ -778,7 +825,10 @@ class ObservationComponent with _$ObservationComponent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ObservationComponent.fromJson(Map<String, dynamic> json) =>
+  factory ObservationComponent.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$ObservationComponentFromJson(json);
 
   /// Acts like a constructor, returns a [ObservationComponent], accepts a
@@ -838,7 +888,10 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
+  factory QuestionnaireResponse.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$QuestionnaireResponseFromJson(json);
 
   /// Acts like a constructor, returns a [QuestionnaireResponse], accepts a
@@ -884,7 +937,10 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
+  factory QuestionnaireResponseItem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$QuestionnaireResponseItemFromJson(json);
 
   /// Acts like a constructor, returns a [QuestionnaireResponseItem], accepts a
@@ -942,7 +998,10 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
+  factory QuestionnaireResponseAnswer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$QuestionnaireResponseAnswerFromJson(json);
 
   /// Acts like a constructor, returns a [QuestionnaireResponseAnswer], accepts a
@@ -1008,7 +1067,10 @@ class Sequence with Resource, _$Sequence {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Sequence.fromJson(Map<String, dynamic> json) =>
+  factory Sequence.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SequenceFromJson(json);
 
   /// Acts like a constructor, returns a [Sequence], accepts a
@@ -1058,7 +1120,10 @@ class SequenceReferenceSeq with _$SequenceReferenceSeq {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SequenceReferenceSeq.fromJson(Map<String, dynamic> json) =>
+  factory SequenceReferenceSeq.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SequenceReferenceSeqFromJson(json);
 
   /// Acts like a constructor, returns a [SequenceReferenceSeq], accepts a
@@ -1106,7 +1171,10 @@ class SequenceVariant with _$SequenceVariant {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SequenceVariant.fromJson(Map<String, dynamic> json) =>
+  factory SequenceVariant.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SequenceVariantFromJson(json);
 
   /// Acts like a constructor, returns a [SequenceVariant], accepts a
@@ -1168,7 +1236,10 @@ class SequenceQuality with _$SequenceQuality {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SequenceQuality.fromJson(Map<String, dynamic> json) =>
+  factory SequenceQuality.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SequenceQualityFromJson(json);
 
   /// Acts like a constructor, returns a [SequenceQuality], accepts a
@@ -1217,7 +1288,10 @@ class SequenceRepository with _$SequenceRepository {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SequenceRepository.fromJson(Map<String, dynamic> json) =>
+  factory SequenceRepository.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SequenceRepositoryFromJson(json);
 
   /// Acts like a constructor, returns a [SequenceRepository], accepts a
@@ -1278,7 +1352,10 @@ class Specimen with Resource, _$Specimen {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Specimen.fromJson(Map<String, dynamic> json) =>
+  factory Specimen.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SpecimenFromJson(json);
 
   /// Acts like a constructor, returns a [Specimen], accepts a
@@ -1322,7 +1399,10 @@ class SpecimenCollection with _$SpecimenCollection {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SpecimenCollection.fromJson(Map<String, dynamic> json) =>
+  factory SpecimenCollection.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SpecimenCollectionFromJson(json);
 
   /// Acts like a constructor, returns a [SpecimenCollection], accepts a
@@ -1366,7 +1446,10 @@ class SpecimenProcessing with _$SpecimenProcessing {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
+  factory SpecimenProcessing.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SpecimenProcessingFromJson(json);
 
   /// Acts like a constructor, returns a [SpecimenProcessing], accepts a
@@ -1411,7 +1494,10 @@ class SpecimenContainer with _$SpecimenContainer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SpecimenContainer.fromJson(Map<String, dynamic> json) =>
+  factory SpecimenContainer.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$SpecimenContainerFromJson(json);
 
   /// Acts like a constructor, returns a [SpecimenContainer], accepts a

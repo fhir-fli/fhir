@@ -1847,7 +1847,10 @@ class _$_CodeSystem extends _CodeSystem {
         _concept = concept,
         super._();
 
-  factory _$_CodeSystem.fromJson(Map<String, dynamic> json) =>
+  factory _$_CodeSystem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CodeSystemFromJson(json);
 
   /// [resourceType] This is a CodeSystem resource
@@ -2760,8 +2763,10 @@ abstract class _CodeSystem extends CodeSystem {
       final List<CodeSystemConcept>? concept}) = _$_CodeSystem;
   _CodeSystem._() : super._();
 
-  factory _CodeSystem.fromJson(Map<String, dynamic> json) =
-      _$_CodeSystem.fromJson;
+  factory _CodeSystem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CodeSystem.fromJson;
 
   @override
 
@@ -3512,7 +3517,10 @@ class _$_CodeSystemFilter extends _CodeSystemFilter {
         _operatorElement = operatorElement,
         super._();
 
-  factory _$_CodeSystemFilter.fromJson(Map<String, dynamic> json) =>
+  factory _$_CodeSystemFilter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CodeSystemFilterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -3720,8 +3728,10 @@ abstract class _CodeSystemFilter extends CodeSystemFilter {
       _$_CodeSystemFilter;
   _CodeSystemFilter._() : super._();
 
-  factory _CodeSystemFilter.fromJson(Map<String, dynamic> json) =
-      _$_CodeSystemFilter.fromJson;
+  factory _CodeSystemFilter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CodeSystemFilter.fromJson;
 
   @override
 
@@ -4148,7 +4158,10 @@ class _$_CodeSystemProperty extends _CodeSystemProperty {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CodeSystemProperty.fromJson(Map<String, dynamic> json) =>
+  factory _$_CodeSystemProperty.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CodeSystemPropertyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -4341,8 +4354,10 @@ abstract class _CodeSystemProperty extends CodeSystemProperty {
       _$_CodeSystemProperty;
   _CodeSystemProperty._() : super._();
 
-  factory _CodeSystemProperty.fromJson(Map<String, dynamic> json) =
-      _$_CodeSystemProperty.fromJson;
+  factory _CodeSystemProperty.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CodeSystemProperty.fromJson;
 
   @override
 
@@ -4779,7 +4794,10 @@ class _$_CodeSystemConcept extends _CodeSystemConcept {
         _concept = concept,
         super._();
 
-  factory _$_CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
+  factory _$_CodeSystemConcept.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CodeSystemConceptFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5010,8 +5028,10 @@ abstract class _CodeSystemConcept extends CodeSystemConcept {
       final List<CodeSystemConcept>? concept}) = _$_CodeSystemConcept;
   _CodeSystemConcept._() : super._();
 
-  factory _CodeSystemConcept.fromJson(Map<String, dynamic> json) =
-      _$_CodeSystemConcept.fromJson;
+  factory _CodeSystemConcept.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CodeSystemConcept.fromJson;
 
   @override
 
@@ -5395,7 +5415,10 @@ class _$_CodeSystemDesignation extends _CodeSystemDesignation {
         _additionalUse = additionalUse,
         super._();
 
-  factory _$_CodeSystemDesignation.fromJson(Map<String, dynamic> json) =>
+  factory _$_CodeSystemDesignation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CodeSystemDesignationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -5575,8 +5598,10 @@ abstract class _CodeSystemDesignation extends CodeSystemDesignation {
       _$_CodeSystemDesignation;
   _CodeSystemDesignation._() : super._();
 
-  factory _CodeSystemDesignation.fromJson(Map<String, dynamic> json) =
-      _$_CodeSystemDesignation.fromJson;
+  factory _CodeSystemDesignation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CodeSystemDesignation.fromJson;
 
   @override
 
@@ -6159,7 +6184,10 @@ class _$_CodeSystemProperty1 extends _CodeSystemProperty1 {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
+  factory _$_CodeSystemProperty1.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_CodeSystemProperty1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -6406,8 +6434,10 @@ abstract class _CodeSystemProperty1 extends CodeSystemProperty1 {
       _$_CodeSystemProperty1;
   _CodeSystemProperty1._() : super._();
 
-  factory _CodeSystemProperty1.fromJson(Map<String, dynamic> json) =
-      _$_CodeSystemProperty1.fromJson;
+  factory _CodeSystemProperty1.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_CodeSystemProperty1.fromJson;
 
   @override
 
@@ -8224,7 +8254,10 @@ class _$_ConceptMap extends _ConceptMap {
         _group = group,
         super._();
 
-  factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConceptMap.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConceptMapFromJson(json);
 
   /// [resourceType] This is a ConceptMap resource
@@ -9101,8 +9134,10 @@ abstract class _ConceptMap extends ConceptMap {
       final List<ConceptMapGroup>? group}) = _$_ConceptMap;
   _ConceptMap._() : super._();
 
-  factory _ConceptMap.fromJson(Map<String, dynamic> json) =
-      _$_ConceptMap.fromJson;
+  factory _ConceptMap.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConceptMap.fromJson;
 
   @override
 
@@ -9864,7 +9899,10 @@ class _$_ConceptMapProperty extends _ConceptMapProperty {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConceptMapProperty.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConceptMapProperty.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConceptMapPropertyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -10060,8 +10098,10 @@ abstract class _ConceptMapProperty extends ConceptMapProperty {
       final FhirCanonical? system}) = _$_ConceptMapProperty;
   _ConceptMapProperty._() : super._();
 
-  factory _ConceptMapProperty.fromJson(Map<String, dynamic> json) =
-      _$_ConceptMapProperty.fromJson;
+  factory _ConceptMapProperty.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConceptMapProperty.fromJson;
 
   @override
 
@@ -10503,8 +10543,9 @@ class _$_ConceptMapAdditionalAttribute extends _ConceptMapAdditionalAttribute {
         super._();
 
   factory _$_ConceptMapAdditionalAttribute.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_ConceptMapAdditionalAttributeFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_ConceptMapAdditionalAttributeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -10699,8 +10740,10 @@ abstract class _ConceptMapAdditionalAttribute
       _$_ConceptMapAdditionalAttribute;
   _ConceptMapAdditionalAttribute._() : super._();
 
-  factory _ConceptMapAdditionalAttribute.fromJson(Map<String, dynamic> json) =
-      _$_ConceptMapAdditionalAttribute.fromJson;
+  factory _ConceptMapAdditionalAttribute.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConceptMapAdditionalAttribute.fromJson;
 
   @override
 
@@ -11021,7 +11064,10 @@ class _$_ConceptMapGroup extends _ConceptMapGroup {
         _element = element,
         super._();
 
-  factory _$_ConceptMapGroup.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConceptMapGroup.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConceptMapGroupFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -11184,8 +11230,10 @@ abstract class _ConceptMapGroup extends ConceptMapGroup {
       final ConceptMapUnmapped? unmapped}) = _$_ConceptMapGroup;
   _ConceptMapGroup._() : super._();
 
-  factory _ConceptMapGroup.fromJson(Map<String, dynamic> json) =
-      _$_ConceptMapGroup.fromJson;
+  factory _ConceptMapGroup.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConceptMapGroup.fromJson;
 
   @override
 
@@ -11578,7 +11626,10 @@ class _$_ConceptMapElement extends _ConceptMapElement {
         _target = target,
         super._();
 
-  factory _$_ConceptMapElement.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConceptMapElement.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConceptMapElementFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -11774,8 +11825,10 @@ abstract class _ConceptMapElement extends ConceptMapElement {
       final List<ConceptMapTarget>? target}) = _$_ConceptMapElement;
   _ConceptMapElement._() : super._();
 
-  factory _ConceptMapElement.fromJson(Map<String, dynamic> json) =
-      _$_ConceptMapElement.fromJson;
+  factory _ConceptMapElement.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConceptMapElement.fromJson;
 
   @override
 
@@ -12276,7 +12329,10 @@ class _$_ConceptMapTarget extends _ConceptMapTarget {
         _product = product,
         super._();
 
-  factory _$_ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConceptMapTarget.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConceptMapTargetFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -12534,8 +12590,10 @@ abstract class _ConceptMapTarget extends ConceptMapTarget {
       final List<ConceptMapDependsOn>? product}) = _$_ConceptMapTarget;
   _ConceptMapTarget._() : super._();
 
-  factory _ConceptMapTarget.fromJson(Map<String, dynamic> json) =
-      _$_ConceptMapTarget.fromJson;
+  factory _ConceptMapTarget.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConceptMapTarget.fromJson;
 
   @override
 
@@ -13170,7 +13228,10 @@ class _$_ConceptMapProperty1 extends _ConceptMapProperty1 {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConceptMapProperty1.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConceptMapProperty1.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConceptMapProperty1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -13431,8 +13492,10 @@ abstract class _ConceptMapProperty1 extends ConceptMapProperty1 {
       _$_ConceptMapProperty1;
   _ConceptMapProperty1._() : super._();
 
-  factory _ConceptMapProperty1.fromJson(Map<String, dynamic> json) =
-      _$_ConceptMapProperty1.fromJson;
+  factory _ConceptMapProperty1.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConceptMapProperty1.fromJson;
 
   @override
 
@@ -13974,7 +14037,10 @@ class _$_ConceptMapDependsOn extends _ConceptMapDependsOn {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConceptMapDependsOn.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConceptMapDependsOnFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -14188,8 +14254,10 @@ abstract class _ConceptMapDependsOn extends ConceptMapDependsOn {
       final FhirCanonical? valueSet}) = _$_ConceptMapDependsOn;
   _ConceptMapDependsOn._() : super._();
 
-  factory _ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =
-      _$_ConceptMapDependsOn.fromJson;
+  factory _ConceptMapDependsOn.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConceptMapDependsOn.fromJson;
 
   @override
 
@@ -14665,7 +14733,10 @@ class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =>
+  factory _$_ConceptMapUnmapped.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ConceptMapUnmappedFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -14879,8 +14950,10 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
       final FhirCanonical? otherMap}) = _$_ConceptMapUnmapped;
   _ConceptMapUnmapped._() : super._();
 
-  factory _ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =
-      _$_ConceptMapUnmapped.fromJson;
+  factory _ConceptMapUnmapped.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ConceptMapUnmapped.fromJson;
 
   @override
 
@@ -16614,7 +16687,10 @@ class _$_NamingSystem extends _NamingSystem {
         _uniqueId = uniqueId,
         super._();
 
-  factory _$_NamingSystem.fromJson(Map<String, dynamic> json) =>
+  factory _$_NamingSystem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_NamingSystemFromJson(json);
 
   /// [resourceType] This is a NamingSystem resource
@@ -17426,8 +17502,10 @@ abstract class _NamingSystem extends NamingSystem {
       required final List<NamingSystemUniqueId> uniqueId}) = _$_NamingSystem;
   _NamingSystem._() : super._();
 
-  factory _NamingSystem.fromJson(Map<String, dynamic> json) =
-      _$_NamingSystem.fromJson;
+  factory _NamingSystem.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_NamingSystem.fromJson;
 
   @override
 
@@ -18226,7 +18304,10 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
+  factory _$_NamingSystemUniqueId.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_NamingSystemUniqueIdFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -18448,8 +18529,10 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
           final Element? authoritativeElement}) = _$_NamingSystemUniqueId;
   _NamingSystemUniqueId._() : super._();
 
-  factory _NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =
-      _$_NamingSystemUniqueId.fromJson;
+  factory _NamingSystemUniqueId.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_NamingSystemUniqueId.fromJson;
 
   @override
 
@@ -20117,7 +20200,10 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
         _codeSystem = codeSystem,
         super._();
 
-  factory _$_TerminologyCapabilities.fromJson(Map<String, dynamic> json) =>
+  factory _$_TerminologyCapabilities.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_TerminologyCapabilitiesFromJson(json);
 
   /// [resourceType] This is a TerminologyCapabilities resource
@@ -20829,8 +20915,10 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
       _$_TerminologyCapabilities;
   _TerminologyCapabilities._() : super._();
 
-  factory _TerminologyCapabilities.fromJson(Map<String, dynamic> json) =
-      _$_TerminologyCapabilities.fromJson;
+  factory _TerminologyCapabilities.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TerminologyCapabilities.fromJson;
 
   @override
 
@@ -21432,8 +21520,9 @@ class _$_TerminologyCapabilitiesSoftware
         super._();
 
   factory _$_TerminologyCapabilitiesSoftware.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_TerminologyCapabilitiesSoftwareFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_TerminologyCapabilitiesSoftwareFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -21588,8 +21677,10 @@ abstract class _TerminologyCapabilitiesSoftware
       _$_TerminologyCapabilitiesSoftware;
   _TerminologyCapabilitiesSoftware._() : super._();
 
-  factory _TerminologyCapabilitiesSoftware.fromJson(Map<String, dynamic> json) =
-      _$_TerminologyCapabilitiesSoftware.fromJson;
+  factory _TerminologyCapabilitiesSoftware.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TerminologyCapabilitiesSoftware.fromJson;
 
   @override
 
@@ -21905,8 +21996,9 @@ class _$_TerminologyCapabilitiesImplementation
         super._();
 
   factory _$_TerminologyCapabilitiesImplementation.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_TerminologyCapabilitiesImplementationFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_TerminologyCapabilitiesImplementationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -22415,8 +22507,9 @@ class _$_TerminologyCapabilitiesCodeSystem
         super._();
 
   factory _$_TerminologyCapabilitiesCodeSystem.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_TerminologyCapabilitiesCodeSystemFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_TerminologyCapabilitiesCodeSystemFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -23062,8 +23155,9 @@ class _$_TerminologyCapabilitiesVersion
         super._();
 
   factory _$_TerminologyCapabilitiesVersion.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_TerminologyCapabilitiesVersionFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_TerminologyCapabilitiesVersionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -23320,8 +23414,10 @@ abstract class _TerminologyCapabilitiesVersion
       _$_TerminologyCapabilitiesVersion;
   _TerminologyCapabilitiesVersion._() : super._();
 
-  factory _TerminologyCapabilitiesVersion.fromJson(Map<String, dynamic> json) =
-      _$_TerminologyCapabilitiesVersion.fromJson;
+  factory _TerminologyCapabilitiesVersion.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TerminologyCapabilitiesVersion.fromJson;
 
   @override
 
@@ -23652,8 +23748,9 @@ class _$_TerminologyCapabilitiesFilter extends _TerminologyCapabilitiesFilter {
         super._();
 
   factory _$_TerminologyCapabilitiesFilter.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_TerminologyCapabilitiesFilterFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_TerminologyCapabilitiesFilterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -23824,8 +23921,10 @@ abstract class _TerminologyCapabilitiesFilter
       _$_TerminologyCapabilitiesFilter;
   _TerminologyCapabilitiesFilter._() : super._();
 
-  factory _TerminologyCapabilitiesFilter.fromJson(Map<String, dynamic> json) =
-      _$_TerminologyCapabilitiesFilter.fromJson;
+  factory _TerminologyCapabilitiesFilter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TerminologyCapabilitiesFilter.fromJson;
 
   @override
 
@@ -24251,8 +24350,9 @@ class _$_TerminologyCapabilitiesExpansion
         super._();
 
   factory _$_TerminologyCapabilitiesExpansion.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_TerminologyCapabilitiesExpansionFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_TerminologyCapabilitiesExpansionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -24794,8 +24894,9 @@ class _$_TerminologyCapabilitiesParameter
         super._();
 
   factory _$_TerminologyCapabilitiesParameter.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_TerminologyCapabilitiesParameterFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_TerminologyCapabilitiesParameterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -25221,8 +25322,9 @@ class _$_TerminologyCapabilitiesValidateCode
         super._();
 
   factory _$_TerminologyCapabilitiesValidateCode.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_TerminologyCapabilitiesValidateCodeFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_TerminologyCapabilitiesValidateCodeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -25620,8 +25722,9 @@ class _$_TerminologyCapabilitiesTranslation
         super._();
 
   factory _$_TerminologyCapabilitiesTranslation.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_TerminologyCapabilitiesTranslationFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_TerminologyCapabilitiesTranslationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -26018,8 +26121,9 @@ class _$_TerminologyCapabilitiesClosure
         super._();
 
   factory _$_TerminologyCapabilitiesClosure.fromJson(
-          Map<String, dynamic> json) =>
-      _$$_TerminologyCapabilitiesClosureFromJson(json);
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>      _$$_TerminologyCapabilitiesClosureFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -26157,8 +26261,10 @@ abstract class _TerminologyCapabilitiesClosure
       _$_TerminologyCapabilitiesClosure;
   _TerminologyCapabilitiesClosure._() : super._();
 
-  factory _TerminologyCapabilitiesClosure.fromJson(Map<String, dynamic> json) =
-      _$_TerminologyCapabilitiesClosure.fromJson;
+  factory _TerminologyCapabilitiesClosure.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_TerminologyCapabilitiesClosure.fromJson;
 
   @override
 
@@ -27789,7 +27895,10 @@ class _$_ValueSet extends _ValueSet {
         _relatedArtifact = relatedArtifact,
         super._();
 
-  factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSet.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ValueSetFromJson(json);
 
   /// [resourceType] This is a ValueSet resource
@@ -28572,7 +28681,10 @@ abstract class _ValueSet extends ValueSet {
       final ValueSetScope? scope}) = _$_ValueSet;
   _ValueSet._() : super._();
 
-  factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
+  factory _ValueSet.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ValueSet.fromJson;
 
   @override
 
@@ -29263,7 +29375,10 @@ class _$_ValueSetCompose extends _ValueSetCompose {
         _propertyElement = propertyElement,
         super._();
 
-  factory _$_ValueSetCompose.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetCompose.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ValueSetComposeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -29502,8 +29617,10 @@ abstract class _ValueSetCompose extends ValueSetCompose {
       _$_ValueSetCompose;
   _ValueSetCompose._() : super._();
 
-  factory _ValueSetCompose.fromJson(Map<String, dynamic> json) =
-      _$_ValueSetCompose.fromJson;
+  factory _ValueSetCompose.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ValueSetCompose.fromJson;
 
   @override
 
@@ -29949,7 +30066,10 @@ class _$_ValueSetInclude extends _ValueSetInclude {
         _valueSet = valueSet,
         super._();
 
-  factory _$_ValueSetInclude.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetInclude.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ValueSetIncludeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -30184,8 +30304,10 @@ abstract class _ValueSetInclude extends ValueSetInclude {
       _$_ValueSetInclude;
   _ValueSetInclude._() : super._();
 
-  factory _ValueSetInclude.fromJson(Map<String, dynamic> json) =
-      _$_ValueSetInclude.fromJson;
+  factory _ValueSetInclude.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ValueSetInclude.fromJson;
 
   @override
 
@@ -30544,7 +30666,10 @@ class _$_ValueSetConcept extends _ValueSetConcept {
         _designation = designation,
         super._();
 
-  factory _$_ValueSetConcept.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetConcept.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ValueSetConceptFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -30719,8 +30844,10 @@ abstract class _ValueSetConcept extends ValueSetConcept {
       final List<ValueSetDesignation>? designation}) = _$_ValueSetConcept;
   _ValueSetConcept._() : super._();
 
-  factory _ValueSetConcept.fromJson(Map<String, dynamic> json) =
-      _$_ValueSetConcept.fromJson;
+  factory _ValueSetConcept.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ValueSetConcept.fromJson;
 
   @override
 
@@ -31081,7 +31208,10 @@ class _$_ValueSetDesignation extends _ValueSetDesignation {
         _additionalUse = additionalUse,
         super._();
 
-  factory _$_ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetDesignation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ValueSetDesignationFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -31261,8 +31391,10 @@ abstract class _ValueSetDesignation extends ValueSetDesignation {
       _$_ValueSetDesignation;
   _ValueSetDesignation._() : super._();
 
-  factory _ValueSetDesignation.fromJson(Map<String, dynamic> json) =
-      _$_ValueSetDesignation.fromJson;
+  factory _ValueSetDesignation.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ValueSetDesignation.fromJson;
 
   @override
 
@@ -31628,7 +31760,10 @@ class _$_ValueSetFilter extends _ValueSetFilter {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ValueSetFilter.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetFilter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ValueSetFilterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -31803,8 +31938,10 @@ abstract class _ValueSetFilter extends ValueSetFilter {
       _$_ValueSetFilter;
   _ValueSetFilter._() : super._();
 
-  factory _ValueSetFilter.fromJson(Map<String, dynamic> json) =
-      _$_ValueSetFilter.fromJson;
+  factory _ValueSetFilter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ValueSetFilter.fromJson;
 
   @override
 
@@ -32333,7 +32470,10 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
         _contains = contains,
         super._();
 
-  factory _$_ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetExpansion.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ValueSetExpansionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -32604,8 +32744,10 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
       final List<ValueSetContains>? contains}) = _$_ValueSetExpansion;
   _ValueSetExpansion._() : super._();
 
-  factory _ValueSetExpansion.fromJson(Map<String, dynamic> json) =
-      _$_ValueSetExpansion.fromJson;
+  factory _ValueSetExpansion.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ValueSetExpansion.fromJson;
 
   @override
 
@@ -33253,7 +33395,10 @@ class _$_ValueSetParameter extends _ValueSetParameter {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ValueSetParameter.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetParameter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ValueSetParameterFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -33521,8 +33666,10 @@ abstract class _ValueSetParameter extends ValueSetParameter {
           final Element? valueDateTimeElement}) = _$_ValueSetParameter;
   _ValueSetParameter._() : super._();
 
-  factory _ValueSetParameter.fromJson(Map<String, dynamic> json) =
-      _$_ValueSetParameter.fromJson;
+  factory _ValueSetParameter.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ValueSetParameter.fromJson;
 
   @override
 
@@ -33884,7 +34031,10 @@ class _$_ValueSetProperty extends _ValueSetProperty {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ValueSetProperty.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetProperty.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ValueSetPropertyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -34038,8 +34188,10 @@ abstract class _ValueSetProperty extends ValueSetProperty {
       @JsonKey(name: '_uri') final Element? uriElement}) = _$_ValueSetProperty;
   _ValueSetProperty._() : super._();
 
-  factory _ValueSetProperty.fromJson(Map<String, dynamic> json) =
-      _$_ValueSetProperty.fromJson;
+  factory _ValueSetProperty.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ValueSetProperty.fromJson;
 
   @override
 
@@ -34607,7 +34759,10 @@ class _$_ValueSetContains extends _ValueSetContains {
         _contains = contains,
         super._();
 
-  factory _$_ValueSetContains.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetContains.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ValueSetContainsFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -34895,8 +35050,10 @@ abstract class _ValueSetContains extends ValueSetContains {
       final List<ValueSetContains>? contains}) = _$_ValueSetContains;
   _ValueSetContains._() : super._();
 
-  factory _ValueSetContains.fromJson(Map<String, dynamic> json) =
-      _$_ValueSetContains.fromJson;
+  factory _ValueSetContains.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ValueSetContains.fromJson;
 
   @override
 
@@ -35554,7 +35711,10 @@ class _$_ValueSetProperty1 extends _ValueSetProperty1 {
         _subProperty = subProperty,
         super._();
 
-  factory _$_ValueSetProperty1.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetProperty1.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ValueSetProperty1FromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -35818,8 +35978,10 @@ abstract class _ValueSetProperty1 extends ValueSetProperty1 {
       final List<ValueSetSubProperty>? subProperty}) = _$_ValueSetProperty1;
   _ValueSetProperty1._() : super._();
 
-  factory _ValueSetProperty1.fromJson(Map<String, dynamic> json) =
-      _$_ValueSetProperty1.fromJson;
+  factory _ValueSetProperty1.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ValueSetProperty1.fromJson;
 
   @override
 
@@ -36446,7 +36608,10 @@ class _$_ValueSetSubProperty extends _ValueSetSubProperty {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ValueSetSubProperty.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetSubProperty.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ValueSetSubPropertyFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -36693,8 +36858,10 @@ abstract class _ValueSetSubProperty extends ValueSetSubProperty {
       _$_ValueSetSubProperty;
   _ValueSetSubProperty._() : super._();
 
-  factory _ValueSetSubProperty.fromJson(Map<String, dynamic> json) =
-      _$_ValueSetSubProperty.fromJson;
+  factory _ValueSetSubProperty.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ValueSetSubProperty.fromJson;
 
   @override
 
@@ -37050,7 +37217,10 @@ class _$_ValueSetScope extends _ValueSetScope {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ValueSetScope.fromJson(Map<String, dynamic> json) =>
+  factory _$_ValueSetScope.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) =>
       _$$_ValueSetScopeFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
@@ -37213,8 +37383,10 @@ abstract class _ValueSetScope extends ValueSetScope {
           final Element? exclusionCriteriaElement}) = _$_ValueSetScope;
   _ValueSetScope._() : super._();
 
-  factory _ValueSetScope.fromJson(Map<String, dynamic> json) =
-      _$_ValueSetScope.fromJson;
+  factory _ValueSetScope.fromJson(
+    Map<String, dynamic> json, [
+    SerializationManager? serializationManager,
+  ]) => = _$_ValueSetScope.fromJson;
 
   @override
 
