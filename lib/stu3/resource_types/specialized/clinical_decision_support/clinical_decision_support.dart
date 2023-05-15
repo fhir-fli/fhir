@@ -1,8 +1,4 @@
-// ignore_for_file: invalid_annotation_target
-// ignore_for_file: sort_unnamed_constructors_first
-// ignore_for_file: sort_constructors_first
-// ignore_for_file: avoid_unused_constructor_parameters
-// ignore_for_file: prefer_mixin
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -26,6 +22,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     @Default(Stu3ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
         Stu3ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -68,10 +65,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GuidanceResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);
 
   /// Acts like a constructor, returns a [GuidanceResponse], accepts a

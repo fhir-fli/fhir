@@ -1,8 +1,4 @@
-// ignore_for_file: invalid_annotation_target
-// ignore_for_file: sort_unnamed_constructors_first
-// ignore_for_file: sort_constructors_first
-// ignore_for_file: avoid_unused_constructor_parameters
-// ignore_for_file: prefer_mixin
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -138,6 +134,7 @@ class AuditEvent with Resource, _$AuditEvent {
     @Default(R5ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: R5ResourceType.AuditEvent)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -291,10 +288,7 @@ class AuditEvent with Resource, _$AuditEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AuditEvent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventFromJson(json);
 
   /// Acts like a constructor, returns a [AuditEvent], accepts a
@@ -402,10 +396,7 @@ class AuditEventOutcome with _$AuditEventOutcome {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AuditEventOutcome.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory AuditEventOutcome.fromJson(Map<String, dynamic> json) =>
       _$AuditEventOutcomeFromJson(json);
 
   /// Acts like a constructor, returns a [AuditEventOutcome], accepts a
@@ -599,10 +590,7 @@ class AuditEventAgent with _$AuditEventAgent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AuditEventAgent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventAgentFromJson(json);
 
   /// Acts like a constructor, returns a [AuditEventAgent], accepts a
@@ -717,10 +705,7 @@ class AuditEventSource with _$AuditEventSource {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AuditEventSource.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
       _$AuditEventSourceFromJson(json);
 
   /// Acts like a constructor, returns a [AuditEventSource], accepts a
@@ -868,10 +853,7 @@ class AuditEventEntity with _$AuditEventEntity {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AuditEventEntity.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
       _$AuditEventEntityFromJson(json);
 
   /// Acts like a constructor, returns a [AuditEventEntity], accepts a
@@ -1059,10 +1041,7 @@ class AuditEventDetail with _$AuditEventDetail {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AuditEventDetail.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
       _$AuditEventDetailFromJson(json);
 
   /// Acts like a constructor, returns a [AuditEventDetail], accepts a
@@ -1215,6 +1194,7 @@ class Consent with Resource, _$Consent {
     @Default(R5ResourceType.Consent)
     @JsonKey(unknownEnumValue: R5ResourceType.Consent)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1380,10 +1360,7 @@ class Consent with Resource, _$Consent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Consent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory Consent.fromJson(Map<String, dynamic> json) =>
       _$ConsentFromJson(json);
 
   /// Acts like a constructor, returns a [Consent], accepts a
@@ -1507,10 +1484,7 @@ class ConsentPolicyBasis with _$ConsentPolicyBasis {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConsentPolicyBasis.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ConsentPolicyBasis.fromJson(Map<String, dynamic> json) =>
       _$ConsentPolicyBasisFromJson(json);
 
   /// Acts like a constructor, returns a [ConsentPolicyBasis], accepts a
@@ -1658,10 +1632,7 @@ class ConsentVerification with _$ConsentVerification {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConsentVerification.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ConsentVerification.fromJson(Map<String, dynamic> json) =>
       _$ConsentVerificationFromJson(json);
 
   /// Acts like a constructor, returns a [ConsentVerification], accepts a
@@ -1851,10 +1822,7 @@ class ConsentProvision with _$ConsentProvision {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConsentProvision.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ConsentProvision.fromJson(Map<String, dynamic> json) =>
       _$ConsentProvisionFromJson(json);
 
   /// Acts like a constructor, returns a [ConsentProvision], accepts a
@@ -1974,10 +1942,7 @@ class ConsentActor with _$ConsentActor {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConsentActor.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ConsentActor.fromJson(Map<String, dynamic> json) =>
       _$ConsentActorFromJson(json);
 
   /// Acts like a constructor, returns a [ConsentActor], accepts a
@@ -2100,10 +2065,7 @@ class ConsentData with _$ConsentData {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConsentData.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ConsentData.fromJson(Map<String, dynamic> json) =>
       _$ConsentDataFromJson(json);
 
   /// Acts like a constructor, returns a [ConsentData], accepts a
@@ -2210,6 +2172,7 @@ class Permission with Resource, _$Permission {
     @Default(R5ResourceType.Permission)
     @JsonKey(unknownEnumValue: R5ResourceType.Permission)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2324,10 +2287,7 @@ class Permission with Resource, _$Permission {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Permission.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory Permission.fromJson(Map<String, dynamic> json) =>
       _$PermissionFromJson(json);
 
   /// Acts like a constructor, returns a [Permission], accepts a
@@ -2435,10 +2395,7 @@ class PermissionJustification with _$PermissionJustification {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PermissionJustification.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory PermissionJustification.fromJson(Map<String, dynamic> json) =>
       _$PermissionJustificationFromJson(json);
 
   /// Acts like a constructor, returns a [PermissionJustification], accepts a
@@ -2563,10 +2520,7 @@ class PermissionRule with _$PermissionRule {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PermissionRule.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory PermissionRule.fromJson(Map<String, dynamic> json) =>
       _$PermissionRuleFromJson(json);
 
   /// Acts like a constructor, returns a [PermissionRule], accepts a
@@ -2686,10 +2640,7 @@ class PermissionData with _$PermissionData {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PermissionData.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory PermissionData.fromJson(Map<String, dynamic> json) =>
       _$PermissionDataFromJson(json);
 
   /// Acts like a constructor, returns a [PermissionData], accepts a
@@ -2804,10 +2755,7 @@ class PermissionResource with _$PermissionResource {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PermissionResource.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory PermissionResource.fromJson(Map<String, dynamic> json) =>
       _$PermissionResourceFromJson(json);
 
   /// Acts like a constructor, returns a [PermissionResource], accepts a
@@ -2918,10 +2866,7 @@ class PermissionActivity with _$PermissionActivity {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PermissionActivity.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory PermissionActivity.fromJson(Map<String, dynamic> json) =>
       _$PermissionActivityFromJson(json);
 
   /// Acts like a constructor, returns a [PermissionActivity], accepts a
@@ -3084,6 +3029,7 @@ class Provenance with Resource, _$Provenance {
     @Default(R5ResourceType.Provenance)
     @JsonKey(unknownEnumValue: R5ResourceType.Provenance)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3236,10 +3182,7 @@ class Provenance with Resource, _$Provenance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Provenance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory Provenance.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceFromJson(json);
 
   /// Acts like a constructor, returns a [Provenance], accepts a
@@ -3387,10 +3330,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProvenanceAgent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceAgentFromJson(json);
 
   /// Acts like a constructor, returns a [ProvenanceAgent], accepts a
@@ -3540,10 +3480,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProvenanceEntity.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceEntityFromJson(json);
 
   /// Acts like a constructor, returns a [ProvenanceEntity], accepts a

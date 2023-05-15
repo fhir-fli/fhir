@@ -1,8 +1,4 @@
-// ignore_for_file: invalid_annotation_target
-// ignore_for_file: sort_unnamed_constructors_first
-// ignore_for_file: sort_constructors_first
-// ignore_for_file: avoid_unused_constructor_parameters
-// ignore_for_file: prefer_mixin
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -26,6 +22,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     @Default(Dstu2ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
         Dstu2ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -91,10 +88,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinition], accepts a
@@ -136,10 +130,7 @@ class StructureDefinitionContact with _$StructureDefinitionContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinitionContact.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory StructureDefinitionContact.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionContactFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinitionContact], accepts a
@@ -188,10 +179,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinitionMapping.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionMappingFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinitionMapping], accepts a
@@ -232,10 +220,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinitionSnapshot.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionSnapshotFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinitionSnapshot], accepts a
@@ -277,10 +262,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinitionDifferential.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
       _$StructureDefinitionDifferentialFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinitionDifferential], accepts a
@@ -303,6 +285,7 @@ class DataElement with Resource, _$DataElement {
     @Default(Dstu2ResourceType.DataElement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
         Dstu2ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -341,10 +324,7 @@ class DataElement with Resource, _$DataElement {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DataElement.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory DataElement.fromJson(Map<String, dynamic> json) =>
       _$DataElementFromJson(json);
 
   /// Acts like a constructor, returns a [DataElement], accepts a
@@ -386,10 +366,7 @@ class DataElementContact with _$DataElementContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DataElementContact.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory DataElementContact.fromJson(Map<String, dynamic> json) =>
       _$DataElementContactFromJson(json);
 
   /// Acts like a constructor, returns a [DataElementContact], accepts a
@@ -438,10 +415,7 @@ class DataElementMapping with _$DataElementMapping {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DataElementMapping.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory DataElementMapping.fromJson(Map<String, dynamic> json) =>
       _$DataElementMappingFromJson(json);
 
   /// Acts like a constructor, returns a [DataElementMapping], accepts a

@@ -1,8 +1,4 @@
-// ignore_for_file: invalid_annotation_target
-// ignore_for_file: sort_unnamed_constructors_first
-// ignore_for_file: sort_constructors_first
-// ignore_for_file: avoid_unused_constructor_parameters
-// ignore_for_file: prefer_mixin
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -123,6 +119,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     @Default(R5ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -255,10 +252,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentNotice.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$PaymentNoticeFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentNotice], accepts a
@@ -444,6 +438,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     @Default(R5ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -670,10 +665,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliation], accepts a
@@ -895,10 +887,7 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliationAllocation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory PaymentReconciliationAllocation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationAllocationFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliationAllocation],
@@ -1017,9 +1006,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliationProcessNote.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$PaymentReconciliationProcessNoteFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliationProcessNote],

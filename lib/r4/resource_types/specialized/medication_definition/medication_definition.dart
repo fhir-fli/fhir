@@ -1,8 +1,4 @@
-// ignore_for_file: invalid_annotation_target
-// ignore_for_file: sort_unnamed_constructors_first
-// ignore_for_file: sort_constructors_first
-// ignore_for_file: avoid_unused_constructor_parameters
-// ignore_for_file: prefer_mixin
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -59,6 +55,8 @@ class AdministrableProductDefinition
 
         /// [resourceType] This is a AdministrableProductDefinition resource",
         R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
     @JsonKey(name: 'id')
@@ -127,10 +125,7 @@ class AdministrableProductDefinition
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AdministrableProductDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory AdministrableProductDefinition.fromJson(Map<String, dynamic> json) =>
       _$AdministrableProductDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [AdministrableProductDefinition], accepts a
@@ -235,9 +230,7 @@ class AdministrableProductDefinitionProperty
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AdministrableProductDefinitionProperty.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$AdministrableProductDefinitionPropertyFromJson(json);
 
   /// Acts like a constructor, returns a [AdministrableProductDefinitionProperty], accepts a
@@ -333,9 +326,7 @@ class AdministrableProductDefinitionRouteOfAdministration
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AdministrableProductDefinitionRouteOfAdministration.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$AdministrableProductDefinitionRouteOfAdministrationFromJson(json);
 
   /// Acts like a constructor, returns a [AdministrableProductDefinitionRouteOfAdministration], accepts a
@@ -407,9 +398,7 @@ class AdministrableProductDefinitionTargetSpecies
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AdministrableProductDefinitionTargetSpecies.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$AdministrableProductDefinitionTargetSpeciesFromJson(json);
 
   /// Acts like a constructor, returns a [AdministrableProductDefinitionTargetSpecies], accepts a
@@ -494,9 +483,7 @@ class AdministrableProductDefinitionWithdrawalPeriod
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AdministrableProductDefinitionWithdrawalPeriod.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$AdministrableProductDefinitionWithdrawalPeriodFromJson(json);
 
   /// Acts like a constructor, returns a [AdministrableProductDefinitionWithdrawalPeriod], accepts a
@@ -570,6 +557,7 @@ class Ingredient with Resource, _$Ingredient {
   factory Ingredient({
     /// [resourceType] This is a Ingredient resource;
     @Default(R4ResourceType.Ingredient) R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id') String? fhirId,
@@ -648,10 +636,7 @@ class Ingredient with Resource, _$Ingredient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Ingredient.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory Ingredient.fromJson(Map<String, dynamic> json) =>
       _$IngredientFromJson(json);
 
   /// Acts like a constructor, returns a [Ingredient], accepts a
@@ -722,10 +707,7 @@ class IngredientManufacturer with _$IngredientManufacturer {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory IngredientManufacturer.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory IngredientManufacturer.fromJson(Map<String, dynamic> json) =>
       _$IngredientManufacturerFromJson(json);
 
   /// Acts like a constructor, returns a [IngredientManufacturer], accepts a
@@ -794,10 +776,7 @@ class IngredientSubstance with _$IngredientSubstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory IngredientSubstance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory IngredientSubstance.fromJson(Map<String, dynamic> json) =>
       _$IngredientSubstanceFromJson(json);
 
   /// Acts like a constructor, returns a [IngredientSubstance], accepts a
@@ -916,10 +895,7 @@ class IngredientStrength with _$IngredientStrength {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory IngredientStrength.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory IngredientStrength.fromJson(Map<String, dynamic> json) =>
       _$IngredientStrengthFromJson(json);
 
   /// Acts like a constructor, returns a [IngredientStrength], accepts a
@@ -1013,10 +989,7 @@ class IngredientReferenceStrength with _$IngredientReferenceStrength {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory IngredientReferenceStrength.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory IngredientReferenceStrength.fromJson(Map<String, dynamic> json) =>
       _$IngredientReferenceStrengthFromJson(json);
 
   /// Acts like a constructor, returns a [IngredientReferenceStrength], accepts a
@@ -1089,6 +1062,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
   factory ClinicalUseDefinition({
     /// [resourceType] This is a ClinicalUseDefinition resource;
     @Default(R4ResourceType.ClinicalUseDefinition) R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id') String? fhirId,
@@ -1169,10 +1143,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ClinicalUseDefinition.fromJson(Map<String, dynamic> json) =>
       _$ClinicalUseDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalUseDefinition], accepts a
@@ -1254,9 +1225,7 @@ class ClinicalUseDefinitionContraindication
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalUseDefinitionContraindication.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$ClinicalUseDefinitionContraindicationFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalUseDefinitionContraindication], accepts a
@@ -1323,9 +1292,7 @@ class ClinicalUseDefinitionOtherTherapy
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalUseDefinitionOtherTherapy.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$ClinicalUseDefinitionOtherTherapyFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalUseDefinitionOtherTherapy], accepts a
@@ -1427,10 +1394,7 @@ class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseDefinitionIndication.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ClinicalUseDefinitionIndication.fromJson(Map<String, dynamic> json) =>
       _$ClinicalUseDefinitionIndicationFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalUseDefinitionIndication], accepts a
@@ -1513,9 +1477,7 @@ class ClinicalUseDefinitionInteraction with _$ClinicalUseDefinitionInteraction {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalUseDefinitionInteraction.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$ClinicalUseDefinitionInteractionFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalUseDefinitionInteraction], accepts a
@@ -1583,9 +1545,7 @@ class ClinicalUseDefinitionInteractant with _$ClinicalUseDefinitionInteractant {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalUseDefinitionInteractant.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$ClinicalUseDefinitionInteractantFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalUseDefinitionInteractant], accepts a
@@ -1657,9 +1617,7 @@ class ClinicalUseDefinitionUndesirableEffect
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalUseDefinitionUndesirableEffect.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$ClinicalUseDefinitionUndesirableEffectFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalUseDefinitionUndesirableEffect], accepts a
@@ -1730,10 +1688,7 @@ class ClinicalUseDefinitionWarning with _$ClinicalUseDefinitionWarning {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseDefinitionWarning.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ClinicalUseDefinitionWarning.fromJson(Map<String, dynamic> json) =>
       _$ClinicalUseDefinitionWarningFromJson(json);
 
   /// Acts like a constructor, returns a [ClinicalUseDefinitionWarning], accepts a
@@ -1802,6 +1757,8 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
 
         /// [resourceType] This is a ManufacturedItemDefinition resource;
         R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id')
@@ -1876,10 +1833,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ManufacturedItemDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ManufacturedItemDefinition.fromJson(Map<String, dynamic> json) =>
       _$ManufacturedItemDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [ManufacturedItemDefinition], accepts a
@@ -1979,9 +1933,7 @@ class ManufacturedItemDefinitionProperty
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ManufacturedItemDefinitionProperty.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$ManufacturedItemDefinitionPropertyFromJson(json);
 
   /// Acts like a constructor, returns a [ManufacturedItemDefinitionProperty], accepts a
@@ -2097,6 +2049,8 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
 
         /// [resourceType] This is a MedicinalProductDefinition resource;
         R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id')
@@ -2246,10 +2200,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicinalProductDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory MedicinalProductDefinition.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [MedicinalProductDefinition], accepts a
@@ -2319,9 +2270,7 @@ class MedicinalProductDefinitionContact
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductDefinitionContact.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionContactFromJson(json);
 
   /// Acts like a constructor, returns a [MedicinalProductDefinitionContact], accepts a
@@ -2406,10 +2355,7 @@ class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicinalProductDefinitionName.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory MedicinalProductDefinitionName.fromJson(Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionNameFromJson(json);
 
   /// Acts like a constructor, returns a [MedicinalProductDefinitionName], accepts a
@@ -2484,9 +2430,7 @@ class MedicinalProductDefinitionNamePart
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductDefinitionNamePart.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionNamePartFromJson(json);
 
   /// Acts like a constructor, returns a [MedicinalProductDefinitionNamePart], accepts a
@@ -2561,9 +2505,7 @@ class MedicinalProductDefinitionCountryLanguage
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductDefinitionCountryLanguage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionCountryLanguageFromJson(json);
 
   /// Acts like a constructor, returns a [MedicinalProductDefinitionCountryLanguage], accepts a
@@ -2634,9 +2576,7 @@ class MedicinalProductDefinitionCrossReference
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductDefinitionCrossReference.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionCrossReferenceFromJson(json);
 
   /// Acts like a constructor, returns a [MedicinalProductDefinitionCrossReference], accepts a
@@ -2717,9 +2657,7 @@ class MedicinalProductDefinitionOperation
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductDefinitionOperation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionOperationFromJson(json);
 
   /// Acts like a constructor, returns a [MedicinalProductDefinitionOperation], accepts a
@@ -2819,9 +2757,7 @@ class MedicinalProductDefinitionCharacteristic
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MedicinalProductDefinitionCharacteristic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [MedicinalProductDefinitionCharacteristic], accepts a
@@ -2911,6 +2847,8 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
 
         /// [resourceType] This is a PackagedProductDefinition resource;
         R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id')
@@ -3018,10 +2956,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PackagedProductDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory PackagedProductDefinition.fromJson(Map<String, dynamic> json) =>
       _$PackagedProductDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [PackagedProductDefinition], accepts a
@@ -3091,9 +3026,7 @@ class PackagedProductDefinitionLegalStatusOfSupply
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PackagedProductDefinitionLegalStatusOfSupply.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$PackagedProductDefinitionLegalStatusOfSupplyFromJson(json);
 
   /// Acts like a constructor, returns a [PackagedProductDefinitionLegalStatusOfSupply], accepts a
@@ -3210,9 +3143,7 @@ class PackagedProductDefinitionPackage with _$PackagedProductDefinitionPackage {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PackagedProductDefinitionPackage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$PackagedProductDefinitionPackageFromJson(json);
 
   /// Acts like a constructor, returns a [PackagedProductDefinitionPackage], accepts a
@@ -3365,9 +3296,7 @@ class PackagedProductDefinitionShelfLifeStorage
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PackagedProductDefinitionShelfLifeStorage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$PackagedProductDefinitionShelfLifeStorageFromJson(json);
 
   /// Acts like a constructor, returns a [PackagedProductDefinitionShelfLifeStorage], accepts a
@@ -3468,9 +3397,7 @@ class PackagedProductDefinitionProperty
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PackagedProductDefinitionProperty.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$PackagedProductDefinitionPropertyFromJson(json);
 
   /// Acts like a constructor, returns a [PackagedProductDefinitionProperty], accepts a
@@ -3540,9 +3467,7 @@ class PackagedProductDefinitionContainedItem
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PackagedProductDefinitionContainedItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$PackagedProductDefinitionContainedItemFromJson(json);
 
   /// Acts like a constructor, returns a [PackagedProductDefinitionContainedItem], accepts a
@@ -3625,6 +3550,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   factory RegulatedAuthorization({
     /// [resourceType] This is a RegulatedAuthorization resource;
     @Default(R4ResourceType.RegulatedAuthorization) R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id') String? fhirId,
@@ -3718,10 +3644,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RegulatedAuthorization.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory RegulatedAuthorization.fromJson(Map<String, dynamic> json) =>
       _$RegulatedAuthorizationFromJson(json);
 
   /// Acts like a constructor, returns a [RegulatedAuthorization], accepts a
@@ -3815,10 +3738,7 @@ class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RegulatedAuthorizationCase.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory RegulatedAuthorizationCase.fromJson(Map<String, dynamic> json) =>
       _$RegulatedAuthorizationCaseFromJson(json);
 
   /// Acts like a constructor, returns a [RegulatedAuthorizationCase], accepts a
@@ -3911,6 +3831,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
   factory SubstanceDefinition({
     /// [resourceType] This is a SubstanceDefinition resource;
     @Default(R4ResourceType.SubstanceDefinition) R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id') String? fhirId,
@@ -4019,10 +3940,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory SubstanceDefinition.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinition], accepts a
@@ -4141,10 +4059,7 @@ class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionMoiety.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory SubstanceDefinitionMoiety.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionMoietyFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionMoiety], accepts a
@@ -4243,10 +4158,7 @@ class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionProperty.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory SubstanceDefinitionProperty.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionPropertyFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionProperty], accepts a
@@ -4321,9 +4233,7 @@ class SubstanceDefinitionMolecularWeight
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceDefinitionMolecularWeight.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$SubstanceDefinitionMolecularWeightFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionMolecularWeight], accepts a
@@ -4436,10 +4346,7 @@ class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionStructure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory SubstanceDefinitionStructure.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionStructureFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionStructure], accepts a
@@ -4524,9 +4431,7 @@ class SubstanceDefinitionRepresentation
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceDefinitionRepresentation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$SubstanceDefinitionRepresentationFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionRepresentation], accepts a
@@ -4615,10 +4520,7 @@ class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionCode.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory SubstanceDefinitionCode.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionCodeFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionCode], accepts a
@@ -4742,10 +4644,7 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionName.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory SubstanceDefinitionName.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionNameFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionName], accepts a
@@ -4824,10 +4723,7 @@ class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionOfficial.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory SubstanceDefinitionOfficial.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionOfficialFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionOfficial], accepts a
@@ -4947,10 +4843,7 @@ class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionRelationship.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory SubstanceDefinitionRelationship.fromJson(Map<String, dynamic> json) =>
       _$SubstanceDefinitionRelationshipFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionRelationship], accepts a
@@ -5035,9 +4928,7 @@ class SubstanceDefinitionSourceMaterial
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceDefinitionSourceMaterial.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$SubstanceDefinitionSourceMaterialFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceDefinitionSourceMaterial], accepts a

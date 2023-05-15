@@ -1,8 +1,4 @@
-// ignore_for_file: invalid_annotation_target
-// ignore_for_file: sort_unnamed_constructors_first
-// ignore_for_file: sort_constructors_first
-// ignore_for_file: avoid_unused_constructor_parameters
-// ignore_for_file: prefer_mixin
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -131,6 +127,8 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
 
         /// [resourceType] This is a Endpoint resource
         R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -275,10 +273,7 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FhirEndpoint.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory FhirEndpoint.fromJson(Map<String, dynamic> json) =>
       _$FhirEndpointFromJson(json);
 
   /// Acts like a constructor, returns a [FhirEndpoint], accepts a
@@ -446,6 +441,8 @@ class HealthcareService with Resource, _$HealthcareService {
 
         /// [resourceType] This is a HealthcareService resource
         R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -646,10 +643,7 @@ class HealthcareService with Resource, _$HealthcareService {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareService.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareService], accepts a
@@ -756,10 +750,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareServiceEligibility.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory HealthcareServiceEligibility.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceEligibilityFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareServiceEligibility], accepts a
@@ -900,10 +891,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
               ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareServiceAvailableTime.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory HealthcareServiceAvailableTime.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceAvailableTimeFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareServiceAvailableTime], accepts a
@@ -1014,10 +1002,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareServiceNotAvailable.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory HealthcareServiceNotAvailable.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceNotAvailableFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareServiceNotAvailable], accepts a
@@ -1167,6 +1152,8 @@ class Location with Resource, _$Location {
 
         /// [resourceType] This is a Location resource
         R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1341,10 +1328,7 @@ class Location with Resource, _$Location {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Location.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
 
   /// Acts like a constructor, returns a [Location], accepts a
@@ -1473,10 +1457,7 @@ class LocationPosition with _$LocationPosition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory LocationPosition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$LocationPositionFromJson(json);
 
   /// Acts like a constructor, returns a [LocationPosition], accepts a
@@ -1611,10 +1592,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory LocationHoursOfOperation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory LocationHoursOfOperation.fromJson(Map<String, dynamic> json) =>
       _$LocationHoursOfOperationFromJson(json);
 
   /// Acts like a constructor, returns a [LocationHoursOfOperation], accepts a
@@ -1728,6 +1706,8 @@ class Organization with Resource, _$Organization {
 
         /// [resourceType] This is a Organization resource
         R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1852,10 +1832,7 @@ class Organization with Resource, _$Organization {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Organization.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory Organization.fromJson(Map<String, dynamic> json) =>
       _$OrganizationFromJson(json);
 
   /// Acts like a constructor, returns a [Organization], accepts a
@@ -1972,10 +1949,7 @@ class OrganizationContact with _$OrganizationContact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrganizationContact.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
       _$OrganizationContactFromJson(json);
 
   /// Acts like a constructor, returns a [OrganizationContact], accepts a
@@ -2095,6 +2069,8 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
 
         /// [resourceType] This is a OrganizationAffiliation resource
         R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2224,10 +2200,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrganizationAffiliation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
       _$OrganizationAffiliationFromJson(json);
 
   /// Acts like a constructor, returns a [OrganizationAffiliation], accepts a

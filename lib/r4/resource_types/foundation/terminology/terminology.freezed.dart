@@ -22,6 +22,8 @@ CodeSystem _$CodeSystemFromJson(Map<String, dynamic> json) {
 mixin _$CodeSystem {
   @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -298,6 +300,8 @@ abstract class $CodeSystemCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -410,6 +414,7 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -469,6 +474,10 @@ class _$CodeSystemCopyWithImpl<$Res, $Val extends CodeSystem>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -948,6 +957,8 @@ abstract class _$$_CodeSystemCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -1079,6 +1090,7 @@ class __$$_CodeSystemCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1138,6 +1150,10 @@ class __$$_CodeSystemCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1360,6 +1376,8 @@ class _$_CodeSystem extends _CodeSystem {
   _$_CodeSystem(
       {@JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
           this.resourceType = R4ResourceType.CodeSystem,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -1452,6 +1470,9 @@ class _$_CodeSystem extends _CodeSystem {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -1890,7 +1911,7 @@ class _$_CodeSystem extends _CodeSystem {
 
   @override
   String toString() {
-    return 'CodeSystem(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, caseSensitive: $caseSensitive, caseSensitiveElement: $caseSensitiveElement, valueSet: $valueSet, hierarchyMeaning: $hierarchyMeaning, hierarchyMeaningElement: $hierarchyMeaningElement, compositional: $compositional, compositionalElement: $compositionalElement, versionNeeded: $versionNeeded, versionNeededElement: $versionNeededElement, content: $content, contentElement: $contentElement, supplements: $supplements, count: $count, countElement: $countElement, filter: $filter, property: $property, concept: $concept)';
+    return 'CodeSystem(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, caseSensitive: $caseSensitive, caseSensitiveElement: $caseSensitiveElement, valueSet: $valueSet, hierarchyMeaning: $hierarchyMeaning, hierarchyMeaningElement: $hierarchyMeaningElement, compositional: $compositional, compositionalElement: $compositionalElement, versionNeeded: $versionNeeded, versionNeededElement: $versionNeededElement, content: $content, contentElement: $contentElement, supplements: $supplements, count: $count, countElement: $countElement, filter: $filter, property: $property, concept: $concept)';
   }
 
   @override
@@ -1900,6 +1921,7 @@ class _$_CodeSystem extends _CodeSystem {
             other is _$_CodeSystem &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1998,6 +2020,7 @@ class _$_CodeSystem extends _CodeSystem {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        id,
         fhirId,
         meta,
         implicitRules,
@@ -2071,6 +2094,8 @@ abstract class _CodeSystem extends CodeSystem {
   factory _CodeSystem(
       {@JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
           final R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -2153,6 +2178,9 @@ abstract class _CodeSystem extends CodeSystem {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CodeSystem)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -5746,6 +5774,8 @@ ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) {
 mixin _$ConceptMap {
   @JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -5990,6 +6020,8 @@ abstract class $ConceptMapCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -6091,6 +6123,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6142,6 +6175,10 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6577,6 +6614,8 @@ abstract class _$$_ConceptMapCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -6696,6 +6735,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6747,6 +6787,10 @@ class __$$_ConceptMapCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6937,6 +6981,8 @@ class _$_ConceptMap extends _ConceptMap {
   _$_ConceptMap(
       {@JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
           this.resourceType = R4ResourceType.ConceptMap,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -7016,6 +7062,9 @@ class _$_ConceptMap extends _ConceptMap {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -7382,7 +7431,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   @override
   String toString() {
-    return 'ConceptMap(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, sourceUri: $sourceUri, sourceUriElement: $sourceUriElement, sourceCanonical: $sourceCanonical, sourceCanonicalElement: $sourceCanonicalElement, targetUri: $targetUri, targetUriElement: $targetUriElement, targetCanonical: $targetCanonical, targetCanonicalElement: $targetCanonicalElement, group: $group)';
+    return 'ConceptMap(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, sourceUri: $sourceUri, sourceUriElement: $sourceUriElement, sourceCanonical: $sourceCanonical, sourceCanonicalElement: $sourceCanonicalElement, targetUri: $targetUri, targetUriElement: $targetUriElement, targetCanonical: $targetCanonical, targetCanonicalElement: $targetCanonicalElement, group: $group)';
   }
 
   @override
@@ -7392,6 +7441,7 @@ class _$_ConceptMap extends _ConceptMap {
             other is _$_ConceptMap &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -7477,6 +7527,7 @@ class _$_ConceptMap extends _ConceptMap {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        id,
         fhirId,
         meta,
         implicitRules,
@@ -7542,6 +7593,8 @@ abstract class _ConceptMap extends ConceptMap {
   factory _ConceptMap(
       {@JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
           final R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -7614,6 +7667,9 @@ abstract class _ConceptMap extends ConceptMap {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ConceptMap)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -10961,6 +11017,8 @@ NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) {
 mixin _$NamingSystem {
   @JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -11135,6 +11193,8 @@ abstract class $NamingSystemCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -11208,6 +11268,7 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -11245,6 +11306,10 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -11540,6 +11605,8 @@ abstract class _$$_NamingSystemCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -11624,6 +11691,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -11661,6 +11729,10 @@ class __$$_NamingSystemCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -11795,6 +11867,8 @@ class _$_NamingSystem extends _NamingSystem {
   _$_NamingSystem(
       {@JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
           this.resourceType = R4ResourceType.NamingSystem,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -11853,6 +11927,9 @@ class _$_NamingSystem extends _NamingSystem {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -12133,7 +12210,7 @@ class _$_NamingSystem extends _NamingSystem {
 
   @override
   String toString() {
-    return 'NamingSystem(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, kind: $kind, kindElement: $kindElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, responsible: $responsible, responsibleElement: $responsibleElement, type: $type, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, usage: $usage, usageElement: $usageElement, uniqueId: $uniqueId)';
+    return 'NamingSystem(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, kind: $kind, kindElement: $kindElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, responsible: $responsible, responsibleElement: $responsibleElement, type: $type, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, usage: $usage, usageElement: $usageElement, uniqueId: $uniqueId)';
   }
 
   @override
@@ -12143,6 +12220,7 @@ class _$_NamingSystem extends _NamingSystem {
             other is _$_NamingSystem &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -12201,6 +12279,7 @@ class _$_NamingSystem extends _NamingSystem {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        id,
         fhirId,
         meta,
         implicitRules,
@@ -12252,6 +12331,8 @@ abstract class _NamingSystem extends NamingSystem {
   factory _NamingSystem(
       {@JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
           final R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -12303,6 +12384,9 @@ abstract class _NamingSystem extends NamingSystem {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.NamingSystem)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -13163,6 +13247,8 @@ TerminologyCapabilities _$TerminologyCapabilitiesFromJson(
 mixin _$TerminologyCapabilities {
   @JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -13423,6 +13509,8 @@ abstract class $TerminologyCapabilitiesCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -13531,6 +13619,7 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -13585,6 +13674,10 @@ class _$TerminologyCapabilitiesCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -14086,6 +14179,8 @@ abstract class _$$_TerminologyCapabilitiesCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -14216,6 +14311,7 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -14270,6 +14366,10 @@ class __$$_TerminologyCapabilitiesCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -14472,6 +14572,8 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   _$_TerminologyCapabilities(
       {@JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
           this.resourceType = R4ResourceType.TerminologyCapabilities,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -14553,6 +14655,9 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -14932,7 +15037,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
 
   @override
   String toString() {
-    return 'TerminologyCapabilities(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, kind: $kind, kindElement: $kindElement, software: $software, implementation: $implementation, lockedDate: $lockedDate, lockedDateElement: $lockedDateElement, codeSystem: $codeSystem, expansion: $expansion, codeSearch: $codeSearch, codeSearchElement: $codeSearchElement, validateCode: $validateCode, translation: $translation, closure: $closure)';
+    return 'TerminologyCapabilities(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, kind: $kind, kindElement: $kindElement, software: $software, implementation: $implementation, lockedDate: $lockedDate, lockedDateElement: $lockedDateElement, codeSystem: $codeSystem, expansion: $expansion, codeSearch: $codeSearch, codeSearchElement: $codeSearchElement, validateCode: $validateCode, translation: $translation, closure: $closure)';
   }
 
   @override
@@ -14942,6 +15047,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
             other is _$_TerminologyCapabilities &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -15032,6 +15138,7 @@ class _$_TerminologyCapabilities extends _TerminologyCapabilities {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        id,
         fhirId,
         meta,
         implicitRules,
@@ -15102,6 +15209,8 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   factory _TerminologyCapabilities(
           {@JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
               final R4ResourceType resourceType,
+          @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+              final int? id,
           @JsonKey(name: 'id')
               final String? fhirId,
           final FhirMeta? meta,
@@ -15177,6 +15286,9 @@ abstract class _TerminologyCapabilities extends TerminologyCapabilities {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.TerminologyCapabilities)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -20389,6 +20501,8 @@ ValueSet _$ValueSetFromJson(Map<String, dynamic> json) {
 mixin _$ValueSet {
   @JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -20614,6 +20728,8 @@ abstract class $ValueSetCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -20705,6 +20821,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -20751,6 +20868,10 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -21141,6 +21262,8 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -21248,6 +21371,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -21294,6 +21418,10 @@ class __$$_ValueSetCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -21464,6 +21592,8 @@ class _$_ValueSet extends _ValueSet {
   _$_ValueSet(
       {@JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
           this.resourceType = R4ResourceType.ValueSet,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -21535,6 +21665,9 @@ class _$_ValueSet extends _ValueSet {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -21879,7 +22012,7 @@ class _$_ValueSet extends _ValueSet {
 
   @override
   String toString() {
-    return 'ValueSet(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, immutable: $immutable, immutableElement: $immutableElement, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, compose: $compose, expansion: $expansion)';
+    return 'ValueSet(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, immutable: $immutable, immutableElement: $immutableElement, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, compose: $compose, expansion: $expansion)';
   }
 
   @override
@@ -21889,6 +22022,7 @@ class _$_ValueSet extends _ValueSet {
             other is _$_ValueSet &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -21964,6 +22098,7 @@ class _$_ValueSet extends _ValueSet {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        id,
         fhirId,
         meta,
         implicitRules,
@@ -22024,6 +22159,8 @@ abstract class _ValueSet extends ValueSet {
   factory _ValueSet(
       {@JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
           final R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -22087,6 +22224,9 @@ abstract class _ValueSet extends ValueSet {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ValueSet)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.

@@ -12,6 +12,7 @@ _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Immunization) ??
           R4ResourceType.Immunization,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -600,6 +601,7 @@ _$_ImmunizationEvaluation _$$_ImmunizationEvaluationFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ImmunizationEvaluation) ??
           R4ResourceType.ImmunizationEvaluation,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -749,6 +751,7 @@ _$_ImmunizationRecommendation _$$_ImmunizationRecommendationFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ImmunizationRecommendation) ??
           R4ResourceType.ImmunizationRecommendation,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -998,6 +1001,7 @@ _$_Medication _$$_MedicationFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Medication) ??
           R4ResourceType.Medication,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1190,6 +1194,7 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicationAdministration) ??
           R4ResourceType.MedicationAdministration,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1460,6 +1465,7 @@ _$_MedicationDispense _$$_MedicationDispenseFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicationDispense) ??
           R4ResourceType.MedicationDispense,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1742,6 +1748,7 @@ _$_MedicationKnowledge _$$_MedicationKnowledgeFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicationKnowledge) ??
           R4ResourceType.MedicationKnowledge,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2625,6 +2632,7 @@ _$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicationRequest) ??
           R4ResourceType.MedicationRequest,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -3030,6 +3038,7 @@ _$_MedicationStatement _$$_MedicationStatementFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicationStatement) ??
           R4ResourceType.MedicationStatement,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

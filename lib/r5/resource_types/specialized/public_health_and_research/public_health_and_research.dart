@@ -1,8 +1,4 @@
-// ignore_for_file: invalid_annotation_target
-// ignore_for_file: sort_unnamed_constructors_first
-// ignore_for_file: sort_constructors_first
-// ignore_for_file: avoid_unused_constructor_parameters
-// ignore_for_file: prefer_mixin
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -225,6 +221,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     @Default(R5ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -474,10 +471,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudy.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudy], accepts a
@@ -600,10 +594,7 @@ class ResearchStudyLabel with _$ResearchStudyLabel {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyLabel.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ResearchStudyLabel.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyLabelFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyLabel], accepts a
@@ -745,10 +736,7 @@ class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyAssociatedParty.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ResearchStudyAssociatedParty.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyAssociatedPartyFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyAssociatedParty],
@@ -881,10 +869,7 @@ class ResearchStudyProgressStatus with _$ResearchStudyProgressStatus {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyProgressStatus.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ResearchStudyProgressStatus.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyProgressStatusFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyProgressStatus], accepts
@@ -1023,10 +1008,7 @@ class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyRecruitment.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ResearchStudyRecruitment.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyRecruitmentFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyRecruitment], accepts a
@@ -1190,10 +1172,7 @@ class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyComparisonGroup.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ResearchStudyComparisonGroup.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyComparisonGroupFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyComparisonGroup],
@@ -1331,10 +1310,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyObjective.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyObjectiveFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyObjective], accepts a
@@ -1474,10 +1450,7 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyOutcomeMeasure.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ResearchStudyOutcomeMeasure.fromJson(Map<String, dynamic> json) =>
       _$ResearchStudyOutcomeMeasureFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyOutcomeMeasure], accepts
@@ -1596,6 +1569,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
     @Default(R5ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1725,10 +1699,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchSubject.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$ResearchSubjectFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchSubject], accepts a
@@ -1868,10 +1839,7 @@ class ResearchSubjectProgress with _$ResearchSubjectProgress {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchSubjectProgress.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =>
       _$ResearchSubjectProgressFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchSubjectProgress], accepts a

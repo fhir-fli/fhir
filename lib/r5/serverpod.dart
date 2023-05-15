@@ -22,6 +22,7 @@ Future<void> main() async {
       String converter = "part of '$newFileName';\n\n";
       bool isClass = false;
       String className = '';
+      Map<String, String> fields = <String, String>{};
       for (final String line in stringList) {
         if (isClass) {
           if (line.trim().startsWith('///')) {
@@ -30,28 +31,26 @@ Future<void> main() async {
             final String fieldName = splitLine.last.replaceAll(',', '');
             if (fieldName != 'resourceType') {
               final String fieldType = splitLine[splitLine.length - 2];
-              if (fieldName == 'id' && resourceTypes.contains(className)) {
-                converter += '$fieldName: serializationManager.deserialize<';
-                // converter +=
-                //     '$fieldName: resource.fhirId == null ? null : client.FhirId(resource.fhirId),';
-              } else if (fieldType.contains('List<')) {
-                converter +=
-                    "$fieldName: serializationManager.deserialize<$fieldType>(json['$fieldName']),";
-                // converter +=
-                //     '$fieldName: $fieldType resource.$fieldName == null ? null : resource.$fieldName,';
-              } else if (fieldName == 'routeOfAdministration' ||
-                  fieldName == 'relatedMedicationKnowledge') {
-              } else if (primitives.contains(fieldType.replaceAll('?', ''))) {
-                converter +=
-                    "$fieldName: serializationManager.deserialize<$fieldType>(json['$fieldName']),";
-                // converter +=
-                //     '$fieldName: resource.$fieldName == null ? null : client.${fieldType.replaceAll("?", "")}(resource.fhirId),';
-              } else {
-                converter +=
-                    "$fieldName: serializationManager.deserialize<$fieldType>(json['$fieldName']),";
-                // converter +=
-                //     '$fieldName: resource.$fieldName == null ? null : ${fieldType.substring(0, 1).toLowerCase()}${fieldType.substring(1).replaceAll("?", "")}ToClient(resource.$fieldName),';
+              fields[fieldName] = fieldType;
+              if (fieldName == 'dbId') {
+                // converter += "case 'id':\nid = value;\nreturn;";
+              } else if (fieldName == 'fhirId') {
+                // converter += "case 'fhirId':\n fhirId = value;\nreturn;";
               }
+              // if (fieldName == 'id' && resourceTypes.contains(className)) {
+              //   converter += '$fieldName: serializationManager.deserialize<';
+              // } else if (fieldType.contains('List<')) {
+              //   converter +=
+              //       "$fieldName: serializationManager.deserialize<$fieldType>(json['$fieldName']),";
+              // } else if (fieldName == 'routeOfAdministration' ||
+              //     fieldName == 'relatedMedicationKnowledge') {
+              // } else if (primitives.contains(fieldType.replaceAll('?', ''))) {
+              //   converter +=
+              //       "$fieldName: serializationManager.deserialize<$fieldType>(json['$fieldName']),";
+              // } else {
+              //   converter +=
+              //       "$fieldName: serializationManager.deserialize<$fieldType>(json['$fieldName']),";
+              // }
             }
             if (changeFieldName(
                         splitLine.last.replaceAll(',', ''), className) ==
@@ -60,27 +59,47 @@ Future<void> main() async {
             } else if (changeFieldName(
                         splitLine.last.replaceAll(',', ''), className) ==
                     'relatedMedicationKnowledge' &&
-                className == 'MedicationKnowledge') {
-            } else {}
-
-            converter += '\n';
+                className == 'MedicationKnowledge') {}
           } else if (line.contains('}) = _')) {
             isClass = false;
-            converter += '\n);\n';
-            converter += '}\n';
+            if (resourceTypes.contains(className)) {
+              converter += 'class ${className}Table extends Table {\n';
+              converter +=
+                  "  ${className}Table() : super(tableName: '${className.toLowerCase()}')\n\n";
+              converter += "final dbId = ColumnInt('id');\n\n";
+              converter += "final fhirId = ColumnString('fhirId');\n\n";
+              fields.forEach((String key, String value) {
+                if (key != 'id' && key != 'dbId' && key != 'fhirId') {
+                  String newType = changeYamlTypes(value);
+                  newType = newType == 'String'
+                      ? 'ColumnString'
+                      : newType == 'bool'
+                          ? 'ColumnBool'
+                          : newType == 'DateTime'
+                              ? 'ColumnDateTime'
+                              : newType == 'int'
+                                  ? 'ColumnInt'
+                                  : newType == 'double'
+                                      ? 'ColumnDouble'
+                                      : 'ColumnSerializable';
+                  converter += "final $key = $newType('$key')";
+                }
+              });
+            }
           }
         }
         if (line.contains('factory') && line.contains('({')) {
           className =
               line.replaceAll('factory ', '').replaceAll('({', '').trim();
           isClass = true;
-          converter += '$className _\$${className}ServerPodFromJson'
-              '(Map<String, dynamic> json, SerializationManager serializationManager,){\n'
-              'return $className(\n';
-
-          // if (resourceTypes.contains(className)) {
-          //   yaml += 'table: ${className.toLowerCase()}\n';
-          // }
+          if (resourceTypes.contains(className)) {
+            converter += tableClass(className);
+          }
+          // converter += '@override\n'
+          //     'void setColumnName(\n'
+          //     'String columnName,\n'
+          //     'value,\n){\n'
+          //     'switch(columnName){\n';
         }
       }
       await File(file.replaceAll('.dart', '.serverpod.dart'))
@@ -89,6 +108,118 @@ Future<void> main() async {
     }
   }
 }
+
+String tableClass(String type) => '''
+static Future<List<$type>> _\$${type}Find(
+    _i1.Session session, {
+    ${type}ExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.find<$type>(
+      where: where != null ? where($type.t) : null,
+      limit: limit,
+      offset: offset,
+      orderBy: orderBy,
+      orderByList: orderByList,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<$type?> _\$${type}FindSingleRow(
+    _i1.Session session, {
+    ${type}ExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.findSingleRow<$type>(
+      where: where != null ? where($type.t) : null,
+      offset: offset,
+      orderBy: orderBy,
+      orderDescending: orderDescending,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+  static Future<$type?> _\$${type}FindById(
+    _i1.Session session,
+    int id,
+  ) async {
+    return session.db.findById<$type>(id);
+  }
+
+  static Future<int> _\$${type}Delete(
+    _i1.Session session, {
+    required ${type}ExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.delete<$type>(
+      where: where($type.t),
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> _\$${type}DeleteRow(
+    _i1.Session session,
+    $type row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.deleteRow(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<bool> _\$${type}Update(
+    _i1.Session session,
+    $type row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.update(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<void> _\$${type}Insert(
+    _i1.Session session,
+    $type row, {
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.insert(
+      row,
+      transaction: transaction,
+    );
+  }
+
+  static Future<int> _\$${type}Count(
+    _i1.Session session, {
+    ${type}ExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async {
+    return session.db.count<$type>(
+      where: where != null ? where($type.t) : null,
+      limit: limit,
+      useCache: useCache,
+      transaction: transaction,
+    );
+  }
+
+
+''';
 
 const String resourceYaml = '''
 class: Resource

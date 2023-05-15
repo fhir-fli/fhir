@@ -1,8 +1,4 @@
-// ignore_for_file: invalid_annotation_target
-// ignore_for_file: sort_unnamed_constructors_first
-// ignore_for_file: sort_constructors_first
-// ignore_for_file: avoid_unused_constructor_parameters
-// ignore_for_file: prefer_mixin
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -201,6 +197,7 @@ class Citation with Resource, _$Citation {
   /// [citedArtifact] The article or artifact being described.
   factory Citation({
     @Default(R4ResourceType.Citation) R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -269,10 +266,7 @@ class Citation with Resource, _$Citation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Citation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory Citation.fromJson(Map<String, dynamic> json) =>
       _$CitationFromJson(json);
 
   /// Acts like a constructor, returns a [Citation], accepts a
@@ -352,10 +346,7 @@ class CitationSummary with _$CitationSummary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationSummary.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationSummary.fromJson(Map<String, dynamic> json) =>
       _$CitationSummaryFromJson(json);
 
   /// Acts like a constructor, returns a [CitationSummary], accepts a
@@ -432,10 +423,7 @@ class CitationClassification with _$CitationClassification {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationClassification.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationClassification.fromJson(Map<String, dynamic> json) =>
       _$CitationClassificationFromJson(json);
 
   /// Acts like a constructor, returns a [CitationClassification], accepts a
@@ -518,10 +506,7 @@ class CitationStatusDate with _$CitationStatusDate {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationStatusDate.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationStatusDate.fromJson(Map<String, dynamic> json) =>
       _$CitationStatusDateFromJson(json);
 
   /// Acts like a constructor, returns a [CitationStatusDate], accepts a
@@ -617,10 +602,7 @@ class CitationRelatesTo with _$CitationRelatesTo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationRelatesTo.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$CitationRelatesToFromJson(json);
 
   /// Acts like a constructor, returns a [CitationRelatesTo], accepts a
@@ -745,10 +727,7 @@ class CitationCitedArtifact with _$CitationCitedArtifact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationCitedArtifact.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationCitedArtifact.fromJson(Map<String, dynamic> json) =>
       _$CitationCitedArtifactFromJson(json);
 
   /// Acts like a constructor, returns a [CitationCitedArtifact], accepts a
@@ -828,10 +807,7 @@ class CitationVersion with _$CitationVersion {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationVersion.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationVersion.fromJson(Map<String, dynamic> json) =>
       _$CitationVersionFromJson(json);
 
   /// Acts like a constructor, returns a [CitationVersion], accepts a
@@ -914,10 +890,7 @@ class CitationStatusDate1 with _$CitationStatusDate1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationStatusDate1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationStatusDate1.fromJson(Map<String, dynamic> json) =>
       _$CitationStatusDate1FromJson(json);
 
   /// Acts like a constructor, returns a [CitationStatusDate1], accepts a
@@ -1000,10 +973,7 @@ class CitationTitle with _$CitationTitle {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationTitle.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationTitle.fromJson(Map<String, dynamic> json) =>
       _$CitationTitleFromJson(json);
 
   /// Acts like a constructor, returns a [CitationTitle], accepts a
@@ -1092,10 +1062,7 @@ class CitationAbstract with _$CitationAbstract {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationAbstract.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationAbstract.fromJson(Map<String, dynamic> json) =>
       _$CitationAbstractFromJson(json);
 
   /// Acts like a constructor, returns a [CitationAbstract], accepts a
@@ -1178,10 +1145,7 @@ class CitationPart with _$CitationPart {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPart.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationPart.fromJson(Map<String, dynamic> json) =>
       _$CitationPartFromJson(json);
 
   /// Acts like a constructor, returns a [CitationPart], accepts a
@@ -1276,10 +1240,7 @@ class CitationRelatesTo1 with _$CitationRelatesTo1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationRelatesTo1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationRelatesTo1.fromJson(Map<String, dynamic> json) =>
       _$CitationRelatesTo1FromJson(json);
 
   /// Acts like a constructor, returns a [CitationRelatesTo1], accepts a
@@ -1411,10 +1372,7 @@ class CitationPublicationForm with _$CitationPublicationForm {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPublicationForm.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationPublicationForm.fromJson(Map<String, dynamic> json) =>
       _$CitationPublicationFormFromJson(json);
 
   /// Acts like a constructor, returns a [CitationPublicationForm], accepts a
@@ -1508,10 +1466,7 @@ class CitationPublishedIn with _$CitationPublishedIn {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPublishedIn.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationPublishedIn.fromJson(Map<String, dynamic> json) =>
       _$CitationPublishedInFromJson(json);
 
   /// Acts like a constructor, returns a [CitationPublishedIn], accepts a
@@ -1603,10 +1558,7 @@ class CitationPeriodicRelease with _$CitationPeriodicRelease {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPeriodicRelease.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationPeriodicRelease.fromJson(Map<String, dynamic> json) =>
       _$CitationPeriodicReleaseFromJson(json);
 
   /// Acts like a constructor, returns a [CitationPeriodicRelease], accepts a
@@ -1714,10 +1666,7 @@ class CitationDateOfPublication with _$CitationDateOfPublication {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationDateOfPublication.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationDateOfPublication.fromJson(Map<String, dynamic> json) =>
       _$CitationDateOfPublicationFromJson(json);
 
   /// Acts like a constructor, returns a [CitationDateOfPublication], accepts a
@@ -1797,10 +1746,7 @@ class CitationWebLocation with _$CitationWebLocation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationWebLocation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationWebLocation.fromJson(Map<String, dynamic> json) =>
       _$CitationWebLocationFromJson(json);
 
   /// Acts like a constructor, returns a [CitationWebLocation], accepts a
@@ -1881,10 +1827,7 @@ class CitationClassification1 with _$CitationClassification1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationClassification1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationClassification1.fromJson(Map<String, dynamic> json) =>
       _$CitationClassification1FromJson(json);
 
   /// Acts like a constructor, returns a [CitationClassification1], accepts a
@@ -1978,10 +1921,7 @@ class CitationWhoClassified with _$CitationWhoClassified {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationWhoClassified.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationWhoClassified.fromJson(Map<String, dynamic> json) =>
       _$CitationWhoClassifiedFromJson(json);
 
   /// Acts like a constructor, returns a [CitationWhoClassified], accepts a
@@ -2065,10 +2005,7 @@ class CitationContributorship with _$CitationContributorship {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationContributorship.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationContributorship.fromJson(Map<String, dynamic> json) =>
       _$CitationContributorshipFromJson(json);
 
   /// Acts like a constructor, returns a [CitationContributorship], accepts a
@@ -2191,10 +2128,7 @@ class CitationEntry with _$CitationEntry {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationEntry.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationEntry.fromJson(Map<String, dynamic> json) =>
       _$CitationEntryFromJson(json);
 
   /// Acts like a constructor, returns a [CitationEntry], accepts a
@@ -2280,10 +2214,7 @@ class CitationAffiliationInfo with _$CitationAffiliationInfo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationAffiliationInfo.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationAffiliationInfo.fromJson(Map<String, dynamic> json) =>
       _$CitationAffiliationInfoFromJson(json);
 
   /// Acts like a constructor, returns a [CitationAffiliationInfo], accepts a
@@ -2363,10 +2294,7 @@ class CitationContributionInstance with _$CitationContributionInstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationContributionInstance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationContributionInstance.fromJson(Map<String, dynamic> json) =>
       _$CitationContributionInstanceFromJson(json);
 
   /// Acts like a constructor, returns a [CitationContributionInstance], accepts a
@@ -2454,10 +2382,7 @@ class CitationSummary1 with _$CitationSummary1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationSummary1.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CitationSummary1.fromJson(Map<String, dynamic> json) =>
       _$CitationSummary1FromJson(json);
 
   /// Acts like a constructor, returns a [CitationSummary1], accepts a
@@ -2675,6 +2600,7 @@ class Evidence with Resource, _$Evidence {
     @Default(R4ResourceType.Evidence)
     @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
         R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -2736,10 +2662,7 @@ class Evidence with Resource, _$Evidence {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Evidence.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory Evidence.fromJson(Map<String, dynamic> json) =>
       _$EvidenceFromJson(json);
 
   /// Acts like a constructor, returns a [Evidence], accepts a
@@ -2813,10 +2736,7 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariableDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceVariableDefinition.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariableDefinition], accepts a
@@ -2906,10 +2826,7 @@ class EvidenceStatistic with _$EvidenceStatistic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceStatistic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceStatistic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceStatisticFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceStatistic], accepts a
@@ -2988,10 +2905,7 @@ class EvidenceSampleSize with _$EvidenceSampleSize {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceSampleSize.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceSampleSize.fromJson(Map<String, dynamic> json) =>
       _$EvidenceSampleSizeFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceSampleSize], accepts a
@@ -3069,10 +2983,7 @@ class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceAttributeEstimate.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceAttributeEstimate.fromJson(Map<String, dynamic> json) =>
       _$EvidenceAttributeEstimateFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceAttributeEstimate], accepts a
@@ -3135,10 +3046,7 @@ class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceModelCharacteristic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceModelCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceModelCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceModelCharacteristic], accepts a
@@ -3212,10 +3120,7 @@ class EvidenceVar with _$EvidenceVar {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVar.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceVar.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVarFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVar], accepts a
@@ -3292,10 +3197,7 @@ class EvidenceCertainty with _$EvidenceCertainty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceCertainty.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceCertainty.fromJson(Map<String, dynamic> json) =>
       _$EvidenceCertaintyFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceCertainty], accepts a
@@ -3437,6 +3339,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
   /// [section] The root of the sections that make up the composition.;
   factory EvidenceReport({
     @Default(R4ResourceType.EvidenceReport) R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -3484,10 +3387,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReport.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceReport.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReport], accepts a
@@ -3546,10 +3446,7 @@ class EvidenceReportSubject with _$EvidenceReportSubject {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportSubject.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceReportSubject.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportSubjectFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReportSubject], accepts a
@@ -3632,10 +3529,7 @@ class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportCharacteristic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReportCharacteristic], accepts a
@@ -3698,10 +3592,7 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportRelatesTo.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportRelatesToFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReportRelatesTo], accepts a
@@ -3796,10 +3687,7 @@ class EvidenceReportSection with _$EvidenceReportSection {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportSection.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceReportSection.fromJson(Map<String, dynamic> json) =>
       _$EvidenceReportSectionFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReportSection], accepts a
@@ -4017,6 +3905,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     @Default(R4ResourceType.EvidenceVariable)
     @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
         R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -4079,10 +3968,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariable.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariable], accepts a
@@ -4232,10 +4118,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
               ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariableCharacteristic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariableCharacteristic], accepts a
@@ -4320,10 +4203,7 @@ class EvidenceVariableTimeFromStart with _$EvidenceVariableTimeFromStart {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariableTimeFromStart.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceVariableTimeFromStart.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableTimeFromStartFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariableTimeFromStart], accepts a
@@ -4391,10 +4271,7 @@ class EvidenceVariableCategory with _$EvidenceVariableCategory {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariableCategory.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCategoryFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariableCategory], accepts a
@@ -4646,6 +4523,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
     @Default(R4ResourceType.ResearchDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
         R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -4722,10 +4600,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ResearchDefinition.fromJson(Map<String, dynamic> json) =>
       _$ResearchDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchDefinition], accepts a
@@ -4984,6 +4859,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
     @Default(R4ResourceType.ResearchElementDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
         R4ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -5061,10 +4937,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchElementDefinition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory ResearchElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ResearchElementDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchElementDefinition], accepts a
@@ -5256,8 +5129,6 @@ class ResearchElementDefinitionCharacteristic
               ' it is neither a yaml string or a yaml map.');
 
   factory ResearchElementDefinitionCharacteristic.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$ResearchElementDefinitionCharacteristicFromJson(json);
 }

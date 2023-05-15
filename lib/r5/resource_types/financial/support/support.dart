@@ -1,8 +1,4 @@
-// ignore_for_file: invalid_annotation_target
-// ignore_for_file: sort_unnamed_constructors_first
-// ignore_for_file: sort_constructors_first
-// ignore_for_file: avoid_unused_constructor_parameters
-// ignore_for_file: prefer_mixin
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -169,6 +165,7 @@ class Coverage with Resource, _$Coverage {
     @Default(R5ResourceType.Coverage)
     @JsonKey(unknownEnumValue: R5ResourceType.Coverage)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -356,10 +353,7 @@ class Coverage with Resource, _$Coverage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Coverage.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory Coverage.fromJson(Map<String, dynamic> json) =>
       _$CoverageFromJson(json);
 
   /// Acts like a constructor, returns a [Coverage], accepts a
@@ -476,10 +470,7 @@ class CoveragePaymentBy with _$CoveragePaymentBy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoveragePaymentBy.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CoveragePaymentBy.fromJson(Map<String, dynamic> json) =>
       _$CoveragePaymentByFromJson(json);
 
   /// Acts like a constructor, returns a [CoveragePaymentBy], accepts a
@@ -605,10 +596,7 @@ class CoverageClass with _$CoverageClass {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageClass.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CoverageClass.fromJson(Map<String, dynamic> json) =>
       _$CoverageClassFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageClass], accepts a
@@ -756,10 +744,7 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageCostToBeneficiary.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =>
       _$CoverageCostToBeneficiaryFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageCostToBeneficiary], accepts a
@@ -868,10 +853,7 @@ class CoverageException with _$CoverageException {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageException.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CoverageException.fromJson(Map<String, dynamic> json) =>
       _$CoverageExceptionFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageException], accepts a
@@ -1021,6 +1003,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     @Default(R5ResourceType.CoverageEligibilityRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1181,10 +1164,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
       _$CoverageEligibilityRequestFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequest], accepts a
@@ -1315,10 +1295,7 @@ class CoverageEligibilityRequestEvent with _$CoverageEligibilityRequestEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityRequestEvent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CoverageEligibilityRequestEvent.fromJson(Map<String, dynamic> json) =>
       _$CoverageEligibilityRequestEventFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequestEvent],
@@ -1458,9 +1435,7 @@ class CoverageEligibilityRequestSupportingInfo
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestSupportingInfo.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$CoverageEligibilityRequestSupportingInfoFromJson(json);
 
   /// Acts like a constructor, returns a
@@ -1607,9 +1582,7 @@ class CoverageEligibilityRequestInsurance
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestInsurance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$CoverageEligibilityRequestInsuranceFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequestInsurance],
@@ -1788,10 +1761,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityRequestItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =>
       _$CoverageEligibilityRequestItemFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequestItem],
@@ -1914,9 +1884,7 @@ class CoverageEligibilityRequestDiagnosis
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestDiagnosis.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$CoverageEligibilityRequestDiagnosisFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequestDiagnosis],
@@ -2064,6 +2032,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     @Default(R5ResourceType.CoverageEligibilityResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2234,10 +2203,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
       _$CoverageEligibilityResponseFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponse], accepts
@@ -2363,9 +2329,7 @@ class CoverageEligibilityResponseEvent with _$CoverageEligibilityResponseEvent {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseEvent.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$CoverageEligibilityResponseEventFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponseEvent],
@@ -2505,9 +2469,7 @@ class CoverageEligibilityResponseInsurance
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseInsurance.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$CoverageEligibilityResponseInsuranceFromJson(json);
 
   /// Acts like a constructor, returns a
@@ -2730,10 +2692,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityResponseItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =>
       _$CoverageEligibilityResponseItemFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponseItem],
@@ -2904,9 +2863,7 @@ class CoverageEligibilityResponseBenefit
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseBenefit.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$CoverageEligibilityResponseBenefitFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponseBenefit],
@@ -3030,9 +2987,7 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseError.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+          Map<String, dynamic> json) =>
       _$CoverageEligibilityResponseErrorFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponseError],
@@ -3139,6 +3094,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     @Default(R5ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3251,10 +3207,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EnrollmentRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentRequestFromJson(json);
 
   /// Acts like a constructor, returns a [EnrollmentRequest], accepts a
@@ -3366,6 +3319,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     @Default(R5ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3487,10 +3441,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EnrollmentResponse.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
       _$EnrollmentResponseFromJson(json);
 
   /// Acts like a constructor, returns a [EnrollmentResponse], accepts a

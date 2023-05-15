@@ -1,8 +1,4 @@
-// ignore_for_file: invalid_annotation_target
-// ignore_for_file: sort_unnamed_constructors_first
-// ignore_for_file: sort_constructors_first
-// ignore_for_file: avoid_unused_constructor_parameters
-// ignore_for_file: prefer_mixin
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -26,6 +22,7 @@ class Communication with Resource, _$Communication {
     @Default(Stu3ResourceType.Communication)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
         Stu3ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -74,10 +71,7 @@ class Communication with Resource, _$Communication {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Communication.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory Communication.fromJson(Map<String, dynamic> json) =>
       _$CommunicationFromJson(json);
 
   /// Acts like a constructor, returns a [Communication], accepts a
@@ -118,10 +112,7 @@ class CommunicationPayload with _$CommunicationPayload {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CommunicationPayload.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CommunicationPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationPayloadFromJson(json);
 
   /// Acts like a constructor, returns a [CommunicationPayload], accepts a
@@ -144,6 +135,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     @Default(Stu3ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
         Stu3ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -193,10 +185,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CommunicationRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestFromJson(json);
 
   /// Acts like a constructor, returns a [CommunicationRequest], accepts a
@@ -237,10 +226,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CommunicationRequestPayload.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestPayloadFromJson(json);
 
   /// Acts like a constructor, returns a [CommunicationRequestPayload], accepts a
@@ -279,10 +265,7 @@ class CommunicationRequestRequester with _$CommunicationRequestRequester {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CommunicationRequestRequester.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory CommunicationRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestRequesterFromJson(json);
 
   /// Acts like a constructor, returns a [CommunicationRequestRequester], accepts a
@@ -305,6 +288,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
     @Default(Stu3ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
         Stu3ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -357,10 +341,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory DeviceRequest.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceRequest], accepts a
@@ -399,10 +380,7 @@ class DeviceRequestRequester with _$DeviceRequestRequester {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceRequestRequester.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory DeviceRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$DeviceRequestRequesterFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceRequestRequester], accepts a
@@ -425,6 +403,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     @Default(Stu3ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
         Stu3ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -465,10 +444,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceUseStatement.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceUseStatement], accepts a
@@ -491,6 +467,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     @Default(Stu3ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
         Stu3ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -530,10 +507,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SupplyDelivery.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory SupplyDelivery.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliveryFromJson(json);
 
   /// Acts like a constructor, returns a [SupplyDelivery], accepts a
@@ -573,10 +547,7 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SupplyDeliverySuppliedItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory SupplyDeliverySuppliedItem.fromJson(Map<String, dynamic> json) =>
       _$SupplyDeliverySuppliedItemFromJson(json);
 
   /// Acts like a constructor, returns a [SupplyDeliverySuppliedItem], accepts a
@@ -599,6 +570,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     @Default(Stu3ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
         Stu3ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -642,10 +614,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SupplyRequest.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory SupplyRequest.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestFromJson(json);
 
   /// Acts like a constructor, returns a [SupplyRequest], accepts a
@@ -685,10 +654,7 @@ class SupplyRequestOrderedItem with _$SupplyRequestOrderedItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SupplyRequestOrderedItem.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory SupplyRequestOrderedItem.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestOrderedItemFromJson(json);
 
   /// Acts like a constructor, returns a [SupplyRequestOrderedItem], accepts a
@@ -727,10 +693,7 @@ class SupplyRequestRequester with _$SupplyRequestRequester {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SupplyRequestRequester.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory SupplyRequestRequester.fromJson(Map<String, dynamic> json) =>
       _$SupplyRequestRequesterFromJson(json);
 
   /// Acts like a constructor, returns a [SupplyRequestRequester], accepts a

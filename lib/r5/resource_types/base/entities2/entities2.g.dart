@@ -13,6 +13,7 @@ _$_BiologicallyDerivedProduct _$$_BiologicallyDerivedProductFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.BiologicallyDerivedProduct) ??
           R5ResourceType.BiologicallyDerivedProduct,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -443,6 +444,7 @@ _$_BiologicallyDerivedProductDispense
                   unknownValue:
                       R5ResourceType.BiologicallyDerivedProductDispense) ??
               R5ResourceType.BiologicallyDerivedProductDispense,
+          dbId: json['dbId'] as int?,
           fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           meta: json['meta'] == null
               ? null
@@ -626,6 +628,7 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Device) ??
           R5ResourceType.Device,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1126,6 +1129,7 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DeviceMetric) ??
           R5ResourceType.DeviceMetric,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1283,6 +1287,7 @@ _$_NutritionProduct _$$_NutritionProductFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.NutritionProduct) ??
           R5ResourceType.NutritionProduct,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1609,6 +1614,7 @@ _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Substance) ??
           R5ResourceType.Substance,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

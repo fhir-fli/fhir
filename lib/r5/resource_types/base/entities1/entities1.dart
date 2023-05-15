@@ -1,8 +1,4 @@
-// ignore_for_file: invalid_annotation_target
-// ignore_for_file: sort_unnamed_constructors_first
-// ignore_for_file: sort_constructors_first
-// ignore_for_file: avoid_unused_constructor_parameters
-// ignore_for_file: prefer_mixin
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
 
 // Dart imports:
 import 'dart:convert';
@@ -141,6 +137,7 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
     @Default(R5ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -288,10 +285,7 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FhirEndpoint.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory FhirEndpoint.fromJson(Map<String, dynamic> json) =>
       _$FhirEndpointFromJson(json);
 
   /// Acts like a constructor, returns a [FhirEndpoint], accepts a
@@ -416,10 +410,7 @@ class FhirEndpointPayload with _$FhirEndpointPayload {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FhirEndpointPayload.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory FhirEndpointPayload.fromJson(Map<String, dynamic> json) =>
       _$FhirEndpointPayloadFromJson(json);
 
   /// Acts like a constructor, returns a [FhirEndpointPayload], accepts a
@@ -588,6 +579,7 @@ class HealthcareService with Resource, _$HealthcareService {
     @Default(R5ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -784,10 +776,7 @@ class HealthcareService with Resource, _$HealthcareService {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareService.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareService], accepts a
@@ -898,10 +887,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareServiceEligibility.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory HealthcareServiceEligibility.fromJson(Map<String, dynamic> json) =>
       _$HealthcareServiceEligibilityFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareServiceEligibility],
@@ -1054,6 +1040,7 @@ class Location with Resource, _$Location {
     @Default(R5ResourceType.Location)
     @JsonKey(unknownEnumValue: R5ResourceType.Location)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1228,10 +1215,7 @@ class Location with Resource, _$Location {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Location.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory Location.fromJson(Map<String, dynamic> json) =>
       _$LocationFromJson(json);
 
   /// Acts like a constructor, returns a [Location], accepts a
@@ -1372,10 +1356,7 @@ class LocationPosition with _$LocationPosition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory LocationPosition.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory LocationPosition.fromJson(Map<String, dynamic> json) =>
       _$LocationPositionFromJson(json);
 
   /// Acts like a constructor, returns a [LocationPosition], accepts a
@@ -1508,6 +1489,7 @@ class Organization with Resource, _$Organization {
     @Default(R5ResourceType.Organization)
     @JsonKey(unknownEnumValue: R5ResourceType.Organization)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1645,10 +1627,7 @@ class Organization with Resource, _$Organization {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Organization.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory Organization.fromJson(Map<String, dynamic> json) =>
       _$OrganizationFromJson(json);
 
   /// Acts like a constructor, returns a [Organization], accepts a
@@ -1775,10 +1754,7 @@ class OrganizationQualification with _$OrganizationQualification {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrganizationQualification.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory OrganizationQualification.fromJson(Map<String, dynamic> json) =>
       _$OrganizationQualificationFromJson(json);
 
   /// Acts like a constructor, returns a [OrganizationQualification], accepts a
@@ -1902,6 +1878,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     @Default(R5ResourceType.OrganizationAffiliation)
     @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2034,10 +2011,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrganizationAffiliation.fromJson(
-    Map<String, dynamic> json, [
-    SerializationManager? serializationManager,
-  ]) =>
+  factory OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
       _$OrganizationAffiliationFromJson(json);
 
   /// Acts like a constructor, returns a [OrganizationAffiliation], accepts a

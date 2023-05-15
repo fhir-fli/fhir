@@ -22,6 +22,8 @@ FhirEndpoint _$FhirEndpointFromJson(Map<String, dynamic> json) {
 mixin _$FhirEndpoint {
   @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -170,6 +172,8 @@ abstract class $FhirEndpointCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -232,6 +236,7 @@ class _$FhirEndpointCopyWithImpl<$Res, $Val extends FhirEndpoint>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -264,6 +269,10 @@ class _$FhirEndpointCopyWithImpl<$Res, $Val extends FhirEndpoint>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -499,6 +508,8 @@ abstract class _$$_FhirEndpointCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -569,6 +580,7 @@ class __$$_FhirEndpointCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -601,6 +613,10 @@ class __$$_FhirEndpointCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -715,6 +731,8 @@ class _$_FhirEndpoint extends _FhirEndpoint {
   _$_FhirEndpoint(
       {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
           this.resourceType = R4ResourceType.Endpoint,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -768,6 +786,9 @@ class _$_FhirEndpoint extends _FhirEndpoint {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -1044,7 +1065,7 @@ class _$_FhirEndpoint extends _FhirEndpoint {
 
   @override
   String toString() {
-    return 'FhirEndpoint(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, connectionType: $connectionType, name: $name, nameElement: $nameElement, managingOrganization: $managingOrganization, contact: $contact, period: $period, payloadType: $payloadType, payloadMimeType: $payloadMimeType, payloadMimeTypeElement: $payloadMimeTypeElement, address: $address, addressElement: $addressElement, header: $header, headerElement: $headerElement)';
+    return 'FhirEndpoint(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, connectionType: $connectionType, name: $name, nameElement: $nameElement, managingOrganization: $managingOrganization, contact: $contact, period: $period, payloadType: $payloadType, payloadMimeType: $payloadMimeType, payloadMimeTypeElement: $payloadMimeTypeElement, address: $address, addressElement: $addressElement, header: $header, headerElement: $headerElement)';
   }
 
   @override
@@ -1054,6 +1075,7 @@ class _$_FhirEndpoint extends _FhirEndpoint {
             other is _$_FhirEndpoint &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1104,6 +1126,7 @@ class _$_FhirEndpoint extends _FhirEndpoint {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        id,
         fhirId,
         meta,
         implicitRules,
@@ -1150,6 +1173,8 @@ abstract class _FhirEndpoint extends FhirEndpoint {
   factory _FhirEndpoint(
       {@JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
           final R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -1193,6 +1218,9 @@ abstract class _FhirEndpoint extends FhirEndpoint {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -1363,6 +1391,8 @@ HealthcareService _$HealthcareServiceFromJson(Map<String, dynamic> json) {
 mixin _$HealthcareService {
   @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -1572,6 +1602,8 @@ abstract class $HealthcareServiceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -1651,6 +1683,7 @@ class _$HealthcareServiceCopyWithImpl<$Res, $Val extends HealthcareService>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1697,6 +1730,10 @@ class _$HealthcareServiceCopyWithImpl<$Res, $Val extends HealthcareService>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2018,6 +2055,8 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -2107,6 +2146,7 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2153,6 +2193,10 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2323,6 +2367,8 @@ class _$_HealthcareService extends _HealthcareService {
   _$_HealthcareService(
       {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
           this.resourceType = R4ResourceType.HealthcareService,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -2400,6 +2446,9 @@ class _$_HealthcareService extends _HealthcareService {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -2831,7 +2880,7 @@ class _$_HealthcareService extends _HealthcareService {
 
   @override
   String toString() {
-    return 'HealthcareService(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, providedBy: $providedBy, category: $category, type: $type, specialty: $specialty, location: $location, name: $name, nameElement: $nameElement, comment: $comment, commentElement: $commentElement, extraDetails: $extraDetails, extraDetailsElement: $extraDetailsElement, photo: $photo, telecom: $telecom, coverageArea: $coverageArea, serviceProvisionCode: $serviceProvisionCode, eligibility: $eligibility, program: $program, characteristic: $characteristic, communication: $communication, referralMethod: $referralMethod, appointmentRequired: $appointmentRequired, appointmentRequiredElement: $appointmentRequiredElement, availableTime: $availableTime, notAvailable: $notAvailable, availabilityExceptions: $availabilityExceptions, availabilityExceptionsElement: $availabilityExceptionsElement, endpoint: $endpoint)';
+    return 'HealthcareService(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, providedBy: $providedBy, category: $category, type: $type, specialty: $specialty, location: $location, name: $name, nameElement: $nameElement, comment: $comment, commentElement: $commentElement, extraDetails: $extraDetails, extraDetailsElement: $extraDetailsElement, photo: $photo, telecom: $telecom, coverageArea: $coverageArea, serviceProvisionCode: $serviceProvisionCode, eligibility: $eligibility, program: $program, characteristic: $characteristic, communication: $communication, referralMethod: $referralMethod, appointmentRequired: $appointmentRequired, appointmentRequiredElement: $appointmentRequiredElement, availableTime: $availableTime, notAvailable: $notAvailable, availabilityExceptions: $availabilityExceptions, availabilityExceptionsElement: $availabilityExceptionsElement, endpoint: $endpoint)';
   }
 
   @override
@@ -2841,6 +2890,7 @@ class _$_HealthcareService extends _HealthcareService {
             other is _$_HealthcareService &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -2919,6 +2969,7 @@ class _$_HealthcareService extends _HealthcareService {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        id,
         fhirId,
         meta,
         implicitRules,
@@ -2980,6 +3031,8 @@ abstract class _HealthcareService extends HealthcareService {
   factory _HealthcareService(
       {@JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
           final R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -3038,6 +3091,9 @@ abstract class _HealthcareService extends HealthcareService {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -4782,6 +4838,8 @@ Location _$LocationFromJson(Map<String, dynamic> json) {
 mixin _$Location {
   @JsonKey(unknownEnumValue: R4ResourceType.Location)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -4958,6 +5016,8 @@ abstract class $LocationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Location)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -5033,6 +5093,7 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5072,6 +5133,10 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5400,6 +5465,8 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Location)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -5488,6 +5555,7 @@ class __$$_LocationCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5527,6 +5595,10 @@ class __$$_LocationCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5669,6 +5741,8 @@ class _$_Location extends _Location {
   _$_Location(
       {@JsonKey(unknownEnumValue: R4ResourceType.Location)
           this.resourceType = R4ResourceType.Location,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -5730,6 +5804,9 @@ class _$_Location extends _Location {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Location)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -6041,7 +6118,7 @@ class _$_Location extends _Location {
 
   @override
   String toString() {
-    return 'Location(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, operationalStatus: $operationalStatus, name: $name, nameElement: $nameElement, alias: $alias, aliasElement: $aliasElement, description: $description, descriptionElement: $descriptionElement, mode: $mode, modeElement: $modeElement, type: $type, telecom: $telecom, address: $address, physicalType: $physicalType, position: $position, managingOrganization: $managingOrganization, partOf: $partOf, hoursOfOperation: $hoursOfOperation, availabilityExceptions: $availabilityExceptions, availabilityExceptionsElement: $availabilityExceptionsElement, endpoint: $endpoint)';
+    return 'Location(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, operationalStatus: $operationalStatus, name: $name, nameElement: $nameElement, alias: $alias, aliasElement: $aliasElement, description: $description, descriptionElement: $descriptionElement, mode: $mode, modeElement: $modeElement, type: $type, telecom: $telecom, address: $address, physicalType: $physicalType, position: $position, managingOrganization: $managingOrganization, partOf: $partOf, hoursOfOperation: $hoursOfOperation, availabilityExceptions: $availabilityExceptions, availabilityExceptionsElement: $availabilityExceptionsElement, endpoint: $endpoint)';
   }
 
   @override
@@ -6051,6 +6128,7 @@ class _$_Location extends _Location {
             other is _$_Location &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -6114,6 +6192,7 @@ class _$_Location extends _Location {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        id,
         fhirId,
         meta,
         implicitRules,
@@ -6167,6 +6246,8 @@ abstract class _Location extends Location {
   factory _Location(
       {@JsonKey(unknownEnumValue: R4ResourceType.Location)
           final R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -6217,6 +6298,9 @@ abstract class _Location extends Location {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Location)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -7575,6 +7659,8 @@ Organization _$OrganizationFromJson(Map<String, dynamic> json) {
 mixin _$Organization {
   @JsonKey(unknownEnumValue: R4ResourceType.Organization)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -7702,6 +7788,8 @@ abstract class $OrganizationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -7756,6 +7844,7 @@ class _$OrganizationCopyWithImpl<$Res, $Val extends Organization>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -7785,6 +7874,10 @@ class _$OrganizationCopyWithImpl<$Res, $Val extends Organization>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7976,6 +8069,8 @@ abstract class _$$_OrganizationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -8035,6 +8130,7 @@ class __$$_OrganizationCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -8064,6 +8160,10 @@ class __$$_OrganizationCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -8166,6 +8266,8 @@ class _$_Organization extends _Organization {
   _$_Organization(
       {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
           this.resourceType = R4ResourceType.Organization,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -8215,6 +8317,9 @@ class _$_Organization extends _Organization {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Organization)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -8474,7 +8579,7 @@ class _$_Organization extends _Organization {
 
   @override
   String toString() {
-    return 'Organization(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, type: $type, name: $name, nameElement: $nameElement, alias: $alias, aliasElement: $aliasElement, telecom: $telecom, address: $address, partOf: $partOf, contact: $contact, endpoint: $endpoint)';
+    return 'Organization(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, type: $type, name: $name, nameElement: $nameElement, alias: $alias, aliasElement: $aliasElement, telecom: $telecom, address: $address, partOf: $partOf, contact: $contact, endpoint: $endpoint)';
   }
 
   @override
@@ -8484,6 +8589,7 @@ class _$_Organization extends _Organization {
             other is _$_Organization &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -8525,6 +8631,7 @@ class _$_Organization extends _Organization {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        id,
         fhirId,
         meta,
         implicitRules,
@@ -8568,6 +8675,8 @@ abstract class _Organization extends Organization {
   factory _Organization(
       {@JsonKey(unknownEnumValue: R4ResourceType.Organization)
           final R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -8606,6 +8715,9 @@ abstract class _Organization extends Organization {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Organization)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -9227,6 +9339,8 @@ OrganizationAffiliation _$OrganizationAffiliationFromJson(
 mixin _$OrganizationAffiliation {
   @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -9360,6 +9474,8 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -9414,6 +9530,7 @@ class _$OrganizationAffiliationCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -9443,6 +9560,10 @@ class _$OrganizationAffiliationCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9646,6 +9767,8 @@ abstract class _$$_OrganizationAffiliationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
           R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -9706,6 +9829,7 @@ class __$$_OrganizationAffiliationCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -9735,6 +9859,10 @@ class __$$_OrganizationAffiliationCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9837,6 +9965,8 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   _$_OrganizationAffiliation(
       {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
           this.resourceType = R4ResourceType.OrganizationAffiliation,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -9884,6 +10014,9 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -10152,7 +10285,7 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
 
   @override
   String toString() {
-    return 'OrganizationAffiliation(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, period: $period, organization: $organization, participatingOrganization: $participatingOrganization, network: $network, code: $code, specialty: $specialty, location: $location, healthcareService: $healthcareService, telecom: $telecom, endpoint: $endpoint)';
+    return 'OrganizationAffiliation(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, period: $period, organization: $organization, participatingOrganization: $participatingOrganization, network: $network, code: $code, specialty: $specialty, location: $location, healthcareService: $healthcareService, telecom: $telecom, endpoint: $endpoint)';
   }
 
   @override
@@ -10162,6 +10295,7 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
             other is _$_OrganizationAffiliation &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -10206,6 +10340,7 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        id,
         fhirId,
         meta,
         implicitRules,
@@ -10251,6 +10386,8 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   factory _OrganizationAffiliation(
       {@JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
           final R4ResourceType resourceType,
+      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -10287,6 +10424,9 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
+  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.

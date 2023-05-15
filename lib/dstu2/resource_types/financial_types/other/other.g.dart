@@ -13,6 +13,7 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ExplanationOfBenefit) ??
           Dstu2ResourceType.ExplanationOfBenefit,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

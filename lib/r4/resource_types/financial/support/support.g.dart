@@ -11,6 +11,7 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Coverage) ??
           R4ResourceType.Coverage,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -430,6 +431,7 @@ _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CoverageEligibilityRequest) ??
           R4ResourceType.CoverageEligibilityRequest,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -793,6 +795,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CoverageEligibilityResponse) ??
           R4ResourceType.CoverageEligibilityResponse,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1204,6 +1207,7 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.EnrollmentRequest) ??
           R4ResourceType.EnrollmentRequest,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1303,6 +1307,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.EnrollmentResponse) ??
           R4ResourceType.EnrollmentResponse,
+      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
