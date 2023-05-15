@@ -504,7 +504,7 @@ _$_TriggerDefinition _$$_TriggerDefinitionFromJson(Map<String, dynamic> json) =>
           .toList(),
       condition: json['condition'] == null
           ? null
-          : Expression.fromJson(json['condition'] as Map<String, dynamic>),
+          : FhirExpression.fromJson(json['condition'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_TriggerDefinitionToJson(
@@ -589,8 +589,8 @@ Map<String, dynamic> _$$_UsageContextToJson(_$_UsageContext instance) {
   return val;
 }
 
-_$_Expression _$$_ExpressionFromJson(Map<String, dynamic> json) =>
-    _$_Expression(
+_$_FhirExpression _$$_FhirExpressionFromJson(Map<String, dynamic> json) =>
+    _$_FhirExpression(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -604,8 +604,8 @@ _$_Expression _$$_ExpressionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
       language: $enumDecodeNullable(
-          _$ExpressionLanguageEnumMap, json['language'],
-          unknownValue: ExpressionLanguage.unknown),
+          _$FhirExpressionLanguageEnumMap, json['language'],
+          unknownValue: FhirExpressionLanguage.unknown),
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
@@ -621,7 +621,7 @@ _$_Expression _$$_ExpressionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExpressionToJson(_$_Expression instance) {
+Map<String, dynamic> _$$_FhirExpressionToJson(_$_FhirExpression instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -637,7 +637,7 @@ Map<String, dynamic> _$$_ExpressionToJson(_$_Expression instance) {
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('name', instance.name?.toJson());
   writeNotNull('_name', instance.nameElement?.toJson());
-  writeNotNull('language', _$ExpressionLanguageEnumMap[instance.language]);
+  writeNotNull('language', _$FhirExpressionLanguageEnumMap[instance.language]);
   writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('expression', instance.expression);
   writeNotNull('_expression', instance.expressionElement?.toJson());
@@ -646,11 +646,11 @@ Map<String, dynamic> _$$_ExpressionToJson(_$_Expression instance) {
   return val;
 }
 
-const _$ExpressionLanguageEnumMap = {
-  ExpressionLanguage.text_cql: 'text/cql',
-  ExpressionLanguage.text_fhirpath: 'text/fhirpath',
-  ExpressionLanguage.application_x_fhir_query: 'application/x-fhir-query',
-  ExpressionLanguage.text_cql_identifier: 'text/cql-identifier',
-  ExpressionLanguage.text_cql_expression: 'text/cql-expression',
-  ExpressionLanguage.unknown: 'unknown',
+const _$FhirExpressionLanguageEnumMap = {
+  FhirExpressionLanguage.text_cql: 'text/cql',
+  FhirExpressionLanguage.text_fhirpath: 'text/fhirpath',
+  FhirExpressionLanguage.application_x_fhir_query: 'application/x-fhir-query',
+  FhirExpressionLanguage.text_cql_identifier: 'text/cql-identifier',
+  FhirExpressionLanguage.text_cql_expression: 'text/cql-expression',
+  FhirExpressionLanguage.unknown: 'unknown',
 };

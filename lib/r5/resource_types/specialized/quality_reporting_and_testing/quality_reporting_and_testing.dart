@@ -1215,7 +1215,7 @@ class MeasurePopulation with _$MeasurePopulation {
 
     /// [criteria] An expression that specifies the criteria for the
     ///  population, typically the name of an expression in a library.
-    Expression? criteria,
+    FhirExpression? criteria,
 
     /// [groupDefinition] A Group resource that defines this population as a
     ///  set of characteristics.
@@ -1387,7 +1387,7 @@ class MeasureStratifier with _$MeasureStratifier {
     ///  stratifier. This is typically the name of an expression defined within
     ///  a referenced library, but it may also be a path to a stratifier
     ///  element.
-    Expression? criteria,
+    FhirExpression? criteria,
 
     /// [groupDefinition] A Group resource that defines this population as a
     ///  set of characteristics.
@@ -1541,7 +1541,7 @@ class MeasureComponent with _$MeasureComponent {
     ///  of the stratifier. This is typically the name of an expression defined
     ///  within a referenced library, but it may also be a path to a stratifier
     ///  element.
-    Expression? criteria,
+    FhirExpression? criteria,
 
     /// [groupDefinition] A Group resource that defines this population as a
     ///  set of characteristics.
@@ -1699,7 +1699,7 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
     ///  the name of a valid expression defined within a referenced library,
     ///  but it may also be a path to a specific data element. The criteria
     ///  defines the data to be returned for this element.
-    required Expression criteria,
+    required FhirExpression criteria,
   }) = _MeasureSupplementalData;
 
   /// Produces a Yaml formatted String version of the object

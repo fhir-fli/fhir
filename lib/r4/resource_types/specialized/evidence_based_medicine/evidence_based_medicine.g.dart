@@ -2885,7 +2885,7 @@ _$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
               json['definitionCodeableConcept'] as Map<String, dynamic>),
       definitionExpression: json['definitionExpression'] == null
           ? null
-          : Expression.fromJson(
+          : FhirExpression.fromJson(
               json['definitionExpression'] as Map<String, dynamic>),
       exclude: json['exclude'] == null
           ? null
@@ -3582,7 +3582,7 @@ _$_ResearchElementDefinitionCharacteristic
                   json['_definitionCanonical'] as Map<String, dynamic>),
           definitionExpression: json['definitionExpression'] == null
               ? null
-              : Expression.fromJson(
+              : FhirExpression.fromJson(
                   json['definitionExpression'] as Map<String, dynamic>),
           definitionDataRequirement: json['definitionDataRequirement'] == null
               ? null

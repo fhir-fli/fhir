@@ -933,7 +933,7 @@ _$_TriggerDefinition _$$_TriggerDefinitionFromJson(Map<String, dynamic> json) =>
           .toList(),
       condition: json['condition'] == null
           ? null
-          : Expression.fromJson(json['condition'] as Map<String, dynamic>),
+          : FhirExpression.fromJson(json['condition'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_TriggerDefinitionToJson(
@@ -1019,8 +1019,8 @@ Map<String, dynamic> _$$_UsageContextToJson(_$_UsageContext instance) {
   return val;
 }
 
-_$_Expression _$$_ExpressionFromJson(Map<String, dynamic> json) =>
-    _$_Expression(
+_$_FhirExpression _$$_FhirExpressionFromJson(Map<String, dynamic> json) =>
+    _$_FhirExpression(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1050,7 +1050,7 @@ _$_Expression _$$_ExpressionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExpressionToJson(_$_Expression instance) {
+Map<String, dynamic> _$$_FhirExpressionToJson(_$_FhirExpression instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

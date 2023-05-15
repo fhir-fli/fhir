@@ -5389,7 +5389,7 @@ mixin _$MeasurePopulation {
 
   /// [criteria] An expression that specifies the criteria for the
   ///  population, typically the name of an expression in a library.
-  Expression? get criteria => throw _privateConstructorUsedError;
+  FhirExpression? get criteria => throw _privateConstructorUsedError;
 
   /// [groupDefinition] A Group resource that defines this population as a
   ///  set of characteristics.
@@ -5438,7 +5438,7 @@ abstract class $MeasurePopulationCopyWith<$Res> {
       CodeableConcept? code,
       FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Expression? criteria,
+      FhirExpression? criteria,
       Reference? groupDefinition,
       String? inputPopulationId,
       @JsonKey(name: '_inputPopulationId') Element? inputPopulationIdElement,
@@ -5447,7 +5447,7 @@ abstract class $MeasurePopulationCopyWith<$Res> {
   $ElementCopyWith<$Res>? get linkIdElement;
   $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get descriptionElement;
-  $ExpressionCopyWith<$Res>? get criteria;
+  $FhirExpressionCopyWith<$Res>? get criteria;
   $ReferenceCopyWith<$Res>? get groupDefinition;
   $ElementCopyWith<$Res>? get inputPopulationIdElement;
   $CodeableConceptCopyWith<$Res>? get aggregateMethod;
@@ -5516,7 +5516,7 @@ class _$MeasurePopulationCopyWithImpl<$Res, $Val extends MeasurePopulation>
       criteria: freezed == criteria
           ? _value.criteria
           : criteria // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       groupDefinition: freezed == groupDefinition
           ? _value.groupDefinition
           : groupDefinition // ignore: cast_nullable_to_non_nullable
@@ -5574,12 +5574,12 @@ class _$MeasurePopulationCopyWithImpl<$Res, $Val extends MeasurePopulation>
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get criteria {
+  $FhirExpressionCopyWith<$Res>? get criteria {
     if (_value.criteria == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.criteria!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.criteria!, (value) {
       return _then(_value.copyWith(criteria: value) as $Val);
     });
   }
@@ -5638,7 +5638,7 @@ abstract class _$$_MeasurePopulationCopyWith<$Res>
       CodeableConcept? code,
       FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Expression? criteria,
+      FhirExpression? criteria,
       Reference? groupDefinition,
       String? inputPopulationId,
       @JsonKey(name: '_inputPopulationId') Element? inputPopulationIdElement,
@@ -5651,7 +5651,7 @@ abstract class _$$_MeasurePopulationCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
   @override
-  $ExpressionCopyWith<$Res>? get criteria;
+  $FhirExpressionCopyWith<$Res>? get criteria;
   @override
   $ReferenceCopyWith<$Res>? get groupDefinition;
   @override
@@ -5721,7 +5721,7 @@ class __$$_MeasurePopulationCopyWithImpl<$Res>
       criteria: freezed == criteria
           ? _value.criteria
           : criteria // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       groupDefinition: freezed == groupDefinition
           ? _value.groupDefinition
           : groupDefinition // ignore: cast_nullable_to_non_nullable
@@ -5863,7 +5863,7 @@ class _$_MeasurePopulation extends _MeasurePopulation {
   /// [criteria] An expression that specifies the criteria for the
   ///  population, typically the name of an expression in a library.
   @override
-  final Expression? criteria;
+  final FhirExpression? criteria;
 
   /// [groupDefinition] A Group resource that defines this population as a
   ///  set of characteristics.
@@ -5978,7 +5978,7 @@ abstract class _MeasurePopulation extends MeasurePopulation {
       final FhirMarkdown? description,
       @JsonKey(name: '_description')
           final Element? descriptionElement,
-      final Expression? criteria,
+      final FhirExpression? criteria,
       final Reference? groupDefinition,
       final String? inputPopulationId,
       @JsonKey(name: '_inputPopulationId')
@@ -6050,7 +6050,7 @@ abstract class _MeasurePopulation extends MeasurePopulation {
 
   /// [criteria] An expression that specifies the criteria for the
   ///  population, typically the name of an expression in a library.
-  Expression? get criteria;
+  FhirExpression? get criteria;
   @override
 
   /// [groupDefinition] A Group resource that defines this population as a
@@ -6150,7 +6150,7 @@ mixin _$MeasureStratifier {
   ///  stratifier. This is typically the name of an expression defined within
   ///  a referenced library, but it may also be a path to a stratifier
   ///  element.
-  Expression? get criteria => throw _privateConstructorUsedError;
+  FhirExpression? get criteria => throw _privateConstructorUsedError;
 
   /// [groupDefinition] A Group resource that defines this population as a
   ///  set of characteristics.
@@ -6182,14 +6182,14 @@ abstract class $MeasureStratifierCopyWith<$Res> {
       CodeableConcept? code,
       FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Expression? criteria,
+      FhirExpression? criteria,
       Reference? groupDefinition,
       List<MeasureComponent>? component});
 
   $ElementCopyWith<$Res>? get linkIdElement;
   $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get descriptionElement;
-  $ExpressionCopyWith<$Res>? get criteria;
+  $FhirExpressionCopyWith<$Res>? get criteria;
   $ReferenceCopyWith<$Res>? get groupDefinition;
 }
 
@@ -6254,7 +6254,7 @@ class _$MeasureStratifierCopyWithImpl<$Res, $Val extends MeasureStratifier>
       criteria: freezed == criteria
           ? _value.criteria
           : criteria // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       groupDefinition: freezed == groupDefinition
           ? _value.groupDefinition
           : groupDefinition // ignore: cast_nullable_to_non_nullable
@@ -6304,12 +6304,12 @@ class _$MeasureStratifierCopyWithImpl<$Res, $Val extends MeasureStratifier>
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get criteria {
+  $FhirExpressionCopyWith<$Res>? get criteria {
     if (_value.criteria == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.criteria!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.criteria!, (value) {
       return _then(_value.copyWith(criteria: value) as $Val);
     });
   }
@@ -6344,7 +6344,7 @@ abstract class _$$_MeasureStratifierCopyWith<$Res>
       CodeableConcept? code,
       FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Expression? criteria,
+      FhirExpression? criteria,
       Reference? groupDefinition,
       List<MeasureComponent>? component});
 
@@ -6355,7 +6355,7 @@ abstract class _$$_MeasureStratifierCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
   @override
-  $ExpressionCopyWith<$Res>? get criteria;
+  $FhirExpressionCopyWith<$Res>? get criteria;
   @override
   $ReferenceCopyWith<$Res>? get groupDefinition;
 }
@@ -6419,7 +6419,7 @@ class __$$_MeasureStratifierCopyWithImpl<$Res>
       criteria: freezed == criteria
           ? _value.criteria
           : criteria // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       groupDefinition: freezed == groupDefinition
           ? _value.groupDefinition
           : groupDefinition // ignore: cast_nullable_to_non_nullable
@@ -6557,7 +6557,7 @@ class _$_MeasureStratifier extends _MeasureStratifier {
   ///  a referenced library, but it may also be a path to a stratifier
   ///  element.
   @override
-  final Expression? criteria;
+  final FhirExpression? criteria;
 
   /// [groupDefinition] A Group resource that defines this population as a
   ///  set of characteristics.
@@ -6653,7 +6653,7 @@ abstract class _MeasureStratifier extends MeasureStratifier {
       final CodeableConcept? code,
       final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
-      final Expression? criteria,
+      final FhirExpression? criteria,
       final Reference? groupDefinition,
       final List<MeasureComponent>? component}) = _$_MeasureStratifier;
   _MeasureStratifier._() : super._();
@@ -6727,7 +6727,7 @@ abstract class _MeasureStratifier extends MeasureStratifier {
   ///  stratifier. This is typically the name of an expression defined within
   ///  a referenced library, but it may also be a path to a stratifier
   ///  element.
-  Expression? get criteria;
+  FhirExpression? get criteria;
   @override
 
   /// [groupDefinition] A Group resource that defines this population as a
@@ -6808,7 +6808,7 @@ mixin _$MeasureComponent {
   ///  of the stratifier. This is typically the name of an expression defined
   ///  within a referenced library, but it may also be a path to a stratifier
   ///  element.
-  Expression? get criteria => throw _privateConstructorUsedError;
+  FhirExpression? get criteria => throw _privateConstructorUsedError;
 
   /// [groupDefinition] A Group resource that defines this population as a
   ///  set of characteristics.
@@ -6835,13 +6835,13 @@ abstract class $MeasureComponentCopyWith<$Res> {
       CodeableConcept? code,
       FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Expression? criteria,
+      FhirExpression? criteria,
       Reference? groupDefinition});
 
   $ElementCopyWith<$Res>? get linkIdElement;
   $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get descriptionElement;
-  $ExpressionCopyWith<$Res>? get criteria;
+  $FhirExpressionCopyWith<$Res>? get criteria;
   $ReferenceCopyWith<$Res>? get groupDefinition;
 }
 
@@ -6905,7 +6905,7 @@ class _$MeasureComponentCopyWithImpl<$Res, $Val extends MeasureComponent>
       criteria: freezed == criteria
           ? _value.criteria
           : criteria // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       groupDefinition: freezed == groupDefinition
           ? _value.groupDefinition
           : groupDefinition // ignore: cast_nullable_to_non_nullable
@@ -6951,12 +6951,12 @@ class _$MeasureComponentCopyWithImpl<$Res, $Val extends MeasureComponent>
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get criteria {
+  $FhirExpressionCopyWith<$Res>? get criteria {
     if (_value.criteria == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.criteria!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.criteria!, (value) {
       return _then(_value.copyWith(criteria: value) as $Val);
     });
   }
@@ -6991,7 +6991,7 @@ abstract class _$$_MeasureComponentCopyWith<$Res>
       CodeableConcept? code,
       FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Expression? criteria,
+      FhirExpression? criteria,
       Reference? groupDefinition});
 
   @override
@@ -7001,7 +7001,7 @@ abstract class _$$_MeasureComponentCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
   @override
-  $ExpressionCopyWith<$Res>? get criteria;
+  $FhirExpressionCopyWith<$Res>? get criteria;
   @override
   $ReferenceCopyWith<$Res>? get groupDefinition;
 }
@@ -7064,7 +7064,7 @@ class __$$_MeasureComponentCopyWithImpl<$Res>
       criteria: freezed == criteria
           ? _value.criteria
           : criteria // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       groupDefinition: freezed == groupDefinition
           ? _value.groupDefinition
           : groupDefinition // ignore: cast_nullable_to_non_nullable
@@ -7196,7 +7196,7 @@ class _$_MeasureComponent extends _MeasureComponent {
   ///  within a referenced library, but it may also be a path to a stratifier
   ///  element.
   @override
-  final Expression? criteria;
+  final FhirExpression? criteria;
 
   /// [groupDefinition] A Group resource that defines this population as a
   ///  set of characteristics.
@@ -7271,7 +7271,7 @@ abstract class _MeasureComponent extends MeasureComponent {
       final CodeableConcept? code,
       final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
-      final Expression? criteria,
+      final FhirExpression? criteria,
       final Reference? groupDefinition}) = _$_MeasureComponent;
   _MeasureComponent._() : super._();
 
@@ -7344,7 +7344,7 @@ abstract class _MeasureComponent extends MeasureComponent {
   ///  of the stratifier. This is typically the name of an expression defined
   ///  within a referenced library, but it may also be a path to a stratifier
   ///  element.
-  Expression? get criteria;
+  FhirExpression? get criteria;
   @override
 
   /// [groupDefinition] A Group resource that defines this population as a
@@ -7427,7 +7427,7 @@ mixin _$MeasureSupplementalData {
   ///  the name of a valid expression defined within a referenced library,
   ///  but it may also be a path to a specific data element. The criteria
   ///  defines the data to be returned for this element.
-  Expression get criteria => throw _privateConstructorUsedError;
+  FhirExpression get criteria => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -7451,12 +7451,12 @@ abstract class $MeasureSupplementalDataCopyWith<$Res> {
       List<CodeableConcept>? usage,
       FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Expression criteria});
+      FhirExpression criteria});
 
   $ElementCopyWith<$Res>? get linkIdElement;
   $CodeableConceptCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get descriptionElement;
-  $ExpressionCopyWith<$Res> get criteria;
+  $FhirExpressionCopyWith<$Res> get criteria;
 }
 
 /// @nodoc
@@ -7524,7 +7524,7 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res,
       criteria: null == criteria
           ? _value.criteria
           : criteria // ignore: cast_nullable_to_non_nullable
-              as Expression,
+              as FhirExpression,
     ) as $Val);
   }
 
@@ -7566,8 +7566,8 @@ class _$MeasureSupplementalDataCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res> get criteria {
-    return $ExpressionCopyWith<$Res>(_value.criteria, (value) {
+  $FhirExpressionCopyWith<$Res> get criteria {
+    return $FhirExpressionCopyWith<$Res>(_value.criteria, (value) {
       return _then(_value.copyWith(criteria: value) as $Val);
     });
   }
@@ -7591,7 +7591,7 @@ abstract class _$$_MeasureSupplementalDataCopyWith<$Res>
       List<CodeableConcept>? usage,
       FhirMarkdown? description,
       @JsonKey(name: '_description') Element? descriptionElement,
-      Expression criteria});
+      FhirExpression criteria});
 
   @override
   $ElementCopyWith<$Res>? get linkIdElement;
@@ -7600,7 +7600,7 @@ abstract class _$$_MeasureSupplementalDataCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
   @override
-  $ExpressionCopyWith<$Res> get criteria;
+  $FhirExpressionCopyWith<$Res> get criteria;
 }
 
 /// @nodoc
@@ -7666,7 +7666,7 @@ class __$$_MeasureSupplementalDataCopyWithImpl<$Res>
       criteria: null == criteria
           ? _value.criteria
           : criteria // ignore: cast_nullable_to_non_nullable
-              as Expression,
+              as FhirExpression,
     ));
   }
 }
@@ -7817,7 +7817,7 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
   ///  but it may also be a path to a specific data element. The criteria
   ///  defines the data to be returned for this element.
   @override
-  final Expression criteria;
+  final FhirExpression criteria;
 
   @override
   String toString() {
@@ -7889,7 +7889,7 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
       final List<CodeableConcept>? usage,
       final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
-      required final Expression criteria}) = _$_MeasureSupplementalData;
+      required final FhirExpression criteria}) = _$_MeasureSupplementalData;
   _MeasureSupplementalData._() : super._();
 
   factory _MeasureSupplementalData.fromJson(Map<String, dynamic> json) =
@@ -7969,7 +7969,7 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
   ///  the name of a valid expression defined within a referenced library,
   ///  but it may also be a path to a specific data element. The criteria
   ///  defines the data to be returned for this element.
-  Expression get criteria;
+  FhirExpression get criteria;
   @override
   @JsonKey(ignore: true)
   _$$_MeasureSupplementalDataCopyWith<_$_MeasureSupplementalData>

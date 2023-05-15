@@ -31500,7 +31500,8 @@ mixin _$EvidenceVariableCharacteristic {
       throw _privateConstructorUsedError;
 
   /// [definitionExpression] Defines the characteristic using Expression.
-  Expression? get definitionExpression => throw _privateConstructorUsedError;
+  FhirExpression? get definitionExpression =>
+      throw _privateConstructorUsedError;
 
   /// [definitionId] Defines the characteristic using id.
   FhirId? get definitionId => throw _privateConstructorUsedError;
@@ -31563,7 +31564,7 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
       Reference? definitionReference,
       FhirCanonical? definitionCanonical,
       CodeableConcept? definitionCodeableConcept,
-      Expression? definitionExpression,
+      FhirExpression? definitionExpression,
       FhirId? definitionId,
       @JsonKey(name: '_definitionId') Element? definitionIdElement,
       EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue,
@@ -31579,7 +31580,7 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
   $ElementCopyWith<$Res>? get excludeElement;
   $ReferenceCopyWith<$Res>? get definitionReference;
   $CodeableConceptCopyWith<$Res>? get definitionCodeableConcept;
-  $ExpressionCopyWith<$Res>? get definitionExpression;
+  $FhirExpressionCopyWith<$Res>? get definitionExpression;
   $ElementCopyWith<$Res>? get definitionIdElement;
   $EvidenceVariableDefinitionByTypeAndValueCopyWith<$Res>?
       get definitionByTypeAndValue;
@@ -31685,7 +31686,7 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
       definitionExpression: freezed == definitionExpression
           ? _value.definitionExpression
           : definitionExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       definitionId: freezed == definitionId
           ? _value.definitionId
           : definitionId // ignore: cast_nullable_to_non_nullable
@@ -31788,12 +31789,12 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get definitionExpression {
+  $FhirExpressionCopyWith<$Res>? get definitionExpression {
     if (_value.definitionExpression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.definitionExpression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.definitionExpression!, (value) {
       return _then(_value.copyWith(definitionExpression: value) as $Val);
     });
   }
@@ -31910,7 +31911,7 @@ abstract class _$$_EvidenceVariableCharacteristicCopyWith<$Res>
       Reference? definitionReference,
       FhirCanonical? definitionCanonical,
       CodeableConcept? definitionCodeableConcept,
-      Expression? definitionExpression,
+      FhirExpression? definitionExpression,
       FhirId? definitionId,
       @JsonKey(name: '_definitionId') Element? definitionIdElement,
       EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue,
@@ -31932,7 +31933,7 @@ abstract class _$$_EvidenceVariableCharacteristicCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get definitionCodeableConcept;
   @override
-  $ExpressionCopyWith<$Res>? get definitionExpression;
+  $FhirExpressionCopyWith<$Res>? get definitionExpression;
   @override
   $ElementCopyWith<$Res>? get definitionIdElement;
   @override
@@ -32044,7 +32045,7 @@ class __$$_EvidenceVariableCharacteristicCopyWithImpl<$Res>
       definitionExpression: freezed == definitionExpression
           ? _value.definitionExpression
           : definitionExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       definitionId: freezed == definitionId
           ? _value.definitionId
           : definitionId // ignore: cast_nullable_to_non_nullable
@@ -32255,7 +32256,7 @@ class _$_EvidenceVariableCharacteristic
 
   /// [definitionExpression] Defines the characteristic using Expression.
   @override
-  final Expression? definitionExpression;
+  final FhirExpression? definitionExpression;
 
   /// [definitionId] Defines the characteristic using id.
   @override
@@ -32422,7 +32423,7 @@ abstract class _EvidenceVariableCharacteristic
       final Reference? definitionReference,
       final FhirCanonical? definitionCanonical,
       final CodeableConcept? definitionCodeableConcept,
-      final Expression? definitionExpression,
+      final FhirExpression? definitionExpression,
       final FhirId? definitionId,
       @JsonKey(name: '_definitionId') final Element? definitionIdElement,
       final EvidenceVariableDefinitionByTypeAndValue? definitionByTypeAndValue,
@@ -32524,7 +32525,7 @@ abstract class _EvidenceVariableCharacteristic
   @override
 
   /// [definitionExpression] Defines the characteristic using Expression.
-  Expression? get definitionExpression;
+  FhirExpression? get definitionExpression;
   @override
 
   /// [definitionId] Defines the characteristic using id.

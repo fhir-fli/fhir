@@ -3090,7 +3090,7 @@ class ParametersParameter with _$ParametersParameter {
     DataRequirement? valueDataRequirement,
 
     /// [valueExpression] If the parameter is a data type.
-    Expression? valueExpression,
+    FhirExpression? valueExpression,
 
     /// [valueParameterDefinition] If the parameter is a data type.
     ParameterDefinition? valueParameterDefinition,

@@ -5046,7 +5046,7 @@ mixin _$ClinicalUseDefinitionContraindication {
   /// [applicability] An expression that returns true or false, indicating
   ///  whether the indication is applicable or not, after having applied its
   ///  other elements.
-  Expression? get applicability => throw _privateConstructorUsedError;
+  FhirExpression? get applicability => throw _privateConstructorUsedError;
 
   /// [otherTherapy] Information about the use of the medicinal product in
   ///  relation to other therapies described as part of the contraindication.
@@ -5076,12 +5076,12 @@ abstract class $ClinicalUseDefinitionContraindicationCopyWith<$Res> {
       CodeableReference? diseaseStatus,
       List<CodeableReference>? comorbidity,
       List<Reference>? indication,
-      Expression? applicability,
+      FhirExpression? applicability,
       List<ClinicalUseDefinitionOtherTherapy>? otherTherapy});
 
   $CodeableReferenceCopyWith<$Res>? get diseaseSymptomProcedure;
   $CodeableReferenceCopyWith<$Res>? get diseaseStatus;
-  $ExpressionCopyWith<$Res>? get applicability;
+  $FhirExpressionCopyWith<$Res>? get applicability;
 }
 
 /// @nodoc
@@ -5140,7 +5140,7 @@ class _$ClinicalUseDefinitionContraindicationCopyWithImpl<$Res,
       applicability: freezed == applicability
           ? _value.applicability
           : applicability // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       otherTherapy: freezed == otherTherapy
           ? _value.otherTherapy
           : otherTherapy // ignore: cast_nullable_to_non_nullable
@@ -5175,12 +5175,12 @@ class _$ClinicalUseDefinitionContraindicationCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get applicability {
+  $FhirExpressionCopyWith<$Res>? get applicability {
     if (_value.applicability == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.applicability!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.applicability!, (value) {
       return _then(_value.copyWith(applicability: value) as $Val);
     });
   }
@@ -5203,7 +5203,7 @@ abstract class _$$_ClinicalUseDefinitionContraindicationCopyWith<$Res>
       CodeableReference? diseaseStatus,
       List<CodeableReference>? comorbidity,
       List<Reference>? indication,
-      Expression? applicability,
+      FhirExpression? applicability,
       List<ClinicalUseDefinitionOtherTherapy>? otherTherapy});
 
   @override
@@ -5211,7 +5211,7 @@ abstract class _$$_ClinicalUseDefinitionContraindicationCopyWith<$Res>
   @override
   $CodeableReferenceCopyWith<$Res>? get diseaseStatus;
   @override
-  $ExpressionCopyWith<$Res>? get applicability;
+  $FhirExpressionCopyWith<$Res>? get applicability;
 }
 
 /// @nodoc
@@ -5269,7 +5269,7 @@ class __$$_ClinicalUseDefinitionContraindicationCopyWithImpl<$Res>
       applicability: freezed == applicability
           ? _value.applicability
           : applicability // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       otherTherapy: freezed == otherTherapy
           ? _value._otherTherapy
           : otherTherapy // ignore: cast_nullable_to_non_nullable
@@ -5413,7 +5413,7 @@ class _$_ClinicalUseDefinitionContraindication
   ///  whether the indication is applicable or not, after having applied its
   ///  other elements.
   @override
-  final Expression? applicability;
+  final FhirExpression? applicability;
 
   /// [otherTherapy] Information about the use of the medicinal product in
   ///  relation to other therapies described as part of the contraindication.
@@ -5500,7 +5500,7 @@ abstract class _ClinicalUseDefinitionContraindication
           final CodeableReference? diseaseStatus,
           final List<CodeableReference>? comorbidity,
           final List<Reference>? indication,
-          final Expression? applicability,
+          final FhirExpression? applicability,
           final List<ClinicalUseDefinitionOtherTherapy>? otherTherapy}) =
       _$_ClinicalUseDefinitionContraindication;
   _ClinicalUseDefinitionContraindication._() : super._();
@@ -5565,7 +5565,7 @@ abstract class _ClinicalUseDefinitionContraindication
   /// [applicability] An expression that returns true or false, indicating
   ///  whether the indication is applicable or not, after having applied its
   ///  other elements.
-  Expression? get applicability;
+  FhirExpression? get applicability;
   @override
 
   /// [otherTherapy] Information about the use of the medicinal product in
@@ -6069,7 +6069,7 @@ mixin _$ClinicalUseDefinitionIndication {
   /// [applicability] An expression that returns true or false, indicating
   ///  whether the indication is applicable or not, after having applied its
   ///  other elements.
-  Expression? get applicability => throw _privateConstructorUsedError;
+  FhirExpression? get applicability => throw _privateConstructorUsedError;
 
   /// [otherTherapy] Information about the use of the medicinal product in
   ///  relation to other therapies described as part of the indication.
@@ -6102,7 +6102,7 @@ abstract class $ClinicalUseDefinitionIndicationCopyWith<$Res> {
       String? durationString,
       @JsonKey(name: '_durationString') Element? durationStringElement,
       List<Reference>? undesirableEffect,
-      Expression? applicability,
+      FhirExpression? applicability,
       List<ClinicalUseDefinitionOtherTherapy>? otherTherapy});
 
   $CodeableReferenceCopyWith<$Res>? get diseaseSymptomProcedure;
@@ -6110,7 +6110,7 @@ abstract class $ClinicalUseDefinitionIndicationCopyWith<$Res> {
   $CodeableReferenceCopyWith<$Res>? get intendedEffect;
   $RangeCopyWith<$Res>? get durationRange;
   $ElementCopyWith<$Res>? get durationStringElement;
-  $ExpressionCopyWith<$Res>? get applicability;
+  $FhirExpressionCopyWith<$Res>? get applicability;
 }
 
 /// @nodoc
@@ -6189,7 +6189,7 @@ class _$ClinicalUseDefinitionIndicationCopyWithImpl<$Res,
       applicability: freezed == applicability
           ? _value.applicability
           : applicability // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       otherTherapy: freezed == otherTherapy
           ? _value.otherTherapy
           : otherTherapy // ignore: cast_nullable_to_non_nullable
@@ -6260,12 +6260,12 @@ class _$ClinicalUseDefinitionIndicationCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get applicability {
+  $FhirExpressionCopyWith<$Res>? get applicability {
     if (_value.applicability == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.applicability!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.applicability!, (value) {
       return _then(_value.copyWith(applicability: value) as $Val);
     });
   }
@@ -6292,7 +6292,7 @@ abstract class _$$_ClinicalUseDefinitionIndicationCopyWith<$Res>
       String? durationString,
       @JsonKey(name: '_durationString') Element? durationStringElement,
       List<Reference>? undesirableEffect,
-      Expression? applicability,
+      FhirExpression? applicability,
       List<ClinicalUseDefinitionOtherTherapy>? otherTherapy});
 
   @override
@@ -6306,7 +6306,7 @@ abstract class _$$_ClinicalUseDefinitionIndicationCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get durationStringElement;
   @override
-  $ExpressionCopyWith<$Res>? get applicability;
+  $FhirExpressionCopyWith<$Res>? get applicability;
 }
 
 /// @nodoc
@@ -6384,7 +6384,7 @@ class __$$_ClinicalUseDefinitionIndicationCopyWithImpl<$Res>
       applicability: freezed == applicability
           ? _value.applicability
           : applicability // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       otherTherapy: freezed == otherTherapy
           ? _value._otherTherapy
           : otherTherapy // ignore: cast_nullable_to_non_nullable
@@ -6563,7 +6563,7 @@ class _$_ClinicalUseDefinitionIndication
   ///  whether the indication is applicable or not, after having applied its
   ///  other elements.
   @override
-  final Expression? applicability;
+  final FhirExpression? applicability;
 
   /// [otherTherapy] Information about the use of the medicinal product in
   ///  relation to other therapies described as part of the indication.
@@ -6666,7 +6666,7 @@ abstract class _ClinicalUseDefinitionIndication
       final String? durationString,
       @JsonKey(name: '_durationString') final Element? durationStringElement,
       final List<Reference>? undesirableEffect,
-      final Expression? applicability,
+      final FhirExpression? applicability,
       final List<ClinicalUseDefinitionOtherTherapy>?
           otherTherapy}) = _$_ClinicalUseDefinitionIndication;
   _ClinicalUseDefinitionIndication._() : super._();
@@ -6757,7 +6757,7 @@ abstract class _ClinicalUseDefinitionIndication
   /// [applicability] An expression that returns true or false, indicating
   ///  whether the indication is applicable or not, after having applied its
   ///  other elements.
-  Expression? get applicability;
+  FhirExpression? get applicability;
   @override
 
   /// [otherTherapy] Information about the use of the medicinal product in

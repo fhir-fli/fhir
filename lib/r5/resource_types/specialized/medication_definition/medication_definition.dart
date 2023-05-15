@@ -1251,7 +1251,7 @@ class ClinicalUseDefinitionContraindication
     /// [applicability] An expression that returns true or false, indicating
     ///  whether the indication is applicable or not, after having applied its
     ///  other elements.
-    Expression? applicability,
+    FhirExpression? applicability,
 
     /// [otherTherapy] Information about the use of the medicinal product in
     ///  relation to other therapies described as part of the contraindication.
@@ -1551,7 +1551,7 @@ class ClinicalUseDefinitionIndication with _$ClinicalUseDefinitionIndication {
     /// [applicability] An expression that returns true or false, indicating
     ///  whether the indication is applicable or not, after having applied its
     ///  other elements.
-    Expression? applicability,
+    FhirExpression? applicability,
 
     /// [otherTherapy] Information about the use of the medicinal product in
     ///  relation to other therapies described as part of the indication.

@@ -7135,7 +7135,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
     CodeableConcept? definitionCodeableConcept,
 
     /// [definitionExpression] Defines the characteristic using Expression.
-    Expression? definitionExpression,
+    FhirExpression? definitionExpression,
 
     /// [definitionId] Defines the characteristic using id.
     FhirId? definitionId,

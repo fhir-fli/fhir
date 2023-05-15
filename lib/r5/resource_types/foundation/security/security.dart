@@ -1797,7 +1797,7 @@ class ConsentProvision with _$ConsentProvision {
 
     /// [expression] A computable (FHIRPath or other) definition of what is
     ///  controlled by this consent.
-    Expression? expression,
+    FhirExpression? expression,
 
     /// [provision] Provisions which provide exceptions to the base provision
     ///  or subprovisions.
@@ -2618,7 +2618,7 @@ class PermissionData with _$PermissionData {
     List<Period>? period,
 
     /// [expression] Used when other data selection elements are insufficient.
-    Expression? expression,
+    FhirExpression? expression,
   }) = _PermissionData;
 
   /// Produces a Yaml formatted String version of the object

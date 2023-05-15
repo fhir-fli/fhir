@@ -16679,7 +16679,7 @@ mixin _$RequestGroupCondition {
 
   /// [expression] An expression that returns true or false, indicating whether
   ///  or not the condition is satisfied.
-  Expression? get expression => throw _privateConstructorUsedError;
+  FhirExpression? get expression => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -16699,10 +16699,10 @@ abstract class $RequestGroupConditionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirCode? kind,
       @JsonKey(name: '_kind') Element? kindElement,
-      Expression? expression});
+      FhirExpression? expression});
 
   $ElementCopyWith<$Res>? get kindElement;
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -16750,7 +16750,7 @@ class _$RequestGroupConditionCopyWithImpl<$Res,
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ) as $Val);
   }
 
@@ -16768,12 +16768,12 @@ class _$RequestGroupConditionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get expression {
+  $FhirExpressionCopyWith<$Res>? get expression {
     if (_value.expression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.expression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.expression!, (value) {
       return _then(_value.copyWith(expression: value) as $Val);
     });
   }
@@ -16793,12 +16793,12 @@ abstract class _$$_RequestGroupConditionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirCode? kind,
       @JsonKey(name: '_kind') Element? kindElement,
-      Expression? expression});
+      FhirExpression? expression});
 
   @override
   $ElementCopyWith<$Res>? get kindElement;
   @override
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -16843,7 +16843,7 @@ class __$$_RequestGroupConditionCopyWithImpl<$Res>
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ));
   }
 }
@@ -16945,7 +16945,7 @@ class _$_RequestGroupCondition extends _RequestGroupCondition {
   /// [expression] An expression that returns true or false, indicating whether
   ///  or not the condition is satisfied.
   @override
-  final Expression? expression;
+  final FhirExpression? expression;
 
   @override
   String toString() {
@@ -17002,7 +17002,7 @@ abstract class _RequestGroupCondition extends RequestGroupCondition {
       final List<FhirExtension>? modifierExtension,
       final FhirCode? kind,
       @JsonKey(name: '_kind') final Element? kindElement,
-      final Expression? expression}) = _$_RequestGroupCondition;
+      final FhirExpression? expression}) = _$_RequestGroupCondition;
   _RequestGroupCondition._() : super._();
 
   factory _RequestGroupCondition.fromJson(Map<String, dynamic> json) =
@@ -17053,7 +17053,7 @@ abstract class _RequestGroupCondition extends RequestGroupCondition {
 
   /// [expression] An expression that returns true or false, indicating whether
   ///  or not the condition is satisfied.
-  Expression? get expression;
+  FhirExpression? get expression;
   @override
   @JsonKey(ignore: true)
   _$$_RequestGroupConditionCopyWith<_$_RequestGroupCondition> get copyWith =>

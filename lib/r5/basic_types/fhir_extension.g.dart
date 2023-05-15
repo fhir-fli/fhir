@@ -223,7 +223,7 @@ _$_FhirExtension _$$_FhirExtensionFromJson(Map<String, dynamic> json) =>
               json['valueDataRequirement'] as Map<String, dynamic>),
       valueExpression: json['valueExpression'] == null
           ? null
-          : Expression.fromJson(
+          : FhirExpression.fromJson(
               json['valueExpression'] as Map<String, dynamic>),
       valueParameterDefinition: json['valueParameterDefinition'] == null
           ? null

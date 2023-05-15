@@ -674,7 +674,7 @@ _$_ClinicalUseDefinitionContraindication
               .toList(),
           applicability: json['applicability'] == null
               ? null
-              : Expression.fromJson(
+              : FhirExpression.fromJson(
                   json['applicability'] as Map<String, dynamic>),
           otherTherapy: (json['otherTherapy'] as List<dynamic>?)
               ?.map((e) => ClinicalUseDefinitionOtherTherapy.fromJson(
@@ -783,7 +783,8 @@ _$_ClinicalUseDefinitionIndication _$$_ClinicalUseDefinitionIndicationFromJson(
           .toList(),
       applicability: json['applicability'] == null
           ? null
-          : Expression.fromJson(json['applicability'] as Map<String, dynamic>),
+          : FhirExpression.fromJson(
+              json['applicability'] as Map<String, dynamic>),
       otherTherapy: (json['otherTherapy'] as List<dynamic>?)
           ?.map((e) => ClinicalUseDefinitionOtherTherapy.fromJson(
               e as Map<String, dynamic>))

@@ -679,7 +679,7 @@ _$_MeasurePopulation _$$_MeasurePopulationFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
       criteria: json['criteria'] == null
           ? null
-          : Expression.fromJson(json['criteria'] as Map<String, dynamic>),
+          : FhirExpression.fromJson(json['criteria'] as Map<String, dynamic>),
       groupDefinition: json['groupDefinition'] == null
           ? null
           : Reference.fromJson(json['groupDefinition'] as Map<String, dynamic>),
@@ -747,7 +747,7 @@ _$_MeasureStratifier _$$_MeasureStratifierFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
       criteria: json['criteria'] == null
           ? null
-          : Expression.fromJson(json['criteria'] as Map<String, dynamic>),
+          : FhirExpression.fromJson(json['criteria'] as Map<String, dynamic>),
       groupDefinition: json['groupDefinition'] == null
           ? null
           : Reference.fromJson(json['groupDefinition'] as Map<String, dynamic>),
@@ -807,7 +807,7 @@ _$_MeasureComponent _$$_MeasureComponentFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
       criteria: json['criteria'] == null
           ? null
-          : Expression.fromJson(json['criteria'] as Map<String, dynamic>),
+          : FhirExpression.fromJson(json['criteria'] as Map<String, dynamic>),
       groupDefinition: json['groupDefinition'] == null
           ? null
           : Reference.fromJson(json['groupDefinition'] as Map<String, dynamic>),
@@ -863,7 +863,8 @@ _$_MeasureSupplementalData _$$_MeasureSupplementalDataFromJson(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      criteria: Expression.fromJson(json['criteria'] as Map<String, dynamic>),
+      criteria:
+          FhirExpression.fromJson(json['criteria'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MeasureSupplementalDataToJson(

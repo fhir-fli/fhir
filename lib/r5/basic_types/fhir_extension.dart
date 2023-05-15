@@ -528,7 +528,7 @@ class FhirExtension with _$FhirExtension {
 
     /// [valueExpression] Value of extension - must be one of a constrained set
     ///  of the data types (see [Extensibility](extensibility.html) for a list).
-    Expression? valueExpression,
+    FhirExpression? valueExpression,
 
     /// [valueParameterDefinition] Value of extension - must be one of a
     /// constrained set of the data types (see

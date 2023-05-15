@@ -197,7 +197,7 @@ class Encounter with Resource, _$Encounter {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -487,7 +487,7 @@ class EncounterParticipant with _$EncounterParticipant {
   factory EncounterParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -614,7 +614,7 @@ class EncounterReason with _$EncounterReason {
   factory EncounterReason({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -735,7 +735,7 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
   factory EncounterDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -865,7 +865,7 @@ class EncounterAdmission with _$EncounterAdmission {
   factory EncounterAdmission({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1006,7 +1006,7 @@ class EncounterLocation with _$EncounterLocation {
   factory EncounterLocation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1211,7 +1211,7 @@ class EncounterHistory with Resource, _$EncounterHistory {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1422,7 +1422,7 @@ class EncounterHistoryLocation with _$EncounterHistoryLocation {
   factory EncounterHistoryLocation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1608,7 +1608,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1810,7 +1810,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   factory EpisodeOfCareStatusHistory({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1929,7 +1929,7 @@ class EpisodeOfCareReason with _$EpisodeOfCareReason {
   factory EpisodeOfCareReason({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2046,7 +2046,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   factory EpisodeOfCareDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2212,7 +2212,7 @@ class Flag with Resource, _$Flag {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2592,7 +2592,7 @@ class Library with Resource, _$Library {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3028,7 +3028,7 @@ class FhirList with Resource, _$FhirList {
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3147,7 +3147,7 @@ class FhirList with Resource, _$FhirList {
     List<Annotation>? note,
 
     /// [entry] Entries in this list.
-    List<ListEntry>? entry,
+    List<FhirListEntry>? entry,
 
     /// [emptyReason] If the list is empty, why the list is empty.
     CodeableConcept? emptyReason,
@@ -3185,15 +3185,15 @@ class FhirList with Resource, _$FhirList {
   }
 }
 
-/// [ListEntry] A List is a curated collection of resources, for things such as
+/// [FhirListEntry] A List is a curated collection of resources, for things such as
 ///  problem lists, allergy lists, facility list, organization list, etc.
 @freezed
-class ListEntry with _$ListEntry {
-  /// [ListEntry] A List is a curated collection of resources, for things such
+class FhirListEntry with _$FhirListEntry {
+  /// [FhirListEntry] A List is a curated collection of resources, for things such
   ///  as problem lists, allergy lists, facility list, organization list, etc.
-  ListEntry._();
+  FhirListEntry._();
 
-  /// [ListEntry] A List is a curated collection of resources, for things such
+  /// [FhirListEntry] A List is a curated collection of resources, for things such
   ///  as problem lists, allergy lists, facility list, organization list, etc.
   ///
   /// [id] Unique id for the element within a resource (for internal
@@ -3233,10 +3233,10 @@ class ListEntry with _$ListEntry {
   ///
   /// [item] A reference to the actual resource from which data was derived.
   ///
-  factory ListEntry({
+  factory FhirListEntry({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3280,32 +3280,32 @@ class ListEntry with _$ListEntry {
 
     /// [item] A reference to the actual resource from which data was derived.
     required Reference item,
-  }) = _ListEntry;
+  }) = _FhirListEntry;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ListEntry.fromYaml(dynamic yaml) => yaml is String
-      ? ListEntry.fromJson(
+  factory FhirListEntry.fromYaml(dynamic yaml) => yaml is String
+      ? FhirListEntry.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ListEntry.fromJson(
+          ? FhirListEntry.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ListEntry cannot be constructed from input provided,'
+              'FhirListEntry cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ListEntry.fromJson(Map<String, dynamic> json) =>
-      _$ListEntryFromJson(json);
+  factory FhirListEntry.fromJson(Map<String, dynamic> json) =>
+      _$FhirListEntryFromJson(json);
 
-  /// Acts like a constructor, returns a [ListEntry], accepts a
+  /// Acts like a constructor, returns a [FhirListEntry], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ListEntry.fromJsonString(String source) {
+  factory FhirListEntry.fromJsonString(String source) {
     final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ListEntryFromJson(json);
+      return _$FhirListEntryFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');

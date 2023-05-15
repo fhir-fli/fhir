@@ -620,7 +620,7 @@ _$_ActivityDefinitionDynamicValue _$$_ActivityDefinitionDynamicValueFromJson(
           ? null
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
       expression:
-          Expression.fromJson(json['expression'] as Map<String, dynamic>),
+          FhirExpression.fromJson(json['expression'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_ActivityDefinitionDynamicValueToJson(
@@ -4547,7 +4547,7 @@ _$_PlanDefinitionCondition _$$_PlanDefinitionConditionFromJson(
           : Element.fromJson(json['_kind'] as Map<String, dynamic>),
       expression: json['expression'] == null
           ? null
-          : Expression.fromJson(json['expression'] as Map<String, dynamic>),
+          : FhirExpression.fromJson(json['expression'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_PlanDefinitionConditionToJson(
@@ -4803,7 +4803,7 @@ _$_PlanDefinitionDynamicValue _$$_PlanDefinitionDynamicValueFromJson(
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
       expression: json['expression'] == null
           ? null
-          : Expression.fromJson(json['expression'] as Map<String, dynamic>),
+          : FhirExpression.fromJson(json['expression'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_PlanDefinitionDynamicValueToJson(

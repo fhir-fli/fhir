@@ -21572,7 +21572,8 @@ mixin _$EvidenceVariableCharacteristic {
   Element? get definitionCanonicalElement => throw _privateConstructorUsedError;
   CodeableConcept? get definitionCodeableConcept =>
       throw _privateConstructorUsedError;
-  Expression? get definitionExpression => throw _privateConstructorUsedError;
+  FhirExpression? get definitionExpression =>
+      throw _privateConstructorUsedError;
   FhirBoolean? get exclude => throw _privateConstructorUsedError;
   @JsonKey(name: '_exclude')
   Element? get excludeElement => throw _privateConstructorUsedError;
@@ -21610,7 +21611,7 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
       @JsonKey(name: '_definitionCanonical')
           Element? definitionCanonicalElement,
       CodeableConcept? definitionCodeableConcept,
-      Expression? definitionExpression,
+      FhirExpression? definitionExpression,
       FhirBoolean? exclude,
       @JsonKey(name: '_exclude')
           Element? excludeElement,
@@ -21623,7 +21624,7 @@ abstract class $EvidenceVariableCharacteristicCopyWith<$Res> {
   $ReferenceCopyWith<$Res>? get definitionReference;
   $ElementCopyWith<$Res>? get definitionCanonicalElement;
   $CodeableConceptCopyWith<$Res>? get definitionCodeableConcept;
-  $ExpressionCopyWith<$Res>? get definitionExpression;
+  $FhirExpressionCopyWith<$Res>? get definitionExpression;
   $ElementCopyWith<$Res>? get excludeElement;
   $EvidenceVariableTimeFromStartCopyWith<$Res>? get timeFromStart;
   $ElementCopyWith<$Res>? get groupMeasureElement;
@@ -21699,7 +21700,7 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
       definitionExpression: freezed == definitionExpression
           ? _value.definitionExpression
           : definitionExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       exclude: freezed == exclude
           ? _value.exclude
           : exclude // ignore: cast_nullable_to_non_nullable
@@ -21774,12 +21775,12 @@ class _$EvidenceVariableCharacteristicCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get definitionExpression {
+  $FhirExpressionCopyWith<$Res>? get definitionExpression {
     if (_value.definitionExpression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.definitionExpression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.definitionExpression!, (value) {
       return _then(_value.copyWith(definitionExpression: value) as $Val);
     });
   }
@@ -21845,7 +21846,7 @@ abstract class _$$_EvidenceVariableCharacteristicCopyWith<$Res>
       @JsonKey(name: '_definitionCanonical')
           Element? definitionCanonicalElement,
       CodeableConcept? definitionCodeableConcept,
-      Expression? definitionExpression,
+      FhirExpression? definitionExpression,
       FhirBoolean? exclude,
       @JsonKey(name: '_exclude')
           Element? excludeElement,
@@ -21863,7 +21864,7 @@ abstract class _$$_EvidenceVariableCharacteristicCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get definitionCodeableConcept;
   @override
-  $ExpressionCopyWith<$Res>? get definitionExpression;
+  $FhirExpressionCopyWith<$Res>? get definitionExpression;
   @override
   $ElementCopyWith<$Res>? get excludeElement;
   @override
@@ -21941,7 +21942,7 @@ class __$$_EvidenceVariableCharacteristicCopyWithImpl<$Res>
       definitionExpression: freezed == definitionExpression
           ? _value.definitionExpression
           : definitionExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       exclude: freezed == exclude
           ? _value.exclude
           : exclude // ignore: cast_nullable_to_non_nullable
@@ -22034,7 +22035,7 @@ class _$_EvidenceVariableCharacteristic
   @override
   final CodeableConcept? definitionCodeableConcept;
   @override
-  final Expression? definitionExpression;
+  final FhirExpression? definitionExpression;
   @override
   final FhirBoolean? exclude;
   @override
@@ -22142,7 +22143,7 @@ abstract class _EvidenceVariableCharacteristic
           @JsonKey(name: '_definitionCanonical')
               final Element? definitionCanonicalElement,
           final CodeableConcept? definitionCodeableConcept,
-          final Expression? definitionExpression,
+          final FhirExpression? definitionExpression,
           final FhirBoolean? exclude,
           @JsonKey(name: '_exclude')
               final Element? excludeElement,
@@ -22179,7 +22180,7 @@ abstract class _EvidenceVariableCharacteristic
   @override
   CodeableConcept? get definitionCodeableConcept;
   @override
-  Expression? get definitionExpression;
+  FhirExpression? get definitionExpression;
   @override
   FhirBoolean? get exclude;
   @override
@@ -27433,7 +27434,8 @@ mixin _$ResearchElementDefinitionCharacteristic {
   FhirCanonical? get definitionCanonical => throw _privateConstructorUsedError;
   @JsonKey(name: '_definitionCanonical')
   Element? get definitionCanonicalElement => throw _privateConstructorUsedError;
-  Expression? get definitionExpression => throw _privateConstructorUsedError;
+  FhirExpression? get definitionExpression =>
+      throw _privateConstructorUsedError;
   DataRequirement? get definitionDataRequirement =>
       throw _privateConstructorUsedError;
   List<UsageContext>? get usageContext => throw _privateConstructorUsedError;
@@ -27508,7 +27510,7 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
       FhirCanonical? definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           Element? definitionCanonicalElement,
-      Expression? definitionExpression,
+      FhirExpression? definitionExpression,
       DataRequirement? definitionDataRequirement,
       List<UsageContext>? usageContext,
       FhirBoolean? exclude,
@@ -27544,7 +27546,7 @@ abstract class $ResearchElementDefinitionCharacteristicCopyWith<$Res> {
 
   $CodeableConceptCopyWith<$Res>? get definitionCodeableConcept;
   $ElementCopyWith<$Res>? get definitionCanonicalElement;
-  $ExpressionCopyWith<$Res>? get definitionExpression;
+  $FhirExpressionCopyWith<$Res>? get definitionExpression;
   $DataRequirementCopyWith<$Res>? get definitionDataRequirement;
   $ElementCopyWith<$Res>? get excludeElement;
   $CodeableConceptCopyWith<$Res>? get unitOfMeasure;
@@ -27640,7 +27642,7 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res,
       definitionExpression: freezed == definitionExpression
           ? _value.definitionExpression
           : definitionExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       definitionDataRequirement: freezed == definitionDataRequirement
           ? _value.definitionDataRequirement
           : definitionDataRequirement // ignore: cast_nullable_to_non_nullable
@@ -27779,12 +27781,12 @@ class _$ResearchElementDefinitionCharacteristicCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get definitionExpression {
+  $FhirExpressionCopyWith<$Res>? get definitionExpression {
     if (_value.definitionExpression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.definitionExpression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.definitionExpression!, (value) {
       return _then(_value.copyWith(definitionExpression: value) as $Val);
     });
   }
@@ -28031,7 +28033,7 @@ abstract class _$$_ResearchElementDefinitionCharacteristicCopyWith<$Res>
       FhirCanonical? definitionCanonical,
       @JsonKey(name: '_definitionCanonical')
           Element? definitionCanonicalElement,
-      Expression? definitionExpression,
+      FhirExpression? definitionExpression,
       DataRequirement? definitionDataRequirement,
       List<UsageContext>? usageContext,
       FhirBoolean? exclude,
@@ -28070,7 +28072,7 @@ abstract class _$$_ResearchElementDefinitionCharacteristicCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get definitionCanonicalElement;
   @override
-  $ExpressionCopyWith<$Res>? get definitionExpression;
+  $FhirExpressionCopyWith<$Res>? get definitionExpression;
   @override
   $DataRequirementCopyWith<$Res>? get definitionDataRequirement;
   @override
@@ -28181,7 +28183,7 @@ class __$$_ResearchElementDefinitionCharacteristicCopyWithImpl<$Res>
       definitionExpression: freezed == definitionExpression
           ? _value.definitionExpression
           : definitionExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       definitionDataRequirement: freezed == definitionDataRequirement
           ? _value.definitionDataRequirement
           : definitionDataRequirement // ignore: cast_nullable_to_non_nullable
@@ -28383,7 +28385,7 @@ class _$_ResearchElementDefinitionCharacteristic
   @JsonKey(name: '_definitionCanonical')
   final Element? definitionCanonicalElement;
   @override
-  final Expression? definitionExpression;
+  final FhirExpression? definitionExpression;
   @override
   final DataRequirement? definitionDataRequirement;
   final List<UsageContext>? _usageContext;
@@ -28585,7 +28587,7 @@ abstract class _ResearchElementDefinitionCharacteristic
           final FhirCanonical? definitionCanonical,
           @JsonKey(name: '_definitionCanonical')
               final Element? definitionCanonicalElement,
-          final Expression? definitionExpression,
+          final FhirExpression? definitionExpression,
           final DataRequirement? definitionDataRequirement,
           final List<UsageContext>? usageContext,
           final FhirBoolean? exclude,
@@ -28641,7 +28643,7 @@ abstract class _ResearchElementDefinitionCharacteristic
   @JsonKey(name: '_definitionCanonical')
   Element? get definitionCanonicalElement;
   @override
-  Expression? get definitionExpression;
+  FhirExpression? get definitionExpression;
   @override
   DataRequirement? get definitionDataRequirement;
   @override

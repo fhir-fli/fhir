@@ -1,5 +1,3 @@
-// ignore_for_file: missing_whitespace_between_adjacent_strings
-
 import 'dart:io';
 
 Future<void> main() async {
@@ -8,6 +6,7 @@ Future<void> main() async {
       .list(recursive: true)
       .map((FileSystemEntity event) => event.path)
       .toList();
+  String fileNames = '';
   for (final String file in fileList) {
     if (file.contains('.dart') &&
         !file.contains('.g.') &&
@@ -18,8 +17,8 @@ Future<void> main() async {
         !file.contains('.sql')) {
       final String fileString = await File(file).readAsString();
       final List<String> stringList = fileString.split('\n');
-      final String newFileName = file.split('/').last;
-      String converter = "part of '$newFileName';\n\n";
+      String yaml = '';
+      String converter = '';
       bool isClass = false;
       String className = '';
       for (final String line in stringList) {
@@ -31,63 +30,83 @@ Future<void> main() async {
             if (fieldName != 'resourceType') {
               final String fieldType = splitLine[splitLine.length - 2];
               if (fieldName == 'id' && resourceTypes.contains(className)) {
-                converter += '$fieldName: serializationManager.deserialize<';
-                // converter +=
-                //     '$fieldName: resource.fhirId == null ? null : client.FhirId(resource.fhirId),';
+                converter +=
+                    '$fieldName: resource.fhirId == null ? null : client.FhirId(resource.fhirId),';
               } else if (fieldType.contains('List<')) {
                 converter +=
-                    "$fieldName: serializationManager.deserialize<$fieldType>(json['$fieldName']),";
-                // converter +=
-                //     '$fieldName: $fieldType resource.$fieldName == null ? null : resource.$fieldName,';
+                    '$fieldName: $fieldType resource.$fieldName == null ? null : resource.$fieldName,';
               } else if (fieldName == 'routeOfAdministration' ||
                   fieldName == 'relatedMedicationKnowledge') {
               } else if (primitives.contains(fieldType.replaceAll('?', ''))) {
                 converter +=
-                    "$fieldName: serializationManager.deserialize<$fieldType>(json['$fieldName']),";
-                // converter +=
-                //     '$fieldName: resource.$fieldName == null ? null : client.${fieldType.replaceAll("?", "")}(resource.fhirId),';
+                    '$fieldName: resource.$fieldName == null ? null : client.${fieldType.replaceAll("?", "")}(resource.fhirId),';
               } else {
                 converter +=
-                    "$fieldName: serializationManager.deserialize<$fieldType>(json['$fieldName']),";
-                // converter +=
-                //     '$fieldName: resource.$fieldName == null ? null : ${fieldType.substring(0, 1).toLowerCase()}${fieldType.substring(1).replaceAll("?", "")}ToClient(resource.$fieldName),';
+                    '$fieldName: resource.$fieldName == null ? null : ${fieldType.substring(0, 1).toLowerCase()}${fieldType.substring(1).replaceAll("?", "")}ToClient(resource.$fieldName),';
               }
             }
+            yaml += '  ';
+            yaml +=
+                changeFieldName(splitLine.last.replaceAll(',', ''), className);
+            yaml += ': ';
             if (changeFieldName(
                         splitLine.last.replaceAll(',', ''), className) ==
                     'routeOfAdministration' &&
                 className == 'AdministrableProductDefinition') {
+              yaml +=
+                  'List<AdministrableProductDefinitionRouteOfAdministration>';
             } else if (changeFieldName(
                         splitLine.last.replaceAll(',', ''), className) ==
                     'relatedMedicationKnowledge' &&
                 className == 'MedicationKnowledge') {
-            } else {}
+              yaml += 'List<MedicationKnowledgeRelatedMedicationKnowledge>?';
+            } else {
+              yaml += changeYamlTypes(splitLine[splitLine.length - 2]);
+            }
 
+            yaml += '\n';
             converter += '\n';
           } else if (line.contains('}) = _')) {
             isClass = false;
             converter += '\n);\n';
-            converter += '}\n';
+            await File(
+                    '../../../fhirpod/fhirpod_server/lib/src/protocol/${className.toLowerCase()}.yaml')
+                .writeAsString(yaml);
+            // await File(
+            //         '../../../fhirpod/fhirpod_server/lib/src/converters/${className.toLowerCase()}.dart')
+            //     .writeAsString(converter);
+            fileNames += "export '${className.toLowerCase()}.dart';\n";
+            yaml = '';
+            converter = '';
           }
         }
         if (line.contains('factory') && line.contains('({')) {
+          isClass = true;
           className =
               line.replaceAll('factory ', '').replaceAll('({', '').trim();
-          isClass = true;
-          converter += '$className _\$${className}ServerPodFromJson'
-              '(Map<String, dynamic> json, SerializationManager serializationManager,){\n'
-              'return $className(\n';
-
-          // if (resourceTypes.contains(className)) {
-          //   yaml += 'table: ${className.toLowerCase()}\n';
-          // }
+          converter += "import 'package:fhir/r5.dart' as client;\n";
+          converter +=
+              "import 'package:fhirpod_server/src/generated/protocol.dart' as server;\n";
+          converter += "import 'converters.dart';\n";
+          final String converterName =
+              '${className.substring(0, 1).toLowerCase()}'
+              '${className.substring(1)}';
+          converter += 'client.$className? '
+              '${converterName}ToClient(server.$className? resource) => resource == null ? null : client.$className(\n';
+          yaml += 'class: $className\n';
+          if (resourceTypes.contains(className)) {
+            yaml += 'table: ${className.toLowerCase()}\n';
+          }
+          yaml += 'fields: \n';
         }
       }
-      await File(file.replaceAll('.dart', '.serverpod.dart'))
-          .writeAsString(converter);
-      converter = '';
     }
   }
+  await File('../../../fhirpod/fhirpod_server/lib/src/protocol/resource.yaml')
+      .writeAsString(resourceYaml);
+  // await File(
+  //         '../../../fhirpod/fhirpod_server/lib/src/converters/converters.dart')
+  //     .writeAsString(fileNames);
 }
 
 const String resourceYaml = '''

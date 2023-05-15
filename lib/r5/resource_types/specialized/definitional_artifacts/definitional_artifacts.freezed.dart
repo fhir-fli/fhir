@@ -4820,7 +4820,7 @@ mixin _$ActivityDefinitionDynamicValue {
 
   /// [expression] An expression specifying the value of the customized
   ///  element.
-  Expression get expression => throw _privateConstructorUsedError;
+  FhirExpression get expression => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -4842,10 +4842,10 @@ abstract class $ActivityDefinitionDynamicValueCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Expression expression});
+      FhirExpression expression});
 
   $ElementCopyWith<$Res>? get pathElement;
-  $ExpressionCopyWith<$Res> get expression;
+  $FhirExpressionCopyWith<$Res> get expression;
 }
 
 /// @nodoc
@@ -4893,7 +4893,7 @@ class _$ActivityDefinitionDynamicValueCopyWithImpl<$Res,
       expression: null == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression,
+              as FhirExpression,
     ) as $Val);
   }
 
@@ -4911,8 +4911,8 @@ class _$ActivityDefinitionDynamicValueCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res> get expression {
-    return $ExpressionCopyWith<$Res>(_value.expression, (value) {
+  $FhirExpressionCopyWith<$Res> get expression {
+    return $FhirExpressionCopyWith<$Res>(_value.expression, (value) {
       return _then(_value.copyWith(expression: value) as $Val);
     });
   }
@@ -4933,12 +4933,12 @@ abstract class _$$_ActivityDefinitionDynamicValueCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Expression expression});
+      FhirExpression expression});
 
   @override
   $ElementCopyWith<$Res>? get pathElement;
   @override
-  $ExpressionCopyWith<$Res> get expression;
+  $FhirExpressionCopyWith<$Res> get expression;
 }
 
 /// @nodoc
@@ -4985,7 +4985,7 @@ class __$$_ActivityDefinitionDynamicValueCopyWithImpl<$Res>
       expression: null == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression,
+              as FhirExpression,
     ));
   }
 }
@@ -5099,7 +5099,7 @@ class _$_ActivityDefinitionDynamicValue
   /// [expression] An expression specifying the value of the customized
   ///  element.
   @override
-  final Expression expression;
+  final FhirExpression expression;
 
   @override
   String toString() {
@@ -5157,7 +5157,7 @@ abstract class _ActivityDefinitionDynamicValue
           final List<FhirExtension>? modifierExtension,
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement,
-          required final Expression expression}) =
+          required final FhirExpression expression}) =
       _$_ActivityDefinitionDynamicValue;
   _ActivityDefinitionDynamicValue._() : super._();
 
@@ -5218,7 +5218,7 @@ abstract class _ActivityDefinitionDynamicValue
 
   /// [expression] An expression specifying the value of the customized
   ///  element.
-  Expression get expression;
+  FhirExpression get expression;
   @override
   @JsonKey(ignore: true)
   _$$_ActivityDefinitionDynamicValueCopyWith<_$_ActivityDefinitionDynamicValue>
@@ -47099,7 +47099,7 @@ mixin _$PlanDefinitionCondition {
 
   /// [expression] An expression that returns true or false, indicating
   ///  whether the condition is satisfied.
-  Expression? get expression => throw _privateConstructorUsedError;
+  FhirExpression? get expression => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -47119,10 +47119,10 @@ abstract class $PlanDefinitionConditionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirCode? kind,
       @JsonKey(name: '_kind') Element? kindElement,
-      Expression? expression});
+      FhirExpression? expression});
 
   $ElementCopyWith<$Res>? get kindElement;
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -47170,7 +47170,7 @@ class _$PlanDefinitionConditionCopyWithImpl<$Res,
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ) as $Val);
   }
 
@@ -47188,12 +47188,12 @@ class _$PlanDefinitionConditionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get expression {
+  $FhirExpressionCopyWith<$Res>? get expression {
     if (_value.expression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.expression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.expression!, (value) {
       return _then(_value.copyWith(expression: value) as $Val);
     });
   }
@@ -47213,12 +47213,12 @@ abstract class _$$_PlanDefinitionConditionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirCode? kind,
       @JsonKey(name: '_kind') Element? kindElement,
-      Expression? expression});
+      FhirExpression? expression});
 
   @override
   $ElementCopyWith<$Res>? get kindElement;
   @override
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -47264,7 +47264,7 @@ class __$$_PlanDefinitionConditionCopyWithImpl<$Res>
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ));
   }
 }
@@ -47368,7 +47368,7 @@ class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
   /// [expression] An expression that returns true or false, indicating
   ///  whether the condition is satisfied.
   @override
-  final Expression? expression;
+  final FhirExpression? expression;
 
   @override
   String toString() {
@@ -47426,7 +47426,7 @@ abstract class _PlanDefinitionCondition extends PlanDefinitionCondition {
       final List<FhirExtension>? modifierExtension,
       final FhirCode? kind,
       @JsonKey(name: '_kind') final Element? kindElement,
-      final Expression? expression}) = _$_PlanDefinitionCondition;
+      final FhirExpression? expression}) = _$_PlanDefinitionCondition;
   _PlanDefinitionCondition._() : super._();
 
   factory _PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =
@@ -47478,7 +47478,7 @@ abstract class _PlanDefinitionCondition extends PlanDefinitionCondition {
 
   /// [expression] An expression that returns true or false, indicating
   ///  whether the condition is satisfied.
-  Expression? get expression;
+  FhirExpression? get expression;
   @override
   @JsonKey(ignore: true)
   _$$_PlanDefinitionConditionCopyWith<_$_PlanDefinitionCondition>
@@ -49841,7 +49841,7 @@ mixin _$PlanDefinitionDynamicValue {
 
   /// [expression] An expression specifying the value of the customized
   ///  element.
-  Expression? get expression => throw _privateConstructorUsedError;
+  FhirExpression? get expression => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -49862,10 +49862,10 @@ abstract class $PlanDefinitionDynamicValueCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Expression? expression});
+      FhirExpression? expression});
 
   $ElementCopyWith<$Res>? get pathElement;
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -49913,7 +49913,7 @@ class _$PlanDefinitionDynamicValueCopyWithImpl<$Res,
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ) as $Val);
   }
 
@@ -49931,12 +49931,12 @@ class _$PlanDefinitionDynamicValueCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get expression {
+  $FhirExpressionCopyWith<$Res>? get expression {
     if (_value.expression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.expression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.expression!, (value) {
       return _then(_value.copyWith(expression: value) as $Val);
     });
   }
@@ -49957,12 +49957,12 @@ abstract class _$$_PlanDefinitionDynamicValueCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Expression? expression});
+      FhirExpression? expression});
 
   @override
   $ElementCopyWith<$Res>? get pathElement;
   @override
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -50009,7 +50009,7 @@ class __$$_PlanDefinitionDynamicValueCopyWithImpl<$Res>
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ));
   }
 }
@@ -50121,7 +50121,7 @@ class _$_PlanDefinitionDynamicValue extends _PlanDefinitionDynamicValue {
   /// [expression] An expression specifying the value of the customized
   ///  element.
   @override
-  final Expression? expression;
+  final FhirExpression? expression;
 
   @override
   String toString() {
@@ -50178,7 +50178,7 @@ abstract class _PlanDefinitionDynamicValue extends PlanDefinitionDynamicValue {
       final List<FhirExtension>? modifierExtension,
       final String? path,
       @JsonKey(name: '_path') final Element? pathElement,
-      final Expression? expression}) = _$_PlanDefinitionDynamicValue;
+      final FhirExpression? expression}) = _$_PlanDefinitionDynamicValue;
   _PlanDefinitionDynamicValue._() : super._();
 
   factory _PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =
@@ -50238,7 +50238,7 @@ abstract class _PlanDefinitionDynamicValue extends PlanDefinitionDynamicValue {
 
   /// [expression] An expression specifying the value of the customized
   ///  element.
-  Expression? get expression;
+  FhirExpression? get expression;
   @override
   @JsonKey(ignore: true)
   _$$_PlanDefinitionDynamicValueCopyWith<_$_PlanDefinitionDynamicValue>

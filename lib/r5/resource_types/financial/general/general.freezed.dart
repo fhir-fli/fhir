@@ -10032,7 +10032,7 @@ mixin _$ChargeItemDefinitionApplicability {
   ///  whether the condition is satisfied. When using FHIRPath expressions,
   ///  the %context environment variable must be replaced at runtime with the
   ///  ChargeItem resource to which this definition is applied.
-  Expression? get condition => throw _privateConstructorUsedError;
+  FhirExpression? get condition => throw _privateConstructorUsedError;
 
   /// [effectivePeriod] The period during which the charge item definition
   ///  content was or is planned to be in active use.
@@ -10060,11 +10060,11 @@ abstract class $ChargeItemDefinitionApplicabilityCopyWith<$Res> {
       {@JsonKey(name: 'id') String? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Expression? condition,
+      FhirExpression? condition,
       Period? effectivePeriod,
       RelatedArtifact? relatedArtifact});
 
-  $ExpressionCopyWith<$Res>? get condition;
+  $FhirExpressionCopyWith<$Res>? get condition;
   $PeriodCopyWith<$Res>? get effectivePeriod;
   $RelatedArtifactCopyWith<$Res>? get relatedArtifact;
 }
@@ -10106,7 +10106,7 @@ class _$ChargeItemDefinitionApplicabilityCopyWithImpl<$Res,
       condition: freezed == condition
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       effectivePeriod: freezed == effectivePeriod
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
@@ -10120,12 +10120,12 @@ class _$ChargeItemDefinitionApplicabilityCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get condition {
+  $FhirExpressionCopyWith<$Res>? get condition {
     if (_value.condition == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.condition!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.condition!, (value) {
       return _then(_value.copyWith(condition: value) as $Val);
     });
   }
@@ -10168,12 +10168,12 @@ abstract class _$$_ChargeItemDefinitionApplicabilityCopyWith<$Res>
       {@JsonKey(name: 'id') String? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Expression? condition,
+      FhirExpression? condition,
       Period? effectivePeriod,
       RelatedArtifact? relatedArtifact});
 
   @override
-  $ExpressionCopyWith<$Res>? get condition;
+  $FhirExpressionCopyWith<$Res>? get condition;
   @override
   $PeriodCopyWith<$Res>? get effectivePeriod;
   @override
@@ -10216,7 +10216,7 @@ class __$$_ChargeItemDefinitionApplicabilityCopyWithImpl<$Res>
       condition: freezed == condition
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       effectivePeriod: freezed == effectivePeriod
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
@@ -10323,7 +10323,7 @@ class _$_ChargeItemDefinitionApplicability
   ///  the %context environment variable must be replaced at runtime with the
   ///  ChargeItem resource to which this definition is applied.
   @override
-  final Expression? condition;
+  final FhirExpression? condition;
 
   /// [effectivePeriod] The period during which the charge item definition
   ///  content was or is planned to be in active use.
@@ -10391,7 +10391,7 @@ abstract class _ChargeItemDefinitionApplicability
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          final Expression? condition,
+          final FhirExpression? condition,
           final Period? effectivePeriod,
           final RelatedArtifact? relatedArtifact}) =
       _$_ChargeItemDefinitionApplicability;
@@ -10440,7 +10440,7 @@ abstract class _ChargeItemDefinitionApplicability
   ///  whether the condition is satisfied. When using FHIRPath expressions,
   ///  the %context environment variable must be replaced at runtime with the
   ///  ChargeItem resource to which this definition is applied.
-  Expression? get condition;
+  FhirExpression? get condition;
   @override
 
   /// [effectivePeriod] The period during which the charge item definition

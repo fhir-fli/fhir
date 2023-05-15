@@ -1739,7 +1739,7 @@ _$_RequestGroupCondition _$$_RequestGroupConditionFromJson(
           : Element.fromJson(json['_kind'] as Map<String, dynamic>),
       expression: json['expression'] == null
           ? null
-          : Expression.fromJson(json['expression'] as Map<String, dynamic>),
+          : FhirExpression.fromJson(json['expression'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_RequestGroupConditionToJson(

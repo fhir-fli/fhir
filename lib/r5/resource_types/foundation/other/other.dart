@@ -3194,7 +3194,7 @@ class ParametersParameter with _$ParametersParameter {
     DataRequirement? valueDataRequirement,
 
     /// [valueExpression] Conveys the content if the parameter is a data type.
-    Expression? valueExpression,
+    FhirExpression? valueExpression,
 
     /// [valueParameterDefinition] Conveys the content if the parameter is a
     ///  data type.

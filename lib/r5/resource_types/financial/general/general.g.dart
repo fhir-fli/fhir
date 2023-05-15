@@ -1109,7 +1109,8 @@ _$_ChargeItemDefinitionApplicability
               .toList(),
           condition: json['condition'] == null
               ? null
-              : Expression.fromJson(json['condition'] as Map<String, dynamic>),
+              : FhirExpression.fromJson(
+                  json['condition'] as Map<String, dynamic>),
           effectivePeriod: json['effectivePeriod'] == null
               ? null
               : Period.fromJson(

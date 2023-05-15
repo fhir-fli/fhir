@@ -2202,7 +2202,7 @@ _$_RequestOrchestrationCondition _$$_RequestOrchestrationConditionFromJson(
           : Element.fromJson(json['_kind'] as Map<String, dynamic>),
       expression: json['expression'] == null
           ? null
-          : Expression.fromJson(json['expression'] as Map<String, dynamic>),
+          : FhirExpression.fromJson(json['expression'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_RequestOrchestrationConditionToJson(
@@ -2466,7 +2466,8 @@ _$_RequestOrchestrationDynamicValue
               : Element.fromJson(json['_path'] as Map<String, dynamic>),
           expression: json['expression'] == null
               ? null
-              : Expression.fromJson(json['expression'] as Map<String, dynamic>),
+              : FhirExpression.fromJson(
+                  json['expression'] as Map<String, dynamic>),
         );
 
 Map<String, dynamic> _$$_RequestOrchestrationDynamicValueToJson(

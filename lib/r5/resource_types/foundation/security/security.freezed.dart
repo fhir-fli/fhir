@@ -7538,7 +7538,7 @@ mixin _$ConsentProvision {
 
   /// [expression] A computable (FHIRPath or other) definition of what is
   ///  controlled by this consent.
-  Expression? get expression => throw _privateConstructorUsedError;
+  FhirExpression? get expression => throw _privateConstructorUsedError;
 
   /// [provision] Provisions which provide exceptions to the base provision
   ///  or subprovisions.
@@ -7570,12 +7570,12 @@ abstract class $ConsentProvisionCopyWith<$Res> {
       List<CodeableConcept>? code,
       Period? dataPeriod,
       List<ConsentData>? data,
-      Expression? expression,
+      FhirExpression? expression,
       List<ConsentProvision>? provision});
 
   $PeriodCopyWith<$Res>? get period;
   $PeriodCopyWith<$Res>? get dataPeriod;
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -7663,7 +7663,7 @@ class _$ConsentProvisionCopyWithImpl<$Res, $Val extends ConsentProvision>
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       provision: freezed == provision
           ? _value.provision
           : provision // ignore: cast_nullable_to_non_nullable
@@ -7697,12 +7697,12 @@ class _$ConsentProvisionCopyWithImpl<$Res, $Val extends ConsentProvision>
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get expression {
+  $FhirExpressionCopyWith<$Res>? get expression {
     if (_value.expression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.expression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.expression!, (value) {
       return _then(_value.copyWith(expression: value) as $Val);
     });
   }
@@ -7730,7 +7730,7 @@ abstract class _$$_ConsentProvisionCopyWith<$Res>
       List<CodeableConcept>? code,
       Period? dataPeriod,
       List<ConsentData>? data,
-      Expression? expression,
+      FhirExpression? expression,
       List<ConsentProvision>? provision});
 
   @override
@@ -7738,7 +7738,7 @@ abstract class _$$_ConsentProvisionCopyWith<$Res>
   @override
   $PeriodCopyWith<$Res>? get dataPeriod;
   @override
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -7824,7 +7824,7 @@ class __$$_ConsentProvisionCopyWithImpl<$Res>
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       provision: freezed == provision
           ? _value._provision
           : provision // ignore: cast_nullable_to_non_nullable
@@ -8074,7 +8074,7 @@ class _$_ConsentProvision extends _ConsentProvision {
   /// [expression] A computable (FHIRPath or other) definition of what is
   ///  controlled by this consent.
   @override
-  final Expression? expression;
+  final FhirExpression? expression;
 
   /// [provision] Provisions which provide exceptions to the base provision
   ///  or subprovisions.
@@ -8175,7 +8175,7 @@ abstract class _ConsentProvision extends ConsentProvision {
       final List<CodeableConcept>? code,
       final Period? dataPeriod,
       final List<ConsentData>? data,
-      final Expression? expression,
+      final FhirExpression? expression,
       final List<ConsentProvision>? provision}) = _$_ConsentProvision;
   _ConsentProvision._() : super._();
 
@@ -8270,7 +8270,7 @@ abstract class _ConsentProvision extends ConsentProvision {
 
   /// [expression] A computable (FHIRPath or other) definition of what is
   ///  controlled by this consent.
-  Expression? get expression;
+  FhirExpression? get expression;
   @override
 
   /// [provision] Provisions which provide exceptions to the base provision
@@ -11143,7 +11143,7 @@ mixin _$PermissionData {
   List<Period>? get period => throw _privateConstructorUsedError;
 
   /// [expression] Used when other data selection elements are insufficient.
-  Expression? get expression => throw _privateConstructorUsedError;
+  FhirExpression? get expression => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -11164,9 +11164,9 @@ abstract class $PermissionDataCopyWith<$Res> {
       List<PermissionResource>? resource,
       List<Coding>? security,
       List<Period>? period,
-      Expression? expression});
+      FhirExpression? expression});
 
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -11218,18 +11218,18 @@ class _$PermissionDataCopyWithImpl<$Res, $Val extends PermissionData>
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ) as $Val);
   }
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get expression {
+  $FhirExpressionCopyWith<$Res>? get expression {
     if (_value.expression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.expression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.expression!, (value) {
       return _then(_value.copyWith(expression: value) as $Val);
     });
   }
@@ -11250,10 +11250,10 @@ abstract class _$$_PermissionDataCopyWith<$Res>
       List<PermissionResource>? resource,
       List<Coding>? security,
       List<Period>? period,
-      Expression? expression});
+      FhirExpression? expression});
 
   @override
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -11303,7 +11303,7 @@ class __$$_PermissionDataCopyWithImpl<$Res>
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ));
   }
 }
@@ -11444,7 +11444,7 @@ class _$_PermissionData extends _PermissionData {
 
   /// [expression] Used when other data selection elements are insufficient.
   @override
-  final Expression? expression;
+  final FhirExpression? expression;
 
   @override
   String toString() {
@@ -11502,7 +11502,7 @@ abstract class _PermissionData extends PermissionData {
       final List<PermissionResource>? resource,
       final List<Coding>? security,
       final List<Period>? period,
-      final Expression? expression}) = _$_PermissionData;
+      final FhirExpression? expression}) = _$_PermissionData;
   _PermissionData._() : super._();
 
   factory _PermissionData.fromJson(Map<String, dynamic> json) =
@@ -11558,7 +11558,7 @@ abstract class _PermissionData extends PermissionData {
   @override
 
   /// [expression] Used when other data selection elements are insufficient.
-  Expression? get expression;
+  FhirExpression? get expression;
   @override
   @JsonKey(ignore: true)
   _$$_PermissionDataCopyWith<_$_PermissionData> get copyWith =>

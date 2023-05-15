@@ -903,7 +903,7 @@ _$_ConsentProvision _$$_ConsentProvisionFromJson(Map<String, dynamic> json) =>
           .toList(),
       expression: json['expression'] == null
           ? null
-          : Expression.fromJson(json['expression'] as Map<String, dynamic>),
+          : FhirExpression.fromJson(json['expression'] as Map<String, dynamic>),
       provision: (json['provision'] as List<dynamic>?)
           ?.map((e) => ConsentProvision.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1219,7 +1219,7 @@ _$_PermissionData _$$_PermissionDataFromJson(Map<String, dynamic> json) =>
           .toList(),
       expression: json['expression'] == null
           ? null
-          : Expression.fromJson(json['expression'] as Map<String, dynamic>),
+          : FhirExpression.fromJson(json['expression'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_PermissionDataToJson(_$_PermissionData instance) {

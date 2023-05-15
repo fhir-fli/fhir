@@ -1,5 +1,6 @@
 part of 'resource.dart';
 
+// TODO(Dokotela): does not convert Elements properly
 Resource _resourceFromXml(String xmlString) {
   final Xml2Json myTransformer = Xml2Json();
   myTransformer.parse(xmlString);
@@ -166,7 +167,7 @@ Map<String, dynamic> reformatXmlJsonMap(
               if (isPrimitive(oldType, oldValue as Map<String, dynamic>)) {
                 addIfPrimitive(oldValue, key, fhirField);
               } else {
-                print('168: $oldType $oldValue');
+                // print('168: $oldType $oldValue');
                 newMap[replacedKey] = fhirField.isList
                     ? <Map<String, dynamic>>[
                         reformatXmlJsonMap(oldValue, fhirFieldMap[oldType]!)

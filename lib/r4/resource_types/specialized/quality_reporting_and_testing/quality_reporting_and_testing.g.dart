@@ -529,7 +529,8 @@ _$_MeasurePopulation _$$_MeasurePopulationFromJson(Map<String, dynamic> json) =>
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      criteria: Expression.fromJson(json['criteria'] as Map<String, dynamic>),
+      criteria:
+          FhirExpression.fromJson(json['criteria'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MeasurePopulationToJson(
@@ -572,7 +573,7 @@ _$_MeasureStratifier _$$_MeasureStratifierFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
       criteria: json['criteria'] == null
           ? null
-          : Expression.fromJson(json['criteria'] as Map<String, dynamic>),
+          : FhirExpression.fromJson(json['criteria'] as Map<String, dynamic>),
       component: (json['component'] as List<dynamic>?)
           ?.map((e) => MeasureComponent.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -618,7 +619,8 @@ _$_MeasureComponent _$$_MeasureComponentFromJson(Map<String, dynamic> json) =>
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      criteria: Expression.fromJson(json['criteria'] as Map<String, dynamic>),
+      criteria:
+          FhirExpression.fromJson(json['criteria'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MeasureComponentToJson(_$_MeasureComponent instance) {
@@ -662,7 +664,8 @@ _$_MeasureSupplementalData _$$_MeasureSupplementalDataFromJson(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      criteria: Expression.fromJson(json['criteria'] as Map<String, dynamic>),
+      criteria:
+          FhirExpression.fromJson(json['criteria'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MeasureSupplementalDataToJson(

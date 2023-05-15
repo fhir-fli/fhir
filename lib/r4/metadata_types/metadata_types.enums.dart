@@ -64,7 +64,7 @@ enum TriggerDefinitionType {
   unknown,
 }
 
-enum ExpressionLanguage {
+enum FhirExpressionLanguage {
   @JsonValue('text/cql')
   text_cql,
   @JsonValue('text/fhirpath')

@@ -645,7 +645,7 @@ class FhirList with Resource, _$FhirList {
     @JsonKey(unknownEnumValue: ListMode.unknown) required ListMode mode,
     @JsonKey(name: '_mode') Element? modeElement,
     String? note,
-    List<ListEntry>? entry,
+    List<FhirListEntry>? entry,
     CodeableConcept? emptyReason,
   }) = _FhirList;
 
@@ -678,9 +678,9 @@ class FhirList with Resource, _$FhirList {
 }
 
 @freezed
-class ListEntry with _$ListEntry {
-  ListEntry._();
-  factory ListEntry({
+class FhirListEntry with _$FhirListEntry {
+  FhirListEntry._();
+  factory FhirListEntry({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -691,32 +691,32 @@ class ListEntry with _$ListEntry {
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
     required Reference item,
-  }) = _ListEntry;
+  }) = _FhirListEntry;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
-  factory ListEntry.fromYaml(dynamic yaml) => yaml is String
-      ? ListEntry.fromJson(
+  factory FhirListEntry.fromYaml(dynamic yaml) => yaml is String
+      ? FhirListEntry.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ListEntry.fromJson(
+          ? FhirListEntry.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ListEntry cannot be constructed from input provided,'
+              'FhirListEntry cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ListEntry.fromJson(Map<String, dynamic> json) =>
-      _$ListEntryFromJson(json);
+  factory FhirListEntry.fromJson(Map<String, dynamic> json) =>
+      _$FhirListEntryFromJson(json);
 
-  /// Acts like a constructor, returns a [ListEntry], accepts a
+  /// Acts like a constructor, returns a [FhirListEntry], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ListEntry.fromJsonString(String source) {
+  factory FhirListEntry.fromJsonString(String source) {
     final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ListEntryFromJson(json);
+      return _$FhirListEntryFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');

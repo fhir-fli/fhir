@@ -11820,7 +11820,7 @@ class StructureMapSource with _$StructureMapSource {
 
     /// [defaultValueExpression] A value to use if there is no existing value in
     ///  the source object.
-    Expression? defaultValueExpression,
+    FhirExpression? defaultValueExpression,
 
     /// [defaultValueParameterDefinition] A value to use if there is no existing
     ///  value in the source object.

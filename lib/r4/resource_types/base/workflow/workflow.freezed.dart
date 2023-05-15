@@ -9170,7 +9170,7 @@ mixin _$TaskInput {
       throw _privateConstructorUsedError;
 
   /// [valueExpression] The value of the input parameter as a basic type.
-  Expression? get valueExpression => throw _privateConstructorUsedError;
+  FhirExpression? get valueExpression => throw _privateConstructorUsedError;
 
   /// [valueParameterDefinition] The value of the input parameter as a basic
   ///  type.
@@ -9273,7 +9273,7 @@ abstract class $TaskInputCopyWith<$Res> {
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
       DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
+      FhirExpression? valueExpression,
       ParameterDefinition? valueParameterDefinition,
       RelatedArtifact? valueRelatedArtifact,
       TriggerDefinition? valueTriggerDefinition,
@@ -9325,7 +9325,7 @@ abstract class $TaskInputCopyWith<$Res> {
   $ContactDetailCopyWith<$Res>? get valueContactDetail;
   $ContributorCopyWith<$Res>? get valueContributor;
   $DataRequirementCopyWith<$Res>? get valueDataRequirement;
-  $ExpressionCopyWith<$Res>? get valueExpression;
+  $FhirExpressionCopyWith<$Res>? get valueExpression;
   $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
   $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact;
   $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
@@ -9689,7 +9689,7 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
       valueExpression: freezed == valueExpression
           ? _value.valueExpression
           : valueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       valueParameterDefinition: freezed == valueParameterDefinition
           ? _value.valueParameterDefinition
           : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -10245,12 +10245,12 @@ class _$TaskInputCopyWithImpl<$Res, $Val extends TaskInput>
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get valueExpression {
+  $FhirExpressionCopyWith<$Res>? get valueExpression {
     if (_value.valueExpression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
       return _then(_value.copyWith(valueExpression: value) as $Val);
     });
   }
@@ -10405,7 +10405,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
       DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
+      FhirExpression? valueExpression,
       ParameterDefinition? valueParameterDefinition,
       RelatedArtifact? valueRelatedArtifact,
       TriggerDefinition? valueTriggerDefinition,
@@ -10502,7 +10502,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
   @override
   $DataRequirementCopyWith<$Res>? get valueDataRequirement;
   @override
-  $ExpressionCopyWith<$Res>? get valueExpression;
+  $FhirExpressionCopyWith<$Res>? get valueExpression;
   @override
   $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
   @override
@@ -10870,7 +10870,7 @@ class __$$_TaskInputCopyWithImpl<$Res>
       valueExpression: freezed == valueExpression
           ? _value.valueExpression
           : valueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       valueParameterDefinition: freezed == valueParameterDefinition
           ? _value.valueParameterDefinition
           : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -11325,7 +11325,7 @@ class _$_TaskInput extends _TaskInput {
 
   /// [valueExpression] The value of the input parameter as a basic type.
   @override
-  final Expression? valueExpression;
+  final FhirExpression? valueExpression;
 
   /// [valueParameterDefinition] The value of the input parameter as a basic
   ///  type.
@@ -11652,7 +11652,7 @@ abstract class _TaskInput extends TaskInput {
       final ContactDetail? valueContactDetail,
       final Contributor? valueContributor,
       final DataRequirement? valueDataRequirement,
-      final Expression? valueExpression,
+      final FhirExpression? valueExpression,
       final ParameterDefinition? valueParameterDefinition,
       final RelatedArtifact? valueRelatedArtifact,
       final TriggerDefinition? valueTriggerDefinition,
@@ -11971,7 +11971,7 @@ abstract class _TaskInput extends TaskInput {
   @override
 
   /// [valueExpression] The value of the input parameter as a basic type.
-  Expression? get valueExpression;
+  FhirExpression? get valueExpression;
   @override
 
   /// [valueParameterDefinition] The value of the input parameter as a basic
@@ -12251,7 +12251,7 @@ mixin _$TaskOutput {
       throw _privateConstructorUsedError;
 
   /// [valueExpression] The value of the Output parameter as a basic type.
-  Expression? get valueExpression => throw _privateConstructorUsedError;
+  FhirExpression? get valueExpression => throw _privateConstructorUsedError;
 
   /// [valueParameterDefinition] The value of the Output parameter as a basic
   ///  type.
@@ -12355,7 +12355,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
       DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
+      FhirExpression? valueExpression,
       ParameterDefinition? valueParameterDefinition,
       RelatedArtifact? valueRelatedArtifact,
       TriggerDefinition? valueTriggerDefinition,
@@ -12407,7 +12407,7 @@ abstract class $TaskOutputCopyWith<$Res> {
   $ContactDetailCopyWith<$Res>? get valueContactDetail;
   $ContributorCopyWith<$Res>? get valueContributor;
   $DataRequirementCopyWith<$Res>? get valueDataRequirement;
-  $ExpressionCopyWith<$Res>? get valueExpression;
+  $FhirExpressionCopyWith<$Res>? get valueExpression;
   $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
   $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact;
   $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
@@ -12771,7 +12771,7 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
       valueExpression: freezed == valueExpression
           ? _value.valueExpression
           : valueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       valueParameterDefinition: freezed == valueParameterDefinition
           ? _value.valueParameterDefinition
           : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -13327,12 +13327,12 @@ class _$TaskOutputCopyWithImpl<$Res, $Val extends TaskOutput>
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get valueExpression {
+  $FhirExpressionCopyWith<$Res>? get valueExpression {
     if (_value.valueExpression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
       return _then(_value.copyWith(valueExpression: value) as $Val);
     });
   }
@@ -13488,7 +13488,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
       DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
+      FhirExpression? valueExpression,
       ParameterDefinition? valueParameterDefinition,
       RelatedArtifact? valueRelatedArtifact,
       TriggerDefinition? valueTriggerDefinition,
@@ -13585,7 +13585,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
   @override
   $DataRequirementCopyWith<$Res>? get valueDataRequirement;
   @override
-  $ExpressionCopyWith<$Res>? get valueExpression;
+  $FhirExpressionCopyWith<$Res>? get valueExpression;
   @override
   $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
   @override
@@ -13953,7 +13953,7 @@ class __$$_TaskOutputCopyWithImpl<$Res>
       valueExpression: freezed == valueExpression
           ? _value.valueExpression
           : valueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       valueParameterDefinition: freezed == valueParameterDefinition
           ? _value.valueParameterDefinition
           : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -14407,7 +14407,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   /// [valueExpression] The value of the Output parameter as a basic type.
   @override
-  final Expression? valueExpression;
+  final FhirExpression? valueExpression;
 
   /// [valueParameterDefinition] The value of the Output parameter as a basic
   ///  type.
@@ -14734,7 +14734,7 @@ abstract class _TaskOutput extends TaskOutput {
       final ContactDetail? valueContactDetail,
       final Contributor? valueContributor,
       final DataRequirement? valueDataRequirement,
-      final Expression? valueExpression,
+      final FhirExpression? valueExpression,
       final ParameterDefinition? valueParameterDefinition,
       final RelatedArtifact? valueRelatedArtifact,
       final TriggerDefinition? valueTriggerDefinition,
@@ -15052,7 +15052,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
 
   /// [valueExpression] The value of the Output parameter as a basic type.
-  Expression? get valueExpression;
+  FhirExpression? get valueExpression;
   @override
 
   /// [valueParameterDefinition] The value of the Output parameter as a basic

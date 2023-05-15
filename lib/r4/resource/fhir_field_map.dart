@@ -8287,7 +8287,7 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'source': const FhirField(false, 'Reference'),
     'orderedBy': const FhirField(false, 'CodeableConcept'),
     'note': const FhirField(true, 'Annotation'),
-    'entry': const FhirField(true, 'ListEntry'),
+    'entry': const FhirField(true, 'FhirListEntry'),
     'emptyReason': const FhirField(false, 'CodeableConcept'),
   },
   'List': <String, FhirField>{
@@ -8316,10 +8316,10 @@ final Map<String, Map<String, FhirField>> fhirFieldMap =
     'source': const FhirField(false, 'Reference'),
     'orderedBy': const FhirField(false, 'CodeableConcept'),
     'note': const FhirField(true, 'Annotation'),
-    'entry': const FhirField(true, 'ListEntry'),
+    'entry': const FhirField(true, 'FhirListEntry'),
     'emptyReason': const FhirField(false, 'CodeableConcept'),
   },
-  'ListEntry': <String, FhirField>{
+  'FhirListEntry': <String, FhirField>{
     'id': const FhirField(false, 'String'),
     'extension': const FhirField(true, 'FhirExtension'),
     'modifierExtension': const FhirField(true, 'FhirExtension'),

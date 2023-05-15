@@ -186,7 +186,8 @@ class Appointment with Resource, _$Appointment {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id')
+        String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -660,7 +661,8 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id')
+        String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -903,7 +905,8 @@ class Schedule with Resource, _$Schedule {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id')
+        String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1149,7 +1152,8 @@ class Slot with Resource, _$Slot {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id')
+        String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1478,7 +1482,8 @@ class Task with Resource, _$Task {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id')
+        String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2229,7 +2234,7 @@ class TaskInput with _$TaskInput {
     DataRequirement? valueDataRequirement,
 
     /// [valueExpression] The value of the input parameter as a basic type.
-    Expression? valueExpression,
+    FhirExpression? valueExpression,
 
     /// [valueParameterDefinition] The value of the input parameter as a basic
     ///  type.
@@ -2674,7 +2679,7 @@ class TaskOutput with _$TaskOutput {
     DataRequirement? valueDataRequirement,
 
     /// [valueExpression] The value of the Output parameter as a basic type.
-    Expression? valueExpression,
+    FhirExpression? valueExpression,
 
     /// [valueParameterDefinition] The value of the Output parameter as a basic
     ///  type.
@@ -2845,7 +2850,8 @@ class VerificationResult with Resource, _$VerificationResult {
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id')
+        String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -3219,7 +3225,8 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
   factory VerificationResultAttestation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id')
+        String? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions

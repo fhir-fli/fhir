@@ -304,7 +304,7 @@ mixin _$FhirExtension {
 
   /// [valueExpression] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
-  Expression? get valueExpression => throw _privateConstructorUsedError;
+  FhirExpression? get valueExpression => throw _privateConstructorUsedError;
 
   /// [valueParameterDefinition] Value of extension - must be one of a
   /// constrained set of the data types (see [Extensibility](extensibility.html)
@@ -413,7 +413,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
       DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
+      FhirExpression? valueExpression,
       ParameterDefinition? valueParameterDefinition,
       RelatedArtifact? valueRelatedArtifact,
       TriggerDefinition? valueTriggerDefinition,
@@ -466,7 +466,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
   $ContactDetailCopyWith<$Res>? get valueContactDetail;
   $ContributorCopyWith<$Res>? get valueContributor;
   $DataRequirementCopyWith<$Res>? get valueDataRequirement;
-  $ExpressionCopyWith<$Res>? get valueExpression;
+  $FhirExpressionCopyWith<$Res>? get valueExpression;
   $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
   $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact;
   $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
@@ -838,7 +838,7 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
       valueExpression: freezed == valueExpression
           ? _value.valueExpression
           : valueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       valueParameterDefinition: freezed == valueParameterDefinition
           ? _value.valueParameterDefinition
           : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -1419,12 +1419,12 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get valueExpression {
+  $FhirExpressionCopyWith<$Res>? get valueExpression {
     if (_value.valueExpression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
       return _then(_value.copyWith(valueExpression: value) as $Val);
     });
   }
@@ -1570,7 +1570,7 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
       DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
+      FhirExpression? valueExpression,
       ParameterDefinition? valueParameterDefinition,
       RelatedArtifact? valueRelatedArtifact,
       TriggerDefinition? valueTriggerDefinition,
@@ -1670,7 +1670,7 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
   @override
   $DataRequirementCopyWith<$Res>? get valueDataRequirement;
   @override
-  $ExpressionCopyWith<$Res>? get valueExpression;
+  $FhirExpressionCopyWith<$Res>? get valueExpression;
   @override
   $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
   @override
@@ -2045,7 +2045,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
       valueExpression: freezed == valueExpression
           ? _value.valueExpression
           : valueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       valueParameterDefinition: freezed == valueParameterDefinition
           ? _value.valueParameterDefinition
           : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -2518,7 +2518,7 @@ class _$_FhirExtension extends _FhirExtension {
   /// [valueExpression] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
   @override
-  final Expression? valueExpression;
+  final FhirExpression? valueExpression;
 
   /// [valueParameterDefinition] Value of extension - must be one of a
   /// constrained set of the data types (see [Extensibility](extensibility.html)
@@ -2852,7 +2852,7 @@ abstract class _FhirExtension extends FhirExtension {
       final ContactDetail? valueContactDetail,
       final Contributor? valueContributor,
       final DataRequirement? valueDataRequirement,
-      final Expression? valueExpression,
+      final FhirExpression? valueExpression,
       final ParameterDefinition? valueParameterDefinition,
       final RelatedArtifact? valueRelatedArtifact,
       final TriggerDefinition? valueTriggerDefinition,
@@ -3214,7 +3214,7 @@ abstract class _FhirExtension extends FhirExtension {
 
   /// [valueExpression] Value of extension - must be one of a constrained set
   ///  of the data types (see [Extensibility](extensibility.html) for a list).
-  Expression? get valueExpression;
+  FhirExpression? get valueExpression;
   @override
 
   /// [valueParameterDefinition] Value of extension - must be one of a

@@ -8804,7 +8804,7 @@ mixin _$TriggerDefinition {
   /// [condition] A boolean-valued expression that is evaluated in the
   ///  context of the container of the trigger definition and returns whether
   ///  or not the trigger fires.
-  Expression? get condition => throw _privateConstructorUsedError;
+  FhirExpression? get condition => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -8834,7 +8834,7 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
       FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
       List<DataRequirement>? data,
-      Expression? condition});
+      FhirExpression? condition});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get nameElement;
@@ -8843,7 +8843,7 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
   $ReferenceCopyWith<$Res>? get timingReference;
   $ElementCopyWith<$Res>? get timingDateElement;
   $ElementCopyWith<$Res>? get timingDateTimeElement;
-  $ExpressionCopyWith<$Res>? get condition;
+  $FhirExpressionCopyWith<$Res>? get condition;
 }
 
 /// @nodoc
@@ -8940,7 +8940,7 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
       condition: freezed == condition
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ) as $Val);
   }
 
@@ -9030,12 +9030,12 @@ class _$TriggerDefinitionCopyWithImpl<$Res, $Val extends TriggerDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get condition {
+  $FhirExpressionCopyWith<$Res>? get condition {
     if (_value.condition == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.condition!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.condition!, (value) {
       return _then(_value.copyWith(condition: value) as $Val);
     });
   }
@@ -9065,7 +9065,7 @@ abstract class _$$_TriggerDefinitionCopyWith<$Res>
       FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
       List<DataRequirement>? data,
-      Expression? condition});
+      FhirExpression? condition});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -9082,7 +9082,7 @@ abstract class _$$_TriggerDefinitionCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get timingDateTimeElement;
   @override
-  $ExpressionCopyWith<$Res>? get condition;
+  $FhirExpressionCopyWith<$Res>? get condition;
 }
 
 /// @nodoc
@@ -9177,7 +9177,7 @@ class __$$_TriggerDefinitionCopyWithImpl<$Res>
       condition: freezed == condition
           ? _value.condition
           : condition // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ));
   }
 }
@@ -9321,7 +9321,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   ///  context of the container of the trigger definition and returns whether
   ///  or not the trigger fires.
   @override
-  final Expression? condition;
+  final FhirExpression? condition;
 
   @override
   String toString() {
@@ -9415,7 +9415,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
       final FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime') final Element? timingDateTimeElement,
       final List<DataRequirement>? data,
-      final Expression? condition}) = _$_TriggerDefinition;
+      final FhirExpression? condition}) = _$_TriggerDefinition;
   _TriggerDefinition._() : super._();
 
   factory _TriggerDefinition.fromJson(Map<String, dynamic> json) =
@@ -9508,7 +9508,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   /// [condition] A boolean-valued expression that is evaluated in the
   ///  context of the container of the trigger definition and returns whether
   ///  or not the trigger fires.
-  Expression? get condition;
+  FhirExpression? get condition;
   @override
   @JsonKey(ignore: true)
   _$$_TriggerDefinitionCopyWith<_$_TriggerDefinition> get copyWith =>
@@ -9966,12 +9966,12 @@ abstract class _UsageContext extends UsageContext {
       throw _privateConstructorUsedError;
 }
 
-Expression _$ExpressionFromJson(Map<String, dynamic> json) {
-  return _Expression.fromJson(json);
+FhirExpression _$FhirExpressionFromJson(Map<String, dynamic> json) {
+  return _FhirExpression.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Expression {
+mixin _$FhirExpression {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @JsonKey(name: 'id')
@@ -10027,15 +10027,15 @@ mixin _$Expression {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ExpressionCopyWith<Expression> get copyWith =>
+  $FhirExpressionCopyWith<FhirExpression> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ExpressionCopyWith<$Res> {
-  factory $ExpressionCopyWith(
-          Expression value, $Res Function(Expression) then) =
-      _$ExpressionCopyWithImpl<$Res, Expression>;
+abstract class $FhirExpressionCopyWith<$Res> {
+  factory $FhirExpressionCopyWith(
+          FhirExpression value, $Res Function(FhirExpression) then) =
+      _$FhirExpressionCopyWithImpl<$Res, FhirExpression>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String? fhirId,
@@ -10059,9 +10059,9 @@ abstract class $ExpressionCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ExpressionCopyWithImpl<$Res, $Val extends Expression>
-    implements $ExpressionCopyWith<$Res> {
-  _$ExpressionCopyWithImpl(this._value, this._then);
+class _$FhirExpressionCopyWithImpl<$Res, $Val extends FhirExpression>
+    implements $FhirExpressionCopyWith<$Res> {
+  _$FhirExpressionCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -10198,11 +10198,11 @@ class _$ExpressionCopyWithImpl<$Res, $Val extends Expression>
 }
 
 /// @nodoc
-abstract class _$$_ExpressionCopyWith<$Res>
-    implements $ExpressionCopyWith<$Res> {
-  factory _$$_ExpressionCopyWith(
-          _$_Expression value, $Res Function(_$_Expression) then) =
-      __$$_ExpressionCopyWithImpl<$Res>;
+abstract class _$$_FhirExpressionCopyWith<$Res>
+    implements $FhirExpressionCopyWith<$Res> {
+  factory _$$_FhirExpressionCopyWith(
+          _$_FhirExpression value, $Res Function(_$_FhirExpression) then) =
+      __$$_FhirExpressionCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -10232,11 +10232,11 @@ abstract class _$$_ExpressionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ExpressionCopyWithImpl<$Res>
-    extends _$ExpressionCopyWithImpl<$Res, _$_Expression>
-    implements _$$_ExpressionCopyWith<$Res> {
-  __$$_ExpressionCopyWithImpl(
-      _$_Expression _value, $Res Function(_$_Expression) _then)
+class __$$_FhirExpressionCopyWithImpl<$Res>
+    extends _$FhirExpressionCopyWithImpl<$Res, _$_FhirExpression>
+    implements _$$_FhirExpressionCopyWith<$Res> {
+  __$$_FhirExpressionCopyWithImpl(
+      _$_FhirExpression _value, $Res Function(_$_FhirExpression) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -10255,7 +10255,7 @@ class __$$_ExpressionCopyWithImpl<$Res>
     Object? reference = freezed,
     Object? referenceElement = freezed,
   }) {
-    return _then(_$_Expression(
+    return _then(_$_FhirExpression(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -10310,8 +10310,8 @@ class __$$_ExpressionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Expression extends _Expression {
-  _$_Expression(
+class _$_FhirExpression extends _FhirExpression {
+  _$_FhirExpression(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.description,
@@ -10327,8 +10327,8 @@ class _$_Expression extends _Expression {
       : _extension_ = extension_,
         super._();
 
-  factory _$_Expression.fromJson(Map<String, dynamic> json) =>
-      _$$_ExpressionFromJson(json);
+  factory _$_FhirExpression.fromJson(Map<String, dynamic> json) =>
+      _$$_FhirExpressionFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -10412,14 +10412,14 @@ class _$_Expression extends _Expression {
 
   @override
   String toString() {
-    return 'Expression(fhirId: $fhirId, extension_: $extension_, description: $description, descriptionElement: $descriptionElement, name: $name, nameElement: $nameElement, language: $language, languageElement: $languageElement, expression: $expression, expressionElement: $expressionElement, reference: $reference, referenceElement: $referenceElement)';
+    return 'FhirExpression(fhirId: $fhirId, extension_: $extension_, description: $description, descriptionElement: $descriptionElement, name: $name, nameElement: $nameElement, language: $language, languageElement: $languageElement, expression: $expression, expressionElement: $expressionElement, reference: $reference, referenceElement: $referenceElement)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Expression &&
+            other is _$_FhirExpression &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -10464,19 +10464,19 @@ class _$_Expression extends _Expression {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ExpressionCopyWith<_$_Expression> get copyWith =>
-      __$$_ExpressionCopyWithImpl<_$_Expression>(this, _$identity);
+  _$$_FhirExpressionCopyWith<_$_FhirExpression> get copyWith =>
+      __$$_FhirExpressionCopyWithImpl<_$_FhirExpression>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExpressionToJson(
+    return _$$_FhirExpressionToJson(
       this,
     );
   }
 }
 
-abstract class _Expression extends Expression {
-  factory _Expression(
+abstract class _FhirExpression extends FhirExpression {
+  factory _FhirExpression(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final String? description,
@@ -10489,11 +10489,11 @@ abstract class _Expression extends Expression {
           @JsonKey(name: '_expression') final Element? expressionElement,
           final FhirUri? reference,
           @JsonKey(name: '_reference') final Element? referenceElement}) =
-      _$_Expression;
-  _Expression._() : super._();
+      _$_FhirExpression;
+  _FhirExpression._() : super._();
 
-  factory _Expression.fromJson(Map<String, dynamic> json) =
-      _$_Expression.fromJson;
+  factory _FhirExpression.fromJson(Map<String, dynamic> json) =
+      _$_FhirExpression.fromJson;
 
   @override
 
@@ -10562,6 +10562,6 @@ abstract class _Expression extends Expression {
   Element? get referenceElement;
   @override
   @JsonKey(ignore: true)
-  _$$_ExpressionCopyWith<_$_Expression> get copyWith =>
+  _$$_FhirExpressionCopyWith<_$_FhirExpression> get copyWith =>
       throw _privateConstructorUsedError;
 }

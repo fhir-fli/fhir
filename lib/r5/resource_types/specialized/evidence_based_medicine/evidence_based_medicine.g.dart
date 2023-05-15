@@ -3152,7 +3152,7 @@ _$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
               json['definitionCodeableConcept'] as Map<String, dynamic>),
       definitionExpression: json['definitionExpression'] == null
           ? null
-          : Expression.fromJson(
+          : FhirExpression.fromJson(
               json['definitionExpression'] as Map<String, dynamic>),
       definitionId: json['definitionId'] == null
           ? null

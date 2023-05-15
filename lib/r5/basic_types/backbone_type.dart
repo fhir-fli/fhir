@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod/serverpod.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:

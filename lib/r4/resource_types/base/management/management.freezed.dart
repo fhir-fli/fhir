@@ -10656,7 +10656,7 @@ mixin _$FhirList {
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   /// [entry] Entries in this list.
-  List<ListEntry>? get entry => throw _privateConstructorUsedError;
+  List<FhirListEntry>? get entry => throw _privateConstructorUsedError;
 
   /// [emptyReason] If the list is empty, why the list is empty.
   CodeableConcept? get emptyReason => throw _privateConstructorUsedError;
@@ -10708,7 +10708,7 @@ abstract class $FhirListCopyWith<$Res> {
       Reference? source,
       CodeableConcept? orderedBy,
       List<Annotation>? note,
-      List<ListEntry>? entry,
+      List<FhirListEntry>? entry,
       CodeableConcept? emptyReason});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -10877,7 +10877,7 @@ class _$FhirListCopyWithImpl<$Res, $Val extends FhirList>
       entry: freezed == entry
           ? _value.entry
           : entry // ignore: cast_nullable_to_non_nullable
-              as List<ListEntry>?,
+              as List<FhirListEntry>?,
       emptyReason: freezed == emptyReason
           ? _value.emptyReason
           : emptyReason // ignore: cast_nullable_to_non_nullable
@@ -11097,7 +11097,7 @@ abstract class _$$_FhirListCopyWith<$Res> implements $FhirListCopyWith<$Res> {
       Reference? source,
       CodeableConcept? orderedBy,
       List<Annotation>? note,
-      List<ListEntry>? entry,
+      List<FhirListEntry>? entry,
       CodeableConcept? emptyReason});
 
   @override
@@ -11278,7 +11278,7 @@ class __$$_FhirListCopyWithImpl<$Res>
       entry: freezed == entry
           ? _value._entry
           : entry // ignore: cast_nullable_to_non_nullable
-              as List<ListEntry>?,
+              as List<FhirListEntry>?,
       emptyReason: freezed == emptyReason
           ? _value.emptyReason
           : emptyReason // ignore: cast_nullable_to_non_nullable
@@ -11326,7 +11326,7 @@ class _$_FhirList extends _FhirList {
       this.source,
       this.orderedBy,
       final List<Annotation>? note,
-      final List<ListEntry>? entry,
+      final List<FhirListEntry>? entry,
       this.emptyReason})
       : _contained = contained,
         _extension_ = extension_,
@@ -11558,11 +11558,11 @@ class _$_FhirList extends _FhirList {
   }
 
   /// [entry] Entries in this list.
-  final List<ListEntry>? _entry;
+  final List<FhirListEntry>? _entry;
 
   /// [entry] Entries in this list.
   @override
-  List<ListEntry>? get entry {
+  List<FhirListEntry>? get entry {
     final value = _entry;
     if (value == null) return null;
     if (_entry is EqualUnmodifiableListView) return _entry;
@@ -11715,7 +11715,7 @@ abstract class _FhirList extends FhirList {
       final Reference? source,
       final CodeableConcept? orderedBy,
       final List<Annotation>? note,
-      final List<ListEntry>? entry,
+      final List<FhirListEntry>? entry,
       final CodeableConcept? emptyReason}) = _$_FhirList;
   _FhirList._() : super._();
 
@@ -11874,7 +11874,7 @@ abstract class _FhirList extends FhirList {
   @override
 
   /// [entry] Entries in this list.
-  List<ListEntry>? get entry;
+  List<FhirListEntry>? get entry;
   @override
 
   /// [emptyReason] If the list is empty, why the list is empty.
@@ -11885,12 +11885,12 @@ abstract class _FhirList extends FhirList {
       throw _privateConstructorUsedError;
 }
 
-ListEntry _$ListEntryFromJson(Map<String, dynamic> json) {
-  return _ListEntry.fromJson(json);
+FhirListEntry _$FhirListEntryFromJson(Map<String, dynamic> json) {
+  return _FhirListEntry.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ListEntry {
+mixin _$FhirListEntry {
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   @JsonKey(name: 'id')
@@ -11944,14 +11944,15 @@ mixin _$ListEntry {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ListEntryCopyWith<ListEntry> get copyWith =>
+  $FhirListEntryCopyWith<FhirListEntry> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ListEntryCopyWith<$Res> {
-  factory $ListEntryCopyWith(ListEntry value, $Res Function(ListEntry) then) =
-      _$ListEntryCopyWithImpl<$Res, ListEntry>;
+abstract class $FhirListEntryCopyWith<$Res> {
+  factory $FhirListEntryCopyWith(
+          FhirListEntry value, $Res Function(FhirListEntry) then) =
+      _$FhirListEntryCopyWithImpl<$Res, FhirListEntry>;
   @useResult
   $Res call(
       {@JsonKey(name: 'id') String? fhirId,
@@ -11971,9 +11972,9 @@ abstract class $ListEntryCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ListEntryCopyWithImpl<$Res, $Val extends ListEntry>
-    implements $ListEntryCopyWith<$Res> {
-  _$ListEntryCopyWithImpl(this._value, this._then);
+class _$FhirListEntryCopyWithImpl<$Res, $Val extends FhirListEntry>
+    implements $FhirListEntryCopyWith<$Res> {
+  _$FhirListEntryCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -12079,10 +12080,11 @@ class _$ListEntryCopyWithImpl<$Res, $Val extends ListEntry>
 }
 
 /// @nodoc
-abstract class _$$_ListEntryCopyWith<$Res> implements $ListEntryCopyWith<$Res> {
-  factory _$$_ListEntryCopyWith(
-          _$_ListEntry value, $Res Function(_$_ListEntry) then) =
-      __$$_ListEntryCopyWithImpl<$Res>;
+abstract class _$$_FhirListEntryCopyWith<$Res>
+    implements $FhirListEntryCopyWith<$Res> {
+  factory _$$_FhirListEntryCopyWith(
+          _$_FhirListEntry value, $Res Function(_$_FhirListEntry) then) =
+      __$$_FhirListEntryCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -12107,11 +12109,11 @@ abstract class _$$_ListEntryCopyWith<$Res> implements $ListEntryCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ListEntryCopyWithImpl<$Res>
-    extends _$ListEntryCopyWithImpl<$Res, _$_ListEntry>
-    implements _$$_ListEntryCopyWith<$Res> {
-  __$$_ListEntryCopyWithImpl(
-      _$_ListEntry _value, $Res Function(_$_ListEntry) _then)
+class __$$_FhirListEntryCopyWithImpl<$Res>
+    extends _$FhirListEntryCopyWithImpl<$Res, _$_FhirListEntry>
+    implements _$$_FhirListEntryCopyWith<$Res> {
+  __$$_FhirListEntryCopyWithImpl(
+      _$_FhirListEntry _value, $Res Function(_$_FhirListEntry) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -12127,7 +12129,7 @@ class __$$_ListEntryCopyWithImpl<$Res>
     Object? dateElement = freezed,
     Object? item = null,
   }) {
-    return _then(_$_ListEntry(
+    return _then(_$_FhirListEntry(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -12170,8 +12172,8 @@ class __$$_ListEntryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ListEntry extends _ListEntry {
-  _$_ListEntry(
+class _$_FhirListEntry extends _FhirListEntry {
+  _$_FhirListEntry(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12185,8 +12187,8 @@ class _$_ListEntry extends _ListEntry {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ListEntry.fromJson(Map<String, dynamic> json) =>
-      _$$_ListEntryFromJson(json);
+  factory _$_FhirListEntry.fromJson(Map<String, dynamic> json) =>
+      _$$_FhirListEntryFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -12285,14 +12287,14 @@ class _$_ListEntry extends _ListEntry {
 
   @override
   String toString() {
-    return 'ListEntry(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, flag: $flag, deleted: $deleted, deletedElement: $deletedElement, date: $date, dateElement: $dateElement, item: $item)';
+    return 'FhirListEntry(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, flag: $flag, deleted: $deleted, deletedElement: $deletedElement, date: $date, dateElement: $dateElement, item: $item)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ListEntry &&
+            other is _$_FhirListEntry &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -12325,19 +12327,19 @@ class _$_ListEntry extends _ListEntry {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ListEntryCopyWith<_$_ListEntry> get copyWith =>
-      __$$_ListEntryCopyWithImpl<_$_ListEntry>(this, _$identity);
+  _$$_FhirListEntryCopyWith<_$_FhirListEntry> get copyWith =>
+      __$$_FhirListEntryCopyWithImpl<_$_FhirListEntry>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ListEntryToJson(
+    return _$$_FhirListEntryToJson(
       this,
     );
   }
 }
 
-abstract class _ListEntry extends ListEntry {
-  factory _ListEntry(
+abstract class _FhirListEntry extends FhirListEntry {
+  factory _FhirListEntry(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12346,11 +12348,11 @@ abstract class _ListEntry extends ListEntry {
       @JsonKey(name: '_deleted') final Element? deletedElement,
       final FhirDateTime? date,
       @JsonKey(name: '_date') final Element? dateElement,
-      required final Reference item}) = _$_ListEntry;
-  _ListEntry._() : super._();
+      required final Reference item}) = _$_FhirListEntry;
+  _FhirListEntry._() : super._();
 
-  factory _ListEntry.fromJson(Map<String, dynamic> json) =
-      _$_ListEntry.fromJson;
+  factory _FhirListEntry.fromJson(Map<String, dynamic> json) =
+      _$_FhirListEntry.fromJson;
 
   @override
 
@@ -12413,6 +12415,6 @@ abstract class _ListEntry extends ListEntry {
   Reference get item;
   @override
   @JsonKey(ignore: true)
-  _$$_ListEntryCopyWith<_$_ListEntry> get copyWith =>
+  _$$_FhirListEntryCopyWith<_$_FhirListEntry> get copyWith =>
       throw _privateConstructorUsedError;
 }

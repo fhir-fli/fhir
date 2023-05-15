@@ -646,7 +646,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
               json['defaultValueDataRequirement'] as Map<String, dynamic>),
       defaultValueExpression: json['defaultValueExpression'] == null
           ? null
-          : Expression.fromJson(
+          : FhirExpression.fromJson(
               json['defaultValueExpression'] as Map<String, dynamic>),
       defaultValueParameterDefinition:
           json['defaultValueParameterDefinition'] == null
@@ -896,7 +896,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
               json['fixedDataRequirement'] as Map<String, dynamic>),
       fixedExpression: json['fixedExpression'] == null
           ? null
-          : Expression.fromJson(
+          : FhirExpression.fromJson(
               json['fixedExpression'] as Map<String, dynamic>),
       fixedParameterDefinition: json['fixedParameterDefinition'] == null
           ? null
@@ -1139,7 +1139,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
               json['patternDataRequirement'] as Map<String, dynamic>),
       patternExpression: json['patternExpression'] == null
           ? null
-          : Expression.fromJson(
+          : FhirExpression.fromJson(
               json['patternExpression'] as Map<String, dynamic>),
       patternParameterDefinition: json['patternParameterDefinition'] == null
           ? null
@@ -2222,7 +2222,7 @@ _$_ElementDefinitionExample _$$_ElementDefinitionExampleFromJson(
               json['valueDataRequirement'] as Map<String, dynamic>),
       valueExpression: json['valueExpression'] == null
           ? null
-          : Expression.fromJson(
+          : FhirExpression.fromJson(
               json['valueExpression'] as Map<String, dynamic>),
       valueParameterDefinition: json['valueParameterDefinition'] == null
           ? null

@@ -3763,7 +3763,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueExpression] The value that should be used if there is no
     ///  value stated in the instance (e.g. 'if not otherwise specified, the
     ///  abstract is false').
-    Expression? defaultValueExpression,
+    FhirExpression? defaultValueExpression,
 
     /// [defaultValueParameterDefinition] The value that should be used if
     ///  there is no value stated in the instance (e.g. 'if not otherwise
@@ -4207,7 +4207,7 @@ class ElementDefinition with _$ElementDefinition {
     ///  comparison, non-significant whitespace is ignored, and all values must
     ///  be an exact match (case and accent sensitive). Missing
     ///  elements/attributes must also be missing.
-    Expression? fixedExpression,
+    FhirExpression? fixedExpression,
 
     /// [fixedParameterDefinition] Specifies a value that SHALL be exactly the
     ///  value  for this element in the instance, if present. For purposes of
@@ -5641,7 +5641,7 @@ class ElementDefinition with _$ElementDefinition {
     ///  [Examples of
     ///  Patterns](elementdefinition-examples.html#pattern-examples) for
     ///  examples of pattern usage and the effect it will have.
-    Expression? patternExpression,
+    FhirExpression? patternExpression,
 
     /// [patternParameterDefinition] Specifies a value that each occurrence of
     ///  the element in the instance SHALL follow - that is, any value in the
@@ -7286,7 +7286,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
 
     /// [valueExpression] The actual value for the element, which must be one
     ///  of the types allowed for this element.
-    Expression? valueExpression,
+    FhirExpression? valueExpression,
 
     /// [valueParameterDefinition] The actual value for the element, which must
     ///  be one of the types allowed for this element.

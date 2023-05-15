@@ -1089,7 +1089,7 @@ _$_FhirList _$$_FhirListFromJson(Map<String, dynamic> json) => _$_FhirList(
           ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
           .toList(),
       entry: (json['entry'] as List<dynamic>?)
-          ?.map((e) => ListEntry.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => FhirListEntry.fromJson(e as Map<String, dynamic>))
           .toList(),
       emptyReason: json['emptyReason'] == null
           ? null
@@ -1156,7 +1156,8 @@ const _$ListModeEnumMap = {
   ListMode.unknown: 'unknown',
 };
 
-_$_ListEntry _$$_ListEntryFromJson(Map<String, dynamic> json) => _$_ListEntry(
+_$_FhirListEntry _$$_FhirListEntryFromJson(Map<String, dynamic> json) =>
+    _$_FhirListEntry(
       flag: json['flag'] == null
           ? null
           : CodeableConcept.fromJson(json['flag'] as Map<String, dynamic>),
@@ -1173,7 +1174,7 @@ _$_ListEntry _$$_ListEntryFromJson(Map<String, dynamic> json) => _$_ListEntry(
       item: Reference.fromJson(json['item'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ListEntryToJson(_$_ListEntry instance) {
+Map<String, dynamic> _$$_FhirListEntryToJson(_$_FhirListEntry instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

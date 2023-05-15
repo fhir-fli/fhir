@@ -21478,7 +21478,7 @@ mixin _$RequestOrchestrationCondition {
 
   /// [expression] An expression that returns true or false, indicating
   ///  whether or not the condition is satisfied.
-  Expression? get expression => throw _privateConstructorUsedError;
+  FhirExpression? get expression => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -21500,10 +21500,10 @@ abstract class $RequestOrchestrationConditionCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       FhirCode? kind,
       @JsonKey(name: '_kind') Element? kindElement,
-      Expression? expression});
+      FhirExpression? expression});
 
   $ElementCopyWith<$Res>? get kindElement;
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -21551,7 +21551,7 @@ class _$RequestOrchestrationConditionCopyWithImpl<$Res,
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ) as $Val);
   }
 
@@ -21569,12 +21569,12 @@ class _$RequestOrchestrationConditionCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get expression {
+  $FhirExpressionCopyWith<$Res>? get expression {
     if (_value.expression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.expression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.expression!, (value) {
       return _then(_value.copyWith(expression: value) as $Val);
     });
   }
@@ -21595,12 +21595,12 @@ abstract class _$$_RequestOrchestrationConditionCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       FhirCode? kind,
       @JsonKey(name: '_kind') Element? kindElement,
-      Expression? expression});
+      FhirExpression? expression});
 
   @override
   $ElementCopyWith<$Res>? get kindElement;
   @override
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -21647,7 +21647,7 @@ class __$$_RequestOrchestrationConditionCopyWithImpl<$Res>
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ));
   }
 }
@@ -21752,7 +21752,7 @@ class _$_RequestOrchestrationCondition extends _RequestOrchestrationCondition {
   /// [expression] An expression that returns true or false, indicating
   ///  whether or not the condition is satisfied.
   @override
-  final Expression? expression;
+  final FhirExpression? expression;
 
   @override
   String toString() {
@@ -21810,7 +21810,7 @@ abstract class _RequestOrchestrationCondition
       final List<FhirExtension>? modifierExtension,
       final FhirCode? kind,
       @JsonKey(name: '_kind') final Element? kindElement,
-      final Expression? expression}) = _$_RequestOrchestrationCondition;
+      final FhirExpression? expression}) = _$_RequestOrchestrationCondition;
   _RequestOrchestrationCondition._() : super._();
 
   factory _RequestOrchestrationCondition.fromJson(Map<String, dynamic> json) =
@@ -21862,7 +21862,7 @@ abstract class _RequestOrchestrationCondition
 
   /// [expression] An expression that returns true or false, indicating
   ///  whether or not the condition is satisfied.
-  Expression? get expression;
+  FhirExpression? get expression;
   @override
   @JsonKey(ignore: true)
   _$$_RequestOrchestrationConditionCopyWith<_$_RequestOrchestrationCondition>
@@ -24287,7 +24287,7 @@ mixin _$RequestOrchestrationDynamicValue {
 
   /// [expression] An expression specifying the value of the customized
   ///  element.
-  Expression? get expression => throw _privateConstructorUsedError;
+  FhirExpression? get expression => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -24309,10 +24309,10 @@ abstract class $RequestOrchestrationDynamicValueCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Expression? expression});
+      FhirExpression? expression});
 
   $ElementCopyWith<$Res>? get pathElement;
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -24360,7 +24360,7 @@ class _$RequestOrchestrationDynamicValueCopyWithImpl<$Res,
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ) as $Val);
   }
 
@@ -24378,12 +24378,12 @@ class _$RequestOrchestrationDynamicValueCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get expression {
+  $FhirExpressionCopyWith<$Res>? get expression {
     if (_value.expression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.expression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.expression!, (value) {
       return _then(_value.copyWith(expression: value) as $Val);
     });
   }
@@ -24404,12 +24404,12 @@ abstract class _$$_RequestOrchestrationDynamicValueCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       String? path,
       @JsonKey(name: '_path') Element? pathElement,
-      Expression? expression});
+      FhirExpression? expression});
 
   @override
   $ElementCopyWith<$Res>? get pathElement;
   @override
-  $ExpressionCopyWith<$Res>? get expression;
+  $FhirExpressionCopyWith<$Res>? get expression;
 }
 
 /// @nodoc
@@ -24456,7 +24456,7 @@ class __$$_RequestOrchestrationDynamicValueCopyWithImpl<$Res>
       expression: freezed == expression
           ? _value.expression
           : expression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
     ));
   }
 }
@@ -24570,7 +24570,7 @@ class _$_RequestOrchestrationDynamicValue
   /// [expression] An expression specifying the value of the customized
   ///  element.
   @override
-  final Expression? expression;
+  final FhirExpression? expression;
 
   @override
   String toString() {
@@ -24629,7 +24629,7 @@ abstract class _RequestOrchestrationDynamicValue
       final List<FhirExtension>? modifierExtension,
       final String? path,
       @JsonKey(name: '_path') final Element? pathElement,
-      final Expression? expression}) = _$_RequestOrchestrationDynamicValue;
+      final FhirExpression? expression}) = _$_RequestOrchestrationDynamicValue;
   _RequestOrchestrationDynamicValue._() : super._();
 
   factory _RequestOrchestrationDynamicValue.fromJson(
@@ -24689,7 +24689,7 @@ abstract class _RequestOrchestrationDynamicValue
 
   /// [expression] An expression specifying the value of the customized
   ///  element.
-  Expression? get expression;
+  FhirExpression? get expression;
   @override
   @JsonKey(ignore: true)
   _$$_RequestOrchestrationDynamicValueCopyWith<

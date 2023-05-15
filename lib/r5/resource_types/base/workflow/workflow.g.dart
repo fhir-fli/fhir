@@ -1636,7 +1636,7 @@ _$_TaskInput _$$_TaskInputFromJson(Map<String, dynamic> json) => _$_TaskInput(
               json['valueDataRequirement'] as Map<String, dynamic>),
       valueExpression: json['valueExpression'] == null
           ? null
-          : Expression.fromJson(
+          : FhirExpression.fromJson(
               json['valueExpression'] as Map<String, dynamic>),
       valueParameterDefinition: json['valueParameterDefinition'] == null
           ? null
@@ -1979,7 +1979,7 @@ _$_TaskOutput _$$_TaskOutputFromJson(Map<String, dynamic> json) =>
               json['valueDataRequirement'] as Map<String, dynamic>),
       valueExpression: json['valueExpression'] == null
           ? null
-          : Expression.fromJson(
+          : FhirExpression.fromJson(
               json['valueExpression'] as Map<String, dynamic>),
       valueParameterDefinition: json['valueParameterDefinition'] == null
           ? null
@@ -2589,7 +2589,7 @@ _$_TransportInput _$$_TransportInputFromJson(Map<String, dynamic> json) =>
               json['valueDataRequirement'] as Map<String, dynamic>),
       valueExpression: json['valueExpression'] == null
           ? null
-          : Expression.fromJson(
+          : FhirExpression.fromJson(
               json['valueExpression'] as Map<String, dynamic>),
       valueParameterDefinition: json['valueParameterDefinition'] == null
           ? null
@@ -2932,7 +2932,7 @@ _$_TransportOutput _$$_TransportOutputFromJson(Map<String, dynamic> json) =>
               json['valueDataRequirement'] as Map<String, dynamic>),
       valueExpression: json['valueExpression'] == null
           ? null
-          : Expression.fromJson(
+          : FhirExpression.fromJson(
               json['valueExpression'] as Map<String, dynamic>),
       valueParameterDefinition: json['valueParameterDefinition'] == null
           ? null

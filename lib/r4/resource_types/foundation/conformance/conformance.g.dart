@@ -5119,7 +5119,7 @@ _$_StructureMapSource _$$_StructureMapSourceFromJson(
               json['defaultValueDataRequirement'] as Map<String, dynamic>),
       defaultValueExpression: json['defaultValueExpression'] == null
           ? null
-          : Expression.fromJson(
+          : FhirExpression.fromJson(
               json['defaultValueExpression'] as Map<String, dynamic>),
       defaultValueParameterDefinition:
           json['defaultValueParameterDefinition'] == null

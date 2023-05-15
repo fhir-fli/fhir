@@ -941,7 +941,7 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
 
     /// [expression] An expression specifying the value of the customized
     ///  element.
-    required Expression expression,
+    required FhirExpression expression,
   }) = _ActivityDefinitionDynamicValue;
 
   /// Produces a Yaml formatted String version of the object
@@ -4355,7 +4355,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
 
     /// [expression] An expression that returns true or false, indicating whether
     ///  the condition is satisfied.
-    Expression? expression,
+    FhirExpression? expression,
   }) = _PlanDefinitionCondition;
 
   /// Produces a Yaml formatted String version of the object
@@ -4722,7 +4722,7 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
 
     /// [expression] An expression specifying the value of the customized
     ///  element.
-    Expression? expression,
+    FhirExpression? expression,
   }) = _PlanDefinitionDynamicValue;
 
   /// Produces a Yaml formatted String version of the object

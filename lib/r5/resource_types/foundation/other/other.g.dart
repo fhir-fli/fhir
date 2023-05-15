@@ -1503,7 +1503,7 @@ _$_ParametersParameter _$$_ParametersParameterFromJson(
               json['valueDataRequirement'] as Map<String, dynamic>),
       valueExpression: json['valueExpression'] == null
           ? null
-          : Expression.fromJson(
+          : FhirExpression.fromJson(
               json['valueExpression'] as Map<String, dynamic>),
       valueParameterDefinition: json['valueParameterDefinition'] == null
           ? null

@@ -883,7 +883,7 @@ class MeasurePopulation with _$MeasurePopulation {
 
     /// [criteria] An expression that specifies the criteria for the population,
     ///  typically the name of an expression in a library.
-    required Expression criteria,
+    required FhirExpression criteria,
   }) = _MeasurePopulation;
 
   /// Produces a Yaml formatted String version of the object
@@ -1009,7 +1009,7 @@ class MeasureStratifier with _$MeasureStratifier {
     /// [criteria] An expression that specifies the criteria for the stratifier.
     /// This is typically the name of an expression defined within a referenced
     ///  library, but it may also be a path to a stratifier element.
-    Expression? criteria,
+    FhirExpression? criteria,
 
     /// [component] A component of the stratifier criteria for the measure
     /// report, specified as either the name of a valid CQL expression defined
@@ -1140,7 +1140,7 @@ class MeasureComponent with _$MeasureComponent {
     /// of the stratifier. This is typically the name of an expression defined
     /// within a referenced library, but it may also be a path to a stratifier
     ///  element.
-    required Expression criteria,
+    required FhirExpression criteria,
   }) = _MeasureComponent;
 
   /// Produces a Yaml formatted String version of the object
@@ -1277,7 +1277,7 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
     /// name of a valid expression defined within a referenced library, but it may
     /// also be a path to a specific data element. The criteria defines the data
     ///  to be returned for this element.
-    required Expression criteria,
+    required FhirExpression criteria,
   }) = _MeasureSupplementalData;
 
   /// Produces a Yaml formatted String version of the object

@@ -51491,7 +51491,8 @@ mixin _$StructureMapSource {
 
   /// [defaultValueExpression] A value to use if there is no existing value in
   ///  the source object.
-  Expression? get defaultValueExpression => throw _privateConstructorUsedError;
+  FhirExpression? get defaultValueExpression =>
+      throw _privateConstructorUsedError;
 
   /// [defaultValueParameterDefinition] A value to use if there is no existing
   ///  value in the source object.
@@ -51677,7 +51678,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       ContactDetail? defaultValueContactDetail,
       Contributor? defaultValueContributor,
       DataRequirement? defaultValueDataRequirement,
-      Expression? defaultValueExpression,
+      FhirExpression? defaultValueExpression,
       ParameterDefinition? defaultValueParameterDefinition,
       RelatedArtifact? defaultValueRelatedArtifact,
       TriggerDefinition? defaultValueTriggerDefinition,
@@ -51750,7 +51751,7 @@ abstract class $StructureMapSourceCopyWith<$Res> {
   $ContactDetailCopyWith<$Res>? get defaultValueContactDetail;
   $ContributorCopyWith<$Res>? get defaultValueContributor;
   $DataRequirementCopyWith<$Res>? get defaultValueDataRequirement;
-  $ExpressionCopyWith<$Res>? get defaultValueExpression;
+  $FhirExpressionCopyWith<$Res>? get defaultValueExpression;
   $ParameterDefinitionCopyWith<$Res>? get defaultValueParameterDefinition;
   $RelatedArtifactCopyWith<$Res>? get defaultValueRelatedArtifact;
   $TriggerDefinitionCopyWith<$Res>? get defaultValueTriggerDefinition;
@@ -52168,7 +52169,7 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
       defaultValueExpression: freezed == defaultValueExpression
           ? _value.defaultValueExpression
           : defaultValueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       defaultValueParameterDefinition: freezed ==
               defaultValueParameterDefinition
           ? _value.defaultValueParameterDefinition
@@ -52823,12 +52824,13 @@ class _$StructureMapSourceCopyWithImpl<$Res, $Val extends StructureMapSource>
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get defaultValueExpression {
+  $FhirExpressionCopyWith<$Res>? get defaultValueExpression {
     if (_value.defaultValueExpression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.defaultValueExpression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.defaultValueExpression!,
+        (value) {
       return _then(_value.copyWith(defaultValueExpression: value) as $Val);
     });
   }
@@ -53091,7 +53093,7 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
       ContactDetail? defaultValueContactDetail,
       Contributor? defaultValueContributor,
       DataRequirement? defaultValueDataRequirement,
-      Expression? defaultValueExpression,
+      FhirExpression? defaultValueExpression,
       ParameterDefinition? defaultValueParameterDefinition,
       RelatedArtifact? defaultValueRelatedArtifact,
       TriggerDefinition? defaultValueTriggerDefinition,
@@ -53212,7 +53214,7 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
   @override
   $DataRequirementCopyWith<$Res>? get defaultValueDataRequirement;
   @override
-  $ExpressionCopyWith<$Res>? get defaultValueExpression;
+  $FhirExpressionCopyWith<$Res>? get defaultValueExpression;
   @override
   $ParameterDefinitionCopyWith<$Res>? get defaultValueParameterDefinition;
   @override
@@ -53640,7 +53642,7 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
       defaultValueExpression: freezed == defaultValueExpression
           ? _value.defaultValueExpression
           : defaultValueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       defaultValueParameterDefinition: freezed ==
               defaultValueParameterDefinition
           ? _value.defaultValueParameterDefinition
@@ -54261,7 +54263,7 @@ class _$_StructureMapSource extends _StructureMapSource {
   /// [defaultValueExpression] A value to use if there is no existing value in
   ///  the source object.
   @override
-  final Expression? defaultValueExpression;
+  final FhirExpression? defaultValueExpression;
 
   /// [defaultValueParameterDefinition] A value to use if there is no existing
   ///  value in the source object.
@@ -54692,7 +54694,7 @@ abstract class _StructureMapSource extends StructureMapSource {
       final ContactDetail? defaultValueContactDetail,
       final Contributor? defaultValueContributor,
       final DataRequirement? defaultValueDataRequirement,
-      final Expression? defaultValueExpression,
+      final FhirExpression? defaultValueExpression,
       final ParameterDefinition? defaultValueParameterDefinition,
       final RelatedArtifact? defaultValueRelatedArtifact,
       final TriggerDefinition? defaultValueTriggerDefinition,
@@ -55096,7 +55098,7 @@ abstract class _StructureMapSource extends StructureMapSource {
 
   /// [defaultValueExpression] A value to use if there is no existing value in
   ///  the source object.
-  Expression? get defaultValueExpression;
+  FhirExpression? get defaultValueExpression;
   @override
 
   /// [defaultValueParameterDefinition] A value to use if there is no existing

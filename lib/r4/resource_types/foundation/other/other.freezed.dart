@@ -11707,7 +11707,7 @@ mixin _$ParametersParameter {
       throw _privateConstructorUsedError;
 
   /// [valueExpression] If the parameter is a data type.
-  Expression? get valueExpression => throw _privateConstructorUsedError;
+  FhirExpression? get valueExpression => throw _privateConstructorUsedError;
 
   /// [valueParameterDefinition] If the parameter is a data type.
   ParameterDefinition? get valueParameterDefinition =>
@@ -11817,7 +11817,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
       DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
+      FhirExpression? valueExpression,
       ParameterDefinition? valueParameterDefinition,
       RelatedArtifact? valueRelatedArtifact,
       TriggerDefinition? valueTriggerDefinition,
@@ -11871,7 +11871,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
   $ContactDetailCopyWith<$Res>? get valueContactDetail;
   $ContributorCopyWith<$Res>? get valueContributor;
   $DataRequirementCopyWith<$Res>? get valueDataRequirement;
-  $ExpressionCopyWith<$Res>? get valueExpression;
+  $FhirExpressionCopyWith<$Res>? get valueExpression;
   $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
   $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact;
   $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
@@ -12242,7 +12242,7 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
       valueExpression: freezed == valueExpression
           ? _value.valueExpression
           : valueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       valueParameterDefinition: freezed == valueParameterDefinition
           ? _value.valueParameterDefinition
           : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -12810,12 +12810,12 @@ class _$ParametersParameterCopyWithImpl<$Res, $Val extends ParametersParameter>
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get valueExpression {
+  $FhirExpressionCopyWith<$Res>? get valueExpression {
     if (_value.valueExpression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
       return _then(_value.copyWith(valueExpression: value) as $Val);
     });
   }
@@ -12972,7 +12972,7 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
       ContactDetail? valueContactDetail,
       Contributor? valueContributor,
       DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
+      FhirExpression? valueExpression,
       ParameterDefinition? valueParameterDefinition,
       RelatedArtifact? valueRelatedArtifact,
       TriggerDefinition? valueTriggerDefinition,
@@ -13071,7 +13071,7 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
   @override
   $DataRequirementCopyWith<$Res>? get valueDataRequirement;
   @override
-  $ExpressionCopyWith<$Res>? get valueExpression;
+  $FhirExpressionCopyWith<$Res>? get valueExpression;
   @override
   $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
   @override
@@ -13446,7 +13446,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueExpression: freezed == valueExpression
           ? _value.valueExpression
           : valueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       valueParameterDefinition: freezed == valueParameterDefinition
           ? _value.valueParameterDefinition
           : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -13917,7 +13917,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   /// [valueExpression] If the parameter is a data type.
   @override
-  final Expression? valueExpression;
+  final FhirExpression? valueExpression;
 
   /// [valueParameterDefinition] If the parameter is a data type.
   @override
@@ -14270,7 +14270,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       final ContactDetail? valueContactDetail,
       final Contributor? valueContributor,
       final DataRequirement? valueDataRequirement,
-      final Expression? valueExpression,
+      final FhirExpression? valueExpression,
       final ParameterDefinition? valueParameterDefinition,
       final RelatedArtifact? valueRelatedArtifact,
       final TriggerDefinition? valueTriggerDefinition,
@@ -14596,7 +14596,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
 
   /// [valueExpression] If the parameter is a data type.
-  Expression? get valueExpression;
+  FhirExpression? get valueExpression;
   @override
 
   /// [valueParameterDefinition] If the parameter is a data type.

@@ -3574,7 +3574,7 @@ class RequestGroupCondition with _$RequestGroupCondition {
 
     /// [expression] An expression that returns true or false, indicating whether
     ///  or not the condition is satisfied.
-    Expression? expression,
+    FhirExpression? expression,
   }) = _RequestGroupCondition;
 
   /// Produces a Yaml formatted String version of the object

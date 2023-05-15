@@ -2168,7 +2168,7 @@ class TriggerDefinition with _$TriggerDefinition {
     /// [condition] A boolean-valued expression that is evaluated in the
     ///  context of the container of the trigger definition and returns whether
     ///  or not the trigger fires.
-    Expression? condition,
+    FhirExpression? condition,
   }) = _TriggerDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -2315,19 +2315,19 @@ class UsageContext with _$UsageContext {
   }
 }
 
-/// [Expression] A expression that is evaluated in a specified context and
+/// [FhirExpression] A expression that is evaluated in a specified context and
 ///  returns a value. The context of use of the expression must specify the
 ///  context in which the expression is evaluated, and how the result of the
 ///  expression is used.
 @freezed
-class Expression with _$Expression {
-  /// [Expression] A expression that is evaluated in a specified context and
+class FhirExpression with _$FhirExpression {
+  /// [FhirExpression] A expression that is evaluated in a specified context and
   ///  returns a value. The context of use of the expression must specify the
   ///  context in which the expression is evaluated, and how the result of the
   ///  expression is used.
-  Expression._();
+  FhirExpression._();
 
-  /// [Expression] A expression that is evaluated in a specified context and
+  /// [FhirExpression] A expression that is evaluated in a specified context and
   ///  returns a value. The context of use of the expression must specify the
   ///  context in which the expression is evaluated, and how the result of the
   ///  expression is used.
@@ -2364,7 +2364,7 @@ class Expression with _$Expression {
   ///
   /// [referenceElement] ("_reference") Extensions for reference
   ///
-  factory Expression({
+  factory FhirExpression({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2410,33 +2410,33 @@ class Expression with _$Expression {
 
     /// [referenceElement] ("_reference") Extensions for reference
     @JsonKey(name: '_reference') Element? referenceElement,
-  }) = _Expression;
+  }) = _FhirExpression;
 
   /// Produces a Yaml formatted String version of the object
 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Expression.fromYaml(dynamic yaml) => yaml is String
-      ? Expression.fromJson(
+  factory FhirExpression.fromYaml(dynamic yaml) => yaml is String
+      ? FhirExpression.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Expression.fromJson(
+          ? FhirExpression.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'Expression cannot be constructed from input provided,'
+              'FhirExpression cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Expression.fromJson(Map<String, dynamic> json) =>
-      _$ExpressionFromJson(json);
+  factory FhirExpression.fromJson(Map<String, dynamic> json) =>
+      _$FhirExpressionFromJson(json);
 
-  /// Acts like a constructor, returns a [Expression], accepts a
+  /// Acts like a constructor, returns a [FhirExpression], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory Expression.fromJsonString(String source) {
+  factory FhirExpression.fromJsonString(String source) {
     final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ExpressionFromJson(json);
+      return _$FhirExpressionFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');

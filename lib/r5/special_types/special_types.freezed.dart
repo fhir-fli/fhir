@@ -3971,7 +3971,8 @@ mixin _$ElementDefinition {
   /// [defaultValueExpression] The value that should be used if there is no
   ///  value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-  Expression? get defaultValueExpression => throw _privateConstructorUsedError;
+  FhirExpression? get defaultValueExpression =>
+      throw _privateConstructorUsedError;
 
   /// [defaultValueParameterDefinition] The value that should be used if
   ///  there is no value stated in the instance (e.g. 'if not otherwise
@@ -4446,7 +4447,7 @@ mixin _$ElementDefinition {
   ///  comparison, non-significant whitespace is ignored, and all values must
   ///  be an exact match (case and accent sensitive). Missing
   ///  elements/attributes must also be missing.
-  Expression? get fixedExpression => throw _privateConstructorUsedError;
+  FhirExpression? get fixedExpression => throw _privateConstructorUsedError;
 
   /// [fixedParameterDefinition] Specifies a value that SHALL be exactly the
   ///  value  for this element in the instance, if present. For purposes of
@@ -5862,7 +5863,7 @@ mixin _$ElementDefinition {
   ///  [Examples of
   ///  Patterns](elementdefinition-examples.html#pattern-examples) for
   ///  examples of pattern usage and the effect it will have.
-  Expression? get patternExpression => throw _privateConstructorUsedError;
+  FhirExpression? get patternExpression => throw _privateConstructorUsedError;
 
   /// [patternParameterDefinition] Specifies a value that each occurrence of
   ///  the element in the instance SHALL follow - that is, any value in the
@@ -6524,7 +6525,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Timing? defaultValueTiming,
       ContactDetail? defaultValueContactDetail,
       DataRequirement? defaultValueDataRequirement,
-      Expression? defaultValueExpression,
+      FhirExpression? defaultValueExpression,
       ParameterDefinition? defaultValueParameterDefinition,
       RelatedArtifact? defaultValueRelatedArtifact,
       TriggerDefinition? defaultValueTriggerDefinition,
@@ -6624,7 +6625,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Timing? fixedTiming,
       ContactDetail? fixedContactDetail,
       DataRequirement? fixedDataRequirement,
-      Expression? fixedExpression,
+      FhirExpression? fixedExpression,
       ParameterDefinition? fixedParameterDefinition,
       RelatedArtifact? fixedRelatedArtifact,
       TriggerDefinition? fixedTriggerDefinition,
@@ -6718,7 +6719,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Timing? patternTiming,
       ContactDetail? patternContactDetail,
       DataRequirement? patternDataRequirement,
-      Expression? patternExpression,
+      FhirExpression? patternExpression,
       ParameterDefinition? patternParameterDefinition,
       RelatedArtifact? patternRelatedArtifact,
       TriggerDefinition? patternTriggerDefinition,
@@ -6868,7 +6869,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $TimingCopyWith<$Res>? get defaultValueTiming;
   $ContactDetailCopyWith<$Res>? get defaultValueContactDetail;
   $DataRequirementCopyWith<$Res>? get defaultValueDataRequirement;
-  $ExpressionCopyWith<$Res>? get defaultValueExpression;
+  $FhirExpressionCopyWith<$Res>? get defaultValueExpression;
   $ParameterDefinitionCopyWith<$Res>? get defaultValueParameterDefinition;
   $RelatedArtifactCopyWith<$Res>? get defaultValueRelatedArtifact;
   $TriggerDefinitionCopyWith<$Res>? get defaultValueTriggerDefinition;
@@ -6924,7 +6925,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $TimingCopyWith<$Res>? get fixedTiming;
   $ContactDetailCopyWith<$Res>? get fixedContactDetail;
   $DataRequirementCopyWith<$Res>? get fixedDataRequirement;
-  $ExpressionCopyWith<$Res>? get fixedExpression;
+  $FhirExpressionCopyWith<$Res>? get fixedExpression;
   $ParameterDefinitionCopyWith<$Res>? get fixedParameterDefinition;
   $RelatedArtifactCopyWith<$Res>? get fixedRelatedArtifact;
   $TriggerDefinitionCopyWith<$Res>? get fixedTriggerDefinition;
@@ -6978,7 +6979,7 @@ abstract class $ElementDefinitionCopyWith<$Res> {
   $TimingCopyWith<$Res>? get patternTiming;
   $ContactDetailCopyWith<$Res>? get patternContactDetail;
   $DataRequirementCopyWith<$Res>? get patternDataRequirement;
-  $ExpressionCopyWith<$Res>? get patternExpression;
+  $FhirExpressionCopyWith<$Res>? get patternExpression;
   $ParameterDefinitionCopyWith<$Res>? get patternParameterDefinition;
   $RelatedArtifactCopyWith<$Res>? get patternRelatedArtifact;
   $TriggerDefinitionCopyWith<$Res>? get patternTriggerDefinition;
@@ -7743,7 +7744,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       defaultValueExpression: freezed == defaultValueExpression
           ? _value.defaultValueExpression
           : defaultValueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       defaultValueParameterDefinition: freezed ==
               defaultValueParameterDefinition
           ? _value.defaultValueParameterDefinition
@@ -8057,7 +8058,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       fixedExpression: freezed == fixedExpression
           ? _value.fixedExpression
           : fixedExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       fixedParameterDefinition: freezed == fixedParameterDefinition
           ? _value.fixedParameterDefinition
           : fixedParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -8353,7 +8354,7 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
       patternExpression: freezed == patternExpression
           ? _value.patternExpression
           : patternExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       patternParameterDefinition: freezed == patternParameterDefinition
           ? _value.patternParameterDefinition
           : patternParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -9331,12 +9332,13 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get defaultValueExpression {
+  $FhirExpressionCopyWith<$Res>? get defaultValueExpression {
     if (_value.defaultValueExpression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.defaultValueExpression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.defaultValueExpression!,
+        (value) {
       return _then(_value.copyWith(defaultValueExpression: value) as $Val);
     });
   }
@@ -10015,12 +10017,12 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get fixedExpression {
+  $FhirExpressionCopyWith<$Res>? get fixedExpression {
     if (_value.fixedExpression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.fixedExpression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.fixedExpression!, (value) {
       return _then(_value.copyWith(fixedExpression: value) as $Val);
     });
   }
@@ -10670,12 +10672,12 @@ class _$ElementDefinitionCopyWithImpl<$Res, $Val extends ElementDefinition>
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get patternExpression {
+  $FhirExpressionCopyWith<$Res>? get patternExpression {
     if (_value.patternExpression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.patternExpression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.patternExpression!, (value) {
       return _then(_value.copyWith(patternExpression: value) as $Val);
     });
   }
@@ -11248,7 +11250,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Timing? defaultValueTiming,
       ContactDetail? defaultValueContactDetail,
       DataRequirement? defaultValueDataRequirement,
-      Expression? defaultValueExpression,
+      FhirExpression? defaultValueExpression,
       ParameterDefinition? defaultValueParameterDefinition,
       RelatedArtifact? defaultValueRelatedArtifact,
       TriggerDefinition? defaultValueTriggerDefinition,
@@ -11348,7 +11350,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Timing? fixedTiming,
       ContactDetail? fixedContactDetail,
       DataRequirement? fixedDataRequirement,
-      Expression? fixedExpression,
+      FhirExpression? fixedExpression,
       ParameterDefinition? fixedParameterDefinition,
       RelatedArtifact? fixedRelatedArtifact,
       TriggerDefinition? fixedTriggerDefinition,
@@ -11442,7 +11444,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Timing? patternTiming,
       ContactDetail? patternContactDetail,
       DataRequirement? patternDataRequirement,
-      Expression? patternExpression,
+      FhirExpression? patternExpression,
       ParameterDefinition? patternParameterDefinition,
       RelatedArtifact? patternRelatedArtifact,
       TriggerDefinition? patternTriggerDefinition,
@@ -11651,7 +11653,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $DataRequirementCopyWith<$Res>? get defaultValueDataRequirement;
   @override
-  $ExpressionCopyWith<$Res>? get defaultValueExpression;
+  $FhirExpressionCopyWith<$Res>? get defaultValueExpression;
   @override
   $ParameterDefinitionCopyWith<$Res>? get defaultValueParameterDefinition;
   @override
@@ -11763,7 +11765,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $DataRequirementCopyWith<$Res>? get fixedDataRequirement;
   @override
-  $ExpressionCopyWith<$Res>? get fixedExpression;
+  $FhirExpressionCopyWith<$Res>? get fixedExpression;
   @override
   $ParameterDefinitionCopyWith<$Res>? get fixedParameterDefinition;
   @override
@@ -11871,7 +11873,7 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   $DataRequirementCopyWith<$Res>? get patternDataRequirement;
   @override
-  $ExpressionCopyWith<$Res>? get patternExpression;
+  $FhirExpressionCopyWith<$Res>? get patternExpression;
   @override
   $ParameterDefinitionCopyWith<$Res>? get patternParameterDefinition;
   @override
@@ -12669,7 +12671,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       defaultValueExpression: freezed == defaultValueExpression
           ? _value.defaultValueExpression
           : defaultValueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       defaultValueParameterDefinition: freezed ==
               defaultValueParameterDefinition
           ? _value.defaultValueParameterDefinition
@@ -12983,7 +12985,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       fixedExpression: freezed == fixedExpression
           ? _value.fixedExpression
           : fixedExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       fixedParameterDefinition: freezed == fixedParameterDefinition
           ? _value.fixedParameterDefinition
           : fixedParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -13279,7 +13281,7 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
       patternExpression: freezed == patternExpression
           ? _value.patternExpression
           : patternExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       patternParameterDefinition: freezed == patternParameterDefinition
           ? _value.patternParameterDefinition
           : patternParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -14697,7 +14699,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   ///  value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
   @override
-  final Expression? defaultValueExpression;
+  final FhirExpression? defaultValueExpression;
 
   /// [defaultValueParameterDefinition] The value that should be used if
   ///  there is no value stated in the instance (e.g. 'if not otherwise
@@ -15241,7 +15243,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   ///  be an exact match (case and accent sensitive). Missing
   ///  elements/attributes must also be missing.
   @override
-  final Expression? fixedExpression;
+  final FhirExpression? fixedExpression;
 
   /// [fixedParameterDefinition] Specifies a value that SHALL be exactly the
   ///  value  for this element in the instance, if present. For purposes of
@@ -16723,7 +16725,7 @@ class _$_ElementDefinition extends _ElementDefinition {
   ///  Patterns](elementdefinition-examples.html#pattern-examples) for
   ///  examples of pattern usage and the effect it will have.
   @override
-  final Expression? patternExpression;
+  final FhirExpression? patternExpression;
 
   /// [patternParameterDefinition] Specifies a value that each occurrence of
   ///  the element in the instance SHALL follow - that is, any value in the
@@ -18187,7 +18189,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Timing? defaultValueTiming,
       final ContactDetail? defaultValueContactDetail,
       final DataRequirement? defaultValueDataRequirement,
-      final Expression? defaultValueExpression,
+      final FhirExpression? defaultValueExpression,
       final ParameterDefinition? defaultValueParameterDefinition,
       final RelatedArtifact? defaultValueRelatedArtifact,
       final TriggerDefinition? defaultValueTriggerDefinition,
@@ -18287,7 +18289,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Timing? fixedTiming,
       final ContactDetail? fixedContactDetail,
       final DataRequirement? fixedDataRequirement,
-      final Expression? fixedExpression,
+      final FhirExpression? fixedExpression,
       final ParameterDefinition? fixedParameterDefinition,
       final RelatedArtifact? fixedRelatedArtifact,
       final TriggerDefinition? fixedTriggerDefinition,
@@ -18381,7 +18383,7 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Timing? patternTiming,
       final ContactDetail? patternContactDetail,
       final DataRequirement? patternDataRequirement,
-      final Expression? patternExpression,
+      final FhirExpression? patternExpression,
       final ParameterDefinition? patternParameterDefinition,
       final RelatedArtifact? patternRelatedArtifact,
       final TriggerDefinition? patternTriggerDefinition,
@@ -19091,7 +19093,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   /// [defaultValueExpression] The value that should be used if there is no
   ///  value stated in the instance (e.g. 'if not otherwise specified, the
   ///  abstract is false').
-  Expression? get defaultValueExpression;
+  FhirExpression? get defaultValueExpression;
   @override
 
   /// [defaultValueParameterDefinition] The value that should be used if
@@ -19635,7 +19637,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   ///  comparison, non-significant whitespace is ignored, and all values must
   ///  be an exact match (case and accent sensitive). Missing
   ///  elements/attributes must also be missing.
-  Expression? get fixedExpression;
+  FhirExpression? get fixedExpression;
   @override
 
   /// [fixedParameterDefinition] Specifies a value that SHALL be exactly the
@@ -21117,7 +21119,7 @@ abstract class _ElementDefinition extends ElementDefinition {
   ///  [Examples of
   ///  Patterns](elementdefinition-examples.html#pattern-examples) for
   ///  examples of pattern usage and the effect it will have.
-  Expression? get patternExpression;
+  FhirExpression? get patternExpression;
   @override
 
   /// [patternParameterDefinition] Specifies a value that each occurrence of
@@ -24421,7 +24423,7 @@ mixin _$ElementDefinitionExample {
 
   /// [valueExpression] The actual value for the element, which must be one
   ///  of the types allowed for this element.
-  Expression? get valueExpression => throw _privateConstructorUsedError;
+  FhirExpression? get valueExpression => throw _privateConstructorUsedError;
 
   /// [valueParameterDefinition] The actual value for the element, which must
   ///  be one of the types allowed for this element.
@@ -24542,7 +24544,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
       Timing? valueTiming,
       ContactDetail? valueContactDetail,
       DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
+      FhirExpression? valueExpression,
       ParameterDefinition? valueParameterDefinition,
       RelatedArtifact? valueRelatedArtifact,
       TriggerDefinition? valueTriggerDefinition,
@@ -24598,7 +24600,7 @@ abstract class $ElementDefinitionExampleCopyWith<$Res> {
   $TimingCopyWith<$Res>? get valueTiming;
   $ContactDetailCopyWith<$Res>? get valueContactDetail;
   $DataRequirementCopyWith<$Res>? get valueDataRequirement;
-  $ExpressionCopyWith<$Res>? get valueExpression;
+  $FhirExpressionCopyWith<$Res>? get valueExpression;
   $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
   $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact;
   $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
@@ -24987,7 +24989,7 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res,
       valueExpression: freezed == valueExpression
           ? _value.valueExpression
           : valueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       valueParameterDefinition: freezed == valueParameterDefinition
           ? _value.valueParameterDefinition
           : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -25580,12 +25582,12 @@ class _$ElementDefinitionExampleCopyWithImpl<$Res,
 
   @override
   @pragma('vm:prefer-inline')
-  $ExpressionCopyWith<$Res>? get valueExpression {
+  $FhirExpressionCopyWith<$Res>? get valueExpression {
     if (_value.valueExpression == null) {
       return null;
     }
 
-    return $ExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
+    return $FhirExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
       return _then(_value.copyWith(valueExpression: value) as $Val);
     });
   }
@@ -25771,7 +25773,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
       Timing? valueTiming,
       ContactDetail? valueContactDetail,
       DataRequirement? valueDataRequirement,
-      Expression? valueExpression,
+      FhirExpression? valueExpression,
       ParameterDefinition? valueParameterDefinition,
       RelatedArtifact? valueRelatedArtifact,
       TriggerDefinition? valueTriggerDefinition,
@@ -25874,7 +25876,7 @@ abstract class _$$_ElementDefinitionExampleCopyWith<$Res>
   @override
   $DataRequirementCopyWith<$Res>? get valueDataRequirement;
   @override
-  $ExpressionCopyWith<$Res>? get valueExpression;
+  $FhirExpressionCopyWith<$Res>? get valueExpression;
   @override
   $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
   @override
@@ -26269,7 +26271,7 @@ class __$$_ElementDefinitionExampleCopyWithImpl<$Res>
       valueExpression: freezed == valueExpression
           ? _value.valueExpression
           : valueExpression // ignore: cast_nullable_to_non_nullable
-              as Expression?,
+              as FhirExpression?,
       valueParameterDefinition: freezed == valueParameterDefinition
           ? _value.valueParameterDefinition
           : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
@@ -26808,7 +26810,7 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
   /// [valueExpression] The actual value for the element, which must be one
   ///  of the types allowed for this element.
   @override
-  final Expression? valueExpression;
+  final FhirExpression? valueExpression;
 
   /// [valueParameterDefinition] The actual value for the element, which must
   ///  be one of the types allowed for this element.
@@ -27169,7 +27171,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
       final Timing? valueTiming,
       final ContactDetail? valueContactDetail,
       final DataRequirement? valueDataRequirement,
-      final Expression? valueExpression,
+      final FhirExpression? valueExpression,
       final ParameterDefinition? valueParameterDefinition,
       final RelatedArtifact? valueRelatedArtifact,
       final TriggerDefinition? valueTriggerDefinition,
@@ -27559,7 +27561,7 @@ abstract class _ElementDefinitionExample extends ElementDefinitionExample {
 
   /// [valueExpression] The actual value for the element, which must be one
   ///  of the types allowed for this element.
-  Expression? get valueExpression;
+  FhirExpression? get valueExpression;
   @override
 
   /// [valueParameterDefinition] The actual value for the element, which must
