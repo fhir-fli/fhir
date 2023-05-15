@@ -2,6 +2,8 @@
 // ignore_for_file: sort_unnamed_constructors_first
 // ignore_for_file: sort_constructors_first
 // ignore_for_file: avoid_unused_constructor_parameters
+// ignore_for_file: prefer_mixin
+
 // Dart imports:
 import 'dart:convert';
 
