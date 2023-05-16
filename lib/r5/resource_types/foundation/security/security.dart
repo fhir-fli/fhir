@@ -133,6 +133,7 @@ class AuditEvent with Resource, _$AuditEvent {
     @Default(R5ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: R5ResourceType.AuditEvent)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1192,6 +1193,7 @@ class Consent with Resource, _$Consent {
     @Default(R5ResourceType.Consent)
     @JsonKey(unknownEnumValue: R5ResourceType.Consent)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2169,6 +2171,7 @@ class Permission with Resource, _$Permission {
     @Default(R5ResourceType.Permission)
     @JsonKey(unknownEnumValue: R5ResourceType.Permission)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3025,6 +3028,7 @@ class Provenance with Resource, _$Provenance {
     @Default(R5ResourceType.Provenance)
     @JsonKey(unknownEnumValue: R5ResourceType.Provenance)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.

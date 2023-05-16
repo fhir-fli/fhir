@@ -360,6 +360,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     @Default(R5ResourceType.ActivityDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ActivityDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1285,6 +1286,7 @@ class ActorDefinition with Resource, _$ActorDefinition {
     @Default(R5ResourceType.ActorDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ActorDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1803,6 +1805,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
     @Default(R5ResourceType.ConditionDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ConditionDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2878,6 +2881,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     @Default(R5ResourceType.DeviceDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -5402,6 +5406,7 @@ class EventDefinition with Resource, _$EventDefinition {
     @Default(R5ResourceType.EventDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.EventDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -5889,6 +5894,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
     @Default(R5ResourceType.ExampleScenario)
     @JsonKey(unknownEnumValue: R5ResourceType.ExampleScenario)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -7611,6 +7617,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     @Default(R5ResourceType.ObservationDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ObservationDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -8611,6 +8618,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     @Default(R5ResourceType.PlanDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.PlanDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -11258,6 +11266,7 @@ class Questionnaire with Resource, _$Questionnaire {
     @Default(R5ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -12732,6 +12741,7 @@ class Requirements with Resource, _$Requirements {
     @Default(R5ResourceType.Requirements)
     @JsonKey(unknownEnumValue: R5ResourceType.Requirements)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -13425,6 +13435,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
     @Default(R5ResourceType.SpecimenDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.SpecimenDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.

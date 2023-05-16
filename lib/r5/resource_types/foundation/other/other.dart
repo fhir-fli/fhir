@@ -101,6 +101,7 @@ class Basic with Resource, _$Basic {
     @Default(R5ResourceType.Basic)
     @JsonKey(unknownEnumValue: R5ResourceType.Basic)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -280,6 +281,7 @@ class Binary with Resource, _$Binary {
     @Default(R5ResourceType.Binary)
     @JsonKey(unknownEnumValue: R5ResourceType.Binary)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -427,6 +429,7 @@ class Bundle with Resource, _$Bundle {
     @Default(R5ResourceType.Bundle)
     @JsonKey(unknownEnumValue: R5ResourceType.Bundle)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1346,6 +1349,7 @@ class Linkage with Resource, _$Linkage {
     @Default(R5ResourceType.Linkage)
     @JsonKey(unknownEnumValue: R5ResourceType.Linkage)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1694,6 +1698,7 @@ class MessageHeader with Resource, _$MessageHeader {
     @Default(R5ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2359,6 +2364,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
     @Default(R5ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2684,6 +2690,7 @@ class Parameters with Resource, _$Parameters {
     @Default(R5ResourceType.Parameters)
     @JsonKey(unknownEnumValue: R5ResourceType.Parameters)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3412,6 +3419,7 @@ class Subscription with Resource, _$Subscription {
     @Default(R5ResourceType.Subscription)
     @JsonKey(unknownEnumValue: R5ResourceType.Subscription)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -4002,6 +4010,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     @Default(R5ResourceType.SubscriptionStatus)
     @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -4490,6 +4499,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     @Default(R5ResourceType.SubscriptionTopic)
     @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.

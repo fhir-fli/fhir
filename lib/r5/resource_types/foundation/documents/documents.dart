@@ -187,6 +187,7 @@ class Composition with Resource, _$Composition {
     @Default(R5ResourceType.Composition)
     @JsonKey(unknownEnumValue: R5ResourceType.Composition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1067,6 +1068,7 @@ class DocumentReference with Resource, _$DocumentReference {
     @Default(R5ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: R5ResourceType.DocumentReference)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.

@@ -137,6 +137,8 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
     @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
         R5ResourceType resourceType,
 
+      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
+
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
       @JsonKey(name: 'id') FhirId? fhirId,
@@ -577,6 +579,8 @@ class HealthcareService with Resource, _$HealthcareService {
     @Default(R5ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
         R5ResourceType resourceType,
+
+      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1038,6 +1042,8 @@ class Location with Resource, _$Location {
     @JsonKey(unknownEnumValue: R5ResourceType.Location)
         R5ResourceType resourceType,
 
+      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
+
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
       @JsonKey(name: 'id') FhirId? fhirId,
@@ -1486,6 +1492,8 @@ class Organization with Resource, _$Organization {
     @JsonKey(unknownEnumValue: R5ResourceType.Organization)
         R5ResourceType resourceType,
 
+      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
+
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
       @JsonKey(name: 'id') FhirId? fhirId,
@@ -1873,6 +1881,8 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     @Default(R5ResourceType.OrganizationAffiliation)
     @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
         R5ResourceType resourceType,
+
+      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.

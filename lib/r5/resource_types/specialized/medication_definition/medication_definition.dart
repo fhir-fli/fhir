@@ -152,6 +152,7 @@ class AdministrableProductDefinition
     @Default(R5ResourceType.AdministrableProductDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1002,6 +1003,7 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
     @Default(R5ResourceType.ClinicalUseDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2190,6 +2192,7 @@ class Ingredient with Resource, _$Ingredient {
     @Default(R5ResourceType.Ingredient)
     @JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3084,6 +3087,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
     @Default(R5ResourceType.ManufacturedItemDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3877,6 +3881,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
     @Default(R5ResourceType.MedicinalProductDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -5262,6 +5267,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
     @Default(R5ResourceType.PackagedProductDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -6163,6 +6169,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
     @Default(R5ResourceType.RegulatedAuthorization)
     @JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -6614,6 +6621,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
     @Default(R5ResourceType.SubstanceDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -8496,6 +8504,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
     @Default(R5ResourceType.SubstanceNucleicAcid)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -9188,6 +9197,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
     @Default(R5ResourceType.SubstancePolymer)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -10203,6 +10213,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
     @Default(R5ResourceType.SubstanceProtein)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -10650,6 +10661,7 @@ class SubstanceReferenceInformation
     @Default(R5ResourceType.SubstanceReferenceInformation)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -11311,6 +11323,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
     @Default(R5ResourceType.SubstanceSourceMaterial)
     @JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.

@@ -147,6 +147,7 @@ class Account with Resource, _$Account {
     @Default(R5ResourceType.Account)
     @JsonKey(unknownEnumValue: R5ResourceType.Account)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1277,6 +1278,7 @@ class ChargeItem with Resource, _$ChargeItem {
     @Default(R5ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: R5ResourceType.ChargeItem)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1858,6 +1860,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     @Default(R5ResourceType.ChargeItemDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ChargeItemDefinition)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2670,6 +2673,7 @@ class Contract with Resource, _$Contract {
     @Default(R5ResourceType.Contract)
     @JsonKey(unknownEnumValue: R5ResourceType.Contract)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -5653,6 +5657,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     @Default(R5ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: R5ResourceType.ExplanationOfBenefit)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -10308,6 +10313,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
     @Default(R5ResourceType.InsurancePlan)
     @JsonKey(unknownEnumValue: R5ResourceType.InsurancePlan)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.

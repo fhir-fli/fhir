@@ -118,10 +118,11 @@ class PaymentNotice with Resource, _$PaymentNotice {
     @Default(R5ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -436,10 +437,11 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     @Default(R5ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -768,7 +770,7 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
   factory PaymentReconciliationAllocation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -947,7 +949,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   factory PaymentReconciliationProcessNote({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.

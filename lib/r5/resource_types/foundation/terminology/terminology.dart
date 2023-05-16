@@ -273,6 +273,7 @@ class CodeSystem with Resource, _$CodeSystem {
     @Default(R5ResourceType.CodeSystem)
     @JsonKey(unknownEnumValue: R5ResourceType.CodeSystem)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -571,8 +572,7 @@ class CodeSystem with Resource, _$CodeSystem {
     /// [count] The total number of concepts defined by the code system. Where
     ///  the code system has a compositional grammar, the basis of this count
     ///  is defined by the system steward.
-    @JsonKey(name: 'count')
-    FhirUnsignedInt? codeSystemCount,
+    @JsonKey(name: 'count') FhirUnsignedInt? codeSystemCount,
 
     /// [countElement] ("_count") Extensions for count
     @JsonKey(name: '_count') Element? countElement,
@@ -1639,6 +1639,7 @@ class ConceptMap with Resource, _$ConceptMap {
     @Default(R5ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: R5ResourceType.ConceptMap)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3529,6 +3530,7 @@ class NamingSystem with Resource, _$NamingSystem {
     @Default(R5ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: R5ResourceType.NamingSystem)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -4236,6 +4238,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     @Default(R5ResourceType.TerminologyCapabilities)
     @JsonKey(unknownEnumValue: R5ResourceType.TerminologyCapabilities)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -6072,6 +6075,7 @@ class ValueSet with Resource, _$ValueSet {
     @Default(R5ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: R5ResourceType.ValueSet)
         R5ResourceType resourceType,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
