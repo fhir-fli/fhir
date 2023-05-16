@@ -7,7 +7,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -24,7 +23,6 @@ class Composition with Resource, _$Composition {
     @Default(Dstu2ResourceType.Composition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -230,7 +228,6 @@ class DocumentManifest with Resource, _$DocumentManifest {
     @Default(Dstu2ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -379,7 +376,6 @@ class DocumentReference with Resource, _$DocumentReference {
     @Default(Dstu2ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -624,7 +620,6 @@ class FhirList with Resource, _$FhirList {
     @Default(Dstu2ResourceType.FhirList)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

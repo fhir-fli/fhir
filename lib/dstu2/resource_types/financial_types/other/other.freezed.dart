@@ -22,8 +22,6 @@ ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
 mixin _$ExplanationOfBenefit {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -73,8 +71,6 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
           Dstu2ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -137,7 +133,6 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -167,10 +162,6 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -434,8 +425,6 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
           Dstu2ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -508,7 +497,6 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -538,10 +526,6 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -644,8 +628,6 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
           this.resourceType = Dstu2ResourceType.ExplanationOfBenefit,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -689,9 +671,6 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
   final Dstu2ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -782,7 +761,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 
   @override
   String toString() {
-    return 'ExplanationOfBenefit(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, outcome: $outcome, outcomeElement: $outcomeElement, disposition: $disposition, dispositionElement: $dispositionElement, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, createdElement: $createdElement, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization)';
+    return 'ExplanationOfBenefit(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, request: $request, outcome: $outcome, outcomeElement: $outcomeElement, disposition: $disposition, dispositionElement: $dispositionElement, ruleset: $ruleset, originalRuleset: $originalRuleset, created: $created, createdElement: $createdElement, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization)';
   }
 
   @override
@@ -792,7 +771,6 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
             other is _$_ExplanationOfBenefit &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -839,7 +817,6 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -884,8 +861,6 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   factory _ExplanationOfBenefit(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
           final Dstu2ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -925,9 +900,6 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
   Dstu2ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;

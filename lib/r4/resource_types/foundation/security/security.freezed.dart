@@ -22,8 +22,6 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
 mixin _$AuditEvent {
   @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -161,8 +159,6 @@ abstract class $AuditEventCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -224,7 +220,6 @@ class _$AuditEventCopyWithImpl<$Res, $Val extends AuditEvent>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -256,10 +251,6 @@ class _$AuditEventCopyWithImpl<$Res, $Val extends AuditEvent>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -499,8 +490,6 @@ abstract class _$$_AuditEventCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -571,7 +560,6 @@ class __$$_AuditEventCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -603,10 +591,6 @@ class __$$_AuditEventCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -717,8 +701,6 @@ class _$_AuditEvent extends _AuditEvent {
   _$_AuditEvent(
       {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
           this.resourceType = R4ResourceType.AuditEvent,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -767,9 +749,6 @@ class _$_AuditEvent extends _AuditEvent {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -1001,7 +980,7 @@ class _$_AuditEvent extends _AuditEvent {
 
   @override
   String toString() {
-    return 'AuditEvent(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, subtype: $subtype, action: $action, actionElement: $actionElement, period: $period, recorded: $recorded, recordedElement: $recordedElement, outcome: $outcome, outcomeElement: $outcomeElement, outcomeDesc: $outcomeDesc, outcomeDescElement: $outcomeDescElement, purposeOfEvent: $purposeOfEvent, agent: $agent, source: $source, entity: $entity)';
+    return 'AuditEvent(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, subtype: $subtype, action: $action, actionElement: $actionElement, period: $period, recorded: $recorded, recordedElement: $recordedElement, outcome: $outcome, outcomeElement: $outcomeElement, outcomeDesc: $outcomeDesc, outcomeDescElement: $outcomeDescElement, purposeOfEvent: $purposeOfEvent, agent: $agent, source: $source, entity: $entity)';
   }
 
   @override
@@ -1011,7 +990,6 @@ class _$_AuditEvent extends _AuditEvent {
             other is _$_AuditEvent &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1058,7 +1036,6 @@ class _$_AuditEvent extends _AuditEvent {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
         fhirId,
         meta,
         implicitRules,
@@ -1104,8 +1081,6 @@ abstract class _AuditEvent extends AuditEvent {
   factory _AuditEvent(
       {@JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
           final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -1147,9 +1122,6 @@ abstract class _AuditEvent extends AuditEvent {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -4472,8 +4444,6 @@ Consent _$ConsentFromJson(Map<String, dynamic> json) {
 mixin _$Consent {
   @JsonKey(unknownEnumValue: R4ResourceType.Consent)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -4625,8 +4595,6 @@ abstract class $ConsentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -4688,7 +4656,6 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4721,10 +4688,6 @@ class _$ConsentCopyWithImpl<$Res, $Val extends Consent>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4983,8 +4946,6 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -5055,7 +5016,6 @@ class __$$_ConsentCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5088,10 +5048,6 @@ class __$$_ConsentCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5206,8 +5162,6 @@ class _$_Consent extends _Consent {
   _$_Consent(
       {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
           this.resourceType = R4ResourceType.Consent,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -5257,9 +5211,6 @@ class _$_Consent extends _Consent {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Consent)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -5535,7 +5486,7 @@ class _$_Consent extends _Consent {
 
   @override
   String toString() {
-    return 'Consent(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, scope: $scope, category: $category, patient: $patient, dateTime: $dateTime, dateTimeElement: $dateTimeElement, performer: $performer, organization: $organization, sourceAttachment: $sourceAttachment, sourceReference: $sourceReference, policy: $policy, policyRule: $policyRule, verification: $verification, provision: $provision)';
+    return 'Consent(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, scope: $scope, category: $category, patient: $patient, dateTime: $dateTime, dateTimeElement: $dateTimeElement, performer: $performer, organization: $organization, sourceAttachment: $sourceAttachment, sourceReference: $sourceReference, policy: $policy, policyRule: $policyRule, verification: $verification, provision: $provision)';
   }
 
   @override
@@ -5545,7 +5496,6 @@ class _$_Consent extends _Consent {
             other is _$_Consent &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -5597,7 +5547,6 @@ class _$_Consent extends _Consent {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
         fhirId,
         meta,
         implicitRules,
@@ -5644,8 +5593,6 @@ abstract class _Consent extends Consent {
   factory _Consent(
       {@JsonKey(unknownEnumValue: R4ResourceType.Consent)
           final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -5685,9 +5632,6 @@ abstract class _Consent extends Consent {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Consent)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -8441,8 +8385,6 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {
 mixin _$Provenance {
   @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -8579,8 +8521,6 @@ abstract class $ProvenanceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -8638,7 +8578,6 @@ class _$ProvenanceCopyWithImpl<$Res, $Val extends Provenance>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -8669,10 +8608,6 @@ class _$ProvenanceCopyWithImpl<$Res, $Val extends Provenance>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -8892,8 +8827,6 @@ abstract class _$$_ProvenanceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -8958,7 +8891,6 @@ class __$$_ProvenanceCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -8989,10 +8921,6 @@ class __$$_ProvenanceCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9099,8 +9027,6 @@ class _$_Provenance extends _Provenance {
   _$_Provenance(
       {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
           this.resourceType = R4ResourceType.Provenance,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -9150,9 +9076,6 @@ class _$_Provenance extends _Provenance {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -9413,7 +9336,7 @@ class _$_Provenance extends _Provenance {
 
   @override
   String toString() {
-    return 'Provenance(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, target: $target, occurredPeriod: $occurredPeriod, occurredDateTime: $occurredDateTime, occurredDateTimeElement: $occurredDateTimeElement, recorded: $recorded, recordedElement: $recordedElement, policy: $policy, policyElement: $policyElement, location: $location, reason: $reason, activity: $activity, agent: $agent, entity: $entity, signature: $signature)';
+    return 'Provenance(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, target: $target, occurredPeriod: $occurredPeriod, occurredDateTime: $occurredDateTime, occurredDateTimeElement: $occurredDateTimeElement, recorded: $recorded, recordedElement: $recordedElement, policy: $policy, policyElement: $policyElement, location: $location, reason: $reason, activity: $activity, agent: $agent, entity: $entity, signature: $signature)';
   }
 
   @override
@@ -9423,7 +9346,6 @@ class _$_Provenance extends _Provenance {
             other is _$_Provenance &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -9472,7 +9394,6 @@ class _$_Provenance extends _Provenance {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
         fhirId,
         meta,
         implicitRules,
@@ -9517,8 +9438,6 @@ abstract class _Provenance extends Provenance {
   factory _Provenance(
       {@JsonKey(unknownEnumValue: R4ResourceType.Provenance)
           final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -9558,9 +9477,6 @@ abstract class _Provenance extends Provenance {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.

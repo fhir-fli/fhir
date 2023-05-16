@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -120,8 +119,6 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
 
         /// [resourceType] This is a BiologicallyDerivedProduct resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -879,8 +876,6 @@ class Device with Resource, _$Device {
 
         /// [resourceType] This is a Device resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1877,8 +1872,6 @@ class DeviceMetric with Resource, _$DeviceMetric {
 
         /// [resourceType] This is a DeviceMetric resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2217,7 +2210,6 @@ class NutritionProduct with Resource, _$NutritionProduct {
   factory NutritionProduct({
     /// [resourceType] This is a NutritionProduct resource;
     @Default(R4ResourceType.NutritionProduct) R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id') String? fhirId,
@@ -2741,7 +2733,6 @@ class Substance with Resource, _$Substance {
     @Default(R4ResourceType.Substance)
     @JsonKey(unknownEnumValue: R4ResourceType.Substance)
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

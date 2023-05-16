@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Organization with Resource, _$Organization {
     @Default(Dstu2ResourceType.Organization)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -127,7 +125,6 @@ class HealthcareService with Resource, _$HealthcareService {
     @Default(Dstu2ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -336,7 +333,6 @@ class Group with Resource, _$Group {
     @Default(Dstu2ResourceType.Group)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

@@ -12,7 +12,6 @@ _$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.TestReport) ??
           Stu3ResourceType.TestReport,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -528,7 +527,6 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.TestScript) ??
           Stu3ResourceType.TestScript,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -184,8 +183,6 @@ class Appointment with Resource, _$Appointment {
 
         /// [resourceType] This is a Appointment resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -661,8 +658,6 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
 
         /// [resourceType] This is a AppointmentResponse resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -907,8 +902,6 @@ class Schedule with Resource, _$Schedule {
 
         /// [resourceType] This is a Schedule resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1156,8 +1149,6 @@ class Slot with Resource, _$Slot {
 
         /// [resourceType] This is a Slot resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1488,8 +1479,6 @@ class Task with Resource, _$Task {
 
         /// [resourceType] This is a Task resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2858,8 +2847,6 @@ class VerificationResult with Resource, _$VerificationResult {
 
         /// [resourceType] This is a VerificationResult resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.

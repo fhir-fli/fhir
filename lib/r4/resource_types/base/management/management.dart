@@ -7,7 +7,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -164,8 +163,6 @@ class Encounter with Resource, _$Encounter {
 
         /// [resourceType] This is a Encounter resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1194,8 +1191,6 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
 
         /// [resourceType] This is a EpisodeOfCare resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1663,8 +1658,6 @@ class Flag with Resource, _$Flag {
 
         /// [resourceType] This is a Flag resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2018,8 +2011,6 @@ class Library with Resource, _$Library {
 
         /// [resourceType] This is a Library resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2440,8 +2431,6 @@ class FhirList with Resource, _$FhirList {
 
         /// [resourceType] This is a List resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.

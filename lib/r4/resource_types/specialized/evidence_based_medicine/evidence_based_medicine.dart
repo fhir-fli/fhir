@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -197,7 +196,6 @@ class Citation with Resource, _$Citation {
   /// [citedArtifact] The article or artifact being described.
   factory Citation({
     @Default(R4ResourceType.Citation) R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -2600,7 +2598,6 @@ class Evidence with Resource, _$Evidence {
     @Default(R4ResourceType.Evidence)
     @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -3339,7 +3336,6 @@ class EvidenceReport with Resource, _$EvidenceReport {
   /// [section] The root of the sections that make up the composition.;
   factory EvidenceReport({
     @Default(R4ResourceType.EvidenceReport) R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -3905,7 +3901,6 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     @Default(R4ResourceType.EvidenceVariable)
     @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -4523,7 +4518,6 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
     @Default(R4ResourceType.ResearchDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -4859,7 +4853,6 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
     @Default(R4ResourceType.ResearchElementDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

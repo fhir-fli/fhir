@@ -11,7 +11,6 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Location) ??
           Dstu2ResourceType.Location,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -293,7 +292,6 @@ _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Substance) ??
           Dstu2ResourceType.Substance,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -461,7 +459,6 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Person) ??
           Dstu2ResourceType.Person,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -627,7 +624,6 @@ _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Contract) ??
           Dstu2ResourceType.Contract,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

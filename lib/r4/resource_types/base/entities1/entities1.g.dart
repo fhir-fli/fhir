@@ -12,7 +12,6 @@ _$_FhirEndpoint _$$_FhirEndpointFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Endpoint) ??
           R4ResourceType.Endpoint,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -284,7 +283,6 @@ _$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.HealthcareService) ??
           R4ResourceType.HealthcareService,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -625,7 +623,6 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Location) ??
           R4ResourceType.Location,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -894,7 +891,6 @@ _$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Organization) ??
           R4ResourceType.Organization,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1055,7 +1051,6 @@ _$_OrganizationAffiliation _$$_OrganizationAffiliationFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.OrganizationAffiliation) ??
           R4ResourceType.OrganizationAffiliation,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

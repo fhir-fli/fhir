@@ -12,7 +12,6 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Composition) ??
           Stu3ResourceType.Composition,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -432,7 +431,6 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DocumentManifest) ??
           Stu3ResourceType.DocumentManifest,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -616,7 +614,6 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DocumentReference) ??
           Stu3ResourceType.DocumentReference,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

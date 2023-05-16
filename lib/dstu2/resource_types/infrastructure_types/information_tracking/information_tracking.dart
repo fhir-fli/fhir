@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Questionnaire with Resource, _$Questionnaire {
     @Default(Dstu2ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: '_id') Element? idElement,
     FhirMeta? meta,
@@ -187,7 +185,6 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     @Default(Dstu2ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: '_id') Element? idElement,
     FhirMeta? meta,
@@ -386,7 +383,6 @@ class Provenance with Resource, _$Provenance {
     @Default(Dstu2ResourceType.Provenance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -581,7 +577,6 @@ class AuditEvent with Resource, _$AuditEvent {
     @Default(Dstu2ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

@@ -11,7 +11,6 @@ _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Account) ??
           R4ResourceType.Account,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -350,7 +349,6 @@ _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ChargeItem) ??
           R4ResourceType.ChargeItem,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -598,7 +596,6 @@ _$_ChargeItemDefinition _$$_ChargeItemDefinitionFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ChargeItemDefinition) ??
           R4ResourceType.ChargeItemDefinition,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -941,7 +938,6 @@ _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Contract) ??
           R4ResourceType.Contract,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2237,7 +2233,6 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ExplanationOfBenefit) ??
           R4ResourceType.ExplanationOfBenefit,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -3991,7 +3986,6 @@ _$_InsurancePlan _$$_InsurancePlanFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.InsurancePlan) ??
           R4ResourceType.InsurancePlan,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

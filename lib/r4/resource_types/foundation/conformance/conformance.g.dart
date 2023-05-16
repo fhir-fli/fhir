@@ -13,7 +13,6 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CapabilityStatement) ??
           R4ResourceType.CapabilityStatement,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1139,7 +1138,6 @@ _$_CompartmentDefinition _$$_CompartmentDefinitionFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CompartmentDefinition) ??
           R4ResourceType.CompartmentDefinition,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1341,7 +1339,6 @@ _$_ExampleScenario _$$_ExampleScenarioFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ExampleScenario) ??
           R4ResourceType.ExampleScenario,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1970,7 +1967,6 @@ _$_GraphDefinition _$$_GraphDefinitionFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.GraphDefinition) ??
           R4ResourceType.GraphDefinition,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2303,7 +2299,6 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ImplementationGuide) ??
           R4ResourceType.ImplementationGuide,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -3076,7 +3071,6 @@ _$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MessageDefinition) ??
           R4ResourceType.MessageDefinition,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -3377,7 +3371,6 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.OperationDefinition) ??
           R4ResourceType.OperationDefinition,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -3822,7 +3815,6 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.SearchParameter) ??
           R4ResourceType.SearchParameter,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -4101,7 +4093,6 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.StructureDefinition) ??
           R4ResourceType.StructureDefinition,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -4501,7 +4492,6 @@ _$_StructureMap _$$_StructureMapFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.StructureMap) ??
           R4ResourceType.StructureMap,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

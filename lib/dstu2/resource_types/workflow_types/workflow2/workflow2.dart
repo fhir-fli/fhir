@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class ProcessRequest with Resource, _$ProcessRequest {
     @Default(Dstu2ResourceType.ProcessRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -126,7 +124,6 @@ class ProcessResponse with Resource, _$ProcessResponse {
     @Default(Dstu2ResourceType.ProcessResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -227,7 +224,6 @@ class SupplyRequest with Resource, _$SupplyRequest {
     @Default(Dstu2ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -330,7 +326,6 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     @Default(Dstu2ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

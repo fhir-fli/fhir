@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -137,11 +136,10 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
     @Default(R5ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -355,7 +353,7 @@ class FhirEndpointPayload with _$FhirEndpointPayload {
   factory FhirEndpointPayload({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -579,11 +577,10 @@ class HealthcareService with Resource, _$HealthcareService {
     @Default(R5ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -836,7 +833,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   factory HealthcareServiceEligibility({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1040,11 +1037,10 @@ class Location with Resource, _$Location {
     @Default(R5ResourceType.Location)
     @JsonKey(unknownEnumValue: R5ResourceType.Location)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1290,7 +1286,7 @@ class LocationPosition with _$LocationPosition {
   factory LocationPosition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1489,11 +1485,10 @@ class Organization with Resource, _$Organization {
     @Default(R5ResourceType.Organization)
     @JsonKey(unknownEnumValue: R5ResourceType.Organization)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1699,7 +1694,7 @@ class OrganizationQualification with _$OrganizationQualification {
   factory OrganizationQualification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1878,11 +1873,10 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     @Default(R5ResourceType.OrganizationAffiliation)
     @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not

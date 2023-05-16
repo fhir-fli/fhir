@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -225,7 +224,6 @@ class Appointment with Resource, _$Appointment {
     @Default(R5ResourceType.Appointment)
     @JsonKey(unknownEnumValue: R5ResourceType.Appointment)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1404,7 +1402,6 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     @Default(R5ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1692,7 +1689,6 @@ class Schedule with Resource, _$Schedule {
     @Default(R5ResourceType.Schedule)
     @JsonKey(unknownEnumValue: R5ResourceType.Schedule)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1952,7 +1948,6 @@ class Slot with Resource, _$Slot {
     @Default(R5ResourceType.Slot)
     @JsonKey(unknownEnumValue: R5ResourceType.Slot)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2294,7 +2289,6 @@ class Task with Resource, _$Task {
     @Default(R5ResourceType.Task)
     @JsonKey(unknownEnumValue: R5ResourceType.Task)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3937,7 +3931,6 @@ class Transport with Resource, _$Transport {
     @Default(R5ResourceType.Transport)
     @JsonKey(unknownEnumValue: R5ResourceType.Transport)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -5405,7 +5398,6 @@ class VerificationResult with Resource, _$VerificationResult {
     @Default(R5ResourceType.VerificationResult)
     @JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.

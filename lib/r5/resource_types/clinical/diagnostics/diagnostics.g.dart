@@ -12,7 +12,6 @@ _$_BodyStructure _$$_BodyStructureFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.BodyStructure) ??
           R5ResourceType.BodyStructure,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -427,7 +426,6 @@ _$_DiagnosticReport _$$_DiagnosticReportFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DiagnosticReport) ??
           R5ResourceType.DiagnosticReport,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -671,7 +669,6 @@ _$_GenomicStudy _$$_GenomicStudyFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.GenomicStudy) ??
           R5ResourceType.GenomicStudy,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1091,7 +1088,6 @@ _$_ImagingSelection _$$_ImagingSelectionFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ImagingSelection) ??
           R5ResourceType.ImagingSelection,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1449,7 +1445,6 @@ _$_ImagingStudy _$$_ImagingStudyFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ImagingStudy) ??
           R5ResourceType.ImagingStudy,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1789,7 +1784,6 @@ _$_MolecularSequence _$$_MolecularSequenceFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.MolecularSequence) ??
           R5ResourceType.MolecularSequence,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2100,7 +2094,6 @@ _$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Observation) ??
           R5ResourceType.Observation,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2618,7 +2611,6 @@ _$_QuestionnaireResponse _$$_QuestionnaireResponseFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.QuestionnaireResponse) ??
           R5ResourceType.QuestionnaireResponse,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2908,7 +2900,6 @@ _$_Specimen _$$_SpecimenFromJson(Map<String, dynamic> json) => _$_Specimen(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Specimen) ??
           R5ResourceType.Specimen,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

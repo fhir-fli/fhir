@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Observation with Resource, _$Observation {
     @Default(Dstu2ResourceType.Observation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Observation)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: '_id') Element? idElement,
     FhirMeta? meta,
@@ -255,7 +253,6 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     @Default(Dstu2ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -369,7 +366,6 @@ class DiagnosticOrder with Resource, _$DiagnosticOrder {
     @Default(Dstu2ResourceType.DiagnosticOrder)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -518,7 +514,6 @@ class Specimen with Resource, _$Specimen {
     @Default(Dstu2ResourceType.Specimen)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -718,7 +713,6 @@ class BodySite with Resource, _$BodySite {
     @Default(Dstu2ResourceType.BodySite)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -770,7 +764,6 @@ class ImagingStudy with Resource, _$ImagingStudy {
     @Default(Dstu2ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -945,7 +938,6 @@ class ImagingObjectSelection with Resource, _$ImagingObjectSelection {
     @Default(Dstu2ResourceType.ImagingObjectSelection)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

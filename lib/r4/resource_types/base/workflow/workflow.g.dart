@@ -12,7 +12,6 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Appointment) ??
           R4ResourceType.Appointment,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -401,7 +400,6 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.AppointmentResponse) ??
           R4ResourceType.AppointmentResponse,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -509,7 +507,6 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Schedule) ??
           R4ResourceType.Schedule,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -612,7 +609,6 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Slot) ??
           R4ResourceType.Slot,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -733,7 +729,6 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Task) ??
           R4ResourceType.Task,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1634,7 +1629,6 @@ _$_VerificationResult _$$_VerificationResultFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.VerificationResult) ??
           R4ResourceType.VerificationResult,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

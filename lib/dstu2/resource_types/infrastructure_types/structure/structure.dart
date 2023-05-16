@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Media with Resource, _$Media {
     @Default(Dstu2ResourceType.Media)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -85,7 +83,6 @@ class Binary with Resource, _$Binary {
     @Default(Dstu2ResourceType.Binary)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -131,7 +128,6 @@ class Bundle with Resource, _$Bundle {
     @Default(Dstu2ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -465,7 +461,6 @@ class Basic with Resource, _$Basic {
     @Default(Dstu2ResourceType.Basic)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

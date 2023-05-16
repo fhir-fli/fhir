@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @Default(Dstu2ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -357,7 +355,6 @@ class TestScript with Resource, _$TestScript {
     @Default(Dstu2ResourceType.TestScript)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

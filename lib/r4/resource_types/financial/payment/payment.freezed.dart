@@ -22,8 +22,6 @@ PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) {
 mixin _$PaymentNotice {
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -158,8 +156,6 @@ abstract class $PaymentNoticeCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -224,7 +220,6 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -256,10 +251,6 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -543,8 +534,6 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -622,7 +611,6 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -654,10 +642,6 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -768,8 +752,6 @@ class _$_PaymentNotice extends _PaymentNotice {
   _$_PaymentNotice(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
           this.resourceType = R4ResourceType.PaymentNotice,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -814,9 +796,6 @@ class _$_PaymentNotice extends _PaymentNotice {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -1019,7 +998,7 @@ class _$_PaymentNotice extends _PaymentNotice {
 
   @override
   String toString() {
-    return 'PaymentNotice(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, request: $request, response: $response, created: $created, createdElement: $createdElement, provider: $provider, payment: $payment, paymentDate: $paymentDate, paymentDateElement: $paymentDateElement, payee: $payee, recipient: $recipient, amount: $amount, paymentStatus: $paymentStatus)';
+    return 'PaymentNotice(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, request: $request, response: $response, created: $created, createdElement: $createdElement, provider: $provider, payment: $payment, paymentDate: $paymentDate, paymentDateElement: $paymentDateElement, payee: $payee, recipient: $recipient, amount: $amount, paymentStatus: $paymentStatus)';
   }
 
   @override
@@ -1029,7 +1008,6 @@ class _$_PaymentNotice extends _PaymentNotice {
             other is _$_PaymentNotice &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1078,7 +1056,6 @@ class _$_PaymentNotice extends _PaymentNotice {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
         fhirId,
         meta,
         implicitRules,
@@ -1124,8 +1101,6 @@ abstract class _PaymentNotice extends PaymentNotice {
   factory _PaymentNotice(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
           final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -1166,9 +1141,6 @@ abstract class _PaymentNotice extends PaymentNotice {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -1326,8 +1298,6 @@ PaymentReconciliation _$PaymentReconciliationFromJson(
 mixin _$PaymentReconciliation {
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -1485,8 +1455,6 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -1560,7 +1528,6 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1597,10 +1564,6 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1924,8 +1887,6 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -2012,7 +1973,6 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2049,10 +2009,6 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2183,8 +2139,6 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
           this.resourceType = R4ResourceType.PaymentReconciliation,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -2238,9 +2192,6 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -2489,7 +2440,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 
   @override
   String toString() {
-    return 'PaymentReconciliation(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, period: $period, created: $created, createdElement: $createdElement, paymentIssuer: $paymentIssuer, request: $request, requestor: $requestor, outcome: $outcome, outcomeElement: $outcomeElement, disposition: $disposition, dispositionElement: $dispositionElement, paymentDate: $paymentDate, paymentDateElement: $paymentDateElement, paymentAmount: $paymentAmount, paymentIdentifier: $paymentIdentifier, detail: $detail, formCode: $formCode, processNote: $processNote)';
+    return 'PaymentReconciliation(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, period: $period, created: $created, createdElement: $createdElement, paymentIssuer: $paymentIssuer, request: $request, requestor: $requestor, outcome: $outcome, outcomeElement: $outcomeElement, disposition: $disposition, dispositionElement: $dispositionElement, paymentDate: $paymentDate, paymentDateElement: $paymentDateElement, paymentAmount: $paymentAmount, paymentIdentifier: $paymentIdentifier, detail: $detail, formCode: $formCode, processNote: $processNote)';
   }
 
   @override
@@ -2499,7 +2450,6 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
             other is _$_PaymentReconciliation &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -2558,7 +2508,6 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
         fhirId,
         meta,
         implicitRules,
@@ -2610,8 +2559,6 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   factory _PaymentReconciliation(
           {@JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
               final R4ResourceType resourceType,
-          @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-              final int? id,
           @JsonKey(name: 'id')
               final String? fhirId,
           final FhirMeta? meta,
@@ -2660,9 +2607,6 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.

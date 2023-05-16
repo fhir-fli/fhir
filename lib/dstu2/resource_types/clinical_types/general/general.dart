@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     @Default(Dstu2ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.AllergyIntolerance)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -149,7 +147,6 @@ class Condition with Resource, _$Condition {
     @Default(Dstu2ResourceType.Condition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Condition)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -315,7 +312,6 @@ class Procedure with Resource, _$Procedure {
     @Default(Dstu2ResourceType.Procedure)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Procedure)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -474,7 +470,6 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
     @Default(Dstu2ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ClinicalImpression)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -661,7 +656,6 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     @Default(Dstu2ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.FamilyMemberHistory)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -788,7 +782,6 @@ class RiskAssessment with Resource, _$RiskAssessment {
     @Default(Dstu2ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.RiskAssessment)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -898,7 +891,6 @@ class DetectedIssue with Resource, _$DetectedIssue {
     @Default(Dstu2ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DetectedIssue)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

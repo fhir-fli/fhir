@@ -23,8 +23,6 @@ mixin _$PaymentNotice {
   /// [resourceType] This is a PaymentNotice resource
   @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -163,8 +161,6 @@ abstract class $PaymentNoticeCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -229,7 +225,6 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -261,10 +256,6 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -552,8 +543,6 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -631,7 +620,6 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -663,10 +651,6 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -777,8 +761,6 @@ class _$_PaymentNotice extends _PaymentNotice {
   _$_PaymentNotice(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
           this.resourceType = R5ResourceType.PaymentNotice,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -824,9 +806,6 @@ class _$_PaymentNotice extends _PaymentNotice {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -1035,7 +1014,7 @@ class _$_PaymentNotice extends _PaymentNotice {
 
   @override
   String toString() {
-    return 'PaymentNotice(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, request: $request, response: $response, created: $created, createdElement: $createdElement, reporter: $reporter, payment: $payment, paymentDate: $paymentDate, paymentDateElement: $paymentDateElement, payee: $payee, recipient: $recipient, amount: $amount, paymentStatus: $paymentStatus)';
+    return 'PaymentNotice(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, request: $request, response: $response, created: $created, createdElement: $createdElement, reporter: $reporter, payment: $payment, paymentDate: $paymentDate, paymentDateElement: $paymentDateElement, payee: $payee, recipient: $recipient, amount: $amount, paymentStatus: $paymentStatus)';
   }
 
   @override
@@ -1045,7 +1024,6 @@ class _$_PaymentNotice extends _PaymentNotice {
             other is _$_PaymentNotice &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1094,7 +1072,6 @@ class _$_PaymentNotice extends _PaymentNotice {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -1140,8 +1117,6 @@ abstract class _PaymentNotice extends PaymentNotice {
   factory _PaymentNotice(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -1184,9 +1159,6 @@ abstract class _PaymentNotice extends PaymentNotice {
   /// [resourceType] This is a PaymentNotice resource
   @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -1349,8 +1321,6 @@ mixin _$PaymentReconciliation {
   /// [resourceType] This is a PaymentReconciliation resource
   @JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -1593,8 +1563,6 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1708,7 +1676,6 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1765,10 +1732,6 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2336,8 +2299,6 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -2478,7 +2439,6 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2535,10 +2495,6 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2749,8 +2705,6 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
           this.resourceType = R5ResourceType.PaymentReconciliation,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -2831,9 +2785,6 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -3190,7 +3141,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 
   @override
   String toString() {
-    return 'PaymentReconciliation(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, status: $status, statusElement: $statusElement, kind: $kind, period: $period, created: $created, createdElement: $createdElement, enterer: $enterer, issuerType: $issuerType, paymentIssuer: $paymentIssuer, request: $request, requestor: $requestor, outcome: $outcome, outcomeElement: $outcomeElement, disposition: $disposition, dispositionElement: $dispositionElement, date: $date, dateElement: $dateElement, location: $location, method: $method, cardBrand: $cardBrand, cardBrandElement: $cardBrandElement, accountNumber: $accountNumber, accountNumberElement: $accountNumberElement, expirationDate: $expirationDate, expirationDateElement: $expirationDateElement, processor: $processor, processorElement: $processorElement, referenceNumber: $referenceNumber, referenceNumberElement: $referenceNumberElement, authorization: $authorization, authorizationElement: $authorizationElement, tenderedAmount: $tenderedAmount, returnedAmount: $returnedAmount, amount: $amount, paymentIdentifier: $paymentIdentifier, allocation: $allocation, formCode: $formCode, processNote: $processNote)';
+    return 'PaymentReconciliation(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, status: $status, statusElement: $statusElement, kind: $kind, period: $period, created: $created, createdElement: $createdElement, enterer: $enterer, issuerType: $issuerType, paymentIssuer: $paymentIssuer, request: $request, requestor: $requestor, outcome: $outcome, outcomeElement: $outcomeElement, disposition: $disposition, dispositionElement: $dispositionElement, date: $date, dateElement: $dateElement, location: $location, method: $method, cardBrand: $cardBrand, cardBrandElement: $cardBrandElement, accountNumber: $accountNumber, accountNumberElement: $accountNumberElement, expirationDate: $expirationDate, expirationDateElement: $expirationDateElement, processor: $processor, processorElement: $processorElement, referenceNumber: $referenceNumber, referenceNumberElement: $referenceNumberElement, authorization: $authorization, authorizationElement: $authorizationElement, tenderedAmount: $tenderedAmount, returnedAmount: $returnedAmount, amount: $amount, paymentIdentifier: $paymentIdentifier, allocation: $allocation, formCode: $formCode, processNote: $processNote)';
   }
 
   @override
@@ -3200,7 +3151,6 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
             other is _$_PaymentReconciliation &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -3294,7 +3244,6 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -3366,8 +3315,6 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   factory _PaymentReconciliation(
           {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
               final R5ResourceType resourceType,
-          @JsonKey(includeToJson: false, includeFromJson: true)
-              final int? dbId,
           @JsonKey(name: 'id')
               final FhirId? fhirId,
           final FhirMeta? meta,
@@ -3444,9 +3391,6 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   /// [resourceType] This is a PaymentReconciliation resource
   @JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the

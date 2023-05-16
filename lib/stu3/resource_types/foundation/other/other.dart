@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Basic with Resource, _$Basic {
     @Default(Stu3ResourceType.Basic)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -74,7 +72,6 @@ class Binary with Resource, _$Binary {
     @Default(Stu3ResourceType.Binary)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -126,7 +123,6 @@ class Bundle with Resource, _$Bundle {
     @Default(Stu3ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -447,7 +443,6 @@ class Linkage with Resource, _$Linkage {
     @Default(Stu3ResourceType.Linkage)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -539,7 +534,6 @@ class Media with Resource, _$Media {
     @Default(Stu3ResourceType.Media)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Media)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -610,7 +604,6 @@ class MessageHeader with Resource, _$MessageHeader {
     @Default(Stu3ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -801,7 +794,6 @@ class OperationOutcome with Resource, _$OperationOutcome {
     @Default(Stu3ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -901,7 +893,6 @@ class Parameters with Resource, _$Parameters {
     @Default(Stu3ResourceType.Parameters)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1061,7 +1052,6 @@ class Subscription with Resource, _$Subscription {
     @Default(Stu3ResourceType.Subscription)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

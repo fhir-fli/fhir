@@ -11,7 +11,6 @@ _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Group) ??
           Stu3ResourceType.Group,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -340,7 +339,6 @@ _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Patient) ??
           Stu3ResourceType.Patient,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -666,7 +664,6 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Person) ??
           Stu3ResourceType.Person,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -821,7 +818,6 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Practitioner) ??
           Stu3ResourceType.Practitioner,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -977,7 +973,6 @@ _$_PractitionerRole _$$_PractitionerRoleFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.PractitionerRole) ??
           Stu3ResourceType.PractitionerRole,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1191,7 +1186,6 @@ _$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.RelatedPerson) ??
           Stu3ResourceType.RelatedPerson,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

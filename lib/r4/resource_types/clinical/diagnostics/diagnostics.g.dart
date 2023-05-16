@@ -12,7 +12,6 @@ _$_BodyStructure _$$_BodyStructureFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.BodyStructure) ??
           R4ResourceType.BodyStructure,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -258,7 +257,6 @@ _$_DiagnosticReport _$$_DiagnosticReportFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.DiagnosticReport) ??
           R4ResourceType.DiagnosticReport,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -453,7 +451,6 @@ _$_ImagingStudy _$$_ImagingStudyFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ImagingStudy) ??
           R4ResourceType.ImagingStudy,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -801,7 +798,6 @@ _$_Media _$$_MediaFromJson(Map<String, dynamic> json) => _$_Media(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Media) ??
           R4ResourceType.Media,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -983,7 +979,6 @@ _$_MolecularSequence _$$_MolecularSequenceFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MolecularSequence) ??
           R4ResourceType.MolecularSequence,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1718,7 +1713,6 @@ _$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Observation) ??
           R4ResourceType.Observation,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2141,7 +2135,6 @@ _$_QuestionnaireResponse _$$_QuestionnaireResponseFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.QuestionnaireResponse) ??
           R4ResourceType.QuestionnaireResponse,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2432,7 +2425,6 @@ _$_Specimen _$$_SpecimenFromJson(Map<String, dynamic> json) => _$_Specimen(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Specimen) ??
           R4ResourceType.Specimen,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

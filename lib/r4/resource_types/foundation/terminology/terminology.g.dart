@@ -12,7 +12,6 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CodeSystem) ??
           R4ResourceType.CodeSystem,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -683,7 +682,6 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ConceptMap) ??
           R4ResourceType.ConceptMap,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1146,7 +1144,6 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.NamingSystem) ??
           R4ResourceType.NamingSystem,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1342,7 +1339,6 @@ _$_TerminologyCapabilities _$$_TerminologyCapabilitiesFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.TerminologyCapabilities) ??
           R4ResourceType.TerminologyCapabilities,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2025,7 +2021,6 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ValueSet) ??
           R4ResourceType.ValueSet,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

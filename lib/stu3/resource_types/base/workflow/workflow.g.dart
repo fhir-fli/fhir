@@ -12,7 +12,6 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Appointment) ??
           Stu3ResourceType.Appointment,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -375,7 +374,6 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.AppointmentResponse) ??
           Stu3ResourceType.AppointmentResponse,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -482,7 +480,6 @@ _$_ProcessRequest _$$_ProcessRequestFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ProcessRequest) ??
           Stu3ResourceType.ProcessRequest,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -663,7 +660,6 @@ _$_ProcessResponse _$$_ProcessResponseFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ProcessResponse) ??
           Stu3ResourceType.ProcessResponse,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -817,7 +813,6 @@ _$_RequestGroup _$$_RequestGroupFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.RequestGroup) ??
           Stu3ResourceType.RequestGroup,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1177,7 +1172,6 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Schedule) ??
           Stu3ResourceType.Schedule,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1280,7 +1274,6 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Slot) ??
           Stu3ResourceType.Slot,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1410,7 +1403,6 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Task) ??
           Stu3ResourceType.Task,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

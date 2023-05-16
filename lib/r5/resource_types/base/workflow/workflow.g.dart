@@ -12,7 +12,6 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Appointment) ??
           R5ResourceType.Appointment,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -753,7 +752,6 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.AppointmentResponse) ??
           R5ResourceType.AppointmentResponse,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -895,7 +893,6 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Schedule) ??
           R5ResourceType.Schedule,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1006,7 +1003,6 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Slot) ??
           R5ResourceType.Slot,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1127,7 +1123,6 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Task) ??
           R5ResourceType.Task,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2120,7 +2115,6 @@ _$_Transport _$$_TransportFromJson(Map<String, dynamic> json) => _$_Transport(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Transport) ??
           R5ResourceType.Transport,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -3076,7 +3070,6 @@ _$_VerificationResult _$$_VerificationResultFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.VerificationResult) ??
           R5ResourceType.VerificationResult,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

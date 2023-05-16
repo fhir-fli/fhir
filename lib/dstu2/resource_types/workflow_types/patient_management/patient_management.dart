@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Encounter with Resource, _$Encounter {
     @Default(Dstu2ResourceType.Encounter)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -277,7 +275,6 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     @Default(Dstu2ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -425,7 +422,6 @@ class Communication with Resource, _$Communication {
     @Default(Dstu2ResourceType.Communication)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -534,7 +530,6 @@ class Flag with Resource, _$Flag {
     @Default(Dstu2ResourceType.Flag)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Location with Resource, _$Location {
     @Default(Dstu2ResourceType.Location)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -132,7 +130,6 @@ class Substance with Resource, _$Substance {
     @Default(Dstu2ResourceType.Substance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -273,7 +270,6 @@ class Person with Resource, _$Person {
     @Default(Dstu2ResourceType.Person)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -376,7 +372,6 @@ class Contract with Resource, _$Contract {
     @Default(Dstu2ResourceType.Contract)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

@@ -24,8 +24,6 @@ mixin _$AdministrableProductDefinition {
   /// [resourceType] This is a AdministrableProductDefinition resource
   @JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -197,8 +195,6 @@ abstract class $AdministrableProductDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -256,7 +252,6 @@ class _$AdministrableProductDefinitionCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -286,10 +281,6 @@ class _$AdministrableProductDefinitionCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -507,8 +498,6 @@ abstract class _$$_AdministrableProductDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -574,7 +563,6 @@ class __$$_AdministrableProductDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -604,10 +592,6 @@ class __$$_AdministrableProductDefinitionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -711,8 +695,6 @@ class _$_AdministrableProductDefinition
   _$_AdministrableProductDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
           this.resourceType = R5ResourceType.AdministrableProductDefinition,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -762,9 +744,6 @@ class _$_AdministrableProductDefinition
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -1070,7 +1049,7 @@ class _$_AdministrableProductDefinition
 
   @override
   String toString() {
-    return 'AdministrableProductDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, formOf: $formOf, administrableDoseForm: $administrableDoseForm, unitOfPresentation: $unitOfPresentation, producedFrom: $producedFrom, ingredient: $ingredient, device: $device, description: $description, descriptionElement: $descriptionElement, property: $property, routeOfAdministration: $routeOfAdministration)';
+    return 'AdministrableProductDefinition(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, formOf: $formOf, administrableDoseForm: $administrableDoseForm, unitOfPresentation: $unitOfPresentation, producedFrom: $producedFrom, ingredient: $ingredient, device: $device, description: $description, descriptionElement: $descriptionElement, property: $property, routeOfAdministration: $routeOfAdministration)';
   }
 
   @override
@@ -1080,7 +1059,6 @@ class _$_AdministrableProductDefinition
             other is _$_AdministrableProductDefinition &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1127,7 +1105,6 @@ class _$_AdministrableProductDefinition
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -1173,8 +1150,6 @@ abstract class _AdministrableProductDefinition
   factory _AdministrableProductDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -1215,9 +1190,6 @@ abstract class _AdministrableProductDefinition
   /// [resourceType] This is a AdministrableProductDefinition resource
   @JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -3774,8 +3746,6 @@ mixin _$ClinicalUseDefinition {
   /// [resourceType] This is a ClinicalUseDefinition resource
   @JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -3917,8 +3887,6 @@ abstract class $ClinicalUseDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -3977,7 +3945,6 @@ class _$ClinicalUseDefinitionCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4007,10 +3974,6 @@ class _$ClinicalUseDefinitionCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4255,8 +4218,6 @@ abstract class _$$_ClinicalUseDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -4323,7 +4284,6 @@ class __$$_ClinicalUseDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4353,10 +4313,6 @@ class __$$_ClinicalUseDefinitionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4459,8 +4415,6 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
   _$_ClinicalUseDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
           this.resourceType = R5ResourceType.ClinicalUseDefinition,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -4507,9 +4461,6 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -4753,7 +4704,7 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
 
   @override
   String toString() {
-    return 'ClinicalUseDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, typeElement: $typeElement, category: $category, subject: $subject, status: $status, contraindication: $contraindication, indication: $indication, interaction: $interaction, population: $population, library_: $library_, undesirableEffect: $undesirableEffect, warning: $warning)';
+    return 'ClinicalUseDefinition(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, typeElement: $typeElement, category: $category, subject: $subject, status: $status, contraindication: $contraindication, indication: $indication, interaction: $interaction, population: $population, library_: $library_, undesirableEffect: $undesirableEffect, warning: $warning)';
   }
 
   @override
@@ -4763,7 +4714,6 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
             other is _$_ClinicalUseDefinition &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -4808,7 +4758,6 @@ class _$_ClinicalUseDefinition extends _ClinicalUseDefinition {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -4853,8 +4802,6 @@ abstract class _ClinicalUseDefinition extends ClinicalUseDefinition {
   factory _ClinicalUseDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -4894,9 +4841,6 @@ abstract class _ClinicalUseDefinition extends ClinicalUseDefinition {
   /// [resourceType] This is a ClinicalUseDefinition resource
   @JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseDefinition)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -8687,8 +8631,6 @@ mixin _$Ingredient {
   /// [resourceType] This is a Ingredient resource
   @JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -8840,8 +8782,6 @@ abstract class $IngredientCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -8902,7 +8842,6 @@ class _$IngredientCopyWithImpl<$Res, $Val extends Ingredient>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -8932,10 +8871,6 @@ class _$IngredientCopyWithImpl<$Res, $Val extends Ingredient>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9167,8 +9102,6 @@ abstract class _$$_IngredientCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -9238,7 +9171,6 @@ class __$$_IngredientCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -9268,10 +9200,6 @@ class __$$_IngredientCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9374,8 +9302,6 @@ class _$_Ingredient extends _Ingredient {
   _$_Ingredient(
       {@JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
           this.resourceType = R5ResourceType.Ingredient,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -9423,9 +9349,6 @@ class _$_Ingredient extends _Ingredient {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -9671,7 +9594,7 @@ class _$_Ingredient extends _Ingredient {
 
   @override
   String toString() {
-    return 'Ingredient(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, for_: $for_, role: $role, function_: $function_, group: $group, allergenicIndicator: $allergenicIndicator, allergenicIndicatorElement: $allergenicIndicatorElement, comment: $comment, commentElement: $commentElement, manufacturer: $manufacturer, substance: $substance)';
+    return 'Ingredient(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, for_: $for_, role: $role, function_: $function_, group: $group, allergenicIndicator: $allergenicIndicator, allergenicIndicatorElement: $allergenicIndicatorElement, comment: $comment, commentElement: $commentElement, manufacturer: $manufacturer, substance: $substance)';
   }
 
   @override
@@ -9681,7 +9604,6 @@ class _$_Ingredient extends _Ingredient {
             other is _$_Ingredient &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -9729,7 +9651,6 @@ class _$_Ingredient extends _Ingredient {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -9773,8 +9694,6 @@ abstract class _Ingredient extends Ingredient {
   factory _Ingredient(
       {@JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -9817,9 +9736,6 @@ abstract class _Ingredient extends Ingredient {
   /// [resourceType] This is a Ingredient resource
   @JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -12582,8 +12498,6 @@ mixin _$ManufacturedItemDefinition {
   /// [resourceType] This is a ManufacturedItemDefinition resource
   @JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -12722,8 +12636,6 @@ abstract class $ManufacturedItemDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -12778,7 +12690,6 @@ class _$ManufacturedItemDefinitionCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -12807,10 +12718,6 @@ class _$ManufacturedItemDefinitionCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -13007,8 +12914,6 @@ abstract class _$$_ManufacturedItemDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -13070,7 +12975,6 @@ class __$$_ManufacturedItemDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -13099,10 +13003,6 @@ class __$$_ManufacturedItemDefinitionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -13201,8 +13101,6 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
   _$_ManufacturedItemDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
           this.resourceType = R5ResourceType.ManufacturedItemDefinition,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -13249,9 +13147,6 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -13503,7 +13398,7 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
 
   @override
   String toString() {
-    return 'ManufacturedItemDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, name: $name, nameElement: $nameElement, manufacturedDoseForm: $manufacturedDoseForm, unitOfPresentation: $unitOfPresentation, manufacturer: $manufacturer, marketingStatus: $marketingStatus, ingredient: $ingredient, property: $property, component: $component)';
+    return 'ManufacturedItemDefinition(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, name: $name, nameElement: $nameElement, manufacturedDoseForm: $manufacturedDoseForm, unitOfPresentation: $unitOfPresentation, manufacturer: $manufacturer, marketingStatus: $marketingStatus, ingredient: $ingredient, property: $property, component: $component)';
   }
 
   @override
@@ -13513,7 +13408,6 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
             other is _$_ManufacturedItemDefinition &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -13559,7 +13453,6 @@ class _$_ManufacturedItemDefinition extends _ManufacturedItemDefinition {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -13603,8 +13496,6 @@ abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
   factory _ManufacturedItemDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
               final R5ResourceType resourceType,
-          @JsonKey(includeToJson: false, includeFromJson: true)
-              final int? dbId,
           @JsonKey(name: 'id')
               final FhirId? fhirId,
           final FhirMeta? meta,
@@ -13644,9 +13535,6 @@ abstract class _ManufacturedItemDefinition extends ManufacturedItemDefinition {
   /// [resourceType] This is a ManufacturedItemDefinition resource
   @JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -15641,8 +15529,6 @@ mixin _$MedicinalProductDefinition {
   /// [resourceType] This is a MedicinalProductDefinition resource
   @JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -15907,8 +15793,6 @@ abstract class $MedicinalProductDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -15993,7 +15877,6 @@ class _$MedicinalProductDefinitionCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -16043,10 +15926,6 @@ class _$MedicinalProductDefinitionCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -16420,8 +16299,6 @@ abstract class _$$_MedicinalProductDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -16520,7 +16397,6 @@ class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -16570,10 +16446,6 @@ class __$$_MedicinalProductDefinitionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -16756,8 +16628,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
   _$_MedicinalProductDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
           this.resourceType = R5ResourceType.MedicinalProductDefinition,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -16839,9 +16709,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -17378,7 +17245,7 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
 
   @override
   String toString() {
-    return 'MedicinalProductDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, domain: $domain, version: $version, versionElement: $versionElement, status: $status, statusDate: $statusDate, statusDateElement: $statusDateElement, description: $description, descriptionElement: $descriptionElement, combinedPharmaceuticalDoseForm: $combinedPharmaceuticalDoseForm, route: $route, indication: $indication, indicationElement: $indicationElement, legalStatusOfSupply: $legalStatusOfSupply, additionalMonitoringIndicator: $additionalMonitoringIndicator, specialMeasures: $specialMeasures, pediatricUseIndicator: $pediatricUseIndicator, classification: $classification, marketingStatus: $marketingStatus, packagedMedicinalProduct: $packagedMedicinalProduct, comprisedOf: $comprisedOf, ingredient: $ingredient, impurity: $impurity, attachedDocument: $attachedDocument, masterFile: $masterFile, contact: $contact, clinicalTrial: $clinicalTrial, code: $code, name: $name, crossReference: $crossReference, operation: $operation, characteristic: $characteristic)';
+    return 'MedicinalProductDefinition(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, domain: $domain, version: $version, versionElement: $versionElement, status: $status, statusDate: $statusDate, statusDateElement: $statusDateElement, description: $description, descriptionElement: $descriptionElement, combinedPharmaceuticalDoseForm: $combinedPharmaceuticalDoseForm, route: $route, indication: $indication, indicationElement: $indicationElement, legalStatusOfSupply: $legalStatusOfSupply, additionalMonitoringIndicator: $additionalMonitoringIndicator, specialMeasures: $specialMeasures, pediatricUseIndicator: $pediatricUseIndicator, classification: $classification, marketingStatus: $marketingStatus, packagedMedicinalProduct: $packagedMedicinalProduct, comprisedOf: $comprisedOf, ingredient: $ingredient, impurity: $impurity, attachedDocument: $attachedDocument, masterFile: $masterFile, contact: $contact, clinicalTrial: $clinicalTrial, code: $code, name: $name, crossReference: $crossReference, operation: $operation, characteristic: $characteristic)';
   }
 
   @override
@@ -17388,7 +17255,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
             other is _$_MedicinalProductDefinition &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -17471,7 +17337,6 @@ class _$_MedicinalProductDefinition extends _MedicinalProductDefinition {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -17536,8 +17401,6 @@ abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
   factory _MedicinalProductDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -17600,9 +17463,6 @@ abstract class _MedicinalProductDefinition extends MedicinalProductDefinition {
   /// [resourceType] This is a MedicinalProductDefinition resource
   @JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -21429,8 +21289,6 @@ mixin _$PackagedProductDefinition {
   /// [resourceType] This is a PackagedProductDefinition resource
   @JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -21618,8 +21476,6 @@ abstract class $PackagedProductDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -21686,7 +21542,6 @@ class _$PackagedProductDefinitionCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -21722,10 +21577,6 @@ class _$PackagedProductDefinitionCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -21991,8 +21842,6 @@ abstract class _$$_PackagedProductDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -22069,7 +21918,6 @@ class __$$_PackagedProductDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -22105,10 +21953,6 @@ class __$$_PackagedProductDefinitionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -22235,8 +22079,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
   _$_PackagedProductDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
           this.resourceType = R5ResourceType.PackagedProductDefinition,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -22295,9 +22137,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -22645,7 +22484,7 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
   @override
   String toString() {
-    return 'PackagedProductDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, nameElement: $nameElement, type: $type, packageFor: $packageFor, status: $status, statusDate: $statusDate, statusDateElement: $statusDateElement, containedItemQuantity: $containedItemQuantity, description: $description, descriptionElement: $descriptionElement, legalStatusOfSupply: $legalStatusOfSupply, marketingStatus: $marketingStatus, copackagedIndicator: $copackagedIndicator, copackagedIndicatorElement: $copackagedIndicatorElement, manufacturer: $manufacturer, attachedDocument: $attachedDocument, packaging: $packaging, characteristic: $characteristic)';
+    return 'PackagedProductDefinition(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, nameElement: $nameElement, type: $type, packageFor: $packageFor, status: $status, statusDate: $statusDate, statusDateElement: $statusDateElement, containedItemQuantity: $containedItemQuantity, description: $description, descriptionElement: $descriptionElement, legalStatusOfSupply: $legalStatusOfSupply, marketingStatus: $marketingStatus, copackagedIndicator: $copackagedIndicator, copackagedIndicatorElement: $copackagedIndicatorElement, manufacturer: $manufacturer, attachedDocument: $attachedDocument, packaging: $packaging, characteristic: $characteristic)';
   }
 
   @override
@@ -22655,7 +22494,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
             other is _$_PackagedProductDefinition &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -22717,7 +22555,6 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -22768,8 +22605,6 @@ abstract class _PackagedProductDefinition extends PackagedProductDefinition {
   factory _PackagedProductDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
               final R5ResourceType resourceType,
-          @JsonKey(includeToJson: false, includeFromJson: true)
-              final int? dbId,
           @JsonKey(name: 'id')
               final FhirId? fhirId,
           final FhirMeta? meta,
@@ -22819,9 +22654,6 @@ abstract class _PackagedProductDefinition extends PackagedProductDefinition {
   /// [resourceType] This is a PackagedProductDefinition resource
   @JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -25406,8 +25238,6 @@ mixin _$RegulatedAuthorization {
   /// [resourceType] This is a RegulatedAuthorization resource
   @JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -25569,8 +25399,6 @@ abstract class $RegulatedAuthorizationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -25636,7 +25464,6 @@ class _$RegulatedAuthorizationCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -25670,10 +25497,6 @@ class _$RegulatedAuthorizationCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -25953,8 +25776,6 @@ abstract class _$$_RegulatedAuthorizationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -26031,7 +25852,6 @@ class __$$_RegulatedAuthorizationCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -26065,10 +25885,6 @@ class __$$_RegulatedAuthorizationCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -26187,8 +26003,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   _$_RegulatedAuthorization(
       {@JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
           this.resourceType = R5ResourceType.RegulatedAuthorization,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -26241,9 +26055,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -26529,7 +26340,7 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
 
   @override
   String toString() {
-    return 'RegulatedAuthorization(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, subject: $subject, type: $type, description: $description, descriptionElement: $descriptionElement, region: $region, status: $status, statusDate: $statusDate, statusDateElement: $statusDateElement, validityPeriod: $validityPeriod, indication: $indication, intendedUse: $intendedUse, basis: $basis, holder: $holder, regulator: $regulator, attachedDocument: $attachedDocument, case_: $case_)';
+    return 'RegulatedAuthorization(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, subject: $subject, type: $type, description: $description, descriptionElement: $descriptionElement, region: $region, status: $status, statusDate: $statusDate, statusDateElement: $statusDateElement, validityPeriod: $validityPeriod, indication: $indication, intendedUse: $intendedUse, basis: $basis, holder: $holder, regulator: $regulator, attachedDocument: $attachedDocument, case_: $case_)';
   }
 
   @override
@@ -26539,7 +26350,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
             other is _$_RegulatedAuthorization &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -26591,7 +26401,6 @@ class _$_RegulatedAuthorization extends _RegulatedAuthorization {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -26640,8 +26449,6 @@ abstract class _RegulatedAuthorization extends RegulatedAuthorization {
   factory _RegulatedAuthorization(
       {@JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -26686,9 +26493,6 @@ abstract class _RegulatedAuthorization extends RegulatedAuthorization {
   /// [resourceType] This is a RegulatedAuthorization resource
   @JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -27495,8 +27299,6 @@ mixin _$SubstanceDefinition {
   /// [resourceType] This is a SubstanceDefinition resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -27684,8 +27486,6 @@ abstract class $SubstanceDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -27759,7 +27559,6 @@ class _$SubstanceDefinitionCopyWithImpl<$Res, $Val extends SubstanceDefinition>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -27802,10 +27601,6 @@ class _$SubstanceDefinitionCopyWithImpl<$Res, $Val extends SubstanceDefinition>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -28135,8 +27930,6 @@ abstract class _$$_SubstanceDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -28222,7 +28015,6 @@ class __$$_SubstanceDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -28265,10 +28057,6 @@ class __$$_SubstanceDefinitionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -28423,8 +28211,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
   _$_SubstanceDefinition(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
           this.resourceType = R5ResourceType.SubstanceDefinition,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -28493,9 +28279,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -28887,7 +28670,7 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
 
   @override
   String toString() {
-    return 'SubstanceDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, version: $version, versionElement: $versionElement, status: $status, classification: $classification, domain: $domain, grade: $grade, description: $description, descriptionElement: $descriptionElement, informationSource: $informationSource, note: $note, manufacturer: $manufacturer, supplier: $supplier, moiety: $moiety, characterization: $characterization, property: $property, referenceInformation: $referenceInformation, molecularWeight: $molecularWeight, structure: $structure, code: $code, name: $name, relationship: $relationship, nucleicAcid: $nucleicAcid, polymer: $polymer, protein: $protein, sourceMaterial: $sourceMaterial)';
+    return 'SubstanceDefinition(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, version: $version, versionElement: $versionElement, status: $status, classification: $classification, domain: $domain, grade: $grade, description: $description, descriptionElement: $descriptionElement, informationSource: $informationSource, note: $note, manufacturer: $manufacturer, supplier: $supplier, moiety: $moiety, characterization: $characterization, property: $property, referenceInformation: $referenceInformation, molecularWeight: $molecularWeight, structure: $structure, code: $code, name: $name, relationship: $relationship, nucleicAcid: $nucleicAcid, polymer: $polymer, protein: $protein, sourceMaterial: $sourceMaterial)';
   }
 
   @override
@@ -28897,7 +28680,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
             other is _$_SubstanceDefinition &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -28962,7 +28744,6 @@ class _$_SubstanceDefinition extends _SubstanceDefinition {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -29020,8 +28801,6 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
   factory _SubstanceDefinition(
           {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
               final R5ResourceType resourceType,
-          @JsonKey(includeToJson: false, includeFromJson: true)
-              final int? dbId,
           @JsonKey(name: 'id')
               final FhirId? fhirId,
           final FhirMeta? meta,
@@ -29075,9 +28854,6 @@ abstract class _SubstanceDefinition extends SubstanceDefinition {
   /// [resourceType] This is a SubstanceDefinition resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -36288,8 +36064,6 @@ mixin _$SubstanceNucleicAcid {
   /// [resourceType] This is a SubstanceNucleicAcid resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -36414,8 +36188,6 @@ abstract class $SubstanceNucleicAcidCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -36465,7 +36237,6 @@ class _$SubstanceNucleicAcidCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -36489,10 +36260,6 @@ class _$SubstanceNucleicAcidCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -36672,8 +36439,6 @@ abstract class _$$_SubstanceNucleicAcidCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -36728,7 +36493,6 @@ class __$$_SubstanceNucleicAcidCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -36752,10 +36516,6 @@ class __$$_SubstanceNucleicAcidCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -36834,8 +36594,6 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
   _$_SubstanceNucleicAcid(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
           this.resourceType = R5ResourceType.SubstanceNucleicAcid,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -36872,9 +36630,6 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -37061,7 +36816,7 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
 
   @override
   String toString() {
-    return 'SubstanceNucleicAcid(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, sequenceType: $sequenceType, numberOfSubunits: $numberOfSubunits, numberOfSubunitsElement: $numberOfSubunitsElement, areaOfHybridisation: $areaOfHybridisation, areaOfHybridisationElement: $areaOfHybridisationElement, oligoNucleotideType: $oligoNucleotideType, subunit: $subunit)';
+    return 'SubstanceNucleicAcid(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, sequenceType: $sequenceType, numberOfSubunits: $numberOfSubunits, numberOfSubunitsElement: $numberOfSubunitsElement, areaOfHybridisation: $areaOfHybridisation, areaOfHybridisationElement: $areaOfHybridisationElement, oligoNucleotideType: $oligoNucleotideType, subunit: $subunit)';
   }
 
   @override
@@ -37071,7 +36826,6 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
             other is _$_SubstanceNucleicAcid &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -37109,28 +36863,26 @@ class _$_SubstanceNucleicAcid extends _SubstanceNucleicAcid {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        resourceType,
-        dbId,
-        fhirId,
-        meta,
-        implicitRules,
-        implicitRulesElement,
-        language,
-        languageElement,
-        text,
-        const DeepCollectionEquality().hash(_contained),
-        const DeepCollectionEquality().hash(_extension_),
-        const DeepCollectionEquality().hash(_modifierExtension),
-        sequenceType,
-        numberOfSubunits,
-        numberOfSubunitsElement,
-        areaOfHybridisation,
-        areaOfHybridisationElement,
-        oligoNucleotideType,
-        const DeepCollectionEquality().hash(_subunit)
-      ]);
+  int get hashCode => Object.hash(
+      runtimeType,
+      resourceType,
+      fhirId,
+      meta,
+      implicitRules,
+      implicitRulesElement,
+      language,
+      languageElement,
+      text,
+      const DeepCollectionEquality().hash(_contained),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      sequenceType,
+      numberOfSubunits,
+      numberOfSubunitsElement,
+      areaOfHybridisation,
+      areaOfHybridisationElement,
+      oligoNucleotideType,
+      const DeepCollectionEquality().hash(_subunit));
 
   @JsonKey(ignore: true)
   @override
@@ -37151,8 +36903,6 @@ abstract class _SubstanceNucleicAcid extends SubstanceNucleicAcid {
   factory _SubstanceNucleicAcid(
           {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
               final R5ResourceType resourceType,
-          @JsonKey(includeToJson: false, includeFromJson: true)
-              final int? dbId,
           @JsonKey(name: 'id')
               final FhirId? fhirId,
           final FhirMeta? meta,
@@ -37187,9 +36937,6 @@ abstract class _SubstanceNucleicAcid extends SubstanceNucleicAcid {
   /// [resourceType] This is a SubstanceNucleicAcid resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -39232,8 +38979,6 @@ mixin _$SubstancePolymer {
   /// [resourceType] This is a SubstancePolymer resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -39355,8 +39100,6 @@ abstract class $SubstancePolymerCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -39406,7 +39149,6 @@ class _$SubstancePolymerCopyWithImpl<$Res, $Val extends SubstancePolymer>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -39431,10 +39173,6 @@ class _$SubstancePolymerCopyWithImpl<$Res, $Val extends SubstancePolymer>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -39618,8 +39356,6 @@ abstract class _$$_SubstancePolymerCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -39675,7 +39411,6 @@ class __$$_SubstancePolymerCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -39700,10 +39435,6 @@ class __$$_SubstancePolymerCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -39786,8 +39517,6 @@ class _$_SubstancePolymer extends _SubstancePolymer {
   _$_SubstancePolymer(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
           this.resourceType = R5ResourceType.SubstancePolymer,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -39827,9 +39556,6 @@ class _$_SubstancePolymer extends _SubstancePolymer {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -40032,7 +39758,7 @@ class _$_SubstancePolymer extends _SubstancePolymer {
 
   @override
   String toString() {
-    return 'SubstancePolymer(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, class_: $class_, geometry: $geometry, copolymerConnectivity: $copolymerConnectivity, modification: $modification, modificationElement: $modificationElement, monomerSet: $monomerSet, repeat: $repeat)';
+    return 'SubstancePolymer(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, class_: $class_, geometry: $geometry, copolymerConnectivity: $copolymerConnectivity, modification: $modification, modificationElement: $modificationElement, monomerSet: $monomerSet, repeat: $repeat)';
   }
 
   @override
@@ -40042,7 +39768,6 @@ class _$_SubstancePolymer extends _SubstancePolymer {
             other is _$_SubstancePolymer &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -40081,7 +39806,6 @@ class _$_SubstancePolymer extends _SubstancePolymer {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -40120,8 +39844,6 @@ abstract class _SubstancePolymer extends SubstancePolymer {
   factory _SubstancePolymer(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -40156,9 +39878,6 @@ abstract class _SubstancePolymer extends SubstancePolymer {
   /// [resourceType] This is a SubstancePolymer resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -43454,8 +43173,6 @@ mixin _$SubstanceProtein {
   /// [resourceType] This is a SubstanceProtein resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -43585,8 +43302,6 @@ abstract class $SubstanceProteinCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -43632,7 +43347,6 @@ class _$SubstanceProteinCopyWithImpl<$Res, $Val extends SubstanceProtein>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -43655,10 +43369,6 @@ class _$SubstanceProteinCopyWithImpl<$Res, $Val extends SubstanceProtein>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -43810,8 +43520,6 @@ abstract class _$$_SubstanceProteinCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -43861,7 +43569,6 @@ class __$$_SubstanceProteinCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -43884,10 +43591,6 @@ class __$$_SubstanceProteinCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -43962,8 +43665,6 @@ class _$_SubstanceProtein extends _SubstanceProtein {
   _$_SubstanceProtein(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
           this.resourceType = R5ResourceType.SubstanceProtein,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -44001,9 +43702,6 @@ class _$_SubstanceProtein extends _SubstanceProtein {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -44227,7 +43925,7 @@ class _$_SubstanceProtein extends _SubstanceProtein {
 
   @override
   String toString() {
-    return 'SubstanceProtein(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, sequenceType: $sequenceType, numberOfSubunits: $numberOfSubunits, numberOfSubunitsElement: $numberOfSubunitsElement, disulfideLinkage: $disulfideLinkage, disulfideLinkageElement: $disulfideLinkageElement, subunit: $subunit)';
+    return 'SubstanceProtein(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, sequenceType: $sequenceType, numberOfSubunits: $numberOfSubunits, numberOfSubunitsElement: $numberOfSubunitsElement, disulfideLinkage: $disulfideLinkage, disulfideLinkageElement: $disulfideLinkageElement, subunit: $subunit)';
   }
 
   @override
@@ -44237,7 +43935,6 @@ class _$_SubstanceProtein extends _SubstanceProtein {
             other is _$_SubstanceProtein &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -44274,7 +43971,6 @@ class _$_SubstanceProtein extends _SubstanceProtein {
   int get hashCode => Object.hash(
       runtimeType,
       resourceType,
-      dbId,
       fhirId,
       meta,
       implicitRules,
@@ -44310,8 +44006,6 @@ abstract class _SubstanceProtein extends SubstanceProtein {
   factory _SubstanceProtein(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -44344,9 +44038,6 @@ abstract class _SubstanceProtein extends SubstanceProtein {
   /// [resourceType] This is a SubstanceProtein resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -45413,8 +45104,6 @@ mixin _$SubstanceReferenceInformation {
   /// [resourceType] This is a SubstanceReferenceInformation resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -45522,8 +45211,6 @@ abstract class $SubstanceReferenceInformationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -45567,7 +45254,6 @@ class _$SubstanceReferenceInformationCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -45589,10 +45275,6 @@ class _$SubstanceReferenceInformationCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -45729,8 +45411,6 @@ abstract class _$$_SubstanceReferenceInformationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -45778,7 +45458,6 @@ class __$$_SubstanceReferenceInformationCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -45800,10 +45479,6 @@ class __$$_SubstanceReferenceInformationCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -45874,8 +45549,6 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
   _$_SubstanceReferenceInformation(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
           this.resourceType = R5ResourceType.SubstanceReferenceInformation,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -45912,9 +45585,6 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -46095,7 +45765,7 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
 
   @override
   String toString() {
-    return 'SubstanceReferenceInformation(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, comment: $comment, commentElement: $commentElement, gene: $gene, geneElement: $geneElement, target: $target)';
+    return 'SubstanceReferenceInformation(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, comment: $comment, commentElement: $commentElement, gene: $gene, geneElement: $geneElement, target: $target)';
   }
 
   @override
@@ -46105,7 +45775,6 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
             other is _$_SubstanceReferenceInformation &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -46137,7 +45806,6 @@ class _$_SubstanceReferenceInformation extends _SubstanceReferenceInformation {
   int get hashCode => Object.hash(
       runtimeType,
       resourceType,
-      dbId,
       fhirId,
       meta,
       implicitRules,
@@ -46174,8 +45842,6 @@ abstract class _SubstanceReferenceInformation
   factory _SubstanceReferenceInformation(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -46207,9 +45873,6 @@ abstract class _SubstanceReferenceInformation
   /// [resourceType] This is a SubstanceReferenceInformation resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -47996,8 +47659,6 @@ mixin _$SubstanceSourceMaterial {
   /// [resourceType] This is a SubstanceSourceMaterial resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -48174,8 +47835,6 @@ abstract class $SubstanceSourceMaterialCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -48238,7 +47897,6 @@ class _$SubstanceSourceMaterialCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -48271,10 +47929,6 @@ class _$SubstanceSourceMaterialCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -48527,8 +48181,6 @@ abstract class _$$_SubstanceSourceMaterialCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -48600,7 +48252,6 @@ class __$$_SubstanceSourceMaterialCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -48633,10 +48284,6 @@ class __$$_SubstanceSourceMaterialCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -48751,8 +48398,6 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
   _$_SubstanceSourceMaterial(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
           this.resourceType = R5ResourceType.SubstanceSourceMaterial,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -48807,9 +48452,6 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -49138,7 +48780,7 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
 
   @override
   String toString() {
-    return 'SubstanceSourceMaterial(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, sourceMaterialClass: $sourceMaterialClass, sourceMaterialType: $sourceMaterialType, sourceMaterialState: $sourceMaterialState, organismId: $organismId, organismName: $organismName, organismNameElement: $organismNameElement, parentSubstanceId: $parentSubstanceId, parentSubstanceName: $parentSubstanceName, parentSubstanceNameElement: $parentSubstanceNameElement, countryOfOrigin: $countryOfOrigin, geographicalLocation: $geographicalLocation, geographicalLocationElement: $geographicalLocationElement, developmentStage: $developmentStage, fractionDescription: $fractionDescription, organism: $organism, partDescription: $partDescription)';
+    return 'SubstanceSourceMaterial(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, sourceMaterialClass: $sourceMaterialClass, sourceMaterialType: $sourceMaterialType, sourceMaterialState: $sourceMaterialState, organismId: $organismId, organismName: $organismName, organismNameElement: $organismNameElement, parentSubstanceId: $parentSubstanceId, parentSubstanceName: $parentSubstanceName, parentSubstanceNameElement: $parentSubstanceNameElement, countryOfOrigin: $countryOfOrigin, geographicalLocation: $geographicalLocation, geographicalLocationElement: $geographicalLocationElement, developmentStage: $developmentStage, fractionDescription: $fractionDescription, organism: $organism, partDescription: $partDescription)';
   }
 
   @override
@@ -49148,7 +48790,6 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
             other is _$_SubstanceSourceMaterial &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -49207,7 +48848,6 @@ class _$_SubstanceSourceMaterial extends _SubstanceSourceMaterial {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -49256,8 +48896,6 @@ abstract class _SubstanceSourceMaterial extends SubstanceSourceMaterial {
   factory _SubstanceSourceMaterial(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -49303,9 +48941,6 @@ abstract class _SubstanceSourceMaterial extends SubstanceSourceMaterial {
   /// [resourceType] This is a SubstanceSourceMaterial resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the

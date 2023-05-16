@@ -12,7 +12,6 @@ _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Questionnaire) ??
           Dstu2ResourceType.Questionnaire,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       idElement: json['_id'] == null
           ? null
@@ -393,7 +392,6 @@ _$_QuestionnaireResponse _$$_QuestionnaireResponseFromJson(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.QuestionnaireResponse) ??
         Dstu2ResourceType.QuestionnaireResponse,
-    dbId: json['dbId'] as int?,
     fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
     idElement: json['_id'] == null
         ? null
@@ -752,7 +750,6 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Provenance) ??
           Dstu2ResourceType.Provenance,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1006,7 +1003,6 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.AuditEvent) ??
           Dstu2ResourceType.AuditEvent,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

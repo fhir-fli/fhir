@@ -22,8 +22,6 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
 mixin _$Appointment {
   @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -251,8 +249,6 @@ abstract class $AppointmentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -339,7 +335,6 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -387,10 +382,6 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -750,8 +741,6 @@ abstract class _$$_AppointmentCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -851,7 +840,6 @@ class __$$_AppointmentCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -899,10 +887,6 @@ class __$$_AppointmentCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1077,8 +1061,6 @@ class _$_Appointment extends _Appointment {
   _$_Appointment(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
           this.resourceType = R4ResourceType.Appointment,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -1155,9 +1137,6 @@ class _$_Appointment extends _Appointment {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -1574,7 +1553,7 @@ class _$_Appointment extends _Appointment {
 
   @override
   String toString() {
-    return 'Appointment(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, cancelationReason: $cancelationReason, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, appointmentType: $appointmentType, reasonCode: $reasonCode, reasonReference: $reasonReference, priority: $priority, priorityElement: $priorityElement, description: $description, descriptionElement: $descriptionElement, supportingInformation: $supportingInformation, start: $start, startElement: $startElement, end: $end, endElement: $endElement, minutesDuration: $minutesDuration, minutesDurationElement: $minutesDurationElement, slot: $slot, created: $created, createdElement: $createdElement, comment: $comment, commentElement: $commentElement, patientInstruction: $patientInstruction, patientInstructionElement: $patientInstructionElement, basedOn: $basedOn, participant: $participant, requestedPeriod: $requestedPeriod)';
+    return 'Appointment(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, cancelationReason: $cancelationReason, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, appointmentType: $appointmentType, reasonCode: $reasonCode, reasonReference: $reasonReference, priority: $priority, priorityElement: $priorityElement, description: $description, descriptionElement: $descriptionElement, supportingInformation: $supportingInformation, start: $start, startElement: $startElement, end: $end, endElement: $endElement, minutesDuration: $minutesDuration, minutesDurationElement: $minutesDurationElement, slot: $slot, created: $created, createdElement: $createdElement, comment: $comment, commentElement: $commentElement, patientInstruction: $patientInstruction, patientInstructionElement: $patientInstructionElement, basedOn: $basedOn, participant: $participant, requestedPeriod: $requestedPeriod)';
   }
 
   @override
@@ -1584,7 +1563,6 @@ class _$_Appointment extends _Appointment {
             other is _$_Appointment &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1665,7 +1643,6 @@ class _$_Appointment extends _Appointment {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
         fhirId,
         meta,
         implicitRules,
@@ -1727,8 +1704,6 @@ abstract class _Appointment extends Appointment {
   factory _Appointment(
       {@JsonKey(unknownEnumValue: R4ResourceType.Appointment)
           final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -1791,9 +1766,6 @@ abstract class _Appointment extends Appointment {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -2648,8 +2620,6 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
 mixin _$AppointmentResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -2784,8 +2754,6 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -2843,7 +2811,6 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2872,10 +2839,6 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3095,8 +3058,6 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -3162,7 +3123,6 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -3191,10 +3151,6 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3293,8 +3249,6 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   _$_AppointmentResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
           this.resourceType = R4ResourceType.AppointmentResponse,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -3338,9 +3292,6 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -3551,7 +3502,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   @override
   String toString() {
-    return 'AppointmentResponse(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, appointment: $appointment, start: $start, startElement: $startElement, end: $end, endElement: $endElement, participantType: $participantType, actor: $actor, participantStatus: $participantStatus, participantStatusElement: $participantStatusElement, comment: $comment, commentElement: $commentElement)';
+    return 'AppointmentResponse(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, appointment: $appointment, start: $start, startElement: $startElement, end: $end, endElement: $endElement, participantType: $participantType, actor: $actor, participantStatus: $participantStatus, participantStatusElement: $participantStatusElement, comment: $comment, commentElement: $commentElement)';
   }
 
   @override
@@ -3561,7 +3512,6 @@ class _$_AppointmentResponse extends _AppointmentResponse {
             other is _$_AppointmentResponse &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -3607,7 +3557,6 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
         fhirId,
         meta,
         implicitRules,
@@ -3651,8 +3600,6 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   factory _AppointmentResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
           final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -3691,9 +3638,6 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -3846,8 +3790,6 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
 mixin _$Schedule {
   @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -3973,8 +3915,6 @@ abstract class $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -4025,7 +3965,6 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4052,10 +3991,6 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4234,8 +4169,6 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -4291,7 +4224,6 @@ class __$$_ScheduleCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4318,10 +4250,6 @@ class __$$_ScheduleCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4412,8 +4340,6 @@ class _$_Schedule extends _Schedule {
   _$_Schedule(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
           this.resourceType = R4ResourceType.Schedule,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -4456,9 +4382,6 @@ class _$_Schedule extends _Schedule {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -4685,7 +4608,7 @@ class _$_Schedule extends _Schedule {
 
   @override
   String toString() {
-    return 'Schedule(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, actor: $actor, planningHorizon: $planningHorizon, comment: $comment, commentElement: $commentElement)';
+    return 'Schedule(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, actor: $actor, planningHorizon: $planningHorizon, comment: $comment, commentElement: $commentElement)';
   }
 
   @override
@@ -4695,7 +4618,6 @@ class _$_Schedule extends _Schedule {
             other is _$_Schedule &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -4737,7 +4659,6 @@ class _$_Schedule extends _Schedule {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
         fhirId,
         meta,
         implicitRules,
@@ -4778,8 +4699,6 @@ abstract class _Schedule extends Schedule {
   factory _Schedule(
       {@JsonKey(unknownEnumValue: R4ResourceType.Schedule)
           final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -4813,9 +4732,6 @@ abstract class _Schedule extends Schedule {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -4958,8 +4874,6 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
 mixin _$Slot {
   @JsonKey(unknownEnumValue: R4ResourceType.Slot)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -5104,8 +5018,6 @@ abstract class $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -5169,7 +5081,6 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5202,10 +5113,6 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5451,8 +5358,6 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -5523,7 +5428,6 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5556,10 +5460,6 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5674,8 +5574,6 @@ class _$_Slot extends _Slot {
   _$_Slot(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
           this.resourceType = R4ResourceType.Slot,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -5725,9 +5623,6 @@ class _$_Slot extends _Slot {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Slot)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -5974,7 +5869,7 @@ class _$_Slot extends _Slot {
 
   @override
   String toString() {
-    return 'Slot(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, appointmentType: $appointmentType, schedule: $schedule, status: $status, statusElement: $statusElement, start: $start, startElement: $startElement, end: $end, endElement: $endElement, overbooked: $overbooked, overbookedElement: $overbookedElement, comment: $comment, commentElement: $commentElement)';
+    return 'Slot(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, appointmentType: $appointmentType, schedule: $schedule, status: $status, statusElement: $statusElement, start: $start, startElement: $startElement, end: $end, endElement: $endElement, overbooked: $overbooked, overbookedElement: $overbookedElement, comment: $comment, commentElement: $commentElement)';
   }
 
   @override
@@ -5984,7 +5879,6 @@ class _$_Slot extends _Slot {
             other is _$_Slot &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -6037,7 +5931,6 @@ class _$_Slot extends _Slot {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
         fhirId,
         meta,
         implicitRules,
@@ -6084,8 +5977,6 @@ abstract class _Slot extends Slot {
   factory _Slot(
       {@JsonKey(unknownEnumValue: R4ResourceType.Slot)
           final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -6128,9 +6019,6 @@ abstract class _Slot extends Slot {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Slot)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -6298,8 +6186,6 @@ Task _$TaskFromJson(Map<String, dynamic> json) {
 mixin _$Task {
   @JsonKey(unknownEnumValue: R4ResourceType.Task)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -6536,8 +6422,6 @@ abstract class $TaskCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -6640,7 +6524,6 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6695,10 +6578,6 @@ class _$TaskCopyWithImpl<$Res, $Val extends Task>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7204,8 +7083,6 @@ abstract class _$$_TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -7329,7 +7206,6 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -7384,10 +7260,6 @@ class __$$_TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res, _$_Task>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7590,8 +7462,6 @@ class _$_Task extends _Task {
   _$_Task(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
           this.resourceType = R4ResourceType.Task,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -7671,9 +7541,6 @@ class _$_Task extends _Task {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Task)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -8083,7 +7950,7 @@ class _$_Task extends _Task {
 
   @override
   String toString() {
-    return 'Task(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, groupIdentifier: $groupIdentifier, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, businessStatus: $businessStatus, intent: $intent, intentElement: $intentElement, priority: $priority, priorityElement: $priorityElement, code: $code, description: $description, descriptionElement: $descriptionElement, focus: $focus, for_: $for_, encounter: $encounter, executionPeriod: $executionPeriod, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, lastModified: $lastModified, lastModifiedElement: $lastModifiedElement, requester: $requester, performerType: $performerType, owner: $owner, location: $location, reasonCode: $reasonCode, reasonReference: $reasonReference, insurance: $insurance, note: $note, relevantHistory: $relevantHistory, restriction: $restriction, input: $input, output: $output)';
+    return 'Task(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, groupIdentifier: $groupIdentifier, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, businessStatus: $businessStatus, intent: $intent, intentElement: $intentElement, priority: $priority, priorityElement: $priorityElement, code: $code, description: $description, descriptionElement: $descriptionElement, focus: $focus, for_: $for_, encounter: $encounter, executionPeriod: $executionPeriod, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, lastModified: $lastModified, lastModifiedElement: $lastModifiedElement, requester: $requester, performerType: $performerType, owner: $owner, location: $location, reasonCode: $reasonCode, reasonReference: $reasonReference, insurance: $insurance, note: $note, relevantHistory: $relevantHistory, restriction: $restriction, input: $input, output: $output)';
   }
 
   @override
@@ -8093,7 +7960,6 @@ class _$_Task extends _Task {
             other is _$_Task &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -8183,7 +8049,6 @@ class _$_Task extends _Task {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
         fhirId,
         meta,
         implicitRules,
@@ -8252,8 +8117,6 @@ abstract class _Task extends Task {
   factory _Task(
       {@JsonKey(unknownEnumValue: R4ResourceType.Task)
           final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          final int? id,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -8321,9 +8184,6 @@ abstract class _Task extends Task {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Task)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -15233,8 +15093,6 @@ VerificationResult _$VerificationResultFromJson(Map<String, dynamic> json) {
 mixin _$VerificationResult {
   @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -15393,8 +15251,6 @@ abstract class $VerificationResultCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -15463,7 +15319,6 @@ class _$VerificationResultCopyWithImpl<$Res, $Val extends VerificationResult>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -15499,10 +15354,6 @@ class _$VerificationResultCopyWithImpl<$Res, $Val extends VerificationResult>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -15791,8 +15642,6 @@ abstract class _$$_VerificationResultCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          int? id,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -15872,7 +15721,6 @@ class __$$_VerificationResultCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? id = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -15908,10 +15756,6 @@ class __$$_VerificationResultCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      id: freezed == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -16038,8 +15882,6 @@ class _$_VerificationResult extends _VerificationResult {
   _$_VerificationResult(
       {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
           this.resourceType = R4ResourceType.VerificationResult,
-      @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-          this.id,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -16095,9 +15937,6 @@ class _$_VerificationResult extends _VerificationResult {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  final int? id;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -16374,7 +16213,7 @@ class _$_VerificationResult extends _VerificationResult {
 
   @override
   String toString() {
-    return 'VerificationResult(resourceType: $resourceType, id: $id, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, target: $target, targetLocation: $targetLocation, targetLocationElement: $targetLocationElement, need: $need, status: $status, statusElement: $statusElement, statusDate: $statusDate, statusDateElement: $statusDateElement, validationType: $validationType, validationProcess: $validationProcess, frequency: $frequency, lastPerformed: $lastPerformed, lastPerformedElement: $lastPerformedElement, nextScheduled: $nextScheduled, nextScheduledElement: $nextScheduledElement, failureAction: $failureAction, primarySource: $primarySource, attestation: $attestation, validator: $validator)';
+    return 'VerificationResult(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, target: $target, targetLocation: $targetLocation, targetLocationElement: $targetLocationElement, need: $need, status: $status, statusElement: $statusElement, statusDate: $statusDate, statusDateElement: $statusDateElement, validationType: $validationType, validationProcess: $validationProcess, frequency: $frequency, lastPerformed: $lastPerformed, lastPerformedElement: $lastPerformedElement, nextScheduled: $nextScheduled, nextScheduledElement: $nextScheduledElement, failureAction: $failureAction, primarySource: $primarySource, attestation: $attestation, validator: $validator)';
   }
 
   @override
@@ -16384,7 +16223,6 @@ class _$_VerificationResult extends _VerificationResult {
             other is _$_VerificationResult &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -16444,7 +16282,6 @@ class _$_VerificationResult extends _VerificationResult {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        id,
         fhirId,
         meta,
         implicitRules,
@@ -16495,8 +16332,6 @@ abstract class _VerificationResult extends VerificationResult {
   factory _VerificationResult(
           {@JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
               final R4ResourceType resourceType,
-          @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-              final int? id,
           @JsonKey(name: 'id')
               final String? fhirId,
           final FhirMeta? meta,
@@ -16544,9 +16379,6 @@ abstract class _VerificationResult extends VerificationResult {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-  int? get id;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.

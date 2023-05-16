@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -177,8 +176,6 @@ class Immunization with Resource, _$Immunization {
 
         /// [resourceType] This is a Immunization resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1066,8 +1063,6 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
 
         /// [resourceType] This is a ImmunizationEvaluation resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1332,8 +1327,6 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
 
         /// [resourceType] This is a ImmunizationRecommendation resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1859,8 +1852,6 @@ class Medication with Resource, _$Medication {
 
         /// [resourceType] This is a Medication resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2390,8 +2381,6 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
 
         /// [resourceType] This is a MedicationAdministration resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -3032,8 +3021,6 @@ class MedicationDispense with Resource, _$MedicationDispense {
 
         /// [resourceType] This is a MedicationDispense resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -3637,8 +3624,6 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
 
         /// [resourceType] This is a MedicationKnowledge resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -5756,8 +5741,6 @@ class MedicationRequest with Resource, _$MedicationRequest {
 
         /// [resourceType] This is a MedicationRequest resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -6593,8 +6576,6 @@ class MedicationStatement with Resource, _$MedicationStatement {
 
         /// [resourceType] This is a MedicationStatement resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.

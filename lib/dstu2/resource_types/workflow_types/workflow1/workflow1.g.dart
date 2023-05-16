@@ -11,7 +11,6 @@ _$_Order _$$_OrderFromJson(Map<String, dynamic> json) => _$_Order(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Order) ??
           Dstu2ResourceType.Order,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -247,7 +246,6 @@ _$_OrderResponse _$$_OrderResponseFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.OrderResponse) ??
           Dstu2ResourceType.OrderResponse,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -351,7 +349,6 @@ _$_CommunicationRequest _$$_CommunicationRequestFromJson(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.CommunicationRequest) ??
           Dstu2ResourceType.CommunicationRequest,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -546,7 +543,6 @@ _$_DeviceUseRequest _$$_DeviceUseRequestFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceUseRequest) ??
           Dstu2ResourceType.DeviceUseRequest,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -705,7 +701,6 @@ _$_DeviceUseStatement _$$_DeviceUseStatementFromJson(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceUseStatement) ??
           Dstu2ResourceType.DeviceUseStatement,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

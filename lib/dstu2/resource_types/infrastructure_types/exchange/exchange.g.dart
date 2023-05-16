@@ -12,7 +12,6 @@ _$_MessageHeader _$$_MessageHeaderFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.MessageHeader) ??
           Dstu2ResourceType.MessageHeader,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -373,7 +372,6 @@ _$_OperationOutcome _$$_OperationOutcomeFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.OperationOutcome) ??
           Dstu2ResourceType.OperationOutcome,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       idElement: json['_id'] == null
           ? null
@@ -497,7 +495,6 @@ _$_Parameters _$$_ParametersFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Parameters) ??
           Dstu2ResourceType.Parameters,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -743,7 +740,6 @@ _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Subscription) ??
           Dstu2ResourceType.Subscription,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

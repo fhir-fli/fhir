@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Account with Resource, _$Account {
     @Default(Dstu2ResourceType.Account)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -84,7 +82,6 @@ class Claim with Resource, _$Claim {
     @Default(Dstu2ResourceType.Claim)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -545,7 +542,6 @@ class ClaimResponse with Resource, _$ClaimResponse {
     @Default(Dstu2ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

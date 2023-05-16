@@ -7,7 +7,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -24,7 +23,6 @@ class Encounter with Resource, _$Encounter {
     @Default(Stu3ResourceType.Encounter)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -341,7 +339,6 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     @Default(Stu3ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EpisodeOfCare)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -483,7 +480,6 @@ class Flag with Resource, _$Flag {
     @Default(Stu3ResourceType.Flag)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Flag)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -538,7 +534,6 @@ class Library with Resource, _$Library {
     @Default(Stu3ResourceType.Library)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Library)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -626,7 +621,6 @@ class FhirList with Resource, _$FhirList {
     @Default(Stu3ResourceType.FhirList)
     @JsonKey(unknownEnumValue: Stu3ResourceType.FhirList)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

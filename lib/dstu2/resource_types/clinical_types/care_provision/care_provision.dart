@@ -21,7 +21,6 @@ class CarePlan with Resource, _$CarePlan {
     @Default(Dstu2ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CarePlan)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -279,7 +278,6 @@ class Goal with Resource, _$Goal {
     @Default(Dstu2ResourceType.Goal)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Goal)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -386,7 +384,6 @@ class ReferralRequest with Resource, _$ReferralRequest {
     @Default(Dstu2ResourceType.ReferralRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ReferralRequest)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -449,7 +446,6 @@ class ProcedureRequest with Resource, _$ProcedureRequest {
     @Default(Dstu2ResourceType.ProcedureRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcedureRequest)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -515,7 +511,6 @@ class NutritionOrder with Resource, _$NutritionOrder {
     @Default(Dstu2ResourceType.NutritionOrder)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.NutritionOrder)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -905,7 +900,6 @@ class VisionPrescription with Resource, _$VisionPrescription {
     @Default(Dstu2ResourceType.VisionPrescription)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.VisionPrescription)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

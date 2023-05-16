@@ -12,7 +12,6 @@ _$_ProcessRequest _$$_ProcessRequestFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ProcessRequest) ??
           Dstu2ResourceType.ProcessRequest,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -272,7 +271,6 @@ _$_ProcessResponse _$$_ProcessResponseFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ProcessResponse) ??
           Dstu2ResourceType.ProcessResponse,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -422,7 +420,6 @@ _$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.SupplyRequest) ??
           Dstu2ResourceType.SupplyRequest,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -577,7 +574,6 @@ _$_SupplyDelivery _$$_SupplyDeliveryFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.SupplyDelivery) ??
           Dstu2ResourceType.SupplyDelivery,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

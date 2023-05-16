@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Coverage with Resource, _$Coverage {
     @Default(Dstu2ResourceType.Coverage)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -87,7 +85,6 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
     @Default(Dstu2ResourceType.EligibilityRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -143,7 +140,6 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
     @Default(Dstu2ResourceType.EligibilityResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -205,7 +201,6 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     @Default(Dstu2ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -264,7 +259,6 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     @Default(Dstu2ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

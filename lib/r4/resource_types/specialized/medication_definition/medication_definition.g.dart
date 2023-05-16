@@ -12,7 +12,6 @@ _$_AdministrableProductDefinition _$$_AdministrableProductDefinitionFromJson(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.AdministrableProductDefinition,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -490,7 +489,6 @@ _$_Ingredient _$$_IngredientFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Ingredient,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -809,7 +807,6 @@ _$_ClinicalUseDefinition _$$_ClinicalUseDefinitionFromJson(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.ClinicalUseDefinition,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1280,7 +1277,6 @@ _$_ManufacturedItemDefinition _$$_ManufacturedItemDefinitionFromJson(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.ManufacturedItemDefinition,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1441,7 +1437,6 @@ _$_MedicinalProductDefinition _$$_MedicinalProductDefinitionFromJson(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.MedicinalProductDefinition,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1978,7 +1973,6 @@ _$_PackagedProductDefinition _$$_PackagedProductDefinitionFromJson(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.PackagedProductDefinition,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2401,7 +2395,6 @@ _$_RegulatedAuthorization _$$_RegulatedAuthorizationFromJson(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.RegulatedAuthorization,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2593,7 +2586,6 @@ _$_SubstanceDefinition _$$_SubstanceDefinitionFromJson(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.SubstanceDefinition,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

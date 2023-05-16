@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class AuditEvent with Resource, _$AuditEvent {
     @Default(Stu3ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -309,7 +307,6 @@ class Consent with Resource, _$Consent {
     @Default(Stu3ResourceType.Consent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -627,7 +624,6 @@ class Provenance with Resource, _$Provenance {
     @Default(Stu3ResourceType.Provenance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -220,8 +219,6 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
 
         /// [resourceType] This is a CapabilityStatement resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2562,8 +2559,6 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
 
         /// [resourceType] This is a CompartmentDefinition resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -3056,8 +3051,6 @@ class ExampleScenario with Resource, _$ExampleScenario {
 
         /// [resourceType] This is a ExampleScenario resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -4467,8 +4460,6 @@ class GraphDefinition with Resource, _$GraphDefinition {
 
         /// [resourceType] This is a GraphDefinition resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -5288,8 +5279,6 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
 
         /// [resourceType] This is a ImplementationGuide resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -7184,8 +7173,6 @@ class MessageDefinition with Resource, _$MessageDefinition {
 
         /// [resourceType] This is a MessageDefinition resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -7892,8 +7879,6 @@ class OperationDefinition with Resource, _$OperationDefinition {
 
         /// [resourceType] This is a OperationDefinition resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -8934,8 +8919,6 @@ class SearchParameter with Resource, _$SearchParameter {
 
         /// [resourceType] This is a SearchParameter resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -9565,8 +9548,6 @@ class StructureDefinition with Resource, _$StructureDefinition {
 
         /// [resourceType] This is a StructureDefinition resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -10489,8 +10470,6 @@ class StructureMap with Resource, _$StructureMap {
 
         /// [resourceType] This is a StructureMap resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.

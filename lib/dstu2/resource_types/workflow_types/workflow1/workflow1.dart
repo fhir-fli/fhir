@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Order with Resource, _$Order {
     @Default(Dstu2ResourceType.Order)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -118,7 +116,6 @@ class OrderResponse with Resource, _$OrderResponse {
     @Default(Dstu2ResourceType.OrderResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -173,7 +170,6 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     @Default(Dstu2ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -283,7 +279,6 @@ class DeviceUseRequest with Resource, _$DeviceUseRequest {
     @Default(Dstu2ResourceType.DeviceUseRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -351,7 +346,6 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     @Default(Dstu2ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

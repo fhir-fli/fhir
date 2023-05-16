@@ -13,7 +13,6 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.AllergyIntolerance) ??
           Dstu2ResourceType.AllergyIntolerance,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -385,7 +384,6 @@ _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) {
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.Condition) ??
         Dstu2ResourceType.Condition,
-    dbId: json['dbId'] as int?,
     fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
@@ -661,7 +659,6 @@ _$_Procedure _$$_ProcedureFromJson(Map<String, dynamic> json) => _$_Procedure(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Procedure) ??
           Dstu2ResourceType.Procedure,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -916,7 +913,6 @@ _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ClinicalImpression) ??
           Dstu2ResourceType.ClinicalImpression,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1185,7 +1181,6 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.FamilyMemberHistory) ??
         Dstu2ResourceType.FamilyMemberHistory,
-    dbId: json['dbId'] as int?,
     fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
@@ -1427,7 +1422,6 @@ _$_RiskAssessment _$$_RiskAssessmentFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.RiskAssessment) ??
           Dstu2ResourceType.RiskAssessment,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1607,7 +1601,6 @@ _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DetectedIssue) ??
           Dstu2ResourceType.DetectedIssue,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

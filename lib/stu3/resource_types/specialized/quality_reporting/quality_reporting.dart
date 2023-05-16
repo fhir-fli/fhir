@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Measure with Resource, _$Measure {
     @Default(Stu3ResourceType.Measure)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -305,7 +303,6 @@ class MeasureReport with Resource, _$MeasureReport {
     @Default(Stu3ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

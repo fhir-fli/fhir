@@ -11,7 +11,6 @@ _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Group) ??
           R4ResourceType.Group,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -385,7 +384,6 @@ _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Patient) ??
           R4ResourceType.Patient,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -689,7 +687,6 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Person) ??
           R4ResourceType.Person,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -841,7 +838,6 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Practitioner) ??
           R4ResourceType.Practitioner,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1002,7 +998,6 @@ _$_PractitionerRole _$$_PractitionerRoleFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.PractitionerRole) ??
           R4ResourceType.PractitionerRole,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1241,7 +1236,6 @@ _$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.RelatedPerson) ??
           R4ResourceType.RelatedPerson,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

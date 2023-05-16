@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Composition with Resource, _$Composition {
     @Default(Stu3ResourceType.Composition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -259,7 +257,6 @@ class DocumentManifest with Resource, _$DocumentManifest {
     @Default(Stu3ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -401,7 +398,6 @@ class DocumentReference with Resource, _$DocumentReference {
     @Default(Stu3ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

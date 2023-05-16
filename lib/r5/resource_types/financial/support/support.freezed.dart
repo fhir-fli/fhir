@@ -23,8 +23,6 @@ mixin _$Coverage {
   /// [resourceType] This is a Coverage resource
   @JsonKey(unknownEnumValue: R5ResourceType.Coverage)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -222,8 +220,6 @@ abstract class $CoverageCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Coverage)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -306,7 +302,6 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -349,10 +344,6 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -723,8 +714,6 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Coverage)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -823,7 +812,6 @@ class __$$_CoverageCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -866,10 +854,6 @@ class __$$_CoverageCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1024,8 +1008,6 @@ class _$_Coverage extends _Coverage {
   _$_Coverage(
       {@JsonKey(unknownEnumValue: R5ResourceType.Coverage)
           this.resourceType = R5ResourceType.Coverage,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -1091,9 +1073,6 @@ class _$_Coverage extends _Coverage {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Coverage)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -1421,7 +1400,7 @@ class _$_Coverage extends _Coverage {
 
   @override
   String toString() {
-    return 'Coverage(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, kind: $kind, kindElement: $kindElement, paymentBy: $paymentBy, type: $type, policyHolder: $policyHolder, subscriber: $subscriber, subscriberId: $subscriberId, beneficiary: $beneficiary, dependent: $dependent, dependentElement: $dependentElement, relationship: $relationship, period: $period, insurer: $insurer, class_: $class_, order: $order, orderElement: $orderElement, network: $network, networkElement: $networkElement, costToBeneficiary: $costToBeneficiary, subrogation: $subrogation, subrogationElement: $subrogationElement, contract: $contract, insurancePlan: $insurancePlan)';
+    return 'Coverage(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, kind: $kind, kindElement: $kindElement, paymentBy: $paymentBy, type: $type, policyHolder: $policyHolder, subscriber: $subscriber, subscriberId: $subscriberId, beneficiary: $beneficiary, dependent: $dependent, dependentElement: $dependentElement, relationship: $relationship, period: $period, insurer: $insurer, class_: $class_, order: $order, orderElement: $orderElement, network: $network, networkElement: $networkElement, costToBeneficiary: $costToBeneficiary, subrogation: $subrogation, subrogationElement: $subrogationElement, contract: $contract, insurancePlan: $insurancePlan)';
   }
 
   @override
@@ -1431,7 +1410,6 @@ class _$_Coverage extends _Coverage {
             other is _$_Coverage &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1499,7 +1477,6 @@ class _$_Coverage extends _Coverage {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -1556,8 +1533,6 @@ abstract class _Coverage extends Coverage {
   factory _Coverage(
       {@JsonKey(unknownEnumValue: R5ResourceType.Coverage)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -1614,9 +1589,6 @@ abstract class _Coverage extends Coverage {
   /// [resourceType] This is a Coverage resource
   @JsonKey(unknownEnumValue: R5ResourceType.Coverage)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -3806,8 +3778,6 @@ mixin _$CoverageEligibilityRequest {
   /// [resourceType] This is a CoverageEligibilityRequest resource
   @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -3980,8 +3950,6 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -4052,7 +4020,6 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4089,10 +4056,6 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4389,8 +4352,6 @@ abstract class _$$_CoverageEligibilityRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -4474,7 +4435,6 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4511,10 +4471,6 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4645,8 +4601,6 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   _$_CoverageEligibilityRequest(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
           this.resourceType = R5ResourceType.CoverageEligibilityRequest,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -4704,9 +4658,6 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -5015,7 +4966,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
 
   @override
   String toString() {
-    return 'CoverageEligibilityRequest(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, priority: $priority, purpose: $purpose, purposeElement: $purposeElement, patient: $patient, event: $event, servicedDate: $servicedDate, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, created: $created, createdElement: $createdElement, enterer: $enterer, provider: $provider, insurer: $insurer, facility: $facility, supportingInfo: $supportingInfo, insurance: $insurance, item: $item)';
+    return 'CoverageEligibilityRequest(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, priority: $priority, purpose: $purpose, purposeElement: $purposeElement, patient: $patient, event: $event, servicedDate: $servicedDate, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, created: $created, createdElement: $createdElement, enterer: $enterer, provider: $provider, insurer: $insurer, facility: $facility, supportingInfo: $supportingInfo, insurance: $insurance, item: $item)';
   }
 
   @override
@@ -5025,7 +4976,6 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
             other is _$_CoverageEligibilityRequest &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -5082,7 +5032,6 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -5134,8 +5083,6 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   factory _CoverageEligibilityRequest(
           {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
               final R5ResourceType resourceType,
-          @JsonKey(includeToJson: false, includeFromJson: true)
-              final int? dbId,
           @JsonKey(name: 'id')
               final FhirId? fhirId,
           final FhirMeta? meta,
@@ -5185,9 +5132,6 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   /// [resourceType] This is a CoverageEligibilityRequest resource
   @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -8171,8 +8115,6 @@ mixin _$CoverageEligibilityResponse {
   /// [resourceType] This is a CoverageEligibilityResponse resource
   @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -8358,8 +8300,6 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -8439,7 +8379,6 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -8480,10 +8419,6 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -8816,8 +8751,6 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -8912,7 +8845,6 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -8953,10 +8885,6 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9103,8 +9031,6 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   _$_CoverageEligibilityResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
           this.resourceType = R5ResourceType.CoverageEligibilityResponse,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -9168,9 +9094,6 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -9483,7 +9406,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
 
   @override
   String toString() {
-    return 'CoverageEligibilityResponse(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, purpose: $purpose, purposeElement: $purposeElement, patient: $patient, event: $event, servicedDate: $servicedDate, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, created: $created, createdElement: $createdElement, requestor: $requestor, request: $request, outcome: $outcome, outcomeElement: $outcomeElement, disposition: $disposition, dispositionElement: $dispositionElement, insurer: $insurer, insurance: $insurance, preAuthRef: $preAuthRef, preAuthRefElement: $preAuthRefElement, form: $form, error: $error)';
+    return 'CoverageEligibilityResponse(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, purpose: $purpose, purposeElement: $purposeElement, patient: $patient, event: $event, servicedDate: $servicedDate, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, created: $created, createdElement: $createdElement, requestor: $requestor, request: $request, outcome: $outcome, outcomeElement: $outcomeElement, disposition: $disposition, dispositionElement: $dispositionElement, insurer: $insurer, insurance: $insurance, preAuthRef: $preAuthRef, preAuthRefElement: $preAuthRefElement, form: $form, error: $error)';
   }
 
   @override
@@ -9493,7 +9416,6 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
             other is _$_CoverageEligibilityResponse &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -9556,7 +9478,6 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -9613,8 +9534,6 @@ abstract class _CoverageEligibilityResponse
   factory _CoverageEligibilityResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -9671,9 +9590,6 @@ abstract class _CoverageEligibilityResponse
   /// [resourceType] This is a CoverageEligibilityResponse resource
   @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -13284,8 +13200,6 @@ mixin _$EnrollmentRequest {
   /// [resourceType] This is a EnrollmentRequest resource
   @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -13403,8 +13317,6 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -13457,7 +13369,6 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -13483,10 +13394,6 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -13698,8 +13605,6 @@ abstract class _$$_EnrollmentRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -13760,7 +13665,6 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -13786,10 +13690,6 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -13876,8 +13776,6 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
           this.resourceType = R5ResourceType.EnrollmentRequest,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -13916,9 +13814,6 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -14100,7 +13995,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 
   @override
   String toString() {
-    return 'EnrollmentRequest(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, created: $created, createdElement: $createdElement, insurer: $insurer, provider: $provider, candidate: $candidate, coverage: $coverage)';
+    return 'EnrollmentRequest(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, created: $created, createdElement: $createdElement, insurer: $insurer, provider: $provider, candidate: $candidate, coverage: $coverage)';
   }
 
   @override
@@ -14110,7 +14005,6 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
             other is _$_EnrollmentRequest &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -14150,7 +14044,6 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -14191,8 +14084,6 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   factory _EnrollmentRequest(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -14228,9 +14119,6 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   /// [resourceType] This is a EnrollmentRequest resource
   @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -14365,8 +14253,6 @@ mixin _$EnrollmentResponse {
   /// [resourceType] This is a EnrollmentResponse resource
   @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -14495,8 +14381,6 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -14555,7 +14439,6 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -14584,10 +14467,6 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -14823,8 +14702,6 @@ abstract class _$$_EnrollmentResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
           R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -14892,7 +14769,6 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -14921,10 +14797,6 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -15023,8 +14895,6 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
           this.resourceType = R5ResourceType.EnrollmentResponse,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -15068,9 +14938,6 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -15266,7 +15133,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 
   @override
   String toString() {
-    return 'EnrollmentResponse(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, request: $request, outcome: $outcome, outcomeElement: $outcomeElement, disposition: $disposition, dispositionElement: $dispositionElement, created: $created, createdElement: $createdElement, organization: $organization, requestProvider: $requestProvider)';
+    return 'EnrollmentResponse(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, request: $request, outcome: $outcome, outcomeElement: $outcomeElement, disposition: $disposition, dispositionElement: $dispositionElement, created: $created, createdElement: $createdElement, organization: $organization, requestProvider: $requestProvider)';
   }
 
   @override
@@ -15276,7 +15143,6 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
             other is _$_EnrollmentResponse &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -15321,7 +15187,6 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -15365,8 +15230,6 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   factory _EnrollmentResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
           final R5ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -15407,9 +15270,6 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   /// [resourceType] This is a EnrollmentResponse resource
   @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
   R5ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the

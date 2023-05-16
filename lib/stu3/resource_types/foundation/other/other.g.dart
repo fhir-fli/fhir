@@ -11,7 +11,6 @@ _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Basic) ??
           Stu3ResourceType.Basic,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -214,7 +213,6 @@ _$_Binary _$$_BinaryFromJson(Map<String, dynamic> json) => _$_Binary(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Binary) ??
           Stu3ResourceType.Binary,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -292,7 +290,6 @@ _$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Bundle) ??
           Stu3ResourceType.Bundle,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -604,7 +601,6 @@ _$_Linkage _$$_LinkageFromJson(Map<String, dynamic> json) => _$_Linkage(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Linkage) ??
           Stu3ResourceType.Linkage,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -712,7 +708,6 @@ _$_Media _$$_MediaFromJson(Map<String, dynamic> json) => _$_Media(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Media) ??
           Stu3ResourceType.Media,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -878,7 +873,6 @@ _$_MessageHeader _$$_MessageHeaderFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.MessageHeader) ??
           Stu3ResourceType.MessageHeader,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1115,7 +1109,6 @@ _$_OperationOutcome _$$_OperationOutcomeFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.OperationOutcome) ??
           Stu3ResourceType.OperationOutcome,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1285,7 +1278,6 @@ _$_Parameters _$$_ParametersFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Parameters) ??
           Stu3ResourceType.Parameters,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1675,7 +1667,6 @@ _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Subscription) ??
           Stu3ResourceType.Subscription,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

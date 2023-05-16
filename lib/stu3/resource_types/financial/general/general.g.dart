@@ -11,7 +11,6 @@ _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Account) ??
           Stu3ResourceType.Account,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -314,7 +313,6 @@ _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ChargeItem) ??
           Stu3ResourceType.ChargeItem,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -537,7 +535,6 @@ _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Contract) ??
           Stu3ResourceType.Contract,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1056,7 +1053,6 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ExplanationOfBenefit) ??
           Stu3ResourceType.ExplanationOfBenefit,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

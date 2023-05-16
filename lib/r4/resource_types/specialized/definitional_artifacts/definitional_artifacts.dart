@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -316,8 +315,6 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
 
         /// [resourceType] This is a ActivityDefinition resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1117,8 +1114,6 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
 
         /// [resourceType] This is a DeviceDefinition resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2201,8 +2196,6 @@ class EventDefinition with Resource, _$EventDefinition {
 
         /// [resourceType] This is a EventDefinition resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2609,8 +2602,6 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
 
         /// [resourceType] This is a ObservationDefinition resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -3259,8 +3250,6 @@ class PlanDefinition with Resource, _$PlanDefinition {
 
         /// [resourceType] This is a PlanDefinition resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -4950,8 +4939,6 @@ class Questionnaire with Resource, _$Questionnaire {
 
         /// [resourceType] This is a Questionnaire resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -6155,8 +6142,6 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
 
         /// [resourceType] This is a SpecimenDefinition resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.

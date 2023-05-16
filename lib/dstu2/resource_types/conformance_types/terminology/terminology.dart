@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class ValueSet with Resource, _$ValueSet {
     @Default(Dstu2ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: '_id') Element? idElement,
     FhirMeta? meta,
@@ -629,7 +627,6 @@ class ConceptMap with Resource, _$ConceptMap {
     @Default(Dstu2ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -886,7 +883,6 @@ class NamingSystem with Resource, _$NamingSystem {
     @Default(Dstu2ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

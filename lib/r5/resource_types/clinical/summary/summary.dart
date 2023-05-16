@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -213,11 +212,10 @@ class AdverseEvent with Resource, _$AdverseEvent {
     @Default(R5ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: R5ResourceType.AdverseEvent)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -518,7 +516,7 @@ class AdverseEventParticipant with _$AdverseEventParticipant {
   factory AdverseEventParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -667,7 +665,7 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   factory AdverseEventSuspectEntity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -820,7 +818,7 @@ class AdverseEventCausality with _$AdverseEventCausality {
   factory AdverseEventCausality({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -970,7 +968,7 @@ class AdverseEventContributingFactor with _$AdverseEventContributingFactor {
   factory AdverseEventContributingFactor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1117,7 +1115,7 @@ class AdverseEventPreventiveAction with _$AdverseEventPreventiveAction {
   factory AdverseEventPreventiveAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1264,7 +1262,7 @@ class AdverseEventMitigatingAction with _$AdverseEventMitigatingAction {
   factory AdverseEventMitigatingAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1427,7 +1425,7 @@ class AdverseEventSupportingInfo with _$AdverseEventSupportingInfo {
   factory AdverseEventSupportingInfo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1666,11 +1664,10 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     @Default(R5ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: R5ResourceType.AllergyIntolerance)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1924,7 +1921,7 @@ class AllergyIntoleranceParticipant with _$AllergyIntoleranceParticipant {
   factory AllergyIntoleranceParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2067,7 +2064,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   factory AllergyIntoleranceReaction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2330,11 +2327,10 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
     @Default(R5ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: R5ResourceType.ClinicalImpression)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2592,7 +2588,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   factory ClinicalImpressionFinding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2833,11 +2829,10 @@ class Condition with Resource, _$Condition {
     @Default(R5ResourceType.Condition)
     @JsonKey(unknownEnumValue: R5ResourceType.Condition)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3112,7 +3107,7 @@ class ConditionParticipant with _$ConditionParticipant {
   factory ConditionParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3228,7 +3223,7 @@ class ConditionStage with _$ConditionStage {
   factory ConditionStage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3431,11 +3426,10 @@ class DetectedIssue with Resource, _$DetectedIssue {
     @Default(R5ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: R5ResourceType.DetectedIssue)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3656,7 +3650,7 @@ class DetectedIssueEvidence with _$DetectedIssueEvidence {
   factory DetectedIssueEvidence({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3781,7 +3775,7 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
   factory DetectedIssueMitigation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4039,11 +4033,10 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     @Default(R5ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: R5ResourceType.FamilyMemberHistory)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -4334,7 +4327,7 @@ class FamilyMemberHistoryParticipant with _$FamilyMemberHistoryParticipant {
   factory FamilyMemberHistoryParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4476,7 +4469,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   factory FamilyMemberHistoryCondition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4667,7 +4660,7 @@ class FamilyMemberHistoryProcedure with _$FamilyMemberHistoryProcedure {
   factory FamilyMemberHistoryProcedure({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5028,11 +5021,10 @@ class Procedure with Resource, _$Procedure {
     @Default(R5ResourceType.Procedure)
     @JsonKey(unknownEnumValue: R5ResourceType.Procedure)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -5392,7 +5384,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
   factory ProcedurePerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5524,7 +5516,7 @@ class ProcedureFocalDevice with _$ProcedureFocalDevice {
   factory ProcedureFocalDevice({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.

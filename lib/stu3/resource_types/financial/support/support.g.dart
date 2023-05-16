@@ -11,7 +11,6 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Coverage) ??
           Stu3ResourceType.Coverage,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -361,7 +360,6 @@ _$_EligibilityRequest _$$_EligibilityRequestFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.EligibilityRequest) ??
           Stu3ResourceType.EligibilityRequest,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -505,7 +503,6 @@ _$_EligibilityResponse _$$_EligibilityResponseFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.EligibilityResponse) ??
           Stu3ResourceType.EligibilityResponse,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -799,7 +796,6 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.EnrollmentRequest) ??
           Stu3ResourceType.EnrollmentRequest,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -901,7 +897,6 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.EnrollmentResponse) ??
           Stu3ResourceType.EnrollmentResponse,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

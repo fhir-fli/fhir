@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -55,8 +54,6 @@ class AdministrableProductDefinition
 
         /// [resourceType] This is a AdministrableProductDefinition resource",
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.",
     @JsonKey(name: 'id')
@@ -557,7 +554,6 @@ class Ingredient with Resource, _$Ingredient {
   factory Ingredient({
     /// [resourceType] This is a Ingredient resource;
     @Default(R4ResourceType.Ingredient) R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id') String? fhirId,
@@ -1062,7 +1058,6 @@ class ClinicalUseDefinition with Resource, _$ClinicalUseDefinition {
   factory ClinicalUseDefinition({
     /// [resourceType] This is a ClinicalUseDefinition resource;
     @Default(R4ResourceType.ClinicalUseDefinition) R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id') String? fhirId,
@@ -1757,8 +1752,6 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
 
         /// [resourceType] This is a ManufacturedItemDefinition resource;
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id')
@@ -2049,8 +2042,6 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
 
         /// [resourceType] This is a MedicinalProductDefinition resource;
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id')
@@ -2847,8 +2838,6 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
 
         /// [resourceType] This is a PackagedProductDefinition resource;
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id')
@@ -3550,7 +3539,6 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   factory RegulatedAuthorization({
     /// [resourceType] This is a RegulatedAuthorization resource;
     @Default(R4ResourceType.RegulatedAuthorization) R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id') String? fhirId,
@@ -3831,7 +3819,6 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
   factory SubstanceDefinition({
     /// [resourceType] This is a SubstanceDefinition resource;
     @Default(R4ResourceType.SubstanceDefinition) R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id') String? fhirId,

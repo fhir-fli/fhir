@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -174,7 +173,6 @@ class CarePlan with Resource, _$CarePlan {
     @Default(R5ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: R5ResourceType.CarePlan)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -628,7 +626,6 @@ class CareTeam with Resource, _$CareTeam {
     @Default(R5ResourceType.CareTeam)
     @JsonKey(unknownEnumValue: R5ResourceType.CareTeam)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1045,7 +1042,6 @@ class Goal with Resource, _$Goal {
     @Default(R5ResourceType.Goal)
     @JsonKey(unknownEnumValue: R5ResourceType.Goal)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1661,7 +1657,6 @@ class NutritionIntake with Resource, _$NutritionIntake {
     @Default(R5ResourceType.NutritionIntake)
     @JsonKey(unknownEnumValue: R5ResourceType.NutritionIntake)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2485,7 +2480,6 @@ class NutritionOrder with Resource, _$NutritionOrder {
     @Default(R5ResourceType.NutritionOrder)
     @JsonKey(unknownEnumValue: R5ResourceType.NutritionOrder)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -4172,7 +4166,6 @@ class RequestOrchestration with Resource, _$RequestOrchestration {
     @Default(R5ResourceType.RequestOrchestration)
     @JsonKey(unknownEnumValue: R5ResourceType.RequestOrchestration)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -5744,7 +5737,6 @@ class RiskAssessment with Resource, _$RiskAssessment {
     @Default(R5ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: R5ResourceType.RiskAssessment)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -6313,7 +6305,6 @@ class ServiceRequest with Resource, _$ServiceRequest {
     @Default(R5ResourceType.ServiceRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.ServiceRequest)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -7093,7 +7084,6 @@ class VisionPrescription with Resource, _$VisionPrescription {
     @Default(R5ResourceType.VisionPrescription)
     @JsonKey(unknownEnumValue: R5ResourceType.VisionPrescription)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.

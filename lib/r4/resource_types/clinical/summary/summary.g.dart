@@ -12,7 +12,6 @@ _$_AdverseEvent _$$_AdverseEventFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.AdverseEvent) ??
           R4ResourceType.AdverseEvent,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -409,7 +408,6 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.AllergyIntolerance) ??
           R4ResourceType.AllergyIntolerance,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -648,7 +646,6 @@ _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ClinicalImpression) ??
           R4ResourceType.ClinicalImpression,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -902,7 +899,6 @@ _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) => _$_Condition(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Condition) ??
           R4ResourceType.Condition,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1162,7 +1158,6 @@ _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.DetectedIssue) ??
           R4ResourceType.DetectedIssue,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1380,7 +1375,6 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.FamilyMemberHistory) ??
           R4ResourceType.FamilyMemberHistory,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1653,7 +1647,6 @@ _$_Procedure _$$_ProcedureFromJson(Map<String, dynamic> json) => _$_Procedure(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Procedure) ??
           R4ResourceType.Procedure,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

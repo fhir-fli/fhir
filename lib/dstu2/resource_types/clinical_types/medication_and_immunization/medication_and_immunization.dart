@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Medication with Resource, _$Medication {
     @Default(Dstu2ResourceType.Medication)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -290,7 +288,6 @@ class MedicationOrder with Resource, _$MedicationOrder {
     @Default(Dstu2ResourceType.MedicationOrder)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: '_id') Element? idElement,
     FhirMeta? meta,
@@ -488,7 +485,6 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     @Default(Dstu2ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -605,7 +601,6 @@ class MedicationDispense with Resource, _$MedicationDispense {
     @Default(Dstu2ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -762,7 +757,6 @@ class MedicationStatement with Resource, _$MedicationStatement {
     @Default(Dstu2ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -883,7 +877,6 @@ class Immunization with Resource, _$Immunization {
     @Default(Dstu2ResourceType.Immunization)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1093,7 +1086,6 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     @Default(Dstu2ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

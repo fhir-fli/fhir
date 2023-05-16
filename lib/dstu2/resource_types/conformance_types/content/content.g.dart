@@ -17,7 +17,6 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.StructureDefinition) ??
         Dstu2ResourceType.StructureDefinition,
-    dbId: json['dbId'] as int?,
     fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
@@ -498,7 +497,6 @@ _$_DataElement _$$_DataElementFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DataElement) ??
           Dstu2ResourceType.DataElement,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

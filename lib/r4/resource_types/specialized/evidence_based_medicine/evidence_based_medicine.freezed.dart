@@ -21,8 +21,6 @@ Citation _$CitationFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Citation {
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   String? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -112,7 +110,6 @@ abstract class $CitationCopyWith<$Res> {
   @useResult
   $Res call(
       {R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
       @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -201,7 +198,6 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -260,10 +256,6 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -713,7 +705,6 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
   @useResult
   $Res call(
       {R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
       @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -819,7 +810,6 @@ class __$$_CitationCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -878,10 +868,6 @@ class __$$_CitationCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1099,7 +1085,6 @@ class __$$_CitationCopyWithImpl<$Res>
 class _$_Citation extends _Citation {
   _$_Citation(
       {this.resourceType = R4ResourceType.Citation,
-      @JsonKey(includeToJson: false, includeFromJson: true) this.dbId,
       @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
@@ -1177,9 +1162,6 @@ class _$_Citation extends _Citation {
   @override
   @JsonKey()
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final String? fhirId;
@@ -1445,7 +1427,7 @@ class _$_Citation extends _Citation {
 
   @override
   String toString() {
-    return 'Citation(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, summary: $summary, classification: $classification, note: $note, currentState: $currentState, statusDate: $statusDate, relatesTo: $relatesTo, citedArtifact: $citedArtifact)';
+    return 'Citation(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, summary: $summary, classification: $classification, note: $note, currentState: $currentState, statusDate: $statusDate, relatesTo: $relatesTo, citedArtifact: $citedArtifact)';
   }
 
   @override
@@ -1455,7 +1437,6 @@ class _$_Citation extends _Citation {
             other is _$_Citation &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1550,7 +1531,6 @@ class _$_Citation extends _Citation {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -1622,7 +1602,6 @@ class _$_Citation extends _Citation {
 abstract class _Citation extends Citation {
   factory _Citation(
       {final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true) final int? dbId,
       @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -1681,9 +1660,6 @@ abstract class _Citation extends Citation {
 
   @override
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
   @JsonKey(name: 'id')
   String? get fhirId;
@@ -11779,8 +11755,6 @@ Evidence _$EvidenceFromJson(Map<String, dynamic> json) {
 mixin _$Evidence {
   @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   String? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -11861,8 +11835,6 @@ abstract class $EvidenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -11960,7 +11932,6 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -12014,10 +11985,6 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -12436,8 +12403,6 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -12551,7 +12516,6 @@ class __$$_EvidenceCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -12605,10 +12569,6 @@ class __$$_EvidenceCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -12807,8 +12767,6 @@ class _$_Evidence extends _Evidence {
   _$_Evidence(
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
           this.resourceType = R4ResourceType.Evidence,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -12894,9 +12852,6 @@ class _$_Evidence extends _Evidence {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final String? fhirId;
@@ -13128,7 +13083,7 @@ class _$_Evidence extends _Evidence {
 
   @override
   String toString() {
-    return 'Evidence(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, title: $title, titleElement: $titleElement, citeAsReference: $citeAsReference, citAsMarkdown: $citAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, useContext: $useContext, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, description: $description, descriptionElement: $descriptionElement, assertion: $assertion, assertionElement: $assertionElement, note: $note, variableDefinition: $variableDefinition, synthesisType: $synthesisType, studyType: $studyType, statistic: $statistic, certainty: $certainty)';
+    return 'Evidence(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, title: $title, titleElement: $titleElement, citeAsReference: $citeAsReference, citAsMarkdown: $citAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, useContext: $useContext, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, description: $description, descriptionElement: $descriptionElement, assertion: $assertion, assertionElement: $assertionElement, note: $note, variableDefinition: $variableDefinition, synthesisType: $synthesisType, studyType: $studyType, statistic: $statistic, certainty: $certainty)';
   }
 
   @override
@@ -13138,7 +13093,6 @@ class _$_Evidence extends _Evidence {
             other is _$_Evidence &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -13226,7 +13180,6 @@ class _$_Evidence extends _Evidence {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -13294,8 +13247,6 @@ abstract class _Evidence extends Evidence {
   factory _Evidence(
       {@JsonKey(unknownEnumValue: R4ResourceType.Evidence)
           final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -13365,9 +13316,6 @@ abstract class _Evidence extends Evidence {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
   @JsonKey(name: 'id')
   String? get fhirId;
@@ -16863,8 +16811,6 @@ EvidenceReport _$EvidenceReportFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$EvidenceReport {
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   String? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -16925,7 +16871,6 @@ abstract class $EvidenceReportCopyWith<$Res> {
   @useResult
   $Res call(
       {R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
       @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -16987,7 +16932,6 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -17027,10 +16971,6 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -17305,7 +17245,6 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
   @useResult
   $Res call(
       {R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
       @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
@@ -17376,7 +17315,6 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -17416,10 +17354,6 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -17561,7 +17495,6 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
 class _$_EvidenceReport extends _EvidenceReport {
   _$_EvidenceReport(
       {this.resourceType = R4ResourceType.EvidenceReport,
-      @JsonKey(includeToJson: false, includeFromJson: true) this.dbId,
       @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
@@ -17618,9 +17551,6 @@ class _$_EvidenceReport extends _EvidenceReport {
   @override
   @JsonKey()
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final String? fhirId;
@@ -17819,7 +17749,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   @override
   String toString() {
-    return 'EvidenceReport(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, status: $status, statusElement: $statusElement, useContext: $useContext, identifier: $identifier, relatedIdentifier: $relatedIdentifier, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, type: $type, note: $note, relatedArtifact: $relatedArtifact, subject: $subject, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatesTo: $relatesTo, section: $section)';
+    return 'EvidenceReport(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, status: $status, statusElement: $statusElement, useContext: $useContext, identifier: $identifier, relatedIdentifier: $relatedIdentifier, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, type: $type, note: $note, relatedArtifact: $relatedArtifact, subject: $subject, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatesTo: $relatesTo, section: $section)';
   }
 
   @override
@@ -17829,7 +17759,6 @@ class _$_EvidenceReport extends _EvidenceReport {
             other is _$_EvidenceReport &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -17889,7 +17818,6 @@ class _$_EvidenceReport extends _EvidenceReport {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -17942,7 +17870,6 @@ class _$_EvidenceReport extends _EvidenceReport {
 abstract class _EvidenceReport extends EvidenceReport {
   factory _EvidenceReport(
       {final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true) final int? dbId,
       @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
@@ -17983,9 +17910,6 @@ abstract class _EvidenceReport extends EvidenceReport {
 
   @override
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
   @JsonKey(name: 'id')
   String? get fhirId;
@@ -19952,8 +19876,6 @@ EvidenceVariable _$EvidenceVariableFromJson(Map<String, dynamic> json) {
 mixin _$EvidenceVariable {
   @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   String? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -20039,8 +19961,6 @@ abstract class $EvidenceVariableCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -20139,7 +20059,6 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -20193,10 +20112,6 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -20607,8 +20522,6 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -20722,7 +20635,6 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -20776,10 +20688,6 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -20979,8 +20887,6 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   _$_EvidenceVariable(
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
           this.resourceType = R4ResourceType.EvidenceVariable,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -21067,9 +20973,6 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final String? fhirId;
@@ -21294,7 +21197,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   @override
   String toString() {
-    return 'EvidenceVariable(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, description: $description, descriptionElement: $descriptionElement, note: $note, useContext: $useContext, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, actual: $actual, actualElement: $actualElement, characteristicCombination: $characteristicCombination, characteristicCombinationElement: $characteristicCombinationElement, characteristic: $characteristic, handling: $handling, handlingElement: $handlingElement, category: $category)';
+    return 'EvidenceVariable(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, description: $description, descriptionElement: $descriptionElement, note: $note, useContext: $useContext, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, actual: $actual, actualElement: $actualElement, characteristicCombination: $characteristicCombination, characteristicCombinationElement: $characteristicCombinationElement, characteristic: $characteristic, handling: $handling, handlingElement: $handlingElement, category: $category)';
   }
 
   @override
@@ -21304,7 +21207,6 @@ class _$_EvidenceVariable extends _EvidenceVariable {
             other is _$_EvidenceVariable &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -21392,7 +21294,6 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -21460,8 +21361,6 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   factory _EvidenceVariable(
       {@JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
           final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -21534,9 +21433,6 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
   @JsonKey(name: 'id')
   String? get fhirId;
@@ -23096,8 +22992,6 @@ ResearchDefinition _$ResearchDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$ResearchDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   String? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -23201,8 +23095,6 @@ abstract class $ResearchDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -23331,7 +23223,6 @@ class _$ResearchDefinitionCopyWithImpl<$Res, $Val extends ResearchDefinition>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -23400,10 +23291,6 @@ class _$ResearchDefinitionCopyWithImpl<$Res, $Val extends ResearchDefinition>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -23988,8 +23875,6 @@ abstract class _$$_ResearchDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -24143,7 +24028,6 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -24212,10 +24096,6 @@ class __$$_ResearchDefinitionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -24474,8 +24354,6 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   _$_ResearchDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
           this.resourceType = R4ResourceType.ResearchDefinition,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -24584,9 +24462,6 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final String? fhirId;
@@ -24865,7 +24740,7 @@ class _$_ResearchDefinition extends _ResearchDefinition {
 
   @override
   String toString() {
-    return 'ResearchDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, comment: $comment, commentElement: $commentElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library_: $library_, population: $population, exposure: $exposure, exposureAlternative: $exposureAlternative, outcome: $outcome)';
+    return 'ResearchDefinition(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, comment: $comment, commentElement: $commentElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library_: $library_, population: $population, exposure: $exposure, exposureAlternative: $exposureAlternative, outcome: $outcome)';
   }
 
   @override
@@ -24875,7 +24750,6 @@ class _$_ResearchDefinition extends _ResearchDefinition {
             other is _$_ResearchDefinition &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -24987,7 +24861,6 @@ class _$_ResearchDefinition extends _ResearchDefinition {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -25071,8 +24944,6 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   factory _ResearchDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
           final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -25165,9 +25036,6 @@ abstract class _ResearchDefinition extends ResearchDefinition {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
   @JsonKey(name: 'id')
   String? get fhirId;
@@ -25329,8 +25197,6 @@ ResearchElementDefinition _$ResearchElementDefinitionFromJson(
 mixin _$ResearchElementDefinition {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   String? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -25438,8 +25304,6 @@ abstract class $ResearchElementDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -25570,7 +25434,6 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -25640,10 +25503,6 @@ class _$ResearchElementDefinitionCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -26213,8 +26072,6 @@ abstract class _$$_ResearchElementDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
           R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -26369,7 +26226,6 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -26439,10 +26295,6 @@ class __$$_ResearchElementDefinitionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -26705,8 +26557,6 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   _$_ResearchElementDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
           this.resourceType = R4ResourceType.ResearchElementDefinition,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -26820,9 +26670,6 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
   final R4ResourceType resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final String? fhirId;
@@ -27110,7 +26957,7 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
 
   @override
   String toString() {
-    return 'ResearchElementDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, comment: $comment, commentElement: $commentElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library_: $library_, type: $type, typeElement: $typeElement, variableType: $variableType, variableTypeElement: $variableTypeElement, characteristic: $characteristic)';
+    return 'ResearchElementDefinition(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, comment: $comment, commentElement: $commentElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library_: $library_, type: $type, typeElement: $typeElement, variableType: $variableType, variableTypeElement: $variableTypeElement, characteristic: $characteristic)';
   }
 
   @override
@@ -27120,7 +26967,6 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
             other is _$_ResearchElementDefinition &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -27233,7 +27079,6 @@ class _$_ResearchElementDefinition extends _ResearchElementDefinition {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -27318,8 +27163,6 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   factory _ResearchElementDefinition(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
           final R4ResourceType resourceType,
-      @JsonKey(includeToJson: false, includeFromJson: true)
-          final int? dbId,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -27416,9 +27259,6 @@ abstract class _ResearchElementDefinition extends ResearchElementDefinition {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
   R4ResourceType get resourceType;
-  @override
-  @JsonKey(includeToJson: false, includeFromJson: true)
-  int? get dbId;
   @override
   @JsonKey(name: 'id')
   String? get fhirId;

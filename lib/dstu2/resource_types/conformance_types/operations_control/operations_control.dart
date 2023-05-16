@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Conformance with Resource, _$Conformance {
     @Default(Dstu2ResourceType.Conformance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -95,7 +93,6 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @Default(Dstu2ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -856,7 +853,6 @@ class OperationDefinition with Resource, _$OperationDefinition {
     @Default(Dstu2ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1052,7 +1048,6 @@ class SearchParameter with Resource, _$SearchParameter {
     @Default(Dstu2ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

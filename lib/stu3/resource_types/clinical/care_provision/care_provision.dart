@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -86,7 +85,6 @@ class CarePlan with Resource, _$CarePlan {
     @Default(Stu3ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CarePlan)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -261,7 +259,6 @@ class CareTeam with Resource, _$CareTeam {
     @Default(Stu3ResourceType.CareTeam)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CareTeam)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -364,7 +361,6 @@ class Goal with Resource, _$Goal {
     @Default(Stu3ResourceType.Goal)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Goal)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -474,7 +470,6 @@ class NutritionOrder with Resource, _$NutritionOrder {
     @Default(Stu3ResourceType.NutritionOrder)
     @JsonKey(unknownEnumValue: Stu3ResourceType.NutritionOrder)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -794,7 +789,6 @@ class ProcedureRequest with Resource, _$ProcedureRequest {
     @Default(Stu3ResourceType.ProcedureRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ProcedureRequest)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -917,7 +911,6 @@ class ReferralRequest with Resource, _$ReferralRequest {
     @Default(Stu3ResourceType.ReferralRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ReferralRequest)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1034,7 +1027,6 @@ class RiskAssessment with Resource, _$RiskAssessment {
     @Default(Stu3ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: Stu3ResourceType.RiskAssessment)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1152,7 +1144,6 @@ class VisionPrescription with Resource, _$VisionPrescription {
     @Default(Stu3ResourceType.VisionPrescription)
     @JsonKey(unknownEnumValue: Stu3ResourceType.VisionPrescription)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

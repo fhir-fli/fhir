@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -155,7 +154,6 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
     @Default(R5ResourceType.ArtifactAssessment)
     @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -759,7 +757,6 @@ class Citation with Resource, _$Citation {
     @Default(R5ResourceType.Citation)
     @JsonKey(unknownEnumValue: R5ResourceType.Citation)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3914,7 +3911,6 @@ class Evidence with Resource, _$Evidence {
     @Default(R5ResourceType.Evidence)
     @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -5249,7 +5245,6 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     @Default(R5ResourceType.EvidenceVariable)
     @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -5952,7 +5947,6 @@ class EvidenceReport with Resource, _$EvidenceReport {
     @Default(R5ResourceType.EvidenceReport)
     @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.

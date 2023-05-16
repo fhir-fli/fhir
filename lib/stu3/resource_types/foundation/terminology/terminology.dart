@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class CodeSystem with Resource, _$CodeSystem {
     @Default(Stu3ResourceType.CodeSystem)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CodeSystem)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -342,7 +340,6 @@ class ConceptMap with Resource, _$ConceptMap {
     @Default(Stu3ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ConceptMap)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -649,7 +646,6 @@ class ExpansionProfile with Resource, _$ExpansionProfile {
     @Default(Stu3ResourceType.ExpansionProfile)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ExpansionProfile)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1017,7 +1013,6 @@ class NamingSystem with Resource, _$NamingSystem {
     @Default(Stu3ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: Stu3ResourceType.NamingSystem)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1133,7 +1128,6 @@ class ValueSet with Resource, _$ValueSet {
     @Default(Stu3ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ValueSet)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

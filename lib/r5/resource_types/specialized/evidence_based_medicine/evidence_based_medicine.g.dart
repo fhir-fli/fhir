@@ -13,7 +13,6 @@ _$_ArtifactAssessment _$$_ArtifactAssessmentFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ArtifactAssessment) ??
           R5ResourceType.ArtifactAssessment,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -424,7 +423,6 @@ _$_Citation _$$_CitationFromJson(Map<String, dynamic> json) => _$_Citation(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Citation) ??
           R5ResourceType.Citation,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1662,7 +1660,6 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Evidence) ??
           R5ResourceType.Evidence,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2258,7 +2255,6 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.EvidenceVariable) ??
           R5ResourceType.EvidenceVariable,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2574,7 +2570,6 @@ _$_EvidenceReport _$$_EvidenceReportFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.EvidenceReport) ??
           R5ResourceType.EvidenceReport,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

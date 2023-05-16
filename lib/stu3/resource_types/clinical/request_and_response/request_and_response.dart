@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Communication with Resource, _$Communication {
     @Default(Stu3ResourceType.Communication)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -135,7 +133,6 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     @Default(Stu3ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -288,7 +285,6 @@ class DeviceRequest with Resource, _$DeviceRequest {
     @Default(Stu3ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -403,7 +399,6 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     @Default(Stu3ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -467,7 +462,6 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     @Default(Stu3ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -570,7 +564,6 @@ class SupplyRequest with Resource, _$SupplyRequest {
     @Default(Stu3ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

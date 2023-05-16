@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Device with Resource, _$Device {
     @Default(Dstu2ResourceType.Device)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -91,7 +89,6 @@ class DeviceComponent with Resource, _$DeviceComponent {
     @Default(Dstu2ResourceType.DeviceComponent)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: '_id') Element? idElement,
     FhirMeta? meta,
@@ -182,7 +179,6 @@ class DeviceMetric with Resource, _$DeviceMetric {
     @Default(Dstu2ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

@@ -13,7 +13,6 @@ _$_BiologicallyDerivedProduct _$$_BiologicallyDerivedProductFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.BiologicallyDerivedProduct) ??
           R4ResourceType.BiologicallyDerivedProduct,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -498,7 +497,6 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Device) ??
           R4ResourceType.Device,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -927,7 +925,6 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.DeviceMetric) ??
           R4ResourceType.DeviceMetric,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1089,7 +1086,6 @@ _$_NutritionProduct _$$_NutritionProductFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.NutritionProduct,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1417,7 +1413,6 @@ _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Substance) ??
           R4ResourceType.Substance,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

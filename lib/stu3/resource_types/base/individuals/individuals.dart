@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Group with Resource, _$Group {
     @Default(Stu3ResourceType.Group)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Group)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -169,7 +167,6 @@ class Patient with Resource, _$Patient {
     @Default(Stu3ResourceType.Patient)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -410,7 +407,6 @@ class Person with Resource, _$Person {
     @Default(Stu3ResourceType.Person)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Person)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -510,7 +506,6 @@ class Practitioner with Resource, _$Practitioner {
     @Default(Stu3ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -612,7 +607,6 @@ class PractitionerRole with Resource, _$PractitionerRole {
     @Default(Stu3ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -762,7 +756,6 @@ class RelatedPerson with Resource, _$RelatedPerson {
     @Default(Stu3ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

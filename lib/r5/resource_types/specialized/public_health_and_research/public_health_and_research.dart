@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -221,7 +220,6 @@ class ResearchStudy with Resource, _$ResearchStudy {
     @Default(R5ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1569,7 +1567,6 @@ class ResearchSubject with Resource, _$ResearchSubject {
     @Default(R5ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.

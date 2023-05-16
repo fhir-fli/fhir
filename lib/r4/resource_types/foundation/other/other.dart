@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -98,8 +97,6 @@ class Basic with Resource, _$Basic {
 
         /// [resourceType] This is a Basic resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -272,8 +269,6 @@ class Binary with Resource, _$Binary {
 
         /// [resourceType] This is a Binary resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -418,8 +413,6 @@ class Bundle with Resource, _$Bundle {
 
         /// [resourceType] This is a Bundle resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1359,8 +1352,6 @@ class Linkage with Resource, _$Linkage {
 
         /// [resourceType] This is a Linkage resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1699,8 +1690,6 @@ class MessageHeader with Resource, _$MessageHeader {
 
         /// [resourceType] This is a MessageHeader resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2327,8 +2316,6 @@ class OperationOutcome with Resource, _$OperationOutcome {
 
         /// [resourceType] This is a OperationOutcome resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2643,8 +2630,6 @@ class Parameters with Resource, _$Parameters {
 
         /// [resourceType] This is a Parameters resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -3263,8 +3248,6 @@ class Subscription with Resource, _$Subscription {
 
         /// [resourceType] This is a Subscription resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -3610,8 +3593,6 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     /// [resourceType] This is a SubscriptionStatus resource;
     @Default(R4ResourceType.SubscriptionStatus)
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id')
@@ -3900,7 +3881,6 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   factory SubscriptionTopic({
     /// [resourceType] This is a SubscriptionTopic resource;
     @Default(R4ResourceType.SubscriptionTopic) R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id') String? fhirId,

@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @Default(Stu3ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -762,7 +760,6 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     @Default(Stu3ResourceType.CompartmentDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -879,7 +876,6 @@ class DataElement with Resource, _$DataElement {
     @Default(Stu3ResourceType.DataElement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -998,7 +994,6 @@ class GraphDefinition with Resource, _$GraphDefinition {
     @Default(Stu3ResourceType.GraphDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1208,7 +1203,6 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @Default(Stu3ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1507,7 +1501,6 @@ class MessageDefinition with Resource, _$MessageDefinition {
     @Default(Stu3ResourceType.MessageDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1664,7 +1657,6 @@ class OperationDefinition with Resource, _$OperationDefinition {
     @Default(Stu3ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1890,7 +1882,6 @@ class SearchParameter with Resource, _$SearchParameter {
     @Default(Stu3ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -2022,7 +2013,6 @@ class StructureDefinition with Resource, _$StructureDefinition {
     @Default(Stu3ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -2240,7 +2230,6 @@ class StructureMap with Resource, _$StructureMap {
     @Default(Stu3ResourceType.StructureMap)
     @JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

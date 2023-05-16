@@ -12,7 +12,6 @@ _$_AdverseEvent _$$_AdverseEventFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.AdverseEvent) ??
           Stu3ResourceType.AdverseEvent,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -344,7 +343,6 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.AllergyIntolerance) ??
           Stu3ResourceType.AllergyIntolerance,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -624,7 +622,6 @@ _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ClinicalImpression) ??
           Stu3ResourceType.ClinicalImpression,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -858,7 +855,6 @@ _$_Condition _$$_ConditionFromJson(Map<String, dynamic> json) => _$_Condition(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Condition) ??
           Stu3ResourceType.Condition,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1109,7 +1105,6 @@ _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DetectedIssue) ??
           Stu3ResourceType.DetectedIssue,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1269,7 +1264,6 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.FamilyMemberHistory) ??
           Stu3ResourceType.FamilyMemberHistory,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1537,7 +1531,6 @@ _$_Procedure _$$_ProcedureFromJson(Map<String, dynamic> json) => _$_Procedure(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Procedure) ??
           Stu3ResourceType.Procedure,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

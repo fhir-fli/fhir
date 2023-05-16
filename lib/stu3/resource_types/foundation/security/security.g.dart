@@ -12,7 +12,6 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.AuditEvent) ??
           Stu3ResourceType.AuditEvent,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -488,7 +487,6 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Consent) ??
           Stu3ResourceType.Consent,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -835,7 +833,6 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Provenance) ??
           Stu3ResourceType.Provenance,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

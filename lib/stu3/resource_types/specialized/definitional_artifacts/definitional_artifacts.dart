@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     @Default(Stu3ResourceType.ActivityDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -210,7 +208,6 @@ class PlanDefinition with Resource, _$PlanDefinition {
     @Default(Stu3ResourceType.PlanDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -634,7 +631,6 @@ class Questionnaire with Resource, _$Questionnaire {
     @Default(Stu3ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -905,7 +901,6 @@ class ServiceDefinition with Resource, _$ServiceDefinition {
     @Default(Stu3ResourceType.ServiceDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

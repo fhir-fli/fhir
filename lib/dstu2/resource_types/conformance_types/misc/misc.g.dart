@@ -17,7 +17,6 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.ImplementationGuide) ??
         Dstu2ResourceType.ImplementationGuide,
-    dbId: json['dbId'] as int?,
     fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
@@ -575,7 +574,6 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.TestScript) ??
           Dstu2ResourceType.TestScript,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

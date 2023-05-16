@@ -12,7 +12,6 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.CodeSystem) ??
           R5ResourceType.CodeSystem,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -185,7 +184,7 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
       supplements: json['supplements'] == null
           ? null
           : FhirCanonical.fromJson(json['supplements']),
-      count: json['count'] == null
+      codeSystemCount: json['count'] == null
           ? null
           : FhirUnsignedInt.fromJson(json['count']),
       countElement: json['_count'] == null
@@ -286,7 +285,7 @@ Map<String, dynamic> _$$_CodeSystemToJson(_$_CodeSystem instance) {
   writeNotNull('content', instance.content?.toJson());
   writeNotNull('_content', instance.contentElement?.toJson());
   writeNotNull('supplements', instance.supplements?.toJson());
-  writeNotNull('count', instance.count?.toJson());
+  writeNotNull('count', instance.codeSystemCount?.toJson());
   writeNotNull('_count', instance.countElement?.toJson());
   writeNotNull('filter', instance.filter?.map((e) => e.toJson()).toList());
   writeNotNull('property', instance.property?.map((e) => e.toJson()).toList());
@@ -770,7 +769,6 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ConceptMap) ??
           R5ResourceType.ConceptMap,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1546,7 +1544,6 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.NamingSystem) ??
           R5ResourceType.NamingSystem,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1862,7 +1859,6 @@ _$_TerminologyCapabilities _$$_TerminologyCapabilitiesFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.TerminologyCapabilities) ??
           R5ResourceType.TerminologyCapabilities,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2575,7 +2571,6 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ValueSet) ??
           R5ResourceType.ValueSet,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

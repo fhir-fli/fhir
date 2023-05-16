@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class PaymentNotice with Resource, _$PaymentNotice {
     @Default(Stu3ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentNotice)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -83,7 +81,6 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     @Default(Stu3ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PaymentReconciliation)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

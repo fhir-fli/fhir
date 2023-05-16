@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class AdverseEvent with Resource, _$AdverseEvent {
     @Default(Stu3ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AdverseEvent)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -136,7 +134,6 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     @Default(Stu3ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AllergyIntolerance)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -259,7 +256,6 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
     @Default(Stu3ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ClinicalImpression)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -414,7 +410,6 @@ class Condition with Resource, _$Condition {
     @Default(Stu3ResourceType.Condition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Condition)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -573,7 +568,6 @@ class DetectedIssue with Resource, _$DetectedIssue {
     @Default(Stu3ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DetectedIssue)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -678,7 +672,6 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     @Default(Stu3ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: Stu3ResourceType.FamilyMemberHistory)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -809,7 +802,6 @@ class Procedure with Resource, _$Procedure {
     @Default(Stu3ResourceType.Procedure)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Procedure)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

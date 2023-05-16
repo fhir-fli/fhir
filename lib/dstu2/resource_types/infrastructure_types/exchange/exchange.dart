@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class MessageHeader with Resource, _$MessageHeader {
     @Default(Dstu2ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -220,7 +218,6 @@ class OperationOutcome with Resource, _$OperationOutcome {
     @Default(Dstu2ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: '_id') Element? idElement,
     FhirMeta? meta,
@@ -319,7 +316,6 @@ class Parameters with Resource, _$Parameters {
     @Default(Dstu2ResourceType.Parameters)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -441,7 +437,6 @@ class Subscription with Resource, _$Subscription {
     @Default(Dstu2ResourceType.Subscription)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

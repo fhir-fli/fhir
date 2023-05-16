@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Account with Resource, _$Account {
     @Default(Stu3ResourceType.Account)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -166,7 +164,6 @@ class ChargeItem with Resource, _$ChargeItem {
     @Default(Stu3ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -284,7 +281,6 @@ class Contract with Resource, _$Contract {
     @Default(Stu3ResourceType.Contract)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -743,7 +739,6 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     @Default(Stu3ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
         Stu3ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

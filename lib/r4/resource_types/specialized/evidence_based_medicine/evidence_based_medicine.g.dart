@@ -10,7 +10,6 @@ _$_Citation _$$_CitationFromJson(Map<String, dynamic> json) => _$_Citation(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.Citation,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1631,7 +1630,6 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Evidence) ??
           R4ResourceType.Evidence,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2267,7 +2265,6 @@ _$_EvidenceReport _$$_EvidenceReportFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.EvidenceReport,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2663,7 +2660,6 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.EvidenceVariable) ??
           R4ResourceType.EvidenceVariable,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -3045,7 +3041,6 @@ _$_ResearchDefinition _$$_ResearchDefinitionFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ResearchDefinition) ??
           R4ResourceType.ResearchDefinition,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -3306,7 +3301,6 @@ _$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ResearchElementDefinition) ??
           R4ResourceType.ResearchElementDefinition,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

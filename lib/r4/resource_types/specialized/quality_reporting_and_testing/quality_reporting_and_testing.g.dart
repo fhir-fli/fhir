@@ -11,7 +11,6 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Measure) ??
           R4ResourceType.Measure,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -698,7 +697,6 @@ _$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MeasureReport) ??
           R4ResourceType.MeasureReport,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1070,7 +1068,6 @@ _$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.TestReport) ??
           R4ResourceType.TestReport,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1559,7 +1556,6 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.TestScript) ??
           R4ResourceType.TestScript,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

@@ -13,7 +13,6 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.CapabilityStatement) ??
           Stu3ResourceType.CapabilityStatement,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1174,7 +1173,6 @@ _$_CompartmentDefinition _$$_CompartmentDefinitionFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.CompartmentDefinition) ??
           Stu3ResourceType.CompartmentDefinition,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1383,7 +1381,6 @@ _$_DataElement _$$_DataElementFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DataElement) ??
           Stu3ResourceType.DataElement,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1597,7 +1594,6 @@ _$_GraphDefinition _$$_GraphDefinitionFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.GraphDefinition) ??
           Stu3ResourceType.GraphDefinition,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1898,7 +1894,6 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ImplementationGuide) ??
           Stu3ResourceType.ImplementationGuide,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2309,7 +2304,6 @@ _$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.MessageDefinition) ??
           Stu3ResourceType.MessageDefinition,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2574,7 +2568,6 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.OperationDefinition) ??
           Stu3ResourceType.OperationDefinition,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2973,7 +2966,6 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.SearchParameter) ??
           Stu3ResourceType.SearchParameter,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -3288,7 +3280,6 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.StructureDefinition) ??
           Stu3ResourceType.StructureDefinition,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -3625,7 +3616,6 @@ _$_StructureMap _$$_StructureMapFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.StructureMap) ??
           Stu3ResourceType.StructureMap,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

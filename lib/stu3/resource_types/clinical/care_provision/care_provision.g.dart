@@ -136,7 +136,6 @@ _$_CarePlan _$$_CarePlanFromJson(Map<String, dynamic> json) => _$_CarePlan(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.CarePlan) ??
           Stu3ResourceType.CarePlan,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -585,7 +584,6 @@ _$_CareTeam _$$_CareTeamFromJson(Map<String, dynamic> json) => _$_CareTeam(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.CareTeam) ??
           Stu3ResourceType.CareTeam,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -747,7 +745,6 @@ _$_Goal _$$_GoalFromJson(Map<String, dynamic> json) => _$_Goal(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Goal) ??
           Stu3ResourceType.Goal,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -952,7 +949,6 @@ _$_NutritionOrder _$$_NutritionOrderFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.NutritionOrder) ??
           Stu3ResourceType.NutritionOrder,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1339,7 +1335,6 @@ _$_ProcedureRequest _$$_ProcedureRequestFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ProcedureRequest) ??
           Stu3ResourceType.ProcedureRequest,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1571,7 +1566,6 @@ _$_ReferralRequest _$$_ReferralRequestFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ReferralRequest) ??
           Stu3ResourceType.ReferralRequest,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1779,7 +1773,6 @@ _$_RiskAssessment _$$_RiskAssessmentFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.RiskAssessment) ??
           Stu3ResourceType.RiskAssessment,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1994,7 +1987,6 @@ _$_VisionPrescription _$$_VisionPrescriptionFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.VisionPrescription) ??
           Stu3ResourceType.VisionPrescription,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

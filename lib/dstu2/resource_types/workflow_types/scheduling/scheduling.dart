@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -22,7 +21,6 @@ class Appointment with Resource, _$Appointment {
     @Default(Dstu2ResourceType.Appointment)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -138,7 +136,6 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     @Default(Dstu2ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -199,7 +196,6 @@ class Schedule with Resource, _$Schedule {
     @Default(Dstu2ResourceType.Schedule)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -253,7 +249,6 @@ class Slot with Resource, _$Slot {
     @Default(Dstu2ResourceType.Slot)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
         Dstu2ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

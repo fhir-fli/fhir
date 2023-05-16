@@ -11,7 +11,6 @@ _$_Encounter _$$_EncounterFromJson(Map<String, dynamic> json) => _$_Encounter(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Encounter) ??
           Stu3ResourceType.Encounter,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -518,7 +517,6 @@ _$_EpisodeOfCare _$$_EpisodeOfCareFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.EpisodeOfCare) ??
           Stu3ResourceType.EpisodeOfCare,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -716,7 +714,6 @@ _$_Flag _$$_FlagFromJson(Map<String, dynamic> json) => _$_Flag(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Flag) ??
           Stu3ResourceType.Flag,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -816,7 +813,6 @@ _$_Library _$$_LibraryFromJson(Map<String, dynamic> json) => _$_Library(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Library) ??
           Stu3ResourceType.Library,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1028,7 +1024,6 @@ _$_FhirList _$$_FhirListFromJson(Map<String, dynamic> json) => _$_FhirList(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.FhirList) ??
           Stu3ResourceType.FhirList,
-      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

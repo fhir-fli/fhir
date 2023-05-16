@@ -12,7 +12,6 @@ _$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ResearchStudy) ??
           R4ResourceType.ResearchStudy,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -418,7 +417,6 @@ _$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ResearchSubject) ??
           R4ResourceType.ResearchSubject,
-      id: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

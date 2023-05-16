@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -147,8 +146,6 @@ class Coverage with Resource, _$Coverage {
 
         /// [resourceType] This is a Coverage resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -804,8 +801,6 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
 
         /// [resourceType] This is a CoverageEligibilityRequest resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1601,8 +1596,6 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
 
         /// [resourceType] This is a CoverageEligibilityResponse resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2445,8 +2438,6 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
 
         /// [resourceType] This is a EnrollmentRequest resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2666,8 +2657,6 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
 
         /// [resourceType] This is a EnrollmentResponse resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.

@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -195,7 +194,6 @@ class Encounter with Resource, _$Encounter {
     @Default(R5ResourceType.Encounter)
     @JsonKey(unknownEnumValue: R5ResourceType.Encounter)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1210,7 +1208,6 @@ class EncounterHistory with Resource, _$EncounterHistory {
     @Default(R5ResourceType.EncounterHistory)
     @JsonKey(unknownEnumValue: R5ResourceType.EncounterHistory)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1608,7 +1605,6 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     @Default(R5ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2213,7 +2209,6 @@ class Flag with Resource, _$Flag {
     @Default(R5ResourceType.Flag)
     @JsonKey(unknownEnumValue: R5ResourceType.Flag)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2594,7 +2589,6 @@ class Library with Resource, _$Library {
     @Default(R5ResourceType.Library)
     @JsonKey(unknownEnumValue: R5ResourceType.Library)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3031,7 +3025,6 @@ class FhirList with Resource, _$FhirList {
     @Default(R5ResourceType.List)
     @JsonKey(unknownEnumValue: R5ResourceType.List)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.

@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -321,7 +320,6 @@ class Measure with Resource, _$Measure {
     @Default(R5ResourceType.Measure)
     @JsonKey(unknownEnumValue: R5ResourceType.Measure)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1887,7 +1885,6 @@ class MeasureReport with Resource, _$MeasureReport {
     @Default(R5ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3284,7 +3281,6 @@ class TestPlan with Resource, _$TestPlan {
     @Default(R5ResourceType.TestPlan)
     @JsonKey(unknownEnumValue: R5ResourceType.TestPlan)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -4507,7 +4503,6 @@ class TestReport with Resource, _$TestReport {
     @Default(R5ResourceType.TestReport)
     @JsonKey(unknownEnumValue: R5ResourceType.TestReport)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -6019,7 +6014,6 @@ class TestScript with Resource, _$TestScript {
     @Default(R5ResourceType.TestScript)
     @JsonKey(unknownEnumValue: R5ResourceType.TestScript)
         R5ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.

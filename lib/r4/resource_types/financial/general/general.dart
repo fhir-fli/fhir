@@ -5,7 +5,6 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:serverpod_serialization/serverpod_serialization.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -119,8 +118,6 @@ class Account with Resource, _$Account {
 
         /// [resourceType] This is a Account resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -663,8 +660,6 @@ class ChargeItem with Resource, _$ChargeItem {
 
         /// [resourceType] This is a ChargeItem resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -1188,8 +1183,6 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
 
         /// [resourceType] This is a ChargeItemDefinition resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -2016,8 +2009,6 @@ class Contract with Resource, _$Contract {
 
         /// [resourceType] This is a Contract resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -4930,8 +4921,6 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
 
         /// [resourceType] This is a ExplanationOfBenefit resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
@@ -8524,8 +8513,6 @@ class InsurancePlan with Resource, _$InsurancePlan {
 
         /// [resourceType] This is a InsurancePlan resource
         R4ResourceType resourceType,
-    @JsonKey(includeToJson: false, includeFromJson: true, name: 'dbId')
-        int? id,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
