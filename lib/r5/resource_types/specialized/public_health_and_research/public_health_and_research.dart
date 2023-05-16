@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod/serverpod.dart' as _i1;
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -12,6 +13,7 @@ import '../../../../r5.dart';
 
 part 'public_health_and_research.freezed.dart';
 part 'public_health_and_research.g.dart';
+part 'public_health_and_research.serverpod.dart';
 
 /// [ResearchStudy] A scientific study of nature that sometimes includes
 ///  processes involved in health and disease. For example, clinical trials are
@@ -20,7 +22,7 @@ part 'public_health_and_research.g.dart';
 ///  certain outcomes and certain groups of people by looking at data collected
 ///  in the past or future.
 @freezed
-class ResearchStudy with Resource, _$ResearchStudy {
+class ResearchStudy extends _i1.TableRow with Resource, _$ResearchStudy {
   /// [ResearchStudy] A scientific study of nature that sometimes includes
   ///  processes involved in health and disease. For example, clinical trials
   ///  are research studies that involve people. These studies may be related
@@ -458,6 +460,131 @@ class ResearchStudy with Resource, _$ResearchStudy {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final ResearchStudyTable t = ResearchStudyTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$ResearchStudyToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'ResearchStudy';
+
+  static Future<List<ResearchStudy>> find(
+    _i1.Session session, {
+    ResearchStudyExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchStudyFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ResearchStudy?> findSingleRow(
+    _i1.Session session, {
+    ResearchStudyExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchStudyFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ResearchStudy?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$ResearchStudyFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required ResearchStudyExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchStudyDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    ResearchStudy row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchStudyDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    ResearchStudy row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchStudyUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    ResearchStudy row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchStudyInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    ResearchStudyExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchStudyCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchStudy.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudy.fromJson(
@@ -470,7 +597,10 @@ class ResearchStudy with Resource, _$ResearchStudy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudy.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ResearchStudyFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudy], accepts a
@@ -593,7 +723,10 @@ class ResearchStudyLabel with _$ResearchStudyLabel {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyLabel.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyLabel.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ResearchStudyLabelFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyLabel], accepts a
@@ -735,7 +868,10 @@ class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyAssociatedParty.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyAssociatedParty.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ResearchStudyAssociatedPartyFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyAssociatedParty],
@@ -868,7 +1004,10 @@ class ResearchStudyProgressStatus with _$ResearchStudyProgressStatus {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyProgressStatus.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyProgressStatus.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ResearchStudyProgressStatusFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyProgressStatus], accepts
@@ -1007,7 +1146,10 @@ class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyRecruitment.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyRecruitment.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ResearchStudyRecruitmentFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyRecruitment], accepts a
@@ -1171,7 +1313,10 @@ class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyComparisonGroup.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyComparisonGroup.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ResearchStudyComparisonGroupFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyComparisonGroup],
@@ -1309,7 +1454,10 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyObjective.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ResearchStudyObjectiveFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyObjective], accepts a
@@ -1449,7 +1597,10 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchStudyOutcomeMeasure.fromJson(Map<String, dynamic> json) =>
+  factory ResearchStudyOutcomeMeasure.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ResearchStudyOutcomeMeasureFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchStudyOutcomeMeasure], accepts
@@ -1469,7 +1620,7 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
 /// [ResearchSubject] A ResearchSubject is a participant or object which is the
 ///  recipient of investigative activities in a research study.
 @freezed
-class ResearchSubject with Resource, _$ResearchSubject {
+class ResearchSubject extends _i1.TableRow with Resource, _$ResearchSubject {
   /// [ResearchSubject] A ResearchSubject is a participant or object which is
   ///  the recipient of investigative activities in a research study.
   ResearchSubject._();
@@ -1686,6 +1837,131 @@ class ResearchSubject with Resource, _$ResearchSubject {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final ResearchSubjectTable t = ResearchSubjectTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$ResearchSubjectToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'ResearchSubject';
+
+  static Future<List<ResearchSubject>> find(
+    _i1.Session session, {
+    ResearchSubjectExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchSubjectFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ResearchSubject?> findSingleRow(
+    _i1.Session session, {
+    ResearchSubjectExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchSubjectFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ResearchSubject?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$ResearchSubjectFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required ResearchSubjectExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchSubjectDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    ResearchSubject row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchSubjectDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    ResearchSubject row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchSubjectUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    ResearchSubject row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchSubjectInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    ResearchSubjectExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ResearchSubjectCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchSubject.fromYaml(dynamic yaml) => yaml is String
       ? ResearchSubject.fromJson(
@@ -1698,7 +1974,10 @@ class ResearchSubject with Resource, _$ResearchSubject {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchSubject.fromJson(Map<String, dynamic> json) =>
+  factory ResearchSubject.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ResearchSubjectFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchSubject], accepts a
@@ -1838,7 +2117,10 @@ class ResearchSubjectProgress with _$ResearchSubjectProgress {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =>
+  factory ResearchSubjectProgress.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ResearchSubjectProgressFromJson(json);
 
   /// Acts like a constructor, returns a [ResearchSubjectProgress], accepts a

@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod/serverpod.dart' as _i1;
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -12,11 +13,12 @@ import '../../../../r5.dart';
 
 part 'security.freezed.dart';
 part 'security.g.dart';
+part 'security.serverpod.dart';
 
 /// [AuditEvent] A record of an event relevant for purposes such as operations,
 ///  privacy, security, maintenance, and performance analysis.
 @freezed
-class AuditEvent with Resource, _$AuditEvent {
+class AuditEvent extends _i1.TableRow with Resource, _$AuditEvent {
   /// [AuditEvent] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
   AuditEvent._();
@@ -275,6 +277,131 @@ class AuditEvent with Resource, _$AuditEvent {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final AuditEventTable t = AuditEventTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$AuditEventToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'AuditEvent';
+
+  static Future<List<AuditEvent>> find(
+    _i1.Session session, {
+    AuditEventExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$AuditEventFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<AuditEvent?> findSingleRow(
+    _i1.Session session, {
+    AuditEventExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$AuditEventFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<AuditEvent?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$AuditEventFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required AuditEventExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$AuditEventDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    AuditEvent row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$AuditEventDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    AuditEvent row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$AuditEventUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    AuditEvent row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$AuditEventInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    AuditEventExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$AuditEventCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEvent.fromYaml(dynamic yaml) => yaml is String
       ? AuditEvent.fromJson(
@@ -287,7 +414,10 @@ class AuditEvent with Resource, _$AuditEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AuditEvent.fromJson(Map<String, dynamic> json) =>
+  factory AuditEvent.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$AuditEventFromJson(json);
 
   /// Acts like a constructor, returns a [AuditEvent], accepts a
@@ -395,7 +525,10 @@ class AuditEventOutcome with _$AuditEventOutcome {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AuditEventOutcome.fromJson(Map<String, dynamic> json) =>
+  factory AuditEventOutcome.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$AuditEventOutcomeFromJson(json);
 
   /// Acts like a constructor, returns a [AuditEventOutcome], accepts a
@@ -589,7 +722,10 @@ class AuditEventAgent with _$AuditEventAgent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
+  factory AuditEventAgent.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$AuditEventAgentFromJson(json);
 
   /// Acts like a constructor, returns a [AuditEventAgent], accepts a
@@ -704,7 +840,10 @@ class AuditEventSource with _$AuditEventSource {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
+  factory AuditEventSource.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$AuditEventSourceFromJson(json);
 
   /// Acts like a constructor, returns a [AuditEventSource], accepts a
@@ -852,7 +991,10 @@ class AuditEventEntity with _$AuditEventEntity {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
+  factory AuditEventEntity.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$AuditEventEntityFromJson(json);
 
   /// Acts like a constructor, returns a [AuditEventEntity], accepts a
@@ -1040,7 +1182,10 @@ class AuditEventDetail with _$AuditEventDetail {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
+  factory AuditEventDetail.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$AuditEventDetailFromJson(json);
 
   /// Acts like a constructor, returns a [AuditEventDetail], accepts a
@@ -1061,7 +1206,7 @@ class AuditEventDetail with _$AuditEventDetail {
 ///  recipient(s) or recipient role(s) to perform one or more actions within a
 ///  given policy context, for specific purposes and periods of time.
 @freezed
-class Consent with Resource, _$Consent {
+class Consent extends _i1.TableRow with Resource, _$Consent {
   /// [Consent] A record of a healthcare consumer’s  choices  or choices made
   ///  on their behalf by a third party, which permits or denies identified
   ///  recipient(s) or recipient role(s) to perform one or more actions within
@@ -1347,6 +1492,130 @@ class Consent with Resource, _$Consent {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final ConsentTable t = ConsentTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() => _$ConsentToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Consent';
+
+  static Future<List<Consent>> find(
+    _i1.Session session, {
+    ConsentExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConsentFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Consent?> findSingleRow(
+    _i1.Session session, {
+    ConsentExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConsentFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Consent?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$ConsentFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required ConsentExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConsentDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Consent row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConsentDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Consent row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConsentUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Consent row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConsentInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    ConsentExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConsentCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Consent.fromYaml(dynamic yaml) => yaml is String
       ? Consent.fromJson(
@@ -1359,7 +1628,10 @@ class Consent with Resource, _$Consent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Consent.fromJson(Map<String, dynamic> json) =>
+  factory Consent.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConsentFromJson(json);
 
   /// Acts like a constructor, returns a [Consent], accepts a
@@ -1483,7 +1755,10 @@ class ConsentPolicyBasis with _$ConsentPolicyBasis {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConsentPolicyBasis.fromJson(Map<String, dynamic> json) =>
+  factory ConsentPolicyBasis.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConsentPolicyBasisFromJson(json);
 
   /// Acts like a constructor, returns a [ConsentPolicyBasis], accepts a
@@ -1631,7 +1906,10 @@ class ConsentVerification with _$ConsentVerification {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConsentVerification.fromJson(Map<String, dynamic> json) =>
+  factory ConsentVerification.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConsentVerificationFromJson(json);
 
   /// Acts like a constructor, returns a [ConsentVerification], accepts a
@@ -1821,7 +2099,10 @@ class ConsentProvision with _$ConsentProvision {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConsentProvision.fromJson(Map<String, dynamic> json) =>
+  factory ConsentProvision.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConsentProvisionFromJson(json);
 
   /// Acts like a constructor, returns a [ConsentProvision], accepts a
@@ -1941,7 +2222,10 @@ class ConsentActor with _$ConsentActor {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConsentActor.fromJson(Map<String, dynamic> json) =>
+  factory ConsentActor.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConsentActorFromJson(json);
 
   /// Acts like a constructor, returns a [ConsentActor], accepts a
@@ -2064,7 +2348,10 @@ class ConsentData with _$ConsentData {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConsentData.fromJson(Map<String, dynamic> json) =>
+  factory ConsentData.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConsentDataFromJson(json);
 
   /// Acts like a constructor, returns a [ConsentData], accepts a
@@ -2083,7 +2370,7 @@ class ConsentData with _$ConsentData {
 /// [Permission] Permission resource holds access rules for a given data and
 ///  context.
 @freezed
-class Permission with Resource, _$Permission {
+class Permission extends _i1.TableRow with Resource, _$Permission {
   /// [Permission] Permission resource holds access rules for a given data and
   ///  context.
   Permission._();
@@ -2274,6 +2561,131 @@ class Permission with Resource, _$Permission {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final PermissionTable t = PermissionTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$PermissionToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Permission';
+
+  static Future<List<Permission>> find(
+    _i1.Session session, {
+    PermissionExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PermissionFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Permission?> findSingleRow(
+    _i1.Session session, {
+    PermissionExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PermissionFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Permission?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$PermissionFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required PermissionExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PermissionDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Permission row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PermissionDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Permission row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PermissionUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Permission row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PermissionInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    PermissionExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PermissionCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Permission.fromYaml(dynamic yaml) => yaml is String
       ? Permission.fromJson(
@@ -2286,7 +2698,10 @@ class Permission with Resource, _$Permission {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Permission.fromJson(Map<String, dynamic> json) =>
+  factory Permission.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$PermissionFromJson(json);
 
   /// Acts like a constructor, returns a [Permission], accepts a
@@ -2394,7 +2809,10 @@ class PermissionJustification with _$PermissionJustification {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PermissionJustification.fromJson(Map<String, dynamic> json) =>
+  factory PermissionJustification.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$PermissionJustificationFromJson(json);
 
   /// Acts like a constructor, returns a [PermissionJustification], accepts a
@@ -2519,7 +2937,10 @@ class PermissionRule with _$PermissionRule {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PermissionRule.fromJson(Map<String, dynamic> json) =>
+  factory PermissionRule.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$PermissionRuleFromJson(json);
 
   /// Acts like a constructor, returns a [PermissionRule], accepts a
@@ -2639,7 +3060,10 @@ class PermissionData with _$PermissionData {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PermissionData.fromJson(Map<String, dynamic> json) =>
+  factory PermissionData.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$PermissionDataFromJson(json);
 
   /// Acts like a constructor, returns a [PermissionData], accepts a
@@ -2754,7 +3178,10 @@ class PermissionResource with _$PermissionResource {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PermissionResource.fromJson(Map<String, dynamic> json) =>
+  factory PermissionResource.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$PermissionResourceFromJson(json);
 
   /// Acts like a constructor, returns a [PermissionResource], accepts a
@@ -2865,7 +3292,10 @@ class PermissionActivity with _$PermissionActivity {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PermissionActivity.fromJson(Map<String, dynamic> json) =>
+  factory PermissionActivity.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$PermissionActivityFromJson(json);
 
   /// Acts like a constructor, returns a [PermissionActivity], accepts a
@@ -2892,7 +3322,7 @@ class PermissionActivity with _$PermissionActivity {
 ///  Document Completion - has the artifact been legally authenticated), all of
 ///  which may impact security, privacy, and trust policies.
 @freezed
-class Provenance with Resource, _$Provenance {
+class Provenance extends _i1.TableRow with Resource, _$Provenance {
   /// [Provenance] Provenance of a resource is a record that describes entities
   ///  and processes involved in producing and delivering or otherwise
   ///  influencing that resource. Provenance provides a critical foundation for
@@ -3169,6 +3599,131 @@ class Provenance with Resource, _$Provenance {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final ProvenanceTable t = ProvenanceTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$ProvenanceToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Provenance';
+
+  static Future<List<Provenance>> find(
+    _i1.Session session, {
+    ProvenanceExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ProvenanceFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Provenance?> findSingleRow(
+    _i1.Session session, {
+    ProvenanceExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ProvenanceFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Provenance?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$ProvenanceFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required ProvenanceExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ProvenanceDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Provenance row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ProvenanceDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Provenance row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ProvenanceUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Provenance row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ProvenanceInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    ProvenanceExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ProvenanceCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Provenance.fromYaml(dynamic yaml) => yaml is String
       ? Provenance.fromJson(
@@ -3181,7 +3736,10 @@ class Provenance with Resource, _$Provenance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Provenance.fromJson(Map<String, dynamic> json) =>
+  factory Provenance.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ProvenanceFromJson(json);
 
   /// Acts like a constructor, returns a [Provenance], accepts a
@@ -3329,7 +3887,10 @@ class ProvenanceAgent with _$ProvenanceAgent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
+  factory ProvenanceAgent.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ProvenanceAgentFromJson(json);
 
   /// Acts like a constructor, returns a [ProvenanceAgent], accepts a
@@ -3479,7 +4040,10 @@ class ProvenanceEntity with _$ProvenanceEntity {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
+  factory ProvenanceEntity.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ProvenanceEntityFromJson(json);
 
   /// Acts like a constructor, returns a [ProvenanceEntity], accepts a

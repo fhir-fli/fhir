@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod/serverpod.dart' as _i1;
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -12,11 +13,12 @@ import '../../../../r5.dart';
 
 part 'payment.freezed.dart';
 part 'payment.g.dart';
+part 'payment.serverpod.dart';
 
 /// [PaymentNotice] This resource provides the status of the payment for goods
 ///  and services rendered, and the request and response resource references.
 @freezed
-class PaymentNotice with Resource, _$PaymentNotice {
+class PaymentNotice extends _i1.TableRow with Resource, _$PaymentNotice {
   /// [PaymentNotice] This resource provides the status of the payment for
   ///  goods and services rendered, and the request and response resource
   ///  references.
@@ -239,6 +241,131 @@ class PaymentNotice with Resource, _$PaymentNotice {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final PaymentNoticeTable t = PaymentNoticeTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$PaymentNoticeToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'PaymentNotice';
+
+  static Future<List<PaymentNotice>> find(
+    _i1.Session session, {
+    PaymentNoticeExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentNoticeFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<PaymentNotice?> findSingleRow(
+    _i1.Session session, {
+    PaymentNoticeExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentNoticeFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<PaymentNotice?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$PaymentNoticeFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required PaymentNoticeExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentNoticeDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    PaymentNotice row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentNoticeDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    PaymentNotice row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentNoticeUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    PaymentNotice row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentNoticeInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    PaymentNoticeExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentNoticeCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PaymentNotice.fromYaml(dynamic yaml) => yaml is String
       ? PaymentNotice.fromJson(
@@ -251,7 +378,10 @@ class PaymentNotice with Resource, _$PaymentNotice {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
+  factory PaymentNotice.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$PaymentNoticeFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentNotice], accepts a
@@ -270,7 +400,8 @@ class PaymentNotice with Resource, _$PaymentNotice {
 /// [PaymentReconciliation] This resource provides the details including amount
 ///  of a payment and allocates the payment items being paid.
 @freezed
-class PaymentReconciliation with Resource, _$PaymentReconciliation {
+class PaymentReconciliation extends _i1.TableRow
+    with Resource, _$PaymentReconciliation {
   /// [PaymentReconciliation] This resource provides the details including
   ///  amount of a payment and allocates the payment items being paid.
   PaymentReconciliation._();
@@ -652,6 +783,131 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final PaymentReconciliationTable t = PaymentReconciliationTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$PaymentReconciliationToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'PaymentReconciliation';
+
+  static Future<List<PaymentReconciliation>> find(
+    _i1.Session session, {
+    PaymentReconciliationExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentReconciliationFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<PaymentReconciliation?> findSingleRow(
+    _i1.Session session, {
+    PaymentReconciliationExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentReconciliationFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<PaymentReconciliation?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$PaymentReconciliationFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required PaymentReconciliationExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentReconciliationDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    PaymentReconciliation row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentReconciliationDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    PaymentReconciliation row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentReconciliationUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    PaymentReconciliation row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentReconciliationInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    PaymentReconciliationExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$PaymentReconciliationCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PaymentReconciliation.fromYaml(dynamic yaml) => yaml is String
       ? PaymentReconciliation.fromJson(
@@ -664,7 +920,10 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
+  factory PaymentReconciliation.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$PaymentReconciliationFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliation], accepts a
@@ -886,7 +1145,10 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliationAllocation.fromJson(Map<String, dynamic> json) =>
+  factory PaymentReconciliationAllocation.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$PaymentReconciliationAllocationFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliationAllocation],
@@ -1005,7 +1267,9 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliationProcessNote.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$PaymentReconciliationProcessNoteFromJson(json);
 
   /// Acts like a constructor, returns a [PaymentReconciliationProcessNote],

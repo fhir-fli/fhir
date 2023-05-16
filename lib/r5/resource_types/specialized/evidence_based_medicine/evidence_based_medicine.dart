@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod/serverpod.dart' as _i1;
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -12,12 +13,14 @@ import '../../../../r5.dart';
 
 part 'evidence_based_medicine.freezed.dart';
 part 'evidence_based_medicine.g.dart';
+part 'evidence_based_medicine.serverpod.dart';
 
 /// [ArtifactAssessment] This Resource provides one or more comments,
 ///  classifiers or ratings about a Resource and supports attribution and
 ///  rights management metadata for the added content.
 @freezed
-class ArtifactAssessment with Resource, _$ArtifactAssessment {
+class ArtifactAssessment extends _i1.TableRow
+    with Resource, _$ArtifactAssessment {
   /// [ArtifactAssessment] This Resource provides one or more comments,
   ///  classifiers or ratings about a Resource and supports attribution and
   ///  rights management metadata for the added content.
@@ -322,6 +325,131 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final ArtifactAssessmentTable t = ArtifactAssessmentTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$ArtifactAssessmentToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'ArtifactAssessment';
+
+  static Future<List<ArtifactAssessment>> find(
+    _i1.Session session, {
+    ArtifactAssessmentExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ArtifactAssessmentFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ArtifactAssessment?> findSingleRow(
+    _i1.Session session, {
+    ArtifactAssessmentExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ArtifactAssessmentFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ArtifactAssessment?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$ArtifactAssessmentFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required ArtifactAssessmentExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ArtifactAssessmentDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    ArtifactAssessment row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ArtifactAssessmentDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    ArtifactAssessment row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ArtifactAssessmentUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    ArtifactAssessment row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ArtifactAssessmentInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    ArtifactAssessmentExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ArtifactAssessmentCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ArtifactAssessment.fromYaml(dynamic yaml) => yaml is String
       ? ArtifactAssessment.fromJson(
@@ -334,7 +462,10 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ArtifactAssessment.fromJson(Map<String, dynamic> json) =>
+  factory ArtifactAssessment.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ArtifactAssessmentFromJson(json);
 
   /// Acts like a constructor, returns a [ArtifactAssessment], accepts a
@@ -519,7 +650,10 @@ class ArtifactAssessmentContent with _$ArtifactAssessmentContent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ArtifactAssessmentContent.fromJson(Map<String, dynamic> json) =>
+  factory ArtifactAssessmentContent.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ArtifactAssessmentContentFromJson(json);
 
   /// Acts like a constructor, returns a [ArtifactAssessmentContent], accepts a
@@ -541,7 +675,7 @@ class ArtifactAssessmentContent with _$ArtifactAssessmentContent {
 ///  practices such as versioning, expressing complex contributorship roles,
 ///  and referencing computable resources.
 @freezed
-class Citation with Resource, _$Citation {
+class Citation extends _i1.TableRow with Resource, _$Citation {
   /// [Citation] The Citation Resource enables reference to any knowledge
   ///  artifact for purposes of identification and attribution. The Citation
   ///  Resource supports existing reference structures and developing
@@ -1026,6 +1160,130 @@ class Citation with Resource, _$Citation {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final CitationTable t = CitationTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() => _$CitationToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Citation';
+
+  static Future<List<Citation>> find(
+    _i1.Session session, {
+    CitationExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CitationFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Citation?> findSingleRow(
+    _i1.Session session, {
+    CitationExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CitationFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Citation?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$CitationFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required CitationExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CitationDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Citation row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CitationDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Citation row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CitationUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Citation row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CitationInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    CitationExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CitationCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Citation.fromYaml(dynamic yaml) => yaml is String
       ? Citation.fromJson(
@@ -1038,7 +1296,10 @@ class Citation with Resource, _$Citation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Citation.fromJson(Map<String, dynamic> json) =>
+  factory Citation.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationFromJson(json);
 
   /// Acts like a constructor, returns a [Citation], accepts a
@@ -1158,7 +1419,10 @@ class CitationSummary with _$CitationSummary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationSummary.fromJson(Map<String, dynamic> json) =>
+  factory CitationSummary.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationSummaryFromJson(json);
 
   /// Acts like a constructor, returns a [CitationSummary], accepts a
@@ -1273,7 +1537,10 @@ class CitationClassification with _$CitationClassification {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationClassification.fromJson(Map<String, dynamic> json) =>
+  factory CitationClassification.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationClassificationFromJson(json);
 
   /// Acts like a constructor, returns a [CitationClassification], accepts a
@@ -1402,7 +1669,10 @@ class CitationStatusDate with _$CitationStatusDate {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationStatusDate.fromJson(Map<String, dynamic> json) =>
+  factory CitationStatusDate.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationStatusDateFromJson(json);
 
   /// Acts like a constructor, returns a [CitationStatusDate], accepts a
@@ -1606,7 +1876,10 @@ class CitationCitedArtifact with _$CitationCitedArtifact {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationCitedArtifact.fromJson(Map<String, dynamic> json) =>
+  factory CitationCitedArtifact.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationCitedArtifactFromJson(json);
 
   /// Acts like a constructor, returns a [CitationCitedArtifact], accepts a
@@ -1726,7 +1999,10 @@ class CitationVersion with _$CitationVersion {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationVersion.fromJson(Map<String, dynamic> json) =>
+  factory CitationVersion.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationVersionFromJson(json);
 
   /// Acts like a constructor, returns a [CitationVersion], accepts a
@@ -1851,7 +2127,10 @@ class CitationStatusDate1 with _$CitationStatusDate1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationStatusDate1.fromJson(Map<String, dynamic> json) =>
+  factory CitationStatusDate1.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationStatusDate1FromJson(json);
 
   /// Acts like a constructor, returns a [CitationStatusDate1], accepts a
@@ -1976,7 +2255,10 @@ class CitationTitle with _$CitationTitle {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationTitle.fromJson(Map<String, dynamic> json) =>
+  factory CitationTitle.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationTitleFromJson(json);
 
   /// Acts like a constructor, returns a [CitationTitle], accepts a
@@ -2111,7 +2393,10 @@ class CitationAbstract with _$CitationAbstract {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationAbstract.fromJson(Map<String, dynamic> json) =>
+  factory CitationAbstract.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationAbstractFromJson(json);
 
   /// Acts like a constructor, returns a [CitationAbstract], accepts a
@@ -2236,7 +2521,10 @@ class CitationPart with _$CitationPart {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPart.fromJson(Map<String, dynamic> json) =>
+  factory CitationPart.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationPartFromJson(json);
 
   /// Acts like a constructor, returns a [CitationPart], accepts a
@@ -2421,7 +2709,10 @@ class CitationRelatesTo with _$CitationRelatesTo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationRelatesTo.fromJson(Map<String, dynamic> json) =>
+  factory CitationRelatesTo.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationRelatesToFromJson(json);
 
   /// Acts like a constructor, returns a [CitationRelatesTo], accepts a
@@ -2706,7 +2997,10 @@ class CitationPublicationForm with _$CitationPublicationForm {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPublicationForm.fromJson(Map<String, dynamic> json) =>
+  factory CitationPublicationForm.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationPublicationFormFromJson(json);
 
   /// Acts like a constructor, returns a [CitationPublicationForm], accepts a
@@ -2850,7 +3144,10 @@ class CitationPublishedIn with _$CitationPublishedIn {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPublishedIn.fromJson(Map<String, dynamic> json) =>
+  factory CitationPublishedIn.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationPublishedInFromJson(json);
 
   /// Acts like a constructor, returns a [CitationPublishedIn], accepts a
@@ -2972,7 +3269,10 @@ class CitationWebLocation with _$CitationWebLocation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationWebLocation.fromJson(Map<String, dynamic> json) =>
+  factory CitationWebLocation.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationWebLocationFromJson(json);
 
   /// Acts like a constructor, returns a [CitationWebLocation], accepts a
@@ -3092,7 +3392,10 @@ class CitationClassification1 with _$CitationClassification1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationClassification1.fromJson(Map<String, dynamic> json) =>
+  factory CitationClassification1.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationClassification1FromJson(json);
 
   /// Acts like a constructor, returns a [CitationClassification1], accepts a
@@ -3222,7 +3525,10 @@ class CitationContributorship with _$CitationContributorship {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationContributorship.fromJson(Map<String, dynamic> json) =>
+  factory CitationContributorship.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationContributorshipFromJson(json);
 
   /// Acts like a constructor, returns a [CitationContributorship], accepts a
@@ -3397,7 +3703,10 @@ class CitationEntry with _$CitationEntry {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationEntry.fromJson(Map<String, dynamic> json) =>
+  factory CitationEntry.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationEntryFromJson(json);
 
   /// Acts like a constructor, returns a [CitationEntry], accepts a
@@ -3517,7 +3826,10 @@ class CitationContributionInstance with _$CitationContributionInstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationContributionInstance.fromJson(Map<String, dynamic> json) =>
+  factory CitationContributionInstance.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationContributionInstanceFromJson(json);
 
   /// Acts like a constructor, returns a [CitationContributionInstance],
@@ -3656,7 +3968,10 @@ class CitationSummary1 with _$CitationSummary1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationSummary1.fromJson(Map<String, dynamic> json) =>
+  factory CitationSummary1.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CitationSummary1FromJson(json);
 
   /// Acts like a constructor, returns a [CitationSummary1], accepts a
@@ -3678,7 +3993,7 @@ class CitationSummary1 with _$CitationSummary1 {
 ///  variables, confounding variables), the statistics, and the certainty of
 ///  this evidence.
 @freezed
-class Evidence with Resource, _$Evidence {
+class Evidence extends _i1.TableRow with Resource, _$Evidence {
   /// [Evidence] The Evidence Resource provides a machine-interpretable
   ///  expression of an evidence concept including the evidence variables
   ///  (e.g., population, exposures/interventions, comparators, outcomes,
@@ -4204,6 +4519,130 @@ class Evidence with Resource, _$Evidence {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final EvidenceTable t = EvidenceTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() => _$EvidenceToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Evidence';
+
+  static Future<List<Evidence>> find(
+    _i1.Session session, {
+    EvidenceExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Evidence?> findSingleRow(
+    _i1.Session session, {
+    EvidenceExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Evidence?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$EvidenceFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required EvidenceExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Evidence row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Evidence row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Evidence row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    EvidenceExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Evidence.fromYaml(dynamic yaml) => yaml is String
       ? Evidence.fromJson(
@@ -4216,7 +4655,10 @@ class Evidence with Resource, _$Evidence {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Evidence.fromJson(Map<String, dynamic> json) =>
+  factory Evidence.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceFromJson(json);
 
   /// Acts like a constructor, returns a [Evidence], accepts a
@@ -4361,7 +4803,10 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariableDefinition.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceVariableDefinition.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceVariableDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariableDefinition], accepts a
@@ -4548,7 +4993,10 @@ class EvidenceStatistic with _$EvidenceStatistic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceStatistic.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceStatistic.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceStatisticFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceStatistic], accepts a
@@ -4708,7 +5156,10 @@ class EvidenceSampleSize with _$EvidenceSampleSize {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceSampleSize.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceSampleSize.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceSampleSizeFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceSampleSize], accepts a
@@ -4866,7 +5317,10 @@ class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceAttributeEstimate.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceAttributeEstimate.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceAttributeEstimateFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceAttributeEstimate], accepts a
@@ -4996,7 +5450,10 @@ class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceModelCharacteristic.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceModelCharacteristic.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceModelCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceModelCharacteristic], accepts
@@ -5016,7 +5473,7 @@ class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
 /// [EvidenceVariable] The EvidenceVariable resource describes an element that
 ///  knowledge (Evidence) is about.
 @freezed
-class EvidenceVariable with Resource, _$EvidenceVariable {
+class EvidenceVariable extends _i1.TableRow with Resource, _$EvidenceVariable {
   /// [EvidenceVariable] The EvidenceVariable resource describes an element
   ///  that knowledge (Evidence) is about.
   EvidenceVariable._();
@@ -5542,6 +5999,131 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final EvidenceVariableTable t = EvidenceVariableTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$EvidenceVariableToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'EvidenceVariable';
+
+  static Future<List<EvidenceVariable>> find(
+    _i1.Session session, {
+    EvidenceVariableExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceVariableFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<EvidenceVariable?> findSingleRow(
+    _i1.Session session, {
+    EvidenceVariableExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceVariableFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<EvidenceVariable?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$EvidenceVariableFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required EvidenceVariableExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceVariableDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    EvidenceVariable row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceVariableDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    EvidenceVariable row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceVariableUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    EvidenceVariable row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceVariableInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    EvidenceVariableExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceVariableCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceVariable.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceVariable.fromJson(
@@ -5554,7 +6136,10 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariable.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceVariable.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceVariableFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariable], accepts a
@@ -5699,7 +6284,10 @@ class EvidenceCertainty with _$EvidenceCertainty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceCertainty.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceCertainty.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceCertaintyFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceCertainty], accepts a
@@ -5720,7 +6308,7 @@ class EvidenceCertainty with _$EvidenceCertainty {
 ///  compositions of Evidence, EvidenceVariable, and Citation resources and
 ///  related concepts.
 @freezed
-class EvidenceReport with Resource, _$EvidenceReport {
+class EvidenceReport extends _i1.TableRow with Resource, _$EvidenceReport {
   /// [EvidenceReport] The EvidenceReport Resource is a specialized container
   ///  for a collection of resources and codeable concepts, adapted to support
   ///  compositions of Evidence, EvidenceVariable, and Citation resources and
@@ -6238,6 +6826,131 @@ class EvidenceReport with Resource, _$EvidenceReport {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final EvidenceReportTable t = EvidenceReportTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$EvidenceReportToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'EvidenceReport';
+
+  static Future<List<EvidenceReport>> find(
+    _i1.Session session, {
+    EvidenceReportExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceReportFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<EvidenceReport?> findSingleRow(
+    _i1.Session session, {
+    EvidenceReportExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceReportFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<EvidenceReport?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$EvidenceReportFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required EvidenceReportExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceReportDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    EvidenceReport row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceReportDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    EvidenceReport row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceReportUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    EvidenceReport row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceReportInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    EvidenceReportExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EvidenceReportCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceReport.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceReport.fromJson(
@@ -6250,7 +6963,10 @@ class EvidenceReport with Resource, _$EvidenceReport {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReport.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceReport.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceReportFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReport], accepts a
@@ -6362,7 +7078,10 @@ class EvidenceReportSubject with _$EvidenceReportSubject {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportSubject.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceReportSubject.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceReportSubjectFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReportSubject], accepts a
@@ -6514,7 +7233,10 @@ class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceReportCharacteristic.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceReportCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReportCharacteristic],
@@ -6634,7 +7356,10 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceReportRelatesTo.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceReportRelatesToFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReportRelatesTo], accepts a
@@ -6766,7 +7491,10 @@ class EvidenceReportTarget with _$EvidenceReportTarget {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportTarget.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceReportTarget.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceReportTargetFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReportTarget], accepts a
@@ -6974,7 +7702,10 @@ class EvidenceReportSection with _$EvidenceReportSection {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceReportSection.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceReportSection.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceReportSectionFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceReportSection], accepts a
@@ -7188,7 +7919,10 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceVariableCharacteristic.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceVariableCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariableCharacteristic],
@@ -7361,7 +8095,9 @@ class EvidenceVariableDefinitionByTypeAndValue
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableDefinitionByTypeAndValue.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceVariableDefinitionByTypeAndValueFromJson(json);
 
   /// Acts like a constructor, returns a
@@ -7491,7 +8227,9 @@ class EvidenceVariableDefinitionByCombination
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableDefinitionByCombination.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceVariableDefinitionByCombinationFromJson(json);
 
   /// Acts like a constructor, returns a
@@ -7654,7 +8392,10 @@ class EvidenceVariableTimeFromEvent with _$EvidenceVariableTimeFromEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariableTimeFromEvent.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceVariableTimeFromEvent.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceVariableTimeFromEventFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariableTimeFromEvent],
@@ -7776,7 +8517,10 @@ class EvidenceVariableCategory with _$EvidenceVariableCategory {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =>
+  factory EvidenceVariableCategory.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EvidenceVariableCategoryFromJson(json);
 
   /// Acts like a constructor, returns a [EvidenceVariableCategory], accepts a

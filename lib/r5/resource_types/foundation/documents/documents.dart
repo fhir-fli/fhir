@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod/serverpod.dart' as _i1;
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -12,6 +13,7 @@ import '../../../../r5.dart';
 
 part 'documents.freezed.dart';
 part 'documents.g.dart';
+part 'documents.serverpod.dart';
 
 /// [Composition] A set of healthcare-related information that is assembled
 ///  together into a single logical package that provides a single coherent
@@ -24,7 +26,7 @@ part 'documents.g.dart';
 ///  must be included as subsequent entries in the Bundle (for example Patient,
 ///  Practitioner, Encounter, etc.).
 @freezed
-class Composition with Resource, _$Composition {
+class Composition extends _i1.TableRow with Resource, _$Composition {
   /// [Composition] A set of healthcare-related information that is assembled
   ///  together into a single logical package that provides a single coherent
   ///  statement of meaning, establishes its own context and that has clinical
@@ -364,6 +366,131 @@ class Composition with Resource, _$Composition {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final CompositionTable t = CompositionTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$CompositionToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Composition';
+
+  static Future<List<Composition>> find(
+    _i1.Session session, {
+    CompositionExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompositionFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Composition?> findSingleRow(
+    _i1.Session session, {
+    CompositionExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompositionFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Composition?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$CompositionFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required CompositionExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompositionDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Composition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompositionDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Composition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompositionUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Composition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompositionInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    CompositionExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompositionCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Composition.fromYaml(dynamic yaml) => yaml is String
       ? Composition.fromJson(
@@ -376,7 +503,10 @@ class Composition with Resource, _$Composition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Composition.fromJson(Map<String, dynamic> json) =>
+  factory Composition.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CompositionFromJson(json);
 
   /// Acts like a constructor, returns a [Composition], accepts a
@@ -516,7 +646,10 @@ class CompositionAttester with _$CompositionAttester {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
+  factory CompositionAttester.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CompositionAttesterFromJson(json);
 
   /// Acts like a constructor, returns a [CompositionAttester], accepts a
@@ -660,7 +793,10 @@ class CompositionEvent with _$CompositionEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
+  factory CompositionEvent.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CompositionEventFromJson(json);
 
   /// Acts like a constructor, returns a [CompositionEvent], accepts a
@@ -868,7 +1004,10 @@ class CompositionSection with _$CompositionSection {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CompositionSection.fromJson(Map<String, dynamic> json) =>
+  factory CompositionSection.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CompositionSectionFromJson(json);
 
   /// Acts like a constructor, returns a [CompositionSection], accepts a
@@ -894,7 +1033,8 @@ class CompositionSection with _$CompositionSection {
 ///  the document can be discovered and managed.  The actual content may be
 ///  inline base64 encoded data or provided by direct reference.
 @freezed
-class DocumentReference with Resource, _$DocumentReference {
+class DocumentReference extends _i1.TableRow
+    with Resource, _$DocumentReference {
   /// [DocumentReference] A reference to a document of any kind for any
   ///  purpose. While the term “document” implies a more narrow focus, for this
   ///  resource this "document" encompasses *any* serialized object with a
@@ -1260,6 +1400,131 @@ class DocumentReference with Resource, _$DocumentReference {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final DocumentReferenceTable t = DocumentReferenceTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$DocumentReferenceToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'DocumentReference';
+
+  static Future<List<DocumentReference>> find(
+    _i1.Session session, {
+    DocumentReferenceExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DocumentReferenceFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<DocumentReference?> findSingleRow(
+    _i1.Session session, {
+    DocumentReferenceExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DocumentReferenceFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<DocumentReference?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$DocumentReferenceFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required DocumentReferenceExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DocumentReferenceDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    DocumentReference row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DocumentReferenceDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    DocumentReference row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DocumentReferenceUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    DocumentReference row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DocumentReferenceInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    DocumentReferenceExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DocumentReferenceCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentReference.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReference.fromJson(
@@ -1272,7 +1537,10 @@ class DocumentReference with Resource, _$DocumentReference {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReference.fromJson(Map<String, dynamic> json) =>
+  factory DocumentReference.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$DocumentReferenceFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReference], accepts a
@@ -1411,7 +1679,10 @@ class DocumentReferenceAttester with _$DocumentReferenceAttester {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReferenceAttester.fromJson(Map<String, dynamic> json) =>
+  factory DocumentReferenceAttester.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$DocumentReferenceAttesterFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReferenceAttester], accepts a
@@ -1542,7 +1813,10 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
+  factory DocumentReferenceRelatesTo.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$DocumentReferenceRelatesToFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReferenceRelatesTo], accepts a
@@ -1677,7 +1951,10 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
+  factory DocumentReferenceContent.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$DocumentReferenceContentFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReferenceContent], accepts a
@@ -1822,7 +2099,10 @@ class DocumentReferenceProfile with _$DocumentReferenceProfile {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DocumentReferenceProfile.fromJson(Map<String, dynamic> json) =>
+  factory DocumentReferenceProfile.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$DocumentReferenceProfileFromJson(json);
 
   /// Acts like a constructor, returns a [DocumentReferenceProfile], accepts a

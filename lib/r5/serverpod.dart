@@ -8,6 +8,7 @@ Future<void> main() async {
       .list(recursive: true)
       .map((FileSystemEntity event) => event.path)
       .toList();
+  final List<String> classNames = <String>[];
   for (final String file in fileList) {
     if (file.contains('.dart') &&
         !file.contains('.g.') &&
@@ -30,6 +31,7 @@ Future<void> main() async {
       bool isClass = false;
       String className = '';
       String mainFile = '';
+
       final Map<String, String> fields = <String, String>{};
       for (final String line in stringList) {
         mainFile += '$line\n';
@@ -106,14 +108,15 @@ Future<void> main() async {
           className =
               line.replaceAll('factory ', '').replaceAll('({', '').trim();
           isClass = true;
+          classNames.add(className);
           if (resourceTypes.contains(className)) {
             converter += tableClass(className,
                 '${className.substring(0, 1).toLowerCase()}${className.substring(1)}');
           }
         }
       }
-      await File(file.replaceAll('.dart', '.serverpod.dart'))
-          .writeAsString(converter);
+      // await File(file.replaceAll('.dart', '.serverpod.dart'))
+      //     .writeAsString(converter);
       mainFile = mainFile
           .substring(0, mainFile.length - 1)
           .replaceAll(
@@ -124,18 +127,18 @@ import 'package:yaml/yaml.dart';
 ''', '''
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:serverpod/serverpod.dart' as _i1;
-import 'package:yaml/yaml.dart';, replace);\n
+import 'package:yaml/yaml.dart';\n
 ''');
-      await File(file).writeAsString(mainFile);
+      // await File(file).writeAsString(mainFile);
       converter = '';
       mainFile = '';
     }
   }
 
   String generatorYaml = 'type: server\n\n';
-  generatorYaml += 'client_package_path: ../fhirpod_client\n\n;';
+  generatorYaml += 'client_package_path: ../fhirpod_client\n\n';
   generatorYaml += 'extraClasses:\n';
-  for (final String element in resourceTypes) {
+  for (final String element in classNames) {
     generatorYaml += '  - package:fhir/r5.dart:$element\n';
   }
   await File('generator.yaml').writeAsString(generatorYaml);

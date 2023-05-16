@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod/serverpod.dart' as _i1;
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -12,13 +13,15 @@ import '../../../../r5.dart';
 
 part 'entities2.freezed.dart';
 part 'entities2.g.dart';
+part 'entities2.serverpod.dart';
 
 /// [BiologicallyDerivedProduct] This resource reflects an instance of a
 ///  biologically derived product. A material substance originating from a
 ///  biological entity intended to be transplanted or infused into another
 ///  (possibly the same) biological entity.
 @freezed
-class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
+class BiologicallyDerivedProduct extends _i1.TableRow
+    with Resource, _$BiologicallyDerivedProduct {
   /// [BiologicallyDerivedProduct] This resource reflects an instance of a
   ///  biologically derived product. A material substance originating from a
   ///  biological entity intended to be transplanted or infused into another
@@ -263,6 +266,132 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final BiologicallyDerivedProductTable t =
+      BiologicallyDerivedProductTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$BiologicallyDerivedProductToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'BiologicallyDerivedProduct';
+
+  static Future<List<BiologicallyDerivedProduct>> find(
+    _i1.Session session, {
+    BiologicallyDerivedProductExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<BiologicallyDerivedProduct?> findSingleRow(
+    _i1.Session session, {
+    BiologicallyDerivedProductExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<BiologicallyDerivedProduct?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$BiologicallyDerivedProductFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required BiologicallyDerivedProductExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    BiologicallyDerivedProduct row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    BiologicallyDerivedProduct row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    BiologicallyDerivedProduct row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    BiologicallyDerivedProductExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BiologicallyDerivedProduct.fromYaml(dynamic yaml) => yaml is String
       ? BiologicallyDerivedProduct.fromJson(
@@ -275,7 +404,10 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =>
+  factory BiologicallyDerivedProduct.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$BiologicallyDerivedProductFromJson(json);
 
   /// Acts like a constructor, returns a [BiologicallyDerivedProduct], accepts a
@@ -409,8 +541,7 @@ class BiologicallyDerivedProductCollection
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BiologicallyDerivedProductCollection.fromJson(
-          Map<String, dynamic> json) =>
+  factory BiologicallyDerivedProductCollection.fromJson(Map<String, dynamic> json, [_i1.SerializationManager? serializationManager,]) =>
       _$BiologicallyDerivedProductCollectionFromJson(json);
 
   /// Acts like a constructor, returns a
@@ -582,8 +713,7 @@ class BiologicallyDerivedProductProperty
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BiologicallyDerivedProductProperty.fromJson(
-          Map<String, dynamic> json) =>
+  factory BiologicallyDerivedProductProperty.fromJson(Map<String, dynamic> json, [_i1.SerializationManager? serializationManager,]) =>
       _$BiologicallyDerivedProductPropertyFromJson(json);
 
   /// Acts like a constructor, returns a [BiologicallyDerivedProductProperty],
@@ -601,7 +731,7 @@ class BiologicallyDerivedProductProperty
 }
 
 @freezed
-class BiologicallyDerivedProductDispense
+class BiologicallyDerivedProductDispense extends _i1.TableRow
     with Resource, _$BiologicallyDerivedProductDispense {
   /// [BiologicallyDerivedProductDispense] This resource reflects an instance
   ///  of a biologically derived product dispense. The supply or dispense of a
@@ -869,6 +999,132 @@ class BiologicallyDerivedProductDispense
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final BiologicallyDerivedProductDispenseTable t =
+      BiologicallyDerivedProductDispenseTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$BiologicallyDerivedProductDispenseToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'BiologicallyDerivedProductDispense';
+
+  static Future<List<BiologicallyDerivedProductDispense>> find(
+    _i1.Session session, {
+    BiologicallyDerivedProductDispenseExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductDispenseFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<BiologicallyDerivedProductDispense?> findSingleRow(
+    _i1.Session session, {
+    BiologicallyDerivedProductDispenseExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductDispenseFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<BiologicallyDerivedProductDispense?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$BiologicallyDerivedProductDispenseFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required BiologicallyDerivedProductDispenseExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductDispenseDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    BiologicallyDerivedProductDispense row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductDispenseDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    BiologicallyDerivedProductDispense row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductDispenseUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    BiologicallyDerivedProductDispense row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductDispenseInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    BiologicallyDerivedProductDispenseExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$BiologicallyDerivedProductDispenseCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BiologicallyDerivedProductDispense.fromYaml(dynamic yaml) => yaml
           is String
@@ -882,8 +1138,7 @@ class BiologicallyDerivedProductDispense
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BiologicallyDerivedProductDispense.fromJson(
-          Map<String, dynamic> json) =>
+  factory BiologicallyDerivedProductDispense.fromJson(Map<String, dynamic> json, [_i1.SerializationManager? serializationManager,]) =>
       _$BiologicallyDerivedProductDispenseFromJson(json);
 
   /// Acts like a constructor, returns a [BiologicallyDerivedProductDispense],
@@ -1003,8 +1258,7 @@ class BiologicallyDerivedProductDispensePerformer
                   ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory BiologicallyDerivedProductDispensePerformer.fromJson(
-          Map<String, dynamic> json) =>
+  factory BiologicallyDerivedProductDispensePerformer.fromJson(Map<String, dynamic> json, [_i1.SerializationManager? serializationManager,]) =>
       _$BiologicallyDerivedProductDispensePerformerFromJson(json);
 
   /// Acts like a constructor, returns a
@@ -1026,7 +1280,7 @@ class BiologicallyDerivedProductDispensePerformer
 ///  healthcare without being substantially changed through that activity. The
 ///  device may be a medical or non-medical device.
 @freezed
-class Device with Resource, _$Device {
+class Device extends _i1.TableRow with Resource, _$Device {
   /// [Device] A type of a manufactured item that is used in the provision of
   ///  healthcare without being substantially changed through that activity.
   ///  The device may be a medical or non-medical device.
@@ -1450,6 +1704,130 @@ class Device with Resource, _$Device {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final DeviceTable t = DeviceTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() => _$DeviceToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Device';
+
+  static Future<List<Device>> find(
+    _i1.Session session, {
+    DeviceExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Device?> findSingleRow(
+    _i1.Session session, {
+    DeviceExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Device?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$DeviceFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required DeviceExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Device row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Device row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Device row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    DeviceExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Device.fromYaml(dynamic yaml) => yaml is String
       ? Device.fromJson(
@@ -1462,7 +1840,11 @@ class Device with Resource, _$Device {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
+  factory Device.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
+      _$DeviceFromJson(json);
 
   /// Acts like a constructor, returns a [Device], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -1668,7 +2050,10 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =>
+  factory DeviceUdiCarrier.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$DeviceUdiCarrierFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceUdiCarrier], accepts a
@@ -1799,7 +2184,10 @@ class DeviceName with _$DeviceName {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceName.fromJson(Map<String, dynamic> json) =>
+  factory DeviceName.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$DeviceNameFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceName], accepts a
@@ -1932,7 +2320,10 @@ class DeviceVersion with _$DeviceVersion {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceVersion.fromJson(Map<String, dynamic> json) =>
+  factory DeviceVersion.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$DeviceVersionFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceVersion], accepts a
@@ -2061,7 +2452,10 @@ class DeviceConformsTo with _$DeviceConformsTo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceConformsTo.fromJson(Map<String, dynamic> json) =>
+  factory DeviceConformsTo.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$DeviceConformsToFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceConformsTo], accepts a
@@ -2231,7 +2625,10 @@ class DeviceProperty with _$DeviceProperty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceProperty.fromJson(Map<String, dynamic> json) =>
+  factory DeviceProperty.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$DevicePropertyFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceProperty], accepts a
@@ -2250,7 +2647,7 @@ class DeviceProperty with _$DeviceProperty {
 /// [DeviceMetric] Describes a measurement, calculation or setting capability
 ///  of a device.
 @freezed
-class DeviceMetric with Resource, _$DeviceMetric {
+class DeviceMetric extends _i1.TableRow with Resource, _$DeviceMetric {
   /// [DeviceMetric] Describes a measurement, calculation or setting capability
   ///  of a device.
   DeviceMetric._();
@@ -2493,6 +2890,131 @@ class DeviceMetric with Resource, _$DeviceMetric {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final DeviceMetricTable t = DeviceMetricTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$DeviceMetricToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'DeviceMetric';
+
+  static Future<List<DeviceMetric>> find(
+    _i1.Session session, {
+    DeviceMetricExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceMetricFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<DeviceMetric?> findSingleRow(
+    _i1.Session session, {
+    DeviceMetricExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceMetricFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<DeviceMetric?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$DeviceMetricFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required DeviceMetricExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceMetricDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    DeviceMetric row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceMetricDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    DeviceMetric row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceMetricUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    DeviceMetric row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceMetricInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    DeviceMetricExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$DeviceMetricCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
       ? DeviceMetric.fromJson(
@@ -2505,7 +3027,10 @@ class DeviceMetric with Resource, _$DeviceMetric {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
+  factory DeviceMetric.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$DeviceMetricFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceMetric], accepts a
@@ -2631,7 +3156,10 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
+  factory DeviceMetricCalibration.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$DeviceMetricCalibrationFromJson(json);
 
   /// Acts like a constructor, returns a [DeviceMetricCalibration], accepts a
@@ -2649,7 +3177,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
 
 /// [NutritionProduct] A food or supplement that is consumed by patients.
 @freezed
-class NutritionProduct with Resource, _$NutritionProduct {
+class NutritionProduct extends _i1.TableRow with Resource, _$NutritionProduct {
   /// [NutritionProduct] A food or supplement that is consumed by patients.
   NutritionProduct._();
 
@@ -2857,6 +3385,131 @@ class NutritionProduct with Resource, _$NutritionProduct {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final NutritionProductTable t = NutritionProductTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$NutritionProductToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'NutritionProduct';
+
+  static Future<List<NutritionProduct>> find(
+    _i1.Session session, {
+    NutritionProductExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NutritionProductFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<NutritionProduct?> findSingleRow(
+    _i1.Session session, {
+    NutritionProductExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NutritionProductFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<NutritionProduct?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$NutritionProductFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required NutritionProductExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NutritionProductDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    NutritionProduct row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NutritionProductDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    NutritionProduct row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NutritionProductUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    NutritionProduct row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NutritionProductInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    NutritionProductExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NutritionProductCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NutritionProduct.fromYaml(dynamic yaml) => yaml is String
       ? NutritionProduct.fromJson(
@@ -2869,7 +3522,10 @@ class NutritionProduct with Resource, _$NutritionProduct {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NutritionProduct.fromJson(Map<String, dynamic> json) =>
+  factory NutritionProduct.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$NutritionProductFromJson(json);
 
   /// Acts like a constructor, returns a [NutritionProduct], accepts a
@@ -2977,7 +3633,10 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NutritionProductNutrient.fromJson(Map<String, dynamic> json) =>
+  factory NutritionProductNutrient.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$NutritionProductNutrientFromJson(json);
 
   /// Acts like a constructor, returns a [NutritionProductNutrient], accepts a
@@ -3083,7 +3742,10 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NutritionProductIngredient.fromJson(Map<String, dynamic> json) =>
+  factory NutritionProductIngredient.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$NutritionProductIngredientFromJson(json);
 
   /// Acts like a constructor, returns a [NutritionProductIngredient], accepts a
@@ -3242,7 +3904,10 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NutritionProductCharacteristic.fromJson(Map<String, dynamic> json) =>
+  factory NutritionProductCharacteristic.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$NutritionProductCharacteristicFromJson(json);
 
   /// Acts like a constructor, returns a [NutritionProductCharacteristic],
@@ -3406,7 +4071,10 @@ class NutritionProductInstance with _$NutritionProductInstance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NutritionProductInstance.fromJson(Map<String, dynamic> json) =>
+  factory NutritionProductInstance.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$NutritionProductInstanceFromJson(json);
 
   /// Acts like a constructor, returns a [NutritionProductInstance], accepts a
@@ -3424,7 +4092,7 @@ class NutritionProductInstance with _$NutritionProductInstance {
 
 /// [Substance] A homogeneous material with a definite composition.
 @freezed
-class Substance with Resource, _$Substance {
+class Substance extends _i1.TableRow with Resource, _$Substance {
   /// [Substance] A homogeneous material with a definite composition.
   Substance._();
 
@@ -3638,6 +4306,131 @@ class Substance with Resource, _$Substance {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final SubstanceTable t = SubstanceTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$SubstanceToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Substance';
+
+  static Future<List<Substance>> find(
+    _i1.Session session, {
+    SubstanceExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SubstanceFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Substance?> findSingleRow(
+    _i1.Session session, {
+    SubstanceExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SubstanceFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Substance?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$SubstanceFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required SubstanceExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SubstanceDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Substance row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SubstanceDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Substance row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SubstanceUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Substance row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SubstanceInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    SubstanceExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SubstanceCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Substance.fromYaml(dynamic yaml) => yaml is String
       ? Substance.fromJson(
@@ -3650,7 +4443,10 @@ class Substance with Resource, _$Substance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Substance.fromJson(Map<String, dynamic> json) =>
+  factory Substance.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$SubstanceFromJson(json);
 
   /// Acts like a constructor, returns a [Substance], accepts a
@@ -3764,7 +4560,10 @@ class SubstanceIngredient with _$SubstanceIngredient {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
+  factory SubstanceIngredient.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$SubstanceIngredientFromJson(json);
 
   /// Acts like a constructor, returns a [SubstanceIngredient], accepts a

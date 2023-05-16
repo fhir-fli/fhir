@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod/serverpod.dart' as _i1;
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -12,12 +13,13 @@ import '../../../../r5.dart';
 
 part 'terminology.freezed.dart';
 part 'terminology.g.dart';
+part 'terminology.serverpod.dart';
 
 /// [CodeSystem] The CodeSystem resource is used to declare the existence of
 ///  and describe a code system or code system supplement and its key
 ///  properties, and optionally define a part or all of its content.
 @freezed
-class CodeSystem with Resource, _$CodeSystem {
+class CodeSystem extends _i1.TableRow with Resource, _$CodeSystem {
   /// [CodeSystem] The CodeSystem resource is used to declare the existence of
   ///  and describe a code system or code system supplement and its key
   ///  properties, and optionally define a part or all of its content.
@@ -595,6 +597,131 @@ class CodeSystem with Resource, _$CodeSystem {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final CodeSystemTable t = CodeSystemTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$CodeSystemToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'CodeSystem';
+
+  static Future<List<CodeSystem>> find(
+    _i1.Session session, {
+    CodeSystemExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CodeSystemFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<CodeSystem?> findSingleRow(
+    _i1.Session session, {
+    CodeSystemExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CodeSystemFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<CodeSystem?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$CodeSystemFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required CodeSystemExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CodeSystemDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    CodeSystem row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CodeSystemDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    CodeSystem row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CodeSystemUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    CodeSystem row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CodeSystemInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    CodeSystemExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CodeSystemCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CodeSystem.fromYaml(dynamic yaml) => yaml is String
       ? CodeSystem.fromJson(
@@ -607,7 +734,10 @@ class CodeSystem with Resource, _$CodeSystem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystem.fromJson(Map<String, dynamic> json) =>
+  factory CodeSystem.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CodeSystemFromJson(json);
 
   /// Acts like a constructor, returns a [CodeSystem], accepts a
@@ -750,7 +880,10 @@ class CodeSystemFilter with _$CodeSystemFilter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystemFilter.fromJson(Map<String, dynamic> json) =>
+  factory CodeSystemFilter.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CodeSystemFilterFromJson(json);
 
   /// Acts like a constructor, returns a [CodeSystemFilter], accepts a
@@ -903,7 +1036,10 @@ class CodeSystemProperty with _$CodeSystemProperty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystemProperty.fromJson(Map<String, dynamic> json) =>
+  factory CodeSystemProperty.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CodeSystemPropertyFromJson(json);
 
   /// Acts like a constructor, returns a [CodeSystemProperty], accepts a
@@ -1065,7 +1201,10 @@ class CodeSystemConcept with _$CodeSystemConcept {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
+  factory CodeSystemConcept.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CodeSystemConceptFromJson(json);
 
   /// Acts like a constructor, returns a [CodeSystemConcept], accepts a
@@ -1196,7 +1335,10 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystemDesignation.fromJson(Map<String, dynamic> json) =>
+  factory CodeSystemDesignation.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CodeSystemDesignationFromJson(json);
 
   /// Acts like a constructor, returns a [CodeSystemDesignation], accepts a
@@ -1370,7 +1512,10 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
+  factory CodeSystemProperty1.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CodeSystemProperty1FromJson(json);
 
   /// Acts like a constructor, returns a [CodeSystemProperty1], accepts a
@@ -1390,7 +1535,7 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
 ///  or more other concepts - either concepts in code systems, or data
 ///  element/data element concepts, or classes in class models.
 @freezed
-class ConceptMap with Resource, _$ConceptMap {
+class ConceptMap extends _i1.TableRow with Resource, _$ConceptMap {
   /// [ConceptMap] A statement of relationships from one set of concepts to one
   ///  or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
@@ -1952,6 +2097,131 @@ class ConceptMap with Resource, _$ConceptMap {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final ConceptMapTable t = ConceptMapTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$ConceptMapToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'ConceptMap';
+
+  static Future<List<ConceptMap>> find(
+    _i1.Session session, {
+    ConceptMapExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConceptMapFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ConceptMap?> findSingleRow(
+    _i1.Session session, {
+    ConceptMapExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConceptMapFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ConceptMap?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$ConceptMapFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required ConceptMapExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConceptMapDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    ConceptMap row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConceptMapDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    ConceptMap row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConceptMapUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    ConceptMap row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConceptMapInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    ConceptMapExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ConceptMapCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConceptMap.fromYaml(dynamic yaml) => yaml is String
       ? ConceptMap.fromJson(
@@ -1964,7 +2234,10 @@ class ConceptMap with Resource, _$ConceptMap {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMap.fromJson(Map<String, dynamic> json) =>
+  factory ConceptMap.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConceptMapFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMap], accepts a
@@ -2118,7 +2391,10 @@ class ConceptMapProperty with _$ConceptMapProperty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapProperty.fromJson(Map<String, dynamic> json) =>
+  factory ConceptMapProperty.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConceptMapPropertyFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMapProperty], accepts a
@@ -2277,7 +2553,10 @@ class ConceptMapAdditionalAttribute with _$ConceptMapAdditionalAttribute {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapAdditionalAttribute.fromJson(Map<String, dynamic> json) =>
+  factory ConceptMapAdditionalAttribute.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConceptMapAdditionalAttributeFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMapAdditionalAttribute],
@@ -2411,7 +2690,10 @@ class ConceptMapGroup with _$ConceptMapGroup {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapGroup.fromJson(Map<String, dynamic> json) =>
+  factory ConceptMapGroup.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConceptMapGroupFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMapGroup], accepts a
@@ -2558,7 +2840,10 @@ class ConceptMapElement with _$ConceptMapElement {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
+  factory ConceptMapElement.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConceptMapElementFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMapElement], accepts a
@@ -2741,7 +3026,10 @@ class ConceptMapTarget with _$ConceptMapTarget {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
+  factory ConceptMapTarget.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConceptMapTargetFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMapTarget], accepts a
@@ -2945,7 +3233,10 @@ class ConceptMapProperty1 with _$ConceptMapProperty1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapProperty1.fromJson(Map<String, dynamic> json) =>
+  factory ConceptMapProperty1.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConceptMapProperty1FromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMapProperty1], accepts a
@@ -3105,7 +3396,10 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =>
+  factory ConceptMapDependsOn.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConceptMapDependsOnFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMapDependsOn], accepts a
@@ -3281,7 +3575,10 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =>
+  factory ConceptMapUnmapped.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ConceptMapUnmappedFromJson(json);
 
   /// Acts like a constructor, returns a [ConceptMapUnmapped], accepts a
@@ -3301,7 +3598,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
 ///  namespace for the identification of concepts, people, devices, etc.
 ///  Represents a "System" used within the Identifier and Coding data types.
 @freezed
-class NamingSystem with Resource, _$NamingSystem {
+class NamingSystem extends _i1.TableRow with Resource, _$NamingSystem {
   /// [NamingSystem] A curated namespace that issues unique symbols within that
   ///  namespace for the identification of concepts, people, devices, etc.
   ///  Represents a "System" used within the Identifier and Coding data types.
@@ -3816,6 +4113,131 @@ class NamingSystem with Resource, _$NamingSystem {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final NamingSystemTable t = NamingSystemTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$NamingSystemToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'NamingSystem';
+
+  static Future<List<NamingSystem>> find(
+    _i1.Session session, {
+    NamingSystemExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NamingSystemFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<NamingSystem?> findSingleRow(
+    _i1.Session session, {
+    NamingSystemExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NamingSystemFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<NamingSystem?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$NamingSystemFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required NamingSystemExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NamingSystemDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    NamingSystem row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NamingSystemDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    NamingSystem row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NamingSystemUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    NamingSystem row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NamingSystemInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    NamingSystemExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$NamingSystemCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory NamingSystem.fromYaml(dynamic yaml) => yaml is String
       ? NamingSystem.fromJson(
@@ -3828,7 +4250,10 @@ class NamingSystem with Resource, _$NamingSystem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NamingSystem.fromJson(Map<String, dynamic> json) =>
+  factory NamingSystem.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$NamingSystemFromJson(json);
 
   /// Acts like a constructor, returns a [NamingSystem], accepts a
@@ -3997,7 +4422,10 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
+  factory NamingSystemUniqueId.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$NamingSystemUniqueIdFromJson(json);
 
   /// Acts like a constructor, returns a [NamingSystemUniqueId], accepts a
@@ -4018,7 +4446,8 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
 ///  used as a statement of actual server functionality or a statement of
 ///  required or desired server implementation.
 @freezed
-class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
+class TerminologyCapabilities extends _i1.TableRow
+    with Resource, _$TerminologyCapabilities {
   /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
   ///  set of capabilities (behaviors) of a FHIR Terminology Server that may be
   ///  used as a statement of actual server functionality or a statement of
@@ -4507,6 +4936,131 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final TerminologyCapabilitiesTable t = TerminologyCapabilitiesTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$TerminologyCapabilitiesToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'TerminologyCapabilities';
+
+  static Future<List<TerminologyCapabilities>> find(
+    _i1.Session session, {
+    TerminologyCapabilitiesExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$TerminologyCapabilitiesFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<TerminologyCapabilities?> findSingleRow(
+    _i1.Session session, {
+    TerminologyCapabilitiesExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$TerminologyCapabilitiesFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<TerminologyCapabilities?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$TerminologyCapabilitiesFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required TerminologyCapabilitiesExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$TerminologyCapabilitiesDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    TerminologyCapabilities row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$TerminologyCapabilitiesDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    TerminologyCapabilities row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$TerminologyCapabilitiesUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    TerminologyCapabilities row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$TerminologyCapabilitiesInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    TerminologyCapabilitiesExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$TerminologyCapabilitiesCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TerminologyCapabilities.fromYaml(dynamic yaml) => yaml is String
       ? TerminologyCapabilities.fromJson(
@@ -4519,7 +5073,10 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilities.fromJson(Map<String, dynamic> json) =>
+  factory TerminologyCapabilities.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$TerminologyCapabilitiesFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilities], accepts a
@@ -4644,7 +5201,10 @@ class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilitiesSoftware.fromJson(Map<String, dynamic> json) =>
+  factory TerminologyCapabilitiesSoftware.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$TerminologyCapabilitiesSoftwareFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilitiesSoftware],
@@ -4774,7 +5334,9 @@ class TerminologyCapabilitiesImplementation
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesImplementation.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$TerminologyCapabilitiesImplementationFromJson(json);
 
   /// Acts like a constructor, returns a
@@ -4916,7 +5478,9 @@ class TerminologyCapabilitiesCodeSystem
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesCodeSystem.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$TerminologyCapabilitiesCodeSystemFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilitiesCodeSystem],
@@ -5079,7 +5643,10 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilitiesVersion.fromJson(Map<String, dynamic> json) =>
+  factory TerminologyCapabilitiesVersion.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$TerminologyCapabilitiesVersionFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilitiesVersion],
@@ -5202,7 +5769,10 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilitiesFilter.fromJson(Map<String, dynamic> json) =>
+  factory TerminologyCapabilitiesFilter.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$TerminologyCapabilitiesFilterFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilitiesFilter],
@@ -5352,7 +5922,9 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesExpansion.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$TerminologyCapabilitiesExpansionFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilitiesExpansion],
@@ -5477,7 +6049,9 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesParameter.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$TerminologyCapabilitiesParameterFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilitiesParameter],
@@ -5593,7 +6167,9 @@ class TerminologyCapabilitiesValidateCode
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesValidateCode.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$TerminologyCapabilitiesValidateCodeFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilitiesValidateCode],
@@ -5709,7 +6285,9 @@ class TerminologyCapabilitiesTranslation
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TerminologyCapabilitiesTranslation.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$TerminologyCapabilitiesTranslationFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilitiesTranslation],
@@ -5823,7 +6401,10 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilitiesClosure.fromJson(Map<String, dynamic> json) =>
+  factory TerminologyCapabilitiesClosure.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$TerminologyCapabilitiesClosureFromJson(json);
 
   /// Acts like a constructor, returns a [TerminologyCapabilitiesClosure],
@@ -5845,7 +6426,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
 ///  sets link between [CodeSystem](codesystem.html) definitions and their use
 ///  in [coded elements](terminologies.html).
 @freezed
-class ValueSet with Resource, _$ValueSet {
+class ValueSet extends _i1.TableRow with Resource, _$ValueSet {
   /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn
   ///  from one or more code systems, intended for use in a particular context.
   ///  Value sets link between [CodeSystem](codesystem.html) definitions and
@@ -6356,6 +6937,130 @@ class ValueSet with Resource, _$ValueSet {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final ValueSetTable t = ValueSetTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() => _$ValueSetToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'ValueSet';
+
+  static Future<List<ValueSet>> find(
+    _i1.Session session, {
+    ValueSetExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ValueSetFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ValueSet?> findSingleRow(
+    _i1.Session session, {
+    ValueSetExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ValueSetFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ValueSet?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$ValueSetFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required ValueSetExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ValueSetDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    ValueSet row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ValueSetDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    ValueSet row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ValueSetUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    ValueSet row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ValueSetInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    ValueSetExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ValueSetCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ValueSet.fromYaml(dynamic yaml) => yaml is String
       ? ValueSet.fromJson(
@@ -6368,7 +7073,10 @@ class ValueSet with Resource, _$ValueSet {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSet.fromJson(Map<String, dynamic> json) =>
+  factory ValueSet.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ValueSetFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSet], accepts a
@@ -6539,7 +7247,10 @@ class ValueSetCompose with _$ValueSetCompose {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
+  factory ValueSetCompose.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ValueSetComposeFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetCompose], accepts a
@@ -6710,7 +7421,10 @@ class ValueSetInclude with _$ValueSetInclude {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetInclude.fromJson(Map<String, dynamic> json) =>
+  factory ValueSetInclude.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ValueSetIncludeFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetInclude], accepts a
@@ -6846,7 +7560,10 @@ class ValueSetConcept with _$ValueSetConcept {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetConcept.fromJson(Map<String, dynamic> json) =>
+  factory ValueSetConcept.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ValueSetConceptFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetConcept], accepts a
@@ -6982,7 +7699,10 @@ class ValueSetDesignation with _$ValueSetDesignation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
+  factory ValueSetDesignation.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ValueSetDesignationFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetDesignation], accepts a
@@ -7126,7 +7846,10 @@ class ValueSetFilter with _$ValueSetFilter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetFilter.fromJson(Map<String, dynamic> json) =>
+  factory ValueSetFilter.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ValueSetFilterFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetFilter], accepts a
@@ -7324,7 +8047,10 @@ class ValueSetExpansion with _$ValueSetExpansion {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
+  factory ValueSetExpansion.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ValueSetExpansionFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetExpansion], accepts a
@@ -7510,7 +8236,10 @@ class ValueSetParameter with _$ValueSetParameter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetParameter.fromJson(Map<String, dynamic> json) =>
+  factory ValueSetParameter.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ValueSetParameterFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetParameter], accepts a
@@ -7638,7 +8367,10 @@ class ValueSetProperty with _$ValueSetProperty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetProperty.fromJson(Map<String, dynamic> json) =>
+  factory ValueSetProperty.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ValueSetPropertyFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetProperty], accepts a
@@ -7849,7 +8581,10 @@ class ValueSetContains with _$ValueSetContains {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetContains.fromJson(Map<String, dynamic> json) =>
+  factory ValueSetContains.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ValueSetContainsFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetContains], accepts a
@@ -8031,7 +8766,10 @@ class ValueSetProperty1 with _$ValueSetProperty1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetProperty1.fromJson(Map<String, dynamic> json) =>
+  factory ValueSetProperty1.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ValueSetProperty1FromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetProperty1], accepts a
@@ -8210,7 +8948,10 @@ class ValueSetSubProperty with _$ValueSetSubProperty {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetSubProperty.fromJson(Map<String, dynamic> json) =>
+  factory ValueSetSubProperty.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ValueSetSubPropertyFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetSubProperty], accepts a
@@ -8340,7 +9081,10 @@ class ValueSetScope with _$ValueSetScope {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSetScope.fromJson(Map<String, dynamic> json) =>
+  factory ValueSetScope.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ValueSetScopeFromJson(json);
 
   /// Acts like a constructor, returns a [ValueSetScope], accepts a

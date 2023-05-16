@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod/serverpod.dart' as _i1;
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -12,13 +13,15 @@ import '../../../../r5.dart';
 
 part 'conformance.freezed.dart';
 part 'conformance.g.dart';
+part 'conformance.serverpod.dart';
 
 /// [CapabilityStatement] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
 ///  version of FHIR that may be used as a statement of actual server
 ///  functionality or a statement of required or desired server implementation.
 @freezed
-class CapabilityStatement with Resource, _$CapabilityStatement {
+class CapabilityStatement extends _i1.TableRow
+    with Resource, _$CapabilityStatement {
   /// [CapabilityStatement] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
   ///  version of FHIR that may be used as a statement of actual server
@@ -547,6 +550,131 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final CapabilityStatementTable t = CapabilityStatementTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$CapabilityStatementToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'CapabilityStatement';
+
+  static Future<List<CapabilityStatement>> find(
+    _i1.Session session, {
+    CapabilityStatementExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CapabilityStatementFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<CapabilityStatement?> findSingleRow(
+    _i1.Session session, {
+    CapabilityStatementExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CapabilityStatementFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<CapabilityStatement?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$CapabilityStatementFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required CapabilityStatementExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CapabilityStatementDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    CapabilityStatement row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CapabilityStatementDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    CapabilityStatement row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CapabilityStatementUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    CapabilityStatement row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CapabilityStatementInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    CapabilityStatementExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CapabilityStatementCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
       ? CapabilityStatement.fromJson(
@@ -559,7 +687,10 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
+  factory CapabilityStatement.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatement], accepts a
@@ -695,7 +826,10 @@ class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatementSoftware.fromJson(Map<String, dynamic> json) =>
+  factory CapabilityStatementSoftware.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementSoftwareFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatementSoftware], accepts
@@ -834,7 +968,9 @@ class CapabilityStatementImplementation
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementImplementation.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementImplementationFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatementImplementation],
@@ -1013,7 +1149,10 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatementRest.fromJson(Map<String, dynamic> json) =>
+  factory CapabilityStatementRest.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementRestFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatementRest], accepts a
@@ -1146,7 +1285,10 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatementSecurity.fromJson(Map<String, dynamic> json) =>
+  factory CapabilityStatementSecurity.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementSecurityFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatementSecurity], accepts
@@ -1490,7 +1632,10 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatementResource.fromJson(Map<String, dynamic> json) =>
+  factory CapabilityStatementResource.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementResourceFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatementResource], accepts
@@ -1624,7 +1769,10 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =>
+  factory CapabilityStatementInteraction.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementInteractionFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatementInteraction],
@@ -1788,7 +1936,10 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =>
+  factory CapabilityStatementSearchParam.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementSearchParamFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatementSearchParam],
@@ -1950,7 +2101,10 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatementOperation.fromJson(Map<String, dynamic> json) =>
+  factory CapabilityStatementOperation.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementOperationFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatementOperation],
@@ -2080,7 +2234,10 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =>
+  factory CapabilityStatementInteraction1.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementInteraction1FromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatementInteraction1],
@@ -2229,7 +2386,10 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatementMessaging.fromJson(Map<String, dynamic> json) =>
+  factory CapabilityStatementMessaging.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementMessagingFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatementMessaging],
@@ -2353,7 +2513,10 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatementEndpoint.fromJson(Map<String, dynamic> json) =>
+  factory CapabilityStatementEndpoint.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementEndpointFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatementEndpoint], accepts
@@ -2481,7 +2644,9 @@ class CapabilityStatementSupportedMessage
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatementSupportedMessage.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementSupportedMessageFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatementSupportedMessage],
@@ -2619,7 +2784,10 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CapabilityStatementDocument.fromJson(Map<String, dynamic> json) =>
+  factory CapabilityStatementDocument.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CapabilityStatementDocumentFromJson(json);
 
   /// Acts like a constructor, returns a [CapabilityStatementDocument], accepts
@@ -2639,7 +2807,8 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
 /// [CompartmentDefinition] A compartment definition that defines how resources
 ///  are accessed on a server.
 @freezed
-class CompartmentDefinition with Resource, _$CompartmentDefinition {
+class CompartmentDefinition extends _i1.TableRow
+    with Resource, _$CompartmentDefinition {
   /// [CompartmentDefinition] A compartment definition that defines how
   ///  resources are accessed on a server.
   CompartmentDefinition._();
@@ -3047,6 +3216,131 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final CompartmentDefinitionTable t = CompartmentDefinitionTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$CompartmentDefinitionToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'CompartmentDefinition';
+
+  static Future<List<CompartmentDefinition>> find(
+    _i1.Session session, {
+    CompartmentDefinitionExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompartmentDefinitionFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<CompartmentDefinition?> findSingleRow(
+    _i1.Session session, {
+    CompartmentDefinitionExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompartmentDefinitionFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<CompartmentDefinition?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$CompartmentDefinitionFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required CompartmentDefinitionExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompartmentDefinitionDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    CompartmentDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompartmentDefinitionDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    CompartmentDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompartmentDefinitionUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    CompartmentDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompartmentDefinitionInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    CompartmentDefinitionExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CompartmentDefinitionCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompartmentDefinition.fromYaml(dynamic yaml) => yaml is String
       ? CompartmentDefinition.fromJson(
@@ -3059,7 +3353,10 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CompartmentDefinition.fromJson(Map<String, dynamic> json) =>
+  factory CompartmentDefinition.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CompartmentDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [CompartmentDefinition], accepts a
@@ -3219,7 +3516,10 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =>
+  factory CompartmentDefinitionResource.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CompartmentDefinitionResourceFromJson(json);
 
   /// Acts like a constructor, returns a [CompartmentDefinitionResource],
@@ -3241,7 +3541,7 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
 ///  references. The Graph Definition resource defines a set and makes rules
 ///  about the set.
 @freezed
-class GraphDefinition with Resource, _$GraphDefinition {
+class GraphDefinition extends _i1.TableRow with Resource, _$GraphDefinition {
   /// [GraphDefinition] A formal computable definition of a graph of resources
   ///  - that is, a coherent set of resources that form a graph by following
   ///  references. The Graph Definition resource defines a set and makes rules
@@ -3646,6 +3946,131 @@ class GraphDefinition with Resource, _$GraphDefinition {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final GraphDefinitionTable t = GraphDefinitionTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$GraphDefinitionToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'GraphDefinition';
+
+  static Future<List<GraphDefinition>> find(
+    _i1.Session session, {
+    GraphDefinitionExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$GraphDefinitionFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<GraphDefinition?> findSingleRow(
+    _i1.Session session, {
+    GraphDefinitionExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$GraphDefinitionFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<GraphDefinition?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$GraphDefinitionFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required GraphDefinitionExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$GraphDefinitionDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    GraphDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$GraphDefinitionDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    GraphDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$GraphDefinitionUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    GraphDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$GraphDefinitionInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    GraphDefinitionExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$GraphDefinitionCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GraphDefinition.fromYaml(dynamic yaml) => yaml is String
       ? GraphDefinition.fromJson(
@@ -3658,7 +4083,10 @@ class GraphDefinition with Resource, _$GraphDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GraphDefinition.fromJson(Map<String, dynamic> json) =>
+  factory GraphDefinition.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$GraphDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [GraphDefinition], accepts a
@@ -3797,7 +4225,10 @@ class GraphDefinitionNode with _$GraphDefinitionNode {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GraphDefinitionNode.fromJson(Map<String, dynamic> json) =>
+  factory GraphDefinitionNode.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$GraphDefinitionNodeFromJson(json);
 
   /// Acts like a constructor, returns a [GraphDefinitionNode], accepts a
@@ -3988,7 +4419,10 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GraphDefinitionLink.fromJson(Map<String, dynamic> json) =>
+  factory GraphDefinitionLink.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$GraphDefinitionLinkFromJson(json);
 
   /// Acts like a constructor, returns a [GraphDefinitionLink], accepts a
@@ -4144,7 +4578,10 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =>
+  factory GraphDefinitionCompartment.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$GraphDefinitionCompartmentFromJson(json);
 
   /// Acts like a constructor, returns a [GraphDefinitionCompartment], accepts a
@@ -4166,7 +4603,8 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
 ///  implementation guide into a logical whole and to publish a computable
 ///  definition of all the parts.
 @freezed
-class ImplementationGuide with Resource, _$ImplementationGuide {
+class ImplementationGuide extends _i1.TableRow
+    with Resource, _$ImplementationGuide {
   /// [ImplementationGuide] A set of rules of how a particular interoperability
   ///  or standards problem is solved - typically through the use of FHIR
   ///  resources. This resource is used to gather all the parts of an
@@ -4629,6 +5067,131 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final ImplementationGuideTable t = ImplementationGuideTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$ImplementationGuideToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'ImplementationGuide';
+
+  static Future<List<ImplementationGuide>> find(
+    _i1.Session session, {
+    ImplementationGuideExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ImplementationGuideFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ImplementationGuide?> findSingleRow(
+    _i1.Session session, {
+    ImplementationGuideExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ImplementationGuideFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ImplementationGuide?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$ImplementationGuideFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required ImplementationGuideExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ImplementationGuideDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    ImplementationGuide row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ImplementationGuideDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    ImplementationGuide row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ImplementationGuideUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    ImplementationGuide row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ImplementationGuideInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    ImplementationGuideExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ImplementationGuideCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ImplementationGuide.fromYaml(dynamic yaml) => yaml is String
       ? ImplementationGuide.fromJson(
@@ -4641,7 +5204,10 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuide.fromJson(Map<String, dynamic> json) =>
+  factory ImplementationGuide.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ImplementationGuideFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuide], accepts a
@@ -4789,7 +5355,10 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuideDependsOn.fromJson(Map<String, dynamic> json) =>
+  factory ImplementationGuideDependsOn.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ImplementationGuideDependsOnFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuideDependsOn],
@@ -4910,7 +5479,10 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
+  factory ImplementationGuideGlobal.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ImplementationGuideGlobalFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuideGlobal], accepts a
@@ -5054,7 +5626,10 @@ class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuideDefinition.fromJson(Map<String, dynamic> json) =>
+  factory ImplementationGuideDefinition.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ImplementationGuideDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuideDefinition],
@@ -5182,7 +5757,10 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuideGrouping.fromJson(Map<String, dynamic> json) =>
+  factory ImplementationGuideGrouping.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ImplementationGuideGroupingFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuideGrouping], accepts
@@ -5360,7 +5938,10 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuideResource.fromJson(Map<String, dynamic> json) =>
+  factory ImplementationGuideResource.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ImplementationGuideResourceFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuideResource], accepts
@@ -5540,7 +6121,10 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
+  factory ImplementationGuidePage.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ImplementationGuidePageFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuidePage], accepts a
@@ -5660,7 +6244,10 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuideParameter.fromJson(Map<String, dynamic> json) =>
+  factory ImplementationGuideParameter.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ImplementationGuideParameterFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuideParameter],
@@ -5796,7 +6383,10 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuideTemplate.fromJson(Map<String, dynamic> json) =>
+  factory ImplementationGuideTemplate.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ImplementationGuideTemplateFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuideTemplate], accepts
@@ -5954,7 +6544,10 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuideManifest.fromJson(Map<String, dynamic> json) =>
+  factory ImplementationGuideManifest.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ImplementationGuideManifestFromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuideManifest], accepts
@@ -6093,7 +6686,10 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuideResource1.fromJson(Map<String, dynamic> json) =>
+  factory ImplementationGuideResource1.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ImplementationGuideResource1FromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuideResource1],
@@ -6229,7 +6825,10 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ImplementationGuidePage1.fromJson(Map<String, dynamic> json) =>
+  factory ImplementationGuidePage1.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ImplementationGuidePage1FromJson(json);
 
   /// Acts like a constructor, returns a [ImplementationGuidePage1], accepts a
@@ -6250,7 +6849,8 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
 ///  message, the content to be transmitted and what response(s), if any, are
 ///  permitted.
 @freezed
-class MessageDefinition with Resource, _$MessageDefinition {
+class MessageDefinition extends _i1.TableRow
+    with Resource, _$MessageDefinition {
   /// [MessageDefinition] Defines the characteristics of a message that can be
   ///  shared between systems, including the type of event that initiates the
   ///  message, the content to be transmitted and what response(s), if any, are
@@ -6712,6 +7312,131 @@ class MessageDefinition with Resource, _$MessageDefinition {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final MessageDefinitionTable t = MessageDefinitionTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$MessageDefinitionToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'MessageDefinition';
+
+  static Future<List<MessageDefinition>> find(
+    _i1.Session session, {
+    MessageDefinitionExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$MessageDefinitionFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<MessageDefinition?> findSingleRow(
+    _i1.Session session, {
+    MessageDefinitionExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$MessageDefinitionFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<MessageDefinition?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$MessageDefinitionFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required MessageDefinitionExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$MessageDefinitionDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    MessageDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$MessageDefinitionDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    MessageDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$MessageDefinitionUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    MessageDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$MessageDefinitionInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    MessageDefinitionExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$MessageDefinitionCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageDefinition.fromYaml(dynamic yaml) => yaml is String
       ? MessageDefinition.fromJson(
@@ -6724,7 +7449,10 @@ class MessageDefinition with Resource, _$MessageDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MessageDefinition.fromJson(Map<String, dynamic> json) =>
+  factory MessageDefinition.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$MessageDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [MessageDefinition], accepts a
@@ -6871,7 +7599,10 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MessageDefinitionFocus.fromJson(Map<String, dynamic> json) =>
+  factory MessageDefinitionFocus.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$MessageDefinitionFocusFromJson(json);
 
   /// Acts like a constructor, returns a [MessageDefinitionFocus], accepts a
@@ -6995,7 +7726,9 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageDefinitionAllowedResponse.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$MessageDefinitionAllowedResponseFromJson(json);
 
   /// Acts like a constructor, returns a [MessageDefinitionAllowedResponse],
@@ -7015,7 +7748,8 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
 /// [OperationDefinition] A formal computable definition of an operation (on
 ///  the RESTful interface) or a named query (using the search interaction).
 @freezed
-class OperationDefinition with Resource, _$OperationDefinition {
+class OperationDefinition extends _i1.TableRow
+    with Resource, _$OperationDefinition {
   /// [OperationDefinition] A formal computable definition of an operation (on
   ///  the RESTful interface) or a named query (using the search interaction).
   OperationDefinition._();
@@ -7531,6 +8265,131 @@ class OperationDefinition with Resource, _$OperationDefinition {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final OperationDefinitionTable t = OperationDefinitionTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$OperationDefinitionToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'OperationDefinition';
+
+  static Future<List<OperationDefinition>> find(
+    _i1.Session session, {
+    OperationDefinitionExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OperationDefinitionFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<OperationDefinition?> findSingleRow(
+    _i1.Session session, {
+    OperationDefinitionExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OperationDefinitionFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<OperationDefinition?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$OperationDefinitionFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required OperationDefinitionExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OperationDefinitionDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    OperationDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OperationDefinitionDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    OperationDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OperationDefinitionUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    OperationDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OperationDefinitionInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    OperationDefinitionExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OperationDefinitionCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationDefinition.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinition.fromJson(
@@ -7543,7 +8402,10 @@ class OperationDefinition with Resource, _$OperationDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
+  factory OperationDefinition.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$OperationDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [OperationDefinition], accepts a
@@ -7782,7 +8644,10 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
+  factory OperationDefinitionParameter.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$OperationDefinitionParameterFromJson(json);
 
   /// Acts like a constructor, returns a [OperationDefinitionParameter],
@@ -7902,7 +8767,10 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationDefinitionBinding.fromJson(Map<String, dynamic> json) =>
+  factory OperationDefinitionBinding.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$OperationDefinitionBindingFromJson(json);
 
   /// Acts like a constructor, returns a [OperationDefinitionBinding], accepts a
@@ -8030,7 +8898,9 @@ class OperationDefinitionReferencedFrom
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinitionReferencedFrom.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$OperationDefinitionReferencedFromFromJson(json);
 
   /// Acts like a constructor, returns a [OperationDefinitionReferencedFrom],
@@ -8150,7 +9020,10 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =>
+  factory OperationDefinitionOverload.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$OperationDefinitionOverloadFromJson(json);
 
   /// Acts like a constructor, returns a [OperationDefinitionOverload], accepts
@@ -8170,7 +9043,7 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
 /// [SearchParameter] A search parameter that defines a named search item that
 ///  can be used to search/filter on a resource.
 @freezed
-class SearchParameter with Resource, _$SearchParameter {
+class SearchParameter extends _i1.TableRow with Resource, _$SearchParameter {
   /// [SearchParameter] A search parameter that defines a named search item
   ///  that can be used to search/filter on a resource.
   SearchParameter._();
@@ -8724,6 +9597,131 @@ class SearchParameter with Resource, _$SearchParameter {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final SearchParameterTable t = SearchParameterTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$SearchParameterToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'SearchParameter';
+
+  static Future<List<SearchParameter>> find(
+    _i1.Session session, {
+    SearchParameterExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SearchParameterFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<SearchParameter?> findSingleRow(
+    _i1.Session session, {
+    SearchParameterExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SearchParameterFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<SearchParameter?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$SearchParameterFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required SearchParameterExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SearchParameterDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    SearchParameter row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SearchParameterDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    SearchParameter row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SearchParameterUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    SearchParameter row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SearchParameterInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    SearchParameterExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$SearchParameterCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SearchParameter.fromYaml(dynamic yaml) => yaml is String
       ? SearchParameter.fromJson(
@@ -8736,7 +9734,10 @@ class SearchParameter with Resource, _$SearchParameter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SearchParameter.fromJson(Map<String, dynamic> json) =>
+  factory SearchParameter.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$SearchParameterFromJson(json);
 
   /// Acts like a constructor, returns a [SearchParameter], accepts a
@@ -8851,7 +9852,10 @@ class SearchParameterComponent with _$SearchParameterComponent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SearchParameterComponent.fromJson(Map<String, dynamic> json) =>
+  factory SearchParameterComponent.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$SearchParameterComponentFromJson(json);
 
   /// Acts like a constructor, returns a [SearchParameterComponent], accepts a
@@ -8871,7 +9875,8 @@ class SearchParameterComponent with _$SearchParameterComponent {
 ///  used to describe the underlying resources, data types defined in FHIR, and
 ///  also for describing extensions and constraints on resources and data types.
 @freezed
-class StructureDefinition with Resource, _$StructureDefinition {
+class StructureDefinition extends _i1.TableRow
+    with Resource, _$StructureDefinition {
   /// [StructureDefinition] A definition of a FHIR structure. This resource is
   ///  used to describe the underlying resources, data types defined in FHIR,
   ///  and also for describing extensions and constraints on resources and data
@@ -9407,6 +10412,131 @@ class StructureDefinition with Resource, _$StructureDefinition {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final StructureDefinitionTable t = StructureDefinitionTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$StructureDefinitionToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'StructureDefinition';
+
+  static Future<List<StructureDefinition>> find(
+    _i1.Session session, {
+    StructureDefinitionExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureDefinitionFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<StructureDefinition?> findSingleRow(
+    _i1.Session session, {
+    StructureDefinitionExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureDefinitionFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<StructureDefinition?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$StructureDefinitionFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required StructureDefinitionExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureDefinitionDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    StructureDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureDefinitionDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    StructureDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureDefinitionUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    StructureDefinition row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureDefinitionInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    StructureDefinitionExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureDefinitionCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureDefinition.fromYaml(dynamic yaml) => yaml is String
       ? StructureDefinition.fromJson(
@@ -9419,7 +10549,10 @@ class StructureDefinition with Resource, _$StructureDefinition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinition.fromJson(Map<String, dynamic> json) =>
+  factory StructureDefinition.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureDefinitionFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinition], accepts a
@@ -9567,7 +10700,10 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
+  factory StructureDefinitionMapping.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureDefinitionMappingFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinitionMapping], accepts a
@@ -9693,7 +10829,10 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinitionContext.fromJson(Map<String, dynamic> json) =>
+  factory StructureDefinitionContext.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureDefinitionContextFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinitionContext], accepts a
@@ -9800,7 +10939,10 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
+  factory StructureDefinitionSnapshot.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureDefinitionSnapshotFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinitionSnapshot], accepts
@@ -9909,7 +11051,10 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureDefinitionDifferential.fromJson(Map<String, dynamic> json) =>
+  factory StructureDefinitionDifferential.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureDefinitionDifferentialFromJson(json);
 
   /// Acts like a constructor, returns a [StructureDefinitionDifferential],
@@ -9929,7 +11074,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
 /// [StructureMap] A Map of relationships between 2 structures that can be used
 ///  to transform data.
 @freezed
-class StructureMap with Resource, _$StructureMap {
+class StructureMap extends _i1.TableRow with Resource, _$StructureMap {
   /// [StructureMap] A Map of relationships between 2 structures that can be
   ///  used to transform data.
   StructureMap._();
@@ -10330,6 +11475,131 @@ class StructureMap with Resource, _$StructureMap {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final StructureMapTable t = StructureMapTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$StructureMapToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'StructureMap';
+
+  static Future<List<StructureMap>> find(
+    _i1.Session session, {
+    StructureMapExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureMapFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<StructureMap?> findSingleRow(
+    _i1.Session session, {
+    StructureMapExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureMapFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<StructureMap?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$StructureMapFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required StructureMapExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureMapDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    StructureMap row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureMapDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    StructureMap row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureMapUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    StructureMap row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureMapInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    StructureMapExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$StructureMapCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory StructureMap.fromYaml(dynamic yaml) => yaml is String
       ? StructureMap.fromJson(
@@ -10342,7 +11612,10 @@ class StructureMap with Resource, _$StructureMap {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureMap.fromJson(Map<String, dynamic> json) =>
+  factory StructureMap.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureMapFromJson(json);
 
   /// Acts like a constructor, returns a [StructureMap], accepts a
@@ -10475,7 +11748,10 @@ class StructureMapStructure with _$StructureMapStructure {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureMapStructure.fromJson(Map<String, dynamic> json) =>
+  factory StructureMapStructure.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureMapStructureFromJson(json);
 
   /// Acts like a constructor, returns a [StructureMapStructure], accepts a
@@ -10591,7 +11867,10 @@ class StructureMapConst with _$StructureMapConst {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureMapConst.fromJson(Map<String, dynamic> json) =>
+  factory StructureMapConst.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureMapConstFromJson(json);
 
   /// Acts like a constructor, returns a [StructureMapConst], accepts a
@@ -10743,7 +12022,10 @@ class StructureMapGroup with _$StructureMapGroup {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureMapGroup.fromJson(Map<String, dynamic> json) =>
+  factory StructureMapGroup.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureMapGroupFromJson(json);
 
   /// Acts like a constructor, returns a [StructureMapGroup], accepts a
@@ -10879,7 +12161,10 @@ class StructureMapInput with _$StructureMapInput {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureMapInput.fromJson(Map<String, dynamic> json) =>
+  factory StructureMapInput.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureMapInputFromJson(json);
 
   /// Acts like a constructor, returns a [StructureMapInput], accepts a
@@ -11015,7 +12300,10 @@ class StructureMapRule with _$StructureMapRule {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureMapRule.fromJson(Map<String, dynamic> json) =>
+  factory StructureMapRule.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureMapRuleFromJson(json);
 
   /// Acts like a constructor, returns a [StructureMapRule], accepts a
@@ -11237,7 +12525,10 @@ class StructureMapSource with _$StructureMapSource {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureMapSource.fromJson(Map<String, dynamic> json) =>
+  factory StructureMapSource.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureMapSourceFromJson(json);
 
   /// Acts like a constructor, returns a [StructureMapSource], accepts a
@@ -11399,7 +12690,10 @@ class StructureMapTarget with _$StructureMapTarget {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureMapTarget.fromJson(Map<String, dynamic> json) =>
+  factory StructureMapTarget.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureMapTargetFromJson(json);
 
   /// Acts like a constructor, returns a [StructureMapTarget], accepts a
@@ -11575,7 +12869,10 @@ class StructureMapParameter with _$StructureMapParameter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureMapParameter.fromJson(Map<String, dynamic> json) =>
+  factory StructureMapParameter.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureMapParameterFromJson(json);
 
   /// Acts like a constructor, returns a [StructureMapParameter], accepts a
@@ -11686,7 +12983,10 @@ class StructureMapDependent with _$StructureMapDependent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory StructureMapDependent.fromJson(Map<String, dynamic> json) =>
+  factory StructureMapDependent.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$StructureMapDependentFromJson(json);
 
   /// Acts like a constructor, returns a [StructureMapDependent], accepts a

@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod/serverpod.dart' as _i1;
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -12,13 +13,14 @@ import '../../../../r5.dart';
 
 part 'entities1.freezed.dart';
 part 'entities1.g.dart';
+part 'entities1.serverpod.dart';
 
 /// [FhirEndpoint] The technical details of an endpoint that can be used for
 ///  electronic services, such as for web services providing XDS.b, a REST
 ///  endpoint for another FHIR server, or a s/Mime email address. This may
 ///  include any security context information.
 @freezed
-class FhirEndpoint with Resource, _$FhirEndpoint {
+class FhirEndpoint extends _i1.TableRow with Resource, _$FhirEndpoint {
   /// [FhirEndpoint] The technical details of an endpoint that can be used for
   ///  electronic services, such as for web services providing XDS.b, a REST
   ///  endpoint for another FHIR server, or a s/Mime email address. This may
@@ -136,12 +138,11 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
     @Default(R5ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
         R5ResourceType resourceType,
-
-      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -273,6 +274,131 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final FhirEndpointTable t = FhirEndpointTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$FhirEndpointToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'FhirEndpoint';
+
+  static Future<List<FhirEndpoint>> find(
+    _i1.Session session, {
+    FhirEndpointExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirEndpointFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<FhirEndpoint?> findSingleRow(
+    _i1.Session session, {
+    FhirEndpointExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirEndpointFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<FhirEndpoint?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$FhirEndpointFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required FhirEndpointExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirEndpointDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    FhirEndpoint row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirEndpointDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    FhirEndpoint row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirEndpointUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    FhirEndpoint row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirEndpointInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    FhirEndpointExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirEndpointCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory FhirEndpoint.fromYaml(dynamic yaml) => yaml is String
       ? FhirEndpoint.fromJson(
@@ -285,7 +411,10 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FhirEndpoint.fromJson(Map<String, dynamic> json) =>
+  factory FhirEndpoint.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$FhirEndpointFromJson(json);
 
   /// Acts like a constructor, returns a [FhirEndpoint], accepts a
@@ -355,7 +484,7 @@ class FhirEndpointPayload with _$FhirEndpointPayload {
   factory FhirEndpointPayload({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -410,7 +539,10 @@ class FhirEndpointPayload with _$FhirEndpointPayload {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FhirEndpointPayload.fromJson(Map<String, dynamic> json) =>
+  factory FhirEndpointPayload.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$FhirEndpointPayloadFromJson(json);
 
   /// Acts like a constructor, returns a [FhirEndpointPayload], accepts a
@@ -429,7 +561,8 @@ class FhirEndpointPayload with _$FhirEndpointPayload {
 /// [HealthcareService] The details of a healthcare service available at a
 ///  location.
 @freezed
-class HealthcareService with Resource, _$HealthcareService {
+class HealthcareService extends _i1.TableRow
+    with Resource, _$HealthcareService {
   /// [HealthcareService] The details of a healthcare service available at a
   ///  location.
   HealthcareService._();
@@ -579,12 +712,11 @@ class HealthcareService with Resource, _$HealthcareService {
     @Default(R5ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
         R5ResourceType resourceType,
-
-      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -765,6 +897,131 @@ class HealthcareService with Resource, _$HealthcareService {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final HealthcareServiceTable t = HealthcareServiceTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$HealthcareServiceToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'HealthcareService';
+
+  static Future<List<HealthcareService>> find(
+    _i1.Session session, {
+    HealthcareServiceExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$HealthcareServiceFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<HealthcareService?> findSingleRow(
+    _i1.Session session, {
+    HealthcareServiceExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$HealthcareServiceFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<HealthcareService?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$HealthcareServiceFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required HealthcareServiceExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$HealthcareServiceDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    HealthcareService row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$HealthcareServiceDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    HealthcareService row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$HealthcareServiceUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    HealthcareService row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$HealthcareServiceInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    HealthcareServiceExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$HealthcareServiceCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareService.fromJson(
@@ -777,7 +1034,10 @@ class HealthcareService with Resource, _$HealthcareService {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareService.fromJson(Map<String, dynamic> json) =>
+  factory HealthcareService.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$HealthcareServiceFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareService], accepts a
@@ -837,7 +1097,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   factory HealthcareServiceEligibility({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -888,7 +1148,10 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory HealthcareServiceEligibility.fromJson(Map<String, dynamic> json) =>
+  factory HealthcareServiceEligibility.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$HealthcareServiceEligibilityFromJson(json);
 
   /// Acts like a constructor, returns a [HealthcareServiceEligibility],
@@ -909,7 +1172,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
 ///  provided and resources and participants may be stored, found, contained,
 ///  or accommodated.
 @freezed
-class Location with Resource, _$Location {
+class Location extends _i1.TableRow with Resource, _$Location {
   /// [Location] Details and position information for a place where services
   ///  are provided and resources and participants may be stored, found,
   ///  contained, or accommodated.
@@ -1041,12 +1304,11 @@ class Location with Resource, _$Location {
     @Default(R5ResourceType.Location)
     @JsonKey(unknownEnumValue: R5ResourceType.Location)
         R5ResourceType resourceType,
-
-      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1205,6 +1467,130 @@ class Location with Resource, _$Location {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final LocationTable t = LocationTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() => _$LocationToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Location';
+
+  static Future<List<Location>> find(
+    _i1.Session session, {
+    LocationExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LocationFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Location?> findSingleRow(
+    _i1.Session session, {
+    LocationExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LocationFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Location?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$LocationFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required LocationExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LocationDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Location row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LocationDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Location row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LocationUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Location row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LocationInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    LocationExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LocationCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Location.fromYaml(dynamic yaml) => yaml is String
       ? Location.fromJson(
@@ -1217,7 +1603,10 @@ class Location with Resource, _$Location {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Location.fromJson(Map<String, dynamic> json) =>
+  factory Location.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$LocationFromJson(json);
 
   /// Acts like a constructor, returns a [Location], accepts a
@@ -1292,7 +1681,7 @@ class LocationPosition with _$LocationPosition {
   factory LocationPosition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1358,7 +1747,10 @@ class LocationPosition with _$LocationPosition {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory LocationPosition.fromJson(Map<String, dynamic> json) =>
+  factory LocationPosition.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$LocationPositionFromJson(json);
 
   /// Acts like a constructor, returns a [LocationPosition], accepts a
@@ -1379,7 +1771,7 @@ class LocationPosition with _$LocationPosition {
 ///  action.  Includes companies, institutions, corporations, departments,
 ///  community groups, healthcare practice groups, payer/insurer, etc.
 @freezed
-class Organization with Resource, _$Organization {
+class Organization extends _i1.TableRow with Resource, _$Organization {
   /// [Organization] A formally or informally recognized grouping of people or
   ///  organizations formed for the purpose of achieving some form of
   ///  collective action.  Includes companies, institutions, corporations,
@@ -1491,12 +1883,11 @@ class Organization with Resource, _$Organization {
     @Default(R5ResourceType.Organization)
     @JsonKey(unknownEnumValue: R5ResourceType.Organization)
         R5ResourceType resourceType,
-
-      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1618,6 +2009,131 @@ class Organization with Resource, _$Organization {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final OrganizationTable t = OrganizationTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$OrganizationToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Organization';
+
+  static Future<List<Organization>> find(
+    _i1.Session session, {
+    OrganizationExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Organization?> findSingleRow(
+    _i1.Session session, {
+    OrganizationExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Organization?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$OrganizationFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required OrganizationExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Organization row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Organization row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Organization row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    OrganizationExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Organization.fromYaml(dynamic yaml) => yaml is String
       ? Organization.fromJson(
@@ -1630,7 +2146,10 @@ class Organization with Resource, _$Organization {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Organization.fromJson(Map<String, dynamic> json) =>
+  factory Organization.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$OrganizationFromJson(json);
 
   /// Acts like a constructor, returns a [Organization], accepts a
@@ -1702,7 +2221,7 @@ class OrganizationQualification with _$OrganizationQualification {
   factory OrganizationQualification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1757,7 +2276,10 @@ class OrganizationQualification with _$OrganizationQualification {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrganizationQualification.fromJson(Map<String, dynamic> json) =>
+  factory OrganizationQualification.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$OrganizationQualificationFromJson(json);
 
   /// Acts like a constructor, returns a [OrganizationQualification], accepts a
@@ -1777,7 +2299,8 @@ class OrganizationQualification with _$OrganizationQualification {
 ///  between 2 distinct organizations, that is not a part-of
 ///  relationship/sub-division relationship.
 @freezed
-class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
+class OrganizationAffiliation extends _i1.TableRow
+    with Resource, _$OrganizationAffiliation {
   /// [OrganizationAffiliation] Defines an affiliation/association/relationship
   ///  between 2 distinct organizations, that is not a part-of
   ///  relationship/sub-division relationship.
@@ -1881,12 +2404,11 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     @Default(R5ResourceType.OrganizationAffiliation)
     @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
         R5ResourceType resourceType,
-
-      @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
+    @JsonKey(includeToJson: false, includeFromJson: true) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2003,6 +2525,131 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final OrganizationAffiliationTable t = OrganizationAffiliationTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$OrganizationAffiliationToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'OrganizationAffiliation';
+
+  static Future<List<OrganizationAffiliation>> find(
+    _i1.Session session, {
+    OrganizationAffiliationExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationAffiliationFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<OrganizationAffiliation?> findSingleRow(
+    _i1.Session session, {
+    OrganizationAffiliationExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationAffiliationFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<OrganizationAffiliation?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$OrganizationAffiliationFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required OrganizationAffiliationExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationAffiliationDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    OrganizationAffiliation row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationAffiliationDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    OrganizationAffiliation row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationAffiliationUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    OrganizationAffiliation row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationAffiliationInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    OrganizationAffiliationExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$OrganizationAffiliationCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OrganizationAffiliation.fromYaml(dynamic yaml) => yaml is String
       ? OrganizationAffiliation.fromJson(
@@ -2015,7 +2662,10 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
+  factory OrganizationAffiliation.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$OrganizationAffiliationFromJson(json);
 
   /// Acts like a constructor, returns a [OrganizationAffiliation], accepts a

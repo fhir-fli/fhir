@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod/serverpod.dart' as _i1;
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -12,12 +13,13 @@ import '../../../../r5.dart';
 
 part 'billing.freezed.dart';
 part 'billing.g.dart';
+part 'billing.serverpod.dart';
 
 /// [Claim] A provider issued list of professional services and products which
 ///  have been provided, or are to be provided, to a patient which is sent to
 ///  an insurer for reimbursement.
 @freezed
-class Claim with Resource, _$Claim {
+class Claim extends _i1.TableRow with Resource, _$Claim {
   /// [Claim] A provider issued list of professional services and products
   ///  which have been provided, or are to be provided, to a patient which is
   ///  sent to an insurer for reimbursement.
@@ -420,6 +422,130 @@ class Claim with Resource, _$Claim {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final ClaimTable t = ClaimTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() => _$ClaimToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Claim';
+
+  static Future<List<Claim>> find(
+    _i1.Session session, {
+    ClaimExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Claim?> findSingleRow(
+    _i1.Session session, {
+    ClaimExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Claim?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$ClaimFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required ClaimExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Claim row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Claim row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Claim row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    ClaimExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Claim.fromYaml(dynamic yaml) => yaml is String
       ? Claim.fromJson(
@@ -431,7 +557,11 @@ class Claim with Resource, _$Claim {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
+  factory Claim.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
+      _$ClaimFromJson(json);
 
   /// Acts like a constructor, returns a [Claim], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -546,7 +676,10 @@ class ClaimRelated with _$ClaimRelated {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimRelated.fromJson(Map<String, dynamic> json) =>
+  factory ClaimRelated.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimRelatedFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimRelated], accepts a
@@ -657,7 +790,10 @@ class ClaimPayee with _$ClaimPayee {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimPayee.fromJson(Map<String, dynamic> json) =>
+  factory ClaimPayee.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimPayeeFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimPayee], accepts a
@@ -781,7 +917,10 @@ class ClaimEvent with _$ClaimEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimEvent.fromJson(Map<String, dynamic> json) =>
+  factory ClaimEvent.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimEventFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimEvent], accepts a
@@ -921,7 +1060,10 @@ class ClaimCareTeam with _$ClaimCareTeam {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimCareTeam.fromJson(Map<String, dynamic> json) =>
+  factory ClaimCareTeam.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimCareTeamFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimCareTeam], accepts a
@@ -1132,7 +1274,10 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimSupportingInfo.fromJson(Map<String, dynamic> json) =>
+  factory ClaimSupportingInfo.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimSupportingInfoFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimSupportingInfo], accepts a
@@ -1267,7 +1412,10 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimDiagnosis.fromJson(Map<String, dynamic> json) =>
+  factory ClaimDiagnosis.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimDiagnosisFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimDiagnosis], accepts a
@@ -1410,7 +1558,10 @@ class ClaimProcedure with _$ClaimProcedure {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimProcedure.fromJson(Map<String, dynamic> json) =>
+  factory ClaimProcedure.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimProcedureFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimProcedure], accepts a
@@ -1586,7 +1737,10 @@ class ClaimInsurance with _$ClaimInsurance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimInsurance.fromJson(Map<String, dynamic> json) =>
+  factory ClaimInsurance.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimInsuranceFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimInsurance], accepts a
@@ -1716,7 +1870,10 @@ class ClaimAccident with _$ClaimAccident {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimAccident.fromJson(Map<String, dynamic> json) =>
+  factory ClaimAccident.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimAccidentFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimAccident], accepts a
@@ -2053,7 +2210,10 @@ class ClaimItem with _$ClaimItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimItem.fromJson(Map<String, dynamic> json) =>
+  factory ClaimItem.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimItemFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimItem], accepts a
@@ -2164,7 +2324,10 @@ class ClaimBodySite with _$ClaimBodySite {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimBodySite.fromJson(Map<String, dynamic> json) =>
+  factory ClaimBodySite.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimBodySiteFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimBodySite], accepts a
@@ -2399,7 +2562,10 @@ class ClaimDetail with _$ClaimDetail {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimDetail.fromJson(Map<String, dynamic> json) =>
+  factory ClaimDetail.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimDetailFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimDetail], accepts a
@@ -2627,7 +2793,10 @@ class ClaimSubDetail with _$ClaimSubDetail {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimSubDetail.fromJson(Map<String, dynamic> json) =>
+  factory ClaimSubDetail.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimSubDetailFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimSubDetail], accepts a
@@ -2646,7 +2815,7 @@ class ClaimSubDetail with _$ClaimSubDetail {
 /// [ClaimResponse] This resource provides the adjudication details from the
 ///  processing of a Claim resource.
 @freezed
-class ClaimResponse with Resource, _$ClaimResponse {
+class ClaimResponse extends _i1.TableRow with Resource, _$ClaimResponse {
   /// [ClaimResponse] This resource provides the adjudication details from the
   ///  processing of a Claim resource.
   ClaimResponse._();
@@ -3048,6 +3217,131 @@ class ClaimResponse with Resource, _$ClaimResponse {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final ClaimResponseTable t = ClaimResponseTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$ClaimResponseToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'ClaimResponse';
+
+  static Future<List<ClaimResponse>> find(
+    _i1.Session session, {
+    ClaimResponseExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimResponseFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ClaimResponse?> findSingleRow(
+    _i1.Session session, {
+    ClaimResponseExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimResponseFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<ClaimResponse?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$ClaimResponseFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required ClaimResponseExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimResponseDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    ClaimResponse row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimResponseDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    ClaimResponse row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimResponseUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    ClaimResponse row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimResponseInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    ClaimResponseExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$ClaimResponseCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ClaimResponse.fromYaml(dynamic yaml) => yaml is String
       ? ClaimResponse.fromJson(
@@ -3060,7 +3354,10 @@ class ClaimResponse with Resource, _$ClaimResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponse.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponse.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponse], accepts a
@@ -3181,7 +3478,10 @@ class ClaimResponseEvent with _$ClaimResponseEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseEvent.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseEvent.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseEventFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseEvent], accepts a
@@ -3331,7 +3631,10 @@ class ClaimResponseItem with _$ClaimResponseItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseItem.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseItem.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseItemFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseItem], accepts a
@@ -3460,7 +3763,10 @@ class ClaimResponseReviewOutcome with _$ClaimResponseReviewOutcome {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseReviewOutcome.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseReviewOutcome.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseReviewOutcomeFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseReviewOutcome], accepts a
@@ -3589,7 +3895,10 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseAdjudication.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseAdjudication.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseAdjudicationFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseAdjudication], accepts a
@@ -3732,7 +4041,10 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseDetail.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseDetail.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseDetailFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseDetail], accepts a
@@ -3873,7 +4185,10 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseSubDetail.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseSubDetail.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseSubDetailFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseSubDetail], accepts a
@@ -4186,7 +4501,10 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseAddItem.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseAddItem.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseAddItemFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseAddItem], accepts a
@@ -4294,7 +4612,10 @@ class ClaimResponseBodySite with _$ClaimResponseBodySite {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseBodySite.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseBodySite.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseBodySiteFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseBodySite], accepts a
@@ -4513,7 +4834,10 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseDetail1.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseDetail1.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseDetail1FromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseDetail1], accepts a
@@ -4726,7 +5050,10 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseSubDetail1.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseSubDetail1.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseSubDetail1FromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseSubDetail1], accepts a
@@ -4841,7 +5168,10 @@ class ClaimResponseTotal with _$ClaimResponseTotal {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseTotal.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseTotal.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseTotalFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseTotal], accepts a
@@ -4978,7 +5308,10 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponsePayment.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponsePayment.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponsePaymentFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponsePayment], accepts a
@@ -5104,7 +5437,10 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseProcessNote.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseProcessNote.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseProcessNoteFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseProcessNote], accepts a
@@ -5256,7 +5592,10 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseInsurance.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseInsurance.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseInsuranceFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseInsurance], accepts a
@@ -5420,7 +5759,10 @@ class ClaimResponseError with _$ClaimResponseError {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClaimResponseError.fromJson(Map<String, dynamic> json) =>
+  factory ClaimResponseError.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$ClaimResponseErrorFromJson(json);
 
   /// Acts like a constructor, returns a [ClaimResponseError], accepts a
@@ -5439,7 +5781,7 @@ class ClaimResponseError with _$ClaimResponseError {
 /// [Invoice] Invoice containing collected ChargeItems from an Account with
 ///  calculated individual and total price for Billing purpose.
 @freezed
-class Invoice with Resource, _$Invoice {
+class Invoice extends _i1.TableRow with Resource, _$Invoice {
   /// [Invoice] Invoice containing collected ChargeItems from an Account with
   ///  calculated individual and total price for Billing purpose.
   Invoice._();
@@ -5733,6 +6075,130 @@ class Invoice with Resource, _$Invoice {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final InvoiceTable t = InvoiceTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() => _$InvoiceToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Invoice';
+
+  static Future<List<Invoice>> find(
+    _i1.Session session, {
+    InvoiceExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$InvoiceFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Invoice?> findSingleRow(
+    _i1.Session session, {
+    InvoiceExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$InvoiceFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Invoice?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$InvoiceFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required InvoiceExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$InvoiceDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Invoice row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$InvoiceDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Invoice row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$InvoiceUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Invoice row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$InvoiceInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    InvoiceExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$InvoiceCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Invoice.fromYaml(dynamic yaml) => yaml is String
       ? Invoice.fromJson(
@@ -5745,7 +6211,10 @@ class Invoice with Resource, _$Invoice {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Invoice.fromJson(Map<String, dynamic> json) =>
+  factory Invoice.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$InvoiceFromJson(json);
 
   /// Acts like a constructor, returns a [Invoice], accepts a
@@ -5857,7 +6326,10 @@ class InvoiceParticipant with _$InvoiceParticipant {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory InvoiceParticipant.fromJson(Map<String, dynamic> json) =>
+  factory InvoiceParticipant.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$InvoiceParticipantFromJson(json);
 
   /// Acts like a constructor, returns a [InvoiceParticipant], accepts a
@@ -6020,7 +6492,10 @@ class InvoiceLineItem with _$InvoiceLineItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory InvoiceLineItem.fromJson(Map<String, dynamic> json) =>
+  factory InvoiceLineItem.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$InvoiceLineItemFromJson(json);
 
   /// Acts like a constructor, returns a [InvoiceLineItem], accepts a

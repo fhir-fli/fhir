@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod/serverpod.dart' as _i1;
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -12,6 +13,7 @@ import '../../../../r5.dart';
 
 part 'management.freezed.dart';
 part 'management.g.dart';
+part 'management.serverpod.dart';
 
 /// [Encounter] An interaction between a patient and healthcare provider(s) for
 ///  the purpose of providing healthcare service(s) or assessing the health
@@ -19,7 +21,7 @@ part 'management.g.dart';
 ///  about the actual activities that occurred, where Appointment is used to
 ///  record planned activities.
 @freezed
-class Encounter with Resource, _$Encounter {
+class Encounter extends _i1.TableRow with Resource, _$Encounter {
   /// [Encounter] An interaction between a patient and healthcare provider(s)
   ///  for the purpose of providing healthcare service(s) or assessing the
   ///  health status of a patient.  Encounter is primarily used to record
@@ -402,6 +404,131 @@ class Encounter with Resource, _$Encounter {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final EncounterTable t = EncounterTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$EncounterToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Encounter';
+
+  static Future<List<Encounter>> find(
+    _i1.Session session, {
+    EncounterExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Encounter?> findSingleRow(
+    _i1.Session session, {
+    EncounterExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Encounter?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$EncounterFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required EncounterExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Encounter row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Encounter row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Encounter row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    EncounterExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Encounter.fromYaml(dynamic yaml) => yaml is String
       ? Encounter.fromJson(
@@ -414,7 +541,10 @@ class Encounter with Resource, _$Encounter {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Encounter.fromJson(Map<String, dynamic> json) =>
+  factory Encounter.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EncounterFromJson(json);
 
   /// Acts like a constructor, returns a [Encounter], accepts a
@@ -545,7 +675,10 @@ class EncounterParticipant with _$EncounterParticipant {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
+  factory EncounterParticipant.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EncounterParticipantFromJson(json);
 
   /// Acts like a constructor, returns a [EncounterParticipant], accepts a
@@ -666,7 +799,10 @@ class EncounterReason with _$EncounterReason {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EncounterReason.fromJson(Map<String, dynamic> json) =>
+  factory EncounterReason.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EncounterReasonFromJson(json);
 
   /// Acts like a constructor, returns a [EncounterReason], accepts a
@@ -787,7 +923,10 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EncounterDiagnosis.fromJson(Map<String, dynamic> json) =>
+  factory EncounterDiagnosis.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EncounterDiagnosisFromJson(json);
 
   /// Acts like a constructor, returns a [EncounterDiagnosis], accepts a
@@ -930,7 +1069,10 @@ class EncounterAdmission with _$EncounterAdmission {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EncounterAdmission.fromJson(Map<String, dynamic> json) =>
+  factory EncounterAdmission.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EncounterAdmissionFromJson(json);
 
   /// Acts like a constructor, returns a [EncounterAdmission], accepts a
@@ -1069,7 +1211,10 @@ class EncounterLocation with _$EncounterLocation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
+  factory EncounterLocation.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EncounterLocationFromJson(json);
 
   /// Acts like a constructor, returns a [EncounterLocation], accepts a
@@ -1089,7 +1234,7 @@ class EncounterLocation with _$EncounterLocation {
 ///  throughout the history of an Encounter, often tracked for specific
 ///  purposes such as billing.
 @freezed
-class EncounterHistory with Resource, _$EncounterHistory {
+class EncounterHistory extends _i1.TableRow with Resource, _$EncounterHistory {
   /// [EncounterHistory] A record of significant events/milestones key data
   ///  throughout the history of an Encounter, often tracked for specific
   ///  purposes such as billing.
@@ -1349,6 +1494,131 @@ class EncounterHistory with Resource, _$EncounterHistory {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final EncounterHistoryTable t = EncounterHistoryTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$EncounterHistoryToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'EncounterHistory';
+
+  static Future<List<EncounterHistory>> find(
+    _i1.Session session, {
+    EncounterHistoryExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterHistoryFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<EncounterHistory?> findSingleRow(
+    _i1.Session session, {
+    EncounterHistoryExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterHistoryFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<EncounterHistory?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$EncounterHistoryFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required EncounterHistoryExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterHistoryDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    EncounterHistory row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterHistoryDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    EncounterHistory row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterHistoryUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    EncounterHistory row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterHistoryInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    EncounterHistoryExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EncounterHistoryCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EncounterHistory.fromYaml(dynamic yaml) => yaml is String
       ? EncounterHistory.fromJson(
@@ -1361,7 +1631,10 @@ class EncounterHistory with Resource, _$EncounterHistory {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EncounterHistory.fromJson(Map<String, dynamic> json) =>
+  factory EncounterHistory.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EncounterHistoryFromJson(json);
 
   /// Acts like a constructor, returns a [EncounterHistory], accepts a
@@ -1474,7 +1747,10 @@ class EncounterHistoryLocation with _$EncounterHistoryLocation {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EncounterHistoryLocation.fromJson(Map<String, dynamic> json) =>
+  factory EncounterHistoryLocation.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EncounterHistoryLocationFromJson(json);
 
   /// Acts like a constructor, returns a [EncounterHistoryLocation], accepts a
@@ -1495,7 +1771,7 @@ class EncounterHistoryLocation with _$EncounterHistoryLocation {
 ///  managing organization assumes a level of responsibility for the patient
 ///  during this time.
 @freezed
-class EpisodeOfCare with Resource, _$EpisodeOfCare {
+class EpisodeOfCare extends _i1.TableRow with Resource, _$EpisodeOfCare {
   /// [EpisodeOfCare] An association between a patient and an organization /
   ///  healthcare provider(s) during which time encounters may occur. The
   ///  managing organization assumes a level of responsibility for the patient
@@ -1734,6 +2010,131 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final EpisodeOfCareTable t = EpisodeOfCareTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$EpisodeOfCareToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'EpisodeOfCare';
+
+  static Future<List<EpisodeOfCare>> find(
+    _i1.Session session, {
+    EpisodeOfCareExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EpisodeOfCareFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<EpisodeOfCare?> findSingleRow(
+    _i1.Session session, {
+    EpisodeOfCareExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EpisodeOfCareFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<EpisodeOfCare?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$EpisodeOfCareFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required EpisodeOfCareExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EpisodeOfCareDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    EpisodeOfCare row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EpisodeOfCareDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    EpisodeOfCare row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EpisodeOfCareUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    EpisodeOfCare row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EpisodeOfCareInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    EpisodeOfCareExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EpisodeOfCareCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EpisodeOfCare.fromYaml(dynamic yaml) => yaml is String
       ? EpisodeOfCare.fromJson(
@@ -1746,7 +2147,10 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
+  factory EpisodeOfCare.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EpisodeOfCareFromJson(json);
 
   /// Acts like a constructor, returns a [EpisodeOfCare], accepts a
@@ -1865,7 +2269,10 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
+  factory EpisodeOfCareStatusHistory.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EpisodeOfCareStatusHistoryFromJson(json);
 
   /// Acts like a constructor, returns a [EpisodeOfCareStatusHistory], accepts a
@@ -1983,7 +2390,10 @@ class EpisodeOfCareReason with _$EpisodeOfCareReason {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EpisodeOfCareReason.fromJson(Map<String, dynamic> json) =>
+  factory EpisodeOfCareReason.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EpisodeOfCareReasonFromJson(json);
 
   /// Acts like a constructor, returns a [EpisodeOfCareReason], accepts a
@@ -2099,7 +2509,10 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =>
+  factory EpisodeOfCareDiagnosis.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EpisodeOfCareDiagnosisFromJson(json);
 
   /// Acts like a constructor, returns a [EpisodeOfCareDiagnosis], accepts a
@@ -2118,7 +2531,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
 /// [Flag] Prospective warnings of potential issues when providing care to the
 ///  patient.
 @freezed
-class Flag with Resource, _$Flag {
+class Flag extends _i1.TableRow with Resource, _$Flag {
   /// [Flag] Prospective warnings of potential issues when providing care to
   ///  the patient.
   Flag._();
@@ -2320,6 +2733,130 @@ class Flag with Resource, _$Flag {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final FlagTable t = FlagTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() => _$FlagToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Flag';
+
+  static Future<List<Flag>> find(
+    _i1.Session session, {
+    FlagExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FlagFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Flag?> findSingleRow(
+    _i1.Session session, {
+    FlagExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FlagFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Flag?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$FlagFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required FlagExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FlagDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Flag row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FlagDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Flag row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FlagUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Flag row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FlagInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    FlagExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FlagCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Flag.fromYaml(dynamic yaml) => yaml is String
       ? Flag.fromJson(
@@ -2331,7 +2868,11 @@ class Flag with Resource, _$Flag {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
+  factory Flag.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
+      _$FlagFromJson(json);
 
   /// Acts like a constructor, returns a [Flag], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
@@ -2351,7 +2892,7 @@ class Flag with Resource, _$Flag {
 ///  knowledge assets such as logic libraries and information model
 ///  descriptions, as well as to describe a collection of knowledge assets.
 @freezed
-class Library with Resource, _$Library {
+class Library extends _i1.TableRow with Resource, _$Library {
   /// [Library] The Library resource is a general-purpose container for
   ///  knowledge asset definitions. It can be used to describe and expose
   ///  existing knowledge assets such as logic libraries and information model
@@ -2890,6 +3431,130 @@ class Library with Resource, _$Library {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final LibraryTable t = LibraryTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() => _$LibraryToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Library';
+
+  static Future<List<Library>> find(
+    _i1.Session session, {
+    LibraryExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LibraryFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Library?> findSingleRow(
+    _i1.Session session, {
+    LibraryExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LibraryFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Library?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$LibraryFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required LibraryExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LibraryDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Library row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LibraryDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Library row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LibraryUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Library row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LibraryInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    LibraryExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$LibraryCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Library.fromYaml(dynamic yaml) => yaml is String
       ? Library.fromJson(
@@ -2902,7 +3567,10 @@ class Library with Resource, _$Library {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Library.fromJson(Map<String, dynamic> json) =>
+  factory Library.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$LibraryFromJson(json);
 
   /// Acts like a constructor, returns a [Library], accepts a
@@ -2921,7 +3589,7 @@ class Library with Resource, _$Library {
 /// [FhirList] A List is a curated collection of resources, for things such as
 ///  problem lists, allergy lists, facility list, organization list, etc.
 @freezed
-class FhirList with Resource, _$FhirList {
+class FhirList extends _i1.TableRow with Resource, _$FhirList {
   /// [FhirList] A List is a curated collection of resources, for things such
   ///  as problem lists, allergy lists, facility list, organization list, etc.
   FhirList._();
@@ -3163,6 +3831,130 @@ class FhirList with Resource, _$FhirList {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final FhirListTable t = FhirListTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() => _$FhirListToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'FhirList';
+
+  static Future<List<FhirList>> find(
+    _i1.Session session, {
+    FhirListExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirListFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<FhirList?> findSingleRow(
+    _i1.Session session, {
+    FhirListExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirListFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<FhirList?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$FhirListFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required FhirListExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirListDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    FhirList row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirListDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    FhirList row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirListUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    FhirList row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirListInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    FhirListExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$FhirListCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory FhirList.fromYaml(dynamic yaml) => yaml is String
       ? FhirList.fromJson(
@@ -3175,7 +3967,10 @@ class FhirList with Resource, _$FhirList {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FhirList.fromJson(Map<String, dynamic> json) =>
+  factory FhirList.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$FhirListFromJson(json);
 
   /// Acts like a constructor, returns a [FhirList], accepts a
@@ -3303,7 +4098,10 @@ class FhirListEntry with _$FhirListEntry {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory FhirListEntry.fromJson(Map<String, dynamic> json) =>
+  factory FhirListEntry.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$FhirListEntryFromJson(json);
 
   /// Acts like a constructor, returns a [FhirListEntry], accepts a

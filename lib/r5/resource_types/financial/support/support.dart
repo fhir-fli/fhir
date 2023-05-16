@@ -5,6 +5,7 @@ import 'dart:convert';
 
 // Package imports:
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:serverpod/serverpod.dart' as _i1;
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -12,12 +13,13 @@ import '../../../../r5.dart';
 
 part 'support.freezed.dart';
 part 'support.g.dart';
+part 'support.serverpod.dart';
 
 /// [Coverage] Financial instrument which may be used to reimburse or pay for
 ///  health care products and services. Includes both insurance and
 ///  self-payment.
 @freezed
-class Coverage with Resource, _$Coverage {
+class Coverage extends _i1.TableRow with Resource, _$Coverage {
   /// [Coverage] Financial instrument which may be used to reimburse or pay for
   ///  health care products and services. Includes both insurance and
   ///  self-payment.
@@ -340,6 +342,130 @@ class Coverage with Resource, _$Coverage {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final CoverageTable t = CoverageTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() => _$CoverageToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'Coverage';
+
+  static Future<List<Coverage>> find(
+    _i1.Session session, {
+    CoverageExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Coverage?> findSingleRow(
+    _i1.Session session, {
+    CoverageExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<Coverage?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$CoverageFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required CoverageExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    Coverage row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    Coverage row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    Coverage row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    CoverageExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Coverage.fromYaml(dynamic yaml) => yaml is String
       ? Coverage.fromJson(
@@ -352,7 +478,10 @@ class Coverage with Resource, _$Coverage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Coverage.fromJson(Map<String, dynamic> json) =>
+  factory Coverage.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageFromJson(json);
 
   /// Acts like a constructor, returns a [Coverage], accepts a
@@ -469,7 +598,10 @@ class CoveragePaymentBy with _$CoveragePaymentBy {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoveragePaymentBy.fromJson(Map<String, dynamic> json) =>
+  factory CoveragePaymentBy.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoveragePaymentByFromJson(json);
 
   /// Acts like a constructor, returns a [CoveragePaymentBy], accepts a
@@ -595,7 +727,10 @@ class CoverageClass with _$CoverageClass {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageClass.fromJson(Map<String, dynamic> json) =>
+  factory CoverageClass.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageClassFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageClass], accepts a
@@ -743,7 +878,10 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =>
+  factory CoverageCostToBeneficiary.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageCostToBeneficiaryFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageCostToBeneficiary], accepts a
@@ -852,7 +990,10 @@ class CoverageException with _$CoverageException {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageException.fromJson(Map<String, dynamic> json) =>
+  factory CoverageException.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageExceptionFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageException], accepts a
@@ -874,7 +1015,8 @@ class CoverageException with _$CoverageException {
 ///  regarding whether the stated coverage is valid and in-force and optionally
 ///  to provide the insurance details of the policy.
 @freezed
-class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
+class CoverageEligibilityRequest extends _i1.TableRow
+    with Resource, _$CoverageEligibilityRequest {
   /// [CoverageEligibilityRequest] The CoverageEligibilityRequest provides
   ///  patient and insurance coverage information to an insurer for them to
   ///  respond, in the form of an CoverageEligibilityResponse, with information
@@ -1151,6 +1293,132 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final CoverageEligibilityRequestTable t =
+      CoverageEligibilityRequestTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$CoverageEligibilityRequestToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'CoverageEligibilityRequest';
+
+  static Future<List<CoverageEligibilityRequest>> find(
+    _i1.Session session, {
+    CoverageEligibilityRequestExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityRequestFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<CoverageEligibilityRequest?> findSingleRow(
+    _i1.Session session, {
+    CoverageEligibilityRequestExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityRequestFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<CoverageEligibilityRequest?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$CoverageEligibilityRequestFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required CoverageEligibilityRequestExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityRequestDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    CoverageEligibilityRequest row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityRequestDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    CoverageEligibilityRequest row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityRequestUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    CoverageEligibilityRequest row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityRequestInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    CoverageEligibilityRequestExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityRequestCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityRequest.fromYaml(dynamic yaml) => yaml is String
       ? CoverageEligibilityRequest.fromJson(
@@ -1163,7 +1431,10 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
+  factory CoverageEligibilityRequest.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityRequestFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequest], accepts a
@@ -1294,7 +1565,10 @@ class CoverageEligibilityRequestEvent with _$CoverageEligibilityRequestEvent {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityRequestEvent.fromJson(Map<String, dynamic> json) =>
+  factory CoverageEligibilityRequestEvent.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityRequestEventFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequestEvent],
@@ -1434,7 +1708,9 @@ class CoverageEligibilityRequestSupportingInfo
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestSupportingInfo.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityRequestSupportingInfoFromJson(json);
 
   /// Acts like a constructor, returns a
@@ -1581,7 +1857,9 @@ class CoverageEligibilityRequestInsurance
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestInsurance.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityRequestInsuranceFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequestInsurance],
@@ -1760,7 +2038,10 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =>
+  factory CoverageEligibilityRequestItem.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityRequestItemFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequestItem],
@@ -1883,7 +2164,9 @@ class CoverageEligibilityRequestDiagnosis
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityRequestDiagnosis.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityRequestDiagnosisFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityRequestDiagnosis],
@@ -1903,7 +2186,8 @@ class CoverageEligibilityRequestDiagnosis
 /// [CoverageEligibilityResponse] This resource provides eligibility and plan
 ///  details from the processing of an CoverageEligibilityRequest resource.
 @freezed
-class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
+class CoverageEligibilityResponse extends _i1.TableRow
+    with Resource, _$CoverageEligibilityResponse {
   /// [CoverageEligibilityResponse] This resource provides eligibility and plan
   ///  details from the processing of an CoverageEligibilityRequest resource.
   CoverageEligibilityResponse._();
@@ -2190,6 +2474,132 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final CoverageEligibilityResponseTable t =
+      CoverageEligibilityResponseTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$CoverageEligibilityResponseToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'CoverageEligibilityResponse';
+
+  static Future<List<CoverageEligibilityResponse>> find(
+    _i1.Session session, {
+    CoverageEligibilityResponseExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityResponseFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<CoverageEligibilityResponse?> findSingleRow(
+    _i1.Session session, {
+    CoverageEligibilityResponseExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityResponseFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<CoverageEligibilityResponse?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$CoverageEligibilityResponseFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required CoverageEligibilityResponseExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityResponseDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    CoverageEligibilityResponse row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityResponseDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    CoverageEligibilityResponse row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityResponseUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    CoverageEligibilityResponse row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityResponseInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    CoverageEligibilityResponseExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$CoverageEligibilityResponseCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CoverageEligibilityResponse.fromYaml(dynamic yaml) => yaml is String
       ? CoverageEligibilityResponse.fromJson(
@@ -2202,7 +2612,10 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
+  factory CoverageEligibilityResponse.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityResponseFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponse], accepts
@@ -2328,7 +2741,9 @@ class CoverageEligibilityResponseEvent with _$CoverageEligibilityResponseEvent {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseEvent.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityResponseEventFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponseEvent],
@@ -2468,7 +2883,9 @@ class CoverageEligibilityResponseInsurance
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseInsurance.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityResponseInsuranceFromJson(json);
 
   /// Acts like a constructor, returns a
@@ -2691,7 +3108,10 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =>
+  factory CoverageEligibilityResponseItem.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityResponseItemFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponseItem],
@@ -2862,7 +3282,9 @@ class CoverageEligibilityResponseBenefit
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseBenefit.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityResponseBenefitFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponseBenefit],
@@ -2986,7 +3408,9 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CoverageEligibilityResponseError.fromJson(
-          Map<String, dynamic> json) =>
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$CoverageEligibilityResponseErrorFromJson(json);
 
   /// Acts like a constructor, returns a [CoverageEligibilityResponseError],
@@ -3006,7 +3430,8 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
 /// [EnrollmentRequest] This resource provides the insurance enrollment details
 ///  to the insurer regarding a specified coverage.
 @freezed
-class EnrollmentRequest with Resource, _$EnrollmentRequest {
+class EnrollmentRequest extends _i1.TableRow
+    with Resource, _$EnrollmentRequest {
   /// [EnrollmentRequest] This resource provides the insurance enrollment
   ///  details to the insurer regarding a specified coverage.
   EnrollmentRequest._();
@@ -3194,6 +3619,131 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final EnrollmentRequestTable t = EnrollmentRequestTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$EnrollmentRequestToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'EnrollmentRequest';
+
+  static Future<List<EnrollmentRequest>> find(
+    _i1.Session session, {
+    EnrollmentRequestExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentRequestFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<EnrollmentRequest?> findSingleRow(
+    _i1.Session session, {
+    EnrollmentRequestExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentRequestFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<EnrollmentRequest?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$EnrollmentRequestFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required EnrollmentRequestExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentRequestDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    EnrollmentRequest row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentRequestDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    EnrollmentRequest row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentRequestUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    EnrollmentRequest row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentRequestInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    EnrollmentRequestExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentRequestCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EnrollmentRequest.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentRequest.fromJson(
@@ -3206,7 +3756,10 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
+  factory EnrollmentRequest.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EnrollmentRequestFromJson(json);
 
   /// Acts like a constructor, returns a [EnrollmentRequest], accepts a
@@ -3225,7 +3778,8 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
 /// [EnrollmentResponse] This resource provides enrollment and plan details
 ///  from the processing of an EnrollmentRequest resource.
 @freezed
-class EnrollmentResponse with Resource, _$EnrollmentResponse {
+class EnrollmentResponse extends _i1.TableRow
+    with Resource, _$EnrollmentResponse {
   /// [EnrollmentResponse] This resource provides enrollment and plan details
   ///  from the processing of an EnrollmentRequest resource.
   EnrollmentResponse._();
@@ -3428,6 +3982,131 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   @override
   String toYaml() => json2yaml(toJson());
 
+  @override
+  void setColumn(
+    String columnName,
+    value,
+  ) {}
+
+  static final EnrollmentResponseTable t = EnrollmentResponseTable();
+
+  @override
+  Map<String, dynamic> toJsonForDatabase() =>
+      _$EnrollmentResponseToJsonForDatabase(this);
+
+  @override
+  String get tableName => 'EnrollmentResponse';
+
+  static Future<List<EnrollmentResponse>> find(
+    _i1.Session session, {
+    EnrollmentResponseExpressionBuilder? where,
+    int? limit,
+    int? offset,
+    _i1.Column? orderBy,
+    List<_i1.Order>? orderByList,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentResponseFind(
+        session,
+        where: where,
+        limit: limit,
+        offset: offset,
+        orderBy: orderBy,
+        orderByList: orderByList,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<EnrollmentResponse?> findSingleRow(
+    _i1.Session session, {
+    EnrollmentResponseExpressionBuilder? where,
+    int? offset,
+    _i1.Column? orderBy,
+    bool orderDescending = false,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentResponseFindSingleRow(
+        session,
+        where: where,
+        offset: offset,
+        orderBy: orderBy,
+        orderDescending: orderDescending,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
+  static Future<EnrollmentResponse?> findById(
+    _i1.Session session,
+    int id,
+  ) async =>
+      _$EnrollmentResponseFindById(
+        session,
+        id,
+      );
+
+  static Future<int> delete(
+    _i1.Session session, {
+    required EnrollmentResponseExpressionBuilder where,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentResponseDelete(
+        session,
+        where: where,
+        transaction: transaction,
+      );
+
+  static Future<bool> deleteRow(
+    _i1.Session session,
+    EnrollmentResponse row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentResponseDeleteRow(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<bool> update(
+    _i1.Session session,
+    EnrollmentResponse row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentResponseUpdate(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<void> insert(
+    _i1.Session session,
+    EnrollmentResponse row, {
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentResponseInsert(
+        session,
+        row,
+        transaction: transaction,
+      );
+
+  static Future<int> count(
+    _i1.Session session, {
+    EnrollmentResponseExpressionBuilder? where,
+    int? limit,
+    bool useCache = true,
+    _i1.Transaction? transaction,
+  }) async =>
+      _$EnrollmentResponseCount(
+        session,
+        where: where,
+        limit: limit,
+        useCache: useCache,
+        transaction: transaction,
+      );
+
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EnrollmentResponse.fromYaml(dynamic yaml) => yaml is String
       ? EnrollmentResponse.fromJson(
@@ -3440,7 +4119,10 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
+  factory EnrollmentResponse.fromJson(
+    Map<String, dynamic> json, [
+    _i1.SerializationManager? serializationManager,
+  ]) =>
       _$EnrollmentResponseFromJson(json);
 
   /// Acts like a constructor, returns a [EnrollmentResponse], accepts a
