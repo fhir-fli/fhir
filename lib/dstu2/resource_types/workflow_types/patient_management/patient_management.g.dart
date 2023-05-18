@@ -11,6 +11,7 @@ _$_Encounter _$$_EncounterFromJson(Map<String, dynamic> json) => _$_Encounter(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Encounter) ??
           Dstu2ResourceType.Encounter,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -510,6 +511,7 @@ _$_EpisodeOfCare _$$_EpisodeOfCareFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.EpisodeOfCare) ??
           Dstu2ResourceType.EpisodeOfCare,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -730,6 +732,7 @@ _$_Communication _$$_CommunicationFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Communication) ??
           Dstu2ResourceType.Communication,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -909,6 +912,7 @@ _$_Flag _$$_FlagFromJson(Map<String, dynamic> json) => _$_Flag(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Flag) ??
           Dstu2ResourceType.Flag,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

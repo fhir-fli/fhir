@@ -22,6 +22,8 @@ Measure _$MeasureFromJson(Map<String, dynamic> json) {
 mixin _$Measure {
   @JsonKey(unknownEnumValue: R4ResourceType.Measure)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -399,6 +401,8 @@ abstract class $MeasureCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Measure)
           R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -548,6 +552,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -628,6 +633,10 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1315,6 +1324,8 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Measure)
           R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -1492,6 +1503,7 @@ class __$$_MeasureCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1572,6 +1584,10 @@ class __$$_MeasureCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1877,9 +1893,11 @@ class __$$_MeasureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Measure extends _Measure {
-  _$_Measure(
+  const _$_Measure(
       {@JsonKey(unknownEnumValue: R4ResourceType.Measure)
           this.resourceType = R4ResourceType.Measure,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -2008,6 +2026,9 @@ class _$_Measure extends _Measure {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Measure)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -2656,7 +2677,7 @@ class _$_Measure extends _Measure {
 
   @override
   String toString() {
-    return 'Measure(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library_: $library_, disclaimer: $disclaimer, disclaimerElement: $disclaimerElement, scoring: $scoring, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, riskAdjustmentElement: $riskAdjustmentElement, rateAggregation: $rateAggregation, rateAggregationElement: $rateAggregationElement, rationale: $rationale, rationaleElement: $rationaleElement, clinicalRecommendationStatement: $clinicalRecommendationStatement, clinicalRecommendationStatementElement: $clinicalRecommendationStatementElement, improvementNotation: $improvementNotation, definition: $definition, definitionElement: $definitionElement, guidance: $guidance, guidanceElement: $guidanceElement, group: $group, supplementalData: $supplementalData)';
+    return 'Measure(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, subtitle: $subtitle, subtitleElement: $subtitleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, library_: $library_, disclaimer: $disclaimer, disclaimerElement: $disclaimerElement, scoring: $scoring, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, riskAdjustmentElement: $riskAdjustmentElement, rateAggregation: $rateAggregation, rateAggregationElement: $rateAggregationElement, rationale: $rationale, rationaleElement: $rationaleElement, clinicalRecommendationStatement: $clinicalRecommendationStatement, clinicalRecommendationStatementElement: $clinicalRecommendationStatementElement, improvementNotation: $improvementNotation, definition: $definition, definitionElement: $definitionElement, guidance: $guidance, guidanceElement: $guidanceElement, group: $group, supplementalData: $supplementalData)';
   }
 
   @override
@@ -2666,6 +2687,7 @@ class _$_Measure extends _Measure {
             other is _$_Measure &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -2789,6 +2811,7 @@ class _$_Measure extends _Measure {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -2880,9 +2903,11 @@ class _$_Measure extends _Measure {
 }
 
 abstract class _Measure extends Measure {
-  factory _Measure(
+  const factory _Measure(
       {@JsonKey(unknownEnumValue: R4ResourceType.Measure)
           final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -2984,13 +3009,16 @@ abstract class _Measure extends Measure {
           final Element? guidanceElement,
       final List<MeasureGroup>? group,
       final List<MeasureSupplementalData>? supplementalData}) = _$_Measure;
-  _Measure._() : super._();
+  const _Measure._() : super._();
 
   factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Measure)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -3677,7 +3705,7 @@ class __$$_MeasureGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureGroup extends _MeasureGroup {
-  _$_MeasureGroup(
+  const _$_MeasureGroup(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3863,7 +3891,7 @@ class _$_MeasureGroup extends _MeasureGroup {
 }
 
 abstract class _MeasureGroup extends MeasureGroup {
-  factory _MeasureGroup(
+  const factory _MeasureGroup(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3872,7 +3900,7 @@ abstract class _MeasureGroup extends MeasureGroup {
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<MeasurePopulation>? population,
       final List<MeasureStratifier>? stratifier}) = _$_MeasureGroup;
-  _MeasureGroup._() : super._();
+  const _MeasureGroup._() : super._();
 
   factory _MeasureGroup.fromJson(Map<String, dynamic> json) =
       _$_MeasureGroup.fromJson;
@@ -4183,7 +4211,7 @@ class __$$_MeasurePopulationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasurePopulation extends _MeasurePopulation {
-  _$_MeasurePopulation(
+  const _$_MeasurePopulation(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4336,7 +4364,7 @@ class _$_MeasurePopulation extends _MeasurePopulation {
 }
 
 abstract class _MeasurePopulation extends MeasurePopulation {
-  factory _MeasurePopulation(
+  const factory _MeasurePopulation(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4344,7 +4372,7 @@ abstract class _MeasurePopulation extends MeasurePopulation {
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       required final FhirExpression criteria}) = _$_MeasurePopulation;
-  _MeasurePopulation._() : super._();
+  const _MeasurePopulation._() : super._();
 
   factory _MeasurePopulation.fromJson(Map<String, dynamic> json) =
       _$_MeasurePopulation.fromJson;
@@ -4672,7 +4700,7 @@ class __$$_MeasureStratifierCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureStratifier extends _MeasureStratifier {
-  _$_MeasureStratifier(
+  const _$_MeasureStratifier(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4851,7 +4879,7 @@ class _$_MeasureStratifier extends _MeasureStratifier {
 }
 
 abstract class _MeasureStratifier extends MeasureStratifier {
-  factory _MeasureStratifier(
+  const factory _MeasureStratifier(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4860,7 +4888,7 @@ abstract class _MeasureStratifier extends MeasureStratifier {
       @JsonKey(name: '_description') final Element? descriptionElement,
       final FhirExpression? criteria,
       final List<MeasureComponent>? component}) = _$_MeasureStratifier;
-  _MeasureStratifier._() : super._();
+  const _MeasureStratifier._() : super._();
 
   factory _MeasureStratifier.fromJson(Map<String, dynamic> json) =
       _$_MeasureStratifier.fromJson;
@@ -5179,7 +5207,7 @@ class __$$_MeasureComponentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureComponent extends _MeasureComponent {
-  _$_MeasureComponent(
+  const _$_MeasureComponent(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5337,7 +5365,7 @@ class _$_MeasureComponent extends _MeasureComponent {
 }
 
 abstract class _MeasureComponent extends MeasureComponent {
-  factory _MeasureComponent(
+  const factory _MeasureComponent(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5345,7 +5373,7 @@ abstract class _MeasureComponent extends MeasureComponent {
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       required final FhirExpression criteria}) = _$_MeasureComponent;
-  _MeasureComponent._() : super._();
+  const _MeasureComponent._() : super._();
 
   factory _MeasureComponent.fromJson(Map<String, dynamic> json) =
       _$_MeasureComponent.fromJson;
@@ -5681,7 +5709,7 @@ class __$$_MeasureSupplementalDataCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureSupplementalData extends _MeasureSupplementalData {
-  _$_MeasureSupplementalData(
+  const _$_MeasureSupplementalData(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5865,7 +5893,7 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
 }
 
 abstract class _MeasureSupplementalData extends MeasureSupplementalData {
-  factory _MeasureSupplementalData(
+  const factory _MeasureSupplementalData(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5874,7 +5902,7 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       required final FhirExpression criteria}) = _$_MeasureSupplementalData;
-  _MeasureSupplementalData._() : super._();
+  const _MeasureSupplementalData._() : super._();
 
   factory _MeasureSupplementalData.fromJson(Map<String, dynamic> json) =
       _$_MeasureSupplementalData.fromJson;
@@ -5956,6 +5984,8 @@ MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) {
 mixin _$MeasureReport {
   @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -6099,6 +6129,8 @@ abstract class $MeasureReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
           R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -6158,6 +6190,7 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6188,6 +6221,10 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6427,6 +6464,8 @@ abstract class _$$_MeasureReportCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
           R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -6495,6 +6534,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6525,6 +6565,10 @@ class __$$_MeasureReportCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6628,9 +6672,11 @@ class __$$_MeasureReportCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReport extends _MeasureReport {
-  _$_MeasureReport(
+  const _$_MeasureReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
           this.resourceType = R4ResourceType.MeasureReport,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -6676,6 +6722,9 @@ class _$_MeasureReport extends _MeasureReport {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -6908,7 +6957,7 @@ class _$_MeasureReport extends _MeasureReport {
 
   @override
   String toString() {
-    return 'MeasureReport(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, typeElement: $typeElement, measure: $measure, subject: $subject, date: $date, dateElement: $dateElement, reporter: $reporter, period: $period, improvementNotation: $improvementNotation, group: $group, evaluatedResource: $evaluatedResource)';
+    return 'MeasureReport(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, typeElement: $typeElement, measure: $measure, subject: $subject, date: $date, dateElement: $dateElement, reporter: $reporter, period: $period, improvementNotation: $improvementNotation, group: $group, evaluatedResource: $evaluatedResource)';
   }
 
   @override
@@ -6918,6 +6967,7 @@ class _$_MeasureReport extends _MeasureReport {
             other is _$_MeasureReport &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -6963,6 +7013,7 @@ class _$_MeasureReport extends _MeasureReport {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -7004,9 +7055,11 @@ class _$_MeasureReport extends _MeasureReport {
 }
 
 abstract class _MeasureReport extends MeasureReport {
-  factory _MeasureReport(
+  const factory _MeasureReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
           final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -7038,7 +7091,7 @@ abstract class _MeasureReport extends MeasureReport {
       final CodeableConcept? improvementNotation,
       final List<MeasureReportGroup>? group,
       final List<Reference>? evaluatedResource}) = _$_MeasureReport;
-  _MeasureReport._() : super._();
+  const _MeasureReport._() : super._();
 
   factory _MeasureReport.fromJson(Map<String, dynamic> json) =
       _$_MeasureReport.fromJson;
@@ -7046,6 +7099,9 @@ abstract class _MeasureReport extends MeasureReport {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -7437,7 +7493,7 @@ class __$$_MeasureReportGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportGroup extends _MeasureReportGroup {
-  _$_MeasureReportGroup(
+  const _$_MeasureReportGroup(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7615,7 +7671,7 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
 }
 
 abstract class _MeasureReportGroup extends MeasureReportGroup {
-  factory _MeasureReportGroup(
+  const factory _MeasureReportGroup(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7623,7 +7679,7 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
       final List<MeasureReportPopulation>? population,
       final Quantity? measureScore,
       final List<MeasureReportStratifier>? stratifier}) = _$_MeasureReportGroup;
-  _MeasureReportGroup._() : super._();
+  const _MeasureReportGroup._() : super._();
 
   factory _MeasureReportGroup.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportGroup.fromJson;
@@ -7936,7 +7992,7 @@ class __$$_MeasureReportPopulationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportPopulation extends _MeasureReportPopulation {
-  _$_MeasureReportPopulation(
+  const _$_MeasureReportPopulation(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8089,7 +8145,7 @@ class _$_MeasureReportPopulation extends _MeasureReportPopulation {
 }
 
 abstract class _MeasureReportPopulation extends MeasureReportPopulation {
-  factory _MeasureReportPopulation(
+  const factory _MeasureReportPopulation(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8097,7 +8153,7 @@ abstract class _MeasureReportPopulation extends MeasureReportPopulation {
       final FhirInteger? count,
       @JsonKey(name: '_count') final Element? countElement,
       final Reference? subjectResults}) = _$_MeasureReportPopulation;
-  _MeasureReportPopulation._() : super._();
+  const _MeasureReportPopulation._() : super._();
 
   factory _MeasureReportPopulation.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportPopulation.fromJson;
@@ -8331,7 +8387,7 @@ class __$$_MeasureReportStratifierCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportStratifier extends _MeasureReportStratifier {
-  _$_MeasureReportStratifier(
+  const _$_MeasureReportStratifier(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8492,13 +8548,13 @@ class _$_MeasureReportStratifier extends _MeasureReportStratifier {
 }
 
 abstract class _MeasureReportStratifier extends MeasureReportStratifier {
-  factory _MeasureReportStratifier(
+  const factory _MeasureReportStratifier(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? code,
       final List<MeasureReportStratum>? stratum}) = _$_MeasureReportStratifier;
-  _MeasureReportStratifier._() : super._();
+  const _MeasureReportStratifier._() : super._();
 
   factory _MeasureReportStratifier.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportStratifier.fromJson;
@@ -8789,7 +8845,7 @@ class __$$_MeasureReportStratumCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportStratum extends _MeasureReportStratum {
-  _$_MeasureReportStratum(
+  const _$_MeasureReportStratum(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8966,7 +9022,7 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
 }
 
 abstract class _MeasureReportStratum extends MeasureReportStratum {
-  factory _MeasureReportStratum(
+  const factory _MeasureReportStratum(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8974,7 +9030,7 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
       final List<MeasureReportComponent>? component,
       final List<MeasureReportPopulation1>? population,
       final Quantity? measureScore}) = _$_MeasureReportStratum;
-  _MeasureReportStratum._() : super._();
+  const _MeasureReportStratum._() : super._();
 
   factory _MeasureReportStratum.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportStratum.fromJson;
@@ -9232,7 +9288,7 @@ class __$$_MeasureReportComponentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportComponent extends _MeasureReportComponent {
-  _$_MeasureReportComponent(
+  const _$_MeasureReportComponent(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9366,13 +9422,13 @@ class _$_MeasureReportComponent extends _MeasureReportComponent {
 }
 
 abstract class _MeasureReportComponent extends MeasureReportComponent {
-  factory _MeasureReportComponent(
+  const factory _MeasureReportComponent(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept code,
       required final CodeableConcept value}) = _$_MeasureReportComponent;
-  _MeasureReportComponent._() : super._();
+  const _MeasureReportComponent._() : super._();
 
   factory _MeasureReportComponent.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportComponent.fromJson;
@@ -9674,7 +9730,7 @@ class __$$_MeasureReportPopulation1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
-  _$_MeasureReportPopulation1(
+  const _$_MeasureReportPopulation1(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9827,7 +9883,7 @@ class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
 }
 
 abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
-  factory _MeasureReportPopulation1(
+  const factory _MeasureReportPopulation1(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9835,7 +9891,7 @@ abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
       final FhirInteger? count,
       @JsonKey(name: '_count') final Element? countElement,
       final Reference? subjectResults}) = _$_MeasureReportPopulation1;
-  _MeasureReportPopulation1._() : super._();
+  const _MeasureReportPopulation1._() : super._();
 
   factory _MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportPopulation1.fromJson;
@@ -9905,6 +9961,8 @@ TestReport _$TestReportFromJson(Map<String, dynamic> json) {
 mixin _$TestReport {
   @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -10058,6 +10116,8 @@ abstract class $TestReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestReport)
           R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -10127,6 +10187,7 @@ class _$TestReportCopyWithImpl<$Res, $Val extends TestReport>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -10161,6 +10222,10 @@ class _$TestReportCopyWithImpl<$Res, $Val extends TestReport>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -10452,6 +10517,8 @@ abstract class _$$_TestReportCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestReport)
           R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -10533,6 +10600,7 @@ class __$$_TestReportCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -10567,6 +10635,10 @@ class __$$_TestReportCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -10686,9 +10758,11 @@ class __$$_TestReportCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestReport extends _TestReport {
-  _$_TestReport(
+  const _$_TestReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestReport)
           this.resourceType = R4ResourceType.TestReport,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -10740,6 +10814,9 @@ class _$_TestReport extends _TestReport {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -10973,7 +11050,7 @@ class _$_TestReport extends _TestReport {
 
   @override
   String toString() {
-    return 'TestReport(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, testScript: $testScript, result: $result, resultElement: $resultElement, score: $score, scoreElement: $scoreElement, tester: $tester, testerElement: $testerElement, issued: $issued, issuedElement: $issuedElement, participant: $participant, setup: $setup, test: $test, teardown: $teardown)';
+    return 'TestReport(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, testScript: $testScript, result: $result, resultElement: $resultElement, score: $score, scoreElement: $scoreElement, tester: $tester, testerElement: $testerElement, issued: $issued, issuedElement: $issuedElement, participant: $participant, setup: $setup, test: $test, teardown: $teardown)';
   }
 
   @override
@@ -10983,6 +11060,7 @@ class _$_TestReport extends _TestReport {
             other is _$_TestReport &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -11035,6 +11113,7 @@ class _$_TestReport extends _TestReport {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -11080,9 +11159,11 @@ class _$_TestReport extends _TestReport {
 }
 
 abstract class _TestReport extends TestReport {
-  factory _TestReport(
+  const factory _TestReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestReport)
           final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -11121,7 +11202,7 @@ abstract class _TestReport extends TestReport {
       final TestReportSetup? setup,
       final List<TestReportTest>? test,
       final TestReportTeardown? teardown}) = _$_TestReport;
-  _TestReport._() : super._();
+  const _TestReport._() : super._();
 
   factory _TestReport.fromJson(Map<String, dynamic> json) =
       _$_TestReport.fromJson;
@@ -11129,6 +11210,9 @@ abstract class _TestReport extends TestReport {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -11577,7 +11661,7 @@ class __$$_TestReportParticipantCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestReportParticipant extends _TestReportParticipant {
-  _$_TestReportParticipant(
+  const _$_TestReportParticipant(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -11745,7 +11829,7 @@ class _$_TestReportParticipant extends _TestReportParticipant {
 }
 
 abstract class _TestReportParticipant extends TestReportParticipant {
-  factory _TestReportParticipant(
+  const factory _TestReportParticipant(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -11756,7 +11840,7 @@ abstract class _TestReportParticipant extends TestReportParticipant {
           final String? display,
           @JsonKey(name: '_display') final Element? displayElement}) =
       _$_TestReportParticipant;
-  _TestReportParticipant._() : super._();
+  const _TestReportParticipant._() : super._();
 
   factory _TestReportParticipant.fromJson(Map<String, dynamic> json) =
       _$_TestReportParticipant.fromJson;
@@ -11978,7 +12062,7 @@ class __$$_TestReportSetupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestReportSetup extends _TestReportSetup {
-  _$_TestReportSetup(
+  const _$_TestReportSetup(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12112,12 +12196,12 @@ class _$_TestReportSetup extends _TestReportSetup {
 }
 
 abstract class _TestReportSetup extends TestReportSetup {
-  factory _TestReportSetup(
+  const factory _TestReportSetup(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<TestReportAction> action}) = _$_TestReportSetup;
-  _TestReportSetup._() : super._();
+  const _TestReportSetup._() : super._();
 
   factory _TestReportSetup.fromJson(Map<String, dynamic> json) =
       _$_TestReportSetup.fromJson;
@@ -12365,7 +12449,7 @@ class __$$_TestReportActionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestReportAction extends _TestReportAction {
-  _$_TestReportAction(
+  const _$_TestReportAction(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12501,14 +12585,14 @@ class _$_TestReportAction extends _TestReportAction {
 }
 
 abstract class _TestReportAction extends TestReportAction {
-  factory _TestReportAction(
+  const factory _TestReportAction(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final TestReportOperation? operation,
           @JsonKey(name: 'assert') final TestReportAssert? assert_}) =
       _$_TestReportAction;
-  _TestReportAction._() : super._();
+  const _TestReportAction._() : super._();
 
   factory _TestReportAction.fromJson(Map<String, dynamic> json) =
       _$_TestReportAction.fromJson;
@@ -12838,7 +12922,7 @@ class __$$_TestReportOperationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestReportOperation extends _TestReportOperation {
-  _$_TestReportOperation(
+  const _$_TestReportOperation(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -13006,7 +13090,7 @@ class _$_TestReportOperation extends _TestReportOperation {
 }
 
 abstract class _TestReportOperation extends TestReportOperation {
-  factory _TestReportOperation(
+  const factory _TestReportOperation(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -13017,7 +13101,7 @@ abstract class _TestReportOperation extends TestReportOperation {
           final FhirUri? detail,
           @JsonKey(name: '_detail') final Element? detailElement}) =
       _$_TestReportOperation;
-  _TestReportOperation._() : super._();
+  const _TestReportOperation._() : super._();
 
   factory _TestReportOperation.fromJson(Map<String, dynamic> json) =
       _$_TestReportOperation.fromJson;
@@ -13364,7 +13448,7 @@ class __$$_TestReportAssertCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestReportAssert extends _TestReportAssert {
-  _$_TestReportAssert(
+  const _$_TestReportAssert(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -13531,7 +13615,7 @@ class _$_TestReportAssert extends _TestReportAssert {
 }
 
 abstract class _TestReportAssert extends TestReportAssert {
-  factory _TestReportAssert(
+  const factory _TestReportAssert(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -13542,7 +13626,7 @@ abstract class _TestReportAssert extends TestReportAssert {
           final String? detail,
           @JsonKey(name: '_detail') final Element? detailElement}) =
       _$_TestReportAssert;
-  _TestReportAssert._() : super._();
+  const _TestReportAssert._() : super._();
 
   factory _TestReportAssert.fromJson(Map<String, dynamic> json) =
       _$_TestReportAssert.fromJson;
@@ -13860,7 +13944,7 @@ class __$$_TestReportTestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestReportTest extends _TestReportTest {
-  _$_TestReportTest(
+  const _$_TestReportTest(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14029,7 +14113,7 @@ class _$_TestReportTest extends _TestReportTest {
 }
 
 abstract class _TestReportTest extends TestReportTest {
-  factory _TestReportTest(
+  const factory _TestReportTest(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14038,7 +14122,7 @@ abstract class _TestReportTest extends TestReportTest {
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       required final List<TestReportAction1> action}) = _$_TestReportTest;
-  _TestReportTest._() : super._();
+  const _TestReportTest._() : super._();
 
   factory _TestReportTest.fromJson(Map<String, dynamic> json) =
       _$_TestReportTest.fromJson;
@@ -14306,7 +14390,7 @@ class __$$_TestReportAction1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestReportAction1 extends _TestReportAction1 {
-  _$_TestReportAction1(
+  const _$_TestReportAction1(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14443,14 +14527,14 @@ class _$_TestReportAction1 extends _TestReportAction1 {
 }
 
 abstract class _TestReportAction1 extends TestReportAction1 {
-  factory _TestReportAction1(
+  const factory _TestReportAction1(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final TestReportOperation? operation,
           @JsonKey(name: 'assert') final TestReportAssert? assert_}) =
       _$_TestReportAction1;
-  _TestReportAction1._() : super._();
+  const _TestReportAction1._() : super._();
 
   factory _TestReportAction1.fromJson(Map<String, dynamic> json) =
       _$_TestReportAction1.fromJson;
@@ -14655,7 +14739,7 @@ class __$$_TestReportTeardownCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestReportTeardown extends _TestReportTeardown {
-  _$_TestReportTeardown(
+  const _$_TestReportTeardown(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14790,12 +14874,12 @@ class _$_TestReportTeardown extends _TestReportTeardown {
 }
 
 abstract class _TestReportTeardown extends TestReportTeardown {
-  factory _TestReportTeardown(
+  const factory _TestReportTeardown(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<TestReportAction2> action}) = _$_TestReportTeardown;
-  _TestReportTeardown._() : super._();
+  const _TestReportTeardown._() : super._();
 
   factory _TestReportTeardown.fromJson(Map<String, dynamic> json) =
       _$_TestReportTeardown.fromJson;
@@ -15007,7 +15091,7 @@ class __$$_TestReportAction2CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestReportAction2 extends _TestReportAction2 {
-  _$_TestReportAction2(
+  const _$_TestReportAction2(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -15135,12 +15219,12 @@ class _$_TestReportAction2 extends _TestReportAction2 {
 }
 
 abstract class _TestReportAction2 extends TestReportAction2 {
-  factory _TestReportAction2(
+  const factory _TestReportAction2(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final TestReportOperation operation}) = _$_TestReportAction2;
-  _TestReportAction2._() : super._();
+  const _TestReportAction2._() : super._();
 
   factory _TestReportAction2.fromJson(Map<String, dynamic> json) =
       _$_TestReportAction2.fromJson;
@@ -15195,6 +15279,8 @@ TestScript _$TestScriptFromJson(Map<String, dynamic> json) {
 mixin _$TestScript {
   @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -15433,6 +15519,8 @@ abstract class $TestScriptCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestScript)
           R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -15529,6 +15617,7 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -15580,6 +15669,10 @@ class _$TestScriptCopyWithImpl<$Res, $Val extends TestScript>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -16003,6 +16096,8 @@ abstract class _$$_TestScriptCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestScript)
           R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -16116,6 +16211,7 @@ class __$$_TestScriptCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -16167,6 +16263,10 @@ class __$$_TestScriptCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -16354,9 +16454,11 @@ class __$$_TestScriptCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScript extends _TestScript {
-  _$_TestScript(
+  const _$_TestScript(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestScript)
           this.resourceType = R4ResourceType.TestScript,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -16437,6 +16539,9 @@ class _$_TestScript extends _TestScript {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -16844,7 +16949,7 @@ class _$_TestScript extends _TestScript {
 
   @override
   String toString() {
-    return 'TestScript(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, origin: $origin, destination: $destination, metadata: $metadata, fixture: $fixture, profile: $profile, variable: $variable, setup: $setup, test: $test, teardown: $teardown)';
+    return 'TestScript(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, origin: $origin, destination: $destination, metadata: $metadata, fixture: $fixture, profile: $profile, variable: $variable, setup: $setup, test: $test, teardown: $teardown)';
   }
 
   @override
@@ -16854,6 +16959,7 @@ class _$_TestScript extends _TestScript {
             other is _$_TestScript &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -16934,6 +17040,7 @@ class _$_TestScript extends _TestScript {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -16996,9 +17103,11 @@ class _$_TestScript extends _TestScript {
 }
 
 abstract class _TestScript extends TestScript {
-  factory _TestScript(
+  const factory _TestScript(
       {@JsonKey(unknownEnumValue: R4ResourceType.TestScript)
           final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -17059,7 +17168,7 @@ abstract class _TestScript extends TestScript {
       final TestScriptSetup? setup,
       final List<TestScriptTest>? test,
       final TestScriptTeardown? teardown}) = _$_TestScript;
-  _TestScript._() : super._();
+  const _TestScript._() : super._();
 
   factory _TestScript.fromJson(Map<String, dynamic> json) =
       _$_TestScript.fromJson;
@@ -17067,6 +17176,9 @@ abstract class _TestScript extends TestScript {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -17550,7 +17662,7 @@ class __$$_TestScriptOriginCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptOrigin extends _TestScriptOrigin {
-  _$_TestScriptOrigin(
+  const _$_TestScriptOrigin(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -17693,14 +17805,14 @@ class _$_TestScriptOrigin extends _TestScriptOrigin {
 }
 
 abstract class _TestScriptOrigin extends TestScriptOrigin {
-  factory _TestScriptOrigin(
+  const factory _TestScriptOrigin(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirInteger? index,
       @JsonKey(name: '_index') final Element? indexElement,
       required final Coding profile}) = _$_TestScriptOrigin;
-  _TestScriptOrigin._() : super._();
+  const _TestScriptOrigin._() : super._();
 
   factory _TestScriptOrigin.fromJson(Map<String, dynamic> json) =
       _$_TestScriptOrigin.fromJson;
@@ -17971,7 +18083,7 @@ class __$$_TestScriptDestinationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptDestination extends _TestScriptDestination {
-  _$_TestScriptDestination(
+  const _$_TestScriptDestination(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -18115,14 +18227,14 @@ class _$_TestScriptDestination extends _TestScriptDestination {
 }
 
 abstract class _TestScriptDestination extends TestScriptDestination {
-  factory _TestScriptDestination(
+  const factory _TestScriptDestination(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirInteger? index,
       @JsonKey(name: '_index') final Element? indexElement,
       required final Coding profile}) = _$_TestScriptDestination;
-  _TestScriptDestination._() : super._();
+  const _TestScriptDestination._() : super._();
 
   factory _TestScriptDestination.fromJson(Map<String, dynamic> json) =
       _$_TestScriptDestination.fromJson;
@@ -18348,7 +18460,7 @@ class __$$_TestScriptMetadataCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptMetadata extends _TestScriptMetadata {
-  _$_TestScriptMetadata(
+  const _$_TestScriptMetadata(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -18503,14 +18615,14 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
 }
 
 abstract class _TestScriptMetadata extends TestScriptMetadata {
-  factory _TestScriptMetadata(
+  const factory _TestScriptMetadata(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<TestScriptLink>? link,
           required final List<TestScriptCapability> capability}) =
       _$_TestScriptMetadata;
-  _TestScriptMetadata._() : super._();
+  const _TestScriptMetadata._() : super._();
 
   factory _TestScriptMetadata.fromJson(Map<String, dynamic> json) =
       _$_TestScriptMetadata.fromJson;
@@ -18794,7 +18906,7 @@ class __$$_TestScriptLinkCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptLink extends _TestScriptLink {
-  _$_TestScriptLink(
+  const _$_TestScriptLink(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -18947,7 +19059,7 @@ class _$_TestScriptLink extends _TestScriptLink {
 }
 
 abstract class _TestScriptLink extends TestScriptLink {
-  factory _TestScriptLink(
+  const factory _TestScriptLink(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -18956,7 +19068,7 @@ abstract class _TestScriptLink extends TestScriptLink {
           final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement}) =
       _$_TestScriptLink;
-  _TestScriptLink._() : super._();
+  const _TestScriptLink._() : super._();
 
   factory _TestScriptLink.fromJson(Map<String, dynamic> json) =
       _$_TestScriptLink.fromJson;
@@ -19427,7 +19539,7 @@ class __$$_TestScriptCapabilityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptCapability extends _TestScriptCapability {
-  _$_TestScriptCapability(
+  const _$_TestScriptCapability(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -19704,7 +19816,7 @@ class _$_TestScriptCapability extends _TestScriptCapability {
 }
 
 abstract class _TestScriptCapability extends TestScriptCapability {
-  factory _TestScriptCapability(
+  const factory _TestScriptCapability(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -19721,7 +19833,7 @@ abstract class _TestScriptCapability extends TestScriptCapability {
       final List<FhirUri>? link,
       @JsonKey(name: '_link') final List<Element?>? linkElement,
       required final FhirCanonical capabilities}) = _$_TestScriptCapability;
-  _TestScriptCapability._() : super._();
+  const _TestScriptCapability._() : super._();
 
   factory _TestScriptCapability.fromJson(Map<String, dynamic> json) =
       _$_TestScriptCapability.fromJson;
@@ -20098,7 +20210,7 @@ class __$$_TestScriptFixtureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptFixture extends _TestScriptFixture {
-  _$_TestScriptFixture(
+  const _$_TestScriptFixture(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -20267,7 +20379,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
 }
 
 abstract class _TestScriptFixture extends TestScriptFixture {
-  factory _TestScriptFixture(
+  const factory _TestScriptFixture(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -20276,7 +20388,7 @@ abstract class _TestScriptFixture extends TestScriptFixture {
       final FhirBoolean? autodelete,
       @JsonKey(name: '_autodelete') final Element? autodeleteElement,
       final Reference? resource}) = _$_TestScriptFixture;
-  _TestScriptFixture._() : super._();
+  const _TestScriptFixture._() : super._();
 
   factory _TestScriptFixture.fromJson(Map<String, dynamic> json) =
       _$_TestScriptFixture.fromJson;
@@ -20864,7 +20976,7 @@ class __$$_TestScriptVariableCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptVariable extends _TestScriptVariable {
-  _$_TestScriptVariable(
+  const _$_TestScriptVariable(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -21127,7 +21239,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
 }
 
 abstract class _TestScriptVariable extends TestScriptVariable {
-  factory _TestScriptVariable(
+  const factory _TestScriptVariable(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -21148,7 +21260,7 @@ abstract class _TestScriptVariable extends TestScriptVariable {
           final FhirId? sourceId,
           @JsonKey(name: '_sourceId') final Element? sourceIdElement}) =
       _$_TestScriptVariable;
-  _TestScriptVariable._() : super._();
+  const _TestScriptVariable._() : super._();
 
   factory _TestScriptVariable.fromJson(Map<String, dynamic> json) =
       _$_TestScriptVariable.fromJson;
@@ -21424,7 +21536,7 @@ class __$$_TestScriptSetupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptSetup extends _TestScriptSetup {
-  _$_TestScriptSetup(
+  const _$_TestScriptSetup(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -21558,12 +21670,12 @@ class _$_TestScriptSetup extends _TestScriptSetup {
 }
 
 abstract class _TestScriptSetup extends TestScriptSetup {
-  factory _TestScriptSetup(
+  const factory _TestScriptSetup(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<TestScriptAction> action}) = _$_TestScriptSetup;
-  _TestScriptSetup._() : super._();
+  const _TestScriptSetup._() : super._();
 
   factory _TestScriptSetup.fromJson(Map<String, dynamic> json) =
       _$_TestScriptSetup.fromJson;
@@ -21811,7 +21923,7 @@ class __$$_TestScriptActionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptAction extends _TestScriptAction {
-  _$_TestScriptAction(
+  const _$_TestScriptAction(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -21947,14 +22059,14 @@ class _$_TestScriptAction extends _TestScriptAction {
 }
 
 abstract class _TestScriptAction extends TestScriptAction {
-  factory _TestScriptAction(
+  const factory _TestScriptAction(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final TestScriptOperation? operation,
           @JsonKey(name: 'assert') final TestScriptAssert? assert_}) =
       _$_TestScriptAction;
-  _TestScriptAction._() : super._();
+  const _TestScriptAction._() : super._();
 
   factory _TestScriptAction.fromJson(Map<String, dynamic> json) =
       _$_TestScriptAction.fromJson;
@@ -22896,7 +23008,7 @@ class __$$_TestScriptOperationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptOperation extends _TestScriptOperation {
-  _$_TestScriptOperation(
+  const _$_TestScriptOperation(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -23306,7 +23418,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 }
 
 abstract class _TestScriptOperation extends TestScriptOperation {
-  factory _TestScriptOperation(
+  const factory _TestScriptOperation(
       {@JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: 'extension')
@@ -23359,7 +23471,7 @@ abstract class _TestScriptOperation extends TestScriptOperation {
       final String? url,
       @JsonKey(name: '_url')
           final Element? urlElement}) = _$_TestScriptOperation;
-  _TestScriptOperation._() : super._();
+  const _TestScriptOperation._() : super._();
 
   factory _TestScriptOperation.fromJson(Map<String, dynamic> json) =
       _$_TestScriptOperation.fromJson;
@@ -23793,7 +23905,7 @@ class __$$_TestScriptRequestHeaderCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
-  _$_TestScriptRequestHeader(
+  const _$_TestScriptRequestHeader(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -23946,7 +24058,7 @@ class _$_TestScriptRequestHeader extends _TestScriptRequestHeader {
 }
 
 abstract class _TestScriptRequestHeader extends TestScriptRequestHeader {
-  factory _TestScriptRequestHeader(
+  const factory _TestScriptRequestHeader(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -23955,7 +24067,7 @@ abstract class _TestScriptRequestHeader extends TestScriptRequestHeader {
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_TestScriptRequestHeader;
-  _TestScriptRequestHeader._() : super._();
+  const _TestScriptRequestHeader._() : super._();
 
   factory _TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =
       _$_TestScriptRequestHeader.fromJson;
@@ -25244,7 +25356,7 @@ class __$$_TestScriptAssertCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptAssert extends _TestScriptAssert {
-  _$_TestScriptAssert(
+  const _$_TestScriptAssert(
       {@JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: 'extension')
@@ -25765,7 +25877,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
 }
 
 abstract class _TestScriptAssert extends TestScriptAssert {
-  factory _TestScriptAssert(
+  const factory _TestScriptAssert(
       {@JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: 'extension')
@@ -25838,7 +25950,7 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       final FhirBoolean? warningOnly,
       @JsonKey(name: '_warningOnly')
           final Element? warningOnlyElement}) = _$_TestScriptAssert;
-  _TestScriptAssert._() : super._();
+  const _TestScriptAssert._() : super._();
 
   factory _TestScriptAssert.fromJson(Map<String, dynamic> json) =
       _$_TestScriptAssert.fromJson;
@@ -26349,7 +26461,7 @@ class __$$_TestScriptTestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptTest extends _TestScriptTest {
-  _$_TestScriptTest(
+  const _$_TestScriptTest(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -26518,7 +26630,7 @@ class _$_TestScriptTest extends _TestScriptTest {
 }
 
 abstract class _TestScriptTest extends TestScriptTest {
-  factory _TestScriptTest(
+  const factory _TestScriptTest(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -26527,7 +26639,7 @@ abstract class _TestScriptTest extends TestScriptTest {
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       required final List<TestScriptAction1> action}) = _$_TestScriptTest;
-  _TestScriptTest._() : super._();
+  const _TestScriptTest._() : super._();
 
   factory _TestScriptTest.fromJson(Map<String, dynamic> json) =
       _$_TestScriptTest.fromJson;
@@ -26795,7 +26907,7 @@ class __$$_TestScriptAction1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptAction1 extends _TestScriptAction1 {
-  _$_TestScriptAction1(
+  const _$_TestScriptAction1(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -26932,14 +27044,14 @@ class _$_TestScriptAction1 extends _TestScriptAction1 {
 }
 
 abstract class _TestScriptAction1 extends TestScriptAction1 {
-  factory _TestScriptAction1(
+  const factory _TestScriptAction1(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final TestScriptOperation? operation,
           @JsonKey(name: 'assert') final TestScriptAssert? assert_}) =
       _$_TestScriptAction1;
-  _TestScriptAction1._() : super._();
+  const _TestScriptAction1._() : super._();
 
   factory _TestScriptAction1.fromJson(Map<String, dynamic> json) =
       _$_TestScriptAction1.fromJson;
@@ -27144,7 +27256,7 @@ class __$$_TestScriptTeardownCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptTeardown extends _TestScriptTeardown {
-  _$_TestScriptTeardown(
+  const _$_TestScriptTeardown(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -27279,12 +27391,12 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
 }
 
 abstract class _TestScriptTeardown extends TestScriptTeardown {
-  factory _TestScriptTeardown(
+  const factory _TestScriptTeardown(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<TestScriptAction2> action}) = _$_TestScriptTeardown;
-  _TestScriptTeardown._() : super._();
+  const _TestScriptTeardown._() : super._();
 
   factory _TestScriptTeardown.fromJson(Map<String, dynamic> json) =
       _$_TestScriptTeardown.fromJson;
@@ -27496,7 +27608,7 @@ class __$$_TestScriptAction2CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TestScriptAction2 extends _TestScriptAction2 {
-  _$_TestScriptAction2(
+  const _$_TestScriptAction2(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -27624,12 +27736,12 @@ class _$_TestScriptAction2 extends _TestScriptAction2 {
 }
 
 abstract class _TestScriptAction2 extends TestScriptAction2 {
-  factory _TestScriptAction2(
+  const factory _TestScriptAction2(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final TestScriptOperation operation}) = _$_TestScriptAction2;
-  _TestScriptAction2._() : super._();
+  const _TestScriptAction2._() : super._();
 
   factory _TestScriptAction2.fromJson(Map<String, dynamic> json) =
       _$_TestScriptAction2.fromJson;

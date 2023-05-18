@@ -17,10 +17,11 @@ part 'misc.g.dart';
 @freezed
 class ImplementationGuide with Resource, _$ImplementationGuide {
   ImplementationGuide._();
-  factory ImplementationGuide({
+  const factory ImplementationGuide({
     @Default(Dstu2ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -37,8 +38,9 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     @JsonKey(name: '_version') Element? versionElement,
     required String name,
     @JsonKey(name: '_name') Element? nameElement,
-    @JsonKey(required: true, unknownEnumValue: ImplementationGuideStatus.unknown)
-        required ImplementationGuideStatus status,
+    @JsonKey(
+        required: true, unknownEnumValue: ImplementationGuideStatus.unknown)
+    required ImplementationGuideStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirBoolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -92,7 +94,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
 @freezed
 class ImplementationGuideContact with _$ImplementationGuideContact {
   ImplementationGuideContact._();
-  factory ImplementationGuideContact({
+  const factory ImplementationGuideContact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -134,12 +136,12 @@ class ImplementationGuideContact with _$ImplementationGuideContact {
 @freezed
 class ImplementationGuideDependency with _$ImplementationGuideDependency {
   ImplementationGuideDependency._();
-  factory ImplementationGuideDependency({
+  const factory ImplementationGuideDependency({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DependencyType.unknown)
-        required DependencyType type,
+    required DependencyType type,
     required FhirUri uri,
     @JsonKey(name: '_uri') Element? uriElement,
   }) = _ImplementationGuideDependency;
@@ -178,14 +180,14 @@ class ImplementationGuideDependency with _$ImplementationGuideDependency {
 @freezed
 class ImplementationGuidePackage with _$ImplementationGuidePackage {
   ImplementationGuidePackage._();
-  factory ImplementationGuidePackage({
+  const factory ImplementationGuidePackage({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required String name,
     String? description,
     @JsonKey(required: true)
-        required List<ImplementationGuidePackageResource> resource,
+    required List<ImplementationGuidePackageResource> resource,
   }) = _ImplementationGuidePackage;
 
   /// Produces a Yaml formatted String version of the object
@@ -222,7 +224,7 @@ class ImplementationGuidePackage with _$ImplementationGuidePackage {
 @freezed
 class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   ImplementationGuideGlobal._();
-  factory ImplementationGuideGlobal({
+  const factory ImplementationGuideGlobal({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -265,7 +267,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
 @freezed
 class ImplementationGuidePage with _$ImplementationGuidePage {
   ImplementationGuidePage._();
-  factory ImplementationGuidePage({
+  const factory ImplementationGuidePage({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -313,12 +315,12 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
 class ImplementationGuidePackageResource
     with _$ImplementationGuidePackageResource {
   ImplementationGuidePackageResource._();
-  factory ImplementationGuidePackageResource({
+  const factory ImplementationGuidePackageResource({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
-        required ResourcePurpose purpose,
+    required ResourcePurpose purpose,
     String? name,
     String? description,
     String? acronym,
@@ -351,10 +353,11 @@ class ImplementationGuidePackageResource
 @freezed
 class TestScript with Resource, _$TestScript {
   TestScript._();
-  factory TestScript({
+  const factory TestScript({
     @Default(Dstu2ResourceType.TestScript)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -371,7 +374,7 @@ class TestScript with Resource, _$TestScript {
     required String name,
     @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-        required TestScriptStatus status,
+    required TestScriptStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     Identifier? identifier,
     FhirBoolean? experimental,
@@ -428,7 +431,7 @@ class TestScript with Resource, _$TestScript {
 @freezed
 class TestScriptContact with _$TestScriptContact {
   TestScriptContact._();
-  factory TestScriptContact({
+  const factory TestScriptContact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -470,13 +473,13 @@ class TestScriptContact with _$TestScriptContact {
 @freezed
 class TestScriptMetadata with _$TestScriptMetadata {
   TestScriptMetadata._();
-  factory TestScriptMetadata({
+  const factory TestScriptMetadata({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<TestScriptMetadataLink>? link,
     @JsonKey(required: true)
-        required List<TestScriptMetadataCapability> capability,
+    required List<TestScriptMetadataCapability> capability,
   }) = _TestScriptMetadata;
 
   /// Produces a Yaml formatted String version of the object
@@ -513,7 +516,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
 @freezed
 class TestScriptMetadataLink with _$TestScriptMetadataLink {
   TestScriptMetadataLink._();
-  factory TestScriptMetadataLink({
+  const factory TestScriptMetadataLink({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -557,7 +560,7 @@ class TestScriptMetadataLink with _$TestScriptMetadataLink {
 @freezed
 class TestScriptMetadataCapability with _$TestScriptMetadataCapability {
   TestScriptMetadataCapability._();
-  factory TestScriptMetadataCapability({
+  const factory TestScriptMetadataCapability({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -608,7 +611,7 @@ class TestScriptMetadataCapability with _$TestScriptMetadataCapability {
 @freezed
 class TestScriptFixture with _$TestScriptFixture {
   TestScriptFixture._();
-  factory TestScriptFixture({
+  const factory TestScriptFixture({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -653,7 +656,7 @@ class TestScriptFixture with _$TestScriptFixture {
 @freezed
 class TestScriptVariable with _$TestScriptVariable {
   TestScriptVariable._();
-  factory TestScriptVariable({
+  const factory TestScriptVariable({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -701,7 +704,7 @@ class TestScriptVariable with _$TestScriptVariable {
 @freezed
 class TestScriptSetup with _$TestScriptSetup {
   TestScriptSetup._();
-  factory TestScriptSetup({
+  const factory TestScriptSetup({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -743,7 +746,7 @@ class TestScriptSetup with _$TestScriptSetup {
 @freezed
 class TestScriptSetupAction with _$TestScriptSetupAction {
   TestScriptSetupAction._();
-  factory TestScriptSetupAction({
+  const factory TestScriptSetupAction({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -786,7 +789,7 @@ class TestScriptSetupAction with _$TestScriptSetupAction {
 @freezed
 class TestScriptActionOperation with _$TestScriptActionOperation {
   TestScriptActionOperation._();
-  factory TestScriptActionOperation({
+  const factory TestScriptActionOperation({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -801,7 +804,7 @@ class TestScriptActionOperation with _$TestScriptActionOperation {
     @JsonKey(unknownEnumValue: OperationAccept.unknown) OperationAccept? accept,
     @JsonKey(name: '_accept') Element? acceptElement,
     @JsonKey(unknownEnumValue: OperationContentType.unknown)
-        OperationContentType? contentType,
+    OperationContentType? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
     FhirInteger? destination,
     @JsonKey(name: '_destination') Element? destinationElement,
@@ -854,7 +857,7 @@ class TestScriptActionOperation with _$TestScriptActionOperation {
 @freezed
 class TestScriptOperationRequestHeader with _$TestScriptOperationRequestHeader {
   TestScriptOperationRequestHeader._();
-  factory TestScriptOperationRequestHeader({
+  const factory TestScriptOperationRequestHeader({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirExtension? modifierExtension,
@@ -887,7 +890,7 @@ class TestScriptOperationRequestHeader with _$TestScriptOperationRequestHeader {
 @freezed
 class TestScriptActionAssert with _$TestScriptActionAssert {
   TestScriptActionAssert._();
-  factory TestScriptActionAssert({
+  const factory TestScriptActionAssert({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -895,14 +898,14 @@ class TestScriptActionAssert with _$TestScriptActionAssert {
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     @JsonKey(unknownEnumValue: AssertDirection.unknown)
-        AssertDirection? direction,
+    AssertDirection? direction,
     @JsonKey(name: '_direction') Element? directionElement,
     String? compareToSourceId,
     @JsonKey(name: '_compareToSourceId') Element? compareToSourceIdElement,
     String? compareToSourcePath,
     @JsonKey(name: '_compareToSourcePath') Element? compareToSourcePathElement,
     @JsonKey(unknownEnumValue: AssertContentType.unknown)
-        AssertContentType? contentType,
+    AssertContentType? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
     String? headerField,
     @JsonKey(name: '_headerField') Element? headerFieldElement,
@@ -911,7 +914,7 @@ class TestScriptActionAssert with _$TestScriptActionAssert {
     FhirBoolean? navigationLinks,
     @JsonKey(name: '_navigationLinks') Element? navigationLinksElement,
     @JsonKey(unknownEnumValue: AssertOperator.unknown, name: 'operator')
-        AssertOperator? operator_,
+    AssertOperator? operator_,
     @JsonKey(name: '_operator') Element? operatorElement,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -965,7 +968,7 @@ class TestScriptActionAssert with _$TestScriptActionAssert {
 @freezed
 class TestScriptTest with _$TestScriptTest {
   TestScriptTest._();
-  factory TestScriptTest({
+  const factory TestScriptTest({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1011,7 +1014,7 @@ class TestScriptTest with _$TestScriptTest {
 @freezed
 class TestScriptTeardown with _$TestScriptTeardown {
   TestScriptTeardown._();
-  factory TestScriptTeardown({
+  const factory TestScriptTeardown({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1052,7 +1055,7 @@ class TestScriptTeardown with _$TestScriptTeardown {
 @freezed
 class TestScriptTeardownAction with _$TestScriptTeardownAction {
   TestScriptTeardownAction._();
-  factory TestScriptTeardownAction({
+  const factory TestScriptTeardownAction({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

@@ -22,6 +22,8 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) {
 mixin _$Questionnaire {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: '_id')
@@ -74,6 +76,8 @@ abstract class $QuestionnaireCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       @JsonKey(name: '_id')
@@ -136,6 +140,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? idElement = freezed,
     Object? meta = freezed,
@@ -166,6 +171,10 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -393,6 +402,8 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       @JsonKey(name: '_id')
@@ -463,6 +474,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? idElement = freezed,
     Object? meta = freezed,
@@ -493,6 +505,10 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -596,9 +612,11 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Questionnaire extends _Questionnaire {
-  _$_Questionnaire(
+  const _$_Questionnaire(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
           this.resourceType = Dstu2ResourceType.Questionnaire,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: '_id')
@@ -649,6 +667,9 @@ class _$_Questionnaire extends _Questionnaire {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -769,7 +790,7 @@ class _$_Questionnaire extends _Questionnaire {
 
   @override
   String toString() {
-    return 'Questionnaire(resourceType: $resourceType, fhirId: $fhirId, idElement: $idElement, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, version: $version, versionElement: $versionElement, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, telecom: $telecom, subjectType: $subjectType, subjectTypeElement: $subjectTypeElement, group: $group)';
+    return 'Questionnaire(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, idElement: $idElement, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, version: $version, versionElement: $versionElement, status: $status, statusElement: $statusElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, telecom: $telecom, subjectType: $subjectType, subjectTypeElement: $subjectTypeElement, group: $group)';
   }
 
   @override
@@ -779,6 +800,7 @@ class _$_Questionnaire extends _Questionnaire {
             other is _$_Questionnaire &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.idElement, idElement) ||
                 other.idElement == idElement) &&
@@ -826,6 +848,7 @@ class _$_Questionnaire extends _Questionnaire {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         idElement,
         meta,
@@ -867,9 +890,11 @@ class _$_Questionnaire extends _Questionnaire {
 }
 
 abstract class _Questionnaire extends Questionnaire {
-  factory _Questionnaire(
+  const factory _Questionnaire(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: '_id')
@@ -905,7 +930,7 @@ abstract class _Questionnaire extends Questionnaire {
       @JsonKey(name: '_subjectType')
           final List<Element?>? subjectTypeElement,
       required final QuestionnaireGroup group}) = _$_Questionnaire;
-  _Questionnaire._() : super._();
+  const _Questionnaire._() : super._();
 
   factory _Questionnaire.fromJson(Map<String, dynamic> json) =
       _$_Questionnaire.fromJson;
@@ -913,6 +938,9 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -1272,7 +1300,7 @@ class __$$_QuestionnaireGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireGroup extends _QuestionnaireGroup {
-  _$_QuestionnaireGroup(
+  const _$_QuestionnaireGroup(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1448,7 +1476,7 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
 }
 
 abstract class _QuestionnaireGroup extends QuestionnaireGroup {
-  factory _QuestionnaireGroup(
+  const factory _QuestionnaireGroup(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -1464,7 +1492,7 @@ abstract class _QuestionnaireGroup extends QuestionnaireGroup {
           final List<QuestionnaireGroup>? group,
           final List<QuestionnaireGroupQuestion>? question}) =
       _$_QuestionnaireGroup;
-  _QuestionnaireGroup._() : super._();
+  const _QuestionnaireGroup._() : super._();
 
   factory _QuestionnaireGroup.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireGroup.fromJson;
@@ -1808,7 +1836,7 @@ class __$$_QuestionnaireGroupQuestionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
-  _$_QuestionnaireGroupQuestion(
+  const _$_QuestionnaireGroupQuestion(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1983,7 +2011,7 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
 }
 
 abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
-  factory _QuestionnaireGroupQuestion(
+  const factory _QuestionnaireGroupQuestion(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1998,7 +2026,7 @@ abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
       final Reference? options,
       final List<Coding>? option,
       final List<QuestionnaireGroup>? group}) = _$_QuestionnaireGroupQuestion;
-  _QuestionnaireGroupQuestion._() : super._();
+  const _QuestionnaireGroupQuestion._() : super._();
 
   factory _QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireGroupQuestion.fromJson;
@@ -2052,6 +2080,8 @@ QuestionnaireResponse _$QuestionnaireResponseFromJson(
 mixin _$QuestionnaireResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: '_id')
@@ -2100,6 +2130,8 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       @JsonKey(name: '_id')
@@ -2162,6 +2194,7 @@ class _$QuestionnaireResponseCopyWithImpl<$Res,
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? idElement = freezed,
     Object? meta = freezed,
@@ -2190,6 +2223,10 @@ class _$QuestionnaireResponseCopyWithImpl<$Res,
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2461,6 +2498,8 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       @JsonKey(name: '_id')
@@ -2534,6 +2573,7 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? idElement = freezed,
     Object? meta = freezed,
@@ -2562,6 +2602,10 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2657,9 +2701,11 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireResponse extends _QuestionnaireResponse {
-  _$_QuestionnaireResponse(
+  const _$_QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
           this.resourceType = Dstu2ResourceType.QuestionnaireResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: '_id')
@@ -2701,6 +2747,9 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -2782,7 +2831,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
 
   @override
   String toString() {
-    return 'QuestionnaireResponse(resourceType: $resourceType, fhirId: $fhirId, idElement: $idElement, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, questionnaire: $questionnaire, status: $status, statusElement: $statusElement, subject: $subject, author: $author, authored: $authored, authoredElement: $authoredElement, source: $source, encounter: $encounter, group: $group)';
+    return 'QuestionnaireResponse(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, idElement: $idElement, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, questionnaire: $questionnaire, status: $status, statusElement: $statusElement, subject: $subject, author: $author, authored: $authored, authoredElement: $authoredElement, source: $source, encounter: $encounter, group: $group)';
   }
 
   @override
@@ -2792,6 +2841,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
             other is _$_QuestionnaireResponse &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.idElement, idElement) ||
                 other.idElement == idElement) &&
@@ -2835,6 +2885,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         idElement,
         meta,
@@ -2875,9 +2926,11 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
 }
 
 abstract class _QuestionnaireResponse extends QuestionnaireResponse {
-  factory _QuestionnaireResponse(
+  const factory _QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: '_id')
@@ -2908,7 +2961,7 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       final Reference? source,
       final Reference? encounter,
       final QuestionnaireResponseGroup? group}) = _$_QuestionnaireResponse;
-  _QuestionnaireResponse._() : super._();
+  const _QuestionnaireResponse._() : super._();
 
   factory _QuestionnaireResponse.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireResponse.fromJson;
@@ -2916,6 +2969,9 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -3264,7 +3320,7 @@ class __$$_QuestionnaireResponseGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
-  _$_QuestionnaireResponseGroup(
+  const _$_QuestionnaireResponseGroup(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3419,7 +3475,7 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
 }
 
 abstract class _QuestionnaireResponseGroup extends QuestionnaireResponseGroup {
-  factory _QuestionnaireResponseGroup(
+  const factory _QuestionnaireResponseGroup(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -3433,7 +3489,7 @@ abstract class _QuestionnaireResponseGroup extends QuestionnaireResponseGroup {
           final List<QuestionnaireResponseGroup>? group,
           final List<QuestionnaireResponseGroupQuestion>? question}) =
       _$_QuestionnaireResponseGroup;
-  _QuestionnaireResponseGroup._() : super._();
+  const _QuestionnaireResponseGroup._() : super._();
 
   factory _QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireResponseGroup.fromJson;
@@ -3681,7 +3737,7 @@ class __$$_QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_QuestionnaireResponseGroupQuestion
     extends _QuestionnaireResponseGroupQuestion {
-  _$_QuestionnaireResponseGroupQuestion(
+  const _$_QuestionnaireResponseGroupQuestion(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3808,7 +3864,7 @@ class _$_QuestionnaireResponseGroupQuestion
 
 abstract class _QuestionnaireResponseGroupQuestion
     extends QuestionnaireResponseGroupQuestion {
-  factory _QuestionnaireResponseGroupQuestion(
+  const factory _QuestionnaireResponseGroupQuestion(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -3818,7 +3874,7 @@ abstract class _QuestionnaireResponseGroupQuestion
           final String? text,
           final List<QuestionnaireResponseQuestionAnswer>? answer}) =
       _$_QuestionnaireResponseGroupQuestion;
-  _QuestionnaireResponseGroupQuestion._() : super._();
+  const _QuestionnaireResponseGroupQuestion._() : super._();
 
   factory _QuestionnaireResponseGroupQuestion.fromJson(
           Map<String, dynamic> json) =
@@ -4494,7 +4550,7 @@ class __$$_QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_QuestionnaireResponseQuestionAnswer
     extends _QuestionnaireResponseQuestionAnswer {
-  _$_QuestionnaireResponseQuestionAnswer(
+  const _$_QuestionnaireResponseQuestionAnswer(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4746,7 +4802,7 @@ class _$_QuestionnaireResponseQuestionAnswer
 
 abstract class _QuestionnaireResponseQuestionAnswer
     extends QuestionnaireResponseQuestionAnswer {
-  factory _QuestionnaireResponseQuestionAnswer(
+  const factory _QuestionnaireResponseQuestionAnswer(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -4775,7 +4831,7 @@ abstract class _QuestionnaireResponseQuestionAnswer
           final Reference? valueReference,
           final List<QuestionnaireResponseGroup>? group}) =
       _$_QuestionnaireResponseQuestionAnswer;
-  _QuestionnaireResponseQuestionAnswer._() : super._();
+  const _QuestionnaireResponseQuestionAnswer._() : super._();
 
   factory _QuestionnaireResponseQuestionAnswer.fromJson(
           Map<String, dynamic> json) =
@@ -4862,6 +4918,8 @@ Provenance _$ProvenanceFromJson(Map<String, dynamic> json) {
 mixin _$Provenance {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -4907,6 +4965,8 @@ abstract class $ProvenanceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -4960,6 +5020,7 @@ class _$ProvenanceCopyWithImpl<$Res, $Val extends Provenance>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4988,6 +5049,10 @@ class _$ProvenanceCopyWithImpl<$Res, $Val extends Provenance>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5187,6 +5252,8 @@ abstract class _$$_ProvenanceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -5246,6 +5313,7 @@ class __$$_ProvenanceCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5274,6 +5342,10 @@ class __$$_ProvenanceCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5369,9 +5441,11 @@ class __$$_ProvenanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Provenance extends _Provenance {
-  _$_Provenance(
+  const _$_Provenance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
           this.resourceType = Dstu2ResourceType.Provenance,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -5418,6 +5492,9 @@ class _$_Provenance extends _Provenance {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -5549,7 +5626,7 @@ class _$_Provenance extends _Provenance {
 
   @override
   String toString() {
-    return 'Provenance(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, target: $target, period: $period, recorded: $recorded, recordedElement: $recordedElement, reason: $reason, activity: $activity, location: $location, policy: $policy, policyElement: $policyElement, agent: $agent, entity: $entity, signature: $signature)';
+    return 'Provenance(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, target: $target, period: $period, recorded: $recorded, recordedElement: $recordedElement, reason: $reason, activity: $activity, location: $location, policy: $policy, policyElement: $policyElement, agent: $agent, entity: $entity, signature: $signature)';
   }
 
   @override
@@ -5559,6 +5636,7 @@ class _$_Provenance extends _Provenance {
             other is _$_Provenance &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -5601,6 +5679,7 @@ class _$_Provenance extends _Provenance {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -5640,9 +5719,11 @@ class _$_Provenance extends _Provenance {
 }
 
 abstract class _Provenance extends Provenance {
-  factory _Provenance(
+  const factory _Provenance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -5671,7 +5752,7 @@ abstract class _Provenance extends Provenance {
       final List<ProvenanceAgent>? agent,
       final List<ProvenanceEntity>? entity,
       final List<Signature>? signature}) = _$_Provenance;
-  _Provenance._() : super._();
+  const _Provenance._() : super._();
 
   factory _Provenance.fromJson(Map<String, dynamic> json) =
       _$_Provenance.fromJson;
@@ -5679,6 +5760,9 @@ abstract class _Provenance extends Provenance {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -5959,7 +6043,7 @@ class __$$_ProvenanceAgentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProvenanceAgent extends _ProvenanceAgent {
-  _$_ProvenanceAgent(
+  const _$_ProvenanceAgent(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6081,7 +6165,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
 }
 
 abstract class _ProvenanceAgent extends ProvenanceAgent {
-  factory _ProvenanceAgent(
+  const factory _ProvenanceAgent(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -6091,7 +6175,7 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
           final Identifier? userId,
           final List<ProvenanceAgentRelatedAgent>? relatedAgent}) =
       _$_ProvenanceAgent;
-  _ProvenanceAgent._() : super._();
+  const _ProvenanceAgent._() : super._();
 
   factory _ProvenanceAgent.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceAgent.fromJson;
@@ -6401,7 +6485,7 @@ class __$$_ProvenanceEntityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProvenanceEntity extends _ProvenanceEntity {
-  _$_ProvenanceEntity(
+  const _$_ProvenanceEntity(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6535,7 +6619,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
 }
 
 abstract class _ProvenanceEntity extends ProvenanceEntity {
-  factory _ProvenanceEntity(
+  const factory _ProvenanceEntity(
       {@JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: 'extension')
@@ -6553,7 +6637,7 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
           final Element? referenceElement,
       final String? display,
       final ProvenanceAgent? agent}) = _$_ProvenanceEntity;
-  _ProvenanceEntity._() : super._();
+  const _ProvenanceEntity._() : super._();
 
   factory _ProvenanceEntity.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceEntity.fromJson;
@@ -6752,7 +6836,7 @@ class __$$_ProvenanceAgentRelatedAgentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
-  _$_ProvenanceAgentRelatedAgent(
+  const _$_ProvenanceAgentRelatedAgent(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6841,13 +6925,13 @@ class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
 
 abstract class _ProvenanceAgentRelatedAgent
     extends ProvenanceAgentRelatedAgent {
-  factory _ProvenanceAgentRelatedAgent(
+  const factory _ProvenanceAgentRelatedAgent(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
       required final FhirUri target}) = _$_ProvenanceAgentRelatedAgent;
-  _ProvenanceAgentRelatedAgent._() : super._();
+  const _ProvenanceAgentRelatedAgent._() : super._();
 
   factory _ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =
       _$_ProvenanceAgentRelatedAgent.fromJson;
@@ -6878,6 +6962,8 @@ AuditEvent _$AuditEventFromJson(Map<String, dynamic> json) {
 mixin _$AuditEvent {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -6914,6 +7000,8 @@ abstract class $AuditEventCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -6955,6 +7043,7 @@ class _$AuditEventCopyWithImpl<$Res, $Val extends AuditEvent>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6975,6 +7064,10 @@ class _$AuditEventCopyWithImpl<$Res, $Val extends AuditEvent>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7110,6 +7203,8 @@ abstract class _$$_AuditEventCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -7155,6 +7250,7 @@ class __$$_AuditEventCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -7175,6 +7271,10 @@ class __$$_AuditEventCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7238,9 +7338,11 @@ class __$$_AuditEventCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEvent extends _AuditEvent {
-  _$_AuditEvent(
+  const _$_AuditEvent(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
           this.resourceType = Dstu2ResourceType.AuditEvent,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -7272,6 +7374,9 @@ class _$_AuditEvent extends _AuditEvent {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -7345,7 +7450,7 @@ class _$_AuditEvent extends _AuditEvent {
 
   @override
   String toString() {
-    return 'AuditEvent(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, event: $event, participant: $participant, source: $source, object: $object)';
+    return 'AuditEvent(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, event: $event, participant: $participant, source: $source, object: $object)';
   }
 
   @override
@@ -7355,6 +7460,7 @@ class _$_AuditEvent extends _AuditEvent {
             other is _$_AuditEvent &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -7384,6 +7490,7 @@ class _$_AuditEvent extends _AuditEvent {
   int get hashCode => Object.hash(
       runtimeType,
       resourceType,
+      dbId,
       fhirId,
       meta,
       implicitRules,
@@ -7414,9 +7521,11 @@ class _$_AuditEvent extends _AuditEvent {
 }
 
 abstract class _AuditEvent extends AuditEvent {
-  factory _AuditEvent(
+  const factory _AuditEvent(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -7435,7 +7544,7 @@ abstract class _AuditEvent extends AuditEvent {
       required final List<AuditEventParticipant> participant,
       required final AuditEventSource source,
       final List<AuditEventObject>? object}) = _$_AuditEvent;
-  _AuditEvent._() : super._();
+  const _AuditEvent._() : super._();
 
   factory _AuditEvent.fromJson(Map<String, dynamic> json) =
       _$_AuditEvent.fromJson;
@@ -7443,6 +7552,9 @@ abstract class _AuditEvent extends AuditEvent {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -7699,7 +7811,7 @@ class __$$_AuditEventEventCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventEvent extends _AuditEventEvent {
-  _$_AuditEventEvent(
+  const _$_AuditEventEvent(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7831,7 +7943,7 @@ class _$_AuditEventEvent extends _AuditEventEvent {
 }
 
 abstract class _AuditEventEvent extends AuditEventEvent {
-  factory _AuditEventEvent(
+  const factory _AuditEventEvent(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7842,7 +7954,7 @@ abstract class _AuditEventEvent extends AuditEventEvent {
       final FhirCode? outcome,
       final String? outcomeDesc,
       final List<Coding>? purposeOfEvent}) = _$_AuditEventEvent;
-  _AuditEventEvent._() : super._();
+  const _AuditEventEvent._() : super._();
 
   factory _AuditEventEvent.fromJson(Map<String, dynamic> json) =
       _$_AuditEventEvent.fromJson;
@@ -8242,7 +8354,7 @@ class __$$_AuditEventParticipantCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventParticipant extends _AuditEventParticipant {
-  _$_AuditEventParticipant(
+  const _$_AuditEventParticipant(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8412,7 +8524,7 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
 }
 
 abstract class _AuditEventParticipant extends AuditEventParticipant {
-  factory _AuditEventParticipant(
+  const factory _AuditEventParticipant(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8428,7 +8540,7 @@ abstract class _AuditEventParticipant extends AuditEventParticipant {
       final Coding? media,
       final AuditEventParticipantNetwork? network,
       final List<Coding>? purposeOfUse}) = _$_AuditEventParticipant;
-  _AuditEventParticipant._() : super._();
+  const _AuditEventParticipant._() : super._();
 
   factory _AuditEventParticipant.fromJson(Map<String, dynamic> json) =
       _$_AuditEventParticipant.fromJson;
@@ -8667,7 +8779,7 @@ class __$$_AuditEventSourceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventSource extends _AuditEventSource {
-  _$_AuditEventSource(
+  const _$_AuditEventSource(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8775,7 +8887,7 @@ class _$_AuditEventSource extends _AuditEventSource {
 }
 
 abstract class _AuditEventSource extends AuditEventSource {
-  factory _AuditEventSource(
+  const factory _AuditEventSource(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8783,7 +8895,7 @@ abstract class _AuditEventSource extends AuditEventSource {
       @JsonKey(name: '_site') final Element? siteElement,
       required final Identifier identifier,
       final List<Coding>? type}) = _$_AuditEventSource;
-  _AuditEventSource._() : super._();
+  const _AuditEventSource._() : super._();
 
   factory _AuditEventSource.fromJson(Map<String, dynamic> json) =
       _$_AuditEventSource.fromJson;
@@ -9162,7 +9274,7 @@ class __$$_AuditEventObjectCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventObject extends _AuditEventObject {
-  _$_AuditEventObject(
+  const _$_AuditEventObject(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9318,7 +9430,7 @@ class _$_AuditEventObject extends _AuditEventObject {
 }
 
 abstract class _AuditEventObject extends AuditEventObject {
-  factory _AuditEventObject(
+  const factory _AuditEventObject(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9333,7 +9445,7 @@ abstract class _AuditEventObject extends AuditEventObject {
       final FhirBase64Binary? query,
       @JsonKey(name: '_query') final Element? queryElement,
       final List<AuditEventObjectDetail>? detail}) = _$_AuditEventObject;
-  _AuditEventObject._() : super._();
+  const _AuditEventObject._() : super._();
 
   factory _AuditEventObject.fromJson(Map<String, dynamic> json) =
       _$_AuditEventObject.fromJson;
@@ -9582,7 +9694,7 @@ class __$$_AuditEventParticipantNetworkCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
-  _$_AuditEventParticipantNetwork(
+  const _$_AuditEventParticipantNetwork(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9685,7 +9797,7 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
 
 abstract class _AuditEventParticipantNetwork
     extends AuditEventParticipantNetwork {
-  factory _AuditEventParticipantNetwork(
+  const factory _AuditEventParticipantNetwork(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -9694,7 +9806,7 @@ abstract class _AuditEventParticipantNetwork
           final FhirCode? type,
           @JsonKey(name: '_type') final Element? typeElement}) =
       _$_AuditEventParticipantNetwork;
-  _AuditEventParticipantNetwork._() : super._();
+  const _AuditEventParticipantNetwork._() : super._();
 
   factory _AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =
       _$_AuditEventParticipantNetwork.fromJson;
@@ -9897,7 +10009,7 @@ class __$$_AuditEventObjectDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
-  _$_AuditEventObjectDetail(
+  const _$_AuditEventObjectDetail(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9992,14 +10104,14 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
 }
 
 abstract class _AuditEventObjectDetail extends AuditEventObjectDetail {
-  factory _AuditEventObjectDetail(
+  const factory _AuditEventObjectDetail(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final String type,
       @JsonKey(name: '_type') final Element? typeElement,
       required final FhirBase64Binary? value}) = _$_AuditEventObjectDetail;
-  _AuditEventObjectDetail._() : super._();
+  const _AuditEventObjectDetail._() : super._();
 
   factory _AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =
       _$_AuditEventObjectDetail.fromJson;

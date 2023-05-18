@@ -17,10 +17,11 @@ part 'scheduling.g.dart';
 @freezed
 class Appointment with Resource, _$Appointment {
   Appointment._();
-  factory Appointment({
+  const factory Appointment({
     @Default(Dstu2ResourceType.Appointment)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -33,7 +34,7 @@ class Appointment with Resource, _$Appointment {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-        required AppointmentStatus status,
+    required AppointmentStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
     CodeableConcept? reason,
@@ -84,17 +85,17 @@ class Appointment with Resource, _$Appointment {
 @freezed
 class AppointmentParticipant with _$AppointmentParticipant {
   AppointmentParticipant._();
-  factory AppointmentParticipant({
+  const factory AppointmentParticipant({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<CodeableConcept>? type,
     Reference? actor,
     @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-        ParticipantRequired? required_,
+    ParticipantRequired? required_,
     @JsonKey(name: '_required') Element? requiredElement,
     @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
-        required ParticipantStatus status,
+    required ParticipantStatus status,
     @JsonKey(name: '_status') Element? statusElement,
   }) = _AppointmentParticipant;
 
@@ -132,10 +133,11 @@ class AppointmentParticipant with _$AppointmentParticipant {
 @freezed
 class AppointmentResponse with Resource, _$AppointmentResponse {
   AppointmentResponse._();
-  factory AppointmentResponse({
+  const factory AppointmentResponse({
     @Default(Dstu2ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -154,8 +156,10 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     @JsonKey(name: '_end') Element? endElement,
     List<CodeableConcept>? participantType,
     Reference? actor,
-    @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
-        required AppointmentResponseParticipantStatus participantStatus,
+    @JsonKey(
+        required: true,
+        unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
+    required AppointmentResponseParticipantStatus participantStatus,
     @JsonKey(name: '_participantStatus') Element? participantStatusElement,
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
@@ -192,10 +196,11 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
 @freezed
 class Schedule with Resource, _$Schedule {
   Schedule._();
-  factory Schedule({
+  const factory Schedule({
     @Default(Dstu2ResourceType.Schedule)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -245,10 +250,11 @@ class Schedule with Resource, _$Schedule {
 @freezed
 class Slot with Resource, _$Slot {
   Slot._();
-  factory Slot({
+  const factory Slot({
     @Default(Dstu2ResourceType.Slot)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -263,7 +269,7 @@ class Slot with Resource, _$Slot {
     CodeableConcept? type,
     required Reference schedule,
     @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
-        required SlotFreeBusyType freeBusyType,
+    required SlotFreeBusyType freeBusyType,
     required FhirInstant start,
     @JsonKey(name: '_start') Element? startElement,
     required FhirInstant end,

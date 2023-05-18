@@ -17,10 +17,11 @@ part 'devices.g.dart';
 @freezed
 class Device with Resource, _$Device {
   Device._();
-  factory Device({
+  const factory Device({
     @Default(Dstu2ResourceType.Device)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -85,10 +86,11 @@ class Device with Resource, _$Device {
 @freezed
 class DeviceComponent with Resource, _$DeviceComponent {
   DeviceComponent._();
-  factory DeviceComponent({
+  const factory DeviceComponent({
     @Default(Dstu2ResourceType.DeviceComponent)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: '_id') Element? idElement,
     FhirMeta? meta,
@@ -106,7 +108,7 @@ class DeviceComponent with Resource, _$DeviceComponent {
     List<CodeableConcept>? operationalStatus,
     CodeableConcept? parameterGroup,
     @JsonKey(unknownEnumValue: DeviceComponentMeasurementPrinciple.unknown)
-        DeviceComponentMeasurementPrinciple? measurementPrinciple,
+    DeviceComponentMeasurementPrinciple? measurementPrinciple,
     List<DeviceComponentProductionSpecification>? productionSpecification,
     CodeableConcept? languageCode,
   }) = _DeviceComponent;
@@ -143,7 +145,7 @@ class DeviceComponent with Resource, _$DeviceComponent {
 class DeviceComponentProductionSpecification
     with _$DeviceComponentProductionSpecification {
   DeviceComponentProductionSpecification._();
-  factory DeviceComponentProductionSpecification({
+  const factory DeviceComponentProductionSpecification({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -175,10 +177,11 @@ class DeviceComponentProductionSpecification
 @freezed
 class DeviceMetric with Resource, _$DeviceMetric {
   DeviceMetric._();
-  factory DeviceMetric({
+  const factory DeviceMetric({
     @Default(Dstu2ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -195,13 +198,13 @@ class DeviceMetric with Resource, _$DeviceMetric {
     Reference? source,
     Reference? parent,
     @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
-        DeviceMetricOperationalStatus? operationalStatus,
+    DeviceMetricOperationalStatus? operationalStatus,
     @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
     @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
-        DeviceMetricColor? color,
+    DeviceMetricColor? color,
     @JsonKey(name: '_color') Element? colorElement,
     @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
-        required DeviceMetricCategory category,
+    required DeviceMetricCategory category,
     @JsonKey(name: '_category') Element? categoryElement,
     Timing? measurementPeriod,
     List<DeviceMetricCalibration>? calibration,
@@ -238,14 +241,14 @@ class DeviceMetric with Resource, _$DeviceMetric {
 @freezed
 class DeviceMetricCalibration with _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
-  factory DeviceMetricCalibration({
+  const factory DeviceMetricCalibration({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CalibrationType.unknown) CalibrationType? type,
     @JsonKey(name: '_type') Element? typeElement,
     @JsonKey(unknownEnumValue: CalibrationState.unknown)
-        CalibrationState? state,
+    CalibrationState? state,
     @JsonKey(name: '_state') Element? stateElement,
     FhirInstant? time,
     @JsonKey(name: '_time') Element? timeElement,

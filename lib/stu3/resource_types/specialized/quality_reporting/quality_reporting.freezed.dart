@@ -22,6 +22,8 @@ Measure _$MeasureFromJson(Map<String, dynamic> json) {
 mixin _$Measure {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -140,6 +142,8 @@ abstract class $MeasureCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -285,6 +289,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -361,6 +366,10 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1007,6 +1016,8 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1178,6 +1189,7 @@ class __$$_MeasureCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1254,6 +1266,10 @@ class __$$_MeasureCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1543,9 +1559,11 @@ class __$$_MeasureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Measure extends _Measure {
-  _$_Measure(
+  const _$_Measure(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
           this.resourceType = Stu3ResourceType.Measure,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -1669,6 +1687,9 @@ class _$_Measure extends _Measure {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -1971,7 +1992,7 @@ class _$_Measure extends _Measure {
 
   @override
   String toString() {
-    return 'Measure(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, library_: $library_, disclaimer: $disclaimer, disclaimerElement: $disclaimerElement, scoring: $scoring, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, riskAdjustmentElement: $riskAdjustmentElement, rateAggregation: $rateAggregation, rateAggregationElement: $rateAggregationElement, rationale: $rationale, rationaleElement: $rationaleElement, clinicalRecommendationStatement: $clinicalRecommendationStatement, clinicalRecommendationStatementElement: $clinicalRecommendationStatementElement, improvementNotation: $improvementNotation, improvementNotationElement: $improvementNotationElement, definition: $definition, definitionElement: $definitionElement, guidance: $guidance, guidanceElement: $guidanceElement, set_: $set_, setElement: $setElement, group: $group, supplementalData: $supplementalData)';
+    return 'Measure(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, library_: $library_, disclaimer: $disclaimer, disclaimerElement: $disclaimerElement, scoring: $scoring, compositeScoring: $compositeScoring, type: $type, riskAdjustment: $riskAdjustment, riskAdjustmentElement: $riskAdjustmentElement, rateAggregation: $rateAggregation, rateAggregationElement: $rateAggregationElement, rationale: $rationale, rationaleElement: $rationaleElement, clinicalRecommendationStatement: $clinicalRecommendationStatement, clinicalRecommendationStatementElement: $clinicalRecommendationStatementElement, improvementNotation: $improvementNotation, improvementNotationElement: $improvementNotationElement, definition: $definition, definitionElement: $definitionElement, guidance: $guidance, guidanceElement: $guidanceElement, set_: $set_, setElement: $setElement, group: $group, supplementalData: $supplementalData)';
   }
 
   @override
@@ -1981,6 +2002,7 @@ class _$_Measure extends _Measure {
             other is _$_Measure &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -2100,6 +2122,7 @@ class _$_Measure extends _Measure {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -2187,9 +2210,11 @@ class _$_Measure extends _Measure {
 }
 
 abstract class _Measure extends Measure {
-  factory _Measure(
+  const factory _Measure(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -2289,13 +2314,16 @@ abstract class _Measure extends Measure {
           final Element? setElement,
       final List<MeasureGroup>? group,
       final List<MeasureSupplementalData>? supplementalData}) = _$_Measure;
-  _Measure._() : super._();
+  const _Measure._() : super._();
 
   factory _Measure.fromJson(Map<String, dynamic> json) = _$_Measure.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -2679,7 +2707,7 @@ class __$$_MeasureGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureGroup extends _MeasureGroup {
-  _$_MeasureGroup(
+  const _$_MeasureGroup(
       {required this.identifier,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
@@ -2778,7 +2806,7 @@ class _$_MeasureGroup extends _MeasureGroup {
 }
 
 abstract class _MeasureGroup extends MeasureGroup {
-  factory _MeasureGroup(
+  const factory _MeasureGroup(
       {required final Identifier identifier,
       final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
@@ -2786,7 +2814,7 @@ abstract class _MeasureGroup extends MeasureGroup {
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<MeasurePopulation>? population,
       final List<MeasureStratifier>? stratifier}) = _$_MeasureGroup;
-  _MeasureGroup._() : super._();
+  const _MeasureGroup._() : super._();
 
   factory _MeasureGroup.fromJson(Map<String, dynamic> json) =
       _$_MeasureGroup.fromJson;
@@ -3069,7 +3097,7 @@ class __$$_MeasurePopulationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasurePopulation extends _MeasurePopulation {
-  _$_MeasurePopulation(
+  const _$_MeasurePopulation(
       {this.identifier,
       this.code,
       this.name,
@@ -3150,7 +3178,7 @@ class _$_MeasurePopulation extends _MeasurePopulation {
 }
 
 abstract class _MeasurePopulation extends MeasurePopulation {
-  factory _MeasurePopulation(
+  const factory _MeasurePopulation(
           {final Identifier? identifier,
           final CodeableConcept? code,
           final String? name,
@@ -3160,7 +3188,7 @@ abstract class _MeasurePopulation extends MeasurePopulation {
           final String? criteria,
           @JsonKey(name: '_criteria') final Element? criteriaElement}) =
       _$_MeasurePopulation;
-  _MeasurePopulation._() : super._();
+  const _MeasurePopulation._() : super._();
 
   factory _MeasurePopulation.fromJson(Map<String, dynamic> json) =
       _$_MeasurePopulation.fromJson;
@@ -3376,7 +3404,7 @@ class __$$_MeasureStratifierCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureStratifier extends _MeasureStratifier {
-  _$_MeasureStratifier(
+  const _$_MeasureStratifier(
       {this.identifier,
       this.criteria,
       @JsonKey(name: '_criteria') this.criteriaElement,
@@ -3442,14 +3470,14 @@ class _$_MeasureStratifier extends _MeasureStratifier {
 }
 
 abstract class _MeasureStratifier extends MeasureStratifier {
-  factory _MeasureStratifier(
+  const factory _MeasureStratifier(
           {final Identifier? identifier,
           final String? criteria,
           @JsonKey(name: '_criteria') final Element? criteriaElement,
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement}) =
       _$_MeasureStratifier;
-  _MeasureStratifier._() : super._();
+  const _MeasureStratifier._() : super._();
 
   factory _MeasureStratifier.fromJson(Map<String, dynamic> json) =
       _$_MeasureStratifier.fromJson;
@@ -3674,7 +3702,7 @@ class __$$_MeasureSupplementalDataCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureSupplementalData extends _MeasureSupplementalData {
-  _$_MeasureSupplementalData(
+  const _$_MeasureSupplementalData(
       {this.identifier,
       final List<CodeableConcept>? usage,
       this.criteria,
@@ -3760,7 +3788,7 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
 }
 
 abstract class _MeasureSupplementalData extends MeasureSupplementalData {
-  factory _MeasureSupplementalData(
+  const factory _MeasureSupplementalData(
           {final Identifier? identifier,
           final List<CodeableConcept>? usage,
           final String? criteria,
@@ -3768,7 +3796,7 @@ abstract class _MeasureSupplementalData extends MeasureSupplementalData {
           final String? path,
           @JsonKey(name: '_path') final Element? pathElement}) =
       _$_MeasureSupplementalData;
-  _MeasureSupplementalData._() : super._();
+  const _MeasureSupplementalData._() : super._();
 
   factory _MeasureSupplementalData.fromJson(Map<String, dynamic> json) =
       _$_MeasureSupplementalData.fromJson;
@@ -3801,6 +3829,8 @@ MeasureReport _$MeasureReportFromJson(Map<String, dynamic> json) {
 mixin _$MeasureReport {
   @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -3848,6 +3878,8 @@ abstract class $MeasureReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -3908,6 +3940,7 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -3937,6 +3970,10 @@ class _$MeasureReportCopyWithImpl<$Res, $Val extends MeasureReport>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4192,6 +4229,8 @@ abstract class _$$_MeasureReportCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -4263,6 +4302,7 @@ class __$$_MeasureReportCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4292,6 +4332,10 @@ class __$$_MeasureReportCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4391,9 +4435,11 @@ class __$$_MeasureReportCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReport extends _MeasureReport {
-  _$_MeasureReport(
+  const _$_MeasureReport(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
           this.resourceType = Stu3ResourceType.MeasureReport,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -4436,6 +4482,9 @@ class _$_MeasureReport extends _MeasureReport {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -4525,7 +4574,7 @@ class _$_MeasureReport extends _MeasureReport {
 
   @override
   String toString() {
-    return 'MeasureReport(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, typeElement: $typeElement, measure: $measure, patient: $patient, date: $date, dateElement: $dateElement, reportingOrganization: $reportingOrganization, period: $period, group: $group, evaluatedResources: $evaluatedResources)';
+    return 'MeasureReport(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, typeElement: $typeElement, measure: $measure, patient: $patient, date: $date, dateElement: $dateElement, reportingOrganization: $reportingOrganization, period: $period, group: $group, evaluatedResources: $evaluatedResources)';
   }
 
   @override
@@ -4535,6 +4584,7 @@ class _$_MeasureReport extends _MeasureReport {
             other is _$_MeasureReport &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -4578,6 +4628,7 @@ class _$_MeasureReport extends _MeasureReport {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -4618,9 +4669,11 @@ class _$_MeasureReport extends _MeasureReport {
 }
 
 abstract class _MeasureReport extends MeasureReport {
-  factory _MeasureReport(
+  const factory _MeasureReport(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -4651,7 +4704,7 @@ abstract class _MeasureReport extends MeasureReport {
       required final Period period,
       final List<MeasureReportGroup>? group,
       final Reference? evaluatedResources}) = _$_MeasureReport;
-  _MeasureReport._() : super._();
+  const _MeasureReport._() : super._();
 
   factory _MeasureReport.fromJson(Map<String, dynamic> json) =
       _$_MeasureReport.fromJson;
@@ -4659,6 +4712,9 @@ abstract class _MeasureReport extends MeasureReport {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -4886,7 +4942,7 @@ class __$$_MeasureReportGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportGroup extends _MeasureReportGroup {
-  _$_MeasureReportGroup(
+  const _$_MeasureReportGroup(
       {required this.identifier,
       final List<MeasureReportPopulation>? population,
       this.measureScore,
@@ -4974,13 +5030,13 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
 }
 
 abstract class _MeasureReportGroup extends MeasureReportGroup {
-  factory _MeasureReportGroup(
+  const factory _MeasureReportGroup(
       {required final Identifier identifier,
       final List<MeasureReportPopulation>? population,
       final FhirDecimal? measureScore,
       @JsonKey(name: '_measureScore') final Element? measureScoreElement,
       final List<MeasureReportStratifier>? stratifier}) = _$_MeasureReportGroup;
-  _MeasureReportGroup._() : super._();
+  const _MeasureReportGroup._() : super._();
 
   factory _MeasureReportGroup.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportGroup.fromJson;
@@ -5205,7 +5261,7 @@ class __$$_MeasureReportPopulationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportPopulation extends _MeasureReportPopulation {
-  _$_MeasureReportPopulation(
+  const _$_MeasureReportPopulation(
       {this.identifier,
       this.code,
       this.count,
@@ -5270,13 +5326,13 @@ class _$_MeasureReportPopulation extends _MeasureReportPopulation {
 }
 
 abstract class _MeasureReportPopulation extends MeasureReportPopulation {
-  factory _MeasureReportPopulation(
+  const factory _MeasureReportPopulation(
       {final Identifier? identifier,
       final CodeableConcept? code,
       final FhirDecimal? count,
       @JsonKey(name: '_count') final Element? countElement,
       final Reference? patients}) = _$_MeasureReportPopulation;
-  _MeasureReportPopulation._() : super._();
+  const _MeasureReportPopulation._() : super._();
 
   factory _MeasureReportPopulation.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportPopulation.fromJson;
@@ -5412,7 +5468,7 @@ class __$$_MeasureReportStratifierCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportStratifier extends _MeasureReportStratifier {
-  _$_MeasureReportStratifier(
+  const _$_MeasureReportStratifier(
       {this.identifier, final List<MeasureReportStratum>? stratum})
       : _stratum = stratum,
         super._();
@@ -5469,10 +5525,10 @@ class _$_MeasureReportStratifier extends _MeasureReportStratifier {
 }
 
 abstract class _MeasureReportStratifier extends MeasureReportStratifier {
-  factory _MeasureReportStratifier(
+  const factory _MeasureReportStratifier(
       {final Identifier? identifier,
       final List<MeasureReportStratum>? stratum}) = _$_MeasureReportStratifier;
-  _MeasureReportStratifier._() : super._();
+  const _MeasureReportStratifier._() : super._();
 
   factory _MeasureReportStratifier.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportStratifier.fromJson;
@@ -5660,7 +5716,7 @@ class __$$_MeasureReportStratumCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportStratum extends _MeasureReportStratum {
-  _$_MeasureReportStratum(
+  const _$_MeasureReportStratum(
       {this.value,
       @JsonKey(name: '_value') this.valueElement,
       final List<MeasureReportPopulation1>? population,
@@ -5740,14 +5796,14 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
 }
 
 abstract class _MeasureReportStratum extends MeasureReportStratum {
-  factory _MeasureReportStratum(
+  const factory _MeasureReportStratum(
           {final String? value,
           @JsonKey(name: '_value') final Element? valueElement,
           final List<MeasureReportPopulation1>? population,
           final FhirDecimal? measureScore,
           @JsonKey(name: '_measureScore') final Element? measureScoreElement}) =
       _$_MeasureReportStratum;
-  _MeasureReportStratum._() : super._();
+  const _MeasureReportStratum._() : super._();
 
   factory _MeasureReportStratum.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportStratum.fromJson;
@@ -5974,7 +6030,7 @@ class __$$_MeasureReportPopulation1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
-  _$_MeasureReportPopulation1(
+  const _$_MeasureReportPopulation1(
       {this.identifier,
       this.code,
       this.count,
@@ -6038,13 +6094,13 @@ class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
 }
 
 abstract class _MeasureReportPopulation1 extends MeasureReportPopulation1 {
-  factory _MeasureReportPopulation1(
+  const factory _MeasureReportPopulation1(
       {final Identifier? identifier,
       final CodeableConcept? code,
       final FhirDecimal? count,
       @JsonKey(name: '_count') final Element? countElement,
       final Reference? patients}) = _$_MeasureReportPopulation1;
-  _MeasureReportPopulation1._() : super._();
+  const _MeasureReportPopulation1._() : super._();
 
   factory _MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =
       _$_MeasureReportPopulation1.fromJson;

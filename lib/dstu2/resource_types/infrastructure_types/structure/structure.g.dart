@@ -11,6 +11,7 @@ _$_Media _$$_MediaFromJson(Map<String, dynamic> json) => _$_Media(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Media) ??
           Dstu2ResourceType.Media,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -241,6 +242,7 @@ _$_Binary _$$_BinaryFromJson(Map<String, dynamic> json) => _$_Binary(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Binary) ??
           Dstu2ResourceType.Binary,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -313,6 +315,7 @@ _$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Bundle) ??
           Dstu2ResourceType.Bundle,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -713,6 +716,7 @@ _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Basic) ??
           Dstu2ResourceType.Basic,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

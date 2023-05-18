@@ -11,6 +11,7 @@ _$_Encounter _$$_EncounterFromJson(Map<String, dynamic> json) => _$_Encounter(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Encounter) ??
           R4ResourceType.Encounter,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -600,6 +601,7 @@ _$_EpisodeOfCare _$$_EpisodeOfCareFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.EpisodeOfCare) ??
           R4ResourceType.EpisodeOfCare,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -797,6 +799,7 @@ _$_Flag _$$_FlagFromJson(Map<String, dynamic> json) => _$_Flag(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Flag) ??
           R4ResourceType.Flag,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -889,6 +892,7 @@ _$_Library _$$_LibraryFromJson(Map<String, dynamic> json) => _$_Library(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Library) ??
           R4ResourceType.Library,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1127,6 +1131,7 @@ _$_FhirList _$$_FhirListFromJson(Map<String, dynamic> json) => _$_FhirList(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.List) ??
           R4ResourceType.List,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

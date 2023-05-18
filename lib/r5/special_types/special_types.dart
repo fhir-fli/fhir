@@ -43,7 +43,7 @@ class Narrative with _$Narrative {
   ///
   /// [div] The actual narrative content, a stripped down version of XHTML.
   ///
-  factory Narrative({
+  const factory Narrative({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -128,7 +128,7 @@ class CodeableReference with _$CodeableReference {
   /// [reference] A reference to a resource the provides exact details about
   ///  the information being referenced.
   ///
-  factory CodeableReference({
+  const factory CodeableReference({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -239,7 +239,7 @@ class Reference with _$Reference {
   ///
   /// [displayElement] ("_display") Extensions for display
   ///
-  factory Reference({
+  const factory Reference({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -386,7 +386,7 @@ class FhirMeta with _$FhirMeta {
   ///  are not required to consider the tags when interpreting the meaning of a
   ///  resource.
   ///
-  factory FhirMeta({
+  const factory FhirMeta({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -555,7 +555,7 @@ class Dosage with _$Dosage {
   /// [maxDosePerLifetime] Upper limit on medication per lifetime of the
   ///  patient.
   ///
-  factory Dosage({
+  const factory Dosage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -730,7 +730,7 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
   ///
   /// [rateQuantity] Amount of medication per unit of time.
   ///
-  factory DosageDoseAndRate({
+  const factory DosageDoseAndRate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3276,7 +3276,7 @@ class ElementDefinition with _$ElementDefinition {
   /// [mapping] Identifies a concept from an external specification that
   ///  roughly corresponds to this element.
   ///
-  factory ElementDefinition({
+  const factory ElementDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3456,7 +3456,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueBase64BinaryElement] ("_defaultValueBase64Binary")
     ///  Extensions for defaultValueBase64Binary
     @JsonKey(name: '_defaultValueBase64Binary')
-        Element? defaultValueBase64BinaryElement,
+    Element? defaultValueBase64BinaryElement,
 
     /// [defaultValueBoolean] The value that should be used if there is no
     ///  value stated in the instance (e.g. 'if not otherwise specified, the
@@ -3475,7 +3475,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueCanonicalElement] ("_defaultValueCanonical") Extensions
     ///  for defaultValueCanonical
     @JsonKey(name: '_defaultValueCanonical')
-        Element? defaultValueCanonicalElement,
+    Element? defaultValueCanonicalElement,
 
     /// [defaultValueCode] The value that should be used if there is no value
     ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
@@ -3503,7 +3503,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueDateTimeElement] ("_defaultValueDateTime") Extensions for
     ///  defaultValueDateTime
     @JsonKey(name: '_defaultValueDateTime')
-        Element? defaultValueDateTimeElement,
+    Element? defaultValueDateTimeElement,
 
     /// [defaultValueDecimal] The value that should be used if there is no
     ///  value stated in the instance (e.g. 'if not otherwise specified, the
@@ -3549,7 +3549,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueInteger64Element] ("_defaultValueInteger64") Extensions
     ///  for defaultValueInteger64
     @JsonKey(name: '_defaultValueInteger64')
-        Element? defaultValueInteger64Element,
+    Element? defaultValueInteger64Element,
 
     /// [defaultValueMarkdown] The value that should be used if there is no
     ///  value stated in the instance (e.g. 'if not otherwise specified, the
@@ -3559,7 +3559,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueMarkdownElement] ("_defaultValueMarkdown") Extensions for
     ///  defaultValueMarkdown
     @JsonKey(name: '_defaultValueMarkdown')
-        Element? defaultValueMarkdownElement,
+    Element? defaultValueMarkdownElement,
 
     /// [defaultValueOid] The value that should be used if there is no value
     ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
@@ -3578,7 +3578,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValuePositiveIntElement] ("_defaultValuePositiveInt")
     ///  Extensions for defaultValuePositiveInt
     @JsonKey(name: '_defaultValuePositiveInt')
-        Element? defaultValuePositiveIntElement,
+    Element? defaultValuePositiveIntElement,
 
     /// [defaultValueString] The value that should be used if there is no value
     ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
@@ -3606,7 +3606,7 @@ class ElementDefinition with _$ElementDefinition {
     /// [defaultValueUnsignedIntElement] ("_defaultValueUnsignedInt")
     ///  Extensions for defaultValueUnsignedInt
     @JsonKey(name: '_defaultValueUnsignedInt')
-        Element? defaultValueUnsignedIntElement,
+    Element? defaultValueUnsignedIntElement,
 
     /// [defaultValueUri] The value that should be used if there is no value
     ///  stated in the instance (e.g. 'if not otherwise specified, the abstract
@@ -6221,7 +6221,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ///
   /// [rulesElement] ("_rules") Extensions for rules
   ///
-  factory ElementDefinitionSlicing({
+  const factory ElementDefinitionSlicing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6361,7 +6361,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   ///
   /// [pathElement] ("_path") Extensions for path
   ///
-  factory ElementDefinitionDiscriminator({
+  const factory ElementDefinitionDiscriminator({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6490,7 +6490,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
   ///
   /// [maxElement] ("_max") Extensions for max
   ///
-  factory ElementDefinitionBase({
+  const factory ElementDefinitionBase({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6645,7 +6645,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
   ///
   /// [versioningElement] ("_versioning") Extensions for versioning
   ///
-  factory ElementDefinitionType({
+  const factory ElementDefinitionType({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7004,7 +7004,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
   /// [valueMeta] The actual value for the element, which must be one of the
   ///  types allowed for this element.
   ///
-  factory ElementDefinitionExample({
+  const factory ElementDefinitionExample({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7422,7 +7422,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   /// [source] A reference to the original source of the constraint, for
   ///  traceability purposes.
   ///
-  factory ElementDefinitionConstraint({
+  const factory ElementDefinitionConstraint({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7584,7 +7584,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ///  element. Additional bindings do not replace the main binding but provide
   ///  more information and/or context.
   ///
-  factory ElementDefinitionBinding({
+  const factory ElementDefinitionBinding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7732,7 +7732,7 @@ class ElementDefinitionAdditional with _$ElementDefinitionAdditional {
   ///
   /// [anyElement] ("_any") Extensions for any
   ///
-  factory ElementDefinitionAdditional({
+  const factory ElementDefinitionAdditional({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7886,7 +7886,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  factory ElementDefinitionMapping({
+  const factory ElementDefinitionMapping({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

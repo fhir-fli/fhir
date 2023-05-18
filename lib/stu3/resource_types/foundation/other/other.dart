@@ -17,10 +17,11 @@ part 'other.g.dart';
 @freezed
 class Basic with Resource, _$Basic {
   Basic._();
-  factory Basic({
+  const factory Basic({
     @Default(Stu3ResourceType.Basic)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -68,10 +69,11 @@ class Basic with Resource, _$Basic {
 @freezed
 class Binary with Resource, _$Binary {
   Binary._();
-  factory Binary({
+  const factory Binary({
     @Default(Stu3ResourceType.Binary)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -119,10 +121,11 @@ class Binary with Resource, _$Binary {
 @freezed
 class Bundle with Resource, _$Bundle {
   Bundle._();
-  factory Bundle({
+  const factory Bundle({
     @Default(Stu3ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -173,7 +176,7 @@ class Bundle with Resource, _$Bundle {
 @freezed
 class BundleLink with _$BundleLink {
   BundleLink._();
-  factory BundleLink({
+  const factory BundleLink({
     String? relation,
     @JsonKey(name: '_relation') Element? relationElement,
     String? url,
@@ -214,7 +217,7 @@ class BundleLink with _$BundleLink {
 @freezed
 class BundleEntry with _$BundleEntry {
   BundleEntry._();
-  factory BundleEntry({
+  const factory BundleEntry({
     List<BundleLink>? link,
     String? fullUrl,
     @JsonKey(name: '_fullUrl') Element? fullUrlElement,
@@ -303,7 +306,7 @@ class BundleEntry with _$BundleEntry {
 @freezed
 class BundleSearch with _$BundleSearch {
   BundleSearch._();
-  factory BundleSearch({
+  const factory BundleSearch({
     BundleSearchMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     FhirDecimal? score,
@@ -344,7 +347,7 @@ class BundleSearch with _$BundleSearch {
 @freezed
 class BundleRequest with _$BundleRequest {
   BundleRequest._();
-  factory BundleRequest({
+  const factory BundleRequest({
     BundleRequestMethod? method,
     @JsonKey(name: '_method') Element? methodElement,
     String? url,
@@ -393,7 +396,7 @@ class BundleRequest with _$BundleRequest {
 @freezed
 class BundleResponse with _$BundleResponse {
   BundleResponse._();
-  factory BundleResponse({
+  const factory BundleResponse({
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
     String? location,
@@ -439,10 +442,11 @@ class BundleResponse with _$BundleResponse {
 @freezed
 class Linkage with Resource, _$Linkage {
   Linkage._();
-  factory Linkage({
+  const factory Linkage({
     @Default(Stu3ResourceType.Linkage)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -490,7 +494,7 @@ class Linkage with Resource, _$Linkage {
 @freezed
 class LinkageItem with _$LinkageItem {
   LinkageItem._();
-  factory LinkageItem({
+  const factory LinkageItem({
     LinkageItemType? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference resource,
@@ -530,10 +534,11 @@ class LinkageItem with _$LinkageItem {
 @freezed
 class Media with Resource, _$Media {
   Media._();
-  factory Media({
+  const factory Media({
     @Default(Stu3ResourceType.Media)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Media)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -600,10 +605,11 @@ class Media with Resource, _$Media {
 @freezed
 class MessageHeader with Resource, _$MessageHeader {
   MessageHeader._();
-  factory MessageHeader({
+  const factory MessageHeader({
     @Default(Stu3ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -660,7 +666,7 @@ class MessageHeader with Resource, _$MessageHeader {
 @freezed
 class MessageHeaderDestination with _$MessageHeaderDestination {
   MessageHeaderDestination._();
-  factory MessageHeaderDestination({
+  const factory MessageHeaderDestination({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Reference? target,
@@ -702,7 +708,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
 @freezed
 class MessageHeaderSource with _$MessageHeaderSource {
   MessageHeaderSource._();
-  factory MessageHeaderSource({
+  const factory MessageHeaderSource({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? software,
@@ -748,7 +754,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
 @freezed
 class MessageHeaderResponse with _$MessageHeaderResponse {
   MessageHeaderResponse._();
-  factory MessageHeaderResponse({
+  const factory MessageHeaderResponse({
     FhirId? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
     MessageHeaderResponseCode? code,
@@ -790,10 +796,11 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 @freezed
 class OperationOutcome with Resource, _$OperationOutcome {
   OperationOutcome._();
-  factory OperationOutcome({
+  const factory OperationOutcome({
     @Default(Stu3ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -841,7 +848,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
 @freezed
 class OperationOutcomeIssue with _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
-  factory OperationOutcomeIssue({
+  const factory OperationOutcomeIssue({
     OperationOutcomeIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     OperationOutcomeIssueCode? code,
@@ -889,10 +896,11 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
 @freezed
 class Parameters with Resource, _$Parameters {
   Parameters._();
-  factory Parameters({
+  const factory Parameters({
     @Default(Stu3ResourceType.Parameters)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -937,7 +945,7 @@ class Parameters with Resource, _$Parameters {
 @freezed
 class ParametersParameter with _$ParametersParameter {
   ParametersParameter._();
-  factory ParametersParameter({
+  const factory ParametersParameter({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     FhirBoolean? valueBoolean,
@@ -1048,10 +1056,11 @@ class ParametersParameter with _$ParametersParameter {
 @freezed
 class Subscription with Resource, _$Subscription {
   Subscription._();
-  factory Subscription({
+  const factory Subscription({
     @Default(Stu3ResourceType.Subscription)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1108,7 +1117,7 @@ class Subscription with Resource, _$Subscription {
 @freezed
 class SubscriptionChannel with _$SubscriptionChannel {
   SubscriptionChannel._();
-  factory SubscriptionChannel({
+  const factory SubscriptionChannel({
     SubscriptionChannelType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? endpoint,

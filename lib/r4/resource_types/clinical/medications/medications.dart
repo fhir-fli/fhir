@@ -170,17 +170,17 @@ class Immunization with Resource, _$Immunization {
   ///
   /// [protocolApplied] The protocol (set of recommendations) being followed by
   ///  the provider who administered the dose.
-  factory Immunization({
+  const factory Immunization({
     @Default(R4ResourceType.Immunization)
     @JsonKey(unknownEnumValue: R4ResourceType.Immunization)
 
-        /// [resourceType] This is a Immunization resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Immunization resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -194,15 +194,13 @@ class Immunization with Resource, _$Immunization {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -224,8 +222,7 @@ class Immunization with Resource, _$Immunization {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -249,8 +246,7 @@ class Immunization with Resource, _$Immunization {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [statusReason] Indicates the reason the immunization event was not
     ///  performed.
@@ -271,15 +267,13 @@ class Immunization with Resource, _$Immunization {
     FhirDateTime? occurrenceDateTime,
 
     /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
-    @JsonKey(name: '_occurrenceDateTime')
-        Element? occurrenceDateTimeElement,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
 
     /// [occurrenceString] Date vaccine administered or was to be administered.
     String? occurrenceString,
 
     /// [occurrenceStringElement] Extensions for occurrenceString
-    @JsonKey(name: '_occurrenceString')
-        Element? occurrenceStringElement,
+    @JsonKey(name: '_occurrenceString') Element? occurrenceStringElement,
 
     /// [recorded] The date the occurrence of the immunization was first captured
     /// in the record - potentially significantly after the occurrence of the
@@ -287,8 +281,7 @@ class Immunization with Resource, _$Immunization {
     FhirDateTime? recorded,
 
     /// [recordedElement] Extensions for recorded
-    @JsonKey(name: '_recorded')
-        Element? recordedElement,
+    @JsonKey(name: '_recorded') Element? recordedElement,
 
     /// [primarySource] An indication that the content of the record is based on
     /// information from the person who administered the vaccine. This reflects
@@ -296,8 +289,7 @@ class Immunization with Resource, _$Immunization {
     FhirBoolean? primarySource,
 
     /// [primarySourceElement] Extensions for primarySource
-    @JsonKey(name: '_primarySource')
-        Element? primarySourceElement,
+    @JsonKey(name: '_primarySource') Element? primarySourceElement,
 
     /// [reportOrigin] The source of the data when the report of the immunization
     /// event is not based on information from the person who administered the
@@ -315,15 +307,13 @@ class Immunization with Resource, _$Immunization {
     String? lotNumber,
 
     /// [lotNumberElement] Extensions for lotNumber
-    @JsonKey(name: '_lotNumber')
-        Element? lotNumberElement,
+    @JsonKey(name: '_lotNumber') Element? lotNumberElement,
 
     /// [expirationDate] Date vaccine batch expires.
     FhirDate? expirationDate,
 
     /// [expirationDateElement] Extensions for expirationDate
-    @JsonKey(name: '_expirationDate')
-        Element? expirationDateElement,
+    @JsonKey(name: '_expirationDate') Element? expirationDateElement,
 
     /// [site] Body site where vaccine was administered.
     CodeableConcept? site,
@@ -353,8 +343,7 @@ class Immunization with Resource, _$Immunization {
     FhirBoolean? isSubpotent,
 
     /// [isSubpotentElement] Extensions for isSubpotent
-    @JsonKey(name: '_isSubpotent')
-        Element? isSubpotentElement,
+    @JsonKey(name: '_isSubpotent') Element? isSubpotentElement,
 
     /// [subpotentReason] Reason why a dose is considered to be subpotent.
     List<CodeableConcept>? subpotentReason,
@@ -449,7 +438,7 @@ class ImmunizationPerformer with _$ImmunizationPerformer {
   ///  administering provider, etc.).
   ///
   /// [actor] The practitioner or organization who performed the action.
-  factory ImmunizationPerformer({
+  const factory ImmunizationPerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -567,7 +556,7 @@ class ImmunizationEducation with _$ImmunizationEducation {
   ///  patient.
   ///
   /// [presentationDateElement] Extensions for presentationDate
-  factory ImmunizationEducation({
+  const factory ImmunizationEducation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -696,7 +685,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
   /// [reported] Self-reported indicator.
   ///
   /// [reportedElement] Extensions for reported
-  factory ImmunizationReaction({
+  const factory ImmunizationReaction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -832,11 +821,10 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   /// [seriesDosesString] The recommended number of doses to achieve immunity.
   ///
   /// [seriesDosesStringElement] Extensions for seriesDosesString
-  factory ImmunizationProtocolApplied({
+  const factory ImmunizationProtocolApplied({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -844,8 +832,7 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -867,8 +854,7 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
     String? series,
 
     /// [seriesElement] Extensions for series
-    @JsonKey(name: '_series')
-        Element? seriesElement,
+    @JsonKey(name: '_series') Element? seriesElement,
 
     /// [authority] Indicates the authority who published the protocol (e.g.
     ///  ACIP) that is being followed.
@@ -882,30 +868,28 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
     FhirPositiveInt? doseNumberPositiveInt,
     @JsonKey(name: '_doseNumberPositiveInt')
 
-        /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
-        Element? doseNumberPositiveIntElement,
+    /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
+    Element? doseNumberPositiveIntElement,
 
     /// [doseNumberString] Nominal position in a series.
     String? doseNumberString,
 
     /// [doseNumberStringElement] Extensions for doseNumberString
-    @JsonKey(name: '_doseNumberString')
-        Element? doseNumberStringElement,
+    @JsonKey(name: '_doseNumberString') Element? doseNumberStringElement,
 
     /// [seriesDosesPositiveInt] The recommended number of doses to achieve
     ///  immunity.
     FhirPositiveInt? seriesDosesPositiveInt,
     @JsonKey(name: '_seriesDosesPositiveInt')
 
-        /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
-        Element? seriesDosesPositiveIntElement,
+    /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
+    Element? seriesDosesPositiveIntElement,
 
     /// [seriesDosesString] The recommended number of doses to achieve immunity.
     String? seriesDosesString,
 
     /// [seriesDosesStringElement] Extensions for seriesDosesString
-    @JsonKey(name: '_seriesDosesString')
-        Element? seriesDosesStringElement,
+    @JsonKey(name: '_seriesDosesString') Element? seriesDosesStringElement,
   }) = _ImmunizationProtocolApplied;
 
   /// Produces a Yaml formatted String version of the object
@@ -1057,17 +1041,17 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   /// [seriesDosesString] The recommended number of doses to achieve immunity.
   ///
   /// [seriesDosesStringElement] Extensions for seriesDosesString
-  factory ImmunizationEvaluation({
+  const factory ImmunizationEvaluation({
     @Default(R4ResourceType.ImmunizationEvaluation)
     @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationEvaluation)
 
-        /// [resourceType] This is a ImmunizationEvaluation resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a ImmunizationEvaluation resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1081,15 +1065,13 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1111,8 +1093,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1138,8 +1119,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [patient] The individual for whom the evaluation is being done.
     required Reference patient,
@@ -1149,8 +1129,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [authority] Indicates the authority who published the protocol (e.g.
     ///  ACIP).
@@ -1176,45 +1155,41 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [series] One possible path to achieve presumed immunity against a disease
     ///  - within the context of an authority.
     String? series,
 
     /// [seriesElement] Extensions for series
-    @JsonKey(name: '_series')
-        Element? seriesElement,
+    @JsonKey(name: '_series') Element? seriesElement,
 
     /// [doseNumberPositiveInt] Nominal position in a series.
     FhirPositiveInt? doseNumberPositiveInt,
     @JsonKey(name: '_doseNumberPositiveInt')
 
-        /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
-        Element? doseNumberPositiveIntElement,
+    /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
+    Element? doseNumberPositiveIntElement,
 
     /// [doseNumberString] Nominal position in a series.
     String? doseNumberString,
 
     /// [doseNumberStringElement] Extensions for doseNumberString
-    @JsonKey(name: '_doseNumberString')
-        Element? doseNumberStringElement,
+    @JsonKey(name: '_doseNumberString') Element? doseNumberStringElement,
 
     /// [seriesDosesPositiveInt] The recommended number of doses to achieve
     ///  immunity.
     FhirPositiveInt? seriesDosesPositiveInt,
     @JsonKey(name: '_seriesDosesPositiveInt')
 
-        /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
-        Element? seriesDosesPositiveIntElement,
+    /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
+    Element? seriesDosesPositiveIntElement,
 
     /// [seriesDosesString] The recommended number of doses to achieve immunity.
     String? seriesDosesString,
 
     /// [seriesDosesStringElement] Extensions for seriesDosesString
-    @JsonKey(name: '_seriesDosesString')
-        Element? seriesDosesStringElement,
+    @JsonKey(name: '_seriesDosesString') Element? seriesDosesStringElement,
   }) = _ImmunizationEvaluation;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1321,17 +1296,17 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   ///  ACIP).
   ///
   /// [recommendation] Vaccine administration recommendations.
-  factory ImmunizationRecommendation({
+  const factory ImmunizationRecommendation({
     @Default(R4ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: R4ResourceType.ImmunizationRecommendation)
 
-        /// [resourceType] This is a ImmunizationRecommendation resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a ImmunizationRecommendation resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1345,15 +1320,13 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1375,8 +1348,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1404,8 +1376,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [authority] Indicates the authority who published the protocol (e.g.
     ///  ACIP).
@@ -1527,11 +1498,10 @@ class ImmunizationRecommendationRecommendation
   /// [supportingPatientInformation] Patient Information that supports the
   /// status and recommendation.  This includes patient observations, adverse
   ///  reactions and allergy/intolerance information.
-  factory ImmunizationRecommendationRecommendation({
+  const factory ImmunizationRecommendationRecommendation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1539,8 +1509,7 @@ class ImmunizationRecommendationRecommendation
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -1584,47 +1553,43 @@ class ImmunizationRecommendationRecommendation
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [series] One possible path to achieve presumed immunity against a disease
     ///  - within the context of an authority.
     String? series,
 
     /// [seriesElement] Extensions for series
-    @JsonKey(name: '_series')
-        Element? seriesElement,
+    @JsonKey(name: '_series') Element? seriesElement,
 
     /// [doseNumberPositiveInt] Nominal position of the recommended dose in a
     ///  series (e.g. dose 2 is the next recommended dose).
     FhirPositiveInt? doseNumberPositiveInt,
     @JsonKey(name: '_doseNumberPositiveInt')
 
-        /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
-        Element? doseNumberPositiveIntElement,
+    /// [doseNumberPositiveIntElement] Extensions for doseNumberPositiveInt
+    Element? doseNumberPositiveIntElement,
 
     /// [doseNumberString] Nominal position of the recommended dose in a series
     ///  (e.g. dose 2 is the next recommended dose).
     String? doseNumberString,
 
     /// [doseNumberStringElement] Extensions for doseNumberString
-    @JsonKey(name: '_doseNumberString')
-        Element? doseNumberStringElement,
+    @JsonKey(name: '_doseNumberString') Element? doseNumberStringElement,
 
     /// [seriesDosesPositiveInt] The recommended number of doses to achieve
     ///  immunity.
     FhirPositiveInt? seriesDosesPositiveInt,
     @JsonKey(name: '_seriesDosesPositiveInt')
 
-        /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
-        Element? seriesDosesPositiveIntElement,
+    /// [seriesDosesPositiveIntElement] Extensions for seriesDosesPositiveInt
+    Element? seriesDosesPositiveIntElement,
 
     /// [seriesDosesString] The recommended number of doses to achieve immunity.
     String? seriesDosesString,
 
     /// [seriesDosesStringElement] Extensions for seriesDosesString
-    @JsonKey(name: '_seriesDosesString')
-        Element? seriesDosesStringElement,
+    @JsonKey(name: '_seriesDosesString') Element? seriesDosesStringElement,
 
     /// [supportingImmunization] Immunization event history and/or evaluation
     ///  that supports the status and recommendation.
@@ -1695,7 +1660,7 @@ class ImmunizationRecommendationDateCriterion
   /// [value] The date whose meaning is specified by dateCriterion.code.
   ///
   /// [valueElement] Extensions for value
-  factory ImmunizationRecommendationDateCriterion({
+  const factory ImmunizationRecommendationDateCriterion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1846,17 +1811,17 @@ class Medication with Resource, _$Medication {
   ///  product.
   ///
   /// [batch] Information that only applies to packages (not products).
-  factory Medication({
+  const factory Medication({
     @Default(R4ResourceType.Medication)
     @JsonKey(unknownEnumValue: R4ResourceType.Medication)
 
-        /// [resourceType] This is a Medication resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Medication resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1870,15 +1835,13 @@ class Medication with Resource, _$Medication {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1900,8 +1863,7 @@ class Medication with Resource, _$Medication {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1932,8 +1894,7 @@ class Medication with Resource, _$Medication {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [manufacturer] Describes the details of the manufacturer of the
     /// medication product.  This is not intended to represent the distributor of
@@ -2035,7 +1996,7 @@ class MedicationIngredient with _$MedicationIngredient {
   /// [strength] Specifies how many (or how much) of the items there are in
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
   ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
-  factory MedicationIngredient({
+  const factory MedicationIngredient({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2157,7 +2118,7 @@ class MedicationBatch with _$MedicationBatch {
   /// [expirationDate] When this specific batch of product will expire.
   ///
   /// [expirationDateElement] Extensions for expirationDate
-  factory MedicationBatch({
+  const factory MedicationBatch({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2375,17 +2336,17 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   ///
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the administration was verified.
-  factory MedicationAdministration({
+  const factory MedicationAdministration({
     @Default(R4ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationAdministration)
 
-        /// [resourceType] This is a MedicationAdministration resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a MedicationAdministration resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2399,15 +2360,13 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2429,8 +2388,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2460,8 +2418,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     List<FhirUri>? instantiates,
 
     /// [instantiatesElement] Extensions for instantiates
-    @JsonKey(name: '_instantiates')
-        List<Element?>? instantiatesElement,
+    @JsonKey(name: '_instantiates') List<Element?>? instantiatesElement,
 
     /// [partOf] A larger event of which this particular event is a component or
     ///  step.
@@ -2474,8 +2431,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [statusReason] A code indicating why the administration was not
     ///  performed.
@@ -2516,8 +2472,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     FhirDateTime? effectiveDateTime,
 
     /// [effectiveDateTimeElement] Extensions for effectiveDateTime
-    @JsonKey(name: '_effectiveDateTime')
-        Element? effectiveDateTimeElement,
+    @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
 
     /// [effectivePeriod] A specific date/time or interval of time during which
     /// the administration took place (or did not take place, when the 'notGiven'
@@ -2624,7 +2579,7 @@ class MedicationAdministrationPerformer
   ///  medication administration.
   ///
   /// [actor] Indicates who or what performed the medication administration.
-  factory MedicationAdministrationPerformer({
+  const factory MedicationAdministrationPerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2751,7 +2706,7 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   /// 100 ml per 1 hour or 100 ml/hr.  May also be expressed as a rate per unit
   /// of time, e.g. 500 ml per 2 hours.  Other examples:  200 mcg/min or 200
   ///  mcg/1 minute; 1 liter/8 hours.
-  factory MedicationAdministrationDosage({
+  const factory MedicationAdministrationDosage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3015,17 +2970,17 @@ class MedicationDispense with Resource, _$MedicationDispense {
   ///
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the dispense was verified.
-  factory MedicationDispense({
+  const factory MedicationDispense({
     @Default(R4ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationDispense)
 
-        /// [resourceType] This is a MedicationDispense resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a MedicationDispense resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -3039,15 +2994,13 @@ class MedicationDispense with Resource, _$MedicationDispense {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -3069,8 +3022,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -3102,8 +3054,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [statusReasonCodeableConcept] Indicates the reason why a dispense was not
     ///  performed.
@@ -3170,16 +3121,14 @@ class MedicationDispense with Resource, _$MedicationDispense {
     FhirDateTime? whenPrepared,
 
     /// [whenPreparedElement] Extensions for whenPrepared
-    @JsonKey(name: '_whenPrepared')
-        Element? whenPreparedElement,
+    @JsonKey(name: '_whenPrepared') Element? whenPreparedElement,
 
     /// [whenHandedOver] The time the dispensed product was provided to the
     ///  patient or their representative.
     FhirDateTime? whenHandedOver,
 
     /// [whenHandedOverElement] Extensions for whenHandedOver
-    @JsonKey(name: '_whenHandedOver')
-        Element? whenHandedOverElement,
+    @JsonKey(name: '_whenHandedOver') Element? whenHandedOverElement,
 
     /// [destination] Identification of the facility/location where the
     ///  medication was shipped to, as part of the dispense event.
@@ -3284,7 +3233,7 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
   ///
   /// [actor] The device, practitioner, etc. who performed the action.  It
   ///  should be assumed that the actor is the dispenser of the medication.
-  factory MedicationDispensePerformer({
+  const factory MedicationDispensePerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3401,7 +3350,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   ///
   /// [responsibleParty] The person or organization that has primary
   ///  responsibility for the substitution.
-  factory MedicationDispenseSubstitution({
+  const factory MedicationDispenseSubstitution({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3618,17 +3567,17 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   ///
   /// [kinetics] The time course of drug absorption, distribution, metabolism
   ///  and excretion of a medication from the body.
-  factory MedicationKnowledge({
+  const factory MedicationKnowledge({
     @Default(R4ResourceType.MedicationKnowledge)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationKnowledge)
 
-        /// [resourceType] This is a MedicationKnowledge resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a MedicationKnowledge resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -3642,15 +3591,13 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -3672,8 +3619,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -3703,8 +3649,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [manufacturer] Describes the details of the manufacturer of the
     /// medication product.  This is not intended to represent the distributor of
@@ -3727,8 +3672,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     List<String>? synonym,
 
     /// [synonymElement] Extensions for synonym
-    @JsonKey(name: '_synonym')
-        List<Element?>? synonymElement,
+    @JsonKey(name: '_synonym') List<Element?>? synonymElement,
     List<MedicationKnowledgeRelatedMedicationKnowledge>?
 
         /// [relatedMedicationKnowledge] Associated or related knowledge about a
@@ -3756,8 +3700,8 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     FhirMarkdown? preparationInstruction,
     @JsonKey(name: '_preparationInstruction')
 
-        /// [preparationInstructionElement] Extensions for preparationInstruction
-        Element? preparationInstructionElement,
+    /// [preparationInstructionElement] Extensions for preparationInstruction
+    Element? preparationInstructionElement,
 
     /// [intendedRoute] The intended or approved route of administration.
     List<CodeableConcept>? intendedRoute,
@@ -3860,7 +3804,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge
   ///
   /// [reference] Associated documentation about the associated medication
   ///  knowledge.
-  factory MedicationKnowledgeRelatedMedicationKnowledge({
+  const factory MedicationKnowledgeRelatedMedicationKnowledge({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3954,7 +3898,7 @@ class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
   ///  professional monograph, patient education monograph).
   ///
   /// [source] Associated documentation about the medication.
-  factory MedicationKnowledgeMonograph({
+  const factory MedicationKnowledgeMonograph({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4068,7 +4012,7 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
   /// [strength] Specifies how many (or how much) of the items there are in
   /// this Medication.  For example, 250 mg per tablet.  This is expressed as a
   ///  ratio where the numerator is 250mg and the denominator is 1 tablet.
-  factory MedicationKnowledgeIngredient({
+  const factory MedicationKnowledgeIngredient({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4189,7 +4133,7 @@ class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
   /// [sourceElement] Extensions for source
   ///
   /// [cost] The price of the medication.
-  factory MedicationKnowledgeCost({
+  const factory MedicationKnowledgeCost({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4299,7 +4243,7 @@ class MedicationKnowledgeMonitoringProgram
   /// [name] Name of the reviewing program.
   ///
   /// [nameElement] Extensions for name
-  factory MedicationKnowledgeMonitoringProgram({
+  const factory MedicationKnowledgeMonitoringProgram({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4400,7 +4344,7 @@ class MedicationKnowledgeAdministrationGuidelines
   /// [patientCharacteristics] Characteristics of the patient that are relevant
   /// to the administration guidelines (for example, height, weight, gender,
   ///  etc.).
-  factory MedicationKnowledgeAdministrationGuidelines({
+  const factory MedicationKnowledgeAdministrationGuidelines({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4502,7 +4446,7 @@ class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
   ///  therapeutic, etc.).
   ///
   /// [dosage] Dosage for the medication for the specific guidelines.
-  factory MedicationKnowledgeDosage({
+  const factory MedicationKnowledgeDosage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4610,7 +4554,7 @@ class MedicationKnowledgePatientCharacteristics
   /// [value] The specific characteristic (e.g. height, weight, gender, etc.).
   ///
   /// [valueElement] Extensions for value
-  factory MedicationKnowledgePatientCharacteristics({
+  const factory MedicationKnowledgePatientCharacteristics({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4710,7 +4654,7 @@ class MedicationKnowledgeMedicineClassification
   ///
   /// [classification] Specific category assigned to the medication (e.g.
   ///  anti-infective, anti-hypertensive, antibiotic, etc.).
-  factory MedicationKnowledgeMedicineClassification({
+  const factory MedicationKnowledgeMedicineClassification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4805,7 +4749,7 @@ class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
   ///
   /// [quantity] The number of product units the package would contain if fully
   ///  loaded.
-  factory MedicationKnowledgePackaging({
+  const factory MedicationKnowledgePackaging({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4919,7 +4863,7 @@ class MedicationKnowledgeDrugCharacteristic
   /// [valueBase64Binary] Description of the characteristic.
   ///
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
-  factory MedicationKnowledgeDrugCharacteristic({
+  const factory MedicationKnowledgeDrugCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5032,7 +4976,7 @@ class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
   ///
   /// [maxDispense] The maximum number of units of the medication that can be
   ///  dispensed in a period.
-  factory MedicationKnowledgeRegulatory({
+  const factory MedicationKnowledgeRegulatory({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5145,7 +5089,7 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
   ///  when dispensing.
   ///
   /// [allowedElement] Extensions for allowed
-  factory MedicationKnowledgeSubstitution({
+  const factory MedicationKnowledgeSubstitution({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5250,7 +5194,7 @@ class MedicationKnowledgeSchedule with _$MedicationKnowledgeSchedule {
   ///  modifierExtension itself).
   ///
   /// [schedule] Specifies the specific drug schedule.
-  factory MedicationKnowledgeSchedule({
+  const factory MedicationKnowledgeSchedule({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5350,7 +5294,7 @@ class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
   ///  dispensed.
   ///
   /// [period] The period that applies to the maximum number of units.
-  factory MedicationKnowledgeMaxDispense({
+  const factory MedicationKnowledgeMaxDispense({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5458,7 +5402,7 @@ class MedicationKnowledgeKinetics with _$MedicationKnowledgeKinetics {
   ///
   /// [halfLifePeriod] The time required for any specified property (e.g., the
   ///  concentration of a substance in the body) to decrease by half.
-  factory MedicationKnowledgeKinetics({
+  const factory MedicationKnowledgeKinetics({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5735,17 +5679,17 @@ class MedicationRequest with Resource, _$MedicationRequest {
   /// resource or fulfilling request or event resources that identify key state
   /// transitions or updates that are likely to be relevant to a user looking at
   ///  the current version of the resource.
-  factory MedicationRequest({
+  const factory MedicationRequest({
     @Default(R4ResourceType.MedicationRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationRequest)
 
-        /// [resourceType] This is a MedicationRequest resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a MedicationRequest resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -5759,15 +5703,13 @@ class MedicationRequest with Resource, _$MedicationRequest {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -5789,8 +5731,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -5820,8 +5761,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [statusReason] Captures the reason for the current state of the
     ///  MedicationRequest.
@@ -5831,8 +5771,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     FhirCode? intent,
 
     /// [intentElement] Extensions for intent
-    @JsonKey(name: '_intent')
-        Element? intentElement,
+    @JsonKey(name: '_intent') Element? intentElement,
 
     /// [category] Indicates the type of medication request (for example, where
     /// the medication is expected to be consumed or administered (i.e. inpatient
@@ -5844,16 +5783,14 @@ class MedicationRequest with Resource, _$MedicationRequest {
     FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
-    @JsonKey(name: '_priority')
-        Element? priorityElement,
+    @JsonKey(name: '_priority') Element? priorityElement,
 
     /// [doNotPerform] If true indicates that the provider is asking for the
     ///  medication request not to occur.
     FhirBoolean? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
-    @JsonKey(name: '_doNotPerform')
-        Element? doNotPerformElement,
+    @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
 
     /// [reportedBoolean] Indicates if this record was captured as a secondary
     /// 'reported' record rather than as an original primary source-of-truth
@@ -5861,8 +5798,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     FhirBoolean? reportedBoolean,
 
     /// [reportedBooleanElement] Extensions for reportedBoolean
-    @JsonKey(name: '_reportedBoolean')
-        Element? reportedBooleanElement,
+    @JsonKey(name: '_reportedBoolean') Element? reportedBooleanElement,
 
     /// [reportedReference] Indicates if this record was captured as a secondary
     /// 'reported' record rather than as an original primary source-of-truth
@@ -5898,8 +5834,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     FhirDateTime? authoredOn,
 
     /// [authoredOnElement] Extensions for authoredOn
-    @JsonKey(name: '_authoredOn')
-        Element? authoredOnElement,
+    @JsonKey(name: '_authoredOn') Element? authoredOnElement,
 
     /// [requester] The individual, organization, or device that initiated the
     ///  request and has responsibility for its activation.
@@ -5931,8 +5866,8 @@ class MedicationRequest with Resource, _$MedicationRequest {
     List<FhirCanonical>? instantiatesCanonical,
     @JsonKey(name: '_instantiatesCanonical')
 
-        /// [instantiatesCanonicalElement] Extensions for instantiatesCanonical
-        List<Element>? instantiatesCanonicalElement,
+    /// [instantiatesCanonicalElement] Extensions for instantiatesCanonical
+    List<Element>? instantiatesCanonicalElement,
 
     /// [instantiatesUri] The URL pointing to an externally maintained protocol,
     /// guideline, orderset or other definition that is adhered to in whole or in
@@ -5940,8 +5875,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     List<FhirUri>? instantiatesUri,
 
     /// [instantiatesUriElement] Extensions for instantiatesUri
-    @JsonKey(name: '_instantiatesUri')
-        List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
 
     /// [basedOn] A plan or request that is fulfilled in whole or in part by this
     ///  medication request.
@@ -6092,11 +6026,10 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   ///
   /// [performer] Indicates the intended dispensing Organization specified by
   ///  the prescriber.
-  factory MedicationRequestDispenseRequest({
+  const factory MedicationRequestDispenseRequest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -6104,8 +6037,7 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -6145,8 +6077,8 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
     FhirUnsignedInt? numberOfRepeatsAllowed,
     @JsonKey(name: '_numberOfRepeatsAllowed')
 
-        /// [numberOfRepeatsAllowedElement] Extensions for numberOfRepeatsAllowed
-        Element? numberOfRepeatsAllowedElement,
+    /// [numberOfRepeatsAllowedElement] Extensions for numberOfRepeatsAllowed
+    Element? numberOfRepeatsAllowedElement,
 
     /// [quantity] The amount that is to be dispensed for one fill.
     Quantity? quantity,
@@ -6223,7 +6155,7 @@ class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   ///
   /// [duration] The length of time that the first dispense is expected to
   ///  last.
-  factory MedicationRequestInitialFill({
+  const factory MedicationRequestInitialFill({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6338,7 +6270,7 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   ///
   /// [reason] Indicates the reason for the substitution, or why substitution
   ///  must or must not be performed.
-  factory MedicationRequestSubstitution({
+  const factory MedicationRequestSubstitution({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6570,17 +6502,17 @@ class MedicationStatement with Resource, _$MedicationStatement {
   ///
   /// [dosage] Indicates how the medication is/was or should be taken by the
   ///  patient.
-  factory MedicationStatement({
+  const factory MedicationStatement({
     @Default(R4ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.MedicationStatement)
 
-        /// [resourceType] This is a MedicationStatement resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a MedicationStatement resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -6594,15 +6526,13 @@ class MedicationStatement with Resource, _$MedicationStatement {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -6624,8 +6554,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -6664,8 +6593,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [statusReason] Captures the reason for the current state of the
     ///  MedicationStatement.
@@ -6700,8 +6628,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
     FhirDateTime? effectiveDateTime,
 
     /// [effectiveDateTimeElement] Extensions for effectiveDateTime
-    @JsonKey(name: '_effectiveDateTime')
-        Element? effectiveDateTimeElement,
+    @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
 
     /// [effectivePeriod] The interval of time during which it is being asserted
     /// that the patient is/was/will be taking the medication (or was not taking,
@@ -6713,8 +6640,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
     FhirDateTime? dateAsserted,
 
     /// [dateAssertedElement] Extensions for dateAsserted
-    @JsonKey(name: '_dateAsserted')
-        Element? dateAssertedElement,
+    @JsonKey(name: '_dateAsserted') Element? dateAssertedElement,
 
     /// [informationSource] The person or organization that provided the
     /// information about the taking of this medication. Note: Use derivedFrom

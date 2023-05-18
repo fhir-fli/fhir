@@ -22,6 +22,8 @@ Encounter _$EncounterFromJson(Map<String, dynamic> json) {
 mixin _$Encounter {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -80,6 +82,8 @@ abstract class $EncounterCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -149,6 +153,7 @@ class _$EncounterCopyWithImpl<$Res, $Val extends Encounter>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -187,6 +192,10 @@ class _$EncounterCopyWithImpl<$Res, $Val extends Encounter>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -498,6 +507,8 @@ abstract class _$$_EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -579,6 +590,7 @@ class __$$_EncounterCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -617,6 +629,10 @@ class __$$_EncounterCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -752,9 +768,11 @@ class __$$_EncounterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Encounter extends _Encounter {
-  _$_Encounter(
+  const _$_Encounter(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
           this.resourceType = Stu3ResourceType.Encounter,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -815,6 +833,9 @@ class _$_Encounter extends _Encounter {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -1002,7 +1023,7 @@ class _$_Encounter extends _Encounter {
 
   @override
   String toString() {
-    return 'Encounter(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, statusHistory: $statusHistory, class_: $class_, classHistory: $classHistory, type: $type, priority: $priority, subject: $subject, episodeOfCare: $episodeOfCare, incomingReferral: $incomingReferral, participant: $participant, appointment: $appointment, period: $period, length: $length, reason: $reason, diagnosis: $diagnosis, account: $account, hospitalization: $hospitalization, location: $location, serviceProvider: $serviceProvider, partOf: $partOf)';
+    return 'Encounter(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, statusHistory: $statusHistory, class_: $class_, classHistory: $classHistory, type: $type, priority: $priority, subject: $subject, episodeOfCare: $episodeOfCare, incomingReferral: $incomingReferral, participant: $participant, appointment: $appointment, period: $period, length: $length, reason: $reason, diagnosis: $diagnosis, account: $account, hospitalization: $hospitalization, location: $location, serviceProvider: $serviceProvider, partOf: $partOf)';
   }
 
   @override
@@ -1012,6 +1033,7 @@ class _$_Encounter extends _Encounter {
             other is _$_Encounter &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1070,6 +1092,7 @@ class _$_Encounter extends _Encounter {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -1119,9 +1142,11 @@ class _$_Encounter extends _Encounter {
 }
 
 abstract class _Encounter extends Encounter {
-  factory _Encounter(
+  const factory _Encounter(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -1160,7 +1185,7 @@ abstract class _Encounter extends Encounter {
       final List<EncounterLocation>? location,
       final Reference? serviceProvider,
       final Reference? partOf}) = _$_Encounter;
-  _Encounter._() : super._();
+  const _Encounter._() : super._();
 
   factory _Encounter.fromJson(Map<String, dynamic> json) =
       _$_Encounter.fromJson;
@@ -1168,6 +1193,9 @@ abstract class _Encounter extends Encounter {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -1388,7 +1416,7 @@ class __$$_EncounterStatusHistoryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EncounterStatusHistory extends _EncounterStatusHistory {
-  _$_EncounterStatusHistory(
+  const _$_EncounterStatusHistory(
       {this.status,
       @JsonKey(name: '_status') this.statusElement,
       required this.period})
@@ -1441,11 +1469,11 @@ class _$_EncounterStatusHistory extends _EncounterStatusHistory {
 }
 
 abstract class _EncounterStatusHistory extends EncounterStatusHistory {
-  factory _EncounterStatusHistory(
+  const factory _EncounterStatusHistory(
       {final EncounterStatusHistoryStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       required final Period period}) = _$_EncounterStatusHistory;
-  _EncounterStatusHistory._() : super._();
+  const _EncounterStatusHistory._() : super._();
 
   factory _EncounterStatusHistory.fromJson(Map<String, dynamic> json) =
       _$_EncounterStatusHistory.fromJson;
@@ -1584,7 +1612,7 @@ class __$$_EncounterClassHistoryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EncounterClassHistory extends _EncounterClassHistory {
-  _$_EncounterClassHistory(
+  const _$_EncounterClassHistory(
       {@JsonKey(name: 'class') required this.class_, required this.period})
       : super._();
 
@@ -1631,10 +1659,10 @@ class _$_EncounterClassHistory extends _EncounterClassHistory {
 }
 
 abstract class _EncounterClassHistory extends EncounterClassHistory {
-  factory _EncounterClassHistory(
+  const factory _EncounterClassHistory(
       {@JsonKey(name: 'class') required final Coding class_,
       required final Period period}) = _$_EncounterClassHistory;
-  _EncounterClassHistory._() : super._();
+  const _EncounterClassHistory._() : super._();
 
   factory _EncounterClassHistory.fromJson(Map<String, dynamic> json) =
       _$_EncounterClassHistory.fromJson;
@@ -1790,7 +1818,7 @@ class __$$_EncounterParticipantCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EncounterParticipant extends _EncounterParticipant {
-  _$_EncounterParticipant(
+  const _$_EncounterParticipant(
       {final List<CodeableConcept>? type, this.period, this.individual})
       : _type = type,
         super._();
@@ -1850,11 +1878,11 @@ class _$_EncounterParticipant extends _EncounterParticipant {
 }
 
 abstract class _EncounterParticipant extends EncounterParticipant {
-  factory _EncounterParticipant(
+  const factory _EncounterParticipant(
       {final List<CodeableConcept>? type,
       final Period? period,
       final Reference? individual}) = _$_EncounterParticipant;
-  _EncounterParticipant._() : super._();
+  const _EncounterParticipant._() : super._();
 
   factory _EncounterParticipant.fromJson(Map<String, dynamic> json) =
       _$_EncounterParticipant.fromJson;
@@ -2039,7 +2067,7 @@ class __$$_EncounterDiagnosisCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EncounterDiagnosis extends _EncounterDiagnosis {
-  _$_EncounterDiagnosis(
+  const _$_EncounterDiagnosis(
       {required this.condition,
       this.role,
       this.rank,
@@ -2098,13 +2126,13 @@ class _$_EncounterDiagnosis extends _EncounterDiagnosis {
 }
 
 abstract class _EncounterDiagnosis extends EncounterDiagnosis {
-  factory _EncounterDiagnosis(
+  const factory _EncounterDiagnosis(
           {required final Reference condition,
           final CodeableConcept? role,
           final FhirDecimal? rank,
           @JsonKey(name: '_rank') final Element? rankElement}) =
       _$_EncounterDiagnosis;
-  _EncounterDiagnosis._() : super._();
+  const _EncounterDiagnosis._() : super._();
 
   factory _EncounterDiagnosis.fromJson(Map<String, dynamic> json) =
       _$_EncounterDiagnosis.fromJson;
@@ -2414,7 +2442,7 @@ class __$$_EncounterHospitalizationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EncounterHospitalization extends _EncounterHospitalization {
-  _$_EncounterHospitalization(
+  const _$_EncounterHospitalization(
       {this.preAdmissionIdentifier,
       this.origin,
       this.admitSource,
@@ -2535,7 +2563,7 @@ class _$_EncounterHospitalization extends _EncounterHospitalization {
 }
 
 abstract class _EncounterHospitalization extends EncounterHospitalization {
-  factory _EncounterHospitalization(
+  const factory _EncounterHospitalization(
           {final Identifier? preAdmissionIdentifier,
           final Reference? origin,
           final CodeableConcept? admitSource,
@@ -2546,7 +2574,7 @@ abstract class _EncounterHospitalization extends EncounterHospitalization {
           final Reference? destination,
           final CodeableConcept? dischargeDisposition}) =
       _$_EncounterHospitalization;
-  _EncounterHospitalization._() : super._();
+  const _EncounterHospitalization._() : super._();
 
   factory _EncounterHospitalization.fromJson(Map<String, dynamic> json) =
       _$_EncounterHospitalization.fromJson;
@@ -2743,7 +2771,7 @@ class __$$_EncounterLocationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EncounterLocation extends _EncounterLocation {
-  _$_EncounterLocation(
+  const _$_EncounterLocation(
       {required this.location,
       this.status,
       @JsonKey(name: '_status') this.statusElement,
@@ -2802,12 +2830,12 @@ class _$_EncounterLocation extends _EncounterLocation {
 }
 
 abstract class _EncounterLocation extends EncounterLocation {
-  factory _EncounterLocation(
+  const factory _EncounterLocation(
       {required final Reference location,
       final EncounterLocationStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final Period? period}) = _$_EncounterLocation;
-  _EncounterLocation._() : super._();
+  const _EncounterLocation._() : super._();
 
   factory _EncounterLocation.fromJson(Map<String, dynamic> json) =
       _$_EncounterLocation.fromJson;
@@ -2835,6 +2863,8 @@ EpisodeOfCare _$EpisodeOfCareFromJson(Map<String, dynamic> json) {
 mixin _$EpisodeOfCare {
   @JsonKey(unknownEnumValue: Stu3ResourceType.EpisodeOfCare)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -2882,6 +2912,8 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EpisodeOfCare)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -2936,6 +2968,7 @@ class _$EpisodeOfCareCopyWithImpl<$Res, $Val extends EpisodeOfCare>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2965,6 +2998,10 @@ class _$EpisodeOfCareCopyWithImpl<$Res, $Val extends EpisodeOfCare>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3176,6 +3213,8 @@ abstract class _$$_EpisodeOfCareCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EpisodeOfCare)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -3237,6 +3276,7 @@ class __$$_EpisodeOfCareCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -3266,6 +3306,10 @@ class __$$_EpisodeOfCareCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3365,9 +3409,11 @@ class __$$_EpisodeOfCareCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EpisodeOfCare extends _EpisodeOfCare {
-  _$_EpisodeOfCare(
+  const _$_EpisodeOfCare(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EpisodeOfCare)
           this.resourceType = Stu3ResourceType.EpisodeOfCare,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -3414,6 +3460,9 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EpisodeOfCare)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -3548,7 +3597,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 
   @override
   String toString() {
-    return 'EpisodeOfCare(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, statusHistory: $statusHistory, type: $type, diagnosis: $diagnosis, patient: $patient, managingOrganization: $managingOrganization, period: $period, referralRequest: $referralRequest, careManager: $careManager, team: $team, account: $account)';
+    return 'EpisodeOfCare(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, statusHistory: $statusHistory, type: $type, diagnosis: $diagnosis, patient: $patient, managingOrganization: $managingOrganization, period: $period, referralRequest: $referralRequest, careManager: $careManager, team: $team, account: $account)';
   }
 
   @override
@@ -3558,6 +3607,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
             other is _$_EpisodeOfCare &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -3602,6 +3652,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -3642,9 +3693,11 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 }
 
 abstract class _EpisodeOfCare extends EpisodeOfCare {
-  factory _EpisodeOfCare(
+  const factory _EpisodeOfCare(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EpisodeOfCare)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -3673,7 +3726,7 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
       final Reference? careManager,
       final List<Reference>? team,
       final List<Reference>? account}) = _$_EpisodeOfCare;
-  _EpisodeOfCare._() : super._();
+  const _EpisodeOfCare._() : super._();
 
   factory _EpisodeOfCare.fromJson(Map<String, dynamic> json) =
       _$_EpisodeOfCare.fromJson;
@@ -3681,6 +3734,9 @@ abstract class _EpisodeOfCare extends EpisodeOfCare {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EpisodeOfCare)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -3885,7 +3941,7 @@ class __$$_EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
-  _$_EpisodeOfCareStatusHistory(
+  const _$_EpisodeOfCareStatusHistory(
       {this.status,
       @JsonKey(name: '_status') this.statusElement,
       required this.period})
@@ -3938,11 +3994,11 @@ class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
 }
 
 abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
-  factory _EpisodeOfCareStatusHistory(
+  const factory _EpisodeOfCareStatusHistory(
       {final EpisodeOfCareStatusHistoryStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       required final Period period}) = _$_EpisodeOfCareStatusHistory;
-  _EpisodeOfCareStatusHistory._() : super._();
+  const _EpisodeOfCareStatusHistory._() : super._();
 
   factory _EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =
       _$_EpisodeOfCareStatusHistory.fromJson;
@@ -4131,7 +4187,7 @@ class __$$_EpisodeOfCareDiagnosisCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EpisodeOfCareDiagnosis extends _EpisodeOfCareDiagnosis {
-  _$_EpisodeOfCareDiagnosis(
+  const _$_EpisodeOfCareDiagnosis(
       {required this.condition,
       this.role,
       this.rank,
@@ -4190,13 +4246,13 @@ class _$_EpisodeOfCareDiagnosis extends _EpisodeOfCareDiagnosis {
 }
 
 abstract class _EpisodeOfCareDiagnosis extends EpisodeOfCareDiagnosis {
-  factory _EpisodeOfCareDiagnosis(
+  const factory _EpisodeOfCareDiagnosis(
           {required final Reference condition,
           final CodeableConcept? role,
           final FhirDecimal? rank,
           @JsonKey(name: '_rank') final Element? rankElement}) =
       _$_EpisodeOfCareDiagnosis;
-  _EpisodeOfCareDiagnosis._() : super._();
+  const _EpisodeOfCareDiagnosis._() : super._();
 
   factory _EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =
       _$_EpisodeOfCareDiagnosis.fromJson;
@@ -4224,6 +4280,8 @@ Flag _$FlagFromJson(Map<String, dynamic> json) {
 mixin _$Flag {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Flag)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -4263,6 +4321,8 @@ abstract class $FlagCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Flag)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -4315,6 +4375,7 @@ class _$FlagCopyWithImpl<$Res, $Val extends Flag>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4340,6 +4401,10 @@ class _$FlagCopyWithImpl<$Res, $Val extends Flag>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4553,6 +4618,8 @@ abstract class _$$_FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Flag)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -4612,6 +4679,7 @@ class __$$_FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res, _$_Flag>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4637,6 +4705,10 @@ class __$$_FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res, _$_Flag>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4720,9 +4792,11 @@ class __$$_FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res, _$_Flag>
 /// @nodoc
 @JsonSerializable()
 class _$_Flag extends _Flag {
-  _$_Flag(
+  const _$_Flag(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Flag)
           this.resourceType = Stu3ResourceType.Flag,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -4758,6 +4832,9 @@ class _$_Flag extends _Flag {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Flag)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -4837,7 +4914,7 @@ class _$_Flag extends _Flag {
 
   @override
   String toString() {
-    return 'Flag(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, category: $category, code: $code, subject: $subject, period: $period, encounter: $encounter, author: $author)';
+    return 'Flag(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, category: $category, code: $code, subject: $subject, period: $period, encounter: $encounter, author: $author)';
   }
 
   @override
@@ -4847,6 +4924,7 @@ class _$_Flag extends _Flag {
             other is _$_Flag &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -4884,6 +4962,7 @@ class _$_Flag extends _Flag {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -4920,9 +4999,11 @@ class _$_Flag extends _Flag {
 }
 
 abstract class _Flag extends Flag {
-  factory _Flag(
+  const factory _Flag(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Flag)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -4947,13 +5028,16 @@ abstract class _Flag extends Flag {
       final Period? period,
       final Reference? encounter,
       final Reference? author}) = _$_Flag;
-  _Flag._() : super._();
+  const _Flag._() : super._();
 
   factory _Flag.fromJson(Map<String, dynamic> json) = _$_Flag.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Flag)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -5010,6 +5094,8 @@ Library _$LibraryFromJson(Map<String, dynamic> json) {
 mixin _$Library {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Library)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -5096,6 +5182,8 @@ abstract class $LibraryCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Library)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -5201,6 +5289,7 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5257,6 +5346,10 @@ class _$LibraryCopyWithImpl<$Res, $Val extends Library>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5707,6 +5800,8 @@ abstract class _$$_LibraryCopyWith<$Res> implements $LibraryCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Library)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -5829,6 +5924,7 @@ class __$$_LibraryCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5885,6 +5981,10 @@ class __$$_LibraryCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6092,9 +6192,11 @@ class __$$_LibraryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Library extends _Library {
-  _$_Library(
+  const _$_Library(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Library)
           this.resourceType = Stu3ResourceType.Library,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -6184,6 +6286,9 @@ class _$_Library extends _Library {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Library)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -6409,7 +6514,7 @@ class _$_Library extends _Library {
 
   @override
   String toString() {
-    return 'Library(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, type: $type, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, parameter: $parameter, dataRequirement: $dataRequirement, content: $content)';
+    return 'Library(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, type: $type, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, parameter: $parameter, dataRequirement: $dataRequirement, content: $content)';
   }
 
   @override
@@ -6419,6 +6524,7 @@ class _$_Library extends _Library {
             other is _$_Library &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -6511,6 +6617,7 @@ class _$_Library extends _Library {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -6578,9 +6685,11 @@ class _$_Library extends _Library {
 }
 
 abstract class _Library extends Library {
-  factory _Library(
+  const factory _Library(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Library)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -6649,13 +6758,16 @@ abstract class _Library extends Library {
       final List<ParameterDefinition>? parameter,
       final List<DataRequirement>? dataRequirement,
       final List<Attachment>? content}) = _$_Library;
-  _Library._() : super._();
+  const _Library._() : super._();
 
   factory _Library.fromJson(Map<String, dynamic> json) = _$_Library.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Library)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -6788,6 +6900,8 @@ FhirList _$FhirListFromJson(Map<String, dynamic> json) {
 mixin _$FhirList {
   @JsonKey(unknownEnumValue: Stu3ResourceType.FhirList)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -6839,6 +6953,8 @@ abstract class $FhirListCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.FhirList)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -6905,6 +7021,7 @@ class _$FhirListCopyWithImpl<$Res, $Val extends FhirList>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6938,6 +7055,10 @@ class _$FhirListCopyWithImpl<$Res, $Val extends FhirList>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7228,6 +7349,8 @@ abstract class _$$_FhirListCopyWith<$Res> implements $FhirListCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.FhirList)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -7306,6 +7429,7 @@ class __$$_FhirListCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -7339,6 +7463,10 @@ class __$$_FhirListCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7454,9 +7582,11 @@ class __$$_FhirListCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_FhirList extends _FhirList {
-  _$_FhirList(
+  const _$_FhirList(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.FhirList)
           this.resourceType = Stu3ResourceType.FhirList,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -7506,6 +7636,9 @@ class _$_FhirList extends _FhirList {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.FhirList)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -7620,7 +7753,7 @@ class _$_FhirList extends _FhirList {
 
   @override
   String toString() {
-    return 'FhirList(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, mode: $mode, modeElement: $modeElement, title: $title, titleElement: $titleElement, code: $code, subject: $subject, encounter: $encounter, date: $date, dateElement: $dateElement, source: $source, orderedBy: $orderedBy, note: $note, entry: $entry, emptyReason: $emptyReason)';
+    return 'FhirList(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, mode: $mode, modeElement: $modeElement, title: $title, titleElement: $titleElement, code: $code, subject: $subject, encounter: $encounter, date: $date, dateElement: $dateElement, source: $source, orderedBy: $orderedBy, note: $note, entry: $entry, emptyReason: $emptyReason)';
   }
 
   @override
@@ -7630,6 +7763,7 @@ class _$_FhirList extends _FhirList {
             other is _$_FhirList &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -7679,6 +7813,7 @@ class _$_FhirList extends _FhirList {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -7723,9 +7858,11 @@ class _$_FhirList extends _FhirList {
 }
 
 abstract class _FhirList extends FhirList {
-  factory _FhirList(
+  const factory _FhirList(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.FhirList)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -7761,13 +7898,16 @@ abstract class _FhirList extends FhirList {
       final List<Annotation>? note,
       final List<FhirListEntry>? entry,
       final CodeableConcept? emptyReason}) = _$_FhirList;
-  _FhirList._() : super._();
+  const _FhirList._() : super._();
 
   factory _FhirList.fromJson(Map<String, dynamic> json) = _$_FhirList.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.FhirList)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -8046,7 +8186,7 @@ class __$$_FhirListEntryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_FhirListEntry extends _FhirListEntry {
-  _$_FhirListEntry(
+  const _$_FhirListEntry(
       {this.flag,
       this.deleted,
       @JsonKey(name: '_deleted') this.deletedElement,
@@ -8113,14 +8253,14 @@ class _$_FhirListEntry extends _FhirListEntry {
 }
 
 abstract class _FhirListEntry extends FhirListEntry {
-  factory _FhirListEntry(
+  const factory _FhirListEntry(
       {final CodeableConcept? flag,
       final FhirBoolean? deleted,
       @JsonKey(name: '_deleted') final Element? deletedElement,
       final FhirDate? date,
       @JsonKey(name: '_date') final Element? dateElement,
       required final Reference item}) = _$_FhirListEntry;
-  _FhirListEntry._() : super._();
+  const _FhirListEntry._() : super._();
 
   factory _FhirListEntry.fromJson(Map<String, dynamic> json) =
       _$_FhirListEntry.fromJson;

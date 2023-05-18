@@ -17,10 +17,11 @@ part 'request_and_response.g.dart';
 @freezed
 class Communication with Resource, _$Communication {
   Communication._();
-  factory Communication({
+  const factory Communication({
     @Default(Stu3ResourceType.Communication)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -88,7 +89,7 @@ class Communication with Resource, _$Communication {
 @freezed
 class CommunicationPayload with _$CommunicationPayload {
   CommunicationPayload._();
-  factory CommunicationPayload({
+  const factory CommunicationPayload({
     String? contentString,
     @JsonKey(name: '_contentString') Element? contentStringElement,
     Attachment? contentAttachment,
@@ -129,10 +130,11 @@ class CommunicationPayload with _$CommunicationPayload {
 @freezed
 class CommunicationRequest with Resource, _$CommunicationRequest {
   CommunicationRequest._();
-  factory CommunicationRequest({
+  const factory CommunicationRequest({
     @Default(Stu3ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -201,7 +203,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 @freezed
 class CommunicationRequestPayload with _$CommunicationRequestPayload {
   CommunicationRequestPayload._();
-  factory CommunicationRequestPayload({
+  const factory CommunicationRequestPayload({
     String? contentString,
     @JsonKey(name: '_contentString') Element? contentStringElement,
     Attachment? contentAttachment,
@@ -242,7 +244,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
 @freezed
 class CommunicationRequestRequester with _$CommunicationRequestRequester {
   CommunicationRequestRequester._();
-  factory CommunicationRequestRequester({
+  const factory CommunicationRequestRequester({
     required Reference agent,
     Reference? onBehalfOf,
   }) = _CommunicationRequestRequester;
@@ -281,10 +283,11 @@ class CommunicationRequestRequester with _$CommunicationRequestRequester {
 @freezed
 class DeviceRequest with Resource, _$DeviceRequest {
   DeviceRequest._();
-  factory DeviceRequest({
+  const factory DeviceRequest({
     @Default(Stu3ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -356,7 +359,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
 @freezed
 class DeviceRequestRequester with _$DeviceRequestRequester {
   DeviceRequestRequester._();
-  factory DeviceRequestRequester({
+  const factory DeviceRequestRequester({
     required Reference agent,
     Reference? onBehalfOf,
   }) = _DeviceRequestRequester;
@@ -395,10 +398,11 @@ class DeviceRequestRequester with _$DeviceRequestRequester {
 @freezed
 class DeviceUseStatement with Resource, _$DeviceUseStatement {
   DeviceUseStatement._();
-  factory DeviceUseStatement({
+  const factory DeviceUseStatement({
     @Default(Stu3ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -458,10 +462,11 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
 @freezed
 class SupplyDelivery with Resource, _$SupplyDelivery {
   SupplyDelivery._();
-  factory SupplyDelivery({
+  const factory SupplyDelivery({
     @Default(Stu3ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -520,7 +525,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
 @freezed
 class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   SupplyDeliverySuppliedItem._();
-  factory SupplyDeliverySuppliedItem({
+  const factory SupplyDeliverySuppliedItem({
     Quantity? quantity,
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
@@ -560,10 +565,11 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
 @freezed
 class SupplyRequest with Resource, _$SupplyRequest {
   SupplyRequest._();
-  factory SupplyRequest({
+  const factory SupplyRequest({
     @Default(Stu3ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -626,7 +632,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
 @freezed
 class SupplyRequestOrderedItem with _$SupplyRequestOrderedItem {
   SupplyRequestOrderedItem._();
-  factory SupplyRequestOrderedItem({
+  const factory SupplyRequestOrderedItem({
     required Quantity quantity,
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
@@ -666,7 +672,7 @@ class SupplyRequestOrderedItem with _$SupplyRequestOrderedItem {
 @freezed
 class SupplyRequestRequester with _$SupplyRequestRequester {
   SupplyRequestRequester._();
-  factory SupplyRequestRequester({
+  const factory SupplyRequestRequester({
     required Reference agent,
     Reference? onBehalfOf,
   }) = _SupplyRequestRequester;

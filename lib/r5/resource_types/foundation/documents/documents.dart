@@ -182,11 +182,12 @@ class Composition with Resource, _$Composition {
   ///
   /// [section] The root of the sections that make up the composition.
   ///
-  factory Composition({
+  const factory Composition({
     /// [resourceType] This is a Composition resource
     @Default(R5ResourceType.Composition)
     @JsonKey(unknownEnumValue: R5ResourceType.Composition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -458,7 +459,7 @@ class CompositionAttester with _$CompositionAttester {
   ///
   /// [party] Who attested the composition in the specified way.
   ///
-  factory CompositionAttester({
+  const factory CompositionAttester({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -601,7 +602,7 @@ class CompositionEvent with _$CompositionEvent {
   ///  The events may be included as a code or as a reference to an other
   ///  resource.
   ///
-  factory CompositionEvent({
+  const factory CompositionEvent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -773,7 +774,7 @@ class CompositionSection with _$CompositionSection {
   ///
   /// [section] A nested sub-section within this section.
   ///
-  factory CompositionSection({
+  const factory CompositionSection({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1062,11 +1063,12 @@ class DocumentReference with Resource, _$DocumentReference {
   ///  content element repetitions, these must all represent the same document
   ///  in different format, or attachment metadata.
   ///
-  factory DocumentReference({
+  const factory DocumentReference({
     /// [resourceType] This is a DocumentReference resource
     @Default(R5ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: R5ResourceType.DocumentReference)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1352,7 +1354,7 @@ class DocumentReferenceAttester with _$DocumentReferenceAttester {
   ///
   /// [party] Who attested the document in the specified way.
   ///
-  factory DocumentReferenceAttester({
+  const factory DocumentReferenceAttester({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1488,7 +1490,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   ///
   /// [target] The target document of this relationship.
   ///
-  factory DocumentReferenceRelatesTo({
+  const factory DocumentReferenceRelatesTo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1621,7 +1623,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
   ///  and template that the document conforms to beyond the base format
   ///  indicated in the mimeType.
   ///
-  factory DocumentReferenceContent({
+  const factory DocumentReferenceContent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1759,7 +1761,7 @@ class DocumentReferenceProfile with _$DocumentReferenceProfile {
   ///
   /// [valueCanonicalElement] ("_valueCanonical") Extensions for valueCanonical
   ///
-  factory DocumentReferenceProfile({
+  const factory DocumentReferenceProfile({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

@@ -91,17 +91,17 @@ class Basic with Resource, _$Basic {
   ///
   /// [author] Indicates who was responsible for creating the resource
   ///  instance.
-  factory Basic({
+  const factory Basic({
     @Default(R4ResourceType.Basic)
     @JsonKey(unknownEnumValue: R4ResourceType.Basic)
 
-        /// [resourceType] This is a Basic resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Basic resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -115,15 +115,13 @@ class Basic with Resource, _$Basic {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -145,8 +143,7 @@ class Basic with Resource, _$Basic {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -179,8 +176,7 @@ class Basic with Resource, _$Basic {
     FhirDate? created,
 
     /// [createdElement] Extensions for created
-    @JsonKey(name: '_created')
-        Element? createdElement,
+    @JsonKey(name: '_created') Element? createdElement,
 
     /// [author] Indicates who was responsible for creating the resource
     ///  instance.
@@ -263,17 +259,17 @@ class Binary with Resource, _$Binary {
   /// [data] The actual content, base64 encoded.
   ///
   /// [dataElement] Extensions for data
-  factory Binary({
+  const factory Binary({
     @Default(R4ResourceType.Binary)
     @JsonKey(unknownEnumValue: R4ResourceType.Binary)
 
-        /// [resourceType] This is a Binary resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Binary resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -287,23 +283,20 @@ class Binary with Resource, _$Binary {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [contentType] MimeType of the binary content represented as a standard
     ///  MimeType (BCP 13).
     FhirCode? contentType,
 
     /// [contentTypeElement] Extensions for contentType
-    @JsonKey(name: '_contentType')
-        Element? contentTypeElement,
+    @JsonKey(name: '_contentType') Element? contentTypeElement,
 
     /// [securityContext] This element identifies another resource that can be
     /// used as a proxy of the security sensitivity to use when deciding and
@@ -322,8 +315,7 @@ class Binary with Resource, _$Binary {
     FhirBase64Binary? data,
 
     /// [dataElement] Extensions for data
-    @JsonKey(name: '_data')
-        Element? dataElement,
+    @JsonKey(name: '_data') Element? dataElement,
   }) = _Binary;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -407,17 +399,17 @@ class Bundle with Resource, _$Bundle {
   ///  information about a resource (transactions and history only).
   ///
   /// [signature] Digital Signature - base64 encoded. XML-DSig or a JWT.
-  factory Bundle({
+  const factory Bundle({
     @Default(R4ResourceType.Bundle)
     @JsonKey(unknownEnumValue: R4ResourceType.Bundle)
 
-        /// [resourceType] This is a Bundle resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Bundle resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -431,15 +423,13 @@ class Bundle with Resource, _$Bundle {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [identifier] A persistent identifier for the bundle that won't change as
     ///  a bundle is copied from server to server.
@@ -450,16 +440,14 @@ class Bundle with Resource, _$Bundle {
     FhirCode? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type')
-        Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [timestamp] The date/time that the bundle was assembled - i.e. when the
     ///  resources were placed in the bundle.
     FhirInstant? timestamp,
 
     /// [timestampElement] Extensions for timestamp
-    @JsonKey(name: '_timestamp')
-        Element? timestampElement,
+    @JsonKey(name: '_timestamp') Element? timestampElement,
 
     /// [total] If a set of search matches, this is the total number of entries
     /// of type 'match' across all pages in the search.  It does not include
@@ -468,8 +456,7 @@ class Bundle with Resource, _$Bundle {
     FhirUnsignedInt? total,
 
     /// [totalElement] Extensions for total
-    @JsonKey(name: '_total')
-        Element? totalElement,
+    @JsonKey(name: '_total') Element? totalElement,
 
     /// [link] A series of links that provide context to this bundle.
     List<BundleLink>? link,
@@ -549,7 +536,7 @@ class BundleLink with _$BundleLink {
   /// [url] The reference details for the link.
   ///
   /// [urlElement] Extensions for url
-  factory BundleLink({
+  const factory BundleLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -680,7 +667,7 @@ class BundleEntry with _$BundleEntry {
   /// [response] Indicates the results of processing the corresponding
   /// 'request' entry in the batch or transaction being responded to or what the
   ///  results of an operation where when returning history.
-  factory BundleEntry({
+  const factory BundleEntry({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -871,7 +858,7 @@ class BundleSearch with _$BundleSearch {
   /// [score] When searching, the server's search ranking score for the entry.
   ///
   /// [scoreElement] Extensions for score
-  factory BundleSearch({
+  const factory BundleSearch({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1012,7 +999,7 @@ class BundleRequest with _$BundleRequest {
   ///  "?").
   ///
   /// [ifNoneExistElement] Extensions for ifNoneExist
-  factory BundleRequest({
+  const factory BundleRequest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1177,7 +1164,7 @@ class BundleResponse with _$BundleResponse {
   ///
   /// [outcome] An OperationOutcome containing hints and warnings produced as
   ///  part of processing this entry in a batch or transaction.
-  factory BundleResponse({
+  const factory BundleResponse({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1346,17 +1333,17 @@ class Linkage with Resource, _$Linkage {
   /// [item] Identifies which record considered as the reference to the same
   /// real-world occurrence as well as how the items should be evaluated within
   ///  the collection of linked items.
-  factory Linkage({
+  const factory Linkage({
     @Default(R4ResourceType.Linkage)
     @JsonKey(unknownEnumValue: R4ResourceType.Linkage)
 
-        /// [resourceType] This is a Linkage resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Linkage resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1370,15 +1357,13 @@ class Linkage with Resource, _$Linkage {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1400,8 +1385,7 @@ class Linkage with Resource, _$Linkage {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1423,8 +1407,7 @@ class Linkage with Resource, _$Linkage {
     FhirBoolean? active,
 
     /// [activeElement] Extensions for active
-    @JsonKey(name: '_active')
-        Element? activeElement,
+    @JsonKey(name: '_active') Element? activeElement,
 
     /// [author] Identifies the user or organization responsible for asserting
     /// the linkages as well as the user or organization who establishes the
@@ -1504,7 +1487,7 @@ class LinkageItem with _$LinkageItem {
   /// [typeElement] Extensions for type
   ///
   /// [resource] The resource instance being linked as part of the group.
-  factory LinkageItem({
+  const factory LinkageItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1684,17 +1667,17 @@ class MessageHeader with Resource, _$MessageHeader {
   ///  class of the event.
   ///
   /// [definition] Permanent link to the MessageDefinition for this message.
-  factory MessageHeader({
+  const factory MessageHeader({
     @Default(R4ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: R4ResourceType.MessageHeader)
 
-        /// [resourceType] This is a MessageHeader resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a MessageHeader resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1708,15 +1691,13 @@ class MessageHeader with Resource, _$MessageHeader {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1738,8 +1719,7 @@ class MessageHeader with Resource, _$MessageHeader {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1771,8 +1751,7 @@ class MessageHeader with Resource, _$MessageHeader {
     FhirUri? eventUri,
 
     /// [eventUriElement] Extensions for eventUri
-    @JsonKey(name: '_eventUri')
-        Element? eventUriElement,
+    @JsonKey(name: '_eventUri') Element? eventUriElement,
 
     /// [destination] The destination application which the message is intended
     ///  for.
@@ -1895,7 +1874,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   /// [receiver] Allows data conveyed by a message to be addressed to a
   /// particular person or department when routing to a specific application
   ///  isn't sufficient.
-  factory MessageHeaderDestination({
+  const factory MessageHeaderDestination({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2032,7 +2011,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
   /// [endpoint] Identifies the routing target to send acknowledgements to.
   ///
   /// [endpointElement] Extensions for endpoint
-  factory MessageHeaderSource({
+  const factory MessageHeaderSource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2169,7 +2148,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   /// [codeElement] Extensions for code
   ///
   /// [details] Full details of any issues found in the message.
-  factory MessageHeaderResponse({
+  const factory MessageHeaderResponse({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2310,17 +2289,17 @@ class OperationOutcome with Resource, _$OperationOutcome {
   ///
   /// [issue] An error, warning, or information message that results from a
   ///  system action.
-  factory OperationOutcome({
+  const factory OperationOutcome({
     @Default(R4ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: R4ResourceType.OperationOutcome)
 
-        /// [resourceType] This is a OperationOutcome resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a OperationOutcome resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2334,15 +2313,13 @@ class OperationOutcome with Resource, _$OperationOutcome {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2364,8 +2341,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2486,7 +2462,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
   ///  to be raised.
   ///
   /// [expressionElement] Extensions for expression
-  factory OperationOutcomeIssue({
+  const factory OperationOutcomeIssue({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2624,17 +2600,17 @@ class Parameters with Resource, _$Parameters {
   /// [languageElement] Extensions for language
   ///
   /// [parameter] A parameter passed to or received from the operation.
-  factory Parameters({
+  const factory Parameters({
     @Default(R4ResourceType.Parameters)
     @JsonKey(unknownEnumValue: R4ResourceType.Parameters)
 
-        /// [resourceType] This is a Parameters resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Parameters resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2648,15 +2624,13 @@ class Parameters with Resource, _$Parameters {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [parameter] A parameter passed to or received from the operation.
     List<ParametersParameter>? parameter,
@@ -2869,7 +2843,7 @@ class ParametersParameter with _$ParametersParameter {
   /// [resource] If the parameter is a whole resource.
   ///
   /// [part_] A named part of a multi-part parameter.
-  factory ParametersParameter({
+  const factory ParametersParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3242,17 +3216,17 @@ class Subscription with Resource, _$Subscription {
   ///
   /// [channel] Details where to send notifications when resources are received
   ///  that meet the criteria.
-  factory Subscription({
+  const factory Subscription({
     @Default(R4ResourceType.Subscription)
     @JsonKey(unknownEnumValue: R4ResourceType.Subscription)
 
-        /// [resourceType] This is a Subscription resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Subscription resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -3266,15 +3240,13 @@ class Subscription with Resource, _$Subscription {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -3296,8 +3268,7 @@ class Subscription with Resource, _$Subscription {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -3319,8 +3290,7 @@ class Subscription with Resource, _$Subscription {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [contact] Contact details for a human to contact about the subscription.
     ///  The primary use of this for system administrator troubleshooting.
@@ -3330,31 +3300,27 @@ class Subscription with Resource, _$Subscription {
     FhirInstant? end,
 
     /// [endElement] Extensions for end
-    @JsonKey(name: '_end')
-        Element? endElement,
+    @JsonKey(name: '_end') Element? endElement,
 
     /// [reason] A description of why this subscription is defined.
     String? reason,
 
     /// [reasonElement] Extensions for reason
-    @JsonKey(name: '_reason')
-        Element? reasonElement,
+    @JsonKey(name: '_reason') Element? reasonElement,
 
     /// [criteria] The rules that the server should use to determine when to
     ///  generate notifications for this subscription.
     String? criteria,
 
     /// [criteriaElement] Extensions for criteria
-    @JsonKey(name: '_criteria')
-        Element? criteriaElement,
+    @JsonKey(name: '_criteria') Element? criteriaElement,
 
     /// [error] A record of the last error that occurred when the server
     ///  processed a notification.
     String? error,
 
     /// [errorElement] Extensions for error
-    @JsonKey(name: '_error')
-        Element? errorElement,
+    @JsonKey(name: '_error') Element? errorElement,
 
     /// [channel] Details where to send notifications when resources are received
     ///  that meet the criteria.
@@ -3447,7 +3413,7 @@ class SubscriptionChannel with _$SubscriptionChannel {
   ///  notification.
   ///
   /// [headerElement] Extensions for header
-  factory SubscriptionChannel({
+  const factory SubscriptionChannel({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3589,14 +3555,13 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
   /// [topic] The reference to the SubscriptionTopic for the Subscription which generated this notification.;
   ///
   /// [error] A record of errors that occurred when the server processed a notification.;
-  factory SubscriptionStatus({
+  const factory SubscriptionStatus({
     /// [resourceType] This is a SubscriptionStatus resource;
-    @Default(R4ResourceType.SubscriptionStatus)
-        R4ResourceType resourceType,
+    @Default(R4ResourceType.SubscriptionStatus) R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
     FhirMeta? meta,
@@ -3605,15 +3570,13 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.;
     FhirCode? language,
 
     /// [languageElement] (_language): Extensions for language;
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
     Narrative? text,
@@ -3622,8 +3585,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     List<Resource>? contained,
 
     /// [extension_] May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
     /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
@@ -3633,22 +3595,20 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     FhirCode? status,
 
     /// [statusElement] (_status): Extensions for status;
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [type] The type of event being conveyed with this notificaiton.;
     FhirCode? type,
 
     /// [typeElement] (_type): Extensions for type;
-    @JsonKey(name: '_type')
-        Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [eventsSinceSubscriptionStart] The total number of actual events which have been generated since the Subscription was created (inclusive of this notification) - regardless of how many have been successfully communicated.  This number is NOT incremented for handshake and heartbeat notifications.;
     FhirInteger64? eventsSinceSubscriptionStart,
     @JsonKey(name: '_eventsSinceSubscriptionStart')
 
-        /// [eventsSinceSubscriptionStartElement] (_eventsSinceSubscriptionStart): Extensions for eventsSinceSubscriptionStart;
-        Element? eventsSinceSubscriptionStartElement,
+    /// [eventsSinceSubscriptionStartElement] (_eventsSinceSubscriptionStart): Extensions for eventsSinceSubscriptionStart;
+    Element? eventsSinceSubscriptionStartElement,
 
     /// [notificationEvent] Detailed information about events relevant to this subscription notification.;
     List<SubscriptionStatusNotificationEvent>? notificationEvent,
@@ -3716,7 +3676,7 @@ class SubscriptionStatusNotificationEvent
   /// [focus] The focus of this event. While this will usually be a reference to the focus resource of the event, it MAY contain a reference to a non-FHIR object.;
   ///
   /// [additionalContext] Additional context information for this event. Generally, this will contain references to additional resources included with the event (e.g., the Patient relevant to an Encounter), however it MAY refer to non-FHIR objects.;
-  factory SubscriptionStatusNotificationEvent({
+  const factory SubscriptionStatusNotificationEvent({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
     @JsonKey(name: 'id') FhirId? fhirId,
 
@@ -3878,9 +3838,10 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   /// [canFilterBy] List of properties by which Subscriptions on the SubscriptionTopic can be filtered. May be defined Search Parameters (e.g., Encounter.patient) or parameters defined within this SubscriptionTopic context (e.g., hub.event).;
   ///
   /// [notificationShape] List of properties to describe the shape (e.g., resources) included in notifications from this Subscription Topic.;
-  factory SubscriptionTopic({
+  const factory SubscriptionTopic({
     /// [resourceType] This is a SubscriptionTopic resource;
     @Default(R4ResourceType.SubscriptionTopic) R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id') String? fhirId,
@@ -4058,7 +4019,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
   /// [fhirPathCriteria] The FHIRPath based rules that the server should use to determine when to trigger a notification for this topic.;
   ///
   /// [fhirPathCriteriaElement] (_fhirPathCriteria): Extensions for fhirPathCriteria;
-  factory SubscriptionTopicResourceTrigger({
+  const factory SubscriptionTopicResourceTrigger({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -4068,7 +4029,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
     @JsonKey(name: '_resource') Element? resourceElement,
     List<FhirCode>? supportedInteraction,
     @JsonKey(name: '_supportedInteraction')
-        List<Element>? supportedInteractionElement,
+    List<Element>? supportedInteractionElement,
     SubscriptionTopicQueryCriteria? queryCriteria,
     String? fhirPathCriteria,
     @JsonKey(name: '_fhirPathCriteria') Element? fhirPathCriteriaElement,
@@ -4143,7 +4104,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
   /// [requireBoth] If set to true, both current and previous criteria must evaluate true to  trigger a notification for this topic.  Otherwise a notification for this topic will be triggered if either one evaluates to true.;
   ///
   /// [requireBothElement] (_requireBoth): Extensions for requireBoth;
-  factory SubscriptionTopicQueryCriteria({
+  const factory SubscriptionTopicQueryCriteria({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -4217,7 +4178,7 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
   /// [resource] URL of the Resource that is the focus type used in this event trigger.  Relative URLs are relative to the StructureDefinition root of the implemented FHIR version (e.g., http://hl7.org/fhir/StructureDefinition). For example, "Patient" maps to http://hl7.org/fhir/StructureDefinition/Patient.  For more information, see <a href="elementdefinition-definitions.html#ElementDefinition.type.code">ElementDefinition.type.code</a>.;
   ///
   /// [resourceElement] (_resource): Extensions for resource;
-  factory SubscriptionTopicEventTrigger({
+  const factory SubscriptionTopicEventTrigger({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -4295,7 +4256,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
   /// [modifier] Allowable operators to apply when determining matches (Search Modifiers).  If the filterParameter is a SearchParameter, this list of modifiers SHALL be a strict subset of the modifiers defined on that SearchParameter.;
   ///
   /// [modifierElement] (_modifier): Extensions for modifier;
-  factory SubscriptionTopicCanFilterBy({
+  const factory SubscriptionTopicCanFilterBy({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -4369,7 +4330,7 @@ class SubscriptionTopicNotificationShape
   /// [revInclude] Search-style _revinclude directives, rooted in the resource for this shape. Servers SHOULD include resources listed here, if they exist and the user is authorized to receive them.  Clients SHOULD be prepared to receive these additional resources, but SHALL function properly without them.;
   ///
   /// [revIncludeElement] (_revInclude): Extensions for revInclude;
-  factory SubscriptionTopicNotificationShape({
+  const factory SubscriptionTopicNotificationShape({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

@@ -189,11 +189,12 @@ class Encounter with Resource, _$Encounter {
   /// [location] List of locations where  the patient has been during this
   ///  encounter.
   ///
-  factory Encounter({
+  const factory Encounter({
     /// [resourceType] This is a Encounter resource
     @Default(R5ResourceType.Encounter)
     @JsonKey(unknownEnumValue: R5ResourceType.Encounter)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -484,7 +485,7 @@ class EncounterParticipant with _$EncounterParticipant {
   ///  the encounter. Not including the patient here covers use cases such as a
   ///  case meeting between practitioners about a patient - non contact times.
   ///
-  factory EncounterParticipant({
+  const factory EncounterParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -611,7 +612,7 @@ class EncounterReason with _$EncounterReason {
   ///  reference to another resource. For admissions, this can be used for a
   ///  coded admission diagnosis.
   ///
-  factory EncounterReason({
+  const factory EncounterReason({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -732,7 +733,7 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
   /// [use] Role that this diagnosis has within the encounter (e.g. admission,
   ///  billing, discharge …).
   ///
-  factory EncounterDiagnosis({
+  const factory EncounterDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -862,7 +863,7 @@ class EncounterAdmission with _$EncounterAdmission {
   ///
   /// [dischargeDisposition] Category or kind of location after discharge.
   ///
-  factory EncounterAdmission({
+  const factory EncounterAdmission({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1003,7 +1004,7 @@ class EncounterLocation with _$EncounterLocation {
   ///
   /// [period] Time period during which the patient was present at the location.
   ///
-  factory EncounterLocation({
+  const factory EncounterLocation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1203,11 +1204,12 @@ class EncounterHistory with Resource, _$EncounterHistory {
   ///  the multiple cardinality permits de-normalizing the levels of the
   ///  location hierarchy, such as site/ward/room/bed.
   ///
-  factory EncounterHistory({
+  const factory EncounterHistory({
     /// [resourceType] This is a EncounterHistory resource
     @Default(R5ResourceType.EncounterHistory)
     @JsonKey(unknownEnumValue: R5ResourceType.EncounterHistory)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1419,7 +1421,7 @@ class EncounterHistoryLocation with _$EncounterHistoryLocation {
   ///  (bed/ward/room/etc.) desired to be recorded to simplify either messaging
   ///  or query.
   ///
-  factory EncounterHistoryLocation({
+  const factory EncounterHistoryLocation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1600,11 +1602,12 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
   /// [account] The set of accounts that may be used for billing for this
   ///  EpisodeOfCare.
   ///
-  factory EpisodeOfCare({
+  const factory EpisodeOfCare({
     /// [resourceType] This is a EpisodeOfCare resource
     @Default(R5ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: R5ResourceType.EpisodeOfCare)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1807,7 +1810,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   /// [period] The period during this EpisodeOfCare that the specific status
   ///  applied.
   ///
-  factory EpisodeOfCareStatusHistory({
+  const factory EpisodeOfCareStatusHistory({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1926,7 +1929,7 @@ class EpisodeOfCareReason with _$EpisodeOfCareReason {
   ///  episode of care, expressed as a text, code or a reference to another
   ///  resource.
   ///
-  factory EpisodeOfCareReason({
+  const factory EpisodeOfCareReason({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2043,7 +2046,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   /// [use] Role that this diagnosis has within the episode of care (e.g.
   ///  admission, billing, discharge …).
   ///
-  factory EpisodeOfCareDiagnosis({
+  const factory EpisodeOfCareDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2204,11 +2207,12 @@ class Flag with Resource, _$Flag {
   ///
   /// [author] The person, organization or device that created the flag.
   ///
-  factory Flag({
+  const factory Flag({
     /// [resourceType] This is a Flag resource
     @Default(R5ResourceType.Flag)
     @JsonKey(unknownEnumValue: R5ResourceType.Flag)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2584,11 +2588,12 @@ class Library with Resource, _$Library {
   ///  Either way, the contentType of the attachment determines how to
   ///  interpret the content.
   ///
-  factory Library({
+  const factory Library({
     /// [resourceType] This is a Library resource
     @Default(R5ResourceType.Library)
     @JsonKey(unknownEnumValue: R5ResourceType.Library)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2697,7 +2702,7 @@ class Library with Resource, _$Library {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -3020,11 +3025,12 @@ class FhirList with Resource, _$FhirList {
   ///
   /// [emptyReason] If the list is empty, why the list is empty.
   ///
-  factory FhirList({
+  const factory FhirList({
     /// [resourceType] This is a List resource
     @Default(R5ResourceType.List)
     @JsonKey(unknownEnumValue: R5ResourceType.List)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3233,7 +3239,7 @@ class FhirListEntry with _$FhirListEntry {
   ///
   /// [item] A reference to the actual resource from which data was derived.
   ///
-  factory FhirListEntry({
+  const factory FhirListEntry({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

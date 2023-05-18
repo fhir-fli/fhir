@@ -17,10 +17,11 @@ part 'testing.g.dart';
 @freezed
 class TestReport with Resource, _$TestReport {
   TestReport._();
-  factory TestReport({
+  const factory TestReport({
     @Default(Stu3ResourceType.TestReport)
     @JsonKey(unknownEnumValue: Stu3ResourceType.TestReport)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -82,7 +83,7 @@ class TestReport with Resource, _$TestReport {
 @freezed
 class TestReportParticipant with _$TestReportParticipant {
   TestReportParticipant._();
-  factory TestReportParticipant({
+  const factory TestReportParticipant({
     TestReportParticipantType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? uri,
@@ -125,7 +126,7 @@ class TestReportParticipant with _$TestReportParticipant {
 @freezed
 class TestReportSetup with _$TestReportSetup {
   TestReportSetup._();
-  factory TestReportSetup({
+  const factory TestReportSetup({
     required List<TestReportAction> action,
   }) = _TestReportSetup;
 
@@ -163,7 +164,7 @@ class TestReportSetup with _$TestReportSetup {
 @freezed
 class TestReportAction with _$TestReportAction {
   TestReportAction._();
-  factory TestReportAction({
+  const factory TestReportAction({
     TestReportOperation? operation,
     @JsonKey(name: 'assert') TestReportAssert? assert_,
   }) = _TestReportAction;
@@ -202,7 +203,7 @@ class TestReportAction with _$TestReportAction {
 @freezed
 class TestReportOperation with _$TestReportOperation {
   TestReportOperation._();
-  factory TestReportOperation({
+  const factory TestReportOperation({
     TestReportOperationResult? result,
     @JsonKey(name: '_result') Element? resultElement,
     String? message,
@@ -245,7 +246,7 @@ class TestReportOperation with _$TestReportOperation {
 @freezed
 class TestReportAssert with _$TestReportAssert {
   TestReportAssert._();
-  factory TestReportAssert({
+  const factory TestReportAssert({
     TestReportAssertResult? result,
     @JsonKey(name: '_result') Element? resultElement,
     String? message,
@@ -288,7 +289,7 @@ class TestReportAssert with _$TestReportAssert {
 @freezed
 class TestReportTest with _$TestReportTest {
   TestReportTest._();
-  factory TestReportTest({
+  const factory TestReportTest({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
@@ -330,7 +331,7 @@ class TestReportTest with _$TestReportTest {
 @freezed
 class TestReportAction1 with _$TestReportAction1 {
   TestReportAction1._();
-  factory TestReportAction1({
+  const factory TestReportAction1({
     TestReportOperation? operation,
     @JsonKey(name: 'assert') TestReportAssert? assert_,
   }) = _TestReportAction1;
@@ -369,7 +370,7 @@ class TestReportAction1 with _$TestReportAction1 {
 @freezed
 class TestReportTeardown with _$TestReportTeardown {
   TestReportTeardown._();
-  factory TestReportTeardown({
+  const factory TestReportTeardown({
     required List<TestReportAction2> action,
   }) = _TestReportTeardown;
 
@@ -407,7 +408,7 @@ class TestReportTeardown with _$TestReportTeardown {
 @freezed
 class TestReportAction2 with _$TestReportAction2 {
   TestReportAction2._();
-  factory TestReportAction2({
+  const factory TestReportAction2({
     required TestReportOperation operation,
   }) = _TestReportAction2;
 
@@ -445,10 +446,11 @@ class TestReportAction2 with _$TestReportAction2 {
 @freezed
 class TestScript with Resource, _$TestScript {
   TestScript._();
-  factory TestScript({
+  const factory TestScript({
     @Default(Stu3ResourceType.TestScript)
     @JsonKey(unknownEnumValue: Stu3ResourceType.TestScript)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -529,7 +531,7 @@ class TestScript with Resource, _$TestScript {
 @freezed
 class TestScriptOrigin with _$TestScriptOrigin {
   TestScriptOrigin._();
-  factory TestScriptOrigin({
+  const factory TestScriptOrigin({
     FhirDecimal? index,
     @JsonKey(name: '_index') Element? indexElement,
     required Coding profile,
@@ -569,7 +571,7 @@ class TestScriptOrigin with _$TestScriptOrigin {
 @freezed
 class TestScriptDestination with _$TestScriptDestination {
   TestScriptDestination._();
-  factory TestScriptDestination({
+  const factory TestScriptDestination({
     FhirDecimal? index,
     @JsonKey(name: '_index') Element? indexElement,
     required Coding profile,
@@ -609,7 +611,7 @@ class TestScriptDestination with _$TestScriptDestination {
 @freezed
 class TestScriptMetadata with _$TestScriptMetadata {
   TestScriptMetadata._();
-  factory TestScriptMetadata({
+  const factory TestScriptMetadata({
     List<TestScriptLink>? link,
     required List<TestScriptCapability> capability,
   }) = _TestScriptMetadata;
@@ -648,7 +650,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
 @freezed
 class TestScriptLink with _$TestScriptLink {
   TestScriptLink._();
-  factory TestScriptLink({
+  const factory TestScriptLink({
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
     String? description,
@@ -689,7 +691,7 @@ class TestScriptLink with _$TestScriptLink {
 @freezed
 class TestScriptCapability with _$TestScriptCapability {
   TestScriptCapability._();
-  factory TestScriptCapability({
+  const factory TestScriptCapability({
     @JsonKey(name: 'required') FhirBoolean? required_,
     @JsonKey(name: '_required') Element? requiredElement,
     FhirBoolean? validated,
@@ -739,7 +741,7 @@ class TestScriptCapability with _$TestScriptCapability {
 @freezed
 class TestScriptFixture with _$TestScriptFixture {
   TestScriptFixture._();
-  factory TestScriptFixture({
+  const factory TestScriptFixture({
     FhirBoolean? autocreate,
     @JsonKey(name: '_autocreate') Element? autocreateElement,
     FhirBoolean? autodelete,
@@ -781,7 +783,7 @@ class TestScriptFixture with _$TestScriptFixture {
 @freezed
 class TestScriptVariable with _$TestScriptVariable {
   TestScriptVariable._();
-  factory TestScriptVariable({
+  const factory TestScriptVariable({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? defaultValue,
@@ -834,7 +836,7 @@ class TestScriptVariable with _$TestScriptVariable {
 @freezed
 class TestScriptRule with _$TestScriptRule {
   TestScriptRule._();
-  factory TestScriptRule({
+  const factory TestScriptRule({
     required Reference resource,
     List<TestScriptParam>? param,
   }) = _TestScriptRule;
@@ -873,7 +875,7 @@ class TestScriptRule with _$TestScriptRule {
 @freezed
 class TestScriptParam with _$TestScriptParam {
   TestScriptParam._();
-  factory TestScriptParam({
+  const factory TestScriptParam({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? value,
@@ -914,7 +916,7 @@ class TestScriptParam with _$TestScriptParam {
 @freezed
 class TestScriptRuleset with _$TestScriptRuleset {
   TestScriptRuleset._();
-  factory TestScriptRuleset({
+  const factory TestScriptRuleset({
     required Reference resource,
     required List<TestScriptRule1> rule,
   }) = _TestScriptRuleset;
@@ -953,7 +955,7 @@ class TestScriptRuleset with _$TestScriptRuleset {
 @freezed
 class TestScriptRule1 with _$TestScriptRule1 {
   TestScriptRule1._();
-  factory TestScriptRule1({
+  const factory TestScriptRule1({
     FhirId? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
     List<TestScriptParam1>? param,
@@ -993,7 +995,7 @@ class TestScriptRule1 with _$TestScriptRule1 {
 @freezed
 class TestScriptParam1 with _$TestScriptParam1 {
   TestScriptParam1._();
-  factory TestScriptParam1({
+  const factory TestScriptParam1({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? value,
@@ -1034,7 +1036,7 @@ class TestScriptParam1 with _$TestScriptParam1 {
 @freezed
 class TestScriptSetup with _$TestScriptSetup {
   TestScriptSetup._();
-  factory TestScriptSetup({
+  const factory TestScriptSetup({
     required List<TestScriptAction> action,
   }) = _TestScriptSetup;
 
@@ -1072,7 +1074,7 @@ class TestScriptSetup with _$TestScriptSetup {
 @freezed
 class TestScriptAction with _$TestScriptAction {
   TestScriptAction._();
-  factory TestScriptAction({
+  const factory TestScriptAction({
     TestScriptOperation? operation,
     @JsonKey(name: 'assert') TestScriptAssert? assert_,
   }) = _TestScriptAction;
@@ -1111,7 +1113,7 @@ class TestScriptAction with _$TestScriptAction {
 @freezed
 class TestScriptOperation with _$TestScriptOperation {
   TestScriptOperation._();
-  factory TestScriptOperation({
+  const factory TestScriptOperation({
     Coding? type,
     String? resource,
     @JsonKey(name: '_resource') Element? resourceElement,
@@ -1178,7 +1180,7 @@ class TestScriptOperation with _$TestScriptOperation {
 @freezed
 class TestScriptRequestHeader with _$TestScriptRequestHeader {
   TestScriptRequestHeader._();
-  factory TestScriptRequestHeader({
+  const factory TestScriptRequestHeader({
     String? field,
     @JsonKey(name: '_field') Element? fieldElement,
     String? value,
@@ -1219,7 +1221,7 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
 @freezed
 class TestScriptAssert with _$TestScriptAssert {
   TestScriptAssert._();
-  factory TestScriptAssert({
+  const factory TestScriptAssert({
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
     String? description,
@@ -1230,7 +1232,7 @@ class TestScriptAssert with _$TestScriptAssert {
     @JsonKey(name: '_compareToSourceId') Element? compareToSourceIdElement,
     String? compareToSourceExpression,
     @JsonKey(name: '_compareToSourceExpression')
-        Element? compareToSourceExpressionElement,
+    Element? compareToSourceExpressionElement,
     String? compareToSourcePath,
     @JsonKey(name: '_compareToSourcePath') Element? compareToSourcePathElement,
     TestScriptAssertContentType? contentType,
@@ -1303,7 +1305,7 @@ class TestScriptAssert with _$TestScriptAssert {
 @freezed
 class TestScriptRule2 with _$TestScriptRule2 {
   TestScriptRule2._();
-  factory TestScriptRule2({
+  const factory TestScriptRule2({
     FhirId? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
     List<TestScriptParam2>? param,
@@ -1343,7 +1345,7 @@ class TestScriptRule2 with _$TestScriptRule2 {
 @freezed
 class TestScriptParam2 with _$TestScriptParam2 {
   TestScriptParam2._();
-  factory TestScriptParam2({
+  const factory TestScriptParam2({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? value,
@@ -1384,7 +1386,7 @@ class TestScriptParam2 with _$TestScriptParam2 {
 @freezed
 class TestScriptRuleset1 with _$TestScriptRuleset1 {
   TestScriptRuleset1._();
-  factory TestScriptRuleset1({
+  const factory TestScriptRuleset1({
     FhirId? rulesetId,
     @JsonKey(name: '_rulesetId') Element? rulesetIdElement,
     List<TestScriptRule3>? rule,
@@ -1424,7 +1426,7 @@ class TestScriptRuleset1 with _$TestScriptRuleset1 {
 @freezed
 class TestScriptRule3 with _$TestScriptRule3 {
   TestScriptRule3._();
-  factory TestScriptRule3({
+  const factory TestScriptRule3({
     FhirId? ruleId,
     @JsonKey(name: '_ruleId') Element? ruleIdElement,
     List<TestScriptParam3>? param,
@@ -1464,7 +1466,7 @@ class TestScriptRule3 with _$TestScriptRule3 {
 @freezed
 class TestScriptParam3 with _$TestScriptParam3 {
   TestScriptParam3._();
-  factory TestScriptParam3({
+  const factory TestScriptParam3({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? value,
@@ -1505,7 +1507,7 @@ class TestScriptParam3 with _$TestScriptParam3 {
 @freezed
 class TestScriptTest with _$TestScriptTest {
   TestScriptTest._();
-  factory TestScriptTest({
+  const factory TestScriptTest({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     String? description,
@@ -1547,7 +1549,7 @@ class TestScriptTest with _$TestScriptTest {
 @freezed
 class TestScriptAction1 with _$TestScriptAction1 {
   TestScriptAction1._();
-  factory TestScriptAction1({
+  const factory TestScriptAction1({
     TestScriptOperation? operation,
     @JsonKey(name: 'assert') TestScriptAssert? assert_,
   }) = _TestScriptAction1;
@@ -1586,7 +1588,7 @@ class TestScriptAction1 with _$TestScriptAction1 {
 @freezed
 class TestScriptTeardown with _$TestScriptTeardown {
   TestScriptTeardown._();
-  factory TestScriptTeardown({
+  const factory TestScriptTeardown({
     required List<TestScriptAction2> action,
   }) = _TestScriptTeardown;
 
@@ -1624,7 +1626,7 @@ class TestScriptTeardown with _$TestScriptTeardown {
 @freezed
 class TestScriptAction2 with _$TestScriptAction2 {
   TestScriptAction2._();
-  factory TestScriptAction2({
+  const factory TestScriptAction2({
     required TestScriptOperation operation,
   }) = _TestScriptAction2;
 

@@ -17,10 +17,11 @@ part 'patient_management.g.dart';
 @freezed
 class Encounter with Resource, _$Encounter {
   Encounter._();
-  factory Encounter({
+  const factory Encounter({
     @Default(Dstu2ResourceType.Encounter)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -33,11 +34,11 @@ class Encounter with Resource, _$Encounter {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: EncounterStatus.unknown)
-        required EncounterStatus status,
+    required EncounterStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     List<EncounterStatusHistory>? statusHistory,
     @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
-        EncounterClass? class_,
+    EncounterClass? class_,
     @JsonKey(name: '_class') Element? classElement,
     List<CodeableConcept>? type,
     CodeableConcept? priority,
@@ -87,12 +88,12 @@ class Encounter with Resource, _$Encounter {
 @freezed
 class EncounterStatusHistory with _$EncounterStatusHistory {
   EncounterStatusHistory._();
-  factory EncounterStatusHistory({
+  const factory EncounterStatusHistory({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-        required EncounterHistoryStatus status,
+    required EncounterHistoryStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period period,
   }) = _EncounterStatusHistory;
@@ -131,7 +132,7 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
 @freezed
 class EncounterParticipant with _$EncounterParticipant {
   EncounterParticipant._();
-  factory EncounterParticipant({
+  const factory EncounterParticipant({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -174,7 +175,7 @@ class EncounterParticipant with _$EncounterParticipant {
 @freezed
 class EncounterHospitalization with _$EncounterHospitalization {
   EncounterHospitalization._();
-  factory EncounterHospitalization({
+  const factory EncounterHospitalization({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -226,13 +227,13 @@ class EncounterHospitalization with _$EncounterHospitalization {
 @freezed
 class EncounterLocation with _$EncounterLocation {
   EncounterLocation._();
-  factory EncounterLocation({
+  const factory EncounterLocation({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference location,
     @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
-        EncounterLocationStatus? status,
+    EncounterLocationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? period,
   }) = _EncounterLocation;
@@ -271,10 +272,11 @@ class EncounterLocation with _$EncounterLocation {
 @freezed
 class EpisodeOfCare with Resource, _$EpisodeOfCare {
   EpisodeOfCare._();
-  factory EpisodeOfCare({
+  const factory EpisodeOfCare({
     @Default(Dstu2ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -287,7 +289,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
-        required EpisodeOfCareStatus status,
+    required EpisodeOfCareStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     List<EpisodeOfCareStatusHistory>? statusHistory,
     List<CodeableConcept>? type,
@@ -331,12 +333,13 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
 @freezed
 class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistory._();
-  factory EpisodeOfCareStatusHistory({
+  const factory EpisodeOfCareStatusHistory({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-        required EpisodeOfCareHistoryStatus status,
+    @JsonKey(
+        required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
+    required EpisodeOfCareHistoryStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period period,
   }) = _EpisodeOfCareStatusHistory;
@@ -375,7 +378,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
 @freezed
 class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
   EpisodeOfCareCareTeam._();
-  factory EpisodeOfCareCareTeam({
+  const factory EpisodeOfCareCareTeam({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -418,10 +421,11 @@ class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
 @freezed
 class Communication with Resource, _$Communication {
   Communication._();
-  factory Communication({
+  const factory Communication({
     @Default(Dstu2ResourceType.Communication)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -439,7 +443,7 @@ class Communication with Resource, _$Communication {
     List<CommunicationPayload>? payload,
     List<CodeableConcept>? medium,
     @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
-        CommunicationStatus? status,
+    CommunicationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? encounter,
     FhirDateTime? sent,
@@ -482,7 +486,7 @@ class Communication with Resource, _$Communication {
 @freezed
 class CommunicationPayload with _$CommunicationPayload {
   CommunicationPayload._();
-  factory CommunicationPayload({
+  const factory CommunicationPayload({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -526,10 +530,11 @@ class CommunicationPayload with _$CommunicationPayload {
 @freezed
 class Flag with Resource, _$Flag {
   Flag._();
-  factory Flag({
+  const factory Flag({
     @Default(Dstu2ResourceType.Flag)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

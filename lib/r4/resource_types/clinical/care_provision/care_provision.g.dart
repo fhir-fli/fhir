@@ -11,6 +11,7 @@ _$_CarePlan _$$_CarePlanFromJson(Map<String, dynamic> json) => _$_CarePlan(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CarePlan) ??
           R4ResourceType.CarePlan,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -516,6 +517,7 @@ _$_CareTeam _$$_CareTeamFromJson(Map<String, dynamic> json) => _$_CareTeam(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CareTeam) ??
           R4ResourceType.CareTeam,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -684,6 +686,7 @@ _$_Goal _$$_GoalFromJson(Map<String, dynamic> json) => _$_Goal(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Goal) ??
           R4ResourceType.Goal,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -914,6 +917,7 @@ _$_NutritionOrder _$$_NutritionOrderFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.NutritionOrder) ??
           R4ResourceType.NutritionOrder,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1394,6 +1398,7 @@ _$_RequestGroup _$$_RequestGroupFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.RequestGroup) ??
           R4ResourceType.RequestGroup,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1823,6 +1828,7 @@ _$_RiskAssessment _$$_RiskAssessmentFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.RiskAssessment) ??
           R4ResourceType.RiskAssessment,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2045,6 +2051,7 @@ _$_ServiceRequest _$$_ServiceRequestFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ServiceRequest) ??
           R4ResourceType.ServiceRequest,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2308,6 +2315,7 @@ _$_VisionPrescription _$$_VisionPrescriptionFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.VisionPrescription) ??
           R4ResourceType.VisionPrescription,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

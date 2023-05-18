@@ -12,6 +12,7 @@ _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.PaymentNotice) ??
           Stu3ResourceType.PaymentNotice,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -245,6 +246,7 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.PaymentReconciliation) ??
           Stu3ResourceType.PaymentReconciliation,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

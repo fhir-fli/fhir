@@ -22,6 +22,8 @@ Coverage _$CoverageFromJson(Map<String, dynamic> json) {
 mixin _$Coverage {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -80,6 +82,8 @@ abstract class $CoverageCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -156,6 +160,7 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -194,6 +199,10 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -540,6 +549,8 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -631,6 +642,7 @@ class __$$_CoverageCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -669,6 +681,10 @@ class __$$_CoverageCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -804,9 +820,11 @@ class __$$_CoverageCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Coverage extends _Coverage {
-  _$_Coverage(
+  const _$_Coverage(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
           this.resourceType = Stu3ResourceType.Coverage,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -863,6 +881,9 @@ class _$_Coverage extends _Coverage {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -988,7 +1009,7 @@ class _$_Coverage extends _Coverage {
 
   @override
   String toString() {
-    return 'Coverage(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, policyHolder: $policyHolder, subscriber: $subscriber, subscriberId: $subscriberId, subscriberIdElement: $subscriberIdElement, beneficiary: $beneficiary, relationship: $relationship, period: $period, payor: $payor, grouping: $grouping, dependent: $dependent, dependentElement: $dependentElement, sequence: $sequence, sequenceElement: $sequenceElement, order: $order, orderElement: $orderElement, network: $network, networkElement: $networkElement, contract: $contract)';
+    return 'Coverage(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, policyHolder: $policyHolder, subscriber: $subscriber, subscriberId: $subscriberId, subscriberIdElement: $subscriberIdElement, beneficiary: $beneficiary, relationship: $relationship, period: $period, payor: $payor, grouping: $grouping, dependent: $dependent, dependentElement: $dependentElement, sequence: $sequence, sequenceElement: $sequenceElement, order: $order, orderElement: $orderElement, network: $network, networkElement: $networkElement, contract: $contract)';
   }
 
   @override
@@ -998,6 +1019,7 @@ class _$_Coverage extends _Coverage {
             other is _$_Coverage &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1059,6 +1081,7 @@ class _$_Coverage extends _Coverage {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -1108,9 +1131,11 @@ class _$_Coverage extends _Coverage {
 }
 
 abstract class _Coverage extends Coverage {
-  factory _Coverage(
+  const factory _Coverage(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -1153,13 +1178,16 @@ abstract class _Coverage extends Coverage {
       @JsonKey(name: '_network')
           final Element? networkElement,
       final List<Reference>? contract}) = _$_Coverage;
-  _Coverage._() : super._();
+  const _Coverage._() : super._();
 
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -1819,7 +1847,7 @@ class __$$_CoverageGroupingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CoverageGrouping extends _CoverageGrouping {
-  _$_CoverageGrouping(
+  const _$_CoverageGrouping(
       {this.group,
       @JsonKey(name: '_group') this.groupElement,
       this.groupDisplay,
@@ -2012,7 +2040,7 @@ class _$_CoverageGrouping extends _CoverageGrouping {
 }
 
 abstract class _CoverageGrouping extends CoverageGrouping {
-  factory _CoverageGrouping(
+  const factory _CoverageGrouping(
       {final String? group,
       @JsonKey(name: '_group')
           final Element? groupElement,
@@ -2050,7 +2078,7 @@ abstract class _CoverageGrouping extends CoverageGrouping {
       final String? subClassDisplay,
       @JsonKey(name: '_subClassDisplay')
           final Element? subClassDisplayElement}) = _$_CoverageGrouping;
-  _CoverageGrouping._() : super._();
+  const _CoverageGrouping._() : super._();
 
   factory _CoverageGrouping.fromJson(Map<String, dynamic> json) =
       _$_CoverageGrouping.fromJson;
@@ -2130,6 +2158,8 @@ EligibilityRequest _$EligibilityRequestFromJson(Map<String, dynamic> json) {
 mixin _$EligibilityRequest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -2185,6 +2215,8 @@ abstract class $EligibilityRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -2259,6 +2291,7 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2295,6 +2328,10 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2658,6 +2695,8 @@ abstract class _$$_EligibilityRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -2749,6 +2788,7 @@ class __$$_EligibilityRequestCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2785,6 +2825,10 @@ class __$$_EligibilityRequestCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2912,9 +2956,11 @@ class __$$_EligibilityRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EligibilityRequest extends _EligibilityRequest {
-  _$_EligibilityRequest(
+  const _$_EligibilityRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
           this.resourceType = Stu3ResourceType.EligibilityRequest,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -2965,6 +3011,9 @@ class _$_EligibilityRequest extends _EligibilityRequest {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -3069,7 +3118,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
 
   @override
   String toString() {
-    return 'EligibilityRequest(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, priority: $priority, patient: $patient, servicedDate: $servicedDate, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, created: $created, createdElement: $createdElement, enterer: $enterer, provider: $provider, organization: $organization, insurer: $insurer, facility: $facility, coverage: $coverage, businessArrangement: $businessArrangement, businessArrangementElement: $businessArrangementElement, benefitCategory: $benefitCategory, benefitSubCategory: $benefitSubCategory)';
+    return 'EligibilityRequest(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, priority: $priority, patient: $patient, servicedDate: $servicedDate, servicedDateElement: $servicedDateElement, servicedPeriod: $servicedPeriod, created: $created, createdElement: $createdElement, enterer: $enterer, provider: $provider, organization: $organization, insurer: $insurer, facility: $facility, coverage: $coverage, businessArrangement: $businessArrangement, businessArrangementElement: $businessArrangementElement, benefitCategory: $benefitCategory, benefitSubCategory: $benefitSubCategory)';
   }
 
   @override
@@ -3079,6 +3128,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
             other is _$_EligibilityRequest &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -3140,6 +3190,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -3188,9 +3239,11 @@ class _$_EligibilityRequest extends _EligibilityRequest {
 }
 
 abstract class _EligibilityRequest extends EligibilityRequest {
-  factory _EligibilityRequest(
+  const factory _EligibilityRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -3229,7 +3282,7 @@ abstract class _EligibilityRequest extends EligibilityRequest {
           final Element? businessArrangementElement,
       final CodeableConcept? benefitCategory,
       final CodeableConcept? benefitSubCategory}) = _$_EligibilityRequest;
-  _EligibilityRequest._() : super._();
+  const _EligibilityRequest._() : super._();
 
   factory _EligibilityRequest.fromJson(Map<String, dynamic> json) =
       _$_EligibilityRequest.fromJson;
@@ -3237,6 +3290,9 @@ abstract class _EligibilityRequest extends EligibilityRequest {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -3319,6 +3375,8 @@ EligibilityResponse _$EligibilityResponseFromJson(Map<String, dynamic> json) {
 mixin _$EligibilityResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -3373,6 +3431,8 @@ abstract class $EligibilityResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -3439,6 +3499,7 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -3472,6 +3533,10 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3763,6 +3828,8 @@ abstract class _$$_EligibilityResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -3841,6 +3908,7 @@ class __$$_EligibilityResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -3874,6 +3942,10 @@ class __$$_EligibilityResponseCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3989,9 +4061,11 @@ class __$$_EligibilityResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EligibilityResponse extends _EligibilityResponse {
-  _$_EligibilityResponse(
+  const _$_EligibilityResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
           this.resourceType = Stu3ResourceType.EligibilityResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -4041,6 +4115,9 @@ class _$_EligibilityResponse extends _EligibilityResponse {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -4154,7 +4231,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
 
   @override
   String toString() {
-    return 'EligibilityResponse(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, created: $created, createdElement: $createdElement, requestProvider: $requestProvider, requestOrganization: $requestOrganization, request: $request, outcome: $outcome, disposition: $disposition, dispositionElement: $dispositionElement, insurer: $insurer, inforce: $inforce, inforceElement: $inforceElement, insurance: $insurance, form: $form, error: $error)';
+    return 'EligibilityResponse(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, created: $created, createdElement: $createdElement, requestProvider: $requestProvider, requestOrganization: $requestOrganization, request: $request, outcome: $outcome, disposition: $disposition, dispositionElement: $dispositionElement, insurer: $insurer, inforce: $inforce, inforceElement: $inforceElement, insurance: $insurance, form: $form, error: $error)';
   }
 
   @override
@@ -4164,6 +4241,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
             other is _$_EligibilityResponse &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -4214,6 +4292,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -4259,9 +4338,11 @@ class _$_EligibilityResponse extends _EligibilityResponse {
 }
 
 abstract class _EligibilityResponse extends EligibilityResponse {
-  factory _EligibilityResponse(
+  const factory _EligibilityResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -4297,7 +4378,7 @@ abstract class _EligibilityResponse extends EligibilityResponse {
       final List<EligibilityResponseInsurance>? insurance,
       final CodeableConcept? form,
       final List<EligibilityResponseError>? error}) = _$_EligibilityResponse;
-  _EligibilityResponse._() : super._();
+  const _EligibilityResponse._() : super._();
 
   factory _EligibilityResponse.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponse.fromJson;
@@ -4305,6 +4386,9 @@ abstract class _EligibilityResponse extends EligibilityResponse {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -4524,7 +4608,7 @@ class __$$_EligibilityResponseInsuranceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
-  _$_EligibilityResponseInsurance(
+  const _$_EligibilityResponseInsurance(
       {this.coverage,
       this.contract,
       final List<EligibilityResponseBenefitBalance>? benefitBalance})
@@ -4588,12 +4672,12 @@ class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
 
 abstract class _EligibilityResponseInsurance
     extends EligibilityResponseInsurance {
-  factory _EligibilityResponseInsurance(
+  const factory _EligibilityResponseInsurance(
           {final Reference? coverage,
           final Reference? contract,
           final List<EligibilityResponseBenefitBalance>? benefitBalance}) =
       _$_EligibilityResponseInsurance;
-  _EligibilityResponseInsurance._() : super._();
+  const _EligibilityResponseInsurance._() : super._();
 
   factory _EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponseInsurance.fromJson;
@@ -4968,7 +5052,7 @@ class __$$_EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EligibilityResponseBenefitBalance
     extends _EligibilityResponseBenefitBalance {
-  _$_EligibilityResponseBenefitBalance(
+  const _$_EligibilityResponseBenefitBalance(
       {required this.category,
       this.subCategory,
       this.excluded,
@@ -5090,7 +5174,7 @@ class _$_EligibilityResponseBenefitBalance
 
 abstract class _EligibilityResponseBenefitBalance
     extends EligibilityResponseBenefitBalance {
-  factory _EligibilityResponseBenefitBalance(
+  const factory _EligibilityResponseBenefitBalance(
           {required final CodeableConcept category,
           final CodeableConcept? subCategory,
           final FhirBoolean? excluded,
@@ -5104,7 +5188,7 @@ abstract class _EligibilityResponseBenefitBalance
           final CodeableConcept? term,
           final List<EligibilityResponseFinancial>? financial}) =
       _$_EligibilityResponseBenefitBalance;
-  _EligibilityResponseBenefitBalance._() : super._();
+  const _EligibilityResponseBenefitBalance._() : super._();
 
   factory _EligibilityResponseBenefitBalance.fromJson(
           Map<String, dynamic> json) =
@@ -5431,7 +5515,7 @@ class __$$_EligibilityResponseFinancialCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
-  _$_EligibilityResponseFinancial(
+  const _$_EligibilityResponseFinancial(
       {required this.type,
       this.allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') this.allowedUnsignedIntElement,
@@ -5529,7 +5613,7 @@ class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
 
 abstract class _EligibilityResponseFinancial
     extends EligibilityResponseFinancial {
-  factory _EligibilityResponseFinancial(
+  const factory _EligibilityResponseFinancial(
       {required final CodeableConcept type,
       final FhirDecimal? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt')
@@ -5542,7 +5626,7 @@ abstract class _EligibilityResponseFinancial
       @JsonKey(name: '_usedUnsignedInt')
           final Element? usedUnsignedIntElement,
       final Money? usedMoney}) = _$_EligibilityResponseFinancial;
-  _EligibilityResponseFinancial._() : super._();
+  const _EligibilityResponseFinancial._() : super._();
 
   factory _EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponseFinancial.fromJson;
@@ -5674,7 +5758,7 @@ class __$$_EligibilityResponseErrorCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EligibilityResponseError extends _EligibilityResponseError {
-  _$_EligibilityResponseError({required this.code}) : super._();
+  const _$_EligibilityResponseError({required this.code}) : super._();
 
   factory _$_EligibilityResponseError.fromJson(Map<String, dynamic> json) =>
       _$$_EligibilityResponseErrorFromJson(json);
@@ -5715,9 +5799,9 @@ class _$_EligibilityResponseError extends _EligibilityResponseError {
 }
 
 abstract class _EligibilityResponseError extends EligibilityResponseError {
-  factory _EligibilityResponseError({required final CodeableConcept code}) =
-      _$_EligibilityResponseError;
-  _EligibilityResponseError._() : super._();
+  const factory _EligibilityResponseError(
+      {required final CodeableConcept code}) = _$_EligibilityResponseError;
+  const _EligibilityResponseError._() : super._();
 
   factory _EligibilityResponseError.fromJson(Map<String, dynamic> json) =
       _$_EligibilityResponseError.fromJson;
@@ -5738,6 +5822,8 @@ EnrollmentRequest _$EnrollmentRequestFromJson(Map<String, dynamic> json) {
 mixin _$EnrollmentRequest {
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -5781,6 +5867,8 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -5835,6 +5923,7 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5861,6 +5950,10 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6088,6 +6181,8 @@ abstract class _$$_EnrollmentRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -6151,6 +6246,7 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6177,6 +6273,10 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6264,9 +6364,11 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EnrollmentRequest extends _EnrollmentRequest {
-  _$_EnrollmentRequest(
+  const _$_EnrollmentRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
           this.resourceType = Stu3ResourceType.EnrollmentRequest,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -6305,6 +6407,9 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -6387,7 +6492,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 
   @override
   String toString() {
-    return 'EnrollmentRequest(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, created: $created, createdElement: $createdElement, insurer: $insurer, provider: $provider, organization: $organization, subject: $subject, coverage: $coverage)';
+    return 'EnrollmentRequest(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, created: $created, createdElement: $createdElement, insurer: $insurer, provider: $provider, organization: $organization, subject: $subject, coverage: $coverage)';
   }
 
   @override
@@ -6397,6 +6502,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
             other is _$_EnrollmentRequest &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -6437,6 +6543,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -6475,9 +6582,11 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 }
 
 abstract class _EnrollmentRequest extends EnrollmentRequest {
-  factory _EnrollmentRequest(
+  const factory _EnrollmentRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -6504,7 +6613,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       final Reference? organization,
       final Reference? subject,
       final Reference? coverage}) = _$_EnrollmentRequest;
-  _EnrollmentRequest._() : super._();
+  const _EnrollmentRequest._() : super._();
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentRequest.fromJson;
@@ -6512,6 +6621,9 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -6572,6 +6684,8 @@ EnrollmentResponse _$EnrollmentResponseFromJson(Map<String, dynamic> json) {
 mixin _$EnrollmentResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -6618,6 +6732,8 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -6676,6 +6792,7 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6704,6 +6821,10 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6951,6 +7072,8 @@ abstract class _$$_EnrollmentResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -7019,6 +7142,7 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -7047,6 +7171,10 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7142,9 +7270,11 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EnrollmentResponse extends _EnrollmentResponse {
-  _$_EnrollmentResponse(
+  const _$_EnrollmentResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
           this.resourceType = Stu3ResourceType.EnrollmentResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -7186,6 +7316,9 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -7273,7 +7406,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 
   @override
   String toString() {
-    return 'EnrollmentResponse(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, request: $request, outcome: $outcome, disposition: $disposition, dispositionElement: $dispositionElement, created: $created, createdElement: $createdElement, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization)';
+    return 'EnrollmentResponse(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, request: $request, outcome: $outcome, disposition: $disposition, dispositionElement: $dispositionElement, created: $created, createdElement: $createdElement, organization: $organization, requestProvider: $requestProvider, requestOrganization: $requestOrganization)';
   }
 
   @override
@@ -7283,6 +7416,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
             other is _$_EnrollmentResponse &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -7327,6 +7461,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -7367,9 +7502,11 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 }
 
 abstract class _EnrollmentResponse extends EnrollmentResponse {
-  factory _EnrollmentResponse(
+  const factory _EnrollmentResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -7399,7 +7536,7 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       final Reference? organization,
       final Reference? requestProvider,
       final Reference? requestOrganization}) = _$_EnrollmentResponse;
-  _EnrollmentResponse._() : super._();
+  const _EnrollmentResponse._() : super._();
 
   factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentResponse.fromJson;
@@ -7407,6 +7544,9 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;

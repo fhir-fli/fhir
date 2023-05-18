@@ -110,17 +110,17 @@ class AuditEvent with Resource, _$AuditEvent {
   /// [source] The system that is reporting the event.
   ///
   /// [entity] Specific instances of data or objects that have been accessed.
-  factory AuditEvent({
+  const factory AuditEvent({
     @Default(R4ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: R4ResourceType.AuditEvent)
 
-        /// [resourceType] This is a AuditEvent resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a AuditEvent resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -134,15 +134,13 @@ class AuditEvent with Resource, _$AuditEvent {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -164,8 +162,7 @@ class AuditEvent with Resource, _$AuditEvent {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -195,8 +192,7 @@ class AuditEvent with Resource, _$AuditEvent {
     FhirCode? action,
 
     /// [actionElement] Extensions for action
-    @JsonKey(name: '_action')
-        Element? actionElement,
+    @JsonKey(name: '_action') Element? actionElement,
 
     /// [period] The period during which the activity occurred.
     Period? period,
@@ -205,22 +201,19 @@ class AuditEvent with Resource, _$AuditEvent {
     FhirInstant? recorded,
 
     /// [recordedElement] Extensions for recorded
-    @JsonKey(name: '_recorded')
-        Element? recordedElement,
+    @JsonKey(name: '_recorded') Element? recordedElement,
 
     /// [outcome] Indicates whether the event succeeded or failed.
     FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
-    @JsonKey(name: '_outcome')
-        Element? outcomeElement,
+    @JsonKey(name: '_outcome') Element? outcomeElement,
 
     /// [outcomeDesc] A free text description of the outcome of the event.
     String? outcomeDesc,
 
     /// [outcomeDescElement] Extensions for outcomeDesc
-    @JsonKey(name: '_outcomeDesc')
-        Element? outcomeDescElement,
+    @JsonKey(name: '_outcomeDesc') Element? outcomeDescElement,
 
     /// [purposeOfEvent] The purposeOfUse (reason) that was used during the event
     ///  being recorded.
@@ -341,7 +334,7 @@ class AuditEventAgent with _$AuditEventAgent {
   ///
   /// [purposeOfUse] The reason (purpose of use), specific to this agent, that
   ///  was used during the event being recorded.
-  factory AuditEventAgent({
+  const factory AuditEventAgent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -502,7 +495,7 @@ class AuditEventNetwork with _$AuditEventNetwork {
   ///  the audit event.
   ///
   /// [typeElement] Extensions for type
-  factory AuditEventNetwork({
+  const factory AuditEventNetwork({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -619,7 +612,7 @@ class AuditEventSource with _$AuditEventSource {
   /// [observer] Identifier of the source where the event was detected.
   ///
   /// [type] Code specifying the type of source where event originated.
-  factory AuditEventSource({
+  const factory AuditEventSource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -753,7 +746,7 @@ class AuditEventEntity with _$AuditEventEntity {
   ///
   /// [detail] Tagged value pairs for conveying additional information about
   ///  the entity.
-  factory AuditEventEntity({
+  const factory AuditEventEntity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -897,7 +890,7 @@ class AuditEventDetail with _$AuditEventDetail {
   /// [valueBase64Binary] The  value of the extra detail.
   ///
   /// [valueBase64BinaryElement] Extensions for valueBase64Binary
-  factory AuditEventDetail({
+  const factory AuditEventDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1090,17 +1083,17 @@ class Consent with Resource, _$Consent {
   ///
   /// [provision] An exception to the base policy of this consent. An exception
   ///  can be an addition or removal of access permissions.
-  factory Consent({
+  const factory Consent({
     @Default(R4ResourceType.Consent)
     @JsonKey(unknownEnumValue: R4ResourceType.Consent)
 
-        /// [resourceType] This is a Consent resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Consent resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1114,15 +1107,13 @@ class Consent with Resource, _$Consent {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1144,8 +1135,7 @@ class Consent with Resource, _$Consent {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1169,8 +1159,7 @@ class Consent with Resource, _$Consent {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [scope] A selector of the type of consent being presented: ADR, Privacy,
     ///  Treatment, Research.  This list is now extensible.
@@ -1188,8 +1177,7 @@ class Consent with Resource, _$Consent {
     FhirDateTime? dateTime,
 
     /// [dateTimeElement] Extensions for dateTime
-    @JsonKey(name: '_dateTime')
-        Element? dateTimeElement,
+    @JsonKey(name: '_dateTime') Element? dateTimeElement,
 
     /// [performer] Either the Grantor, which is the entity responsible for
     /// granting the rights listed in a Consent Directive or the Grantee, which is
@@ -1306,7 +1294,7 @@ class ConsentPolicy with _$ConsentPolicy {
   ///  jurisdictionally, or in law.
   ///
   /// [uriElement] Extensions for uri
-  factory ConsentPolicy({
+  const factory ConsentPolicy({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1426,7 +1414,7 @@ class ConsentVerification with _$ConsentVerification {
   /// [verificationDate] Date verification was collected.
   ///
   /// [verificationDateElement] Extensions for verificationDate
-  factory ConsentVerification({
+  const factory ConsentVerification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1569,7 +1557,7 @@ class ConsentProvision with _$ConsentProvision {
   ///  referenced.
   ///
   /// [provision] Rules which provide exceptions to the base rule or subrules.
-  factory ConsentProvision({
+  const factory ConsentProvision({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1715,7 +1703,7 @@ class ConsentActor with _$ConsentActor {
   /// [reference] The resource that identifies the actor. To identify actors by
   /// type, use group to identify a set of actors by some property they share
   ///  (e.g. 'admitting officers').
-  factory ConsentActor({
+  const factory ConsentActor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1826,7 +1814,7 @@ class ConsentData with _$ConsentData {
   ///
   /// [reference] A reference to a specific resource that defines which
   ///  resources are covered by this consent.
-  factory ConsentData({
+  const factory ConsentData({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2003,17 +1991,17 @@ class Provenance with Resource, _$Provenance {
   /// [signature] A digital signature on the target Reference(s). The signer
   /// should match a Provenance.agent. The purpose of the signature is
   ///  indicated.
-  factory Provenance({
+  const factory Provenance({
     @Default(R4ResourceType.Provenance)
     @JsonKey(unknownEnumValue: R4ResourceType.Provenance)
 
-        /// [resourceType] This is a Provenance resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Provenance resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2027,15 +2015,13 @@ class Provenance with Resource, _$Provenance {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2057,8 +2043,7 @@ class Provenance with Resource, _$Provenance {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2087,15 +2072,13 @@ class Provenance with Resource, _$Provenance {
     FhirDateTime? occurredDateTime,
 
     /// [occurredDateTimeElement] Extensions for occurredDateTime
-    @JsonKey(name: '_occurredDateTime')
-        Element? occurredDateTimeElement,
+    @JsonKey(name: '_occurredDateTime') Element? occurredDateTimeElement,
 
     /// [recorded] The instant of time at which the activity was recorded.
     FhirInstant? recorded,
 
     /// [recordedElement] Extensions for recorded
-    @JsonKey(name: '_recorded')
-        Element? recordedElement,
+    @JsonKey(name: '_recorded') Element? recordedElement,
 
     /// [policy] Policy or plan the activity was defined by. Typically, a single
     /// activity may have multiple applicable policy documents, such as patient
@@ -2103,8 +2086,7 @@ class Provenance with Resource, _$Provenance {
     List<FhirUri>? policy,
 
     /// [policyElement] Extensions for policy
-    @JsonKey(name: '_policy')
-        List<Element?>? policyElement,
+    @JsonKey(name: '_policy') List<Element?>? policyElement,
 
     /// [location] Where the activity occurred, if relevant.
     Reference? location,
@@ -2209,7 +2191,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
   ///
   /// [onBehalfOf] The individual, device, or organization for whom the change
   ///  was made.
-  factory ProvenanceAgent({
+  const factory ProvenanceAgent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2336,7 +2318,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
   /// responsibility for that entity, possibly along with other agents. This
   /// description can be understood as shorthand for saying that the agent was
   ///  responsible for the activity which generated the entity.
-  factory ProvenanceEntity({
+  const factory ProvenanceEntity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,

@@ -159,15 +159,16 @@ class Communication with Resource, _$Communication {
   /// [note] Additional notes or commentary about the communication by the
   ///  sender, receiver or other interested parties.
   ///
-  factory Communication({
+  const factory Communication({
     /// [resourceType] This is a Communication resource
     @Default(R5ResourceType.Communication)
     @JsonKey(unknownEnumValue: R5ResourceType.Communication)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -418,10 +419,10 @@ class CommunicationPayload with _$CommunicationPayload {
   /// [contentCodeableConcept] A communicated content (or for multi-part
   ///  communications, one portion of the communication).
   ///
-  factory CommunicationPayload({
+  const factory CommunicationPayload({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -648,15 +649,16 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   /// [note] Comments made about the request by the requester, sender,
   ///  recipient, subject or other participants.
   ///
-  factory CommunicationRequest({
+  const factory CommunicationRequest({
     /// [resourceType] This is a CommunicationRequest resource
     @Default(R5ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.CommunicationRequest)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -921,10 +923,10 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
   /// [contentCodeableConcept] The communicated content (or for multi-part
   ///  communications, one portion of the communication).
   ///
-  factory CommunicationRequestPayload({
+  const factory CommunicationRequestPayload({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1080,15 +1082,16 @@ class DeviceAssociation with Resource, _$DeviceAssociation {
   /// [operation] The details about the device when it is in use to describe
   ///  its operation.
   ///
-  factory DeviceAssociation({
+  const factory DeviceAssociation({
     /// [resourceType] This is a DeviceAssociation resource
     @Default(R5ResourceType.DeviceAssociation)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceAssociation)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1255,10 +1258,10 @@ class DeviceAssociationOperation with _$DeviceAssociationOperation {
   ///
   /// [period] Begin and end dates and times for the device's operation.
   ///
-  factory DeviceAssociationOperation({
+  const factory DeviceAssociationOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1456,15 +1459,16 @@ class DeviceDispense with Resource, _$DeviceDispense {
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the dispense was verified.
   ///
-  factory DeviceDispense({
+  const factory DeviceDispense({
     /// [resourceType] This is a DeviceDispense resource
     @Default(R5ResourceType.DeviceDispense)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceDispense)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1693,10 +1697,10 @@ class DeviceDispensePerformer with _$DeviceDispensePerformer {
   /// [actor] The device, practitioner, etc. who performed the action.  It
   ///  should be assumed that the actor is the dispenser of the device.
   ///
-  factory DeviceDispensePerformer({
+  const factory DeviceDispensePerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1946,15 +1950,16 @@ class DeviceRequest with Resource, _$DeviceRequest {
   ///
   /// [relevantHistory] Key events in the history of the request.
   ///
-  factory DeviceRequest({
+  const factory DeviceRequest({
     /// [resourceType] This is a DeviceRequest resource
     @Default(R5ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceRequest)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2257,10 +2262,10 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
   ///
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
-  factory DeviceRequestParameter({
+  const factory DeviceRequestParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2462,15 +2467,16 @@ class DeviceUsage with Resource, _$DeviceUsage {
   ///  may include for example a comment, an instruction, or a note associated
   ///  with the statement.
   ///
-  factory DeviceUsage({
+  const factory DeviceUsage({
     /// [resourceType] This is a DeviceUsage resource
     @Default(R5ResourceType.DeviceUsage)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceUsage)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2690,10 +2696,10 @@ class DeviceUsageAdherence with _$DeviceUsageAdherence {
   ///
   /// [reason] Reason for adherence type.
   ///
-  factory DeviceUsageAdherence({
+  const factory DeviceUsageAdherence({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2904,15 +2910,16 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   ///  required in order to proceed with the evaluation. A subsequent request
   ///  to the service should include this data.
   ///
-  factory GuidanceResponse({
+  const factory GuidanceResponse({
     /// [resourceType] This is a GuidanceResponse resource
     @Default(R5ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.GuidanceResponse)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3206,15 +3213,16 @@ class InventoryItem with Resource, _$InventoryItem {
   ///
   /// [productReference] Link to a product resource used in clinical workflows.
   ///
-  factory InventoryItem({
+  const factory InventoryItem({
     /// [resourceType] This is a InventoryItem resource
     @Default(R5ResourceType.InventoryItem)
     @JsonKey(unknownEnumValue: R5ResourceType.InventoryItem)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3407,10 +3415,10 @@ class InventoryItemName with _$InventoryItemName {
   ///
   /// [nameElement] ("_name") Extensions for name
   ///
-  factory InventoryItemName({
+  const factory InventoryItemName({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3525,10 +3533,10 @@ class InventoryItemResponsibleOrganization
   /// [organization] An organization that has an association with the item,
   ///  e.g. manufacturer, distributor, responsible, etc.
   ///
-  factory InventoryItemResponsibleOrganization({
+  const factory InventoryItemResponsibleOrganization({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3641,10 +3649,10 @@ class InventoryItemDescription with _$InventoryItemDescription {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory InventoryItemDescription({
+  const factory InventoryItemDescription({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3764,10 +3772,10 @@ class InventoryItemAssociation with _$InventoryItemAssociation {
   ///  means the inverse - that the contained product contains 20 units of the
   ///  present product.
   ///
-  factory InventoryItemAssociation({
+  const factory InventoryItemAssociation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3916,10 +3924,10 @@ class InventoryItemCharacteristic with _$InventoryItemCharacteristic {
   ///
   /// [valueCodeableConcept] The value of the attribute.
   ///
-  factory InventoryItemCharacteristic({
+  const factory InventoryItemCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4088,10 +4096,10 @@ class InventoryItemInstance with _$InventoryItemInstance {
   ///
   /// [location] The location that the item is associated with.
   ///
-  factory InventoryItemInstance({
+  const factory InventoryItemInstance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4265,15 +4273,16 @@ class InventoryReport with Resource, _$InventoryReport {
   ///
   /// [note] A note associated with the InventoryReport.
   ///
-  factory InventoryReport({
+  const factory InventoryReport({
     /// [resourceType] This is a InventoryReport resource
     @Default(R5ResourceType.InventoryReport)
     @JsonKey(unknownEnumValue: R5ResourceType.InventoryReport)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -4458,10 +4467,10 @@ class InventoryReportInventoryListing with _$InventoryReportInventoryListing {
   ///
   /// [item] The item or items in this listing.
   ///
-  factory InventoryReportInventoryListing({
+  const factory InventoryReportInventoryListing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4577,10 +4586,10 @@ class InventoryReportItem with _$InventoryReportItem {
   ///
   /// [item] The code or reference to the item type.
   ///
-  factory InventoryReportItem({
+  const factory InventoryReportItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4750,15 +4759,16 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   /// [receiver] Identifies the individual or organization that received the
   ///  delivery.
   ///
-  factory SupplyDelivery({
+  const factory SupplyDelivery({
     /// [resourceType] This is a SupplyDelivery resource
     @Default(R5ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: R5ResourceType.SupplyDelivery)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -4953,10 +4963,10 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   ///  resource representing the details of the item or a code that identifies
   ///  the item from a known list.
   ///
-  factory SupplyDeliverySuppliedItem({
+  const factory SupplyDeliverySuppliedItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5151,15 +5161,16 @@ class SupplyRequest with Resource, _$SupplyRequest {
   ///
   /// [deliverTo] Where the supply is destined to go.
   ///
-  factory SupplyRequest({
+  const factory SupplyRequest({
     /// [resourceType] This is a SupplyRequest resource
     @Default(R5ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.SupplyRequest)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -5380,10 +5391,10 @@ class SupplyRequestParameter with _$SupplyRequestParameter {
   ///
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
-  factory SupplyRequestParameter({
+  const factory SupplyRequestParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.

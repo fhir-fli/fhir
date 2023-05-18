@@ -11,6 +11,7 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Device) ??
           Dstu2ResourceType.Device,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -251,6 +252,7 @@ _$_DeviceComponent _$$_DeviceComponentFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceComponent) ??
           Dstu2ResourceType.DeviceComponent,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       idElement: json['_id'] == null
           ? null
@@ -419,6 +421,7 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceMetric) ??
           Dstu2ResourceType.DeviceMetric,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

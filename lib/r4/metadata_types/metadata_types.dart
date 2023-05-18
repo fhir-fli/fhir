@@ -39,7 +39,7 @@ class ContactDetail with _$ContactDetail {
   ///
   /// [telecom] The contact details for the individual (if a name was provided)
   ///  or the organization.
-  factory ContactDetail({
+  const factory ContactDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -124,7 +124,7 @@ class Contributor with _$Contributor {
   ///
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the contributor.
-  factory Contributor({
+  const factory Contributor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -248,7 +248,7 @@ class DataRequirement with _$DataRequirement {
   /// [limitElement] Extensions for limit
   ///
   /// [sort] Specifies the order of the results to be returned.
-  factory DataRequirement({
+  const factory DataRequirement({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -410,7 +410,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// specified by the path has a value that is one of the specified codes. If
   /// codes are specified in addition to a value set, the filter returns items
   ///  matching a code in the value set or one of the specified codes.
-  factory DataRequirementCodeFilter({
+  const factory DataRequirementCodeFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -577,7 +577,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// is specified, the filter will return only those data items that are equal
   /// to the specified dateTime. If a Duration is specified, the filter will
   ///  return only those data items that fall within Duration before now.
-  factory DataRequirementDateFilter({
+  const factory DataRequirementDateFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -730,11 +730,10 @@ class DataRequirementSort with _$DataRequirementSort {
   /// [direction] The direction of the sort, ascending or descending.
   ///
   /// [directionElement] Extensions for direction
-  factory DataRequirementSort({
+  const factory DataRequirementSort({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -742,8 +741,7 @@ class DataRequirementSort with _$DataRequirementSort {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -768,16 +766,14 @@ class DataRequirementSort with _$DataRequirementSort {
     String? path,
 
     /// [pathElement] Extensions for path
-    @JsonKey(name: '_path')
-        Element? pathElement,
+    @JsonKey(name: '_path') Element? pathElement,
     @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
 
-        /// [direction] The direction of the sort, ascending or descending.
-        DataRequirementSortDirection? direction,
+    /// [direction] The direction of the sort, ascending or descending.
+    DataRequirementSortDirection? direction,
 
     /// [directionElement] Extensions for direction
-    @JsonKey(name: '_direction')
-        Element? directionElement,
+    @JsonKey(name: '_direction') Element? directionElement,
   }) = _DataRequirementSort;
 
   /// Produces a Yaml formatted String version of the object
@@ -862,7 +858,7 @@ class ParameterDefinition with _$ParameterDefinition {
   ///
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
-  factory ParameterDefinition({
+  const factory ParameterDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -999,11 +995,10 @@ class RelatedArtifact with _$RelatedArtifact {
   ///
   /// [resource] The related resource, such as a library, value set, profile,
   ///  or other knowledge resource.
-  factory RelatedArtifact({
+  const factory RelatedArtifact({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1011,48 +1006,42 @@ class RelatedArtifact with _$RelatedArtifact {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
 
-        /// [type] The type of relationship to the related artifact.
-        RelatedArtifactType? type,
+    /// [type] The type of relationship to the related artifact.
+    RelatedArtifactType? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type')
-        Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [label] A short label that can be used to reference the citation from
     ///  elsewhere in the containing artifact, such as a footnote index.
     String? label,
 
     /// [labelElement] Extensions for label
-    @JsonKey(name: '_label')
-        Element? labelElement,
+    @JsonKey(name: '_label') Element? labelElement,
 
     /// [display] A brief description of the document or knowledge resource being
     ///  referenced, suitable for display to a consumer.
     String? display,
 
     /// [displayElement] Extensions for display
-    @JsonKey(name: '_display')
-        Element? displayElement,
+    @JsonKey(name: '_display') Element? displayElement,
 
     /// [citation] A bibliographic citation for the related artifact. This text
     ///  SHOULD be formatted according to an accepted citation format.
     FhirMarkdown? citation,
 
     /// [citationElement] Extensions for citation
-    @JsonKey(name: '_citation')
-        Element? citationElement,
+    @JsonKey(name: '_citation') Element? citationElement,
 
     /// [url] A url for the artifact that can be followed to access the actual
     ///  content.
     FhirUrl? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [document] The document being referenced, represented as an attachment.
     ///  This is exclusive with the resource element.
@@ -1144,11 +1133,10 @@ class TriggerDefinition with _$TriggerDefinition {
   /// [condition] A boolean-valued expression that is evaluated in the context
   /// of the container of the trigger definition and returns whether or not the
   ///  trigger fires.
-  factory TriggerDefinition({
+  const factory TriggerDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1156,16 +1144,14 @@ class TriggerDefinition with _$TriggerDefinition {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
 
-        /// [type] The type of triggering event.
-        TriggerDefinitionType? type,
+    /// [type] The type of triggering event.
+    TriggerDefinitionType? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type')
-        Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [name] A formal name for the event. This may be an absolute URI that
     /// identifies the event formally (e.g. from a trigger registry), or a simple
@@ -1173,8 +1159,7 @@ class TriggerDefinition with _$TriggerDefinition {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [timingTiming] The timing of the event (if this is a periodic trigger).
     Timing? timingTiming,
@@ -1187,15 +1172,13 @@ class TriggerDefinition with _$TriggerDefinition {
     FhirDate? timingDate,
 
     /// [timingDateElement] Extensions for timingDate
-    @JsonKey(name: '_timingDate')
-        Element? timingDateElement,
+    @JsonKey(name: '_timingDate') Element? timingDateElement,
 
     /// [timingDateTime] The timing of the event (if this is a periodic trigger).
     FhirDateTime? timingDateTime,
 
     /// [timingDateTimeElement] Extensions for timingDateTime
-    @JsonKey(name: '_timingDateTime')
-        Element? timingDateTimeElement,
+    @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
 
     /// [data] The triggering data of the event (if this is a data trigger). If
     /// more than one data is requirement is specified, then all the data
@@ -1274,7 +1257,7 @@ class UsageContext with _$UsageContext {
   ///
   /// [valueReference] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
-  factory UsageContext({
+  const factory UsageContext({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1382,11 +1365,10 @@ class FhirExpression with _$FhirExpression {
   /// [reference] A URI that defines where the expression is found.
   ///
   /// [referenceElement] Extensions for reference
-  factory FhirExpression({
+  const factory FhirExpression({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1394,47 +1376,41 @@ class FhirExpression with _$FhirExpression {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [description] A brief, natural language description of the condition that
     ///  effectively communicates the intended semantics.
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [name] A short name assigned to the expression to allow for multiple
     ///  reuse of the expression in the context where it is defined.
     FhirId? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: FhirExpressionLanguage.unknown)
 
-        /// [language] The media type of the language for the expression.
-        FhirExpressionLanguage? language,
+    /// [language] The media type of the language for the expression.
+    FhirExpressionLanguage? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [expression] An expression in the specified language that returns a
     ///  value.
     String? expression,
 
     /// [expressionElement] Extensions for expression
-    @JsonKey(name: '_expression')
-        Element? expressionElement,
+    @JsonKey(name: '_expression') Element? expressionElement,
 
     /// [reference] A URI that defines where the expression is found.
     FhirUri? reference,
 
     /// [referenceElement] Extensions for reference
-    @JsonKey(name: '_reference')
-        Element? referenceElement,
+    @JsonKey(name: '_reference') Element? referenceElement,
   }) = _FhirExpression;
 
   /// Produces a Yaml formatted String version of the object

@@ -108,7 +108,7 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     case 'GraphDefinition':
       return GraphDefinition.fromJson(json);
     case 'Group':
-      return Group.fromJson(json);
+      return FhirGroup.fromJson(json);
     case 'GuidanceResponse':
       return GuidanceResponse.fromJson(json);
     case 'HealthcareService':
@@ -239,7 +239,9 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return ValueSet.fromJson(json);
     case 'VisionPrescription':
       return VisionPrescription.fromJson(json);
+    default:
+      throw UnsupportedError(
+          "You have passed Resource.fromJson a type doesn't exist or is null. "
+          'In this case, the resourceType is $resourceType.');
   }
-
-  return _$ResourceFromJson(json);
 }

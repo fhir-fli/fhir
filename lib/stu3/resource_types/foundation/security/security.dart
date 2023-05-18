@@ -17,10 +17,11 @@ part 'security.g.dart';
 @freezed
 class AuditEvent with Resource, _$AuditEvent {
   AuditEvent._();
-  factory AuditEvent({
+  const factory AuditEvent({
     @Default(Stu3ResourceType.AuditEvent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -78,7 +79,7 @@ class AuditEvent with Resource, _$AuditEvent {
 @freezed
 class AuditEventAgent with _$AuditEventAgent {
   AuditEventAgent._();
-  factory AuditEventAgent({
+  const factory AuditEventAgent({
     List<CodeableConcept>? role,
     Reference? reference,
     Identifier? userId,
@@ -130,7 +131,7 @@ class AuditEventAgent with _$AuditEventAgent {
 @freezed
 class AuditEventNetwork with _$AuditEventNetwork {
   AuditEventNetwork._();
-  factory AuditEventNetwork({
+  const factory AuditEventNetwork({
     String? address,
     @JsonKey(name: '_address') Element? addressElement,
     AuditEventNetworkType? type,
@@ -171,7 +172,7 @@ class AuditEventNetwork with _$AuditEventNetwork {
 @freezed
 class AuditEventSource with _$AuditEventSource {
   AuditEventSource._();
-  factory AuditEventSource({
+  const factory AuditEventSource({
     String? site,
     @JsonKey(name: '_site') Element? siteElement,
     required Identifier identifier,
@@ -212,7 +213,7 @@ class AuditEventSource with _$AuditEventSource {
 @freezed
 class AuditEventEntity with _$AuditEventEntity {
   AuditEventEntity._();
-  factory AuditEventEntity({
+  const factory AuditEventEntity({
     Identifier? identifier,
     Reference? reference,
     Coding? type,
@@ -262,7 +263,7 @@ class AuditEventEntity with _$AuditEventEntity {
 @freezed
 class AuditEventDetail with _$AuditEventDetail {
   AuditEventDetail._();
-  factory AuditEventDetail({
+  const factory AuditEventDetail({
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? value,
@@ -303,10 +304,11 @@ class AuditEventDetail with _$AuditEventDetail {
 @freezed
 class Consent with Resource, _$Consent {
   Consent._();
-  factory Consent({
+  const factory Consent({
     @Default(Stu3ResourceType.Consent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -373,7 +375,7 @@ class Consent with Resource, _$Consent {
 @freezed
 class ConsentActor with _$ConsentActor {
   ConsentActor._();
-  factory ConsentActor({
+  const factory ConsentActor({
     required CodeableConcept role,
     required Reference reference,
   }) = _ConsentActor;
@@ -412,7 +414,7 @@ class ConsentActor with _$ConsentActor {
 @freezed
 class ConsentPolicy with _$ConsentPolicy {
   ConsentPolicy._();
-  factory ConsentPolicy({
+  const factory ConsentPolicy({
     String? authority,
     @JsonKey(name: '_authority') Element? authorityElement,
     String? uri,
@@ -453,7 +455,7 @@ class ConsentPolicy with _$ConsentPolicy {
 @freezed
 class ConsentData with _$ConsentData {
   ConsentData._();
-  factory ConsentData({
+  const factory ConsentData({
     ConsentDataMeaning? meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
     required Reference reference,
@@ -493,7 +495,7 @@ class ConsentData with _$ConsentData {
 @freezed
 class ConsentExcept with _$ConsentExcept {
   ConsentExcept._();
-  factory ConsentExcept({
+  const factory ConsentExcept({
     ConsentExceptType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Period? period,
@@ -541,7 +543,7 @@ class ConsentExcept with _$ConsentExcept {
 @freezed
 class ConsentActor1 with _$ConsentActor1 {
   ConsentActor1._();
-  factory ConsentActor1({
+  const factory ConsentActor1({
     required CodeableConcept role,
     required Reference reference,
   }) = _ConsentActor1;
@@ -580,7 +582,7 @@ class ConsentActor1 with _$ConsentActor1 {
 @freezed
 class ConsentData1 with _$ConsentData1 {
   ConsentData1._();
-  factory ConsentData1({
+  const factory ConsentData1({
     ConsentData1Meaning? meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
     required Reference reference,
@@ -620,10 +622,11 @@ class ConsentData1 with _$ConsentData1 {
 @freezed
 class Provenance with Resource, _$Provenance {
   Provenance._();
-  factory Provenance({
+  const factory Provenance({
     @Default(Stu3ResourceType.Provenance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -679,7 +682,7 @@ class Provenance with Resource, _$Provenance {
 @freezed
 class ProvenanceAgent with _$ProvenanceAgent {
   ProvenanceAgent._();
-  factory ProvenanceAgent({
+  const factory ProvenanceAgent({
     List<CodeableConcept>? role,
     String? whoUri,
     @JsonKey(name: '_whoUri') Element? whoUriElement,
@@ -724,7 +727,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
 @freezed
 class ProvenanceEntity with _$ProvenanceEntity {
   ProvenanceEntity._();
-  factory ProvenanceEntity({
+  const factory ProvenanceEntity({
     ProvenanceEntityRole? role,
     @JsonKey(name: '_role') Element? roleElement,
     String? whatUri,

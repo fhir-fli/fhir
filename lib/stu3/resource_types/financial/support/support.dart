@@ -17,10 +17,11 @@ part 'support.g.dart';
 @freezed
 class Coverage with Resource, _$Coverage {
   Coverage._();
-  factory Coverage({
+  const factory Coverage({
     @Default(Stu3ResourceType.Coverage)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -86,7 +87,7 @@ class Coverage with Resource, _$Coverage {
 @freezed
 class CoverageGrouping with _$CoverageGrouping {
   CoverageGrouping._();
-  factory CoverageGrouping({
+  const factory CoverageGrouping({
     String? group,
     @JsonKey(name: '_group') Element? groupElement,
     String? groupDisplay,
@@ -147,10 +148,11 @@ class CoverageGrouping with _$CoverageGrouping {
 @freezed
 class EligibilityRequest with Resource, _$EligibilityRequest {
   EligibilityRequest._();
-  factory EligibilityRequest({
+  const factory EligibilityRequest({
     @Default(Stu3ResourceType.EligibilityRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -214,10 +216,11 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
 @freezed
 class EligibilityResponse with Resource, _$EligibilityResponse {
   EligibilityResponse._();
-  factory EligibilityResponse({
+  const factory EligibilityResponse({
     @Default(Stu3ResourceType.EligibilityResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -278,7 +281,7 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
 @freezed
 class EligibilityResponseInsurance with _$EligibilityResponseInsurance {
   EligibilityResponseInsurance._();
-  factory EligibilityResponseInsurance({
+  const factory EligibilityResponseInsurance({
     Reference? coverage,
     Reference? contract,
     List<EligibilityResponseBenefitBalance>? benefitBalance,
@@ -319,7 +322,7 @@ class EligibilityResponseInsurance with _$EligibilityResponseInsurance {
 class EligibilityResponseBenefitBalance
     with _$EligibilityResponseBenefitBalance {
   EligibilityResponseBenefitBalance._();
-  factory EligibilityResponseBenefitBalance({
+  const factory EligibilityResponseBenefitBalance({
     required CodeableConcept category,
     CodeableConcept? subCategory,
     FhirBoolean? excluded,
@@ -357,7 +360,7 @@ class EligibilityResponseBenefitBalance
 @freezed
 class EligibilityResponseFinancial with _$EligibilityResponseFinancial {
   EligibilityResponseFinancial._();
-  factory EligibilityResponseFinancial({
+  const factory EligibilityResponseFinancial({
     required CodeableConcept type,
     FhirDecimal? allowedUnsignedInt,
     @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
@@ -403,7 +406,7 @@ class EligibilityResponseFinancial with _$EligibilityResponseFinancial {
 @freezed
 class EligibilityResponseError with _$EligibilityResponseError {
   EligibilityResponseError._();
-  factory EligibilityResponseError({
+  const factory EligibilityResponseError({
     required CodeableConcept code,
   }) = _EligibilityResponseError;
 
@@ -441,10 +444,11 @@ class EligibilityResponseError with _$EligibilityResponseError {
 @freezed
 class EnrollmentRequest with Resource, _$EnrollmentRequest {
   EnrollmentRequest._();
-  factory EnrollmentRequest({
+  const factory EnrollmentRequest({
     @Default(Stu3ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -498,10 +502,11 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
 @freezed
 class EnrollmentResponse with Resource, _$EnrollmentResponse {
   EnrollmentResponse._();
-  factory EnrollmentResponse({
+  const factory EnrollmentResponse({
     @Default(Stu3ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

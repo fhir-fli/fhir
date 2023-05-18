@@ -17,10 +17,11 @@ part 'support.g.dart';
 @freezed
 class Coverage with Resource, _$Coverage {
   Coverage._();
-  factory Coverage({
+  const factory Coverage({
     @Default(Dstu2ResourceType.Coverage)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -81,10 +82,11 @@ class Coverage with Resource, _$Coverage {
 @freezed
 class EligibilityRequest with Resource, _$EligibilityRequest {
   EligibilityRequest._();
-  factory EligibilityRequest({
+  const factory EligibilityRequest({
     @Default(Dstu2ResourceType.EligibilityRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -136,10 +138,11 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
 @freezed
 class EligibilityResponse with Resource, _$EligibilityResponse {
   EligibilityResponse._();
-  factory EligibilityResponse({
+  const factory EligibilityResponse({
     @Default(Dstu2ResourceType.EligibilityResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -153,7 +156,7 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
     List<Identifier>? identifier,
     Reference? request,
     @JsonKey(unknownEnumValue: EligibilityResponseOutcome.unknown)
-        EligibilityResponseOutcome? outcome,
+    EligibilityResponseOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,
@@ -197,10 +200,11 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
 @freezed
 class EnrollmentRequest with Resource, _$EnrollmentRequest {
   EnrollmentRequest._();
-  factory EnrollmentRequest({
+  const factory EnrollmentRequest({
     @Default(Dstu2ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -255,10 +259,11 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
 @freezed
 class EnrollmentResponse with Resource, _$EnrollmentResponse {
   EnrollmentResponse._();
-  factory EnrollmentResponse({
+  const factory EnrollmentResponse({
     @Default(Dstu2ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -272,7 +277,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     List<Identifier>? identifier,
     Reference? request,
     @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-        EnrollmentResponseOutcome? outcome,
+    EnrollmentResponseOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,

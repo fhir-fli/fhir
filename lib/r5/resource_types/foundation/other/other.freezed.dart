@@ -23,6 +23,8 @@ mixin _$Basic {
   /// [resourceType] This is a Basic resource
   @JsonKey(unknownEnumValue: R5ResourceType.Basic)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -130,6 +132,8 @@ abstract class $BasicCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Basic)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -176,6 +180,7 @@ class _$BasicCopyWithImpl<$Res, $Val extends Basic>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -198,6 +203,10 @@ class _$BasicCopyWithImpl<$Res, $Val extends Basic>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -367,6 +376,8 @@ abstract class _$$_BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Basic)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -417,6 +428,7 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res, _$_Basic>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -439,6 +451,10 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res, _$_Basic>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -510,9 +526,11 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res, _$_Basic>
 /// @nodoc
 @JsonSerializable()
 class _$_Basic extends _Basic {
-  _$_Basic(
+  const _$_Basic(
       {@JsonKey(unknownEnumValue: R5ResourceType.Basic)
           this.resourceType = R5ResourceType.Basic,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -547,6 +565,9 @@ class _$_Basic extends _Basic {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Basic)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -718,7 +739,7 @@ class _$_Basic extends _Basic {
 
   @override
   String toString() {
-    return 'Basic(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, subject: $subject, created: $created, createdElement: $createdElement, author: $author)';
+    return 'Basic(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, subject: $subject, created: $created, createdElement: $createdElement, author: $author)';
   }
 
   @override
@@ -728,6 +749,7 @@ class _$_Basic extends _Basic {
             other is _$_Basic &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -760,6 +782,7 @@ class _$_Basic extends _Basic {
   int get hashCode => Object.hash(
       runtimeType,
       resourceType,
+      dbId,
       fhirId,
       meta,
       implicitRules,
@@ -792,9 +815,11 @@ class _$_Basic extends _Basic {
 }
 
 abstract class _Basic extends Basic {
-  factory _Basic(
+  const factory _Basic(
       {@JsonKey(unknownEnumValue: R5ResourceType.Basic)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -816,7 +841,7 @@ abstract class _Basic extends Basic {
       @JsonKey(name: '_created')
           final Element? createdElement,
       final Reference? author}) = _$_Basic;
-  _Basic._() : super._();
+  const _Basic._() : super._();
 
   factory _Basic.fromJson(Map<String, dynamic> json) = _$_Basic.fromJson;
 
@@ -825,6 +850,9 @@ abstract class _Basic extends Basic {
   /// [resourceType] This is a Basic resource
   @JsonKey(unknownEnumValue: R5ResourceType.Basic)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -948,6 +976,8 @@ mixin _$Binary {
   /// [resourceType] This is a Binary resource
   @JsonKey(unknownEnumValue: R5ResourceType.Binary)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -1018,6 +1048,8 @@ abstract class $BinaryCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Binary)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1057,6 +1089,7 @@ class _$BinaryCopyWithImpl<$Res, $Val extends Binary>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1074,6 +1107,10 @@ class _$BinaryCopyWithImpl<$Res, $Val extends Binary>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1203,6 +1240,8 @@ abstract class _$$_BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Binary)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1245,6 +1284,7 @@ class __$$_BinaryCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1262,6 +1302,10 @@ class __$$_BinaryCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1313,9 +1357,11 @@ class __$$_BinaryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Binary extends _Binary {
-  _$_Binary(
+  const _$_Binary(
       {@JsonKey(unknownEnumValue: R5ResourceType.Binary)
           this.resourceType = R5ResourceType.Binary,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -1341,6 +1387,9 @@ class _$_Binary extends _Binary {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Binary)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -1411,7 +1460,7 @@ class _$_Binary extends _Binary {
 
   @override
   String toString() {
-    return 'Binary(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, contentType: $contentType, contentTypeElement: $contentTypeElement, securityContext: $securityContext, data: $data, dataElement: $dataElement)';
+    return 'Binary(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, contentType: $contentType, contentTypeElement: $contentTypeElement, securityContext: $securityContext, data: $data, dataElement: $dataElement)';
   }
 
   @override
@@ -1421,6 +1470,7 @@ class _$_Binary extends _Binary {
             other is _$_Binary &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1447,6 +1497,7 @@ class _$_Binary extends _Binary {
   int get hashCode => Object.hash(
       runtimeType,
       resourceType,
+      dbId,
       fhirId,
       meta,
       implicitRules,
@@ -1474,9 +1525,11 @@ class _$_Binary extends _Binary {
 }
 
 abstract class _Binary extends Binary {
-  factory _Binary(
+  const factory _Binary(
       {@JsonKey(unknownEnumValue: R5ResourceType.Binary)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -1493,7 +1546,7 @@ abstract class _Binary extends Binary {
       final FhirBase64Binary? data,
       @JsonKey(name: '_data')
           final Element? dataElement}) = _$_Binary;
-  _Binary._() : super._();
+  const _Binary._() : super._();
 
   factory _Binary.fromJson(Map<String, dynamic> json) = _$_Binary.fromJson;
 
@@ -1502,6 +1555,9 @@ abstract class _Binary extends Binary {
   /// [resourceType] This is a Binary resource
   @JsonKey(unknownEnumValue: R5ResourceType.Binary)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -1584,6 +1640,8 @@ mixin _$Bundle {
   /// [resourceType] This is a Bundle resource
   @JsonKey(unknownEnumValue: R5ResourceType.Bundle)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -1671,6 +1729,8 @@ abstract class $BundleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Bundle)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1719,6 +1779,7 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1742,6 +1803,10 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1919,6 +1984,8 @@ abstract class _$$_BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Bundle)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1972,6 +2039,7 @@ class __$$_BundleCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1995,6 +2063,10 @@ class __$$_BundleCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2070,9 +2142,11 @@ class __$$_BundleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Bundle extends _Bundle {
-  _$_Bundle(
+  const _$_Bundle(
       {@JsonKey(unknownEnumValue: R5ResourceType.Bundle)
           this.resourceType = R5ResourceType.Bundle,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -2107,6 +2181,9 @@ class _$_Bundle extends _Bundle {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Bundle)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -2219,7 +2296,7 @@ class _$_Bundle extends _Bundle {
 
   @override
   String toString() {
-    return 'Bundle(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, identifier: $identifier, type: $type, typeElement: $typeElement, timestamp: $timestamp, timestampElement: $timestampElement, total: $total, totalElement: $totalElement, link: $link, entry: $entry, signature: $signature, issues: $issues)';
+    return 'Bundle(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, identifier: $identifier, type: $type, typeElement: $typeElement, timestamp: $timestamp, timestampElement: $timestampElement, total: $total, totalElement: $totalElement, link: $link, entry: $entry, signature: $signature, issues: $issues)';
   }
 
   @override
@@ -2229,6 +2306,7 @@ class _$_Bundle extends _Bundle {
             other is _$_Bundle &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -2260,26 +2338,28 @@ class _$_Bundle extends _Bundle {
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      resourceType,
-      fhirId,
-      meta,
-      implicitRules,
-      implicitRulesElement,
-      language,
-      languageElement,
-      identifier,
-      type,
-      typeElement,
-      timestamp,
-      timestampElement,
-      total,
-      totalElement,
-      const DeepCollectionEquality().hash(_link),
-      const DeepCollectionEquality().hash(_entry),
-      signature,
-      issues);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        resourceType,
+        dbId,
+        fhirId,
+        meta,
+        implicitRules,
+        implicitRulesElement,
+        language,
+        languageElement,
+        identifier,
+        type,
+        typeElement,
+        timestamp,
+        timestampElement,
+        total,
+        totalElement,
+        const DeepCollectionEquality().hash(_link),
+        const DeepCollectionEquality().hash(_entry),
+        signature,
+        issues
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -2296,9 +2376,11 @@ class _$_Bundle extends _Bundle {
 }
 
 abstract class _Bundle extends Bundle {
-  factory _Bundle(
+  const factory _Bundle(
       {@JsonKey(unknownEnumValue: R5ResourceType.Bundle)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -2322,7 +2404,7 @@ abstract class _Bundle extends Bundle {
       final List<BundleEntry>? entry,
       final Signature? signature,
       final Resource? issues}) = _$_Bundle;
-  _Bundle._() : super._();
+  const _Bundle._() : super._();
 
   factory _Bundle.fromJson(Map<String, dynamic> json) = _$_Bundle.fromJson;
 
@@ -2331,6 +2413,9 @@ abstract class _Bundle extends Bundle {
   /// [resourceType] This is a Bundle resource
   @JsonKey(unknownEnumValue: R5ResourceType.Bundle)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -2661,7 +2746,7 @@ class __$$_BundleLinkCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BundleLink extends _BundleLink {
-  _$_BundleLink(
+  const _$_BundleLink(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2817,7 +2902,7 @@ class _$_BundleLink extends _BundleLink {
 }
 
 abstract class _BundleLink extends BundleLink {
-  factory _BundleLink(
+  const factory _BundleLink(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2825,7 +2910,7 @@ abstract class _BundleLink extends BundleLink {
       @JsonKey(name: '_relation') final Element? relationElement,
       final FhirUri? url,
       @JsonKey(name: '_url') final Element? urlElement}) = _$_BundleLink;
-  _BundleLink._() : super._();
+  const _BundleLink._() : super._();
 
   factory _BundleLink.fromJson(Map<String, dynamic> json) =
       _$_BundleLink.fromJson;
@@ -3216,7 +3301,7 @@ class __$$_BundleEntryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BundleEntry extends _BundleEntry {
-  _$_BundleEntry(
+  const _$_BundleEntry(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3421,7 +3506,7 @@ class _$_BundleEntry extends _BundleEntry {
 }
 
 abstract class _BundleEntry extends BundleEntry {
-  factory _BundleEntry(
+  const factory _BundleEntry(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3432,7 +3517,7 @@ abstract class _BundleEntry extends BundleEntry {
       final BundleSearch? search,
       final BundleRequest? request,
       final BundleResponse? response}) = _$_BundleEntry;
-  _BundleEntry._() : super._();
+  const _BundleEntry._() : super._();
 
   factory _BundleEntry.fromJson(Map<String, dynamic> json) =
       _$_BundleEntry.fromJson;
@@ -3760,7 +3845,7 @@ class __$$_BundleSearchCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BundleSearch extends _BundleSearch {
-  _$_BundleSearch(
+  const _$_BundleSearch(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3915,7 +4000,7 @@ class _$_BundleSearch extends _BundleSearch {
 }
 
 abstract class _BundleSearch extends BundleSearch {
-  factory _BundleSearch(
+  const factory _BundleSearch(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3923,7 +4008,7 @@ abstract class _BundleSearch extends BundleSearch {
       @JsonKey(name: '_mode') final Element? modeElement,
       final FhirDecimal? score,
       @JsonKey(name: '_score') final Element? scoreElement}) = _$_BundleSearch;
-  _BundleSearch._() : super._();
+  const _BundleSearch._() : super._();
 
   factory _BundleSearch.fromJson(Map<String, dynamic> json) =
       _$_BundleSearch.fromJson;
@@ -4417,7 +4502,7 @@ class __$$_BundleRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BundleRequest extends _BundleRequest {
-  _$_BundleRequest(
+  const _$_BundleRequest(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4651,7 +4736,7 @@ class _$_BundleRequest extends _BundleRequest {
 }
 
 abstract class _BundleRequest extends BundleRequest {
-  factory _BundleRequest(
+  const factory _BundleRequest(
       {@JsonKey(name: 'id')
           final String? fhirId,
       @JsonKey(name: 'extension')
@@ -4675,7 +4760,7 @@ abstract class _BundleRequest extends BundleRequest {
       final String? ifNoneExist,
       @JsonKey(name: '_ifNoneExist')
           final Element? ifNoneExistElement}) = _$_BundleRequest;
-  _BundleRequest._() : super._();
+  const _BundleRequest._() : super._();
 
   factory _BundleRequest.fromJson(Map<String, dynamic> json) =
       _$_BundleRequest.fromJson;
@@ -5134,7 +5219,7 @@ class __$$_BundleResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BundleResponse extends _BundleResponse {
-  _$_BundleResponse(
+  const _$_BundleResponse(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5336,7 +5421,7 @@ class _$_BundleResponse extends _BundleResponse {
 }
 
 abstract class _BundleResponse extends BundleResponse {
-  factory _BundleResponse(
+  const factory _BundleResponse(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5349,7 +5434,7 @@ abstract class _BundleResponse extends BundleResponse {
       final FhirInstant? lastModified,
       @JsonKey(name: '_lastModified') final Element? lastModifiedElement,
       final Resource? outcome}) = _$_BundleResponse;
-  _BundleResponse._() : super._();
+  const _BundleResponse._() : super._();
 
   factory _BundleResponse.fromJson(Map<String, dynamic> json) =
       _$_BundleResponse.fromJson;
@@ -5450,6 +5535,8 @@ mixin _$Linkage {
   /// [resourceType] This is a Linkage resource
   @JsonKey(unknownEnumValue: R5ResourceType.Linkage)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -5552,6 +5639,8 @@ abstract class $LinkageCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Linkage)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -5594,6 +5683,7 @@ class _$LinkageCopyWithImpl<$Res, $Val extends Linkage>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5614,6 +5704,10 @@ class _$LinkageCopyWithImpl<$Res, $Val extends Linkage>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5756,6 +5850,8 @@ abstract class _$$_LinkageCopyWith<$Res> implements $LinkageCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Linkage)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -5801,6 +5897,7 @@ class __$$_LinkageCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -5821,6 +5918,10 @@ class __$$_LinkageCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5884,9 +5985,11 @@ class __$$_LinkageCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Linkage extends _Linkage {
-  _$_Linkage(
+  const _$_Linkage(
       {@JsonKey(unknownEnumValue: R5ResourceType.Linkage)
           this.resourceType = R5ResourceType.Linkage,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -5919,6 +6022,9 @@ class _$_Linkage extends _Linkage {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Linkage)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -6082,7 +6188,7 @@ class _$_Linkage extends _Linkage {
 
   @override
   String toString() {
-    return 'Linkage(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, active: $active, activeElement: $activeElement, author: $author, item: $item)';
+    return 'Linkage(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, active: $active, activeElement: $activeElement, author: $author, item: $item)';
   }
 
   @override
@@ -6092,6 +6198,7 @@ class _$_Linkage extends _Linkage {
             other is _$_Linkage &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -6121,6 +6228,7 @@ class _$_Linkage extends _Linkage {
   int get hashCode => Object.hash(
       runtimeType,
       resourceType,
+      dbId,
       fhirId,
       meta,
       implicitRules,
@@ -6151,9 +6259,11 @@ class _$_Linkage extends _Linkage {
 }
 
 abstract class _Linkage extends Linkage {
-  factory _Linkage(
+  const factory _Linkage(
       {@JsonKey(unknownEnumValue: R5ResourceType.Linkage)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -6173,7 +6283,7 @@ abstract class _Linkage extends Linkage {
           final Element? activeElement,
       final Reference? author,
       required final List<LinkageItem> item}) = _$_Linkage;
-  _Linkage._() : super._();
+  const _Linkage._() : super._();
 
   factory _Linkage.fromJson(Map<String, dynamic> json) = _$_Linkage.fromJson;
 
@@ -6182,6 +6292,9 @@ abstract class _Linkage extends Linkage {
   /// [resourceType] This is a Linkage resource
   @JsonKey(unknownEnumValue: R5ResourceType.Linkage)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -6502,7 +6615,7 @@ class __$$_LinkageItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_LinkageItem extends _LinkageItem {
-  _$_LinkageItem(
+  const _$_LinkageItem(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6648,14 +6761,14 @@ class _$_LinkageItem extends _LinkageItem {
 }
 
 abstract class _LinkageItem extends LinkageItem {
-  factory _LinkageItem(
+  const factory _LinkageItem(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
       required final Reference resource}) = _$_LinkageItem;
-  _LinkageItem._() : super._();
+  const _LinkageItem._() : super._();
 
   factory _LinkageItem.fromJson(Map<String, dynamic> json) =
       _$_LinkageItem.fromJson;
@@ -6722,6 +6835,8 @@ mixin _$MessageHeader {
   /// [resourceType] This is a MessageHeader resource
   @JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -6864,6 +6979,8 @@ abstract class $MessageHeaderCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -6920,6 +7037,7 @@ class _$MessageHeaderCopyWithImpl<$Res, $Val extends MessageHeader>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6948,6 +7066,10 @@ class _$MessageHeaderCopyWithImpl<$Res, $Val extends MessageHeader>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7191,6 +7313,8 @@ abstract class _$$_MessageHeaderCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -7257,6 +7381,7 @@ class __$$_MessageHeaderCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -7285,6 +7410,10 @@ class __$$_MessageHeaderCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7380,9 +7509,11 @@ class __$$_MessageHeaderCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MessageHeader extends _MessageHeader {
-  _$_MessageHeader(
+  const _$_MessageHeader(
       {@JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
           this.resourceType = R5ResourceType.MessageHeader,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -7424,6 +7555,9 @@ class _$_MessageHeader extends _MessageHeader {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -7643,7 +7777,7 @@ class _$_MessageHeader extends _MessageHeader {
 
   @override
   String toString() {
-    return 'MessageHeader(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, eventCoding: $eventCoding, eventCanonical: $eventCanonical, eventCanonicalElement: $eventCanonicalElement, destination: $destination, sender: $sender, author: $author, source: $source, responsible: $responsible, reason: $reason, response: $response, focus: $focus, definition: $definition)';
+    return 'MessageHeader(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, eventCoding: $eventCoding, eventCanonical: $eventCanonical, eventCanonicalElement: $eventCanonicalElement, destination: $destination, sender: $sender, author: $author, source: $source, responsible: $responsible, reason: $reason, response: $response, focus: $focus, definition: $definition)';
   }
 
   @override
@@ -7653,6 +7787,7 @@ class _$_MessageHeader extends _MessageHeader {
             other is _$_MessageHeader &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -7696,6 +7831,7 @@ class _$_MessageHeader extends _MessageHeader {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -7735,9 +7871,11 @@ class _$_MessageHeader extends _MessageHeader {
 }
 
 abstract class _MessageHeader extends MessageHeader {
-  factory _MessageHeader(
+  const factory _MessageHeader(
       {@JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -7765,7 +7903,7 @@ abstract class _MessageHeader extends MessageHeader {
       final MessageHeaderResponse? response,
       final List<Reference>? focus,
       final FhirCanonical? definition}) = _$_MessageHeader;
-  _MessageHeader._() : super._();
+  const _MessageHeader._() : super._();
 
   factory _MessageHeader.fromJson(Map<String, dynamic> json) =
       _$_MessageHeader.fromJson;
@@ -7775,6 +7913,9 @@ abstract class _MessageHeader extends MessageHeader {
   /// [resourceType] This is a MessageHeader resource
   @JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -8256,7 +8397,7 @@ class __$$_MessageHeaderDestinationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MessageHeaderDestination extends _MessageHeaderDestination {
-  _$_MessageHeaderDestination(
+  const _$_MessageHeaderDestination(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8437,7 +8578,7 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
 }
 
 abstract class _MessageHeaderDestination extends MessageHeaderDestination {
-  factory _MessageHeaderDestination(
+  const factory _MessageHeaderDestination(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8448,7 +8589,7 @@ abstract class _MessageHeaderDestination extends MessageHeaderDestination {
       @JsonKey(name: '_name') final Element? nameElement,
       final Reference? target,
       final Reference? receiver}) = _$_MessageHeaderDestination;
-  _MessageHeaderDestination._() : super._();
+  const _MessageHeaderDestination._() : super._();
 
   factory _MessageHeaderDestination.fromJson(Map<String, dynamic> json) =
       _$_MessageHeaderDestination.fromJson;
@@ -8913,7 +9054,7 @@ class __$$_MessageHeaderSourceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MessageHeaderSource extends _MessageHeaderSource {
-  _$_MessageHeaderSource(
+  const _$_MessageHeaderSource(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9120,7 +9261,7 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
 }
 
 abstract class _MessageHeaderSource extends MessageHeaderSource {
-  factory _MessageHeaderSource(
+  const factory _MessageHeaderSource(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9134,7 +9275,7 @@ abstract class _MessageHeaderSource extends MessageHeaderSource {
       final String? version,
       @JsonKey(name: '_version') final Element? versionElement,
       final ContactPoint? contact}) = _$_MessageHeaderSource;
-  _MessageHeaderSource._() : super._();
+  const _MessageHeaderSource._() : super._();
 
   factory _MessageHeaderSource.fromJson(Map<String, dynamic> json) =
       _$_MessageHeaderSource.fromJson;
@@ -9473,7 +9614,7 @@ class __$$_MessageHeaderResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MessageHeaderResponse extends _MessageHeaderResponse {
-  _$_MessageHeaderResponse(
+  const _$_MessageHeaderResponse(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9629,7 +9770,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
 }
 
 abstract class _MessageHeaderResponse extends MessageHeaderResponse {
-  factory _MessageHeaderResponse(
+  const factory _MessageHeaderResponse(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9637,7 +9778,7 @@ abstract class _MessageHeaderResponse extends MessageHeaderResponse {
       final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final Reference? details}) = _$_MessageHeaderResponse;
-  _MessageHeaderResponse._() : super._();
+  const _MessageHeaderResponse._() : super._();
 
   factory _MessageHeaderResponse.fromJson(Map<String, dynamic> json) =
       _$_MessageHeaderResponse.fromJson;
@@ -9710,6 +9851,8 @@ mixin _$OperationOutcome {
   /// [resourceType] This is a OperationOutcome resource
   @JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -9800,6 +9943,8 @@ abstract class $OperationOutcomeCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -9836,6 +9981,7 @@ class _$OperationOutcomeCopyWithImpl<$Res, $Val extends OperationOutcome>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -9853,6 +9999,10 @@ class _$OperationOutcomeCopyWithImpl<$Res, $Val extends OperationOutcome>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9960,6 +10110,8 @@ abstract class _$$_OperationOutcomeCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -9998,6 +10150,7 @@ class __$$_OperationOutcomeCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -10015,6 +10168,10 @@ class __$$_OperationOutcomeCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -10066,9 +10223,11 @@ class __$$_OperationOutcomeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OperationOutcome extends _OperationOutcome {
-  _$_OperationOutcome(
+  const _$_OperationOutcome(
       {@JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
           this.resourceType = R5ResourceType.OperationOutcome,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -10097,6 +10256,9 @@ class _$_OperationOutcome extends _OperationOutcome {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -10242,7 +10404,7 @@ class _$_OperationOutcome extends _OperationOutcome {
 
   @override
   String toString() {
-    return 'OperationOutcome(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, issue: $issue)';
+    return 'OperationOutcome(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, issue: $issue)';
   }
 
   @override
@@ -10252,6 +10414,7 @@ class _$_OperationOutcome extends _OperationOutcome {
             other is _$_OperationOutcome &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -10277,6 +10440,7 @@ class _$_OperationOutcome extends _OperationOutcome {
   int get hashCode => Object.hash(
       runtimeType,
       resourceType,
+      dbId,
       fhirId,
       meta,
       implicitRules,
@@ -10304,9 +10468,11 @@ class _$_OperationOutcome extends _OperationOutcome {
 }
 
 abstract class _OperationOutcome extends OperationOutcome {
-  factory _OperationOutcome(
+  const factory _OperationOutcome(
       {@JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -10322,7 +10488,7 @@ abstract class _OperationOutcome extends OperationOutcome {
           final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<OperationOutcomeIssue> issue}) = _$_OperationOutcome;
-  _OperationOutcome._() : super._();
+  const _OperationOutcome._() : super._();
 
   factory _OperationOutcome.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcome.fromJson;
@@ -10332,6 +10498,9 @@ abstract class _OperationOutcome extends OperationOutcome {
   /// [resourceType] This is a OperationOutcome resource
   @JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -10808,7 +10977,7 @@ class __$$_OperationOutcomeIssueCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
-  _$_OperationOutcomeIssue(
+  const _$_OperationOutcomeIssue(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -11084,7 +11253,7 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
 }
 
 abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
-  factory _OperationOutcomeIssue(
+  const factory _OperationOutcomeIssue(
       {@JsonKey(name: 'id')
           final String? fhirId,
       @JsonKey(name: 'extension')
@@ -11106,7 +11275,7 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
       final List<String>? expression,
       @JsonKey(name: '_expression')
           final List<Element>? expressionElement}) = _$_OperationOutcomeIssue;
-  _OperationOutcomeIssue._() : super._();
+  const _OperationOutcomeIssue._() : super._();
 
   factory _OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcomeIssue.fromJson;
@@ -11222,6 +11391,8 @@ mixin _$Parameters {
   /// [resourceType] This is a Parameters resource
   @JsonKey(unknownEnumValue: R5ResourceType.Parameters)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -11270,6 +11441,8 @@ abstract class $ParametersCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Parameters)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -11300,6 +11473,7 @@ class _$ParametersCopyWithImpl<$Res, $Val extends Parameters>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -11313,6 +11487,10 @@ class _$ParametersCopyWithImpl<$Res, $Val extends Parameters>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -11392,6 +11570,8 @@ abstract class _$$_ParametersCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Parameters)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -11423,6 +11603,7 @@ class __$$_ParametersCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -11436,6 +11617,10 @@ class __$$_ParametersCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -11471,9 +11656,11 @@ class __$$_ParametersCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Parameters extends _Parameters {
-  _$_Parameters(
+  const _$_Parameters(
       {@JsonKey(unknownEnumValue: R5ResourceType.Parameters)
           this.resourceType = R5ResourceType.Parameters,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -11494,6 +11681,9 @@ class _$_Parameters extends _Parameters {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Parameters)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -11544,7 +11734,7 @@ class _$_Parameters extends _Parameters {
 
   @override
   String toString() {
-    return 'Parameters(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, parameter: $parameter)';
+    return 'Parameters(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, parameter: $parameter)';
   }
 
   @override
@@ -11554,6 +11744,7 @@ class _$_Parameters extends _Parameters {
             other is _$_Parameters &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -11573,6 +11764,7 @@ class _$_Parameters extends _Parameters {
   int get hashCode => Object.hash(
       runtimeType,
       resourceType,
+      dbId,
       fhirId,
       meta,
       implicitRules,
@@ -11596,9 +11788,11 @@ class _$_Parameters extends _Parameters {
 }
 
 abstract class _Parameters extends Parameters {
-  factory _Parameters(
+  const factory _Parameters(
       {@JsonKey(unknownEnumValue: R5ResourceType.Parameters)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -11609,7 +11803,7 @@ abstract class _Parameters extends Parameters {
       @JsonKey(name: '_language')
           final Element? languageElement,
       final List<ParametersParameter>? parameter}) = _$_Parameters;
-  _Parameters._() : super._();
+  const _Parameters._() : super._();
 
   factory _Parameters.fromJson(Map<String, dynamic> json) =
       _$_Parameters.fromJson;
@@ -11619,6 +11813,9 @@ abstract class _Parameters extends Parameters {
   /// [resourceType] This is a Parameters resource
   @JsonKey(unknownEnumValue: R5ResourceType.Parameters)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -13848,7 +14045,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ParametersParameter extends _ParametersParameter {
-  _$_ParametersParameter(
+  const _$_ParametersParameter(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14594,7 +14791,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 }
 
 abstract class _ParametersParameter extends ParametersParameter {
-  factory _ParametersParameter(
+  const factory _ParametersParameter(
       {@JsonKey(name: 'id')
           final String? fhirId,
       @JsonKey(name: 'extension')
@@ -14700,7 +14897,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       final Resource? resource,
       @JsonKey(name: 'part')
           final List<ParametersParameter>? part_}) = _$_ParametersParameter;
-  _ParametersParameter._() : super._();
+  const _ParametersParameter._() : super._();
 
   factory _ParametersParameter.fromJson(Map<String, dynamic> json) =
       _$_ParametersParameter.fromJson;
@@ -15101,6 +15298,8 @@ mixin _$Subscription {
   /// [resourceType] This is a Subscription resource
   @JsonKey(unknownEnumValue: R5ResourceType.Subscription)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -15308,6 +15507,8 @@ abstract class $SubscriptionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Subscription)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -15392,6 +15593,7 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -15435,6 +15637,10 @@ class _$SubscriptionCopyWithImpl<$Res, $Val extends Subscription>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -15786,6 +15992,8 @@ abstract class _$$_SubscriptionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Subscription)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -15884,6 +16092,7 @@ class __$$_SubscriptionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -15927,6 +16136,10 @@ class __$$_SubscriptionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -16082,9 +16295,11 @@ class __$$_SubscriptionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Subscription extends _Subscription {
-  _$_Subscription(
+  const _$_Subscription(
       {@JsonKey(unknownEnumValue: R5ResourceType.Subscription)
           this.resourceType = R5ResourceType.Subscription,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -16152,6 +16367,9 @@ class _$_Subscription extends _Subscription {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Subscription)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -16474,7 +16692,7 @@ class _$_Subscription extends _Subscription {
 
   @override
   String toString() {
-    return 'Subscription(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, topic: $topic, contact: $contact, end: $end, endElement: $endElement, managingEntity: $managingEntity, reason: $reason, reasonElement: $reasonElement, filterBy: $filterBy, channelType: $channelType, endpoint: $endpoint, endpointElement: $endpointElement, parameter: $parameter, heartbeatPeriod: $heartbeatPeriod, heartbeatPeriodElement: $heartbeatPeriodElement, timeout: $timeout, timeoutElement: $timeoutElement, contentType: $contentType, contentTypeElement: $contentTypeElement, content: $content, contentElement: $contentElement, maxCount: $maxCount, maxCountElement: $maxCountElement)';
+    return 'Subscription(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, topic: $topic, contact: $contact, end: $end, endElement: $endElement, managingEntity: $managingEntity, reason: $reason, reasonElement: $reasonElement, filterBy: $filterBy, channelType: $channelType, endpoint: $endpoint, endpointElement: $endpointElement, parameter: $parameter, heartbeatPeriod: $heartbeatPeriod, heartbeatPeriodElement: $heartbeatPeriodElement, timeout: $timeout, timeoutElement: $timeoutElement, contentType: $contentType, contentTypeElement: $contentTypeElement, content: $content, contentElement: $contentElement, maxCount: $maxCount, maxCountElement: $maxCountElement)';
   }
 
   @override
@@ -16484,6 +16702,7 @@ class _$_Subscription extends _Subscription {
             other is _$_Subscription &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -16553,6 +16772,7 @@ class _$_Subscription extends _Subscription {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -16607,9 +16827,11 @@ class _$_Subscription extends _Subscription {
 }
 
 abstract class _Subscription extends Subscription {
-  factory _Subscription(
+  const factory _Subscription(
       {@JsonKey(unknownEnumValue: R5ResourceType.Subscription)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -16661,7 +16883,7 @@ abstract class _Subscription extends Subscription {
       final FhirPositiveInt? maxCount,
       @JsonKey(name: '_maxCount')
           final Element? maxCountElement}) = _$_Subscription;
-  _Subscription._() : super._();
+  const _Subscription._() : super._();
 
   factory _Subscription.fromJson(Map<String, dynamic> json) =
       _$_Subscription.fromJson;
@@ -16671,6 +16893,9 @@ abstract class _Subscription extends Subscription {
   /// [resourceType] This is a Subscription resource
   @JsonKey(unknownEnumValue: R5ResourceType.Subscription)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -17279,7 +17504,7 @@ class __$$_SubscriptionFilterByCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubscriptionFilterBy extends _SubscriptionFilterBy {
-  _$_SubscriptionFilterBy(
+  const _$_SubscriptionFilterBy(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -17491,7 +17716,7 @@ class _$_SubscriptionFilterBy extends _SubscriptionFilterBy {
 }
 
 abstract class _SubscriptionFilterBy extends SubscriptionFilterBy {
-  factory _SubscriptionFilterBy(
+  const factory _SubscriptionFilterBy(
       {@JsonKey(name: 'id')
           final String? fhirId,
       @JsonKey(name: 'extension')
@@ -17512,7 +17737,7 @@ abstract class _SubscriptionFilterBy extends SubscriptionFilterBy {
       final String? value,
       @JsonKey(name: '_value')
           final Element? valueElement}) = _$_SubscriptionFilterBy;
-  _SubscriptionFilterBy._() : super._();
+  const _SubscriptionFilterBy._() : super._();
 
   factory _SubscriptionFilterBy.fromJson(Map<String, dynamic> json) =
       _$_SubscriptionFilterBy.fromJson;
@@ -17845,7 +18070,7 @@ class __$$_SubscriptionParameterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubscriptionParameter extends _SubscriptionParameter {
-  _$_SubscriptionParameter(
+  const _$_SubscriptionParameter(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -18003,7 +18228,7 @@ class _$_SubscriptionParameter extends _SubscriptionParameter {
 }
 
 abstract class _SubscriptionParameter extends SubscriptionParameter {
-  factory _SubscriptionParameter(
+  const factory _SubscriptionParameter(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -18012,7 +18237,7 @@ abstract class _SubscriptionParameter extends SubscriptionParameter {
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_SubscriptionParameter;
-  _SubscriptionParameter._() : super._();
+  const _SubscriptionParameter._() : super._();
 
   factory _SubscriptionParameter.fromJson(Map<String, dynamic> json) =
       _$_SubscriptionParameter.fromJson;
@@ -18087,6 +18312,8 @@ mixin _$SubscriptionStatus {
   /// [resourceType] This is a SubscriptionStatus resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -18219,6 +18446,8 @@ abstract class $SubscriptionStatusCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -18271,6 +18500,7 @@ class _$SubscriptionStatusCopyWithImpl<$Res, $Val extends SubscriptionStatus>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -18297,6 +18527,10 @@ class _$SubscriptionStatusCopyWithImpl<$Res, $Val extends SubscriptionStatus>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -18487,6 +18721,8 @@ abstract class _$$_SubscriptionStatusCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -18545,6 +18781,7 @@ class __$$_SubscriptionStatusCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -18571,6 +18808,10 @@ class __$$_SubscriptionStatusCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -18659,9 +18900,11 @@ class __$$_SubscriptionStatusCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubscriptionStatus extends _SubscriptionStatus {
-  _$_SubscriptionStatus(
+  const _$_SubscriptionStatus(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
           this.resourceType = R5ResourceType.SubscriptionStatus,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -18703,6 +18946,9 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -18909,7 +19155,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
 
   @override
   String toString() {
-    return 'SubscriptionStatus(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, status: $status, statusElement: $statusElement, type: $type, typeElement: $typeElement, eventsSinceSubscriptionStart: $eventsSinceSubscriptionStart, eventsSinceSubscriptionStartElement: $eventsSinceSubscriptionStartElement, notificationEvent: $notificationEvent, subscription: $subscription, topic: $topic, error: $error)';
+    return 'SubscriptionStatus(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, status: $status, statusElement: $statusElement, type: $type, typeElement: $typeElement, eventsSinceSubscriptionStart: $eventsSinceSubscriptionStart, eventsSinceSubscriptionStartElement: $eventsSinceSubscriptionStartElement, notificationEvent: $notificationEvent, subscription: $subscription, topic: $topic, error: $error)';
   }
 
   @override
@@ -18919,6 +19165,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
             other is _$_SubscriptionStatus &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -18963,6 +19210,7 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -19001,9 +19249,11 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
 }
 
 abstract class _SubscriptionStatus extends SubscriptionStatus {
-  factory _SubscriptionStatus(
+  const factory _SubscriptionStatus(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -19031,7 +19281,7 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
       required final Reference subscription,
       final FhirCanonical? topic,
       final List<CodeableConcept>? error}) = _$_SubscriptionStatus;
-  _SubscriptionStatus._() : super._();
+  const _SubscriptionStatus._() : super._();
 
   factory _SubscriptionStatus.fromJson(Map<String, dynamic> json) =
       _$_SubscriptionStatus.fromJson;
@@ -19041,6 +19291,9 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   /// [resourceType] This is a SubscriptionStatus resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -19471,7 +19724,7 @@ class __$$_SubscriptionStatusNotificationEventCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubscriptionStatusNotificationEvent
     extends _SubscriptionStatusNotificationEvent {
-  _$_SubscriptionStatusNotificationEvent(
+  const _$_SubscriptionStatusNotificationEvent(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -19665,7 +19918,7 @@ class _$_SubscriptionStatusNotificationEvent
 
 abstract class _SubscriptionStatusNotificationEvent
     extends SubscriptionStatusNotificationEvent {
-  factory _SubscriptionStatusNotificationEvent(
+  const factory _SubscriptionStatusNotificationEvent(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -19676,7 +19929,7 @@ abstract class _SubscriptionStatusNotificationEvent
           final Reference? focus,
           final List<Reference>? additionalContext}) =
       _$_SubscriptionStatusNotificationEvent;
-  _SubscriptionStatusNotificationEvent._() : super._();
+  const _SubscriptionStatusNotificationEvent._() : super._();
 
   factory _SubscriptionStatusNotificationEvent.fromJson(
           Map<String, dynamic> json) =
@@ -19763,6 +20016,8 @@ mixin _$SubscriptionTopic {
   /// [resourceType] This is a SubscriptionTopic resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -20049,6 +20304,8 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -20157,6 +20414,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -20214,6 +20472,10 @@ class _$SubscriptionTopicCopyWithImpl<$Res, $Val extends SubscriptionTopic>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -20687,6 +20949,8 @@ abstract class _$$_SubscriptionTopicCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -20814,6 +21078,7 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -20871,6 +21136,10 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -21082,9 +21351,11 @@ class __$$_SubscriptionTopicCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubscriptionTopic extends _SubscriptionTopic {
-  _$_SubscriptionTopic(
+  const _$_SubscriptionTopic(
       {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
           this.resourceType = R5ResourceType.SubscriptionTopic,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -21176,6 +21447,9 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -21644,7 +21918,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
 
   @override
   String toString() {
-    return 'SubscriptionTopic(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, derivedFrom: $derivedFrom, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, resourceTrigger: $resourceTrigger, eventTrigger: $eventTrigger, canFilterBy: $canFilterBy, notificationShape: $notificationShape)';
+    return 'SubscriptionTopic(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, derivedFrom: $derivedFrom, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, resourceTrigger: $resourceTrigger, eventTrigger: $eventTrigger, canFilterBy: $canFilterBy, notificationShape: $notificationShape)';
   }
 
   @override
@@ -21654,6 +21928,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
             other is _$_SubscriptionTopic &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -21748,6 +22023,7 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -21817,9 +22093,11 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
 }
 
 abstract class _SubscriptionTopic extends SubscriptionTopic {
-  factory _SubscriptionTopic(
+  const factory _SubscriptionTopic(
           {@JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
               final R5ResourceType resourceType,
+          @JsonKey(includeFromJson: true, includeToJson: false)
+              final int? dbId,
           @JsonKey(name: 'id')
               final FhirId? fhirId,
           final FhirMeta? meta,
@@ -21891,7 +22169,7 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
           final List<SubscriptionTopicCanFilterBy>? canFilterBy,
           final List<SubscriptionTopicNotificationShape>? notificationShape}) =
       _$_SubscriptionTopic;
-  _SubscriptionTopic._() : super._();
+  const _SubscriptionTopic._() : super._();
 
   factory _SubscriptionTopic.fromJson(Map<String, dynamic> json) =
       _$_SubscriptionTopic.fromJson;
@@ -21901,6 +22179,9 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   /// [resourceType] This is a SubscriptionTopic resource
   @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -22602,7 +22883,7 @@ class __$$_SubscriptionTopicResourceTriggerCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubscriptionTopicResourceTrigger
     extends _SubscriptionTopicResourceTrigger {
-  _$_SubscriptionTopicResourceTrigger(
+  const _$_SubscriptionTopicResourceTrigger(
       {@JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: 'extension')
@@ -22854,7 +23135,7 @@ class _$_SubscriptionTopicResourceTrigger
 
 abstract class _SubscriptionTopicResourceTrigger
     extends SubscriptionTopicResourceTrigger {
-  factory _SubscriptionTopicResourceTrigger(
+  const factory _SubscriptionTopicResourceTrigger(
           {@JsonKey(name: 'id')
               final String? fhirId,
           @JsonKey(name: 'extension')
@@ -22874,7 +23155,7 @@ abstract class _SubscriptionTopicResourceTrigger
           @JsonKey(name: '_fhirPathCriteria')
               final Element? fhirPathCriteriaElement}) =
       _$_SubscriptionTopicResourceTrigger;
-  _SubscriptionTopicResourceTrigger._() : super._();
+  const _SubscriptionTopicResourceTrigger._() : super._();
 
   factory _SubscriptionTopicResourceTrigger.fromJson(
       Map<String, dynamic> json) = _$_SubscriptionTopicResourceTrigger.fromJson;
@@ -23368,7 +23649,7 @@ class __$$_SubscriptionTopicQueryCriteriaCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubscriptionTopicQueryCriteria
     extends _SubscriptionTopicQueryCriteria {
-  _$_SubscriptionTopicQueryCriteria(
+  const _$_SubscriptionTopicQueryCriteria(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -23590,7 +23871,7 @@ class _$_SubscriptionTopicQueryCriteria
 
 abstract class _SubscriptionTopicQueryCriteria
     extends SubscriptionTopicQueryCriteria {
-  factory _SubscriptionTopicQueryCriteria(
+  const factory _SubscriptionTopicQueryCriteria(
           {@JsonKey(name: 'id')
               final String? fhirId,
           @JsonKey(name: 'extension')
@@ -23612,7 +23893,7 @@ abstract class _SubscriptionTopicQueryCriteria
           @JsonKey(name: '_requireBoth')
               final Element? requireBothElement}) =
       _$_SubscriptionTopicQueryCriteria;
-  _SubscriptionTopicQueryCriteria._() : super._();
+  const _SubscriptionTopicQueryCriteria._() : super._();
 
   factory _SubscriptionTopicQueryCriteria.fromJson(Map<String, dynamic> json) =
       _$_SubscriptionTopicQueryCriteria.fromJson;
@@ -23991,7 +24272,7 @@ class __$$_SubscriptionTopicEventTriggerCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubscriptionTopicEventTrigger extends _SubscriptionTopicEventTrigger {
-  _$_SubscriptionTopicEventTrigger(
+  const _$_SubscriptionTopicEventTrigger(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -24167,7 +24448,7 @@ class _$_SubscriptionTopicEventTrigger extends _SubscriptionTopicEventTrigger {
 
 abstract class _SubscriptionTopicEventTrigger
     extends SubscriptionTopicEventTrigger {
-  factory _SubscriptionTopicEventTrigger(
+  const factory _SubscriptionTopicEventTrigger(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -24177,7 +24458,7 @@ abstract class _SubscriptionTopicEventTrigger
           final FhirUri? resource,
           @JsonKey(name: '_resource') final Element? resourceElement}) =
       _$_SubscriptionTopicEventTrigger;
-  _SubscriptionTopicEventTrigger._() : super._();
+  const _SubscriptionTopicEventTrigger._() : super._();
 
   factory _SubscriptionTopicEventTrigger.fromJson(Map<String, dynamic> json) =
       _$_SubscriptionTopicEventTrigger.fromJson;
@@ -24660,7 +24941,7 @@ class __$$_SubscriptionTopicCanFilterByCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SubscriptionTopicCanFilterBy extends _SubscriptionTopicCanFilterBy {
-  _$_SubscriptionTopicCanFilterBy(
+  const _$_SubscriptionTopicCanFilterBy(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -24939,7 +25220,7 @@ class _$_SubscriptionTopicCanFilterBy extends _SubscriptionTopicCanFilterBy {
 
 abstract class _SubscriptionTopicCanFilterBy
     extends SubscriptionTopicCanFilterBy {
-  factory _SubscriptionTopicCanFilterBy(
+  const factory _SubscriptionTopicCanFilterBy(
           {@JsonKey(name: 'id')
               final String? fhirId,
           @JsonKey(name: 'extension')
@@ -24964,7 +25245,7 @@ abstract class _SubscriptionTopicCanFilterBy
           @JsonKey(name: '_modifier')
               final List<Element>? modifierElement}) =
       _$_SubscriptionTopicCanFilterBy;
-  _SubscriptionTopicCanFilterBy._() : super._();
+  const _SubscriptionTopicCanFilterBy._() : super._();
 
   factory _SubscriptionTopicCanFilterBy.fromJson(Map<String, dynamic> json) =
       _$_SubscriptionTopicCanFilterBy.fromJson;
@@ -25345,7 +25626,7 @@ class __$$_SubscriptionTopicNotificationShapeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubscriptionTopicNotificationShape
     extends _SubscriptionTopicNotificationShape {
-  _$_SubscriptionTopicNotificationShape(
+  const _$_SubscriptionTopicNotificationShape(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -25582,7 +25863,7 @@ class _$_SubscriptionTopicNotificationShape
 
 abstract class _SubscriptionTopicNotificationShape
     extends SubscriptionTopicNotificationShape {
-  factory _SubscriptionTopicNotificationShape(
+  const factory _SubscriptionTopicNotificationShape(
           {@JsonKey(name: 'id')
               final String? fhirId,
           @JsonKey(name: 'extension')
@@ -25598,7 +25879,7 @@ abstract class _SubscriptionTopicNotificationShape
           @JsonKey(name: '_revInclude')
               final List<Element>? revIncludeElement}) =
       _$_SubscriptionTopicNotificationShape;
-  _SubscriptionTopicNotificationShape._() : super._();
+  const _SubscriptionTopicNotificationShape._() : super._();
 
   factory _SubscriptionTopicNotificationShape.fromJson(
           Map<String, dynamic> json) =

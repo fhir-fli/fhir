@@ -17,10 +17,11 @@ part 'summary.g.dart';
 @freezed
 class AdverseEvent with Resource, _$AdverseEvent {
   AdverseEvent._();
-  factory AdverseEvent({
+  const factory AdverseEvent({
     @Default(Stu3ResourceType.AdverseEvent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AdverseEvent)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -83,14 +84,14 @@ class AdverseEvent with Resource, _$AdverseEvent {
 @freezed
 class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   AdverseEventSuspectEntity._();
-  factory AdverseEventSuspectEntity({
+  const factory AdverseEventSuspectEntity({
     required Reference instance,
     AdverseEventSuspectEntityCausality? causality,
     @JsonKey(name: '_causality') Element? causalityElement,
     CodeableConcept? causalityAssessment,
     String? causalityProductRelatedness,
     @JsonKey(name: '_causalityProductRelatedness')
-        Element? causalityProductRelatednessElement,
+    Element? causalityProductRelatednessElement,
     CodeableConcept? causalityMethod,
     Reference? causalityAuthor,
     CodeableConcept? causalityResult,
@@ -130,10 +131,11 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
 @freezed
 class AllergyIntolerance with Resource, _$AllergyIntolerance {
   AllergyIntolerance._();
-  factory AllergyIntolerance({
+  const factory AllergyIntolerance({
     @Default(Stu3ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AllergyIntolerance)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -205,7 +207,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
 @freezed
 class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   AllergyIntoleranceReaction._();
-  factory AllergyIntoleranceReaction({
+  const factory AllergyIntoleranceReaction({
     CodeableConcept? substance,
     required List<CodeableConcept> manifestation,
     String? description,
@@ -252,10 +254,11 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
 @freezed
 class ClinicalImpression with Resource, _$ClinicalImpression {
   ClinicalImpression._();
-  factory ClinicalImpression({
+  const factory ClinicalImpression({
     @Default(Stu3ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ClinicalImpression)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -325,7 +328,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
 @freezed
 class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
   ClinicalImpressionInvestigation._();
-  factory ClinicalImpressionInvestigation({
+  const factory ClinicalImpressionInvestigation({
     required CodeableConcept code,
     List<Reference>? item,
   }) = _ClinicalImpressionInvestigation;
@@ -365,7 +368,7 @@ class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
 @freezed
 class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   ClinicalImpressionFinding._();
-  factory ClinicalImpressionFinding({
+  const factory ClinicalImpressionFinding({
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
     String? basis,
@@ -406,10 +409,11 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
 @freezed
 class Condition with Resource, _$Condition {
   Condition._();
-  factory Condition({
+  const factory Condition({
     @Default(Stu3ResourceType.Condition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Condition)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -486,7 +490,7 @@ class Condition with Resource, _$Condition {
 @freezed
 class ConditionStage with _$ConditionStage {
   ConditionStage._();
-  factory ConditionStage({
+  const factory ConditionStage({
     CodeableConcept? summary,
     List<Reference>? assessment,
   }) = _ConditionStage;
@@ -525,7 +529,7 @@ class ConditionStage with _$ConditionStage {
 @freezed
 class ConditionEvidence with _$ConditionEvidence {
   ConditionEvidence._();
-  factory ConditionEvidence({
+  const factory ConditionEvidence({
     List<CodeableConcept>? code,
     List<Reference>? detail,
   }) = _ConditionEvidence;
@@ -564,10 +568,11 @@ class ConditionEvidence with _$ConditionEvidence {
 @freezed
 class DetectedIssue with Resource, _$DetectedIssue {
   DetectedIssue._();
-  factory DetectedIssue({
+  const factory DetectedIssue({
     @Default(Stu3ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DetectedIssue)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -627,7 +632,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
 @freezed
 class DetectedIssueMitigation with _$DetectedIssueMitigation {
   DetectedIssueMitigation._();
-  factory DetectedIssueMitigation({
+  const factory DetectedIssueMitigation({
     required CodeableConcept action,
     FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -668,10 +673,11 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
 @freezed
 class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   FamilyMemberHistory._();
-  factory FamilyMemberHistory({
+  const factory FamilyMemberHistory({
     @Default(Stu3ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: Stu3ResourceType.FamilyMemberHistory)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -753,7 +759,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
 @freezed
 class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   FamilyMemberHistoryCondition._();
-  factory FamilyMemberHistoryCondition({
+  const factory FamilyMemberHistoryCondition({
     required CodeableConcept code,
     CodeableConcept? outcome,
     Age? onsetAge,
@@ -798,10 +804,11 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
 @freezed
 class Procedure with Resource, _$Procedure {
   Procedure._();
-  factory Procedure({
+  const factory Procedure({
     @Default(Stu3ResourceType.Procedure)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Procedure)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -875,7 +882,7 @@ class Procedure with Resource, _$Procedure {
 @freezed
 class ProcedurePerformer with _$ProcedurePerformer {
   ProcedurePerformer._();
-  factory ProcedurePerformer({
+  const factory ProcedurePerformer({
     CodeableConcept? role,
     required Reference actor,
     Reference? onBehalfOf,
@@ -915,7 +922,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
 @freezed
 class ProcedureFocalDevice with _$ProcedureFocalDevice {
   ProcedureFocalDevice._();
-  factory ProcedureFocalDevice({
+  const factory ProcedureFocalDevice({
     CodeableConcept? action,
     required Reference manipulated,
   }) = _ProcedureFocalDevice;

@@ -194,8 +194,9 @@ class Citation with Resource, _$Citation {
   /// [relatesTo] Artifact related to the Citation Resource.
   ///
   /// [citedArtifact] The article or artifact being described.
-  factory Citation({
+  const factory Citation({
     @Default(R4ResourceType.Citation) R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -320,7 +321,7 @@ class CitationSummary with _$CitationSummary {
   /// [text] The human-readable display of the citation.
   ///
   /// [textElement] _(_text) Extensions for text
-  factory CitationSummary({
+  const factory CitationSummary({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -398,7 +399,7 @@ class CitationClassification with _$CitationClassification {
   /// [type] The kind of classifier (e.g. publication type, keyword).
   ///
   /// [classifier] The specific classification value.
-  factory CitationClassification({
+  const factory CitationClassification({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -479,7 +480,7 @@ class CitationStatusDate with _$CitationStatusDate {
   /// [actualElement] _(_actual) Extensions for actual
   ///
   /// [period] When the status started and/or ended.
-  factory CitationStatusDate({
+  const factory CitationStatusDate({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -572,7 +573,7 @@ class CitationRelatesTo with _$CitationRelatesTo {
   ///
   /// [targetAttachment] The article or artifact that the Citation Resource is
   /// related to.
-  factory CitationRelatesTo({
+  const factory CitationRelatesTo({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -688,7 +689,7 @@ class CitationCitedArtifact with _$CitationCitedArtifact {
   /// statements.
   ///
   /// [note] Any additional information or content for the article or artifact.
-  factory CitationCitedArtifact({
+  const factory CitationCitedArtifact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -781,7 +782,7 @@ class CitationVersion with _$CitationVersion {
   /// [valueElement] _(_value) Extensions for value
   ///
   /// [baseCitation] Citation for the main version of the cited artifact.
-  factory CitationVersion({
+  const factory CitationVersion({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -863,7 +864,7 @@ class CitationStatusDate1 with _$CitationStatusDate1 {
   /// [actualElement] _(_actual) Extensions for actual
   ///
   /// [period] When the status started and/or ended.
-  factory CitationStatusDate1({
+  const factory CitationStatusDate1({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -946,7 +947,7 @@ class CitationTitle with _$CitationTitle {
   /// [text] The title of the article or artifact.
   ///
   /// [textElement] _(_text) Extensions for text
-  factory CitationTitle({
+  const factory CitationTitle({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1033,7 +1034,7 @@ class CitationAbstract with _$CitationAbstract {
   /// [copyright] Copyright notice for the abstract.
   ///
   /// [copyrightElement] _(_copyright) Extensions for copyright
-  factory CitationAbstract({
+  const factory CitationAbstract({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1118,7 +1119,7 @@ class CitationPart with _$CitationPart {
   /// [valueElement] _(_value) Extensions for value
   ///
   /// [baseCitation] The citation for the full article or artifact.
-  factory CitationPart({
+  const factory CitationPart({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1210,7 +1211,7 @@ class CitationRelatesTo1 with _$CitationRelatesTo1 {
   ///
   /// [targetAttachment] The article or artifact that the cited artifact is
   /// related to.
-  factory CitationRelatesTo1({
+  const factory CitationRelatesTo1({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1330,7 +1331,7 @@ class CitationPublicationForm with _$CitationPublicationForm {
   /// [copyright] Copyright notice for the full article or artifact.
   ///
   /// [copyrightElement] _(_copyright) Extensions for copyright
-  factory CitationPublicationForm({
+  const factory CitationPublicationForm({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1436,7 +1437,7 @@ class CitationPublishedIn with _$CitationPublishedIn {
   ///
   /// [publisherLocationElement] _(_publisherLocation) Extensions for
   /// publisherLocation
-  factory CitationPublishedIn({
+  const factory CitationPublishedIn({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1529,7 +1530,7 @@ class CitationPeriodicRelease with _$CitationPeriodicRelease {
   ///
   /// [dateOfPublication] Defining the date on which the issue of the journal was
   /// published.
-  factory CitationPeriodicRelease({
+  const factory CitationPeriodicRelease({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1631,7 +1632,7 @@ class CitationDateOfPublication with _$CitationDateOfPublication {
   /// was published.
   ///
   /// [textElement] _(_text) Extensions for text
-  factory CitationDateOfPublication({
+  const factory CitationDateOfPublication({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1720,7 +1721,7 @@ class CitationWebLocation with _$CitationWebLocation {
   /// [url] The specific URL.
   ///
   /// [urlElement] _(_url) Extensions for url
-  factory CitationWebLocation({
+  const factory CitationWebLocation({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1800,7 +1801,7 @@ class CitationClassification1 with _$CitationClassification1 {
   /// [classifier] The specific classification value.
   ///
   /// [whoClassified] Provenance and copyright of classification.
-  factory CitationClassification1({
+  const factory CitationClassification1({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1891,7 +1892,7 @@ class CitationWhoClassified with _$CitationWhoClassified {
   /// [freeToShare] Acceptable to re-use the classification.
   ///
   /// [freeToShareElement] _(_freeToShare) Extensions for freeToShare
-  factory CitationWhoClassified({
+  const factory CitationWhoClassified({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1978,7 +1979,7 @@ class CitationContributorship with _$CitationContributorship {
   ///
   /// [summary] Used to record a display of the author/contributor list without
   /// separate coding for each list member.
-  factory CitationContributorship({
+  const factory CitationContributorship({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2088,7 +2089,7 @@ class CitationEntry with _$CitationEntry {
   /// [listOrder] Used to code order of authors.
   ///
   /// [listOrderElement] _(_listOrder) Extensions for listOrder
-  factory CitationEntry({
+  const factory CitationEntry({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2106,7 +2107,7 @@ class CitationEntry with _$CitationEntry {
     List<CitationContributionInstance>? contributionInstance,
     FhirBoolean? correspondingContact,
     @JsonKey(name: '_correspondingContact')
-        Element? correspondingContactElement,
+    Element? correspondingContactElement,
     FhirPositiveInt? listOrder,
     @JsonKey(name: '_listOrder') Element? listOrderElement,
   }) = _CitationEntry;
@@ -2186,7 +2187,7 @@ class CitationAffiliationInfo with _$CitationAffiliationInfo {
   /// [roleElement] _(_role) Extensions for role
   ///
   /// [identifier] Identifier for the organization.
-  factory CitationAffiliationInfo({
+  const factory CitationAffiliationInfo({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2268,7 +2269,7 @@ class CitationContributionInstance with _$CitationContributionInstance {
   /// [time] The time that the contribution was made.
   ///
   /// [timeElement] _(_time) Extensions for time
-  factory CitationContributionInstance({
+  const factory CitationContributionInstance({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2354,7 +2355,7 @@ class CitationSummary1 with _$CitationSummary1 {
   /// contributorship statement.
   ///
   /// [valueElement] _(_value) Extensions for value
-  factory CitationSummary1({
+  const factory CitationSummary1({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2594,10 +2595,11 @@ class Evidence with Resource, _$Evidence {
   ///
   /// [outcome] A reference to a EvidenceVariable resomece that defines the
   ///  outcome for the research.
-  factory Evidence({
+  const factory Evidence({
     @Default(R4ResourceType.Evidence)
     @JsonKey(unknownEnumValue: R4ResourceType.Evidence)
-        R4ResourceType resourceType,
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -2705,7 +2707,7 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
   /// [intended] Definition of the intended variable related to the Evidence.;
   ///
   /// [directnessMatch] Indication of quality of match between intended variable to actual variable.;
-  factory EvidenceVariableDefinition({
+  const factory EvidenceVariableDefinition({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2789,7 +2791,7 @@ class EvidenceStatistic with _$EvidenceStatistic {
   /// [attributeEstimate] A statistical attribute of the statistic such as a measure of heterogeneity.;
   ///
   /// [modelCharacteristic] A component of the method to generate the statistic.;
-  factory EvidenceStatistic({
+  const factory EvidenceStatistic({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2871,7 +2873,7 @@ class EvidenceSampleSize with _$EvidenceSampleSize {
   /// [knownDataCount] Number of participants with known results for measured variables.;
   ///
   /// [knownDataCountElement] (_knownDataCount): Extensions for knownDataCount;
-  factory EvidenceSampleSize({
+  const factory EvidenceSampleSize({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2882,7 +2884,7 @@ class EvidenceSampleSize with _$EvidenceSampleSize {
     @JsonKey(name: '_numberOfStudies') Element? numberOfStudiesElement,
     FhirUnsignedInt? numberOfParticipants,
     @JsonKey(name: '_numberOfParticipants')
-        Element? numberOfParticipantsElement,
+    Element? numberOfParticipantsElement,
     FhirUnsignedInt? knownDataCount,
     @JsonKey(name: '_knownDataCount') Element? knownDataCountElement,
   }) = _EvidenceSampleSize;
@@ -2950,7 +2952,7 @@ class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
   /// [range] Lower bound of confidence interval.;
   ///
   /// [attributeEstimate] A nested attribute estimate; which is the attribute estimate of an attribute estimate.;
-  factory EvidenceAttributeEstimate({
+  const factory EvidenceAttributeEstimate({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -3018,7 +3020,7 @@ class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
   /// [variable] A variable adjusted for in the adjusted analysis.;
   ///
   /// [attributeEstimate] An attribute of the statistic used as a model characteristic.;
-  factory EvidenceModelCharacteristic({
+  const factory EvidenceModelCharacteristic({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -3093,7 +3095,7 @@ class EvidenceVar with _$EvidenceVar {
   /// [modifierExtension] May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
   /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
-  factory EvidenceVar({
+  const factory EvidenceVar({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -3165,7 +3167,7 @@ class EvidenceCertainty with _$EvidenceCertainty {
   /// [raterElement] (_rater): Extensions for rater;
   ///
   /// [subcomponent] A domain or subdomain of certainty.;
-  factory EvidenceCertainty({
+  const factory EvidenceCertainty({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -3334,8 +3336,9 @@ class EvidenceReport with Resource, _$EvidenceReport {
   /// [relatesTo] Relationships that this composition has with other compositions or documents that already exist.;
   ///
   /// [section] The root of the sections that make up the composition.;
-  factory EvidenceReport({
+  const factory EvidenceReport({
     @Default(R4ResourceType.EvidenceReport) R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -3419,7 +3422,7 @@ class EvidenceReportSubject with _$EvidenceReportSubject {
   /// [characteristic] Characteristic.;
   ///
   /// [note] Used for general notes and annotations not coded elsewhere.;
-  factory EvidenceReportSubject({
+  const factory EvidenceReportSubject({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -3494,7 +3497,7 @@ class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
   /// [excludeElement] (_exclude): Extensions for exclude;
   ///
   /// [period] Timeframe for the characteristic.;
-  factory EvidenceReportCharacteristic({
+  const factory EvidenceReportCharacteristic({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -3563,7 +3566,7 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
   /// [codeElement] (_code): Extensions for code;
   ///
   /// [target] The target composition/document of this relationship.;
-  factory EvidenceReportRelatesTo({
+  const factory EvidenceReportRelatesTo({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -3648,7 +3651,7 @@ class EvidenceReportSection with _$EvidenceReportSection {
   /// [emptyReason] If the section is empty, why the list is empty. An empty section typically has some text explaining the empty reason.;
   ///
   /// [section] A nested sub-section within this section.;
-  factory EvidenceReportSection({
+  const factory EvidenceReportSection({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -3897,10 +3900,11 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// [characteristic] A characteristic that defines the members of the
   /// evidence element. Multiple characteristics are applied with "and"
   ///  semantics.
-  factory EvidenceVariable({
+  const factory EvidenceVariable({
     @Default(R4ResourceType.EvidenceVariable)
     @JsonKey(unknownEnumValue: R4ResourceType.EvidenceVariable)
-        R4ResourceType resourceType,
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -3944,7 +3948,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     @JsonKey(name: '_actual') Element? actualElement,
     FhirCode? characteristicCombination,
     @JsonKey(name: '_characteristicCombination')
-        Element? characteristicCombinationElement,
+    Element? characteristicCombinationElement,
     required List<EvidenceVariableCharacteristic> characteristic,
     FhirCode? handling,
     @JsonKey(name: '_handling') Element? handlingElement,
@@ -4079,7 +4083,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   ///  effective period.
   ///
   /// [groupMeasureElement] Extensions for groupMeasure
-  factory EvidenceVariableCharacteristic({
+  const factory EvidenceVariableCharacteristic({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -4172,7 +4176,7 @@ class EvidenceVariableTimeFromStart with _$EvidenceVariableTimeFromStart {
   ///
   /// [note] A human-readable string to clarify or explain concepts about the timeFromEvent.;
   ///
-  factory EvidenceVariableTimeFromStart({
+  const factory EvidenceVariableTimeFromStart({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -4240,7 +4244,7 @@ class EvidenceVariableCategory with _$EvidenceVariableCategory {
   /// [valueQuantity] Definition of the grouping.;
   ///
   /// [valueRange] Definition of the grouping.;
-  factory EvidenceVariableCategory({
+  const factory EvidenceVariableCategory({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -4514,10 +4518,11 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   ///
   /// [outcome] A reference to a ResearchElementDefinition resomece that
   ///  defines the outcome for the research.
-  factory ResearchDefinition({
+  const factory ResearchDefinition({
     @Default(R4ResourceType.ResearchDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchDefinition)
-        R4ResourceType resourceType,
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -4849,10 +4854,11 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// [characteristic] A characteristic that defines the members of the
   /// research element. Multiple characteristics are applied with "and"
   ///  semantics.
-  factory ResearchElementDefinition({
+  const factory ResearchElementDefinition({
     @Default(R4ResourceType.ResearchElementDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchElementDefinition)
-        R4ResourceType resourceType,
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -5065,7 +5071,7 @@ class ResearchElementDefinitionCharacteristic
   ///
   /// [participantEffectiveGroupMeasureElement] Extensions for
   ///  participantEffectiveGroupMeasure
-  factory ResearchElementDefinitionCharacteristic({
+  const factory ResearchElementDefinitionCharacteristic({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -5080,30 +5086,30 @@ class ResearchElementDefinitionCharacteristic
     CodeableConcept? unitOfMeasure,
     String? studyEffectiveDescription,
     @JsonKey(name: '_studyEffectiveDescription')
-        Element? studyEffectiveDescriptionElement,
+    Element? studyEffectiveDescriptionElement,
     FhirDateTime? studyEffectiveDateTime,
     @JsonKey(name: '_studyEffectiveDateTime')
-        Element? studyEffectiveDateTimeElement,
+    Element? studyEffectiveDateTimeElement,
     Period? studyEffectivePeriod,
     FhirDuration? studyEffectiveDuration,
     Timing? studyEffectiveTiming,
     FhirDuration? studyEffectiveTimeFromStart,
     FhirCode? studyEffectiveGroupMeasure,
     @JsonKey(name: '_studyEffectiveGroupMeasure')
-        Element? studyEffectiveGroupMeasureElement,
+    Element? studyEffectiveGroupMeasureElement,
     String? participantEffectiveDescription,
     @JsonKey(name: '_participantEffectiveDescription')
-        Element? participantEffectiveDescriptionElement,
+    Element? participantEffectiveDescriptionElement,
     FhirDateTime? participantEffectiveDateTime,
     @JsonKey(name: '_participantEffectiveDateTime')
-        Element? participantEffectiveDateTimeElement,
+    Element? participantEffectiveDateTimeElement,
     Period? participantEffectivePeriod,
     FhirDuration? participantEffectiveDuration,
     Timing? participantEffectiveTiming,
     FhirDuration? participantEffectiveTimeFromStart,
     FhirCode? participantEffectiveGroupMeasure,
     @JsonKey(name: '_participantEffectiveGroupMeasure')
-        Element? participantEffectiveGroupMeasureElement,
+    Element? participantEffectiveGroupMeasureElement,
   }) = _ResearchElementDefinitionCharacteristic;
 
   /// Produces a Yaml formatted String version of the object

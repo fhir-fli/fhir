@@ -13,6 +13,7 @@ _$_AdministrableProductDefinition _$$_AdministrableProductDefinitionFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.AdministrableProductDefinition) ??
           R5ResourceType.AdministrableProductDefinition,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -532,6 +533,7 @@ _$_ClinicalUseDefinition _$$_ClinicalUseDefinitionFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ClinicalUseDefinition) ??
           R5ResourceType.ClinicalUseDefinition,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1014,6 +1016,7 @@ _$_Ingredient _$$_IngredientFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Ingredient) ??
           R5ResourceType.Ingredient,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1366,6 +1369,7 @@ _$_ManufacturedItemDefinition _$$_ManufacturedItemDefinitionFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ManufacturedItemDefinition) ??
           R5ResourceType.ManufacturedItemDefinition,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1665,6 +1669,7 @@ _$_MedicinalProductDefinition _$$_MedicinalProductDefinitionFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.MedicinalProductDefinition) ??
           R5ResourceType.MedicinalProductDefinition,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2222,6 +2227,7 @@ _$_PackagedProductDefinition _$$_PackagedProductDefinitionFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.PackagedProductDefinition) ??
           R5ResourceType.PackagedProductDefinition,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2606,6 +2612,7 @@ _$_RegulatedAuthorization _$$_RegulatedAuthorizationFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.RegulatedAuthorization) ??
           R5ResourceType.RegulatedAuthorization,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2803,6 +2810,7 @@ _$_SubstanceDefinition _$$_SubstanceDefinitionFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SubstanceDefinition) ??
           R5ResourceType.SubstanceDefinition,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -3658,6 +3666,7 @@ _$_SubstanceNucleicAcid _$$_SubstanceNucleicAcidFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SubstanceNucleicAcid) ??
           R5ResourceType.SubstanceNucleicAcid,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -3925,6 +3934,7 @@ _$_SubstancePolymer _$$_SubstancePolymerFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SubstancePolymer) ??
           R5ResourceType.SubstancePolymer,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -4329,6 +4339,7 @@ _$_SubstanceProtein _$$_SubstanceProteinFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SubstanceProtein) ??
           R5ResourceType.SubstanceProtein,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -4503,6 +4514,7 @@ _$_SubstanceReferenceInformation _$$_SubstanceReferenceInformationFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SubstanceReferenceInformation) ??
           R5ResourceType.SubstanceReferenceInformation,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -4753,6 +4765,7 @@ _$_SubstanceSourceMaterial _$$_SubstanceSourceMaterialFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SubstanceSourceMaterial) ??
           R5ResourceType.SubstanceSourceMaterial,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

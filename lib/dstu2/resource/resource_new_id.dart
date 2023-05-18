@@ -90,7 +90,7 @@ Resource _newId(Resource resource) {
     case Dstu2ResourceType.Goal:
       return (resource as Goal).copyWith(fhirId: newId());
     case Dstu2ResourceType.Group:
-      return (resource as Group).copyWith(fhirId: newId());
+      return (resource as FhirGroup).copyWith(fhirId: newId());
     case Dstu2ResourceType.HealthcareService:
       return (resource as HealthcareService).copyWith(fhirId: newId());
     case Dstu2ResourceType.ImagingObjectSelection:

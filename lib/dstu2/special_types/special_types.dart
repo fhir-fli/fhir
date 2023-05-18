@@ -17,7 +17,7 @@ part 'special_types.g.dart';
 @freezed
 class FhirMeta with _$FhirMeta {
   FhirMeta._();
-  factory FhirMeta({
+  const factory FhirMeta({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -64,7 +64,7 @@ class FhirMeta with _$FhirMeta {
 @freezed
 class Reference with _$Reference {
   Reference._();
-  factory Reference({
+  const factory Reference({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -108,7 +108,7 @@ class Reference with _$Reference {
 @freezed
 class ElementDefinition with _$ElementDefinition {
   ElementDefinition._();
-  factory ElementDefinition({
+  const factory ElementDefinition({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required String path,
@@ -144,7 +144,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_defaultValueDecimal') Element? defaultValueDecimalElement,
     FhirBase64Binary? defaultValueBase64Binary,
     @JsonKey(name: '_defaultValueBase64Binary')
-        Element? defaultValueBase64BinaryElement,
+    Element? defaultValueBase64BinaryElement,
     FhirInstant? defaultValueInstant,
     @JsonKey(name: '_defaultValueInstant') Element? defaultValueInstantElement,
     String? defaultValueString,
@@ -155,7 +155,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_defaultValueDate') Element? defaultValueDateElement,
     FhirDateTime? defaultValueDateTime,
     @JsonKey(name: '_defaultValueDateTime')
-        Element? defaultValueDateTimeElement,
+    Element? defaultValueDateTimeElement,
     FhirTime? defaultValueTime,
     @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
     FhirCode? defaultValueCode,
@@ -166,13 +166,13 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
     FhirUnsignedInt? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
-        Element? defaultValueUnsignedIntElement,
+    Element? defaultValueUnsignedIntElement,
     FhirPositiveInt? defaultValuePositiveInt,
     @JsonKey(name: '_defaultValuePositiveInt')
-        Element? defaultValuePositiveIntElement,
+    Element? defaultValuePositiveIntElement,
     FhirMarkdown? defaultValueMarkdown,
     @JsonKey(name: '_defaultValueMarkDown')
-        Element? defaultValueMarkDownElement,
+    Element? defaultValueMarkDownElement,
     Annotation? defaultValueAnnotation,
     Attachment? defaultValueAttachment,
     Identifier? defaultValueIdentifier,
@@ -345,7 +345,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_minValueDecimal') Element? minValueDecimalElement,
     FhirBase64Binary? minValueBase64Binary,
     @JsonKey(name: '_minValueBase64Binary')
-        Element? minValueBase64BinaryElement,
+    Element? minValueBase64BinaryElement,
     FhirInstant? minValueInstant,
     @JsonKey(name: '_minValueInstant') Element? minValueInstantElement,
     String? minValueString,
@@ -395,7 +395,7 @@ class ElementDefinition with _$ElementDefinition {
     @JsonKey(name: '_maxValueDecimal') Element? maxValueDecimalElement,
     FhirBase64Binary? maxValueBase64Binary,
     @JsonKey(name: '_maxValueBase64Binary')
-        Element? maxValueBase64BinaryElement,
+    Element? maxValueBase64BinaryElement,
     FhirInstant? maxValueInstant,
     @JsonKey(name: '_maxValueInstant') Element? maxValueInstantElement,
     String? maxValueString,
@@ -486,12 +486,12 @@ class ElementDefinition with _$ElementDefinition {
 @freezed
 class Narrative with _$Narrative {
   Narrative._();
-  factory Narrative({
+  const factory Narrative({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-        required NarrativeStatus status,
+    required NarrativeStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     required String div,
   }) = _Narrative;
@@ -530,7 +530,7 @@ class Narrative with _$Narrative {
 @freezed
 class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ElementDefinitionSlicing._();
-  factory ElementDefinitionSlicing({
+  const factory ElementDefinitionSlicing({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<String>? discriminator,
@@ -539,7 +539,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
     FhirBoolean? ordered,
     @JsonKey(name: '_ordered') Element? orderedElement,
     @JsonKey(unknownEnumValue: SlicingRules.unknown)
-        required SlicingRules rules,
+    required SlicingRules rules,
     @JsonKey(name: '_rules') Element? rulesElement,
   }) = _ElementDefinitionSlicing;
 
@@ -577,7 +577,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 @freezed
 class ElementDefinitionBase with _$ElementDefinitionBase {
   ElementDefinitionBase._();
-  factory ElementDefinitionBase({
+  const factory ElementDefinitionBase({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required String path,
@@ -622,7 +622,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
 @freezed
 class ElementDefinitionType with _$ElementDefinitionType {
   ElementDefinitionType._();
-  factory ElementDefinitionType({
+  const factory ElementDefinitionType({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirCode? code,
@@ -667,7 +667,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
 @freezed
 class TypeCodeExtension with _$TypeCodeExtension {
   TypeCodeExtension._();
-  factory TypeCodeExtension({
+  const factory TypeCodeExtension({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
   }) = _TypeCodeExtension;
 
@@ -705,7 +705,7 @@ class TypeCodeExtension with _$TypeCodeExtension {
 @freezed
 class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ElementDefinitionConstraint._();
-  factory ElementDefinitionConstraint({
+  const factory ElementDefinitionConstraint({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     required FhirId key,
@@ -713,7 +713,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
     String? requirements,
     @JsonKey(name: '_requirements') Element? requirementsElement,
     @JsonKey(unknownEnumValue: ConstraintSeverity.unknown)
-        required ConstraintSeverity severity,
+    required ConstraintSeverity severity,
     @JsonKey(name: '_severity') Element? severityElement,
     required String human,
     @JsonKey(name: '_human') Element? humanElement,
@@ -755,11 +755,13 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 @freezed
 class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ElementDefinitionBinding._();
-  factory ElementDefinitionBinding({
+  const factory ElementDefinitionBinding({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(required: true, unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-        required ElementDefinitionBindingStrength strength,
+    @JsonKey(
+        required: true,
+        unknownEnumValue: ElementDefinitionBindingStrength.unknown)
+    required ElementDefinitionBindingStrength strength,
     @JsonKey(name: '_strength') Element? strengthElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -801,7 +803,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
 @freezed
 class ElementDefinitionMapping with _$ElementDefinitionMapping {
   ElementDefinitionMapping._();
-  factory ElementDefinitionMapping({
+  const factory ElementDefinitionMapping({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,

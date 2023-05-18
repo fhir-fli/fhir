@@ -127,15 +127,16 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   /// [property] A property that is specific to this BiologicallyDerviedProduct
   ///  instance.
   ///
-  factory BiologicallyDerivedProduct({
+  const factory BiologicallyDerivedProduct({
     /// [resourceType] This is a BiologicallyDerivedProduct resource
     @Default(R5ResourceType.BiologicallyDerivedProduct)
     @JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProduct)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -344,10 +345,10 @@ class BiologicallyDerivedProductCollection
   ///
   /// [collectedPeriod] Time of product collection.
   ///
-  factory BiologicallyDerivedProductCollection({
+  const factory BiologicallyDerivedProductCollection({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -495,10 +496,10 @@ class BiologicallyDerivedProductProperty
   ///
   /// [valueAttachment] Property values.
   ///
-  factory BiologicallyDerivedProductProperty({
+  const factory BiologicallyDerivedProductProperty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -719,15 +720,17 @@ class BiologicallyDerivedProductDispense
   /// [usageInstructionElement] ("_usageInstruction") Extensions for
   ///  usageInstruction
   ///
-  factory BiologicallyDerivedProductDispense({
+  const factory BiologicallyDerivedProductDispense({
     /// [resourceType] This is a BiologicallyDerivedProductDispense resource
     @Default(R5ResourceType.BiologicallyDerivedProductDispense)
-    @JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProductDispense)
-        R5ResourceType resourceType,
+    @JsonKey(
+        unknownEnumValue: R5ResourceType.BiologicallyDerivedProductDispense)
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -948,10 +951,10 @@ class BiologicallyDerivedProductDispensePerformer
   ///
   /// [actor] Identifies the person responsible for the action.
   ///
-  factory BiologicallyDerivedProductDispensePerformer({
+  const factory BiologicallyDerivedProductDispensePerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1207,15 +1210,16 @@ class Device with Resource, _$Device {
   /// [parent] The higher level or encompassing device that this device is a
   ///  logical part of.
   ///
-  factory Device({
+  const factory Device({
     /// [resourceType] This is a Device resource
     @Default(R5ResourceType.Device)
     @JsonKey(unknownEnumValue: R5ResourceType.Device)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1559,10 +1563,10 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   ///
   /// [entryTypeElement] ("_entryType") Extensions for entryType
   ///
-  factory DeviceUdiCarrier({
+  const factory DeviceUdiCarrier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1732,10 +1736,10 @@ class DeviceName with _$DeviceName {
   ///
   /// [displayElement] ("_display") Extensions for display
   ///
-  factory DeviceName({
+  const factory DeviceName({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1864,10 +1868,10 @@ class DeviceVersion with _$DeviceVersion {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory DeviceVersion({
+  const factory DeviceVersion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1996,10 +2000,10 @@ class DeviceConformsTo with _$DeviceConformsTo {
   ///
   /// [versionElement] ("_version") Extensions for version
   ///
-  factory DeviceConformsTo({
+  const factory DeviceConformsTo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2142,10 +2146,10 @@ class DeviceProperty with _$DeviceProperty {
   /// [valueAttachment] The value of the property specified by the associated
   ///  property.type code.
   ///
-  factory DeviceProperty({
+  const factory DeviceProperty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2354,15 +2358,16 @@ class DeviceMetric with Resource, _$DeviceMetric {
   /// [calibration] Describes the calibrations that have been performed or that
   ///  are required to be performed.
   ///
-  factory DeviceMetric({
+  const factory DeviceMetric({
     /// [resourceType] This is a DeviceMetric resource
     @Default(R5ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceMetric)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2564,10 +2569,10 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   ///
   /// [timeElement] ("_time") Extensions for time
   ///
-  factory DeviceMetricCalibration({
+  const factory DeviceMetricCalibration({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2735,15 +2740,16 @@ class NutritionProduct with Resource, _$NutritionProduct {
   ///
   /// [note] Comments made about the product.
   ///
-  factory NutritionProduct({
+  const factory NutritionProduct({
     /// [resourceType] This is a NutritionProduct resource
     @Default(R5ResourceType.NutritionProduct)
     @JsonKey(unknownEnumValue: R5ResourceType.NutritionProduct)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2920,10 +2926,10 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
   /// [amount] The amount of nutrient expressed in one or more units: X per
   ///  pack / per serving / per dose.
   ///
-  factory NutritionProductNutrient({
+  const factory NutritionProductNutrient({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3027,10 +3033,10 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
   ///
   /// [amount] The amount of ingredient that is in the product.
   ///
-  factory NutritionProductIngredient({
+  const factory NutritionProductIngredient({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3154,10 +3160,10 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   ///
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
-  factory NutritionProductCharacteristic({
+  const factory NutritionProductCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3317,10 +3323,10 @@ class NutritionProductInstance with _$NutritionProductInstance {
   ///  event during which material in this product from one or more biological
   ///  entities was obtained or pooled.
   ///
-  factory NutritionProductInstance({
+  const factory NutritionProductInstance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3511,15 +3517,16 @@ class Substance with Resource, _$Substance {
   ///
   /// [ingredient] A substance can be composed of other substances.
   ///
-  factory Substance({
+  const factory Substance({
     /// [resourceType] This is a Substance resource
     @Default(R5ResourceType.Substance)
     @JsonKey(unknownEnumValue: R5ResourceType.Substance)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3701,10 +3708,10 @@ class SubstanceIngredient with _$SubstanceIngredient {
   /// [substanceReference] Another substance that is a component of this
   ///  substance.
   ///
-  factory SubstanceIngredient({
+  const factory SubstanceIngredient({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.

@@ -17,10 +17,11 @@ part 'individuals.g.dart';
 @freezed
 class Patient with Resource, _$Patient {
   Patient._();
-  factory Patient({
+  const factory Patient({
     @Default(Dstu2ResourceType.Patient)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Patient)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: '_id') Element? idElement,
     FhirMeta? meta,
@@ -49,10 +50,10 @@ class Patient with Resource, _$Patient {
     CodeableConcept? maritalStatus,
     FhirBoolean? multipleBirthBoolean,
     @JsonKey(name: '_multipleBirthBoolean')
-        Element? multipleBirthBooleanElement,
+    Element? multipleBirthBooleanElement,
     FhirInteger? multipleBirthInteger,
     @JsonKey(name: '_multipleBirthInteger')
-        Element? multipleBirthIntegerElement,
+    Element? multipleBirthIntegerElement,
     List<Attachment>? photo,
     List<PatientContact>? contact,
     PatientAnimal? animal,
@@ -93,7 +94,7 @@ class Patient with Resource, _$Patient {
 @freezed
 class PatientContact with _$PatientContact {
   PatientContact._();
-  factory PatientContact({
+  const factory PatientContact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -141,7 +142,7 @@ class PatientContact with _$PatientContact {
 @freezed
 class PatientAnimal with _$PatientAnimal {
   PatientAnimal._();
-  factory PatientAnimal({
+  const factory PatientAnimal({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -184,7 +185,7 @@ class PatientAnimal with _$PatientAnimal {
 @freezed
 class PatientCommunication with _$PatientCommunication {
   PatientCommunication._();
-  factory PatientCommunication({
+  const factory PatientCommunication({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -227,7 +228,7 @@ class PatientCommunication with _$PatientCommunication {
 @freezed
 class PatientLink with _$PatientLink {
   PatientLink._();
-  factory PatientLink({
+  const factory PatientLink({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -270,10 +271,11 @@ class PatientLink with _$PatientLink {
 @freezed
 class Practitioner with Resource, _$Practitioner {
   Practitioner._();
-  factory Practitioner({
+  const factory Practitioner({
     @Default(Dstu2ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Practitioner)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -291,7 +293,7 @@ class Practitioner with Resource, _$Practitioner {
     List<ContactPoint>? telecom,
     List<Address>? address,
     @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-        PractitionerGender? gender,
+    PractitionerGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     FhirDate? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,
@@ -332,7 +334,7 @@ class Practitioner with Resource, _$Practitioner {
 @freezed
 class PractitionerPractitionerRole with _$PractitionerPractitionerRole {
   PractitionerPractitionerRole._();
-  factory PractitionerPractitionerRole({
+  const factory PractitionerPractitionerRole({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -379,7 +381,7 @@ class PractitionerPractitionerRole with _$PractitionerPractitionerRole {
 @freezed
 class PractitionerQualification with _$PractitionerQualification {
   PractitionerQualification._();
-  factory PractitionerQualification({
+  const factory PractitionerQualification({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -423,10 +425,11 @@ class PractitionerQualification with _$PractitionerQualification {
 @freezed
 class RelatedPerson with Resource, _$RelatedPerson {
   RelatedPerson._();
-  factory RelatedPerson({
+  const factory RelatedPerson({
     @Default(Dstu2ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.RelatedPerson)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -443,7 +446,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
     HumanName? name,
     List<ContactPoint>? telecom,
     @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-        RelatedPersonGender? gender,
+    RelatedPersonGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     FhirDate? birthDate,
     @JsonKey(name: '_birthDate') Element? birthDateElement,

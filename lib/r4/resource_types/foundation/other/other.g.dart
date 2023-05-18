@@ -11,6 +11,7 @@ _$_Basic _$$_BasicFromJson(Map<String, dynamic> json) => _$_Basic(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Basic) ??
           R4ResourceType.Basic,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -239,6 +240,7 @@ _$_Binary _$$_BinaryFromJson(Map<String, dynamic> json) => _$_Binary(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Binary) ??
           R4ResourceType.Binary,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -318,6 +320,7 @@ _$_Bundle _$$_BundleFromJson(Map<String, dynamic> json) => _$_Bundle(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Bundle) ??
           R4ResourceType.Bundle,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -676,6 +679,7 @@ _$_Linkage _$$_LinkageFromJson(Map<String, dynamic> json) => _$_Linkage(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Linkage) ??
           R4ResourceType.Linkage,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -789,6 +793,7 @@ _$_MessageHeader _$$_MessageHeaderFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MessageHeader) ??
           R4ResourceType.MessageHeader,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1062,6 +1067,7 @@ _$_OperationOutcome _$$_OperationOutcomeFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.OperationOutcome) ??
           R4ResourceType.OperationOutcome,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1201,6 +1207,7 @@ _$_Parameters _$$_ParametersFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Parameters) ??
           R4ResourceType.Parameters,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1600,6 +1607,7 @@ _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Subscription) ??
           R4ResourceType.Subscription,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1758,6 +1766,7 @@ _$_SubscriptionStatus _$$_SubscriptionStatusFromJson(
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.SubscriptionStatus,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1916,6 +1925,7 @@ _$_SubscriptionTopic _$$_SubscriptionTopicFromJson(Map<String, dynamic> json) =>
       resourceType:
           $enumDecodeNullable(_$R4ResourceTypeEnumMap, json['resourceType']) ??
               R4ResourceType.SubscriptionTopic,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

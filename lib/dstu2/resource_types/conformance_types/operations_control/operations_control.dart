@@ -17,10 +17,11 @@ part 'operations_control.g.dart';
 @freezed
 class Conformance with Resource, _$Conformance {
   Conformance._();
-  factory Conformance({
+  const factory Conformance({
     @Default(Dstu2ResourceType.Conformance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -34,7 +35,7 @@ class Conformance with Resource, _$Conformance {
     String? version,
     String? name,
     @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-        ConformanceStatus? status,
+    ConformanceStatus? status,
     FhirBoolean? experimental,
     String? publisher,
     List<ConformanceContact>? contact,
@@ -43,13 +44,13 @@ class Conformance with Resource, _$Conformance {
     String? requirements,
     String? copyright,
     @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-        required ConformanceKind kind,
+    required ConformanceKind kind,
     ConformanceSoftware? software,
     ConformanceImplementation? implementation,
     required FhirId fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-        required ConformanceAcceptUnknown acceptUnknown,
+    required ConformanceAcceptUnknown acceptUnknown,
     @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
     required List<ConformanceFormat> format,
     List<Reference>? profile,
@@ -89,10 +90,11 @@ class Conformance with Resource, _$Conformance {
 @freezed
 class CapabilityStatement with Resource, _$CapabilityStatement {
   CapabilityStatement._();
-  factory CapabilityStatement({
+  const factory CapabilityStatement({
     @Default(Dstu2ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -106,7 +108,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     String? version,
     String? name,
     @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-        ConformanceStatus? status,
+    ConformanceStatus? status,
     FhirBoolean? experimental,
     String? publisher,
     List<ConformanceContact>? contact,
@@ -115,13 +117,13 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     String? requirements,
     String? copyright,
     @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-        required ConformanceKind kind,
+    required ConformanceKind kind,
     ConformanceSoftware? software,
     ConformanceImplementation? implementation,
     required FhirId fhirVersion,
     @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
     @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-        required ConformanceAcceptUnknown acceptUnknown,
+    required ConformanceAcceptUnknown acceptUnknown,
     @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
     required List<ConformanceFormat> format,
     List<Reference>? profile,
@@ -161,7 +163,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
 @freezed
 class ConformanceContact with _$ConformanceContact {
   ConformanceContact._();
-  factory ConformanceContact({
+  const factory ConformanceContact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -203,7 +205,7 @@ class ConformanceContact with _$ConformanceContact {
 @freezed
 class ConformanceSoftware with _$ConformanceSoftware {
   ConformanceSoftware._();
-  factory ConformanceSoftware({
+  const factory ConformanceSoftware({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -246,7 +248,7 @@ class ConformanceSoftware with _$ConformanceSoftware {
 @freezed
 class ConformanceImplementation with _$ConformanceImplementation {
   ConformanceImplementation._();
-  factory ConformanceImplementation({
+  const factory ConformanceImplementation({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -288,7 +290,7 @@ class ConformanceImplementation with _$ConformanceImplementation {
 @freezed
 class ConformanceRest with _$ConformanceRest {
   ConformanceRest._();
-  factory ConformanceRest({
+  const factory ConformanceRest({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -300,7 +302,7 @@ class ConformanceRest with _$ConformanceRest {
     required List<ConformanceRestResource> resource,
     List<ConformanceRestInteraction>? interaction,
     @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
-        RestTransactionMode? transactionMode,
+    RestTransactionMode? transactionMode,
     List<ConformanceResourceSearchParam>? searchParam,
     List<ConformanceRestOperation>? operation,
     List<FhirUri>? compartment,
@@ -340,7 +342,7 @@ class ConformanceRest with _$ConformanceRest {
 @freezed
 class ConformanceMessaging with _$ConformanceMessaging {
   ConformanceMessaging._();
-  factory ConformanceMessaging({
+  const factory ConformanceMessaging({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -385,7 +387,7 @@ class ConformanceMessaging with _$ConformanceMessaging {
 @freezed
 class ConformanceDocument with _$ConformanceDocument {
   ConformanceDocument._();
-  factory ConformanceDocument({
+  const factory ConformanceDocument({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -429,7 +431,7 @@ class ConformanceDocument with _$ConformanceDocument {
 @freezed
 class ConformanceRestSecurity with _$ConformanceRestSecurity {
   ConformanceRestSecurity._();
-  factory ConformanceRestSecurity({
+  const factory ConformanceRestSecurity({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -474,7 +476,7 @@ class ConformanceRestSecurity with _$ConformanceRestSecurity {
 @freezed
 class ConformanceRestResource with _$ConformanceRestResource {
   ConformanceRestResource._();
-  factory ConformanceRestResource({
+  const factory ConformanceRestResource({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -483,9 +485,9 @@ class ConformanceRestResource with _$ConformanceRestResource {
     @JsonKey(name: '_type') Element? typeElement,
     Reference? profile,
     @JsonKey(required: true)
-        required List<ConformanceResourceInteraction> interaction,
+    required List<ConformanceResourceInteraction> interaction,
     @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-        ResourceVersioning? versioning,
+    ResourceVersioning? versioning,
     FhirBoolean? readHistory,
     FhirBoolean? updateCreate,
     @JsonKey(name: '_updateCreate') Element? updateCreateElement,
@@ -493,7 +495,7 @@ class ConformanceRestResource with _$ConformanceRestResource {
     @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
     FhirBoolean? conditionalUpdate,
     @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-        ResourceConditionalDelete? conditionalDelete,
+    ResourceConditionalDelete? conditionalDelete,
     @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
     List<String>? searchInclude,
     List<String>? searchRevInclude,
@@ -534,12 +536,12 @@ class ConformanceRestResource with _$ConformanceRestResource {
 @freezed
 class ConformanceResourceInteraction with _$ConformanceResourceInteraction {
   ConformanceResourceInteraction._();
-  factory ConformanceResourceInteraction({
+  const factory ConformanceResourceInteraction({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
-        required ResourceInteractionCode code,
+    required ResourceInteractionCode code,
     String? documentation,
   }) = _ConformanceResourceInteraction;
 
@@ -578,7 +580,7 @@ class ConformanceResourceInteraction with _$ConformanceResourceInteraction {
 @freezed
 class ConformanceRestOperation with _$ConformanceRestOperation {
   ConformanceRestOperation._();
-  factory ConformanceRestOperation({
+  const factory ConformanceRestOperation({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -621,7 +623,7 @@ class ConformanceRestOperation with _$ConformanceRestOperation {
 @freezed
 class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint {
   ConformanceMessagingEndpoint._();
-  factory ConformanceMessagingEndpoint({
+  const factory ConformanceMessagingEndpoint({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -664,7 +666,7 @@ class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint {
 @freezed
 class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
   ConformanceMessagingEvent._();
-  factory ConformanceMessagingEvent({
+  const factory ConformanceMessagingEvent({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -712,7 +714,7 @@ class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
 @freezed
 class ConformanceSecurityCertificate with _$ConformanceSecurityCertificate {
   ConformanceSecurityCertificate._();
-  factory ConformanceSecurityCertificate({
+  const factory ConformanceSecurityCertificate({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -756,12 +758,12 @@ class ConformanceSecurityCertificate with _$ConformanceSecurityCertificate {
 @freezed
 class ConformanceRestInteraction with _$ConformanceRestInteraction {
   ConformanceRestInteraction._();
-  factory ConformanceRestInteraction({
+  const factory ConformanceRestInteraction({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
-        required RestInteractionCode code,
+    required RestInteractionCode code,
     String? documentation,
   }) = _ConformanceRestInteraction;
 
@@ -799,7 +801,7 @@ class ConformanceRestInteraction with _$ConformanceRestInteraction {
 @freezed
 class ConformanceResourceSearchParam with _$ConformanceResourceSearchParam {
   ConformanceResourceSearchParam._();
-  factory ConformanceResourceSearchParam({
+  const factory ConformanceResourceSearchParam({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -807,7 +809,7 @@ class ConformanceResourceSearchParam with _$ConformanceResourceSearchParam {
     required String name,
     FhirUri? definition,
     @JsonKey(unknownEnumValue: SearchParamType.unknown)
-        required SearchParamType type,
+    required SearchParamType type,
     String? documentation,
     List<FhirCode>? target,
     List<SearchParamModifier>? modifier,
@@ -849,10 +851,11 @@ class ConformanceResourceSearchParam with _$ConformanceResourceSearchParam {
 @freezed
 class OperationDefinition with Resource, _$OperationDefinition {
   OperationDefinition._();
-  factory OperationDefinition({
+  const factory OperationDefinition({
     @Default(Dstu2ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -864,10 +867,11 @@ class OperationDefinition with Resource, _$OperationDefinition {
     FhirUri? url,
     String? version,
     required String name,
-    @JsonKey(required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
-        required OperationDefinitionStatus status,
+    @JsonKey(
+        required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
+    required OperationDefinitionStatus status,
     @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-        required OperationDefinitionKind kind,
+    required OperationDefinitionKind kind,
     FhirBoolean? experimental,
     String? publisher,
     List<OperationDefinitionContact>? contact,
@@ -915,7 +919,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
 @freezed
 class OperationDefinitionContact with _$OperationDefinitionContact {
   OperationDefinitionContact._();
-  factory OperationDefinitionContact({
+  const factory OperationDefinitionContact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -957,7 +961,7 @@ class OperationDefinitionContact with _$OperationDefinitionContact {
 @freezed
 class OperationDefinitionParameter with _$OperationDefinitionParameter {
   OperationDefinitionParameter._();
-  factory OperationDefinitionParameter({
+  const factory OperationDefinitionParameter({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1008,7 +1012,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
 class OperationDefinitionParameterBinding
     with _$OperationDefinitionParameterBinding {
   OperationDefinitionParameterBinding._();
-  factory OperationDefinitionParameterBinding({
+  const factory OperationDefinitionParameterBinding({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1016,7 +1020,7 @@ class OperationDefinitionParameterBinding
         required: true,
         unknownEnumValue: OperationDefinitionBindingStrength.unknown)
     @JsonKey(required: true)
-        required OperationDefinitionBindingStrength strength,
+    required OperationDefinitionBindingStrength strength,
     FhirUri? valueSetUri,
     Reference? valueSetReference,
   }) = _OperationDefinitionParameterBinding;
@@ -1044,10 +1048,11 @@ class OperationDefinitionParameterBinding
 @freezed
 class SearchParameter with Resource, _$SearchParameter {
   SearchParameter._();
-  factory SearchParameter({
+  const factory SearchParameter({
     @Default(Dstu2ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1059,7 +1064,7 @@ class SearchParameter with Resource, _$SearchParameter {
     required FhirUri url,
     required String name,
     @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-        SearchParameterStatus? status,
+    SearchParameterStatus? status,
     FhirBoolean? experimental,
     String? publisher,
     List<SearchParameterContact>? contact,
@@ -1069,11 +1074,11 @@ class SearchParameter with Resource, _$SearchParameter {
     required FhirCode code,
     FhirCode? base,
     @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-        required SearchParameterType type,
+    required SearchParameterType type,
     String? description,
     String? xpath,
     @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-        SearchParameterXpathUsage? xpathUsage,
+    SearchParameterXpathUsage? xpathUsage,
     List<FhirCode>? target,
   }) = _SearchParameter;
 
@@ -1108,7 +1113,7 @@ class SearchParameter with Resource, _$SearchParameter {
 @freezed
 class SearchParameterContact with _$SearchParameterContact {
   SearchParameterContact._();
-  factory SearchParameterContact({
+  const factory SearchParameterContact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

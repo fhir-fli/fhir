@@ -120,17 +120,17 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
   ///  notification.
   ///
   /// [headerElement] Extensions for header
-  factory FhirEndpoint({
+  const factory FhirEndpoint({
     @Default(R4ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: R4ResourceType.Endpoint)
 
-        /// [resourceType] This is a Endpoint resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Endpoint resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -144,15 +144,13 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -174,8 +172,7 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -200,8 +197,7 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [connectionType] A coded value that represents the technical details of
     /// the usage of this endpoint, such as what WSDLs should be used in what way.
@@ -212,8 +208,7 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [managingOrganization] The organization that manages this endpoint (even
     /// if technically another organization is hosting this in the cloud, it is
@@ -239,23 +234,20 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
     List<FhirCode>? payloadMimeType,
 
     /// [payloadMimeTypeElement] Extensions for payloadMimeType
-    @JsonKey(name: '_payloadMimeType')
-        List<Element?>? payloadMimeTypeElement,
+    @JsonKey(name: '_payloadMimeType') List<Element?>? payloadMimeTypeElement,
 
     /// [address] The uri that describes the actual end-point to connect to.
     FhirUrl? address,
 
     /// [addressElement] Extensions for address
-    @JsonKey(name: '_address')
-        Element? addressElement,
+    @JsonKey(name: '_address') Element? addressElement,
 
     /// [header] Additional headers / information to send as part of the
     ///  notification.
     List<String>? header,
 
     /// [headerElement] Extensions for header
-    @JsonKey(name: '_header')
-        List<Element?>? headerElement,
+    @JsonKey(name: '_header') List<Element?>? headerElement,
   }) = _FhirEndpoint;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -432,17 +424,17 @@ class HealthcareService with Resource, _$HealthcareService {
   ///
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the specific healthcare services defined at this resource.
-  factory HealthcareService({
+  const factory HealthcareService({
     @Default(R4ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: R4ResourceType.HealthcareService)
 
-        /// [resourceType] This is a HealthcareService resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a HealthcareService resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -456,15 +448,13 @@ class HealthcareService with Resource, _$HealthcareService {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -486,8 +476,7 @@ class HealthcareService with Resource, _$HealthcareService {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -513,8 +502,7 @@ class HealthcareService with Resource, _$HealthcareService {
     FhirBoolean? active,
 
     /// [activeElement] Extensions for active
-    @JsonKey(name: '_active')
-        Element? activeElement,
+    @JsonKey(name: '_active') Element? activeElement,
 
     /// [providedBy] The organization that provides this healthcare service.
     Reference? providedBy,
@@ -538,8 +526,7 @@ class HealthcareService with Resource, _$HealthcareService {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [comment] Any additional description of the service and/or any specific
     /// issues not covered by the other attributes, which can be displayed as
@@ -547,16 +534,14 @@ class HealthcareService with Resource, _$HealthcareService {
     String? comment,
 
     /// [commentElement] Extensions for comment
-    @JsonKey(name: '_comment')
-        Element? commentElement,
+    @JsonKey(name: '_comment') Element? commentElement,
 
     /// [extraDetails] Extra details about the service that can't be placed in
     ///  the other fields.
     FhirMarkdown? extraDetails,
 
     /// [extraDetailsElement] Extensions for extraDetails
-    @JsonKey(name: '_extraDetails')
-        Element? extraDetailsElement,
+    @JsonKey(name: '_extraDetails') Element? extraDetailsElement,
 
     /// [photo] If there is a photo/symbol associated with this
     /// HealthcareService, it may be included here to facilitate quick
@@ -601,8 +586,7 @@ class HealthcareService with Resource, _$HealthcareService {
     FhirBoolean? appointmentRequired,
 
     /// [appointmentRequiredElement] Extensions for appointmentRequired
-    @JsonKey(name: '_appointmentRequired')
-        Element? appointmentRequiredElement,
+    @JsonKey(name: '_appointmentRequired') Element? appointmentRequiredElement,
 
     /// [availableTime] A collection of times that the Service Site is available.
     List<HealthcareServiceAvailableTime>? availableTime,
@@ -618,8 +602,8 @@ class HealthcareService with Resource, _$HealthcareService {
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
 
-        /// [availabilityExceptionsElement] Extensions for availabilityExceptions
-        Element? availabilityExceptionsElement,
+    /// [availabilityExceptionsElement] Extensions for availabilityExceptions
+    Element? availabilityExceptionsElement,
 
     /// [endpoint] Technical endpoints providing access to services operated for
     ///  the specific healthcare services defined at this resource.
@@ -692,7 +676,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   /// [comment] Describes the eligibility conditions for the service.
   ///
   /// [commentElement] Extensions for comment
-  factory HealthcareServiceEligibility({
+  const factory HealthcareServiceEligibility({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -813,7 +797,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   ///  set, then this time is ignored.
   ///
   /// [availableEndTimeElement] Extensions for availableEndTime
-  factory HealthcareServiceAvailableTime({
+  const factory HealthcareServiceAvailableTime({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -942,7 +926,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   ///
   /// [during] Service is not available (seasonally or for a public holiday)
   ///  from this date.
-  factory HealthcareServiceNotAvailable({
+  const factory HealthcareServiceNotAvailable({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1141,17 +1125,17 @@ class Location with Resource, _$Location {
   ///
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the location.
-  factory Location({
+  const factory Location({
     @Default(R4ResourceType.Location)
     @JsonKey(unknownEnumValue: R4ResourceType.Location)
 
-        /// [resourceType] This is a Location resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Location resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1165,15 +1149,13 @@ class Location with Resource, _$Location {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1195,8 +1177,7 @@ class Location with Resource, _$Location {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1223,8 +1204,7 @@ class Location with Resource, _$Location {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [operationalStatus] The operational status covers operation values most
     /// relevant to beds (but can also apply to rooms/units/chairs/etc. such as an
@@ -1237,32 +1217,28 @@ class Location with Resource, _$Location {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [alias] A list of alternate names that the location is known as, or was
     ///  known as, in the past.
     List<String>? alias,
 
     /// [aliasElement] Extensions for alias
-    @JsonKey(name: '_alias')
-        List<Element?>? aliasElement,
+    @JsonKey(name: '_alias') List<Element?>? aliasElement,
 
     /// [description] Description of the Location, which helps in finding or
     ///  referencing the place.
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [mode] Indicates whether a resource instance represents a specific
     ///  location or a class of locations.
     FhirCode? mode,
 
     /// [modeElement] Extensions for mode
-    @JsonKey(name: '_mode')
-        Element? modeElement,
+    @JsonKey(name: '_mode') Element? modeElement,
 
     /// [type] Indicates the type of function performed at the location.
     List<CodeableConcept>? type,
@@ -1301,8 +1277,8 @@ class Location with Resource, _$Location {
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
 
-        /// [availabilityExceptionsElement] Extensions for availabilityExceptions
-        Element? availabilityExceptionsElement,
+    /// [availabilityExceptionsElement] Extensions for availabilityExceptions
+    Element? availabilityExceptionsElement,
 
     /// [endpoint] Technical endpoints providing access to services operated for
     ///  the location.
@@ -1385,7 +1361,7 @@ class LocationPosition with _$LocationPosition {
   ///  as for the text of the altitude element in KML (see notes below).
   ///
   /// [altitudeElement] Extensions for altitude
-  factory LocationPosition({
+  const factory LocationPosition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1516,7 +1492,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
   /// [closingTime] Time that the Location closes.
   ///
   /// [closingTimeElement] Extensions for closingTime
-  factory LocationHoursOfOperation({
+  const factory LocationHoursOfOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1693,17 +1669,17 @@ class Organization with Resource, _$Organization {
   ///
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the organization.
-  factory Organization({
+  const factory Organization({
     @Default(R4ResourceType.Organization)
     @JsonKey(unknownEnumValue: R4ResourceType.Organization)
 
-        /// [resourceType] This is a Organization resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Organization resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1717,15 +1693,13 @@ class Organization with Resource, _$Organization {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1747,8 +1721,7 @@ class Organization with Resource, _$Organization {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1773,8 +1746,7 @@ class Organization with Resource, _$Organization {
     FhirBoolean? active,
 
     /// [activeElement] Extensions for active
-    @JsonKey(name: '_active')
-        Element? activeElement,
+    @JsonKey(name: '_active') Element? activeElement,
 
     /// [type] The kind(s) of organization that this is.
     List<CodeableConcept>? type,
@@ -1783,16 +1755,14 @@ class Organization with Resource, _$Organization {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [alias] A list of alternate names that the organization is known as, or
     ///  was known as in the past.
     List<String>? alias,
 
     /// [aliasElement] Extensions for alias
-    @JsonKey(name: '_alias')
-        List<Element?>? aliasElement,
+    @JsonKey(name: '_alias') List<Element?>? aliasElement,
 
     /// [telecom] A contact detail for the organization.
     List<ContactPoint>? telecom,
@@ -1883,7 +1853,7 @@ class OrganizationContact with _$OrganizationContact {
   ///  by which the party may be contacted.
   ///
   /// [address] Visiting or postal addresses for the contact.
-  factory OrganizationContact({
+  const factory OrganizationContact({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2054,17 +2024,17 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   ///
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  this role.
-  factory OrganizationAffiliation({
+  const factory OrganizationAffiliation({
     @Default(R4ResourceType.OrganizationAffiliation)
     @JsonKey(unknownEnumValue: R4ResourceType.OrganizationAffiliation)
 
-        /// [resourceType] This is a OrganizationAffiliation resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a OrganizationAffiliation resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2078,15 +2048,13 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2108,8 +2076,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2133,8 +2100,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     FhirBoolean? active,
 
     /// [activeElement] Extensions for active
-    @JsonKey(name: '_active')
-        Element? activeElement,
+    @JsonKey(name: '_active') Element? activeElement,
 
     /// [period] The period during which the participatingOrganization is
     ///  affiliated with the primary organization.

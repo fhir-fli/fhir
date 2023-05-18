@@ -101,17 +101,17 @@ class BodyStructure with Resource, _$BodyStructure {
   /// [image] Image or images used to identify a location.
   ///
   /// [patient] The person to which the body site belongs.
-  factory BodyStructure({
+  const factory BodyStructure({
     @Default(R4ResourceType.BodyStructure)
     @JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
 
-        /// [resourceType] This is a BodyStructure resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a BodyStructure resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -125,15 +125,13 @@ class BodyStructure with Resource, _$BodyStructure {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -155,8 +153,7 @@ class BodyStructure with Resource, _$BodyStructure {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -180,8 +177,7 @@ class BodyStructure with Resource, _$BodyStructure {
     FhirBoolean? active,
 
     /// [activeElement] Extensions for active
-    @JsonKey(name: '_active')
-        Element? activeElement,
+    @JsonKey(name: '_active') Element? activeElement,
 
     /// [morphology] The kind of structure being represented by the body
     /// structure at `BodyStructure.location`.  This can define both normal and
@@ -202,8 +198,7 @@ class BodyStructure with Resource, _$BodyStructure {
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [image] Image or images used to identify a location.
     List<Attachment>? image,
@@ -381,17 +376,17 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   /// [presentedForm] Rich text representation of the entire result as issued
   /// by the diagnostic service. Multiple formats are allowed but they SHALL be
   ///  semantically equivalent.
-  factory DiagnosticReport({
+  const factory DiagnosticReport({
     @Default(R4ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
 
-        /// [resourceType] This is a DiagnosticReport resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a DiagnosticReport resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -405,15 +400,13 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -435,8 +428,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -464,8 +456,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [category] A code that classifies the clinical discipline, department or
     /// diagnostic service that created the report (e.g. cardiology, biochemistry,
@@ -493,8 +484,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     FhirDateTime? effectiveDateTime,
 
     /// [effectiveDateTimeElement] Extensions for effectiveDateTime
-    @JsonKey(name: '_effectiveDateTime')
-        Element? effectiveDateTimeElement,
+    @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
 
     /// [effectivePeriod] The time or time-period the observed values are related
     /// to. When the subject of the report is a patient, this is usually either
@@ -508,8 +498,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     FhirInstant? issued,
 
     /// [issuedElement] Extensions for issued
-    @JsonKey(name: '_issued')
-        Element? issuedElement,
+    @JsonKey(name: '_issued') Element? issuedElement,
 
     /// [performer] The diagnostic service that is responsible for issuing the
     ///  report.
@@ -544,8 +533,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     String? conclusion,
 
     /// [conclusionElement] Extensions for conclusion
-    @JsonKey(name: '_conclusion')
-        Element? conclusionElement,
+    @JsonKey(name: '_conclusion') Element? conclusionElement,
 
     /// [conclusionCode] One or more codes that represent the summary conclusion
     ///  (interpretation/impression) of the diagnostic report.
@@ -629,7 +617,7 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
   /// [commentElement] Extensions for comment
   ///
   /// [link] Reference to the image source.
-  factory DiagnosticReportMedia({
+  const factory DiagnosticReportMedia({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -839,17 +827,17 @@ class ImagingStudy with Resource, _$ImagingStudy {
   /// [descriptionElement] Extensions for description
   ///
   /// [series] Each study has one or more series of images or other content.
-  factory ImagingStudy({
+  const factory ImagingStudy({
     @Default(R4ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
 
-        /// [resourceType] This is a ImagingStudy resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a ImagingStudy resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -863,15 +851,13 @@ class ImagingStudy with Resource, _$ImagingStudy {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -893,8 +879,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -919,8 +904,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [modality] A list of all the series.modality values that are actual
     /// acquisition modalities, i.e. those in the DICOM Context Group 29 (value
@@ -938,8 +922,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     FhirDateTime? started,
 
     /// [startedElement] Extensions for started
-    @JsonKey(name: '_started')
-        Element? startedElement,
+    @JsonKey(name: '_started') Element? startedElement,
 
     /// [basedOn] A list of the diagnostic requests that resulted in this imaging
     ///  study being performed.
@@ -966,8 +949,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     FhirUnsignedInt? numberOfSeries,
 
     /// [numberOfSeriesElement] Extensions for numberOfSeries
-    @JsonKey(name: '_numberOfSeries')
-        Element? numberOfSeriesElement,
+    @JsonKey(name: '_numberOfSeries') Element? numberOfSeriesElement,
 
     /// [numberOfInstances] Number of SOP Instances in Study. This value given
     /// may be larger than the number of instance elements this resource contains
@@ -976,8 +958,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     FhirUnsignedInt? numberOfInstances,
 
     /// [numberOfInstancesElement] Extensions for numberOfInstances
-    @JsonKey(name: '_numberOfInstances')
-        Element? numberOfInstancesElement,
+    @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
 
     /// [procedureReference] The procedure which this ImagingStudy was part of.
     Reference? procedureReference,
@@ -1009,8 +990,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [series] Each study has one or more series of images or other content.
     List<ImagingStudySeries>? series,
@@ -1130,7 +1110,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
   ///
   /// [instance] A single SOP instance within the series, e.g. an image, or
   ///  presentation state.
-  factory ImagingStudySeries({
+  const factory ImagingStudySeries({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1298,7 +1278,7 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
   ///  series.
   ///
   /// [actor] Indicates who or what performed the series.
-  factory ImagingStudyPerformer({
+  const factory ImagingStudyPerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1415,7 +1395,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
   /// [title] The description of the instance.
   ///
   /// [titleElement] Extensions for title
-  factory ImagingStudyInstance({
+  const factory ImagingStudyInstance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1639,17 +1619,17 @@ class Media with Resource, _$Media {
   ///
   /// [note] Comments made about the media by the performer, subject or other
   ///  participants.
-  factory Media({
+  const factory Media({
     @Default(R4ResourceType.Media)
     @JsonKey(unknownEnumValue: R4ResourceType.Media)
 
-        /// [resourceType] This is a Media resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Media resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1663,15 +1643,13 @@ class Media with Resource, _$Media {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1693,8 +1671,7 @@ class Media with Resource, _$Media {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1729,8 +1706,7 @@ class Media with Resource, _$Media {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [type] A code that classifies whether the media is an image, video or
     ///  audio recording or some other media category.
@@ -1755,8 +1731,7 @@ class Media with Resource, _$Media {
     FhirDateTime? createdDateTime,
 
     /// [createdDateTimeElement] Extensions for createdDateTime
-    @JsonKey(name: '_createdDateTime')
-        Element? createdDateTimeElement,
+    @JsonKey(name: '_createdDateTime') Element? createdDateTimeElement,
 
     /// [createdPeriod] The date and time(s) at which the media was collected.
     Period? createdPeriod,
@@ -1766,12 +1741,10 @@ class Media with Resource, _$Media {
     FhirInstant? issued,
 
     /// [issuedElement] Extensions for issued
-    @JsonKey(name: '_issued')
-        Element? issuedElement,
+    @JsonKey(name: '_issued') Element? issuedElement,
 
     /// [operator] The person who administered the collection of the image.
-    @JsonKey(name: 'operator')
-        Reference? operator_,
+    @JsonKey(name: 'operator') Reference? operator_,
 
     /// [reasonCode] Describes why the event occurred in coded or textual form.
     List<CodeableConcept>? reasonCode,
@@ -1785,8 +1758,7 @@ class Media with Resource, _$Media {
     String? deviceName,
 
     /// [deviceNameElement] Extensions for deviceName
-    @JsonKey(name: '_deviceName')
-        Element? deviceNameElement,
+    @JsonKey(name: '_deviceName') Element? deviceNameElement,
 
     /// [device] The device used to collect the media.
     Reference? device,
@@ -1795,15 +1767,13 @@ class Media with Resource, _$Media {
     FhirPositiveInt? height,
 
     /// [heightElement] Extensions for height
-    @JsonKey(name: '_height')
-        Element? heightElement,
+    @JsonKey(name: '_height') Element? heightElement,
 
     /// [width] Width of the image in pixels (photo/video).
     FhirPositiveInt? width,
 
     /// [widthElement] Extensions for width
-    @JsonKey(name: '_width')
-        Element? widthElement,
+    @JsonKey(name: '_width') Element? widthElement,
 
     /// [frames] The number of frames in a photo. This is used with a multi-page
     /// fax, or an imaging acquisition context that takes multiple slices in a
@@ -1813,16 +1783,14 @@ class Media with Resource, _$Media {
     FhirPositiveInt? frames,
 
     /// [framesElement] Extensions for frames
-    @JsonKey(name: '_frames')
-        Element? framesElement,
+    @JsonKey(name: '_frames') Element? framesElement,
 
     /// [duration] The duration of the recording in seconds - for audio and
     ///  video.
     FhirDecimal? duration,
 
     /// [durationElement] Extensions for duration
-    @JsonKey(name: '_duration')
-        Element? durationElement,
+    @JsonKey(name: '_duration') Element? durationElement,
 
     /// [content] The actual content of the media - inline or by direct reference
     ///  to the media source file.
@@ -1978,17 +1946,17 @@ class MolecularSequence with Resource, _$MolecularSequence {
   ///  variant.
   ///
   /// [structureVariant] Information about chromosome structure variation.
-  factory MolecularSequence({
+  const factory MolecularSequence({
     @Default(R4ResourceType.MolecularSequence)
     @JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
 
-        /// [resourceType] This is a MolecularSequence resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a MolecularSequence resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2002,15 +1970,13 @@ class MolecularSequence with Resource, _$MolecularSequence {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2032,8 +1998,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2058,8 +2023,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     FhirCode? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type')
-        Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [coordinateSystem] Whether the sequence is numbered starting at 0
     /// (0-based numbering or coordinates, inclusive start, exclusive end) or
@@ -2067,8 +2031,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     FhirInteger? coordinateSystem,
 
     /// [coordinateSystemElement] Extensions for coordinateSystem
-    @JsonKey(name: '_coordinateSystem')
-        Element? coordinateSystemElement,
+    @JsonKey(name: '_coordinateSystem') Element? coordinateSystemElement,
 
     /// [patient] The patient whose sequencing results are described by this
     ///  resource.
@@ -2105,8 +2068,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     String? observedSeq,
 
     /// [observedSeqElement] Extensions for observedSeq
-    @JsonKey(name: '_observedSeq')
-        Element? observedSeqElement,
+    @JsonKey(name: '_observedSeq') Element? observedSeqElement,
 
     /// [quality] An experimental feature attribute that defines the quality of
     /// the feature in a quantitative way, such as a phred quality score
@@ -2118,8 +2080,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
     FhirInteger? readCoverage,
 
     /// [readCoverageElement] Extensions for readCoverage
-    @JsonKey(name: '_readCoverage')
-        Element? readCoverageElement,
+    @JsonKey(name: '_readCoverage') Element? readCoverageElement,
 
     /// [repository] Configurations of the external repository. The repository
     /// shall store target's observedSeq or records related with target's
@@ -2243,7 +2204,7 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
   ///  inclusive and includes the last position.
   ///
   /// [windowEndElement] Extensions for windowEnd
-  factory MolecularSequenceReferenceSeq({
+  const factory MolecularSequenceReferenceSeq({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2440,7 +2401,7 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
   ///
   /// [variantPointer] A pointer to an Observation containing variant
   ///  information.
-  factory MolecularSequenceVariant({
+  const factory MolecularSequenceVariant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2660,7 +2621,7 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
   ///
   /// [roc] Receiver Operator Characteristic (ROC) Curve  to give
   ///  sensitivity/specificity tradeoff.
-  factory MolecularSequenceQuality({
+  const factory MolecularSequenceQuality({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2888,7 +2849,7 @@ class MolecularSequenceRoc with _$MolecularSequenceRoc {
   ///  field value.
   ///
   /// [fMeasureElement] Extensions for fMeasure
-  factory MolecularSequenceRoc({
+  const factory MolecularSequenceRoc({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3059,7 +3020,7 @@ class MolecularSequenceRepository with _$MolecularSequenceRepository {
   /// [readsetId] Id of the read in this external repository.
   ///
   /// [readsetIdElement] Extensions for readsetId
-  factory MolecularSequenceRepository({
+  const factory MolecularSequenceRepository({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3209,7 +3170,7 @@ class MolecularSequenceStructureVariant
   /// [outer] Structural variant outer.
   ///
   /// [inner] Structural variant inner.
-  factory MolecularSequenceStructureVariant({
+  const factory MolecularSequenceStructureVariant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3324,7 +3285,7 @@ class MolecularSequenceOuter with _$MolecularSequenceOuter {
   ///  position.
   ///
   /// [endElement] Extensions for end
-  factory MolecularSequenceOuter({
+  const factory MolecularSequenceOuter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3443,7 +3404,7 @@ class MolecularSequenceInner with _$MolecularSequenceInner {
   ///  position.
   ///
   /// [endElement] Extensions for end
-  factory MolecularSequenceInner({
+  const factory MolecularSequenceInner({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3736,17 +3697,17 @@ class Observation with Resource, _$Observation {
   /// that share the same attributes.  Examples include systolic and diastolic
   /// component observations for blood pressure measurement and multiple
   ///  component observations for genetics observations.
-  factory Observation({
+  const factory Observation({
     @Default(R4ResourceType.Observation)
     @JsonKey(unknownEnumValue: R4ResourceType.Observation)
 
-        /// [resourceType] This is a Observation resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Observation resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -3760,15 +3721,13 @@ class Observation with Resource, _$Observation {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -3790,8 +3749,7 @@ class Observation with Resource, _$Observation {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -3824,8 +3782,7 @@ class Observation with Resource, _$Observation {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [category] A code that classifies the general type of observation being
     ///  made.
@@ -3867,8 +3824,7 @@ class Observation with Resource, _$Observation {
     FhirDateTime? effectiveDateTime,
 
     /// [effectiveDateTimeElement] Extensions for effectiveDateTime
-    @JsonKey(name: '_effectiveDateTime')
-        Element? effectiveDateTimeElement,
+    @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
 
     /// [effectivePeriod] The time or time-period the observed value is asserted
     /// as being true. For biological subjects - e.g. human patients - this is
@@ -3892,8 +3848,7 @@ class Observation with Resource, _$Observation {
     FhirInstant? effectiveInstant,
 
     /// [effectiveInstantElement] Extensions for effectiveInstant
-    @JsonKey(name: '_effectiveInstant')
-        Element? effectiveInstantElement,
+    @JsonKey(name: '_effectiveInstant') Element? effectiveInstantElement,
 
     /// [issued] The date and time this version of the observation was made
     /// available to providers, typically after the results have been reviewed and
@@ -3901,8 +3856,7 @@ class Observation with Resource, _$Observation {
     FhirInstant? issued,
 
     /// [issuedElement] Extensions for issued
-    @JsonKey(name: '_issued')
-        Element? issuedElement,
+    @JsonKey(name: '_issued') Element? issuedElement,
 
     /// [performer] Who was responsible for asserting the observed value as
     ///  "true".
@@ -3921,24 +3875,21 @@ class Observation with Resource, _$Observation {
     String? valueString,
 
     /// [valueStringElement] Extensions for valueString
-    @JsonKey(name: '_valueString')
-        Element? valueStringElement,
+    @JsonKey(name: '_valueString') Element? valueStringElement,
 
     /// [valueBoolean] The information determined as a result of making the
     ///  observation, if the information has a simple value.
     FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] Extensions for valueBoolean
-    @JsonKey(name: '_valueBoolean')
-        Element? valueBooleanElement,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
     /// [valueInteger] The information determined as a result of making the
     ///  observation, if the information has a simple value.
     FhirInteger? valueInteger,
 
     /// [valueIntegerElement] Extensions for valueInteger
-    @JsonKey(name: '_valueInteger')
-        Element? valueIntegerElement,
+    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
 
     /// [valueRange] The information determined as a result of making the
     ///  observation, if the information has a simple value.
@@ -3957,16 +3908,14 @@ class Observation with Resource, _$Observation {
     FhirTime? valueTime,
 
     /// [valueTimeElement] Extensions for valueTime
-    @JsonKey(name: '_valueTime')
-        Element? valueTimeElement,
+    @JsonKey(name: '_valueTime') Element? valueTimeElement,
 
     /// [valueDateTime] The information determined as a result of making the
     ///  observation, if the information has a simple value.
     FhirDateTime? valueDateTime,
 
     /// [valueDateTimeElement] Extensions for valueDateTime
-    @JsonKey(name: '_valueDateTime')
-        Element? valueDateTimeElement,
+    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
 
     /// [valuePeriod] The information determined as a result of making the
     ///  observation, if the information has a simple value.
@@ -4110,7 +4059,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
   ///  "normals".
   ///
   /// [textElement] Extensions for text
-  factory ObservationReferenceRange({
+  const factory ObservationReferenceRange({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4294,7 +4243,7 @@ class ObservationComponent with _$ObservationComponent {
   ///
   /// [referenceRange] Guidance on how to interpret the value by comparison to
   ///  a normal or recommended range.
-  factory ObservationComponent({
+  const factory ObservationComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4533,17 +4482,17 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   ///
   /// [item] A group or question item from the original questionnaire for which
   ///  answers are provided.
-  factory QuestionnaireResponse({
+  const factory QuestionnaireResponse({
     @Default(R4ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
 
-        /// [resourceType] This is a QuestionnaireResponse resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a QuestionnaireResponse resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -4557,15 +4506,13 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -4587,8 +4534,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -4625,16 +4571,14 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     FhirCanonical? questionnaire,
 
     /// [questionnaireElement] Extensions for [questionnaire].
-    @JsonKey(name: '_questionnaire')
-        Element? questionnaireElement,
+    @JsonKey(name: '_questionnaire') Element? questionnaireElement,
 
     /// [status] The position of the questionnaire response within its overall
     ///  lifecycle.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [subject] The subject of the questionnaire response.  This could be a
     /// patient, organization, practitioner, device, etc.  This is who/what the
@@ -4650,8 +4594,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
     FhirDateTime? authored,
 
     /// [authoredElement] Extensions for authored
-    @JsonKey(name: '_authored')
-        Element? authoredElement,
+    @JsonKey(name: '_authored') Element? authoredElement,
 
     /// [author] Person who received the answers to the questions in the
     ///  QuestionnaireResponse and recorded them in the system.
@@ -4746,7 +4689,7 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   /// [answer] The respondent's answer(s) to the question.
   ///
   /// [item] Questions or sub-groups nested beneath a question or group.
-  factory QuestionnaireResponseItem({
+  const factory QuestionnaireResponseItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4922,7 +4865,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   ///
   /// [item] Nested groups and/or questions found within this particular
   ///  answer.
-  factory QuestionnaireResponseAnswer({
+  const factory QuestionnaireResponseAnswer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5159,17 +5102,17 @@ class Specimen with Resource, _$Specimen {
   /// [note] To communicate any details or issues about the specimen or during
   /// the specimen collection. (for example: broken vial, sent with patient,
   ///  frozen).
-  factory Specimen({
+  const factory Specimen({
     @Default(R4ResourceType.Specimen)
     @JsonKey(unknownEnumValue: R4ResourceType.Specimen)
 
-        /// [resourceType] This is a Specimen resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Specimen resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -5183,15 +5126,13 @@ class Specimen with Resource, _$Specimen {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -5213,8 +5154,7 @@ class Specimen with Resource, _$Specimen {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -5243,8 +5183,7 @@ class Specimen with Resource, _$Specimen {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [type] The kind of material that forms the specimen.
     CodeableConcept? type,
@@ -5258,8 +5197,7 @@ class Specimen with Resource, _$Specimen {
     FhirDateTime? receivedTime,
 
     /// [receivedTimeElement] Extensions for receivedTime
-    @JsonKey(name: '_receivedTime')
-        Element? receivedTimeElement,
+    @JsonKey(name: '_receivedTime') Element? receivedTimeElement,
 
     /// [parent] Reference to the parent (source) specimen which is used when the
     ///  specimen was either derived from or a component of another specimen.
@@ -5379,7 +5317,7 @@ class SpecimenCollection with _$SpecimenCollection {
   ///
   /// [fastingStatusDuration] Abstinence or reduction from some or all food,
   ///  drink, or both, for a period of time prior to sample collection.
-  factory SpecimenCollection({
+  const factory SpecimenCollection({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5529,7 +5467,7 @@ class SpecimenProcessing with _$SpecimenProcessing {
   /// [timePeriod] A record of the time or period when the specimen processing
   /// occurred.  For example the time of sample fixation or the period of time
   ///  the sample was in formalin.
-  factory SpecimenProcessing({
+  const factory SpecimenProcessing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5670,7 +5608,7 @@ class SpecimenContainer with _$SpecimenContainer {
   ///
   /// [additiveReference] Introduced substance to preserve, maintain or enhance
   ///  the specimen. Examples: Formalin, Citrate, EDTA.
-  factory SpecimenContainer({
+  const factory SpecimenContainer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,

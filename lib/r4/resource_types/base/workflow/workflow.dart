@@ -177,17 +177,17 @@ class Appointment with Resource, _$Appointment {
   /// length of the appointment to fill and populate the start/end times for the
   /// actual allocated time. However, in other situations the duration may be
   ///  calculated by the scheduling system.
-  factory Appointment({
+  const factory Appointment({
     @Default(R4ResourceType.Appointment)
     @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
 
-        /// [resourceType] This is a Appointment resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Appointment resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -201,15 +201,13 @@ class Appointment with Resource, _$Appointment {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -231,8 +229,7 @@ class Appointment with Resource, _$Appointment {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -261,8 +258,7 @@ class Appointment with Resource, _$Appointment {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [cancelationReason] The coded reason for the appointment being cancelled.
     /// This is often used in reporting/billing/futher processing to determine if
@@ -302,8 +298,7 @@ class Appointment with Resource, _$Appointment {
     FhirUnsignedInt? priority,
 
     /// [priorityElement] Extensions for priority
-    @JsonKey(name: '_priority')
-        Element? priorityElement,
+    @JsonKey(name: '_priority') Element? priorityElement,
 
     /// [description] The brief description of the appointment as would be shown
     /// on a subject line in a meeting request, or appointment list. Detailed or
@@ -311,8 +306,7 @@ class Appointment with Resource, _$Appointment {
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [supportingInformation] Additional information to support the appointment
     ///  provided when making the appointment.
@@ -322,15 +316,13 @@ class Appointment with Resource, _$Appointment {
     FhirInstant? start,
 
     /// [startElement] Extensions for start
-    @JsonKey(name: '_start')
-        Element? startElement,
+    @JsonKey(name: '_start') Element? startElement,
 
     /// [end] Date/Time that the appointment is to conclude.
     FhirInstant? end,
 
     /// [endElement] Extensions for end
-    @JsonKey(name: '_end')
-        Element? endElement,
+    @JsonKey(name: '_end') Element? endElement,
 
     /// [minutesDuration] Number of minutes that the appointment is to take. This
     /// can be less than the duration between the start and end times.  For
@@ -342,8 +334,7 @@ class Appointment with Resource, _$Appointment {
     FhirPositiveInt? minutesDuration,
 
     /// [minutesDurationElement] Extensions for minutesDuration
-    @JsonKey(name: '_minutesDuration')
-        Element? minutesDurationElement,
+    @JsonKey(name: '_minutesDuration') Element? minutesDurationElement,
 
     /// [slot] The slots from the participants' schedules that will be filled by
     ///  the appointment.
@@ -356,15 +347,13 @@ class Appointment with Resource, _$Appointment {
     FhirDateTime? created,
 
     /// [createdElement] Extensions for created
-    @JsonKey(name: '_created')
-        Element? createdElement,
+    @JsonKey(name: '_created') Element? createdElement,
 
     /// [comment] Additional comments about the appointment.
     String? comment,
 
     /// [commentElement] Extensions for comment
-    @JsonKey(name: '_comment')
-        Element? commentElement,
+    @JsonKey(name: '_comment') Element? commentElement,
 
     /// [patientInstruction] While Appointment.comment contains information for
     /// internal use, Appointment.patientInstructions is used to capture patient
@@ -373,8 +362,7 @@ class Appointment with Resource, _$Appointment {
     String? patientInstruction,
 
     /// [patientInstructionElement] Extensions for patientInstruction
-    @JsonKey(name: '_patientInstruction')
-        Element? patientInstructionElement,
+    @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
 
     /// [basedOn] The service request this appointment is allocated to assess
     ///  (e.g. incoming referral or procedure request).
@@ -471,7 +459,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
   /// [statusElement] Extensions for status
   ///
   /// [period] Participation period of the actor.
-  factory AppointmentParticipant({
+  const factory AppointmentParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -652,17 +640,17 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
   /// [comment] Additional comments about the appointment.
   ///
   /// [commentElement] Extensions for comment
-  factory AppointmentResponse({
+  const factory AppointmentResponse({
     @Default(R4ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
 
-        /// [resourceType] This is a AppointmentResponse resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a AppointmentResponse resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -676,15 +664,13 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -706,8 +692,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -738,8 +723,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     FhirInstant? start,
 
     /// [startElement] Extensions for start
-    @JsonKey(name: '_start')
-        Element? startElement,
+    @JsonKey(name: '_start') Element? startElement,
 
     /// [end] This may be either the same as the appointment request to confirm
     /// the details of the appointment, or alternately a new time to request a
@@ -747,8 +731,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     FhirInstant? end,
 
     /// [endElement] Extensions for end
-    @JsonKey(name: '_end')
-        Element? endElement,
+    @JsonKey(name: '_end') Element? endElement,
 
     /// [participantType] Role of participant in the appointment.
     List<CodeableConcept>? participantType,
@@ -765,15 +748,13 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
     FhirCode? participantStatus,
 
     /// [participantStatusElement] Extensions for participantStatus
-    @JsonKey(name: '_participantStatus')
-        Element? participantStatusElement,
+    @JsonKey(name: '_participantStatus') Element? participantStatusElement,
 
     /// [comment] Additional comments about the appointment.
     String? comment,
 
     /// [commentElement] Extensions for comment
-    @JsonKey(name: '_comment')
-        Element? commentElement,
+    @JsonKey(name: '_comment') Element? commentElement,
   }) = _AppointmentResponse;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -896,17 +877,17 @@ class Schedule with Resource, _$Schedule {
   ///  associated.
   ///
   /// [commentElement] Extensions for comment
-  factory Schedule({
+  const factory Schedule({
     @Default(R4ResourceType.Schedule)
     @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
 
-        /// [resourceType] This is a Schedule resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Schedule resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -920,15 +901,13 @@ class Schedule with Resource, _$Schedule {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -950,8 +929,7 @@ class Schedule with Resource, _$Schedule {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -976,8 +954,7 @@ class Schedule with Resource, _$Schedule {
     FhirBoolean? active,
 
     /// [activeElement] Extensions for active
-    @JsonKey(name: '_active')
-        Element? activeElement,
+    @JsonKey(name: '_active') Element? activeElement,
 
     /// [serviceCategory] A broad categorization of the service that is to be
     ///  performed during this appointment.
@@ -1008,8 +985,7 @@ class Schedule with Resource, _$Schedule {
     String? comment,
 
     /// [commentElement] Extensions for comment
-    @JsonKey(name: '_comment')
-        Element? commentElement,
+    @JsonKey(name: '_comment') Element? commentElement,
   }) = _Schedule;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1143,17 +1119,17 @@ class Slot with Resource, _$Slot {
   ///  as custom constraints on the slot.
   ///
   /// [commentElement] Extensions for comment
-  factory Slot({
+  const factory Slot({
     @Default(R4ResourceType.Slot)
     @JsonKey(unknownEnumValue: R4ResourceType.Slot)
 
-        /// [resourceType] This is a Slot resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Slot resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1167,15 +1143,13 @@ class Slot with Resource, _$Slot {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1197,8 +1171,7 @@ class Slot with Resource, _$Slot {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1245,38 +1218,33 @@ class Slot with Resource, _$Slot {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [start] Date/Time that the slot is to begin.
     FhirInstant? start,
 
     /// [startElement] Extensions for start
-    @JsonKey(name: '_start')
-        Element? startElement,
+    @JsonKey(name: '_start') Element? startElement,
 
     /// [end] Date/Time that the slot is to conclude.
     FhirInstant? end,
 
     /// [endElement] Extensions for end
-    @JsonKey(name: '_end')
-        Element? endElement,
+    @JsonKey(name: '_end') Element? endElement,
 
     /// [overbooked] This slot has already been overbooked, appointments are
     ///  unlikely to be accepted for this time.
     FhirBoolean? overbooked,
 
     /// [overbookedElement] Extensions for overbooked
-    @JsonKey(name: '_overbooked')
-        Element? overbookedElement,
+    @JsonKey(name: '_overbooked') Element? overbookedElement,
 
     /// [comment] Comments on the slot to describe any extended information. Such
     ///  as custom constraints on the slot.
     String? comment,
 
     /// [commentElement] Extensions for comment
-    @JsonKey(name: '_comment')
-        Element? commentElement,
+    @JsonKey(name: '_comment') Element? commentElement,
   }) = _Slot;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1473,17 +1441,17 @@ class Task with Resource, _$Task {
   ///  task.
   ///
   /// [output] Outputs produced by the Task.
-  factory Task({
+  const factory Task({
     @Default(R4ResourceType.Task)
     @JsonKey(unknownEnumValue: R4ResourceType.Task)
 
-        /// [resourceType] This is a Task resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Task resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1497,15 +1465,13 @@ class Task with Resource, _$Task {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1527,8 +1493,7 @@ class Task with Resource, _$Task {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1559,8 +1524,7 @@ class Task with Resource, _$Task {
     FhirUri? instantiatesUri,
 
     /// [instantiatesUriElement] Extensions for instantiatesUri
-    @JsonKey(name: '_instantiatesUri')
-        Element? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') Element? instantiatesUriElement,
 
     /// [basedOn] BasedOn refers to a higher-level authorization that triggered
     /// the creation of the task.  It references a "request" resource such as a
@@ -1582,8 +1546,7 @@ class Task with Resource, _$Task {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [statusReason] An explanation as to why this task is held, failed, was
     ///  refused, etc.
@@ -1599,16 +1562,14 @@ class Task with Resource, _$Task {
     FhirCode? intent,
 
     /// [intentElement] Extensions for intent
-    @JsonKey(name: '_intent')
-        Element? intentElement,
+    @JsonKey(name: '_intent') Element? intentElement,
 
     /// [priority] Indicates how quickly the Task should be addressed with
     ///  respect to other requests.
     FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
-    @JsonKey(name: '_priority')
-        Element? priorityElement,
+    @JsonKey(name: '_priority') Element? priorityElement,
 
     /// [code] A name or code (or both) briefly describing what the task
     ///  involves.
@@ -1618,8 +1579,7 @@ class Task with Resource, _$Task {
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [focus] The request being actioned or the resource being manipulated by
     ///  this task.
@@ -1627,8 +1587,7 @@ class Task with Resource, _$Task {
 
     /// [for] The entity who benefits from the performance of the service
     ///  specified in the task (e.g., the patient).
-    @JsonKey(name: 'for')
-        Reference? for_,
+    @JsonKey(name: 'for') Reference? for_,
 
     /// [encounter] The healthcare event  (e.g. a patient and healthcare provider
     ///  interaction) during which this task was created.
@@ -1643,15 +1602,13 @@ class Task with Resource, _$Task {
     FhirDateTime? authoredOn,
 
     /// [authoredOnElement] Extensions for authoredOn
-    @JsonKey(name: '_authoredOn')
-        Element? authoredOnElement,
+    @JsonKey(name: '_authoredOn') Element? authoredOnElement,
 
     /// [lastModified] The date and time of last modification to this task.
     FhirDateTime? lastModified,
 
     /// [lastModifiedElement] Extensions for lastModified
-    @JsonKey(name: '_lastModified')
-        Element? lastModifiedElement,
+    @JsonKey(name: '_lastModified') Element? lastModifiedElement,
 
     /// [requester] The creator of the task.
     Reference? requester,
@@ -1767,7 +1724,7 @@ class TaskRestriction with _$TaskRestriction {
   ///
   /// [recipient] For requests that are targeted to more than on potential
   ///  recipient/target, for whom is fulfillment sought?
-  factory TaskRestriction({
+  const factory TaskRestriction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2015,7 +1972,7 @@ class TaskInput with _$TaskInput {
   /// [valueDosage] The value of the input parameter as a basic type.
   ///
   /// [valueMeta] The value of the input parameter as a basic type.
-  factory TaskInput({
+  const factory TaskInput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2461,7 +2418,7 @@ class TaskOutput with _$TaskOutput {
   /// [valueDosage] The value of the Output parameter as a basic type.
   ///
   /// [valueMeta] The value of the Output parameter as a basic type.
-  factory TaskOutput({
+  const factory TaskOutput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2841,17 +2798,17 @@ class VerificationResult with Resource, _$VerificationResult {
   /// [attestation] Information about the entity attesting to information.
   ///
   /// [validator] Information about the entity validating information.
-  factory VerificationResult({
+  const factory VerificationResult({
     @Default(R4ResourceType.VerificationResult)
     @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
 
-        /// [resourceType] This is a VerificationResult resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a VerificationResult resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2865,15 +2822,13 @@ class VerificationResult with Resource, _$VerificationResult {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2895,8 +2850,7 @@ class VerificationResult with Resource, _$VerificationResult {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2921,8 +2875,7 @@ class VerificationResult with Resource, _$VerificationResult {
     List<String>? targetLocation,
 
     /// [targetLocationElement] Extensions for targetLocation
-    @JsonKey(name: '_targetLocation')
-        List<Element?>? targetLocationElement,
+    @JsonKey(name: '_targetLocation') List<Element?>? targetLocationElement,
 
     /// [need] The frequency with which the target must be validated (none;
     ///  initial; periodic).
@@ -2933,15 +2886,13 @@ class VerificationResult with Resource, _$VerificationResult {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [statusDate] When the validation status was updated.
     FhirDateTime? statusDate,
 
     /// [statusDateElement] Extensions for statusDate
-    @JsonKey(name: '_statusDate')
-        Element? statusDateElement,
+    @JsonKey(name: '_statusDate') Element? statusDateElement,
 
     /// [validationType] What the target is validated against (nothing; primary
     ///  source; multiple sources).
@@ -2960,15 +2911,13 @@ class VerificationResult with Resource, _$VerificationResult {
     FhirDateTime? lastPerformed,
 
     /// [lastPerformedElement] Extensions for lastPerformed
-    @JsonKey(name: '_lastPerformed')
-        Element? lastPerformedElement,
+    @JsonKey(name: '_lastPerformed') Element? lastPerformedElement,
 
     /// [nextScheduled] The date when target is next validated, if appropriate.
     FhirDate? nextScheduled,
 
     /// [nextScheduledElement] Extensions for nextScheduled
-    @JsonKey(name: '_nextScheduled')
-        Element? nextScheduledElement,
+    @JsonKey(name: '_nextScheduled') Element? nextScheduledElement,
 
     /// [failureAction] The result if validation fails (fatal; warning; record
     ///  only; none).
@@ -3068,7 +3017,7 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   ///
   /// [pushTypeAvailable] Type of alerts/updates the primary source can send
   ///  (specific requested changes; any changes; as defined by source).
-  factory VerificationResultPrimarySource({
+  const factory VerificationResultPrimarySource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3222,11 +3171,10 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
   ///
   /// [sourceSignature] Signed assertion by the attestation source that they
   ///  have attested to the information.
-  factory VerificationResultAttestation({
+  const factory VerificationResultAttestation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -3234,8 +3182,7 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -3267,16 +3214,15 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
     FhirDate? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [sourceIdentityCertificate] A digital identity certificate associated
     ///  with the attestation source.
     String? sourceIdentityCertificate,
     @JsonKey(name: '_sourceIdentityCertificate')
 
-        /// [sourceIdentityCertificateElement] Extensions for sourceIdentityCertificate
-        Element? sourceIdentityCertificateElement,
+    /// [sourceIdentityCertificateElement] Extensions for sourceIdentityCertificate
+    Element? sourceIdentityCertificateElement,
 
     /// [proxyIdentityCertificate] A digital identity certificate associated with
     /// the proxy entity submitting attested information on behalf of the
@@ -3284,8 +3230,8 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
     String? proxyIdentityCertificate,
     @JsonKey(name: '_proxyIdentityCertificate')
 
-        /// [proxyIdentityCertificateElement] Extensions for proxyIdentityCertificate
-        Element? proxyIdentityCertificateElement,
+    /// [proxyIdentityCertificateElement] Extensions for proxyIdentityCertificate
+    Element? proxyIdentityCertificateElement,
 
     /// [proxySignature] Signed assertion by the proxy entity indicating that
     /// they have the right to submit attested information on behalf of the
@@ -3370,7 +3316,7 @@ class VerificationResultValidator with _$VerificationResultValidator {
   ///
   /// [attestationSignature] Signed assertion by the validator that they have
   ///  validated the information.
-  factory VerificationResultValidator({
+  const factory VerificationResultValidator({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

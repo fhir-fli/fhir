@@ -140,17 +140,17 @@ class Coverage with Resource, _$Coverage {
   /// [subrogationElement] Extensions for subrogation
   ///
   /// [contract] The policy(s) which constitute this insurance coverage.
-  factory Coverage({
+  const factory Coverage({
     @Default(R4ResourceType.Coverage)
     @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
 
-        /// [resourceType] This is a Coverage resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Coverage resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -164,15 +164,13 @@ class Coverage with Resource, _$Coverage {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -194,8 +192,7 @@ class Coverage with Resource, _$Coverage {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -219,8 +216,7 @@ class Coverage with Resource, _$Coverage {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [type] The type of coverage: social program, medical plan, accident
     /// coverage (workers compensation, auto), group health or payment by an
@@ -239,8 +235,7 @@ class Coverage with Resource, _$Coverage {
     String? subscriberId,
 
     /// [subscriberIdElement] Extensions for subscriberId
-    @JsonKey(name: '_subscriberId')
-        Element? subscriberIdElement,
+    @JsonKey(name: '_subscriberId') Element? subscriberIdElement,
 
     /// [beneficiary] The party who benefits from the insurance coverage; the
     ///  patient when products and/or services are provided.
@@ -250,8 +245,7 @@ class Coverage with Resource, _$Coverage {
     String? dependent,
 
     /// [dependentElement] Extensions for dependent
-    @JsonKey(name: '_dependent')
-        Element? dependentElement,
+    @JsonKey(name: '_dependent') Element? dependentElement,
 
     /// [relationship] The relationship of beneficiary (patient) to the
     ///  subscriber.
@@ -267,8 +261,7 @@ class Coverage with Resource, _$Coverage {
     required List<Reference> payor,
 
     /// [class] A suite of underwriter specific classifiers.
-    @JsonKey(name: 'class')
-        List<CoverageClass>? class_,
+    @JsonKey(name: 'class') List<CoverageClass>? class_,
 
     /// [order] The order of applicability of this coverage relative to other
     /// coverages which are currently in force. Note, there may be gaps in the
@@ -277,8 +270,7 @@ class Coverage with Resource, _$Coverage {
     FhirPositiveInt? order,
 
     /// [orderElement] Extensions for order
-    @JsonKey(name: '_order')
-        Element? orderElement,
+    @JsonKey(name: '_order') Element? orderElement,
 
     /// [network] The insurer-specific identifier for the insurer-defined network
     /// of providers to which the beneficiary may seek treatment which will be
@@ -287,8 +279,7 @@ class Coverage with Resource, _$Coverage {
     String? network,
 
     /// [networkElement] Extensions for network
-    @JsonKey(name: '_network')
-        Element? networkElement,
+    @JsonKey(name: '_network') Element? networkElement,
 
     /// [costToBeneficiary] A suite of codes indicating the cost category and
     /// associated amount which have been detailed in the policy and may have been
@@ -301,8 +292,7 @@ class Coverage with Resource, _$Coverage {
     FhirBoolean? subrogation,
 
     /// [subrogationElement] Extensions for subrogation
-    @JsonKey(name: '_subrogation')
-        Element? subrogationElement,
+    @JsonKey(name: '_subrogation') Element? subrogationElement,
 
     /// [contract] The policy(s) which constitute this insurance coverage.
     List<Reference>? contract,
@@ -382,7 +372,7 @@ class CoverageClass with _$CoverageClass {
   /// [name] A short description for the class.
   ///
   /// [nameElement] Extensions for name
-  factory CoverageClass({
+  const factory CoverageClass({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -502,7 +492,7 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   ///
   /// [exception] A suite of codes indicating exceptions or reductions to
   ///  patient costs and their effective periods.
-  factory CoverageCostToBeneficiary({
+  const factory CoverageCostToBeneficiary({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -612,7 +602,7 @@ class CoverageException with _$CoverageException {
   /// [type] The code for the specific exception.
   ///
   /// [period] The timeframe during when the exception is in force.
-  factory CoverageException({
+  const factory CoverageException({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -795,17 +785,17 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   /// [item] Service categories or billable services for which benefit details
   /// and/or an authorization prior to service delivery may be required by the
   ///  payor.
-  factory CoverageEligibilityRequest({
+  const factory CoverageEligibilityRequest({
     @Default(R4ResourceType.CoverageEligibilityRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
 
-        /// [resourceType] This is a CoverageEligibilityRequest resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a CoverageEligibilityRequest resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -819,15 +809,13 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -849,8 +837,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -875,8 +862,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [priority] When the requestor expects the processor to complete
     ///  processing.
@@ -890,8 +876,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     List<FhirCode>? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        List<Element?>? purposeElement,
+    @JsonKey(name: '_purpose') List<Element?>? purposeElement,
 
     /// [patient] The party who is the beneficiary of the supplied coverage and
     ///  for whom eligibility is sought.
@@ -902,8 +887,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     FhirDate? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
-    @JsonKey(name: '_servicedDate')
-        Element? servicedDateElement,
+    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
 
     /// [servicedPeriod] The date or dates when the enclosed suite of services
     ///  were performed or completed.
@@ -913,8 +897,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
     FhirDateTime? created,
 
     /// [createdElement] Extensions for created
-    @JsonKey(name: '_created')
-        Element? createdElement,
+    @JsonKey(name: '_created') Element? createdElement,
 
     /// [enterer] Person who created the request.
     Reference? enterer,
@@ -1020,7 +1003,7 @@ class CoverageEligibilityRequestSupportingInfo
   ///  items, product/servce categories and specific billing codes.
   ///
   /// [appliesToAllElement] Extensions for appliesToAll
-  factory CoverageEligibilityRequestSupportingInfo({
+  const factory CoverageEligibilityRequestSupportingInfo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1136,7 +1119,7 @@ class CoverageEligibilityRequestInsurance
   ///  provider and the insurer for special business processing purposes.
   ///
   /// [businessArrangementElement] Extensions for businessArrangement
-  factory CoverageEligibilityRequestInsurance({
+  const factory CoverageEligibilityRequestInsurance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1269,11 +1252,10 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   ///
   /// [detail] The plan/proposal/order describing the proposed service in
   ///  detail.
-  factory CoverageEligibilityRequestItem({
+  const factory CoverageEligibilityRequestItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1281,8 +1263,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -1304,8 +1285,8 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
     List<FhirPositiveInt>? supportingInfoSequence,
     @JsonKey(name: '_supportingInfoSequence')
 
-        /// [supportingInfoSequenceElement] Extensions for supportingInfoSequence
-        List<Element>? supportingInfoSequenceElement,
+    /// [supportingInfoSequenceElement] Extensions for supportingInfoSequence
+    List<Element>? supportingInfoSequenceElement,
 
     /// [category] Code to identify the general type of benefits under which
     ///  products and services are provided.
@@ -1413,7 +1394,7 @@ class CoverageEligibilityRequestDiagnosis
   ///
   /// [diagnosisReference] The nature of illness or problem in a coded form or
   ///  as a reference to an external defined Condition.
-  factory CoverageEligibilityRequestDiagnosis({
+  const factory CoverageEligibilityRequestDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1590,17 +1571,17 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   /// [form] A code for the form to be used for printing the content.
   ///
   /// [error] Errors encountered during the processing of the request.
-  factory CoverageEligibilityResponse({
+  const factory CoverageEligibilityResponse({
     @Default(R4ResourceType.CoverageEligibilityResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
 
-        /// [resourceType] This is a CoverageEligibilityResponse resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a CoverageEligibilityResponse resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1614,15 +1595,13 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1644,8 +1623,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1670,8 +1648,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [purpose] Code to specify whether requesting: prior authorization
     /// requirements for some service categories or billing codes; benefits for
@@ -1681,8 +1658,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     List<FhirCode>? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        List<Element?>? purposeElement,
+    @JsonKey(name: '_purpose') List<Element?>? purposeElement,
 
     /// [patient] The party who is the beneficiary of the supplied coverage and
     ///  for whom eligibility is sought.
@@ -1693,8 +1669,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     FhirDate? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
-    @JsonKey(name: '_servicedDate')
-        Element? servicedDateElement,
+    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
 
     /// [servicedPeriod] The date or dates when the enclosed suite of services
     ///  were performed or completed.
@@ -1704,8 +1679,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     FhirDateTime? created,
 
     /// [createdElement] Extensions for created
-    @JsonKey(name: '_created')
-        Element? createdElement,
+    @JsonKey(name: '_created') Element? createdElement,
 
     /// [requestor] The provider which is responsible for the request.
     Reference? requestor,
@@ -1717,16 +1691,14 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
-    @JsonKey(name: '_outcome')
-        Element? outcomeElement,
+    @JsonKey(name: '_outcome') Element? outcomeElement,
 
     /// [disposition] A human readable description of the status of the
     ///  adjudication.
     String? disposition,
 
     /// [dispositionElement] Extensions for disposition
-    @JsonKey(name: '_disposition')
-        Element? dispositionElement,
+    @JsonKey(name: '_disposition') Element? dispositionElement,
 
     /// [insurer] The Insurer who issued the coverage in question and is the
     ///  author of the response.
@@ -1742,8 +1714,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     String? preAuthRef,
 
     /// [preAuthRefElement] Extensions for preAuthRef
-    @JsonKey(name: '_preAuthRef')
-        Element? preAuthRefElement,
+    @JsonKey(name: '_preAuthRef') Element? preAuthRefElement,
 
     /// [form] A code for the form to be used for printing the content.
     CodeableConcept? form,
@@ -1828,7 +1799,7 @@ class CoverageEligibilityResponseInsurance
   ///
   /// [item] Benefits and optionally current balances, and authorization
   ///  details by category or service.
-  factory CoverageEligibilityResponseInsurance({
+  const factory CoverageEligibilityResponseInsurance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1980,11 +1951,10 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   ///  descriptive information regarding the preauthorization.
   ///
   /// [authorizationUrlElement] Extensions for authorizationUrl
-  factory CoverageEligibilityResponseItem({
+  const factory CoverageEligibilityResponseItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1992,8 +1962,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -2032,22 +2001,19 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
     FhirBoolean? excluded,
 
     /// [excludedElement] Extensions for excluded
-    @JsonKey(name: '_excluded')
-        Element? excludedElement,
+    @JsonKey(name: '_excluded') Element? excludedElement,
 
     /// [name] A short name or tag for the benefit.
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [description] A richer description of the benefit or services covered.
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [network] Is a flag to indicate whether the benefits refer to in-network
     ///  providers or out-of-network providers.
@@ -2068,8 +2034,8 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
     FhirBoolean? authorizationRequired,
     @JsonKey(name: '_authorizationRequired')
 
-        /// [authorizationRequiredElement] Extensions for authorizationRequired
-        Element? authorizationRequiredElement,
+    /// [authorizationRequiredElement] Extensions for authorizationRequired
+    Element? authorizationRequiredElement,
 
     /// [authorizationSupporting] Codes or comments regarding information or
     ///  actions associated with the preauthorization.
@@ -2080,8 +2046,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
     FhirUri? authorizationUrl,
 
     /// [authorizationUrlElement] Extensions for authorizationUrl
-    @JsonKey(name: '_authorizationUrl')
-        Element? authorizationUrlElement,
+    @JsonKey(name: '_authorizationUrl') Element? authorizationUrlElement,
   }) = _CoverageEligibilityResponseItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -2175,7 +2140,7 @@ class CoverageEligibilityResponseBenefit
   /// [usedStringElement] Extensions for usedString
   ///
   /// [usedMoney] The quantity of the benefit which have been consumed to date.
-  factory CoverageEligibilityResponseBenefit({
+  const factory CoverageEligibilityResponseBenefit({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2298,7 +2263,7 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   ///
   /// [code] An error code,from a specified code system, which details why the
   ///  eligibility check could not be performed.
-  factory CoverageEligibilityResponseError({
+  const factory CoverageEligibilityResponseError({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2432,17 +2397,17 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   ///
   /// [coverage] Reference to the program or plan identification, underwriter
   ///  or payor.
-  factory EnrollmentRequest({
+  const factory EnrollmentRequest({
     @Default(R4ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
 
-        /// [resourceType] This is a EnrollmentRequest resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a EnrollmentRequest resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2456,15 +2421,13 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2486,8 +2449,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2511,15 +2473,13 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [created] The date when this resource was created.
     FhirDateTime? created,
 
     /// [createdElement] Extensions for created
-    @JsonKey(name: '_created')
-        Element? createdElement,
+    @JsonKey(name: '_created') Element? createdElement,
 
     /// [insurer] The Insurer who is target  of the request.
     Reference? insurer,
@@ -2651,17 +2611,17 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   ///
   /// [requestProvider] The practitioner who is responsible for the services
   ///  rendered to the patient.
-  factory EnrollmentResponse({
+  const factory EnrollmentResponse({
     @Default(R4ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
 
-        /// [resourceType] This is a EnrollmentResponse resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a EnrollmentResponse resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2675,15 +2635,13 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2705,8 +2663,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2730,8 +2687,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [request] Original request resource reference.
     Reference? request,
@@ -2740,23 +2696,20 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
-    @JsonKey(name: '_outcome')
-        Element? outcomeElement,
+    @JsonKey(name: '_outcome') Element? outcomeElement,
 
     /// [disposition] A description of the status of the adjudication.
     String? disposition,
 
     /// [dispositionElement] Extensions for disposition
-    @JsonKey(name: '_disposition')
-        Element? dispositionElement,
+    @JsonKey(name: '_disposition') Element? dispositionElement,
 
     /// [created] The date when the enclosed suite of services were performed or
     ///  completed.
     FhirDateTime? created,
 
     /// [createdElement] Extensions for created
-    @JsonKey(name: '_created')
-        Element? createdElement,
+    @JsonKey(name: '_created') Element? createdElement,
 
     /// [organization] The Insurer who produced this adjudicated response.
     Reference? organization,

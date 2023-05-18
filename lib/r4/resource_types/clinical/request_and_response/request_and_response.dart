@@ -157,17 +157,17 @@ class Communication with Resource, _$Communication {
   ///
   /// [note] Additional notes or commentary about the communication by the
   ///  sender, receiver or other interested parties.
-  factory Communication({
+  const factory Communication({
     @Default(R4ResourceType.Communication)
     @JsonKey(unknownEnumValue: R4ResourceType.Communication)
 
-        /// [resourceType] This is a Communication resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Communication resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -181,15 +181,13 @@ class Communication with Resource, _$Communication {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -211,8 +209,7 @@ class Communication with Resource, _$Communication {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -245,8 +242,7 @@ class Communication with Resource, _$Communication {
     List<FhirUri>? instantiatesUri,
 
     /// [instantiatesUriElement] Extensions for instantiatesUri
-    @JsonKey(name: '_instantiatesUri')
-        List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
 
     /// [basedOn] An order, proposal or plan fulfilled in whole or in part by
     ///  this Communication.
@@ -263,8 +259,7 @@ class Communication with Resource, _$Communication {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [statusReason] Captures the reason for the current state of the
     ///  Communication.
@@ -280,8 +275,7 @@ class Communication with Resource, _$Communication {
     FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
-    @JsonKey(name: '_priority')
-        Element? priorityElement,
+    @JsonKey(name: '_priority') Element? priorityElement,
 
     /// [medium] A channel that was used for this communication (e.g. email,
     ///  fax).
@@ -306,15 +300,13 @@ class Communication with Resource, _$Communication {
     FhirDateTime? sent,
 
     /// [sentElement] Extensions for sent
-    @JsonKey(name: '_sent')
-        Element? sentElement,
+    @JsonKey(name: '_sent') Element? sentElement,
 
     /// [received] The time when this communication arrived at the destination.
     FhirDateTime? received,
 
     /// [receivedElement] Extensions for received
-    @JsonKey(name: '_received')
-        Element? receivedElement,
+    @JsonKey(name: '_received') Element? receivedElement,
 
     /// [recipient] The entity (e.g. person, organization, clinical information
     /// system, care team or device) which was the target of the communication. If
@@ -417,7 +409,7 @@ class CommunicationPayload with _$CommunicationPayload {
   ///
   /// [contentReference] A communicated content (or for multi-part
   ///  communications, one portion of the communication).
-  factory CommunicationPayload({
+  const factory CommunicationPayload({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -634,17 +626,17 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   ///
   /// [note] Comments made about the request by the requester, sender,
   ///  recipient, subject or other participants.
-  factory CommunicationRequest({
+  const factory CommunicationRequest({
     @Default(R4ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.CommunicationRequest)
 
-        /// [resourceType] This is a CommunicationRequest resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a CommunicationRequest resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -658,15 +650,13 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -688,8 +678,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -728,8 +717,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [statusReason] Captures the reason for the current state of the
     ///  CommunicationRequest.
@@ -744,16 +732,14 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
-    @JsonKey(name: '_priority')
-        Element? priorityElement,
+    @JsonKey(name: '_priority') Element? priorityElement,
 
     /// [doNotPerform] If true indicates that the CommunicationRequest is asking
     ///  for the specified action to *not* occur.
     FhirBoolean? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
-    @JsonKey(name: '_doNotPerform')
-        Element? doNotPerformElement,
+    @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
 
     /// [medium] A channel that was used for this communication (e.g. email,
     ///  fax).
@@ -779,8 +765,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     FhirDateTime? occurrenceDateTime,
 
     /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
-    @JsonKey(name: '_occurrenceDateTime')
-        Element? occurrenceDateTimeElement,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
 
     /// [occurrencePeriod] The time when this communication is to occur.
     Period? occurrencePeriod,
@@ -790,8 +775,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     FhirDateTime? authoredOn,
 
     /// [authoredOnElement] Extensions for authoredOn
-    @JsonKey(name: '_authoredOn')
-        Element? authoredOnElement,
+    @JsonKey(name: '_authoredOn') Element? authoredOnElement,
 
     /// [requester] The device, individual, or organization who initiated the
     ///  request and has responsibility for its activation.
@@ -892,7 +876,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
   ///
   /// [contentReference] The communicated content (or for multi-part
   ///  communications, one portion of the communication).
-  factory CommunicationRequestPayload({
+  const factory CommunicationRequestPayload({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1123,17 +1107,17 @@ class DeviceRequest with Resource, _$DeviceRequest {
   ///  the statement.
   ///
   /// [relevantHistory] Key events in the history of the request.
-  factory DeviceRequest({
+  const factory DeviceRequest({
     @Default(R4ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceRequest)
 
-        /// [resourceType] This is a DeviceRequest resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a DeviceRequest resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1147,15 +1131,13 @@ class DeviceRequest with Resource, _$DeviceRequest {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1177,8 +1159,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1210,8 +1191,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
     List<FhirUri>? instantiatesUri,
 
     /// [instantiatesUriElement] Extensions for instantiatesUri
-    @JsonKey(name: '_instantiatesUri')
-        List<Element?>? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') List<Element?>? instantiatesUriElement,
 
     /// [basedOn] Plan/proposal/order fulfilled by this request.
     List<Reference>? basedOn,
@@ -1227,24 +1207,21 @@ class DeviceRequest with Resource, _$DeviceRequest {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [intent] Whether the request is a proposal, plan, an original order or a
     ///  reflex order.
     FhirCode? intent,
 
     /// [intentElement] Extensions for intent
-    @JsonKey(name: '_intent')
-        Element? intentElement,
+    @JsonKey(name: '_intent') Element? intentElement,
 
     /// [priority] Indicates how quickly the {{title}} should be addressed with
     ///  respect to other requests.
     FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
-    @JsonKey(name: '_priority')
-        Element? priorityElement,
+    @JsonKey(name: '_priority') Element? priorityElement,
 
     /// [codeReference] The details of the device to be used.
     Reference? codeReference,
@@ -1270,8 +1247,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
     FhirDateTime? occurrenceDateTime,
 
     /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
-    @JsonKey(name: '_occurrenceDateTime')
-        Element? occurrenceDateTimeElement,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
 
     /// [occurrencePeriod] The timing schedule for the use of the device. The
     /// Schedule data type allows many different expressions, for example. "Every
@@ -1289,8 +1265,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
     FhirDateTime? authoredOn,
 
     /// [authoredOnElement] Extensions for authoredOn
-    @JsonKey(name: '_authoredOn')
-        Element? authoredOnElement,
+    @JsonKey(name: '_authoredOn') Element? authoredOnElement,
 
     /// [requester] The individual who initiated the request and has
     ///  responsibility for its activation.
@@ -1402,7 +1377,7 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
   /// [valueBoolean] The value of the device detail.
   ///
   /// [valueBooleanElement] Extensions for valueBoolean
-  factory DeviceRequestParameter({
+  const factory DeviceRequestParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1588,17 +1563,17 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
   /// all or sufficiently in one of the attributes provided in a class. These
   /// may include for example a comment, an instruction, or a note associated
   ///  with the statement.
-  factory DeviceUseStatement({
+  const factory DeviceUseStatement({
     @Default(R4ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceUseStatement)
 
-        /// [resourceType] This is a DeviceUseStatement resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a DeviceUseStatement resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1612,15 +1587,13 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1642,8 +1615,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1673,8 +1645,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [subject] The patient who used the device.
     required Reference subject,
@@ -1694,15 +1665,13 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
     FhirDateTime? timingDateTime,
 
     /// [timingDateTimeElement] Extensions for timingDateTime
-    @JsonKey(name: '_timingDateTime')
-        Element? timingDateTimeElement,
+    @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
 
     /// [recordedOn] The time at which the statement was made/recorded.
     FhirDateTime? recordedOn,
 
     /// [recordedOnElement] Extensions for recordedOn
-    @JsonKey(name: '_recordedOn')
-        Element? recordedOnElement,
+    @JsonKey(name: '_recordedOn') Element? recordedOnElement,
 
     /// [source] Who reported the device was being used by the patient.
     Reference? source,
@@ -1895,17 +1864,17 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   /// accurate response, this element will a description of the data required in
   /// order to proceed with the evaluation. A subsequent request to the service
   ///  should include this data.
-  factory GuidanceResponse({
+  const factory GuidanceResponse({
     @Default(R4ResourceType.GuidanceResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.GuidanceResponse)
 
-        /// [resourceType] This is a GuidanceResponse resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a GuidanceResponse resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1919,15 +1888,13 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1949,8 +1916,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1982,16 +1948,14 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     FhirUri? moduleUri,
 
     /// [moduleUriElement] Extensions for moduleUri
-    @JsonKey(name: '_moduleUri')
-        Element? moduleUriElement,
+    @JsonKey(name: '_moduleUri') Element? moduleUriElement,
 
     /// [moduleCanonical] An identifier, CodeableConcept or canonical reference
     ///  to the guidance that was requested.
     FhirCanonical? moduleCanonical,
 
     /// [moduleCanonicalElement] Extensions for moduleCanonical
-    @JsonKey(name: '_moduleCanonical')
-        Element? moduleCanonicalElement,
+    @JsonKey(name: '_moduleCanonical') Element? moduleCanonicalElement,
 
     /// [moduleCodeableConcept] An identifier, CodeableConcept or canonical
     ///  reference to the guidance that was requested.
@@ -2009,8 +1973,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [subject] The patient for which the request was processed.
     Reference? subject,
@@ -2023,8 +1986,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
     FhirDateTime? occurrenceDateTime,
 
     /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
-    @JsonKey(name: '_occurrenceDateTime')
-        Element? occurrenceDateTimeElement,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
 
     /// [performer] Provides a reference to the device that performed the
     ///  guidance.
@@ -2195,17 +2157,17 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   ///  was shipped to, as part of the dispense event.
   ///
   /// [receiver] Identifies the person who picked up the Supply.
-  factory SupplyDelivery({
+  const factory SupplyDelivery({
     @Default(R4ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: R4ResourceType.SupplyDelivery)
 
-        /// [resourceType] This is a SupplyDelivery resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a SupplyDelivery resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2219,15 +2181,13 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2249,8 +2209,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2283,8 +2242,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [patient] A link to a resource representing the person whom the delivered
     ///  item is for.
@@ -2302,8 +2260,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     FhirDateTime? occurrenceDateTime,
 
     /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
-    @JsonKey(name: '_occurrenceDateTime')
-        Element? occurrenceDateTimeElement,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
 
     /// [occurrencePeriod] The date or time(s) the activity occurred.
     Period? occurrencePeriod,
@@ -2393,7 +2350,7 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   /// [itemReference] Identifies the medication, substance or device being
   /// dispensed. This is either a link to a resource representing the details of
   ///  the item or a code that identifies the item from a known list.
-  factory SupplyDeliverySuppliedItem({
+  const factory SupplyDeliverySuppliedItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2581,17 +2538,17 @@ class SupplyRequest with Resource, _$SupplyRequest {
   /// [deliverFrom] Where the supply is expected to come from.
   ///
   /// [deliverTo] Where the supply is destined to go.
-  factory SupplyRequest({
+  const factory SupplyRequest({
     @Default(R4ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: R4ResourceType.SupplyRequest)
 
-        /// [resourceType] This is a SupplyRequest resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a SupplyRequest resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2605,15 +2562,13 @@ class SupplyRequest with Resource, _$SupplyRequest {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2635,8 +2590,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2662,8 +2616,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [category] Category of supply, e.g.  central, non-stock, etc. This is
     ///  used to support work flows associated with the supply process.
@@ -2674,8 +2627,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
-    @JsonKey(name: '_priority')
-        Element? priorityElement,
+    @JsonKey(name: '_priority') Element? priorityElement,
 
     /// [itemCodeableConcept] The item that is requested to be supplied. This is
     /// either a link to a resource representing the details of the item or a code
@@ -2698,8 +2650,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     FhirDateTime? occurrenceDateTime,
 
     /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
-    @JsonKey(name: '_occurrenceDateTime')
-        Element? occurrenceDateTimeElement,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
 
     /// [occurrencePeriod] When the request should be fulfilled.
     Period? occurrencePeriod,
@@ -2711,8 +2662,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     FhirDateTime? authoredOn,
 
     /// [authoredOnElement] Extensions for authoredOn
-    @JsonKey(name: '_authoredOn')
-        Element? authoredOnElement,
+    @JsonKey(name: '_authoredOn') Element? authoredOnElement,
 
     /// [requester] The device, practitioner, etc. who initiated the request.
     Reference? requester,
@@ -2805,7 +2755,7 @@ class SupplyRequestParameter with _$SupplyRequestParameter {
   /// [valueBoolean] The value of the device detail.
   ///
   /// [valueBooleanElement] Extensions for valueBoolean
-  factory SupplyRequestParameter({
+  const factory SupplyRequestParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,

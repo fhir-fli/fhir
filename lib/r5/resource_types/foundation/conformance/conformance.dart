@@ -250,11 +250,12 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   ///
   /// [document] A document definition.
   ///
-  factory CapabilityStatement({
+  const factory CapabilityStatement({
     /// [resourceType] This is a CapabilityStatement resource
     @Default(R5ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: R5ResourceType.CapabilityStatement)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -358,7 +359,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -630,7 +631,7 @@ class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   ///
   /// [releaseDateElement] ("_releaseDate") Extensions for releaseDate
   ///
-  factory CapabilityStatementSoftware({
+  const factory CapabilityStatementSoftware({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -768,7 +769,7 @@ class CapabilityStatementImplementation
   /// [custodian] The organization responsible for the management of the
   ///  instance and oversight of the data on the server at the specified URL.
   ///
-  factory CapabilityStatementImplementation({
+  const factory CapabilityStatementImplementation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -925,7 +926,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
   ///  compartment that the system supports. The reference is to a
   ///  CompartmentDefinition resource by its canonical URL .
   ///
-  factory CapabilityStatementRest({
+  const factory CapabilityStatementRest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1083,7 +1084,7 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory CapabilityStatementSecurity({
+  const factory CapabilityStatementSecurity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1308,7 +1309,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   ///  operation for details about how to invoke the operation, and the
   ///  parameters.
   ///
-  factory CapabilityStatementResource({
+  const factory CapabilityStatementResource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1561,7 +1562,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory CapabilityStatementInteraction({
+  const factory CapabilityStatementInteraction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1708,7 +1709,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory CapabilityStatementSearchParam({
+  const factory CapabilityStatementSearchParam({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1873,7 +1874,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory CapabilityStatementOperation({
+  const factory CapabilityStatementOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2019,7 +2020,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory CapabilityStatementInteraction1({
+  const factory CapabilityStatementInteraction1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2158,7 +2159,7 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   /// [supportedMessage] References to message definitions for messages this
   ///  system can send or receive.
   ///
-  factory CapabilityStatementMessaging({
+  const factory CapabilityStatementMessaging({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2296,7 +2297,7 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   ///
   /// [addressElement] ("_address") Extensions for address
   ///
-  factory CapabilityStatementEndpoint({
+  const factory CapabilityStatementEndpoint({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2422,7 +2423,7 @@ class CapabilityStatementSupportedMessage
   /// [definition] Points to a message definition that identifies the messaging
   ///  event, message structure, allowed responses, etc.
   ///
-  factory CapabilityStatementSupportedMessage({
+  const factory CapabilityStatementSupportedMessage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2554,7 +2555,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
   /// [profile] A profile on the document Bundle that constrains which
   ///  resources are present, and their contents.
   ///
-  factory CapabilityStatementDocument({
+  const factory CapabilityStatementDocument({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2814,11 +2815,12 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   ///
   /// [resource] Information about how a resource is related to the compartment.
   ///
-  factory CompartmentDefinition({
+  const factory CompartmentDefinition({
     /// [resourceType] This is a CompartmentDefinition resource
     @Default(R5ResourceType.CompartmentDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.CompartmentDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2922,7 +2924,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -3135,7 +3137,7 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   ///
   /// [endParamElement] ("_endParam") Extensions for endParam
   ///
-  factory CompartmentDefinitionResource({
+  const factory CompartmentDefinitionResource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3417,11 +3419,12 @@ class GraphDefinition with Resource, _$GraphDefinition {
   ///
   /// [link] Links this graph makes rules about.
   ///
-  factory GraphDefinition({
+  const factory GraphDefinition({
     /// [resourceType] This is a GraphDefinition resource
     @Default(R5ResourceType.GraphDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.GraphDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3525,7 +3528,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -3727,7 +3730,7 @@ class GraphDefinitionNode with _$GraphDefinitionNode {
   ///
   /// [profile] Profile for the target resource.
   ///
-  factory GraphDefinitionNode({
+  const factory GraphDefinitionNode({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3887,7 +3890,7 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
   ///
   /// [compartment] Compartment Consistency Rules.
   ///
-  factory GraphDefinitionLink({
+  const factory GraphDefinitionLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4064,7 +4067,7 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory GraphDefinitionCompartment({
+  const factory GraphDefinitionCompartment({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4367,11 +4370,12 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   /// [manifest] Information about an assembled implementation guide, created
   ///  by the publication tooling.
   ///
-  factory ImplementationGuide({
+  const factory ImplementationGuide({
     /// [resourceType] This is a ImplementationGuide resource
     @Default(R5ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: R5ResourceType.ImplementationGuide)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -4475,7 +4479,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -4715,7 +4719,7 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   ///
   /// [reasonElement] ("_reason") Extensions for reason
   ///
-  factory ImplementationGuideDependsOn({
+  const factory ImplementationGuideDependsOn({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4852,7 +4856,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   ///
   /// [profile] A reference to the profile that all instances must conform to.
   ///
-  factory ImplementationGuideGlobal({
+  const factory ImplementationGuideGlobal({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4983,7 +4987,7 @@ class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
   ///
   /// [template] A template for building resources.
   ///
-  factory ImplementationGuideDefinition({
+  const factory ImplementationGuideDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5120,7 +5124,7 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory ImplementationGuideGrouping({
+  const factory ImplementationGuideGrouping({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5268,7 +5272,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
   ///
   /// [groupingIdElement] ("_groupingId") Extensions for groupingId
   ///
-  factory ImplementationGuideResource({
+  const factory ImplementationGuideResource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5447,7 +5451,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
   ///
   /// [page] Nested Pages/Sections under this page.
   ///
-  factory ImplementationGuidePage({
+  const factory ImplementationGuidePage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5602,7 +5606,7 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory ImplementationGuideParameter({
+  const factory ImplementationGuideParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5729,7 +5733,7 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   ///
   /// [scopeElement] ("_scope") Extensions for scope
   ///
-  factory ImplementationGuideTemplate({
+  const factory ImplementationGuideTemplate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5875,7 +5879,7 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
   ///
   /// [otherElement] ("_other") Extensions for other
   ///
-  factory ImplementationGuideManifest({
+  const factory ImplementationGuideManifest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6024,7 +6028,7 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   ///
   /// [relativePathElement] ("_relativePath") Extensions for relativePath
   ///
-  factory ImplementationGuideResource1({
+  const factory ImplementationGuideResource1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6162,7 +6166,7 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
   ///
   /// [anchorElement] ("_anchor") Extensions for anchor
   ///
-  factory ImplementationGuidePage1({
+  const factory ImplementationGuidePage1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6448,11 +6452,12 @@ class MessageDefinition with Resource, _$MessageDefinition {
   ///  building the message. The GraphDefinition can also specify profiles that
   ///  apply to the various resources.
   ///
-  factory MessageDefinition({
+  const factory MessageDefinition({
     /// [resourceType] This is a MessageDefinition resource
     @Default(R5ResourceType.MessageDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.MessageDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -6551,7 +6556,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -6795,7 +6800,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
   ///
   /// [maxElement] ("_max") Extensions for max
   ///
-  factory MessageDefinitionFocus({
+  const factory MessageDefinitionFocus({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6931,7 +6936,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
   ///
   /// [situationElement] ("_situation") Extensions for situation
   ///
-  factory MessageDefinitionAllowedResponse({
+  const factory MessageDefinitionAllowedResponse({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7233,11 +7238,12 @@ class OperationDefinition with Resource, _$OperationDefinition {
   ///  invoking this operation, to help code generators when generating
   ///  overloaded parameter sets for this operation.
   ///
-  factory OperationDefinition({
+  const factory OperationDefinition({
     /// [resourceType] This is a OperationDefinition resource
     @Default(R5ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.OperationDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -7341,7 +7347,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -7650,7 +7656,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
   ///
   /// [part_] ("part") The parts of a nested Parameter.
   ///
-  factory OperationDefinitionParameter({
+  const factory OperationDefinitionParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7839,7 +7845,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
   /// [valueSet] Points to the value set or external definition (e.g. implicit
   ///  value set) that identifies the set of codes to be used.
   ///
-  factory OperationDefinitionBinding({
+  const factory OperationDefinitionBinding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7962,7 +7968,7 @@ class OperationDefinitionReferencedFrom
   ///
   /// [sourceIdElement] ("_sourceId") Extensions for sourceId
   ///
-  factory OperationDefinitionReferencedFrom({
+  const factory OperationDefinitionReferencedFrom({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8087,7 +8093,7 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  factory OperationDefinitionOverload({
+  const factory OperationDefinitionOverload({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8402,11 +8408,12 @@ class SearchParameter with Resource, _$SearchParameter {
   ///
   /// [component] Used to define the parts of a composite search parameter.
   ///
-  factory SearchParameter({
+  const factory SearchParameter({
     /// [resourceType] This is a SearchParameter resource
     @Default(R5ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: R5ResourceType.SearchParameter)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -8510,7 +8517,7 @@ class SearchParameter with Resource, _$SearchParameter {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -8788,7 +8795,7 @@ class SearchParameterComponent with _$SearchParameterComponent {
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
-  factory SearchParameterComponent({
+  const factory SearchParameterComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9099,11 +9106,12 @@ class StructureDefinition with Resource, _$StructureDefinition {
   /// [differential] A differential view is expressed relative to the base
   ///  StructureDefinition - a statement of differences that it applies.
   ///
-  factory StructureDefinition({
+  const factory StructureDefinition({
     /// [resourceType] This is a StructureDefinition resource
     @Default(R5ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.StructureDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -9209,7 +9217,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -9487,7 +9495,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  factory StructureDefinitionMapping({
+  const factory StructureDefinitionMapping({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9626,7 +9634,7 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
-  factory StructureDefinitionContext({
+  const factory StructureDefinitionContext({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9744,7 +9752,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   ///
   /// [element] Captures constraints on each element within the resource.
   ///
-  factory StructureDefinitionSnapshot({
+  const factory StructureDefinitionSnapshot({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9852,7 +9860,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   ///
   /// [element] Captures constraints on each element within the resource.
   ///
-  factory StructureDefinitionDifferential({
+  const factory StructureDefinitionDifferential({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10095,11 +10103,12 @@ class StructureMap with Resource, _$StructureMap {
   /// [group] Organizes the mapping into managable chunks for human review/ease
   ///  of maintenance.
   ///
-  factory StructureMap({
+  const factory StructureMap({
     /// [resourceType] This is a StructureMap resource
     @Default(R5ResourceType.StructureMap)
     @JsonKey(unknownEnumValue: R5ResourceType.StructureMap)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -10202,7 +10211,7 @@ class StructureMap with Resource, _$StructureMap {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -10399,7 +10408,7 @@ class StructureMapStructure with _$StructureMapStructure {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory StructureMapStructure({
+  const factory StructureMapStructure({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10525,7 +10534,7 @@ class StructureMapConst with _$StructureMapConst {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory StructureMapConst({
+  const factory StructureMapConst({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10656,7 +10665,7 @@ class StructureMapGroup with _$StructureMapGroup {
   ///
   /// [rule] Transform Rule from source to target.
   ///
-  factory StructureMapGroup({
+  const factory StructureMapGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10801,7 +10810,7 @@ class StructureMapInput with _$StructureMapInput {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory StructureMapInput({
+  const factory StructureMapInput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10937,7 +10946,7 @@ class StructureMapRule with _$StructureMapRule {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory StructureMapRule({
+  const factory StructureMapRule({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -11109,7 +11118,7 @@ class StructureMapSource with _$StructureMapSource {
   ///
   /// [logMessageElement] ("_logMessage") Extensions for logMessage
   ///
-  factory StructureMapSource({
+  const factory StructureMapSource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -11305,7 +11314,7 @@ class StructureMapTarget with _$StructureMapTarget {
   ///
   /// [parameter] Parameters to the transform.
   ///
-  factory StructureMapTarget({
+  const factory StructureMapTarget({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -11473,7 +11482,7 @@ class StructureMapParameter with _$StructureMapParameter {
   ///
   /// [valueDateTimeElement] ("_valueDateTime") Extensions for valueDateTime
   ///
-  factory StructureMapParameter({
+  const factory StructureMapParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -11623,7 +11632,7 @@ class StructureMapDependent with _$StructureMapDependent {
   ///
   /// [parameter] Parameter to pass to the rule or group.
   ///
-  factory StructureMapDependent({
+  const factory StructureMapDependent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

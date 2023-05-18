@@ -17,10 +17,11 @@ part 'groups.g.dart';
 @freezed
 class Organization with Resource, _$Organization {
   Organization._();
-  factory Organization({
+  const factory Organization({
     @Default(Dstu2ResourceType.Organization)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -76,7 +77,7 @@ class Organization with Resource, _$Organization {
 @freezed
 class OrganizationContact with _$OrganizationContact {
   OrganizationContact._();
-  factory OrganizationContact({
+  const factory OrganizationContact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -121,10 +122,11 @@ class OrganizationContact with _$OrganizationContact {
 @freezed
 class HealthcareService with Resource, _$HealthcareService {
   HealthcareService._();
-  factory HealthcareService({
+  const factory HealthcareService({
     @Default(Dstu2ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -161,7 +163,7 @@ class HealthcareService with Resource, _$HealthcareService {
     List<HealthcareServiceNotAvailable>? notAvailable,
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
-        Element? availabilityExceptionsElement,
+    Element? availabilityExceptionsElement,
   }) = _HealthcareService;
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -195,7 +197,7 @@ class HealthcareService with Resource, _$HealthcareService {
 @freezed
 class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
   HealthcareServiceServiceType._();
-  factory HealthcareServiceServiceType({
+  const factory HealthcareServiceServiceType({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -237,7 +239,7 @@ class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
 @freezed
 class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
-  factory HealthcareServiceAvailableTime({
+  const factory HealthcareServiceAvailableTime({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -286,7 +288,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 @freezed
 class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
-  factory HealthcareServiceNotAvailable({
+  const factory HealthcareServiceNotAvailable({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -327,12 +329,13 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
 }
 
 @freezed
-class Group with Resource, _$Group {
-  Group._();
-  factory Group({
+class FhirGroup with Resource, _$FhirGroup {
+  FhirGroup._();
+  const factory FhirGroup({
     @Default(Dstu2ResourceType.Group)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -355,27 +358,29 @@ class Group with Resource, _$Group {
     @JsonKey(name: '_quantity') Element? quantityElement,
     List<GroupCharacteristic>? characteristic,
     List<GroupMember>? member,
-  }) = _Group;
+  }) = _FhirGroup;
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
-  factory Group.fromYaml(dynamic yaml) => yaml is String
-      ? Group.fromJson(
+  factory FhirGroup.fromYaml(dynamic yaml) => yaml is String
+      ? FhirGroup.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Group.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          ? FhirGroup.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'Group cannot be constructed from input provided,'
+              'FhirGroup cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
+  factory FhirGroup.fromJson(Map<String, dynamic> json) =>
+      _$FhirGroupFromJson(json);
 
-  /// Acts like a constructor, returns a [Group], accepts a
+  /// Acts like a constructor, returns a [FhirGroup], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory Group.fromJsonString(String source) {
+  factory FhirGroup.fromJsonString(String source) {
     final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$GroupFromJson(json);
+      return _$FhirGroupFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -386,7 +391,7 @@ class Group with Resource, _$Group {
 @freezed
 class GroupCharacteristic with _$GroupCharacteristic {
   GroupCharacteristic._();
-  factory GroupCharacteristic({
+  const factory GroupCharacteristic({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -434,7 +439,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
 @freezed
 class GroupMember with _$GroupMember {
   GroupMember._();
-  factory GroupMember({
+  const factory GroupMember({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

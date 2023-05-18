@@ -17,10 +17,11 @@ part 'documents.g.dart';
 @freezed
 class Composition with Resource, _$Composition {
   Composition._();
-  factory Composition({
+  const factory Composition({
     @Default(Stu3ResourceType.Composition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -83,7 +84,7 @@ class Composition with Resource, _$Composition {
 @freezed
 class CompositionAttester with _$CompositionAttester {
   CompositionAttester._();
-  factory CompositionAttester({
+  const factory CompositionAttester({
     List<CompositionAttesterMode>? mode,
     @JsonKey(name: '_mode') List<Element?>? modeElement,
     FhirTime? time,
@@ -125,7 +126,7 @@ class CompositionAttester with _$CompositionAttester {
 @freezed
 class CompositionRelatesTo with _$CompositionRelatesTo {
   CompositionRelatesTo._();
-  factory CompositionRelatesTo({
+  const factory CompositionRelatesTo({
     FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     Identifier? targetIdentifier,
@@ -166,7 +167,7 @@ class CompositionRelatesTo with _$CompositionRelatesTo {
 @freezed
 class CompositionEvent with _$CompositionEvent {
   CompositionEvent._();
-  factory CompositionEvent({
+  const factory CompositionEvent({
     List<CodeableConcept>? code,
     Period? period,
     List<Reference>? detail,
@@ -206,7 +207,7 @@ class CompositionEvent with _$CompositionEvent {
 @freezed
 class CompositionSection with _$CompositionSection {
   CompositionSection._();
-  factory CompositionSection({
+  const factory CompositionSection({
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     CodeableConcept? code,
@@ -253,10 +254,11 @@ class CompositionSection with _$CompositionSection {
 @freezed
 class DocumentManifest with Resource, _$DocumentManifest {
   DocumentManifest._();
-  factory DocumentManifest({
+  const factory DocumentManifest({
     @Default(Stu3ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -316,7 +318,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
 @freezed
 class DocumentManifestContent with _$DocumentManifestContent {
   DocumentManifestContent._();
-  factory DocumentManifestContent({
+  const factory DocumentManifestContent({
     Attachment? pAttachment,
     Reference? pReference,
   }) = _DocumentManifestContent;
@@ -355,7 +357,7 @@ class DocumentManifestContent with _$DocumentManifestContent {
 @freezed
 class DocumentManifestRelated with _$DocumentManifestRelated {
   DocumentManifestRelated._();
-  factory DocumentManifestRelated({
+  const factory DocumentManifestRelated({
     Identifier? identifier,
     Reference? ref,
   }) = _DocumentManifestRelated;
@@ -394,10 +396,11 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
 @freezed
 class DocumentReference with Resource, _$DocumentReference {
   DocumentReference._();
-  factory DocumentReference({
+  const factory DocumentReference({
     @Default(Stu3ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -463,7 +466,7 @@ class DocumentReference with Resource, _$DocumentReference {
 @freezed
 class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   DocumentReferenceRelatesTo._();
-  factory DocumentReferenceRelatesTo({
+  const factory DocumentReferenceRelatesTo({
     DocumentReferenceRelatesToCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     required Reference target,
@@ -503,7 +506,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
 @freezed
 class DocumentReferenceContent with _$DocumentReferenceContent {
   DocumentReferenceContent._();
-  factory DocumentReferenceContent({
+  const factory DocumentReferenceContent({
     required Attachment attachment,
     Coding? format,
   }) = _DocumentReferenceContent;
@@ -542,7 +545,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
 @freezed
 class DocumentReferenceContext with _$DocumentReferenceContext {
   DocumentReferenceContext._();
-  factory DocumentReferenceContext({
+  const factory DocumentReferenceContext({
     Reference? encounter,
     List<CodeableConcept>? event,
     Period? period,
@@ -586,7 +589,7 @@ class DocumentReferenceContext with _$DocumentReferenceContext {
 @freezed
 class DocumentReferenceRelated with _$DocumentReferenceRelated {
   DocumentReferenceRelated._();
-  factory DocumentReferenceRelated({
+  const factory DocumentReferenceRelated({
     Identifier? identifier,
     Reference? ref,
   }) = _DocumentReferenceRelated;

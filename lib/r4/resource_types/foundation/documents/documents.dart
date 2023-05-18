@@ -116,17 +116,17 @@ class CatalogEntry with Resource, _$CatalogEntry {
   ///
   /// [relatedEntry] Used for example, to point to a substance, or to a device
   ///  used to administer a medication.
-  factory CatalogEntry({
+  const factory CatalogEntry({
     @Default(R4ResourceType.CatalogEntry)
     @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
 
-        /// [resourceType] This is a CatalogEntry resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a CatalogEntry resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -140,15 +140,13 @@ class CatalogEntry with Resource, _$CatalogEntry {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -170,8 +168,7 @@ class CatalogEntry with Resource, _$CatalogEntry {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -199,8 +196,7 @@ class CatalogEntry with Resource, _$CatalogEntry {
     FhirBoolean? orderable,
 
     /// [orderableElement] Extensions for orderable
-    @JsonKey(name: '_orderable')
-        Element? orderableElement,
+    @JsonKey(name: '_orderable') Element? orderableElement,
 
     /// [referencedItem] The item in a catalog or definition.
     required Reference referencedItem,
@@ -217,8 +213,7 @@ class CatalogEntry with Resource, _$CatalogEntry {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [validityPeriod] The time period in which this catalog entry is expected
     ///  to be active.
@@ -229,16 +224,14 @@ class CatalogEntry with Resource, _$CatalogEntry {
     FhirDateTime? validTo,
 
     /// [validToElement] Extensions for validTo
-    @JsonKey(name: '_validTo')
-        Element? validToElement,
+    @JsonKey(name: '_validTo') Element? validToElement,
 
     /// [lastUpdated] Typically date of issue is different from the beginning of
     ///  the validity. This can be used to see when an item was last updated.
     FhirDateTime? lastUpdated,
 
     /// [lastUpdatedElement] Extensions for lastUpdated
-    @JsonKey(name: '_lastUpdated')
-        Element? lastUpdatedElement,
+    @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
 
     /// [additionalCharacteristic] Used for examplefor Out of Formulary, or any
     ///  specifics.
@@ -319,7 +312,7 @@ class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
   /// [relationtypeElement] Extensions for relationtype
   ///
   /// [item] The reference to the related item.
-  factory CatalogEntryRelatedEntry({
+  const factory CatalogEntryRelatedEntry({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -514,17 +507,17 @@ class Composition with Resource, _$Composition {
   ///  being documented.
   ///
   /// [section] The root of the sections that make up the composition.
-  factory Composition({
+  const factory Composition({
     @Default(R4ResourceType.Composition)
     @JsonKey(unknownEnumValue: R4ResourceType.Composition)
 
-        /// [resourceType] This is a Composition resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Composition resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -538,15 +531,13 @@ class Composition with Resource, _$Composition {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -568,8 +559,7 @@ class Composition with Resource, _$Composition {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -595,8 +585,7 @@ class Composition with Resource, _$Composition {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [type] Specifies the particular kind of composition (e.g. History and
     /// Physical, Discharge Summary, Progress Note). This usually equates to the
@@ -623,8 +612,7 @@ class Composition with Resource, _$Composition {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [author] Identifies who is responsible for the information in the
     ///  composition, not necessarily who typed it in.
@@ -634,16 +622,14 @@ class Composition with Resource, _$Composition {
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [confidentiality] The code specifying the level of confidentiality of the
     ///  Composition.
     FhirCode? confidentiality,
 
     /// [confidentialityElement] Extensions for confidentiality
-    @JsonKey(name: '_confidentiality')
-        Element? confidentialityElement,
+    @JsonKey(name: '_confidentiality') Element? confidentialityElement,
 
     /// [attester] A participant who has attested to the accuracy of the
     ///  composition/document.
@@ -744,7 +730,7 @@ class CompositionAttester with _$CompositionAttester {
   /// [timeElement] Extensions for time
   ///
   /// [party] Who attested the composition in the specified way.
-  factory CompositionAttester({
+  const factory CompositionAttester({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -868,7 +854,7 @@ class CompositionRelatesTo with _$CompositionRelatesTo {
   /// [targetIdentifier] The target composition/document of this relationship.
   ///
   /// [targetReference] The target composition/document of this relationship.
-  factory CompositionRelatesTo({
+  const factory CompositionRelatesTo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -995,7 +981,7 @@ class CompositionEvent with _$CompositionEvent {
   /// [detail] The description and/or reference of the event(s) being
   /// documented. For example, this could be used to document such a colonoscopy
   ///  or an appendectomy.
-  factory CompositionEvent({
+  const factory CompositionEvent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1158,7 +1144,7 @@ class CompositionSection with _$CompositionSection {
   ///  section typically has some text explaining the empty reason.
   ///
   /// [section] A nested sub-section within this section.
-  factory CompositionSection({
+  const factory CompositionSection({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1385,17 +1371,17 @@ class DocumentManifest with Resource, _$DocumentManifest {
   ///
   /// [related] Related identifiers or resources associated with the
   ///  DocumentManifest.
-  factory DocumentManifest({
+  const factory DocumentManifest({
     @Default(R4ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
 
-        /// [resourceType] This is a DocumentManifest resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a DocumentManifest resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1409,15 +1395,13 @@ class DocumentManifest with Resource, _$DocumentManifest {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1439,8 +1423,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1469,8 +1452,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [type] The code specifying the type of clinical activity that resulted in
     ///  placing the associated content into the DocumentManifest.
@@ -1490,8 +1472,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
     FhirDateTime? created,
 
     /// [createdElement] Extensions for created
-    @JsonKey(name: '_created')
-        Element? createdElement,
+    @JsonKey(name: '_created') Element? createdElement,
 
     /// [author] Identifies who is the author of the manifest. Manifest author is
     ///  not necessarly the author of the references included.
@@ -1506,16 +1487,14 @@ class DocumentManifest with Resource, _$DocumentManifest {
     FhirUri? source,
 
     /// [sourceElement] Extensions for source
-    @JsonKey(name: '_source')
-        Element? sourceElement,
+    @JsonKey(name: '_source') Element? sourceElement,
 
     /// [description] Human-readable description of the source document. This is
     ///  sometimes known as the "title".
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [content] The list of Resources that consist of the parts of this
     ///  manifest.
@@ -1592,7 +1571,7 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
   ///
   /// [ref] Related Resource to this DocumentManifest. For example, Order,
   ///  ServiceRequest,  Procedure, EligibilityRequest, etc.
-  factory DocumentManifestRelated({
+  const factory DocumentManifestRelated({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1786,17 +1765,17 @@ class DocumentReference with Resource, _$DocumentReference {
   ///  content element repetitions, each with a different format.
   ///
   /// [context] The clinical context in which the document was prepared.
-  factory DocumentReference({
+  const factory DocumentReference({
     @Default(R4ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
 
-        /// [resourceType] This is a DocumentReference resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a DocumentReference resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1810,15 +1789,13 @@ class DocumentReference with Resource, _$DocumentReference {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1840,8 +1817,7 @@ class DocumentReference with Resource, _$DocumentReference {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1872,15 +1848,13 @@ class DocumentReference with Resource, _$DocumentReference {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [docStatus] The status of the underlying document.
     FhirCode? docStatus,
 
     /// [docStatusElement] Extensions for docStatus
-    @JsonKey(name: '_docStatus')
-        Element? docStatusElement,
+    @JsonKey(name: '_docStatus') Element? docStatusElement,
 
     /// [type] Specifies the particular kind of document referenced  (e.g.
     /// History and Physical, Discharge Summary, Progress Note). This usually
@@ -1902,8 +1876,7 @@ class DocumentReference with Resource, _$DocumentReference {
     FhirInstant? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [author] Identifies who is responsible for adding the information to the
     ///  document.
@@ -1925,8 +1898,7 @@ class DocumentReference with Resource, _$DocumentReference {
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [securityLabel] A set of Security-Tag codes specifying the level of
     /// privacy/security of the Document. Note that
@@ -2015,7 +1987,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   /// [codeElement] Extensions for code
   ///
   /// [target] The target document of this relationship.
-  factory DocumentReferenceRelatesTo({
+  const factory DocumentReferenceRelatesTo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2128,7 +2100,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
   /// [format] An identifier of the document encoding, structure, and template
   /// that the document conforms to beyond the base format indicated in the
   ///  mimeType.
-  factory DocumentReferenceContent({
+  const factory DocumentReferenceContent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2257,7 +2229,7 @@ class DocumentReferenceContext with _$DocumentReferenceContext {
   ///
   /// [related] Related identifiers or resources associated with the
   ///  DocumentReference.
-  factory DocumentReferenceContext({
+  const factory DocumentReferenceContext({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,

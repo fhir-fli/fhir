@@ -309,17 +309,17 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// medication must be computed based on the patient's weight, a dynamic value
   /// would be used to specify an expression that calculated the weight, and the
   ///  path on the request resource that would contain the result.
-  factory ActivityDefinition({
+  const factory ActivityDefinition({
     @Default(R4ResourceType.ActivityDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ActivityDefinition)
 
-        /// [resourceType] This is a ActivityDefinition resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a ActivityDefinition resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -333,15 +333,13 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -363,8 +361,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -391,8 +388,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this activity
     /// definition when it is represented in other formats, or referenced in a
@@ -413,8 +409,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the activity definition. This
     /// name should be usable as an identifier for the module by machine
@@ -422,32 +417,28 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the activity
     ///  definition.
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [subtitle] An explanatory or alternate title for the activity definition
     ///  giving additional information about its content.
     String? subtitle,
 
     /// [subtitleElement] Extensions for subtitle
-    @JsonKey(name: '_subtitle')
-        Element? subtitleElement,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
 
     /// [status] The status of this activity definition. Enables tracking the
     ///  life-cycle of the content.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this activity definition
     /// is authored for testing purposes (or education/evaluation/marketing) and
@@ -455,8 +446,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [subjectCodeableConcept] A code or group definition that describes the
     ///  intended subject of the activity being defined.
@@ -466,8 +456,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     ///  subject of the activity being defined.
     Reference? subjectReference,
     FhirCanonical? subjectCanonical,
-    @JsonKey(name: '_subjectCanonical')
-        Element? subjectCanonicalElement,
+    @JsonKey(name: '_subjectCanonical') Element? subjectCanonicalElement,
 
     /// [date] The date  (and optionally time) when the activity definition was
     /// published. The date must change when the business version changes and it
@@ -476,16 +465,14 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  activity definition.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -496,8 +483,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -515,16 +501,14 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [usage] A detailed description of how the activity definition is used
     ///  from a clinical perspective.
     String? usage,
 
     /// [usageElement] Extensions for usage
-    @JsonKey(name: '_usage')
-        Element? usageElement,
+    @JsonKey(name: '_usage') Element? usageElement,
 
     /// [copyright] A copyright statement relating to the activity definition
     /// and/or its contents. Copyright statements are generally legal restrictions
@@ -532,8 +516,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
@@ -541,8 +524,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     FhirDate? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
-    @JsonKey(name: '_approvalDate')
-        Element? approvalDateElement,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
@@ -550,8 +532,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
 
     /// [effectivePeriod] The period during which the activity definition content
     ///  was or is planned to be in active use.
@@ -584,8 +565,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
 
     /// [library] A reference to a Library resource containing any formal logic
     ///  used by the activity definition.
-    @JsonKey(name: 'library')
-        List<FhirCanonical>? library_,
+    @JsonKey(name: 'library') List<FhirCanonical>? library_,
 
     /// [kind] A description of the kind of resource the activity definition is
     /// representing. For example, a MedicationRequest, a ServiceRequest, or a
@@ -594,8 +574,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     FhirCode? kind,
 
     /// [kindElement] Extensions for kind
-    @JsonKey(name: '_kind')
-        Element? kindElement,
+    @JsonKey(name: '_kind') Element? kindElement,
 
     /// [profile] A profile to which the target of the activity definition is
     ///  expected to conform.
@@ -610,16 +589,14 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     FhirCode? intent,
 
     /// [intentElement] Extensions for intent
-    @JsonKey(name: '_intent')
-        Element? intentElement,
+    @JsonKey(name: '_intent') Element? intentElement,
 
     /// [priority] Indicates how quickly the activity  should be addressed with
     ///  respect to other requests.
     FhirCode? priority,
 
     /// [priorityElement] Extensions for priority
-    @JsonKey(name: '_priority')
-        Element? priorityElement,
+    @JsonKey(name: '_priority') Element? priorityElement,
 
     /// [doNotPerform] Set this to true if the definition is to indicate that a
     /// particular activity should NOT be performed. If true, this element should
@@ -629,8 +606,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     FhirBoolean? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
-    @JsonKey(name: '_doNotPerform')
-        Element? doNotPerformElement,
+    @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
 
     /// [timingTiming] The period, timing or frequency upon which the described
     ///  activity is to occur.
@@ -641,8 +617,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     FhirDateTime? timingDateTime,
 
     /// [timingDateTimeElement] Extensions for timingDateTime
-    @JsonKey(name: '_timingDateTime')
-        Element? timingDateTimeElement,
+    @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
 
     /// [timingAge] The period, timing or frequency upon which the described
     ///  activity is to occur.
@@ -781,7 +756,7 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   ///
   /// [role] The role the participant should play in performing the described
   ///  action.
-  factory ActivityDefinitionParticipant({
+  const factory ActivityDefinitionParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -898,7 +873,7 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   ///
   /// [expression] An expression specifying the value of the customized
   ///  element.
-  factory ActivityDefinitionDynamicValue({
+  const factory ActivityDefinitionDynamicValue({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1108,17 +1083,17 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   ///
   /// [material] A substance used to create the material(s) of which the device
   ///  is made.
-  factory DeviceDefinition({
+  const factory DeviceDefinition({
     @Default(R4ResourceType.DeviceDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceDefinition)
 
-        /// [resourceType] This is a DeviceDefinition resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a DeviceDefinition resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1132,15 +1107,13 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1162,8 +1135,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1195,8 +1167,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     String? manufacturerString,
 
     /// [manufacturerStringElement] Extensions for manufacturerString
-    @JsonKey(name: '_manufacturerString')
-        Element? manufacturerStringElement,
+    @JsonKey(name: '_manufacturerString') Element? manufacturerStringElement,
 
     /// [manufacturerReference] A name of the manufacturer.
     Reference? manufacturerReference,
@@ -1208,8 +1179,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     String? modelNumber,
 
     /// [modelNumberElement] Extensions for modelNumber
-    @JsonKey(name: '_modelNumber')
-        Element? modelNumberElement,
+    @JsonKey(name: '_modelNumber') Element? modelNumberElement,
 
     /// [type] What kind of device or device system this is.
     CodeableConcept? type,
@@ -1223,8 +1193,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     List<String>? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        List<Element?>? versionElement,
+    @JsonKey(name: '_version') List<Element?>? versionElement,
 
     /// [safety] Safety characteristics of the device.
     List<CodeableConcept>? safety,
@@ -1258,15 +1227,13 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [onlineInformation] Access to on-line information about the device.
     FhirUri? onlineInformation,
 
     /// [onlineInformationElement] Extensions for onlineInformation
-    @JsonKey(name: '_onlineInformation')
-        Element? onlineInformationElement,
+    @JsonKey(name: '_onlineInformation') Element? onlineInformationElement,
 
     /// [note] Descriptive information, usage information or implantation
     ///  information that is not captured in an existing element.
@@ -1359,7 +1326,7 @@ class DeviceDefinitionUdiDeviceIdentifier
   /// [jurisdiction] The jurisdiction to which the deviceIdentifier applies.
   ///
   /// [jurisdictionElement] Extensions for jurisdiction
-  factory DeviceDefinitionUdiDeviceIdentifier({
+  const factory DeviceDefinitionUdiDeviceIdentifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1470,7 +1437,7 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
   ///  ManufactureDeviceName | ModelName.
   ///
   /// [typeElement] Extensions for type
-  factory DeviceDefinitionDeviceName({
+  const factory DeviceDefinitionDeviceName({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1585,7 +1552,7 @@ class DeviceDefinitionSpecialization with _$DeviceDefinitionSpecialization {
   ///  communicate.
   ///
   /// [versionElement] Extensions for version
-  factory DeviceDefinitionSpecialization({
+  const factory DeviceDefinitionSpecialization({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1695,7 +1662,7 @@ class DeviceDefinitionCapability with _$DeviceDefinitionCapability {
   /// [type] Type of capability.
   ///
   /// [description] Description of capability.
-  factory DeviceDefinitionCapability({
+  const factory DeviceDefinitionCapability({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1800,7 +1767,7 @@ class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
   /// [valueQuantity] Property value as a quantity.
   ///
   /// [valueCode] Property value as a code, e.g., NTP4 (synced to NTP).
-  factory DeviceDefinitionProperty({
+  const factory DeviceDefinitionProperty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1913,7 +1880,7 @@ class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
   ///  allergen.
   ///
   /// [allergenicIndicatorElement] Extensions for allergenicIndicator
-  factory DeviceDefinitionMaterial({
+  const factory DeviceDefinitionMaterial({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2190,17 +2157,17 @@ class EventDefinition with Resource, _$EventDefinition {
   /// [trigger] The trigger element defines when the event occurs. If more than
   /// one trigger condition is specified, the event fires whenever any one of
   ///  the trigger conditions is met.
-  factory EventDefinition({
+  const factory EventDefinition({
     @Default(R4ResourceType.EventDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.EventDefinition)
 
-        /// [resourceType] This is a EventDefinition resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a EventDefinition resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2214,15 +2181,13 @@ class EventDefinition with Resource, _$EventDefinition {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2244,8 +2209,7 @@ class EventDefinition with Resource, _$EventDefinition {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2272,8 +2236,7 @@ class EventDefinition with Resource, _$EventDefinition {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this event
     /// definition when it is represented in other formats, or referenced in a
@@ -2290,8 +2253,7 @@ class EventDefinition with Resource, _$EventDefinition {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the event definition. This
     /// name should be usable as an identifier for the module by machine
@@ -2299,32 +2261,28 @@ class EventDefinition with Resource, _$EventDefinition {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the event
     ///  definition.
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [subtitle] An explanatory or alternate title for the event definition
     ///  giving additional information about its content.
     String? subtitle,
 
     /// [subtitleElement] Extensions for subtitle
-    @JsonKey(name: '_subtitle')
-        Element? subtitleElement,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
 
     /// [status] The status of this event definition. Enables tracking the
     ///  life-cycle of the content.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this event definition is
     /// authored for testing purposes (or education/evaluation/marketing) and is
@@ -2332,8 +2290,7 @@ class EventDefinition with Resource, _$EventDefinition {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [subjectCodeableConcept] A code or group definition that describes the
     ///  intended subject of the event definition.
@@ -2350,16 +2307,14 @@ class EventDefinition with Resource, _$EventDefinition {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  event definition.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -2370,8 +2325,7 @@ class EventDefinition with Resource, _$EventDefinition {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -2389,16 +2343,14 @@ class EventDefinition with Resource, _$EventDefinition {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [usage] A detailed description of how the event definition is used from a
     ///  clinical perspective.
     String? usage,
 
     /// [usageElement] Extensions for usage
-    @JsonKey(name: '_usage')
-        Element? usageElement,
+    @JsonKey(name: '_usage') Element? usageElement,
 
     /// [copyright] A copyright statement relating to the event definition and/or
     /// its contents. Copyright statements are generally legal restrictions on the
@@ -2406,8 +2358,7 @@ class EventDefinition with Resource, _$EventDefinition {
     FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
@@ -2415,8 +2366,7 @@ class EventDefinition with Resource, _$EventDefinition {
     FhirDate? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
-    @JsonKey(name: '_approvalDate')
-        Element? approvalDateElement,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
@@ -2424,8 +2374,7 @@ class EventDefinition with Resource, _$EventDefinition {
     FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
 
     /// [effectivePeriod] The period during which the event definition content
     ///  was or is planned to be in active use.
@@ -2596,17 +2545,17 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
   ///
   /// [criticalCodedValueSet] The set of critical coded results for the
   ///  observation conforming to this ObservationDefinition.
-  factory ObservationDefinition({
+  const factory ObservationDefinition({
     @Default(R4ResourceType.ObservationDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ObservationDefinition)
 
-        /// [resourceType] This is a ObservationDefinition resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a ObservationDefinition resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2620,15 +2569,13 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2650,8 +2597,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2684,16 +2630,16 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     List<FhirCode>? permittedDataType,
     @JsonKey(name: '_permittedDataType')
 
-        /// [permittedDataTypeElement] Extensions for permittedDataType
-        List<Element>? permittedDataTypeElement,
+    /// [permittedDataTypeElement] Extensions for permittedDataType
+    List<Element>? permittedDataTypeElement,
 
     /// [multipleResultsAllowed] Multiple results allowed for observations
     ///  conforming to this ObservationDefinition.
     FhirBoolean? multipleResultsAllowed,
     @JsonKey(name: '_multipleResultsAllowed')
 
-        /// [multipleResultsAllowedElement] Extensions for multipleResultsAllowed
-        Element? multipleResultsAllowedElement,
+    /// [multipleResultsAllowedElement] Extensions for multipleResultsAllowed
+    Element? multipleResultsAllowedElement,
 
     /// [method] The method or technique used to perform the observation.
     CodeableConcept? method,
@@ -2703,8 +2649,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     String? preferredReportName,
 
     /// [preferredReportNameElement] Extensions for preferredReportName
-    @JsonKey(name: '_preferredReportName')
-        Element? preferredReportNameElement,
+    @JsonKey(name: '_preferredReportName') Element? preferredReportNameElement,
 
     /// [quantitativeDetails] Characteristics for quantitative results of this
     ///  observation.
@@ -2808,7 +2753,7 @@ class ObservationDefinitionQuantitativeDetails
   ///  results of such observations are of type Quantity.
   ///
   /// [decimalPrecisionElement] Extensions for decimalPrecision
-  factory ObservationDefinitionQuantitativeDetails({
+  const factory ObservationDefinitionQuantitativeDetails({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2939,7 +2884,7 @@ class ObservationDefinitionQualifiedInterval
   /// [condition] Text based condition for which the reference range is valid.
   ///
   /// [conditionElement] Extensions for condition
-  factory ObservationDefinitionQualifiedInterval({
+  const factory ObservationDefinitionQualifiedInterval({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3244,17 +3189,17 @@ class PlanDefinition with Resource, _$PlanDefinition {
   ///  improvement objective, etc.
   ///
   /// [action] An action or group of actions to be taken as part of the plan.
-  factory PlanDefinition({
+  const factory PlanDefinition({
     @Default(R4ResourceType.PlanDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.PlanDefinition)
 
-        /// [resourceType] This is a PlanDefinition resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a PlanDefinition resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -3268,15 +3213,13 @@ class PlanDefinition with Resource, _$PlanDefinition {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -3298,8 +3241,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -3326,8 +3268,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this plan
     /// definition when it is represented in other formats, or referenced in a
@@ -3348,8 +3289,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the plan definition. This name
     /// should be usable as an identifier for the module by machine processing
@@ -3357,24 +3297,21 @@ class PlanDefinition with Resource, _$PlanDefinition {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the plan
     ///  definition.
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [subtitle] An explanatory or alternate title for the plan definition
     ///  giving additional information about its content.
     String? subtitle,
 
     /// [subtitleElement] Extensions for subtitle
-    @JsonKey(name: '_subtitle')
-        Element? subtitleElement,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
 
     /// [type] A high-level category for the plan definition that distinguishes
     ///  the kinds of systems that would be interested in the plan definition.
@@ -3385,8 +3322,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this plan definition is
     /// authored for testing purposes (or education/evaluation/marketing) and is
@@ -3394,8 +3330,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [subjectCodeableConcept] A code or group definition that describes the
     ///  intended subject of the plan definition.
@@ -3405,8 +3340,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     ///  subject of the plan definition.
     Reference? subjectReference,
     FhirCanonical? subjectCanonical,
-    @JsonKey(name: '_subjectCanonical')
-        Element? subjectCanonicalElement,
+    @JsonKey(name: '_subjectCanonical') Element? subjectCanonicalElement,
 
     /// [date] The date  (and optionally time) when the plan definition was
     /// published. The date must change when the business version changes and it
@@ -3415,16 +3349,14 @@ class PlanDefinition with Resource, _$PlanDefinition {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  plan definition.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -3435,8 +3367,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -3454,16 +3385,14 @@ class PlanDefinition with Resource, _$PlanDefinition {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [usage] A detailed description of how the plan definition is used from a
     ///  clinical perspective.
     String? usage,
 
     /// [usageElement] Extensions for usage
-    @JsonKey(name: '_usage')
-        Element? usageElement,
+    @JsonKey(name: '_usage') Element? usageElement,
 
     /// [copyright] A copyright statement relating to the plan definition and/or
     /// its contents. Copyright statements are generally legal restrictions on the
@@ -3471,8 +3400,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
@@ -3480,8 +3408,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     FhirDate? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
-    @JsonKey(name: '_approvalDate')
-        Element? approvalDateElement,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
@@ -3489,8 +3416,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
 
     /// [effectivePeriod] The period during which the plan definition content was
     ///  or is planned to be in active use.
@@ -3523,8 +3449,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
 
     /// [library] A reference to a Library resource containing any formal logic
     ///  used by the plan definition.
-    @JsonKey(name: 'library')
-        List<FhirCanonical>? library_,
+    @JsonKey(name: 'library') List<FhirCanonical>? library_,
 
     /// [goal] Goals that describe what the activities within the plan are
     /// intended to achieve. For example, weight loss, restoring an activity of
@@ -3620,7 +3545,7 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
   ///  resources.
   ///
   /// [target] Indicates what should be done and within what timeframe.
-  factory PlanDefinitionGoal({
+  const factory PlanDefinitionGoal({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3770,7 +3695,7 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
   ///
   /// [due] Indicates the timeframe after the start of the goal in which the
   ///  goal should be met.
-  factory PlanDefinitionTarget({
+  const factory PlanDefinitionTarget({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4032,7 +3957,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
   /// example, a selection behavior of at-most-one indicates that of the
   /// sub-actions, at most one may be chosen as part of realizing the action
   ///  definition.
-  factory PlanDefinitionAction({
+  const factory PlanDefinitionAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4319,7 +4244,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
   ///
   /// [expression] An expression that returns true or false, indicating whether
   ///  the condition is satisfied.
-  factory PlanDefinitionCondition({
+  const factory PlanDefinitionCondition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4438,7 +4363,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   ///
   /// [offsetRange] A duration or range of durations to apply to the
   ///  relationship. For example, 30-60 minutes before.
-  factory PlanDefinitionRelatedAction({
+  const factory PlanDefinitionRelatedAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4560,7 +4485,7 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   ///
   /// [role] The role the participant should play in performing the described
   ///  action.
-  factory PlanDefinitionParticipant({
+  const factory PlanDefinitionParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4679,7 +4604,7 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   ///
   /// [expression] An expression specifying the value of the customized
   ///  element.
-  factory PlanDefinitionDynamicValue({
+  const factory PlanDefinitionDynamicValue({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4933,17 +4858,17 @@ class Questionnaire with Resource, _$Questionnaire {
   ///
   /// [item] A particular question, question grouping or display text that is
   ///  part of the questionnaire.
-  factory Questionnaire({
+  const factory Questionnaire({
     @Default(R4ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: R4ResourceType.Questionnaire)
 
-        /// [resourceType] This is a Questionnaire resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Questionnaire resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -4957,15 +4882,13 @@ class Questionnaire with Resource, _$Questionnaire {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -4987,8 +4910,7 @@ class Questionnaire with Resource, _$Questionnaire {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -5015,8 +4937,7 @@ class Questionnaire with Resource, _$Questionnaire {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this
     /// questionnaire when it is represented in other formats, or referenced in a
@@ -5033,8 +4954,7 @@ class Questionnaire with Resource, _$Questionnaire {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the questionnaire. This name
     /// should be usable as an identifier for the module by machine processing
@@ -5042,15 +4962,13 @@ class Questionnaire with Resource, _$Questionnaire {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the questionnaire.
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [derivedFrom] The URL of a Questionnaire that this Questionnaire is based
     ///  on.
@@ -5061,8 +4979,7 @@ class Questionnaire with Resource, _$Questionnaire {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this questionnaire is
     /// authored for testing purposes (or education/evaluation/marketing) and is
@@ -5070,16 +4987,14 @@ class Questionnaire with Resource, _$Questionnaire {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [subjectType] The types of subjects that can be the subject of responses
     ///  created for the questionnaire.
     List<FhirCode>? subjectType,
 
     /// [subjectTypeElement] Extensions for subjectType
-    @JsonKey(name: '_subjectType')
-        List<Element?>? subjectTypeElement,
+    @JsonKey(name: '_subjectType') List<Element?>? subjectTypeElement,
 
     /// [date] The date  (and optionally time) when the questionnaire was
     /// published. The date must change when the business version changes and it
@@ -5088,16 +5003,14 @@ class Questionnaire with Resource, _$Questionnaire {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  questionnaire.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -5108,8 +5021,7 @@ class Questionnaire with Resource, _$Questionnaire {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -5127,8 +5039,7 @@ class Questionnaire with Resource, _$Questionnaire {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the questionnaire and/or
     /// its contents. Copyright statements are generally legal restrictions on the
@@ -5136,8 +5047,7 @@ class Questionnaire with Resource, _$Questionnaire {
     FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
@@ -5145,8 +5055,7 @@ class Questionnaire with Resource, _$Questionnaire {
     FhirDate? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
-    @JsonKey(name: '_approvalDate')
-        Element? approvalDateElement,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
@@ -5154,8 +5063,7 @@ class Questionnaire with Resource, _$Questionnaire {
     FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
 
     /// [effectivePeriod] The period during which the questionnaire content was
     ///  or is planned to be in active use.
@@ -5319,7 +5227,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
   ///
   /// [item] Text, questions and other groups to be nested beneath a question
   ///  or group.
-  factory QuestionnaireItem({
+  const factory QuestionnaireItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5564,7 +5472,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   ///
   /// [answerReference] A value that the referenced question is tested using
   ///  the specified operator in order for the item to be enabled.
-  factory QuestionnaireEnableWhen({
+  const factory QuestionnaireEnableWhen({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5763,7 +5671,7 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   ///  list of possible answers is initially shown.
   ///
   /// [initialSelectedElement] Extensions for initialSelected
-  factory QuestionnaireAnswerOption({
+  const factory QuestionnaireAnswerOption({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5940,7 +5848,7 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
   /// [valueQuantity] The actual value to for an initial answer.
   ///
   /// [valueReference] The actual value to for an initial answer.
-  factory QuestionnaireInitial({
+  const factory QuestionnaireInitial({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6136,17 +6044,17 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
   ///
   /// [typeTested] Specimen conditioned in a container as expected by the
   ///  testing laboratory.
-  factory SpecimenDefinition({
+  const factory SpecimenDefinition({
     @Default(R4ResourceType.SpecimenDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.SpecimenDefinition)
 
-        /// [resourceType] This is a SpecimenDefinition resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a SpecimenDefinition resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -6160,15 +6068,13 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -6190,8 +6096,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -6221,8 +6126,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
     String? timeAspect,
 
     /// [timeAspectElement] Extensions for timeAspect
-    @JsonKey(name: '_timeAspect')
-        Element? timeAspectElement,
+    @JsonKey(name: '_timeAspect') Element? timeAspectElement,
 
     /// [collection] The action to be performed for collecting the specimen.
     List<CodeableConcept>? collection,
@@ -6319,7 +6223,7 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
   ///
   /// [handling] Set of instructions for preservation/transport of the specimen
   ///  at a defined temperature interval, prior the testing process.
-  factory SpecimenDefinitionTypeTested({
+  const factory SpecimenDefinitionTypeTested({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6478,7 +6382,7 @@ class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   ///  for this kind of specimen.
   ///
   /// [preparationElement] Extensions for preparation
-  factory SpecimenDefinitionContainer({
+  const factory SpecimenDefinitionContainer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6619,7 +6523,7 @@ class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
   /// [additiveReference] Substance introduced in the kind of container to
   /// preserve, maintain or enhance the specimen. Examples: Formalin, Citrate,
   ///  EDTA.
-  factory SpecimenDefinitionAdditive({
+  const factory SpecimenDefinitionAdditive({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6736,7 +6640,7 @@ class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
   ///  transport of the specimen. For instance, 'Protect from light exposure'.
   ///
   /// [instructionElement] Extensions for instruction
-  factory SpecimenDefinitionHandling({
+  const factory SpecimenDefinitionHandling({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,

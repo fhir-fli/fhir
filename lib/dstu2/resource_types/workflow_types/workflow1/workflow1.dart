@@ -17,10 +17,11 @@ part 'workflow1.g.dart';
 @freezed
 class Order with Resource, _$Order {
   Order._();
-  factory Order({
+  const factory Order({
     @Default(Dstu2ResourceType.Order)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -69,7 +70,7 @@ class Order with Resource, _$Order {
 @freezed
 class OrderWhen with _$OrderWhen {
   OrderWhen._();
-  factory OrderWhen({
+  const factory OrderWhen({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -112,10 +113,11 @@ class OrderWhen with _$OrderWhen {
 @freezed
 class OrderResponse with Resource, _$OrderResponse {
   OrderResponse._();
-  factory OrderResponse({
+  const factory OrderResponse({
     @Default(Dstu2ResourceType.OrderResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -129,7 +131,7 @@ class OrderResponse with Resource, _$OrderResponse {
     FhirDateTime? date,
     Reference? who,
     @JsonKey(unknownEnumValue: OrderResponseOrderStatus.unknown)
-        required OrderResponseOrderStatus orderStatus,
+    required OrderResponseOrderStatus orderStatus,
     @JsonKey(name: '_orderStatus') Element? orderStatusElement,
     String? description,
     List<Reference>? fulfillment,
@@ -166,10 +168,11 @@ class OrderResponse with Resource, _$OrderResponse {
 @freezed
 class CommunicationRequest with Resource, _$CommunicationRequest {
   CommunicationRequest._();
-  factory CommunicationRequest({
+  const factory CommunicationRequest({
     @Default(Dstu2ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -188,7 +191,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
     List<CodeableConcept>? medium,
     Reference? requester,
     @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
-        CommunicationRequestStatus? status,
+    CommunicationRequestStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? encounter,
     FhirDateTime? scheduledDateTime,
@@ -231,7 +234,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 @freezed
 class CommunicationRequestPayload with _$CommunicationRequestPayload {
   CommunicationRequestPayload._();
-  factory CommunicationRequestPayload({
+  const factory CommunicationRequestPayload({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -275,10 +278,11 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
 @freezed
 class DeviceUseRequest with Resource, _$DeviceUseRequest {
   DeviceUseRequest._();
-  factory DeviceUseRequest({
+  const factory DeviceUseRequest({
     @Default(Dstu2ResourceType.DeviceUseRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -292,7 +296,7 @@ class DeviceUseRequest with Resource, _$DeviceUseRequest {
     CodeableConcept? bodySiteCodeableConcept,
     Reference? bodySiteReference,
     @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
-        DeviceUseRequestStatus? status,
+    DeviceUseRequestStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Reference device,
     Reference? encounter,
@@ -307,7 +311,7 @@ class DeviceUseRequest with Resource, _$DeviceUseRequest {
     Period? timingPeriod,
     FhirDateTime? timingDateTime,
     @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
-        DeviceUseRequestPriority? priority,
+    DeviceUseRequestPriority? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
   }) = _DeviceUseRequest;
 
@@ -342,10 +346,11 @@ class DeviceUseRequest with Resource, _$DeviceUseRequest {
 @freezed
 class DeviceUseStatement with Resource, _$DeviceUseStatement {
   DeviceUseStatement._();
-  factory DeviceUseStatement({
+  const factory DeviceUseStatement({
     @Default(Dstu2ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

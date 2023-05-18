@@ -17,10 +17,11 @@ part 'definitional_artifacts.g.dart';
 @freezed
 class ActivityDefinition with Resource, _$ActivityDefinition {
   ActivityDefinition._();
-  factory ActivityDefinition({
+  const factory ActivityDefinition({
     @Default(Stu3ResourceType.ActivityDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -118,7 +119,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
 @freezed
 class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   ActivityDefinitionParticipant._();
-  factory ActivityDefinitionParticipant({
+  const factory ActivityDefinitionParticipant({
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? role,
@@ -158,7 +159,7 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
 @freezed
 class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   ActivityDefinitionDynamicValue._();
-  factory ActivityDefinitionDynamicValue({
+  const factory ActivityDefinitionDynamicValue({
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     String? path,
@@ -204,10 +205,11 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
 @freezed
 class PlanDefinition with Resource, _$PlanDefinition {
   PlanDefinition._();
-  factory PlanDefinition({
+  const factory PlanDefinition({
     @Default(Stu3ResourceType.PlanDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -291,7 +293,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
 @freezed
 class PlanDefinitionGoal with _$PlanDefinitionGoal {
   PlanDefinitionGoal._();
-  factory PlanDefinitionGoal({
+  const factory PlanDefinitionGoal({
     CodeableConcept? category,
     required CodeableConcept description,
     CodeableConcept? priority,
@@ -335,7 +337,7 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
 @freezed
 class PlanDefinitionTarget with _$PlanDefinitionTarget {
   PlanDefinitionTarget._();
-  factory PlanDefinitionTarget({
+  const factory PlanDefinitionTarget({
     CodeableConcept? measure,
     Quantity? detailQuantity,
     Range? detailRange,
@@ -377,7 +379,7 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
 @freezed
 class PlanDefinitionAction with _$PlanDefinitionAction {
   PlanDefinitionAction._();
-  factory PlanDefinitionAction({
+  const factory PlanDefinitionAction({
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
     String? title,
@@ -454,7 +456,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
 @freezed
 class PlanDefinitionCondition with _$PlanDefinitionCondition {
   PlanDefinitionCondition._();
-  factory PlanDefinitionCondition({
+  const factory PlanDefinitionCondition({
     PlanDefinitionConditionKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     String? description,
@@ -499,7 +501,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
 @freezed
 class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   PlanDefinitionRelatedAction._();
-  factory PlanDefinitionRelatedAction({
+  const factory PlanDefinitionRelatedAction({
     FhirId? actionId,
     @JsonKey(name: '_actionId') Element? actionIdElement,
     PlanDefinitionRelatedActionRelationship? relationship,
@@ -542,7 +544,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
 @freezed
 class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   PlanDefinitionParticipant._();
-  factory PlanDefinitionParticipant({
+  const factory PlanDefinitionParticipant({
     PlanDefinitionParticipantType? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? role,
@@ -582,7 +584,7 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
 @freezed
 class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   PlanDefinitionDynamicValue._();
-  factory PlanDefinitionDynamicValue({
+  const factory PlanDefinitionDynamicValue({
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     String? path,
@@ -627,10 +629,11 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
 @freezed
 class Questionnaire with Resource, _$Questionnaire {
   Questionnaire._();
-  factory Questionnaire({
+  const factory Questionnaire({
     @Default(Stu3ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -709,7 +712,7 @@ class Questionnaire with Resource, _$Questionnaire {
 @freezed
 class QuestionnaireItem with _$QuestionnaireItem {
   QuestionnaireItem._();
-  factory QuestionnaireItem({
+  const factory QuestionnaireItem({
     String? linkId,
     @JsonKey(name: '_linkId') Element? linkIdElement,
     String? definition,
@@ -790,7 +793,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
 @freezed
 class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   QuestionnaireEnableWhen._();
-  factory QuestionnaireEnableWhen({
+  const factory QuestionnaireEnableWhen({
     String? question,
     @JsonKey(name: '_question') Element? questionElement,
     FhirBoolean? hasAnswer,
@@ -851,7 +854,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
 @freezed
 class QuestionnaireOption with _$QuestionnaireOption {
   QuestionnaireOption._();
-  factory QuestionnaireOption({
+  const factory QuestionnaireOption({
     FhirDecimal? valueInteger,
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
     FhirDate? valueDate,
@@ -897,10 +900,11 @@ class QuestionnaireOption with _$QuestionnaireOption {
 @freezed
 class ServiceDefinition with Resource, _$ServiceDefinition {
   ServiceDefinition._();
-  factory ServiceDefinition({
+  const factory ServiceDefinition({
     @Default(Stu3ResourceType.ServiceDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

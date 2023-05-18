@@ -306,7 +306,7 @@ class __$$_PopulationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Population extends _Population {
-  _$_Population(
+  const _$_Population(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -464,7 +464,7 @@ class _$_Population extends _Population {
 }
 
 abstract class _Population extends Population {
-  factory _Population(
+  const factory _Population(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -473,7 +473,7 @@ abstract class _Population extends Population {
       final CodeableConcept? gender,
       final CodeableConcept? race,
       final CodeableConcept? physiologicalCondition}) = _$_Population;
-  _Population._() : super._();
+  const _Population._() : super._();
 
   factory _Population.fromJson(Map<String, dynamic> json) =
       _$_Population.fromJson;
@@ -761,7 +761,7 @@ class __$$_ProductShelfLifeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProductShelfLife extends _ProductShelfLife {
-  _$_ProductShelfLife(
+  const _$_ProductShelfLife(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -886,7 +886,7 @@ class _$_ProductShelfLife extends _ProductShelfLife {
 }
 
 abstract class _ProductShelfLife extends ProductShelfLife {
-  factory _ProductShelfLife(
+  const factory _ProductShelfLife(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -895,7 +895,7 @@ abstract class _ProductShelfLife extends ProductShelfLife {
           final Quantity? period,
           final List<CodeableConcept>? specialPrecautionsForStorage}) =
       _$_ProductShelfLife;
-  _ProductShelfLife._() : super._();
+  const _ProductShelfLife._() : super._();
 
   factory _ProductShelfLife.fromJson(Map<String, dynamic> json) =
       _$_ProductShelfLife.fromJson;
@@ -1430,7 +1430,7 @@ class __$$_ProdCharacteristicCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ProdCharacteristic extends _ProdCharacteristic {
-  _$_ProdCharacteristic(
+  const _$_ProdCharacteristic(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1734,7 +1734,7 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
 }
 
 abstract class _ProdCharacteristic extends ProdCharacteristic {
-  factory _ProdCharacteristic(
+  const factory _ProdCharacteristic(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1752,7 +1752,7 @@ abstract class _ProdCharacteristic extends ProdCharacteristic {
       @JsonKey(name: '_imprint') final List<Element?>? imprintElement,
       final List<Attachment>? image,
       final CodeableConcept? scoring}) = _$_ProdCharacteristic;
-  _ProdCharacteristic._() : super._();
+  const _ProdCharacteristic._() : super._();
 
   factory _ProdCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_ProdCharacteristic.fromJson;
@@ -2200,7 +2200,7 @@ class __$$_MarketingStatusCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MarketingStatus extends _MarketingStatus {
-  _$_MarketingStatus(
+  const _$_MarketingStatus(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2386,7 +2386,7 @@ class _$_MarketingStatus extends _MarketingStatus {
 }
 
 abstract class _MarketingStatus extends MarketingStatus {
-  factory _MarketingStatus(
+  const factory _MarketingStatus(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -2397,7 +2397,7 @@ abstract class _MarketingStatus extends MarketingStatus {
           final FhirDateTime? restoreDate,
           @JsonKey(name: '_restoreDate') final Element? restoreDateElement}) =
       _$_MarketingStatus;
-  _MarketingStatus._() : super._();
+  const _MarketingStatus._() : super._();
 
   factory _MarketingStatus.fromJson(Map<String, dynamic> json) =
       _$_MarketingStatus.fromJson;

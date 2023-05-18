@@ -17,10 +17,11 @@ part 'other.g.dart';
 @freezed
 class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ExplanationOfBenefit._();
-  factory ExplanationOfBenefit({
+  const factory ExplanationOfBenefit({
     @Default(Dstu2ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -34,7 +35,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     List<Identifier>? identifier,
     Reference? request,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
-        ExplanationOfBenefitOutcome? outcome,
+    ExplanationOfBenefitOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,

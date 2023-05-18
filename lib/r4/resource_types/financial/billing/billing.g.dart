@@ -11,6 +11,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Claim) ??
           R4ResourceType.Claim,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1117,6 +1118,7 @@ _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ClaimResponse) ??
           R4ResourceType.ClaimResponse,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -2086,6 +2088,7 @@ _$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Invoice) ??
           R4ResourceType.Invoice,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

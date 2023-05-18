@@ -188,7 +188,7 @@ class __$$_ContactDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ContactDetail extends _ContactDetail {
-  _$_ContactDetail(
+  const _$_ContactDetail(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.name,
@@ -301,13 +301,13 @@ class _$_ContactDetail extends _ContactDetail {
 }
 
 abstract class _ContactDetail extends ContactDetail {
-  factory _ContactDetail(
+  const factory _ContactDetail(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
       final List<ContactPoint>? telecom}) = _$_ContactDetail;
-  _ContactDetail._() : super._();
+  const _ContactDetail._() : super._();
 
   factory _ContactDetail.fromJson(Map<String, dynamic> json) =
       _$_ContactDetail.fromJson;
@@ -616,7 +616,7 @@ class __$$_ExtendedContactDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ExtendedContactDetail extends _ExtendedContactDetail {
-  _$_ExtendedContactDetail(
+  const _$_ExtendedContactDetail(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.purpose,
@@ -762,7 +762,7 @@ class _$_ExtendedContactDetail extends _ExtendedContactDetail {
 }
 
 abstract class _ExtendedContactDetail extends ExtendedContactDetail {
-  factory _ExtendedContactDetail(
+  const factory _ExtendedContactDetail(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final CodeableConcept? purpose,
@@ -771,7 +771,7 @@ abstract class _ExtendedContactDetail extends ExtendedContactDetail {
       final Address? address,
       final Reference? organization,
       final Period? period}) = _$_ExtendedContactDetail;
-  _ExtendedContactDetail._() : super._();
+  const _ExtendedContactDetail._() : super._();
 
   factory _ExtendedContactDetail.fromJson(Map<String, dynamic> json) =
       _$_ExtendedContactDetail.fromJson;
@@ -1264,7 +1264,7 @@ class __$$_VirtualServiceDetailCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_VirtualServiceDetail extends _VirtualServiceDetail {
-  _$_VirtualServiceDetail(
+  const _$_VirtualServiceDetail(
       {@JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: 'extension')
@@ -1499,7 +1499,7 @@ class _$_VirtualServiceDetail extends _VirtualServiceDetail {
 }
 
 abstract class _VirtualServiceDetail extends VirtualServiceDetail {
-  factory _VirtualServiceDetail(
+  const factory _VirtualServiceDetail(
       {@JsonKey(name: 'id')
           final String? fhirId,
       @JsonKey(name: 'extension')
@@ -1522,7 +1522,7 @@ abstract class _VirtualServiceDetail extends VirtualServiceDetail {
       final String? sessionKey,
       @JsonKey(name: '_sessionKey')
           final Element? sessionKeyElement}) = _$_VirtualServiceDetail;
-  _VirtualServiceDetail._() : super._();
+  const _VirtualServiceDetail._() : super._();
 
   factory _VirtualServiceDetail.fromJson(Map<String, dynamic> json) =
       _$_VirtualServiceDetail.fromJson;
@@ -1766,7 +1766,7 @@ class __$$_AvailabilityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Availability extends _Availability {
-  _$_Availability(
+  const _$_Availability(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<AvailabilityAvailableTime>? availableTime,
@@ -1883,13 +1883,13 @@ class _$_Availability extends _Availability {
 }
 
 abstract class _Availability extends Availability {
-  factory _Availability(
+  const factory _Availability(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<AvailabilityAvailableTime>? availableTime,
           final List<AvailabilityNotAvailableTime>? notAvailableTime}) =
       _$_Availability;
-  _Availability._() : super._();
+  const _Availability._() : super._();
 
   factory _Availability.fromJson(Map<String, dynamic> json) =
       _$_Availability.fromJson;
@@ -2242,7 +2242,7 @@ class __$$_AvailabilityAvailableTimeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
-  _$_AvailabilityAvailableTime(
+  const _$_AvailabilityAvailableTime(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2456,7 +2456,7 @@ class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
 }
 
 abstract class _AvailabilityAvailableTime extends AvailabilityAvailableTime {
-  factory _AvailabilityAvailableTime(
+  const factory _AvailabilityAvailableTime(
           {@JsonKey(name: 'id')
               final String? fhirId,
           @JsonKey(name: 'extension')
@@ -2475,7 +2475,7 @@ abstract class _AvailabilityAvailableTime extends AvailabilityAvailableTime {
           @JsonKey(name: '_availableEndTime')
               final Element? availableEndTimeElement}) =
       _$_AvailabilityAvailableTime;
-  _AvailabilityAvailableTime._() : super._();
+  const _AvailabilityAvailableTime._() : super._();
 
   factory _AvailabilityAvailableTime.fromJson(Map<String, dynamic> json) =
       _$_AvailabilityAvailableTime.fromJson;
@@ -2781,7 +2781,7 @@ class __$$_AvailabilityNotAvailableTimeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AvailabilityNotAvailableTime extends _AvailabilityNotAvailableTime {
-  _$_AvailabilityNotAvailableTime(
+  const _$_AvailabilityNotAvailableTime(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2929,14 +2929,14 @@ class _$_AvailabilityNotAvailableTime extends _AvailabilityNotAvailableTime {
 
 abstract class _AvailabilityNotAvailableTime
     extends AvailabilityNotAvailableTime {
-  factory _AvailabilityNotAvailableTime(
+  const factory _AvailabilityNotAvailableTime(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final Period? during}) = _$_AvailabilityNotAvailableTime;
-  _AvailabilityNotAvailableTime._() : super._();
+  const _AvailabilityNotAvailableTime._() : super._();
 
   factory _AvailabilityNotAvailableTime.fromJson(Map<String, dynamic> json) =
       _$_AvailabilityNotAvailableTime.fromJson;
@@ -3259,7 +3259,7 @@ class __$$_MonetaryComponentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_MonetaryComponent extends _MonetaryComponent {
-  _$_MonetaryComponent(
+  const _$_MonetaryComponent(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.type,
@@ -3385,7 +3385,7 @@ class _$_MonetaryComponent extends _MonetaryComponent {
 }
 
 abstract class _MonetaryComponent extends MonetaryComponent {
-  factory _MonetaryComponent(
+  const factory _MonetaryComponent(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final FhirCode? type,
@@ -3394,7 +3394,7 @@ abstract class _MonetaryComponent extends MonetaryComponent {
       final FhirDecimal? factor,
       @JsonKey(name: '_factor') final Element? factorElement,
       final Money? amount}) = _$_MonetaryComponent;
-  _MonetaryComponent._() : super._();
+  const _MonetaryComponent._() : super._();
 
   factory _MonetaryComponent.fromJson(Map<String, dynamic> json) =
       _$_MonetaryComponent.fromJson;
@@ -3670,7 +3670,7 @@ class __$$_ContributorCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Contributor extends _Contributor {
-  _$_Contributor(
+  const _$_Contributor(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.type,
@@ -3800,7 +3800,7 @@ class _$_Contributor extends _Contributor {
 }
 
 abstract class _Contributor extends Contributor {
-  factory _Contributor(
+  const factory _Contributor(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final ContributorType? type,
@@ -3808,7 +3808,7 @@ abstract class _Contributor extends Contributor {
       final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
       final List<ContactDetail>? contact}) = _$_Contributor;
-  _Contributor._() : super._();
+  const _Contributor._() : super._();
 
   factory _Contributor.fromJson(Map<String, dynamic> json) =
       _$_Contributor.fromJson;
@@ -4259,7 +4259,7 @@ class __$$_DataRequirementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataRequirement extends _DataRequirement {
-  _$_DataRequirement(
+  const _$_DataRequirement(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.type,
@@ -4554,7 +4554,7 @@ class _$_DataRequirement extends _DataRequirement {
 }
 
 abstract class _DataRequirement extends DataRequirement {
-  factory _DataRequirement(
+  const factory _DataRequirement(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final FhirCode? type,
@@ -4570,7 +4570,7 @@ abstract class _DataRequirement extends DataRequirement {
       final FhirPositiveInt? limit,
       @JsonKey(name: '_limit') final Element? limitElement,
       final List<DataRequirementSort>? sort}) = _$_DataRequirement;
-  _DataRequirement._() : super._();
+  const _DataRequirement._() : super._();
 
   factory _DataRequirement.fromJson(Map<String, dynamic> json) =
       _$_DataRequirement.fromJson;
@@ -4961,7 +4961,7 @@ class __$$_DataRequirementCodeFilterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
-  _$_DataRequirementCodeFilter(
+  const _$_DataRequirementCodeFilter(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5162,7 +5162,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
 }
 
 abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
-  factory _DataRequirementCodeFilter(
+  const factory _DataRequirementCodeFilter(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5172,7 +5172,7 @@ abstract class _DataRequirementCodeFilter extends DataRequirementCodeFilter {
       @JsonKey(name: '_searchParam') final Element? searchParamElement,
       final FhirCanonical? valueSet,
       final List<Coding>? code}) = _$_DataRequirementCodeFilter;
-  _DataRequirementCodeFilter._() : super._();
+  const _DataRequirementCodeFilter._() : super._();
 
   factory _DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementCodeFilter.fromJson;
@@ -5631,7 +5631,7 @@ class __$$_DataRequirementDateFilterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
-  _$_DataRequirementDateFilter(
+  const _$_DataRequirementDateFilter(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5848,7 +5848,7 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
 }
 
 abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
-  factory _DataRequirementDateFilter(
+  const factory _DataRequirementDateFilter(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5860,7 +5860,7 @@ abstract class _DataRequirementDateFilter extends DataRequirementDateFilter {
       @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
       final Period? valuePeriod,
       final FhirDuration? valueDuration}) = _$_DataRequirementDateFilter;
-  _DataRequirementDateFilter._() : super._();
+  const _DataRequirementDateFilter._() : super._();
 
   factory _DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementDateFilter.fromJson;
@@ -6370,7 +6370,7 @@ class __$$_DataRequirementValueFilterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataRequirementValueFilter extends _DataRequirementValueFilter {
-  _$_DataRequirementValueFilter(
+  const _$_DataRequirementValueFilter(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6587,7 +6587,7 @@ class _$_DataRequirementValueFilter extends _DataRequirementValueFilter {
 }
 
 abstract class _DataRequirementValueFilter extends DataRequirementValueFilter {
-  factory _DataRequirementValueFilter(
+  const factory _DataRequirementValueFilter(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6601,7 +6601,7 @@ abstract class _DataRequirementValueFilter extends DataRequirementValueFilter {
       @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
       final Period? valuePeriod,
       final FhirDuration? valueDuration}) = _$_DataRequirementValueFilter;
-  _DataRequirementValueFilter._() : super._();
+  const _DataRequirementValueFilter._() : super._();
 
   factory _DataRequirementValueFilter.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementValueFilter.fromJson;
@@ -6938,7 +6938,7 @@ class __$$_DataRequirementSortCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_DataRequirementSort extends _DataRequirementSort {
-  _$_DataRequirementSort(
+  const _$_DataRequirementSort(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7097,7 +7097,7 @@ class _$_DataRequirementSort extends _DataRequirementSort {
 }
 
 abstract class _DataRequirementSort extends DataRequirementSort {
-  factory _DataRequirementSort(
+  const factory _DataRequirementSort(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -7106,7 +7106,7 @@ abstract class _DataRequirementSort extends DataRequirementSort {
           final DataRequirementSortDirection? direction,
           @JsonKey(name: '_direction') final Element? directionElement}) =
       _$_DataRequirementSort;
-  _DataRequirementSort._() : super._();
+  const _DataRequirementSort._() : super._();
 
   factory _DataRequirementSort.fromJson(Map<String, dynamic> json) =
       _$_DataRequirementSort.fromJson;
@@ -7580,7 +7580,7 @@ class __$$_ParameterDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ParameterDefinition extends _ParameterDefinition {
-  _$_ParameterDefinition(
+  const _$_ParameterDefinition(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.name,
@@ -7768,7 +7768,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
 }
 
 abstract class _ParameterDefinition extends ParameterDefinition {
-  factory _ParameterDefinition(
+  const factory _ParameterDefinition(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final FhirCode? name,
@@ -7784,7 +7784,7 @@ abstract class _ParameterDefinition extends ParameterDefinition {
       final FhirCode? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final FhirCanonical? profile}) = _$_ParameterDefinition;
-  _ParameterDefinition._() : super._();
+  const _ParameterDefinition._() : super._();
 
   factory _ParameterDefinition.fromJson(Map<String, dynamic> json) =
       _$_ParameterDefinition.fromJson;
@@ -8363,7 +8363,7 @@ class __$$_RelatedArtifactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_RelatedArtifact extends _RelatedArtifact {
-  _$_RelatedArtifact(
+  const _$_RelatedArtifact(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.type,
@@ -8593,7 +8593,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
 }
 
 abstract class _RelatedArtifact extends RelatedArtifact {
-  factory _RelatedArtifact(
+  const factory _RelatedArtifact(
       {@JsonKey(name: 'id')
           final String? fhirId,
       @JsonKey(name: 'extension')
@@ -8620,7 +8620,7 @@ abstract class _RelatedArtifact extends RelatedArtifact {
       final FhirDate? publicationDate,
       @JsonKey(name: '_publicationDate')
           final Element? publicationDateElement}) = _$_RelatedArtifact;
-  _RelatedArtifact._() : super._();
+  const _RelatedArtifact._() : super._();
 
   factory _RelatedArtifact.fromJson(Map<String, dynamic> json) =
       _$_RelatedArtifact.fromJson;
@@ -9185,7 +9185,7 @@ class __$$_TriggerDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_TriggerDefinition extends _TriggerDefinition {
-  _$_TriggerDefinition(
+  const _$_TriggerDefinition(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.type,
@@ -9399,7 +9399,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
 }
 
 abstract class _TriggerDefinition extends TriggerDefinition {
-  factory _TriggerDefinition(
+  const factory _TriggerDefinition(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final TriggerDefinitionType? type,
@@ -9416,7 +9416,7 @@ abstract class _TriggerDefinition extends TriggerDefinition {
       @JsonKey(name: '_timingDateTime') final Element? timingDateTimeElement,
       final List<DataRequirement>? data,
       final FhirExpression? condition}) = _$_TriggerDefinition;
-  _TriggerDefinition._() : super._();
+  const _TriggerDefinition._() : super._();
 
   factory _TriggerDefinition.fromJson(Map<String, dynamic> json) =
       _$_TriggerDefinition.fromJson;
@@ -9781,7 +9781,7 @@ class __$$_UsageContextCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_UsageContext extends _UsageContext {
-  _$_UsageContext(
+  const _$_UsageContext(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       required this.code,
@@ -9904,7 +9904,7 @@ class _$_UsageContext extends _UsageContext {
 }
 
 abstract class _UsageContext extends UsageContext {
-  factory _UsageContext(
+  const factory _UsageContext(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       required final Coding code,
@@ -9912,7 +9912,7 @@ abstract class _UsageContext extends UsageContext {
       final Quantity? valueQuantity,
       final Range? valueRange,
       final Reference? valueReference}) = _$_UsageContext;
-  _UsageContext._() : super._();
+  const _UsageContext._() : super._();
 
   factory _UsageContext.fromJson(Map<String, dynamic> json) =
       _$_UsageContext.fromJson;
@@ -10311,7 +10311,7 @@ class __$$_FhirExpressionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_FhirExpression extends _FhirExpression {
-  _$_FhirExpression(
+  const _$_FhirExpression(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.description,
@@ -10476,7 +10476,7 @@ class _$_FhirExpression extends _FhirExpression {
 }
 
 abstract class _FhirExpression extends FhirExpression {
-  factory _FhirExpression(
+  const factory _FhirExpression(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final String? description,
@@ -10490,7 +10490,7 @@ abstract class _FhirExpression extends FhirExpression {
           final FhirUri? reference,
           @JsonKey(name: '_reference') final Element? referenceElement}) =
       _$_FhirExpression;
-  _FhirExpression._() : super._();
+  const _FhirExpression._() : super._();
 
   factory _FhirExpression.fromJson(Map<String, dynamic> json) =
       _$_FhirExpression.fromJson;

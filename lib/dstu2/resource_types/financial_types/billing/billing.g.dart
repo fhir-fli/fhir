@@ -11,6 +11,7 @@ _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Account) ??
           Dstu2ResourceType.Account,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -228,6 +229,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Claim) ??
           Dstu2ResourceType.Claim,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -880,6 +882,7 @@ _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ClaimResponse) ??
           Dstu2ResourceType.ClaimResponse,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

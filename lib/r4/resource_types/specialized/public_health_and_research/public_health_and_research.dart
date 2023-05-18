@@ -160,17 +160,17 @@ class ResearchStudy with Resource, _$ResearchStudy {
   /// [objective] A goal that the study is aiming to achieve in terms of a
   /// scientific question to be answered by the analysis of data collected
   ///  during the study.
-  factory ResearchStudy({
+  const factory ResearchStudy({
     @Default(R4ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
 
-        /// [resourceType] This is a ResearchStudy resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a ResearchStudy resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -184,15 +184,13 @@ class ResearchStudy with Resource, _$ResearchStudy {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -214,8 +212,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -240,8 +237,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [protocol] The set of steps expected to be performed as part of the
     ///  execution of the study.
@@ -255,8 +251,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [primaryPurposeType] The type of study based upon the intent of the
     ///  study's activities. A classification of the intent of the study.
@@ -300,8 +295,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [enrollment] Reference to a Group that defines the criteria for and
     /// quantity of subjects participating in the study.  E.g. " 200 female
@@ -421,7 +415,7 @@ class ResearchStudyArm with _$ResearchStudyArm {
   ///  would be followed by a subject adhering to this arm.
   ///
   /// [descriptionElement] Extensions for description
-  factory ResearchStudyArm({
+  const factory ResearchStudyArm({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -541,7 +535,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
   /// [nameElement] Extensions for name
   ///
   /// [type] The kind of study objective.
-  factory ResearchStudyObjective({
+  const factory ResearchStudyObjective({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -698,17 +692,17 @@ class ResearchSubject with Resource, _$ResearchSubject {
   ///
   /// [consent] A record of the patient's informed agreement to participate in
   ///  the study.
-  factory ResearchSubject({
+  const factory ResearchSubject({
     @Default(R4ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
 
-        /// [resourceType] This is a ResearchSubject resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a ResearchSubject resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -722,15 +716,13 @@ class ResearchSubject with Resource, _$ResearchSubject {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -752,8 +744,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -777,8 +768,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [period] The dates the subject began and ended their participation in the
     ///  study.
@@ -796,16 +786,14 @@ class ResearchSubject with Resource, _$ResearchSubject {
     String? assignedArm,
 
     /// [assignedArmElement] Extensions for assignedArm
-    @JsonKey(name: '_assignedArm')
-        Element? assignedArmElement,
+    @JsonKey(name: '_assignedArm') Element? assignedArmElement,
 
     /// [actualArm] The name of the arm in the study the subject actually
     ///  followed as part of this study.
     String? actualArm,
 
     /// [actualArmElement] Extensions for actualArm
-    @JsonKey(name: '_actualArm')
-        Element? actualArmElement,
+    @JsonKey(name: '_actualArm') Element? actualArmElement,
 
     /// [consent] A record of the patient's informed agreement to participate in
     ///  the study.

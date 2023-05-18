@@ -17,10 +17,11 @@ part 'entities.g.dart';
 @freezed
 class Device with Resource, _$Device {
   Device._();
-  factory Device({
+  const factory Device({
     @Default(Stu3ResourceType.Device)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Device)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -88,7 +89,7 @@ class Device with Resource, _$Device {
 @freezed
 class DeviceUdi with _$DeviceUdi {
   DeviceUdi._();
-  factory DeviceUdi({
+  const factory DeviceUdi({
     String? deviceIdentifier,
     @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
     String? name,
@@ -139,10 +140,11 @@ class DeviceUdi with _$DeviceUdi {
 @freezed
 class DeviceComponent with Resource, _$DeviceComponent {
   DeviceComponent._();
-  factory DeviceComponent({
+  const factory DeviceComponent({
     @Default(Stu3ResourceType.DeviceComponent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceComponent)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -163,7 +165,7 @@ class DeviceComponent with Resource, _$DeviceComponent {
     CodeableConcept? parameterGroup,
     DeviceComponentMeasurementPrinciple? measurementPrinciple,
     @JsonKey(name: '_measurementPrinciple')
-        Element? measurementPrincipleElement,
+    Element? measurementPrincipleElement,
     List<DeviceComponentProductionSpecification>? productionSpecification,
     CodeableConcept? languageCode,
   }) = _DeviceComponent;
@@ -200,7 +202,7 @@ class DeviceComponent with Resource, _$DeviceComponent {
 class DeviceComponentProductionSpecification
     with _$DeviceComponentProductionSpecification {
   DeviceComponentProductionSpecification._();
-  factory DeviceComponentProductionSpecification({
+  const factory DeviceComponentProductionSpecification({
     CodeableConcept? specType,
     Identifier? componentId,
     String? productionSpec,
@@ -230,10 +232,11 @@ class DeviceComponentProductionSpecification
 @freezed
 class DeviceMetric with Resource, _$DeviceMetric {
   DeviceMetric._();
-  factory DeviceMetric({
+  const factory DeviceMetric({
     @Default(Stu3ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceMetric)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -290,7 +293,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 @freezed
 class DeviceMetricCalibration with _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
-  factory DeviceMetricCalibration({
+  const factory DeviceMetricCalibration({
     DeviceMetricCalibrationType? type,
     @JsonKey(name: '_type') Element? typeElement,
     DeviceMetricCalibrationState? state,
@@ -333,10 +336,11 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
 @freezed
 class FhirEndpoint with Resource, _$FhirEndpoint {
   FhirEndpoint._();
-  factory FhirEndpoint({
+  const factory FhirEndpoint({
     @Default(Stu3ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -396,10 +400,11 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
 @freezed
 class HealthcareService with Resource, _$HealthcareService {
   HealthcareService._();
-  factory HealthcareService({
+  const factory HealthcareService({
     @Default(Stu3ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: Stu3ResourceType.HealthcareService)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -441,7 +446,7 @@ class HealthcareService with Resource, _$HealthcareService {
     List<HealthcareServiceNotAvailable>? notAvailable,
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
-        Element? availabilityExceptionsElement,
+    Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
   }) = _HealthcareService;
 
@@ -476,7 +481,7 @@ class HealthcareService with Resource, _$HealthcareService {
 @freezed
 class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
-  factory HealthcareServiceAvailableTime({
+  const factory HealthcareServiceAvailableTime({
     List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
     FhirBoolean? allDay,
@@ -522,7 +527,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 @freezed
 class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
-  factory HealthcareServiceNotAvailable({
+  const factory HealthcareServiceNotAvailable({
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Period? during,
@@ -562,10 +567,11 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
 @freezed
 class Location with Resource, _$Location {
   Location._();
-  factory Location({
+  const factory Location({
     @Default(Stu3ResourceType.Location)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Location)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -629,7 +635,7 @@ class Location with Resource, _$Location {
 @freezed
 class LocationPosition with _$LocationPosition {
   LocationPosition._();
-  factory LocationPosition({
+  const factory LocationPosition({
     FhirDecimal? longitude,
     @JsonKey(name: '_longitude') Element? longitudeElement,
     FhirDecimal? latitude,
@@ -672,10 +678,11 @@ class LocationPosition with _$LocationPosition {
 @freezed
 class Organization with Resource, _$Organization {
   Organization._();
-  factory Organization({
+  const factory Organization({
     @Default(Stu3ResourceType.Organization)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Organization)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -732,7 +739,7 @@ class Organization with Resource, _$Organization {
 @freezed
 class OrganizationContact with _$OrganizationContact {
   OrganizationContact._();
-  factory OrganizationContact({
+  const factory OrganizationContact({
     CodeableConcept? purpose,
     HumanName? name,
     List<ContactPoint>? telecom,
@@ -773,10 +780,11 @@ class OrganizationContact with _$OrganizationContact {
 @freezed
 class Substance with Resource, _$Substance {
   Substance._();
-  factory Substance({
+  const factory Substance({
     @Default(Stu3ResourceType.Substance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Substance)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -829,7 +837,7 @@ class Substance with Resource, _$Substance {
 @freezed
 class SubstanceInstance with _$SubstanceInstance {
   SubstanceInstance._();
-  factory SubstanceInstance({
+  const factory SubstanceInstance({
     Identifier? identifier,
     String? expiry,
     @JsonKey(name: '_expiry') Element? expiryElement,
@@ -870,7 +878,7 @@ class SubstanceInstance with _$SubstanceInstance {
 @freezed
 class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();
-  factory SubstanceIngredient({
+  const factory SubstanceIngredient({
     Ratio? quantity,
     CodeableConcept? substanceCodeableConcept,
     Reference? substanceReference,

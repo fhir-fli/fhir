@@ -23,6 +23,8 @@ mixin _$ResearchStudy {
   /// [resourceType] This is a ResearchStudy resource
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -290,6 +292,8 @@ abstract class $ResearchStudyCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -386,6 +390,7 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -442,6 +447,10 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -862,6 +871,8 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -973,6 +984,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1029,6 +1041,10 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1236,9 +1252,11 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchStudy extends _ResearchStudy {
-  _$_ResearchStudy(
+  const _$_ResearchStudy(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
           this.resourceType = R5ResourceType.ResearchStudy,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -1332,6 +1350,9 @@ class _$_ResearchStudy extends _ResearchStudy {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -1883,7 +1904,7 @@ class _$_ResearchStudy extends _ResearchStudy {
 
   @override
   String toString() {
-    return 'ResearchStudy(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, label: $label, protocol: $protocol, partOf: $partOf, relatedArtifact: $relatedArtifact, date: $date, dateElement: $dateElement, status: $status, statusElement: $statusElement, primaryPurposeType: $primaryPurposeType, phase: $phase, studyDesign: $studyDesign, focus: $focus, condition: $condition, keyword: $keyword, region: $region, descriptionSummary: $descriptionSummary, descriptionSummaryElement: $descriptionSummaryElement, description: $description, descriptionElement: $descriptionElement, period: $period, site: $site, note: $note, classifier: $classifier, associatedParty: $associatedParty, progressStatus: $progressStatus, whyStopped: $whyStopped, recruitment: $recruitment, comparisonGroup: $comparisonGroup, objective: $objective, outcomeMeasure: $outcomeMeasure, result: $result)';
+    return 'ResearchStudy(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, label: $label, protocol: $protocol, partOf: $partOf, relatedArtifact: $relatedArtifact, date: $date, dateElement: $dateElement, status: $status, statusElement: $statusElement, primaryPurposeType: $primaryPurposeType, phase: $phase, studyDesign: $studyDesign, focus: $focus, condition: $condition, keyword: $keyword, region: $region, descriptionSummary: $descriptionSummary, descriptionSummaryElement: $descriptionSummaryElement, description: $description, descriptionElement: $descriptionElement, period: $period, site: $site, note: $note, classifier: $classifier, associatedParty: $associatedParty, progressStatus: $progressStatus, whyStopped: $whyStopped, recruitment: $recruitment, comparisonGroup: $comparisonGroup, objective: $objective, outcomeMeasure: $outcomeMeasure, result: $result)';
   }
 
   @override
@@ -1893,6 +1914,7 @@ class _$_ResearchStudy extends _ResearchStudy {
             other is _$_ResearchStudy &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1981,6 +2003,7 @@ class _$_ResearchStudy extends _ResearchStudy {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -2048,9 +2071,11 @@ class _$_ResearchStudy extends _ResearchStudy {
 }
 
 abstract class _ResearchStudy extends ResearchStudy {
-  factory _ResearchStudy(
+  const factory _ResearchStudy(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -2113,7 +2138,7 @@ abstract class _ResearchStudy extends ResearchStudy {
       final List<ResearchStudyObjective>? objective,
       final List<ResearchStudyOutcomeMeasure>? outcomeMeasure,
       final List<Reference>? result}) = _$_ResearchStudy;
-  _ResearchStudy._() : super._();
+  const _ResearchStudy._() : super._();
 
   factory _ResearchStudy.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudy.fromJson;
@@ -2123,6 +2148,9 @@ abstract class _ResearchStudy extends ResearchStudy {
   /// [resourceType] This is a ResearchStudy resource
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -2638,7 +2666,7 @@ class __$$_ResearchStudyLabelCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchStudyLabel extends _ResearchStudyLabel {
-  _$_ResearchStudyLabel(
+  const _$_ResearchStudyLabel(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2783,7 +2811,7 @@ class _$_ResearchStudyLabel extends _ResearchStudyLabel {
 }
 
 abstract class _ResearchStudyLabel extends ResearchStudyLabel {
-  factory _ResearchStudyLabel(
+  const factory _ResearchStudyLabel(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -2791,7 +2819,7 @@ abstract class _ResearchStudyLabel extends ResearchStudyLabel {
           final String? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_ResearchStudyLabel;
-  _ResearchStudyLabel._() : super._();
+  const _ResearchStudyLabel._() : super._();
 
   factory _ResearchStudyLabel.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyLabel.fromJson;
@@ -3129,7 +3157,7 @@ class __$$_ResearchStudyAssociatedPartyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
-  _$_ResearchStudyAssociatedParty(
+  const _$_ResearchStudyAssociatedParty(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3320,7 +3348,7 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
 
 abstract class _ResearchStudyAssociatedParty
     extends ResearchStudyAssociatedParty {
-  factory _ResearchStudyAssociatedParty(
+  const factory _ResearchStudyAssociatedParty(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3330,7 +3358,7 @@ abstract class _ResearchStudyAssociatedParty
       final List<Period>? period,
       final List<CodeableConcept>? classifier,
       final Reference? party}) = _$_ResearchStudyAssociatedParty;
-  _ResearchStudyAssociatedParty._() : super._();
+  const _ResearchStudyAssociatedParty._() : super._();
 
   factory _ResearchStudyAssociatedParty.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyAssociatedParty.fromJson;
@@ -3652,7 +3680,7 @@ class __$$_ResearchStudyProgressStatusCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchStudyProgressStatus extends _ResearchStudyProgressStatus {
-  _$_ResearchStudyProgressStatus(
+  const _$_ResearchStudyProgressStatus(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3807,7 +3835,7 @@ class _$_ResearchStudyProgressStatus extends _ResearchStudyProgressStatus {
 
 abstract class _ResearchStudyProgressStatus
     extends ResearchStudyProgressStatus {
-  factory _ResearchStudyProgressStatus(
+  const factory _ResearchStudyProgressStatus(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3815,7 +3843,7 @@ abstract class _ResearchStudyProgressStatus
       final FhirBoolean? actual,
       @JsonKey(name: '_actual') final Element? actualElement,
       final Period? period}) = _$_ResearchStudyProgressStatus;
-  _ResearchStudyProgressStatus._() : super._();
+  const _ResearchStudyProgressStatus._() : super._();
 
   factory _ResearchStudyProgressStatus.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyProgressStatus.fromJson;
@@ -4174,7 +4202,7 @@ class __$$_ResearchStudyRecruitmentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
-  _$_ResearchStudyRecruitment(
+  const _$_ResearchStudyRecruitment(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4346,7 +4374,7 @@ class _$_ResearchStudyRecruitment extends _ResearchStudyRecruitment {
 }
 
 abstract class _ResearchStudyRecruitment extends ResearchStudyRecruitment {
-  factory _ResearchStudyRecruitment(
+  const factory _ResearchStudyRecruitment(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4356,7 +4384,7 @@ abstract class _ResearchStudyRecruitment extends ResearchStudyRecruitment {
       @JsonKey(name: '_actualNumber') final Element? actualNumberElement,
       final Reference? eligibility,
       final Reference? actualGroup}) = _$_ResearchStudyRecruitment;
-  _ResearchStudyRecruitment._() : super._();
+  const _ResearchStudyRecruitment._() : super._();
 
   factory _ResearchStudyRecruitment.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyRecruitment.fromJson;
@@ -4792,7 +4820,7 @@ class __$$_ResearchStudyComparisonGroupCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
-  _$_ResearchStudyComparisonGroup(
+  const _$_ResearchStudyComparisonGroup(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5005,7 +5033,7 @@ class _$_ResearchStudyComparisonGroup extends _ResearchStudyComparisonGroup {
 
 abstract class _ResearchStudyComparisonGroup
     extends ResearchStudyComparisonGroup {
-  factory _ResearchStudyComparisonGroup(
+  const factory _ResearchStudyComparisonGroup(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5018,7 +5046,7 @@ abstract class _ResearchStudyComparisonGroup
       @JsonKey(name: '_description') final Element? descriptionElement,
       final List<Reference>? intendedExposure,
       final Reference? observedGroup}) = _$_ResearchStudyComparisonGroup;
-  _ResearchStudyComparisonGroup._() : super._();
+  const _ResearchStudyComparisonGroup._() : super._();
 
   factory _ResearchStudyComparisonGroup.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyComparisonGroup.fromJson;
@@ -5374,7 +5402,7 @@ class __$$_ResearchStudyObjectiveCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchStudyObjective extends _ResearchStudyObjective {
-  _$_ResearchStudyObjective(
+  const _$_ResearchStudyObjective(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5538,7 +5566,7 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
 }
 
 abstract class _ResearchStudyObjective extends ResearchStudyObjective {
-  factory _ResearchStudyObjective(
+  const factory _ResearchStudyObjective(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -5548,7 +5576,7 @@ abstract class _ResearchStudyObjective extends ResearchStudyObjective {
           final FhirMarkdown? description,
           @JsonKey(name: '_description') final Element? descriptionElement}) =
       _$_ResearchStudyObjective;
-  _ResearchStudyObjective._() : super._();
+  const _ResearchStudyObjective._() : super._();
 
   factory _ResearchStudyObjective.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyObjective.fromJson;
@@ -5901,7 +5929,7 @@ class __$$_ResearchStudyOutcomeMeasureCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
-  _$_ResearchStudyOutcomeMeasure(
+  const _$_ResearchStudyOutcomeMeasure(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6084,7 +6112,7 @@ class _$_ResearchStudyOutcomeMeasure extends _ResearchStudyOutcomeMeasure {
 
 abstract class _ResearchStudyOutcomeMeasure
     extends ResearchStudyOutcomeMeasure {
-  factory _ResearchStudyOutcomeMeasure(
+  const factory _ResearchStudyOutcomeMeasure(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6094,7 +6122,7 @@ abstract class _ResearchStudyOutcomeMeasure
       final FhirMarkdown? description,
       @JsonKey(name: '_description') final Element? descriptionElement,
       final Reference? reference}) = _$_ResearchStudyOutcomeMeasure;
-  _ResearchStudyOutcomeMeasure._() : super._();
+  const _ResearchStudyOutcomeMeasure._() : super._();
 
   factory _ResearchStudyOutcomeMeasure.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyOutcomeMeasure.fromJson;
@@ -6174,6 +6202,8 @@ mixin _$ResearchSubject {
   /// [resourceType] This is a ResearchSubject resource
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -6310,6 +6340,8 @@ abstract class $ResearchSubjectCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -6366,6 +6398,7 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6394,6 +6427,10 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6613,6 +6650,8 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -6677,6 +6716,7 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6705,6 +6745,10 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6800,9 +6844,11 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchSubject extends _ResearchSubject {
-  _$_ResearchSubject(
+  const _$_ResearchSubject(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
           this.resourceType = R5ResourceType.ResearchSubject,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -6847,6 +6893,9 @@ class _$_ResearchSubject extends _ResearchSubject {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -7067,7 +7116,7 @@ class _$_ResearchSubject extends _ResearchSubject {
 
   @override
   String toString() {
-    return 'ResearchSubject(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, progress: $progress, period: $period, study: $study, subject: $subject, assignedComparisonGroup: $assignedComparisonGroup, assignedComparisonGroupElement: $assignedComparisonGroupElement, actualComparisonGroup: $actualComparisonGroup, actualComparisonGroupElement: $actualComparisonGroupElement, consent: $consent)';
+    return 'ResearchSubject(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, progress: $progress, period: $period, study: $study, subject: $subject, assignedComparisonGroup: $assignedComparisonGroup, assignedComparisonGroupElement: $assignedComparisonGroupElement, actualComparisonGroup: $actualComparisonGroup, actualComparisonGroupElement: $actualComparisonGroupElement, consent: $consent)';
   }
 
   @override
@@ -7077,6 +7126,7 @@ class _$_ResearchSubject extends _ResearchSubject {
             other is _$_ResearchSubject &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -7124,6 +7174,7 @@ class _$_ResearchSubject extends _ResearchSubject {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -7163,9 +7214,11 @@ class _$_ResearchSubject extends _ResearchSubject {
 }
 
 abstract class _ResearchSubject extends ResearchSubject {
-  factory _ResearchSubject(
+  const factory _ResearchSubject(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -7195,7 +7248,7 @@ abstract class _ResearchSubject extends ResearchSubject {
       @JsonKey(name: '_actualComparisonGroup')
           final Element? actualComparisonGroupElement,
       final List<Reference>? consent}) = _$_ResearchSubject;
-  _ResearchSubject._() : super._();
+  const _ResearchSubject._() : super._();
 
   factory _ResearchSubject.fromJson(Map<String, dynamic> json) =
       _$_ResearchSubject.fromJson;
@@ -7205,6 +7258,9 @@ abstract class _ResearchSubject extends ResearchSubject {
   /// [resourceType] This is a ResearchSubject resource
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -7706,7 +7762,7 @@ class __$$_ResearchSubjectProgressCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
-  _$_ResearchSubjectProgress(
+  const _$_ResearchSubjectProgress(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7894,7 +7950,7 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
 }
 
 abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
-  factory _ResearchSubjectProgress(
+  const factory _ResearchSubjectProgress(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -7907,7 +7963,7 @@ abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
           final FhirDateTime? endDate,
           @JsonKey(name: '_endDate') final Element? endDateElement}) =
       _$_ResearchSubjectProgress;
-  _ResearchSubjectProgress._() : super._();
+  const _ResearchSubjectProgress._() : super._();
 
   factory _ResearchSubjectProgress.fromJson(Map<String, dynamic> json) =
       _$_ResearchSubjectProgress.fromJson;

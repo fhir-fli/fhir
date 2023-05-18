@@ -6,11 +6,12 @@ part of 'individuals.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
+_$_FhirGroup _$$_FhirGroupFromJson(Map<String, dynamic> json) => _$_FhirGroup(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Group) ??
           R4ResourceType.Group,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -79,7 +80,7 @@ _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
           .toList(),
     );
 
-Map<String, dynamic> _$$_GroupToJson(_$_Group instance) {
+Map<String, dynamic> _$$_FhirGroupToJson(_$_FhirGroup instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -384,6 +385,7 @@ _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Patient) ??
           R4ResourceType.Patient,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -687,6 +689,7 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Person) ??
           R4ResourceType.Person,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -838,6 +841,7 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Practitioner) ??
           R4ResourceType.Practitioner,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -998,6 +1002,7 @@ _$_PractitionerRole _$$_PractitionerRoleFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.PractitionerRole) ??
           R4ResourceType.PractitionerRole,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -1236,6 +1241,7 @@ _$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.RelatedPerson) ??
           R4ResourceType.RelatedPerson,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

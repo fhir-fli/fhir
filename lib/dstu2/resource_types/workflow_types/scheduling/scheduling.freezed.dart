@@ -22,6 +22,8 @@ Appointment _$AppointmentFromJson(Map<String, dynamic> json) {
 mixin _$Appointment {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -81,6 +83,8 @@ abstract class $AppointmentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -152,6 +156,7 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -187,6 +192,10 @@ class _$AppointmentCopyWithImpl<$Res, $Val extends Appointment>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -474,6 +483,8 @@ abstract class _$$_AppointmentCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -556,6 +567,7 @@ class __$$_AppointmentCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -591,6 +603,10 @@ class __$$_AppointmentCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -714,9 +730,11 @@ class __$$_AppointmentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Appointment extends _Appointment {
-  _$_Appointment(
+  const _$_Appointment(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
           this.resourceType = Dstu2ResourceType.Appointment,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -772,6 +790,9 @@ class _$_Appointment extends _Appointment {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -891,7 +912,7 @@ class _$_Appointment extends _Appointment {
 
   @override
   String toString() {
-    return 'Appointment(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, reason: $reason, priority: $priority, priorityElement: $priorityElement, description: $description, descriptionElement: $descriptionElement, start: $start, startElement: $startElement, end: $end, endElement: $endElement, minutesDuration: $minutesDuration, minutesDurationElement: $minutesDurationElement, slot: $slot, comment: $comment, commentElement: $commentElement, participant: $participant)';
+    return 'Appointment(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, type: $type, reason: $reason, priority: $priority, priorityElement: $priorityElement, description: $description, descriptionElement: $descriptionElement, start: $start, startElement: $startElement, end: $end, endElement: $endElement, minutesDuration: $minutesDuration, minutesDurationElement: $minutesDurationElement, slot: $slot, comment: $comment, commentElement: $commentElement, participant: $participant)';
   }
 
   @override
@@ -901,6 +922,7 @@ class _$_Appointment extends _Appointment {
             other is _$_Appointment &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -956,6 +978,7 @@ class _$_Appointment extends _Appointment {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -1002,9 +1025,11 @@ class _$_Appointment extends _Appointment {
 }
 
 abstract class _Appointment extends Appointment {
-  factory _Appointment(
+  const factory _Appointment(
           {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
               final Dstu2ResourceType resourceType,
+          @JsonKey(includeFromJson: true, includeToJson: false)
+              final int? dbId,
           @JsonKey(name: 'id')
               final FhirId? fhirId,
           final FhirMeta? meta,
@@ -1047,7 +1072,7 @@ abstract class _Appointment extends Appointment {
               final Element? commentElement,
           required final List<AppointmentParticipant> participant}) =
       _$_Appointment;
-  _Appointment._() : super._();
+  const _Appointment._() : super._();
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
       _$_Appointment.fromJson;
@@ -1055,6 +1080,9 @@ abstract class _Appointment extends Appointment {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -1389,7 +1417,7 @@ class __$$_AppointmentParticipantCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppointmentParticipant extends _AppointmentParticipant {
-  _$_AppointmentParticipant(
+  const _$_AppointmentParticipant(
       {@JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: 'extension')
@@ -1519,7 +1547,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 }
 
 abstract class _AppointmentParticipant extends AppointmentParticipant {
-  factory _AppointmentParticipant(
+  const factory _AppointmentParticipant(
       {@JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: 'extension')
@@ -1535,7 +1563,7 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
           required final ParticipantStatus status,
       @JsonKey(name: '_status')
           final Element? statusElement}) = _$_AppointmentParticipant;
-  _AppointmentParticipant._() : super._();
+  const _AppointmentParticipant._() : super._();
 
   factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
       _$_AppointmentParticipant.fromJson;
@@ -1578,6 +1606,8 @@ AppointmentResponse _$AppointmentResponseFromJson(Map<String, dynamic> json) {
 mixin _$AppointmentResponse {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -1630,6 +1660,8 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1688,6 +1720,7 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1716,6 +1749,10 @@ class _$AppointmentResponseCopyWithImpl<$Res, $Val extends AppointmentResponse>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1935,6 +1972,8 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -2001,6 +2040,7 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2029,6 +2069,10 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2124,9 +2168,11 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_AppointmentResponse extends _AppointmentResponse {
-  _$_AppointmentResponse(
+  const _$_AppointmentResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           this.resourceType = Dstu2ResourceType.AppointmentResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -2171,6 +2217,9 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -2270,7 +2319,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   @override
   String toString() {
-    return 'AppointmentResponse(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, appointment: $appointment, start: $start, startElement: $startElement, end: $end, endElement: $endElement, participantType: $participantType, actor: $actor, participantStatus: $participantStatus, participantStatusElement: $participantStatusElement, comment: $comment, commentElement: $commentElement)';
+    return 'AppointmentResponse(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, appointment: $appointment, start: $start, startElement: $startElement, end: $end, endElement: $endElement, participantType: $participantType, actor: $actor, participantStatus: $participantStatus, participantStatusElement: $participantStatusElement, comment: $comment, commentElement: $commentElement)';
   }
 
   @override
@@ -2280,6 +2329,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
             other is _$_AppointmentResponse &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -2325,6 +2375,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -2365,9 +2416,11 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 }
 
 abstract class _AppointmentResponse extends AppointmentResponse {
-  factory _AppointmentResponse(
+  const factory _AppointmentResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -2399,7 +2452,7 @@ abstract class _AppointmentResponse extends AppointmentResponse {
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement}) = _$_AppointmentResponse;
-  _AppointmentResponse._() : super._();
+  const _AppointmentResponse._() : super._();
 
   factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
       _$_AppointmentResponse.fromJson;
@@ -2407,6 +2460,9 @@ abstract class _AppointmentResponse extends AppointmentResponse {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -2476,6 +2532,8 @@ Schedule _$ScheduleFromJson(Map<String, dynamic> json) {
 mixin _$Schedule {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -2513,6 +2571,8 @@ abstract class $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -2558,6 +2618,7 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2580,6 +2641,10 @@ class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2738,6 +2803,8 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -2788,6 +2855,7 @@ class __$$_ScheduleCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2810,6 +2878,10 @@ class __$$_ScheduleCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2881,9 +2953,11 @@ class __$$_ScheduleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Schedule extends _Schedule {
-  _$_Schedule(
+  const _$_Schedule(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           this.resourceType = Dstu2ResourceType.Schedule,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -2918,6 +2992,9 @@ class _$_Schedule extends _Schedule {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -2999,7 +3076,7 @@ class _$_Schedule extends _Schedule {
 
   @override
   String toString() {
-    return 'Schedule(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, actor: $actor, planningHorizon: $planningHorizon, comment: $comment, commentElement: $commentElement)';
+    return 'Schedule(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, actor: $actor, planningHorizon: $planningHorizon, comment: $comment, commentElement: $commentElement)';
   }
 
   @override
@@ -3009,6 +3086,7 @@ class _$_Schedule extends _Schedule {
             other is _$_Schedule &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -3042,6 +3120,7 @@ class _$_Schedule extends _Schedule {
   int get hashCode => Object.hash(
       runtimeType,
       resourceType,
+      dbId,
       fhirId,
       meta,
       implicitRules,
@@ -3074,9 +3153,11 @@ class _$_Schedule extends _Schedule {
 }
 
 abstract class _Schedule extends Schedule {
-  factory _Schedule(
+  const factory _Schedule(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -3098,13 +3179,16 @@ abstract class _Schedule extends Schedule {
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement}) = _$_Schedule;
-  _Schedule._() : super._();
+  const _Schedule._() : super._();
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -3156,6 +3240,8 @@ Slot _$SlotFromJson(Map<String, dynamic> json) {
 mixin _$Slot {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -3202,6 +3288,8 @@ abstract class $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -3260,6 +3348,7 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -3288,6 +3377,10 @@ class _$SlotCopyWithImpl<$Res, $Val extends Slot>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3505,6 +3598,8 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -3569,6 +3664,7 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -3597,6 +3693,10 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3692,9 +3792,11 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
 /// @nodoc
 @JsonSerializable()
 class _$_Slot extends _Slot {
-  _$_Slot(
+  const _$_Slot(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           this.resourceType = Dstu2ResourceType.Slot,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -3737,6 +3839,9 @@ class _$_Slot extends _Slot {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -3826,7 +3931,7 @@ class _$_Slot extends _Slot {
 
   @override
   String toString() {
-    return 'Slot(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, schedule: $schedule, freeBusyType: $freeBusyType, start: $start, startElement: $startElement, end: $end, endElement: $endElement, overbooked: $overbooked, overbookedElement: $overbookedElement, comment: $comment, commentElement: $commentElement)';
+    return 'Slot(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, type: $type, schedule: $schedule, freeBusyType: $freeBusyType, start: $start, startElement: $startElement, end: $end, endElement: $endElement, overbooked: $overbooked, overbookedElement: $overbookedElement, comment: $comment, commentElement: $commentElement)';
   }
 
   @override
@@ -3836,6 +3941,7 @@ class _$_Slot extends _Slot {
             other is _$_Slot &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -3880,6 +3986,7 @@ class _$_Slot extends _Slot {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -3919,9 +4026,11 @@ class _$_Slot extends _Slot {
 }
 
 abstract class _Slot extends Slot {
-  factory _Slot(
+  const factory _Slot(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -3953,13 +4062,16 @@ abstract class _Slot extends Slot {
       final String? comment,
       @JsonKey(name: '_comment')
           final Element? commentElement}) = _$_Slot;
-  _Slot._() : super._();
+  const _Slot._() : super._();
 
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;

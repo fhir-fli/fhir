@@ -215,11 +215,12 @@ class ResearchStudy with Resource, _$ResearchStudy {
   ///  Could also link to a research registry holding the results such as
   ///  ClinicalTrials.gov.
   ///
-  factory ResearchStudy({
+  const factory ResearchStudy({
     /// [resourceType] This is a ResearchStudy resource
     @Default(R5ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -538,7 +539,7 @@ class ResearchStudyLabel with _$ResearchStudyLabel {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory ResearchStudyLabel({
+  const factory ResearchStudyLabel({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -669,7 +670,7 @@ class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
   /// [party] Individual or organization associated with study (use
   ///  practitionerRole to specify their organisation).
   ///
-  factory ResearchStudyAssociatedParty({
+  const factory ResearchStudyAssociatedParty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -808,7 +809,7 @@ class ResearchStudyProgressStatus with _$ResearchStudyProgressStatus {
   ///
   /// [period] Date range.
   ///
-  factory ResearchStudyProgressStatus({
+  const factory ResearchStudyProgressStatus({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -943,7 +944,7 @@ class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
   ///
   /// [actualGroup] Group of participants who were enrolled in study.
   ///
-  factory ResearchStudyRecruitment({
+  const factory ResearchStudyRecruitment({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1092,7 +1093,7 @@ class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
   /// [observedGroup] Group of participants who were enrolled in study
   ///  comparisonGroup.
   ///
-  factory ResearchStudyComparisonGroup({
+  const factory ResearchStudyComparisonGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1246,7 +1247,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory ResearchStudyObjective({
+  const factory ResearchStudyObjective({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1384,7 +1385,7 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
   ///
   /// [reference] Structured outcome definition.
   ///
-  factory ResearchStudyOutcomeMeasure({
+  const factory ResearchStudyOutcomeMeasure({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1562,11 +1563,12 @@ class ResearchSubject with Resource, _$ResearchSubject {
   /// [consent] A record of the patient's informed agreement to participate in
   ///  the study.
   ///
-  factory ResearchSubject({
+  const factory ResearchSubject({
     /// [resourceType] This is a ResearchSubject resource
     @Default(R5ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1664,7 +1666,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
     /// [assignedComparisonGroupElement] ("_assignedComparisonGroup")
     ///  Extensions for assignedComparisonGroup
     @JsonKey(name: '_assignedComparisonGroup')
-        Element? assignedComparisonGroupElement,
+    Element? assignedComparisonGroupElement,
 
     /// [actualComparisonGroup] The name of the arm in the study the subject
     ///  actually followed as part of this study.
@@ -1673,7 +1675,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
     /// [actualComparisonGroupElement] ("_actualComparisonGroup") Extensions
     ///  for actualComparisonGroup
     @JsonKey(name: '_actualComparisonGroup')
-        Element? actualComparisonGroupElement,
+    Element? actualComparisonGroupElement,
 
     /// [consent] A record of the patient's informed agreement to participate
     ///  in the study.
@@ -1765,7 +1767,7 @@ class ResearchSubjectProgress with _$ResearchSubjectProgress {
   ///
   /// [endDateElement] ("_endDate") Extensions for endDate
   ///
-  factory ResearchSubjectProgress({
+  const factory ResearchSubjectProgress({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

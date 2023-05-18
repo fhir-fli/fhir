@@ -23,6 +23,8 @@ mixin _$ArtifactAssessment {
   /// [resourceType] This is a ArtifactAssessment resource
   @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -216,6 +218,8 @@ abstract class $ArtifactAssessmentCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -297,6 +301,7 @@ class _$ArtifactAssessmentCopyWithImpl<$Res, $Val extends ArtifactAssessment>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -337,6 +342,10 @@ class _$ArtifactAssessmentCopyWithImpl<$Res, $Val extends ArtifactAssessment>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -680,6 +689,8 @@ abstract class _$$_ArtifactAssessmentCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -775,6 +786,7 @@ class __$$_ArtifactAssessmentCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -815,6 +827,10 @@ class __$$_ArtifactAssessmentCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -958,9 +974,11 @@ class __$$_ArtifactAssessmentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ArtifactAssessment extends _ArtifactAssessment {
-  _$_ArtifactAssessment(
+  const _$_ArtifactAssessment(
       {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
           this.resourceType = R5ResourceType.ArtifactAssessment,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -1023,6 +1041,9 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -1305,7 +1326,7 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
 
   @override
   String toString() {
-    return 'ArtifactAssessment(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, title: $title, titleElement: $titleElement, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, date: $date, dateElement: $dateElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, artifactReference: $artifactReference, artifactCanonical: $artifactCanonical, artifactCanonicalElement: $artifactCanonicalElement, artifactUri: $artifactUri, artifactUriElement: $artifactUriElement, content: $content, workflowStatus: $workflowStatus, workflowStatusElement: $workflowStatusElement, disposition: $disposition, dispositionElement: $dispositionElement)';
+    return 'ArtifactAssessment(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, title: $title, titleElement: $titleElement, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, date: $date, dateElement: $dateElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, artifactReference: $artifactReference, artifactCanonical: $artifactCanonical, artifactCanonicalElement: $artifactCanonicalElement, artifactUri: $artifactUri, artifactUriElement: $artifactUriElement, content: $content, workflowStatus: $workflowStatus, workflowStatusElement: $workflowStatusElement, disposition: $disposition, dispositionElement: $dispositionElement)';
   }
 
   @override
@@ -1315,6 +1336,7 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
             other is _$_ArtifactAssessment &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1385,6 +1407,7 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -1437,9 +1460,11 @@ class _$_ArtifactAssessment extends _ArtifactAssessment {
 }
 
 abstract class _ArtifactAssessment extends ArtifactAssessment {
-  factory _ArtifactAssessment(
+  const factory _ArtifactAssessment(
       {@JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -1488,7 +1513,7 @@ abstract class _ArtifactAssessment extends ArtifactAssessment {
       final FhirCode? disposition,
       @JsonKey(name: '_disposition')
           final Element? dispositionElement}) = _$_ArtifactAssessment;
-  _ArtifactAssessment._() : super._();
+  const _ArtifactAssessment._() : super._();
 
   factory _ArtifactAssessment.fromJson(Map<String, dynamic> json) =
       _$_ArtifactAssessment.fromJson;
@@ -1498,6 +1523,9 @@ abstract class _ArtifactAssessment extends ArtifactAssessment {
   /// [resourceType] This is a ArtifactAssessment resource
   @JsonKey(unknownEnumValue: R5ResourceType.ArtifactAssessment)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -2172,7 +2200,7 @@ class __$$_ArtifactAssessmentContentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ArtifactAssessmentContent extends _ArtifactAssessmentContent {
-  _$_ArtifactAssessmentContent(
+  const _$_ArtifactAssessmentContent(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2469,7 +2497,7 @@ class _$_ArtifactAssessmentContent extends _ArtifactAssessmentContent {
 }
 
 abstract class _ArtifactAssessmentContent extends ArtifactAssessmentContent {
-  factory _ArtifactAssessmentContent(
+  const factory _ArtifactAssessmentContent(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2488,7 +2516,7 @@ abstract class _ArtifactAssessmentContent extends ArtifactAssessmentContent {
       @JsonKey(name: '_freeToShare') final Element? freeToShareElement,
       final List<ArtifactAssessmentContent>?
           component}) = _$_ArtifactAssessmentContent;
-  _ArtifactAssessmentContent._() : super._();
+  const _ArtifactAssessmentContent._() : super._();
 
   factory _ArtifactAssessmentContent.fromJson(Map<String, dynamic> json) =
       _$_ArtifactAssessmentContent.fromJson;
@@ -2609,6 +2637,8 @@ mixin _$Citation {
   /// [resourceType] This is a Citation resource
   @JsonKey(unknownEnumValue: R5ResourceType.Citation)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -2909,6 +2939,8 @@ abstract class $CitationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -3025,6 +3057,7 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -3089,6 +3122,10 @@ class _$CitationCopyWithImpl<$Res, $Val extends Citation>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3601,6 +3638,8 @@ abstract class _$$_CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -3737,6 +3776,7 @@ class __$$_CitationCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -3801,6 +3841,10 @@ class __$$_CitationCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4040,9 +4084,11 @@ class __$$_CitationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Citation extends _Citation {
-  _$_Citation(
+  const _$_Citation(
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
           this.resourceType = R5ResourceType.Citation,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -4147,6 +4193,9 @@ class _$_Citation extends _Citation {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Citation)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -4684,7 +4733,7 @@ class _$_Citation extends _Citation {
 
   @override
   String toString() {
-    return 'Citation(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, summary: $summary, classification: $classification, note: $note, currentState: $currentState, statusDate: $statusDate, citedArtifact: $citedArtifact)';
+    return 'Citation(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, summary: $summary, classification: $classification, note: $note, currentState: $currentState, statusDate: $statusDate, citedArtifact: $citedArtifact)';
   }
 
   @override
@@ -4694,6 +4743,7 @@ class _$_Citation extends _Citation {
             other is _$_Citation &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -4795,6 +4845,7 @@ class _$_Citation extends _Citation {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -4870,9 +4921,11 @@ class _$_Citation extends _Citation {
 }
 
 abstract class _Citation extends Citation {
-  factory _Citation(
+  const factory _Citation(
       {@JsonKey(unknownEnumValue: R5ResourceType.Citation)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -4950,7 +5003,7 @@ abstract class _Citation extends Citation {
       final List<CodeableConcept>? currentState,
       final List<CitationStatusDate>? statusDate,
       final CitationCitedArtifact? citedArtifact}) = _$_Citation;
-  _Citation._() : super._();
+  const _Citation._() : super._();
 
   factory _Citation.fromJson(Map<String, dynamic> json) = _$_Citation.fromJson;
 
@@ -4959,6 +5012,9 @@ abstract class _Citation extends Citation {
   /// [resourceType] This is a Citation resource
   @JsonKey(unknownEnumValue: R5ResourceType.Citation)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -5518,7 +5574,7 @@ class __$$_CitationSummaryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationSummary extends _CitationSummary {
-  _$_CitationSummary(
+  const _$_CitationSummary(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5662,14 +5718,14 @@ class _$_CitationSummary extends _CitationSummary {
 }
 
 abstract class _CitationSummary extends CitationSummary {
-  factory _CitationSummary(
+  const factory _CitationSummary(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? style,
       final FhirMarkdown? text,
       @JsonKey(name: '_text') final Element? textElement}) = _$_CitationSummary;
-  _CitationSummary._() : super._();
+  const _CitationSummary._() : super._();
 
   factory _CitationSummary.fromJson(Map<String, dynamic> json) =
       _$_CitationSummary.fromJson;
@@ -5914,7 +5970,7 @@ class __$$_CitationClassificationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationClassification extends _CitationClassification {
-  _$_CitationClassification(
+  const _$_CitationClassification(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6061,13 +6117,13 @@ class _$_CitationClassification extends _CitationClassification {
 }
 
 abstract class _CitationClassification extends CitationClassification {
-  factory _CitationClassification(
+  const factory _CitationClassification(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? type,
       final List<CodeableConcept>? classifier}) = _$_CitationClassification;
-  _CitationClassification._() : super._();
+  const _CitationClassification._() : super._();
 
   factory _CitationClassification.fromJson(Map<String, dynamic> json) =
       _$_CitationClassification.fromJson;
@@ -6359,7 +6415,7 @@ class __$$_CitationStatusDateCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationStatusDate extends _CitationStatusDate {
-  _$_CitationStatusDate(
+  const _$_CitationStatusDate(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6514,7 +6570,7 @@ class _$_CitationStatusDate extends _CitationStatusDate {
 }
 
 abstract class _CitationStatusDate extends CitationStatusDate {
-  factory _CitationStatusDate(
+  const factory _CitationStatusDate(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6522,7 +6578,7 @@ abstract class _CitationStatusDate extends CitationStatusDate {
       final FhirBoolean? actual,
       @JsonKey(name: '_actual') final Element? actualElement,
       required final Period period}) = _$_CitationStatusDate;
-  _CitationStatusDate._() : super._();
+  const _CitationStatusDate._() : super._();
 
   factory _CitationStatusDate.fromJson(Map<String, dynamic> json) =
       _$_CitationStatusDate.fromJson;
@@ -7046,7 +7102,7 @@ class __$$_CitationCitedArtifactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationCitedArtifact extends _CitationCitedArtifact {
-  _$_CitationCitedArtifact(
+  const _$_CitationCitedArtifact(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7425,7 +7481,7 @@ class _$_CitationCitedArtifact extends _CitationCitedArtifact {
 }
 
 abstract class _CitationCitedArtifact extends CitationCitedArtifact {
-  factory _CitationCitedArtifact(
+  const factory _CitationCitedArtifact(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7445,7 +7501,7 @@ abstract class _CitationCitedArtifact extends CitationCitedArtifact {
       final List<CitationClassification1>? classification,
       final CitationContributorship? contributorship,
       final List<Annotation>? note}) = _$_CitationCitedArtifact;
-  _CitationCitedArtifact._() : super._();
+  const _CitationCitedArtifact._() : super._();
 
   factory _CitationCitedArtifact.fromJson(Map<String, dynamic> json) =
       _$_CitationCitedArtifact.fromJson;
@@ -7782,7 +7838,7 @@ class __$$_CitationVersionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationVersion extends _CitationVersion {
-  _$_CitationVersion(
+  const _$_CitationVersion(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7927,14 +7983,14 @@ class _$_CitationVersion extends _CitationVersion {
 }
 
 abstract class _CitationVersion extends CitationVersion {
-  factory _CitationVersion(
+  const factory _CitationVersion(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final Reference? baseCitation}) = _$_CitationVersion;
-  _CitationVersion._() : super._();
+  const _CitationVersion._() : super._();
 
   factory _CitationVersion.fromJson(Map<String, dynamic> json) =
       _$_CitationVersion.fromJson;
@@ -8229,7 +8285,7 @@ class __$$_CitationStatusDate1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationStatusDate1 extends _CitationStatusDate1 {
-  _$_CitationStatusDate1(
+  const _$_CitationStatusDate1(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8382,7 +8438,7 @@ class _$_CitationStatusDate1 extends _CitationStatusDate1 {
 }
 
 abstract class _CitationStatusDate1 extends CitationStatusDate1 {
-  factory _CitationStatusDate1(
+  const factory _CitationStatusDate1(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8390,7 +8446,7 @@ abstract class _CitationStatusDate1 extends CitationStatusDate1 {
       final FhirBoolean? actual,
       @JsonKey(name: '_actual') final Element? actualElement,
       required final Period period}) = _$_CitationStatusDate1;
-  _CitationStatusDate1._() : super._();
+  const _CitationStatusDate1._() : super._();
 
   factory _CitationStatusDate1.fromJson(Map<String, dynamic> json) =
       _$_CitationStatusDate1.fromJson;
@@ -8682,7 +8738,7 @@ class __$$_CitationTitleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationTitle extends _CitationTitle {
-  _$_CitationTitle(
+  const _$_CitationTitle(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8844,7 +8900,7 @@ class _$_CitationTitle extends _CitationTitle {
 }
 
 abstract class _CitationTitle extends CitationTitle {
-  factory _CitationTitle(
+  const factory _CitationTitle(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8852,7 +8908,7 @@ abstract class _CitationTitle extends CitationTitle {
       final CodeableConcept? language,
       final FhirMarkdown? text,
       @JsonKey(name: '_text') final Element? textElement}) = _$_CitationTitle;
-  _CitationTitle._() : super._();
+  const _CitationTitle._() : super._();
 
   factory _CitationTitle.fromJson(Map<String, dynamic> json) =
       _$_CitationTitle.fromJson;
@@ -9205,7 +9261,7 @@ class __$$_CitationAbstractCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationAbstract extends _CitationAbstract {
-  _$_CitationAbstract(
+  const _$_CitationAbstract(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9374,7 +9430,7 @@ class _$_CitationAbstract extends _CitationAbstract {
 }
 
 abstract class _CitationAbstract extends CitationAbstract {
-  factory _CitationAbstract(
+  const factory _CitationAbstract(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -9385,7 +9441,7 @@ abstract class _CitationAbstract extends CitationAbstract {
           final FhirMarkdown? copyright,
           @JsonKey(name: '_copyright') final Element? copyrightElement}) =
       _$_CitationAbstract;
-  _CitationAbstract._() : super._();
+  const _CitationAbstract._() : super._();
 
   factory _CitationAbstract.fromJson(Map<String, dynamic> json) =
       _$_CitationAbstract.fromJson;
@@ -9701,7 +9757,7 @@ class __$$_CitationPartCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationPart extends _CitationPart {
-  _$_CitationPart(
+  const _$_CitationPart(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9853,7 +9909,7 @@ class _$_CitationPart extends _CitationPart {
 }
 
 abstract class _CitationPart extends CitationPart {
-  factory _CitationPart(
+  const factory _CitationPart(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9861,7 +9917,7 @@ abstract class _CitationPart extends CitationPart {
       final String? value,
       @JsonKey(name: '_value') final Element? valueElement,
       final Reference? baseCitation}) = _$_CitationPart;
-  _CitationPart._() : super._();
+  const _CitationPart._() : super._();
 
   factory _CitationPart.fromJson(Map<String, dynamic> json) =
       _$_CitationPart.fromJson;
@@ -10375,7 +10431,7 @@ class __$$_CitationRelatesToCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationRelatesTo extends _CitationRelatesTo {
-  _$_CitationRelatesTo(
+  const _$_CitationRelatesTo(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -10621,7 +10677,7 @@ class _$_CitationRelatesTo extends _CitationRelatesTo {
 }
 
 abstract class _CitationRelatesTo extends CitationRelatesTo {
-  factory _CitationRelatesTo(
+  const factory _CitationRelatesTo(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -10638,7 +10694,7 @@ abstract class _CitationRelatesTo extends CitationRelatesTo {
       final FhirCanonical? resource,
       @JsonKey(name: '_resource') final Element? resourceElement,
       final Reference? resourceReference}) = _$_CitationRelatesTo;
-  _CitationRelatesTo._() : super._();
+  const _CitationRelatesTo._() : super._();
 
   factory _CitationRelatesTo.fromJson(Map<String, dynamic> json) =
       _$_CitationRelatesTo.fromJson;
@@ -11571,7 +11627,7 @@ class __$$_CitationPublicationFormCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationPublicationForm extends _CitationPublicationForm {
-  _$_CitationPublicationForm(
+  const _$_CitationPublicationForm(
       {@JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: 'extension')
@@ -11971,7 +12027,7 @@ class _$_CitationPublicationForm extends _CitationPublicationForm {
 }
 
 abstract class _CitationPublicationForm extends CitationPublicationForm {
-  factory _CitationPublicationForm(
+  const factory _CitationPublicationForm(
       {@JsonKey(name: 'id')
           final String? fhirId,
       @JsonKey(name: 'extension')
@@ -12016,7 +12072,7 @@ abstract class _CitationPublicationForm extends CitationPublicationForm {
       final FhirMarkdown? copyright,
       @JsonKey(name: '_copyright')
           final Element? copyrightElement}) = _$_CitationPublicationForm;
-  _CitationPublicationForm._() : super._();
+  const _CitationPublicationForm._() : super._();
 
   factory _CitationPublicationForm.fromJson(Map<String, dynamic> json) =
       _$_CitationPublicationForm.fromJson;
@@ -12512,7 +12568,7 @@ class __$$_CitationPublishedInCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationPublishedIn extends _CitationPublishedIn {
-  _$_CitationPublishedIn(
+  const _$_CitationPublishedIn(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12704,7 +12760,7 @@ class _$_CitationPublishedIn extends _CitationPublishedIn {
 }
 
 abstract class _CitationPublishedIn extends CitationPublishedIn {
-  factory _CitationPublishedIn(
+  const factory _CitationPublishedIn(
       {@JsonKey(name: 'id')
           final String? fhirId,
       @JsonKey(name: 'extension')
@@ -12719,7 +12775,7 @@ abstract class _CitationPublishedIn extends CitationPublishedIn {
       final String? publisherLocation,
       @JsonKey(name: '_publisherLocation')
           final Element? publisherLocationElement}) = _$_CitationPublishedIn;
-  _CitationPublishedIn._() : super._();
+  const _CitationPublishedIn._() : super._();
 
   factory _CitationPublishedIn.fromJson(Map<String, dynamic> json) =
       _$_CitationPublishedIn.fromJson;
@@ -12997,7 +13053,7 @@ class __$$_CitationWebLocationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationWebLocation extends _CitationWebLocation {
-  _$_CitationWebLocation(
+  const _$_CitationWebLocation(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -13155,7 +13211,7 @@ class _$_CitationWebLocation extends _CitationWebLocation {
 }
 
 abstract class _CitationWebLocation extends CitationWebLocation {
-  factory _CitationWebLocation(
+  const factory _CitationWebLocation(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -13163,7 +13219,7 @@ abstract class _CitationWebLocation extends CitationWebLocation {
           final FhirUri? url,
           @JsonKey(name: '_url') final Element? urlElement}) =
       _$_CitationWebLocation;
-  _CitationWebLocation._() : super._();
+  const _CitationWebLocation._() : super._();
 
   factory _CitationWebLocation.fromJson(Map<String, dynamic> json) =
       _$_CitationWebLocation.fromJson;
@@ -13424,7 +13480,7 @@ class __$$_CitationClassification1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationClassification1 extends _CitationClassification1 {
-  _$_CitationClassification1(
+  const _$_CitationClassification1(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -13591,14 +13647,14 @@ class _$_CitationClassification1 extends _CitationClassification1 {
 }
 
 abstract class _CitationClassification1 extends CitationClassification1 {
-  factory _CitationClassification1(
+  const factory _CitationClassification1(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? type,
       final List<CodeableConcept>? classifier,
       final List<Reference>? artifactAssessment}) = _$_CitationClassification1;
-  _CitationClassification1._() : super._();
+  const _CitationClassification1._() : super._();
 
   factory _CitationClassification1.fromJson(Map<String, dynamic> json) =
       _$_CitationClassification1.fromJson;
@@ -13876,7 +13932,7 @@ class __$$_CitationContributorshipCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationContributorship extends _CitationContributorship {
-  _$_CitationContributorship(
+  const _$_CitationContributorship(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14055,7 +14111,7 @@ class _$_CitationContributorship extends _CitationContributorship {
 }
 
 abstract class _CitationContributorship extends CitationContributorship {
-  factory _CitationContributorship(
+  const factory _CitationContributorship(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14063,7 +14119,7 @@ abstract class _CitationContributorship extends CitationContributorship {
       @JsonKey(name: '_complete') final Element? completeElement,
       final List<CitationEntry>? entry,
       final List<CitationSummary1>? summary}) = _$_CitationContributorship;
-  _CitationContributorship._() : super._();
+  const _CitationContributorship._() : super._();
 
   factory _CitationContributorship.fromJson(Map<String, dynamic> json) =
       _$_CitationContributorship.fromJson;
@@ -14526,7 +14582,7 @@ class __$$_CitationEntryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationEntry extends _CitationEntry {
-  _$_CitationEntry(
+  const _$_CitationEntry(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -14780,7 +14836,7 @@ class _$_CitationEntry extends _CitationEntry {
 }
 
 abstract class _CitationEntry extends CitationEntry {
-  factory _CitationEntry(
+  const factory _CitationEntry(
       {@JsonKey(name: 'id')
           final String? fhirId,
       @JsonKey(name: 'extension')
@@ -14800,7 +14856,7 @@ abstract class _CitationEntry extends CitationEntry {
       final FhirPositiveInt? rankingOrder,
       @JsonKey(name: '_rankingOrder')
           final Element? rankingOrderElement}) = _$_CitationEntry;
-  _CitationEntry._() : super._();
+  const _CitationEntry._() : super._();
 
   factory _CitationEntry.fromJson(Map<String, dynamic> json) =
       _$_CitationEntry.fromJson;
@@ -15117,7 +15173,7 @@ class __$$_CitationContributionInstanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationContributionInstance extends _CitationContributionInstance {
-  _$_CitationContributionInstance(
+  const _$_CitationContributionInstance(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -15263,7 +15319,7 @@ class _$_CitationContributionInstance extends _CitationContributionInstance {
 
 abstract class _CitationContributionInstance
     extends CitationContributionInstance {
-  factory _CitationContributionInstance(
+  const factory _CitationContributionInstance(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -15271,7 +15327,7 @@ abstract class _CitationContributionInstance
           final FhirDateTime? time,
           @JsonKey(name: '_time') final Element? timeElement}) =
       _$_CitationContributionInstance;
-  _CitationContributionInstance._() : super._();
+  const _CitationContributionInstance._() : super._();
 
   factory _CitationContributionInstance.fromJson(Map<String, dynamic> json) =
       _$_CitationContributionInstance.fromJson;
@@ -15608,7 +15664,7 @@ class __$$_CitationSummary1CopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CitationSummary1 extends _CitationSummary1 {
-  _$_CitationSummary1(
+  const _$_CitationSummary1(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -15770,7 +15826,7 @@ class _$_CitationSummary1 extends _CitationSummary1 {
 }
 
 abstract class _CitationSummary1 extends CitationSummary1 {
-  factory _CitationSummary1(
+  const factory _CitationSummary1(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -15780,7 +15836,7 @@ abstract class _CitationSummary1 extends CitationSummary1 {
           final FhirMarkdown? value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_CitationSummary1;
-  _CitationSummary1._() : super._();
+  const _CitationSummary1._() : super._();
 
   factory _CitationSummary1.fromJson(Map<String, dynamic> json) =
       _$_CitationSummary1.fromJson;
@@ -15858,6 +15914,8 @@ mixin _$Evidence {
   /// [resourceType] This is a Evidence resource
   @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -16181,6 +16239,8 @@ abstract class $EvidenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -16307,6 +16367,7 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -16376,6 +16437,10 @@ class _$EvidenceCopyWithImpl<$Res, $Val extends Evidence>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -16944,6 +17009,8 @@ abstract class _$$_EvidenceCopyWith<$Res> implements $EvidenceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -17093,6 +17160,7 @@ class __$$_EvidenceCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -17162,6 +17230,10 @@ class __$$_EvidenceCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -17421,9 +17493,11 @@ class __$$_EvidenceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Evidence extends _Evidence {
-  _$_Evidence(
+  const _$_Evidence(
       {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
           this.resourceType = R5ResourceType.Evidence,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -17535,6 +17609,9 @@ class _$_Evidence extends _Evidence {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -18107,7 +18184,7 @@ class _$_Evidence extends _Evidence {
 
   @override
   String toString() {
-    return 'Evidence(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, assertion: $assertion, assertionElement: $assertionElement, note: $note, variableDefinition: $variableDefinition, synthesisType: $synthesisType, studyDesign: $studyDesign, statistic: $statistic, certainty: $certainty)';
+    return 'Evidence(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, assertion: $assertion, assertionElement: $assertionElement, note: $note, variableDefinition: $variableDefinition, synthesisType: $synthesisType, studyDesign: $studyDesign, statistic: $statistic, certainty: $certainty)';
   }
 
   @override
@@ -18117,6 +18194,7 @@ class _$_Evidence extends _Evidence {
             other is _$_Evidence &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -18223,6 +18301,7 @@ class _$_Evidence extends _Evidence {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -18303,9 +18382,11 @@ class _$_Evidence extends _Evidence {
 }
 
 abstract class _Evidence extends Evidence {
-  factory _Evidence(
+  const factory _Evidence(
       {@JsonKey(unknownEnumValue: R5ResourceType.Evidence)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -18390,7 +18471,7 @@ abstract class _Evidence extends Evidence {
       final List<CodeableConcept>? studyDesign,
       final List<EvidenceStatistic>? statistic,
       final List<EvidenceCertainty>? certainty}) = _$_Evidence;
-  _Evidence._() : super._();
+  const _Evidence._() : super._();
 
   factory _Evidence.fromJson(Map<String, dynamic> json) = _$_Evidence.fromJson;
 
@@ -18399,6 +18480,9 @@ abstract class _Evidence extends Evidence {
   /// [resourceType] This is a Evidence resource
   @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -19098,7 +19182,7 @@ class __$$_EvidenceVariableDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
-  _$_EvidenceVariableDefinition(
+  const _$_EvidenceVariableDefinition(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -19289,7 +19373,7 @@ class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
 }
 
 abstract class _EvidenceVariableDefinition extends EvidenceVariableDefinition {
-  factory _EvidenceVariableDefinition(
+  const factory _EvidenceVariableDefinition(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -19300,7 +19384,7 @@ abstract class _EvidenceVariableDefinition extends EvidenceVariableDefinition {
       final Reference? observed,
       final Reference? intended,
       final CodeableConcept? directnessMatch}) = _$_EvidenceVariableDefinition;
-  _EvidenceVariableDefinition._() : super._();
+  const _EvidenceVariableDefinition._() : super._();
 
   factory _EvidenceVariableDefinition.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariableDefinition.fromJson;
@@ -19831,7 +19915,7 @@ class __$$_EvidenceStatisticCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceStatistic extends _EvidenceStatistic {
-  _$_EvidenceStatistic(
+  const _$_EvidenceStatistic(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -20103,7 +20187,7 @@ class _$_EvidenceStatistic extends _EvidenceStatistic {
 }
 
 abstract class _EvidenceStatistic extends EvidenceStatistic {
-  factory _EvidenceStatistic(
+  const factory _EvidenceStatistic(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -20121,7 +20205,7 @@ abstract class _EvidenceStatistic extends EvidenceStatistic {
       final List<EvidenceAttributeEstimate>? attributeEstimate,
       final List<EvidenceModelCharacteristic>?
           modelCharacteristic}) = _$_EvidenceStatistic;
-  _EvidenceStatistic._() : super._();
+  const _EvidenceStatistic._() : super._();
 
   factory _EvidenceStatistic.fromJson(Map<String, dynamic> json) =
       _$_EvidenceStatistic.fromJson;
@@ -20588,7 +20672,7 @@ class __$$_EvidenceSampleSizeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceSampleSize extends _EvidenceSampleSize {
-  _$_EvidenceSampleSize(
+  const _$_EvidenceSampleSize(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -20802,7 +20886,7 @@ class _$_EvidenceSampleSize extends _EvidenceSampleSize {
 }
 
 abstract class _EvidenceSampleSize extends EvidenceSampleSize {
-  factory _EvidenceSampleSize(
+  const factory _EvidenceSampleSize(
       {@JsonKey(name: 'id')
           final String? fhirId,
       @JsonKey(name: 'extension')
@@ -20821,7 +20905,7 @@ abstract class _EvidenceSampleSize extends EvidenceSampleSize {
       final FhirUnsignedInt? knownDataCount,
       @JsonKey(name: '_knownDataCount')
           final Element? knownDataCountElement}) = _$_EvidenceSampleSize;
-  _EvidenceSampleSize._() : super._();
+  const _EvidenceSampleSize._() : super._();
 
   factory _EvidenceSampleSize.fromJson(Map<String, dynamic> json) =
       _$_EvidenceSampleSize.fromJson;
@@ -21272,7 +21356,7 @@ class __$$_EvidenceAttributeEstimateCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceAttributeEstimate extends _EvidenceAttributeEstimate {
-  _$_EvidenceAttributeEstimate(
+  const _$_EvidenceAttributeEstimate(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -21490,7 +21574,7 @@ class _$_EvidenceAttributeEstimate extends _EvidenceAttributeEstimate {
 }
 
 abstract class _EvidenceAttributeEstimate extends EvidenceAttributeEstimate {
-  factory _EvidenceAttributeEstimate(
+  const factory _EvidenceAttributeEstimate(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -21504,7 +21588,7 @@ abstract class _EvidenceAttributeEstimate extends EvidenceAttributeEstimate {
           final Range? range,
           final List<EvidenceAttributeEstimate>? attributeEstimate}) =
       _$_EvidenceAttributeEstimate;
-  _EvidenceAttributeEstimate._() : super._();
+  const _EvidenceAttributeEstimate._() : super._();
 
   factory _EvidenceAttributeEstimate.fromJson(Map<String, dynamic> json) =
       _$_EvidenceAttributeEstimate.fromJson;
@@ -21827,7 +21911,7 @@ class __$$_EvidenceModelCharacteristicCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceModelCharacteristic extends _EvidenceModelCharacteristic {
-  _$_EvidenceModelCharacteristic(
+  const _$_EvidenceModelCharacteristic(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -22004,7 +22088,7 @@ class _$_EvidenceModelCharacteristic extends _EvidenceModelCharacteristic {
 
 abstract class _EvidenceModelCharacteristic
     extends EvidenceModelCharacteristic {
-  factory _EvidenceModelCharacteristic(
+  const factory _EvidenceModelCharacteristic(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -22013,7 +22097,7 @@ abstract class _EvidenceModelCharacteristic
           final List<EvidenceVariable>? variable,
           final List<EvidenceAttributeEstimate>? attributeEstimate}) =
       _$_EvidenceModelCharacteristic;
-  _EvidenceModelCharacteristic._() : super._();
+  const _EvidenceModelCharacteristic._() : super._();
 
   factory _EvidenceModelCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_EvidenceModelCharacteristic.fromJson;
@@ -22085,6 +22169,8 @@ mixin _$EvidenceVariable {
   /// [resourceType] This is an EvidenceVariable resource
   @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -22414,6 +22500,8 @@ abstract class $EvidenceVariableCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -22538,6 +22626,7 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -22605,6 +22694,10 @@ class _$EvidenceVariableCopyWithImpl<$Res, $Val extends EvidenceVariable>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -23154,6 +23247,8 @@ abstract class _$$_EvidenceVariableCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -23300,6 +23395,7 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -23367,6 +23463,10 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -23618,9 +23718,11 @@ class __$$_EvidenceVariableCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceVariable extends _EvidenceVariable {
-  _$_EvidenceVariable(
+  const _$_EvidenceVariable(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
           this.resourceType = R5ResourceType.EvidenceVariable,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -23729,6 +23831,9 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -24287,7 +24392,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   @override
   String toString() {
-    return 'EvidenceVariable(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, note: $note, actual: $actual, actualElement: $actualElement, characteristic: $characteristic, handling: $handling, handlingElement: $handlingElement, category: $category)';
+    return 'EvidenceVariable(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, shortTitle: $shortTitle, shortTitleElement: $shortTitleElement, note: $note, actual: $actual, actualElement: $actualElement, characteristic: $characteristic, handling: $handling, handlingElement: $handlingElement, category: $category)';
   }
 
   @override
@@ -24297,6 +24402,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
             other is _$_EvidenceVariable &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -24401,6 +24507,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -24479,9 +24586,11 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 }
 
 abstract class _EvidenceVariable extends EvidenceVariable {
-  factory _EvidenceVariable(
+  const factory _EvidenceVariable(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -24565,7 +24674,7 @@ abstract class _EvidenceVariable extends EvidenceVariable {
       @JsonKey(name: '_handling')
           final Element? handlingElement,
       final List<EvidenceVariableCategory>? category}) = _$_EvidenceVariable;
-  _EvidenceVariable._() : super._();
+  const _EvidenceVariable._() : super._();
 
   factory _EvidenceVariable.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariable.fromJson;
@@ -24575,6 +24684,9 @@ abstract class _EvidenceVariable extends EvidenceVariable {
   /// [resourceType] This is an EvidenceVariable resource
   @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -25273,7 +25385,7 @@ class __$$_EvidenceCertaintyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceCertainty extends _EvidenceCertainty {
-  _$_EvidenceCertainty(
+  const _$_EvidenceCertainty(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -25477,7 +25589,7 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
 }
 
 abstract class _EvidenceCertainty extends EvidenceCertainty {
-  factory _EvidenceCertainty(
+  const factory _EvidenceCertainty(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -25489,7 +25601,7 @@ abstract class _EvidenceCertainty extends EvidenceCertainty {
       final String? rater,
       @JsonKey(name: '_rater') final Element? raterElement,
       final List<EvidenceCertainty>? subcomponent}) = _$_EvidenceCertainty;
-  _EvidenceCertainty._() : super._();
+  const _EvidenceCertainty._() : super._();
 
   factory _EvidenceCertainty.fromJson(Map<String, dynamic> json) =
       _$_EvidenceCertainty.fromJson;
@@ -25576,6 +25688,8 @@ mixin _$EvidenceReport {
   /// [resourceType] This is a EvidenceReport resource
   @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -25896,6 +26010,8 @@ abstract class $EvidenceReportCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -26019,6 +26135,7 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -26086,6 +26203,10 @@ class _$EvidenceReportCopyWithImpl<$Res, $Val extends EvidenceReport>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -26643,6 +26764,8 @@ abstract class _$$_EvidenceReportCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
           R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -26789,6 +26912,7 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -26856,6 +26980,10 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -27107,9 +27235,11 @@ class __$$_EvidenceReportCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceReport extends _EvidenceReport {
-  _$_EvidenceReport(
+  const _$_EvidenceReport(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
           this.resourceType = R5ResourceType.EvidenceReport,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -27217,6 +27347,9 @@ class _$_EvidenceReport extends _EvidenceReport {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
   final R5ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the
   ///  resource. Once assigned, this value never changes.
@@ -27774,7 +27907,7 @@ class _$_EvidenceReport extends _EvidenceReport {
 
   @override
   String toString() {
-    return 'EvidenceReport(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, relatedIdentifier: $relatedIdentifier, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, type: $type, note: $note, subject: $subject, relatesTo: $relatesTo, section: $section)';
+    return 'EvidenceReport(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, versionAlgorithmString: $versionAlgorithmString, versionAlgorithmStringElement: $versionAlgorithmStringElement, versionAlgorithmCoding: $versionAlgorithmCoding, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, copyrightLabel: $copyrightLabel, copyrightLabelElement: $copyrightLabelElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, relatedIdentifier: $relatedIdentifier, citeAsReference: $citeAsReference, citeAsMarkdown: $citeAsMarkdown, citeAsMarkdownElement: $citeAsMarkdownElement, type: $type, note: $note, subject: $subject, relatesTo: $relatesTo, section: $section)';
   }
 
   @override
@@ -27784,6 +27917,7 @@ class _$_EvidenceReport extends _EvidenceReport {
             other is _$_EvidenceReport &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -27888,6 +28022,7 @@ class _$_EvidenceReport extends _EvidenceReport {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -27966,9 +28101,11 @@ class _$_EvidenceReport extends _EvidenceReport {
 }
 
 abstract class _EvidenceReport extends EvidenceReport {
-  factory _EvidenceReport(
+  const factory _EvidenceReport(
       {@JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
           final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -28050,7 +28187,7 @@ abstract class _EvidenceReport extends EvidenceReport {
       required final EvidenceReportSubject subject,
       final List<EvidenceReportRelatesTo>? relatesTo,
       final List<EvidenceReportSection>? section}) = _$_EvidenceReport;
-  _EvidenceReport._() : super._();
+  const _EvidenceReport._() : super._();
 
   factory _EvidenceReport.fromJson(Map<String, dynamic> json) =
       _$_EvidenceReport.fromJson;
@@ -28060,6 +28197,9 @@ abstract class _EvidenceReport extends EvidenceReport {
   /// [resourceType] This is a EvidenceReport resource
   @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
   R5ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the
@@ -28597,7 +28737,7 @@ class __$$_EvidenceReportSubjectCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceReportSubject extends _EvidenceReportSubject {
-  _$_EvidenceReportSubject(
+  const _$_EvidenceReportSubject(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -28754,13 +28894,13 @@ class _$_EvidenceReportSubject extends _EvidenceReportSubject {
 }
 
 abstract class _EvidenceReportSubject extends EvidenceReportSubject {
-  factory _EvidenceReportSubject(
+  const factory _EvidenceReportSubject(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<EvidenceReportCharacteristic>? characteristic,
       final List<Annotation>? note}) = _$_EvidenceReportSubject;
-  _EvidenceReportSubject._() : super._();
+  const _EvidenceReportSubject._() : super._();
 
   factory _EvidenceReportSubject.fromJson(Map<String, dynamic> json) =
       _$_EvidenceReportSubject.fromJson;
@@ -29229,7 +29369,7 @@ class __$$_EvidenceReportCharacteristicCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
-  _$_EvidenceReportCharacteristic(
+  const _$_EvidenceReportCharacteristic(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -29431,7 +29571,7 @@ class _$_EvidenceReportCharacteristic extends _EvidenceReportCharacteristic {
 
 abstract class _EvidenceReportCharacteristic
     extends EvidenceReportCharacteristic {
-  factory _EvidenceReportCharacteristic(
+  const factory _EvidenceReportCharacteristic(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -29445,7 +29585,7 @@ abstract class _EvidenceReportCharacteristic
       final FhirBoolean? exclude,
       @JsonKey(name: '_exclude') final Element? excludeElement,
       final Period? period}) = _$_EvidenceReportCharacteristic;
-  _EvidenceReportCharacteristic._() : super._();
+  const _EvidenceReportCharacteristic._() : super._();
 
   factory _EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_EvidenceReportCharacteristic.fromJson;
@@ -29747,7 +29887,7 @@ class __$$_EvidenceReportRelatesToCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
-  _$_EvidenceReportRelatesTo(
+  const _$_EvidenceReportRelatesTo(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -29894,14 +30034,14 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
 }
 
 abstract class _EvidenceReportRelatesTo extends EvidenceReportRelatesTo {
-  factory _EvidenceReportRelatesTo(
+  const factory _EvidenceReportRelatesTo(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       required final EvidenceReportTarget target}) = _$_EvidenceReportRelatesTo;
-  _EvidenceReportRelatesTo._() : super._();
+  const _EvidenceReportRelatesTo._() : super._();
 
   factory _EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =
       _$_EvidenceReportRelatesTo.fromJson;
@@ -30252,7 +30392,7 @@ class __$$_EvidenceReportTargetCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceReportTarget extends _EvidenceReportTarget {
-  _$_EvidenceReportTarget(
+  const _$_EvidenceReportTarget(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -30422,7 +30562,7 @@ class _$_EvidenceReportTarget extends _EvidenceReportTarget {
 }
 
 abstract class _EvidenceReportTarget extends EvidenceReportTarget {
-  factory _EvidenceReportTarget(
+  const factory _EvidenceReportTarget(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -30432,7 +30572,7 @@ abstract class _EvidenceReportTarget extends EvidenceReportTarget {
       final FhirMarkdown? display,
       @JsonKey(name: '_display') final Element? displayElement,
       final Reference? resource}) = _$_EvidenceReportTarget;
-  _EvidenceReportTarget._() : super._();
+  const _EvidenceReportTarget._() : super._();
 
   factory _EvidenceReportTarget.fromJson(Map<String, dynamic> json) =
       _$_EvidenceReportTarget.fromJson;
@@ -30981,7 +31121,7 @@ class __$$_EvidenceReportSectionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceReportSection extends _EvidenceReportSection {
-  _$_EvidenceReportSection(
+  const _$_EvidenceReportSection(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -31282,7 +31422,7 @@ class _$_EvidenceReportSection extends _EvidenceReportSection {
 }
 
 abstract class _EvidenceReportSection extends EvidenceReportSection {
-  factory _EvidenceReportSection(
+  const factory _EvidenceReportSection(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -31300,7 +31440,7 @@ abstract class _EvidenceReportSection extends EvidenceReportSection {
       final List<Quantity>? entryQuantity,
       final CodeableConcept? emptyReason,
       final List<EvidenceReportSection>? section}) = _$_EvidenceReportSection;
-  _EvidenceReportSection._() : super._();
+  const _EvidenceReportSection._() : super._();
 
   factory _EvidenceReportSection.fromJson(Map<String, dynamic> json) =
       _$_EvidenceReportSection.fromJson;
@@ -32090,7 +32230,7 @@ class __$$_EvidenceVariableCharacteristicCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EvidenceVariableCharacteristic
     extends _EvidenceVariableCharacteristic {
-  _$_EvidenceVariableCharacteristic(
+  const _$_EvidenceVariableCharacteristic(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -32409,7 +32549,7 @@ class _$_EvidenceVariableCharacteristic
 
 abstract class _EvidenceVariableCharacteristic
     extends EvidenceVariableCharacteristic {
-  factory _EvidenceVariableCharacteristic(
+  const factory _EvidenceVariableCharacteristic(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -32434,7 +32574,7 @@ abstract class _EvidenceVariableCharacteristic
       final Range? durationRange,
       final List<EvidenceVariableTimeFromEvent>?
           timeFromEvent}) = _$_EvidenceVariableCharacteristic;
-  _EvidenceVariableCharacteristic._() : super._();
+  const _EvidenceVariableCharacteristic._() : super._();
 
   factory _EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariableCharacteristic.fromJson;
@@ -33044,7 +33184,7 @@ class __$$_EvidenceVariableDefinitionByTypeAndValueCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EvidenceVariableDefinitionByTypeAndValue
     extends _EvidenceVariableDefinitionByTypeAndValue {
-  _$_EvidenceVariableDefinitionByTypeAndValue(
+  const _$_EvidenceVariableDefinitionByTypeAndValue(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -33279,7 +33419,7 @@ class _$_EvidenceVariableDefinitionByTypeAndValue
 
 abstract class _EvidenceVariableDefinitionByTypeAndValue
     extends EvidenceVariableDefinitionByTypeAndValue {
-  factory _EvidenceVariableDefinitionByTypeAndValue(
+  const factory _EvidenceVariableDefinitionByTypeAndValue(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -33296,7 +33436,7 @@ abstract class _EvidenceVariableDefinitionByTypeAndValue
           @JsonKey(name: '_valueId') final Element? valueIdElement,
           final CodeableConcept? offset}) =
       _$_EvidenceVariableDefinitionByTypeAndValue;
-  _EvidenceVariableDefinitionByTypeAndValue._() : super._();
+  const _EvidenceVariableDefinitionByTypeAndValue._() : super._();
 
   factory _EvidenceVariableDefinitionByTypeAndValue.fromJson(
           Map<String, dynamic> json) =
@@ -33660,7 +33800,7 @@ class __$$_EvidenceVariableDefinitionByCombinationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EvidenceVariableDefinitionByCombination
     extends _EvidenceVariableDefinitionByCombination {
-  _$_EvidenceVariableDefinitionByCombination(
+  const _$_EvidenceVariableDefinitionByCombination(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -33836,7 +33976,7 @@ class _$_EvidenceVariableDefinitionByCombination
 
 abstract class _EvidenceVariableDefinitionByCombination
     extends EvidenceVariableDefinitionByCombination {
-  factory _EvidenceVariableDefinitionByCombination(
+  const factory _EvidenceVariableDefinitionByCombination(
           {@JsonKey(name: 'id') final String? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -33846,7 +33986,7 @@ abstract class _EvidenceVariableDefinitionByCombination
           @JsonKey(name: '_threshold') final Element? thresholdElement,
           required final List<EvidenceVariableCharacteristic> characteristic}) =
       _$_EvidenceVariableDefinitionByCombination;
-  _EvidenceVariableDefinitionByCombination._() : super._();
+  const _EvidenceVariableDefinitionByCombination._() : super._();
 
   factory _EvidenceVariableDefinitionByCombination.fromJson(
           Map<String, dynamic> json) =
@@ -34344,7 +34484,7 @@ class __$$_EvidenceVariableTimeFromEventCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceVariableTimeFromEvent extends _EvidenceVariableTimeFromEvent {
-  _$_EvidenceVariableTimeFromEvent(
+  const _$_EvidenceVariableTimeFromEvent(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -34573,7 +34713,7 @@ class _$_EvidenceVariableTimeFromEvent extends _EvidenceVariableTimeFromEvent {
 
 abstract class _EvidenceVariableTimeFromEvent
     extends EvidenceVariableTimeFromEvent {
-  factory _EvidenceVariableTimeFromEvent(
+  const factory _EvidenceVariableTimeFromEvent(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -34588,7 +34728,7 @@ abstract class _EvidenceVariableTimeFromEvent
       @JsonKey(name: '_eventId') final Element? eventIdElement,
       final Quantity? quantity,
       final Range? range}) = _$_EvidenceVariableTimeFromEvent;
-  _EvidenceVariableTimeFromEvent._() : super._();
+  const _EvidenceVariableTimeFromEvent._() : super._();
 
   factory _EvidenceVariableTimeFromEvent.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariableTimeFromEvent.fromJson;
@@ -34967,7 +35107,7 @@ class __$$_EvidenceVariableCategoryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_EvidenceVariableCategory extends _EvidenceVariableCategory {
-  _$_EvidenceVariableCategory(
+  const _$_EvidenceVariableCategory(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -35129,7 +35269,7 @@ class _$_EvidenceVariableCategory extends _EvidenceVariableCategory {
 }
 
 abstract class _EvidenceVariableCategory extends EvidenceVariableCategory {
-  factory _EvidenceVariableCategory(
+  const factory _EvidenceVariableCategory(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -35138,7 +35278,7 @@ abstract class _EvidenceVariableCategory extends EvidenceVariableCategory {
       final CodeableConcept? valueCodeableConcept,
       final Quantity? valueQuantity,
       final Range? valueRange}) = _$_EvidenceVariableCategory;
-  _EvidenceVariableCategory._() : super._();
+  const _EvidenceVariableCategory._() : super._();
 
   factory _EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =
       _$_EvidenceVariableCategory.fromJson;

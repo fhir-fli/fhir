@@ -113,17 +113,17 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   ///  infusion.
   ///
   /// [storage] Product storage.
-  factory BiologicallyDerivedProduct({
+  const factory BiologicallyDerivedProduct({
     @Default(R4ResourceType.BiologicallyDerivedProduct)
     @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
 
-        /// [resourceType] This is a BiologicallyDerivedProduct resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a BiologicallyDerivedProduct resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -137,15 +137,13 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -167,8 +165,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -196,8 +193,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     FhirCode? productCategory,
 
     /// [productCategoryElement] Extensions for productCategory
-    @JsonKey(name: '_productCategory')
-        Element? productCategoryElement,
+    @JsonKey(name: '_productCategory') Element? productCategoryElement,
 
     /// [productCode] A code that identifies the kind of this biologically
     ///  derived product (SNOMED Ctcode).
@@ -207,8 +203,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [request] Procedure request to obtain this biologically derived product.
     List<Reference>? request,
@@ -217,8 +212,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     FhirInteger? quantity,
 
     /// [quantityElement] Extensions for quantity
-    @JsonKey(name: '_quantity')
-        Element? quantityElement,
+    @JsonKey(name: '_quantity') Element? quantityElement,
 
     /// [parent] Parent product (if any).
     List<Reference>? parent,
@@ -312,7 +306,7 @@ class BiologicallyDerivedProductCollection
   /// [collectedDateTimeElement] Extensions for collectedDateTime
   ///
   /// [collectedPeriod] Time of product collection.
-  factory BiologicallyDerivedProductCollection({
+  const factory BiologicallyDerivedProductCollection({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -423,7 +417,7 @@ class BiologicallyDerivedProductProcessing
   /// [timeDateTimeElement] Extensions for timeDateTime
   ///
   /// [timePeriod] Time of processing.
-  factory BiologicallyDerivedProductProcessing({
+  const factory BiologicallyDerivedProductProcessing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -536,7 +530,7 @@ class BiologicallyDerivedProductManipulation
   /// [timeDateTimeElement] Extensions for timeDateTime
   ///
   /// [timePeriod] Time of manipulation.
-  factory BiologicallyDerivedProductManipulation({
+  const factory BiologicallyDerivedProductManipulation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -646,7 +640,7 @@ class BiologicallyDerivedProductStorage
   /// [scaleElement] Extensions for scale
   ///
   /// [duration] Storage timeperiod.
-  factory BiologicallyDerivedProductStorage({
+  const factory BiologicallyDerivedProductStorage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -870,17 +864,17 @@ class Device with Resource, _$Device {
   ///  device.  For example devices containing latex.
   ///
   /// [parent] The parent device.
-  factory Device({
+  const factory Device({
     @Default(R4ResourceType.Device)
     @JsonKey(unknownEnumValue: R4ResourceType.Device)
 
-        /// [resourceType] This is a Device resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Device resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -894,15 +888,13 @@ class Device with Resource, _$Device {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -924,8 +916,7 @@ class Device with Resource, _$Device {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -959,8 +950,7 @@ class Device with Resource, _$Device {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [statusReason] Reason for the dtatus of the Device availability.
     List<CodeableConcept>? statusReason,
@@ -971,45 +961,39 @@ class Device with Resource, _$Device {
     String? distinctIdentifier,
 
     /// [distinctIdentifierElement] Extensions for distinctIdentifier
-    @JsonKey(name: '_distinctIdentifier')
-        Element? distinctIdentifierElement,
+    @JsonKey(name: '_distinctIdentifier') Element? distinctIdentifierElement,
 
     /// [manufacturer] A name of the manufacturer.
     String? manufacturer,
 
     /// [manufacturerElement] Extensions for manufacturer
-    @JsonKey(name: '_manufacturer')
-        Element? manufacturerElement,
+    @JsonKey(name: '_manufacturer') Element? manufacturerElement,
 
     /// [manufactureDate] The date and time when the device was manufactured.
     FhirDateTime? manufactureDate,
 
     /// [manufactureDateElement] Extensions for manufactureDate
-    @JsonKey(name: '_manufactureDate')
-        Element? manufactureDateElement,
+    @JsonKey(name: '_manufactureDate') Element? manufactureDateElement,
 
     /// [expirationDate] The date and time beyond which this device is no longer
     ///  valid or should not be used (if applicable).
     FhirDateTime? expirationDate,
 
     /// [expirationDateElement] Extensions for expirationDate
-    @JsonKey(name: '_expirationDate')
-        Element? expirationDateElement,
+    @JsonKey(name: '_expirationDate') Element? expirationDateElement,
 
     /// [lotNumber] Lot number assigned by the manufacturer.
     String? lotNumber,
 
     /// [lotNumberElement] Extensions for lotNumber
-    @JsonKey(name: '_lotNumber')
-        Element? lotNumberElement,
+    @JsonKey(name: '_lotNumber') Element? lotNumberElement,
 
     /// [serialNumber] The serial number assigned by the organization when the
     ///  device was manufactured.
     String? serialNumber,
 
     /// [serialNumberElement] Extensions for serialNumber
-    @JsonKey(name: '_serialNumber')
-        Element? serialNumberElement,
+    @JsonKey(name: '_serialNumber') Element? serialNumberElement,
 
     /// [deviceName] This represents the manufacturer's name of the device as
     /// provided by the device, from a UDI label, or by a person describing the
@@ -1022,15 +1006,13 @@ class Device with Resource, _$Device {
     String? modelNumber,
 
     /// [modelNumberElement] Extensions for modelNumber
-    @JsonKey(name: '_modelNumber')
-        Element? modelNumberElement,
+    @JsonKey(name: '_modelNumber') Element? modelNumberElement,
 
     /// [partNumber] The part number of the device.
     String? partNumber,
 
     /// [partNumberElement] Extensions for partNumber
-    @JsonKey(name: '_partNumber')
-        Element? partNumberElement,
+    @JsonKey(name: '_partNumber') Element? partNumberElement,
 
     /// [type] The kind or type of device.
     CodeableConcept? type,
@@ -1066,8 +1048,7 @@ class Device with Resource, _$Device {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [note] Descriptive information, usage information or implantation
     ///  information that is not captured in an existing element.
@@ -1186,7 +1167,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   /// [entryType] A coded entry to indicate how the data was entered.
   ///
   /// [entryTypeElement] Extensions for entryType
-  factory DeviceUdiCarrier({
+  const factory DeviceUdiCarrier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1346,7 +1327,7 @@ class DeviceDeviceName with _$DeviceDeviceName {
   ///  ManufactureDeviceName | ModelName.
   ///
   /// [typeElement] Extensions for type
-  factory DeviceDeviceName({
+  const factory DeviceDeviceName({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1460,7 +1441,7 @@ class DeviceSpecialization with _$DeviceSpecialization {
   ///  communicate.
   ///
   /// [versionElement] Extensions for version
-  factory DeviceSpecialization({
+  const factory DeviceSpecialization({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1571,7 +1552,7 @@ class DeviceVersion with _$DeviceVersion {
   /// [value] The version text.
   ///
   /// [valueElement] Extensions for value
-  factory DeviceVersion({
+  const factory DeviceVersion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1683,7 +1664,7 @@ class DeviceProperty with _$DeviceProperty {
   /// [valueQuantity] Property value as a quantity.
   ///
   /// [valueCode] Property value as a code, e.g., NTP4 (synced to NTP).
-  factory DeviceProperty({
+  const factory DeviceProperty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1866,17 +1847,17 @@ class DeviceMetric with Resource, _$DeviceMetric {
   ///
   /// [calibration] Describes the calibrations that have been performed or that
   ///  are required to be performed.
-  factory DeviceMetric({
+  const factory DeviceMetric({
     @Default(R4ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
 
-        /// [resourceType] This is a DeviceMetric resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a DeviceMetric resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1890,15 +1871,13 @@ class DeviceMetric with Resource, _$DeviceMetric {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1920,8 +1899,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1969,8 +1947,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
     FhirCode? operationalStatus,
 
     /// [operationalStatusElement] Extensions for operationalStatus
-    @JsonKey(name: '_operationalStatus')
-        Element? operationalStatusElement,
+    @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
 
     /// [color] Describes the color representation for the metric. This is often
     /// used to aid clinicians to track and identify parameter types by color. In
@@ -1980,16 +1957,14 @@ class DeviceMetric with Resource, _$DeviceMetric {
     FhirCode? color,
 
     /// [colorElement] Extensions for color
-    @JsonKey(name: '_color')
-        Element? colorElement,
+    @JsonKey(name: '_color') Element? colorElement,
 
     /// [category] Indicates the category of the observation generation process.
     ///  A DeviceMetric can be for example a setting, measurement, or calculation.
     FhirCode? category,
 
     /// [categoryElement] Extensions for category
-    @JsonKey(name: '_category')
-        Element? categoryElement,
+    @JsonKey(name: '_category') Element? categoryElement,
 
     /// [measurementPeriod] Describes the measurement repetition time. This is
     /// not necessarily the same as the update period. The measurement repetition
@@ -2079,7 +2054,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   /// [time] Describes the time last calibration has been performed.
   ///
   /// [timeElement] Extensions for time
-  factory DeviceMetricCalibration({
+  const factory DeviceMetricCalibration({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2207,9 +2182,10 @@ class NutritionProduct with Resource, _$NutritionProduct {
   /// [instance] Conveys instance-level information about this product item. One or several physical, countable instances or occurrences of the product.;
   ///
   /// [note] Comments made about the product.;
-  factory NutritionProduct({
+  const factory NutritionProduct({
     /// [resourceType] This is a NutritionProduct resource;
     @Default(R4ResourceType.NutritionProduct) R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
     @JsonKey(name: 'id') String? fhirId,
@@ -2320,7 +2296,7 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
   /// [item] The (relevant) nutrients in the product.;
   ///
   /// [amount] The amount of nutrient expressed in one or more units: X per pack / per serving / per dose.;
-  factory NutritionProductNutrient({
+  const factory NutritionProductNutrient({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
 
     @JsonKey(name: 'id') String? fhirId,
@@ -2392,7 +2368,7 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
   /// [item] The ingredient contained in the product.;
   ///
   /// [amount] The amount of ingredient that is in the product.;
-  factory NutritionProductIngredient({
+  const factory NutritionProductIngredient({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
 
     @JsonKey(name: 'id') String? fhirId,
@@ -2479,7 +2455,7 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   /// [valueBoolean] The actual characteristic value corresponding to the type.;
   ///
   /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
-  factory NutritionProductCharacteristic({
+  const factory NutritionProductCharacteristic({
     /// [id] Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
 
     @JsonKey(name: 'id') String? fhirId,
@@ -2600,7 +2576,7 @@ class NutritionProductInstance with _$NutritionProductInstance {
   /// [useByElement] (_useBy): Extensions for useBy;
   ///
   /// [biologicalSource] An identifier that supports traceability to the biological entity that is the source of biological material in the product.;
-  factory NutritionProductInstance({
+  const factory NutritionProductInstance({
     @JsonKey(name: 'id') String? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2729,10 +2705,11 @@ class Substance with Resource, _$Substance {
   ///  specific package/container of the substance: an instance.
   ///
   /// [ingredient] A substance can be composed of other substances.
-  factory Substance({
+  const factory Substance({
     @Default(R4ResourceType.Substance)
     @JsonKey(unknownEnumValue: R4ResourceType.Substance)
-        R4ResourceType resourceType,
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') String? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -2829,7 +2806,7 @@ class SubstanceInstance with _$SubstanceInstance {
   /// [expiryElement] Extensions for expiry
   ///
   /// [quantity] The amount of the substance.
-  factory SubstanceInstance({
+  const factory SubstanceInstance({
     @JsonKey(name: 'id') String? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -2911,7 +2888,7 @@ class SubstanceIngredient with _$SubstanceIngredient {
   ///
   /// [substanceReference] Another substance that is a component of this
   ///  substance.
-  factory SubstanceIngredient({
+  const factory SubstanceIngredient({
     @JsonKey(name: 'id') String? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,

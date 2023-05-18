@@ -213,17 +213,17 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   /// [messaging] A description of the messaging capabilities of the solution.
   ///
   /// [document] A document definition.
-  factory CapabilityStatement({
+  const factory CapabilityStatement({
     @Default(R4ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: R4ResourceType.CapabilityStatement)
 
-        /// [resourceType] This is a CapabilityStatement resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a CapabilityStatement resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -237,15 +237,13 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -267,8 +265,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -295,8 +292,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [version] The identifier that is used to identify this version of the
     /// capability statement when it is referenced in a specification, model,
@@ -308,8 +304,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the capability statement. This
     /// name should be usable as an identifier for the module by machine
@@ -317,24 +312,21 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the capability
     ///  statement.
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this capability statement. Enables tracking the
     ///  life-cycle of the content.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this capability statement
     /// is authored for testing purposes (or education/evaluation/marketing) and
@@ -342,8 +334,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the capability statement was
     /// published. The date must change when the business version changes and it
@@ -352,16 +343,14 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  capability statement.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -374,8 +363,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -393,8 +381,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the capability statement
     /// and/or its contents. Copyright statements are generally legal restrictions
@@ -402,8 +389,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [kind] The way that this statement is intended to be used, to describe an
     /// actual running instance of software, a particular product (kind, not
@@ -412,8 +398,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     FhirCode? kind,
 
     /// [kindElement] Extensions for kind
-    @JsonKey(name: '_kind')
-        Element? kindElement,
+    @JsonKey(name: '_kind') Element? kindElement,
 
     /// [instantiates] Reference to a canonical URL of another
     /// CapabilityStatement that this software implements. This capability
@@ -446,24 +431,21 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     FhirCode? fhirVersion,
 
     /// [fhirVersionElement] Extensions for fhirVersion
-    @JsonKey(name: '_fhirVersion')
-        Element? fhirVersionElement,
+    @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
 
     /// [format] A list of the formats supported by this implementation using
     ///  their content types.
     List<FhirCode>? format,
 
     /// [formatElement] Extensions for format
-    @JsonKey(name: '_format')
-        List<Element?>? formatElement,
+    @JsonKey(name: '_format') List<Element?>? formatElement,
 
     /// [patchFormat] A list of the patch formats supported by this
     ///  implementation using their content types.
     List<FhirCode>? patchFormat,
 
     /// [patchFormatElement] Extensions for patchFormat
-    @JsonKey(name: '_patchFormat')
-        List<Element?>? patchFormatElement,
+    @JsonKey(name: '_patchFormat') List<Element?>? patchFormatElement,
 
     /// [implementationGuide] A list of implementation guides that the server
     ///  does (or should) support in their entirety.
@@ -554,7 +536,7 @@ class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   /// [releaseDate] Date this version of the software was released.
   ///
   /// [releaseDateElement] Extensions for releaseDate
-  factory CapabilityStatementSoftware({
+  const factory CapabilityStatementSoftware({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -679,7 +661,7 @@ class CapabilityStatementImplementation
   ///
   /// [custodian] The organization responsible for the management of the
   ///  instance and oversight of the data on the server at the specified URL.
-  factory CapabilityStatementImplementation({
+  const factory CapabilityStatementImplementation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -817,7 +799,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
   /// [compartment] An absolute URI which is a reference to the definition of a
   /// compartment that the system supports. The reference is to a
   ///  CompartmentDefinition resource by its canonical URL .
-  factory CapabilityStatementRest({
+  const factory CapabilityStatementRest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -970,7 +952,7 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   /// [description] General description of how security works.
   ///
   /// [descriptionElement] Extensions for description
-  factory CapabilityStatementSecurity({
+  const factory CapabilityStatementSecurity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1177,7 +1159,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   /// parameters and their meaning and type. Consult the definition of the
   /// operation for details about how to invoke the operation, and the
   ///  parameters.
-  factory CapabilityStatementResource({
+  const factory CapabilityStatementResource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1408,7 +1390,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   ///  certificates only'.
   ///
   /// [documentationElement] Extensions for documentation
-  factory CapabilityStatementInteraction({
+  const factory CapabilityStatementInteraction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1547,7 +1529,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   ///  how the search parameter is used.  For example, text matching algorithms.
   ///
   /// [documentationElement] Extensions for documentation
-  factory CapabilityStatementSearchParam({
+  const factory CapabilityStatementSearchParam({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1695,7 +1677,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
   ///  and instance-level invocation of the operation.
   ///
   /// [documentationElement] Extensions for documentation
-  factory CapabilityStatementOperation({
+  const factory CapabilityStatementOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1832,7 +1814,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   ///  information about system wide search is implemented.
   ///
   /// [documentationElement] Extensions for documentation
-  factory CapabilityStatementInteraction1({
+  const factory CapabilityStatementInteraction1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1966,7 +1948,7 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   ///
   /// [supportedMessage] References to message definitions for messages this
   ///  system can send or receive.
-  factory CapabilityStatementMessaging({
+  const factory CapabilityStatementMessaging({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2099,7 +2081,7 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   ///  use network addresses for routing, it can be just an identifier.
   ///
   /// [addressElement] Extensions for address
-  factory CapabilityStatementEndpoint({
+  const factory CapabilityStatementEndpoint({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2219,7 +2201,7 @@ class CapabilityStatementSupportedMessage
   ///
   /// [definition] Points to a message definition that identifies the messaging
   ///  event, message structure, allowed responses, etc.
-  factory CapabilityStatementSupportedMessage({
+  const factory CapabilityStatementSupportedMessage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2333,7 +2315,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
   ///
   /// [profile] A profile on the document Bundle that constrains which
   ///  resources are present, and their contents.
-  factory CapabilityStatementDocument({
+  const factory CapabilityStatementDocument({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2553,17 +2535,17 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   ///
   /// [resource] Information about how a resource is related to the
   ///  compartment.
-  factory CompartmentDefinition({
+  const factory CompartmentDefinition({
     @Default(R4ResourceType.CompartmentDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.CompartmentDefinition)
 
-        /// [resourceType] This is a CompartmentDefinition resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a CompartmentDefinition resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2577,15 +2559,13 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2607,8 +2587,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2635,8 +2614,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [version] The identifier that is used to identify this version of the
     /// compartment definition when it is referenced in a specification, model,
@@ -2648,8 +2626,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the compartment definition.
     /// This name should be usable as an identifier for the module by machine
@@ -2657,16 +2634,14 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [status] The status of this compartment definition. Enables tracking the
     ///  life-cycle of the content.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this compartment
     /// definition is authored for testing purposes (or
@@ -2675,8 +2650,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the compartment definition
     /// was published. The date must change when the business version changes and
@@ -2685,16 +2659,14 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  compartment definition.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -2705,8 +2677,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -2720,22 +2691,19 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [code] Which compartment this definition describes.
     FhirCode? code,
 
     /// [codeElement] Extensions for code
-    @JsonKey(name: '_code')
-        Element? codeElement,
+    @JsonKey(name: '_code') Element? codeElement,
 
     /// [search] Whether the search syntax is supported,.
     FhirBoolean? search,
 
     /// [searchElement] Extensions for search
-    @JsonKey(name: '_search')
-        Element? searchElement,
+    @JsonKey(name: '_search') Element? searchElement,
 
     /// [resource] Information about how a resource is related to the
     ///  compartment.
@@ -2817,7 +2785,7 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   ///  compartment.
   ///
   /// [documentationElement] Extensions for documentation
-  factory CompartmentDefinitionResource({
+  const factory CompartmentDefinitionResource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3045,17 +3013,17 @@ class ExampleScenario with Resource, _$ExampleScenario {
   /// [process] Each major process - a group of operations.
   ///
   /// [workflow] Another nested workflow.
-  factory ExampleScenario({
+  const factory ExampleScenario({
     @Default(R4ResourceType.ExampleScenario)
     @JsonKey(unknownEnumValue: R4ResourceType.ExampleScenario)
 
-        /// [resourceType] This is a ExampleScenario resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a ExampleScenario resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -3069,15 +3037,13 @@ class ExampleScenario with Resource, _$ExampleScenario {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -3099,8 +3065,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -3127,8 +3092,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this example
     /// scenario when it is represented in other formats, or referenced in a
@@ -3145,8 +3109,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the example scenario. This
     /// name should be usable as an identifier for the module by machine
@@ -3154,16 +3117,14 @@ class ExampleScenario with Resource, _$ExampleScenario {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [status] The status of this example scenario. Enables tracking the
     ///  life-cycle of the content.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this example scenario is
     /// authored for testing purposes (or education/evaluation/marketing) and is
@@ -3171,8 +3132,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the example scenario was
     /// published. The date must change when the business version changes and it
@@ -3182,16 +3142,14 @@ class ExampleScenario with Resource, _$ExampleScenario {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  example scenario.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -3214,8 +3172,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
     FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [purpose] What the example scenario resource is created for. This should
     /// not be used to show the business purpose of the scenario itself, but the
@@ -3223,8 +3180,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [actor] Actor participating in the resource.
     List<ExampleScenarioActor>? actor,
@@ -3315,7 +3271,7 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
   /// [description] The description of the actor.
   ///
   /// [descriptionElement] Extensions for description
-  factory ExampleScenarioActor({
+  const factory ExampleScenarioActor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3451,7 +3407,7 @@ class ExampleScenarioInstance with _$ExampleScenarioInstance {
   ///
   /// [containedInstance] Resources contained in the instance (e.g. the
   ///  observations contained in a bundle).
-  factory ExampleScenarioInstance({
+  const factory ExampleScenarioInstance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3581,7 +3537,7 @@ class ExampleScenarioVersion with _$ExampleScenarioVersion {
   /// [description] The description of the resource version.
   ///
   /// [descriptionElement] Extensions for description
-  factory ExampleScenarioVersion({
+  const factory ExampleScenarioVersion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3692,7 +3648,7 @@ class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
   /// [versionId] A specific version of a resource contained in the instance.
   ///
   /// [versionIdElement] Extensions for versionId
-  factory ExampleScenarioContainedInstance({
+  const factory ExampleScenarioContainedInstance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3802,7 +3758,7 @@ class ExampleScenarioProcess with _$ExampleScenarioProcess {
   /// [postConditionsElement] Extensions for postConditions
   ///
   /// [step] Each step of the process.
-  factory ExampleScenarioProcess({
+  const factory ExampleScenarioProcess({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3931,7 +3887,7 @@ class ExampleScenarioStep with _$ExampleScenarioStep {
   ///
   /// [alternative] Indicates an alternative step that can be taken instead of
   ///  the operations on the base step in exceptional/atypical circumstances.
-  factory ExampleScenarioStep({
+  const factory ExampleScenarioStep({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4076,7 +4032,7 @@ class ExampleScenarioOperation with _$ExampleScenarioOperation {
   /// [request] Each resource instance used by the initiator.
   ///
   /// [response] Each resource instance used by the responder.
-  factory ExampleScenarioOperation({
+  const factory ExampleScenarioOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4235,7 +4191,7 @@ class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
   /// [descriptionElement] Extensions for description
   ///
   /// [step] What happens in each alternative option.
-  factory ExampleScenarioAlternative({
+  const factory ExampleScenarioAlternative({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4454,17 +4410,17 @@ class GraphDefinition with Resource, _$GraphDefinition {
   /// [profile] The profile that describes the use of the base resource.
   ///
   /// [link] Links this graph makes rules about.
-  factory GraphDefinition({
+  const factory GraphDefinition({
     @Default(R4ResourceType.GraphDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.GraphDefinition)
 
-        /// [resourceType] This is a GraphDefinition resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a GraphDefinition resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -4478,15 +4434,13 @@ class GraphDefinition with Resource, _$GraphDefinition {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -4508,8 +4462,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -4536,8 +4489,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [version] The identifier that is used to identify this version of the
     /// graph definition when it is referenced in a specification, model, design
@@ -4549,8 +4501,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the graph definition. This
     /// name should be usable as an identifier for the module by machine
@@ -4558,16 +4509,14 @@ class GraphDefinition with Resource, _$GraphDefinition {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [status] The status of this graph definition. Enables tracking the
     ///  life-cycle of the content.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this graph definition is
     /// authored for testing purposes (or education/evaluation/marketing) and is
@@ -4575,8 +4524,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the graph definition was
     /// published. The date must change when the business version changes and it
@@ -4585,16 +4533,14 @@ class GraphDefinition with Resource, _$GraphDefinition {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  graph definition.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -4605,8 +4551,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -4624,15 +4569,13 @@ class GraphDefinition with Resource, _$GraphDefinition {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [start] The type of FHIR resource at which instances of this graph start.
     FhirCode? start,
 
     /// [startElement] Extensions for start
-    @JsonKey(name: '_start')
-        Element? startElement,
+    @JsonKey(name: '_start') Element? startElement,
 
     /// [profile] The profile that describes the use of the base resource.
     FhirCanonical? profile,
@@ -4727,7 +4670,7 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
   /// [descriptionElement] Extensions for description
   ///
   /// [target] Potential target for the link.
-  factory GraphDefinitionLink({
+  const factory GraphDefinitionLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4870,7 +4813,7 @@ class GraphDefinitionTarget with _$GraphDefinitionTarget {
   /// [compartment] Compartment Consistency Rules.
   ///
   /// [link] Additional links from target resource.
-  factory GraphDefinitionTarget({
+  const factory GraphDefinitionTarget({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5007,7 +4950,7 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   /// [description] Documentation for FHIRPath expression.
   ///
   /// [descriptionElement] Extensions for description
-  factory GraphDefinitionCompartment({
+  const factory GraphDefinitionCompartment({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5273,17 +5216,17 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   ///
   /// [manifest] Information about an assembled implementation guide, created
   ///  by the publication tooling.
-  factory ImplementationGuide({
+  const factory ImplementationGuide({
     @Default(R4ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: R4ResourceType.ImplementationGuide)
 
-        /// [resourceType] This is a ImplementationGuide resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a ImplementationGuide resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -5297,15 +5240,13 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -5327,8 +5268,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -5355,8 +5295,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [version] The identifier that is used to identify this version of the
     /// implementation guide when it is referenced in a specification, model,
@@ -5368,8 +5307,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the implementation guide. This
     /// name should be usable as an identifier for the module by machine
@@ -5377,24 +5315,21 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the implementation
     ///  guide.
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this implementation guide. Enables tracking the
     ///  life-cycle of the content.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this implementation guide
     /// is authored for testing purposes (or education/evaluation/marketing) and
@@ -5402,8 +5337,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the implementation guide was
     /// published. The date must change when the business version changes and it
@@ -5412,16 +5346,14 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  implementation guide.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -5432,8 +5364,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -5452,8 +5383,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [packageId] The NPM package name for this Implementation Guide, used in
     /// the NPM package distribution, which is the primary mechanism by which FHIR
@@ -5462,16 +5392,14 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     FhirId? packageId,
 
     /// [packageIdElement] Extensions for packageId
-    @JsonKey(name: '_packageId')
-        Element? packageIdElement,
+    @JsonKey(name: '_packageId') Element? packageIdElement,
 
     /// [license] The license that applies to this Implementation Guide, using an
     ///  SPDX license code, or 'not-open-source'.
     FhirCode? license,
 
     /// [licenseElement] Extensions for license
-    @JsonKey(name: '_license')
-        Element? licenseElement,
+    @JsonKey(name: '_license') Element? licenseElement,
 
     /// [fhirVersion] The version(s) of the FHIR specification that this
     /// ImplementationGuide targets - e.g. describes how to use. The value of this
@@ -5481,8 +5409,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
     List<FhirCode>? fhirVersion,
 
     /// [fhirVersionElement] Extensions for fhirVersion
-    @JsonKey(name: '_fhirVersion')
-        List<Element?>? fhirVersionElement,
+    @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
 
     /// [dependsOn] Another implementation guide that this implementation depends
     /// on. Typically, an implementation guide uses value sets, profiles
@@ -5578,7 +5505,7 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   ///  version is required to understand the IG correctly.
   ///
   /// [versionElement] Extensions for version
-  factory ImplementationGuideDependsOn({
+  const factory ImplementationGuideDependsOn({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5697,7 +5624,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   /// [typeElement] Extensions for type
   ///
   /// [profile] A reference to the profile that all instances must conform to.
-  factory ImplementationGuideGlobal({
+  const factory ImplementationGuideGlobal({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5816,7 +5743,7 @@ class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
   /// [parameter] Defines how IG is built by tools.
   ///
   /// [template] A template for building resources.
-  factory ImplementationGuideDefinition({
+  const factory ImplementationGuideDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5940,7 +5867,7 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   /// [description] Human readable text describing the package.
   ///
   /// [descriptionElement] Extensions for description
-  factory ImplementationGuideGrouping({
+  const factory ImplementationGuideGrouping({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6084,7 +6011,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
   ///  in.
   ///
   /// [groupingIdElement] Extensions for groupingId
-  factory ImplementationGuideResource({
+  const factory ImplementationGuideResource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6245,7 +6172,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
   /// [generationElement] Extensions for generation
   ///
   /// [page] Nested Pages/Sections under this page.
-  factory ImplementationGuidePage({
+  const factory ImplementationGuidePage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6375,7 +6302,7 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
   /// [value] Value for named type.
   ///
   /// [valueElement] Extensions for value
-  factory ImplementationGuideParameter({
+  const factory ImplementationGuideParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6496,7 +6423,7 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   /// [scope] The scope in which the template applies.
   ///
   /// [scopeElement] Extensions for scope
-  factory ImplementationGuideTemplate({
+  const factory ImplementationGuideTemplate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6631,7 +6558,7 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
   ///  be the target of a hyperlink in a derived IG.
   ///
   /// [otherElement] Extensions for other
-  factory ImplementationGuideManifest({
+  const factory ImplementationGuideManifest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6775,7 +6702,7 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   ///  within the IG.
   ///
   /// [relativePathElement] Extensions for relativePath
-  factory ImplementationGuideResource1({
+  const factory ImplementationGuideResource1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6908,7 +6835,7 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
   /// [anchor] The name of an anchor available on the page.
   ///
   /// [anchorElement] Extensions for anchor
-  factory ImplementationGuidePage1({
+  const factory ImplementationGuidePage1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -7167,17 +7094,17 @@ class MessageDefinition with Resource, _$MessageDefinition {
   /// what resources are to be added to the bundle when building the document.
   /// The GraphDefinition can also specify profiles that apply to the various
   ///  resources.
-  factory MessageDefinition({
+  const factory MessageDefinition({
     @Default(R4ResourceType.MessageDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.MessageDefinition)
 
-        /// [resourceType] This is a MessageDefinition resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a MessageDefinition resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -7191,15 +7118,13 @@ class MessageDefinition with Resource, _$MessageDefinition {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -7221,8 +7146,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -7245,8 +7169,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this message
     /// definition when it is represented in other formats, or referenced in a
@@ -7263,8 +7186,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the message definition. This
     /// name should be usable as an identifier for the module by machine
@@ -7272,16 +7194,14 @@ class MessageDefinition with Resource, _$MessageDefinition {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the message
     ///  definition.
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [replaces] A MessageDefinition that is superseded by this definition.
     List<FhirCanonical>? replaces,
@@ -7291,8 +7211,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this message definition
     /// is authored for testing purposes (or education/evaluation/marketing) and
@@ -7300,8 +7219,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the message definition was
     /// published. The date must change when the business version changes and it
@@ -7310,16 +7228,14 @@ class MessageDefinition with Resource, _$MessageDefinition {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  message definition.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -7330,8 +7246,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -7349,8 +7264,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the message definition
     /// and/or its contents. Copyright statements are generally legal restrictions
@@ -7358,8 +7272,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [base] The MessageDefinition that is the basis for the contents of this
     ///  resource.
@@ -7376,15 +7289,13 @@ class MessageDefinition with Resource, _$MessageDefinition {
     FhirUri? eventUri,
 
     /// [eventUriElement] Extensions for eventUri
-    @JsonKey(name: '_eventUri')
-        Element? eventUriElement,
+    @JsonKey(name: '_eventUri') Element? eventUriElement,
 
     /// [category] The impact of the content of the message.
     FhirCode? category,
 
     /// [categoryElement] Extensions for category
-    @JsonKey(name: '_category')
-        Element? categoryElement,
+    @JsonKey(name: '_category') Element? categoryElement,
 
     /// [focus] Identifies the resource (or resources) that are being addressed
     /// by the event.  For example, the Encounter for an admit message or two
@@ -7396,8 +7307,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
     FhirCode? responseRequired,
 
     /// [responseRequiredElement] Extensions for responseRequired
-    @JsonKey(name: '_responseRequired')
-        Element? responseRequiredElement,
+    @JsonKey(name: '_responseRequired') Element? responseRequiredElement,
 
     /// [allowedResponse] Indicates what types of messages may be sent as an
     ///  application-level response to this message.
@@ -7492,7 +7402,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
   ///  MessageDefinition.
   ///
   /// [maxElement] Extensions for max
-  factory MessageDefinitionFocus({
+  const factory MessageDefinitionFocus({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -7620,7 +7530,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
   ///  response should be used (as opposed to one of the alternative responses).
   ///
   /// [situationElement] Extensions for situation
-  factory MessageDefinitionAllowedResponse({
+  const factory MessageDefinitionAllowedResponse({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -7873,17 +7783,17 @@ class OperationDefinition with Resource, _$OperationDefinition {
   /// [overload] Defines an appropriate combination of parameters to use when
   /// invoking this operation, to help code generators when generating
   ///  overloaded parameter sets for this operation.
-  factory OperationDefinition({
+  const factory OperationDefinition({
     @Default(R4ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.OperationDefinition)
 
-        /// [resourceType] This is a OperationDefinition resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a OperationDefinition resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -7897,15 +7807,13 @@ class OperationDefinition with Resource, _$OperationDefinition {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -7927,8 +7835,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -7955,8 +7862,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [version] The identifier that is used to identify this version of the
     /// operation definition when it is referenced in a specification, model,
@@ -7968,8 +7874,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the operation definition. This
     /// name should be usable as an identifier for the module by machine
@@ -7977,31 +7882,27 @@ class OperationDefinition with Resource, _$OperationDefinition {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the operation
     ///  definition.
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this operation definition. Enables tracking the
     ///  life-cycle of the content.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [kind] Whether this is an operation or a named query.
     FhirCode? kind,
 
     /// [kindElement] Extensions for kind
-    @JsonKey(name: '_kind')
-        Element? kindElement,
+    @JsonKey(name: '_kind') Element? kindElement,
 
     /// [experimental] A Boolean value to indicate that this operation definition
     /// is authored for testing purposes (or education/evaluation/marketing) and
@@ -8009,8 +7910,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the operation definition was
     /// published. The date must change when the business version changes and it
@@ -8019,16 +7919,14 @@ class OperationDefinition with Resource, _$OperationDefinition {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  operation definition.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -8039,8 +7937,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -8058,31 +7955,27 @@ class OperationDefinition with Resource, _$OperationDefinition {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [affectsState] Whether the operation affects state. Side effects such as
     ///  producing audit trail entries do not count as 'affecting  state'.
     FhirBoolean? affectsState,
 
     /// [affectsStateElement] Extensions for affectsState
-    @JsonKey(name: '_affectsState')
-        Element? affectsStateElement,
+    @JsonKey(name: '_affectsState') Element? affectsStateElement,
 
     /// [code] The name used to invoke the operation.
     FhirCode? code,
 
     /// [codeElement] Extensions for code
-    @JsonKey(name: '_code')
-        Element? codeElement,
+    @JsonKey(name: '_code') Element? codeElement,
 
     /// [comment] Additional information about how to use this operation or named
     ///  query.
     FhirMarkdown? comment,
 
     /// [commentElement] Extensions for comment
-    @JsonKey(name: '_comment')
-        Element? commentElement,
+    @JsonKey(name: '_comment') Element? commentElement,
 
     /// [base] Indicates that this operation definition is a constraining profile
     ///  on the base.
@@ -8092,8 +7985,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     List<FhirCode>? resource,
 
     /// [resourceElement] Extensions for resource
-    @JsonKey(name: '_resource')
-        List<Element?>? resourceElement,
+    @JsonKey(name: '_resource') List<Element?>? resourceElement,
 
     /// [system] Indicates whether this operation or named query can be invoked
     /// at the system level (e.g. without needing to choose a resource type for
@@ -8101,8 +7993,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
     FhirBoolean? system,
 
     /// [systemElement] Extensions for system
-    @JsonKey(name: '_system')
-        Element? systemElement,
+    @JsonKey(name: '_system') Element? systemElement,
 
     /// [type] Indicates whether this operation or named query can be invoked at
     /// the resource type level for any given resource type level (e.g. without
@@ -8110,16 +8001,14 @@ class OperationDefinition with Resource, _$OperationDefinition {
     FhirBoolean? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type')
-        Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [instance] Indicates whether this operation can be invoked on a
     ///  particular instance of one of the given types.
     FhirBoolean? instance,
 
     /// [instanceElement] Extensions for instance
-    @JsonKey(name: '_instance')
-        Element? instanceElement,
+    @JsonKey(name: '_instance') Element? instanceElement,
 
     /// [inputProfile] Additional validation information for the in parameters -
     /// a single profile that covers all the parameters. The profile is a
@@ -8250,7 +8139,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
   ///  operation invocation that are expected to resolve to this resource.
   ///
   /// [part] The parts of a nested Parameter.
-  factory OperationDefinitionParameter({
+  const factory OperationDefinitionParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -8419,7 +8308,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
   ///
   /// [valueSet] Points to the value set or external definition (e.g. implicit
   ///  value set) that identifies the set of codes to be used.
-  factory OperationDefinitionBinding({
+  const factory OperationDefinitionBinding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -8534,7 +8423,7 @@ class OperationDefinitionReferencedFrom
   ///  expected to resolve to this resource.
   ///
   /// [sourceIdElement] Extensions for sourceId
-  factory OperationDefinitionReferencedFrom({
+  const factory OperationDefinitionReferencedFrom({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -8639,7 +8528,7 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
   /// [comment] Comments to go on overload.
   ///
   /// [commentElement] Extensions for comment
-  factory OperationDefinitionOverload({
+  const factory OperationDefinitionOverload({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -8913,17 +8802,17 @@ class SearchParameter with Resource, _$SearchParameter {
   /// [chainElement] Extensions for chain
   ///
   /// [component] Used to define the parts of a composite search parameter.
-  factory SearchParameter({
+  const factory SearchParameter({
     @Default(R4ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: R4ResourceType.SearchParameter)
 
-        /// [resourceType] This is a SearchParameter resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a SearchParameter resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -8937,15 +8826,13 @@ class SearchParameter with Resource, _$SearchParameter {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -8967,8 +8854,7 @@ class SearchParameter with Resource, _$SearchParameter {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -8995,8 +8881,7 @@ class SearchParameter with Resource, _$SearchParameter {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [version] The identifier that is used to identify this version of the
     /// search parameter when it is referenced in a specification, model, design
@@ -9008,8 +8893,7 @@ class SearchParameter with Resource, _$SearchParameter {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the search parameter. This
     /// name should be usable as an identifier for the module by machine
@@ -9017,8 +8901,7 @@ class SearchParameter with Resource, _$SearchParameter {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [derivedFrom] Where this search parameter is originally defined. If a
     /// derivedFrom is provided, then the details in the search parameter must be
@@ -9032,8 +8915,7 @@ class SearchParameter with Resource, _$SearchParameter {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this search parameter is
     /// authored for testing purposes (or education/evaluation/marketing) and is
@@ -9041,8 +8923,7 @@ class SearchParameter with Resource, _$SearchParameter {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the search parameter was
     /// published. The date must change when the business version changes and it
@@ -9051,16 +8932,14 @@ class SearchParameter with Resource, _$SearchParameter {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  search parameter.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -9070,8 +8949,7 @@ class SearchParameter with Resource, _$SearchParameter {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -9089,63 +8967,55 @@ class SearchParameter with Resource, _$SearchParameter {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [code] The code used in the URL or the parameter name in a parameters
     ///  resource for this search parameter.
     FhirCode? code,
 
     /// [codeElement] Extensions for code
-    @JsonKey(name: '_code')
-        Element? codeElement,
+    @JsonKey(name: '_code') Element? codeElement,
 
     /// [base] The base resource type(s) that this search parameter can be used
     ///  against.
     List<FhirCode>? base,
 
     /// [baseElement] Extensions for base
-    @JsonKey(name: '_base')
-        List<Element?>? baseElement,
+    @JsonKey(name: '_base') List<Element?>? baseElement,
 
     /// [type] The type of value that a search parameter may contain, and how the
     ///  content is interpreted.
     FhirCode? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type')
-        Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [expression] A FHIRPath expression that returns a set of elements for the
     ///  search parameter.
     String? expression,
 
     /// [expressionElement] Extensions for expression
-    @JsonKey(name: '_expression')
-        Element? expressionElement,
+    @JsonKey(name: '_expression') Element? expressionElement,
 
     /// [xpath] An XPath expression that returns a set of elements for the search
     ///  parameter.
     String? xpath,
 
     /// [xpathElement] Extensions for xpath
-    @JsonKey(name: '_xpath')
-        Element? xpathElement,
+    @JsonKey(name: '_xpath') Element? xpathElement,
 
     /// [xpathUsage] How the search parameter relates to the set of elements
     ///  returned by evaluating the xpath query.
     FhirCode? xpathUsage,
 
     /// [xpathUsageElement] Extensions for xpathUsage
-    @JsonKey(name: '_xpathUsage')
-        Element? xpathUsageElement,
+    @JsonKey(name: '_xpathUsage') Element? xpathUsageElement,
 
     /// [target] Types of resource (if a resource is referenced).
     List<FhirCode>? target,
 
     /// [targetElement] Extensions for target
-    @JsonKey(name: '_target')
-        List<Element?>? targetElement,
+    @JsonKey(name: '_target') List<Element?>? targetElement,
 
     /// [multipleOr] Whether multiple values are allowed for each time the
     /// parameter exists. Values are separated by commas, and the parameter
@@ -9153,8 +9023,7 @@ class SearchParameter with Resource, _$SearchParameter {
     FhirBoolean? multipleOr,
 
     /// [multipleOrElement] Extensions for multipleOr
-    @JsonKey(name: '_multipleOr')
-        Element? multipleOrElement,
+    @JsonKey(name: '_multipleOr') Element? multipleOrElement,
 
     /// [multipleAnd] Whether multiple parameters are allowed - e.g. more than
     /// one parameter with the same name. The search matches if all the parameters
@@ -9162,22 +9031,19 @@ class SearchParameter with Resource, _$SearchParameter {
     FhirBoolean? multipleAnd,
 
     /// [multipleAndElement] Extensions for multipleAnd
-    @JsonKey(name: '_multipleAnd')
-        Element? multipleAndElement,
+    @JsonKey(name: '_multipleAnd') Element? multipleAndElement,
 
     /// [comparator] Comparators supported for the search parameter.
     List<FhirCode>? comparator,
 
     /// [comparatorElement] Extensions for comparator
-    @JsonKey(name: '_comparator')
-        List<Element?>? comparatorElement,
+    @JsonKey(name: '_comparator') List<Element?>? comparatorElement,
 
     /// [modifier] A modifier supported for the search parameter.
     List<FhirCode>? modifier,
 
     /// [modifierElement] Extensions for modifier
-    @JsonKey(name: '_modifier')
-        List<Element?>? modifierElement,
+    @JsonKey(name: '_modifier') List<Element?>? modifierElement,
 
     /// [chain] Contains the names of any search parameters which may be chained
     /// to the containing search parameter. Chained parameters may be added to
@@ -9188,8 +9054,7 @@ class SearchParameter with Resource, _$SearchParameter {
     List<String>? chain,
 
     /// [chainElement] Extensions for chain
-    @JsonKey(name: '_chain')
-        List<Element?>? chainElement,
+    @JsonKey(name: '_chain') List<Element?>? chainElement,
 
     /// [component] Used to define the parts of a composite search parameter.
     List<SearchParameterComponent>? component,
@@ -9263,7 +9128,7 @@ class SearchParameterComponent with _$SearchParameterComponent {
   ///  component from the output of the main SearchParameter.expression.
   ///
   /// [expressionElement] Extensions for expression
-  factory SearchParameterComponent({
+  const factory SearchParameterComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -9542,17 +9407,17 @@ class StructureDefinition with Resource, _$StructureDefinition {
   ///
   /// [differential] A differential view is expressed relative to the base
   ///  StructureDefinition - a statement of differences that it applies.
-  factory StructureDefinition({
+  const factory StructureDefinition({
     @Default(R4ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.StructureDefinition)
 
-        /// [resourceType] This is a StructureDefinition resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a StructureDefinition resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -9566,15 +9431,13 @@ class StructureDefinition with Resource, _$StructureDefinition {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -9596,8 +9459,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -9624,8 +9486,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this structure
     /// definition when it is represented in other formats, or referenced in a
@@ -9642,8 +9503,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the structure definition. This
     /// name should be usable as an identifier for the module by machine
@@ -9651,24 +9511,21 @@ class StructureDefinition with Resource, _$StructureDefinition {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the structure
     ///  definition.
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this structure definition. Enables tracking the
     ///  life-cycle of the content.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this structure definition
     /// is authored for testing purposes (or education/evaluation/marketing) and
@@ -9676,8 +9533,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the structure definition was
     /// published. The date must change when the business version changes and it
@@ -9686,16 +9542,14 @@ class StructureDefinition with Resource, _$StructureDefinition {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  structure definition.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -9706,8 +9560,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -9725,8 +9578,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the structure definition
     /// and/or its contents. Copyright statements are generally legal restrictions
@@ -9734,8 +9586,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [keyword] A set of key words or terms from external terminologies that
     /// may be used to assist with indexing and searching of templates nby
@@ -9750,8 +9601,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     FhirCode? fhirVersion,
 
     /// [fhirVersionElement] Extensions for fhirVersion
-    @JsonKey(name: '_fhirVersion')
-        Element? fhirVersionElement,
+    @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
 
     /// [mapping] An external specification that the content is mapped to.
     List<StructureDefinitionMapping>? mapping,
@@ -9760,19 +9610,16 @@ class StructureDefinition with Resource, _$StructureDefinition {
     FhirCode? kind,
 
     /// [kindElement] Extensions for kind
-    @JsonKey(name: '_kind')
-        Element? kindElement,
+    @JsonKey(name: '_kind') Element? kindElement,
 
     /// [abstract] Whether structure this definition describes is abstract or not
     /// - that is, whether the structure is not intended to be instantiated. For
     /// Resources and Data types, abstract types will never be exchanged  between
     ///  systems.
-    @JsonKey(name: 'abstract')
-        FhirBoolean? abstract_,
+    @JsonKey(name: 'abstract') FhirBoolean? abstract_,
 
     /// [abstractElement] Extensions for abstract
-    @JsonKey(name: '_abstract')
-        Element? abstractElement,
+    @JsonKey(name: '_abstract') Element? abstractElement,
 
     /// [context] Identifies the types of resource or data type elements to which
     ///  the extension can be applied.
@@ -9784,8 +9631,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
     List<String>? contextInvariant,
 
     /// [contextInvariantElement] Extensions for contextInvariant
-    @JsonKey(name: '_contextInvariant')
-        List<Element?>? contextInvariantElement,
+    @JsonKey(name: '_contextInvariant') List<Element?>? contextInvariantElement,
 
     /// [type] The type this structure describes. If the derivation kind is
     /// 'specialization' then this is the master definition for a type, and there
@@ -9799,21 +9645,18 @@ class StructureDefinition with Resource, _$StructureDefinition {
     FhirUri? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type')
-        Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [baseDefinition] An absolute URI that is the base structure from which
     ///  this type is derived, either by specialization or constraint.
     FhirCanonical? baseDefinition,
-    @JsonKey(name: '_baseDefinition')
-        Element? baseDefinitionElement,
+    @JsonKey(name: '_baseDefinition') Element? baseDefinitionElement,
 
     /// [derivation] How the type relates to the baseDefinition.
     FhirCode? derivation,
 
     /// [derivationElement] Extensions for derivation
-    @JsonKey(name: '_derivation')
-        Element? derivationElement,
+    @JsonKey(name: '_derivation') Element? derivationElement,
 
     /// [snapshot] A snapshot view is expressed in a standalone form that can be
     ///  used and interpreted without considering the base StructureDefinition.
@@ -9905,7 +9748,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
   ///  scope limitations, and other important notes for usage.
   ///
   /// [commentElement] Extensions for comment
-  factory StructureDefinitionMapping({
+  const factory StructureDefinitionMapping({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -10036,7 +9879,7 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
   ///  resources.
   ///
   /// [expressionElement] Extensions for expression
-  factory StructureDefinitionContext({
+  const factory StructureDefinitionContext({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -10146,7 +9989,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   ///  modifierExtension itself).
   ///
   /// [element] Captures constraints on each element within the resource.
-  factory StructureDefinitionSnapshot({
+  const factory StructureDefinitionSnapshot({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -10245,7 +10088,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   ///  modifierExtension itself).
   ///
   /// [element] Captures constraints on each element within the resource.
-  factory StructureDefinitionDifferential({
+  const factory StructureDefinitionDifferential({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -10464,17 +10307,17 @@ class StructureMap with Resource, _$StructureMap {
   ///
   /// [group] Organizes the mapping into manageable chunks for human
   ///  review/ease of maintenance.
-  factory StructureMap({
+  const factory StructureMap({
     @Default(R4ResourceType.StructureMap)
     @JsonKey(unknownEnumValue: R4ResourceType.StructureMap)
 
-        /// [resourceType] This is a StructureMap resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a StructureMap resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -10488,15 +10331,13 @@ class StructureMap with Resource, _$StructureMap {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -10518,8 +10359,7 @@ class StructureMap with Resource, _$StructureMap {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -10546,8 +10386,7 @@ class StructureMap with Resource, _$StructureMap {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this structure
     /// map when it is represented in other formats, or referenced in a
@@ -10564,8 +10403,7 @@ class StructureMap with Resource, _$StructureMap {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the structure map. This name
     /// should be usable as an identifier for the module by machine processing
@@ -10573,23 +10411,20 @@ class StructureMap with Resource, _$StructureMap {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the structure map.
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this structure map. Enables tracking the
     ///  life-cycle of the content.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this structure map is
     /// authored for testing purposes (or education/evaluation/marketing) and is
@@ -10597,8 +10432,7 @@ class StructureMap with Resource, _$StructureMap {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the structure map was
     /// published. The date must change when the business version changes and it
@@ -10607,16 +10441,14 @@ class StructureMap with Resource, _$StructureMap {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  structure map.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -10627,8 +10459,7 @@ class StructureMap with Resource, _$StructureMap {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -10646,8 +10477,7 @@ class StructureMap with Resource, _$StructureMap {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the structure map and/or
     /// its contents. Copyright statements are generally legal restrictions on the
@@ -10655,8 +10485,7 @@ class StructureMap with Resource, _$StructureMap {
     FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [structure] A structure definition used by this map. The structure
     /// definition may describe instances that are converted, or the instances
@@ -10664,8 +10493,7 @@ class StructureMap with Resource, _$StructureMap {
     List<StructureMapStructure>? structure,
 
     /// [import] Other maps used by this map (canonical URLs).
-    @JsonKey(name: 'import')
-        List<FhirCanonical>? import_,
+    @JsonKey(name: 'import') List<FhirCanonical>? import_,
 
     /// [group] Organizes the mapping into manageable chunks for human
     ///  review/ease of maintenance.
@@ -10747,7 +10575,7 @@ class StructureMapStructure with _$StructureMapStructure {
   ///  the mapping.
   ///
   /// [documentationElement] Extensions for documentation
-  factory StructureMapStructure({
+  const factory StructureMapStructure({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -10884,7 +10712,7 @@ class StructureMapGroup with _$StructureMapGroup {
   ///  provided when the mapping is invoked.
   ///
   /// [rule] Transform Rule from source to target.
-  factory StructureMapGroup({
+  const factory StructureMapGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -11025,7 +10853,7 @@ class StructureMapInput with _$StructureMapInput {
   /// [documentation] Documentation for this instance of data.
   ///
   /// [documentationElement] Extensions for documentation
-  factory StructureMapInput({
+  const factory StructureMapInput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -11157,7 +10985,7 @@ class StructureMapRule with _$StructureMapRule {
   /// [documentation] Documentation for this instance of data.
   ///
   /// [documentationElement] Extensions for documentation
-  factory StructureMapRule({
+  const factory StructureMapRule({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -11508,11 +11336,10 @@ class StructureMapSource with _$StructureMapSource {
   ///  the transform log when content matching the source rule is found.
   ///
   /// [logMessageElement] Extensions for logMessage
-  factory StructureMapSource({
+  const factory StructureMapSource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -11520,8 +11347,7 @@ class StructureMapSource with _$StructureMapSource {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -11542,16 +11368,14 @@ class StructureMapSource with _$StructureMapSource {
     FhirId? context,
 
     /// [contextElement] Extensions for context
-    @JsonKey(name: '_context')
-        Element? contextElement,
+    @JsonKey(name: '_context') Element? contextElement,
 
     /// [min] Specified minimum cardinality for the element. This is optional; if
     ///  present, it acts an implicit check on the input content.
     FhirInteger? min,
 
     /// [minElement] Extensions for min
-    @JsonKey(name: '_min')
-        Element? minElement,
+    @JsonKey(name: '_min') Element? minElement,
 
     /// [max] Specified maximum cardinality for the element - a number or a "*".
     /// This is optional; if present, it acts an implicit check on the input
@@ -11559,168 +11383,153 @@ class StructureMapSource with _$StructureMapSource {
     String? max,
 
     /// [maxElement] Extensions for max
-    @JsonKey(name: '_max')
-        Element? maxElement,
+    @JsonKey(name: '_max') Element? maxElement,
 
     /// [type] Specified type for the element. This works as a condition on the
     ///  mapping - use for polymorphic elements.
     String? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type')
-        Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [defaultValueBase64Binary] A value to use if there is no existing value
     ///  in the source object.
     FhirBase64Binary? defaultValueBase64Binary,
     @JsonKey(name: '_defaultValueBase64Binary')
 
-        /// [defaultValueBase64BinaryElement] Extensions for defaultValueBase64Binary
-        Element? defaultValueBase64BinaryElement,
+    /// [defaultValueBase64BinaryElement] Extensions for defaultValueBase64Binary
+    Element? defaultValueBase64BinaryElement,
 
     /// [defaultValueBoolean] A value to use if there is no existing value in the
     ///  source object.
     FhirBoolean? defaultValueBoolean,
 
     /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
-    @JsonKey(name: '_defaultValueBoolean')
-        Element? defaultValueBooleanElement,
+    @JsonKey(name: '_defaultValueBoolean') Element? defaultValueBooleanElement,
 
     /// [defaultValueCanonical] A value to use if there is no existing value in
     ///  the source object.
     FhirCanonical? defaultValueCanonical,
     @JsonKey(name: '_defaultValueCanonical')
 
-        /// [defaultValueCanonicalElement] Extensions for defaultValueCanonical
-        Element? defaultValueCanonicalElement,
+    /// [defaultValueCanonicalElement] Extensions for defaultValueCanonical
+    Element? defaultValueCanonicalElement,
 
     /// [defaultValueCode] A value to use if there is no existing value in the
     ///  source object.
     FhirCode? defaultValueCode,
 
     /// [defaultValueCodeElement] Extensions for defaultValueCode
-    @JsonKey(name: '_defaultValueCode')
-        Element? defaultValueCodeElement,
+    @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
 
     /// [defaultValueDate] A value to use if there is no existing value in the
     ///  source object.
     FhirDate? defaultValueDate,
 
     /// [defaultValueDateElement] Extensions for defaultValueDate
-    @JsonKey(name: '_defaultValueDate')
-        Element? defaultValueDateElement,
+    @JsonKey(name: '_defaultValueDate') Element? defaultValueDateElement,
 
     /// [defaultValueDateTime] A value to use if there is no existing value in
     ///  the source object.
     FhirDateTime? defaultValueDateTime,
     @JsonKey(name: '_defaultValueDateTime')
 
-        /// [defaultValueDateTimeElement] Extensions for defaultValueDateTime
-        Element? defaultValueDateTimeElement,
+    /// [defaultValueDateTimeElement] Extensions for defaultValueDateTime
+    Element? defaultValueDateTimeElement,
 
     /// [defaultValueDecimal] A value to use if there is no existing value in the
     ///  source object.
     FhirDecimal? defaultValueDecimal,
 
     /// [defaultValueDecimalElement] Extensions for defaultValueDecimal
-    @JsonKey(name: '_defaultValueDecimal')
-        Element? defaultValueDecimalElement,
+    @JsonKey(name: '_defaultValueDecimal') Element? defaultValueDecimalElement,
 
     /// [defaultValueId] A value to use if there is no existing value in the
     ///  source object.
     FhirId? defaultValueId,
 
     /// [defaultValueIdElement] Extensions for defaultValueId
-    @JsonKey(name: '_defaultValueId')
-        Element? defaultValueIdElement,
+    @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
 
     /// [defaultValueInstant] A value to use if there is no existing value in the
     ///  source object.
     FhirInstant? defaultValueInstant,
 
     /// [defaultValueInstantElement] Extensions for defaultValueInstant
-    @JsonKey(name: '_defaultValueInstant')
-        Element? defaultValueInstantElement,
+    @JsonKey(name: '_defaultValueInstant') Element? defaultValueInstantElement,
 
     /// [defaultValueInteger] A value to use if there is no existing value in the
     ///  source object.
     FhirInteger? defaultValueInteger,
 
     /// [defaultValueIntegerElement] Extensions for defaultValueInteger
-    @JsonKey(name: '_defaultValueInteger')
-        Element? defaultValueIntegerElement,
+    @JsonKey(name: '_defaultValueInteger') Element? defaultValueIntegerElement,
 
     /// [defaultValueMarkdown] A value to use if there is no existing value in
     ///  the source object.
     FhirMarkdown? defaultValueMarkdown,
     @JsonKey(name: '_defaultValueMarkdown')
 
-        /// [defaultValueMarkdownElement] Extensions for defaultValueMarkdown
-        Element? defaultValueMarkdownElement,
+    /// [defaultValueMarkdownElement] Extensions for defaultValueMarkdown
+    Element? defaultValueMarkdownElement,
 
     /// [defaultValueOid] A value to use if there is no existing value in the
     ///  source object.
     FhirOid? defaultValueOid,
 
     /// [defaultValueOidElement] Extensions for defaultValueOid
-    @JsonKey(name: '_defaultValueOid')
-        Element? defaultValueOidElement,
+    @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
 
     /// [defaultValuePositiveInt] A value to use if there is no existing value in
     ///  the source object.
     FhirPositiveInt? defaultValuePositiveInt,
     @JsonKey(name: '_defaultValuePositiveInt')
 
-        /// [defaultValuePositiveIntElement] Extensions for defaultValuePositiveInt
-        Element? defaultValuePositiveIntElement,
+    /// [defaultValuePositiveIntElement] Extensions for defaultValuePositiveInt
+    Element? defaultValuePositiveIntElement,
 
     /// [defaultValueString] A value to use if there is no existing value in the
     ///  source object.
     String? defaultValueString,
 
     /// [defaultValueStringElement] Extensions for defaultValueString
-    @JsonKey(name: '_defaultValueString')
-        Element? defaultValueStringElement,
+    @JsonKey(name: '_defaultValueString') Element? defaultValueStringElement,
 
     /// [defaultValueTime] A value to use if there is no existing value in the
     ///  source object.
     FhirTime? defaultValueTime,
 
     /// [defaultValueTimeElement] Extensions for defaultValueTime
-    @JsonKey(name: '_defaultValueTime')
-        Element? defaultValueTimeElement,
+    @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
 
     /// [defaultValueUnsignedInt] A value to use if there is no existing value in
     ///  the source object.
     FhirUnsignedInt? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
 
-        /// [defaultValueUnsignedIntElement] Extensions for defaultValueUnsignedInt
-        Element? defaultValueUnsignedIntElement,
+    /// [defaultValueUnsignedIntElement] Extensions for defaultValueUnsignedInt
+    Element? defaultValueUnsignedIntElement,
 
     /// [defaultValueUri] A value to use if there is no existing value in the
     ///  source object.
     FhirUri? defaultValueUri,
 
     /// [defaultValueUriElement] Extensions for defaultValueUri
-    @JsonKey(name: '_defaultValueUri')
-        Element? defaultValueUriElement,
+    @JsonKey(name: '_defaultValueUri') Element? defaultValueUriElement,
 
     /// [defaultValueUrl] A value to use if there is no existing value in the
     ///  source object.
     FhirUrl? defaultValueUrl,
 
     /// [defaultValueUrlElement] Extensions for defaultValueUrl
-    @JsonKey(name: '_defaultValueUrl')
-        Element? defaultValueUrlElement,
+    @JsonKey(name: '_defaultValueUrl') Element? defaultValueUrlElement,
 
     /// [defaultValueUuid] A value to use if there is no existing value in the
     ///  source object.
     FhirUuid? defaultValueUuid,
 
     /// [defaultValueUuidElement] Extensions for defaultValueUuid
-    @JsonKey(name: '_defaultValueUuid')
-        Element? defaultValueUuidElement,
+    @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
 
     /// [defaultValueAddress] A value to use if there is no existing value in the
     ///  source object.
@@ -11850,46 +11659,40 @@ class StructureMapSource with _$StructureMapSource {
     String? element,
 
     /// [elementElement] Extensions for element
-    @JsonKey(name: '_element')
-        Element? elementElement,
+    @JsonKey(name: '_element') Element? elementElement,
 
     /// [listMode] How to handle the list mode for this element.
     FhirCode? listMode,
 
     /// [listModeElement] Extensions for listMode
-    @JsonKey(name: '_listMode')
-        Element? listModeElement,
+    @JsonKey(name: '_listMode') Element? listModeElement,
 
     /// [variable] Named context for field, if a field is specified.
     FhirId? variable,
 
     /// [variableElement] Extensions for variable
-    @JsonKey(name: '_variable')
-        Element? variableElement,
+    @JsonKey(name: '_variable') Element? variableElement,
 
     /// [condition] FHIRPath expression  - must be true or the rule does not
     ///  apply.
     String? condition,
 
     /// [conditionElement] Extensions for condition
-    @JsonKey(name: '_condition')
-        Element? conditionElement,
+    @JsonKey(name: '_condition') Element? conditionElement,
 
     /// [check] FHIRPath expression  - must be true or the mapping engine throws
     ///  an error instead of completing.
     String? check,
 
     /// [checkElement] Extensions for check
-    @JsonKey(name: '_check')
-        Element? checkElement,
+    @JsonKey(name: '_check') Element? checkElement,
 
     /// [logMessage] A FHIRPath expression which specifies a message to put in
     ///  the transform log when content matching the source rule is found.
     String? logMessage,
 
     /// [logMessageElement] Extensions for logMessage
-    @JsonKey(name: '_logMessage')
-        Element? logMessageElement,
+    @JsonKey(name: '_logMessage') Element? logMessageElement,
   }) = _StructureMapSource;
 
   /// Produces a Yaml formatted String version of the object
@@ -11985,7 +11788,7 @@ class StructureMapTarget with _$StructureMapTarget {
   /// [transformElement] Extensions for transform
   ///
   /// [parameter] Parameters to the transform.
-  factory StructureMapTarget({
+  const factory StructureMapTarget({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -12142,7 +11945,7 @@ class StructureMapParameter with _$StructureMapParameter {
   /// [valueDecimal] Parameter value - variable or literal.
   ///
   /// [valueDecimalElement] Extensions for valueDecimal
-  factory StructureMapParameter({
+  const factory StructureMapParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -12272,7 +12075,7 @@ class StructureMapDependent with _$StructureMapDependent {
   /// [variable] Variable to pass to the rule or group.
   ///
   /// [variableElement] Extensions for variable
-  factory StructureMapDependent({
+  const factory StructureMapDependent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,

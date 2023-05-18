@@ -22,6 +22,8 @@ Conformance _$ConformanceFromJson(Map<String, dynamic> json) {
 mixin _$Conformance {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -82,6 +84,8 @@ abstract class $ConformanceCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -146,6 +150,7 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -184,6 +189,10 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -412,6 +421,8 @@ abstract class _$$_ConformanceCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -481,6 +492,7 @@ class __$$_ConformanceCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -519,6 +531,10 @@ class __$$_ConformanceCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -654,9 +670,11 @@ class __$$_ConformanceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Conformance extends _Conformance {
-  _$_Conformance(
+  const _$_Conformance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
           this.resourceType = Dstu2ResourceType.Conformance,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -714,6 +732,9 @@ class _$_Conformance extends _Conformance {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -859,7 +880,7 @@ class _$_Conformance extends _Conformance {
 
   @override
   String toString() {
-    return 'Conformance(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, acceptUnknown: $acceptUnknown, acceptUnknownElement: $acceptUnknownElement, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
+    return 'Conformance(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, acceptUnknown: $acceptUnknown, acceptUnknownElement: $acceptUnknownElement, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
   }
 
   @override
@@ -869,6 +890,7 @@ class _$_Conformance extends _Conformance {
             other is _$_Conformance &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -926,6 +948,7 @@ class _$_Conformance extends _Conformance {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -975,9 +998,11 @@ class _$_Conformance extends _Conformance {
 }
 
 abstract class _Conformance extends Conformance {
-  factory _Conformance(
+  const factory _Conformance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -1018,7 +1043,7 @@ abstract class _Conformance extends Conformance {
       final List<ConformanceRest>? rest,
       final List<ConformanceMessaging>? messaging,
       final List<ConformanceDocument>? document}) = _$_Conformance;
-  _Conformance._() : super._();
+  const _Conformance._() : super._();
 
   factory _Conformance.fromJson(Map<String, dynamic> json) =
       _$_Conformance.fromJson;
@@ -1026,6 +1051,9 @@ abstract class _Conformance extends Conformance {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -1112,6 +1140,8 @@ CapabilityStatement _$CapabilityStatementFromJson(Map<String, dynamic> json) {
 mixin _$CapabilityStatement {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -1172,6 +1202,8 @@ abstract class $CapabilityStatementCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1236,6 +1268,7 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1274,6 +1307,10 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1502,6 +1539,8 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1571,6 +1610,7 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1609,6 +1649,10 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1744,9 +1788,11 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_CapabilityStatement extends _CapabilityStatement {
-  _$_CapabilityStatement(
+  const _$_CapabilityStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
           this.resourceType = Dstu2ResourceType.CapabilityStatement,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -1804,6 +1850,9 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -1949,7 +1998,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   @override
   String toString() {
-    return 'CapabilityStatement(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, acceptUnknown: $acceptUnknown, acceptUnknownElement: $acceptUnknownElement, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
+    return 'CapabilityStatement(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, acceptUnknown: $acceptUnknown, acceptUnknownElement: $acceptUnknownElement, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
   }
 
   @override
@@ -1959,6 +2008,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
             other is _$_CapabilityStatement &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -2016,6 +2066,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -2066,9 +2117,11 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 }
 
 abstract class _CapabilityStatement extends CapabilityStatement {
-  factory _CapabilityStatement(
+  const factory _CapabilityStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -2109,7 +2162,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       final List<ConformanceRest>? rest,
       final List<ConformanceMessaging>? messaging,
       final List<ConformanceDocument>? document}) = _$_CapabilityStatement;
-  _CapabilityStatement._() : super._();
+  const _CapabilityStatement._() : super._();
 
   factory _CapabilityStatement.fromJson(Map<String, dynamic> json) =
       _$_CapabilityStatement.fromJson;
@@ -2117,6 +2170,9 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -2335,7 +2391,7 @@ class __$$_ConformanceContactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConformanceContact extends _ConformanceContact {
-  _$_ConformanceContact(
+  const _$_ConformanceContact(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2431,13 +2487,13 @@ class _$_ConformanceContact extends _ConformanceContact {
 }
 
 abstract class _ConformanceContact extends ConformanceContact {
-  factory _ConformanceContact(
+  const factory _ConformanceContact(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
       final List<ContactPoint>? telecom}) = _$_ConformanceContact;
-  _ConformanceContact._() : super._();
+  const _ConformanceContact._() : super._();
 
   factory _ConformanceContact.fromJson(Map<String, dynamic> json) =
       _$_ConformanceContact.fromJson;
@@ -2613,7 +2669,7 @@ class __$$_ConformanceSoftwareCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConformanceSoftware extends _ConformanceSoftware {
-  _$_ConformanceSoftware(
+  const _$_ConformanceSoftware(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2707,14 +2763,14 @@ class _$_ConformanceSoftware extends _ConformanceSoftware {
 }
 
 abstract class _ConformanceSoftware extends ConformanceSoftware {
-  factory _ConformanceSoftware(
+  const factory _ConformanceSoftware(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final String name,
       final String? version,
       final FhirDateTime? releaseDate}) = _$_ConformanceSoftware;
-  _ConformanceSoftware._() : super._();
+  const _ConformanceSoftware._() : super._();
 
   factory _ConformanceSoftware.fromJson(Map<String, dynamic> json) =
       _$_ConformanceSoftware.fromJson;
@@ -2884,7 +2940,7 @@ class __$$_ConformanceImplementationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConformanceImplementation extends _ConformanceImplementation {
-  _$_ConformanceImplementation(
+  const _$_ConformanceImplementation(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2973,13 +3029,13 @@ class _$_ConformanceImplementation extends _ConformanceImplementation {
 }
 
 abstract class _ConformanceImplementation extends ConformanceImplementation {
-  factory _ConformanceImplementation(
+  const factory _ConformanceImplementation(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final String description,
       final FhirUri? url}) = _$_ConformanceImplementation;
-  _ConformanceImplementation._() : super._();
+  const _ConformanceImplementation._() : super._();
 
   factory _ConformanceImplementation.fromJson(Map<String, dynamic> json) =
       _$_ConformanceImplementation.fromJson;
@@ -3312,7 +3368,7 @@ class __$$_ConformanceRestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConformanceRest extends _ConformanceRest {
-  _$_ConformanceRest(
+  const _$_ConformanceRest(
       {@JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: 'extension')
@@ -3514,7 +3570,7 @@ class _$_ConformanceRest extends _ConformanceRest {
 }
 
 abstract class _ConformanceRest extends ConformanceRest {
-  factory _ConformanceRest(
+  const factory _ConformanceRest(
       {@JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: 'extension')
@@ -3535,7 +3591,7 @@ abstract class _ConformanceRest extends ConformanceRest {
       final List<ConformanceResourceSearchParam>? searchParam,
       final List<ConformanceRestOperation>? operation,
       final List<FhirUri>? compartment}) = _$_ConformanceRest;
-  _ConformanceRest._() : super._();
+  const _ConformanceRest._() : super._();
 
   factory _ConformanceRest.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRest.fromJson;
@@ -3763,7 +3819,7 @@ class __$$_ConformanceMessagingCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConformanceMessaging extends _ConformanceMessaging {
-  _$_ConformanceMessaging(
+  const _$_ConformanceMessaging(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3894,7 +3950,7 @@ class _$_ConformanceMessaging extends _ConformanceMessaging {
 }
 
 abstract class _ConformanceMessaging extends ConformanceMessaging {
-  factory _ConformanceMessaging(
+  const factory _ConformanceMessaging(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -3904,7 +3960,7 @@ abstract class _ConformanceMessaging extends ConformanceMessaging {
           final String? documentation,
           required final List<ConformanceMessagingEvent> event}) =
       _$_ConformanceMessaging;
-  _ConformanceMessaging._() : super._();
+  const _ConformanceMessaging._() : super._();
 
   factory _ConformanceMessaging.fromJson(Map<String, dynamic> json) =
       _$_ConformanceMessaging.fromJson;
@@ -4115,7 +4171,7 @@ class __$$_ConformanceDocumentCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConformanceDocument extends _ConformanceDocument {
-  _$_ConformanceDocument(
+  const _$_ConformanceDocument(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4226,7 +4282,7 @@ class _$_ConformanceDocument extends _ConformanceDocument {
 }
 
 abstract class _ConformanceDocument extends ConformanceDocument {
-  factory _ConformanceDocument(
+  const factory _ConformanceDocument(
       {@JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: 'extension')
@@ -4238,7 +4294,7 @@ abstract class _ConformanceDocument extends ConformanceDocument {
           required final DocumentMode mode,
       final String? documentation,
       required final Reference profile}) = _$_ConformanceDocument;
-  _ConformanceDocument._() : super._();
+  const _ConformanceDocument._() : super._();
 
   factory _ConformanceDocument.fromJson(Map<String, dynamic> json) =
       _$_ConformanceDocument.fromJson;
@@ -4468,7 +4524,7 @@ class __$$_ConformanceRestSecurityCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
-  _$_ConformanceRestSecurity(
+  const _$_ConformanceRestSecurity(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4593,7 +4649,7 @@ class _$_ConformanceRestSecurity extends _ConformanceRestSecurity {
 }
 
 abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
-  factory _ConformanceRestSecurity(
+  const factory _ConformanceRestSecurity(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -4603,7 +4659,7 @@ abstract class _ConformanceRestSecurity extends ConformanceRestSecurity {
           final String? description,
           final List<ConformanceSecurityCertificate>? certificate}) =
       _$_ConformanceRestSecurity;
-  _ConformanceRestSecurity._() : super._();
+  const _ConformanceRestSecurity._() : super._();
 
   factory _ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRestSecurity.fromJson;
@@ -5079,7 +5135,7 @@ class __$$_ConformanceRestResourceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConformanceRestResource extends _ConformanceRestResource {
-  _$_ConformanceRestResource(
+  const _$_ConformanceRestResource(
       {@JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: 'extension')
@@ -5322,7 +5378,7 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
 }
 
 abstract class _ConformanceRestResource extends ConformanceRestResource {
-  factory _ConformanceRestResource(
+  const factory _ConformanceRestResource(
           {@JsonKey(name: 'id')
               final FhirId? fhirId,
           @JsonKey(name: 'extension')
@@ -5354,7 +5410,7 @@ abstract class _ConformanceRestResource extends ConformanceRestResource {
           final List<String>? searchRevInclude,
           final List<ConformanceResourceSearchParam>? searchParam}) =
       _$_ConformanceRestResource;
-  _ConformanceRestResource._() : super._();
+  const _ConformanceRestResource._() : super._();
 
   factory _ConformanceRestResource.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRestResource.fromJson;
@@ -5570,7 +5626,7 @@ class __$$_ConformanceResourceInteractionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceResourceInteraction
     extends _ConformanceResourceInteraction {
-  _$_ConformanceResourceInteraction(
+  const _$_ConformanceResourceInteraction(
       {@JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: 'extension')
@@ -5665,7 +5721,7 @@ class _$_ConformanceResourceInteraction
 
 abstract class _ConformanceResourceInteraction
     extends ConformanceResourceInteraction {
-  factory _ConformanceResourceInteraction(
+  const factory _ConformanceResourceInteraction(
       {@JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: 'extension')
@@ -5674,7 +5730,7 @@ abstract class _ConformanceResourceInteraction
       @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
           required final ResourceInteractionCode code,
       final String? documentation}) = _$_ConformanceResourceInteraction;
-  _ConformanceResourceInteraction._() : super._();
+  const _ConformanceResourceInteraction._() : super._();
 
   factory _ConformanceResourceInteraction.fromJson(Map<String, dynamic> json) =
       _$_ConformanceResourceInteraction.fromJson;
@@ -5869,7 +5925,7 @@ class __$$_ConformanceRestOperationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConformanceRestOperation extends _ConformanceRestOperation {
-  _$_ConformanceRestOperation(
+  const _$_ConformanceRestOperation(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5974,14 +6030,14 @@ class _$_ConformanceRestOperation extends _ConformanceRestOperation {
 }
 
 abstract class _ConformanceRestOperation extends ConformanceRestOperation {
-  factory _ConformanceRestOperation(
+  const factory _ConformanceRestOperation(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required final String name,
       required final Reference definition}) = _$_ConformanceRestOperation;
-  _ConformanceRestOperation._() : super._();
+  const _ConformanceRestOperation._() : super._();
 
   factory _ConformanceRestOperation.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRestOperation.fromJson;
@@ -6196,7 +6252,7 @@ class __$$_ConformanceMessagingEndpointCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
-  _$_ConformanceMessagingEndpoint(
+  const _$_ConformanceMessagingEndpoint(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6293,7 +6349,7 @@ class _$_ConformanceMessagingEndpoint extends _ConformanceMessagingEndpoint {
 
 abstract class _ConformanceMessagingEndpoint
     extends ConformanceMessagingEndpoint {
-  factory _ConformanceMessagingEndpoint(
+  const factory _ConformanceMessagingEndpoint(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -6301,7 +6357,7 @@ abstract class _ConformanceMessagingEndpoint
           required final FhirUri address,
           @JsonKey(name: '_address') final Element? addressElement}) =
       _$_ConformanceMessagingEndpoint;
-  _ConformanceMessagingEndpoint._() : super._();
+  const _ConformanceMessagingEndpoint._() : super._();
 
   factory _ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =
       _$_ConformanceMessagingEndpoint.fromJson;
@@ -6603,7 +6659,7 @@ class __$$_ConformanceMessagingEventCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
-  _$_ConformanceMessagingEvent(
+  const _$_ConformanceMessagingEvent(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6728,7 +6784,7 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
 }
 
 abstract class _ConformanceMessagingEvent extends ConformanceMessagingEvent {
-  factory _ConformanceMessagingEvent(
+  const factory _ConformanceMessagingEvent(
       {@JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: 'extension')
@@ -6745,7 +6801,7 @@ abstract class _ConformanceMessagingEvent extends ConformanceMessagingEvent {
       required final Reference request,
       required final Reference response,
       final String? documentation}) = _$_ConformanceMessagingEvent;
-  _ConformanceMessagingEvent._() : super._();
+  const _ConformanceMessagingEvent._() : super._();
 
   factory _ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =
       _$_ConformanceMessagingEvent.fromJson;
@@ -6962,7 +7018,7 @@ class __$$_ConformanceSecurityCertificateCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceSecurityCertificate
     extends _ConformanceSecurityCertificate {
-  _$_ConformanceSecurityCertificate(
+  const _$_ConformanceSecurityCertificate(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7059,7 +7115,7 @@ class _$_ConformanceSecurityCertificate
 
 abstract class _ConformanceSecurityCertificate
     extends ConformanceSecurityCertificate {
-  factory _ConformanceSecurityCertificate(
+  const factory _ConformanceSecurityCertificate(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -7067,7 +7123,7 @@ abstract class _ConformanceSecurityCertificate
           final FhirBase64Binary? blob,
           @JsonKey(name: '_blob') final Element? blobElement}) =
       _$_ConformanceSecurityCertificate;
-  _ConformanceSecurityCertificate._() : super._();
+  const _ConformanceSecurityCertificate._() : super._();
 
   factory _ConformanceSecurityCertificate.fromJson(Map<String, dynamic> json) =
       _$_ConformanceSecurityCertificate.fromJson;
@@ -7246,7 +7302,7 @@ class __$$_ConformanceRestInteractionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
-  _$_ConformanceRestInteraction(
+  const _$_ConformanceRestInteraction(
       {@JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: 'extension')
@@ -7339,7 +7395,7 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
 }
 
 abstract class _ConformanceRestInteraction extends ConformanceRestInteraction {
-  factory _ConformanceRestInteraction(
+  const factory _ConformanceRestInteraction(
       {@JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: 'extension')
@@ -7348,7 +7404,7 @@ abstract class _ConformanceRestInteraction extends ConformanceRestInteraction {
       @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
           required final RestInteractionCode code,
       final String? documentation}) = _$_ConformanceRestInteraction;
-  _ConformanceRestInteraction._() : super._();
+  const _ConformanceRestInteraction._() : super._();
 
   factory _ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =
       _$_ConformanceRestInteraction.fromJson;
@@ -7600,7 +7656,7 @@ class __$$_ConformanceResourceSearchParamCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceResourceSearchParam
     extends _ConformanceResourceSearchParam {
-  _$_ConformanceResourceSearchParam(
+  const _$_ConformanceResourceSearchParam(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7760,7 +7816,7 @@ class _$_ConformanceResourceSearchParam
 
 abstract class _ConformanceResourceSearchParam
     extends ConformanceResourceSearchParam {
-  factory _ConformanceResourceSearchParam(
+  const factory _ConformanceResourceSearchParam(
       {@JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: 'extension')
@@ -7776,7 +7832,7 @@ abstract class _ConformanceResourceSearchParam
       final List<FhirCode>? target,
       final List<SearchParamModifier>? modifier,
       final List<String>? chain}) = _$_ConformanceResourceSearchParam;
-  _ConformanceResourceSearchParam._() : super._();
+  const _ConformanceResourceSearchParam._() : super._();
 
   factory _ConformanceResourceSearchParam.fromJson(Map<String, dynamic> json) =
       _$_ConformanceResourceSearchParam.fromJson;
@@ -7821,6 +7877,8 @@ OperationDefinition _$OperationDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$OperationDefinition {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -7871,6 +7929,8 @@ abstract class $OperationDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -7922,6 +7982,7 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -7955,6 +8016,10 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -8114,6 +8179,8 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -8166,6 +8233,7 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -8199,6 +8267,10 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -8314,9 +8386,11 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OperationDefinition extends _OperationDefinition {
-  _$_OperationDefinition(
+  const _$_OperationDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
           this.resourceType = Dstu2ResourceType.OperationDefinition,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -8362,6 +8436,9 @@ class _$_OperationDefinition extends _OperationDefinition {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -8471,7 +8548,7 @@ class _$_OperationDefinition extends _OperationDefinition {
 
   @override
   String toString() {
-    return 'OperationDefinition(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, kind: $kind, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, idempotent: $idempotent, code: $code, notes: $notes, base: $base, system: $system, type: $type, instance: $instance, parameter: $parameter)';
+    return 'OperationDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, kind: $kind, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, idempotent: $idempotent, code: $code, notes: $notes, base: $base, system: $system, type: $type, instance: $instance, parameter: $parameter)';
   }
 
   @override
@@ -8481,6 +8558,7 @@ class _$_OperationDefinition extends _OperationDefinition {
             other is _$_OperationDefinition &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -8527,6 +8605,7 @@ class _$_OperationDefinition extends _OperationDefinition {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -8572,9 +8651,11 @@ class _$_OperationDefinition extends _OperationDefinition {
 }
 
 abstract class _OperationDefinition extends OperationDefinition {
-  factory _OperationDefinition(
+  const factory _OperationDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -8606,7 +8687,7 @@ abstract class _OperationDefinition extends OperationDefinition {
       final List<FhirCode>? type,
       required final FhirBoolean instance,
       final List<OperationDefinitionParameter>? parameter}) = _$_OperationDefinition;
-  _OperationDefinition._() : super._();
+  const _OperationDefinition._() : super._();
 
   factory _OperationDefinition.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinition.fromJson;
@@ -8614,6 +8695,9 @@ abstract class _OperationDefinition extends OperationDefinition {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -8824,7 +8908,7 @@ class __$$_OperationDefinitionContactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OperationDefinitionContact extends _OperationDefinitionContact {
-  _$_OperationDefinitionContact(
+  const _$_OperationDefinitionContact(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8920,13 +9004,13 @@ class _$_OperationDefinitionContact extends _OperationDefinitionContact {
 }
 
 abstract class _OperationDefinitionContact extends OperationDefinitionContact {
-  factory _OperationDefinitionContact(
+  const factory _OperationDefinitionContact(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
       final List<ContactPoint>? telecom}) = _$_OperationDefinitionContact;
-  _OperationDefinitionContact._() : super._();
+  const _OperationDefinitionContact._() : super._();
 
   factory _OperationDefinitionContact.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionContact.fromJson;
@@ -9238,7 +9322,7 @@ class __$$_OperationDefinitionParameterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
-  _$_OperationDefinitionParameter(
+  const _$_OperationDefinitionParameter(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9389,7 +9473,7 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
 
 abstract class _OperationDefinitionParameter
     extends OperationDefinitionParameter {
-  factory _OperationDefinitionParameter(
+  const factory _OperationDefinitionParameter(
           {@JsonKey(name: 'id')
               final FhirId? fhirId,
           @JsonKey(name: 'extension')
@@ -9409,7 +9493,7 @@ abstract class _OperationDefinitionParameter
           @JsonKey(name: 'part')
               final List<OperationDefinitionParameter>? part_}) =
       _$_OperationDefinitionParameter;
-  _OperationDefinitionParameter._() : super._();
+  const _OperationDefinitionParameter._() : super._();
 
   factory _OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =
       _$_OperationDefinitionParameter.fromJson;
@@ -9647,7 +9731,7 @@ class __$$_OperationDefinitionParameterBindingCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_OperationDefinitionParameterBinding
     extends _OperationDefinitionParameterBinding {
-  _$_OperationDefinitionParameterBinding(
+  const _$_OperationDefinitionParameterBinding(
       {@JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: 'extension')
@@ -9756,7 +9840,7 @@ class _$_OperationDefinitionParameterBinding
 
 abstract class _OperationDefinitionParameterBinding
     extends OperationDefinitionParameterBinding {
-  factory _OperationDefinitionParameterBinding(
+  const factory _OperationDefinitionParameterBinding(
           {@JsonKey(name: 'id')
               final FhirId? fhirId,
           @JsonKey(name: 'extension')
@@ -9770,7 +9854,7 @@ abstract class _OperationDefinitionParameterBinding
           final FhirUri? valueSetUri,
           final Reference? valueSetReference}) =
       _$_OperationDefinitionParameterBinding;
-  _OperationDefinitionParameterBinding._() : super._();
+  const _OperationDefinitionParameterBinding._() : super._();
 
   factory _OperationDefinitionParameterBinding.fromJson(
           Map<String, dynamic> json) =
@@ -9809,6 +9893,8 @@ SearchParameter _$SearchParameterFromJson(Map<String, dynamic> json) {
 mixin _$SearchParameter {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -9858,6 +9944,8 @@ abstract class $SearchParameterCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -9908,6 +9996,7 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -9938,6 +10027,10 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -10085,6 +10178,8 @@ abstract class _$$_SearchParameterCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -10136,6 +10231,7 @@ class __$$_SearchParameterCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -10166,6 +10262,10 @@ class __$$_SearchParameterCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -10269,9 +10369,11 @@ class __$$_SearchParameterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SearchParameter extends _SearchParameter {
-  _$_SearchParameter(
+  const _$_SearchParameter(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
           this.resourceType = Dstu2ResourceType.SearchParameter,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -10315,6 +10417,9 @@ class _$_SearchParameter extends _SearchParameter {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -10412,7 +10517,7 @@ class _$_SearchParameter extends _SearchParameter {
 
   @override
   String toString() {
-    return 'SearchParameter(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, requirements: $requirements, requirementsElement: $requirementsElement, code: $code, base: $base, type: $type, description: $description, xpath: $xpath, xpathUsage: $xpathUsage, target: $target)';
+    return 'SearchParameter(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, requirements: $requirements, requirementsElement: $requirementsElement, code: $code, base: $base, type: $type, description: $description, xpath: $xpath, xpathUsage: $xpathUsage, target: $target)';
   }
 
   @override
@@ -10422,6 +10527,7 @@ class _$_SearchParameter extends _SearchParameter {
             other is _$_SearchParameter &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -10464,6 +10570,7 @@ class _$_SearchParameter extends _SearchParameter {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -10505,9 +10612,11 @@ class _$_SearchParameter extends _SearchParameter {
 }
 
 abstract class _SearchParameter extends SearchParameter {
-  factory _SearchParameter(
+  const factory _SearchParameter(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -10538,7 +10647,7 @@ abstract class _SearchParameter extends SearchParameter {
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
           final SearchParameterXpathUsage? xpathUsage,
       final List<FhirCode>? target}) = _$_SearchParameter;
-  _SearchParameter._() : super._();
+  const _SearchParameter._() : super._();
 
   factory _SearchParameter.fromJson(Map<String, dynamic> json) =
       _$_SearchParameter.fromJson;
@@ -10546,6 +10655,9 @@ abstract class _SearchParameter extends SearchParameter {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -10749,7 +10861,7 @@ class __$$_SearchParameterContactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_SearchParameterContact extends _SearchParameterContact {
-  _$_SearchParameterContact(
+  const _$_SearchParameterContact(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -10845,13 +10957,13 @@ class _$_SearchParameterContact extends _SearchParameterContact {
 }
 
 abstract class _SearchParameterContact extends SearchParameterContact {
-  factory _SearchParameterContact(
+  const factory _SearchParameterContact(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
       final List<ContactPoint>? telecom}) = _$_SearchParameterContact;
-  _SearchParameterContact._() : super._();
+  const _SearchParameterContact._() : super._();
 
   factory _SearchParameterContact.fromJson(Map<String, dynamic> json) =
       _$_SearchParameterContact.fromJson;

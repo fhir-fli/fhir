@@ -12,6 +12,7 @@ _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.PaymentNotice) ??
           R4ResourceType.PaymentNotice,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -274,6 +275,7 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.PaymentReconciliation) ??
           R4ResourceType.PaymentReconciliation,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

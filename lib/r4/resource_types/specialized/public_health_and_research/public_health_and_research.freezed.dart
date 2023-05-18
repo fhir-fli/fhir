@@ -22,6 +22,8 @@ ResearchStudy _$ResearchStudyFromJson(Map<String, dynamic> json) {
 mixin _$ResearchStudy {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -217,6 +219,8 @@ abstract class $ResearchStudyCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
           R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -291,6 +295,7 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -334,6 +339,10 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -653,6 +662,8 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
           R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -738,6 +749,7 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -781,6 +793,10 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -936,9 +952,11 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchStudy extends _ResearchStudy {
-  _$_ResearchStudy(
+  const _$_ResearchStudy(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
           this.resourceType = R4ResourceType.ResearchStudy,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -1009,6 +1027,9 @@ class _$_ResearchStudy extends _ResearchStudy {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -1427,7 +1448,7 @@ class _$_ResearchStudy extends _ResearchStudy {
 
   @override
   String toString() {
-    return 'ResearchStudy(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, title: $title, titleElement: $titleElement, protocol: $protocol, partOf: $partOf, status: $status, statusElement: $statusElement, primaryPurposeType: $primaryPurposeType, phase: $phase, category: $category, focus: $focus, condition: $condition, contact: $contact, relatedArtifact: $relatedArtifact, keyword: $keyword, location: $location, description: $description, descriptionElement: $descriptionElement, enrollment: $enrollment, period: $period, sponsor: $sponsor, principalInvestigator: $principalInvestigator, site: $site, reasonStopped: $reasonStopped, note: $note, arm: $arm, objective: $objective)';
+    return 'ResearchStudy(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, title: $title, titleElement: $titleElement, protocol: $protocol, partOf: $partOf, status: $status, statusElement: $statusElement, primaryPurposeType: $primaryPurposeType, phase: $phase, category: $category, focus: $focus, condition: $condition, contact: $contact, relatedArtifact: $relatedArtifact, keyword: $keyword, location: $location, description: $description, descriptionElement: $descriptionElement, enrollment: $enrollment, period: $period, sponsor: $sponsor, principalInvestigator: $principalInvestigator, site: $site, reasonStopped: $reasonStopped, note: $note, arm: $arm, objective: $objective)';
   }
 
   @override
@@ -1437,6 +1458,7 @@ class _$_ResearchStudy extends _ResearchStudy {
             other is _$_ResearchStudy &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1500,6 +1522,7 @@ class _$_ResearchStudy extends _ResearchStudy {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -1554,9 +1577,11 @@ class _$_ResearchStudy extends _ResearchStudy {
 }
 
 abstract class _ResearchStudy extends ResearchStudy {
-  factory _ResearchStudy(
+  const factory _ResearchStudy(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
           final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -1601,7 +1626,7 @@ abstract class _ResearchStudy extends ResearchStudy {
       final List<Annotation>? note,
       final List<ResearchStudyArm>? arm,
       final List<ResearchStudyObjective>? objective}) = _$_ResearchStudy;
-  _ResearchStudy._() : super._();
+  const _ResearchStudy._() : super._();
 
   factory _ResearchStudy.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudy.fromJson;
@@ -1609,6 +1634,9 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
@@ -2091,7 +2119,7 @@ class __$$_ResearchStudyArmCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchStudyArm extends _ResearchStudyArm {
-  _$_ResearchStudyArm(
+  const _$_ResearchStudyArm(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2252,7 +2280,7 @@ class _$_ResearchStudyArm extends _ResearchStudyArm {
 }
 
 abstract class _ResearchStudyArm extends ResearchStudyArm {
-  factory _ResearchStudyArm(
+  const factory _ResearchStudyArm(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -2262,7 +2290,7 @@ abstract class _ResearchStudyArm extends ResearchStudyArm {
           final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement}) =
       _$_ResearchStudyArm;
-  _ResearchStudyArm._() : super._();
+  const _ResearchStudyArm._() : super._();
 
   factory _ResearchStudyArm.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyArm.fromJson;
@@ -2547,7 +2575,7 @@ class __$$_ResearchStudyObjectiveCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchStudyObjective extends _ResearchStudyObjective {
-  _$_ResearchStudyObjective(
+  const _$_ResearchStudyObjective(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2690,14 +2718,14 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
 }
 
 abstract class _ResearchStudyObjective extends ResearchStudyObjective {
-  factory _ResearchStudyObjective(
+  const factory _ResearchStudyObjective(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
       @JsonKey(name: '_name') final Element? nameElement,
       final CodeableConcept? type}) = _$_ResearchStudyObjective;
-  _ResearchStudyObjective._() : super._();
+  const _ResearchStudyObjective._() : super._();
 
   factory _ResearchStudyObjective.fromJson(Map<String, dynamic> json) =
       _$_ResearchStudyObjective.fromJson;
@@ -2761,6 +2789,8 @@ ResearchSubject _$ResearchSubjectFromJson(Map<String, dynamic> json) {
 mixin _$ResearchSubject {
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
   R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -2884,6 +2914,8 @@ abstract class $ResearchSubjectCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
           R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -2940,6 +2972,7 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -2967,6 +3000,10 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3190,6 +3227,8 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
           R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           String? fhirId,
       FhirMeta? meta,
@@ -3255,6 +3294,7 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -3282,6 +3322,10 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R4ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3373,9 +3417,11 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ResearchSubject extends _ResearchSubject {
-  _$_ResearchSubject(
+  const _$_ResearchSubject(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
           this.resourceType = R4ResourceType.ResearchSubject,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -3416,6 +3462,9 @@ class _$_ResearchSubject extends _ResearchSubject {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
   final R4ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
 
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
@@ -3603,7 +3652,7 @@ class _$_ResearchSubject extends _ResearchSubject {
 
   @override
   String toString() {
-    return 'ResearchSubject(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, period: $period, study: $study, individual: $individual, assignedArm: $assignedArm, assignedArmElement: $assignedArmElement, actualArm: $actualArm, actualArmElement: $actualArmElement, consent: $consent)';
+    return 'ResearchSubject(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, period: $period, study: $study, individual: $individual, assignedArm: $assignedArm, assignedArmElement: $assignedArmElement, actualArm: $actualArm, actualArmElement: $actualArmElement, consent: $consent)';
   }
 
   @override
@@ -3613,6 +3662,7 @@ class _$_ResearchSubject extends _ResearchSubject {
             other is _$_ResearchSubject &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -3655,6 +3705,7 @@ class _$_ResearchSubject extends _ResearchSubject {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -3693,9 +3744,11 @@ class _$_ResearchSubject extends _ResearchSubject {
 }
 
 abstract class _ResearchSubject extends ResearchSubject {
-  factory _ResearchSubject(
+  const factory _ResearchSubject(
       {@JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
           final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final String? fhirId,
       final FhirMeta? meta,
@@ -3724,7 +3777,7 @@ abstract class _ResearchSubject extends ResearchSubject {
       @JsonKey(name: '_actualArm')
           final Element? actualArmElement,
       final Reference? consent}) = _$_ResearchSubject;
-  _ResearchSubject._() : super._();
+  const _ResearchSubject._() : super._();
 
   factory _ResearchSubject.fromJson(Map<String, dynamic> json) =
       _$_ResearchSubject.fromJson;
@@ -3732,6 +3785,9 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
   R4ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
 
   /// [id] The logical id of the resource, as used in the URL for the resource.

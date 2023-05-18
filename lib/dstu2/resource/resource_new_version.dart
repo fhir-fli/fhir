@@ -199,7 +199,7 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
 
     case Dstu2ResourceType.Group:
-      return (resource as Group)
+      return (resource as FhirGroup)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
 
     case Dstu2ResourceType.HealthcareService:

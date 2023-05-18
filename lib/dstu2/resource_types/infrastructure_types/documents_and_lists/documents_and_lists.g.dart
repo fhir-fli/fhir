@@ -12,6 +12,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Composition) ??
           Dstu2ResourceType.Composition,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -418,6 +419,7 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DocumentManifest) ??
           Dstu2ResourceType.DocumentManifest,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -627,6 +629,7 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DocumentReference) ??
           Dstu2ResourceType.DocumentReference,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -960,6 +963,7 @@ _$_FhirList _$$_FhirListFromJson(Map<String, dynamic> json) => _$_FhirList(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.FhirList) ??
           Dstu2ResourceType.FhirList,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

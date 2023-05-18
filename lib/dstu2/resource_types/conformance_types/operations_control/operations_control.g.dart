@@ -12,6 +12,7 @@ _$_Conformance _$$_ConformanceFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Conformance) ??
           Dstu2ResourceType.Conformance,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -286,6 +287,7 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.CapabilityStatement) ??
           Dstu2ResourceType.CapabilityStatement,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1252,6 +1254,7 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.OperationDefinition) ??
         Dstu2ResourceType.OperationDefinition,
+    dbId: json['dbId'] as int?,
     fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
@@ -1540,6 +1543,7 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.SearchParameter) ??
           Dstu2ResourceType.SearchParameter,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

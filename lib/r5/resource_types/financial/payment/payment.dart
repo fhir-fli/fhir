@@ -113,15 +113,16 @@ class PaymentNotice with Resource, _$PaymentNotice {
   /// [paymentStatus] A code indicating whether payment has been sent or
   ///  cleared.
   ///
-  factory PaymentNotice({
+  const factory PaymentNotice({
     /// [resourceType] This is a PaymentNotice resource
     @Default(R5ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -431,15 +432,16 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   /// [processNote] A note that describes or explains the processing in a human
   ///  readable form.
   ///
-  factory PaymentReconciliation({
+  const factory PaymentReconciliation({
     /// [resourceType] This is a PaymentReconciliation resource
     @Default(R5ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -765,10 +767,10 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
   /// [amount] The monetary amount allocated from the total payment to the
   ///  payable.
   ///
-  factory PaymentReconciliationAllocation({
+  const factory PaymentReconciliationAllocation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -828,7 +830,7 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
     /// [targetItemPositiveIntElement] ("_targetItemPositiveInt") Extensions
     ///  for targetItemPositiveInt
     @JsonKey(name: '_targetItemPositiveInt')
-        Element? targetItemPositiveIntElement,
+    Element? targetItemPositiveIntElement,
 
     /// [encounter] The Encounter to which this payment applies, may be
     ///  completed by the receiver, used for search.
@@ -944,10 +946,10 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   ///
   /// [textElement] ("_text") Extensions for text
   ///
-  factory PaymentReconciliationProcessNote({
+  const factory PaymentReconciliationProcessNote({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.

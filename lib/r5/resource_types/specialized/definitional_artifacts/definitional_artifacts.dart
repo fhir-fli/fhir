@@ -355,11 +355,12 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   ///  value would be used to specify an expression that calculated the weight,
   ///  and the path on the request resource that would contain the result.
   ///
-  factory ActivityDefinition({
+  const factory ActivityDefinition({
     /// [resourceType] This is a ActivityDefinition resource
     @Default(R5ResourceType.ActivityDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ActivityDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -467,7 +468,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -875,7 +876,7 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   /// [function_] ("function") Indicates how the actor will be involved in the
   ///  action - author, reviewer, witness, etc.
   ///
-  factory ActivityDefinitionParticipant({
+  const factory ActivityDefinitionParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1009,7 +1010,7 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   ///
   /// [expression] An expression specifying the value of the customized element.
   ///
-  factory ActivityDefinitionDynamicValue({
+  const factory ActivityDefinitionDynamicValue({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1280,11 +1281,12 @@ class ActorDefinition with Resource, _$ActorDefinition {
   ///  another IG (which IG must be listed in the dependencies). This actor
   ///  inherits all the obligations etc. as defined in the other IG.
   ///
-  factory ActorDefinition({
+  const factory ActorDefinition({
     /// [resourceType] This is a ActorDefinition resource
     @Default(R5ResourceType.ActorDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ActorDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1388,7 +1390,7 @@ class ActorDefinition with Resource, _$ActorDefinition {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -1798,11 +1800,12 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
   ///
   /// [plan] Plan that is appropriate.
   ///
-  factory ConditionDefinition({
+  const factory ConditionDefinition({
     /// [resourceType] This is a ConditionDefinition resource
     @Default(R5ResourceType.ConditionDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ConditionDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1906,7 +1909,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -2196,7 +2199,7 @@ class ConditionDefinitionObservation with _$ConditionDefinitionObservation {
   ///
   /// [code] Code for relevant Observation.
   ///
-  factory ConditionDefinitionObservation({
+  const factory ConditionDefinitionObservation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2304,7 +2307,7 @@ class ConditionDefinitionMedication with _$ConditionDefinitionMedication {
   ///
   /// [code] Code for relevant Medication.
   ///
-  factory ConditionDefinitionMedication({
+  const factory ConditionDefinitionMedication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2417,7 +2420,7 @@ class ConditionDefinitionPrecondition with _$ConditionDefinitionPrecondition {
   ///
   /// [valueQuantity] Value of Observation.
   ///
-  factory ConditionDefinitionPrecondition({
+  const factory ConditionDefinitionPrecondition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2536,7 +2539,7 @@ class ConditionDefinitionQuestionnaire with _$ConditionDefinitionQuestionnaire {
   ///
   /// [reference] Specific Questionnaire.
   ///
-  factory ConditionDefinitionQuestionnaire({
+  const factory ConditionDefinitionQuestionnaire({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2648,7 +2651,7 @@ class ConditionDefinitionPlan with _$ConditionDefinitionPlan {
   ///
   /// [reference] The actual plan.
   ///
-  factory ConditionDefinitionPlan({
+  const factory ConditionDefinitionPlan({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2873,11 +2876,12 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   ///
   /// [chargeItem] Billing code or reference associated with the device.
   ///
-  factory DeviceDefinition({
+  const factory DeviceDefinition({
     /// [resourceType] This is a DeviceDefinition resource
     @Default(R5ResourceType.DeviceDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.DeviceDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3060,7 +3064,7 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
     /// [productionIdentifierInUDIElement] ("_productionIdentifierInUDI")
     ///  Extensions for productionIdentifierInUDI
     @JsonKey(name: '_productionIdentifierInUDI')
-        List<Element>? productionIdentifierInUDIElement,
+    List<Element>? productionIdentifierInUDIElement,
 
     /// [guideline] Information aimed at providing directions for the usage of
     ///  this model of device.
@@ -3161,7 +3165,7 @@ class DeviceDefinitionUdiDeviceIdentifier
   /// [marketDistribution] Indicates where and when the device is available on
   ///  the market.
   ///
-  factory DeviceDefinitionUdiDeviceIdentifier({
+  const factory DeviceDefinitionUdiDeviceIdentifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3297,7 +3301,7 @@ class DeviceDefinitionMarketDistribution
   /// [subJurisdictionElement] ("_subJurisdiction") Extensions for
   ///  subJurisdiction
   ///
-  factory DeviceDefinitionMarketDistribution({
+  const factory DeviceDefinitionMarketDistribution({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3429,7 +3433,7 @@ class DeviceDefinitionRegulatoryIdentifier
   ///
   /// [jurisdictionElement] ("_jurisdiction") Extensions for jurisdiction
   ///
-  factory DeviceDefinitionRegulatoryIdentifier({
+  const factory DeviceDefinitionRegulatoryIdentifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3564,7 +3568,7 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
-  factory DeviceDefinitionDeviceName({
+  const factory DeviceDefinitionDeviceName({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3680,7 +3684,7 @@ class DeviceDefinitionClassification with _$DeviceDefinitionClassification {
   /// [justification] Further information qualifying this classification of the
   ///  device model.
   ///
-  factory DeviceDefinitionClassification({
+  const factory DeviceDefinitionClassification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3801,7 +3805,7 @@ class DeviceDefinitionConformsTo with _$DeviceDefinitionConformsTo {
   /// [source] Standard, regulation, certification, or guidance website,
   ///  document, or other publication, or similar, supporting the conformance.
   ///
-  factory DeviceDefinitionConformsTo({
+  const factory DeviceDefinitionConformsTo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3924,7 +3928,7 @@ class DeviceDefinitionHasPart with _$DeviceDefinitionHasPart {
   ///
   /// [countElement] ("_count") Extensions for count
   ///
-  factory DeviceDefinitionHasPart({
+  const factory DeviceDefinitionHasPart({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4046,7 +4050,7 @@ class DeviceDefinitionPackaging with _$DeviceDefinitionPackaging {
   ///
   /// [packaging] Allows packages within packages.
   ///
-  factory DeviceDefinitionPackaging({
+  const factory DeviceDefinitionPackaging({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4171,7 +4175,7 @@ class DeviceDefinitionDistributor with _$DeviceDefinitionDistributor {
   ///
   /// [organizationReference] Distributor as an Organization resource.
   ///
-  factory DeviceDefinitionDistributor({
+  const factory DeviceDefinitionDistributor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4287,7 +4291,7 @@ class DeviceDefinitionVersion with _$DeviceDefinitionVersion {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory DeviceDefinitionVersion({
+  const factory DeviceDefinitionVersion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4427,7 +4431,7 @@ class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
   /// [valueAttachment] The value of the property specified by the associated
   ///  property.type code.
   ///
-  factory DeviceDefinitionProperty({
+  const factory DeviceDefinitionProperty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4569,7 +4573,7 @@ class DeviceDefinitionLink with _$DeviceDefinitionLink {
   ///
   /// [relatedDevice] A reference to the linked device.
   ///
-  factory DeviceDefinitionLink({
+  const factory DeviceDefinitionLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4687,7 +4691,7 @@ class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
   /// [allergenicIndicatorElement] ("_allergenicIndicator") Extensions for
   ///  allergenicIndicator
   ///
-  factory DeviceDefinitionMaterial({
+  const factory DeviceDefinitionMaterial({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4827,7 +4831,7 @@ class DeviceDefinitionGuideline with _$DeviceDefinitionGuideline {
   ///
   /// [intendedUseElement] ("_intendedUse") Extensions for intendedUse
   ///
-  factory DeviceDefinitionGuideline({
+  const factory DeviceDefinitionGuideline({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4974,7 +4978,7 @@ class DeviceDefinitionCorrectiveAction with _$DeviceDefinitionCorrectiveAction {
   ///
   /// [period] Start and end dates of the  corrective action.
   ///
-  factory DeviceDefinitionCorrectiveAction({
+  const factory DeviceDefinitionCorrectiveAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5101,7 +5105,7 @@ class DeviceDefinitionChargeItem with _$DeviceDefinitionChargeItem {
   ///
   /// [useContext] The context to which this charge item applies.
   ///
-  factory DeviceDefinitionChargeItem({
+  const factory DeviceDefinitionChargeItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5397,11 +5401,12 @@ class EventDefinition with Resource, _$EventDefinition {
   ///  one trigger condition is specified, the event fires whenever any one of
   ///  the trigger conditions is met.
   ///
-  factory EventDefinition({
+  const factory EventDefinition({
     /// [resourceType] This is a EventDefinition resource
     @Default(R5ResourceType.EventDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.EventDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -5505,7 +5510,7 @@ class EventDefinition with Resource, _$EventDefinition {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -5884,11 +5889,12 @@ class ExampleScenario with Resource, _$ExampleScenario {
   /// [process] A group of operations that represents a significant step within
   ///  a scenario.
   ///
-  factory ExampleScenario({
+  const factory ExampleScenario({
     /// [resourceType] This is a ExampleScenario resource
     @Default(R5ResourceType.ExampleScenario)
     @JsonKey(unknownEnumValue: R5ResourceType.ExampleScenario)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -5992,7 +5998,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -6187,7 +6193,7 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory ExampleScenarioActor({
+  const factory ExampleScenarioActor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6352,7 +6358,7 @@ class ExampleScenarioInstance with _$ExampleScenarioInstance {
   /// [containedInstance] References to other instances that can be found
   ///  within this instance (e.g. the observations contained in a bundle).
   ///
-  factory ExampleScenarioInstance({
+  const factory ExampleScenarioInstance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6408,7 +6414,7 @@ class ExampleScenarioInstance with _$ExampleScenarioInstance {
     /// [structureProfileCanonicalElement] ("_structureProfileCanonical")
     ///  Extensions for structureProfileCanonical
     @JsonKey(name: '_structureProfileCanonical')
-        Element? structureProfileCanonicalElement,
+    Element? structureProfileCanonicalElement,
 
     /// [structureProfileUri] Refers to a profile, template or other ruleset
     ///  the instance adheres to.
@@ -6525,7 +6531,7 @@ class ExampleScenarioVersion with _$ExampleScenarioVersion {
   /// [content] Points to an instance (typically an example) that shows the
   ///  data that would flow at this point in the scenario.
   ///
-  factory ExampleScenarioVersion({
+  const factory ExampleScenarioVersion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6655,7 +6661,7 @@ class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
   /// [versionReferenceElement] ("_versionReference") Extensions for
   ///  versionReference
   ///
-  factory ExampleScenarioContainedInstance({
+  const factory ExampleScenarioContainedInstance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6789,7 +6795,7 @@ class ExampleScenarioProcess with _$ExampleScenarioProcess {
   ///
   /// [step] A significant action that occurs as part of the process.
   ///
-  factory ExampleScenarioProcess({
+  const factory ExampleScenarioProcess({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6937,7 +6943,7 @@ class ExampleScenarioStep with _$ExampleScenarioStep {
   ///
   /// [pauseElement] ("_pause") Extensions for pause
   ///
-  factory ExampleScenarioStep({
+  const factory ExampleScenarioStep({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7098,7 +7104,7 @@ class ExampleScenarioOperation with _$ExampleScenarioOperation {
   /// [response] A reference to the instance that is transmitted from receiver
   ///  to requester as part of the operation's synchronous response (if any).
   ///
-  factory ExampleScenarioOperation({
+  const factory ExampleScenarioOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7258,7 +7264,7 @@ class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
   /// [step] Indicates the operation, sub-process or scenario that happens if
   ///  the alternative option is selected.
   ///
-  factory ExampleScenarioAlternative({
+  const factory ExampleScenarioAlternative({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7606,11 +7612,12 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
   /// [component] Some observations have multiple component observations,
   ///  expressed as separate code value pairs.
   ///
-  factory ObservationDefinition({
+  const factory ObservationDefinition({
     /// [resourceType] This is a ObservationDefinition resource
     @Default(R5ResourceType.ObservationDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ObservationDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -7714,7 +7721,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -7898,7 +7905,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     /// [permittedDataTypeElement] ("_permittedDataType") Extensions for
     ///  permittedDataType
     @JsonKey(name: '_permittedDataType')
-        List<Element>? permittedDataTypeElement,
+    List<Element>? permittedDataTypeElement,
 
     /// [multipleResultsAllowed] Multiple results allowed for observations
     ///  conforming to this ObservationDefinition.
@@ -7907,7 +7914,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     /// [multipleResultsAllowedElement] ("_multipleResultsAllowed") Extensions
     ///  for multipleResultsAllowed
     @JsonKey(name: '_multipleResultsAllowed')
-        Element? multipleResultsAllowedElement,
+    Element? multipleResultsAllowedElement,
 
     /// [bodySite] The site on the subject's body where the  observation is to
     ///  be made.
@@ -8062,7 +8069,7 @@ class ObservationDefinitionQualifiedValue
   /// [criticalCodedValueSet] The set of critical coded results for qualitative
   ///  observations  that match the criteria of this set of qualified values.
   ///
-  factory ObservationDefinitionQualifiedValue({
+  const factory ObservationDefinitionQualifiedValue({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8237,7 +8244,7 @@ class ObservationDefinitionComponent with _$ObservationDefinitionComponent {
   ///  a set of conditions -  provides a range for quantitative and ordinal
   ///  observations and a collection of value sets for qualitative observations.
   ///
-  factory ObservationDefinitionComponent({
+  const factory ObservationDefinitionComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8276,7 +8283,7 @@ class ObservationDefinitionComponent with _$ObservationDefinitionComponent {
     /// [permittedDataTypeElement] ("_permittedDataType") Extensions for
     ///  permittedDataType
     @JsonKey(name: '_permittedDataType')
-        List<Element>? permittedDataTypeElement,
+    List<Element>? permittedDataTypeElement,
 
     /// [permittedUnit] Units allowed for the valueQuantity element in the
     ///  instance observations conforming to this ObservationDefinition.
@@ -8606,11 +8613,12 @@ class PlanDefinition with Resource, _$PlanDefinition {
   ///  the pre-condition for performing the service.  For example "pain", "on
   ///  flare-up", etc.
   ///
-  factory PlanDefinition({
+  const factory PlanDefinition({
     /// [resourceType] This is a PlanDefinition resource
     @Default(R5ResourceType.PlanDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.PlanDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -8718,7 +8726,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -9049,7 +9057,7 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
   ///
   /// [target] Indicates what should be done and within what timeframe.
   ///
-  factory PlanDefinitionGoal({
+  const factory PlanDefinitionGoal({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9252,7 +9260,7 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
   /// [due] Indicates the timeframe after the start of the goal in which the
   ///  goal should be met.
   ///
-  factory PlanDefinitionTarget({
+  const factory PlanDefinitionTarget({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9456,7 +9464,7 @@ class PlanDefinitionActor with _$PlanDefinitionActor {
   /// [option] The characteristics of the candidates that could serve as the
   ///  actor.
   ///
-  factory PlanDefinitionActor({
+  const factory PlanDefinitionActor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9589,7 +9597,7 @@ class PlanDefinitionOption with _$PlanDefinitionOption {
   /// [role] The role the participant should play in performing the described
   ///  action.
   ///
-  factory PlanDefinitionOption({
+  const factory PlanDefinitionOption({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9887,7 +9895,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
   ///  sub-actions, at most one may be chosen as part of realizing the action
   ///  definition.
   ///
-  factory PlanDefinitionAction({
+  const factory PlanDefinitionAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10233,7 +10241,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
   /// [expression] An expression that returns true or false, indicating whether
   ///  the condition is satisfied.
   ///
-  factory PlanDefinitionCondition({
+  const factory PlanDefinitionCondition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10363,7 +10371,7 @@ class PlanDefinitionInput with _$PlanDefinitionInput {
   ///
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   ///
-  factory PlanDefinitionInput({
+  const factory PlanDefinitionInput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10502,7 +10510,7 @@ class PlanDefinitionOutput with _$PlanDefinitionOutput {
   ///
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   ///
-  factory PlanDefinitionOutput({
+  const factory PlanDefinitionOutput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10649,7 +10657,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   /// [offsetRange] A duration or range of durations to apply to the
   ///  relationship. For example, 30-60 minutes before.
   ///
-  factory PlanDefinitionRelatedAction({
+  const factory PlanDefinitionRelatedAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10805,7 +10813,7 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   /// [function_] ("function") Indicates how the actor will be involved in the
   ///  action - author, reviewer, witness, etc.
   ///
-  factory PlanDefinitionParticipant({
+  const factory PlanDefinitionParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10953,7 +10961,7 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   ///
   /// [expression] An expression specifying the value of the customized element.
   ///
-  factory PlanDefinitionDynamicValue({
+  const factory PlanDefinitionDynamicValue({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -11253,11 +11261,12 @@ class Questionnaire with Resource, _$Questionnaire {
   /// [item] A particular question, question grouping or display text that is
   ///  part of the questionnaire.
   ///
-  factory Questionnaire({
+  const factory Questionnaire({
     /// [resourceType] This is a Questionnaire resource
     @Default(R5ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: R5ResourceType.Questionnaire)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -11360,7 +11369,7 @@ class Questionnaire with Resource, _$Questionnaire {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -11690,7 +11699,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
   /// [item] Text, questions and other groups to be nested beneath a question
   ///  or group.
   ///
-  factory QuestionnaireItem({
+  const factory QuestionnaireItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -11998,7 +12007,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   ///  different behavior is desired (all must match, at least 2 must match,
   ///  etc.), consider using the enableWhenExpression extension.
   ///
-  factory QuestionnaireEnableWhen({
+  const factory QuestionnaireEnableWhen({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -12238,7 +12247,7 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   /// [initialSelectedElement] ("_initialSelected") Extensions for
   ///  initialSelected
   ///
-  factory QuestionnaireAnswerOption({
+  const factory QuestionnaireAnswerOption({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -12424,7 +12433,7 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
   ///
   /// [valueReference] The actual value to for an initial answer.
   ///
-  factory QuestionnaireInitial({
+  const factory QuestionnaireInitial({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -12727,11 +12736,12 @@ class Requirements with Resource, _$Requirements {
   ///
   /// [statement] The actual statement of requirement, in markdown format.
   ///
-  factory Requirements({
+  const factory Requirements({
     /// [resourceType] This is a Requirements resource
     @Default(R5ResourceType.Requirements)
     @JsonKey(unknownEnumValue: R5ResourceType.Requirements)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -12834,7 +12844,7 @@ class Requirements with Resource, _$Requirements {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -13070,7 +13080,7 @@ class RequirementsStatement with _$RequirementsStatement {
   /// [source] Who asked for this statement to be a requirement. By default,
   ///  it's assumed that the publisher knows who it is if it matters.
   ///
-  factory RequirementsStatement({
+  const factory RequirementsStatement({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -13420,11 +13430,12 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
   /// [typeTested] Specimen conditioned in a container as expected by the
   ///  testing laboratory.
   ///
-  factory SpecimenDefinition({
+  const factory SpecimenDefinition({
     /// [resourceType] This is a SpecimenDefinition resource
     @Default(R5ResourceType.SpecimenDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.SpecimenDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -13522,7 +13533,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -13808,7 +13819,7 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
   /// [testingDestination] Where the specimen will be tested: e.g., lab,
   ///  sector, device or any combination of these.
   ///
-  factory SpecimenDefinitionTypeTested({
+  const factory SpecimenDefinitionTypeTested({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -13984,7 +13995,7 @@ class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   ///
   /// [preparationElement] ("_preparation") Extensions for preparation
   ///
-  factory SpecimenDefinitionContainer({
+  const factory SpecimenDefinitionContainer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -14131,7 +14142,7 @@ class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
   ///  preserve, maintain or enhance the specimen. Examples: Formalin, Citrate,
   ///  EDTA.
   ///
-  factory SpecimenDefinitionAdditive({
+  const factory SpecimenDefinitionAdditive({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -14252,7 +14263,7 @@ class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
   ///
   /// [instructionElement] ("_instruction") Extensions for instruction
   ///
-  factory SpecimenDefinitionHandling({
+  const factory SpecimenDefinitionHandling({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

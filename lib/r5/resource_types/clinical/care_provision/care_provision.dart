@@ -168,11 +168,12 @@ class CarePlan with Resource, _$CarePlan {
   ///
   /// [note] General notes about the care plan not covered elsewhere.
   ///
-  factory CarePlan({
+  const factory CarePlan({
     /// [resourceType] This is a CarePlan resource
     @Default(R5ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: R5ResourceType.CarePlan)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -444,7 +445,7 @@ class CarePlanActivity with _$CarePlanActivity {
   /// [plannedActivityReference] The details of the proposed activity
   ///  represented in a specific resource.
   ///
-  factory CarePlanActivity({
+  const factory CarePlanActivity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -621,11 +622,12 @@ class CareTeam with Resource, _$CareTeam {
   ///
   /// [note] Comments made about the CareTeam.
   ///
-  factory CareTeam({
+  const factory CareTeam({
     /// [resourceType] This is a CareTeam resource
     @Default(R5ResourceType.CareTeam)
     @JsonKey(unknownEnumValue: R5ResourceType.CareTeam)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -826,7 +828,7 @@ class CareTeamParticipant with _$CareTeamParticipant {
   /// [coverageTiming] When the member is generally available within this care
   ///  team.
   ///
-  factory CareTeamParticipant({
+  const factory CareTeamParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1037,11 +1039,12 @@ class Goal with Resource, _$Goal {
   /// [outcome] Identifies the change (or lack of change) at the point when the
   ///  status of the goal is assessed.
   ///
-  factory Goal({
+  const factory Goal({
     /// [resourceType] This is a Goal resource
     @Default(R5ResourceType.Goal)
     @JsonKey(unknownEnumValue: R5ResourceType.Goal)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1334,7 +1337,7 @@ class GoalTarget with _$GoalTarget {
   /// [dueDuration] Indicates either the date or the duration after start by
   ///  which the goal should be met.
   ///
-  factory GoalTarget({
+  const factory GoalTarget({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1652,11 +1655,12 @@ class NutritionIntake with Resource, _$NutritionIntake {
   /// [note] Provides extra information about the Nutrition Intake that is not
   ///  conveyed by the other attributes.
   ///
-  factory NutritionIntake({
+  const factory NutritionIntake({
     /// [resourceType] This is a NutritionIntake resource
     @Default(R5ResourceType.NutritionIntake)
     @JsonKey(unknownEnumValue: R5ResourceType.NutritionIntake)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1948,7 +1952,7 @@ class NutritionIntakeConsumedItem with _$NutritionIntakeConsumedItem {
   /// [notConsumedReason] Document the reason the food or fluid was not
   ///  consumed, such as refused, held, etc.
   ///
-  factory NutritionIntakeConsumedItem({
+  const factory NutritionIntakeConsumedItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2107,7 +2111,7 @@ class NutritionIntakeIngredientLabel with _$NutritionIntakeIngredientLabel {
   ///
   /// [amount] Total amount of nutrient consumed.
   ///
-  factory NutritionIntakeIngredientLabel({
+  const factory NutritionIntakeIngredientLabel({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2240,7 +2244,7 @@ class NutritionIntakePerformer with _$NutritionIntakePerformer {
   ///
   /// [actor] Who performed the intake.
   ///
-  factory NutritionIntakePerformer({
+  const factory NutritionIntakePerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2475,11 +2479,12 @@ class NutritionOrder with Resource, _$NutritionOrder {
   /// [note] Comments made about the {{title}} by the requester, performer,
   ///  subject or other participants.
   ///
-  factory NutritionOrder({
+  const factory NutritionOrder({
     /// [resourceType] This is a NutritionOrder resource
     @Default(R5ResourceType.NutritionOrder)
     @JsonKey(unknownEnumValue: R5ResourceType.NutritionOrder)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2769,7 +2774,7 @@ class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   ///
   /// [instructionElement] ("_instruction") Extensions for instruction
   ///
-  factory NutritionOrderOralDiet({
+  const factory NutritionOrderOralDiet({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2905,7 +2910,7 @@ class NutritionOrderSchedule with _$NutritionOrderSchedule {
   /// [asNeededFor] Indicates whether the product is only taken based on a
   ///  precondition for taking the product.
   ///
-  factory NutritionOrderSchedule({
+  const factory NutritionOrderSchedule({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3022,7 +3027,7 @@ class NutritionOrderNutrient with _$NutritionOrderNutrient {
   ///
   /// [amount] The quantity of the specified nutrient to include in diet.
   ///
-  factory NutritionOrderNutrient({
+  const factory NutritionOrderNutrient({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3131,7 +3136,7 @@ class NutritionOrderTexture with _$NutritionOrderTexture {
   /// [foodType] The food type(s) (e.g. meats, all foods)  that the texture
   ///  modification applies to.  This could be all foods types.
   ///
-  factory NutritionOrderTexture({
+  const factory NutritionOrderTexture({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3252,7 +3257,7 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
   ///
   /// [instructionElement] ("_instruction") Extensions for instruction
   ///
-  factory NutritionOrderSupplement({
+  const factory NutritionOrderSupplement({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3384,7 +3389,7 @@ class NutritionOrderSchedule1 with _$NutritionOrderSchedule1 {
   /// [asNeededFor] Indicates whether the supplement is only taken based on a
   ///  precondition for taking the supplement.
   ///
-  factory NutritionOrderSchedule1({
+  const factory NutritionOrderSchedule1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3537,7 +3542,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   /// [administrationInstructionElement] ("_administrationInstruction")
   ///  Extensions for administrationInstruction
   ///
-  factory NutritionOrderEnteralFormula({
+  const factory NutritionOrderEnteralFormula({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3577,7 +3582,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
     /// [baseFormulaProductNameElement] ("_baseFormulaProductName") Extensions
     ///  for baseFormulaProductName
     @JsonKey(name: '_baseFormulaProductName')
-        Element? baseFormulaProductNameElement,
+    Element? baseFormulaProductNameElement,
 
     /// [deliveryDevice] The intended type of device that is to be used for the
     ///  administration of the enteral formula.
@@ -3618,7 +3623,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
     /// [administrationInstructionElement] ("_administrationInstruction")
     ///  Extensions for administrationInstruction
     @JsonKey(name: '_administrationInstruction')
-        Element? administrationInstructionElement,
+    Element? administrationInstructionElement,
   }) = _NutritionOrderEnteralFormula;
 
   /// Produces a Yaml formatted String version of the object
@@ -3700,7 +3705,7 @@ class NutritionOrderAdditive with _$NutritionOrderAdditive {
   /// [quantity] The amount of additive to be given in addition or to be mixed
   ///  in with the base formula.
   ///
-  factory NutritionOrderAdditive({
+  const factory NutritionOrderAdditive({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3823,7 +3828,7 @@ class NutritionOrderAdministration with _$NutritionOrderAdministration {
   /// [rateRatio] The rate of administration of formula via a feeding pump,
   ///  e.g. 60 mL per hour, according to the specified schedule.
   ///
-  factory NutritionOrderAdministration({
+  const factory NutritionOrderAdministration({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3947,7 +3952,7 @@ class NutritionOrderSchedule2 with _$NutritionOrderSchedule2 {
   /// [asNeededFor] Indicates whether the enteral formula is only taken based
   ///  on a precondition for taking the enteral formula.
   ///
-  factory NutritionOrderSchedule2({
+  const factory NutritionOrderSchedule2({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4161,11 +4166,12 @@ class RequestOrchestration with Resource, _$RequestOrchestration {
   ///
   /// [action] The actions, if any, produced by the evaluation of the artifact.
   ///
-  factory RequestOrchestration({
+  const factory RequestOrchestration({
     /// [resourceType] This is a RequestOrchestration resource
     @Default(R5ResourceType.RequestOrchestration)
     @JsonKey(unknownEnumValue: R5ResourceType.RequestOrchestration)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -4244,7 +4250,7 @@ class RequestOrchestration with Resource, _$RequestOrchestration {
     /// [instantiatesCanonicalElement] ("_instantiatesCanonical") Extensions
     ///  for instantiatesCanonical
     @JsonKey(name: '_instantiatesCanonical')
-        List<Element>? instantiatesCanonicalElement,
+    List<Element>? instantiatesCanonicalElement,
 
     /// [instantiatesUri] A URL referencing an externally defined protocol,
     ///  guideline, orderset or other definition that is adhered to in whole or
@@ -4543,7 +4549,7 @@ class RequestOrchestrationAction with _$RequestOrchestrationAction {
   ///
   /// [action] Sub actions.
   ///
-  factory RequestOrchestrationAction({
+  const factory RequestOrchestrationAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4843,7 +4849,7 @@ class RequestOrchestrationCondition with _$RequestOrchestrationCondition {
   /// [expression] An expression that returns true or false, indicating whether
   ///  or not the condition is satisfied.
   ///
-  factory RequestOrchestrationCondition({
+  const factory RequestOrchestrationCondition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4968,7 +4974,7 @@ class RequestOrchestrationInput with _$RequestOrchestrationInput {
   ///
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   ///
-  factory RequestOrchestrationInput({
+  const factory RequestOrchestrationInput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5101,7 +5107,7 @@ class RequestOrchestrationOutput with _$RequestOrchestrationOutput {
   ///
   /// [relatedDataElement] ("_relatedData") Extensions for relatedData
   ///
-  factory RequestOrchestrationOutput({
+  const factory RequestOrchestrationOutput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5240,7 +5246,7 @@ class RequestOrchestrationRelatedAction
   /// [offsetRange] A duration or range of durations to apply to the
   ///  relationship. For example, 30-60 minutes before.
   ///
-  factory RequestOrchestrationRelatedAction({
+  const factory RequestOrchestrationRelatedAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5390,7 +5396,7 @@ class RequestOrchestrationParticipant with _$RequestOrchestrationParticipant {
   ///
   /// [actorReference] A reference to the actual participant.
   ///
-  factory RequestOrchestrationParticipant({
+  const factory RequestOrchestrationParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5535,7 +5541,7 @@ class RequestOrchestrationDynamicValue with _$RequestOrchestrationDynamicValue {
   ///
   /// [expression] An expression specifying the value of the customized element.
   ///
-  factory RequestOrchestrationDynamicValue({
+  const factory RequestOrchestrationDynamicValue({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5732,11 +5738,12 @@ class RiskAssessment with Resource, _$RiskAssessment {
   ///
   /// [note] Additional comments about the risk assessment.
   ///
-  factory RiskAssessment({
+  const factory RiskAssessment({
     /// [resourceType] This is a RiskAssessment resource
     @Default(R5ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: R5ResourceType.RiskAssessment)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -5975,7 +5982,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   ///
   /// [rationaleElement] ("_rationale") Extensions for rationale
   ///
-  factory RiskAssessmentPrediction({
+  const factory RiskAssessmentPrediction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6300,11 +6307,12 @@ class ServiceRequest with Resource, _$ServiceRequest {
   ///
   /// [relevantHistory] Key events in the history of the request.
   ///
-  factory ServiceRequest({
+  const factory ServiceRequest({
     /// [resourceType] This is a ServiceRequest resource
     @Default(R5ResourceType.ServiceRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.ServiceRequest)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -6647,7 +6655,7 @@ class ServiceRequestOrderDetail with _$ServiceRequestOrderDetail {
   ///
   /// [parameter] The parameter details for the service being requested.
   ///
-  factory ServiceRequestOrderDetail({
+  const factory ServiceRequestOrderDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6772,7 +6780,7 @@ class ServiceRequestParameter with _$ServiceRequestParameter {
   ///
   /// [valuePeriod] Indicates a value for the order detail.
   ///
-  factory ServiceRequestParameter({
+  const factory ServiceRequestParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6909,7 +6917,7 @@ class ServiceRequestPatientInstruction with _$ServiceRequestPatientInstruction {
   /// [instructionReference] Instructions in terms that are understood by the
   ///  patient or consumer.
   ///
-  factory ServiceRequestPatientInstruction({
+  const factory ServiceRequestPatientInstruction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7079,11 +7087,12 @@ class VisionPrescription with Resource, _$VisionPrescription {
   ///  specifications and serves as the authorization for the fullfillment by
   ///  certified professionals.
   ///
-  factory VisionPrescription({
+  const factory VisionPrescription({
     /// [resourceType] This is a VisionPrescription resource
     @Default(R5ResourceType.VisionPrescription)
     @JsonKey(unknownEnumValue: R5ResourceType.VisionPrescription)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -7310,7 +7319,7 @@ class VisionPrescriptionLensSpecification
   ///
   /// [note] Notes for special requirements such as coatings and lens materials.
   ///
-  factory VisionPrescriptionLensSpecification({
+  const factory VisionPrescriptionLensSpecification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7494,7 +7503,7 @@ class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
   ///
   /// [baseElement] ("_base") Extensions for base
   ///
-  factory VisionPrescriptionPrism({
+  const factory VisionPrescriptionPrism({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

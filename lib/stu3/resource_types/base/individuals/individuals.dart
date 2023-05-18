@@ -15,12 +15,13 @@ part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
 @freezed
-class Group with Resource, _$Group {
-  Group._();
-  factory Group({
+class FhirGroup with Resource, _$FhirGroup {
+  FhirGroup._();
+  const factory FhirGroup({
     @Default(Stu3ResourceType.Group)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Group)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -45,27 +46,29 @@ class Group with Resource, _$Group {
     @JsonKey(name: '_quantity') Element? quantityElement,
     List<GroupCharacteristic>? characteristic,
     List<GroupMember>? member,
-  }) = _Group;
+  }) = _FhirGroup;
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
-  factory Group.fromYaml(dynamic yaml) => yaml is String
-      ? Group.fromJson(
+  factory FhirGroup.fromYaml(dynamic yaml) => yaml is String
+      ? FhirGroup.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Group.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          ? FhirGroup.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'Group cannot be constructed from input provided,'
+              'FhirGroup cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
+  factory FhirGroup.fromJson(Map<String, dynamic> json) =>
+      _$FhirGroupFromJson(json);
 
-  /// Acts like a constructor, returns a [Group], accepts a
+  /// Acts like a constructor, returns a [FhirGroup], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory Group.fromJsonString(String source) {
+  factory FhirGroup.fromJsonString(String source) {
     final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$GroupFromJson(json);
+      return _$FhirGroupFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -76,7 +79,7 @@ class Group with Resource, _$Group {
 @freezed
 class GroupCharacteristic with _$GroupCharacteristic {
   GroupCharacteristic._();
-  factory GroupCharacteristic({
+  const factory GroupCharacteristic({
     required CodeableConcept code,
     CodeableConcept? valueCodeableConcept,
     FhirBoolean? valueBoolean,
@@ -122,7 +125,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
 @freezed
 class GroupMember with _$GroupMember {
   GroupMember._();
-  factory GroupMember({
+  const factory GroupMember({
     required Reference entity,
     Period? period,
     FhirBoolean? inactive,
@@ -163,10 +166,11 @@ class GroupMember with _$GroupMember {
 @freezed
 class Patient with Resource, _$Patient {
   Patient._();
-  factory Patient({
+  const factory Patient({
     @Default(Stu3ResourceType.Patient)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -194,10 +198,10 @@ class Patient with Resource, _$Patient {
     CodeableConcept? maritalStatus,
     FhirBoolean? multipleBirthBoolean,
     @JsonKey(name: '_multipleBirthBoolean')
-        Element? multipleBirthBooleanElement,
+    Element? multipleBirthBooleanElement,
     FhirDecimal? multipleBirthInteger,
     @JsonKey(name: '_multipleBirthInteger')
-        Element? multipleBirthIntegerElement,
+    Element? multipleBirthIntegerElement,
     List<Attachment>? photo,
     List<PatientContact>? contact,
     PatientAnimal? animal,
@@ -238,7 +242,7 @@ class Patient with Resource, _$Patient {
 @freezed
 class PatientContact with _$PatientContact {
   PatientContact._();
-  factory PatientContact({
+  const factory PatientContact({
     List<CodeableConcept>? relationship,
     HumanName? name,
     List<ContactPoint>? telecom,
@@ -283,7 +287,7 @@ class PatientContact with _$PatientContact {
 @freezed
 class PatientAnimal with _$PatientAnimal {
   PatientAnimal._();
-  factory PatientAnimal({
+  const factory PatientAnimal({
     required CodeableConcept species,
     CodeableConcept? breed,
     CodeableConcept? genderStatus,
@@ -323,7 +327,7 @@ class PatientAnimal with _$PatientAnimal {
 @freezed
 class PatientCommunication with _$PatientCommunication {
   PatientCommunication._();
-  factory PatientCommunication({
+  const factory PatientCommunication({
     required CodeableConcept language,
     FhirBoolean? preferred,
     @JsonKey(name: '_preferred') Element? preferredElement,
@@ -363,7 +367,7 @@ class PatientCommunication with _$PatientCommunication {
 @freezed
 class PatientLink with _$PatientLink {
   PatientLink._();
-  factory PatientLink({
+  const factory PatientLink({
     required Reference other,
     PatientLinkType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -403,10 +407,11 @@ class PatientLink with _$PatientLink {
 @freezed
 class Person with Resource, _$Person {
   Person._();
-  factory Person({
+  const factory Person({
     @Default(Stu3ResourceType.Person)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Person)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -462,7 +467,7 @@ class Person with Resource, _$Person {
 @freezed
 class PersonLink with _$PersonLink {
   PersonLink._();
-  factory PersonLink({
+  const factory PersonLink({
     required Reference target,
     PersonLinkAssurance? assurance,
     @JsonKey(name: '_assurance') Element? assuranceElement,
@@ -502,10 +507,11 @@ class PersonLink with _$PersonLink {
 @freezed
 class Practitioner with Resource, _$Practitioner {
   Practitioner._();
-  factory Practitioner({
+  const factory Practitioner({
     @Default(Stu3ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -562,7 +568,7 @@ class Practitioner with Resource, _$Practitioner {
 @freezed
 class PractitionerQualification with _$PractitionerQualification {
   PractitionerQualification._();
-  factory PractitionerQualification({
+  const factory PractitionerQualification({
     List<Identifier>? identifier,
     required CodeableConcept code,
     Period? period,
@@ -603,10 +609,11 @@ class PractitionerQualification with _$PractitionerQualification {
 @freezed
 class PractitionerRole with Resource, _$PractitionerRole {
   PractitionerRole._();
-  factory PractitionerRole({
+  const factory PractitionerRole({
     @Default(Stu3ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -632,7 +639,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
     List<PractitionerRoleNotAvailable>? notAvailable,
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
-        Element? availabilityExceptionsElement,
+    Element? availabilityExceptionsElement,
     List<Reference>? endpoint,
   }) = _PractitionerRole;
 
@@ -667,7 +674,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
 @freezed
 class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
   PractitionerRoleAvailableTime._();
-  factory PractitionerRoleAvailableTime({
+  const factory PractitionerRoleAvailableTime({
     List<String>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
     FhirBoolean? allDay,
@@ -712,7 +719,7 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
 @freezed
 class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
   PractitionerRoleNotAvailable._();
-  factory PractitionerRoleNotAvailable({
+  const factory PractitionerRoleNotAvailable({
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     Period? during,
@@ -752,10 +759,11 @@ class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
 @freezed
 class RelatedPerson with Resource, _$RelatedPerson {
   RelatedPerson._();
-  factory RelatedPerson({
+  const factory RelatedPerson({
     @Default(Stu3ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

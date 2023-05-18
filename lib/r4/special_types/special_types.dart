@@ -43,7 +43,7 @@ class Narrative with _$Narrative {
   /// [statusElement] (_status) Extensions for status
   ///
   /// [div] The actual narrative content, a stripped down version of XHTML.
-  factory Narrative({
+  const factory Narrative({
     /// [id] Unique id for the element within a resource (for internal references).
     /// This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -127,7 +127,7 @@ class CodeableReference with _$CodeableReference {
   ///
   /// [reference] A reference to a resource the provides exact details about the
   /// information being referenced.
-  factory CodeableReference({
+  const factory CodeableReference({
     /// [id] Unique id for the element within a resource (for internal references).
     /// This may be any string value that does not contain spaces.",
     @JsonKey(name: 'id') String? fhirId,
@@ -234,7 +234,7 @@ class Reference with _$Reference {
   ///  to the resource reference.
   ///
   /// [displayElement] Extensions for display
-  factory Reference({
+  const factory Reference({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -373,7 +373,7 @@ class FhirMeta with _$FhirMeta {
   /// identify and relate resources to process and workflow, and applications
   /// are not required to consider the tags when interpreting the meaning of a
   ///  resource.
-  factory FhirMeta({
+  const factory FhirMeta({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -536,7 +536,7 @@ class Dosage with _$Dosage {
   ///
   /// [maxDosePerLifetime] Upper limit on medication per lifetime of the
   ///  patient.
-  factory Dosage({
+  const factory Dosage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -704,7 +704,7 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
   /// [rateRange] Amount of medication per unit of time.
   ///
   /// [rateQuantity] Amount of medication per unit of time.
-  factory DosageDoseAndRate({
+  const factory DosageDoseAndRate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2437,11 +2437,10 @@ class ElementDefinition with _$ElementDefinition {
   ///
   /// [mapping] Identifies a concept from an external specification that
   ///  roughly corresponds to this element.
-  factory ElementDefinition({
+  const factory ElementDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2449,8 +2448,7 @@ class ElementDefinition with _$ElementDefinition {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -2473,16 +2471,14 @@ class ElementDefinition with _$ElementDefinition {
     String? path,
 
     /// [pathElement] Extensions for path
-    @JsonKey(name: '_path')
-        Element? pathElement,
+    @JsonKey(name: '_path') Element? pathElement,
 
     /// [representation] Codes that define how this element is represented in
     ///  instances, when the deviation varies from the normal case.
     List<ElementDefinitionRepresentation>? representation,
 
     /// [representationElement] Extensions for representation
-    @JsonKey(name: '_representation')
-        List<Element?>? representationElement,
+    @JsonKey(name: '_representation') List<Element?>? representationElement,
 
     /// [sliceName] The name of this element definition slice, when slicing is
     /// working. The name must be a token with no dots or spaces. This is a unique
@@ -2491,8 +2487,7 @@ class ElementDefinition with _$ElementDefinition {
     String? sliceName,
 
     /// [sliceNameElement] Extensions for sliceName
-    @JsonKey(name: '_sliceName')
-        Element? sliceNameElement,
+    @JsonKey(name: '_sliceName') Element? sliceNameElement,
 
     /// [sliceIsConstraining] If true, indicates that this slice definition is
     /// constraining a slice definition with the same name in an inherited
@@ -2502,8 +2497,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirBoolean? sliceIsConstraining,
 
     /// [sliceIsConstrainingElement] Extensions for sliceIsConstraining
-    @JsonKey(name: '_sliceIsConstraining')
-        Element? sliceIsConstrainingElement,
+    @JsonKey(name: '_sliceIsConstraining') Element? sliceIsConstrainingElement,
 
     /// [label] A single preferred label which is the text to display beside the
     /// element indicating its meaning or to use to prompt for the element in a
@@ -2511,8 +2505,7 @@ class ElementDefinition with _$ElementDefinition {
     String? label,
 
     /// [labelElement] Extensions for label
-    @JsonKey(name: '_label')
-        Element? labelElement,
+    @JsonKey(name: '_label') Element? labelElement,
 
     /// [code] A code that has the same meaning as the element in a particular
     ///  terminology.
@@ -2532,8 +2525,7 @@ class ElementDefinition with _$ElementDefinition {
     String? short,
 
     /// [shortElement] Extensions for short
-    @JsonKey(name: '_short')
-        Element? shortElement,
+    @JsonKey(name: '_short') Element? shortElement,
 
     /// [definition] Provides a complete explanation of the meaning of the data
     /// element for human readability.  For the case of elements derived from
@@ -2544,8 +2536,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirMarkdown? definition,
 
     /// [definitionElement] Extensions for definition
-    @JsonKey(name: '_definition')
-        Element? definitionElement,
+    @JsonKey(name: '_definition') Element? definitionElement,
 
     /// [comment] Explanatory notes and implementation guidance about the data
     /// element, including notes about how to use the data properly, exceptions to
@@ -2554,8 +2545,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirMarkdown? comment,
 
     /// [commentElement] Extensions for comment
-    @JsonKey(name: '_comment')
-        Element? commentElement,
+    @JsonKey(name: '_comment') Element? commentElement,
 
     /// [requirements] This element is for traceability of why the element was
     /// created and why the constraints exist as they do. This may be used to
@@ -2564,32 +2554,28 @@ class ElementDefinition with _$ElementDefinition {
     FhirMarkdown? requirements,
 
     /// [requirementsElement] Extensions for requirements
-    @JsonKey(name: '_requirements')
-        Element? requirementsElement,
+    @JsonKey(name: '_requirements') Element? requirementsElement,
 
     /// [alias] Identifies additional names by which this element might also be
     ///  known.
     List<String>? alias,
 
     /// [aliasElement] Extensions for alias
-    @JsonKey(name: '_alias')
-        List<Element?>? aliasElement,
+    @JsonKey(name: '_alias') List<Element?>? aliasElement,
 
     /// [min] The minimum number of times this element SHALL appear in the
     ///  instance.
     FhirUnsignedInt? min,
 
     /// [minElement] Extensions for min
-    @JsonKey(name: '_min')
-        Element? minElement,
+    @JsonKey(name: '_min') Element? minElement,
 
     /// [max] The maximum number of times this element is permitted to appear in
     ///  the instance.
     String? max,
 
     /// [maxElement] Extensions for max
-    @JsonKey(name: '_max')
-        Element? maxElement,
+    @JsonKey(name: '_max') Element? maxElement,
 
     /// [base] Information about the base definition of the element, provided to
     /// make it unnecessary for tools to trace the deviation of the element
@@ -2609,8 +2595,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUri? contentReference,
 
     /// [contentReferenceElement] Extensions for contentReference
-    @JsonKey(name: '_contentReference')
-        Element? contentReferenceElement,
+    @JsonKey(name: '_contentReference') Element? contentReferenceElement,
 
     /// [type] The data type or resource that the value of this element is
     ///  permitted to be.
@@ -2622,8 +2607,8 @@ class ElementDefinition with _$ElementDefinition {
     FhirBase64Binary? defaultValueBase64Binary,
     @JsonKey(name: '_defaultValueBase64Binary')
 
-        /// [defaultValueBase64BinaryElement] Extensions for defaultValueBase64Binary
-        Element? defaultValueBase64BinaryElement,
+    /// [defaultValueBase64BinaryElement] Extensions for defaultValueBase64Binary
+    Element? defaultValueBase64BinaryElement,
 
     /// [defaultValueBoolean] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2631,8 +2616,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirBoolean? defaultValueBoolean,
 
     /// [defaultValueBooleanElement] Extensions for defaultValueBoolean
-    @JsonKey(name: '_defaultValueBoolean')
-        Element? defaultValueBooleanElement,
+    @JsonKey(name: '_defaultValueBoolean') Element? defaultValueBooleanElement,
 
     /// [defaultValueCanonical] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
@@ -2640,8 +2624,8 @@ class ElementDefinition with _$ElementDefinition {
     FhirCanonical? defaultValueCanonical,
     @JsonKey(name: '_defaultValueCanonical')
 
-        /// [defaultValueCanonicalElement] Extensions for defaultValueCanonical
-        Element? defaultValueCanonicalElement,
+    /// [defaultValueCanonicalElement] Extensions for defaultValueCanonical
+    Element? defaultValueCanonicalElement,
 
     /// [defaultValueCode] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2649,8 +2633,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirCode? defaultValueCode,
 
     /// [defaultValueCodeElement] Extensions for defaultValueCode
-    @JsonKey(name: '_defaultValueCode')
-        Element? defaultValueCodeElement,
+    @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
 
     /// [defaultValueDate] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2658,8 +2641,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDate? defaultValueDate,
 
     /// [defaultValueDateElement] Extensions for defaultValueDate
-    @JsonKey(name: '_defaultValueDate')
-        Element? defaultValueDateElement,
+    @JsonKey(name: '_defaultValueDate') Element? defaultValueDateElement,
 
     /// [defaultValueDateTime] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2667,8 +2649,8 @@ class ElementDefinition with _$ElementDefinition {
     FhirDateTime? defaultValueDateTime,
     @JsonKey(name: '_defaultValueDateTime')
 
-        /// [defaultValueDateTimeElement] Extensions for defaultValueDateTime
-        Element? defaultValueDateTimeElement,
+    /// [defaultValueDateTimeElement] Extensions for defaultValueDateTime
+    Element? defaultValueDateTimeElement,
 
     /// [defaultValueDecimal] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2676,8 +2658,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDecimal? defaultValueDecimal,
 
     /// [defaultValueDecimalElement] Extensions for defaultValueDecimal
-    @JsonKey(name: '_defaultValueDecimal')
-        Element? defaultValueDecimalElement,
+    @JsonKey(name: '_defaultValueDecimal') Element? defaultValueDecimalElement,
 
     /// [defaultValueId] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2685,8 +2666,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirId? defaultValueId,
 
     /// [defaultValueIdElement] Extensions for defaultValueId
-    @JsonKey(name: '_defaultValueId')
-        Element? defaultValueIdElement,
+    @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
 
     /// [defaultValueInstant] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2694,8 +2674,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirInstant? defaultValueInstant,
 
     /// [defaultValueInstantElement] Extensions for defaultValueInstant
-    @JsonKey(name: '_defaultValueInstant')
-        Element? defaultValueInstantElement,
+    @JsonKey(name: '_defaultValueInstant') Element? defaultValueInstantElement,
 
     /// [defaultValueInteger] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2703,8 +2682,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirInteger? defaultValueInteger,
 
     /// [defaultValueIntegerElement] Extensions for defaultValueInteger
-    @JsonKey(name: '_defaultValueInteger')
-        Element? defaultValueIntegerElement,
+    @JsonKey(name: '_defaultValueInteger') Element? defaultValueIntegerElement,
 
     /// [defaultValueMarkdown] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2712,8 +2690,8 @@ class ElementDefinition with _$ElementDefinition {
     FhirMarkdown? defaultValueMarkdown,
     @JsonKey(name: '_defaultValueMarkdown')
 
-        /// [defaultValueMarkdownElement] Extensions for defaultValueMarkdown
-        Element? defaultValueMarkdownElement,
+    /// [defaultValueMarkdownElement] Extensions for defaultValueMarkdown
+    Element? defaultValueMarkdownElement,
 
     /// [defaultValueOid] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2721,8 +2699,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirOid? defaultValueOid,
 
     /// [defaultValueOidElement] Extensions for defaultValueOid
-    @JsonKey(name: '_defaultValueOid')
-        Element? defaultValueOidElement,
+    @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
 
     /// [defaultValuePositiveInt] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
@@ -2730,8 +2707,8 @@ class ElementDefinition with _$ElementDefinition {
     FhirPositiveInt? defaultValuePositiveInt,
     @JsonKey(name: '_defaultValuePositiveInt')
 
-        /// [defaultValuePositiveIntElement] Extensions for defaultValuePositiveInt
-        Element? defaultValuePositiveIntElement,
+    /// [defaultValuePositiveIntElement] Extensions for defaultValuePositiveInt
+    Element? defaultValuePositiveIntElement,
 
     /// [defaultValueString] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2739,8 +2716,7 @@ class ElementDefinition with _$ElementDefinition {
     String? defaultValueString,
 
     /// [defaultValueStringElement] Extensions for defaultValueString
-    @JsonKey(name: '_defaultValueString')
-        Element? defaultValueStringElement,
+    @JsonKey(name: '_defaultValueString') Element? defaultValueStringElement,
 
     /// [defaultValueTime] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2748,8 +2724,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirTime? defaultValueTime,
 
     /// [defaultValueTimeElement] Extensions for defaultValueTime
-    @JsonKey(name: '_defaultValueTime')
-        Element? defaultValueTimeElement,
+    @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
 
     /// [defaultValueUnsignedInt] The value that should be used if there is no
     /// value stated in the instance (e.g. 'if not otherwise specified, the
@@ -2757,8 +2732,8 @@ class ElementDefinition with _$ElementDefinition {
     FhirUnsignedInt? defaultValueUnsignedInt,
     @JsonKey(name: '_defaultValueUnsignedInt')
 
-        /// [defaultValueUnsignedIntElement] Extensions for defaultValueUnsignedInt
-        Element? defaultValueUnsignedIntElement,
+    /// [defaultValueUnsignedIntElement] Extensions for defaultValueUnsignedInt
+    Element? defaultValueUnsignedIntElement,
 
     /// [defaultValueUri] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2766,8 +2741,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUri? defaultValueUri,
 
     /// [defaultValueUriElement] Extensions for defaultValueUri
-    @JsonKey(name: '_defaultValueUri')
-        Element? defaultValueUriElement,
+    @JsonKey(name: '_defaultValueUri') Element? defaultValueUriElement,
 
     /// [defaultValueUrl] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2775,8 +2749,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUrl? defaultValueUrl,
 
     /// [defaultValueUrlElement] Extensions for defaultValueUrl
-    @JsonKey(name: '_defaultValueUrl')
-        Element? defaultValueUrlElement,
+    @JsonKey(name: '_defaultValueUrl') Element? defaultValueUrlElement,
 
     /// [defaultValueUuid] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2784,8 +2757,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUuid? defaultValueUuid,
 
     /// [defaultValueUuidElement] Extensions for defaultValueUuid
-    @JsonKey(name: '_defaultValueUuid')
-        Element? defaultValueUuidElement,
+    @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
 
     /// [defaultValueAddress] The value that should be used if there is no value
     /// stated in the instance (e.g. 'if not otherwise specified, the abstract is
@@ -2945,8 +2917,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirMarkdown? meaningWhenMissing,
 
     /// [meaningWhenMissingElement] Extensions for meaningWhenMissing
-    @JsonKey(name: '_meaningWhenMissing')
-        Element? meaningWhenMissingElement,
+    @JsonKey(name: '_meaningWhenMissing') Element? meaningWhenMissingElement,
 
     /// [orderMeaning] If present, indicates that the order of the repeating
     /// element has meaning and describes what that meaning is.  If absent, it
@@ -2954,8 +2925,7 @@ class ElementDefinition with _$ElementDefinition {
     String? orderMeaning,
 
     /// [orderMeaningElement] Extensions for orderMeaning
-    @JsonKey(name: '_orderMeaning')
-        Element? orderMeaningElement,
+    @JsonKey(name: '_orderMeaning') Element? orderMeaningElement,
 
     /// [fixedBase64Binary] Specifies a value that SHALL be exactly the value
     /// for this element in the instance. For purposes of comparison,
@@ -2965,8 +2935,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirBase64Binary? fixedBase64Binary,
 
     /// [fixedBase64BinaryElement] Extensions for fixedBase64Binary
-    @JsonKey(name: '_fixedBase64Binary')
-        Element? fixedBase64BinaryElement,
+    @JsonKey(name: '_fixedBase64Binary') Element? fixedBase64BinaryElement,
 
     /// [fixedBoolean] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
@@ -2975,8 +2944,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirBoolean? fixedBoolean,
 
     /// [fixedBooleanElement] Extensions for fixedBoolean
-    @JsonKey(name: '_fixedBoolean')
-        Element? fixedBooleanElement,
+    @JsonKey(name: '_fixedBoolean') Element? fixedBooleanElement,
 
     /// [fixedCanonical] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
@@ -2985,8 +2953,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirCanonical? fixedCanonical,
 
     /// [fixedCanonicalElement] Extensions for fixedCanonical
-    @JsonKey(name: '_fixedCanonical')
-        Element? fixedCanonicalElement,
+    @JsonKey(name: '_fixedCanonical') Element? fixedCanonicalElement,
 
     /// [fixedCode] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
@@ -2995,8 +2962,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirCode? fixedCode,
 
     /// [fixedCodeElement] Extensions for fixedCode
-    @JsonKey(name: '_fixedCode')
-        Element? fixedCodeElement,
+    @JsonKey(name: '_fixedCode') Element? fixedCodeElement,
 
     /// [fixedDate] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
@@ -3005,8 +2971,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDate? fixedDate,
 
     /// [fixedDateElement] Extensions for fixedDate
-    @JsonKey(name: '_fixedDate')
-        Element? fixedDateElement,
+    @JsonKey(name: '_fixedDate') Element? fixedDateElement,
 
     /// [fixedDateTime] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
@@ -3015,8 +2980,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDateTime? fixedDateTime,
 
     /// [fixedDateTimeElement] Extensions for fixedDateTime
-    @JsonKey(name: '_fixedDateTime')
-        Element? fixedDateTimeElement,
+    @JsonKey(name: '_fixedDateTime') Element? fixedDateTimeElement,
 
     /// [fixedDecimal] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
@@ -3025,8 +2989,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDecimal? fixedDecimal,
 
     /// [fixedDecimalElement] Extensions for fixedDecimal
-    @JsonKey(name: '_fixedDecimal')
-        Element? fixedDecimalElement,
+    @JsonKey(name: '_fixedDecimal') Element? fixedDecimalElement,
 
     /// [fixedId] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
@@ -3035,8 +2998,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirId? fixedId,
 
     /// [fixedIdElement] Extensions for fixedId
-    @JsonKey(name: '_fixedId')
-        Element? fixedIdElement,
+    @JsonKey(name: '_fixedId') Element? fixedIdElement,
 
     /// [fixedInstant] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
@@ -3045,8 +3007,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirInstant? fixedInstant,
 
     /// [fixedInstantElement] Extensions for fixedInstant
-    @JsonKey(name: '_fixedInstant')
-        Element? fixedInstantElement,
+    @JsonKey(name: '_fixedInstant') Element? fixedInstantElement,
 
     /// [fixedInteger] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
@@ -3055,8 +3016,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirInteger? fixedInteger,
 
     /// [fixedIntegerElement] Extensions for fixedInteger
-    @JsonKey(name: '_fixedInteger')
-        Element? fixedIntegerElement,
+    @JsonKey(name: '_fixedInteger') Element? fixedIntegerElement,
 
     /// [fixedMarkdown] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
@@ -3065,8 +3025,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirMarkdown? fixedMarkdown,
 
     /// [fixedMarkdownElement] Extensions for fixedMarkdown
-    @JsonKey(name: '_fixedMarkdown')
-        Element? fixedMarkdownElement,
+    @JsonKey(name: '_fixedMarkdown') Element? fixedMarkdownElement,
 
     /// [fixedOid] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
@@ -3075,8 +3034,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirOid? fixedOid,
 
     /// [fixedOidElement] Extensions for fixedOid
-    @JsonKey(name: '_fixedOid')
-        Element? fixedOidElement,
+    @JsonKey(name: '_fixedOid') Element? fixedOidElement,
 
     /// [fixedPositiveInt] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
@@ -3085,8 +3043,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirPositiveInt? fixedPositiveInt,
 
     /// [fixedPositiveIntElement] Extensions for fixedPositiveInt
-    @JsonKey(name: '_fixedPositiveInt')
-        Element? fixedPositiveIntElement,
+    @JsonKey(name: '_fixedPositiveInt') Element? fixedPositiveIntElement,
 
     /// [fixedString] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
@@ -3095,8 +3052,7 @@ class ElementDefinition with _$ElementDefinition {
     String? fixedString,
 
     /// [fixedStringElement] Extensions for fixedString
-    @JsonKey(name: '_fixedString')
-        Element? fixedStringElement,
+    @JsonKey(name: '_fixedString') Element? fixedStringElement,
 
     /// [fixedTime] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
@@ -3105,8 +3061,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirTime? fixedTime,
 
     /// [fixedTimeElement] Extensions for fixedTime
-    @JsonKey(name: '_fixedTime')
-        Element? fixedTimeElement,
+    @JsonKey(name: '_fixedTime') Element? fixedTimeElement,
 
     /// [fixedUnsignedInt] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
@@ -3115,8 +3070,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUnsignedInt? fixedUnsignedInt,
 
     /// [fixedUnsignedIntElement] Extensions for fixedUnsignedInt
-    @JsonKey(name: '_fixedUnsignedInt')
-        Element? fixedUnsignedIntElement,
+    @JsonKey(name: '_fixedUnsignedInt') Element? fixedUnsignedIntElement,
 
     /// [fixedUri] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
@@ -3125,8 +3079,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUri? fixedUri,
 
     /// [fixedUriElement] Extensions for fixedUri
-    @JsonKey(name: '_fixedUri')
-        Element? fixedUriElement,
+    @JsonKey(name: '_fixedUri') Element? fixedUriElement,
 
     /// [fixedUrl] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
@@ -3135,8 +3088,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUrl? fixedUrl,
 
     /// [fixedUrlElement] Extensions for fixedUrl
-    @JsonKey(name: '_fixedUrl')
-        Element? fixedUrlElement,
+    @JsonKey(name: '_fixedUrl') Element? fixedUrlElement,
 
     /// [fixedUuid] Specifies a value that SHALL be exactly the value  for this
     /// element in the instance. For purposes of comparison, non-significant
@@ -3145,8 +3097,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUuid? fixedUuid,
 
     /// [fixedUuidElement] Extensions for fixedUuid
-    @JsonKey(name: '_fixedUuid')
-        Element? fixedUuidElement,
+    @JsonKey(name: '_fixedUuid') Element? fixedUuidElement,
 
     /// [fixedAddress] Specifies a value that SHALL be exactly the value  for
     /// this element in the instance. For purposes of comparison, non-significant
@@ -3356,8 +3307,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirBase64Binary? patternBase64Binary,
 
     /// [patternBase64BinaryElement] Extensions for patternBase64Binary
-    @JsonKey(name: '_patternBase64Binary')
-        Element? patternBase64BinaryElement,
+    @JsonKey(name: '_patternBase64Binary') Element? patternBase64BinaryElement,
 
     /// [patternBoolean] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3377,8 +3327,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirBoolean? patternBoolean,
 
     /// [patternBooleanElement] Extensions for patternBoolean
-    @JsonKey(name: '_patternBoolean')
-        Element? patternBooleanElement,
+    @JsonKey(name: '_patternBoolean') Element? patternBooleanElement,
 
     /// [patternCanonical] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3398,8 +3347,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirCanonical? patternCanonical,
 
     /// [patternCanonicalElement] Extensions for patternCanonical
-    @JsonKey(name: '_patternCanonical')
-        Element? patternCanonicalElement,
+    @JsonKey(name: '_patternCanonical') Element? patternCanonicalElement,
 
     /// [patternCode] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3419,8 +3367,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirCode? patternCode,
 
     /// [patternCodeElement] Extensions for patternCode
-    @JsonKey(name: '_patternCode')
-        Element? patternCodeElement,
+    @JsonKey(name: '_patternCode') Element? patternCodeElement,
 
     /// [patternDate] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3440,8 +3387,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDate? patternDate,
 
     /// [patternDateElement] Extensions for patternDate
-    @JsonKey(name: '_patternDate')
-        Element? patternDateElement,
+    @JsonKey(name: '_patternDate') Element? patternDateElement,
 
     /// [patternDateTime] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3461,8 +3407,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDateTime? patternDateTime,
 
     /// [patternDateTimeElement] Extensions for patternDateTime
-    @JsonKey(name: '_patternDateTime')
-        Element? patternDateTimeElement,
+    @JsonKey(name: '_patternDateTime') Element? patternDateTimeElement,
 
     /// [patternDecimal] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3482,8 +3427,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDecimal? patternDecimal,
 
     /// [patternDecimalElement] Extensions for patternDecimal
-    @JsonKey(name: '_patternDecimal')
-        Element? patternDecimalElement,
+    @JsonKey(name: '_patternDecimal') Element? patternDecimalElement,
 
     /// [patternId] Specifies a value that the value in the instance SHALL follow
     /// - that is, any value in the pattern must be found in the instance. Other
@@ -3503,8 +3447,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirId? patternId,
 
     /// [patternIdElement] Extensions for patternId
-    @JsonKey(name: '_patternId')
-        Element? patternIdElement,
+    @JsonKey(name: '_patternId') Element? patternIdElement,
 
     /// [patternInstant] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3524,8 +3467,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirInstant? patternInstant,
 
     /// [patternInstantElement] Extensions for patternInstant
-    @JsonKey(name: '_patternInstant')
-        Element? patternInstantElement,
+    @JsonKey(name: '_patternInstant') Element? patternInstantElement,
 
     /// [patternInteger] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3545,8 +3487,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirInteger? patternInteger,
 
     /// [patternIntegerElement] Extensions for patternInteger
-    @JsonKey(name: '_patternInteger')
-        Element? patternIntegerElement,
+    @JsonKey(name: '_patternInteger') Element? patternIntegerElement,
 
     /// [patternMarkdown] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3566,8 +3507,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirMarkdown? patternMarkdown,
 
     /// [patternMarkdownElement] Extensions for patternMarkdown
-    @JsonKey(name: '_patternMarkdown')
-        Element? patternMarkdownElement,
+    @JsonKey(name: '_patternMarkdown') Element? patternMarkdownElement,
 
     /// [patternOid] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3587,8 +3527,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirOid? patternOid,
 
     /// [patternOidElement] Extensions for patternOid
-    @JsonKey(name: '_patternOid')
-        Element? patternOidElement,
+    @JsonKey(name: '_patternOid') Element? patternOidElement,
 
     /// [patternPositiveInt] Specifies a value that the value in the instance
     /// SHALL follow - that is, any value in the pattern must be found in the
@@ -3608,8 +3547,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirPositiveInt? patternPositiveInt,
 
     /// [patternPositiveIntElement] Extensions for patternPositiveInt
-    @JsonKey(name: '_patternPositiveInt')
-        Element? patternPositiveIntElement,
+    @JsonKey(name: '_patternPositiveInt') Element? patternPositiveIntElement,
 
     /// [patternString] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3629,8 +3567,7 @@ class ElementDefinition with _$ElementDefinition {
     String? patternString,
 
     /// [patternStringElement] Extensions for patternString
-    @JsonKey(name: '_patternString')
-        Element? patternStringElement,
+    @JsonKey(name: '_patternString') Element? patternStringElement,
 
     /// [patternTime] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3650,8 +3587,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirTime? patternTime,
 
     /// [patternTimeElement] Extensions for patternTime
-    @JsonKey(name: '_patternTime')
-        Element? patternTimeElement,
+    @JsonKey(name: '_patternTime') Element? patternTimeElement,
 
     /// [patternUnsignedInt] Specifies a value that the value in the instance
     /// SHALL follow - that is, any value in the pattern must be found in the
@@ -3671,8 +3607,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUnsignedInt? patternUnsignedInt,
 
     /// [patternUnsignedIntElement] Extensions for patternUnsignedInt
-    @JsonKey(name: '_patternUnsignedInt')
-        Element? patternUnsignedIntElement,
+    @JsonKey(name: '_patternUnsignedInt') Element? patternUnsignedIntElement,
 
     /// [patternUri] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3692,8 +3627,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUri? patternUri,
 
     /// [patternUriElement] Extensions for patternUri
-    @JsonKey(name: '_patternUri')
-        Element? patternUriElement,
+    @JsonKey(name: '_patternUri') Element? patternUriElement,
 
     /// [patternUrl] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3713,8 +3647,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUrl? patternUrl,
 
     /// [patternUrlElement] Extensions for patternUrl
-    @JsonKey(name: '_patternUrl')
-        Element? patternUrlElement,
+    @JsonKey(name: '_patternUrl') Element? patternUrlElement,
 
     /// [patternUuid] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -3734,8 +3667,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUuid? patternUuid,
 
     /// [patternUuidElement] Extensions for patternUuid
-    @JsonKey(name: '_patternUuid')
-        Element? patternUuidElement,
+    @JsonKey(name: '_patternUuid') Element? patternUuidElement,
 
     /// [patternAddress] Specifies a value that the value in the instance SHALL
     /// follow - that is, any value in the pattern must be found in the instance.
@@ -4259,8 +4191,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDate? minValueDate,
 
     /// [minValueDateElement] Extensions for minValueDate
-    @JsonKey(name: '_minValueDate')
-        Element? minValueDateElement,
+    @JsonKey(name: '_minValueDate') Element? minValueDateElement,
 
     /// [minValueDateTime] The minimum allowed value for the element. The value
     /// is inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -4268,8 +4199,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDateTime? minValueDateTime,
 
     /// [minValueDateTimeElement] Extensions for minValueDateTime
-    @JsonKey(name: '_minValueDateTime')
-        Element? minValueDateTimeElement,
+    @JsonKey(name: '_minValueDateTime') Element? minValueDateTimeElement,
 
     /// [minValueInstant] The minimum allowed value for the element. The value is
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -4277,8 +4207,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirInstant? minValueInstant,
 
     /// [minValueInstantElement] Extensions for minValueInstant
-    @JsonKey(name: '_minValueInstant')
-        Element? minValueInstantElement,
+    @JsonKey(name: '_minValueInstant') Element? minValueInstantElement,
 
     /// [minValueTime] The minimum allowed value for the element. The value is
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -4286,8 +4215,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirTime? minValueTime,
 
     /// [minValueTimeElement] Extensions for minValueTime
-    @JsonKey(name: '_minValueTime')
-        Element? minValueTimeElement,
+    @JsonKey(name: '_minValueTime') Element? minValueTimeElement,
 
     /// [minValueDecimal] The minimum allowed value for the element. The value is
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -4295,8 +4223,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDecimal? minValueDecimal,
 
     /// [minValueDecimalElement] Extensions for minValueDecimal
-    @JsonKey(name: '_minValueDecimal')
-        Element? minValueDecimalElement,
+    @JsonKey(name: '_minValueDecimal') Element? minValueDecimalElement,
 
     /// [minValueInteger] The minimum allowed value for the element. The value is
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -4304,8 +4231,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirInteger? minValueInteger,
 
     /// [minValueIntegerElement] Extensions for minValueInteger
-    @JsonKey(name: '_minValueInteger')
-        Element? minValueIntegerElement,
+    @JsonKey(name: '_minValueInteger') Element? minValueIntegerElement,
 
     /// [minValuePositiveInt] The minimum allowed value for the element. The
     /// value is inclusive. This is allowed for the types date, dateTime, instant,
@@ -4313,8 +4239,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirPositiveInt? minValuePositiveInt,
 
     /// [minValuePositiveIntElement] Extensions for minValuePositiveInt
-    @JsonKey(name: '_minValuePositiveInt')
-        Element? minValuePositiveIntElement,
+    @JsonKey(name: '_minValuePositiveInt') Element? minValuePositiveIntElement,
 
     /// [minValueUnsignedInt] The minimum allowed value for the element. The
     /// value is inclusive. This is allowed for the types date, dateTime, instant,
@@ -4322,8 +4247,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUnsignedInt? minValueUnsignedInt,
 
     /// [minValueUnsignedIntElement] Extensions for minValueUnsignedInt
-    @JsonKey(name: '_minValueUnsignedInt')
-        Element? minValueUnsignedIntElement,
+    @JsonKey(name: '_minValueUnsignedInt') Element? minValueUnsignedIntElement,
 
     /// [minValueQuantity] The minimum allowed value for the element. The value
     /// is inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -4336,8 +4260,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDate? maxValueDate,
 
     /// [maxValueDateElement] Extensions for maxValueDate
-    @JsonKey(name: '_maxValueDate')
-        Element? maxValueDateElement,
+    @JsonKey(name: '_maxValueDate') Element? maxValueDateElement,
 
     /// [maxValueDateTime] The maximum allowed value for the element. The value
     /// is inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -4345,8 +4268,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDateTime? maxValueDateTime,
 
     /// [maxValueDateTimeElement] Extensions for maxValueDateTime
-    @JsonKey(name: '_maxValueDateTime')
-        Element? maxValueDateTimeElement,
+    @JsonKey(name: '_maxValueDateTime') Element? maxValueDateTimeElement,
 
     /// [maxValueInstant] The maximum allowed value for the element. The value is
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -4354,8 +4276,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirInstant? maxValueInstant,
 
     /// [maxValueInstantElement] Extensions for maxValueInstant
-    @JsonKey(name: '_maxValueInstant')
-        Element? maxValueInstantElement,
+    @JsonKey(name: '_maxValueInstant') Element? maxValueInstantElement,
 
     /// [maxValueTime] The maximum allowed value for the element. The value is
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -4363,8 +4284,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirTime? maxValueTime,
 
     /// [maxValueTimeElement] Extensions for maxValueTime
-    @JsonKey(name: '_maxValueTime')
-        Element? maxValueTimeElement,
+    @JsonKey(name: '_maxValueTime') Element? maxValueTimeElement,
 
     /// [maxValueDecimal] The maximum allowed value for the element. The value is
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -4372,8 +4292,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirDecimal? maxValueDecimal,
 
     /// [maxValueDecimalElement] Extensions for maxValueDecimal
-    @JsonKey(name: '_maxValueDecimal')
-        Element? maxValueDecimalElement,
+    @JsonKey(name: '_maxValueDecimal') Element? maxValueDecimalElement,
 
     /// [maxValueInteger] The maximum allowed value for the element. The value is
     /// inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -4381,8 +4300,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirInteger? maxValueInteger,
 
     /// [maxValueIntegerElement] Extensions for maxValueInteger
-    @JsonKey(name: '_maxValueInteger')
-        Element? maxValueIntegerElement,
+    @JsonKey(name: '_maxValueInteger') Element? maxValueIntegerElement,
 
     /// [maxValuePositiveInt] The maximum allowed value for the element. The
     /// value is inclusive. This is allowed for the types date, dateTime, instant,
@@ -4390,8 +4308,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirPositiveInt? maxValuePositiveInt,
 
     /// [maxValuePositiveIntElement] Extensions for maxValuePositiveInt
-    @JsonKey(name: '_maxValuePositiveInt')
-        Element? maxValuePositiveIntElement,
+    @JsonKey(name: '_maxValuePositiveInt') Element? maxValuePositiveIntElement,
 
     /// [maxValueUnsignedInt] The maximum allowed value for the element. The
     /// value is inclusive. This is allowed for the types date, dateTime, instant,
@@ -4399,8 +4316,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirUnsignedInt? maxValueUnsignedInt,
 
     /// [maxValueUnsignedIntElement] Extensions for maxValueUnsignedInt
-    @JsonKey(name: '_maxValueUnsignedInt')
-        Element? maxValueUnsignedIntElement,
+    @JsonKey(name: '_maxValueUnsignedInt') Element? maxValueUnsignedIntElement,
 
     /// [maxValueQuantity] The maximum allowed value for the element. The value
     /// is inclusive. This is allowed for the types date, dateTime, instant, time,
@@ -4413,16 +4329,14 @@ class ElementDefinition with _$ElementDefinition {
     FhirInteger? maxLength,
 
     /// [maxLengthElement] Extensions for maxLength
-    @JsonKey(name: '_maxLength')
-        Element? maxLengthElement,
+    @JsonKey(name: '_maxLength') Element? maxLengthElement,
 
     /// [condition] A reference to an invariant that may make additional
     ///  statements about the cardinality or value in the instance.
     List<FhirId>? condition,
 
     /// [conditionElement] Extensions for condition
-    @JsonKey(name: '_condition')
-        List<Element?>? conditionElement,
+    @JsonKey(name: '_condition') List<Element?>? conditionElement,
 
     /// [constraint] Formal constraints such as co-occurrence and other
     /// constraints that can be computationally evaluated within the context of
@@ -4437,8 +4351,7 @@ class ElementDefinition with _$ElementDefinition {
     FhirBoolean? mustSupport,
 
     /// [mustSupportElement] Extensions for mustSupport
-    @JsonKey(name: '_mustSupport')
-        Element? mustSupportElement,
+    @JsonKey(name: '_mustSupport') Element? mustSupportElement,
 
     /// [isModifier] If true, the value of this element affects the
     /// interpretation of the element or resource that contains it, and the value
@@ -4450,24 +4363,21 @@ class ElementDefinition with _$ElementDefinition {
     FhirBoolean? isModifier,
 
     /// [isModifierElement] Extensions for isModifier
-    @JsonKey(name: '_isModifier')
-        Element? isModifierElement,
+    @JsonKey(name: '_isModifier') Element? isModifierElement,
 
     /// [isModifierReason] Explains how that element affects the interpretation
     ///  of the resource or element that contains it.
     String? isModifierReason,
 
     /// [isModifierReasonElement] Extensions for isModifierReason
-    @JsonKey(name: '_isModifierReason')
-        Element? isModifierReasonElement,
+    @JsonKey(name: '_isModifierReason') Element? isModifierReasonElement,
 
     /// [isSummary] Whether the element should be included if a client requests a
     ///  search with the parameter _summary=true.
     FhirBoolean? isSummary,
 
     /// [isSummaryElement] Extensions for isSummary
-    @JsonKey(name: '_isSummary')
-        Element? isSummaryElement,
+    @JsonKey(name: '_isSummary') Element? isSummaryElement,
 
     /// [binding] Binds to a value set if this element is coded (code, Coding,
     ///  CodeableConcept, Quantity), or the data types (string, uri).
@@ -4566,11 +4476,10 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   ///  allowed at the end.
   ///
   /// [rulesElement] Extensions for rules
-  factory ElementDefinitionSlicing({
+  const factory ElementDefinitionSlicing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -4578,8 +4487,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -4611,26 +4519,23 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [ordered] If the matching elements have to occur in the same order as
     ///  defined in the profile.
     FhirBoolean? ordered,
 
     /// [orderedElement] Extensions for ordered
-    @JsonKey(name: '_ordered')
-        Element? orderedElement,
+    @JsonKey(name: '_ordered') Element? orderedElement,
     @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
 
-        /// [rules] Whether additional slices are allowed or not. When the slices are
-        /// ordered, profile authors can also say that additional slices are only
-        ///  allowed at the end.
-        ElementDefinitionSlicingRules? rules,
+    /// [rules] Whether additional slices are allowed or not. When the slices are
+    /// ordered, profile authors can also say that additional slices are only
+    ///  allowed at the end.
+    ElementDefinitionSlicingRules? rules,
 
     /// [rulesElement] Extensions for rules
-    @JsonKey(name: '_rules')
-        Element? rulesElement,
+    @JsonKey(name: '_rules') Element? rulesElement,
   }) = _ElementDefinitionSlicing;
 
   /// Produces a Yaml formatted String version of the object
@@ -4707,11 +4612,10 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   ///  which discrimination is based.
   ///
   /// [pathElement] Extensions for path
-  factory ElementDefinitionDiscriminator({
+  const factory ElementDefinitionDiscriminator({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -4719,8 +4623,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -4738,13 +4641,12 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
 
-        /// [type] How the element value is interpreted when discrimination is
-        ///  evaluated.
-        ElementDefinitionDiscriminatorType? type,
+    /// [type] How the element value is interpreted when discrimination is
+    ///  evaluated.
+    ElementDefinitionDiscriminatorType? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type')
-        Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [path] A FHIRPath expression, using [the simple subset of
     /// FHIRPath](fhirpath.html#simple), that is used to identify the element on
@@ -4752,8 +4654,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
     String? path,
 
     /// [pathElement] Extensions for path
-    @JsonKey(name: '_path')
-        Element? pathElement,
+    @JsonKey(name: '_path') Element? pathElement,
   }) = _ElementDefinitionDiscriminator;
 
   /// Produces a Yaml formatted String version of the object
@@ -4835,7 +4736,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
   /// [max] Maximum cardinality of the base element identified by the path.
   ///
   /// [maxElement] Extensions for max
-  factory ElementDefinitionBase({
+  const factory ElementDefinitionBase({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4985,11 +4886,10 @@ class ElementDefinitionType with _$ElementDefinitionType {
   ///  version independent, or whether either can be used.
   ///
   /// [versioningElement] Extensions for versioning
-  factory ElementDefinitionType({
+  const factory ElementDefinitionType({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -4997,8 +4897,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -5023,8 +4922,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
     FhirUri? code,
 
     /// [codeElement] Extensions for code
-    @JsonKey(name: '_code')
-        Element? codeElement,
+    @JsonKey(name: '_code') Element? codeElement,
 
     /// [profile] Identifies a profile structure or implementation Guide that
     /// applies to the datatype this element refers to. If any profiles are
@@ -5034,8 +4932,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
     /// canonical URL. When an implementation guide is specified, the type SHALL
     ///  conform to at least one profile defined in the implementation guide.
     List<FhirCanonical>? profile,
-    @JsonKey(name: '_profile')
-        List<Element?>? profileElement,
+    @JsonKey(name: '_profile') List<Element?>? profileElement,
 
     /// [targetProfile] Used when the type is "Reference" or "canonical", and
     /// identifies a profile structure or implementation Guide that applies to the
@@ -5054,17 +4951,15 @@ class ElementDefinitionType with _$ElementDefinitionType {
     List<ElementDefinitionTypeAggregation>? aggregation,
 
     /// [aggregationElement] Extensions for aggregation
-    @JsonKey(name: '_aggregation')
-        List<Element?>? aggregationElement,
+    @JsonKey(name: '_aggregation') List<Element?>? aggregationElement,
     @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
 
-        /// [versioning] Whether this reference needs to be version specific or
-        ///  version independent, or whether either can be used.
-        ElementDefinitionTypeVersioning? versioning,
+    /// [versioning] Whether this reference needs to be version specific or
+    ///  version independent, or whether either can be used.
+    ElementDefinitionTypeVersioning? versioning,
 
     /// [versioningElement] Extensions for versioning
-    @JsonKey(name: '_versioning')
-        Element? versioningElement,
+    @JsonKey(name: '_versioning') Element? versioningElement,
   }) = _ElementDefinitionType;
 
   /// Produces a Yaml formatted String version of the object
@@ -5322,7 +5217,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
   ///
   /// [valueMeta] The actual value for the element, which must be one of the
   ///  types allowed for this element.
-  factory ElementDefinitionExample({
+  const factory ElementDefinitionExample({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5713,11 +5608,10 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   ///
   /// [source] A reference to the original source of the constraint, for
   ///  traceability purposes.
-  factory ElementDefinitionConstraint({
+  const factory ElementDefinitionConstraint({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -5725,8 +5619,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -5749,49 +5642,43 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
     FhirId? key,
 
     /// [keyElement] Extensions for key
-    @JsonKey(name: '_key')
-        Element? keyElement,
+    @JsonKey(name: '_key') Element? keyElement,
 
     /// [requirements] Description of why this constraint is necessary or
     ///  appropriate.
     String? requirements,
 
     /// [requirementsElement] Extensions for requirements
-    @JsonKey(name: '_requirements')
-        Element? requirementsElement,
+    @JsonKey(name: '_requirements') Element? requirementsElement,
     @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
 
-        /// [severity] Identifies the impact constraint violation has on the
-        ///  conformance of the instance.
-        ElementDefinitionConstraintSeverity? severity,
+    /// [severity] Identifies the impact constraint violation has on the
+    ///  conformance of the instance.
+    ElementDefinitionConstraintSeverity? severity,
 
     /// [severityElement] Extensions for severity
-    @JsonKey(name: '_severity')
-        Element? severityElement,
+    @JsonKey(name: '_severity') Element? severityElement,
 
     /// [human] Text that can be used to describe the constraint in messages
     ///  identifying that the constraint has been violated.
     String? human,
 
     /// [humanElement] Extensions for human
-    @JsonKey(name: '_human')
-        Element? humanElement,
+    @JsonKey(name: '_human') Element? humanElement,
 
     /// [expression] A [FHIRPath](fhirpath.html) expression of constraint that
     ///  can be executed to see if this constraint is met.
     String? expression,
 
     /// [expressionElement] Extensions for expression
-    @JsonKey(name: '_expression')
-        Element? expressionElement,
+    @JsonKey(name: '_expression') Element? expressionElement,
 
     /// [xpath] An XPath expression of constraint that can be executed to see if
     ///  this constraint is met.
     String? xpath,
 
     /// [xpathElement] Extensions for xpath
-    @JsonKey(name: '_xpath')
-        Element? xpathElement,
+    @JsonKey(name: '_xpath') Element? xpathElement,
 
     /// [source] A reference to the original source of the constraint, for
     ///  traceability purposes.
@@ -5874,11 +5761,10 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
   ///
   /// [valueSet] Refers to the value set that identifies the set of codes the
   ///  binding refers to.
-  factory ElementDefinitionBinding({
+  const factory ElementDefinitionBinding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -5886,8 +5772,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -5905,21 +5790,19 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
 
-        /// [strength] Indicates the degree of conformance expectations associated
-        /// with this binding - that is, the degree to which the provided value set
-        ///  must be adhered to in the instances.
-        ElementDefinitionBindingStrength? strength,
+    /// [strength] Indicates the degree of conformance expectations associated
+    /// with this binding - that is, the degree to which the provided value set
+    ///  must be adhered to in the instances.
+    ElementDefinitionBindingStrength? strength,
 
     /// [strengthElement] Extensions for strength
-    @JsonKey(name: '_strength')
-        Element? strengthElement,
+    @JsonKey(name: '_strength') Element? strengthElement,
 
     /// [description] Describes the intended use of this particular set of codes.
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [valueSet] Refers to the value set that identifies the set of codes the
     ///  binding refers to.
@@ -6007,7 +5890,7 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
   /// [comment] Comments that provide information about the mapping or its use.
   ///
   /// [commentElement] Extensions for comment
-  factory ElementDefinitionMapping({
+  const factory ElementDefinitionMapping({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

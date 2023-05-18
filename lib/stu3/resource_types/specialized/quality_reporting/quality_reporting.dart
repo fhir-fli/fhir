@@ -17,10 +17,11 @@ part 'quality_reporting.g.dart';
 @freezed
 class Measure with Resource, _$Measure {
   Measure._();
-  factory Measure({
+  const factory Measure({
     @Default(Stu3ResourceType.Measure)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -81,7 +82,7 @@ class Measure with Resource, _$Measure {
     @JsonKey(name: '_rationale') Element? rationaleElement,
     String? clinicalRecommendationStatement,
     @JsonKey(name: '_clinicalRecommendationStatement')
-        Element? clinicalRecommendationStatementElement,
+    Element? clinicalRecommendationStatementElement,
     String? improvementNotation,
     @JsonKey(name: '_improvementNotation') Element? improvementNotationElement,
     List<String>? definition,
@@ -125,7 +126,7 @@ class Measure with Resource, _$Measure {
 @freezed
 class MeasureGroup with _$MeasureGroup {
   MeasureGroup._();
-  factory MeasureGroup({
+  const factory MeasureGroup({
     required Identifier identifier,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -169,7 +170,7 @@ class MeasureGroup with _$MeasureGroup {
 @freezed
 class MeasurePopulation with _$MeasurePopulation {
   MeasurePopulation._();
-  factory MeasurePopulation({
+  const factory MeasurePopulation({
     Identifier? identifier,
     CodeableConcept? code,
     String? name,
@@ -214,7 +215,7 @@ class MeasurePopulation with _$MeasurePopulation {
 @freezed
 class MeasureStratifier with _$MeasureStratifier {
   MeasureStratifier._();
-  factory MeasureStratifier({
+  const factory MeasureStratifier({
     Identifier? identifier,
     String? criteria,
     @JsonKey(name: '_criteria') Element? criteriaElement,
@@ -256,7 +257,7 @@ class MeasureStratifier with _$MeasureStratifier {
 @freezed
 class MeasureSupplementalData with _$MeasureSupplementalData {
   MeasureSupplementalData._();
-  factory MeasureSupplementalData({
+  const factory MeasureSupplementalData({
     Identifier? identifier,
     List<CodeableConcept>? usage,
     String? criteria,
@@ -299,10 +300,11 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
 @freezed
 class MeasureReport with Resource, _$MeasureReport {
   MeasureReport._();
-  factory MeasureReport({
+  const factory MeasureReport({
     @Default(Stu3ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -359,7 +361,7 @@ class MeasureReport with Resource, _$MeasureReport {
 @freezed
 class MeasureReportGroup with _$MeasureReportGroup {
   MeasureReportGroup._();
-  factory MeasureReportGroup({
+  const factory MeasureReportGroup({
     required Identifier identifier,
     List<MeasureReportPopulation>? population,
     FhirDecimal? measureScore,
@@ -401,7 +403,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
 @freezed
 class MeasureReportPopulation with _$MeasureReportPopulation {
   MeasureReportPopulation._();
-  factory MeasureReportPopulation({
+  const factory MeasureReportPopulation({
     Identifier? identifier,
     CodeableConcept? code,
     FhirDecimal? count,
@@ -443,7 +445,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
 @freezed
 class MeasureReportStratifier with _$MeasureReportStratifier {
   MeasureReportStratifier._();
-  factory MeasureReportStratifier({
+  const factory MeasureReportStratifier({
     Identifier? identifier,
     List<MeasureReportStratum>? stratum,
   }) = _MeasureReportStratifier;
@@ -482,7 +484,7 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
 @freezed
 class MeasureReportStratum with _$MeasureReportStratum {
   MeasureReportStratum._();
-  factory MeasureReportStratum({
+  const factory MeasureReportStratum({
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
     List<MeasureReportPopulation1>? population,
@@ -524,7 +526,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
 @freezed
 class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   MeasureReportPopulation1._();
-  factory MeasureReportPopulation1({
+  const factory MeasureReportPopulation1({
     Identifier? identifier,
     CodeableConcept? code,
     FhirDecimal? count,

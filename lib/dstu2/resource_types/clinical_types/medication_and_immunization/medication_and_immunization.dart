@@ -17,10 +17,11 @@ part 'medication_and_immunization.g.dart';
 @freezed
 class Medication with Resource, _$Medication {
   Medication._();
-  factory Medication({
+  const factory Medication({
     @Default(Dstu2ResourceType.Medication)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -69,7 +70,7 @@ class Medication with Resource, _$Medication {
 @freezed
 class MedicationProduct with _$MedicationProduct {
   MedicationProduct._();
-  factory MedicationProduct({
+  const factory MedicationProduct({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -113,7 +114,7 @@ class MedicationProduct with _$MedicationProduct {
 @freezed
 class MedicationProductIngredient with _$MedicationProductIngredient {
   MedicationProductIngredient._();
-  factory MedicationProductIngredient({
+  const factory MedicationProductIngredient({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -155,7 +156,7 @@ class MedicationProductIngredient with _$MedicationProductIngredient {
 @freezed
 class MedicationProductBatch with _$MedicationProductBatch {
   MedicationProductBatch._();
-  factory MedicationProductBatch({
+  const factory MedicationProductBatch({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -199,7 +200,7 @@ class MedicationProductBatch with _$MedicationProductBatch {
 @freezed
 class MedicationPackage with _$MedicationPackage {
   MedicationPackage._();
-  factory MedicationPackage({
+  const factory MedicationPackage({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -242,7 +243,7 @@ class MedicationPackage with _$MedicationPackage {
 @freezed
 class MedicationPackageContent with _$MedicationPackageContent {
   MedicationPackageContent._();
-  factory MedicationPackageContent({
+  const factory MedicationPackageContent({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -284,10 +285,11 @@ class MedicationPackageContent with _$MedicationPackageContent {
 @freezed
 class MedicationOrder with Resource, _$MedicationOrder {
   MedicationOrder._();
-  factory MedicationOrder({
+  const factory MedicationOrder({
     @Default(Dstu2ResourceType.MedicationOrder)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: '_id') Element? idElement,
     FhirMeta? meta,
@@ -300,7 +302,7 @@ class MedicationOrder with Resource, _$MedicationOrder {
     List<Identifier>? identifier,
     FhirDateTime? dateWritten,
     @JsonKey(unknownEnumValue: MedicationOrderStatus.unknown)
-        MedicationOrderStatus? status,
+    MedicationOrderStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirDateTime? dateEnded,
     CodeableConcept? reasonEnded,
@@ -349,7 +351,7 @@ class MedicationOrder with Resource, _$MedicationOrder {
 @freezed
 class MedicationOrderDosageInstruction with _$MedicationOrderDosageInstruction {
   MedicationOrderDosageInstruction._();
-  factory MedicationOrderDosageInstruction({
+  const factory MedicationOrderDosageInstruction({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -392,7 +394,7 @@ class MedicationOrderDosageInstruction with _$MedicationOrderDosageInstruction {
 @freezed
 class MedicationOrderDispenseRequest with _$MedicationOrderDispenseRequest {
   MedicationOrderDispenseRequest._();
-  factory MedicationOrderDispenseRequest({
+  const factory MedicationOrderDispenseRequest({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -439,7 +441,7 @@ class MedicationOrderDispenseRequest with _$MedicationOrderDispenseRequest {
 @freezed
 class MedicationOrderSubstitution with _$MedicationOrderSubstitution {
   MedicationOrderSubstitution._();
-  factory MedicationOrderSubstitution({
+  const factory MedicationOrderSubstitution({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -481,10 +483,11 @@ class MedicationOrderSubstitution with _$MedicationOrderSubstitution {
 @freezed
 class MedicationAdministration with Resource, _$MedicationAdministration {
   MedicationAdministration._();
-  factory MedicationAdministration({
+  const factory MedicationAdministration({
     @Default(Dstu2ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -496,8 +499,10 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(required: true, unknownEnumValue: MedicationAdministrationStatus.unknown)
-        required MedicationAdministrationStatus status,
+    @JsonKey(
+        required: true,
+        unknownEnumValue: MedicationAdministrationStatus.unknown)
+    required MedicationAdministrationStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     required Reference patient,
     Reference? practitioner,
@@ -547,7 +552,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
 @freezed
 class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   MedicationAdministrationDosage._();
-  factory MedicationAdministrationDosage({
+  const factory MedicationAdministrationDosage({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -597,10 +602,11 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
 @freezed
 class MedicationDispense with Resource, _$MedicationDispense {
   MedicationDispense._();
-  factory MedicationDispense({
+  const factory MedicationDispense({
     @Default(Dstu2ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -613,7 +619,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
-        MedicationDispenseStatus? status,
+    MedicationDispenseStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? patient,
     Reference? dispenser,
@@ -666,7 +672,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
 class MedicationDispenseDosageInstruction
     with _$MedicationDispenseDosageInstruction {
   MedicationDispenseDosageInstruction._();
-  factory MedicationDispenseDosageInstruction({
+  const factory MedicationDispenseDosageInstruction({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -709,7 +715,7 @@ class MedicationDispenseDosageInstruction
 @freezed
 class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   MedicationDispenseSubstitution._();
-  factory MedicationDispenseSubstitution({
+  const factory MedicationDispenseSubstitution({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -753,10 +759,11 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
 @freezed
 class MedicationStatement with Resource, _$MedicationStatement {
   MedicationStatement._();
-  factory MedicationStatement({
+  const factory MedicationStatement({
     @Default(Dstu2ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -772,8 +779,9 @@ class MedicationStatement with Resource, _$MedicationStatement {
     Reference? informationSource,
     FhirDateTime? dateAsserted,
     @JsonKey(name: '_dateAsserted') Element? dateAssertedElement,
-    @JsonKey(required: true, unknownEnumValue: MedicationStatementStatus.unknown)
-        required MedicationStatementStatus status,
+    @JsonKey(
+        required: true, unknownEnumValue: MedicationStatementStatus.unknown)
+    required MedicationStatementStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirBoolean? wasNotTaken,
     List<CodeableConcept>? reasonNotTaken,
@@ -820,7 +828,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
 @freezed
 class MedicationStatementDosage with _$MedicationStatementDosage {
   MedicationStatementDosage._();
-  factory MedicationStatementDosage({
+  const factory MedicationStatementDosage({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -873,10 +881,11 @@ class MedicationStatementDosage with _$MedicationStatementDosage {
 @freezed
 class Immunization with Resource, _$Immunization {
   Immunization._();
-  factory Immunization({
+  const factory Immunization({
     @Default(Dstu2ResourceType.Immunization)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -889,7 +898,7 @@ class Immunization with Resource, _$Immunization {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ImmunizationStatus.unknown)
-        required ImmunizationStatus status,
+    required ImmunizationStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     FhirDateTime? date,
     required CodeableConcept vaccineCode,
@@ -945,7 +954,7 @@ class Immunization with Resource, _$Immunization {
 @freezed
 class ImmunizationExplanation with _$ImmunizationExplanation {
   ImmunizationExplanation._();
-  factory ImmunizationExplanation({
+  const factory ImmunizationExplanation({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -987,7 +996,7 @@ class ImmunizationExplanation with _$ImmunizationExplanation {
 @freezed
 class ImmunizationReaction with _$ImmunizationReaction {
   ImmunizationReaction._();
-  factory ImmunizationReaction({
+  const factory ImmunizationReaction({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1032,7 +1041,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
 @freezed
 class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol {
   ImmunizationVaccinationProtocol._();
-  factory ImmunizationVaccinationProtocol({
+  const factory ImmunizationVaccinationProtocol({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1082,10 +1091,11 @@ class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol {
 @freezed
 class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   ImmunizationRecommendation._();
-  factory ImmunizationRecommendation({
+  const factory ImmunizationRecommendation({
     @Default(Dstu2ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -1099,7 +1109,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
     List<Identifier>? identifier,
     required Reference patient,
     @JsonKey(required: true)
-        required List<ImmunizationRecommendationRecommendation> recommendation,
+    required List<ImmunizationRecommendationRecommendation> recommendation,
   }) = _ImmunizationRecommendation;
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -1134,7 +1144,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
 class ImmunizationRecommendationRecommendation
     with _$ImmunizationRecommendationRecommendation {
   ImmunizationRecommendationRecommendation._();
-  factory ImmunizationRecommendationRecommendation({
+  const factory ImmunizationRecommendationRecommendation({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1172,7 +1182,7 @@ class ImmunizationRecommendationRecommendation
 class ImmunizationRecommendationRecommendationDateCriterion
     with _$ImmunizationRecommendationRecommendationDateCriterion {
   ImmunizationRecommendationRecommendationDateCriterion._();
-  factory ImmunizationRecommendationRecommendationDateCriterion({
+  const factory ImmunizationRecommendationRecommendationDateCriterion({
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirExtension? extensio,
     FhirExtension? modifier,
@@ -1206,7 +1216,7 @@ class ImmunizationRecommendationRecommendationDateCriterion
 class ImmunizationRecommendationRecommendationProtocol
     with _$ImmunizationRecommendationRecommendationProtocol {
   ImmunizationRecommendationRecommendationProtocol._();
-  factory ImmunizationRecommendationRecommendationProtocol({
+  const factory ImmunizationRecommendationRecommendationProtocol({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirExtension? modifierExten,

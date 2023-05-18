@@ -12,6 +12,7 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.AuditEvent) ??
           R4ResourceType.AuditEvent,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -560,6 +561,7 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Consent) ??
           R4ResourceType.Consent,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null
@@ -926,6 +928,7 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Provenance) ??
           R4ResourceType.Provenance,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] as String?,
       meta: json['meta'] == null
           ? null

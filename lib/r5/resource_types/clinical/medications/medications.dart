@@ -97,15 +97,16 @@ class FormularyItem with Resource, _$FormularyItem {
   ///
   /// [statusElement] ("_status") Extensions for status
   ///
-  factory FormularyItem({
+  const factory FormularyItem({
     /// [resourceType] This is a FormularyItem resource
     @Default(R5ResourceType.FormularyItem)
     @JsonKey(unknownEnumValue: R5ResourceType.FormularyItem)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -390,15 +391,16 @@ class Immunization with Resource, _$Immunization {
   /// [protocolApplied] The protocol (set of recommendations) being followed by
   ///  the provider who administered the dose.
   ///
-  factory Immunization({
+  const factory Immunization({
     /// [resourceType] This is a Immunization resource
     @Default(R5ResourceType.Immunization)
     @JsonKey(unknownEnumValue: R5ResourceType.Immunization)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -682,10 +684,10 @@ class ImmunizationPerformer with _$ImmunizationPerformer {
   ///
   /// [actor] The practitioner or organization who performed the action.
   ///
-  factory ImmunizationPerformer({
+  const factory ImmunizationPerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -794,10 +796,10 @@ class ImmunizationProgramEligibility with _$ImmunizationProgramEligibility {
   /// [programStatus] Indicates the patient's eligility status for for a
   ///  specific payment program.
   ///
-  factory ImmunizationProgramEligibility({
+  const factory ImmunizationProgramEligibility({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -913,10 +915,10 @@ class ImmunizationReaction with _$ImmunizationReaction {
   ///
   /// [reportedElement] ("_reported") Extensions for reported
   ///
-  factory ImmunizationReaction({
+  const factory ImmunizationReaction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1048,10 +1050,10 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   ///
   /// [seriesDosesElement] ("_seriesDoses") Extensions for seriesDoses
   ///
-  factory ImmunizationProtocolApplied({
+  const factory ImmunizationProtocolApplied({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1256,15 +1258,16 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   ///
   /// [seriesDosesElement] ("_seriesDoses") Extensions for seriesDoses
   ///
-  factory ImmunizationEvaluation({
+  const factory ImmunizationEvaluation({
     /// [resourceType] This is a ImmunizationEvaluation resource
     @Default(R5ResourceType.ImmunizationEvaluation)
     @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationEvaluation)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1510,15 +1513,16 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   ///
   /// [recommendation] Vaccine administration recommendations.
   ///
-  factory ImmunizationRecommendation({
+  const factory ImmunizationRecommendation({
     /// [resourceType] This is a ImmunizationRecommendation resource
     @Default(R5ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: R5ResourceType.ImmunizationRecommendation)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1717,10 +1721,10 @@ class ImmunizationRecommendationRecommendation
   ///  status and recommendation.  This includes patient observations, adverse
   ///  reactions and allergy/intolerance information.
   ///
-  factory ImmunizationRecommendationRecommendation({
+  const factory ImmunizationRecommendationRecommendation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1888,10 +1892,10 @@ class ImmunizationRecommendationDateCriterion
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory ImmunizationRecommendationDateCriterion({
+  const factory ImmunizationRecommendationDateCriterion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2069,15 +2073,16 @@ class Medication with Resource, _$Medication {
   /// [definition] A reference to a knowledge resource that provides more
   ///  information about this medication.
   ///
-  factory Medication({
+  const factory Medication({
     /// [resourceType] This is a Medication resource
     @Default(R5ResourceType.Medication)
     @JsonKey(unknownEnumValue: R5ResourceType.Medication)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2287,10 +2292,10 @@ class MedicationIngredient with _$MedicationIngredient {
   ///  1 tablet but can also be expressed a quantity when the denominator is
   ///  assumed to be 1 tablet.
   ///
-  factory MedicationIngredient({
+  const factory MedicationIngredient({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2431,10 +2436,10 @@ class MedicationBatch with _$MedicationBatch {
   ///
   /// [expirationDateElement] ("_expirationDate") Extensions for expirationDate
   ///
-  factory MedicationBatch({
+  const factory MedicationBatch({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2678,15 +2683,16 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the administration was verified.
   ///
-  factory MedicationAdministration({
+  const factory MedicationAdministration({
     /// [resourceType] This is a MedicationAdministration resource
     @Default(R5ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: R5ResourceType.MedicationAdministration)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2959,10 +2965,10 @@ class MedicationAdministrationPerformer
   ///
   /// [actor] Indicates who or what performed the medication administration.
   ///
-  factory MedicationAdministrationPerformer({
+  const factory MedicationAdministrationPerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3110,10 +3116,10 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   ///  per unit of time, e.g. 500 ml per 2 hours.  Other examples:  200 mcg/min
   ///  or 200 mcg/1 minute; 1 liter/8 hours.
   ///
-  factory MedicationAdministrationDosage({
+  const factory MedicationAdministrationDosage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3399,15 +3405,16 @@ class MedicationDispense with Resource, _$MedicationDispense {
   /// [eventHistory] A summary of the events of interest that have occurred,
   ///  such as when the dispense was verified.
   ///
-  factory MedicationDispense({
+  const factory MedicationDispense({
     /// [resourceType] This is a MedicationDispense resource
     @Default(R5ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: R5ResourceType.MedicationDispense)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3595,7 +3602,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
     /// [renderedDosageInstructionElement] ("_renderedDosageInstruction")
     ///  Extensions for renderedDosageInstruction
     @JsonKey(name: '_renderedDosageInstruction')
-        Element? renderedDosageInstructionElement,
+    Element? renderedDosageInstructionElement,
 
     /// [dosageInstruction] Indicates how the medication is to be used by the
     ///  patient.
@@ -3695,10 +3702,10 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
   /// [actor] The device, practitioner, etc. who performed the action.  It
   ///  should be assumed that the actor is the dispenser of the medication.
   ///
-  factory MedicationDispensePerformer({
+  const factory MedicationDispensePerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3823,10 +3830,10 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   /// [responsibleParty] The person or organization that has primary
   ///  responsibility for the substitution.
   ///
-  factory MedicationDispenseSubstitution({
+  const factory MedicationDispenseSubstitution({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4163,15 +4170,16 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
   ///  resource, this information provides common definitional elements that
   ///  are needed to understand the specific medication that is being described.
   ///
-  factory MedicationKnowledge({
+  const factory MedicationKnowledge({
     /// [resourceType] This is a MedicationKnowledge resource
     @Default(R5ResourceType.MedicationKnowledge)
     @JsonKey(unknownEnumValue: R5ResourceType.MedicationKnowledge)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -4269,7 +4277,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -4453,7 +4461,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
     /// [preparationInstructionElement] ("_preparationInstruction") Extensions
     ///  for preparationInstruction
     @JsonKey(name: '_preparationInstruction')
-        Element? preparationInstructionElement,
+    Element? preparationInstructionElement,
 
     /// [cost] The price of the medication.
     List<MedicationKnowledgeCost>? cost,
@@ -4565,10 +4573,10 @@ class MedicationKnowledgeRelatedMedicationKnowledge
   /// [reference] Associated documentation about the associated medication
   ///  knowledge.
   ///
-  factory MedicationKnowledgeRelatedMedicationKnowledge({
+  const factory MedicationKnowledgeRelatedMedicationKnowledge({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4678,10 +4686,10 @@ class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
   ///
   /// [source] Associated documentation about the medication.
   ///
-  factory MedicationKnowledgeMonograph({
+  const factory MedicationKnowledgeMonograph({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4798,10 +4806,10 @@ class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
   /// [costCodeableConcept] The price or representation of the cost (for
   ///  example, Band A, Band B or $, $$) of the medication.
   ///
-  factory MedicationKnowledgeCost({
+  const factory MedicationKnowledgeCost({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4924,10 +4932,10 @@ class MedicationKnowledgeMonitoringProgram
   ///
   /// [nameElement] ("_name") Extensions for name
   ///
-  factory MedicationKnowledgeMonitoringProgram({
+  const factory MedicationKnowledgeMonitoringProgram({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5039,10 +5047,10 @@ class MedicationKnowledgeIndicationGuideline
   /// [dosingGuideline] The guidelines for the dosage of the medication for the
   ///  indication.
   ///
-  factory MedicationKnowledgeIndicationGuideline({
+  const factory MedicationKnowledgeIndicationGuideline({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5159,10 +5167,10 @@ class MedicationKnowledgeDosingGuideline
   ///  to the administration guidelines (for example, height, weight, gender,
   ///  etc.).
   ///
-  factory MedicationKnowledgeDosingGuideline({
+  const factory MedicationKnowledgeDosingGuideline({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5279,10 +5287,10 @@ class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
   ///
   /// [dosage] Dosage for the medication for the specific guidelines.
   ///
-  factory MedicationKnowledgeDosage({
+  const factory MedicationKnowledgeDosage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5395,10 +5403,10 @@ class MedicationKnowledgePatientCharacteristic
   /// [valueRange] The specific characteristic (e.g. height, weight, gender,
   ///  etc.).
   ///
-  factory MedicationKnowledgePatientCharacteristic({
+  const factory MedicationKnowledgePatientCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5528,10 +5536,10 @@ class MedicationKnowledgeMedicineClassification
   /// [classification] Specific category assigned to the medication (e.g.
   ///  anti-infective, anti-hypertensive, antibiotic, etc.).
   ///
-  factory MedicationKnowledgeMedicineClassification({
+  const factory MedicationKnowledgeMedicineClassification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5656,10 +5664,10 @@ class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
   ///  provides the details of the product that is in the packaging and is
   ///  being priced.
   ///
-  factory MedicationKnowledgePackaging({
+  const factory MedicationKnowledgePackaging({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5777,10 +5785,10 @@ class MedicationKnowledgeStorageGuideline
   ///  Environment settings may involve temperature, humidity, or exposure to
   ///  light.
   ///
-  factory MedicationKnowledgeStorageGuideline({
+  const factory MedicationKnowledgeStorageGuideline({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5909,10 +5917,10 @@ class MedicationKnowledgeEnvironmentalSetting
   /// [valueCodeableConcept] Value associated to the setting. E.g., 40° – 50°F
   ///  for temperature.
   ///
-  factory MedicationKnowledgeEnvironmentalSetting({
+  const factory MedicationKnowledgeEnvironmentalSetting({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6035,10 +6043,10 @@ class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
   /// [maxDispense] The maximum number of units of the medication that can be
   ///  dispensed in a period.
   ///
-  factory MedicationKnowledgeRegulatory({
+  const factory MedicationKnowledgeRegulatory({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6153,10 +6161,10 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
   ///
   /// [allowedElement] ("_allowed") Extensions for allowed
   ///
-  factory MedicationKnowledgeSubstitution({
+  const factory MedicationKnowledgeSubstitution({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6266,10 +6274,10 @@ class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
   ///
   /// [period] The period that applies to the maximum number of units.
   ///
-  factory MedicationKnowledgeMaxDispense({
+  const factory MedicationKnowledgeMaxDispense({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6383,10 +6391,10 @@ class MedicationKnowledgeDefinitional with _$MedicationKnowledgeDefinitional {
   /// [drugCharacteristic] Specifies descriptive properties of the medicine,
   ///  such as color, shape, imprints, etc.
   ///
-  factory MedicationKnowledgeDefinitional({
+  const factory MedicationKnowledgeDefinitional({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6522,10 +6530,10 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
   ///  1 tablet but can also be expressed a quantity when the denominator is
   ///  assumed to be 1 tablet.
   ///
-  factory MedicationKnowledgeIngredient({
+  const factory MedicationKnowledgeIngredient({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6667,10 +6675,10 @@ class MedicationKnowledgeDrugCharacteristic
   ///
   /// [valueAttachment] Description of the characteristic.
   ///
-  factory MedicationKnowledgeDrugCharacteristic({
+  const factory MedicationKnowledgeDrugCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -6986,15 +6994,16 @@ class MedicationRequest with Resource, _$MedicationRequest {
   ///  state transitions or updates that are likely to be relevant to a user
   ///  looking at the current version of the resource.
   ///
-  factory MedicationRequest({
+  const factory MedicationRequest({
     /// [resourceType] This is a MedicationRequest resource
     @Default(R5ResourceType.MedicationRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.MedicationRequest)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -7220,7 +7229,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
     /// [renderedDosageInstructionElement] ("_renderedDosageInstruction")
     ///  Extensions for renderedDosageInstruction
     @JsonKey(name: '_renderedDosageInstruction')
-        Element? renderedDosageInstructionElement,
+    Element? renderedDosageInstructionElement,
 
     /// [effectiveDosePeriod] The period over which the medication is to be
     ///  taken.  Where there are multiple dosageInstruction lines (for example,
@@ -7368,10 +7377,10 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   /// [doseAdministrationAid] Provides information about the type of adherence
   ///  packaging to be supplied for the medication dispense.
   ///
-  factory MedicationRequestDispenseRequest({
+  const factory MedicationRequestDispenseRequest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -7422,7 +7431,7 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
     /// [numberOfRepeatsAllowedElement] ("_numberOfRepeatsAllowed") Extensions
     ///  for numberOfRepeatsAllowed
     @JsonKey(name: '_numberOfRepeatsAllowed')
-        Element? numberOfRepeatsAllowedElement,
+    Element? numberOfRepeatsAllowedElement,
 
     /// [quantity] The amount that is to be dispensed for one fill.
     Quantity? quantity,
@@ -7531,10 +7540,10 @@ class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   ///
   /// [duration] The length of time that the first dispense is expected to last.
   ///
-  factory MedicationRequestInitialFill({
+  const factory MedicationRequestInitialFill({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -7659,10 +7668,10 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   /// [reason] Indicates the reason for the substitution, or why substitution
   ///  must or must not be performed.
   ///
-  factory MedicationRequestSubstitution({
+  const factory MedicationRequestSubstitution({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -7952,15 +7961,16 @@ class MedicationStatement with Resource, _$MedicationStatement {
   /// [adherence] Indicates whether the medication is or is not being consumed
   ///  or administered.
   ///
-  factory MedicationStatement({
+  const factory MedicationStatement({
     /// [resourceType] This is a MedicationStatement resource
     @Default(R5ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: R5ResourceType.MedicationStatement)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -8122,7 +8132,7 @@ class MedicationStatement with Resource, _$MedicationStatement {
     /// [renderedDosageInstructionElement] ("_renderedDosageInstruction")
     ///  Extensions for renderedDosageInstruction
     @JsonKey(name: '_renderedDosageInstruction')
-        Element? renderedDosageInstructionElement,
+    Element? renderedDosageInstructionElement,
 
     /// [dosage] Indicates how the medication is/was or should be taken by the
     ///  patient.
@@ -8273,10 +8283,10 @@ class MedicationStatementAdherence with _$MedicationStatementAdherence {
   /// [reason] Captures the reason for the current use or adherence of a
   ///  medication.
   ///
-  factory MedicationStatementAdherence({
+  const factory MedicationStatementAdherence({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.

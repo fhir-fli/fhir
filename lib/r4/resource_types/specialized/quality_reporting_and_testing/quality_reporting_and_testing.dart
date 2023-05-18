@@ -281,17 +281,17 @@ class Measure with Resource, _$Measure {
   /// [supplementalData] The supplemental data criteria for the measure report,
   /// specified as either the name of a valid CQL expression within a referenced
   ///  library, or a valid FHIR Resource Path.
-  factory Measure({
+  const factory Measure({
     @Default(R4ResourceType.Measure)
     @JsonKey(unknownEnumValue: R4ResourceType.Measure)
 
-        /// [resourceType] This is a Measure resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Measure resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -305,15 +305,13 @@ class Measure with Resource, _$Measure {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -335,8 +333,7 @@ class Measure with Resource, _$Measure {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -363,8 +360,7 @@ class Measure with Resource, _$Measure {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this measure
     /// when it is represented in other formats, or referenced in a specification,
@@ -385,8 +381,7 @@ class Measure with Resource, _$Measure {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the measure. This name should
     /// be usable as an identifier for the module by machine processing
@@ -394,31 +389,27 @@ class Measure with Resource, _$Measure {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the measure.
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [subtitle] An explanatory or alternate title for the measure giving
     ///  additional information about its content.
     String? subtitle,
 
     /// [subtitleElement] Extensions for subtitle
-    @JsonKey(name: '_subtitle')
-        Element? subtitleElement,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
 
     /// [status] The status of this measure. Enables tracking the life-cycle of
     ///  the content.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this measure is authored
     /// for testing purposes (or education/evaluation/marketing) and is not
@@ -426,8 +417,7 @@ class Measure with Resource, _$Measure {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [subjectCodeableConcept] The intended subjects for the measure. If this
     /// element is not provided, a Patient subject is assumed, but the subject of
@@ -446,16 +436,14 @@ class Measure with Resource, _$Measure {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  measure.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -466,8 +454,7 @@ class Measure with Resource, _$Measure {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -485,16 +472,14 @@ class Measure with Resource, _$Measure {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [usage] A detailed description, from a clinical perspective, of how the
     ///  measure is used.
     String? usage,
 
     /// [usageElement] Extensions for usage
-    @JsonKey(name: '_usage')
-        Element? usageElement,
+    @JsonKey(name: '_usage') Element? usageElement,
 
     /// [copyright] A copyright statement relating to the measure and/or its
     /// contents. Copyright statements are generally legal restrictions on the use
@@ -502,8 +487,7 @@ class Measure with Resource, _$Measure {
     FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
@@ -511,8 +495,7 @@ class Measure with Resource, _$Measure {
     FhirDate? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
-    @JsonKey(name: '_approvalDate')
-        Element? approvalDateElement,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
@@ -520,8 +503,7 @@ class Measure with Resource, _$Measure {
     FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
 
     /// [effectivePeriod] The period during which the measure content was or is
     ///  planned to be in active use.
@@ -554,8 +536,7 @@ class Measure with Resource, _$Measure {
 
     /// [library] A reference to a Library resource containing the formal logic
     ///  used by the measure.
-    @JsonKey(name: 'library')
-        List<FhirCanonical>? library_,
+    @JsonKey(name: 'library') List<FhirCanonical>? library_,
 
     /// [disclaimer] Notices and disclaimers regarding the use of the measure or
     /// related to intellectual property (such as code systems) referenced by the
@@ -563,8 +544,7 @@ class Measure with Resource, _$Measure {
     FhirMarkdown? disclaimer,
 
     /// [disclaimerElement] Extensions for disclaimer
-    @JsonKey(name: '_disclaimer')
-        Element? disclaimerElement,
+    @JsonKey(name: '_disclaimer') Element? disclaimerElement,
 
     /// [scoring] Indicates how the calculation is performed for the measure,
     /// including proportion, ratio, continuous-variable, and cohort. The value
@@ -587,8 +567,7 @@ class Measure with Resource, _$Measure {
     String? riskAdjustment,
 
     /// [riskAdjustmentElement] Extensions for riskAdjustment
-    @JsonKey(name: '_riskAdjustment')
-        Element? riskAdjustmentElement,
+    @JsonKey(name: '_riskAdjustment') Element? riskAdjustmentElement,
 
     /// [rateAggregation] Describes how to combine the information calculated,
     /// based on logic in each of several populations, into one summarized
@@ -596,8 +575,7 @@ class Measure with Resource, _$Measure {
     String? rateAggregation,
 
     /// [rateAggregationElement] Extensions for rateAggregation
-    @JsonKey(name: '_rateAggregation')
-        Element? rateAggregationElement,
+    @JsonKey(name: '_rateAggregation') Element? rateAggregationElement,
 
     /// [rationale] Provides a succinct statement of the need for the measure.
     /// Usually includes statements pertaining to importance criterion: impact,
@@ -605,17 +583,16 @@ class Measure with Resource, _$Measure {
     FhirMarkdown? rationale,
 
     /// [rationaleElement] Extensions for rationale
-    @JsonKey(name: '_rationale')
-        Element? rationaleElement,
+    @JsonKey(name: '_rationale') Element? rationaleElement,
 
     /// [clinicalRecommendationStatement] Provides a summary of relevant clinical
     ///  guidelines or other clinical recommendations supporting the measure.
     FhirMarkdown? clinicalRecommendationStatement,
     @JsonKey(name: '_clinicalRecommendationStatement')
 
-        /// [clinicalRecommendationStatementElement] Extensions for
-        ///  clinicalRecommendationStatement
-        Element? clinicalRecommendationStatementElement,
+    /// [clinicalRecommendationStatementElement] Extensions for
+    ///  clinicalRecommendationStatement
+    Element? clinicalRecommendationStatementElement,
 
     /// [improvementNotation] Information on whether an increase or decrease in
     /// score is the preferred result (e.g., a higher score indicates better
@@ -628,16 +605,14 @@ class Measure with Resource, _$Measure {
     List<FhirMarkdown>? definition,
 
     /// [definitionElement] Extensions for definition
-    @JsonKey(name: '_definition')
-        List<Element?>? definitionElement,
+    @JsonKey(name: '_definition') List<Element?>? definitionElement,
 
     /// [guidance] Additional guidance for the measure including how it can be
     ///  used in a clinical context, and the intent of the measure.
     FhirMarkdown? guidance,
 
     /// [guidanceElement] Extensions for guidance
-    @JsonKey(name: '_guidance')
-        Element? guidanceElement,
+    @JsonKey(name: '_guidance') Element? guidanceElement,
 
     /// [group] A group of population criteria for the measure.
     List<MeasureGroup>? group,
@@ -723,7 +698,7 @@ class MeasureGroup with _$MeasureGroup {
   /// [stratifier] The stratifier criteria for the measure report, specified as
   /// either the name of a valid CQL expression defined within a referenced
   ///  library or a valid FHIR Resource Path.
-  factory MeasureGroup({
+  const factory MeasureGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -844,7 +819,7 @@ class MeasurePopulation with _$MeasurePopulation {
   ///
   /// [criteria] An expression that specifies the criteria for the population,
   ///  typically the name of an expression in a library.
-  factory MeasurePopulation({
+  const factory MeasurePopulation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -966,7 +941,7 @@ class MeasureStratifier with _$MeasureStratifier {
   /// [component] A component of the stratifier criteria for the measure
   /// report, specified as either the name of a valid CQL expression defined
   ///  within a referenced library or a valid FHIR Resource Path.
-  factory MeasureStratifier({
+  const factory MeasureStratifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1095,7 +1070,7 @@ class MeasureComponent with _$MeasureComponent {
   /// of the stratifier. This is typically the name of an expression defined
   /// within a referenced library, but it may also be a path to a stratifier
   ///  element.
-  factory MeasureComponent({
+  const factory MeasureComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1226,7 +1201,7 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
   /// name of a valid expression defined within a referenced library, but it may
   /// also be a path to a specific data element. The criteria defines the data
   ///  to be returned for this element.
-  factory MeasureSupplementalData({
+  const factory MeasureSupplementalData({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1416,17 +1391,17 @@ class MeasureReport with Resource, _$MeasureReport {
   ///
   /// [evaluatedResource] A reference to a Bundle containing the Resources that
   ///  were used in the calculation of this measure.
-  factory MeasureReport({
+  const factory MeasureReport({
     @Default(R4ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: R4ResourceType.MeasureReport)
 
-        /// [resourceType] This is a MeasureReport resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a MeasureReport resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1440,15 +1415,13 @@ class MeasureReport with Resource, _$MeasureReport {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1470,8 +1443,7 @@ class MeasureReport with Resource, _$MeasureReport {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1498,8 +1470,7 @@ class MeasureReport with Resource, _$MeasureReport {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [type] The type of measure report. This may be an individual report,
     /// which provides the score for the measure for an individual member of the
@@ -1511,8 +1482,7 @@ class MeasureReport with Resource, _$MeasureReport {
     FhirCode? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type')
-        Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [measure] A reference to the Measure that was calculated to produce this
     ///  report.
@@ -1526,8 +1496,7 @@ class MeasureReport with Resource, _$MeasureReport {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [reporter] The individual, location, or organization that is reporting
     ///  the data.
@@ -1623,7 +1592,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
   ///
   /// [stratifier] When a measure includes multiple stratifiers, there will be
   ///  a stratifier group for each stratifier defined by the measure.
-  factory MeasureReportGroup({
+  const factory MeasureReportGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1742,7 +1711,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   ///
   /// [subjectResults] This element refers to a List of subject level
   ///  MeasureReport resources, one for each subject in this population.
-  factory MeasureReportPopulation({
+  const factory MeasureReportPopulation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1855,7 +1824,7 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
   /// [stratum] This element contains the results for a single stratum within
   /// the stratifier. For example, when stratifying on administrative gender,
   ///  there will be four strata, one for each possible gender value.
-  factory MeasureReportStratifier({
+  const factory MeasureReportStratifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1970,7 +1939,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
   /// [measureScore] The measure score for this stratum, calculated as
   /// appropriate for the measure type and scoring method, and based on only the
   ///  members of this stratum.
-  factory MeasureReportStratum({
+  const factory MeasureReportStratum({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2084,7 +2053,7 @@ class MeasureReportComponent with _$MeasureReportComponent {
   /// [code] The code for the stratum component value.
   ///
   /// [value] The stratum component value.
-  factory MeasureReportComponent({
+  const factory MeasureReportComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2193,7 +2162,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   /// [subjectResults] This element refers to a List of subject level
   /// MeasureReport resources, one for each subject in this population in this
   ///  stratum.
-  factory MeasureReportPopulation1({
+  const factory MeasureReportPopulation1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2374,17 +2343,17 @@ class TestReport with Resource, _$TestReport {
   ///
   /// [teardown] The results of the series of operations required to clean up
   ///  after all the tests were executed (successfully or otherwise).
-  factory TestReport({
+  const factory TestReport({
     @Default(R4ResourceType.TestReport)
     @JsonKey(unknownEnumValue: R4ResourceType.TestReport)
 
-        /// [resourceType] This is a TestReport resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a TestReport resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2398,15 +2367,13 @@ class TestReport with Resource, _$TestReport {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2428,8 +2395,7 @@ class TestReport with Resource, _$TestReport {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2455,15 +2421,13 @@ class TestReport with Resource, _$TestReport {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [status] The current state of this test report.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [testScript] Ideally this is an absolute URL that is used to identify the
     /// version-specific TestScript that was executed, matching the
@@ -2474,32 +2438,28 @@ class TestReport with Resource, _$TestReport {
     FhirCode? result,
 
     /// [resultElement] Extensions for result
-    @JsonKey(name: '_result')
-        Element? resultElement,
+    @JsonKey(name: '_result') Element? resultElement,
 
     /// [score] The final score (percentage of tests passed) resulting from the
     ///  execution of the TestScript.
     FhirDecimal? score,
 
     /// [scoreElement] Extensions for score
-    @JsonKey(name: '_score')
-        Element? scoreElement,
+    @JsonKey(name: '_score') Element? scoreElement,
 
     /// [tester] Name of the tester producing this report (Organization or
     ///  individual).
     String? tester,
 
     /// [testerElement] Extensions for tester
-    @JsonKey(name: '_tester')
-        Element? testerElement,
+    @JsonKey(name: '_tester') Element? testerElement,
 
     /// [issued] When the TestScript was executed and this TestReport was
     ///  generated.
     FhirDateTime? issued,
 
     /// [issuedElement] Extensions for issued
-    @JsonKey(name: '_issued')
-        Element? issuedElement,
+    @JsonKey(name: '_issued') Element? issuedElement,
 
     /// [participant] A participant in the test execution, either the execution
     ///  engine, a client, or a server.
@@ -2589,7 +2549,7 @@ class TestReportParticipant with _$TestReportParticipant {
   /// [display] The display name of the participant.
   ///
   /// [displayElement] Extensions for display
-  factory TestReportParticipant({
+  const factory TestReportParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2701,7 +2661,7 @@ class TestReportSetup with _$TestReportSetup {
   ///  modifierExtension itself).
   ///
   /// [action] Action would contain either an operation or an assertion.
-  factory TestReportSetup({
+  const factory TestReportSetup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2801,7 +2761,7 @@ class TestReportAction with _$TestReportAction {
   ///
   /// [assert] The results of the assertion performed on the previous
   ///  operations.
-  factory TestReportAction({
+  const factory TestReportAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2912,7 +2872,7 @@ class TestReportOperation with _$TestReportOperation {
   /// [detail] A link to further details on the result.
   ///
   /// [detailElement] Extensions for detail
-  factory TestReportOperation({
+  const factory TestReportOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3034,7 +2994,7 @@ class TestReportAssert with _$TestReportAssert {
   /// [detail] A link to further details on the result.
   ///
   /// [detailElement] Extensions for detail
-  factory TestReportAssert({
+  const factory TestReportAssert({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3156,7 +3116,7 @@ class TestReportTest with _$TestReportTest {
   /// [descriptionElement] Extensions for description
   ///
   /// [action] Action would contain either an operation or an assertion.
-  factory TestReportTest({
+  const factory TestReportTest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3270,7 +3230,7 @@ class TestReportAction1 with _$TestReportAction1 {
   ///
   /// [assert] The results of the assertion performed on the previous
   ///  operations.
-  factory TestReportAction1({
+  const factory TestReportAction1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3371,7 +3331,7 @@ class TestReportTeardown with _$TestReportTeardown {
   ///  modifierExtension itself).
   ///
   /// [action] The teardown action will only contain an operation.
-  factory TestReportTeardown({
+  const factory TestReportTeardown({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3468,7 +3428,7 @@ class TestReportAction2 with _$TestReportAction2 {
   ///  modifierExtension itself).
   ///
   /// [operation] An operation would involve a REST request to a server.
-  factory TestReportAction2({
+  const factory TestReportAction2({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3701,17 +3661,17 @@ class TestScript with Resource, _$TestScript {
   ///
   /// [teardown] A series of operations required to clean up after all the
   ///  tests are executed (successfully or otherwise).
-  factory TestScript({
+  const factory TestScript({
     @Default(R4ResourceType.TestScript)
     @JsonKey(unknownEnumValue: R4ResourceType.TestScript)
 
-        /// [resourceType] This is a TestScript resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a TestScript resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -3725,15 +3685,13 @@ class TestScript with Resource, _$TestScript {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -3755,8 +3713,7 @@ class TestScript with Resource, _$TestScript {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -3783,8 +3740,7 @@ class TestScript with Resource, _$TestScript {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this test
     /// script when it is represented in other formats, or referenced in a
@@ -3801,8 +3757,7 @@ class TestScript with Resource, _$TestScript {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [name] A natural language name identifying the test script. This name
     /// should be usable as an identifier for the module by machine processing
@@ -3810,23 +3765,20 @@ class TestScript with Resource, _$TestScript {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for the test script.
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [status] The status of this test script. Enables tracking the life-cycle
     ///  of the content.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this test script is
     /// authored for testing purposes (or education/evaluation/marketing) and is
@@ -3834,8 +3786,7 @@ class TestScript with Resource, _$TestScript {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the test script was
     /// published. The date must change when the business version changes and it
@@ -3844,16 +3795,14 @@ class TestScript with Resource, _$TestScript {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  test script.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -3864,8 +3813,7 @@ class TestScript with Resource, _$TestScript {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -3883,8 +3831,7 @@ class TestScript with Resource, _$TestScript {
     FhirMarkdown? purpose,
 
     /// [purposeElement] Extensions for purpose
-    @JsonKey(name: '_purpose')
-        Element? purposeElement,
+    @JsonKey(name: '_purpose') Element? purposeElement,
 
     /// [copyright] A copyright statement relating to the test script and/or its
     /// contents. Copyright statements are generally legal restrictions on the use
@@ -3892,8 +3839,7 @@ class TestScript with Resource, _$TestScript {
     FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [origin] An abstract server used in operations within this test script in
     ///  the origin element.
@@ -3997,7 +3943,7 @@ class TestScriptOrigin with _$TestScriptOrigin {
   /// [indexElement] Extensions for index
   ///
   /// [profile] The type of origin profile the test system supports.
-  factory TestScriptOrigin({
+  const factory TestScriptOrigin({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4107,7 +4053,7 @@ class TestScriptDestination with _$TestScriptDestination {
   /// [indexElement] Extensions for index
   ///
   /// [profile] The type of destination profile the test system supports.
-  factory TestScriptDestination({
+  const factory TestScriptDestination({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4215,7 +4161,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
   ///
   /// [capability] Capabilities that must exist and are assumed to function
   ///  correctly on the FHIR server being tested.
-  factory TestScriptMetadata({
+  const factory TestScriptMetadata({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4324,7 +4270,7 @@ class TestScriptLink with _$TestScriptLink {
   /// [description] Short description of the link.
   ///
   /// [descriptionElement] Extensions for description
-  factory TestScriptLink({
+  const factory TestScriptLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4463,7 +4409,7 @@ class TestScriptCapability with _$TestScriptCapability {
   /// execute successfully.   If server does not meet at a minimum the
   /// referenced capability statement, then all tests in this script are
   ///  skipped.
-  factory TestScriptCapability({
+  const factory TestScriptCapability({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4619,7 +4565,7 @@ class TestScriptFixture with _$TestScriptFixture {
   ///
   /// [resource] Reference to the resource (containing the contents of the
   ///  resource needed for operations).
-  factory TestScriptFixture({
+  const factory TestScriptFixture({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4775,7 +4721,7 @@ class TestScriptVariable with _$TestScriptVariable {
   ///  headerField  against within this variable.
   ///
   /// [sourceIdElement] Extensions for sourceId
-  factory TestScriptVariable({
+  const factory TestScriptVariable({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4927,7 +4873,7 @@ class TestScriptSetup with _$TestScriptSetup {
   ///  modifierExtension itself).
   ///
   /// [action] Action would contain either an operation or an assertion.
-  factory TestScriptSetup({
+  const factory TestScriptSetup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5028,7 +4974,7 @@ class TestScriptAction with _$TestScriptAction {
   ///
   /// [assert] Evaluates the results of previous operations to determine if the
   ///  server under test behaves appropriately.
-  factory TestScriptAction({
+  const factory TestScriptAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5206,7 +5152,7 @@ class TestScriptOperation with _$TestScriptOperation {
   /// [url] Complete request URL.
   ///
   /// [urlElement] Extensions for url
-  factory TestScriptOperation({
+  const factory TestScriptOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5417,7 +5363,7 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
   /// [value] The value of the header e.g. "application/fhir+xml".
   ///
   /// [valueElement] Extensions for value
-  factory TestScriptRequestHeader({
+  const factory TestScriptRequestHeader({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5633,11 +5579,10 @@ class TestScriptAssert with _$TestScriptAssert {
   ///  only on error for this assert.
   ///
   /// [warningOnlyElement] Extensions for warningOnly
-  factory TestScriptAssert({
+  const factory TestScriptAssert({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -5645,8 +5590,7 @@ class TestScriptAssert with _$TestScriptAssert {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -5668,23 +5612,20 @@ class TestScriptAssert with _$TestScriptAssert {
     String? label,
 
     /// [labelElement] Extensions for label
-    @JsonKey(name: '_label')
-        Element? labelElement,
+    @JsonKey(name: '_label') Element? labelElement,
 
     /// [description] The description would be used by test engines for tracking
     ///  and reporting purposes.
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [direction] The direction to use for the assertion.
     FhirCode? direction,
 
     /// [directionElement] Extensions for direction
-    @JsonKey(name: '_direction')
-        Element? directionElement,
+    @JsonKey(name: '_direction') Element? directionElement,
 
     /// [compareToSourceId] Id of the source fixture used as the contents to be
     /// evaluated by either the "source/expression" or "sourceId/path"
@@ -5692,8 +5633,7 @@ class TestScriptAssert with _$TestScriptAssert {
     String? compareToSourceId,
 
     /// [compareToSourceIdElement] Extensions for compareToSourceId
-    @JsonKey(name: '_compareToSourceId')
-        Element? compareToSourceIdElement,
+    @JsonKey(name: '_compareToSourceId') Element? compareToSourceIdElement,
 
     /// [compareToSourceExpression] The FHIRPath expression to evaluate against
     /// the source fixture. When compareToSourceId is defined, either
@@ -5702,8 +5642,8 @@ class TestScriptAssert with _$TestScriptAssert {
     String? compareToSourceExpression,
     @JsonKey(name: '_compareToSourceExpression')
 
-        /// [compareToSourceExpressionElement] Extensions for compareToSourceExpression
-        Element? compareToSourceExpressionElement,
+    /// [compareToSourceExpressionElement] Extensions for compareToSourceExpression
+    Element? compareToSourceExpressionElement,
 
     /// [compareToSourcePath] XPath or JSONPath expression to evaluate against
     /// the source fixture. When compareToSourceId is defined, either
@@ -5712,88 +5652,76 @@ class TestScriptAssert with _$TestScriptAssert {
     String? compareToSourcePath,
 
     /// [compareToSourcePathElement] Extensions for compareToSourcePath
-    @JsonKey(name: '_compareToSourcePath')
-        Element? compareToSourcePathElement,
+    @JsonKey(name: '_compareToSourcePath') Element? compareToSourcePathElement,
 
     /// [contentType] The mime-type contents to compare against the request or
     ///  response message 'Content-Type' header.
     FhirCode? contentType,
 
     /// [contentTypeElement] Extensions for contentType
-    @JsonKey(name: '_contentType')
-        Element? contentTypeElement,
+    @JsonKey(name: '_contentType') Element? contentTypeElement,
 
     /// [expression] The FHIRPath expression to be evaluated against the request
     ///  or response message contents - HTTP headers and payload.
     String? expression,
 
     /// [expressionElement] Extensions for expression
-    @JsonKey(name: '_expression')
-        Element? expressionElement,
+    @JsonKey(name: '_expression') Element? expressionElement,
 
     /// [headerField] The HTTP header field name e.g. 'Location'.
     String? headerField,
 
     /// [headerFieldElement] Extensions for headerField
-    @JsonKey(name: '_headerField')
-        Element? headerFieldElement,
+    @JsonKey(name: '_headerField') Element? headerFieldElement,
 
     /// [minimumId] The ID of a fixture.  Asserts that the response contains at a
     ///  minimum the fixture specified by minimumId.
     String? minimumId,
 
     /// [minimumIdElement] Extensions for minimumId
-    @JsonKey(name: '_minimumId')
-        Element? minimumIdElement,
+    @JsonKey(name: '_minimumId') Element? minimumIdElement,
 
     /// [navigationLinks] Whether or not the test execution performs validation
     ///  on the bundle navigation links.
     FhirBoolean? navigationLinks,
 
     /// [navigationLinksElement] Extensions for navigationLinks
-    @JsonKey(name: '_navigationLinks')
-        Element? navigationLinksElement,
+    @JsonKey(name: '_navigationLinks') Element? navigationLinksElement,
 
     /// [operator] The operator type defines the conditional behavior of the
     ///  assert. If not defined, the default is equals.
-    @JsonKey(name: 'operator')
-        FhirCode? operator_,
+    @JsonKey(name: 'operator') FhirCode? operator_,
 
     /// [operatorElement] Extensions for operator
-    @JsonKey(name: '_operator')
-        Element? operatorElement,
+    @JsonKey(name: '_operator') Element? operatorElement,
 
     /// [path] The XPath or JSONPath expression to be evaluated against the
     ///  fixture representing the response received from server.
     String? path,
 
     /// [pathElement] Extensions for path
-    @JsonKey(name: '_path')
-        Element? pathElement,
+    @JsonKey(name: '_path') Element? pathElement,
 
     /// [requestMethod] The request method or HTTP operation code to compare
     ///  against that used by the client system under test.
     FhirCode? requestMethod,
 
     /// [requestMethodElement] Extensions for requestMethod
-    @JsonKey(name: '_requestMethod')
-        Element? requestMethodElement,
+    @JsonKey(name: '_requestMethod') Element? requestMethodElement,
 
     /// [requestURL] The value to use in a comparison against the request URL
     ///  path string.
     String? requestURL,
 
     /// [requestURLElement] Extensions for requestURL
-    @JsonKey(name: '_requestURL')
-        Element? requestURLElement,
+    @JsonKey(name: '_requestURL') Element? requestURLElement,
 
     /// [resource] The type of the resource.  See
     ///  http://build.fhir.org/resourcelist.html.
     FhirCode? resource,
 
     /// [resourceElement] Extensions for resource
-    @JsonKey(name: '_resource')
-        Element? resourceElement,
+    @JsonKey(name: '_resource') Element? resourceElement,
 
     /// [response] okay | created | noContent | notModified | bad | forbidden |
     /// notFound | methodNotAllowed | conflict | gone | preconditionFailed |
@@ -5801,45 +5729,39 @@ class TestScriptAssert with _$TestScriptAssert {
     FhirCode? response,
 
     /// [responseElement] Extensions for response
-    @JsonKey(name: '_response')
-        Element? responseElement,
+    @JsonKey(name: '_response') Element? responseElement,
 
     /// [responseCode] The value of the HTTP response code to be tested.
     String? responseCode,
 
     /// [responseCodeElement] Extensions for responseCode
-    @JsonKey(name: '_responseCode')
-        Element? responseCodeElement,
+    @JsonKey(name: '_responseCode') Element? responseCodeElement,
 
     /// [sourceId] Fixture to evaluate the XPath/JSONPath expression or the
     ///  headerField  against.
     FhirId? sourceId,
 
     /// [sourceIdElement] Extensions for sourceId
-    @JsonKey(name: '_sourceId')
-        Element? sourceIdElement,
+    @JsonKey(name: '_sourceId') Element? sourceIdElement,
 
     /// [validateProfileId] The ID of the Profile to validate against.
     FhirId? validateProfileId,
 
     /// [validateProfileIdElement] Extensions for validateProfileId
-    @JsonKey(name: '_validateProfileId')
-        Element? validateProfileIdElement,
+    @JsonKey(name: '_validateProfileId') Element? validateProfileIdElement,
 
     /// [value] The value to compare to.
     String? value,
 
     /// [valueElement] Extensions for value
-    @JsonKey(name: '_value')
-        Element? valueElement,
+    @JsonKey(name: '_value') Element? valueElement,
 
     /// [warningOnly] Whether or not the test execution will produce a warning
     ///  only on error for this assert.
     FhirBoolean? warningOnly,
 
     /// [warningOnlyElement] Extensions for warningOnly
-    @JsonKey(name: '_warningOnly')
-        Element? warningOnlyElement,
+    @JsonKey(name: '_warningOnly') Element? warningOnlyElement,
   }) = _TestScriptAssert;
 
   /// Produces a Yaml formatted String version of the object
@@ -5918,7 +5840,7 @@ class TestScriptTest with _$TestScriptTest {
   /// [descriptionElement] Extensions for description
   ///
   /// [action] Action would contain either an operation or an assertion.
-  factory TestScriptTest({
+  const factory TestScriptTest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6033,7 +5955,7 @@ class TestScriptAction1 with _$TestScriptAction1 {
   ///
   /// [assert] Evaluates the results of previous operations to determine if the
   ///  server under test behaves appropriately.
-  factory TestScriptAction1({
+  const factory TestScriptAction1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6135,7 +6057,7 @@ class TestScriptTeardown with _$TestScriptTeardown {
   ///  modifierExtension itself).
   ///
   /// [action] The teardown action will only contain an operation.
-  factory TestScriptTeardown({
+  const factory TestScriptTeardown({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6233,7 +6155,7 @@ class TestScriptAction2 with _$TestScriptAction2 {
   ///  modifierExtension itself).
   ///
   /// [operation] An operation would involve a REST request to a server.
-  factory TestScriptAction2({
+  const factory TestScriptAction2({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,

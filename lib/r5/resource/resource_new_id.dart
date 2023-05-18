@@ -141,7 +141,7 @@ Resource _newId(Resource resource) {
     case R5ResourceType.GraphDefinition:
       return (resource as GraphDefinition).copyWith(fhirId: newId());
     case R5ResourceType.Group:
-      return (resource as Group).copyWith(fhirId: newId());
+      return (resource as FhirGroup).copyWith(fhirId: newId());
     case R5ResourceType.GuidanceResponse:
       return (resource as GuidanceResponse).copyWith(fhirId: newId());
     case R5ResourceType.HealthcareService:

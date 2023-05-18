@@ -1,5 +1,11 @@
 # fhir
 
+## [0.11.0]
+
+* Dart 3.0.0!
+* Added in a dbId field (in case you need an int for Id)
+* Changed Group to FhirGroup to avoid problems with other packages
+
 ## [0.10.0]
 
 * I've been playing with some Db packages, and there's some overlap with a number of the primitive types.

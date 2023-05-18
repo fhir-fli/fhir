@@ -13,13 +13,13 @@ import '../../../../r4.dart';
 part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
-/// [Group] Represents a defined collection of entities that may be discussed
+/// [FhirGroup] Represents a defined collection of entities that may be discussed
 @freezed
-class Group with Resource, _$Group {
-  /// [Group] Represents a defined collection of entities that may be discussed
-  Group._();
+class FhirGroup with Resource, _$FhirGroup {
+  /// [FhirGroup] Represents a defined collection of entities that may be discussed
+  FhirGroup._();
 
-  /// [Group] Represents a defined collection of entities that may be discussed
+  /// [FhirGroup] Represents a defined collection of entities that may be discussed
   /// or acted upon collectively but which are not expected to act collectively,
   /// and are not formally or legally recognized; i.e. a collection of entities
   ///  that isn't an Organization.
@@ -115,17 +115,17 @@ class Group with Resource, _$Group {
   ///  members of the group.
   ///
   /// [member] Identifies the resource instances that are members of the group.
-  factory Group({
+  const factory FhirGroup({
     @Default(R4ResourceType.Group)
     @JsonKey(unknownEnumValue: R4ResourceType.Group)
 
-        /// [resourceType] This is a Group resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Group resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -139,15 +139,13 @@ class Group with Resource, _$Group {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -169,8 +167,7 @@ class Group with Resource, _$Group {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -195,16 +192,14 @@ class Group with Resource, _$Group {
     FhirBoolean? active,
 
     /// [activeElement] Extensions for active
-    @JsonKey(name: '_active')
-        Element? activeElement,
+    @JsonKey(name: '_active') Element? activeElement,
 
     /// [type] Identifies the broad classification of the kind of resources the
     ///  group includes.
     FhirCode? type,
 
     /// [typeElement] Extensions for type
-    @JsonKey(name: '_type')
-        Element? typeElement,
+    @JsonKey(name: '_type') Element? typeElement,
 
     /// [actual] If true, indicates that the resource refers to a specific group
     /// of real individuals.  If false, the group defines a set of intended
@@ -212,8 +207,7 @@ class Group with Resource, _$Group {
     FhirBoolean? actual,
 
     /// [actualElement] Extensions for actual
-    @JsonKey(name: '_actual')
-        Element? actualElement,
+    @JsonKey(name: '_actual') Element? actualElement,
 
     /// [code] Provides a specific type of resource the group includes; e.g.
     ///  "cow", "syringe", etc.
@@ -224,16 +218,14 @@ class Group with Resource, _$Group {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [quantity] A count of the number of resource instances that are part of
     ///  the group.
     FhirUnsignedInt? quantity,
 
     /// [quantityElement] Extensions for quantity
-    @JsonKey(name: '_quantity')
-        Element? quantityElement,
+    @JsonKey(name: '_quantity') Element? quantityElement,
 
     /// [managingEntity] Entity responsible for defining and maintaining Group
     ///  characteristics and/or registered members.
@@ -245,27 +237,29 @@ class Group with Resource, _$Group {
 
     /// [member] Identifies the resource instances that are members of the group.
     List<GroupMember>? member,
-  }) = _Group;
+  }) = _FhirGroup;
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Group.fromYaml(dynamic yaml) => yaml is String
-      ? Group.fromJson(
+  factory FhirGroup.fromYaml(dynamic yaml) => yaml is String
+      ? FhirGroup.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Group.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          ? FhirGroup.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'Group cannot be constructed from input provided,'
+              'FhirGroup cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
+  factory FhirGroup.fromJson(Map<String, dynamic> json) =>
+      _$FhirGroupFromJson(json);
 
-  /// Acts like a constructor, returns a [Group], accepts a
+  /// Acts like a constructor, returns a [FhirGroup], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory Group.fromJsonString(String source) {
+  factory FhirGroup.fromJsonString(String source) {
     final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$GroupFromJson(json);
+      return _$FhirGroupFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -334,7 +328,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
   ///
   /// [period] The period over which the characteristic is tested; e.g. the
   ///  patient had an operation during the month of June.
-  factory GroupCharacteristic({
+  const factory GroupCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -476,7 +470,7 @@ class GroupMember with _$GroupMember {
   ///  but previously may have been a member.
   ///
   /// [inactiveElement] Extensions for inactive
-  factory GroupMember({
+  const factory GroupMember({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -677,17 +671,17 @@ class Patient with Resource, _$Patient {
   ///
   /// [link] Link to another patient resource that concerns the same actual
   ///  patient.
-  factory Patient({
+  const factory Patient({
     @Default(R4ResourceType.Patient)
     @JsonKey(unknownEnumValue: R4ResourceType.Patient)
 
-        /// [resourceType] This is a Patient resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Patient resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -701,15 +695,13 @@ class Patient with Resource, _$Patient {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -731,8 +723,7 @@ class Patient with Resource, _$Patient {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -762,8 +753,7 @@ class Patient with Resource, _$Patient {
     FhirBoolean? active,
 
     /// [activeElement] Extensions for active
-    @JsonKey(name: '_active')
-        Element? activeElement,
+    @JsonKey(name: '_active') Element? activeElement,
 
     /// [name] A name associated with the individual.
     List<HumanName>? name,
@@ -777,29 +767,25 @@ class Patient with Resource, _$Patient {
     FhirCode? gender,
 
     /// [genderElement] Extensions for gender
-    @JsonKey(name: '_gender')
-        Element? genderElement,
+    @JsonKey(name: '_gender') Element? genderElement,
 
     /// [birthDate] The date of birth for the individual.
     FhirDate? birthDate,
 
     /// [birthDateElement] Extensions for birthDate
-    @JsonKey(name: '_birthDate')
-        Element? birthDateElement,
+    @JsonKey(name: '_birthDate') Element? birthDateElement,
 
     /// [deceasedBoolean] Indicates if the individual is deceased or not.
     FhirBoolean? deceasedBoolean,
 
     /// [deceasedBooleanElement] Extensions for deceasedBoolean
-    @JsonKey(name: '_deceasedBoolean')
-        Element? deceasedBooleanElement,
+    @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
 
     /// [deceasedDateTime] Indicates if the individual is deceased or not.
     FhirDateTime? deceasedDateTime,
 
     /// [deceasedDateTimeElement] Extensions for deceasedDateTime
-    @JsonKey(name: '_deceasedDateTime')
-        Element? deceasedDateTimeElement,
+    @JsonKey(name: '_deceasedDateTime') Element? deceasedDateTimeElement,
 
     /// [address] An address for the individual.
     List<Address>? address,
@@ -813,16 +799,16 @@ class Patient with Resource, _$Patient {
     FhirBoolean? multipleBirthBoolean,
     @JsonKey(name: '_multipleBirthBoolean')
 
-        /// [multipleBirthBooleanElement] Extensions for multipleBirthBoolean
-        Element? multipleBirthBooleanElement,
+    /// [multipleBirthBooleanElement] Extensions for multipleBirthBoolean
+    Element? multipleBirthBooleanElement,
 
     /// [multipleBirthInteger] Indicates whether the patient is part of a
     ///  multiple (boolean) or indicates the actual birth order (integer).
     FhirInteger? multipleBirthInteger,
     @JsonKey(name: '_multipleBirthInteger')
 
-        /// [multipleBirthIntegerElement] Extensions for multipleBirthInteger
-        Element? multipleBirthIntegerElement,
+    /// [multipleBirthIntegerElement] Extensions for multipleBirthInteger
+    Element? multipleBirthIntegerElement,
 
     /// [photo] Image of the patient.
     List<Attachment>? photo,
@@ -928,7 +914,7 @@ class PatientContact with _$PatientContact {
   ///
   /// [period] The period during which this contact person or organization is
   ///  valid to be contacted relating to this patient.
-  factory PatientContact({
+  const factory PatientContact({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1060,7 +1046,7 @@ class PatientCommunication with _$PatientCommunication {
   ///  (over other languages he masters up a certain level).
   ///
   /// [preferredElement] Extensions for preferred
-  factory PatientCommunication({
+  const factory PatientCommunication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1172,7 +1158,7 @@ class PatientLink with _$PatientLink {
   ///  resource.
   ///
   /// [typeElement] Extensions for type
-  factory PatientLink({
+  const factory PatientLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1332,17 +1318,17 @@ class Person with Resource, _$Person {
   /// [activeElement] Extensions for active
   ///
   /// [link] Link to a resource that concerns the same actual person.
-  factory Person({
+  const factory Person({
     @Default(R4ResourceType.Person)
     @JsonKey(unknownEnumValue: R4ResourceType.Person)
 
-        /// [resourceType] This is a Person resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Person resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1356,15 +1342,13 @@ class Person with Resource, _$Person {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1386,8 +1370,7 @@ class Person with Resource, _$Person {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1418,15 +1401,13 @@ class Person with Resource, _$Person {
     FhirCode? gender,
 
     /// [genderElement] Extensions for gender
-    @JsonKey(name: '_gender')
-        Element? genderElement,
+    @JsonKey(name: '_gender') Element? genderElement,
 
     /// [birthDate] The birth date for the person.
     FhirDate? birthDate,
 
     /// [birthDateElement] Extensions for birthDate
-    @JsonKey(name: '_birthDate')
-        Element? birthDateElement,
+    @JsonKey(name: '_birthDate') Element? birthDateElement,
 
     /// [address] One or more addresses for the person.
     List<Address>? address,
@@ -1443,8 +1424,7 @@ class Person with Resource, _$Person {
     FhirBoolean? active,
 
     /// [activeElement] Extensions for active
-    @JsonKey(name: '_active')
-        Element? activeElement,
+    @JsonKey(name: '_active') Element? activeElement,
 
     /// [link] Link to a resource that concerns the same actual person.
     List<PersonLink>? link,
@@ -1516,7 +1496,7 @@ class PersonLink with _$PersonLink {
   ///  target resource.
   ///
   /// [assuranceElement] Extensions for assurance
-  factory PersonLink({
+  const factory PersonLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1683,17 +1663,17 @@ class Practitioner with Resource, _$Practitioner {
   ///
   /// [communication] A language the practitioner can use in patient
   ///  communication.
-  factory Practitioner({
+  const factory Practitioner({
     @Default(R4ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
 
-        /// [resourceType] This is a Practitioner resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Practitioner resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1707,15 +1687,13 @@ class Practitioner with Resource, _$Practitioner {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1737,8 +1715,7 @@ class Practitioner with Resource, _$Practitioner {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1762,8 +1739,7 @@ class Practitioner with Resource, _$Practitioner {
     FhirBoolean? active,
 
     /// [activeElement] Extensions for active
-    @JsonKey(name: '_active')
-        Element? activeElement,
+    @JsonKey(name: '_active') Element? activeElement,
 
     /// [name] The name(s) associated with the practitioner.
     List<HumanName>? name,
@@ -1783,15 +1759,13 @@ class Practitioner with Resource, _$Practitioner {
     FhirCode? gender,
 
     /// [genderElement] Extensions for gender
-    @JsonKey(name: '_gender')
-        Element? genderElement,
+    @JsonKey(name: '_gender') Element? genderElement,
 
     /// [birthDate] The date of birth for the practitioner.
     FhirDate? birthDate,
 
     /// [birthDateElement] Extensions for birthDate
-    @JsonKey(name: '_birthDate')
-        Element? birthDateElement,
+    @JsonKey(name: '_birthDate') Element? birthDateElement,
 
     /// [photo] Image of the person.
     List<Attachment>? photo,
@@ -1877,7 +1851,7 @@ class PractitionerQualification with _$PractitionerQualification {
   /// [period] Period during which the qualification is valid.
   ///
   /// [issuer] Organization that regulates and issues the qualification.
-  factory PractitionerQualification({
+  const factory PractitionerQualification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2054,17 +2028,17 @@ class PractitionerRole with Resource, _$PractitionerRole {
   ///
   /// [endpoint] Technical endpoints providing access to services operated for
   ///  the practitioner with this role.
-  factory PractitionerRole({
+  const factory PractitionerRole({
     @Default(R4ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
 
-        /// [resourceType] This is a PractitionerRole resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a PractitionerRole resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2078,15 +2052,13 @@ class PractitionerRole with Resource, _$PractitionerRole {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2108,8 +2080,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2133,8 +2104,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
     FhirBoolean? active,
 
     /// [activeElement] Extensions for active
-    @JsonKey(name: '_active')
-        Element? activeElement,
+    @JsonKey(name: '_active') Element? activeElement,
 
     /// [period] The period during which the person is authorized to act as a
     ///  practitioner in these role(s) for the organization.
@@ -2180,8 +2150,8 @@ class PractitionerRole with Resource, _$PractitionerRole {
     String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
 
-        /// [availabilityExceptionsElement] Extensions for availabilityExceptions
-        Element? availabilityExceptionsElement,
+    /// [availabilityExceptionsElement] Extensions for availabilityExceptions
+    Element? availabilityExceptionsElement,
 
     /// [endpoint] Technical endpoints providing access to services operated for
     ///  the practitioner with this role.
@@ -2269,7 +2239,7 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
   ///  set, then this time is ignored.
   ///
   /// [availableEndTimeElement] Extensions for availableEndTime
-  factory PractitionerRoleAvailableTime({
+  const factory PractitionerRoleAvailableTime({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2398,7 +2368,7 @@ class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
   ///
   /// [during] Service is not available (seasonally or for a public holiday)
   ///  from this date.
-  factory PractitionerRoleNotAvailable({
+  const factory PractitionerRoleNotAvailable({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2566,17 +2536,17 @@ class RelatedPerson with Resource, _$RelatedPerson {
   ///
   /// [communication] A language which may be used to communicate with about
   ///  the patient's health.
-  factory RelatedPerson({
+  const factory RelatedPerson({
     @Default(R4ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
 
-        /// [resourceType] This is a RelatedPerson resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a RelatedPerson resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2590,15 +2560,13 @@ class RelatedPerson with Resource, _$RelatedPerson {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2620,8 +2588,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2645,8 +2612,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
     FhirBoolean? active,
 
     /// [activeElement] Extensions for active
-    @JsonKey(name: '_active')
-        Element? activeElement,
+    @JsonKey(name: '_active') Element? activeElement,
 
     /// [patient] The patient this person is related to.
     required Reference patient,
@@ -2667,15 +2633,13 @@ class RelatedPerson with Resource, _$RelatedPerson {
     FhirCode? gender,
 
     /// [genderElement] Extensions for gender
-    @JsonKey(name: '_gender')
-        Element? genderElement,
+    @JsonKey(name: '_gender') Element? genderElement,
 
     /// [birthDate] The date on which the related person was born.
     FhirDate? birthDate,
 
     /// [birthDateElement] Extensions for birthDate
-    @JsonKey(name: '_birthDate')
-        Element? birthDateElement,
+    @JsonKey(name: '_birthDate') Element? birthDateElement,
 
     /// [address] Address where the related person can be contacted or visited.
     List<Address>? address,
@@ -2763,7 +2727,7 @@ class RelatedPersonCommunication with _$RelatedPersonCommunication {
   ///  (over other languages he masters up a certain level).
   ///
   /// [preferredElement] Extensions for preferred
-  factory RelatedPersonCommunication({
+  const factory RelatedPersonCommunication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

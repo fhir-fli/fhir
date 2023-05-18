@@ -41,7 +41,7 @@ class ContactDetail with _$ContactDetail {
   /// [telecom] The contact details for the individual (if a name was provided)
   ///  or the organization.
   ///
-  factory ContactDetail({
+  const factory ContactDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -137,7 +137,7 @@ class ExtendedContactDetail with _$ExtendedContactDetail {
   ///
   /// [period] Period that this contact was valid for usage.
   ///
-  factory ExtendedContactDetail({
+  const factory ExtendedContactDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -264,7 +264,7 @@ class VirtualServiceDetail with _$VirtualServiceDetail {
   ///
   /// [sessionKeyElement] ("_sessionKey") Extensions for sessionKey
   ///
-  factory VirtualServiceDetail({
+  const factory VirtualServiceDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -388,7 +388,7 @@ class Availability with _$Availability {
   ///
   /// [notAvailableTime] Not available during this time due to provided reason.
   ///
-  factory Availability({
+  const factory Availability({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -492,7 +492,7 @@ class AvailabilityAvailableTime with _$AvailabilityAvailableTime {
   /// [availableEndTimeElement] ("_availableEndTime") Extensions for
   ///  availableEndTime
   ///
-  factory AvailabilityAvailableTime({
+  const factory AvailabilityAvailableTime({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -619,7 +619,7 @@ class AvailabilityNotAvailableTime with _$AvailabilityNotAvailableTime {
   ///
   /// [during] Service not available during this period.
   ///
-  factory AvailabilityNotAvailableTime({
+  const factory AvailabilityNotAvailableTime({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -723,7 +723,7 @@ class MonetaryComponent with _$MonetaryComponent {
   ///
   /// [amount] Explicit value amount to be used.
   ///
-  factory MonetaryComponent({
+  const factory MonetaryComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -822,7 +822,7 @@ class Contributor with _$Contributor {
   /// [contact] Contact details to assist a user in finding and communicating
   ///  with the contributor.
   ///
-  factory Contributor({
+  const factory Contributor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -956,7 +956,7 @@ class DataRequirement with _$DataRequirement {
   ///
   /// [sort] Specifies the order of the results to be returned.
   ///
-  factory DataRequirement({
+  const factory DataRequirement({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1132,7 +1132,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   ///  codes are specified in addition to a value set, the filter returns items
   ///  matching a code in the value set or one of the specified codes.
   ///
-  factory DataRequirementCodeFilter({
+  const factory DataRequirementCodeFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1310,7 +1310,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
   ///  filter will return only those data items that fall within Duration
   ///  before now.
   ///
-  factory DataRequirementDateFilter({
+  const factory DataRequirementDateFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1494,7 +1494,7 @@ class DataRequirementValueFilter with _$DataRequirementValueFilter {
   ///
   /// [valueDuration] The value of the filter.
   ///
-  factory DataRequirementValueFilter({
+  const factory DataRequirementValueFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1648,7 +1648,7 @@ class DataRequirementSort with _$DataRequirementSort {
   ///
   /// [directionElement] ("_direction") Extensions for direction
   ///
-  factory DataRequirementSort({
+  const factory DataRequirementSort({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1784,7 +1784,7 @@ class ParameterDefinition with _$ParameterDefinition {
   /// [profile] If specified, this indicates a profile that the input data must
   ///  conform to, or that the output data will conform to.
   ///
-  factory ParameterDefinition({
+  const factory ParameterDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1938,7 +1938,7 @@ class RelatedArtifact with _$RelatedArtifact {
   /// [publicationDateElement] ("_publicationDate") Extensions for
   ///  publicationDate
   ///
-  factory RelatedArtifact({
+  const factory RelatedArtifact({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2103,7 +2103,7 @@ class TriggerDefinition with _$TriggerDefinition {
   ///  of the container of the trigger definition and returns whether or not
   ///  the trigger fires.
   ///
-  factory TriggerDefinition({
+  const factory TriggerDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2247,7 +2247,7 @@ class UsageContext with _$UsageContext {
   /// [valueReference] A value that defines the context specified in this
   ///  context of use. The interpretation of the value is defined by the code.
   ///
-  factory UsageContext({
+  const factory UsageContext({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2364,7 +2364,7 @@ class FhirExpression with _$FhirExpression {
   ///
   /// [referenceElement] ("_reference") Extensions for reference
   ///
-  factory FhirExpression({
+  const factory FhirExpression({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

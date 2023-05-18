@@ -16,7 +16,7 @@ part 'element.g.dart';
 @freezed
 class Element with _$Element {
   Element._();
-  factory Element({
+  const factory Element({
     @JsonKey(name: 'id') String? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
   }) = _Element;

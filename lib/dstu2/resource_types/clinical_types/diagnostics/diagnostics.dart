@@ -17,10 +17,11 @@ part 'diagnostics.g.dart';
 @freezed
 class Observation with Resource, _$Observation {
   Observation._();
-  factory Observation({
+  const factory Observation({
     @Default(Dstu2ResourceType.Observation)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Observation)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: '_id') Element? idElement,
     FhirMeta? meta,
@@ -34,7 +35,7 @@ class Observation with Resource, _$Observation {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ObservationStatus.unknown)
-        required ObservationStatus status,
+    required ObservationStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? category,
     required CodeableConcept code,
@@ -102,7 +103,7 @@ class Observation with Resource, _$Observation {
 @freezed
 class ObservationReferenceRange with _$ObservationReferenceRange {
   ObservationReferenceRange._();
-  factory ObservationReferenceRange({
+  const factory ObservationReferenceRange({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -149,7 +150,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
 @freezed
 class ObservationRelated with _$ObservationRelated {
   ObservationRelated._();
-  factory ObservationRelated({
+  const factory ObservationRelated({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -192,7 +193,7 @@ class ObservationRelated with _$ObservationRelated {
 @freezed
 class ObservationComponent with _$ObservationComponent {
   ObservationComponent._();
-  factory ObservationComponent({
+  const factory ObservationComponent({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -249,10 +250,11 @@ class ObservationComponent with _$ObservationComponent {
 @freezed
 class DiagnosticReport with Resource, _$DiagnosticReport {
   DiagnosticReport._();
-  factory DiagnosticReport({
+  const factory DiagnosticReport({
     @Default(Dstu2ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticReport)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -265,7 +267,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: DiagnosticReportStatus.unknown)
-        required DiagnosticReportStatus status,
+    required DiagnosticReportStatus status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? category,
     required CodeableConcept code,
@@ -319,7 +321,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
 @freezed
 class DiagnosticReportImage with _$DiagnosticReportImage {
   DiagnosticReportImage._();
-  factory DiagnosticReportImage({
+  const factory DiagnosticReportImage({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -362,10 +364,11 @@ class DiagnosticReportImage with _$DiagnosticReportImage {
 @freezed
 class DiagnosticOrder with Resource, _$DiagnosticOrder {
   DiagnosticOrder._();
-  factory DiagnosticOrder({
+  const factory DiagnosticOrder({
     @Default(Dstu2ResourceType.DiagnosticOrder)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DiagnosticOrder)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -382,9 +385,9 @@ class DiagnosticOrder with Resource, _$DiagnosticOrder {
     List<Reference>? supportingInformation,
     List<Reference>? specimen,
     @JsonKey(unknownEnumValue: DiagnosticOrderStatus.unknown)
-        DiagnosticOrderStatus? status,
+    DiagnosticOrderStatus? status,
     @JsonKey(unknownEnumValue: DiagnosticOrderPriority.unknown)
-        DiagnosticOrderPriority? priority,
+    DiagnosticOrderPriority? priority,
     List<DiagnosticOrderEvent>? event,
     List<DiagnosticOrderItem>? item,
     List<Annotation>? note,
@@ -421,7 +424,7 @@ class DiagnosticOrder with Resource, _$DiagnosticOrder {
 @freezed
 class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
   DiagnosticOrderEvent._();
-  factory DiagnosticOrderEvent({
+  const factory DiagnosticOrderEvent({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -465,7 +468,7 @@ class DiagnosticOrderEvent with _$DiagnosticOrderEvent {
 @freezed
 class DiagnosticOrderItem with _$DiagnosticOrderItem {
   DiagnosticOrderItem._();
-  factory DiagnosticOrderItem({
+  const factory DiagnosticOrderItem({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -510,10 +513,11 @@ class DiagnosticOrderItem with _$DiagnosticOrderItem {
 @freezed
 class Specimen with Resource, _$Specimen {
   Specimen._();
-  factory Specimen({
+  const factory Specimen({
     @Default(Dstu2ResourceType.Specimen)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Specimen)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -569,7 +573,7 @@ class Specimen with Resource, _$Specimen {
 @freezed
 class SpecimenCollection with _$SpecimenCollection {
   SpecimenCollection._();
-  factory SpecimenCollection({
+  const factory SpecimenCollection({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
@@ -618,7 +622,7 @@ class SpecimenCollection with _$SpecimenCollection {
 @freezed
 class SpecimenTreatment with _$SpecimenTreatment {
   SpecimenTreatment._();
-  factory SpecimenTreatment({
+  const factory SpecimenTreatment({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -661,7 +665,7 @@ class SpecimenTreatment with _$SpecimenTreatment {
 @freezed
 class SpecimenContainer with _$SpecimenContainer {
   SpecimenContainer._();
-  factory SpecimenContainer({
+  const factory SpecimenContainer({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -709,10 +713,11 @@ class SpecimenContainer with _$SpecimenContainer {
 @freezed
 class BodySite with Resource, _$BodySite {
   BodySite._();
-  factory BodySite({
+  const factory BodySite({
     @Default(Dstu2ResourceType.BodySite)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.BodySite)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -760,10 +765,11 @@ class BodySite with Resource, _$BodySite {
 @freezed
 class ImagingStudy with Resource, _$ImagingStudy {
   ImagingStudy._();
-  factory ImagingStudy({
+  const factory ImagingStudy({
     @Default(Dstu2ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingStudy)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -784,7 +790,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
     List<Coding>? modalityList,
     Reference? referrer,
     @JsonKey(unknownEnumValue: ImagingStudyAvailability.unknown)
-        ImagingStudyAvailability? availability,
+    ImagingStudyAvailability? availability,
     FhirUri? url,
     required FhirUnsignedInt numberOfSeries,
     @JsonKey(name: '_numberOfSeries') Element? numberOfSeriesElement,
@@ -828,7 +834,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
 @freezed
 class ImagingStudySeries with _$ImagingStudySeries {
   ImagingStudySeries._();
-  factory ImagingStudySeries({
+  const factory ImagingStudySeries({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -842,7 +848,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
     required FhirUnsignedInt numberOfInstances,
     @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
     @JsonKey(unknownEnumValue: SeriesAvailability.unknown)
-        SeriesAvailability? availability,
+    SeriesAvailability? availability,
     FhirUri? url,
     Coding? bodySite,
     Coding? laterality,
@@ -885,7 +891,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
 @freezed
 class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance {
   ImagingStudySeriesInstance._();
-  factory ImagingStudySeriesInstance({
+  const factory ImagingStudySeriesInstance({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -934,10 +940,11 @@ class ImagingStudySeriesInstance with _$ImagingStudySeriesInstance {
 @freezed
 class ImagingObjectSelection with Resource, _$ImagingObjectSelection {
   ImagingObjectSelection._();
-  factory ImagingObjectSelection({
+  const factory ImagingObjectSelection({
     @Default(Dstu2ResourceType.ImagingObjectSelection)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ImagingObjectSelection)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -986,7 +993,7 @@ class ImagingObjectSelection with Resource, _$ImagingObjectSelection {
 @freezed
 class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
   ImagingObjectSelectionStudy._();
-  factory ImagingObjectSelectionStudy({
+  const factory ImagingObjectSelectionStudy({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -994,7 +1001,7 @@ class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
     FhirUri? url,
     Reference? imagingStudy,
     @JsonKey(required: true)
-        required List<ImagingObjectSelectionStudySeries> series,
+    required List<ImagingObjectSelectionStudySeries> series,
   }) = _ImagingObjectSelectionStudy;
 
   /// Produces a Yaml formatted String version of the object
@@ -1032,14 +1039,14 @@ class ImagingObjectSelectionStudy with _$ImagingObjectSelectionStudy {
 class ImagingObjectSelectionStudySeries
     with _$ImagingObjectSelectionStudySeries {
   ImagingObjectSelectionStudySeries._();
-  factory ImagingObjectSelectionStudySeries({
+  const factory ImagingObjectSelectionStudySeries({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     FhirOid? uid,
     FhirUri? url,
     @JsonKey(required: true)
-        required List<ImagingObjectSelectionSeriesInstance> instance,
+    required List<ImagingObjectSelectionSeriesInstance> instance,
   }) = _ImagingObjectSelectionStudySeries;
 
   /// Produces a Yaml formatted String version of the object
@@ -1066,7 +1073,7 @@ class ImagingObjectSelectionStudySeries
 class ImagingObjectSelectionSeriesInstance
     with _$ImagingObjectSelectionSeriesInstance {
   ImagingObjectSelectionSeriesInstance._();
-  factory ImagingObjectSelectionSeriesInstance({
+  const factory ImagingObjectSelectionSeriesInstance({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -1100,7 +1107,7 @@ class ImagingObjectSelectionSeriesInstance
 class ImagingObjectSelectionInstanceFrames
     with _$ImagingObjectSelectionInstanceFrames {
   ImagingObjectSelectionInstanceFrames._();
-  factory ImagingObjectSelectionInstanceFrames({
+  const factory ImagingObjectSelectionInstanceFrames({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirExtension? modifierExte,

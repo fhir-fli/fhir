@@ -17,10 +17,11 @@ part 'workflow2.g.dart';
 @freezed
 class ProcessRequest with Resource, _$ProcessRequest {
   ProcessRequest._();
-  factory ProcessRequest({
+  const factory ProcessRequest({
     @Default(Dstu2ResourceType.ProcessRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -30,7 +31,7 @@ class ProcessRequest with Resource, _$ProcessRequest {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: ProcessRequestAction.unknown)
-        required ProcessRequestAction action,
+    required ProcessRequestAction action,
     List<Identifier>? identifier,
     Coding? ruleset,
     Coding? originalRuleset,
@@ -79,7 +80,7 @@ class ProcessRequest with Resource, _$ProcessRequest {
 @freezed
 class ProcessRequestItem with _$ProcessRequestItem {
   ProcessRequestItem._();
-  factory ProcessRequestItem({
+  const factory ProcessRequestItem({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -120,10 +121,11 @@ class ProcessRequestItem with _$ProcessRequestItem {
 @freezed
 class ProcessResponse with Resource, _$ProcessResponse {
   ProcessResponse._();
-  factory ProcessResponse({
+  const factory ProcessResponse({
     @Default(Dstu2ResourceType.ProcessResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -178,7 +180,7 @@ class ProcessResponse with Resource, _$ProcessResponse {
 @freezed
 class ProcessResponseNotes with _$ProcessResponseNotes {
   ProcessResponseNotes._();
-  factory ProcessResponseNotes({
+  const factory ProcessResponseNotes({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -220,10 +222,11 @@ class ProcessResponseNotes with _$ProcessResponseNotes {
 @freezed
 class SupplyRequest with Resource, _$SupplyRequest {
   SupplyRequest._();
-  factory SupplyRequest({
+  const factory SupplyRequest({
     @Default(Dstu2ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -239,7 +242,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
     FhirDateTime? date,
     Identifier? identifier,
     @JsonKey(unknownEnumValue: SupplyRequestStatus.unknown)
-        SupplyRequestStatus? status,
+    SupplyRequestStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? kind,
     Reference? orderedItem,
@@ -280,7 +283,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
 @freezed
 class SupplyRequestWhen with _$SupplyRequestWhen {
   SupplyRequestWhen._();
-  factory SupplyRequestWhen({
+  const factory SupplyRequestWhen({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -322,10 +325,11 @@ class SupplyRequestWhen with _$SupplyRequestWhen {
 @freezed
 class SupplyDelivery with Resource, _$SupplyDelivery {
   SupplyDelivery._();
-  factory SupplyDelivery({
+  const factory SupplyDelivery({
     @Default(Dstu2ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -338,7 +342,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
     @JsonKey(unknownEnumValue: SupplyDeliveryStatus.unknown)
-        SupplyDeliveryStatus? status,
+    SupplyDeliveryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? patient,
     CodeableConcept? type,

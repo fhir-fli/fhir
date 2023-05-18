@@ -12,6 +12,7 @@ _$_FormularyItem _$$_FormularyItemFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.FormularyItem) ??
           R5ResourceType.FormularyItem,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -252,6 +253,7 @@ _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Immunization) ??
           R5ResourceType.Immunization,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -644,6 +646,7 @@ _$_ImmunizationEvaluation _$$_ImmunizationEvaluationFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ImmunizationEvaluation) ??
           R5ResourceType.ImmunizationEvaluation,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -771,6 +774,7 @@ _$_ImmunizationRecommendation _$$_ImmunizationRecommendationFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ImmunizationRecommendation) ??
           R5ResourceType.ImmunizationRecommendation,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -997,6 +1001,7 @@ _$_Medication _$$_MedicationFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Medication) ??
           R5ResourceType.Medication,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1198,6 +1203,7 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.MedicationAdministration) ??
           R5ResourceType.MedicationAdministration,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1473,6 +1479,7 @@ _$_MedicationDispense _$$_MedicationDispenseFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.MedicationDispense) ??
           R5ResourceType.MedicationDispense,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1765,6 +1772,7 @@ _$_MedicationKnowledge _$$_MedicationKnowledgeFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.MedicationKnowledge) ??
           R5ResourceType.MedicationKnowledge,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2915,6 +2923,7 @@ _$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.MedicationRequest) ??
           R5ResourceType.MedicationRequest,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -3320,6 +3329,7 @@ _$_MedicationStatement _$$_MedicationStatementFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.MedicationStatement) ??
           R5ResourceType.MedicationStatement,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

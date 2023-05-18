@@ -106,7 +106,7 @@ Resource _newId(Resource resource) {
     case Stu3ResourceType.GraphDefinition:
       return (resource as GraphDefinition).copyWith(fhirId: newId());
     case Stu3ResourceType.Group:
-      return (resource as Group).copyWith(fhirId: newId());
+      return (resource as FhirGroup).copyWith(fhirId: newId());
     case Stu3ResourceType.GuidanceResponse:
       return (resource as GuidanceResponse).copyWith(fhirId: newId());
     case Stu3ResourceType.HealthcareService:

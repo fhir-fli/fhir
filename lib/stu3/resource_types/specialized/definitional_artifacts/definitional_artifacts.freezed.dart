@@ -22,6 +22,8 @@ ActivityDefinition _$ActivityDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$ActivityDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -128,6 +130,8 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -260,6 +264,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -330,6 +335,10 @@ class _$ActivityDefinitionCopyWithImpl<$Res, $Val extends ActivityDefinition>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -962,6 +971,8 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1122,6 +1133,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1192,6 +1204,10 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1455,9 +1471,11 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ActivityDefinition extends _ActivityDefinition {
-  _$_ActivityDefinition(
+  const _$_ActivityDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
           this.resourceType = Stu3ResourceType.ActivityDefinition,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -1566,6 +1584,9 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -1838,7 +1859,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   @override
   String toString() {
-    return 'ActivityDefinition(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, library_: $library_, kind: $kind, kindElement: $kindElement, code: $code, timingTiming: $timingTiming, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, timingPeriod: $timingPeriod, timingRange: $timingRange, location: $location, participant: $participant, productReference: $productReference, productCodeableConcept: $productCodeableConcept, quantity: $quantity, dosage: $dosage, bodySite: $bodySite, transform: $transform, dynamicValue: $dynamicValue)';
+    return 'ActivityDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, library_: $library_, kind: $kind, kindElement: $kindElement, code: $code, timingTiming: $timingTiming, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, timingPeriod: $timingPeriod, timingRange: $timingRange, location: $location, participant: $participant, productReference: $productReference, productCodeableConcept: $productCodeableConcept, quantity: $quantity, dosage: $dosage, bodySite: $bodySite, transform: $transform, dynamicValue: $dynamicValue)';
   }
 
   @override
@@ -1848,6 +1869,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
             other is _$_ActivityDefinition &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1961,6 +1983,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -2043,9 +2066,11 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 }
 
 abstract class _ActivityDefinition extends ActivityDefinition {
-  factory _ActivityDefinition(
+  const factory _ActivityDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
               final Stu3ResourceType resourceType,
+          @JsonKey(includeFromJson: true, includeToJson: false)
+              final int? dbId,
           @JsonKey(name: 'id')
               final FhirId? fhirId,
           final FhirMeta? meta,
@@ -2132,7 +2157,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           final Reference? transform,
           final List<ActivityDefinitionDynamicValue>? dynamicValue}) =
       _$_ActivityDefinition;
-  _ActivityDefinition._() : super._();
+  const _ActivityDefinition._() : super._();
 
   factory _ActivityDefinition.fromJson(Map<String, dynamic> json) =
       _$_ActivityDefinition.fromJson;
@@ -2140,6 +2165,9 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -2446,7 +2474,7 @@ class __$$_ActivityDefinitionParticipantCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ActivityDefinitionParticipant extends _ActivityDefinitionParticipant {
-  _$_ActivityDefinitionParticipant(
+  const _$_ActivityDefinitionParticipant(
       {this.type, @JsonKey(name: '_type') this.typeElement, this.role})
       : super._();
 
@@ -2499,11 +2527,11 @@ class _$_ActivityDefinitionParticipant extends _ActivityDefinitionParticipant {
 
 abstract class _ActivityDefinitionParticipant
     extends ActivityDefinitionParticipant {
-  factory _ActivityDefinitionParticipant(
+  const factory _ActivityDefinitionParticipant(
       {final String? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final CodeableConcept? role}) = _$_ActivityDefinitionParticipant;
-  _ActivityDefinitionParticipant._() : super._();
+  const _ActivityDefinitionParticipant._() : super._();
 
   factory _ActivityDefinitionParticipant.fromJson(Map<String, dynamic> json) =
       _$_ActivityDefinitionParticipant.fromJson;
@@ -2771,7 +2799,7 @@ class __$$_ActivityDefinitionDynamicValueCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ActivityDefinitionDynamicValue
     extends _ActivityDefinitionDynamicValue {
-  _$_ActivityDefinitionDynamicValue(
+  const _$_ActivityDefinitionDynamicValue(
       {this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.path,
@@ -2864,7 +2892,7 @@ class _$_ActivityDefinitionDynamicValue
 
 abstract class _ActivityDefinitionDynamicValue
     extends ActivityDefinitionDynamicValue {
-  factory _ActivityDefinitionDynamicValue(
+  const factory _ActivityDefinitionDynamicValue(
           {final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
           final String? path,
@@ -2874,7 +2902,7 @@ abstract class _ActivityDefinitionDynamicValue
           final String? expression,
           @JsonKey(name: '_expression') final Element? expressionElement}) =
       _$_ActivityDefinitionDynamicValue;
-  _ActivityDefinitionDynamicValue._() : super._();
+  const _ActivityDefinitionDynamicValue._() : super._();
 
   factory _ActivityDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =
       _$_ActivityDefinitionDynamicValue.fromJson;
@@ -2913,6 +2941,8 @@ PlanDefinition _$PlanDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$PlanDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -3000,6 +3030,8 @@ abstract class $PlanDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -3106,6 +3138,7 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -3162,6 +3195,10 @@ class _$PlanDefinitionCopyWithImpl<$Res, $Val extends PlanDefinition>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3617,6 +3654,8 @@ abstract class _$$_PlanDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -3741,6 +3780,7 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -3797,6 +3837,10 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4004,9 +4048,11 @@ class __$$_PlanDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PlanDefinition extends _PlanDefinition {
-  _$_PlanDefinition(
+  const _$_PlanDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
           this.resourceType = Stu3ResourceType.PlanDefinition,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -4097,6 +4143,9 @@ class _$_PlanDefinition extends _PlanDefinition {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -4323,7 +4372,7 @@ class _$_PlanDefinition extends _PlanDefinition {
 
   @override
   String toString() {
-    return 'PlanDefinition(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, type: $type, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, library_: $library_, goal: $goal, action: $action)';
+    return 'PlanDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, type: $type, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, library_: $library_, goal: $goal, action: $action)';
   }
 
   @override
@@ -4333,6 +4382,7 @@ class _$_PlanDefinition extends _PlanDefinition {
             other is _$_PlanDefinition &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -4423,6 +4473,7 @@ class _$_PlanDefinition extends _PlanDefinition {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -4490,9 +4541,11 @@ class _$_PlanDefinition extends _PlanDefinition {
 }
 
 abstract class _PlanDefinition extends PlanDefinition {
-  factory _PlanDefinition(
+  const factory _PlanDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -4562,7 +4615,7 @@ abstract class _PlanDefinition extends PlanDefinition {
           final List<Reference>? library_,
       final List<PlanDefinitionGoal>? goal,
       final List<PlanDefinitionAction>? action}) = _$_PlanDefinition;
-  _PlanDefinition._() : super._();
+  const _PlanDefinition._() : super._();
 
   factory _PlanDefinition.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinition.fromJson;
@@ -4570,6 +4623,9 @@ abstract class _PlanDefinition extends PlanDefinition {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -4917,7 +4973,7 @@ class __$$_PlanDefinitionGoalCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
-  _$_PlanDefinitionGoal(
+  const _$_PlanDefinitionGoal(
       {this.category,
       required this.description,
       this.priority,
@@ -5023,7 +5079,7 @@ class _$_PlanDefinitionGoal extends _PlanDefinitionGoal {
 }
 
 abstract class _PlanDefinitionGoal extends PlanDefinitionGoal {
-  factory _PlanDefinitionGoal(
+  const factory _PlanDefinitionGoal(
       {final CodeableConcept? category,
       required final CodeableConcept description,
       final CodeableConcept? priority,
@@ -5031,7 +5087,7 @@ abstract class _PlanDefinitionGoal extends PlanDefinitionGoal {
       final List<CodeableConcept>? addresses,
       final List<RelatedArtifact>? documentation,
       final List<PlanDefinitionTarget>? target}) = _$_PlanDefinitionGoal;
-  _PlanDefinitionGoal._() : super._();
+  const _PlanDefinitionGoal._() : super._();
 
   factory _PlanDefinitionGoal.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionGoal.fromJson;
@@ -5273,7 +5329,7 @@ class __$$_PlanDefinitionTargetCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
-  _$_PlanDefinitionTarget(
+  const _$_PlanDefinitionTarget(
       {this.measure,
       this.detailQuantity,
       this.detailRange,
@@ -5336,13 +5392,13 @@ class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
 }
 
 abstract class _PlanDefinitionTarget extends PlanDefinitionTarget {
-  factory _PlanDefinitionTarget(
+  const factory _PlanDefinitionTarget(
       {final CodeableConcept? measure,
       final Quantity? detailQuantity,
       final Range? detailRange,
       final CodeableConcept? detailCodeableConcept,
       final FhirDuration? due}) = _$_PlanDefinitionTarget;
-  _PlanDefinitionTarget._() : super._();
+  const _PlanDefinitionTarget._() : super._();
 
   factory _PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionTarget.fromJson;
@@ -6257,7 +6313,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PlanDefinitionAction extends _PlanDefinitionAction {
-  _$_PlanDefinitionAction(
+  const _$_PlanDefinitionAction(
       {this.label,
       @JsonKey(name: '_label') this.labelElement,
       this.title,
@@ -6659,7 +6715,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
 }
 
 abstract class _PlanDefinitionAction extends PlanDefinitionAction {
-  factory _PlanDefinitionAction(
+  const factory _PlanDefinitionAction(
       {final String? label,
       @JsonKey(name: '_label')
           final Element? labelElement,
@@ -6711,7 +6767,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       final Reference? transform,
       final List<PlanDefinitionDynamicValue>? dynamicValue,
       final List<PlanDefinitionAction>? action}) = _$_PlanDefinitionAction;
-  _PlanDefinitionAction._() : super._();
+  const _PlanDefinitionAction._() : super._();
 
   factory _PlanDefinitionAction.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionAction.fromJson;
@@ -7058,7 +7114,7 @@ class __$$_PlanDefinitionConditionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
-  _$_PlanDefinitionCondition(
+  const _$_PlanDefinitionCondition(
       {this.kind,
       @JsonKey(name: '_kind') this.kindElement,
       this.description,
@@ -7150,7 +7206,7 @@ class _$_PlanDefinitionCondition extends _PlanDefinitionCondition {
 }
 
 abstract class _PlanDefinitionCondition extends PlanDefinitionCondition {
-  factory _PlanDefinitionCondition(
+  const factory _PlanDefinitionCondition(
           {final PlanDefinitionConditionKind? kind,
           @JsonKey(name: '_kind') final Element? kindElement,
           final String? description,
@@ -7160,7 +7216,7 @@ abstract class _PlanDefinitionCondition extends PlanDefinitionCondition {
           final String? expression,
           @JsonKey(name: '_expression') final Element? expressionElement}) =
       _$_PlanDefinitionCondition;
-  _PlanDefinitionCondition._() : super._();
+  const _PlanDefinitionCondition._() : super._();
 
   factory _PlanDefinitionCondition.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionCondition.fromJson;
@@ -7413,7 +7469,7 @@ class __$$_PlanDefinitionRelatedActionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
-  _$_PlanDefinitionRelatedAction(
+  const _$_PlanDefinitionRelatedAction(
       {this.actionId,
       @JsonKey(name: '_actionId') this.actionIdElement,
       this.relationship,
@@ -7486,14 +7542,14 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
 
 abstract class _PlanDefinitionRelatedAction
     extends PlanDefinitionRelatedAction {
-  factory _PlanDefinitionRelatedAction(
+  const factory _PlanDefinitionRelatedAction(
       {final FhirId? actionId,
       @JsonKey(name: '_actionId') final Element? actionIdElement,
       final PlanDefinitionRelatedActionRelationship? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
       final FhirDuration? offsetDuration,
       final Range? offsetRange}) = _$_PlanDefinitionRelatedAction;
-  _PlanDefinitionRelatedAction._() : super._();
+  const _PlanDefinitionRelatedAction._() : super._();
 
   factory _PlanDefinitionRelatedAction.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionRelatedAction.fromJson;
@@ -7667,7 +7723,7 @@ class __$$_PlanDefinitionParticipantCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
-  _$_PlanDefinitionParticipant(
+  const _$_PlanDefinitionParticipant(
       {this.type, @JsonKey(name: '_type') this.typeElement, this.role})
       : super._();
 
@@ -7718,11 +7774,11 @@ class _$_PlanDefinitionParticipant extends _PlanDefinitionParticipant {
 }
 
 abstract class _PlanDefinitionParticipant extends PlanDefinitionParticipant {
-  factory _PlanDefinitionParticipant(
+  const factory _PlanDefinitionParticipant(
       {final PlanDefinitionParticipantType? type,
       @JsonKey(name: '_type') final Element? typeElement,
       final CodeableConcept? role}) = _$_PlanDefinitionParticipant;
-  _PlanDefinitionParticipant._() : super._();
+  const _PlanDefinitionParticipant._() : super._();
 
   factory _PlanDefinitionParticipant.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionParticipant.fromJson;
@@ -7988,7 +8044,7 @@ class __$$_PlanDefinitionDynamicValueCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_PlanDefinitionDynamicValue extends _PlanDefinitionDynamicValue {
-  _$_PlanDefinitionDynamicValue(
+  const _$_PlanDefinitionDynamicValue(
       {this.description,
       @JsonKey(name: '_description') this.descriptionElement,
       this.path,
@@ -8079,7 +8135,7 @@ class _$_PlanDefinitionDynamicValue extends _PlanDefinitionDynamicValue {
 }
 
 abstract class _PlanDefinitionDynamicValue extends PlanDefinitionDynamicValue {
-  factory _PlanDefinitionDynamicValue(
+  const factory _PlanDefinitionDynamicValue(
           {final String? description,
           @JsonKey(name: '_description') final Element? descriptionElement,
           final String? path,
@@ -8089,7 +8145,7 @@ abstract class _PlanDefinitionDynamicValue extends PlanDefinitionDynamicValue {
           final String? expression,
           @JsonKey(name: '_expression') final Element? expressionElement}) =
       _$_PlanDefinitionDynamicValue;
-  _PlanDefinitionDynamicValue._() : super._();
+  const _PlanDefinitionDynamicValue._() : super._();
 
   factory _PlanDefinitionDynamicValue.fromJson(Map<String, dynamic> json) =
       _$_PlanDefinitionDynamicValue.fromJson;
@@ -8128,6 +8184,8 @@ Questionnaire _$QuestionnaireFromJson(Map<String, dynamic> json) {
 mixin _$Questionnaire {
   @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -8208,6 +8266,8 @@ abstract class $QuestionnaireCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -8306,6 +8366,7 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -8357,6 +8418,10 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -8768,6 +8833,8 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -8882,6 +8949,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -8933,6 +9001,10 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9120,9 +9192,11 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Questionnaire extends _Questionnaire {
-  _$_Questionnaire(
+  const _$_Questionnaire(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
           this.resourceType = Stu3ResourceType.Questionnaire,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -9205,6 +9279,9 @@ class _$_Questionnaire extends _Questionnaire {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -9405,7 +9482,7 @@ class _$_Questionnaire extends _Questionnaire {
 
   @override
   String toString() {
-    return 'Questionnaire(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, code: $code, subjectType: $subjectType, subjectTypeElement: $subjectTypeElement, item: $item)';
+    return 'Questionnaire(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, code: $code, subjectType: $subjectType, subjectTypeElement: $subjectTypeElement, item: $item)';
   }
 
   @override
@@ -9415,6 +9492,7 @@ class _$_Questionnaire extends _Questionnaire {
             other is _$_Questionnaire &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -9499,6 +9577,7 @@ class _$_Questionnaire extends _Questionnaire {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -9561,9 +9640,11 @@ class _$_Questionnaire extends _Questionnaire {
 }
 
 abstract class _Questionnaire extends Questionnaire {
-  factory _Questionnaire(
+  const factory _Questionnaire(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -9627,7 +9708,7 @@ abstract class _Questionnaire extends Questionnaire {
       @JsonKey(name: '_subjectType')
           final List<Element?>? subjectTypeElement,
       final List<QuestionnaireItem>? item}) = _$_Questionnaire;
-  _Questionnaire._() : super._();
+  const _Questionnaire._() : super._();
 
   factory _Questionnaire.fromJson(Map<String, dynamic> json) =
       _$_Questionnaire.fromJson;
@@ -9635,6 +9716,9 @@ abstract class _Questionnaire extends Questionnaire {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -10745,7 +10829,7 @@ class __$$_QuestionnaireItemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireItem extends _QuestionnaireItem {
-  _$_QuestionnaireItem(
+  const _$_QuestionnaireItem(
       {this.linkId,
       @JsonKey(name: '_linkId') this.linkIdElement,
       this.definition,
@@ -11104,7 +11188,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
 }
 
 abstract class _QuestionnaireItem extends QuestionnaireItem {
-  factory _QuestionnaireItem(
+  const factory _QuestionnaireItem(
       {final String? linkId,
       @JsonKey(name: '_linkId') final Element? linkIdElement,
       final String? definition,
@@ -11149,7 +11233,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
       final Quantity? initialQuantity,
       final Reference? initialReference,
       final List<QuestionnaireItem>? item}) = _$_QuestionnaireItem;
-  _QuestionnaireItem._() : super._();
+  const _QuestionnaireItem._() : super._();
 
   factory _QuestionnaireItem.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireItem.fromJson;
@@ -11876,7 +11960,7 @@ class __$$_QuestionnaireEnableWhenCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
-  _$_QuestionnaireEnableWhen(
+  const _$_QuestionnaireEnableWhen(
       {this.question,
       @JsonKey(name: '_question') this.questionElement,
       this.hasAnswer,
@@ -12072,7 +12156,7 @@ class _$_QuestionnaireEnableWhen extends _QuestionnaireEnableWhen {
 }
 
 abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
-  factory _QuestionnaireEnableWhen(
+  const factory _QuestionnaireEnableWhen(
       {final String? question,
       @JsonKey(name: '_question') final Element? questionElement,
       final FhirBoolean? hasAnswer,
@@ -12097,7 +12181,7 @@ abstract class _QuestionnaireEnableWhen extends QuestionnaireEnableWhen {
       final Coding? answerCoding,
       final Quantity? answerQuantity,
       final Reference? answerReference}) = _$_QuestionnaireEnableWhen;
-  _QuestionnaireEnableWhen._() : super._();
+  const _QuestionnaireEnableWhen._() : super._();
 
   factory _QuestionnaireEnableWhen.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireEnableWhen.fromJson;
@@ -12436,7 +12520,7 @@ class __$$_QuestionnaireOptionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_QuestionnaireOption extends _QuestionnaireOption {
-  _$_QuestionnaireOption(
+  const _$_QuestionnaireOption(
       {this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
       this.valueDate,
@@ -12534,7 +12618,7 @@ class _$_QuestionnaireOption extends _QuestionnaireOption {
 }
 
 abstract class _QuestionnaireOption extends QuestionnaireOption {
-  factory _QuestionnaireOption(
+  const factory _QuestionnaireOption(
       {final FhirDecimal? valueInteger,
       @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
       final FhirDate? valueDate,
@@ -12544,7 +12628,7 @@ abstract class _QuestionnaireOption extends QuestionnaireOption {
       final String? valueString,
       @JsonKey(name: '_valueString') final Element? valueStringElement,
       final Coding? valueCoding}) = _$_QuestionnaireOption;
-  _QuestionnaireOption._() : super._();
+  const _QuestionnaireOption._() : super._();
 
   factory _QuestionnaireOption.fromJson(Map<String, dynamic> json) =
       _$_QuestionnaireOption.fromJson;
@@ -12585,6 +12669,8 @@ ServiceDefinition _$ServiceDefinitionFromJson(Map<String, dynamic> json) {
 mixin _$ServiceDefinition {
   @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -12671,6 +12757,8 @@ abstract class $ServiceDefinitionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -12775,6 +12863,7 @@ class _$ServiceDefinitionCopyWithImpl<$Res, $Val extends ServiceDefinition>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -12830,6 +12919,10 @@ class _$ServiceDefinitionCopyWithImpl<$Res, $Val extends ServiceDefinition>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -13281,6 +13374,8 @@ abstract class _$$_ServiceDefinitionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -13403,6 +13498,7 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -13458,6 +13554,10 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -13661,9 +13761,11 @@ class __$$_ServiceDefinitionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ServiceDefinition extends _ServiceDefinition {
-  _$_ServiceDefinition(
+  const _$_ServiceDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
           this.resourceType = Stu3ResourceType.ServiceDefinition,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -13751,6 +13853,9 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -13967,7 +14072,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
 
   @override
   String toString() {
-    return 'ServiceDefinition(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, trigger: $trigger, dataRequirement: $dataRequirement, operationDefinition: $operationDefinition)';
+    return 'ServiceDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, description: $description, descriptionElement: $descriptionElement, purpose: $purpose, purposeElement: $purposeElement, usage: $usage, usageElement: $usageElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, useContext: $useContext, jurisdiction: $jurisdiction, topic: $topic, contributor: $contributor, contact: $contact, copyright: $copyright, copyrightElement: $copyrightElement, relatedArtifact: $relatedArtifact, trigger: $trigger, dataRequirement: $dataRequirement, operationDefinition: $operationDefinition)';
   }
 
   @override
@@ -13977,6 +14082,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
             other is _$_ServiceDefinition &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -14068,6 +14174,7 @@ class _$_ServiceDefinition extends _ServiceDefinition {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -14135,9 +14242,11 @@ class _$_ServiceDefinition extends _ServiceDefinition {
 }
 
 abstract class _ServiceDefinition extends ServiceDefinition {
-  factory _ServiceDefinition(
+  const factory _ServiceDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -14205,7 +14314,7 @@ abstract class _ServiceDefinition extends ServiceDefinition {
       final List<TriggerDefinition>? trigger,
       final List<DataRequirement>? dataRequirement,
       final Reference? operationDefinition}) = _$_ServiceDefinition;
-  _ServiceDefinition._() : super._();
+  const _ServiceDefinition._() : super._();
 
   factory _ServiceDefinition.fromJson(Map<String, dynamic> json) =
       _$_ServiceDefinition.fromJson;
@@ -14213,6 +14322,9 @@ abstract class _ServiceDefinition extends ServiceDefinition {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;

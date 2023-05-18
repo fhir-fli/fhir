@@ -6,7 +6,7 @@
 import 'dart:convert';
 
 // Package imports:
-import 'package:json_annotation/json_annotation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
@@ -26,10 +26,12 @@ part 'resource_utils.dart';
 /// class also has it's own fromJson() function as well. The fromJson function
 /// in this class is only used if the resourceType is not previously known
 @JsonSerializable()
-class Resource {
+mixin class Resource {
+  Stu3ResourceType? resourceType;
   @JsonKey(name: 'id')
   FhirId? fhirId;
-  Stu3ResourceType? resourceType;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? dbId;
   FhirMeta? meta;
   FhirUri? implicitRules;
   @JsonKey(name: '_implicitRules')
@@ -72,19 +74,23 @@ class Resource {
               ' it is neither a yaml string nor a yaml map.');
 
   static Resource copyWith({
-    FhirId? fhirId,
     Stu3ResourceType? resourceType,
+    FhirId? fhirId,
+    int? dbId,
     FhirMeta? meta,
     FhirUri? implicitRules,
+    Element? implicitRulesElement,
     FhirCode? language,
+    Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
   }) =>
       Resource.fromJson(<String, dynamic>{
-        'id': fhirId?.toString(),
         'resourceType': resourceType?.toString(),
+        'id': fhirId?.toString(),
+        'dbId': dbId,
         'meta': meta?.toString(),
         'implicitRules': implicitRules?.toString(),
         'text': text?.toString(),
@@ -103,8 +109,8 @@ class Resource {
       }
     }
 
-    writeNotNull('id', fhirId?.toJson());
     writeNotNull('resourceType', resourceType);
+    writeNotNull('id', fhirId?.toJson());
     writeNotNull('meta', meta?.toJson());
     writeNotNull('implicitRules', implicitRules?.toJson());
     writeNotNull('language', language?.toJson());
@@ -134,6 +140,35 @@ class Resource {
   /// returns the same resource with a new ID (even if there is already an ID
   /// present)
   Resource newId() => _newId(this);
+
+  /// because so many DBs seem to want all entries to have an integer for an id
+  Resource newDbId(int id) => copyWith(dbId: id);
+
+  /// The normal toJson ignores the dbId, and produces the fhirId as the id
+  /// However, if you're going to use this as a database entry, you have to
+  /// switch those two ids
+  Map<String, dynamic> toDbJson() {
+    final json = toJson();
+
+    /// Again, for the database, the primary id is an integer, normally stored as dbId
+    json['id'] = dbId;
+
+    /// The fhirId, usually stored in json as id, in the database is going to be fhirId
+    json['fhirId'] = fhirId;
+    return json;
+  }
+
+  /// Likewise, if you're using one of those DBs, then you may need to get that
+  /// resource back, and so we'll need to switch those IDs back before we
+  /// turn them into a Dart class again
+  Resource fromDbJson(Map<String, dynamic> json) {
+    /// Set the dbId to the current Id (integer from the database)
+    json['dbId'] = json['id'];
+
+    /// Classic json format where the fhirId is stored as id
+    json['id'] = json['fhirId'];
+    return Resource.fromJson(json);
+  }
 
   /// Updates the [meta] field of this Resource, updates the meta.lastUpdated
   /// field, adds 1 to the version number

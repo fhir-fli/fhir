@@ -22,6 +22,8 @@ Media _$MediaFromJson(Map<String, dynamic> json) {
 mixin _$Media {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -75,6 +77,8 @@ abstract class $MediaCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -144,6 +148,7 @@ class _$MediaCopyWithImpl<$Res, $Val extends Media>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -177,6 +182,10 @@ class _$MediaCopyWithImpl<$Res, $Val extends Media>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -462,6 +471,8 @@ abstract class _$$_MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -541,6 +552,7 @@ class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res, _$_Media>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -574,6 +586,10 @@ class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res, _$_Media>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -689,9 +705,11 @@ class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res, _$_Media>
 /// @nodoc
 @JsonSerializable()
 class _$_Media extends _Media {
-  _$_Media(
+  const _$_Media(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
           this.resourceType = Dstu2ResourceType.Media,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -742,6 +760,9 @@ class _$_Media extends _Media {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -843,7 +864,7 @@ class _$_Media extends _Media {
 
   @override
   String toString() {
-    return 'Media(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, subtype: $subtype, identifier: $identifier, subject: $subject, operator_: $operator_, view: $view, deviceName: $deviceName, deviceNameElement: $deviceNameElement, height: $height, heightElement: $heightElement, width: $width, widthElement: $widthElement, frames: $frames, framesElement: $framesElement, duration: $duration, durationElement: $durationElement, content: $content)';
+    return 'Media(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, subtype: $subtype, identifier: $identifier, subject: $subject, operator_: $operator_, view: $view, deviceName: $deviceName, deviceNameElement: $deviceNameElement, height: $height, heightElement: $heightElement, width: $width, widthElement: $widthElement, frames: $frames, framesElement: $framesElement, duration: $duration, durationElement: $durationElement, content: $content)';
   }
 
   @override
@@ -853,6 +874,7 @@ class _$_Media extends _Media {
             other is _$_Media &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -903,6 +925,7 @@ class _$_Media extends _Media {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -947,9 +970,11 @@ class _$_Media extends _Media {
 }
 
 abstract class _Media extends Media {
-  factory _Media(
+  const factory _Media(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -988,13 +1013,16 @@ abstract class _Media extends Media {
       @JsonKey(name: '_duration')
           final Element? durationElement,
       required final Attachment content}) = _$_Media;
-  _Media._() : super._();
+  const _Media._() : super._();
 
   factory _Media.fromJson(Map<String, dynamic> json) = _$_Media.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -1074,6 +1102,8 @@ Binary _$BinaryFromJson(Map<String, dynamic> json) {
 mixin _$Binary {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -1101,6 +1131,8 @@ abstract class $BinaryCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1135,6 +1167,7 @@ class _$BinaryCopyWithImpl<$Res, $Val extends Binary>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1150,6 +1183,10 @@ class _$BinaryCopyWithImpl<$Res, $Val extends Binary>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1247,6 +1284,8 @@ abstract class _$$_BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1282,6 +1321,7 @@ class __$$_BinaryCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1297,6 +1337,10 @@ class __$$_BinaryCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1340,9 +1384,11 @@ class __$$_BinaryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Binary extends _Binary {
-  _$_Binary(
+  const _$_Binary(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
           this.resourceType = Dstu2ResourceType.Binary,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -1364,6 +1410,9 @@ class _$_Binary extends _Binary {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -1389,7 +1438,7 @@ class _$_Binary extends _Binary {
 
   @override
   String toString() {
-    return 'Binary(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, contentType: $contentType, contentTypeElement: $contentTypeElement, content: $content)';
+    return 'Binary(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, contentType: $contentType, contentTypeElement: $contentTypeElement, content: $content)';
   }
 
   @override
@@ -1399,6 +1448,7 @@ class _$_Binary extends _Binary {
             other is _$_Binary &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1421,6 +1471,7 @@ class _$_Binary extends _Binary {
   int get hashCode => Object.hash(
       runtimeType,
       resourceType,
+      dbId,
       fhirId,
       meta,
       implicitRules,
@@ -1446,9 +1497,11 @@ class _$_Binary extends _Binary {
 }
 
 abstract class _Binary extends Binary {
-  factory _Binary(
+  const factory _Binary(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -1462,13 +1515,16 @@ abstract class _Binary extends Binary {
       @JsonKey(name: '_contentType')
           final Element? contentTypeElement,
       final FhirBase64Binary? content}) = _$_Binary;
-  _Binary._() : super._();
+  const _Binary._() : super._();
 
   factory _Binary.fromJson(Map<String, dynamic> json) = _$_Binary.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -1505,6 +1561,8 @@ Bundle _$BundleFromJson(Map<String, dynamic> json) {
 mixin _$Bundle {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -1538,6 +1596,8 @@ abstract class $BundleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1580,6 +1640,7 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1599,6 +1660,10 @@ class _$BundleCopyWithImpl<$Res, $Val extends Bundle>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1736,6 +1801,8 @@ abstract class _$$_BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -1781,6 +1848,7 @@ class __$$_BundleCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -1800,6 +1868,10 @@ class __$$_BundleCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1859,9 +1931,11 @@ class __$$_BundleCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Bundle extends _Bundle {
-  _$_Bundle(
+  const _$_Bundle(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
           this.resourceType = Dstu2ResourceType.Bundle,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -1891,6 +1965,9 @@ class _$_Bundle extends _Bundle {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -1942,7 +2019,7 @@ class _$_Bundle extends _Bundle {
 
   @override
   String toString() {
-    return 'Bundle(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, type: $type, typeElement: $typeElement, total: $total, totalElement: $totalElement, link: $link, entry: $entry, signature: $signature)';
+    return 'Bundle(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, type: $type, typeElement: $typeElement, total: $total, totalElement: $totalElement, link: $link, entry: $entry, signature: $signature)';
   }
 
   @override
@@ -1952,6 +2029,7 @@ class _$_Bundle extends _Bundle {
             other is _$_Bundle &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -1979,6 +2057,7 @@ class _$_Bundle extends _Bundle {
   int get hashCode => Object.hash(
       runtimeType,
       resourceType,
+      dbId,
       fhirId,
       meta,
       implicitRules,
@@ -2008,9 +2087,11 @@ class _$_Bundle extends _Bundle {
 }
 
 abstract class _Bundle extends Bundle {
-  factory _Bundle(
+  const factory _Bundle(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -2030,13 +2111,16 @@ abstract class _Bundle extends Bundle {
       final List<BundleLink>? link,
       final List<BundleEntry>? entry,
       final Signature? signature}) = _$_Bundle;
-  _Bundle._() : super._();
+  const _Bundle._() : super._();
 
   factory _Bundle.fromJson(Map<String, dynamic> json) = _$_Bundle.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -2289,7 +2373,7 @@ class __$$_BundleLinkCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BundleLink extends _BundleLink {
-  _$_BundleLink(
+  const _$_BundleLink(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2407,7 +2491,7 @@ class _$_BundleLink extends _BundleLink {
 }
 
 abstract class _BundleLink extends BundleLink {
-  factory _BundleLink(
+  const factory _BundleLink(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2416,7 +2500,7 @@ abstract class _BundleLink extends BundleLink {
       @JsonKey(name: '_relation') final Element? relationElement,
       required final FhirUri url,
       @JsonKey(name: '_url') final Element? urlElement}) = _$_BundleLink;
-  _BundleLink._() : super._();
+  const _BundleLink._() : super._();
 
   factory _BundleLink.fromJson(Map<String, dynamic> json) =
       _$_BundleLink.fromJson;
@@ -2730,7 +2814,7 @@ class __$$_BundleEntryCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BundleEntry extends _BundleEntry {
-  _$_BundleEntry(
+  const _$_BundleEntry(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2871,7 +2955,7 @@ class _$_BundleEntry extends _BundleEntry {
 }
 
 abstract class _BundleEntry extends BundleEntry {
-  factory _BundleEntry(
+  const factory _BundleEntry(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2883,7 +2967,7 @@ abstract class _BundleEntry extends BundleEntry {
       final BundleEntrySearch? search,
       final BundleEntryRequest? request,
       final BundleEntryResponse? response}) = _$_BundleEntry;
-  _BundleEntry._() : super._();
+  const _BundleEntry._() : super._();
 
   factory _BundleEntry.fromJson(Map<String, dynamic> json) =
       _$_BundleEntry.fromJson;
@@ -3135,7 +3219,7 @@ class __$$_BundleEntrySearchCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BundleEntrySearch extends _BundleEntrySearch {
-  _$_BundleEntrySearch(
+  const _$_BundleEntrySearch(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3254,7 +3338,7 @@ class _$_BundleEntrySearch extends _BundleEntrySearch {
 }
 
 abstract class _BundleEntrySearch extends BundleEntrySearch {
-  factory _BundleEntrySearch(
+  const factory _BundleEntrySearch(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -3264,7 +3348,7 @@ abstract class _BundleEntrySearch extends BundleEntrySearch {
           final FhirDecimal? score,
           @JsonKey(name: '_score') final Element? scoreElement}) =
       _$_BundleEntrySearch;
-  _BundleEntrySearch._() : super._();
+  const _BundleEntrySearch._() : super._();
 
   factory _BundleEntrySearch.fromJson(Map<String, dynamic> json) =
       _$_BundleEntrySearch.fromJson;
@@ -3680,7 +3764,7 @@ class __$$_BundleEntryRequestCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BundleEntryRequest extends _BundleEntryRequest {
-  _$_BundleEntryRequest(
+  const _$_BundleEntryRequest(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3850,7 +3934,7 @@ class _$_BundleEntryRequest extends _BundleEntryRequest {
 }
 
 abstract class _BundleEntryRequest extends BundleEntryRequest {
-  factory _BundleEntryRequest(
+  const factory _BundleEntryRequest(
       {@JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: 'extension')
@@ -3877,7 +3961,7 @@ abstract class _BundleEntryRequest extends BundleEntryRequest {
       final String? ifNoneExist,
       @JsonKey(name: '_ifNoneExist')
           final Element? ifNoneExistElement}) = _$_BundleEntryRequest;
-  _BundleEntryRequest._() : super._();
+  const _BundleEntryRequest._() : super._();
 
   factory _BundleEntryRequest.fromJson(Map<String, dynamic> json) =
       _$_BundleEntryRequest.fromJson;
@@ -4228,7 +4312,7 @@ class __$$_BundleEntryResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_BundleEntryResponse extends _BundleEntryResponse {
-  _$_BundleEntryResponse(
+  const _$_BundleEntryResponse(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4372,7 +4456,7 @@ class _$_BundleEntryResponse extends _BundleEntryResponse {
 }
 
 abstract class _BundleEntryResponse extends BundleEntryResponse {
-  factory _BundleEntryResponse(
+  const factory _BundleEntryResponse(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -4386,7 +4470,7 @@ abstract class _BundleEntryResponse extends BundleEntryResponse {
           final FhirInstant? lastModified,
           @JsonKey(name: '_lastModified') final Element? lastModifiedElement}) =
       _$_BundleEntryResponse;
-  _BundleEntryResponse._() : super._();
+  const _BundleEntryResponse._() : super._();
 
   factory _BundleEntryResponse.fromJson(Map<String, dynamic> json) =
       _$_BundleEntryResponse.fromJson;
@@ -4436,6 +4520,8 @@ Basic _$BasicFromJson(Map<String, dynamic> json) {
 mixin _$Basic {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -4472,6 +4558,8 @@ abstract class $BasicCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -4518,6 +4606,7 @@ class _$BasicCopyWithImpl<$Res, $Val extends Basic>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4540,6 +4629,10 @@ class _$BasicCopyWithImpl<$Res, $Val extends Basic>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4709,6 +4802,8 @@ abstract class _$$_BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -4759,6 +4854,7 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res, _$_Basic>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -4781,6 +4877,10 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res, _$_Basic>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4852,9 +4952,11 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res, _$_Basic>
 /// @nodoc
 @JsonSerializable()
 class _$_Basic extends _Basic {
-  _$_Basic(
+  const _$_Basic(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
           this.resourceType = Dstu2ResourceType.Basic,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -4888,6 +4990,9 @@ class _$_Basic extends _Basic {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -4961,7 +5066,7 @@ class _$_Basic extends _Basic {
 
   @override
   String toString() {
-    return 'Basic(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, subject: $subject, author: $author, created: $created, createdElement: $createdElement)';
+    return 'Basic(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, code: $code, subject: $subject, author: $author, created: $created, createdElement: $createdElement)';
   }
 
   @override
@@ -4971,6 +5076,7 @@ class _$_Basic extends _Basic {
             other is _$_Basic &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -5003,6 +5109,7 @@ class _$_Basic extends _Basic {
   int get hashCode => Object.hash(
       runtimeType,
       resourceType,
+      dbId,
       fhirId,
       meta,
       implicitRules,
@@ -5035,9 +5142,11 @@ class _$_Basic extends _Basic {
 }
 
 abstract class _Basic extends Basic {
-  factory _Basic(
+  const factory _Basic(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -5059,13 +5168,16 @@ abstract class _Basic extends Basic {
       final FhirDate? created,
       @JsonKey(name: '_created')
           final Element? createdElement}) = _$_Basic;
-  _Basic._() : super._();
+  const _Basic._() : super._();
 
   factory _Basic.fromJson(Map<String, dynamic> json) = _$_Basic.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;

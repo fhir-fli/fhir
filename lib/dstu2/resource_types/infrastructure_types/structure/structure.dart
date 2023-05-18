@@ -17,10 +17,11 @@ part 'structure.g.dart';
 @freezed
 class Media with Resource, _$Media {
   Media._();
-  factory Media({
+  const factory Media({
     @Default(Dstu2ResourceType.Media)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -79,10 +80,11 @@ class Media with Resource, _$Media {
 @freezed
 class Binary with Resource, _$Binary {
   Binary._();
-  factory Binary({
+  const factory Binary({
     @Default(Dstu2ResourceType.Binary)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -124,10 +126,11 @@ class Binary with Resource, _$Binary {
 @freezed
 class Bundle with Resource, _$Bundle {
   Bundle._();
-  factory Bundle({
+  const factory Bundle({
     @Default(Dstu2ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -173,7 +176,7 @@ class Bundle with Resource, _$Bundle {
 @freezed
 class BundleLink with _$BundleLink {
   BundleLink._();
-  factory BundleLink({
+  const factory BundleLink({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -218,7 +221,7 @@ class BundleLink with _$BundleLink {
 @freezed
 class BundleEntry with _$BundleEntry {
   BundleEntry._();
-  factory BundleEntry({
+  const factory BundleEntry({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -309,7 +312,7 @@ class BundleEntry with _$BundleEntry {
 @freezed
 class BundleEntrySearch with _$BundleEntrySearch {
   BundleEntrySearch._();
-  factory BundleEntrySearch({
+  const factory BundleEntrySearch({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -354,13 +357,13 @@ class BundleEntrySearch with _$BundleEntrySearch {
 @freezed
 class BundleEntryRequest with _$BundleEntryRequest {
   BundleEntryRequest._();
-  factory BundleEntryRequest({
+  const factory BundleEntryRequest({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
     @JsonKey(unknownEnumValue: RequestMethod.unknown)
-        required RequestMethod method,
+    required RequestMethod method,
     @JsonKey(name: '_method') Element? methodElement,
     required FhirUri url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -408,7 +411,7 @@ class BundleEntryRequest with _$BundleEntryRequest {
 @freezed
 class BundleEntryResponse with _$BundleEntryResponse {
   BundleEntryResponse._();
-  factory BundleEntryResponse({
+  const factory BundleEntryResponse({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
@@ -457,10 +460,11 @@ class BundleEntryResponse with _$BundleEntryResponse {
 @freezed
 class Basic with Resource, _$Basic {
   Basic._();
-  factory Basic({
+  const factory Basic({
     @Default(Dstu2ResourceType.Basic)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
-        Dstu2ResourceType resourceType,
+    Dstu2ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,

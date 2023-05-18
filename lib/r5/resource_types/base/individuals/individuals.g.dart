@@ -6,11 +6,12 @@ part of 'individuals.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
+_$_FhirGroup _$$_FhirGroupFromJson(Map<String, dynamic> json) => _$_FhirGroup(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Group) ??
           R5ResourceType.Group,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -86,7 +87,7 @@ _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
           .toList(),
     );
 
-Map<String, dynamic> _$$_GroupToJson(_$_Group instance) {
+Map<String, dynamic> _$$_FhirGroupToJson(_$_FhirGroup instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -411,6 +412,7 @@ _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Patient) ??
           R5ResourceType.Patient,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -714,6 +716,7 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Person) ??
           R5ResourceType.Person,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -932,6 +935,7 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Practitioner) ??
           R5ResourceType.Practitioner,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1150,6 +1154,7 @@ _$_PractitionerRole _$$_PractitionerRoleFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.PractitionerRole) ??
           R5ResourceType.PractitionerRole,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1278,6 +1283,7 @@ _$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.RelatedPerson) ??
           R5ResourceType.RelatedPerson,
+      dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null

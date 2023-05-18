@@ -229,7 +229,7 @@ Resource _updateMeta(Resource resource, {FhirMeta? meta}) {
       return (resource as GraphDefinition)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R5ResourceType.Group:
-      return (resource as Group)
+      return (resource as FhirGroup)
           .copyWith(meta: _updateFhirMetaVersion(meta ?? resource.meta));
     case R5ResourceType.GuidanceResponse:
       return (resource as GuidanceResponse)

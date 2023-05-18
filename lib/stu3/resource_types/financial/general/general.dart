@@ -17,10 +17,11 @@ part 'general.g.dart';
 @freezed
 class Account with Resource, _$Account {
   Account._();
-  factory Account({
+  const factory Account({
     @Default(Stu3ResourceType.Account)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -79,7 +80,7 @@ class Account with Resource, _$Account {
 @freezed
 class AccountCoverage with _$AccountCoverage {
   AccountCoverage._();
-  factory AccountCoverage({
+  const factory AccountCoverage({
     required Reference coverage,
     FhirDecimal? priority,
     @JsonKey(name: '_priority') Element? priorityElement,
@@ -119,7 +120,7 @@ class AccountCoverage with _$AccountCoverage {
 @freezed
 class AccountGuarantor with _$AccountGuarantor {
   AccountGuarantor._();
-  factory AccountGuarantor({
+  const factory AccountGuarantor({
     required Reference party,
     FhirBoolean? onHold,
     @JsonKey(name: '_onHold') Element? onHoldElement,
@@ -160,10 +161,11 @@ class AccountGuarantor with _$AccountGuarantor {
 @freezed
 class ChargeItem with Resource, _$ChargeItem {
   ChargeItem._();
-  factory ChargeItem({
+  const factory ChargeItem({
     @Default(Stu3ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -238,7 +240,7 @@ class ChargeItem with Resource, _$ChargeItem {
 @freezed
 class ChargeItemParticipant with _$ChargeItemParticipant {
   ChargeItemParticipant._();
-  factory ChargeItemParticipant({
+  const factory ChargeItemParticipant({
     CodeableConcept? role,
     required Reference actor,
   }) = _ChargeItemParticipant;
@@ -277,10 +279,11 @@ class ChargeItemParticipant with _$ChargeItemParticipant {
 @freezed
 class Contract with Resource, _$Contract {
   Contract._();
-  factory Contract({
+  const factory Contract({
     @Default(Stu3ResourceType.Contract)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -350,7 +353,7 @@ class Contract with Resource, _$Contract {
 @freezed
 class ContractAgent with _$ContractAgent {
   ContractAgent._();
-  factory ContractAgent({
+  const factory ContractAgent({
     required Reference actor,
     List<CodeableConcept>? role,
   }) = _ContractAgent;
@@ -389,7 +392,7 @@ class ContractAgent with _$ContractAgent {
 @freezed
 class ContractSigner with _$ContractSigner {
   ContractSigner._();
-  factory ContractSigner({
+  const factory ContractSigner({
     required Coding type,
     required Reference party,
     required List<Signature> signature,
@@ -429,7 +432,7 @@ class ContractSigner with _$ContractSigner {
 @freezed
 class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
-  factory ContractValuedItem({
+  const factory ContractValuedItem({
     CodeableConcept? entityCodeableConcept,
     Reference? entityReference,
     Identifier? identifier,
@@ -478,7 +481,7 @@ class ContractValuedItem with _$ContractValuedItem {
 @freezed
 class ContractTerm with _$ContractTerm {
   ContractTerm._();
-  factory ContractTerm({
+  const factory ContractTerm({
     Identifier? identifier,
     String? issued,
     @JsonKey(name: '_issued') Element? issuedElement,
@@ -530,7 +533,7 @@ class ContractTerm with _$ContractTerm {
 @freezed
 class ContractAgent1 with _$ContractAgent1 {
   ContractAgent1._();
-  factory ContractAgent1({
+  const factory ContractAgent1({
     required Reference actor,
     List<CodeableConcept>? role,
   }) = _ContractAgent1;
@@ -569,7 +572,7 @@ class ContractAgent1 with _$ContractAgent1 {
 @freezed
 class ContractValuedItem1 with _$ContractValuedItem1 {
   ContractValuedItem1._();
-  factory ContractValuedItem1({
+  const factory ContractValuedItem1({
     CodeableConcept? entityCodeableConcept,
     Reference? entityReference,
     Identifier? identifier,
@@ -618,7 +621,7 @@ class ContractValuedItem1 with _$ContractValuedItem1 {
 @freezed
 class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
-  factory ContractFriendly({
+  const factory ContractFriendly({
     Attachment? contentAttachment,
     Reference? contentReference,
   }) = _ContractFriendly;
@@ -657,7 +660,7 @@ class ContractFriendly with _$ContractFriendly {
 @freezed
 class ContractLegal with _$ContractLegal {
   ContractLegal._();
-  factory ContractLegal({
+  const factory ContractLegal({
     Attachment? contentAttachment,
     Reference? contentReference,
   }) = _ContractLegal;
@@ -696,7 +699,7 @@ class ContractLegal with _$ContractLegal {
 @freezed
 class ContractRule with _$ContractRule {
   ContractRule._();
-  factory ContractRule({
+  const factory ContractRule({
     Attachment? contentAttachment,
     Reference? contentReference,
   }) = _ContractRule;
@@ -735,10 +738,11 @@ class ContractRule with _$ContractRule {
 @freezed
 class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ExplanationOfBenefit._();
-  factory ExplanationOfBenefit({
+  const factory ExplanationOfBenefit({
     @Default(Stu3ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
-        Stu3ResourceType resourceType,
+    Stu3ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
@@ -825,7 +829,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
 @freezed
 class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   ExplanationOfBenefitRelated._();
-  factory ExplanationOfBenefitRelated({
+  const factory ExplanationOfBenefitRelated({
     Reference? claim,
     CodeableConcept? relationship,
     Identifier? reference,
@@ -865,7 +869,7 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
 @freezed
 class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   ExplanationOfBenefitPayee._();
-  factory ExplanationOfBenefitPayee({
+  const factory ExplanationOfBenefitPayee({
     CodeableConcept? type,
     Reference? party,
   }) = _ExplanationOfBenefitPayee;
@@ -904,7 +908,7 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
 @freezed
 class ExplanationOfBenefitInformation with _$ExplanationOfBenefitInformation {
   ExplanationOfBenefitInformation._();
-  factory ExplanationOfBenefitInformation({
+  const factory ExplanationOfBenefitInformation({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept category,
@@ -955,7 +959,7 @@ class ExplanationOfBenefitInformation with _$ExplanationOfBenefitInformation {
 @freezed
 class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   ExplanationOfBenefitCareTeam._();
-  factory ExplanationOfBenefitCareTeam({
+  const factory ExplanationOfBenefitCareTeam({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required Reference provider,
@@ -999,7 +1003,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
 @freezed
 class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   ExplanationOfBenefitDiagnosis._();
-  factory ExplanationOfBenefitDiagnosis({
+  const factory ExplanationOfBenefitDiagnosis({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     CodeableConcept? diagnosisCodeableConcept,
@@ -1042,7 +1046,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
 @freezed
 class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ExplanationOfBenefitProcedure._();
-  factory ExplanationOfBenefitProcedure({
+  const factory ExplanationOfBenefitProcedure({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     FhirDate? date,
@@ -1085,7 +1089,7 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
 @freezed
 class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   ExplanationOfBenefitInsurance._();
-  factory ExplanationOfBenefitInsurance({
+  const factory ExplanationOfBenefitInsurance({
     Reference? coverage,
     List<String>? preAuthRef,
     @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
@@ -1125,7 +1129,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
 @freezed
 class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   ExplanationOfBenefitAccident._();
-  factory ExplanationOfBenefitAccident({
+  const factory ExplanationOfBenefitAccident({
     FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
     CodeableConcept? type,
@@ -1167,7 +1171,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
 @freezed
 class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ExplanationOfBenefitItem._();
-  factory ExplanationOfBenefitItem({
+  const factory ExplanationOfBenefitItem({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     List<FhirPositiveInt>? careTeamLinkId,
@@ -1178,7 +1182,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     @JsonKey(name: '_procedureLinkId') List<Element?>? procedureLinkIdElement,
     List<FhirPositiveInt>? informationLinkId,
     @JsonKey(name: '_informationLinkId')
-        List<Element>? informationLinkIdElement,
+    List<Element>? informationLinkIdElement,
     CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
@@ -1239,7 +1243,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
 @freezed
 class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   ExplanationOfBenefitAdjudication._();
-  factory ExplanationOfBenefitAdjudication({
+  const factory ExplanationOfBenefitAdjudication({
     required CodeableConcept category,
     CodeableConcept? reason,
     Money? amount,
@@ -1270,7 +1274,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
 @freezed
 class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   ExplanationOfBenefitDetail._();
-  factory ExplanationOfBenefitDetail({
+  const factory ExplanationOfBenefitDetail({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept type,
@@ -1325,7 +1329,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
 @freezed
 class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   ExplanationOfBenefitSubDetail._();
-  factory ExplanationOfBenefitSubDetail({
+  const factory ExplanationOfBenefitSubDetail({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
     required CodeableConcept type,
@@ -1379,7 +1383,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
 @freezed
 class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ExplanationOfBenefitAddItem._();
-  factory ExplanationOfBenefitAddItem({
+  const factory ExplanationOfBenefitAddItem({
     List<FhirId>? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
     CodeableConcept? revenue,
@@ -1427,7 +1431,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
 @freezed
 class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   ExplanationOfBenefitDetail1._();
-  factory ExplanationOfBenefitDetail1({
+  const factory ExplanationOfBenefitDetail1({
     CodeableConcept? revenue,
     CodeableConcept? category,
     CodeableConcept? service,
@@ -1472,7 +1476,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
 @freezed
 class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   ExplanationOfBenefitPayment._();
-  factory ExplanationOfBenefitPayment({
+  const factory ExplanationOfBenefitPayment({
     CodeableConcept? type,
     Money? adjustment,
     CodeableConcept? adjustmentReason,
@@ -1516,7 +1520,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
 @freezed
 class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   ExplanationOfBenefitProcessNote._();
-  factory ExplanationOfBenefitProcessNote({
+  const factory ExplanationOfBenefitProcessNote({
     FhirDecimal? number,
     @JsonKey(name: '_number') Element? numberElement,
     CodeableConcept? type,
@@ -1561,7 +1565,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
 class ExplanationOfBenefitBenefitBalance
     with _$ExplanationOfBenefitBenefitBalance {
   ExplanationOfBenefitBenefitBalance._();
-  factory ExplanationOfBenefitBenefitBalance({
+  const factory ExplanationOfBenefitBenefitBalance({
     required CodeableConcept category,
     CodeableConcept? subCategory,
     FhirBoolean? excluded,
@@ -1599,7 +1603,7 @@ class ExplanationOfBenefitBenefitBalance
 @freezed
 class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   ExplanationOfBenefitFinancial._();
-  factory ExplanationOfBenefitFinancial({
+  const factory ExplanationOfBenefitFinancial({
     required CodeableConcept type,
     FhirDecimal? allowedUnsignedInt,
     @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,

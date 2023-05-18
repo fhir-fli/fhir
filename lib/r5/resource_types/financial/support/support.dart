@@ -159,15 +159,16 @@ class Coverage with Resource, _$Coverage {
   /// [insurancePlan] The insurance plan details, benefits and costs, which
   ///  constitute this insurance coverage.
   ///
-  factory Coverage({
+  const factory Coverage({
     /// [resourceType] This is a Coverage resource
     @Default(R5ResourceType.Coverage)
     @JsonKey(unknownEnumValue: R5ResourceType.Coverage)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -412,10 +413,10 @@ class CoveragePaymentBy with _$CoveragePaymentBy {
   ///
   /// [responsibilityElement] ("_responsibility") Extensions for responsibility
   ///
-  factory CoveragePaymentBy({
+  const factory CoveragePaymentBy({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -533,10 +534,10 @@ class CoverageClass with _$CoverageClass {
   ///
   /// [nameElement] ("_name") Extensions for name
   ///
-  factory CoverageClass({
+  const factory CoverageClass({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -668,10 +669,10 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   /// [exception] A suite of codes indicating exceptions or reductions to
   ///  patient costs and their effective periods.
   ///
-  factory CoverageCostToBeneficiary({
+  const factory CoverageCostToBeneficiary({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -800,10 +801,10 @@ class CoverageException with _$CoverageException {
   ///
   /// [period] The timeframe the exception is in force.
   ///
-  factory CoverageException({
+  const factory CoverageException({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -996,15 +997,16 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   ///  and/or an authorization prior to service delivery may be required by the
   ///  payor.
   ///
-  factory CoverageEligibilityRequest({
+  const factory CoverageEligibilityRequest({
     /// [resourceType] This is a CoverageEligibilityRequest resource
     @Default(R5ResourceType.CoverageEligibilityRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1231,10 +1233,10 @@ class CoverageEligibilityRequestEvent with _$CoverageEligibilityRequestEvent {
   /// [whenPeriod] A date or period in the past or future indicating when the
   ///  event occurred or is expectd to occur.
   ///
-  factory CoverageEligibilityRequestEvent({
+  const factory CoverageEligibilityRequestEvent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1367,10 +1369,10 @@ class CoverageEligibilityRequestSupportingInfo
   ///
   /// [appliesToAllElement] ("_appliesToAll") Extensions for appliesToAll
   ///
-  factory CoverageEligibilityRequestSupportingInfo({
+  const factory CoverageEligibilityRequestSupportingInfo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1511,10 +1513,10 @@ class CoverageEligibilityRequestInsurance
   /// [businessArrangementElement] ("_businessArrangement") Extensions for
   ///  businessArrangement
   ///
-  factory CoverageEligibilityRequestInsurance({
+  const factory CoverageEligibilityRequestInsurance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1670,10 +1672,10 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   /// [detail] The plan/proposal/order describing the proposed service in
   ///  detail.
   ///
-  factory CoverageEligibilityRequestItem({
+  const factory CoverageEligibilityRequestItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1706,7 +1708,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
     /// [supportingInfoSequenceElement] ("_supportingInfoSequence") Extensions
     ///  for supportingInfoSequence
     @JsonKey(name: '_supportingInfoSequence')
-        List<Element>? supportingInfoSequenceElement,
+    List<Element>? supportingInfoSequenceElement,
 
     /// [category] Code to identify the general type of benefits under which
     ///  products and services are provided.
@@ -1826,10 +1828,10 @@ class CoverageEligibilityRequestDiagnosis
   /// [diagnosisReference] The nature of illness or problem in a coded form or
   ///  as a reference to an external defined Condition.
   ///
-  factory CoverageEligibilityRequestDiagnosis({
+  const factory CoverageEligibilityRequestDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2024,15 +2026,16 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   ///
   /// [error] Errors encountered during the processing of the request.
   ///
-  factory CoverageEligibilityResponse({
+  const factory CoverageEligibilityResponse({
     /// [resourceType] This is a CoverageEligibilityResponse resource
     @Default(R5ResourceType.CoverageEligibilityResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2263,10 +2266,10 @@ class CoverageEligibilityResponseEvent with _$CoverageEligibilityResponseEvent {
   /// [whenPeriod] A date or period in the past or future indicating when the
   ///  event occurred or is expectd to occur.
   ///
-  factory CoverageEligibilityResponseEvent({
+  const factory CoverageEligibilityResponseEvent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2397,10 +2400,10 @@ class CoverageEligibilityResponseInsurance
   /// [item] Benefits and optionally current balances, and authorization
   ///  details by category or service.
   ///
-  factory CoverageEligibilityResponseInsurance({
+  const factory CoverageEligibilityResponseInsurance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2570,10 +2573,10 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   /// [authorizationUrlElement] ("_authorizationUrl") Extensions for
   ///  authorizationUrl
   ///
-  factory CoverageEligibilityResponseItem({
+  const factory CoverageEligibilityResponseItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2657,7 +2660,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
     /// [authorizationRequiredElement] ("_authorizationRequired") Extensions
     ///  for authorizationRequired
     @JsonKey(name: '_authorizationRequired')
-        Element? authorizationRequiredElement,
+    Element? authorizationRequiredElement,
 
     /// [authorizationSupporting] Codes or comments regarding information or
     ///  actions associated with the preauthorization.
@@ -2771,10 +2774,10 @@ class CoverageEligibilityResponseBenefit
   ///
   /// [usedMoney] The quantity of the benefit which have been consumed to date.
   ///
-  factory CoverageEligibilityResponseBenefit({
+  const factory CoverageEligibilityResponseBenefit({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2923,10 +2926,10 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
-  factory CoverageEligibilityResponseError({
+  const factory CoverageEligibilityResponseError({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3085,15 +3088,16 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   /// [coverage] Reference to the program or plan identification, underwriter
   ///  or payor.
   ///
-  factory EnrollmentRequest({
+  const factory EnrollmentRequest({
     /// [resourceType] This is a EnrollmentRequest resource
     @Default(R5ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3309,15 +3313,16 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   /// [requestProvider] The practitioner who is responsible for the services
   ///  rendered to the patient.
   ///
-  factory EnrollmentResponse({
+  const factory EnrollmentResponse({
     /// [resourceType] This is a EnrollmentResponse resource
     @Default(R5ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not

@@ -219,11 +219,12 @@ class Appointment with Resource, _$Appointment {
   /// [recurrenceTemplate] The details of the recurrence pattern or template
   ///  that is used to generate recurring appointments.
   ///
-  factory Appointment({
+  const factory Appointment({
     /// [resourceType] This is a Appointment resource
     @Default(R5ResourceType.Appointment)
     @JsonKey(unknownEnumValue: R5ResourceType.Appointment)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -559,7 +560,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
   ///
   /// [statusElement] ("_status") Extensions for status
   ///
-  factory AppointmentParticipant({
+  const factory AppointmentParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -718,7 +719,7 @@ class AppointmentRecurrenceTemplate with _$AppointmentRecurrenceTemplate {
   /// [excludingRecurrenceIdElement] ("_excludingRecurrenceId") Extensions for
   ///  excludingRecurrenceId
   ///
-  factory AppointmentRecurrenceTemplate({
+  const factory AppointmentRecurrenceTemplate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -799,7 +800,7 @@ class AppointmentRecurrenceTemplate with _$AppointmentRecurrenceTemplate {
     /// [excludingRecurrenceIdElement] ("_excludingRecurrenceId") Extensions
     ///  for excludingRecurrenceId
     @JsonKey(name: '_excludingRecurrenceId')
-        List<Element>? excludingRecurrenceIdElement,
+    List<Element>? excludingRecurrenceIdElement,
   }) = _AppointmentRecurrenceTemplate;
 
   /// Produces a Yaml formatted String version of the object
@@ -910,7 +911,7 @@ class AppointmentWeeklyTemplate with _$AppointmentWeeklyTemplate {
   ///
   /// [weekIntervalElement] ("_weekInterval") Extensions for weekInterval
   ///
-  factory AppointmentWeeklyTemplate({
+  const factory AppointmentWeeklyTemplate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1080,7 +1081,7 @@ class AppointmentMonthlyTemplate with _$AppointmentMonthlyTemplate {
   ///
   /// [monthIntervalElement] ("_monthInterval") Extensions for monthInterval
   ///
-  factory AppointmentMonthlyTemplate({
+  const factory AppointmentMonthlyTemplate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1205,7 +1206,7 @@ class AppointmentYearlyTemplate with _$AppointmentYearlyTemplate {
   ///
   /// [yearIntervalElement] ("_yearInterval") Extensions for yearInterval
   ///
-  factory AppointmentYearlyTemplate({
+  const factory AppointmentYearlyTemplate({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1397,11 +1398,12 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
   ///
   /// [recurrenceIdElement] ("_recurrenceId") Extensions for recurrenceId
   ///
-  factory AppointmentResponse({
+  const factory AppointmentResponse({
     /// [resourceType] This is a AppointmentResponse resource
     @Default(R5ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.AppointmentResponse)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1684,11 +1686,12 @@ class Schedule with Resource, _$Schedule {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  factory Schedule({
+  const factory Schedule({
     /// [resourceType] This is a Schedule resource
     @Default(R5ResourceType.Schedule)
     @JsonKey(unknownEnumValue: R5ResourceType.Schedule)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1943,11 +1946,12 @@ class Slot with Resource, _$Slot {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  factory Slot({
+  const factory Slot({
     /// [resourceType] This is a Slot resource
     @Default(R5ResourceType.Slot)
     @JsonKey(unknownEnumValue: R5ResourceType.Slot)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2284,11 +2288,12 @@ class Task with Resource, _$Task {
   ///
   /// [output] Outputs produced by the Task.
   ///
-  factory Task({
+  const factory Task({
     /// [resourceType] This is a Task resource
     @Default(R5ResourceType.Task)
     @JsonKey(unknownEnumValue: R5ResourceType.Task)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2586,7 +2591,7 @@ class TaskPerformer with _$TaskPerformer {
   ///
   /// [actor] The actor or entity who performed the task.
   ///
-  factory TaskPerformer({
+  const factory TaskPerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2698,7 +2703,7 @@ class TaskRestriction with _$TaskRestriction {
   /// [recipient] For requests that are targeted to more than one potential
   ///  recipient/target, to identify who is fulfillment is sought for.
   ///
-  factory TaskRestriction({
+  const factory TaskRestriction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2963,7 +2968,7 @@ class TaskInput with _$TaskInput {
   ///
   /// [valueMeta] The value of the input parameter as a basic type.
   ///
-  factory TaskInput({
+  const factory TaskInput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3448,7 +3453,7 @@ class TaskOutput with _$TaskOutput {
   ///
   /// [valueMeta] The value of the Output parameter as a basic type.
   ///
-  factory TaskOutput({
+  const factory TaskOutput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3926,11 +3931,12 @@ class Transport with Resource, _$Transport {
   ///
   /// [history] The transport event prior to this one.
   ///
-  factory Transport({
+  const factory Transport({
     /// [resourceType] This is a Transport resource
     @Default(R5ResourceType.Transport)
     @JsonKey(unknownEnumValue: R5ResourceType.Transport)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -4235,7 +4241,7 @@ class TransportRestriction with _$TransportRestriction {
   /// [recipient] For requests that are targeted to more than one potential
   ///  recipient/target, to identify who is fulfillment is sought for.
   ///
-  factory TransportRestriction({
+  const factory TransportRestriction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4498,7 +4504,7 @@ class TransportInput with _$TransportInput {
   ///
   /// [valueMeta] The value of the input parameter as a basic type.
   ///
-  factory TransportInput({
+  const factory TransportInput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4983,7 +4989,7 @@ class TransportOutput with _$TransportOutput {
   ///
   /// [valueMeta] The value of the Output parameter as a basic type.
   ///
-  factory TransportOutput({
+  const factory TransportOutput({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5393,11 +5399,12 @@ class VerificationResult with Resource, _$VerificationResult {
   ///
   /// [validator] Information about the entity validating information.
   ///
-  factory VerificationResult({
+  const factory VerificationResult({
     /// [resourceType] This is a VerificationResult resource
     @Default(R5ResourceType.VerificationResult)
     @JsonKey(unknownEnumValue: R5ResourceType.VerificationResult)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -5622,7 +5629,7 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   /// [pushTypeAvailable] Type of alerts/updates the primary source can send
   ///  (specific requested changes; any changes; as defined by source).
   ///
-  factory VerificationResultPrimarySource({
+  const factory VerificationResultPrimarySource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5784,7 +5791,7 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
   /// [sourceSignature] Signed assertion by the attestation source that they
   ///  have attested to the information.
   ///
-  factory VerificationResultAttestation({
+  const factory VerificationResultAttestation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5837,7 +5844,7 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
     /// [sourceIdentityCertificateElement] ("_sourceIdentityCertificate")
     ///  Extensions for sourceIdentityCertificate
     @JsonKey(name: '_sourceIdentityCertificate')
-        Element? sourceIdentityCertificateElement,
+    Element? sourceIdentityCertificateElement,
 
     /// [proxyIdentityCertificate] A digital identity certificate associated
     ///  with the proxy entity submitting attested information on behalf of the
@@ -5847,7 +5854,7 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
     /// [proxyIdentityCertificateElement] ("_proxyIdentityCertificate")
     ///  Extensions for proxyIdentityCertificate
     @JsonKey(name: '_proxyIdentityCertificate')
-        Element? proxyIdentityCertificateElement,
+    Element? proxyIdentityCertificateElement,
 
     /// [proxySignature] Signed assertion by the proxy entity indicating that
     ///  they have the right to submit attested information on behalf of the
@@ -5937,7 +5944,7 @@ class VerificationResultValidator with _$VerificationResultValidator {
   /// [attestationSignature] Signed assertion by the validator that they have
   ///  validated the information.
   ///
-  factory VerificationResultValidator({
+  const factory VerificationResultValidator({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

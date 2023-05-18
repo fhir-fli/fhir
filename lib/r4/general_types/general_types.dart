@@ -46,7 +46,7 @@ class Annotation with _$Annotation {
   /// [text] The text of the annotation in markdown format.
   ///
   /// [textElement] Extensions for text
-  factory Annotation({
+  const factory Annotation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -167,7 +167,7 @@ class Attachment with _$Attachment {
   /// [creation] The date that the attachment was first created.
   ///
   /// [creationElement] Extensions for creation
-  factory Attachment({
+  const factory Attachment({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -305,7 +305,7 @@ class Identifier with _$Identifier {
   /// [period] Time period during which identifier is/was valid for use.
   ///
   /// [assigner] Organization that issued/manages the identifier.
-  factory Identifier({
+  const factory Identifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -406,7 +406,7 @@ class CodeableConcept with _$CodeableConcept {
   ///  represents the intended meaning of the user.
   ///
   /// [textElement] Extensions for text
-  factory CodeableConcept({
+  const factory CodeableConcept({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -509,7 +509,7 @@ class Coding with _$Coding {
   ///  e.g. off a pick list of available items (codes or displays).
   ///
   /// [userSelectedElement] Extensions for userSelected
-  factory Coding({
+  const factory Coding({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -639,11 +639,10 @@ class Quantity with _$Quantity {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-  factory Quantity({
+  const factory Quantity({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -651,50 +650,44 @@ class Quantity with _$Quantity {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [value] The value of the measured amount. The value includes an implicit
     ///  precision in the presentation of the value.
     FhirDecimal? value,
 
     /// [valueElement] Extensions for value
-    @JsonKey(name: '_value')
-        Element? valueElement,
+    @JsonKey(name: '_value') Element? valueElement,
     @JsonKey(unknownEnumValue: QuantityComparator.unknown)
 
-        /// [comparator] How the value should be understood and represented - whether
-        /// the actual value is greater or less than the stated value due to
-        /// measurement issues; e.g. if the comparator is "<" , then the real value is
-        ///  < stated value.
-        QuantityComparator? comparator,
+    /// [comparator] How the value should be understood and represented - whether
+    /// the actual value is greater or less than the stated value due to
+    /// measurement issues; e.g. if the comparator is "<" , then the real value is
+    ///  < stated value.
+    QuantityComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
-    @JsonKey(name: '_comparator')
-        Element? comparatorElement,
+    @JsonKey(name: '_comparator') Element? comparatorElement,
 
     /// [unit] A human-readable form of the unit.
     String? unit,
 
     /// [unitElement] Extensions for unit
-    @JsonKey(name: '_unit')
-        Element? unitElement,
+    @JsonKey(name: '_unit') Element? unitElement,
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
     FhirUri? system,
 
     /// [systemElement] Extensions for system
-    @JsonKey(name: '_system')
-        Element? systemElement,
+    @JsonKey(name: '_system') Element? systemElement,
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
     FhirCode? code,
 
     /// [codeElement] Extensions for code
-    @JsonKey(name: '_code')
-        Element? codeElement,
+    @JsonKey(name: '_code') Element? codeElement,
   }) = _Quantity;
 
   /// Produces a Yaml formatted String version of the object
@@ -771,11 +764,10 @@ class FhirDuration with _$FhirDuration {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-  factory FhirDuration({
+  const factory FhirDuration({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -783,50 +775,44 @@ class FhirDuration with _$FhirDuration {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [value] The value of the measured amount. The value includes an implicit
     ///  precision in the presentation of the value.
     FhirDecimal? value,
 
     /// [valueElement] Extensions for value
-    @JsonKey(name: '_value')
-        Element? valueElement,
+    @JsonKey(name: '_value') Element? valueElement,
     @JsonKey(unknownEnumValue: DurationComparator.unknown)
 
-        /// [comparator] How the value should be understood and represented - whether
-        /// the actual value is greater or less than the stated value due to
-        /// measurement issues; e.g. if the comparator is "<" , then the real value is
-        ///  < stated value.
-        DurationComparator? comparator,
+    /// [comparator] How the value should be understood and represented - whether
+    /// the actual value is greater or less than the stated value due to
+    /// measurement issues; e.g. if the comparator is "<" , then the real value is
+    ///  < stated value.
+    DurationComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
-    @JsonKey(name: '_comparator')
-        Element? comparatorElement,
+    @JsonKey(name: '_comparator') Element? comparatorElement,
 
     /// [unit] A human-readable form of the unit.
     String? unit,
 
     /// [unitElement] Extensions for unit
-    @JsonKey(name: '_unit')
-        Element? unitElement,
+    @JsonKey(name: '_unit') Element? unitElement,
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
     FhirUri? system,
 
     /// [systemElement] Extensions for system
-    @JsonKey(name: '_system')
-        Element? systemElement,
+    @JsonKey(name: '_system') Element? systemElement,
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
     FhirCode? code,
 
     /// [codeElement] Extensions for code
-    @JsonKey(name: '_code')
-        Element? codeElement,
+    @JsonKey(name: '_code') Element? codeElement,
   }) = _FhirDuration;
 
   /// Produces a Yaml formatted String version of the object
@@ -903,11 +889,10 @@ class Distance with _$Distance {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-  factory Distance({
+  const factory Distance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -915,50 +900,44 @@ class Distance with _$Distance {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [value] The value of the measured amount. The value includes an implicit
     ///  precision in the presentation of the value.
     FhirDecimal? value,
 
     /// [valueElement] Extensions for value
-    @JsonKey(name: '_value')
-        Element? valueElement,
+    @JsonKey(name: '_value') Element? valueElement,
     @JsonKey(unknownEnumValue: DistanceComparator.unknown)
 
-        /// [comparator] How the value should be understood and represented - whether
-        /// the actual value is greater or less than the stated value due to
-        /// measurement issues; e.g. if the comparator is "<" , then the real value is
-        ///  < stated value.
-        DistanceComparator? comparator,
+    /// [comparator] How the value should be understood and represented - whether
+    /// the actual value is greater or less than the stated value due to
+    /// measurement issues; e.g. if the comparator is "<" , then the real value is
+    ///  < stated value.
+    DistanceComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
-    @JsonKey(name: '_comparator')
-        Element? comparatorElement,
+    @JsonKey(name: '_comparator') Element? comparatorElement,
 
     /// [unit] A human-readable form of the unit.
     String? unit,
 
     /// [unitElement] Extensions for unit
-    @JsonKey(name: '_unit')
-        Element? unitElement,
+    @JsonKey(name: '_unit') Element? unitElement,
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
     FhirUri? system,
 
     /// [systemElement] Extensions for system
-    @JsonKey(name: '_system')
-        Element? systemElement,
+    @JsonKey(name: '_system') Element? systemElement,
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
     FhirCode? code,
 
     /// [codeElement] Extensions for code
-    @JsonKey(name: '_code')
-        Element? codeElement,
+    @JsonKey(name: '_code') Element? codeElement,
   }) = _Distance;
 
   /// Produces a Yaml formatted String version of the object
@@ -1038,11 +1017,10 @@ class Count with _$Count {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-  factory Count({
+  const factory Count({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -1050,50 +1028,44 @@ class Count with _$Count {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [value] The value of the measured amount. The value includes an implicit
     ///  precision in the presentation of the value.
     FhirDecimal? value,
 
     /// [valueElement] Extensions for value
-    @JsonKey(name: '_value')
-        Element? valueElement,
+    @JsonKey(name: '_value') Element? valueElement,
     @JsonKey(unknownEnumValue: CountComparator.unknown)
 
-        /// [comparator] How the value should be understood and represented - whether
-        /// the actual value is greater or less than the stated value due to
-        /// measurement issues; e.g. if the comparator is "<" , then the real value is
-        ///  < stated value.
-        CountComparator? comparator,
+    /// [comparator] How the value should be understood and represented - whether
+    /// the actual value is greater or less than the stated value due to
+    /// measurement issues; e.g. if the comparator is "<" , then the real value is
+    ///  < stated value.
+    CountComparator? comparator,
 
     /// [comparatorElement] Extensions for comparator
-    @JsonKey(name: '_comparator')
-        Element? comparatorElement,
+    @JsonKey(name: '_comparator') Element? comparatorElement,
 
     /// [unit] A human-readable form of the unit.
     String? unit,
 
     /// [unitElement] Extensions for unit
-    @JsonKey(name: '_unit')
-        Element? unitElement,
+    @JsonKey(name: '_unit') Element? unitElement,
 
     /// [system] The identification of the system that provides the coded form of
     ///  the unit.
     FhirUri? system,
 
     /// [systemElement] Extensions for system
-    @JsonKey(name: '_system')
-        Element? systemElement,
+    @JsonKey(name: '_system') Element? systemElement,
 
     /// [code] A computer processable form of the unit in some unit
     ///  representation system.
     FhirCode? code,
 
     /// [codeElement] Extensions for code
-    @JsonKey(name: '_code')
-        Element? codeElement,
+    @JsonKey(name: '_code') Element? codeElement,
   }) = _Count;
 
   /// Produces a Yaml formatted String version of the object
@@ -1150,7 +1122,7 @@ class Money with _$Money {
   /// [currency] ISO 4217 Currency Code.
   ///
   /// [currencyElement] Extensions for currency
-  factory Money({
+  const factory Money({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1249,7 +1221,7 @@ class Age with _$Age {
   ///  representation system.
   ///
   /// [codeElement] Extensions for code
-  factory Age({
+  const factory Age({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1348,7 +1320,7 @@ class Range with _$Range {
   /// [low] The low limit. The boundary is inclusive.
   ///
   /// [high] The high limit. The boundary is inclusive.
-  factory Range({
+  const factory Range({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1426,7 +1398,7 @@ class Period with _$Period {
   ///  that period is expected/planned to end at that time.
   ///
   /// [endElement] Extensions for end
-  factory Period({
+  const factory Period({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1507,7 +1479,7 @@ class Ratio with _$Ratio {
   /// [numerator] The value of the numerator.
   ///
   /// [denominator] The value of the denominator.
-  factory Ratio({
+  const factory Ratio({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1568,7 +1540,7 @@ class RatioRange with _$RatioRange {
   /// [lowNumerator] "The value of the low limit numerator."
   /// [highNumerator] "The value of the high limit numerator."
   /// [denominator] "The value of the denominator."
-  factory RatioRange({
+  const factory RatioRange({
     /// [id] "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
     @JsonKey(name: 'id') String? fhirId,
 
@@ -1672,7 +1644,7 @@ class SampledData with _$SampledData {
   ///  of a decimal value.
   ///
   /// [dataElement] Extensions for data
-  factory SampledData({
+  const factory SampledData({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1821,7 +1793,7 @@ class Signature with _$Signature {
   ///  not recorded electronically this element would be empty.
   ///
   /// [dataElement] Extensions for data
-  factory Signature({
+  const factory Signature({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1960,7 +1932,7 @@ class HumanName with _$HumanName {
   ///
   /// [period] Indicates the period of time when this name was valid for the
   ///  named person.
-  factory HumanName({
+  const factory HumanName({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2122,7 +2094,7 @@ class Address with _$Address {
   /// [countryElement] Extensions for country
   ///
   /// [period] Time period when address was/is in use.
-  factory Address({
+  const factory Address({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2275,11 +2247,10 @@ class ContactPoint with _$ContactPoint {
   /// [rankElement] Extensions for rank
   ///
   /// [period] Time period when the contact point was/is in use.
-  factory ContactPoint({
+  const factory ContactPoint({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2287,33 +2258,28 @@ class ContactPoint with _$ContactPoint {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
 
-        /// [system] Telecommunications form for contact point - what communications
-        ///  system is required to make use of the contact.
-        ContactPointSystem? system,
+    /// [system] Telecommunications form for contact point - what communications
+    ///  system is required to make use of the contact.
+    ContactPointSystem? system,
 
     /// [systemElement] Extensions for system
-    @JsonKey(name: '_system')
-        Element? systemElement,
+    @JsonKey(name: '_system') Element? systemElement,
 
     /// [value] The actual contact point details, in a form that is meaningful to
     ///  the designated communication system (i.e. phone number or email address).
     String? value,
 
     /// [valueElement] Extensions for value
-    @JsonKey(name: '_value')
-        Element? valueElement,
+    @JsonKey(name: '_value') Element? valueElement,
 
     /// [use] Identifies the purpose for the contact point.
-    @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-        ContactPointUse? use,
+    @JsonKey(unknownEnumValue: ContactPointUse.unknown) ContactPointUse? use,
 
     /// [useElement] Extensions for use
-    @JsonKey(name: '_use')
-        Element? useElement,
+    @JsonKey(name: '_use') Element? useElement,
 
     /// [rank] Specifies a preferred order in which to use a set of contacts.
     /// ContactPoints with lower rank values are more preferred than those with
@@ -2321,8 +2287,7 @@ class ContactPoint with _$ContactPoint {
     FhirPositiveInt? rank,
 
     /// [rankElement] Extensions for rank
-    @JsonKey(name: '_rank')
-        Element? rankElement,
+    @JsonKey(name: '_rank') Element? rankElement,
 
     /// [period] Time period when the contact point was/is in use.
     Period? period,
@@ -2409,7 +2374,7 @@ class Timing with _$Timing {
   /// and either the code or the data may be used to interpret the Timing, with
   /// the exception that .repeat.bounds still applies over the code (and is not
   ///  contained in the code).
-  factory Timing({
+  const factory Timing({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2609,11 +2574,10 @@ class TimingRepeat with _$TimingRepeat {
   ///  is assumed to be after the event.
   ///
   /// [offsetElement] Extensions for offset
-  factory TimingRepeat({
+  const factory TimingRepeat({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2621,8 +2585,7 @@ class TimingRepeat with _$TimingRepeat {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -2660,16 +2623,14 @@ class TimingRepeat with _$TimingRepeat {
     FhirPositiveInt? count,
 
     /// [countElement] Extensions for count
-    @JsonKey(name: '_count')
-        Element? countElement,
+    @JsonKey(name: '_count') Element? countElement,
 
     /// [countMax] If present, indicates that the count is a range - so to
     ///  perform the action between [count] and [countMax] times.
     FhirPositiveInt? countMax,
 
     /// [countMaxElement] Extensions for countMax
-    @JsonKey(name: '_countMax')
-        Element? countMaxElement,
+    @JsonKey(name: '_countMax') Element? countMaxElement,
 
     /// [duration] How long this thing happens for when it happens. If
     /// durationMax is present, this element indicates the lower bound of the
@@ -2677,24 +2638,21 @@ class TimingRepeat with _$TimingRepeat {
     FhirDecimal? duration,
 
     /// [durationElement] Extensions for duration
-    @JsonKey(name: '_duration')
-        Element? durationElement,
+    @JsonKey(name: '_duration') Element? durationElement,
 
     /// [durationMax] If present, indicates that the duration is a range - so to
     ///  perform the action between [duration] and [durationMax] time length.
     FhirDecimal? durationMax,
 
     /// [durationMaxElement] Extensions for durationMax
-    @JsonKey(name: '_durationMax')
-        Element? durationMaxElement,
+    @JsonKey(name: '_durationMax') Element? durationMaxElement,
     @JsonKey(unknownEnumValue: TimingRepeatDurationUnit.unknown)
 
-        /// [durationUnit] The units of time for the duration, in UCUM units.
-        TimingRepeatDurationUnit? durationUnit,
+    /// [durationUnit] The units of time for the duration, in UCUM units.
+    TimingRepeatDurationUnit? durationUnit,
 
     /// [durationUnitElement] Extensions for durationUnit
-    @JsonKey(name: '_durationUnit')
-        Element? durationUnitElement,
+    @JsonKey(name: '_durationUnit') Element? durationUnitElement,
 
     /// [frequency] The number of times to repeat the action within the specified
     /// period. If frequencyMax is present, this element indicates the lower bound
@@ -2702,8 +2660,7 @@ class TimingRepeat with _$TimingRepeat {
     FhirPositiveInt? frequency,
 
     /// [frequencyElement] Extensions for frequency
-    @JsonKey(name: '_frequency')
-        Element? frequencyElement,
+    @JsonKey(name: '_frequency') Element? frequencyElement,
 
     /// [frequencyMax] If present, indicates that the frequency is a range - so
     /// to repeat between [frequency] and [frequencyMax] times within the period
@@ -2711,8 +2668,7 @@ class TimingRepeat with _$TimingRepeat {
     FhirPositiveInt? frequencyMax,
 
     /// [frequencyMaxElement] Extensions for frequencyMax
-    @JsonKey(name: '_frequencyMax')
-        Element? frequencyMaxElement,
+    @JsonKey(name: '_frequencyMax') Element? frequencyMaxElement,
 
     /// [period] Indicates the duration of time over which repetitions are to
     /// occur; e.g. to express "3 times per day", 3 would be the frequency and "1
@@ -2721,8 +2677,7 @@ class TimingRepeat with _$TimingRepeat {
     FhirDecimal? period,
 
     /// [periodElement] Extensions for period
-    @JsonKey(name: '_period')
-        Element? periodElement,
+    @JsonKey(name: '_period') Element? periodElement,
 
     /// [periodMax] If present, indicates that the period is a range from [period]
     /// to [periodMax], allowing expressing concepts such as "do this once every
@@ -2730,39 +2685,34 @@ class TimingRepeat with _$TimingRepeat {
     FhirDecimal? periodMax,
 
     /// [periodMaxElement] Extensions for periodMax
-    @JsonKey(name: '_periodMax')
-        Element? periodMaxElement,
+    @JsonKey(name: '_periodMax') Element? periodMaxElement,
     @JsonKey(unknownEnumValue: TimingRepeatPeriodUnit.unknown)
 
-        /// [periodUnit] The units of time for the period in UCUM units.
-        TimingRepeatPeriodUnit? periodUnit,
+    /// [periodUnit] The units of time for the period in UCUM units.
+    TimingRepeatPeriodUnit? periodUnit,
 
     /// [periodUnitElement] Extensions for periodUnit
-    @JsonKey(name: '_periodUnit')
-        Element? periodUnitElement,
+    @JsonKey(name: '_periodUnit') Element? periodUnitElement,
 
     /// [dayOfWeek] If one or more days of week is provided, then the action
     ///  happens only on the specified day(s).
     List<FhirCode>? dayOfWeek,
 
     /// [dayOfWeekElement] Extensions for dayOfWeek
-    @JsonKey(name: '_dayOfWeek')
-        List<Element?>? dayOfWeekElement,
+    @JsonKey(name: '_dayOfWeek') List<Element?>? dayOfWeekElement,
 
     /// [timeOfDay] Specified time of day for action to take place.
     List<FhirTime>? timeOfDay,
 
     /// [timeOfDayElement] Extensions for timeOfDay
-    @JsonKey(name: '_timeOfDay')
-        List<Element?>? timeOfDayElement,
+    @JsonKey(name: '_timeOfDay') List<Element?>? timeOfDayElement,
 
     /// [when] An approximate time period during the day, potentially linked to
     ///  an event of daily living that indicates when the action should occur.
     List<TimingRepeatWhen>? when,
 
     /// [whenElement] Extensions for when
-    @JsonKey(name: '_when')
-        List<Element?>? whenElement,
+    @JsonKey(name: '_when') List<Element?>? whenElement,
 
     /// [offset] The number of minutes from the event. If the event code does not
     /// indicate whether the minutes is before or after the event, then the offset
@@ -2770,8 +2720,7 @@ class TimingRepeat with _$TimingRepeat {
     FhirUnsignedInt? offset,
 
     /// [offsetElement] Extensions for offset
-    @JsonKey(name: '_offset')
-        Element? offsetElement,
+    @JsonKey(name: '_offset') Element? offsetElement,
   }) = _TimingRepeat;
 
   /// Produces a Yaml formatted String version of the object

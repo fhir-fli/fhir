@@ -22,6 +22,8 @@ GuidanceResponse _$GuidanceResponseFromJson(Map<String, dynamic> json) {
 mixin _$GuidanceResponse {
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
   Stu3ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -76,6 +78,8 @@ abstract class $GuidanceResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -144,6 +148,7 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -178,6 +183,10 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -494,6 +503,8 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
           Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -576,6 +587,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -610,6 +622,10 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Stu3ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -729,9 +745,11 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_GuidanceResponse extends _GuidanceResponse {
-  _$_GuidanceResponse(
+  const _$_GuidanceResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
           this.resourceType = Stu3ResourceType.GuidanceResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -781,6 +799,9 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
   final Stu3ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -896,7 +917,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 
   @override
   String toString() {
-    return 'GuidanceResponse(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, requestId: $requestId, requestIdElement: $requestIdElement, identifier: $identifier, module: $module, status: $status, statusElement: $statusElement, subject: $subject, context: $context, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, performer: $performer, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, note: $note, evaluationMessage: $evaluationMessage, outputParameters: $outputParameters, result: $result, dataRequirement: $dataRequirement)';
+    return 'GuidanceResponse(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, requestId: $requestId, requestIdElement: $requestIdElement, identifier: $identifier, module: $module, status: $status, statusElement: $statusElement, subject: $subject, context: $context, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, performer: $performer, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, note: $note, evaluationMessage: $evaluationMessage, outputParameters: $outputParameters, result: $result, dataRequirement: $dataRequirement)';
   }
 
   @override
@@ -906,6 +927,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
             other is _$_GuidanceResponse &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -961,6 +983,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -1006,9 +1029,11 @@ class _$_GuidanceResponse extends _GuidanceResponse {
 }
 
 abstract class _GuidanceResponse extends GuidanceResponse {
-  factory _GuidanceResponse(
+  const factory _GuidanceResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
           final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -1044,7 +1069,7 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       final Reference? outputParameters,
       final Reference? result,
       final List<DataRequirement>? dataRequirement}) = _$_GuidanceResponse;
-  _GuidanceResponse._() : super._();
+  const _GuidanceResponse._() : super._();
 
   factory _GuidanceResponse.fromJson(Map<String, dynamic> json) =
       _$_GuidanceResponse.fromJson;
@@ -1052,6 +1077,9 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
   Stu3ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;

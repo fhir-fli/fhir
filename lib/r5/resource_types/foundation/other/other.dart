@@ -96,11 +96,12 @@ class Basic with Resource, _$Basic {
   ///
   /// [author] Indicates who was responsible for creating the resource instance.
   ///
-  factory Basic({
+  const factory Basic({
     /// [resourceType] This is a Basic resource
     @Default(R5ResourceType.Basic)
     @JsonKey(unknownEnumValue: R5ResourceType.Basic)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -275,11 +276,12 @@ class Binary with Resource, _$Binary {
   ///
   /// [dataElement] ("_data") Extensions for data
   ///
-  factory Binary({
+  const factory Binary({
     /// [resourceType] This is a Binary resource
     @Default(R5ResourceType.Binary)
     @JsonKey(unknownEnumValue: R5ResourceType.Binary)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -422,11 +424,12 @@ class Bundle with Resource, _$Bundle {
   /// [issues] Captures issues and warnings that relate to the construction of
   ///  the Bundle and the content within it.
   ///
-  factory Bundle({
+  const factory Bundle({
     /// [resourceType] This is a Bundle resource
     @Default(R5ResourceType.Bundle)
     @JsonKey(unknownEnumValue: R5ResourceType.Bundle)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -569,7 +572,7 @@ class BundleLink with _$BundleLink {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory BundleLink({
+  const factory BundleLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -710,7 +713,7 @@ class BundleEntry with _$BundleEntry {
   ///  'request' entry in the batch or transaction being responded to or what
   ///  the results of an operation where when returning history.
   ///
-  factory BundleEntry({
+  const factory BundleEntry({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -855,7 +858,7 @@ class BundleSearch with _$BundleSearch {
   ///
   /// [scoreElement] ("_score") Extensions for score
   ///
-  factory BundleSearch({
+  const factory BundleSearch({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -999,7 +1002,7 @@ class BundleRequest with _$BundleRequest {
   ///
   /// [ifNoneExistElement] ("_ifNoneExist") Extensions for ifNoneExist
   ///
-  factory BundleRequest({
+  const factory BundleRequest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1167,7 +1170,7 @@ class BundleResponse with _$BundleResponse {
   /// [outcome] An OperationOutcome containing hints and warnings produced as
   ///  part of processing this entry in a batch or transaction.
   ///
-  factory BundleResponse({
+  const factory BundleResponse({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1341,11 +1344,12 @@ class Linkage with Resource, _$Linkage {
   ///  real-world occurrence as well as how the items should be evaluated
   ///  within the collection of linked items.
   ///
-  factory Linkage({
+  const factory Linkage({
     /// [resourceType] This is a Linkage resource
     @Default(R5ResourceType.Linkage)
     @JsonKey(unknownEnumValue: R5ResourceType.Linkage)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1504,7 +1508,7 @@ class LinkageItem with _$LinkageItem {
   ///
   /// [resource] The resource instance being linked as part of the group.
   ///
-  factory LinkageItem({
+  const factory LinkageItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1689,11 +1693,12 @@ class MessageHeader with Resource, _$MessageHeader {
   ///
   /// [definition] Permanent link to the MessageDefinition for this message.
   ///
-  factory MessageHeader({
+  const factory MessageHeader({
     /// [resourceType] This is a MessageHeader resource
     @Default(R5ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: R5ResourceType.MessageHeader)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1908,7 +1913,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   ///  particular person or department when routing to a specific application
   ///  isn't sufficient.
   ///
-  factory MessageHeaderDestination({
+  const factory MessageHeaderDestination({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2061,7 +2066,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
   /// [contact] An e-mail, phone, website or other contact point to use to
   ///  resolve issues with message communications.
   ///
-  factory MessageHeaderSource({
+  const factory MessageHeaderSource({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2210,7 +2215,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   ///
   /// [details] Full details of any issues found in the message.
   ///
-  factory MessageHeaderResponse({
+  const factory MessageHeaderResponse({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2354,11 +2359,12 @@ class OperationOutcome with Resource, _$OperationOutcome {
   /// [issue] An error, warning, or information message that results from a
   ///  system action.
   ///
-  factory OperationOutcome({
+  const factory OperationOutcome({
     /// [resourceType] This is a OperationOutcome resource
     @Default(R5ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: R5ResourceType.OperationOutcome)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2532,7 +2538,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
-  factory OperationOutcomeIssue({
+  const factory OperationOutcomeIssue({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2679,11 +2685,12 @@ class Parameters with Resource, _$Parameters {
   ///
   /// [parameter] A parameter passed to or received from the operation.
   ///
-  factory Parameters({
+  const factory Parameters({
     /// [resourceType] This is a Parameters resource
     @Default(R5ResourceType.Parameters)
     @JsonKey(unknownEnumValue: R5ResourceType.Parameters)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2953,7 +2960,7 @@ class ParametersParameter with _$ParametersParameter {
   ///
   /// [part_] ("part") A named part of a multi-part parameter.
   ///
-  factory ParametersParameter({
+  const factory ParametersParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3407,11 +3414,12 @@ class Subscription with Resource, _$Subscription {
   ///
   /// [maxCountElement] ("_maxCount") Extensions for maxCount
   ///
-  factory Subscription({
+  const factory Subscription({
     /// [resourceType] This is a Subscription resource
     @Default(R5ResourceType.Subscription)
     @JsonKey(unknownEnumValue: R5ResourceType.Subscription)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3681,7 +3689,7 @@ class SubscriptionFilterBy with _$SubscriptionFilterBy {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory SubscriptionFilterBy({
+  const factory SubscriptionFilterBy({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3825,7 +3833,7 @@ class SubscriptionParameter with _$SubscriptionParameter {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory SubscriptionParameter({
+  const factory SubscriptionParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3997,11 +4005,12 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
   /// [error] A record of errors that occurred when the server processed a
   ///  notification.
   ///
-  factory SubscriptionStatus({
+  const factory SubscriptionStatus({
     /// [resourceType] This is a SubscriptionStatus resource
     @Default(R5ResourceType.SubscriptionStatus)
     @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionStatus)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -4091,7 +4100,7 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     /// [eventsSinceSubscriptionStartElement] ("_eventsSinceSubscriptionStart")
     ///  Extensions for eventsSinceSubscriptionStart
     @JsonKey(name: '_eventsSinceSubscriptionStart')
-        Element? eventsSinceSubscriptionStartElement,
+    Element? eventsSinceSubscriptionStartElement,
 
     /// [notificationEvent] Detailed information about events relevant to this
     ///  subscription notification.
@@ -4196,7 +4205,7 @@ class SubscriptionStatusNotificationEvent
   ///  with the event (e.g., the Patient relevant to an Encounter), however it
   ///  MAY refer to non-FHIR objects.
   ///
-  factory SubscriptionStatusNotificationEvent({
+  const factory SubscriptionStatusNotificationEvent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4485,11 +4494,12 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   /// [notificationShape] List of properties to describe the shape (e.g.,
   ///  resources) included in notifications from this Subscription Topic.
   ///
-  factory SubscriptionTopic({
+  const factory SubscriptionTopic({
     /// [resourceType] This is a SubscriptionTopic resource
     @Default(R5ResourceType.SubscriptionTopic)
     @JsonKey(unknownEnumValue: R5ResourceType.SubscriptionTopic)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -4593,7 +4603,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -4842,7 +4852,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
   /// [fhirPathCriteriaElement] ("_fhirPathCriteria") Extensions for
   ///  fhirPathCriteria
   ///
-  factory SubscriptionTopicResourceTrigger({
+  const factory SubscriptionTopicResourceTrigger({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4901,7 +4911,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
     /// [supportedInteractionElement] ("_supportedInteraction") Extensions for
     ///  supportedInteraction
     @JsonKey(name: '_supportedInteraction')
-        List<Element>? supportedInteractionElement,
+    List<Element>? supportedInteractionElement,
 
     /// [queryCriteria] The FHIR query based rules that the server should use
     ///  to determine when to trigger a notification for this subscription
@@ -5022,7 +5032,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
   ///
   /// [requireBothElement] ("_requireBoth") Extensions for requireBoth
   ///
-  factory SubscriptionTopicQueryCriteria({
+  const factory SubscriptionTopicQueryCriteria({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5188,7 +5198,7 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
   ///
   /// [resourceElement] ("_resource") Extensions for resource
   ///
-  factory SubscriptionTopicEventTrigger({
+  const factory SubscriptionTopicEventTrigger({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5351,7 +5361,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
   ///
   /// [modifierElement] ("_modifier") Extensions for modifier
   ///
-  factory SubscriptionTopicCanFilterBy({
+  const factory SubscriptionTopicCanFilterBy({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5526,7 +5536,7 @@ class SubscriptionTopicNotificationShape
   ///
   /// [revIncludeElement] ("_revInclude") Extensions for revInclude
   ///
-  factory SubscriptionTopicNotificationShape({
+  const factory SubscriptionTopicNotificationShape({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

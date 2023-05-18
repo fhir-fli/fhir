@@ -112,17 +112,17 @@ class Account with Resource, _$Account {
   ///  payment options fall short.
   ///
   /// [partOf] Reference to a parent Account.
-  factory Account({
+  const factory Account({
     @Default(R4ResourceType.Account)
     @JsonKey(unknownEnumValue: R4ResourceType.Account)
 
-        /// [resourceType] This is a Account resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Account resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -136,15 +136,13 @@ class Account with Resource, _$Account {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -166,8 +164,7 @@ class Account with Resource, _$Account {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -192,8 +189,7 @@ class Account with Resource, _$Account {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [type] Categorizes the account for reporting and searching purposes.
     CodeableConcept? type,
@@ -203,8 +199,7 @@ class Account with Resource, _$Account {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [subject] Identifies the entity which incurs the expenses. While the
     /// immediate recipients of services or goods might be entities related to the
@@ -228,8 +223,7 @@ class Account with Resource, _$Account {
     String? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [guarantor] The parties responsible for balancing the account if other
     ///  payment options fall short.
@@ -310,7 +304,7 @@ class AccountCoverage with _$AccountCoverage {
   /// [priority] The priority of the coverage in the context of this account.
   ///
   /// [priorityElement] Extensions for priority
-  factory AccountCoverage({
+  const factory AccountCoverage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -426,7 +420,7 @@ class AccountGuarantor with _$AccountGuarantor {
   ///
   /// [period] The timeframe during which the guarantor accepts responsibility
   ///  for the account.
-  factory AccountGuarantor({
+  const factory AccountGuarantor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -654,17 +648,17 @@ class ChargeItem with Resource, _$ChargeItem {
   ///  participants.
   ///
   /// [supportingInformation] Further information supporting this charge.
-  factory ChargeItem({
+  const factory ChargeItem({
     @Default(R4ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
 
-        /// [resourceType] This is a ChargeItem resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a ChargeItem resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -678,15 +672,13 @@ class ChargeItem with Resource, _$ChargeItem {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -708,8 +700,7 @@ class ChargeItem with Resource, _$ChargeItem {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -735,8 +726,7 @@ class ChargeItem with Resource, _$ChargeItem {
     List<FhirUri>? definitionUri,
 
     /// [definitionUriElement] Extensions for definitionUri
-    @JsonKey(name: '_definitionUri')
-        List<Element?>? definitionUriElement,
+    @JsonKey(name: '_definitionUri') List<Element?>? definitionUriElement,
 
     /// [definitionCanonical] References the source of pricing information, rules
     ///  of application for the code this ChargeItem uses.
@@ -746,8 +736,7 @@ class ChargeItem with Resource, _$ChargeItem {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [partOf] ChargeItems can be grouped to larger ChargeItems covering the
     ///  whole set.
@@ -769,8 +758,7 @@ class ChargeItem with Resource, _$ChargeItem {
     FhirDateTime? occurrenceDateTime,
 
     /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
-    @JsonKey(name: '_occurrenceDateTime')
-        Element? occurrenceDateTimeElement,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
 
     /// [occurrencePeriod] Date/time(s) or duration when the charged service was
     ///  applied.
@@ -806,8 +794,7 @@ class ChargeItem with Resource, _$ChargeItem {
     FhirDecimal? factorOverride,
 
     /// [factorOverrideElement] Extensions for factorOverride
-    @JsonKey(name: '_factorOverride')
-        Element? factorOverrideElement,
+    @JsonKey(name: '_factorOverride') Element? factorOverrideElement,
 
     /// [priceOverride] Total price of the charge overriding the list price
     ///  associated with the code.
@@ -819,8 +806,7 @@ class ChargeItem with Resource, _$ChargeItem {
     String? overrideReason,
 
     /// [overrideReasonElement] Extensions for overrideReason
-    @JsonKey(name: '_overrideReason')
-        Element? overrideReasonElement,
+    @JsonKey(name: '_overrideReason') Element? overrideReasonElement,
 
     /// [enterer] The device, practitioner, etc. who entered the charge item.
     Reference? enterer,
@@ -829,8 +815,7 @@ class ChargeItem with Resource, _$ChargeItem {
     FhirDateTime? enteredDate,
 
     /// [enteredDateElement] Extensions for enteredDate
-    @JsonKey(name: '_enteredDate')
-        Element? enteredDateElement,
+    @JsonKey(name: '_enteredDate') Element? enteredDateElement,
 
     /// [reason] Describes why the event occurred in coded or textual form.
     List<CodeableConcept>? reason,
@@ -927,7 +912,7 @@ class ChargeItemPerformer with _$ChargeItemPerformer {
   ///
   /// [actor] The device, practitioner, etc. who performed or participated in
   ///  the service.
-  factory ChargeItemPerformer({
+  const factory ChargeItemPerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1177,17 +1162,17 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   /// [propertyGroup] Group of properties which are applicable under the same
   /// conditions. If no applicability rules are established for the group, then
   ///  all properties always apply.
-  factory ChargeItemDefinition({
+  const factory ChargeItemDefinition({
     @Default(R4ResourceType.ChargeItemDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
 
-        /// [resourceType] This is a ChargeItemDefinition resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a ChargeItemDefinition resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -1201,15 +1186,13 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -1231,8 +1214,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -1259,8 +1241,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [identifier] A formal identifier that is used to identify this charge
     /// item definition when it is represented in other formats, or referenced in
@@ -1281,24 +1262,21 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [title] A short, descriptive, user-friendly title for the charge item
     ///  definition.
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [derivedFromUri] The URL pointing to an externally-defined charge item
     ///  definition that is adhered to in whole or in part by this definition.
     List<FhirUri>? derivedFromUri,
 
     /// [derivedFromUriElement] Extensions for derivedFromUri
-    @JsonKey(name: '_derivedFromUri')
-        List<Element?>? derivedFromUriElement,
+    @JsonKey(name: '_derivedFromUri') List<Element?>? derivedFromUriElement,
 
     /// [partOf] A larger definition of which this particular definition is a
     ///  component or step.
@@ -1312,8 +1290,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [experimental] A Boolean value to indicate that this charge item
     /// definition is authored for testing purposes (or
@@ -1322,8 +1299,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     FhirBoolean? experimental,
 
     /// [experimentalElement] Extensions for experimental
-    @JsonKey(name: '_experimental')
-        Element? experimentalElement,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
 
     /// [date] The date  (and optionally time) when the charge item definition
     /// was published. The date must change when the business version changes and
@@ -1332,16 +1308,14 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     FhirDateTime? date,
 
     /// [dateElement] Extensions for date
-    @JsonKey(name: '_date')
-        Element? dateElement,
+    @JsonKey(name: '_date') Element? dateElement,
 
     /// [publisher] The name of the organization or individual that published the
     ///  charge item definition.
     String? publisher,
 
     /// [publisherElement] Extensions for publisher
-    @JsonKey(name: '_publisher')
-        Element? publisherElement,
+    @JsonKey(name: '_publisher') Element? publisherElement,
 
     /// [contact] Contact details to assist a user in finding and communicating
     ///  with the publisher.
@@ -1352,8 +1326,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     FhirMarkdown? description,
 
     /// [descriptionElement] Extensions for description
-    @JsonKey(name: '_description')
-        Element? descriptionElement,
+    @JsonKey(name: '_description') Element? descriptionElement,
 
     /// [useContext] The content was developed with a focus and intent of
     /// supporting the contexts that are listed. These contexts may be general
@@ -1372,8 +1345,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     FhirMarkdown? copyright,
 
     /// [copyrightElement] Extensions for copyright
-    @JsonKey(name: '_copyright')
-        Element? copyrightElement,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
 
     /// [approvalDate] The date on which the resource content was approved by the
     /// publisher. Approval happens once when the content is officially approved
@@ -1381,8 +1353,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     FhirDate? approvalDate,
 
     /// [approvalDateElement] Extensions for approvalDate
-    @JsonKey(name: '_approvalDate')
-        Element? approvalDateElement,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
 
     /// [lastReviewDate] The date on which the resource content was last
     /// reviewed. Review happens periodically after approval but does not change
@@ -1390,8 +1361,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     FhirDate? lastReviewDate,
 
     /// [lastReviewDateElement] Extensions for lastReviewDate
-    @JsonKey(name: '_lastReviewDate')
-        Element? lastReviewDateElement,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
 
     /// [effectivePeriod] The period during which the charge item definition
     ///  content was or is planned to be in active use.
@@ -1495,7 +1465,7 @@ class ChargeItemDefinitionApplicability
   ///  resource to which this definition is applied.
   ///
   /// [expressionElement] Extensions for expression
-  factory ChargeItemDefinitionApplicability({
+  const factory ChargeItemDefinitionApplicability({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1612,7 +1582,7 @@ class ChargeItemDefinitionPropertyGroup
   /// conditions that apply to a billing code is currently under development.
   /// The priceComponent element can be used to offer transparency to the
   ///  recipient of the Invoice of how the prices have been calculated.
-  factory ChargeItemDefinitionPropertyGroup({
+  const factory ChargeItemDefinitionPropertyGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -1721,7 +1691,7 @@ class ChargeItemDefinitionPriceComponent
   /// [factorElement] Extensions for factor
   ///
   /// [amount] The amount calculated for this component.
-  factory ChargeItemDefinitionPriceComponent({
+  const factory ChargeItemDefinitionPriceComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2003,17 +1973,17 @@ class Contract with Resource, _$Contract {
   /// and legally recognized representation of the Contract, which is considered
   /// the "source of truth" and which would be the basis for legal action
   ///  related to enforcement of this Contract.
-  factory Contract({
+  const factory Contract({
     @Default(R4ResourceType.Contract)
     @JsonKey(unknownEnumValue: R4ResourceType.Contract)
 
-        /// [resourceType] This is a Contract resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a Contract resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -2027,15 +1997,13 @@ class Contract with Resource, _$Contract {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -2057,8 +2025,7 @@ class Contract with Resource, _$Contract {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -2084,23 +2051,20 @@ class Contract with Resource, _$Contract {
     FhirUri? url,
 
     /// [urlElement] Extensions for url
-    @JsonKey(name: '_url')
-        Element? urlElement,
+    @JsonKey(name: '_url') Element? urlElement,
 
     /// [version] An edition identifier used for business purposes to label
     ///  business significant variants.
     String? version,
 
     /// [versionElement] Extensions for version
-    @JsonKey(name: '_version')
-        Element? versionElement,
+    @JsonKey(name: '_version') Element? versionElement,
 
     /// [status] The status of the resource instance.
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [legalState] Legal states of the formation of a legal instrument, which
     /// is a formally executed written document that can be formally attributed to
@@ -2118,8 +2082,7 @@ class Contract with Resource, _$Contract {
     FhirUri? instantiatesUri,
 
     /// [instantiatesUriElement] Extensions for instantiatesUri
-    @JsonKey(name: '_instantiatesUri')
-        Element? instantiatesUriElement,
+    @JsonKey(name: '_instantiatesUri') Element? instantiatesUriElement,
 
     /// [contentDerivative] The minimal content derived from the basal
     ///  information source at a specific stage in its lifecycle.
@@ -2129,8 +2092,7 @@ class Contract with Resource, _$Contract {
     FhirDateTime? issued,
 
     /// [issuedElement] Extensions for issued
-    @JsonKey(name: '_issued')
-        Element? issuedElement,
+    @JsonKey(name: '_issued') Element? issuedElement,
 
     /// [applies] Relevant time or time-period when this Contract is applicable.
     Period? applies,
@@ -2167,8 +2129,7 @@ class Contract with Resource, _$Contract {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [title] A short, descriptive, user-friendly title for this Contract
     /// definition, derivative, or instance in any legal state.t giving additional
@@ -2176,8 +2137,7 @@ class Contract with Resource, _$Contract {
     String? title,
 
     /// [titleElement] Extensions for title
-    @JsonKey(name: '_title')
-        Element? titleElement,
+    @JsonKey(name: '_title') Element? titleElement,
 
     /// [subtitle] An explanatory or alternate user-friendly title for this
     /// Contract definition, derivative, or instance in any legal state.t giving
@@ -2185,8 +2145,7 @@ class Contract with Resource, _$Contract {
     String? subtitle,
 
     /// [subtitleElement] Extensions for subtitle
-    @JsonKey(name: '_subtitle')
-        Element? subtitleElement,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
 
     /// [alias] Alternative representation of the title for this Contract
     /// definition, derivative, or instance in any legal state., e.g., a domain
@@ -2194,8 +2153,7 @@ class Contract with Resource, _$Contract {
     List<String>? alias,
 
     /// [aliasElement] Extensions for alias
-    @JsonKey(name: '_alias')
-        List<Element?>? aliasElement,
+    @JsonKey(name: '_alias') List<Element?>? aliasElement,
 
     /// [author] The individual or organization that authored the Contract
     ///  definition, derivative, or instance in any legal state.
@@ -2369,7 +2327,7 @@ class ContractContentDefinition with _$ContractContentDefinition {
   ///  publishing of the Contract precursor content.
   ///
   /// [copyrightElement] Extensions for copyright
-  factory ContractContentDefinition({
+  const factory ContractContentDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2536,7 +2494,7 @@ class ContractTerm with _$ContractTerm {
   ///  assigned some degree of responsibility for the activity taking place.
   ///
   /// [group] Nested group of Contract Provisions.
-  factory ContractTerm({
+  const factory ContractTerm({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2695,7 +2653,7 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
   ///
   /// [control] Security label privacy tag that species the manner in which
   ///  term and/or term elements are to be protected.
-  factory ContractSecurityLabel({
+  const factory ContractSecurityLabel({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -2837,11 +2795,10 @@ class ContractOffer with _$ContractOffer {
   /// [securityLabelNumber] Security labels that protects the offer.
   ///
   /// [securityLabelNumberElement] Extensions for securityLabelNumber
-  factory ContractOffer({
+  const factory ContractOffer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -2849,8 +2806,7 @@ class ContractOffer with _$ContractOffer {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -2896,23 +2852,21 @@ class ContractOffer with _$ContractOffer {
     String? text,
 
     /// [textElement] Extensions for text
-    @JsonKey(name: '_text')
-        Element? textElement,
+    @JsonKey(name: '_text') Element? textElement,
 
     /// [linkId] The id of the clause or question text of the offer in the
     ///  referenced questionnaire/response.
     List<String>? linkId,
 
     /// [linkIdElement] Extensions for linkId
-    @JsonKey(name: '_linkId')
-        List<Element?>? linkIdElement,
+    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
 
     /// [securityLabelNumber] Security labels that protects the offer.
     List<FhirUnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
 
-        /// [securityLabelNumberElement] Extensions for securityLabelNumber
-        List<Element>? securityLabelNumberElement,
+    /// [securityLabelNumberElement] Extensions for securityLabelNumber
+    List<Element>? securityLabelNumberElement,
   }) = _ContractOffer;
 
   /// Produces a Yaml formatted String version of the object
@@ -2982,7 +2936,7 @@ class ContractParty with _$ContractParty {
   /// [reference] Participant in the offer.
   ///
   /// [role] How the party participates in the offer.
-  factory ContractParty({
+  const factory ContractParty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3156,7 +3110,7 @@ class ContractAnswer with _$ContractAnswer {
   /// enables selection of values to be agreed to, e.g., the period of
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
-  factory ContractAnswer({
+  const factory ContractAnswer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3388,11 +3342,10 @@ class ContractAsset with _$ContractAsset {
   /// [securityLabelNumberElement] Extensions for securityLabelNumber
   ///
   /// [valuedItem] Contract Valued Item List.
-  factory ContractAsset({
+  const factory ContractAsset({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -3400,8 +3353,7 @@ class ContractAsset with _$ContractAsset {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -3443,8 +3395,7 @@ class ContractAsset with _$ContractAsset {
     String? condition,
 
     /// [conditionElement] Extensions for condition
-    @JsonKey(name: '_condition')
-        Element? conditionElement,
+    @JsonKey(name: '_condition') Element? conditionElement,
 
     /// [periodType] Type of Asset availability for use or ownership.
     List<CodeableConcept>? periodType,
@@ -3461,16 +3412,14 @@ class ContractAsset with _$ContractAsset {
     String? text,
 
     /// [textElement] Extensions for text
-    @JsonKey(name: '_text')
-        Element? textElement,
+    @JsonKey(name: '_text') Element? textElement,
 
     /// [linkId] Id [Identifier]?? of the clause or question text about the asset
     ///  in the referenced form or QuestionnaireResponse.
     List<String>? linkId,
 
     /// [linkIdElement] Extensions for linkId
-    @JsonKey(name: '_linkId')
-        List<Element?>? linkIdElement,
+    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
 
     /// [answer] Response to assets.
     List<ContractAnswer>? answer,
@@ -3479,8 +3428,8 @@ class ContractAsset with _$ContractAsset {
     List<FhirUnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
 
-        /// [securityLabelNumberElement] Extensions for securityLabelNumber
-        List<Element>? securityLabelNumberElement,
+    /// [securityLabelNumberElement] Extensions for securityLabelNumber
+    List<Element>? securityLabelNumberElement,
 
     /// [valuedItem] Contract Valued Item List.
     List<ContractValuedItem>? valuedItem,
@@ -3560,7 +3509,7 @@ class ContractContext with _$ContractContext {
   /// [text] Context description.
   ///
   /// [textElement] Extensions for text
-  factory ContractContext({
+  const factory ContractContext({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -3728,11 +3677,10 @@ class ContractValuedItem with _$ContractValuedItem {
   ///  are controlled by this condition.
   ///
   /// [securityLabelNumberElement] Extensions for securityLabelNumber
-  factory ContractValuedItem({
+  const factory ContractValuedItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -3740,8 +3688,7 @@ class ContractValuedItem with _$ContractValuedItem {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -3774,8 +3721,7 @@ class ContractValuedItem with _$ContractValuedItem {
     FhirDateTime? effectiveTime,
 
     /// [effectiveTimeElement] Extensions for effectiveTime
-    @JsonKey(name: '_effectiveTime')
-        Element? effectiveTimeElement,
+    @JsonKey(name: '_effectiveTime') Element? effectiveTimeElement,
 
     /// [quantity] Specifies the units by which the Contract Valued Item is
     /// measured or counted, and quantifies the countable or measurable Contract
@@ -3792,8 +3738,7 @@ class ContractValuedItem with _$ContractValuedItem {
     FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
-    @JsonKey(name: '_factor')
-        Element? factorElement,
+    @JsonKey(name: '_factor') Element? factorElement,
 
     /// [points] An amount that expresses the weighting (based on difficulty,
     /// cost and/or resource intensiveness) associated with the Contract Valued
@@ -3803,8 +3748,7 @@ class ContractValuedItem with _$ContractValuedItem {
     FhirDecimal? points,
 
     /// [pointsElement] Extensions for points
-    @JsonKey(name: '_points')
-        Element? pointsElement,
+    @JsonKey(name: '_points') Element? pointsElement,
 
     /// [net] Expresses the product of the Contract Valued Item unitQuantity and
     /// the unitPriceAmt. For example, the formula: unit Quantity * unit Price
@@ -3816,15 +3760,13 @@ class ContractValuedItem with _$ContractValuedItem {
     String? payment,
 
     /// [paymentElement] Extensions for payment
-    @JsonKey(name: '_payment')
-        Element? paymentElement,
+    @JsonKey(name: '_payment') Element? paymentElement,
 
     /// [paymentDate] When payment is due.
     FhirDateTime? paymentDate,
 
     /// [paymentDateElement] Extensions for paymentDate
-    @JsonKey(name: '_paymentDate')
-        Element? paymentDateElement,
+    @JsonKey(name: '_paymentDate') Element? paymentDateElement,
 
     /// [responsible] Who will make payment.
     Reference? responsible,
@@ -3837,16 +3779,15 @@ class ContractValuedItem with _$ContractValuedItem {
     List<String>? linkId,
 
     /// [linkIdElement] Extensions for linkId
-    @JsonKey(name: '_linkId')
-        List<Element?>? linkIdElement,
+    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
 
     /// [securityLabelNumber] A set of security labels that define which terms
     ///  are controlled by this condition.
     List<FhirUnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
 
-        /// [securityLabelNumberElement] Extensions for securityLabelNumber
-        List<Element>? securityLabelNumberElement,
+    /// [securityLabelNumberElement] Extensions for securityLabelNumber
+    List<Element>? securityLabelNumberElement,
   }) = _ContractValuedItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -3996,11 +3937,10 @@ class ContractAction with _$ContractAction {
   /// [securityLabelNumber] Security labels that protects the action.
   ///
   /// [securityLabelNumberElement] Extensions for securityLabelNumber
-  factory ContractAction({
+  const factory ContractAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -4008,8 +3948,7 @@ class ContractAction with _$ContractAction {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -4030,8 +3969,7 @@ class ContractAction with _$ContractAction {
     FhirBoolean? doNotPerform,
 
     /// [doNotPerformElement] Extensions for doNotPerform
-    @JsonKey(name: '_doNotPerform')
-        Element? doNotPerformElement,
+    @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
 
     /// [type] Activity or service obligation to be done or not done, performed
     ///  or not performed, effectuated or not by this Contract term.
@@ -4049,8 +3987,7 @@ class ContractAction with _$ContractAction {
     List<String>? linkId,
 
     /// [linkIdElement] Extensions for linkId
-    @JsonKey(name: '_linkId')
-        List<Element?>? linkIdElement,
+    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
 
     /// [status] Current state of the term action.
     required CodeableConcept status,
@@ -4065,15 +4002,13 @@ class ContractAction with _$ContractAction {
     List<String>? contextLinkId,
 
     /// [contextLinkIdElement] Extensions for contextLinkId
-    @JsonKey(name: '_contextLinkId')
-        List<Element?>? contextLinkIdElement,
+    @JsonKey(name: '_contextLinkId') List<Element?>? contextLinkIdElement,
 
     /// [occurrenceDateTime] When action happens.
     FhirDateTime? occurrenceDateTime,
 
     /// [occurrenceDateTimeElement] Extensions for occurrenceDateTime
-    @JsonKey(name: '_occurrenceDateTime')
-        Element? occurrenceDateTimeElement,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
 
     /// [occurrencePeriod] When action happens.
     Period? occurrencePeriod,
@@ -4091,8 +4026,7 @@ class ContractAction with _$ContractAction {
     List<String>? requesterLinkId,
 
     /// [requesterLinkIdElement] Extensions for requesterLinkId
-    @JsonKey(name: '_requesterLinkId')
-        List<Element?>? requesterLinkIdElement,
+    @JsonKey(name: '_requesterLinkId') List<Element?>? requesterLinkIdElement,
 
     /// [performerType] The type of individual that is desired or required to
     ///  perform or not perform the action.
@@ -4112,8 +4046,7 @@ class ContractAction with _$ContractAction {
     List<String>? performerLinkId,
 
     /// [performerLinkIdElement] Extensions for performerLinkId
-    @JsonKey(name: '_performerLinkId')
-        List<Element?>? performerLinkIdElement,
+    @JsonKey(name: '_performerLinkId') List<Element?>? performerLinkIdElement,
 
     /// [reasonCode] Rationale for the action to be performed or not performed.
     ///  Describes why the action is permitted or prohibited.
@@ -4128,8 +4061,7 @@ class ContractAction with _$ContractAction {
     List<String>? reason,
 
     /// [reasonElement] Extensions for reason
-    @JsonKey(name: '_reason')
-        List<Element?>? reasonElement,
+    @JsonKey(name: '_reason') List<Element?>? reasonElement,
 
     /// [reasonLinkId] Id [Identifier]?? of the clause or question text related
     /// to the reason type or reference of this  action in the referenced form or
@@ -4137,8 +4069,7 @@ class ContractAction with _$ContractAction {
     List<String>? reasonLinkId,
 
     /// [reasonLinkIdElement] Extensions for reasonLinkId
-    @JsonKey(name: '_reasonLinkId')
-        List<Element?>? reasonLinkIdElement,
+    @JsonKey(name: '_reasonLinkId') List<Element?>? reasonLinkIdElement,
 
     /// [note] Comments made about the term action made by the requester,
     ///  performer, subject or other participants.
@@ -4148,8 +4079,8 @@ class ContractAction with _$ContractAction {
     List<FhirUnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
 
-        /// [securityLabelNumberElement] Extensions for securityLabelNumber
-        List<Element>? securityLabelNumberElement,
+    /// [securityLabelNumberElement] Extensions for securityLabelNumber
+    List<Element>? securityLabelNumberElement,
   }) = _ContractAction;
 
   /// Produces a Yaml formatted String version of the object
@@ -4220,7 +4151,7 @@ class ContractSubject with _$ContractSubject {
   ///  for.
   ///
   /// [role] Role type of agent assigned roles in this Contract.
-  factory ContractSubject({
+  const factory ContractSubject({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4325,7 +4256,7 @@ class ContractSigner with _$ContractSigner {
   /// [party] Party which is a signator to this Contract.
   ///
   /// [signature] Legally binding Contract DSIG signature contents in Base64.
-  factory ContractSigner({
+  const factory ContractSigner({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4434,7 +4365,7 @@ class ContractFriendly with _$ContractFriendly {
   /// [contentReference] Human readable rendering of this Contract in a format
   /// and representation intended to enhance comprehension and ensure
   ///  understandability.
-  factory ContractFriendly({
+  const factory ContractFriendly({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4540,7 +4471,7 @@ class ContractLegal with _$ContractLegal {
   /// [contentAttachment] Contract legal text in human renderable form.
   ///
   /// [contentReference] Contract legal text in human renderable form.
-  factory ContractLegal({
+  const factory ContractLegal({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4644,7 +4575,7 @@ class ContractRule with _$ContractRule {
   ///
   /// [contentReference] Computable Contract conveyed using a policy rule
   ///  language (e.g. XACML, DKAL, SecPal).
-  factory ContractRule({
+  const factory ContractRule({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -4915,17 +4846,17 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   /// [benefitPeriod] The term of the benefits documented in this response.
   ///
   /// [benefitBalance] Balance by Benefit Category.
-  factory ExplanationOfBenefit({
+  const factory ExplanationOfBenefit({
     @Default(R4ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
 
-        /// [resourceType] This is a ExplanationOfBenefit resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a ExplanationOfBenefit resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -4939,15 +4870,13 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -4969,8 +4898,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -4994,8 +4922,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [type] The category of claim, e.g. oral, pharmacy, vision, institutional,
     ///  professional.
@@ -5014,8 +4941,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     FhirCode? use,
 
     /// [useElement] Extensions for use
-    @JsonKey(name: '_use')
-        Element? useElement,
+    @JsonKey(name: '_use') Element? useElement,
 
     /// [patient] The party to whom the professional services and/or products
     /// have been supplied or are being considered and for whom actual for
@@ -5029,8 +4955,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     FhirDateTime? created,
 
     /// [createdElement] Extensions for created
-    @JsonKey(name: '_created')
-        Element? createdElement,
+    @JsonKey(name: '_created') Element? createdElement,
 
     /// [enterer] Individual who created the claim, predetermination or
     ///  preauthorization.
@@ -5093,24 +5018,21 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
-    @JsonKey(name: '_outcome')
-        Element? outcomeElement,
+    @JsonKey(name: '_outcome') Element? outcomeElement,
 
     /// [disposition] A human readable description of the status of the
     ///  adjudication.
     String? disposition,
 
     /// [dispositionElement] Extensions for disposition
-    @JsonKey(name: '_disposition')
-        Element? dispositionElement,
+    @JsonKey(name: '_disposition') Element? dispositionElement,
 
     /// [preAuthRef] Reference from the Insurer which is used in later
     ///  communications which refers to this adjudication.
     List<String>? preAuthRef,
 
     /// [preAuthRefElement] Extensions for preAuthRef
-    @JsonKey(name: '_preAuthRef')
-        List<Element?>? preAuthRefElement,
+    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
 
     /// [preAuthRefPeriod] The timeframe during which the supplied
     /// preauthorization reference may be quoted on claims to obtain the
@@ -5138,8 +5060,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     FhirPositiveInt? precedence,
 
     /// [precedenceElement] Extensions for precedence
-    @JsonKey(name: '_precedence')
-        Element? precedenceElement,
+    @JsonKey(name: '_precedence') Element? precedenceElement,
 
     /// [insurance] Financial instruments for reimbursement for the health care
     ///  products and services specified on the claim.
@@ -5254,7 +5175,7 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   ///
   /// [reference] An alternate organizational reference to the case or file to
   ///  which this particular claim pertains.
-  factory ExplanationOfBenefitRelated({
+  const factory ExplanationOfBenefitRelated({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5363,7 +5284,7 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   ///
   /// [party] Reference to the individual or organization to whom any payment
   ///  will be made.
-  factory ExplanationOfBenefitPayee({
+  const factory ExplanationOfBenefitPayee({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5481,7 +5402,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   ///
   /// [qualification] The qualification of the practitioner which is applicable
   ///  for this service.
-  factory ExplanationOfBenefitCareTeam({
+  const factory ExplanationOfBenefitCareTeam({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5642,7 +5563,7 @@ class ExplanationOfBenefitSupportingInfo
   ///
   /// [reason] Provides the reason in the situation where a reason code is
   ///  required in addition to the content.
-  factory ExplanationOfBenefitSupportingInfo({
+  const factory ExplanationOfBenefitSupportingInfo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5803,7 +5724,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   /// [packageCode] A package billing code or bundle code used to group
   /// products and services to a particular health condition (such as heart
   ///  attack) which is based on a predetermined grouping code system.
-  factory ExplanationOfBenefitDiagnosis({
+  const factory ExplanationOfBenefitDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -5941,7 +5862,7 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ///  identifies the clinical intervention performed.
   ///
   /// [udi] Unique Device Identifiers associated with this line item.
-  factory ExplanationOfBenefitProcedure({
+  const factory ExplanationOfBenefitProcedure({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6077,7 +5998,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   ///  related to the prior authorization.
   ///
   /// [preAuthRefElement] Extensions for preAuthRef
-  factory ExplanationOfBenefitInsurance({
+  const factory ExplanationOfBenefitInsurance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6205,7 +6126,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   /// [locationAddress] The physical location of the accident event.
   ///
   /// [locationReference] The physical location of the accident event.
-  factory ExplanationOfBenefitAccident({
+  const factory ExplanationOfBenefitAccident({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6404,11 +6325,10 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ///  or service then this is the result of the adjudication of this item.
   ///
   /// [detail] Second-tier of goods and services.
-  factory ExplanationOfBenefitItem({
+  const factory ExplanationOfBenefitItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -6416,8 +6336,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -6438,37 +6357,35 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     FhirPositiveInt? sequence,
 
     /// [sequenceElement] Extensions for sequence
-    @JsonKey(name: '_sequence')
-        Element? sequenceElement,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
 
     /// [careTeamSequence] Care team members related to this service or product.
     List<FhirPositiveInt>? careTeamSequence,
 
     /// [careTeamSequenceElement] Extensions for careTeamSequence
-    @JsonKey(name: '_careTeamSequence')
-        List<Element?>? careTeamSequenceElement,
+    @JsonKey(name: '_careTeamSequence') List<Element?>? careTeamSequenceElement,
 
     /// [diagnosisSequence] Diagnoses applicable for this service or product.
     List<FhirPositiveInt>? diagnosisSequence,
     @JsonKey(name: '_diagnosisSequence')
 
-        /// [diagnosisSequenceElement] Extensions for diagnosisSequence
-        List<Element>? diagnosisSequenceElement,
+    /// [diagnosisSequenceElement] Extensions for diagnosisSequence
+    List<Element>? diagnosisSequenceElement,
 
     /// [procedureSequence] Procedures applicable for this service or product.
     List<FhirPositiveInt>? procedureSequence,
     @JsonKey(name: '_procedureSequence')
 
-        /// [procedureSequenceElement] Extensions for procedureSequence
-        List<Element>? procedureSequenceElement,
+    /// [procedureSequenceElement] Extensions for procedureSequence
+    List<Element>? procedureSequenceElement,
 
     /// [informationSequence] Exceptions, special conditions and supporting
     ///  information applicable for this service or product.
     List<FhirPositiveInt>? informationSequence,
     @JsonKey(name: '_informationSequence')
 
-        /// [informationSequenceElement] Extensions for informationSequence
-        List<Element>? informationSequenceElement,
+    /// [informationSequenceElement] Extensions for informationSequence
+    List<Element>? informationSequenceElement,
 
     /// [revenue] The type of revenue or cost center providing the product and/or
     ///  service.
@@ -6495,8 +6412,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     FhirDate? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
-    @JsonKey(name: '_servicedDate')
-        Element? servicedDateElement,
+    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
 
     /// [servicedPeriod] The date or dates when the service or product was
     ///  supplied, performed or completed.
@@ -6526,8 +6442,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
-    @JsonKey(name: '_factor')
-        Element? factorElement,
+    @JsonKey(name: '_factor') Element? factorElement,
 
     /// [net] The quantity times the unit price for an additional service or
     ///  product or charge.
@@ -6552,8 +6467,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
-    @JsonKey(name: '_noteNumber')
-        List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
 
     /// [adjudication] If this item is a group then the values here are a summary
     /// of the adjudication of the detail items. If this item is a simple product
@@ -6645,7 +6559,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   ///  exclusive to the amount element above.
   ///
   /// [valueElement] Extensions for value
-  factory ExplanationOfBenefitAdjudication({
+  const factory ExplanationOfBenefitAdjudication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6796,7 +6710,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   /// [adjudication] The adjudication results.
   ///
   /// [subDetail] Third-tier of goods and services.
-  factory ExplanationOfBenefitDetail({
+  const factory ExplanationOfBenefitDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -6999,7 +6913,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   /// [noteNumberElement] Extensions for noteNumber
   ///
   /// [adjudication] The adjudication results.
-  factory ExplanationOfBenefitSubDetail({
+  const factory ExplanationOfBenefitSubDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -7225,11 +7139,10 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   /// [adjudication] The adjudication results.
   ///
   /// [detail] The second-tier service adjudications for payor added services.
-  factory ExplanationOfBenefitAddItem({
+  const factory ExplanationOfBenefitAddItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id')
-        FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [extension_] May be used to represent additional information that is not
     /// part of the basic definition of the element. To make the use of extensions
@@ -7237,8 +7150,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
     /// definition and use of extensions. Though any implementer can define an
     /// extension, there is a set of requirements that SHALL be met as part of the
     ///  definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the element and that modifies the
@@ -7260,24 +7172,22 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
     List<FhirPositiveInt>? itemSequence,
 
     /// [itemSequenceElement] Extensions for itemSequence
-    @JsonKey(name: '_itemSequence')
-        List<Element?>? itemSequenceElement,
+    @JsonKey(name: '_itemSequence') List<Element?>? itemSequenceElement,
 
     /// [detailSequence] The sequence number of the details within the claim item
     ///  which this line is intended to replace.
     List<FhirPositiveInt>? detailSequence,
 
     /// [detailSequenceElement] Extensions for detailSequence
-    @JsonKey(name: '_detailSequence')
-        List<Element?>? detailSequenceElement,
+    @JsonKey(name: '_detailSequence') List<Element?>? detailSequenceElement,
 
     /// [subDetailSequence] The sequence number of the sub-details woithin the
     ///  details within the claim item which this line is intended to replace.
     List<FhirPositiveInt>? subDetailSequence,
     @JsonKey(name: '_subDetailSequence')
 
-        /// [subDetailSequenceElement] Extensions for subDetailSequence
-        List<Element>? subDetailSequenceElement,
+    /// [subDetailSequenceElement] Extensions for subDetailSequence
+    List<Element>? subDetailSequenceElement,
 
     /// [provider] The providers who are authorized for the services rendered to
     ///  the patient.
@@ -7300,8 +7210,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
     FhirDate? servicedDate,
 
     /// [servicedDateElement] Extensions for servicedDate
-    @JsonKey(name: '_servicedDate')
-        Element? servicedDateElement,
+    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
 
     /// [servicedPeriod] The date or dates when the service or product was
     ///  supplied, performed or completed.
@@ -7331,8 +7240,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
     FhirDecimal? factor,
 
     /// [factorElement] Extensions for factor
-    @JsonKey(name: '_factor')
-        Element? factorElement,
+    @JsonKey(name: '_factor') Element? factorElement,
 
     /// [net] The quantity times the unit price for an additional service or
     ///  product or charge.
@@ -7350,8 +7258,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
     List<FhirPositiveInt>? noteNumber,
 
     /// [noteNumberElement] Extensions for noteNumber
-    @JsonKey(name: '_noteNumber')
-        List<Element?>? noteNumberElement,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
 
     /// [adjudication] The adjudication results.
     List<ExplanationOfBenefitAdjudication>? adjudication,
@@ -7458,7 +7365,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   ///
   /// [subDetail] The third-tier service adjudications for payor added
   ///  services.
-  factory ExplanationOfBenefitDetail1({
+  const factory ExplanationOfBenefitDetail1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -7626,7 +7533,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   /// [noteNumberElement] Extensions for noteNumber
   ///
   /// [adjudication] The adjudication results.
-  factory ExplanationOfBenefitSubDetail1({
+  const factory ExplanationOfBenefitSubDetail1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -7769,7 +7676,7 @@ class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   ///  by other coverages, and the benefit payable for this item.
   ///
   /// [amount] Monetary total amount associated with the category.
-  factory ExplanationOfBenefitTotal({
+  const factory ExplanationOfBenefitTotal({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -7890,7 +7797,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   /// [amount] Benefits payable less any payment adjustment.
   ///
   /// [identifier] Issuer's unique identifier for the payment instrument.
-  factory ExplanationOfBenefitPayment({
+  const factory ExplanationOfBenefitPayment({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -8022,7 +7929,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   /// [textElement] Extensions for text
   ///
   /// [language] A code to define the language used in the text of the note.
-  factory ExplanationOfBenefitProcessNote({
+  const factory ExplanationOfBenefitProcessNote({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -8164,7 +8071,7 @@ class ExplanationOfBenefitBenefitBalance
   ///  benefit' or 'maximum annual visits'.
   ///
   /// [financial] Benefits Used to date.
-  factory ExplanationOfBenefitBenefitBalance({
+  const factory ExplanationOfBenefitBenefitBalance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -8307,7 +8214,7 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   /// [usedUnsignedIntElement] Extensions for usedUnsignedInt
   ///
   /// [usedMoney] The quantity of the benefit which have been consumed to date.
-  factory ExplanationOfBenefitFinancial({
+  const factory ExplanationOfBenefitFinancial({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -8507,17 +8414,17 @@ class InsurancePlan with Resource, _$InsurancePlan {
   /// [coverage] Details about the coverage offered by the insurance product.
   ///
   /// [plan] Details about an insurance plan.
-  factory InsurancePlan({
+  const factory InsurancePlan({
     @Default(R4ResourceType.InsurancePlan)
     @JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
 
-        /// [resourceType] This is a InsurancePlan resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a InsurancePlan resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -8531,15 +8438,13 @@ class InsurancePlan with Resource, _$InsurancePlan {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -8561,8 +8466,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -8588,8 +8492,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [type] The kind of health insurance product.
     List<CodeableConcept>? type,
@@ -8599,16 +8502,14 @@ class InsurancePlan with Resource, _$InsurancePlan {
     String? name,
 
     /// [nameElement] Extensions for name
-    @JsonKey(name: '_name')
-        Element? nameElement,
+    @JsonKey(name: '_name') Element? nameElement,
 
     /// [alias] A list of alternate names that the product is known as, or was
     ///  known as in the past.
     List<String>? alias,
 
     /// [aliasElement] Extensions for alias
-    @JsonKey(name: '_alias')
-        List<Element?>? aliasElement,
+    @JsonKey(name: '_alias') List<Element?>? aliasElement,
 
     /// [period] The period of time that the health insurance product is
     ///  available.
@@ -8717,7 +8618,7 @@ class InsurancePlanContact with _$InsurancePlanContact {
   ///  by which the party may be contacted.
   ///
   /// [address] Visiting or postal addresses for the contact.
-  factory InsurancePlanContact({
+  const factory InsurancePlanContact({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -8829,7 +8730,7 @@ class InsurancePlanCoverage with _$InsurancePlanCoverage {
   /// [network] Reference to the network that providing the type of coverage.
   ///
   /// [benefit] Specific benefits under this type of coverage.
-  factory InsurancePlanCoverage({
+  const factory InsurancePlanCoverage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -8941,7 +8842,7 @@ class InsurancePlanBenefit with _$InsurancePlanBenefit {
   /// [requirementElement] Extensions for requirement
   ///
   /// [limit] The specific limits on the benefit.
-  factory InsurancePlanBenefit({
+  const factory InsurancePlanBenefit({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -9052,7 +8953,7 @@ class InsurancePlanLimit with _$InsurancePlanLimit {
   ///  covered benefit.  For examples. wellness visits, or eyeglasses.
   ///
   /// [code] The specific limit on the benefit.
-  factory InsurancePlanLimit({
+  const factory InsurancePlanLimit({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -9167,7 +9068,7 @@ class InsurancePlanPlan with _$InsurancePlanPlan {
   ///
   /// [specificCost] Costs associated with the coverage provided by the
   ///  product.
-  factory InsurancePlanPlan({
+  const factory InsurancePlanPlan({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -9294,7 +9195,7 @@ class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   ///  this plan.
   ///
   /// [commentElement] Extensions for comment
-  factory InsurancePlanGeneralCost({
+  const factory InsurancePlanGeneralCost({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -9410,7 +9311,7 @@ class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
   ///  Mental Health; Substance Abuse; Hospice, Home Health).
   ///
   /// [benefit] List of the specific benefits under this category of benefit.
-  factory InsurancePlanSpecificCost({
+  const factory InsurancePlanSpecificCost({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -9514,7 +9415,7 @@ class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
   ///  speciality office visit; hospitalization; emergency room; urgent care).
   ///
   /// [cost] List of the costs associated with a specific benefit.
-  factory InsurancePlanBenefit1({
+  const factory InsurancePlanBenefit1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -9625,7 +9526,7 @@ class InsurancePlanCost with _$InsurancePlanCost {
   ///
   /// [value] The actual cost value. (some of the costs may be represented as
   ///  percentages rather than currency, e.g. 10% coinsurance).
-  factory InsurancePlanCost({
+  const factory InsurancePlanCost({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,

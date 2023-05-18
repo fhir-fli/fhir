@@ -193,15 +193,16 @@ class Claim with Resource, _$Claim {
   ///
   /// [total] The total value of the all the items in the claim.
   ///
-  factory Claim({
+  const factory Claim({
     /// [resourceType] This is a Claim resource
     @Default(R5ResourceType.Claim)
     @JsonKey(unknownEnumValue: R5ResourceType.Claim)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -490,10 +491,10 @@ class ClaimRelated with _$ClaimRelated {
   /// [reference] An alternate organizational reference to the case or file to
   ///  which this particular claim pertains.
   ///
-  factory ClaimRelated({
+  const factory ClaimRelated({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -604,10 +605,10 @@ class ClaimPayee with _$ClaimPayee {
   /// [party] Reference to the individual or organization to whom any payment
   ///  will be made.
   ///
-  factory ClaimPayee({
+  const factory ClaimPayee({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -720,10 +721,10 @@ class ClaimEvent with _$ClaimEvent {
   /// [whenPeriod] A date or period in the past or future indicating when the
   ///  event occurred or is expectd to occur.
   ///
-  factory ClaimEvent({
+  const factory ClaimEvent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -851,10 +852,10 @@ class ClaimCareTeam with _$ClaimCareTeam {
   /// [specialty] The specialization of the practitioner or provider which is
   ///  applicable for this service.
   ///
-  factory ClaimCareTeam({
+  const factory ClaimCareTeam({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1022,10 +1023,10 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
   /// [reason] Provides the reason in the situation where a reason code is
   ///  required in addition to the content.
   ///
-  factory ClaimSupportingInfo({
+  const factory ClaimSupportingInfo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1200,10 +1201,10 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
   /// [onAdmission] Indication of whether the diagnosis was present on
   ///  admission to a facility.
   ///
-  factory ClaimDiagnosis({
+  const factory ClaimDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1338,10 +1339,10 @@ class ClaimProcedure with _$ClaimProcedure {
   ///
   /// [udi] Unique Device Identifiers associated with this line item.
   ///
-  factory ClaimProcedure({
+  const factory ClaimProcedure({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1496,10 +1497,10 @@ class ClaimInsurance with _$ClaimInsurance {
   /// [claimResponse] The result of the adjudication of the line items for the
   ///  Coverage specified in this insurance.
   ///
-  factory ClaimInsurance({
+  const factory ClaimInsurance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1652,10 +1653,10 @@ class ClaimAccident with _$ClaimAccident {
   ///
   /// [locationReference] The physical location of the accident event.
   ///
-  factory ClaimAccident({
+  const factory ClaimAccident({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1869,10 +1870,10 @@ class ClaimItem with _$ClaimItem {
   /// [detail] A claim detail line. Either a simple (a product or service) or a
   ///  'group' of sub-details which are simple items.
   ///
-  factory ClaimItem({
+  const factory ClaimItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1921,7 +1922,7 @@ class ClaimItem with _$ClaimItem {
     /// [diagnosisSequenceElement] ("_diagnosisSequence") Extensions for
     ///  diagnosisSequence
     @JsonKey(name: '_diagnosisSequence')
-        List<Element>? diagnosisSequenceElement,
+    List<Element>? diagnosisSequenceElement,
 
     /// [procedureSequence] Procedures applicable for this service or product.
     List<FhirPositiveInt>? procedureSequence,
@@ -1929,7 +1930,7 @@ class ClaimItem with _$ClaimItem {
     /// [procedureSequenceElement] ("_procedureSequence") Extensions for
     ///  procedureSequence
     @JsonKey(name: '_procedureSequence')
-        List<Element>? procedureSequenceElement,
+    List<Element>? procedureSequenceElement,
 
     /// [informationSequence] Exceptions, special conditions and supporting
     ///  information applicable for this service or product.
@@ -1938,7 +1939,7 @@ class ClaimItem with _$ClaimItem {
     /// [informationSequenceElement] ("_informationSequence") Extensions for
     ///  informationSequence
     @JsonKey(name: '_informationSequence')
-        List<Element>? informationSequenceElement,
+    List<Element>? informationSequenceElement,
 
     /// [revenue] The type of revenue or cost center providing the product
     ///  and/or service.
@@ -2111,10 +2112,10 @@ class ClaimBodySite with _$ClaimBodySite {
   /// [subSite] A region or surface of the bodySite, e.g. limb region or tooth
   ///  surface(s).
   ///
-  factory ClaimBodySite({
+  const factory ClaimBodySite({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2276,10 +2277,10 @@ class ClaimDetail with _$ClaimDetail {
   /// [subDetail] A claim detail line. Either a simple (a product or service)
   ///  or a 'group' of sub-details which are simple items.
   ///
-  factory ClaimDetail({
+  const factory ClaimDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2508,10 +2509,10 @@ class ClaimSubDetail with _$ClaimSubDetail {
   ///
   /// [udi] Unique Device Identifiers associated with this line item.
   ///
-  factory ClaimSubDetail({
+  const factory ClaimSubDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2818,15 +2819,16 @@ class ClaimResponse with Resource, _$ClaimResponse {
   ///
   /// [error] Errors encountered during the processing of the adjudication.
   ///
-  factory ClaimResponse({
+  const factory ClaimResponse({
     /// [resourceType] This is a ClaimResponse resource
     @Default(R5ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.ClaimResponse)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -3119,10 +3121,10 @@ class ClaimResponseEvent with _$ClaimResponseEvent {
   /// [whenPeriod] A date or period in the past or future indicating when the
   ///  event occurred or is expectd to occur.
   ///
-  factory ClaimResponseEvent({
+  const factory ClaimResponseEvent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3253,10 +3255,10 @@ class ClaimResponseItem with _$ClaimResponseItem {
   /// [detail] A claim detail. Either a simple (a product or service) or a
   ///  'group' of sub-details which are simple items.
   ///
-  factory ClaimResponseItem({
+  const factory ClaimResponseItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3394,10 +3396,10 @@ class ClaimResponseReviewOutcome with _$ClaimResponseReviewOutcome {
   /// [preAuthPeriod] The time frame during which this authorization is
   ///  effective.
   ///
-  factory ClaimResponseReviewOutcome({
+  const factory ClaimResponseReviewOutcome({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3523,10 +3525,10 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
   /// [quantity] A non-monetary value associated with the category. Mutually
   ///  exclusive to the amount element above.
   ///
-  factory ClaimResponseAdjudication({
+  const factory ClaimResponseAdjudication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3657,10 +3659,10 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
   ///
   /// [subDetail] A sub-detail adjudication of a simple product or service.
   ///
-  factory ClaimResponseDetail({
+  const factory ClaimResponseDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -3800,10 +3802,10 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   ///
   /// [adjudication] The adjudication results.
   ///
-  factory ClaimResponseSubDetail({
+  const factory ClaimResponseSubDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4013,10 +4015,10 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
   ///
   /// [detail] The second-tier service adjudications for payor added services.
   ///
-  factory ClaimResponseAddItem({
+  const factory ClaimResponseAddItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4064,7 +4066,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
     /// [subdetailSequenceElement] ("_subdetailSequence") Extensions for
     ///  subdetailSequence
     @JsonKey(name: '_subdetailSequence')
-        List<Element>? subdetailSequenceElement,
+    List<Element>? subdetailSequenceElement,
 
     /// [traceNumber] Trace number for tracking purposes. May be defined at the
     ///  jurisdiction level or between trading partners.
@@ -4240,10 +4242,10 @@ class ClaimResponseBodySite with _$ClaimResponseBodySite {
   /// [subSite] A region or surface of the bodySite, e.g. limb region or tooth
   ///  surface(s).
   ///
-  factory ClaimResponseBodySite({
+  const factory ClaimResponseBodySite({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4396,10 +4398,10 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
   ///
   /// [subDetail] The third-tier service adjudications for payor added services.
   ///
-  factory ClaimResponseDetail1({
+  const factory ClaimResponseDetail1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4613,10 +4615,10 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
   ///
   /// [adjudication] The adjudication results.
   ///
-  factory ClaimResponseSubDetail1({
+  const factory ClaimResponseSubDetail1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4783,10 +4785,10 @@ class ClaimResponseTotal with _$ClaimResponseTotal {
   ///
   /// [amount] Monetary total amount associated with the category.
   ///
-  factory ClaimResponseTotal({
+  const factory ClaimResponseTotal({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -4907,10 +4909,10 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
   ///
   /// [identifier] Issuer's unique identifier for the payment instrument.
   ///
-  factory ClaimResponsePayment({
+  const factory ClaimResponsePayment({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5039,10 +5041,10 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
   ///
   /// [language] A code to define the language used in the text of the note.
   ///
-  factory ClaimResponseProcessNote({
+  const factory ClaimResponseProcessNote({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5177,10 +5179,10 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
   /// [claimResponse] The result of the adjudication of the line items for the
   ///  Coverage specified in this insurance.
   ///
-  factory ClaimResponseInsurance({
+  const factory ClaimResponseInsurance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5334,10 +5336,10 @@ class ClaimResponseError with _$ClaimResponseError {
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
-  factory ClaimResponseError({
+  const factory ClaimResponseError({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5564,15 +5566,16 @@ class Invoice with Resource, _$Invoice {
   /// [note] Comments made about the invoice by the issuer, subject, or other
   ///  participants.
   ///
-  factory Invoice({
+  const factory Invoice({
     /// [resourceType] This is a Invoice resource
     @Default(R5ResourceType.Invoice)
     @JsonKey(unknownEnumValue: R5ResourceType.Invoice)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -5800,10 +5803,10 @@ class InvoiceParticipant with _$InvoiceParticipant {
   /// [actor] The device, practitioner, etc. who performed or participated in
   ///  the service.
   ///
-  factory InvoiceParticipant({
+  const factory InvoiceParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -5934,10 +5937,10 @@ class InvoiceLineItem with _$InvoiceLineItem {
   ///  The priceComponent element can be used to offer transparency to the
   ///  recipient of the Invoice as to how the prices have been calculated.
   ///
-  factory InvoiceLineItem({
+  const factory InvoiceLineItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.

@@ -22,6 +22,8 @@ ValueSet _$ValueSetFromJson(Map<String, dynamic> json) {
 mixin _$ValueSet {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   @JsonKey(name: '_id')
@@ -96,6 +98,8 @@ abstract class $ValueSetCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       @JsonKey(name: '_id')
@@ -191,6 +195,7 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? idElement = freezed,
     Object? meta = freezed,
@@ -238,6 +243,10 @@ class _$ValueSetCopyWithImpl<$Res, $Val extends ValueSet>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -656,6 +665,8 @@ abstract class _$$_ValueSetCopyWith<$Res> implements $ValueSetCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       @JsonKey(name: '_id')
@@ -769,6 +780,7 @@ class __$$_ValueSetCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? idElement = freezed,
     Object? meta = freezed,
@@ -816,6 +828,10 @@ class __$$_ValueSetCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -987,9 +1003,11 @@ class __$$_ValueSetCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSet extends _ValueSet {
-  _$_ValueSet(
+  const _$_ValueSet(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
           this.resourceType = Dstu2ResourceType.ValueSet,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: '_id')
@@ -1061,6 +1079,9 @@ class _$_ValueSet extends _ValueSet {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -1204,7 +1225,7 @@ class _$_ValueSet extends _ValueSet {
 
   @override
   String toString() {
-    return 'ValueSet(resourceType: $resourceType, fhirId: $fhirId, idElement: $idElement, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, date: $date, dateElement: $dateElement, lockedDate: $lockedDate, lockedDateElement: $lockedDateElement, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, immutable: $immutable, immutableElement: $immutableElement, requirements: $requirements, copyright: $copyright, copyrightElement: $copyrightElement, extensible: $extensible, codeSystem: $codeSystem, compose: $compose, expansion: $expansion)';
+    return 'ValueSet(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, idElement: $idElement, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, date: $date, dateElement: $dateElement, lockedDate: $lockedDate, lockedDateElement: $lockedDateElement, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, immutable: $immutable, immutableElement: $immutableElement, requirements: $requirements, copyright: $copyright, copyrightElement: $copyrightElement, extensible: $extensible, codeSystem: $codeSystem, compose: $compose, expansion: $expansion)';
   }
 
   @override
@@ -1214,6 +1235,7 @@ class _$_ValueSet extends _ValueSet {
             other is _$_ValueSet &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.idElement, idElement) ||
                 other.idElement == idElement) &&
@@ -1293,6 +1315,7 @@ class _$_ValueSet extends _ValueSet {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         idElement,
         meta,
@@ -1351,9 +1374,11 @@ class _$_ValueSet extends _ValueSet {
 }
 
 abstract class _ValueSet extends ValueSet {
-  factory _ValueSet(
+  const factory _ValueSet(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: '_id')
@@ -1412,13 +1437,16 @@ abstract class _ValueSet extends ValueSet {
       final ValueSetCodeSystem? codeSystem,
       final ValueSetCompose? compose,
       final ValueSetExpansion? expansion}) = _$_ValueSet;
-  _ValueSet._() : super._();
+  const _ValueSet._() : super._();
 
   factory _ValueSet.fromJson(Map<String, dynamic> json) = _$_ValueSet.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -1678,7 +1706,7 @@ class __$$_ValueSetContactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetContact extends _ValueSetContact {
-  _$_ValueSetContact(
+  const _$_ValueSetContact(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1789,14 +1817,14 @@ class _$_ValueSetContact extends _ValueSetContact {
 }
 
 abstract class _ValueSetContact extends ValueSetContact {
-  factory _ValueSetContact(
+  const factory _ValueSetContact(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       final String? name,
       final List<ContactPoint>? telecom}) = _$_ValueSetContact;
-  _ValueSetContact._() : super._();
+  const _ValueSetContact._() : super._();
 
   factory _ValueSetContact.fromJson(Map<String, dynamic> json) =
       _$_ValueSetContact.fromJson;
@@ -2092,7 +2120,7 @@ class __$$_ValueSetCodeSystemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
-  _$_ValueSetCodeSystem(
+  const _$_ValueSetCodeSystem(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2234,7 +2262,7 @@ class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
 }
 
 abstract class _ValueSetCodeSystem extends ValueSetCodeSystem {
-  factory _ValueSetCodeSystem(
+  const factory _ValueSetCodeSystem(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -2247,7 +2275,7 @@ abstract class _ValueSetCodeSystem extends ValueSetCodeSystem {
           @JsonKey(name: '_caseSensitive') final Element? caseSensitiveElement,
           required final List<ValueSetCodeSystemConcept> concept}) =
       _$_ValueSetCodeSystem;
-  _ValueSetCodeSystem._() : super._();
+  const _ValueSetCodeSystem._() : super._();
 
   factory _ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =
       _$_ValueSetCodeSystem.fromJson;
@@ -2560,7 +2588,7 @@ class __$$_ValueSetCodeSystemConceptCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
-  _$_ValueSetCodeSystemConcept(
+  const _$_ValueSetCodeSystemConcept(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2719,7 +2747,7 @@ class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
 }
 
 abstract class _ValueSetCodeSystemConcept extends ValueSetCodeSystemConcept {
-  factory _ValueSetCodeSystemConcept(
+  const factory _ValueSetCodeSystemConcept(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -2733,7 +2761,7 @@ abstract class _ValueSetCodeSystemConcept extends ValueSetCodeSystemConcept {
           final List<ValueSetConceptDesignation>? designation,
           final List<ValueSetCodeSystemConcept>? concept}) =
       _$_ValueSetCodeSystemConcept;
-  _ValueSetCodeSystemConcept._() : super._();
+  const _ValueSetCodeSystemConcept._() : super._();
 
   factory _ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =
       _$_ValueSetCodeSystemConcept.fromJson;
@@ -3008,7 +3036,7 @@ class __$$_ValueSetConceptDesignationCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
-  _$_ValueSetConceptDesignation(
+  const _$_ValueSetConceptDesignation(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3116,7 +3144,7 @@ class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
 }
 
 abstract class _ValueSetConceptDesignation extends ValueSetConceptDesignation {
-  factory _ValueSetConceptDesignation(
+  const factory _ValueSetConceptDesignation(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -3126,7 +3154,7 @@ abstract class _ValueSetConceptDesignation extends ValueSetConceptDesignation {
           required final String value,
           @JsonKey(name: '_value') final Element? valueElement}) =
       _$_ValueSetConceptDesignation;
-  _ValueSetConceptDesignation._() : super._();
+  const _ValueSetConceptDesignation._() : super._();
 
   factory _ValueSetConceptDesignation.fromJson(Map<String, dynamic> json) =
       _$_ValueSetConceptDesignation.fromJson;
@@ -3327,7 +3355,7 @@ class __$$_ValueSetComposeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetCompose extends _ValueSetCompose {
-  _$_ValueSetCompose(
+  const _$_ValueSetCompose(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3462,7 +3490,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
 }
 
 abstract class _ValueSetCompose extends ValueSetCompose {
-  factory _ValueSetCompose(
+  const factory _ValueSetCompose(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3470,7 +3498,7 @@ abstract class _ValueSetCompose extends ValueSetCompose {
       @JsonKey(name: 'import') final List<FhirUri>? import_,
       final List<ValueSetComposeInclude>? include,
       final List<ValueSetComposeInclude>? exclude}) = _$_ValueSetCompose;
-  _ValueSetCompose._() : super._();
+  const _ValueSetCompose._() : super._();
 
   factory _ValueSetCompose.fromJson(Map<String, dynamic> json) =
       _$_ValueSetCompose.fromJson;
@@ -3743,7 +3771,7 @@ class __$$_ValueSetComposeIncludeCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
-  _$_ValueSetComposeInclude(
+  const _$_ValueSetComposeInclude(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3888,7 +3916,7 @@ class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
 }
 
 abstract class _ValueSetComposeInclude extends ValueSetComposeInclude {
-  factory _ValueSetComposeInclude(
+  const factory _ValueSetComposeInclude(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3899,7 +3927,7 @@ abstract class _ValueSetComposeInclude extends ValueSetComposeInclude {
       @JsonKey(name: '_version') final Element? versionElement,
       final List<ValueSetIncludeConcept>? concept,
       final List<ValueSetIncludeFilter>? filter}) = _$_ValueSetComposeInclude;
-  _ValueSetComposeInclude._() : super._();
+  const _ValueSetComposeInclude._() : super._();
 
   factory _ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =
       _$_ValueSetComposeInclude.fromJson;
@@ -4166,7 +4194,7 @@ class __$$_ValueSetIncludeConceptCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
-  _$_ValueSetIncludeConcept(
+  const _$_ValueSetIncludeConcept(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4298,7 +4326,7 @@ class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
 }
 
 abstract class _ValueSetIncludeConcept extends ValueSetIncludeConcept {
-  factory _ValueSetIncludeConcept(
+  const factory _ValueSetIncludeConcept(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -4309,7 +4337,7 @@ abstract class _ValueSetIncludeConcept extends ValueSetIncludeConcept {
           @JsonKey(name: '_display') final Element? displayElement,
           final List<ValueSetConceptDesignation>? designation}) =
       _$_ValueSetIncludeConcept;
-  _ValueSetIncludeConcept._() : super._();
+  const _ValueSetIncludeConcept._() : super._();
 
   factory _ValueSetIncludeConcept.fromJson(Map<String, dynamic> json) =
       _$_ValueSetIncludeConcept.fromJson;
@@ -4602,7 +4630,7 @@ class __$$_ValueSetIncludeFilterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
-  _$_ValueSetIncludeFilter(
+  const _$_ValueSetIncludeFilter(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4734,7 +4762,7 @@ class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
 }
 
 abstract class _ValueSetIncludeFilter extends ValueSetIncludeFilter {
-  factory _ValueSetIncludeFilter(
+  const factory _ValueSetIncludeFilter(
       {@JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: 'extension')
@@ -4752,7 +4780,7 @@ abstract class _ValueSetIncludeFilter extends ValueSetIncludeFilter {
       required final FhirCode value,
       @JsonKey(name: '_value')
           final Element? valueElement}) = _$_ValueSetIncludeFilter;
-  _ValueSetIncludeFilter._() : super._();
+  const _ValueSetIncludeFilter._() : super._();
 
   factory _ValueSetIncludeFilter.fromJson(Map<String, dynamic> json) =
       _$_ValueSetIncludeFilter.fromJson;
@@ -5116,7 +5144,7 @@ class __$$_ValueSetExpansionCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetExpansion extends _ValueSetExpansion {
-  _$_ValueSetExpansion(
+  const _$_ValueSetExpansion(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5288,7 +5316,7 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
 }
 
 abstract class _ValueSetExpansion extends ValueSetExpansion {
-  factory _ValueSetExpansion(
+  const factory _ValueSetExpansion(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5303,7 +5331,7 @@ abstract class _ValueSetExpansion extends ValueSetExpansion {
       @JsonKey(name: '_offset') final Element? offsetElement,
       final List<ValueSetExpansionParameter>? parameter,
       final List<ValueSetExpansionContains>? contains}) = _$_ValueSetExpansion;
-  _ValueSetExpansion._() : super._();
+  const _ValueSetExpansion._() : super._();
 
   factory _ValueSetExpansion.fromJson(Map<String, dynamic> json) =
       _$_ValueSetExpansion.fromJson;
@@ -5779,7 +5807,7 @@ class __$$_ValueSetExpansionParameterCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
-  _$_ValueSetExpansionParameter(
+  const _$_ValueSetExpansionParameter(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5963,7 +5991,7 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
 }
 
 abstract class _ValueSetExpansionParameter extends ValueSetExpansionParameter {
-  factory _ValueSetExpansionParameter(
+  const factory _ValueSetExpansionParameter(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -5983,7 +6011,7 @@ abstract class _ValueSetExpansionParameter extends ValueSetExpansionParameter {
           final FhirCode? valueCode,
           @JsonKey(name: '_valueCode') final Element? valueCodeElement}) =
       _$_ValueSetExpansionParameter;
-  _ValueSetExpansionParameter._() : super._();
+  const _ValueSetExpansionParameter._() : super._();
 
   factory _ValueSetExpansionParameter.fromJson(Map<String, dynamic> json) =
       _$_ValueSetExpansionParameter.fromJson;
@@ -6400,7 +6428,7 @@ class __$$_ValueSetExpansionContainsCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
-  _$_ValueSetExpansionContains(
+  const _$_ValueSetExpansionContains(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6569,7 +6597,7 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
 }
 
 abstract class _ValueSetExpansionContains extends ValueSetExpansionContains {
-  factory _ValueSetExpansionContains(
+  const factory _ValueSetExpansionContains(
           {@JsonKey(name: 'id') final FhirId? fhirId,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
@@ -6586,7 +6614,7 @@ abstract class _ValueSetExpansionContains extends ValueSetExpansionContains {
           @JsonKey(name: '_display') final Element? displayElement,
           final List<ValueSetExpansionContains>? contains}) =
       _$_ValueSetExpansionContains;
-  _ValueSetExpansionContains._() : super._();
+  const _ValueSetExpansionContains._() : super._();
 
   factory _ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =
       _$_ValueSetExpansionContains.fromJson;
@@ -6644,6 +6672,8 @@ ConceptMap _$ConceptMapFromJson(Map<String, dynamic> json) {
 mixin _$ConceptMap {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -6716,6 +6746,8 @@ abstract class $ConceptMapCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -6806,6 +6838,7 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -6851,6 +6884,10 @@ class _$ConceptMapCopyWithImpl<$Res, $Val extends ConceptMap>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7238,6 +7275,8 @@ abstract class _$$_ConceptMapCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -7344,6 +7383,7 @@ class __$$_ConceptMapCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -7389,6 +7429,10 @@ class __$$_ConceptMapCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7552,9 +7596,11 @@ class __$$_ConceptMapCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConceptMap extends _ConceptMap {
-  _$_ConceptMap(
+  const _$_ConceptMap(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
           this.resourceType = Dstu2ResourceType.ConceptMap,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -7624,6 +7670,9 @@ class _$_ConceptMap extends _ConceptMap {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -7770,7 +7819,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   @override
   String toString() {
-    return 'ConceptMap(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, date: $date, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, requirements: $requirements, copyright: $copyright, copyrightElement: $copyrightElement, sourceUri: $sourceUri, sourceUriElement: $sourceUriElement, sourceReference: $sourceReference, targetUri: $targetUri, targetUriElement: $targetUriElement, targetReference: $targetReference, element: $element, dateElement: $dateElement)';
+    return 'ConceptMap(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, date: $date, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, requirements: $requirements, copyright: $copyright, copyrightElement: $copyrightElement, sourceUri: $sourceUri, sourceUriElement: $sourceUriElement, sourceReference: $sourceReference, targetUri: $targetUri, targetUriElement: $targetUriElement, targetReference: $targetReference, element: $element, dateElement: $dateElement)';
   }
 
   @override
@@ -7780,6 +7829,7 @@ class _$_ConceptMap extends _ConceptMap {
             other is _$_ConceptMap &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -7855,6 +7905,7 @@ class _$_ConceptMap extends _ConceptMap {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -7911,9 +7962,11 @@ class _$_ConceptMap extends _ConceptMap {
 }
 
 abstract class _ConceptMap extends ConceptMap {
-  factory _ConceptMap(
+  const factory _ConceptMap(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -7969,7 +8022,7 @@ abstract class _ConceptMap extends ConceptMap {
       final List<ConceptMapElement>? element,
       @JsonKey(name: '_date')
           final Element? dateElement}) = _$_ConceptMap;
-  _ConceptMap._() : super._();
+  const _ConceptMap._() : super._();
 
   factory _ConceptMap.fromJson(Map<String, dynamic> json) =
       _$_ConceptMap.fromJson;
@@ -7977,6 +8030,9 @@ abstract class _ConceptMap extends ConceptMap {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -8217,7 +8273,7 @@ class __$$_ConceptMapContactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConceptMapContact extends _ConceptMapContact {
-  _$_ConceptMapContact(
+  const _$_ConceptMapContact(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8313,13 +8369,13 @@ class _$_ConceptMapContact extends _ConceptMapContact {
 }
 
 abstract class _ConceptMapContact extends ConceptMapContact {
-  factory _ConceptMapContact(
+  const factory _ConceptMapContact(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
       final List<ContactPoint>? telecom}) = _$_ConceptMapContact;
-  _ConceptMapContact._() : super._();
+  const _ConceptMapContact._() : super._();
 
   factory _ConceptMapContact.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapContact.fromJson;
@@ -8527,7 +8583,7 @@ class __$$_ConceptMapElementCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConceptMapElement extends _ConceptMapElement {
-  _$_ConceptMapElement(
+  const _$_ConceptMapElement(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8636,7 +8692,7 @@ class _$_ConceptMapElement extends _ConceptMapElement {
 }
 
 abstract class _ConceptMapElement extends ConceptMapElement {
-  factory _ConceptMapElement(
+  const factory _ConceptMapElement(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8644,7 +8700,7 @@ abstract class _ConceptMapElement extends ConceptMapElement {
       final FhirCode? code,
       @JsonKey(name: '_code') final Element? codeElement,
       final List<ConceptMapElementTarget>? target}) = _$_ConceptMapElement;
-  _ConceptMapElement._() : super._();
+  const _ConceptMapElement._() : super._();
 
   factory _ConceptMapElement.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapElement.fromJson;
@@ -8971,7 +9027,7 @@ class __$$_ConceptMapElementTargetCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
-  _$_ConceptMapElementTarget(
+  const _$_ConceptMapElementTarget(
       {@JsonKey(name: 'id')
           this.fhirId,
       @JsonKey(name: 'extension')
@@ -9129,7 +9185,7 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
 }
 
 abstract class _ConceptMapElementTarget extends ConceptMapElementTarget {
-  factory _ConceptMapElementTarget(
+  const factory _ConceptMapElementTarget(
           {@JsonKey(name: 'id')
               final FhirId? fhirId,
           @JsonKey(name: 'extension')
@@ -9149,7 +9205,7 @@ abstract class _ConceptMapElementTarget extends ConceptMapElementTarget {
           final List<ConceptMapTargetDependsOn>? dependsOn,
           final List<ConceptMapTargetDependsOn>? product}) =
       _$_ConceptMapElementTarget;
-  _ConceptMapElementTarget._() : super._();
+  const _ConceptMapElementTarget._() : super._();
 
   factory _ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapElementTarget.fromJson;
@@ -9348,7 +9404,7 @@ class __$$_ConceptMapTargetDependsOnCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
-  _$_ConceptMapTargetDependsOn(
+  const _$_ConceptMapTargetDependsOn(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9442,14 +9498,14 @@ class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
 }
 
 abstract class _ConceptMapTargetDependsOn extends ConceptMapTargetDependsOn {
-  factory _ConceptMapTargetDependsOn(
+  const factory _ConceptMapTargetDependsOn(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final FhirUri element,
       required final FhirUri codeSystem,
       required final String code}) = _$_ConceptMapTargetDependsOn;
-  _ConceptMapTargetDependsOn._() : super._();
+  const _ConceptMapTargetDependsOn._() : super._();
 
   factory _ConceptMapTargetDependsOn.fromJson(Map<String, dynamic> json) =
       _$_ConceptMapTargetDependsOn.fromJson;
@@ -9482,6 +9538,8 @@ NamingSystem _$NamingSystemFromJson(Map<String, dynamic> json) {
 mixin _$NamingSystem {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
   Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
@@ -9544,6 +9602,8 @@ abstract class $NamingSystemCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -9620,6 +9680,7 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -9657,6 +9718,10 @@ class _$NamingSystemCopyWithImpl<$Res, $Val extends NamingSystem>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9964,6 +10029,8 @@ abstract class _$$_NamingSystemCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
           Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
       FhirMeta? meta,
@@ -10052,6 +10119,7 @@ class __$$_NamingSystemCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
+    Object? dbId = freezed,
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
@@ -10089,6 +10157,10 @@ class __$$_NamingSystemCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as Dstu2ResourceType,
+      dbId: freezed == dbId
+          ? _value.dbId
+          : dbId // ignore: cast_nullable_to_non_nullable
+              as int?,
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -10220,9 +10292,11 @@ class __$$_NamingSystemCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_NamingSystem extends _NamingSystem {
-  _$_NamingSystem(
+  const _$_NamingSystem(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
           this.resourceType = Dstu2ResourceType.NamingSystem,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
       this.meta,
@@ -10282,6 +10356,9 @@ class _$_NamingSystem extends _NamingSystem {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
   final Dstu2ResourceType resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  final int? dbId;
   @override
   @JsonKey(name: 'id')
   final FhirId? fhirId;
@@ -10408,7 +10485,7 @@ class _$_NamingSystem extends _NamingSystem {
 
   @override
   String toString() {
-    return 'NamingSystem(resourceType: $resourceType, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, kind: $kind, kindElement: $kindElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, responsible: $responsible, responsibleElement: $responsibleElement, date: $date, dateElement: $dateElement, type: $type, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, usage: $usage, usageElement: $usageElement, uniqueId: $uniqueId, replacedBy: $replacedBy)';
+    return 'NamingSystem(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, status: $status, statusElement: $statusElement, kind: $kind, kindElement: $kindElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, responsible: $responsible, responsibleElement: $responsibleElement, date: $date, dateElement: $dateElement, type: $type, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, usage: $usage, usageElement: $usageElement, uniqueId: $uniqueId, replacedBy: $replacedBy)';
   }
 
   @override
@@ -10418,6 +10495,7 @@ class _$_NamingSystem extends _NamingSystem {
             other is _$_NamingSystem &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
+            (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
@@ -10476,6 +10554,7 @@ class _$_NamingSystem extends _NamingSystem {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
+        dbId,
         fhirId,
         meta,
         implicitRules,
@@ -10524,9 +10603,11 @@ class _$_NamingSystem extends _NamingSystem {
 }
 
 abstract class _NamingSystem extends NamingSystem {
-  factory _NamingSystem(
+  const factory _NamingSystem(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
           final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false)
+          final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
       final FhirMeta? meta,
@@ -10572,7 +10653,7 @@ abstract class _NamingSystem extends NamingSystem {
           final Element? usageElement,
       required final List<NamingSystemUniqueId> uniqueId,
       final Reference? replacedBy}) = _$_NamingSystem;
-  _NamingSystem._() : super._();
+  const _NamingSystem._() : super._();
 
   factory _NamingSystem.fromJson(Map<String, dynamic> json) =
       _$_NamingSystem.fromJson;
@@ -10580,6 +10661,9 @@ abstract class _NamingSystem extends NamingSystem {
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
   Dstu2ResourceType get resourceType;
+  @override
+  @JsonKey(includeFromJson: true, includeToJson: false)
+  int? get dbId;
   @override
   @JsonKey(name: 'id')
   FhirId? get fhirId;
@@ -10802,7 +10886,7 @@ class __$$_NamingSystemContactCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_NamingSystemContact extends _NamingSystemContact {
-  _$_NamingSystemContact(
+  const _$_NamingSystemContact(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -10898,13 +10982,13 @@ class _$_NamingSystemContact extends _NamingSystemContact {
 }
 
 abstract class _NamingSystemContact extends NamingSystemContact {
-  factory _NamingSystemContact(
+  const factory _NamingSystemContact(
       {@JsonKey(name: 'id') final FhirId? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
       final List<ContactPoint>? telecom}) = _$_NamingSystemContact;
-  _NamingSystemContact._() : super._();
+  const _NamingSystemContact._() : super._();
 
   factory _NamingSystemContact.fromJson(Map<String, dynamic> json) =
       _$_NamingSystemContact.fromJson;
@@ -11199,7 +11283,7 @@ class __$$_NamingSystemUniqueIdCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
-  _$_NamingSystemUniqueId(
+  const _$_NamingSystemUniqueId(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -11320,7 +11404,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
 }
 
 abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
-  factory _NamingSystemUniqueId(
+  const factory _NamingSystemUniqueId(
       {@JsonKey(name: 'id')
           final FhirId? fhirId,
       @JsonKey(name: 'extension')
@@ -11337,7 +11421,7 @@ abstract class _NamingSystemUniqueId extends NamingSystemUniqueId {
       @JsonKey(name: '_preferred')
           final Element? preferredElement,
       final Period? period}) = _$_NamingSystemUniqueId;
-  _NamingSystemUniqueId._() : super._();
+  const _NamingSystemUniqueId._() : super._();
 
   factory _NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =
       _$_NamingSystemUniqueId.fromJson;

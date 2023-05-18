@@ -142,11 +142,12 @@ class Account with Resource, _$Account {
   ///
   /// [calculatedAtElement] ("_calculatedAt") Extensions for calculatedAt
   ///
-  factory Account({
+  const factory Account({
     /// [resourceType] This is a Account resource
     @Default(R5ResourceType.Account)
     @JsonKey(unknownEnumValue: R5ResourceType.Account)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -376,7 +377,7 @@ class AccountCoverage with _$AccountCoverage {
   ///
   /// [priorityElement] ("_priority") Extensions for priority
   ///
-  factory AccountCoverage({
+  const factory AccountCoverage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -498,7 +499,7 @@ class AccountGuarantor with _$AccountGuarantor {
   /// [period] The timeframe during which the guarantor accepts responsibility
   ///  for the account.
   ///
-  factory AccountGuarantor({
+  const factory AccountGuarantor({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -633,7 +634,7 @@ class AccountDiagnosis with _$AccountDiagnosis {
   /// [packageCode] The package code can be used to group diagnoses that may be
   ///  priced or delivered as a single product. Such as DRGs.
   ///
-  factory AccountDiagnosis({
+  const factory AccountDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -783,7 +784,7 @@ class AccountProcedure with _$AccountProcedure {
   /// [device] Any devices that were associated with the procedure relevant to
   ///  the account.
   ///
-  factory AccountProcedure({
+  const factory AccountProcedure({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -914,7 +915,7 @@ class AccountRelatedAccount with _$AccountRelatedAccount {
   ///
   /// [account] Reference to an associated Account.
   ///
-  factory AccountRelatedAccount({
+  const factory AccountRelatedAccount({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1033,7 +1034,7 @@ class AccountBalance with _$AccountBalance {
   /// [amount] The actual balance value calculated for the age defined in the
   ///  term property.
   ///
-  factory AccountBalance({
+  const factory AccountBalance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1272,11 +1273,12 @@ class ChargeItem with Resource, _$ChargeItem {
   ///
   /// [supportingInformation] Further information supporting this charge.
   ///
-  factory ChargeItem({
+  const factory ChargeItem({
     /// [resourceType] This is a ChargeItem resource
     @Default(R5ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: R5ResourceType.ChargeItem)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1543,7 +1545,7 @@ class ChargeItemPerformer with _$ChargeItemPerformer {
   /// [actor] The device, practitioner, etc. who performed or participated in
   ///  the service.
   ///
-  factory ChargeItemPerformer({
+  const factory ChargeItemPerformer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1853,11 +1855,12 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   ///  conditions. If no applicability rules are established for the group,
   ///  then all properties always apply.
   ///
-  factory ChargeItemDefinition({
+  const factory ChargeItemDefinition({
     /// [resourceType] This is a ChargeItemDefinition resource
     @Default(R5ResourceType.ChargeItemDefinition)
     @JsonKey(unknownEnumValue: R5ResourceType.ChargeItemDefinition)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1966,7 +1969,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -2238,7 +2241,7 @@ class ChargeItemDefinitionApplicability
   /// [relatedArtifact] Reference to / quotation of the external source of the
   ///  group of properties.
   ///
-  factory ChargeItemDefinitionApplicability({
+  const factory ChargeItemDefinitionApplicability({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2371,7 +2374,7 @@ class ChargeItemDefinitionPropertyGroup
   ///  The priceComponent element can be used to offer transparency to the
   ///  recipient of the Invoice of how the prices have been calculated.
   ///
-  factory ChargeItemDefinitionPropertyGroup({
+  const factory ChargeItemDefinitionPropertyGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2665,11 +2668,12 @@ class Contract with Resource, _$Contract {
   ///  considered the "source of truth" and which would be the basis for legal
   ///  action related to enforcement of this Contract.
   ///
-  factory Contract({
+  const factory Contract({
     /// [resourceType] This is a Contract resource
     @Default(R5ResourceType.Contract)
     @JsonKey(unknownEnumValue: R5ResourceType.Contract)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3032,7 +3036,7 @@ class ContractContentDefinition with _$ContractContentDefinition {
   ///
   /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  factory ContractContentDefinition({
+  const factory ContractContentDefinition({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3205,7 +3209,7 @@ class ContractTerm with _$ContractTerm {
   ///
   /// [group] Nested group of Contract Provisions.
   ///
-  factory ContractTerm({
+  const factory ContractTerm({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3369,7 +3373,7 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
   /// [control] Security label privacy tag that specifies the manner in which
   ///  term and/or term elements are to be protected.
   ///
-  factory ContractSecurityLabel({
+  const factory ContractSecurityLabel({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3516,7 +3520,7 @@ class ContractOffer with _$ContractOffer {
   /// [securityLabelNumberElement] ("_securityLabelNumber") Extensions for
   ///  securityLabelNumber
   ///
-  factory ContractOffer({
+  const factory ContractOffer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3590,7 +3594,7 @@ class ContractOffer with _$ContractOffer {
     /// [securityLabelNumberElement] ("_securityLabelNumber") Extensions for
     ///  securityLabelNumber
     @JsonKey(name: '_securityLabelNumber')
-        List<Element>? securityLabelNumberElement,
+    List<Element>? securityLabelNumberElement,
   }) = _ContractOffer;
 
   /// Produces a Yaml formatted String version of the object
@@ -3663,7 +3667,7 @@ class ContractParty with _$ContractParty {
   ///
   /// [role] How the party participates in the offer.
   ///
-  factory ContractParty({
+  const factory ContractParty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3841,7 +3845,7 @@ class ContractAnswer with _$ContractAnswer {
   ///  participation, the date of occupancy of a rental, warranty duration, or
   ///  whether biospecimen may be used for further research.
   ///
-  factory ContractAnswer({
+  const factory ContractAnswer({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4078,7 +4082,7 @@ class ContractAsset with _$ContractAsset {
   ///
   /// [valuedItem] Contract Valued Item List.
   ///
-  factory ContractAsset({
+  const factory ContractAsset({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4167,7 +4171,7 @@ class ContractAsset with _$ContractAsset {
     /// [securityLabelNumberElement] ("_securityLabelNumber") Extensions for
     ///  securityLabelNumber
     @JsonKey(name: '_securityLabelNumber')
-        List<Element>? securityLabelNumberElement,
+    List<Element>? securityLabelNumberElement,
 
     /// [valuedItem] Contract Valued Item List.
     List<ContractValuedItem>? valuedItem,
@@ -4250,7 +4254,7 @@ class ContractContext with _$ContractContext {
   ///
   /// [textElement] ("_text") Extensions for text
   ///
-  factory ContractContext({
+  const factory ContractContext({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4423,7 +4427,7 @@ class ContractValuedItem with _$ContractValuedItem {
   /// [securityLabelNumberElement] ("_securityLabelNumber") Extensions for
   ///  securityLabelNumber
   ///
-  factory ContractValuedItem({
+  const factory ContractValuedItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4535,7 +4539,7 @@ class ContractValuedItem with _$ContractValuedItem {
     /// [securityLabelNumberElement] ("_securityLabelNumber") Extensions for
     ///  securityLabelNumber
     @JsonKey(name: '_securityLabelNumber')
-        List<Element>? securityLabelNumberElement,
+    List<Element>? securityLabelNumberElement,
   }) = _ContractValuedItem;
 
   /// Produces a Yaml formatted String version of the object
@@ -4686,7 +4690,7 @@ class ContractAction with _$ContractAction {
   /// [securityLabelNumberElement] ("_securityLabelNumber") Extensions for
   ///  securityLabelNumber
   ///
-  factory ContractAction({
+  const factory ContractAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4825,7 +4829,7 @@ class ContractAction with _$ContractAction {
     /// [securityLabelNumberElement] ("_securityLabelNumber") Extensions for
     ///  securityLabelNumber
     @JsonKey(name: '_securityLabelNumber')
-        List<Element>? securityLabelNumberElement,
+    List<Element>? securityLabelNumberElement,
   }) = _ContractAction;
 
   /// Produces a Yaml formatted String version of the object
@@ -4898,7 +4902,7 @@ class ContractSubject with _$ContractSubject {
   ///
   /// [role] Role type of agent assigned roles in this Contract.
   ///
-  factory ContractSubject({
+  const factory ContractSubject({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5007,7 +5011,7 @@ class ContractSigner with _$ContractSigner {
   ///
   /// [signature] Legally binding Contract DSIG signature contents in Base64.
   ///
-  factory ContractSigner({
+  const factory ContractSigner({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5120,7 +5124,7 @@ class ContractFriendly with _$ContractFriendly {
   ///  and representation intended to enhance comprehension and ensure
   ///  understandability.
   ///
-  factory ContractFriendly({
+  const factory ContractFriendly({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5230,7 +5234,7 @@ class ContractLegal with _$ContractLegal {
   ///
   /// [contentReference] Contract legal text in human renderable form.
   ///
-  factory ContractLegal({
+  const factory ContractLegal({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5338,7 +5342,7 @@ class ContractRule with _$ContractRule {
   /// [contentReference] Computable Contract conveyed using a policy rule
   ///  language (e.g. XACML, DKAL, SecPal).
   ///
-  factory ContractRule({
+  const factory ContractRule({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5648,11 +5652,12 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ///
   /// [benefitBalance] Balance by Benefit Category.
   ///
-  factory ExplanationOfBenefit({
+  const factory ExplanationOfBenefit({
     /// [resourceType] This is a ExplanationOfBenefit resource
     @Default(R5ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: R5ResourceType.ExplanationOfBenefit)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -6032,7 +6037,7 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   /// [reference] An alternate organizational reference to the case or file to
   ///  which this particular claim pertains.
   ///
-  factory ExplanationOfBenefitRelated({
+  const factory ExplanationOfBenefitRelated({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6155,7 +6160,7 @@ class ExplanationOfBenefitEvent with _$ExplanationOfBenefitEvent {
   /// [whenPeriod] A date or period in the past or future indicating when the
   ///  event occurred or is expectd to occur.
   ///
-  factory ExplanationOfBenefitEvent({
+  const factory ExplanationOfBenefitEvent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6277,7 +6282,7 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   /// [party] Reference to the individual or organization to whom any payment
   ///  will be made.
   ///
-  factory ExplanationOfBenefitPayee({
+  const factory ExplanationOfBenefitPayee({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6403,7 +6408,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   /// [specialty] The specialization of the practitioner or provider which is
   ///  applicable for this service.
   ///
-  factory ExplanationOfBenefitCareTeam({
+  const factory ExplanationOfBenefitCareTeam({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6579,7 +6584,7 @@ class ExplanationOfBenefitSupportingInfo
   /// [reason] Provides the reason in the situation where a reason code is
   ///  required in addition to the content.
   ///
-  factory ExplanationOfBenefitSupportingInfo({
+  const factory ExplanationOfBenefitSupportingInfo({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6763,7 +6768,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   /// [onAdmission] Indication of whether the diagnosis was present on
   ///  admission to a facility.
   ///
-  factory ExplanationOfBenefitDiagnosis({
+  const factory ExplanationOfBenefitDiagnosis({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6905,7 +6910,7 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ///
   /// [udi] Unique Device Identifiers associated with this line item.
   ///
-  factory ExplanationOfBenefitProcedure({
+  const factory ExplanationOfBenefitProcedure({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7050,7 +7055,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   ///
   /// [preAuthRefElement] ("_preAuthRef") Extensions for preAuthRef
   ///
-  factory ExplanationOfBenefitInsurance({
+  const factory ExplanationOfBenefitInsurance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7187,7 +7192,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   ///
   /// [locationReference] The physical location of the accident event.
   ///
-  factory ExplanationOfBenefitAccident({
+  const factory ExplanationOfBenefitAccident({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7420,7 +7425,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ///
   /// [detail] Second-tier of goods and services.
   ///
-  factory ExplanationOfBenefitItem({
+  const factory ExplanationOfBenefitItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7468,7 +7473,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     /// [diagnosisSequenceElement] ("_diagnosisSequence") Extensions for
     ///  diagnosisSequence
     @JsonKey(name: '_diagnosisSequence')
-        List<Element>? diagnosisSequenceElement,
+    List<Element>? diagnosisSequenceElement,
 
     /// [procedureSequence] Procedures applicable for this service or product.
     List<FhirPositiveInt>? procedureSequence,
@@ -7476,7 +7481,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     /// [procedureSequenceElement] ("_procedureSequence") Extensions for
     ///  procedureSequence
     @JsonKey(name: '_procedureSequence')
-        List<Element>? procedureSequenceElement,
+    List<Element>? procedureSequenceElement,
 
     /// [informationSequence] Exceptions, special conditions and supporting
     ///  information applicable for this service or product.
@@ -7485,7 +7490,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
     /// [informationSequenceElement] ("_informationSequence") Extensions for
     ///  informationSequence
     @JsonKey(name: '_informationSequence')
-        List<Element>? informationSequenceElement,
+    List<Element>? informationSequenceElement,
 
     /// [traceNumber] Trace number for tracking purposes. May be defined at the
     ///  jurisdiction level or between trading partners.
@@ -7681,7 +7686,7 @@ class ExplanationOfBenefitBodySite with _$ExplanationOfBenefitBodySite {
   /// [subSite] A region or surface of the bodySite, e.g. limb region or tooth
   ///  surface(s).
   ///
-  factory ExplanationOfBenefitBodySite({
+  const factory ExplanationOfBenefitBodySite({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7806,7 +7811,7 @@ class ExplanationOfBenefitReviewOutcome
   /// [preAuthPeriod] The time frame during which this authorization is
   ///  effective.
   ///
-  factory ExplanationOfBenefitReviewOutcome({
+  const factory ExplanationOfBenefitReviewOutcome({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7944,7 +7949,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   /// [quantity] A non-monetary value associated with the category. Mutually
   ///  exclusive to the amount element above.
   ///
-  factory ExplanationOfBenefitAdjudication({
+  const factory ExplanationOfBenefitAdjudication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8137,7 +8142,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   ///
   /// [subDetail] Third-tier of goods and services.
   ///
-  factory ExplanationOfBenefitDetail({
+  const factory ExplanationOfBenefitDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8397,7 +8402,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   ///
   /// [adjudication] The adjudication results.
   ///
-  factory ExplanationOfBenefitSubDetail({
+  const factory ExplanationOfBenefitSubDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8683,7 +8688,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ///
   /// [detail] The second-tier service adjudications for payor added services.
   ///
-  factory ExplanationOfBenefitAddItem({
+  const factory ExplanationOfBenefitAddItem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8734,7 +8739,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
     /// [subDetailSequenceElement] ("_subDetailSequence") Extensions for
     ///  subDetailSequence
     @JsonKey(name: '_subDetailSequence')
-        List<Element>? subDetailSequenceElement,
+    List<Element>? subDetailSequenceElement,
 
     /// [traceNumber] Trace number for tracking purposes. May be defined at the
     ///  jurisdiction level or between trading partners.
@@ -8922,7 +8927,7 @@ class ExplanationOfBenefitBodySite1 with _$ExplanationOfBenefitBodySite1 {
   /// [subSite] A region or surface of the bodySite, e.g. limb region or tooth
   ///  surface(s).
   ///
-  factory ExplanationOfBenefitBodySite1({
+  const factory ExplanationOfBenefitBodySite1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9089,7 +9094,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   ///
   /// [subDetail] The third-tier service adjudications for payor added services.
   ///
-  factory ExplanationOfBenefitDetail1({
+  const factory ExplanationOfBenefitDetail1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9322,7 +9327,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   ///
   /// [adjudication] The adjudication results.
   ///
-  factory ExplanationOfBenefitSubDetail1({
+  const factory ExplanationOfBenefitSubDetail1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9505,7 +9510,7 @@ class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   ///
   /// [amount] Monetary total amount associated with the category.
   ///
-  factory ExplanationOfBenefitTotal({
+  const factory ExplanationOfBenefitTotal({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9635,7 +9640,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   ///
   /// [identifier] Issuer's unique identifier for the payment instrument.
   ///
-  factory ExplanationOfBenefitPayment({
+  const factory ExplanationOfBenefitPayment({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9774,7 +9779,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   ///
   /// [language] A code to define the language used in the text of the note.
   ///
-  factory ExplanationOfBenefitProcessNote({
+  const factory ExplanationOfBenefitProcessNote({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -9924,7 +9929,7 @@ class ExplanationOfBenefitBenefitBalance
   ///
   /// [financial] Benefits Used to date.
   ///
-  factory ExplanationOfBenefitBenefitBalance({
+  const factory ExplanationOfBenefitBenefitBalance({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10092,7 +10097,7 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   ///
   /// [usedMoney] The quantity of the benefit which have been consumed to date.
   ///
-  factory ExplanationOfBenefitFinancial({
+  const factory ExplanationOfBenefitFinancial({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10303,11 +10308,12 @@ class InsurancePlan with Resource, _$InsurancePlan {
   ///
   /// [plan] Details about an insurance plan.
   ///
-  factory InsurancePlan({
+  const factory InsurancePlan({
     /// [resourceType] This is a InsurancePlan resource
     @Default(R5ResourceType.InsurancePlan)
     @JsonKey(unknownEnumValue: R5ResourceType.InsurancePlan)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -10516,7 +10522,7 @@ class InsurancePlanCoverage with _$InsurancePlanCoverage {
   ///
   /// [benefit] Specific benefits under this type of coverage.
   ///
-  factory InsurancePlanCoverage({
+  const factory InsurancePlanCoverage({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10632,7 +10638,7 @@ class InsurancePlanBenefit with _$InsurancePlanBenefit {
   ///
   /// [limit] The specific limits on the benefit.
   ///
-  factory InsurancePlanBenefit({
+  const factory InsurancePlanBenefit({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10747,7 +10753,7 @@ class InsurancePlanLimit with _$InsurancePlanLimit {
   ///
   /// [code] The specific limit on the benefit.
   ///
-  factory InsurancePlanLimit({
+  const factory InsurancePlanLimit({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10865,7 +10871,7 @@ class InsurancePlanPlan with _$InsurancePlanPlan {
   ///
   /// [specificCost] Costs associated with the coverage provided by the product.
   ///
-  factory InsurancePlanPlan({
+  const factory InsurancePlanPlan({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -10996,7 +11002,7 @@ class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   ///
   /// [commentElement] ("_comment") Extensions for comment
   ///
-  factory InsurancePlanGeneralCost({
+  const factory InsurancePlanGeneralCost({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -11116,7 +11122,7 @@ class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
   ///
   /// [benefit] List of the specific benefits under this category of benefit.
   ///
-  factory InsurancePlanSpecificCost({
+  const factory InsurancePlanSpecificCost({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -11224,7 +11230,7 @@ class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
   ///
   /// [cost] List of the costs associated with a specific benefit.
   ///
-  factory InsurancePlanBenefit1({
+  const factory InsurancePlanBenefit1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -11340,7 +11346,7 @@ class InsurancePlanCost with _$InsurancePlanCost {
   /// [value] The actual cost value. (some of the costs may be represented as
   ///  percentages rather than currency, e.g. 10% coinsurance).
   ///
-  factory InsurancePlanCost({
+  const factory InsurancePlanCost({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

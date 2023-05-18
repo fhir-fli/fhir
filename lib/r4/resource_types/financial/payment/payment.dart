@@ -109,17 +109,17 @@ class PaymentNotice with Resource, _$PaymentNotice {
   ///
   /// [paymentStatus] A code indicating whether payment has been sent or
   ///  cleared.
-  factory PaymentNotice({
+  const factory PaymentNotice({
     @Default(R4ResourceType.PaymentNotice)
     @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
 
-        /// [resourceType] This is a PaymentNotice resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a PaymentNotice resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -133,15 +133,13 @@ class PaymentNotice with Resource, _$PaymentNotice {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -163,8 +161,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -188,8 +185,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [request] Reference of resource for which payment is being made.
     Reference? request,
@@ -202,8 +198,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     FhirDateTime? created,
 
     /// [createdElement] Extensions for created
-    @JsonKey(name: '_created')
-        Element? createdElement,
+    @JsonKey(name: '_created') Element? createdElement,
 
     /// [provider] The practitioner who is responsible for the services rendered
     ///  to the patient.
@@ -216,8 +211,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
     FhirDate? paymentDate,
 
     /// [paymentDateElement] Extensions for paymentDate
-    @JsonKey(name: '_paymentDate')
-        Element? paymentDateElement,
+    @JsonKey(name: '_paymentDate') Element? paymentDateElement,
 
     /// [payee] The party who will receive or has received payment that is the
     ///  subject of this notification.
@@ -371,17 +365,17 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   ///
   /// [processNote] A note that describes or explains the processing in a human
   ///  readable form.
-  factory PaymentReconciliation({
+  const factory PaymentReconciliation({
     @Default(R4ResourceType.PaymentReconciliation)
     @JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
 
-        /// [resourceType] This is a PaymentReconciliation resource
-        R4ResourceType resourceType,
+    /// [resourceType] This is a PaymentReconciliation resource
+    R4ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the resource.
     ///  Once assigned, this value never changes.
-    @JsonKey(name: 'id')
-        String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     /// maintained by the infrastructure. Changes to the content might not always
@@ -395,15 +389,13 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] Extensions for implicitRules
-    @JsonKey(name: '_implicitRules')
-        Element? implicitRulesElement,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
     /// [languageElement] Extensions for language
-    @JsonKey(name: '_language')
-        Element? languageElement,
+    @JsonKey(name: '_language') Element? languageElement,
 
     /// [text] A human-readable narrative that contains a summary of the resource
     /// and can be used to represent the content of the resource to a human. The
@@ -425,8 +417,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     /// applied to the definition and use of extensions. Though any implementer
     /// can define an extension, there is a set of requirements that SHALL be met
     ///  as part of the definition of the extension.
-    @JsonKey(name: 'extension')
-        List<FhirExtension>? extension_,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
     /// [modifierExtension] May be used to represent additional information that
     /// is not part of the basic definition of the resource and that modifies the
@@ -450,8 +441,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     FhirCode? status,
 
     /// [statusElement] Extensions for status
-    @JsonKey(name: '_status')
-        Element? statusElement,
+    @JsonKey(name: '_status') Element? statusElement,
 
     /// [period] The period of time for which payments have been gathered into
     ///  this bulk payment for settlement.
@@ -461,8 +451,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     FhirDateTime? created,
 
     /// [createdElement] Extensions for created
-    @JsonKey(name: '_created')
-        Element? createdElement,
+    @JsonKey(name: '_created') Element? createdElement,
 
     /// [paymentIssuer] The party who generated the payment.
     Reference? paymentIssuer,
@@ -478,24 +467,21 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     FhirCode? outcome,
 
     /// [outcomeElement] Extensions for outcome
-    @JsonKey(name: '_outcome')
-        Element? outcomeElement,
+    @JsonKey(name: '_outcome') Element? outcomeElement,
 
     /// [disposition] A human readable description of the status of the request
     ///  for the reconciliation.
     String? disposition,
 
     /// [dispositionElement] Extensions for disposition
-    @JsonKey(name: '_disposition')
-        Element? dispositionElement,
+    @JsonKey(name: '_disposition') Element? dispositionElement,
 
     /// [paymentDate] The date of payment as indicated on the financial
     ///  instrument.
     FhirDate? paymentDate,
 
     /// [paymentDateElement] Extensions for paymentDate
-    @JsonKey(name: '_paymentDate')
-        Element? paymentDateElement,
+    @JsonKey(name: '_paymentDate') Element? paymentDateElement,
 
     /// [paymentAmount] Total payment amount as indicated on the financial
     ///  instrument.
@@ -606,7 +592,7 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   ///
   /// [amount] The monetary amount allocated from the total payment to the
   ///  payable.
-  factory PaymentReconciliationDetail({
+  const factory PaymentReconciliationDetail({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,
@@ -746,7 +732,7 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   /// [text] The explanation or description associated with the processing.
   ///
   /// [textElement] Extensions for text
-  factory PaymentReconciliationProcessNote({
+  const factory PaymentReconciliationProcessNote({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') FhirId? fhirId,

@@ -268,11 +268,12 @@ class CodeSystem with Resource, _$CodeSystem {
   ///  are inherently hierarchical, but the definitions must be consulted to
   ///  determine what the meanings of the hierarchical relationships are.
   ///
-  factory CodeSystem({
+  const factory CodeSystem({
     /// [resourceType] This is a CodeSystem resource
     @Default(R5ResourceType.CodeSystem)
     @JsonKey(unknownEnumValue: R5ResourceType.CodeSystem)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -377,7 +378,7 @@ class CodeSystem with Resource, _$CodeSystem {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which CodeSystem is more current.
@@ -571,8 +572,7 @@ class CodeSystem with Resource, _$CodeSystem {
     /// [count] The total number of concepts defined by the code system. Where
     ///  the code system has a compositional grammar, the basis of this count
     ///  is defined by the system steward.
-    @JsonKey(name: 'count')
-    FhirUnsignedInt? codeSystemCount,
+    @JsonKey(name: 'count') FhirUnsignedInt? codeSystemCount,
 
     /// [countElement] ("_count") Extensions for count
     @JsonKey(name: '_count') Element? countElement,
@@ -679,7 +679,7 @@ class CodeSystemFilter with _$CodeSystemFilter {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory CodeSystemFilter({
+  const factory CodeSystemFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -827,7 +827,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
-  factory CodeSystemProperty({
+  const factory CodeSystemProperty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -984,7 +984,7 @@ class CodeSystemConcept with _$CodeSystemConcept {
   ///  concepts. The nature of the relationships is variable
   ///  (is-a/contains/categorizes) - see hierarchyMeaning.
   ///
-  factory CodeSystemConcept({
+  const factory CodeSystemConcept({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1132,7 +1132,7 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory CodeSystemDesignation({
+  const factory CodeSystemDesignation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1280,7 +1280,7 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
   ///
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   ///
-  factory CodeSystemProperty1({
+  const factory CodeSystemProperty1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1634,11 +1634,12 @@ class ConceptMap with Resource, _$ConceptMap {
   /// [group] A group of mappings that all have the same source and target
   ///  system.
   ///
-  factory ConceptMap({
+  const factory ConceptMap({
     /// [resourceType] This is a ConceptMap resource
     @Default(R5ResourceType.ConceptMap)
     @JsonKey(unknownEnumValue: R5ResourceType.ConceptMap)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -1741,7 +1742,7 @@ class ConceptMap with Resource, _$ConceptMap {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which ConceptMap is more current.
@@ -1918,7 +1919,7 @@ class ConceptMap with Resource, _$ConceptMap {
     /// [sourceScopeCanonicalElement] ("_sourceScopeCanonical") Extensions for
     ///  sourceScopeCanonical
     @JsonKey(name: '_sourceScopeCanonical')
-        Element? sourceScopeCanonicalElement,
+    Element? sourceScopeCanonicalElement,
 
     /// [targetScopeUri] Identifier for the target value set that provides
     ///  important context about how the mapping choices are made.  Limits the
@@ -1940,7 +1941,7 @@ class ConceptMap with Resource, _$ConceptMap {
     /// [targetScopeCanonicalElement] ("_targetScopeCanonical") Extensions for
     ///  targetScopeCanonical
     @JsonKey(name: '_targetScopeCanonical')
-        Element? targetScopeCanonicalElement,
+    Element? targetScopeCanonicalElement,
 
     /// [group] A group of mappings that all have the same source and target
     ///  system.
@@ -2041,7 +2042,7 @@ class ConceptMapProperty with _$ConceptMapProperty {
   /// [system] The CodeSystem that defines the codes from which values of type
   ///  ```code``` in property values.
   ///
-  factory ConceptMapProperty({
+  const factory ConceptMapProperty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2198,7 +2199,7 @@ class ConceptMapAdditionalAttribute with _$ConceptMapAdditionalAttribute {
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
-  factory ConceptMapAdditionalAttribute({
+  const factory ConceptMapAdditionalAttribute({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2346,7 +2347,7 @@ class ConceptMapGroup with _$ConceptMapGroup {
   ///  mapping specified or the expansion of
   ///  ConceptMap.group.element.target.valueSet is empty.
   ///
-  factory ConceptMapGroup({
+  const factory ConceptMapGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2484,7 +2485,7 @@ class ConceptMapElement with _$ConceptMapElement {
   ///
   /// [target] A concept from the target value set that this concept maps to.
   ///
-  factory ConceptMapElement({
+  const factory ConceptMapElement({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2646,7 +2647,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
   /// [product] Product is the output of a ConceptMap that provides additional
   ///  values that go in other attributes / data elemnts of the target data.
   ///
-  factory ConceptMapTarget({
+  const factory ConceptMapTarget({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2840,7 +2841,7 @@ class ConceptMapProperty1 with _$ConceptMapProperty1 {
   ///
   /// [valueCodeElement] ("_valueCode") Extensions for valueCode
   ///
-  factory ConceptMapProperty1({
+  const factory ConceptMapProperty1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3024,7 +3025,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
   /// [valueSet] This mapping applies if the data element value is a code from
   ///  this value set.
   ///
-  factory ConceptMapDependsOn({
+  const factory ConceptMapDependsOn({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3192,7 +3193,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
   ///  instance to use for mapping if this ConceptMap resource contains no
   ///  matching mapping for the source concept.
   ///
-  factory ConceptMapUnmapped({
+  const factory ConceptMapUnmapped({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3524,11 +3525,12 @@ class NamingSystem with Resource, _$NamingSystem {
   /// [uniqueId] Indicates how the system may be identified when referenced in
   ///  electronic exchange.
   ///
-  factory NamingSystem({
+  const factory NamingSystem({
     /// [resourceType] This is a NamingSystem resource
     @Default(R5ResourceType.NamingSystem)
     @JsonKey(unknownEnumValue: R5ResourceType.NamingSystem)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3631,7 +3633,7 @@ class NamingSystem with Resource, _$NamingSystem {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which NamingSystem is more current.
@@ -3911,7 +3913,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
   ///
   /// [authoritativeElement] ("_authoritative") Extensions for authoritative
   ///
-  factory NamingSystemUniqueId({
+  const factory NamingSystemUniqueId({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4231,11 +4233,12 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   ///
   /// [closure] Whether the $closure operation is supported.
   ///
-  factory TerminologyCapabilities({
+  const factory TerminologyCapabilities({
     /// [resourceType] This is a TerminologyCapabilities resource
     @Default(R5ResourceType.TerminologyCapabilities)
     @JsonKey(unknownEnumValue: R5ResourceType.TerminologyCapabilities)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -4339,7 +4342,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -4582,7 +4585,7 @@ class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
   ///
   /// [versionElement] ("_version") Extensions for version
   ///
-  factory TerminologyCapabilitiesSoftware({
+  const factory TerminologyCapabilitiesSoftware({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4711,7 +4714,7 @@ class TerminologyCapabilitiesImplementation
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory TerminologyCapabilitiesImplementation({
+  const factory TerminologyCapabilitiesImplementation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4845,7 +4848,7 @@ class TerminologyCapabilitiesCodeSystem
   ///
   /// [subsumptionElement] ("_subsumption") Extensions for subsumption
   ///
-  factory TerminologyCapabilitiesCodeSystem({
+  const factory TerminologyCapabilitiesCodeSystem({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4995,7 +4998,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   ///
   /// [propertyElement] ("_property") Extensions for property
   ///
-  factory TerminologyCapabilitiesVersion({
+  const factory TerminologyCapabilitiesVersion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5142,7 +5145,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   ///
   /// [opElement] ("_op") Extensions for op
   ///
-  factory TerminologyCapabilitiesFilter({
+  const factory TerminologyCapabilitiesFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5275,7 +5278,7 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
   ///
   /// [textFilterElement] ("_textFilter") Extensions for textFilter
   ///
-  factory TerminologyCapabilitiesExpansion({
+  const factory TerminologyCapabilitiesExpansion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5415,7 +5418,7 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
   ///
   /// [documentationElement] ("_documentation") Extensions for documentation
   ///
-  factory TerminologyCapabilitiesParameter({
+  const factory TerminologyCapabilitiesParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5537,7 +5540,7 @@ class TerminologyCapabilitiesValidateCode
   ///
   /// [translationsElement] ("_translations") Extensions for translations
   ///
-  factory TerminologyCapabilitiesValidateCode({
+  const factory TerminologyCapabilitiesValidateCode({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5653,7 +5656,7 @@ class TerminologyCapabilitiesTranslation
   ///
   /// [needsMapElement] ("_needsMap") Extensions for needsMap
   ///
-  factory TerminologyCapabilitiesTranslation({
+  const factory TerminologyCapabilitiesTranslation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5768,7 +5771,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   ///
   /// [translationElement] ("_translation") Extensions for translation
   ///
-  factory TerminologyCapabilitiesClosure({
+  const factory TerminologyCapabilitiesClosure({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6067,11 +6070,12 @@ class ValueSet with Resource, _$ValueSet {
   ///  intended to cover and should further clarify the text in
   ///  ValueSet.description.
   ///
-  factory ValueSet({
+  const factory ValueSet({
     /// [resourceType] This is a ValueSet resource
     @Default(R5ResourceType.ValueSet)
     @JsonKey(unknownEnumValue: R5ResourceType.ValueSet)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -6174,7 +6178,7 @@ class ValueSet with Resource, _$ValueSet {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which ValueSet is more current.
@@ -6451,7 +6455,7 @@ class ValueSetCompose with _$ValueSetCompose {
   ///
   /// [propertyElement] ("_property") Extensions for property
   ///
-  factory ValueSetCompose({
+  const factory ValueSetCompose({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6622,7 +6626,7 @@ class ValueSetInclude with _$ValueSetInclude {
   ///
   /// [copyrightElement] ("_copyright") Extensions for copyright
   ///
-  factory ValueSetInclude({
+  const factory ValueSetInclude({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6777,7 +6781,7 @@ class ValueSetConcept with _$ValueSetConcept {
   ///  this value set - other languages, aliases, specialized purposes, used
   ///  for particular purposes, etc.
   ///
-  factory ValueSetConcept({
+  const factory ValueSetConcept({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6914,7 +6918,7 @@ class ValueSetDesignation with _$ValueSetDesignation {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory ValueSetDesignation({
+  const factory ValueSetDesignation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7053,7 +7057,7 @@ class ValueSetFilter with _$ValueSetFilter {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory ValueSetFilter({
+  const factory ValueSetFilter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7220,7 +7224,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
   ///
   /// [contains] The codes that are contained in the value set expansion.
   ///
-  factory ValueSetExpansion({
+  const factory ValueSetExpansion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7411,7 +7415,7 @@ class ValueSetParameter with _$ValueSetParameter {
   ///
   /// [valueDateTimeElement] ("_valueDateTime") Extensions for valueDateTime
   ///
-  factory ValueSetParameter({
+  const factory ValueSetParameter({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7574,7 +7578,7 @@ class ValueSetProperty with _$ValueSetProperty {
   ///
   /// [uriElement] ("_uri") Extensions for uri
   ///
-  factory ValueSetProperty({
+  const factory ValueSetProperty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7738,7 +7742,7 @@ class ValueSetContains with _$ValueSetContains {
   /// [contains] Other codes and entries contained under this entry in the
   ///  hierarchy.
   ///
-  factory ValueSetContains({
+  const factory ValueSetContains({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7934,7 +7938,7 @@ class ValueSetProperty1 with _$ValueSetProperty1 {
   ///
   /// [subProperty] A subproperty value for this concept.
   ///
-  factory ValueSetProperty1({
+  const factory ValueSetProperty1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8116,7 +8120,7 @@ class ValueSetSubProperty with _$ValueSetSubProperty {
   ///
   /// [valueDecimalElement] ("_valueDecimal") Extensions for valueDecimal
   ///
-  factory ValueSetSubProperty({
+  const factory ValueSetSubProperty({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8275,7 +8279,7 @@ class ValueSetScope with _$ValueSetScope {
   /// [exclusionCriteriaElement] ("_exclusionCriteria") Extensions for
   ///  exclusionCriteria
   ///
-  factory ValueSetScope({
+  const factory ValueSetScope({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

@@ -315,11 +315,12 @@ class Measure with Resource, _$Measure {
   ///  specified as either the name of a valid CQL expression within a
   ///  referenced library, or a valid FHIR Resource Path.
   ///
-  factory Measure({
+  const factory Measure({
     /// [resourceType] This is a Measure resource
     @Default(R5ResourceType.Measure)
     @JsonKey(unknownEnumValue: R5ResourceType.Measure)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -426,7 +427,7 @@ class Measure with Resource, _$Measure {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -676,7 +677,7 @@ class Measure with Resource, _$Measure {
     ///  ("_clinicalRecommendationStatement") Extensions for
     ///  clinicalRecommendationStatement
     @JsonKey(name: '_clinicalRecommendationStatement')
-        Element? clinicalRecommendationStatementElement,
+    Element? clinicalRecommendationStatementElement,
 
     /// [improvementNotation] Information on whether an increase or decrease in
     ///  score is the preferred result (e.g., a higher score indicates better
@@ -778,7 +779,7 @@ class MeasureTerm with _$MeasureTerm {
   ///
   /// [definitionElement] ("_definition") Extensions for definition
   ///
-  factory MeasureTerm({
+  const factory MeasureTerm({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -951,7 +952,7 @@ class MeasureGroup with _$MeasureGroup {
   ///  either the name of a valid CQL expression defined within a referenced
   ///  library or a valid FHIR Resource Path.
   ///
-  factory MeasureGroup({
+  const factory MeasureGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1167,7 +1168,7 @@ class MeasurePopulation with _$MeasurePopulation {
   ///  For continuous variables, however, this information must be specified to
   ///  ensure correct calculation.
   ///
-  factory MeasurePopulation({
+  const factory MeasurePopulation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1334,7 +1335,7 @@ class MeasureStratifier with _$MeasureStratifier {
   ///  report, specified as either the name of a valid CQL expression defined
   ///  within a referenced library or a valid FHIR Resource Path.
   ///
-  factory MeasureStratifier({
+  const factory MeasureStratifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1488,7 +1489,7 @@ class MeasureComponent with _$MeasureComponent {
   /// [groupDefinition] A Group resource that defines this population as a set
   ///  of characteristics.
   ///
-  factory MeasureComponent({
+  const factory MeasureComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1639,7 +1640,7 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
   ///  may also be a path to a specific data element. The criteria defines the
   ///  data to be returned for this element.
   ///
-  factory MeasureSupplementalData({
+  const factory MeasureSupplementalData({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -1880,11 +1881,12 @@ class MeasureReport with Resource, _$MeasureReport {
   ///  individual reports to ensure that the size of the MeasureReport resource
   ///  is bounded.
   ///
-  factory MeasureReport({
+  const factory MeasureReport({
     /// [resourceType] This is a MeasureReport resource
     @Default(R5ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: R5ResourceType.MeasureReport)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -2169,7 +2171,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
   /// [stratifier] When a measure includes multiple stratifiers, there will be
   ///  a stratifier group for each stratifier defined by the measure.
   ///
-  factory MeasureReportGroup({
+  const factory MeasureReportGroup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2230,7 +2232,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
     /// [measureScoreDateTimeElement] ("_measureScoreDateTime") Extensions for
     ///  measureScoreDateTime
     @JsonKey(name: '_measureScoreDateTime')
-        Element? measureScoreDateTimeElement,
+    Element? measureScoreDateTimeElement,
 
     /// [measureScoreCodeableConcept] The measure score for this population
     ///  group, calculated as appropriate for the measure type and scoring
@@ -2347,7 +2349,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   /// [subjects] Optional Group identifying the individuals that make up the
   ///  population.
   ///
-  factory MeasureReportPopulation({
+  const factory MeasureReportPopulation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2486,7 +2488,7 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
   ///  the stratifier. For example, when stratifying on administrative gender,
   ///  there will be four strata, one for each possible gender value.
   ///
-  factory MeasureReportStratifier({
+  const factory MeasureReportStratifier({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2659,7 +2661,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
   ///  appropriate for the measure type and scoring method, and based on only
   ///  the members of this stratum.
   ///
-  factory MeasureReportStratum({
+  const factory MeasureReportStratum({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -2741,7 +2743,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
     /// [measureScoreDateTimeElement] ("_measureScoreDateTime") Extensions for
     ///  measureScoreDateTime
     @JsonKey(name: '_measureScoreDateTime')
-        Element? measureScoreDateTimeElement,
+    Element? measureScoreDateTimeElement,
 
     /// [measureScoreCodeableConcept] The measure score for this stratum,
     ///  calculated as appropriate for the measure type and scoring method, and
@@ -2852,7 +2854,7 @@ class MeasureReportComponent with _$MeasureReportComponent {
   ///
   /// [valueReference] The stratum component value.
   ///
-  factory MeasureReportComponent({
+  const factory MeasureReportComponent({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3000,7 +3002,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   /// [subjects] Optional Group identifying the individuals that make up the
   ///  population.
   ///
-  factory MeasureReportPopulation1({
+  const factory MeasureReportPopulation1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3276,11 +3278,12 @@ class TestPlan with Resource, _$TestPlan {
   /// [testCase] The individual test cases that are part of this plan, when
   ///  they they are made explicit.
   ///
-  factory TestPlan({
+  const factory TestPlan({
     /// [resourceType] This is a TestPlan resource
     @Default(R5ResourceType.TestPlan)
     @JsonKey(unknownEnumValue: R5ResourceType.TestPlan)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -3383,7 +3386,7 @@ class TestPlan with Resource, _$TestPlan {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -3589,7 +3592,7 @@ class TestPlanDependency with _$TestPlanDependency {
   ///  successfully performed as a dependency for the execution of this test
   ///  plan.
   ///
-  factory TestPlanDependency({
+  const factory TestPlanDependency({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3715,7 +3718,7 @@ class TestPlanTestCase with _$TestPlanTestCase {
   /// [assertion] The test assertions - the expectations of test results from
   ///  the execution of the test case.
   ///
-  factory TestPlanTestCase({
+  const factory TestPlanTestCase({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3842,7 +3845,7 @@ class TestPlanDependency1 with _$TestPlanDependency1 {
   ///
   /// [predecessor] Link to predecessor test plans.
   ///
-  factory TestPlanDependency1({
+  const factory TestPlanDependency1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -3954,7 +3957,7 @@ class TestPlanTestRun with _$TestPlanTestRun {
   /// [script] The test cases in a structured language e.g. gherkin, Postman,
   ///  or FHIR TestScript.
   ///
-  factory TestPlanTestRun({
+  const factory TestPlanTestRun({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4070,7 +4073,7 @@ class TestPlanScript with _$TestPlanScript {
   /// [sourceReference] The actual content of the cases - references to
   ///  TestScripts or externally defined content.
   ///
-  factory TestPlanScript({
+  const factory TestPlanScript({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4192,7 +4195,7 @@ class TestPlanTestData with _$TestPlanTestData {
   /// [sourceReference] Pointer to a definition of test resources - narrative
   ///  or structured e.g. synthetic data generation, etc.
   ///
-  factory TestPlanTestData({
+  const factory TestPlanTestData({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4314,7 +4317,7 @@ class TestPlanAssertion with _$TestPlanAssertion {
   /// [result] The test assertion - the expected outcome from the test case
   ///  execution.
   ///
-  factory TestPlanAssertion({
+  const factory TestPlanAssertion({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4498,11 +4501,12 @@ class TestReport with Resource, _$TestReport {
   /// [teardown] The results of the series of operations required to clean up
   ///  after all the tests were executed (successfully or otherwise).
   ///
-  factory TestReport({
+  const factory TestReport({
     /// [resourceType] This is a TestReport resource
     @Default(R5ResourceType.TestReport)
     @JsonKey(unknownEnumValue: R5ResourceType.TestReport)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -4713,7 +4717,7 @@ class TestReportParticipant with _$TestReportParticipant {
   ///
   /// [displayElement] ("_display") Extensions for display
   ///
-  factory TestReportParticipant({
+  const factory TestReportParticipant({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4829,7 +4833,7 @@ class TestReportSetup with _$TestReportSetup {
   ///
   /// [action] Action would contain either an operation or an assertion.
   ///
-  factory TestReportSetup({
+  const factory TestReportSetup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -4933,7 +4937,7 @@ class TestReportAction with _$TestReportAction {
   /// [assert_] ("assert") The results of the assertion performed on the
   ///  previous operations.
   ///
-  factory TestReportAction({
+  const factory TestReportAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5048,7 +5052,7 @@ class TestReportOperation with _$TestReportOperation {
   ///
   /// [detailElement] ("_detail") Extensions for detail
   ///
-  factory TestReportOperation({
+  const factory TestReportOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5177,7 +5181,7 @@ class TestReportAssert with _$TestReportAssert {
   /// [requirement] Links or references providing traceability to the testing
   ///  requirements for this assert.
   ///
-  factory TestReportAssert({
+  const factory TestReportAssert({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5305,7 +5309,7 @@ class TestReportRequirement with _$TestReportRequirement {
   ///
   /// [linkCanonicalElement] ("_linkCanonical") Extensions for linkCanonical
   ///
-  factory TestReportRequirement({
+  const factory TestReportRequirement({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5427,7 +5431,7 @@ class TestReportTest with _$TestReportTest {
   ///
   /// [action] Action would contain either an operation or an assertion.
   ///
-  factory TestReportTest({
+  const factory TestReportTest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5545,7 +5549,7 @@ class TestReportAction1 with _$TestReportAction1 {
   /// [assert_] ("assert") The results of the assertion performed on the
   ///  previous operations.
   ///
-  factory TestReportAction1({
+  const factory TestReportAction1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5650,7 +5654,7 @@ class TestReportTeardown with _$TestReportTeardown {
   ///
   /// [action] The teardown action will only contain an operation.
   ///
-  factory TestReportTeardown({
+  const factory TestReportTeardown({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -5751,7 +5755,7 @@ class TestReportAction2 with _$TestReportAction2 {
   ///
   /// [operation] An operation would involve a REST request to a server.
   ///
-  factory TestReportAction2({
+  const factory TestReportAction2({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6009,11 +6013,12 @@ class TestScript with Resource, _$TestScript {
   /// [teardown] A series of operations required to clean up after all the
   ///  tests are executed (successfully or otherwise).
   ///
-  factory TestScript({
+  const factory TestScript({
     /// [resourceType] This is a TestScript resource
     @Default(R5ResourceType.TestScript)
     @JsonKey(unknownEnumValue: R5ResourceType.TestScript)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
@@ -6116,7 +6121,7 @@ class TestScript with Resource, _$TestScript {
     /// [versionAlgorithmStringElement] ("_versionAlgorithmString") Extensions
     ///  for versionAlgorithmString
     @JsonKey(name: '_versionAlgorithmString')
-        Element? versionAlgorithmStringElement,
+    Element? versionAlgorithmStringElement,
 
     /// [versionAlgorithmCoding] Indicates the mechanism used to compare
     ///  versions to determine which is more current.
@@ -6337,7 +6342,7 @@ class TestScriptOrigin with _$TestScriptOrigin {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory TestScriptOrigin({
+  const factory TestScriptOrigin({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6465,7 +6470,7 @@ class TestScriptDestination with _$TestScriptDestination {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory TestScriptDestination({
+  const factory TestScriptDestination({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6586,7 +6591,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
   /// [capability] Capabilities that must exist and are assumed to function
   ///  correctly on the FHIR server being tested.
   ///
-  factory TestScriptMetadata({
+  const factory TestScriptMetadata({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6700,7 +6705,7 @@ class TestScriptLink with _$TestScriptLink {
   ///
   /// [descriptionElement] ("_description") Extensions for description
   ///
-  factory TestScriptLink({
+  const factory TestScriptLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -6846,7 +6851,7 @@ class TestScriptCapability with _$TestScriptCapability {
   ///  referenced capability statement, then all tests in this script are
   ///  skipped.
   ///
-  factory TestScriptCapability({
+  const factory TestScriptCapability({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7005,7 +7010,7 @@ class TestScriptScope with _$TestScriptScope {
   ///  production - live system to system phase (Note, this may involve pii/phi
   ///  data).
   ///
-  factory TestScriptScope({
+  const factory TestScriptScope({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7139,7 +7144,7 @@ class TestScriptFixture with _$TestScriptFixture {
   ///  resource needed for operations). This is allowed to be a Parameters
   ///  resource.
   ///
-  factory TestScriptFixture({
+  const factory TestScriptFixture({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7302,7 +7307,7 @@ class TestScriptVariable with _$TestScriptVariable {
   ///
   /// [sourceIdElement] ("_sourceId") Extensions for sourceId
   ///
-  factory TestScriptVariable({
+  const factory TestScriptVariable({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7459,7 +7464,7 @@ class TestScriptSetup with _$TestScriptSetup {
   ///
   /// [action] Action would contain either an operation or an assertion.
   ///
-  factory TestScriptSetup({
+  const factory TestScriptSetup({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7566,7 +7571,7 @@ class TestScriptAction with _$TestScriptAction {
   /// [assert_] ("assert") Evaluates the results of previous operations to
   ///  determine if the server under test behaves appropriately.
   ///
-  factory TestScriptAction({
+  const factory TestScriptAction({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7752,7 +7757,7 @@ class TestScriptOperation with _$TestScriptOperation {
   ///
   /// [urlElement] ("_url") Extensions for url
   ///
-  factory TestScriptOperation({
+  const factory TestScriptOperation({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -7972,7 +7977,7 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
   ///
   /// [valueElement] ("_value") Extensions for value
   ///
-  factory TestScriptRequestHeader({
+  const factory TestScriptRequestHeader({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8221,7 +8226,7 @@ class TestScriptAssert with _$TestScriptAssert {
   /// [requirement] Links or references providing traceability to the testing
   ///  requirements for this assert.
   ///
-  factory TestScriptAssert({
+  const factory TestScriptAssert({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8288,7 +8293,7 @@ class TestScriptAssert with _$TestScriptAssert {
     /// [compareToSourceExpressionElement] ("_compareToSourceExpression")
     ///  Extensions for compareToSourceExpression
     @JsonKey(name: '_compareToSourceExpression')
-        Element? compareToSourceExpressionElement,
+    Element? compareToSourceExpressionElement,
 
     /// [compareToSourcePath] XPath or JSONPath expression to evaluate against
     ///  the source fixture. When compareToSourceId is defined, either
@@ -8314,7 +8319,7 @@ class TestScriptAssert with _$TestScriptAssert {
     /// [defaultManualCompletionElement] ("_defaultManualCompletion")
     ///  Extensions for defaultManualCompletion
     @JsonKey(name: '_defaultManualCompletion')
-        Element? defaultManualCompletionElement,
+    Element? defaultManualCompletionElement,
 
     /// [expression] The FHIRPath expression to be evaluated against the
     ///  request or response message contents - HTTP headers and payload.
@@ -8521,7 +8526,7 @@ class TestScriptRequirement with _$TestScriptRequirement {
   ///
   /// [linkCanonicalElement] ("_linkCanonical") Extensions for linkCanonical
   ///
-  factory TestScriptRequirement({
+  const factory TestScriptRequirement({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8645,7 +8650,7 @@ class TestScriptTest with _$TestScriptTest {
   ///
   /// [action] Action would contain either an operation or an assertion.
   ///
-  factory TestScriptTest({
+  const factory TestScriptTest({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8766,7 +8771,7 @@ class TestScriptAction1 with _$TestScriptAction1 {
   /// [assert_] ("assert") Evaluates the results of previous operations to
   ///  determine if the server under test behaves appropriately.
   ///
-  factory TestScriptAction1({
+  const factory TestScriptAction1({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8874,7 +8879,7 @@ class TestScriptTeardown with _$TestScriptTeardown {
   ///
   /// [action] The teardown action will only contain an operation.
   ///
-  factory TestScriptTeardown({
+  const factory TestScriptTeardown({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,
@@ -8978,7 +8983,7 @@ class TestScriptAction2 with _$TestScriptAction2 {
   ///
   /// [operation] An operation would involve a REST request to a server.
   ///
-  factory TestScriptAction2({
+  const factory TestScriptAction2({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
     @JsonKey(name: 'id') String? fhirId,

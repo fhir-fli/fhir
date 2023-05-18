@@ -17,7 +17,7 @@ part 'general_types.g.dart';
 @freezed
 class BackboneElement with _$BackboneElement {
   BackboneElement._();
-  factory BackboneElement({
+  const factory BackboneElement({
     List<FhirExtension>? modifierExtension,
   }) = _BackboneElement;
 
@@ -55,7 +55,7 @@ class BackboneElement with _$BackboneElement {
 @freezed
 class Annotation with _$Annotation {
   Annotation._();
-  factory Annotation({
+  const factory Annotation({
     Reference? authorReference,
     String? authorString,
     @JsonKey(name: '_authorString') Element? authorStringElement,
@@ -99,7 +99,7 @@ class Annotation with _$Annotation {
 @freezed
 class Attachment with _$Attachment {
   Attachment._();
-  factory Attachment({
+  const factory Attachment({
     String? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
     String? language,
@@ -152,7 +152,7 @@ class Attachment with _$Attachment {
 @freezed
 class Identifier with _$Identifier {
   Identifier._();
-  factory Identifier({
+  const factory Identifier({
     IdentifierUse? use,
     @JsonKey(name: '_use') Element? useElement,
     CodeableConcept? type,
@@ -198,7 +198,7 @@ class Identifier with _$Identifier {
 @freezed
 class CodeableConcept with _$CodeableConcept {
   CodeableConcept._();
-  factory CodeableConcept({
+  const factory CodeableConcept({
     List<Coding>? coding,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -238,7 +238,7 @@ class CodeableConcept with _$CodeableConcept {
 @freezed
 class Coding with _$Coding {
   Coding._();
-  factory Coding({
+  const factory Coding({
     String? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? version,
@@ -284,7 +284,7 @@ class Coding with _$Coding {
 @freezed
 class Quantity with _$Quantity {
   Quantity._();
-  factory Quantity({
+  const factory Quantity({
     FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
@@ -331,7 +331,7 @@ class Quantity with _$Quantity {
 @freezed
 class FhirDuration with _$FhirDuration {
   FhirDuration._();
-  factory FhirDuration({
+  const factory FhirDuration({
     FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
@@ -378,7 +378,7 @@ class FhirDuration with _$FhirDuration {
 @freezed
 class Distance with _$Distance {
   Distance._();
-  factory Distance({
+  const factory Distance({
     FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
@@ -425,7 +425,7 @@ class Distance with _$Distance {
 @freezed
 class Count with _$Count {
   Count._();
-  factory Count({
+  const factory Count({
     FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
@@ -470,7 +470,7 @@ class Count with _$Count {
 @freezed
 class Money with _$Money {
   Money._();
-  factory Money({
+  const factory Money({
     FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
@@ -515,7 +515,7 @@ class Money with _$Money {
 @freezed
 class Age with _$Age {
   Age._();
-  factory Age({
+  const factory Age({
     FhirDecimal? value,
     @JsonKey(name: '_value') Element? valueElement,
     QuantityComparator? comparator,
@@ -559,7 +559,7 @@ class Age with _$Age {
 @freezed
 class Range with _$Range {
   Range._();
-  factory Range({
+  const factory Range({
     Quantity? low,
     Quantity? high,
   }) = _Range;
@@ -596,7 +596,7 @@ class Range with _$Range {
 @freezed
 class Period with _$Period {
   Period._();
-  factory Period({
+  const factory Period({
     String? start,
     @JsonKey(name: '_start') Element? startElement,
     String? end,
@@ -636,7 +636,7 @@ class Period with _$Period {
 @freezed
 class Ratio with _$Ratio {
   Ratio._();
-  factory Ratio({
+  const factory Ratio({
     Quantity? numerator,
     Quantity? denominator,
   }) = _Ratio;
@@ -673,7 +673,7 @@ class Ratio with _$Ratio {
 @freezed
 class SampledData with _$SampledData {
   SampledData._();
-  factory SampledData({
+  const factory SampledData({
     required Quantity origin,
     FhirDecimal? period,
     @JsonKey(name: '_period') Element? periodElement,
@@ -723,7 +723,7 @@ class SampledData with _$SampledData {
 @freezed
 class Signature with _$Signature {
   Signature._();
-  factory Signature({
+  const factory Signature({
     required List<Coding> type,
     String? when,
     @JsonKey(name: '_when') Element? whenElement,
@@ -773,7 +773,7 @@ class Signature with _$Signature {
 @freezed
 class HumanName with _$HumanName {
   HumanName._();
-  factory HumanName({
+  const factory HumanName({
     HumanNameUse? use,
     @JsonKey(name: '_use') Element? useElement,
     String? text,
@@ -823,7 +823,7 @@ class HumanName with _$HumanName {
 @freezed
 class Address with _$Address {
   Address._();
-  factory Address({
+  const factory Address({
     AddressUse? use,
     @JsonKey(name: '_use') Element? useElement,
     AddressType? type,
@@ -879,7 +879,7 @@ class Address with _$Address {
 @freezed
 class ContactPoint with _$ContactPoint {
   ContactPoint._();
-  factory ContactPoint({
+  const factory ContactPoint({
     ContactPointSystem? system,
     @JsonKey(name: '_system') Element? systemElement,
     String? value,
@@ -925,7 +925,7 @@ class ContactPoint with _$ContactPoint {
 @freezed
 class Timing with _$Timing {
   Timing._();
-  factory Timing({
+  const factory Timing({
     List<String>? event,
     @JsonKey(name: '_event') List<Element?>? eventElement,
     TimingRepeat? repeat,
@@ -965,7 +965,7 @@ class Timing with _$Timing {
 @freezed
 class TimingRepeat with _$TimingRepeat {
   TimingRepeat._();
-  factory TimingRepeat({
+  const factory TimingRepeat({
     FhirDuration? boundsDuration,
     Range? boundsRange,
     Period? boundsPeriod,

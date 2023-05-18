@@ -13,19 +13,19 @@ import '../../../../r5.dart';
 part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
-/// [Group] Represents a defined collection of entities that may be discussed
+/// [FhirGroup] Represents a defined collection of entities that may be discussed
 ///  or acted upon collectively but which are not expected to act collectively,
 ///  and are not formally or legally recognized; i.e. a collection of entities
 ///  that isn't an Organization.
 @freezed
-class Group with Resource, _$Group {
-  /// [Group] Represents a defined collection of entities that may be discussed
+class FhirGroup with Resource, _$FhirGroup {
+  /// [FhirGroup] Represents a defined collection of entities that may be discussed
   ///  or acted upon collectively but which are not expected to act
   ///  collectively, and are not formally or legally recognized; i.e. a
   ///  collection of entities that isn't an Organization.
-  Group._();
+  FhirGroup._();
 
-  /// [Group] Represents a defined collection of entities that may be discussed
+  /// [FhirGroup] Represents a defined collection of entities that may be discussed
   ///  or acted upon collectively but which are not expected to act
   ///  collectively, and are not formally or legally recognized; i.e. a
   ///  collection of entities that isn't an Organization.
@@ -137,15 +137,16 @@ class Group with Resource, _$Group {
   ///
   /// [member] Identifies the resource instances that are members of the group.
   ///
-  factory Group({
+  const factory FhirGroup({
     /// [resourceType] This is a Group resource
     @Default(R5ResourceType.Group)
     @JsonKey(unknownEnumValue: R5ResourceType.Group)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -278,31 +279,33 @@ class Group with Resource, _$Group {
     /// [member] Identifies the resource instances that are members of the
     ///  group.
     List<GroupMember>? member,
-  }) = _Group;
+  }) = _FhirGroup;
 
   /// Produces a Yaml formatted String version of the object
   @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Group.fromYaml(dynamic yaml) => yaml is String
-      ? Group.fromJson(
+  factory FhirGroup.fromYaml(dynamic yaml) => yaml is String
+      ? FhirGroup.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Group.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          ? FhirGroup.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'Group cannot be constructed from input provided,'
+              'FhirGroup cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
+  factory FhirGroup.fromJson(Map<String, dynamic> json) =>
+      _$FhirGroupFromJson(json);
 
-  /// Acts like a constructor, returns a [Group], accepts a
+  /// Acts like a constructor, returns a [FhirGroup], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory Group.fromJsonString(String source) {
+  factory FhirGroup.fromJsonString(String source) {
     final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$GroupFromJson(json);
+      return _$FhirGroupFromJson(json);
     } else {
       throw FormatException('FormatException:\nYou passed $json\n'
           'This does not properly decode to a Map<String,dynamic>.');
@@ -378,10 +381,10 @@ class GroupCharacteristic with _$GroupCharacteristic {
   /// [period] The period over which the characteristic is tested; e.g. the
   ///  patient had an operation during the month of June.
   ///
-  factory GroupCharacteristic({
+  const factory GroupCharacteristic({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -528,10 +531,10 @@ class GroupMember with _$GroupMember {
   ///
   /// [inactiveElement] ("_inactive") Extensions for inactive
   ///
-  factory GroupMember({
+  const factory GroupMember({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -737,15 +740,16 @@ class Patient with Resource, _$Patient {
   /// [link] Link to a Patient or RelatedPerson resource that concerns the same
   ///  actual individual.
   ///
-  factory Patient({
+  const factory Patient({
     /// [resourceType] This is a Patient resource
     @Default(R5ResourceType.Patient)
     @JsonKey(unknownEnumValue: R5ResourceType.Patient)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -870,7 +874,7 @@ class Patient with Resource, _$Patient {
     /// [multipleBirthBooleanElement] ("_multipleBirthBoolean") Extensions for
     ///  multipleBirthBoolean
     @JsonKey(name: '_multipleBirthBoolean')
-        Element? multipleBirthBooleanElement,
+    Element? multipleBirthBooleanElement,
 
     /// [multipleBirthInteger] Indicates whether the patient is part of a
     ///  multiple (boolean) or indicates the actual birth order (integer).
@@ -879,7 +883,7 @@ class Patient with Resource, _$Patient {
     /// [multipleBirthIntegerElement] ("_multipleBirthInteger") Extensions for
     ///  multipleBirthInteger
     @JsonKey(name: '_multipleBirthInteger')
-        Element? multipleBirthIntegerElement,
+    Element? multipleBirthIntegerElement,
 
     /// [photo] Image of the patient.
     List<Attachment>? photo,
@@ -992,10 +996,10 @@ class PatientContact with _$PatientContact {
   /// [period] The period during which this contact person or organization is
   ///  valid to be contacted relating to this patient.
   ///
-  factory PatientContact({
+  const factory PatientContact({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1130,10 +1134,10 @@ class PatientCommunication with _$PatientCommunication {
   ///
   /// [preferredElement] ("_preferred") Extensions for preferred
   ///
-  factory PatientCommunication({
+  const factory PatientCommunication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1247,10 +1251,10 @@ class PatientLink with _$PatientLink {
   ///
   /// [typeElement] ("_type") Extensions for type
   ///
-  factory PatientLink({
+  const factory PatientLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1429,15 +1433,16 @@ class Person with Resource, _$Person {
   ///
   /// [link] Link to a resource that concerns the same actual person.
   ///
-  factory Person({
+  const factory Person({
     /// [resourceType] This is a Person resource
     @Default(R5ResourceType.Person)
     @JsonKey(unknownEnumValue: R5ResourceType.Person)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -1641,10 +1646,10 @@ class PersonCommunication with _$PersonCommunication {
   ///
   /// [preferredElement] ("_preferred") Extensions for preferred
   ///
-  factory PersonCommunication({
+  const factory PersonCommunication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1757,10 +1762,10 @@ class PersonLink with _$PersonLink {
   ///
   /// [assuranceElement] ("_assurance") Extensions for assurance
   ///
-  factory PersonLink({
+  const factory PersonLink({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -1942,15 +1947,16 @@ class Practitioner with Resource, _$Practitioner {
   ///  the languages that a practitioner is able to communicate with patients
   ///  (on a per Organization/Role basis).
   ///
-  factory Practitioner({
+  const factory Practitioner({
     /// [resourceType] This is a Practitioner resource
     @Default(R5ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: R5ResourceType.Practitioner)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2155,10 +2161,10 @@ class PractitionerQualification with _$PractitionerQualification {
   ///
   /// [issuer] Organization that regulates and issues the qualification.
   ///
-  factory PractitionerQualification({
+  const factory PractitionerQualification({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2273,10 +2279,10 @@ class PractitionerCommunication with _$PractitionerCommunication {
   ///
   /// [preferredElement] ("_preferred") Extensions for preferred
   ///
-  factory PractitionerCommunication({
+  const factory PractitionerCommunication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
@@ -2458,15 +2464,16 @@ class PractitionerRole with Resource, _$PractitionerRole {
   ///  the practitioner with this role. Commonly used for locating scheduling
   ///  services, or identifying where to send referrals electronically.
   ///
-  factory PractitionerRole({
+  const factory PractitionerRole({
     /// [resourceType] This is a PractitionerRole resource
     @Default(R5ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: R5ResourceType.PractitionerRole)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2729,15 +2736,16 @@ class RelatedPerson with Resource, _$RelatedPerson {
   /// [communication] A language which may be used to communicate with the
   ///  related person about the patient's health.
   ///
-  factory RelatedPerson({
+  const factory RelatedPerson({
     /// [resourceType] This is a RelatedPerson resource
     @Default(R5ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: R5ResourceType.RelatedPerson)
-        R5ResourceType resourceType,
+    R5ResourceType resourceType,
+    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
     /// [id] The logical id of the resource, as used in the URL for the
     ///  resource. Once assigned, this value never changes.
-      @JsonKey(name: 'id') FhirId? fhirId,
+    @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
     ///  maintained by the infrastructure. Changes to the content might not
@@ -2933,10 +2941,10 @@ class RelatedPersonCommunication with _$RelatedPersonCommunication {
   ///
   /// [preferredElement] ("_preferred") Extensions for preferred
   ///
-  factory RelatedPersonCommunication({
+  const factory RelatedPersonCommunication({
     /// [id] Unique id for the element within a resource (for internal
     ///  references). This may be any string value that does not contain spaces.
-      @JsonKey(name: 'id') String? fhirId,
+    @JsonKey(name: 'id') String? fhirId,
 
     /// [extension_] ("extension") May be used to represent additional
     ///  information that is not part of the basic definition of the element.
