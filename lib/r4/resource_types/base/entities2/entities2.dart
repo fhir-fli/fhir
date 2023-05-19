@@ -17,7 +17,7 @@ part 'entities2.g.dart';
 @freezed
 class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   /// [BiologicallyDerivedProduct] A material substance originating from a
-  BiologicallyDerivedProduct._();
+  const BiologicallyDerivedProduct._();
 
   /// [BiologicallyDerivedProduct] A material substance originating from a
   ///  biological entity intended to be transplanted or infused
@@ -266,7 +266,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
 @freezed
 class BiologicallyDerivedProductCollection
     with _$BiologicallyDerivedProductCollection {
-  BiologicallyDerivedProductCollection._();
+  const BiologicallyDerivedProductCollection._();
 
   /// [BiologicallyDerivedProductCollection] A material substance originating
   ///  from a biological entity intended to be transplanted or infused
@@ -374,7 +374,7 @@ class BiologicallyDerivedProductCollection
 @freezed
 class BiologicallyDerivedProductProcessing
     with _$BiologicallyDerivedProductProcessing {
-  BiologicallyDerivedProductProcessing._();
+  const BiologicallyDerivedProductProcessing._();
 
   /// [BiologicallyDerivedProductProcessing] A material substance originating
   ///  from a biological entity intended to be transplanted or infused
@@ -490,7 +490,7 @@ class BiologicallyDerivedProductProcessing
 @freezed
 class BiologicallyDerivedProductManipulation
     with _$BiologicallyDerivedProductManipulation {
-  BiologicallyDerivedProductManipulation._();
+  const BiologicallyDerivedProductManipulation._();
 
   /// [BiologicallyDerivedProductManipulation] A material substance
   /// originating from a biological entity intended to be transplanted or
@@ -597,7 +597,7 @@ class BiologicallyDerivedProductManipulation
 @freezed
 class BiologicallyDerivedProductStorage
     with _$BiologicallyDerivedProductStorage {
-  BiologicallyDerivedProductStorage._();
+  const BiologicallyDerivedProductStorage._();
 
   /// [BiologicallyDerivedProductStorage] A material substance originating
   ///  from a biological entity intended to be transplanted or infused
@@ -714,7 +714,7 @@ class BiologicallyDerivedProductStorage
 @freezed
 class Device with Resource, _$Device {
   /// [Device] A type of a manufactured item that is used in the provision of
-  Device._();
+  const Device._();
 
   /// [Device] A type of a manufactured item that is used in the provision of
   /// healthcare without being substantially changed through that activity. The
@@ -1093,7 +1093,7 @@ class Device with Resource, _$Device {
 @freezed
 class DeviceUdiCarrier with _$DeviceUdiCarrier {
   /// [DeviceUdiCarrier] A type of a manufactured item that is used in the
-  DeviceUdiCarrier._();
+  const DeviceUdiCarrier._();
 
   /// [DeviceUdiCarrier] A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
@@ -1288,7 +1288,7 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
 @freezed
 class DeviceDeviceName with _$DeviceDeviceName {
   /// [DeviceDeviceName] A type of a manufactured item that is used in the
-  DeviceDeviceName._();
+  const DeviceDeviceName._();
 
   /// [DeviceDeviceName] A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
@@ -1405,7 +1405,7 @@ class DeviceDeviceName with _$DeviceDeviceName {
 @freezed
 class DeviceSpecialization with _$DeviceSpecialization {
   /// [DeviceSpecialization] A type of a manufactured item that is used in the
-  DeviceSpecialization._();
+  const DeviceSpecialization._();
 
   /// [DeviceSpecialization] A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
@@ -1515,7 +1515,7 @@ class DeviceSpecialization with _$DeviceSpecialization {
 @freezed
 class DeviceVersion with _$DeviceVersion {
   /// [DeviceVersion] A type of a manufactured item that is used in the
-  DeviceVersion._();
+  const DeviceVersion._();
 
   /// [DeviceVersion] A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
@@ -1628,7 +1628,7 @@ class DeviceVersion with _$DeviceVersion {
 @freezed
 class DeviceProperty with _$DeviceProperty {
   /// [DeviceProperty] A type of a manufactured item that is used in the
-  DeviceProperty._();
+  const DeviceProperty._();
 
   /// [DeviceProperty] A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
@@ -1738,7 +1738,7 @@ class DeviceProperty with _$DeviceProperty {
 @freezed
 class DeviceMetric with Resource, _$DeviceMetric {
   /// [DeviceMetric] Describes a measurement, calculation or setting capability
-  DeviceMetric._();
+  const DeviceMetric._();
 
   /// [DeviceMetric] Describes a measurement, calculation or setting capability
   ///  of a medical device.
@@ -2014,7 +2014,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 @freezed
 class DeviceMetricCalibration with _$DeviceMetricCalibration {
   /// [DeviceMetricCalibration] Describes a measurement, calculation or
-  DeviceMetricCalibration._();
+  const DeviceMetricCalibration._();
 
   /// [DeviceMetricCalibration] Describes a measurement, calculation or
   ///  setting capability of a medical device.
@@ -2136,7 +2136,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
 @freezed
 class NutritionProduct with Resource, _$NutritionProduct {
   /// [NutritionProduct] A food or supplement that is consumed by patients.
-  NutritionProduct._();
+  const NutritionProduct._();
 
   /// [NutritionProduct] A food or supplement that is consumed by patients.
   ///
@@ -2282,7 +2282,7 @@ class NutritionProduct with Resource, _$NutritionProduct {
 @freezed
 class NutritionProductNutrient with _$NutritionProductNutrient {
   /// [NutritionProductNutrient] A food or supplement that is consumed by patients.
-  NutritionProductNutrient._();
+  const NutritionProductNutrient._();
 
   /// [NutritionProductNutrient] A food or supplement that is consumed by patients.
   ///
@@ -2354,7 +2354,7 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
 @freezed
 class NutritionProductIngredient with _$NutritionProductIngredient {
   /// [NutritionProductIngredient] A food or supplement that is consumed by patients.
-  NutritionProductIngredient._();
+  const NutritionProductIngredient._();
 
   /// [NutritionProductIngredient] A food or supplement that is consumed by patients.
   ///
@@ -2426,7 +2426,7 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
 @freezed
 class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   /// [NutritionProductCharacteristic] A food or supplement that is consumed by patients.
-  NutritionProductCharacteristic._();
+  const NutritionProductCharacteristic._();
 
   /// [NutritionProductCharacteristic] A food or supplement that is consumed by patients.
   ///
@@ -2544,7 +2544,7 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
 @freezed
 class NutritionProductInstance with _$NutritionProductInstance {
   /// [NutritionProductInstance] A food or supplement that is consumed by patients.
-  NutritionProductInstance._();
+  const NutritionProductInstance._();
 
   /// [NutritionProductInstance] A food or supplement that is consumed by patients.
   ///
@@ -2628,7 +2628,7 @@ class NutritionProductInstance with _$NutritionProductInstance {
 @freezed
 class Substance with Resource, _$Substance {
   /// [Substance] A homogeneous material with a definite composition.
-  Substance._();
+  const Substance._();
 
   /// [Substance] A homogeneous material with a definite composition.
   ///
@@ -2769,7 +2769,7 @@ class Substance with Resource, _$Substance {
 @freezed
 class SubstanceInstance with _$SubstanceInstance {
   /// [SubstanceInstance] A homogeneous material with a definite composition.
-  SubstanceInstance._();
+  const SubstanceInstance._();
 
   /// [SubstanceInstance] A homogeneous material with a definite composition.
   ///
@@ -2851,7 +2851,7 @@ class SubstanceInstance with _$SubstanceInstance {
 @freezed
 class SubstanceIngredient with _$SubstanceIngredient {
   /// [SubstanceIngredient] A homogeneous material with a definite
-  SubstanceIngredient._();
+  const SubstanceIngredient._();
 
   /// [SubstanceIngredient] A homogeneous material with a definite
   ///  composition.

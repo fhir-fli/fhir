@@ -16,7 +16,7 @@ part 'devices.g.dart';
 
 @freezed
 class Device with Resource, _$Device {
-  Device._();
+  const Device._();
   const factory Device({
     @Default(Dstu2ResourceType.Device)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Device)
@@ -85,17 +85,18 @@ class Device with Resource, _$Device {
 
 @freezed
 class DeviceComponent with Resource, _$DeviceComponent {
-  DeviceComponent._();
+  const DeviceComponent._();
   const factory DeviceComponent({
     @Default(Dstu2ResourceType.DeviceComponent)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceComponent)
     Dstu2ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
     @JsonKey(name: 'id') FhirId? fhirId,
-    @JsonKey(name: '_id') Element? idElement,
     FhirMeta? meta,
     FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -144,7 +145,7 @@ class DeviceComponent with Resource, _$DeviceComponent {
 @freezed
 class DeviceComponentProductionSpecification
     with _$DeviceComponentProductionSpecification {
-  DeviceComponentProductionSpecification._();
+  const DeviceComponentProductionSpecification._();
   const factory DeviceComponentProductionSpecification({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -176,7 +177,7 @@ class DeviceComponentProductionSpecification
 
 @freezed
 class DeviceMetric with Resource, _$DeviceMetric {
-  DeviceMetric._();
+  const DeviceMetric._();
   const factory DeviceMetric({
     @Default(Dstu2ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceMetric)
@@ -240,7 +241,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 
 @freezed
 class DeviceMetricCalibration with _$DeviceMetricCalibration {
-  DeviceMetricCalibration._();
+  const DeviceMetricCalibration._();
   const factory DeviceMetricCalibration({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

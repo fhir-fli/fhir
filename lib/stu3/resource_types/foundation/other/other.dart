@@ -16,7 +16,7 @@ part 'other.g.dart';
 
 @freezed
 class Basic with Resource, _$Basic {
-  Basic._();
+  const Basic._();
   const factory Basic({
     @Default(Stu3ResourceType.Basic)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Basic)
@@ -68,7 +68,7 @@ class Basic with Resource, _$Basic {
 
 @freezed
 class Binary with Resource, _$Binary {
-  Binary._();
+  const Binary._();
   const factory Binary({
     @Default(Stu3ResourceType.Binary)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Binary)
@@ -120,7 +120,7 @@ class Binary with Resource, _$Binary {
 
 @freezed
 class Bundle with Resource, _$Bundle {
-  Bundle._();
+  const Bundle._();
   const factory Bundle({
     @Default(Stu3ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Bundle)
@@ -175,7 +175,7 @@ class Bundle with Resource, _$Bundle {
 
 @freezed
 class BundleLink with _$BundleLink {
-  BundleLink._();
+  const BundleLink._();
   const factory BundleLink({
     String? relation,
     @JsonKey(name: '_relation') Element? relationElement,
@@ -216,7 +216,7 @@ class BundleLink with _$BundleLink {
 
 @freezed
 class BundleEntry with _$BundleEntry {
-  BundleEntry._();
+  const BundleEntry._();
   const factory BundleEntry({
     List<BundleLink>? link,
     String? fullUrl,
@@ -305,7 +305,7 @@ class BundleEntry with _$BundleEntry {
 
 @freezed
 class BundleSearch with _$BundleSearch {
-  BundleSearch._();
+  const BundleSearch._();
   const factory BundleSearch({
     BundleSearchMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
@@ -346,7 +346,7 @@ class BundleSearch with _$BundleSearch {
 
 @freezed
 class BundleRequest with _$BundleRequest {
-  BundleRequest._();
+  const BundleRequest._();
   const factory BundleRequest({
     BundleRequestMethod? method,
     @JsonKey(name: '_method') Element? methodElement,
@@ -395,7 +395,7 @@ class BundleRequest with _$BundleRequest {
 
 @freezed
 class BundleResponse with _$BundleResponse {
-  BundleResponse._();
+  const BundleResponse._();
   const factory BundleResponse({
     String? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -441,7 +441,7 @@ class BundleResponse with _$BundleResponse {
 
 @freezed
 class Linkage with Resource, _$Linkage {
-  Linkage._();
+  const Linkage._();
   const factory Linkage({
     @Default(Stu3ResourceType.Linkage)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Linkage)
@@ -493,7 +493,7 @@ class Linkage with Resource, _$Linkage {
 
 @freezed
 class LinkageItem with _$LinkageItem {
-  LinkageItem._();
+  const LinkageItem._();
   const factory LinkageItem({
     LinkageItemType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -533,7 +533,7 @@ class LinkageItem with _$LinkageItem {
 
 @freezed
 class Media with Resource, _$Media {
-  Media._();
+  const Media._();
   const factory Media({
     @Default(Stu3ResourceType.Media)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Media)
@@ -604,7 +604,7 @@ class Media with Resource, _$Media {
 
 @freezed
 class MessageHeader with Resource, _$MessageHeader {
-  MessageHeader._();
+  const MessageHeader._();
   const factory MessageHeader({
     @Default(Stu3ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MessageHeader)
@@ -665,7 +665,7 @@ class MessageHeader with Resource, _$MessageHeader {
 
 @freezed
 class MessageHeaderDestination with _$MessageHeaderDestination {
-  MessageHeaderDestination._();
+  const MessageHeaderDestination._();
   const factory MessageHeaderDestination({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -707,7 +707,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
 
 @freezed
 class MessageHeaderSource with _$MessageHeaderSource {
-  MessageHeaderSource._();
+  const MessageHeaderSource._();
   const factory MessageHeaderSource({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -753,7 +753,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
 
 @freezed
 class MessageHeaderResponse with _$MessageHeaderResponse {
-  MessageHeaderResponse._();
+  const MessageHeaderResponse._();
   const factory MessageHeaderResponse({
     FhirId? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
@@ -795,7 +795,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 
 @freezed
 class OperationOutcome with Resource, _$OperationOutcome {
-  OperationOutcome._();
+  const OperationOutcome._();
   const factory OperationOutcome({
     @Default(Stu3ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: Stu3ResourceType.OperationOutcome)
@@ -847,7 +847,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
 
 @freezed
 class OperationOutcomeIssue with _$OperationOutcomeIssue {
-  OperationOutcomeIssue._();
+  const OperationOutcomeIssue._();
   const factory OperationOutcomeIssue({
     OperationOutcomeIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
@@ -895,7 +895,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
 
 @freezed
 class Parameters with Resource, _$Parameters {
-  Parameters._();
+  const Parameters._();
   const factory Parameters({
     @Default(Stu3ResourceType.Parameters)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Parameters)
@@ -944,7 +944,7 @@ class Parameters with Resource, _$Parameters {
 
 @freezed
 class ParametersParameter with _$ParametersParameter {
-  ParametersParameter._();
+  const ParametersParameter._();
   const factory ParametersParameter({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -1055,7 +1055,7 @@ class ParametersParameter with _$ParametersParameter {
 
 @freezed
 class Subscription with Resource, _$Subscription {
-  Subscription._();
+  const Subscription._();
   const factory Subscription({
     @Default(Stu3ResourceType.Subscription)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Subscription)
@@ -1116,7 +1116,7 @@ class Subscription with Resource, _$Subscription {
 
 @freezed
 class SubscriptionChannel with _$SubscriptionChannel {
-  SubscriptionChannel._();
+  const SubscriptionChannel._();
   const factory SubscriptionChannel({
     SubscriptionChannelType? type,
     @JsonKey(name: '_type') Element? typeElement,

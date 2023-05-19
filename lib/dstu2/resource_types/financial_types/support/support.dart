@@ -16,7 +16,7 @@ part 'support.g.dart';
 
 @freezed
 class Coverage with Resource, _$Coverage {
-  Coverage._();
+  const Coverage._();
   const factory Coverage({
     @Default(Dstu2ResourceType.Coverage)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Coverage)
@@ -81,7 +81,7 @@ class Coverage with Resource, _$Coverage {
 
 @freezed
 class EligibilityRequest with Resource, _$EligibilityRequest {
-  EligibilityRequest._();
+  const EligibilityRequest._();
   const factory EligibilityRequest({
     @Default(Dstu2ResourceType.EligibilityRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityRequest)
@@ -137,7 +137,7 @@ class EligibilityRequest with Resource, _$EligibilityRequest {
 
 @freezed
 class EligibilityResponse with Resource, _$EligibilityResponse {
-  EligibilityResponse._();
+  const EligibilityResponse._();
   const factory EligibilityResponse({
     @Default(Dstu2ResourceType.EligibilityResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EligibilityResponse)
@@ -199,7 +199,7 @@ class EligibilityResponse with Resource, _$EligibilityResponse {
 
 @freezed
 class EnrollmentRequest with Resource, _$EnrollmentRequest {
-  EnrollmentRequest._();
+  const EnrollmentRequest._();
   const factory EnrollmentRequest({
     @Default(Dstu2ResourceType.EnrollmentRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentRequest)
@@ -258,7 +258,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
 
 @freezed
 class EnrollmentResponse with Resource, _$EnrollmentResponse {
-  EnrollmentResponse._();
+  const EnrollmentResponse._();
   const factory EnrollmentResponse({
     @Default(Dstu2ResourceType.EnrollmentResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.EnrollmentResponse)

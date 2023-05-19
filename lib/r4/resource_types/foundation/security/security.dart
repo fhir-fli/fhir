@@ -17,7 +17,7 @@ part 'security.g.dart';
 @freezed
 class AuditEvent with Resource, _$AuditEvent {
   /// [AuditEvent] A record of an event made for purposes of maintaining a
-  AuditEvent._();
+  const AuditEvent._();
 
   /// [AuditEvent] A record of an event made for purposes of maintaining a
   /// security log. Typical uses include detection of intrusion attempts and
@@ -262,7 +262,7 @@ class AuditEvent with Resource, _$AuditEvent {
 @freezed
 class AuditEventAgent with _$AuditEventAgent {
   /// [AuditEventAgent] A record of an event made for purposes of maintaining
-  AuditEventAgent._();
+  const AuditEventAgent._();
 
   /// [AuditEventAgent] A record of an event made for purposes of maintaining
   /// a security log. Typical uses include detection of intrusion attempts and
@@ -456,7 +456,7 @@ class AuditEventAgent with _$AuditEventAgent {
 @freezed
 class AuditEventNetwork with _$AuditEventNetwork {
   /// [AuditEventNetwork] A record of an event made for purposes of
-  AuditEventNetwork._();
+  const AuditEventNetwork._();
 
   /// [AuditEventNetwork] A record of an event made for purposes of
   /// maintaining a security log. Typical uses include detection of intrusion
@@ -573,7 +573,7 @@ class AuditEventNetwork with _$AuditEventNetwork {
 @freezed
 class AuditEventSource with _$AuditEventSource {
   /// [AuditEventSource] A record of an event made for purposes of maintaining
-  AuditEventSource._();
+  const AuditEventSource._();
 
   /// [AuditEventSource] A record of an event made for purposes of maintaining
   /// a security log. Typical uses include detection of intrusion attempts and
@@ -690,7 +690,7 @@ class AuditEventSource with _$AuditEventSource {
 @freezed
 class AuditEventEntity with _$AuditEventEntity {
   /// [AuditEventEntity] A record of an event made for purposes of maintaining
-  AuditEventEntity._();
+  const AuditEventEntity._();
 
   /// [AuditEventEntity] A record of an event made for purposes of maintaining
   /// a security log. Typical uses include detection of intrusion attempts and
@@ -849,7 +849,7 @@ class AuditEventEntity with _$AuditEventEntity {
 @freezed
 class AuditEventDetail with _$AuditEventDetail {
   /// [AuditEventDetail] A record of an event made for purposes of maintaining
-  AuditEventDetail._();
+  const AuditEventDetail._();
 
   /// [AuditEventDetail] A record of an event made for purposes of maintaining
   /// a security log. Typical uses include detection of intrusion attempts and
@@ -972,7 +972,7 @@ class AuditEventDetail with _$AuditEventDetail {
 @freezed
 class Consent with Resource, _$Consent {
   /// [Consent] A record of a healthcare consumer’s  choices, which permits or
-  Consent._();
+  const Consent._();
 
   /// [Consent] A record of a healthcare consumer’s  choices, which permits or
   /// denies identified recipient(s) or recipient role(s) to perform one or more
@@ -1253,7 +1253,7 @@ class Consent with Resource, _$Consent {
 @freezed
 class ConsentPolicy with _$ConsentPolicy {
   /// [ConsentPolicy] A record of a healthcare consumer’s  choices, which
-  ConsentPolicy._();
+  const ConsentPolicy._();
 
   /// [ConsentPolicy] A record of a healthcare consumer’s  choices, which
   /// permits or denies identified recipient(s) or recipient role(s) to perform
@@ -1373,7 +1373,7 @@ class ConsentPolicy with _$ConsentPolicy {
 @freezed
 class ConsentVerification with _$ConsentVerification {
   /// [ConsentVerification] A record of a healthcare consumer’s  choices,
-  ConsentVerification._();
+  const ConsentVerification._();
 
   /// [ConsentVerification] A record of a healthcare consumer’s  choices,
   /// which permits or denies identified recipient(s) or recipient role(s) to
@@ -1494,7 +1494,7 @@ class ConsentVerification with _$ConsentVerification {
 @freezed
 class ConsentProvision with _$ConsentProvision {
   /// [ConsentProvision] A record of a healthcare consumer’s  choices, which
-  ConsentProvision._();
+  const ConsentProvision._();
 
   /// [ConsentProvision] A record of a healthcare consumer’s  choices, which
   /// permits or denies identified recipient(s) or recipient role(s) to perform
@@ -1666,7 +1666,7 @@ class ConsentProvision with _$ConsentProvision {
 @freezed
 class ConsentActor with _$ConsentActor {
   /// [ConsentActor] A record of a healthcare consumer’s  choices, which
-  ConsentActor._();
+  const ConsentActor._();
 
   /// [ConsentActor] A record of a healthcare consumer’s  choices, which
   /// permits or denies identified recipient(s) or recipient role(s) to perform
@@ -1776,7 +1776,7 @@ class ConsentActor with _$ConsentActor {
 @freezed
 class ConsentData with _$ConsentData {
   /// [ConsentData] A record of a healthcare consumer’s  choices, which
-  ConsentData._();
+  const ConsentData._();
 
   /// [ConsentData] A record of a healthcare consumer’s  choices, which
   /// permits or denies identified recipient(s) or recipient role(s) to perform
@@ -1889,7 +1889,7 @@ class ConsentData with _$ConsentData {
 @freezed
 class Provenance with Resource, _$Provenance {
   /// [Provenance] Provenance of a resource is a record that describes entities
-  Provenance._();
+  const Provenance._();
 
   /// [Provenance] Provenance of a resource is a record that describes entities
   /// and processes involved in producing and delivering or otherwise
@@ -2144,7 +2144,7 @@ class Provenance with Resource, _$Provenance {
 @freezed
 class ProvenanceAgent with _$ProvenanceAgent {
   /// [ProvenanceAgent] Provenance of a resource is a record that describes
-  ProvenanceAgent._();
+  const ProvenanceAgent._();
 
   /// [ProvenanceAgent] Provenance of a resource is a record that describes
   /// entities and processes involved in producing and delivering or otherwise
@@ -2270,7 +2270,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
 @freezed
 class ProvenanceEntity with _$ProvenanceEntity {
   /// [ProvenanceEntity] Provenance of a resource is a record that describes
-  ProvenanceEntity._();
+  const ProvenanceEntity._();
 
   /// [ProvenanceEntity] Provenance of a resource is a record that describes
   /// entities and processes involved in producing and delivering or otherwise

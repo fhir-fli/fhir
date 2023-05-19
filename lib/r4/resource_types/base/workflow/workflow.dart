@@ -17,7 +17,7 @@ part 'workflow.g.dart';
 @freezed
 class Appointment with Resource, _$Appointment {
   /// [Appointment] A booking of a healthcare event among patient(s),
-  Appointment._();
+  const Appointment._();
 
   /// [Appointment] A booking of a healthcare event among patient(s),
   /// practitioner(s), related person(s) and/or device(s) for a specific
@@ -412,7 +412,7 @@ class Appointment with Resource, _$Appointment {
 @freezed
 class AppointmentParticipant with _$AppointmentParticipant {
   /// [AppointmentParticipant] A booking of a healthcare event among
-  AppointmentParticipant._();
+  const AppointmentParticipant._();
 
   /// [AppointmentParticipant] A booking of a healthcare event among
   /// patient(s), practitioner(s), related person(s) and/or device(s) for a
@@ -548,7 +548,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
 @freezed
 class AppointmentResponse with Resource, _$AppointmentResponse {
   /// [AppointmentResponse] A reply to an appointment request for a patient
-  AppointmentResponse._();
+  const AppointmentResponse._();
 
   /// [AppointmentResponse] A reply to an appointment request for a patient
   ///  and/or practitioner(s), such as a confirmation or rejection.
@@ -789,7 +789,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
 @freezed
 class Schedule with Resource, _$Schedule {
   /// [Schedule] A container for slots of time that may be available for
-  Schedule._();
+  const Schedule._();
 
   /// [Schedule] A container for slots of time that may be available for
   ///  booking appointments.
@@ -1020,7 +1020,7 @@ class Schedule with Resource, _$Schedule {
 @freezed
 class Slot with Resource, _$Slot {
   /// [Slot] A slot of time on a schedule that may be available for booking
-  Slot._();
+  const Slot._();
 
   /// [Slot] A slot of time on a schedule that may be available for booking
   ///  appointments.
@@ -1277,7 +1277,7 @@ class Slot with Resource, _$Slot {
 @freezed
 class Task with Resource, _$Task {
   /// [Task] A task to be performed.
-  Task._();
+  const Task._();
 
   /// [Task] A task to be performed.
   ///
@@ -1687,7 +1687,7 @@ class Task with Resource, _$Task {
 @freezed
 class TaskRestriction with _$TaskRestriction {
   /// [TaskRestriction] A task to be performed.
-  TaskRestriction._();
+  const TaskRestriction._();
 
   /// [TaskRestriction] A task to be performed.
   ///
@@ -1802,7 +1802,7 @@ class TaskRestriction with _$TaskRestriction {
 @freezed
 class TaskInput with _$TaskInput {
   /// [TaskInput] A task to be performed.
-  TaskInput._();
+  const TaskInput._();
 
   /// [TaskInput] A task to be performed.
   ///
@@ -2249,7 +2249,7 @@ class TaskInput with _$TaskInput {
 @freezed
 class TaskOutput with _$TaskOutput {
   /// [TaskOutput] A task to be performed.
-  TaskOutput._();
+  const TaskOutput._();
 
   /// [TaskOutput] A task to be performed.
   ///
@@ -2694,7 +2694,7 @@ class TaskOutput with _$TaskOutput {
 @freezed
 class VerificationResult with Resource, _$VerificationResult {
   /// [VerificationResult] Describes validation requirements, source(s), status
-  VerificationResult._();
+  const VerificationResult._();
 
   /// [VerificationResult] Describes validation requirements, source(s), status
   ///  and dates for one or more elements.
@@ -2966,7 +2966,7 @@ class VerificationResult with Resource, _$VerificationResult {
 @freezed
 class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   /// [VerificationResultPrimarySource] Describes validation requirements,
-  VerificationResultPrimarySource._();
+  const VerificationResultPrimarySource._();
 
   /// [VerificationResultPrimarySource] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
@@ -3113,7 +3113,7 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
 @freezed
 class VerificationResultAttestation with _$VerificationResultAttestation {
   /// [VerificationResultAttestation] Describes validation requirements,
-  VerificationResultAttestation._();
+  const VerificationResultAttestation._();
 
   /// [VerificationResultAttestation] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
@@ -3278,7 +3278,7 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
 @freezed
 class VerificationResultValidator with _$VerificationResultValidator {
   /// [VerificationResultValidator] Describes validation requirements,
-  VerificationResultValidator._();
+  const VerificationResultValidator._();
 
   /// [VerificationResultValidator] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.

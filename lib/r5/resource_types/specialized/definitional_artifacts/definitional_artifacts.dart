@@ -21,7 +21,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   /// [ActivityDefinition] This resource allows for the definition of some
   ///  activity to be performed, independent of a particular patient,
   ///  practitioner, or other performance context.
-  ActivityDefinition._();
+  const ActivityDefinition._();
 
   /// [ActivityDefinition] This resource allows for the definition of some
   ///  activity to be performed, independent of a particular patient,
@@ -832,7 +832,7 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
   /// [ActivityDefinitionParticipant] This resource allows for the definition
   ///  of some activity to be performed, independent of a particular patient,
   ///  practitioner, or other performance context.
-  ActivityDefinitionParticipant._();
+  const ActivityDefinitionParticipant._();
 
   /// [ActivityDefinitionParticipant] This resource allows for the definition
   ///  of some activity to be performed, independent of a particular patient,
@@ -966,7 +966,7 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
   /// [ActivityDefinitionDynamicValue] This resource allows for the definition
   ///  of some activity to be performed, independent of a particular patient,
   ///  practitioner, or other performance context.
-  ActivityDefinitionDynamicValue._();
+  const ActivityDefinitionDynamicValue._();
 
   /// [ActivityDefinitionDynamicValue] This resource allows for the definition
   ///  of some activity to be performed, independent of a particular patient,
@@ -1099,7 +1099,7 @@ class ActorDefinition with Resource, _$ActorDefinition {
   /// [ActorDefinition] Describes an actor - a human or an application that
   ///  plays a role in data exchange, and that may have obligations associated
   ///  with the role the actor plays.
-  ActorDefinition._();
+  const ActorDefinition._();
 
   /// [ActorDefinition] Describes an actor - a human or an application that
   ///  plays a role in data exchange, and that may have obligations associated
@@ -1556,7 +1556,7 @@ class ActorDefinition with Resource, _$ActorDefinition {
 class ConditionDefinition with Resource, _$ConditionDefinition {
   /// [ConditionDefinition] A definition of a condition and information
   ///  relevant to managing it.
-  ConditionDefinition._();
+  const ConditionDefinition._();
 
   /// [ConditionDefinition] A definition of a condition and information
   ///  relevant to managing it.
@@ -2166,7 +2166,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
 class ConditionDefinitionObservation with _$ConditionDefinitionObservation {
   /// [ConditionDefinitionObservation] A definition of a condition and
   ///  information relevant to managing it.
-  ConditionDefinitionObservation._();
+  const ConditionDefinitionObservation._();
 
   /// [ConditionDefinitionObservation] A definition of a condition and
   ///  information relevant to managing it.
@@ -2274,7 +2274,7 @@ class ConditionDefinitionObservation with _$ConditionDefinitionObservation {
 class ConditionDefinitionMedication with _$ConditionDefinitionMedication {
   /// [ConditionDefinitionMedication] A definition of a condition and
   ///  information relevant to managing it.
-  ConditionDefinitionMedication._();
+  const ConditionDefinitionMedication._();
 
   /// [ConditionDefinitionMedication] A definition of a condition and
   ///  information relevant to managing it.
@@ -2381,7 +2381,7 @@ class ConditionDefinitionMedication with _$ConditionDefinitionMedication {
 class ConditionDefinitionPrecondition with _$ConditionDefinitionPrecondition {
   /// [ConditionDefinitionPrecondition] A definition of a condition and
   ///  information relevant to managing it.
-  ConditionDefinitionPrecondition._();
+  const ConditionDefinitionPrecondition._();
 
   /// [ConditionDefinitionPrecondition] A definition of a condition and
   ///  information relevant to managing it.
@@ -2504,7 +2504,7 @@ class ConditionDefinitionPrecondition with _$ConditionDefinitionPrecondition {
 class ConditionDefinitionQuestionnaire with _$ConditionDefinitionQuestionnaire {
   /// [ConditionDefinitionQuestionnaire] A definition of a condition and
   ///  information relevant to managing it.
-  ConditionDefinitionQuestionnaire._();
+  const ConditionDefinitionQuestionnaire._();
 
   /// [ConditionDefinitionQuestionnaire] A definition of a condition and
   ///  information relevant to managing it.
@@ -2618,7 +2618,7 @@ class ConditionDefinitionQuestionnaire with _$ConditionDefinitionQuestionnaire {
 class ConditionDefinitionPlan with _$ConditionDefinitionPlan {
   /// [ConditionDefinitionPlan] A definition of a condition and information
   ///  relevant to managing it.
-  ConditionDefinitionPlan._();
+  const ConditionDefinitionPlan._();
 
   /// [ConditionDefinitionPlan] A definition of a condition and information
   ///  relevant to managing it.
@@ -2724,7 +2724,7 @@ class ConditionDefinitionPlan with _$ConditionDefinitionPlan {
 class DeviceDefinition with Resource, _$DeviceDefinition {
   /// [DeviceDefinition] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
-  DeviceDefinition._();
+  const DeviceDefinition._();
 
   /// [DeviceDefinition] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -3117,7 +3117,7 @@ class DeviceDefinitionUdiDeviceIdentifier
   /// [DeviceDefinitionUdiDeviceIdentifier] The characteristics, operational
   ///  status and capabilities of a medical-related component of a medical
   ///  device.
-  DeviceDefinitionUdiDeviceIdentifier._();
+  const DeviceDefinitionUdiDeviceIdentifier._();
 
   /// [DeviceDefinitionUdiDeviceIdentifier] The characteristics, operational
   ///  status and capabilities of a medical-related component of a medical
@@ -3262,7 +3262,7 @@ class DeviceDefinitionMarketDistribution
   /// [DeviceDefinitionMarketDistribution] The characteristics, operational
   ///  status and capabilities of a medical-related component of a medical
   ///  device.
-  DeviceDefinitionMarketDistribution._();
+  const DeviceDefinitionMarketDistribution._();
 
   /// [DeviceDefinitionMarketDistribution] The characteristics, operational
   ///  status and capabilities of a medical-related component of a medical
@@ -3386,7 +3386,7 @@ class DeviceDefinitionRegulatoryIdentifier
   /// [DeviceDefinitionRegulatoryIdentifier] The characteristics, operational
   ///  status and capabilities of a medical-related component of a medical
   ///  device.
-  DeviceDefinitionRegulatoryIdentifier._();
+  const DeviceDefinitionRegulatoryIdentifier._();
 
   /// [DeviceDefinitionRegulatoryIdentifier] The characteristics, operational
   ///  status and capabilities of a medical-related component of a medical
@@ -3528,7 +3528,7 @@ class DeviceDefinitionRegulatoryIdentifier
 class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
   /// [DeviceDefinitionDeviceName] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
-  DeviceDefinitionDeviceName._();
+  const DeviceDefinitionDeviceName._();
 
   /// [DeviceDefinitionDeviceName] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -3650,7 +3650,7 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
 class DeviceDefinitionClassification with _$DeviceDefinitionClassification {
   /// [DeviceDefinitionClassification] The characteristics, operational status
   ///  and capabilities of a medical-related component of a medical device.
-  DeviceDefinitionClassification._();
+  const DeviceDefinitionClassification._();
 
   /// [DeviceDefinitionClassification] The characteristics, operational status
   ///  and capabilities of a medical-related component of a medical device.
@@ -3760,7 +3760,7 @@ class DeviceDefinitionClassification with _$DeviceDefinitionClassification {
 class DeviceDefinitionConformsTo with _$DeviceDefinitionConformsTo {
   /// [DeviceDefinitionConformsTo] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
-  DeviceDefinitionConformsTo._();
+  const DeviceDefinitionConformsTo._();
 
   /// [DeviceDefinitionConformsTo] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -3893,7 +3893,7 @@ class DeviceDefinitionConformsTo with _$DeviceDefinitionConformsTo {
 class DeviceDefinitionHasPart with _$DeviceDefinitionHasPart {
   /// [DeviceDefinitionHasPart] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
-  DeviceDefinitionHasPart._();
+  const DeviceDefinitionHasPart._();
 
   /// [DeviceDefinitionHasPart] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -4005,7 +4005,7 @@ class DeviceDefinitionHasPart with _$DeviceDefinitionHasPart {
 class DeviceDefinitionPackaging with _$DeviceDefinitionPackaging {
   /// [DeviceDefinitionPackaging] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
-  DeviceDefinitionPackaging._();
+  const DeviceDefinitionPackaging._();
 
   /// [DeviceDefinitionPackaging] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -4140,7 +4140,7 @@ class DeviceDefinitionPackaging with _$DeviceDefinitionPackaging {
 class DeviceDefinitionDistributor with _$DeviceDefinitionDistributor {
   /// [DeviceDefinitionDistributor] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
-  DeviceDefinitionDistributor._();
+  const DeviceDefinitionDistributor._();
 
   /// [DeviceDefinitionDistributor] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -4252,7 +4252,7 @@ class DeviceDefinitionDistributor with _$DeviceDefinitionDistributor {
 class DeviceDefinitionVersion with _$DeviceDefinitionVersion {
   /// [DeviceDefinitionVersion] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
-  DeviceDefinitionVersion._();
+  const DeviceDefinitionVersion._();
 
   /// [DeviceDefinitionVersion] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -4372,7 +4372,7 @@ class DeviceDefinitionVersion with _$DeviceDefinitionVersion {
 class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
   /// [DeviceDefinitionProperty] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
-  DeviceDefinitionProperty._();
+  const DeviceDefinitionProperty._();
 
   /// [DeviceDefinitionProperty] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -4539,7 +4539,7 @@ class DeviceDefinitionProperty with _$DeviceDefinitionProperty {
 class DeviceDefinitionLink with _$DeviceDefinitionLink {
   /// [DeviceDefinitionLink] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
-  DeviceDefinitionLink._();
+  const DeviceDefinitionLink._();
 
   /// [DeviceDefinitionLink] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -4647,7 +4647,7 @@ class DeviceDefinitionLink with _$DeviceDefinitionLink {
 class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
   /// [DeviceDefinitionMaterial] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
-  DeviceDefinitionMaterial._();
+  const DeviceDefinitionMaterial._();
 
   /// [DeviceDefinitionMaterial] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -4778,7 +4778,7 @@ class DeviceDefinitionMaterial with _$DeviceDefinitionMaterial {
 class DeviceDefinitionGuideline with _$DeviceDefinitionGuideline {
   /// [DeviceDefinitionGuideline] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
-  DeviceDefinitionGuideline._();
+  const DeviceDefinitionGuideline._();
 
   /// [DeviceDefinitionGuideline] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -4934,7 +4934,7 @@ class DeviceDefinitionCorrectiveAction with _$DeviceDefinitionCorrectiveAction {
   /// [DeviceDefinitionCorrectiveAction] The characteristics, operational
   ///  status and capabilities of a medical-related component of a medical
   ///  device.
-  DeviceDefinitionCorrectiveAction._();
+  const DeviceDefinitionCorrectiveAction._();
 
   /// [DeviceDefinitionCorrectiveAction] The characteristics, operational
   ///  status and capabilities of a medical-related component of a medical
@@ -5067,7 +5067,7 @@ class DeviceDefinitionCorrectiveAction with _$DeviceDefinitionCorrectiveAction {
 class DeviceDefinitionChargeItem with _$DeviceDefinitionChargeItem {
   /// [DeviceDefinitionChargeItem] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
-  DeviceDefinitionChargeItem._();
+  const DeviceDefinitionChargeItem._();
 
   /// [DeviceDefinitionChargeItem] The characteristics, operational status and
   ///  capabilities of a medical-related component of a medical device.
@@ -5185,7 +5185,7 @@ class DeviceDefinitionChargeItem with _$DeviceDefinitionChargeItem {
 class EventDefinition with Resource, _$EventDefinition {
   /// [EventDefinition] The EventDefinition resource provides a reusable
   ///  description of when a particular event can occur.
-  EventDefinition._();
+  const EventDefinition._();
 
   /// [EventDefinition] The EventDefinition resource provides a reusable
   ///  description of when a particular event can occur.
@@ -5721,7 +5721,7 @@ class EventDefinition with Resource, _$EventDefinition {
 @freezed
 class ExampleScenario with Resource, _$ExampleScenario {
   /// [ExampleScenario] Example of workflow instance.
-  ExampleScenario._();
+  const ExampleScenario._();
 
   /// [ExampleScenario] Example of workflow instance.
   ///
@@ -6146,7 +6146,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
 @freezed
 class ExampleScenarioActor with _$ExampleScenarioActor {
   /// [ExampleScenarioActor] Example of workflow instance.
-  ExampleScenarioActor._();
+  const ExampleScenarioActor._();
 
   /// [ExampleScenarioActor] Example of workflow instance.
   ///
@@ -6285,7 +6285,7 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
 @freezed
 class ExampleScenarioInstance with _$ExampleScenarioInstance {
   /// [ExampleScenarioInstance] Example of workflow instance.
-  ExampleScenarioInstance._();
+  const ExampleScenarioInstance._();
 
   /// [ExampleScenarioInstance] Example of workflow instance.
   ///
@@ -6485,7 +6485,7 @@ class ExampleScenarioInstance with _$ExampleScenarioInstance {
 @freezed
 class ExampleScenarioVersion with _$ExampleScenarioVersion {
   /// [ExampleScenarioVersion] Example of workflow instance.
-  ExampleScenarioVersion._();
+  const ExampleScenarioVersion._();
 
   /// [ExampleScenarioVersion] Example of workflow instance.
   ///
@@ -6621,7 +6621,7 @@ class ExampleScenarioVersion with _$ExampleScenarioVersion {
 @freezed
 class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
   /// [ExampleScenarioContainedInstance] Example of workflow instance.
-  ExampleScenarioContainedInstance._();
+  const ExampleScenarioContainedInstance._();
 
   /// [ExampleScenarioContainedInstance] Example of workflow instance.
   ///
@@ -6745,7 +6745,7 @@ class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
 @freezed
 class ExampleScenarioProcess with _$ExampleScenarioProcess {
   /// [ExampleScenarioProcess] Example of workflow instance.
-  ExampleScenarioProcess._();
+  const ExampleScenarioProcess._();
 
   /// [ExampleScenarioProcess] Example of workflow instance.
   ///
@@ -6892,7 +6892,7 @@ class ExampleScenarioProcess with _$ExampleScenarioProcess {
 @freezed
 class ExampleScenarioStep with _$ExampleScenarioStep {
   /// [ExampleScenarioStep] Example of workflow instance.
-  ExampleScenarioStep._();
+  const ExampleScenarioStep._();
 
   /// [ExampleScenarioStep] Example of workflow instance.
   ///
@@ -7039,7 +7039,7 @@ class ExampleScenarioStep with _$ExampleScenarioStep {
 @freezed
 class ExampleScenarioOperation with _$ExampleScenarioOperation {
   /// [ExampleScenarioOperation] Example of workflow instance.
-  ExampleScenarioOperation._();
+  const ExampleScenarioOperation._();
 
   /// [ExampleScenarioOperation] Example of workflow instance.
   ///
@@ -7223,7 +7223,7 @@ class ExampleScenarioOperation with _$ExampleScenarioOperation {
 @freezed
 class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
   /// [ExampleScenarioAlternative] Example of workflow instance.
-  ExampleScenarioAlternative._();
+  const ExampleScenarioAlternative._();
 
   /// [ExampleScenarioAlternative] Example of workflow instance.
   ///
@@ -7351,7 +7351,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
   /// [ObservationDefinition] Set of definitional characteristics for a kind of
   ///  observation or measurement produced or consumed by an orderable health
   ///  care service.
-  ObservationDefinition._();
+  const ObservationDefinition._();
 
   /// [ObservationDefinition] Set of definitional characteristics for a kind of
   ///  observation or measurement produced or consumed by an orderable health
@@ -8000,7 +8000,7 @@ class ObservationDefinitionQualifiedValue
   /// [ObservationDefinitionQualifiedValue] Set of definitional characteristics
   ///  for a kind of observation or measurement produced or consumed by an
   ///  orderable health care service.
-  ObservationDefinitionQualifiedValue._();
+  const ObservationDefinitionQualifiedValue._();
 
   /// [ObservationDefinitionQualifiedValue] Set of definitional characteristics
   ///  for a kind of observation or measurement produced or consumed by an
@@ -8199,7 +8199,7 @@ class ObservationDefinitionComponent with _$ObservationDefinitionComponent {
   /// [ObservationDefinitionComponent] Set of definitional characteristics for
   ///  a kind of observation or measurement produced or consumed by an
   ///  orderable health care service.
-  ObservationDefinitionComponent._();
+  const ObservationDefinitionComponent._();
 
   /// [ObservationDefinitionComponent] Set of definitional characteristics for
   ///  a kind of observation or measurement produced or consumed by an
@@ -8341,7 +8341,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
   ///  resource is general enough to support the description of a broad range
   ///  of clinical and non-clinical artifacts such as clinical decision support
   ///  rules, order sets, protocols, and drug quality specifications.
-  PlanDefinition._();
+  const PlanDefinition._();
 
   /// [PlanDefinition] This resource allows for the definition of various types
   ///  of plans as a sharable, consumable, and executable artifact. The
@@ -9004,7 +9004,7 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
   ///  resource is general enough to support the description of a broad range
   ///  of clinical and non-clinical artifacts such as clinical decision support
   ///  rules, order sets, protocols, and drug quality specifications.
-  PlanDefinitionGoal._();
+  const PlanDefinitionGoal._();
 
   /// [PlanDefinitionGoal] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -9158,7 +9158,7 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
   ///  resource is general enough to support the description of a broad range
   ///  of clinical and non-clinical artifacts such as clinical decision support
   ///  rules, order sets, protocols, and drug quality specifications.
-  PlanDefinitionTarget._();
+  const PlanDefinitionTarget._();
 
   /// [PlanDefinitionTarget] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -9420,7 +9420,7 @@ class PlanDefinitionActor with _$PlanDefinitionActor {
   ///  resource is general enough to support the description of a broad range
   ///  of clinical and non-clinical artifacts such as clinical decision support
   ///  rules, order sets, protocols, and drug quality specifications.
-  PlanDefinitionActor._();
+  const PlanDefinitionActor._();
 
   /// [PlanDefinitionActor] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -9554,7 +9554,7 @@ class PlanDefinitionOption with _$PlanDefinitionOption {
   ///  resource is general enough to support the description of a broad range
   ///  of clinical and non-clinical artifacts such as clinical decision support
   ///  rules, order sets, protocols, and drug quality specifications.
-  PlanDefinitionOption._();
+  const PlanDefinitionOption._();
 
   /// [PlanDefinitionOption] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -9686,7 +9686,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
   ///  resource is general enough to support the description of a broad range
   ///  of clinical and non-clinical artifacts such as clinical decision support
   ///  rules, order sets, protocols, and drug quality specifications.
-  PlanDefinitionAction._();
+  const PlanDefinitionAction._();
 
   /// [PlanDefinitionAction] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -10201,7 +10201,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
   ///  broad range of clinical and non-clinical artifacts such as clinical
   ///  decision support rules, order sets, protocols, and drug quality
   ///  specifications.
-  PlanDefinitionCondition._();
+  const PlanDefinitionCondition._();
 
   /// [PlanDefinitionCondition] This resource allows for the definition of
   ///  various types of plans as a sharable, consumable, and executable
@@ -10324,7 +10324,7 @@ class PlanDefinitionInput with _$PlanDefinitionInput {
   ///  resource is general enough to support the description of a broad range
   ///  of clinical and non-clinical artifacts such as clinical decision support
   ///  rules, order sets, protocols, and drug quality specifications.
-  PlanDefinitionInput._();
+  const PlanDefinitionInput._();
 
   /// [PlanDefinitionInput] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -10464,7 +10464,7 @@ class PlanDefinitionOutput with _$PlanDefinitionOutput {
   ///  resource is general enough to support the description of a broad range
   ///  of clinical and non-clinical artifacts such as clinical decision support
   ///  rules, order sets, protocols, and drug quality specifications.
-  PlanDefinitionOutput._();
+  const PlanDefinitionOutput._();
 
   /// [PlanDefinitionOutput] This resource allows for the definition of various
   ///  types of plans as a sharable, consumable, and executable artifact. The
@@ -10603,7 +10603,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
   ///  broad range of clinical and non-clinical artifacts such as clinical
   ///  decision support rules, order sets, protocols, and drug quality
   ///  specifications.
-  PlanDefinitionRelatedAction._();
+  const PlanDefinitionRelatedAction._();
 
   /// [PlanDefinitionRelatedAction] This resource allows for the definition of
   ///  various types of plans as a sharable, consumable, and executable
@@ -10761,7 +10761,7 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
   ///  broad range of clinical and non-clinical artifacts such as clinical
   ///  decision support rules, order sets, protocols, and drug quality
   ///  specifications.
-  PlanDefinitionParticipant._();
+  const PlanDefinitionParticipant._();
 
   /// [PlanDefinitionParticipant] This resource allows for the definition of
   ///  various types of plans as a sharable, consumable, and executable
@@ -10914,7 +10914,7 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
   ///  broad range of clinical and non-clinical artifacts such as clinical
   ///  decision support rules, order sets, protocols, and drug quality
   ///  specifications.
-  PlanDefinitionDynamicValue._();
+  const PlanDefinitionDynamicValue._();
 
   /// [PlanDefinitionDynamicValue] This resource allows for the definition of
   ///  various types of plans as a sharable, consumable, and executable
@@ -11050,7 +11050,7 @@ class Questionnaire with Resource, _$Questionnaire {
   ///  collection of answers from end-users. Questionnaires provide detailed
   ///  control over order, presentation, phraseology and grouping to allow
   ///  coherent, consistent data collection.
-  Questionnaire._();
+  const Questionnaire._();
 
   /// [Questionnaire] A structured set of questions intended to guide the
   ///  collection of answers from end-users. Questionnaires provide detailed
@@ -11577,7 +11577,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
   ///  collection of answers from end-users. Questionnaires provide detailed
   ///  control over order, presentation, phraseology and grouping to allow
   ///  coherent, consistent data collection.
-  QuestionnaireItem._();
+  const QuestionnaireItem._();
 
   /// [QuestionnaireItem] A structured set of questions intended to guide the
   ///  collection of answers from end-users. Questionnaires provide detailed
@@ -11892,7 +11892,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
   ///  the collection of answers from end-users. Questionnaires provide
   ///  detailed control over order, presentation, phraseology and grouping to
   ///  allow coherent, consistent data collection.
-  QuestionnaireEnableWhen._();
+  const QuestionnaireEnableWhen._();
 
   /// [QuestionnaireEnableWhen] A structured set of questions intended to guide
   ///  the collection of answers from end-users. Questionnaires provide
@@ -12184,7 +12184,7 @@ class QuestionnaireAnswerOption with _$QuestionnaireAnswerOption {
   ///  guide the collection of answers from end-users. Questionnaires provide
   ///  detailed control over order, presentation, phraseology and grouping to
   ///  allow coherent, consistent data collection.
-  QuestionnaireAnswerOption._();
+  const QuestionnaireAnswerOption._();
 
   /// [QuestionnaireAnswerOption] A structured set of questions intended to
   ///  guide the collection of answers from end-users. Questionnaires provide
@@ -12362,7 +12362,7 @@ class QuestionnaireInitial with _$QuestionnaireInitial {
   ///  the collection of answers from end-users. Questionnaires provide
   ///  detailed control over order, presentation, phraseology and grouping to
   ///  allow coherent, consistent data collection.
-  QuestionnaireInitial._();
+  const QuestionnaireInitial._();
 
   /// [QuestionnaireInitial] A structured set of questions intended to guide
   ///  the collection of answers from end-users. Questionnaires provide
@@ -12562,7 +12562,7 @@ class Requirements with Resource, _$Requirements {
   /// [Requirements] A set of requirements - a list of features or behaviors of
   ///  designed systems that are necessary to achieve organizational or
   ///  regulatory goals.
-  Requirements._();
+  const Requirements._();
 
   /// [Requirements] A set of requirements - a list of features or behaviors of
   ///  designed systems that are necessary to achieve organizational or
@@ -13001,7 +13001,7 @@ class RequirementsStatement with _$RequirementsStatement {
   /// [RequirementsStatement] A set of requirements - a list of features or
   ///  behaviors of designed systems that are necessary to achieve
   ///  organizational or regulatory goals.
-  RequirementsStatement._();
+  const RequirementsStatement._();
 
   /// [RequirementsStatement] A set of requirements - a list of features or
   ///  behaviors of designed systems that are necessary to achieve
@@ -13215,7 +13215,7 @@ class RequirementsStatement with _$RequirementsStatement {
 class SpecimenDefinition with Resource, _$SpecimenDefinition {
   /// [SpecimenDefinition] A kind of specimen with associated set of
   ///  requirements.
-  SpecimenDefinition._();
+  const SpecimenDefinition._();
 
   /// [SpecimenDefinition] A kind of specimen with associated set of
   ///  requirements.
@@ -13755,7 +13755,7 @@ class SpecimenDefinition with Resource, _$SpecimenDefinition {
 class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
   /// [SpecimenDefinitionTypeTested] A kind of specimen with associated set of
   ///  requirements.
-  SpecimenDefinitionTypeTested._();
+  const SpecimenDefinitionTypeTested._();
 
   /// [SpecimenDefinitionTypeTested] A kind of specimen with associated set of
   ///  requirements.
@@ -13936,7 +13936,7 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
 class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
   /// [SpecimenDefinitionContainer] A kind of specimen with associated set of
   ///  requirements.
-  SpecimenDefinitionContainer._();
+  const SpecimenDefinitionContainer._();
 
   /// [SpecimenDefinitionContainer] A kind of specimen with associated set of
   ///  requirements.
@@ -14105,7 +14105,7 @@ class SpecimenDefinitionContainer with _$SpecimenDefinitionContainer {
 class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
   /// [SpecimenDefinitionAdditive] A kind of specimen with associated set of
   ///  requirements.
-  SpecimenDefinitionAdditive._();
+  const SpecimenDefinitionAdditive._();
 
   /// [SpecimenDefinitionAdditive] A kind of specimen with associated set of
   ///  requirements.
@@ -14219,7 +14219,7 @@ class SpecimenDefinitionAdditive with _$SpecimenDefinitionAdditive {
 class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
   /// [SpecimenDefinitionHandling] A kind of specimen with associated set of
   ///  requirements.
-  SpecimenDefinitionHandling._();
+  const SpecimenDefinitionHandling._();
 
   /// [SpecimenDefinitionHandling] A kind of specimen with associated set of
   ///  requirements.

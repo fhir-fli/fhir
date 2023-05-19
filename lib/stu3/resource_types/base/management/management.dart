@@ -18,7 +18,7 @@ part 'management.g.dart';
 
 @freezed
 class Encounter with Resource, _$Encounter {
-  Encounter._();
+  const Encounter._();
   const factory Encounter({
     @Default(Stu3ResourceType.Encounter)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Encounter)
@@ -88,7 +88,7 @@ class Encounter with Resource, _$Encounter {
 
 @freezed
 class EncounterStatusHistory with _$EncounterStatusHistory {
-  EncounterStatusHistory._();
+  const EncounterStatusHistory._();
   const factory EncounterStatusHistory({
     EncounterStatusHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -128,7 +128,7 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
 
 @freezed
 class EncounterClassHistory with _$EncounterClassHistory {
-  EncounterClassHistory._();
+  const EncounterClassHistory._();
   const factory EncounterClassHistory({
     @JsonKey(name: 'class') required Coding class_,
     required Period period,
@@ -167,7 +167,7 @@ class EncounterClassHistory with _$EncounterClassHistory {
 
 @freezed
 class EncounterParticipant with _$EncounterParticipant {
-  EncounterParticipant._();
+  const EncounterParticipant._();
   const factory EncounterParticipant({
     List<CodeableConcept>? type,
     Period? period,
@@ -207,7 +207,7 @@ class EncounterParticipant with _$EncounterParticipant {
 
 @freezed
 class EncounterDiagnosis with _$EncounterDiagnosis {
-  EncounterDiagnosis._();
+  const EncounterDiagnosis._();
   const factory EncounterDiagnosis({
     required Reference condition,
     CodeableConcept? role,
@@ -248,7 +248,7 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
 
 @freezed
 class EncounterHospitalization with _$EncounterHospitalization {
-  EncounterHospitalization._();
+  const EncounterHospitalization._();
   const factory EncounterHospitalization({
     Identifier? preAdmissionIdentifier,
     Reference? origin,
@@ -294,7 +294,7 @@ class EncounterHospitalization with _$EncounterHospitalization {
 
 @freezed
 class EncounterLocation with _$EncounterLocation {
-  EncounterLocation._();
+  const EncounterLocation._();
   const factory EncounterLocation({
     required Reference location,
     EncounterLocationStatus? status,
@@ -335,7 +335,7 @@ class EncounterLocation with _$EncounterLocation {
 
 @freezed
 class EpisodeOfCare with Resource, _$EpisodeOfCare {
-  EpisodeOfCare._();
+  const EpisodeOfCare._();
   const factory EpisodeOfCare({
     @Default(Stu3ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: Stu3ResourceType.EpisodeOfCare)
@@ -396,7 +396,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
 
 @freezed
 class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
-  EpisodeOfCareStatusHistory._();
+  const EpisodeOfCareStatusHistory._();
   const factory EpisodeOfCareStatusHistory({
     EpisodeOfCareStatusHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
@@ -436,7 +436,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
 
 @freezed
 class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
-  EpisodeOfCareDiagnosis._();
+  const EpisodeOfCareDiagnosis._();
   const factory EpisodeOfCareDiagnosis({
     required Reference condition,
     CodeableConcept? role,
@@ -477,7 +477,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
 
 @freezed
 class Flag with Resource, _$Flag {
-  Flag._();
+  const Flag._();
   const factory Flag({
     @Default(Stu3ResourceType.Flag)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Flag)
@@ -532,7 +532,7 @@ class Flag with Resource, _$Flag {
 
 @freezed
 class Library with Resource, _$Library {
-  Library._();
+  const Library._();
   const factory Library({
     @Default(Stu3ResourceType.Library)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Library)
@@ -620,7 +620,7 @@ class Library with Resource, _$Library {
 
 @freezed
 class FhirList with Resource, _$FhirList {
-  FhirList._();
+  const FhirList._();
   const factory FhirList({
     @Default(Stu3ResourceType.FhirList)
     @JsonKey(unknownEnumValue: Stu3ResourceType.FhirList)
@@ -685,7 +685,7 @@ class FhirList with Resource, _$FhirList {
 
 @freezed
 class FhirListEntry with _$FhirListEntry {
-  FhirListEntry._();
+  const FhirListEntry._();
   const factory FhirListEntry({
     CodeableConcept? flag,
     FhirBoolean? deleted,

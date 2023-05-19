@@ -2304,11 +2304,13 @@ mixin _$MedicationOrder {
   int? get dbId => throw _privateConstructorUsedError;
   @JsonKey(name: 'id')
   FhirId? get fhirId => throw _privateConstructorUsedError;
-  @JsonKey(name: '_id')
-  Element? get idElement => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -2360,11 +2362,13 @@ abstract class $MedicationOrderCopyWith<$Res> {
           int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
-      @JsonKey(name: '_id')
-          Element? idElement,
       FhirMeta? meta,
       FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -2391,8 +2395,9 @@ abstract class $MedicationOrderCopyWith<$Res> {
       MedicationOrderSubstitution? substitution,
       Reference? priorPrescription});
 
-  $ElementCopyWith<$Res>? get idElement;
   $FhirMetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
   $CodeableConceptCopyWith<$Res>? get reasonEnded;
@@ -2424,10 +2429,11 @@ class _$MedicationOrderCopyWithImpl<$Res, $Val extends MedicationOrder>
     Object? resourceType = null,
     Object? dbId = freezed,
     Object? fhirId = freezed,
-    Object? idElement = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
@@ -2464,10 +2470,6 @@ class _$MedicationOrderCopyWithImpl<$Res, $Val extends MedicationOrder>
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
-      idElement: freezed == idElement
-          ? _value.idElement
-          : idElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2476,10 +2478,18 @@ class _$MedicationOrderCopyWithImpl<$Res, $Val extends MedicationOrder>
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -2573,18 +2583,6 @@ class _$MedicationOrderCopyWithImpl<$Res, $Val extends MedicationOrder>
 
   @override
   @pragma('vm:prefer-inline')
-  $ElementCopyWith<$Res>? get idElement {
-    if (_value.idElement == null) {
-      return null;
-    }
-
-    return $ElementCopyWith<$Res>(_value.idElement!, (value) {
-      return _then(_value.copyWith(idElement: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
   $FhirMetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
@@ -2592,6 +2590,30 @@ class _$MedicationOrderCopyWithImpl<$Res, $Val extends MedicationOrder>
 
     return $FhirMetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
 
@@ -2771,11 +2793,13 @@ abstract class _$$_MedicationOrderCopyWith<$Res>
           int? dbId,
       @JsonKey(name: 'id')
           FhirId? fhirId,
-      @JsonKey(name: '_id')
-          Element? idElement,
       FhirMeta? meta,
       FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -2803,9 +2827,11 @@ abstract class _$$_MedicationOrderCopyWith<$Res>
       Reference? priorPrescription});
 
   @override
-  $ElementCopyWith<$Res>? get idElement;
-  @override
   $FhirMetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
   @override
   $NarrativeCopyWith<$Res>? get text;
   @override
@@ -2848,10 +2874,11 @@ class __$$_MedicationOrderCopyWithImpl<$Res>
     Object? resourceType = null,
     Object? dbId = freezed,
     Object? fhirId = freezed,
-    Object? idElement = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
@@ -2888,10 +2915,6 @@ class __$$_MedicationOrderCopyWithImpl<$Res>
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
               as FhirId?,
-      idElement: freezed == idElement
-          ? _value.idElement
-          : idElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
       meta: freezed == meta
           ? _value.meta
           : meta // ignore: cast_nullable_to_non_nullable
@@ -2900,10 +2923,18 @@ class __$$_MedicationOrderCopyWithImpl<$Res>
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -3006,11 +3037,13 @@ class _$_MedicationOrder extends _MedicationOrder {
           this.dbId,
       @JsonKey(name: 'id')
           this.fhirId,
-      @JsonKey(name: '_id')
-          this.idElement,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -3056,14 +3089,17 @@ class _$_MedicationOrder extends _MedicationOrder {
   @JsonKey(name: 'id')
   final FhirId? fhirId;
   @override
-  @JsonKey(name: '_id')
-  final Element? idElement;
-  @override
   final FhirMeta? meta;
   @override
   final FhirUri? implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
   final FhirCode? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -3156,7 +3192,7 @@ class _$_MedicationOrder extends _MedicationOrder {
 
   @override
   String toString() {
-    return 'MedicationOrder(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, idElement: $idElement, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, dateWritten: $dateWritten, status: $status, statusElement: $statusElement, dateEnded: $dateEnded, reasonEnded: $reasonEnded, patient: $patient, prescriber: $prescriber, encounter: $encounter, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, note: $note, medicationCodeableConcept: $medicationCodeableConcept, medicationReference: $medicationReference, dosageInstruction: $dosageInstruction, dispenseRequest: $dispenseRequest, substitution: $substitution, priorPrescription: $priorPrescription)';
+    return 'MedicationOrder(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, dateWritten: $dateWritten, status: $status, statusElement: $statusElement, dateEnded: $dateEnded, reasonEnded: $reasonEnded, patient: $patient, prescriber: $prescriber, encounter: $encounter, reasonCodeableConcept: $reasonCodeableConcept, reasonReference: $reasonReference, note: $note, medicationCodeableConcept: $medicationCodeableConcept, medicationReference: $medicationReference, dosageInstruction: $dosageInstruction, dispenseRequest: $dispenseRequest, substitution: $substitution, priorPrescription: $priorPrescription)';
   }
 
   @override
@@ -3168,13 +3204,15 @@ class _$_MedicationOrder extends _MedicationOrder {
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
-            (identical(other.idElement, idElement) ||
-                other.idElement == idElement) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
                 other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality()
                 .equals(other._contained, _contained) &&
@@ -3225,10 +3263,11 @@ class _$_MedicationOrder extends _MedicationOrder {
         resourceType,
         dbId,
         fhirId,
-        idElement,
         meta,
         implicitRules,
+        implicitRulesElement,
         language,
+        languageElement,
         text,
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
@@ -3275,11 +3314,13 @@ abstract class _MedicationOrder extends MedicationOrder {
           final int? dbId,
       @JsonKey(name: 'id')
           final FhirId? fhirId,
-      @JsonKey(name: '_id')
-          final Element? idElement,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
       final FhirCode? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -3320,14 +3361,17 @@ abstract class _MedicationOrder extends MedicationOrder {
   @JsonKey(name: 'id')
   FhirId? get fhirId;
   @override
-  @JsonKey(name: '_id')
-  Element? get idElement;
-  @override
   FhirMeta? get meta;
   @override
   FhirUri? get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement;
+  @override
   FhirCode? get language;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement;
   @override
   Narrative? get text;
   @override

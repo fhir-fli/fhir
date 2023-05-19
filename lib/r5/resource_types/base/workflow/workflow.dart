@@ -21,7 +21,7 @@ class Appointment with Resource, _$Appointment {
   /// [Appointment] A booking of a healthcare event among patient(s),
   ///  practitioner(s), related person(s) and/or device(s) for a specific
   ///  date/time. This may result in one or more Encounter(s).
-  Appointment._();
+  const Appointment._();
 
   /// [Appointment] A booking of a healthcare event among patient(s),
   ///  practitioner(s), related person(s) and/or device(s) for a specific
@@ -514,7 +514,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
   /// [AppointmentParticipant] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
   ///  specific date/time. This may result in one or more Encounter(s).
-  AppointmentParticipant._();
+  const AppointmentParticipant._();
 
   /// [AppointmentParticipant] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
@@ -652,7 +652,7 @@ class AppointmentRecurrenceTemplate with _$AppointmentRecurrenceTemplate {
   /// [AppointmentRecurrenceTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
   ///  specific date/time. This may result in one or more Encounter(s).
-  AppointmentRecurrenceTemplate._();
+  const AppointmentRecurrenceTemplate._();
 
   /// [AppointmentRecurrenceTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
@@ -843,7 +843,7 @@ class AppointmentWeeklyTemplate with _$AppointmentWeeklyTemplate {
   /// [AppointmentWeeklyTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
   ///  specific date/time. This may result in one or more Encounter(s).
-  AppointmentWeeklyTemplate._();
+  const AppointmentWeeklyTemplate._();
 
   /// [AppointmentWeeklyTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
@@ -1035,7 +1035,7 @@ class AppointmentMonthlyTemplate with _$AppointmentMonthlyTemplate {
   /// [AppointmentMonthlyTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
   ///  specific date/time. This may result in one or more Encounter(s).
-  AppointmentMonthlyTemplate._();
+  const AppointmentMonthlyTemplate._();
 
   /// [AppointmentMonthlyTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
@@ -1172,7 +1172,7 @@ class AppointmentYearlyTemplate with _$AppointmentYearlyTemplate {
   /// [AppointmentYearlyTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
   ///  specific date/time. This may result in one or more Encounter(s).
-  AppointmentYearlyTemplate._();
+  const AppointmentYearlyTemplate._();
 
   /// [AppointmentYearlyTemplate] A booking of a healthcare event among
   ///  patient(s), practitioner(s), related person(s) and/or device(s) for a
@@ -1279,7 +1279,7 @@ class AppointmentYearlyTemplate with _$AppointmentYearlyTemplate {
 class AppointmentResponse with Resource, _$AppointmentResponse {
   /// [AppointmentResponse] A reply to an appointment request for a patient
   ///  and/or practitioner(s), such as a confirmation or rejection.
-  AppointmentResponse._();
+  const AppointmentResponse._();
 
   /// [AppointmentResponse] A reply to an appointment request for a patient
   ///  and/or practitioner(s), such as a confirmation or rejection.
@@ -1591,7 +1591,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
 class Schedule with Resource, _$Schedule {
   /// [Schedule] A container for slots of time that may be available for
   ///  booking appointments.
-  Schedule._();
+  const Schedule._();
 
   /// [Schedule] A container for slots of time that may be available for
   ///  booking appointments.
@@ -1845,7 +1845,7 @@ class Schedule with Resource, _$Schedule {
 class Slot with Resource, _$Slot {
   /// [Slot] A slot of time on a schedule that may be available for booking
   ///  appointments.
-  Slot._();
+  const Slot._();
 
   /// [Slot] A slot of time on a schedule that may be available for booking
   ///  appointments.
@@ -2111,7 +2111,7 @@ class Slot with Resource, _$Slot {
 @freezed
 class Task with Resource, _$Task {
   /// [Task] A task to be performed.
-  Task._();
+  const Task._();
 
   /// [Task] A task to be performed.
   ///
@@ -2558,7 +2558,7 @@ class Task with Resource, _$Task {
 @freezed
 class TaskPerformer with _$TaskPerformer {
   /// [TaskPerformer] A task to be performed.
-  TaskPerformer._();
+  const TaskPerformer._();
 
   /// [TaskPerformer] A task to be performed.
   ///
@@ -2663,7 +2663,7 @@ class TaskPerformer with _$TaskPerformer {
 @freezed
 class TaskRestriction with _$TaskRestriction {
   /// [TaskRestriction] A task to be performed.
-  TaskRestriction._();
+  const TaskRestriction._();
 
   /// [TaskRestriction] A task to be performed.
   ///
@@ -2784,7 +2784,7 @@ class TaskRestriction with _$TaskRestriction {
 @freezed
 class TaskInput with _$TaskInput {
   /// [TaskInput] A task to be performed.
-  TaskInput._();
+  const TaskInput._();
 
   /// [TaskInput] A task to be performed.
   ///
@@ -3268,7 +3268,7 @@ class TaskInput with _$TaskInput {
 @freezed
 class TaskOutput with _$TaskOutput {
   /// [TaskOutput] A task to be performed.
-  TaskOutput._();
+  const TaskOutput._();
 
   /// [TaskOutput] A task to be performed.
   ///
@@ -3755,7 +3755,7 @@ class TaskOutput with _$TaskOutput {
 @freezed
 class Transport with Resource, _$Transport {
   /// [Transport] Record of transport of item.
-  Transport._();
+  const Transport._();
 
   /// [Transport] Record of transport of item.
   ///
@@ -4203,7 +4203,7 @@ class Transport with Resource, _$Transport {
 @freezed
 class TransportRestriction with _$TransportRestriction {
   /// [TransportRestriction] Record of transport of item.
-  TransportRestriction._();
+  const TransportRestriction._();
 
   /// [TransportRestriction] Record of transport of item.
   ///
@@ -4320,7 +4320,7 @@ class TransportRestriction with _$TransportRestriction {
 @freezed
 class TransportInput with _$TransportInput {
   /// [TransportInput] Record of transport of item.
-  TransportInput._();
+  const TransportInput._();
 
   /// [TransportInput] Record of transport of item.
   ///
@@ -4804,7 +4804,7 @@ class TransportInput with _$TransportInput {
 @freezed
 class TransportOutput with _$TransportOutput {
   /// [TransportOutput] Record of transport of item.
-  TransportOutput._();
+  const TransportOutput._();
 
   /// [TransportOutput] Record of transport of item.
   ///
@@ -5293,7 +5293,7 @@ class TransportOutput with _$TransportOutput {
 class VerificationResult with Resource, _$VerificationResult {
   /// [VerificationResult] Describes validation requirements, source(s), status
   ///  and dates for one or more elements.
-  VerificationResult._();
+  const VerificationResult._();
 
   /// [VerificationResult] Describes validation requirements, source(s), status
   ///  and dates for one or more elements.
@@ -5578,7 +5578,7 @@ class VerificationResult with Resource, _$VerificationResult {
 class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   /// [VerificationResultPrimarySource] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
-  VerificationResultPrimarySource._();
+  const VerificationResultPrimarySource._();
 
   /// [VerificationResultPrimarySource] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
@@ -5730,7 +5730,7 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
 class VerificationResultAttestation with _$VerificationResultAttestation {
   /// [VerificationResultAttestation] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
-  VerificationResultAttestation._();
+  const VerificationResultAttestation._();
 
   /// [VerificationResultAttestation] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
@@ -5904,7 +5904,7 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
 class VerificationResultValidator with _$VerificationResultValidator {
   /// [VerificationResultValidator] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
-  VerificationResultValidator._();
+  const VerificationResultValidator._();
 
   /// [VerificationResultValidator] Describes validation requirements,
   ///  source(s), status and dates for one or more elements.

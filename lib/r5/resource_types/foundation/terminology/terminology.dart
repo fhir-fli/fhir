@@ -21,7 +21,7 @@ class CodeSystem with Resource, _$CodeSystem {
   /// [CodeSystem] The CodeSystem resource is used to declare the existence of
   ///  and describe a code system or code system supplement and its key
   ///  properties, and optionally define a part or all of its content.
-  CodeSystem._();
+  const CodeSystem._();
 
   /// [CodeSystem] The CodeSystem resource is used to declare the existence of
   ///  and describe a code system or code system supplement and its key
@@ -631,7 +631,7 @@ class CodeSystemFilter with _$CodeSystemFilter {
   /// [CodeSystemFilter] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
   ///  its key properties, and optionally define a part or all of its content.
-  CodeSystemFilter._();
+  const CodeSystemFilter._();
 
   /// [CodeSystemFilter] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
@@ -774,7 +774,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
   /// [CodeSystemProperty] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
   ///  its key properties, and optionally define a part or all of its content.
-  CodeSystemProperty._();
+  const CodeSystemProperty._();
 
   /// [CodeSystemProperty] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
@@ -927,7 +927,7 @@ class CodeSystemConcept with _$CodeSystemConcept {
   /// [CodeSystemConcept] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
   ///  its key properties, and optionally define a part or all of its content.
-  CodeSystemConcept._();
+  const CodeSystemConcept._();
 
   /// [CodeSystemConcept] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
@@ -1089,7 +1089,7 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
   /// [CodeSystemDesignation] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
   ///  its key properties, and optionally define a part or all of its content.
-  CodeSystemDesignation._();
+  const CodeSystemDesignation._();
 
   /// [CodeSystemDesignation] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
@@ -1220,7 +1220,7 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
   /// [CodeSystemProperty1] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
   ///  its key properties, and optionally define a part or all of its content.
-  CodeSystemProperty1._();
+  const CodeSystemProperty1._();
 
   /// [CodeSystemProperty1] The CodeSystem resource is used to declare the
   ///  existence of and describe a code system or code system supplement and
@@ -1394,7 +1394,7 @@ class ConceptMap with Resource, _$ConceptMap {
   /// [ConceptMap] A statement of relationships from one set of concepts to one
   ///  or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
-  ConceptMap._();
+  const ConceptMap._();
 
   /// [ConceptMap] A statement of relationships from one set of concepts to one
   ///  or more other concepts - either concepts in code systems, or data
@@ -1989,7 +1989,7 @@ class ConceptMapProperty with _$ConceptMapProperty {
   ///  concepts to one or more other concepts - either concepts in code
   ///  systems, or data element/data element concepts, or classes in class
   ///  models.
-  ConceptMapProperty._();
+  const ConceptMapProperty._();
 
   /// [ConceptMapProperty] A statement of relationships from one set of
   ///  concepts to one or more other concepts - either concepts in code
@@ -2143,7 +2143,7 @@ class ConceptMapAdditionalAttribute with _$ConceptMapAdditionalAttribute {
   ///  of concepts to one or more other concepts - either concepts in code
   ///  systems, or data element/data element concepts, or classes in class
   ///  models.
-  ConceptMapAdditionalAttribute._();
+  const ConceptMapAdditionalAttribute._();
 
   /// [ConceptMapAdditionalAttribute] A statement of relationships from one set
   ///  of concepts to one or more other concepts - either concepts in code
@@ -2302,7 +2302,7 @@ class ConceptMapGroup with _$ConceptMapGroup {
   /// [ConceptMapGroup] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
-  ConceptMapGroup._();
+  const ConceptMapGroup._();
 
   /// [ConceptMapGroup] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
@@ -2435,7 +2435,7 @@ class ConceptMapElement with _$ConceptMapElement {
   /// [ConceptMapElement] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
-  ConceptMapElement._();
+  const ConceptMapElement._();
 
   /// [ConceptMapElement] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
@@ -2582,7 +2582,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
   /// [ConceptMapTarget] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
   ///  element/data element concepts, or classes in class models.
-  ConceptMapTarget._();
+  const ConceptMapTarget._();
 
   /// [ConceptMapTarget] A statement of relationships from one set of concepts
   ///  to one or more other concepts - either concepts in code systems, or data
@@ -2766,7 +2766,7 @@ class ConceptMapProperty1 with _$ConceptMapProperty1 {
   ///  concepts to one or more other concepts - either concepts in code
   ///  systems, or data element/data element concepts, or classes in class
   ///  models.
-  ConceptMapProperty1._();
+  const ConceptMapProperty1._();
 
   /// [ConceptMapProperty1] A statement of relationships from one set of
   ///  concepts to one or more other concepts - either concepts in code
@@ -2970,7 +2970,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
   ///  concepts to one or more other concepts - either concepts in code
   ///  systems, or data element/data element concepts, or classes in class
   ///  models.
-  ConceptMapDependsOn._();
+  const ConceptMapDependsOn._();
 
   /// [ConceptMapDependsOn] A statement of relationships from one set of
   ///  concepts to one or more other concepts - either concepts in code
@@ -3130,7 +3130,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
   ///  concepts to one or more other concepts - either concepts in code
   ///  systems, or data element/data element concepts, or classes in class
   ///  models.
-  ConceptMapUnmapped._();
+  const ConceptMapUnmapped._();
 
   /// [ConceptMapUnmapped] A statement of relationships from one set of
   ///  concepts to one or more other concepts - either concepts in code
@@ -3305,7 +3305,7 @@ class NamingSystem with Resource, _$NamingSystem {
   /// [NamingSystem] A curated namespace that issues unique symbols within that
   ///  namespace for the identification of concepts, people, devices, etc.
   ///  Represents a "System" used within the Identifier and Coding data types.
-  NamingSystem._();
+  const NamingSystem._();
 
   /// [NamingSystem] A curated namespace that issues unique symbols within that
   ///  namespace for the identification of concepts, people, devices, etc.
@@ -3854,7 +3854,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
   ///  within that namespace for the identification of concepts, people,
   ///  devices, etc.  Represents a "System" used within the Identifier and
   ///  Coding data types.
-  NamingSystemUniqueId._();
+  const NamingSystemUniqueId._();
 
   /// [NamingSystemUniqueId] A curated namespace that issues unique symbols
   ///  within that namespace for the identification of concepts, people,
@@ -4023,7 +4023,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   ///  set of capabilities (behaviors) of a FHIR Terminology Server that may be
   ///  used as a statement of actual server functionality or a statement of
   ///  required or desired server implementation.
-  TerminologyCapabilities._();
+  const TerminologyCapabilities._();
 
   /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
   ///  set of capabilities (behaviors) of a FHIR Terminology Server that may be
@@ -4545,7 +4545,7 @@ class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  TerminologyCapabilitiesSoftware._();
+  const TerminologyCapabilitiesSoftware._();
 
   /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -4673,7 +4673,7 @@ class TerminologyCapabilitiesImplementation
   ///  Terminology Server that may be used as a statement of actual server
   ///  functionality or a statement of required or desired server
   ///  implementation.
-  TerminologyCapabilitiesImplementation._();
+  const TerminologyCapabilitiesImplementation._();
 
   /// [TerminologyCapabilitiesImplementation] A TerminologyCapabilities
   ///  resource documents a set of capabilities (behaviors) of a FHIR
@@ -4802,7 +4802,7 @@ class TerminologyCapabilitiesCodeSystem
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  TerminologyCapabilitiesCodeSystem._();
+  const TerminologyCapabilitiesCodeSystem._();
 
   /// [TerminologyCapabilitiesCodeSystem] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -4943,7 +4943,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  TerminologyCapabilitiesVersion._();
+  const TerminologyCapabilitiesVersion._();
 
   /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -5106,7 +5106,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  TerminologyCapabilitiesFilter._();
+  const TerminologyCapabilitiesFilter._();
 
   /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -5229,7 +5229,7 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  TerminologyCapabilitiesExpansion._();
+  const TerminologyCapabilitiesExpansion._();
 
   /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -5379,7 +5379,7 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  TerminologyCapabilitiesParameter._();
+  const TerminologyCapabilitiesParameter._();
 
   /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -5505,7 +5505,7 @@ class TerminologyCapabilitiesValidateCode
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  TerminologyCapabilitiesValidateCode._();
+  const TerminologyCapabilitiesValidateCode._();
 
   /// [TerminologyCapabilitiesValidateCode] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -5621,7 +5621,7 @@ class TerminologyCapabilitiesTranslation
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  TerminologyCapabilitiesTranslation._();
+  const TerminologyCapabilitiesTranslation._();
 
   /// [TerminologyCapabilitiesTranslation] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -5736,7 +5736,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
   ///  that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  TerminologyCapabilitiesClosure._();
+  const TerminologyCapabilitiesClosure._();
 
   /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
   ///  documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -5850,7 +5850,7 @@ class ValueSet with Resource, _$ValueSet {
   ///  from one or more code systems, intended for use in a particular context.
   ///  Value sets link between [CodeSystem](codesystem.html) definitions and
   ///  their use in [coded elements](terminologies.html).
-  ValueSet._();
+  const ValueSet._();
 
   /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn
   ///  from one or more code systems, intended for use in a particular context.
@@ -6394,7 +6394,7 @@ class ValueSetCompose with _$ValueSetCompose {
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html)
   ///  definitions and their use in [coded elements](terminologies.html).
-  ValueSetCompose._();
+  const ValueSetCompose._();
 
   /// [ValueSetCompose] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -6565,7 +6565,7 @@ class ValueSetInclude with _$ValueSetInclude {
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html)
   ///  definitions and their use in [coded elements](terminologies.html).
-  ValueSetInclude._();
+  const ValueSetInclude._();
 
   /// [ValueSetInclude] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -6736,7 +6736,7 @@ class ValueSetConcept with _$ValueSetConcept {
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html)
   ///  definitions and their use in [coded elements](terminologies.html).
-  ValueSetConcept._();
+  const ValueSetConcept._();
 
   /// [ValueSetConcept] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -6873,7 +6873,7 @@ class ValueSetDesignation with _$ValueSetDesignation {
   ///  particular context. Value sets link between
   ///  [CodeSystem](codesystem.html) definitions and their use in [coded
   ///  elements](terminologies.html).
-  ValueSetDesignation._();
+  const ValueSetDesignation._();
 
   /// [ValueSetDesignation] A ValueSet resource instance specifies a set of
   ///  codes drawn from one or more code systems, intended for use in a
@@ -7008,7 +7008,7 @@ class ValueSetFilter with _$ValueSetFilter {
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html)
   ///  definitions and their use in [coded elements](terminologies.html).
-  ValueSetFilter._();
+  const ValueSetFilter._();
 
   /// [ValueSetFilter] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -7152,7 +7152,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html)
   ///  definitions and their use in [coded elements](terminologies.html).
-  ValueSetExpansion._();
+  const ValueSetExpansion._();
 
   /// [ValueSetExpansion] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -7350,7 +7350,7 @@ class ValueSetParameter with _$ValueSetParameter {
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html)
   ///  definitions and their use in [coded elements](terminologies.html).
-  ValueSetParameter._();
+  const ValueSetParameter._();
 
   /// [ValueSetParameter] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -7536,7 +7536,7 @@ class ValueSetProperty with _$ValueSetProperty {
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html)
   ///  definitions and their use in [coded elements](terminologies.html).
-  ValueSetProperty._();
+  const ValueSetProperty._();
 
   /// [ValueSetProperty] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -7664,7 +7664,7 @@ class ValueSetContains with _$ValueSetContains {
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html)
   ///  definitions and their use in [coded elements](terminologies.html).
-  ValueSetContains._();
+  const ValueSetContains._();
 
   /// [ValueSetContains] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -7875,7 +7875,7 @@ class ValueSetProperty1 with _$ValueSetProperty1 {
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html)
   ///  definitions and their use in [coded elements](terminologies.html).
-  ValueSetProperty1._();
+  const ValueSetProperty1._();
 
   /// [ValueSetProperty1] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular
@@ -8058,7 +8058,7 @@ class ValueSetSubProperty with _$ValueSetSubProperty {
   ///  particular context. Value sets link between
   ///  [CodeSystem](codesystem.html) definitions and their use in [coded
   ///  elements](terminologies.html).
-  ValueSetSubProperty._();
+  const ValueSetSubProperty._();
 
   /// [ValueSetSubProperty] A ValueSet resource instance specifies a set of
   ///  codes drawn from one or more code systems, intended for use in a
@@ -8236,7 +8236,7 @@ class ValueSetScope with _$ValueSetScope {
   ///  drawn from one or more code systems, intended for use in a particular
   ///  context. Value sets link between [CodeSystem](codesystem.html)
   ///  definitions and their use in [coded elements](terminologies.html).
-  ValueSetScope._();
+  const ValueSetScope._();
 
   /// [ValueSetScope] A ValueSet resource instance specifies a set of codes
   ///  drawn from one or more code systems, intended for use in a particular

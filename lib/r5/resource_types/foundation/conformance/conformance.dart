@@ -24,7 +24,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   ///  version of FHIR that may be used as a statement of actual server
   ///  functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatement._();
+  const CapabilityStatement._();
 
   /// [CapabilityStatement] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -586,7 +586,7 @@ class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   ///  version of FHIR that may be used as a statement of actual server
   ///  functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatementSoftware._();
+  const CapabilityStatementSoftware._();
 
   /// [CapabilityStatementSoftware] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -724,7 +724,7 @@ class CapabilityStatementImplementation
   ///  particular version of FHIR that may be used as a statement of actual
   ///  server functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatementImplementation._();
+  const CapabilityStatementImplementation._();
 
   /// [CapabilityStatementImplementation] A Capability Statement documents a
   ///  set of capabilities (behaviors) of a FHIR Server or Client for a
@@ -862,7 +862,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
   ///  version of FHIR that may be used as a statement of actual server
   ///  functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatementRest._();
+  const CapabilityStatementRest._();
 
   /// [CapabilityStatementRest] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1040,7 +1040,7 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   ///  version of FHIR that may be used as a statement of actual server
   ///  functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatementSecurity._();
+  const CapabilityStatementSecurity._();
 
   /// [CapabilityStatementSecurity] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1174,7 +1174,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   ///  version of FHIR that may be used as a statement of actual server
   ///  functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatementResource._();
+  const CapabilityStatementResource._();
 
   /// [CapabilityStatementResource] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1518,7 +1518,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   ///  version of FHIR that may be used as a statement of actual server
   ///  functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatementInteraction._();
+  const CapabilityStatementInteraction._();
 
   /// [CapabilityStatementInteraction] A Capability Statement documents a set
   ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1652,7 +1652,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   ///  version of FHIR that may be used as a statement of actual server
   ///  functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatementSearchParam._();
+  const CapabilityStatementSearchParam._();
 
   /// [CapabilityStatementSearchParam] A Capability Statement documents a set
   ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1816,7 +1816,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
   ///  version of FHIR that may be used as a statement of actual server
   ///  functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatementOperation._();
+  const CapabilityStatementOperation._();
 
   /// [CapabilityStatementOperation] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -1978,7 +1978,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   ///  version of FHIR that may be used as a statement of actual server
   ///  functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatementInteraction1._();
+  const CapabilityStatementInteraction1._();
 
   /// [CapabilityStatementInteraction1] A Capability Statement documents a set
   ///  of capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -2108,7 +2108,7 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   ///  version of FHIR that may be used as a statement of actual server
   ///  functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatementMessaging._();
+  const CapabilityStatementMessaging._();
 
   /// [CapabilityStatementMessaging] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -2257,7 +2257,7 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   ///  version of FHIR that may be used as a statement of actual server
   ///  functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatementEndpoint._();
+  const CapabilityStatementEndpoint._();
 
   /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -2383,7 +2383,7 @@ class CapabilityStatementSupportedMessage
   ///  particular version of FHIR that may be used as a statement of actual
   ///  server functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatementSupportedMessage._();
+  const CapabilityStatementSupportedMessage._();
 
   /// [CapabilityStatementSupportedMessage] A Capability Statement documents a
   ///  set of capabilities (behaviors) of a FHIR Server or Client for a
@@ -2509,7 +2509,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
   ///  version of FHIR that may be used as a statement of actual server
   ///  functionality or a statement of required or desired server
   ///  implementation.
-  CapabilityStatementDocument._();
+  const CapabilityStatementDocument._();
 
   /// [CapabilityStatementDocument] A Capability Statement documents a set of
   ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -2642,7 +2642,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
 class CompartmentDefinition with Resource, _$CompartmentDefinition {
   /// [CompartmentDefinition] A compartment definition that defines how
   ///  resources are accessed on a server.
-  CompartmentDefinition._();
+  const CompartmentDefinition._();
 
   /// [CompartmentDefinition] A compartment definition that defines how
   ///  resources are accessed on a server.
@@ -3081,7 +3081,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
 class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   /// [CompartmentDefinitionResource] A compartment definition that defines how
   ///  resources are accessed on a server.
-  CompartmentDefinitionResource._();
+  const CompartmentDefinitionResource._();
 
   /// [CompartmentDefinitionResource] A compartment definition that defines how
   ///  resources are accessed on a server.
@@ -3246,7 +3246,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
   ///  - that is, a coherent set of resources that form a graph by following
   ///  references. The Graph Definition resource defines a set and makes rules
   ///  about the set.
-  GraphDefinition._();
+  const GraphDefinition._();
 
   /// [GraphDefinition] A formal computable definition of a graph of resources
   ///  - that is, a coherent set of resources that form a graph by following
@@ -3684,7 +3684,7 @@ class GraphDefinitionNode with _$GraphDefinitionNode {
   ///  resources - that is, a coherent set of resources that form a graph by
   ///  following references. The Graph Definition resource defines a set and
   ///  makes rules about the set.
-  GraphDefinitionNode._();
+  const GraphDefinitionNode._();
 
   /// [GraphDefinitionNode] A formal computable definition of a graph of
   ///  resources - that is, a coherent set of resources that form a graph by
@@ -3823,7 +3823,7 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
   ///  resources - that is, a coherent set of resources that form a graph by
   ///  following references. The Graph Definition resource defines a set and
   ///  makes rules about the set.
-  GraphDefinitionLink._();
+  const GraphDefinitionLink._();
 
   /// [GraphDefinitionLink] A formal computable definition of a graph of
   ///  resources - that is, a coherent set of resources that form a graph by
@@ -4014,7 +4014,7 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   ///  resources - that is, a coherent set of resources that form a graph by
   ///  following references. The Graph Definition resource defines a set and
   ///  makes rules about the set.
-  GraphDefinitionCompartment._();
+  const GraphDefinitionCompartment._();
 
   /// [GraphDefinitionCompartment] A formal computable definition of a graph of
   ///  resources - that is, a coherent set of resources that form a graph by
@@ -4172,7 +4172,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   ///  resources. This resource is used to gather all the parts of an
   ///  implementation guide into a logical whole and to publish a computable
   ///  definition of all the parts.
-  ImplementationGuide._();
+  const ImplementationGuide._();
 
   /// [ImplementationGuide] A set of rules of how a particular interoperability
   ///  or standards problem is solved - typically through the use of FHIR
@@ -4669,7 +4669,7 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   ///  use of FHIR resources. This resource is used to gather all the parts of
   ///  an implementation guide into a logical whole and to publish a computable
   ///  definition of all the parts.
-  ImplementationGuideDependsOn._();
+  const ImplementationGuideDependsOn._();
 
   /// [ImplementationGuideDependsOn] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -4818,7 +4818,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   ///  use of FHIR resources. This resource is used to gather all the parts of
   ///  an implementation guide into a logical whole and to publish a computable
   ///  definition of all the parts.
-  ImplementationGuideGlobal._();
+  const ImplementationGuideGlobal._();
 
   /// [ImplementationGuideGlobal] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -4938,7 +4938,7 @@ class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
   ///  use of FHIR resources. This resource is used to gather all the parts of
   ///  an implementation guide into a logical whole and to publish a computable
   ///  definition of all the parts.
-  ImplementationGuideDefinition._();
+  const ImplementationGuideDefinition._();
 
   /// [ImplementationGuideDefinition] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -5083,7 +5083,7 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   ///  use of FHIR resources. This resource is used to gather all the parts of
   ///  an implementation guide into a logical whole and to publish a computable
   ///  definition of all the parts.
-  ImplementationGuideGrouping._();
+  const ImplementationGuideGrouping._();
 
   /// [ImplementationGuideGrouping] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -5211,7 +5211,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
   ///  use of FHIR resources. This resource is used to gather all the parts of
   ///  an implementation guide into a logical whole and to publish a computable
   ///  definition of all the parts.
-  ImplementationGuideResource._();
+  const ImplementationGuideResource._();
 
   /// [ImplementationGuideResource] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -5389,7 +5389,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
   ///  use of FHIR resources. This resource is used to gather all the parts of
   ///  an implementation guide into a logical whole and to publish a computable
   ///  definition of all the parts.
-  ImplementationGuidePage._();
+  const ImplementationGuidePage._();
 
   /// [ImplementationGuidePage] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -5568,7 +5568,7 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
   ///  use of FHIR resources. This resource is used to gather all the parts of
   ///  an implementation guide into a logical whole and to publish a computable
   ///  definition of all the parts.
-  ImplementationGuideParameter._();
+  const ImplementationGuideParameter._();
 
   /// [ImplementationGuideParameter] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -5689,7 +5689,7 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   ///  use of FHIR resources. This resource is used to gather all the parts of
   ///  an implementation guide into a logical whole and to publish a computable
   ///  definition of all the parts.
-  ImplementationGuideTemplate._();
+  const ImplementationGuideTemplate._();
 
   /// [ImplementationGuideTemplate] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -5825,7 +5825,7 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
   ///  use of FHIR resources. This resource is used to gather all the parts of
   ///  an implementation guide into a logical whole and to publish a computable
   ///  definition of all the parts.
-  ImplementationGuideManifest._();
+  const ImplementationGuideManifest._();
 
   /// [ImplementationGuideManifest] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -5983,7 +5983,7 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   ///  use of FHIR resources. This resource is used to gather all the parts of
   ///  an implementation guide into a logical whole and to publish a computable
   ///  definition of all the parts.
-  ImplementationGuideResource1._();
+  const ImplementationGuideResource1._();
 
   /// [ImplementationGuideResource1] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -6122,7 +6122,7 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
   ///  use of FHIR resources. This resource is used to gather all the parts of
   ///  an implementation guide into a logical whole and to publish a computable
   ///  definition of all the parts.
-  ImplementationGuidePage1._();
+  const ImplementationGuidePage1._();
 
   /// [ImplementationGuidePage1] A set of rules of how a particular
   ///  interoperability or standards problem is solved - typically through the
@@ -6255,7 +6255,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
   ///  shared between systems, including the type of event that initiates the
   ///  message, the content to be transmitted and what response(s), if any, are
   ///  permitted.
-  MessageDefinition._();
+  const MessageDefinition._();
 
   /// [MessageDefinition] Defines the characteristics of a message that can be
   ///  shared between systems, including the type of event that initiates the
@@ -6750,7 +6750,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
   ///  can be shared between systems, including the type of event that
   ///  initiates the message, the content to be transmitted and what
   ///  response(s), if any, are permitted.
-  MessageDefinitionFocus._();
+  const MessageDefinitionFocus._();
 
   /// [MessageDefinitionFocus] Defines the characteristics of a message that
   ///  can be shared between systems, including the type of event that
@@ -6897,7 +6897,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
   ///  message that can be shared between systems, including the type of event
   ///  that initiates the message, the content to be transmitted and what
   ///  response(s), if any, are permitted.
-  MessageDefinitionAllowedResponse._();
+  const MessageDefinitionAllowedResponse._();
 
   /// [MessageDefinitionAllowedResponse] Defines the characteristics of a
   ///  message that can be shared between systems, including the type of event
@@ -7018,7 +7018,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
 class OperationDefinition with Resource, _$OperationDefinition {
   /// [OperationDefinition] A formal computable definition of an operation (on
   ///  the RESTful interface) or a named query (using the search interaction).
-  OperationDefinition._();
+  const OperationDefinition._();
 
   /// [OperationDefinition] A formal computable definition of an operation (on
   ///  the RESTful interface) or a named query (using the search interaction).
@@ -7567,7 +7567,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
   /// [OperationDefinitionParameter] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
   ///  interaction).
-  OperationDefinitionParameter._();
+  const OperationDefinitionParameter._();
 
   /// [OperationDefinitionParameter] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
@@ -7806,7 +7806,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
   /// [OperationDefinitionBinding] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
   ///  interaction).
-  OperationDefinitionBinding._();
+  const OperationDefinitionBinding._();
 
   /// [OperationDefinitionBinding] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
@@ -7927,7 +7927,7 @@ class OperationDefinitionReferencedFrom
   /// [OperationDefinitionReferencedFrom] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
   ///  interaction).
-  OperationDefinitionReferencedFrom._();
+  const OperationDefinitionReferencedFrom._();
 
   /// [OperationDefinitionReferencedFrom] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
@@ -8055,7 +8055,7 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
   /// [OperationDefinitionOverload] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
   ///  interaction).
-  OperationDefinitionOverload._();
+  const OperationDefinitionOverload._();
 
   /// [OperationDefinitionOverload] A formal computable definition of an
   ///  operation (on the RESTful interface) or a named query (using the search
@@ -8173,7 +8173,7 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
 class SearchParameter with Resource, _$SearchParameter {
   /// [SearchParameter] A search parameter that defines a named search item
   ///  that can be used to search/filter on a resource.
-  SearchParameter._();
+  const SearchParameter._();
 
   /// [SearchParameter] A search parameter that defines a named search item
   ///  that can be used to search/filter on a resource.
@@ -8758,7 +8758,7 @@ class SearchParameter with Resource, _$SearchParameter {
 class SearchParameterComponent with _$SearchParameterComponent {
   /// [SearchParameterComponent] A search parameter that defines a named search
   ///  item that can be used to search/filter on a resource.
-  SearchParameterComponent._();
+  const SearchParameterComponent._();
 
   /// [SearchParameterComponent] A search parameter that defines a named search
   ///  item that can be used to search/filter on a resource.
@@ -8876,7 +8876,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
   ///  used to describe the underlying resources, data types defined in FHIR,
   ///  and also for describing extensions and constraints on resources and data
   ///  types.
-  StructureDefinition._();
+  const StructureDefinition._();
 
   /// [StructureDefinition] A definition of a FHIR structure. This resource is
   ///  used to describe the underlying resources, data types defined in FHIR,
@@ -9445,7 +9445,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
   ///  resource is used to describe the underlying resources, data types
   ///  defined in FHIR, and also for describing extensions and constraints on
   ///  resources and data types.
-  StructureDefinitionMapping._();
+  const StructureDefinitionMapping._();
 
   /// [StructureDefinitionMapping] A definition of a FHIR structure. This
   ///  resource is used to describe the underlying resources, data types
@@ -9593,7 +9593,7 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
   ///  resource is used to describe the underlying resources, data types
   ///  defined in FHIR, and also for describing extensions and constraints on
   ///  resources and data types.
-  StructureDefinitionContext._();
+  const StructureDefinitionContext._();
 
   /// [StructureDefinitionContext] A definition of a FHIR structure. This
   ///  resource is used to describe the underlying resources, data types
@@ -9719,7 +9719,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   ///  resource is used to describe the underlying resources, data types
   ///  defined in FHIR, and also for describing extensions and constraints on
   ///  resources and data types.
-  StructureDefinitionSnapshot._();
+  const StructureDefinitionSnapshot._();
 
   /// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
   ///  resource is used to describe the underlying resources, data types
@@ -9827,7 +9827,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   ///  resource is used to describe the underlying resources, data types
   ///  defined in FHIR, and also for describing extensions and constraints on
   ///  resources and data types.
-  StructureDefinitionDifferential._();
+  const StructureDefinitionDifferential._();
 
   /// [StructureDefinitionDifferential] A definition of a FHIR structure. This
   ///  resource is used to describe the underlying resources, data types
@@ -9932,7 +9932,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
 class StructureMap with Resource, _$StructureMap {
   /// [StructureMap] A Map of relationships between 2 structures that can be
   ///  used to transform data.
-  StructureMap._();
+  const StructureMap._();
 
   /// [StructureMap] A Map of relationships between 2 structures that can be
   ///  used to transform data.
@@ -10364,7 +10364,7 @@ class StructureMap with Resource, _$StructureMap {
 class StructureMapStructure with _$StructureMapStructure {
   /// [StructureMapStructure] A Map of relationships between 2 structures that
   ///  can be used to transform data.
-  StructureMapStructure._();
+  const StructureMapStructure._();
 
   /// [StructureMapStructure] A Map of relationships between 2 structures that
   ///  can be used to transform data.
@@ -10497,7 +10497,7 @@ class StructureMapStructure with _$StructureMapStructure {
 class StructureMapConst with _$StructureMapConst {
   /// [StructureMapConst] A Map of relationships between 2 structures that can
   ///  be used to transform data.
-  StructureMapConst._();
+  const StructureMapConst._();
 
   /// [StructureMapConst] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -10613,7 +10613,7 @@ class StructureMapConst with _$StructureMapConst {
 class StructureMapGroup with _$StructureMapGroup {
   /// [StructureMapGroup] A Map of relationships between 2 structures that can
   ///  be used to transform data.
-  StructureMapGroup._();
+  const StructureMapGroup._();
 
   /// [StructureMapGroup] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -10765,7 +10765,7 @@ class StructureMapGroup with _$StructureMapGroup {
 class StructureMapInput with _$StructureMapInput {
   /// [StructureMapInput] A Map of relationships between 2 structures that can
   ///  be used to transform data.
-  StructureMapInput._();
+  const StructureMapInput._();
 
   /// [StructureMapInput] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -10901,7 +10901,7 @@ class StructureMapInput with _$StructureMapInput {
 class StructureMapRule with _$StructureMapRule {
   /// [StructureMapRule] A Map of relationships between 2 structures that can
   ///  be used to transform data.
-  StructureMapRule._();
+  const StructureMapRule._();
 
   /// [StructureMapRule] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -11037,7 +11037,7 @@ class StructureMapRule with _$StructureMapRule {
 class StructureMapSource with _$StructureMapSource {
   /// [StructureMapSource] A Map of relationships between 2 structures that can
   ///  be used to transform data.
-  StructureMapSource._();
+  const StructureMapSource._();
 
   /// [StructureMapSource] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -11259,7 +11259,7 @@ class StructureMapSource with _$StructureMapSource {
 class StructureMapTarget with _$StructureMapTarget {
   /// [StructureMapTarget] A Map of relationships between 2 structures that can
   ///  be used to transform data.
-  StructureMapTarget._();
+  const StructureMapTarget._();
 
   /// [StructureMapTarget] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -11421,7 +11421,7 @@ class StructureMapTarget with _$StructureMapTarget {
 class StructureMapParameter with _$StructureMapParameter {
   /// [StructureMapParameter] A Map of relationships between 2 structures that
   ///  can be used to transform data.
-  StructureMapParameter._();
+  const StructureMapParameter._();
 
   /// [StructureMapParameter] A Map of relationships between 2 structures that
   ///  can be used to transform data.
@@ -11597,7 +11597,7 @@ class StructureMapParameter with _$StructureMapParameter {
 class StructureMapDependent with _$StructureMapDependent {
   /// [StructureMapDependent] A Map of relationships between 2 structures that
   ///  can be used to transform data.
-  StructureMapDependent._();
+  const StructureMapDependent._();
 
   /// [StructureMapDependent] A Map of relationships between 2 structures that
   ///  can be used to transform data.

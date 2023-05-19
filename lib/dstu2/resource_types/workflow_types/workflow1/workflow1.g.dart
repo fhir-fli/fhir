@@ -19,8 +19,14 @@ _$_Order _$$_OrderFromJson(Map<String, dynamic> json) => _$_Order(
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
           json['language'] == null ? null : FhirCode.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
       text: json['text'] == null
           ? null
           : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -59,16 +65,12 @@ _$_Order _$$_OrderFromJson(Map<String, dynamic> json) => _$_Order(
       detail: (json['detail'] as List<dynamic>)
           .map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-    )
-      ..implicitRulesElement = json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
-      ..languageElement = json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>);
+    );
 
 Map<String, dynamic> _$$_OrderToJson(_$_Order instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -76,13 +78,12 @@ Map<String, dynamic> _$$_OrderToJson(_$_Order instance) {
     }
   }
 
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e.toJson()).toList());
@@ -255,8 +256,14 @@ _$_OrderResponse _$$_OrderResponseFromJson(Map<String, dynamic> json) =>
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
           json['language'] == null ? null : FhirCode.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
       text: json['text'] == null
           ? null
           : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -287,16 +294,12 @@ _$_OrderResponse _$$_OrderResponseFromJson(Map<String, dynamic> json) =>
       fulfillment: (json['fulfillment'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-    )
-      ..implicitRulesElement = json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
-      ..languageElement = json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>);
+    );
 
 Map<String, dynamic> _$$_OrderResponseToJson(_$_OrderResponse instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -304,13 +307,12 @@ Map<String, dynamic> _$$_OrderResponseToJson(_$_OrderResponse instance) {
     }
   }
 
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e.toJson()).toList());

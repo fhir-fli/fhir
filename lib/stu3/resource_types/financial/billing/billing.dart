@@ -16,7 +16,7 @@ part 'billing.g.dart';
 
 @freezed
 class Claim with Resource, _$Claim {
-  Claim._();
+  const Claim._();
   const factory Claim({
     @Default(Stu3ResourceType.Claim)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
@@ -95,7 +95,7 @@ class Claim with Resource, _$Claim {
 
 @freezed
 class ClaimRelated with _$ClaimRelated {
-  ClaimRelated._();
+  const ClaimRelated._();
   const factory ClaimRelated({
     Reference? claim,
     CodeableConcept? relationship,
@@ -135,7 +135,7 @@ class ClaimRelated with _$ClaimRelated {
 
 @freezed
 class ClaimPayee with _$ClaimPayee {
-  ClaimPayee._();
+  const ClaimPayee._();
   const factory ClaimPayee({
     required CodeableConcept type,
     Reference? party,
@@ -174,7 +174,7 @@ class ClaimPayee with _$ClaimPayee {
 
 @freezed
 class ClaimCareTeam with _$ClaimCareTeam {
-  ClaimCareTeam._();
+  const ClaimCareTeam._();
   const factory ClaimCareTeam({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -218,7 +218,7 @@ class ClaimCareTeam with _$ClaimCareTeam {
 
 @freezed
 class ClaimInformation with _$ClaimInformation {
-  ClaimInformation._();
+  const ClaimInformation._();
   const factory ClaimInformation({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -268,7 +268,7 @@ class ClaimInformation with _$ClaimInformation {
 
 @freezed
 class ClaimDiagnosis with _$ClaimDiagnosis {
-  ClaimDiagnosis._();
+  const ClaimDiagnosis._();
   const factory ClaimDiagnosis({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -311,7 +311,7 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
 
 @freezed
 class ClaimProcedure with _$ClaimProcedure {
-  ClaimProcedure._();
+  const ClaimProcedure._();
   const factory ClaimProcedure({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -354,7 +354,7 @@ class ClaimProcedure with _$ClaimProcedure {
 
 @freezed
 class ClaimInsurance with _$ClaimInsurance {
-  ClaimInsurance._();
+  const ClaimInsurance._();
   const factory ClaimInsurance({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -401,7 +401,7 @@ class ClaimInsurance with _$ClaimInsurance {
 
 @freezed
 class ClaimAccident with _$ClaimAccident {
-  ClaimAccident._();
+  const ClaimAccident._();
   const factory ClaimAccident({
     FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -443,7 +443,7 @@ class ClaimAccident with _$ClaimAccident {
 
 @freezed
 class ClaimItem with _$ClaimItem {
-  ClaimItem._();
+  const ClaimItem._();
   const factory ClaimItem({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -512,7 +512,7 @@ class ClaimItem with _$ClaimItem {
 
 @freezed
 class ClaimDetail with _$ClaimDetail {
-  ClaimDetail._();
+  const ClaimDetail._();
   const factory ClaimDetail({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -563,7 +563,7 @@ class ClaimDetail with _$ClaimDetail {
 
 @freezed
 class ClaimSubDetail with _$ClaimSubDetail {
-  ClaimSubDetail._();
+  const ClaimSubDetail._();
   const factory ClaimSubDetail({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -613,7 +613,7 @@ class ClaimSubDetail with _$ClaimSubDetail {
 
 @freezed
 class ClaimResponse with Resource, _$ClaimResponse {
-  ClaimResponse._();
+  const ClaimResponse._();
   const factory ClaimResponse({
     @Default(Stu3ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
@@ -687,7 +687,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
 
 @freezed
 class ClaimResponseItem with _$ClaimResponseItem {
-  ClaimResponseItem._();
+  const ClaimResponseItem._();
   const factory ClaimResponseItem({
     FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
@@ -730,7 +730,7 @@ class ClaimResponseItem with _$ClaimResponseItem {
 
 @freezed
 class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
-  ClaimResponseAdjudication._();
+  const ClaimResponseAdjudication._();
   const factory ClaimResponseAdjudication({
     required CodeableConcept category,
     CodeableConcept? reason,
@@ -772,7 +772,7 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
 
 @freezed
 class ClaimResponseDetail with _$ClaimResponseDetail {
-  ClaimResponseDetail._();
+  const ClaimResponseDetail._();
   const factory ClaimResponseDetail({
     FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
@@ -815,7 +815,7 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
 
 @freezed
 class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
-  ClaimResponseSubDetail._();
+  const ClaimResponseSubDetail._();
   const factory ClaimResponseSubDetail({
     FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
@@ -857,7 +857,7 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
 
 @freezed
 class ClaimResponseAddItem with _$ClaimResponseAddItem {
-  ClaimResponseAddItem._();
+  const ClaimResponseAddItem._();
   const factory ClaimResponseAddItem({
     List<FhirId>? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
@@ -905,7 +905,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
 
 @freezed
 class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
-  ClaimResponseDetail1._();
+  const ClaimResponseDetail1._();
   const factory ClaimResponseDetail1({
     CodeableConcept? revenue,
     CodeableConcept? category,
@@ -950,7 +950,7 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
 
 @freezed
 class ClaimResponseError with _$ClaimResponseError {
-  ClaimResponseError._();
+  const ClaimResponseError._();
   const factory ClaimResponseError({
     FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
@@ -996,7 +996,7 @@ class ClaimResponseError with _$ClaimResponseError {
 
 @freezed
 class ClaimResponsePayment with _$ClaimResponsePayment {
-  ClaimResponsePayment._();
+  const ClaimResponsePayment._();
   const factory ClaimResponsePayment({
     CodeableConcept? type,
     Money? adjustment,
@@ -1040,7 +1040,7 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
 
 @freezed
 class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
-  ClaimResponseProcessNote._();
+  const ClaimResponseProcessNote._();
   const factory ClaimResponseProcessNote({
     FhirDecimal? number,
     @JsonKey(name: '_number') Element? numberElement,
@@ -1083,7 +1083,7 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
 
 @freezed
 class ClaimResponseInsurance with _$ClaimResponseInsurance {
-  ClaimResponseInsurance._();
+  const ClaimResponseInsurance._();
   const factory ClaimResponseInsurance({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,

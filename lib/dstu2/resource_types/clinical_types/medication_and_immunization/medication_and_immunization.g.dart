@@ -401,17 +401,20 @@ _$_MedicationOrder _$$_MedicationOrderFromJson(Map<String, dynamic> json) =>
           Dstu2ResourceType.MedicationOrder,
       dbId: json['dbId'] as int?,
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      idElement: json['_id'] == null
-          ? null
-          : Element.fromJson(json['_id'] as Map<String, dynamic>),
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
           json['language'] == null ? null : FhirCode.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
       text: json['text'] == null
           ? null
           : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -484,16 +487,12 @@ _$_MedicationOrder _$$_MedicationOrderFromJson(Map<String, dynamic> json) =>
           ? null
           : Reference.fromJson(
               json['priorPrescription'] as Map<String, dynamic>),
-    )
-      ..implicitRulesElement = json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
-      ..languageElement = json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>);
+    );
 
 Map<String, dynamic> _$$_MedicationOrderToJson(_$_MedicationOrder instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -501,14 +500,12 @@ Map<String, dynamic> _$$_MedicationOrderToJson(_$_MedicationOrder instance) {
     }
   }
 
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull('_id', instance.idElement?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e.toJson()).toList());

@@ -16,7 +16,7 @@ part 'other.g.dart';
 
 @freezed
 class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
-  ExplanationOfBenefit._();
+  const ExplanationOfBenefit._();
   const factory ExplanationOfBenefit({
     @Default(Dstu2ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)

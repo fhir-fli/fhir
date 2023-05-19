@@ -17,7 +17,7 @@ part 'draft_types.g.dart';
 @freezed
 class Population with _$Population {
   /// [Population] A populatioof people with some set of grouping criteria.
-  Population._();
+  const Population._();
 
   /// [Population] A populatioof people with some set of grouping criteria.
   ///
@@ -135,7 +135,7 @@ class Population with _$Population {
 @freezed
 class ProductShelfLife with _$ProductShelfLife {
   /// [ProductShelfLife] The shelf-life and storage information for a medicinal product item or container can be described using this class.
-  ProductShelfLife._();
+  const ProductShelfLife._();
 
   /// [ProductShelfLife] The shelf-life and storage information for a medicinal product item or container can be described using this class.
   ///
@@ -204,7 +204,7 @@ class ProductShelfLife with _$ProductShelfLife {
 @freezed
 class ProdCharacteristic with _$ProdCharacteristic {
   /// [ProdCharacteristic] The marketing status describes the date when a
-  ProdCharacteristic._();
+  const ProdCharacteristic._();
 
   /// [ProdCharacteristic] The marketing status describes the date when a
   /// medicinal product is actually put on the market or the date as of which it
@@ -417,7 +417,7 @@ class ProdCharacteristic with _$ProdCharacteristic {
 @freezed
 class MarketingStatus with _$MarketingStatus {
   /// [MarketingStatus] The marketing status describes the date when a
-  MarketingStatus._();
+  const MarketingStatus._();
 
   /// [MarketingStatus] The marketing status describes the date when a
   /// medicinal product is actually put on the market or the date as of which it

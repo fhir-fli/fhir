@@ -23,7 +23,7 @@ class FhirGroup with Resource, _$FhirGroup {
   ///  or acted upon collectively but which are not expected to act
   ///  collectively, and are not formally or legally recognized; i.e. a
   ///  collection of entities that isn't an Organization.
-  FhirGroup._();
+  const FhirGroup._();
 
   /// [FhirGroup] Represents a defined collection of entities that may be discussed
   ///  or acted upon collectively but which are not expected to act
@@ -323,7 +323,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
   ///  may be discussed or acted upon collectively but which are not expected
   ///  to act collectively, and are not formally or legally recognized; i.e. a
   ///  collection of entities that isn't an Organization.
-  GroupCharacteristic._();
+  const GroupCharacteristic._();
 
   /// [GroupCharacteristic] Represents a defined collection of entities that
   ///  may be discussed or acted upon collectively but which are not expected
@@ -489,7 +489,7 @@ class GroupMember with _$GroupMember {
   ///  discussed or acted upon collectively but which are not expected to act
   ///  collectively, and are not formally or legally recognized; i.e. a
   ///  collection of entities that isn't an Organization.
-  GroupMember._();
+  const GroupMember._();
 
   /// [GroupMember] Represents a defined collection of entities that may be
   ///  discussed or acted upon collectively but which are not expected to act
@@ -613,7 +613,7 @@ class GroupMember with _$GroupMember {
 class Patient with Resource, _$Patient {
   /// [Patient] Demographics and other administrative information about an
   ///  individual or animal receiving care or other health-related services.
-  Patient._();
+  const Patient._();
 
   /// [Patient] Demographics and other administrative information about an
   ///  individual or animal receiving care or other health-related services.
@@ -946,7 +946,7 @@ class Patient with Resource, _$Patient {
 class PatientContact with _$PatientContact {
   /// [PatientContact] Demographics and other administrative information about
   ///  an individual or animal receiving care or other health-related services.
-  PatientContact._();
+  const PatientContact._();
 
   /// [PatientContact] Demographics and other administrative information about
   ///  an individual or animal receiving care or other health-related services.
@@ -1094,7 +1094,7 @@ class PatientCommunication with _$PatientCommunication {
   /// [PatientCommunication] Demographics and other administrative information
   ///  about an individual or animal receiving care or other health-related
   ///  services.
-  PatientCommunication._();
+  const PatientCommunication._();
 
   /// [PatientCommunication] Demographics and other administrative information
   ///  about an individual or animal receiving care or other health-related
@@ -1214,7 +1214,7 @@ class PatientCommunication with _$PatientCommunication {
 class PatientLink with _$PatientLink {
   /// [PatientLink] Demographics and other administrative information about an
   ///  individual or animal receiving care or other health-related services.
-  PatientLink._();
+  const PatientLink._();
 
   /// [PatientLink] Demographics and other administrative information about an
   ///  individual or animal receiving care or other health-related services.
@@ -1329,7 +1329,7 @@ class PatientLink with _$PatientLink {
 class Person with Resource, _$Person {
   /// [Person] Demographics and administrative information about a person
   ///  independent of a specific health-related context.
-  Person._();
+  const Person._();
 
   /// [Person] Demographics and administrative information about a person
   ///  independent of a specific health-related context.
@@ -1607,7 +1607,7 @@ class Person with Resource, _$Person {
 class PersonCommunication with _$PersonCommunication {
   /// [PersonCommunication] Demographics and administrative information about a
   ///  person independent of a specific health-related context.
-  PersonCommunication._();
+  const PersonCommunication._();
 
   /// [PersonCommunication] Demographics and administrative information about a
   ///  person independent of a specific health-related context.
@@ -1726,7 +1726,7 @@ class PersonCommunication with _$PersonCommunication {
 class PersonLink with _$PersonLink {
   /// [PersonLink] Demographics and administrative information about a person
   ///  independent of a specific health-related context.
-  PersonLink._();
+  const PersonLink._();
 
   /// [PersonLink] Demographics and administrative information about a person
   ///  independent of a specific health-related context.
@@ -1839,7 +1839,7 @@ class PersonLink with _$PersonLink {
 class Practitioner with Resource, _$Practitioner {
   /// [Practitioner] A person who is directly or indirectly involved in the
   ///  provisioning of healthcare or related services.
-  Practitioner._();
+  const Practitioner._();
 
   /// [Practitioner] A person who is directly or indirectly involved in the
   ///  provisioning of healthcare or related services.
@@ -2124,7 +2124,7 @@ class Practitioner with Resource, _$Practitioner {
 class PractitionerQualification with _$PractitionerQualification {
   /// [PractitionerQualification] A person who is directly or indirectly
   ///  involved in the provisioning of healthcare or related services.
-  PractitionerQualification._();
+  const PractitionerQualification._();
 
   /// [PractitionerQualification] A person who is directly or indirectly
   ///  involved in the provisioning of healthcare or related services.
@@ -2240,7 +2240,7 @@ class PractitionerQualification with _$PractitionerQualification {
 class PractitionerCommunication with _$PractitionerCommunication {
   /// [PractitionerCommunication] A person who is directly or indirectly
   ///  involved in the provisioning of healthcare or related services.
-  PractitionerCommunication._();
+  const PractitionerCommunication._();
 
   /// [PractitionerCommunication] A person who is directly or indirectly
   ///  involved in the provisioning of healthcare or related services.
@@ -2359,7 +2359,7 @@ class PractitionerCommunication with _$PractitionerCommunication {
 class PractitionerRole with Resource, _$PractitionerRole {
   /// [PractitionerRole] A specific set of Roles/Locations/specialties/services
   ///  that a practitioner may perform at an organization for a period of time.
-  PractitionerRole._();
+  const PractitionerRole._();
 
   /// [PractitionerRole] A specific set of Roles/Locations/specialties/services
   ///  that a practitioner may perform at an organization for a period of time.
@@ -2641,7 +2641,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
   /// [RelatedPerson] Information about a person that is involved in a
   ///  patient's health or the care for a patient, but who is not the target of
   ///  healthcare, nor has a formal responsibility in the care process.
-  RelatedPerson._();
+  const RelatedPerson._();
 
   /// [RelatedPerson] Information about a person that is involved in a
   ///  patient's health or the care for a patient, but who is not the target of
@@ -2900,7 +2900,7 @@ class RelatedPersonCommunication with _$RelatedPersonCommunication {
   ///  in a patient's health or the care for a patient, but who is not the
   ///  target of healthcare, nor has a formal responsibility in the care
   ///  process.
-  RelatedPersonCommunication._();
+  const RelatedPersonCommunication._();
 
   /// [RelatedPersonCommunication] Information about a person that is involved
   ///  in a patient's health or the care for a patient, but who is not the

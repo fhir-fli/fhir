@@ -16,7 +16,7 @@ part 'general.g.dart';
 
 @freezed
 class Account with Resource, _$Account {
-  Account._();
+  const Account._();
   const factory Account({
     @Default(Stu3ResourceType.Account)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Account)
@@ -79,7 +79,7 @@ class Account with Resource, _$Account {
 
 @freezed
 class AccountCoverage with _$AccountCoverage {
-  AccountCoverage._();
+  const AccountCoverage._();
   const factory AccountCoverage({
     required Reference coverage,
     FhirDecimal? priority,
@@ -119,7 +119,7 @@ class AccountCoverage with _$AccountCoverage {
 
 @freezed
 class AccountGuarantor with _$AccountGuarantor {
-  AccountGuarantor._();
+  const AccountGuarantor._();
   const factory AccountGuarantor({
     required Reference party,
     FhirBoolean? onHold,
@@ -160,7 +160,7 @@ class AccountGuarantor with _$AccountGuarantor {
 
 @freezed
 class ChargeItem with Resource, _$ChargeItem {
-  ChargeItem._();
+  const ChargeItem._();
   const factory ChargeItem({
     @Default(Stu3ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ChargeItem)
@@ -239,7 +239,7 @@ class ChargeItem with Resource, _$ChargeItem {
 
 @freezed
 class ChargeItemParticipant with _$ChargeItemParticipant {
-  ChargeItemParticipant._();
+  const ChargeItemParticipant._();
   const factory ChargeItemParticipant({
     CodeableConcept? role,
     required Reference actor,
@@ -278,7 +278,7 @@ class ChargeItemParticipant with _$ChargeItemParticipant {
 
 @freezed
 class Contract with Resource, _$Contract {
-  Contract._();
+  const Contract._();
   const factory Contract({
     @Default(Stu3ResourceType.Contract)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Contract)
@@ -352,7 +352,7 @@ class Contract with Resource, _$Contract {
 
 @freezed
 class ContractAgent with _$ContractAgent {
-  ContractAgent._();
+  const ContractAgent._();
   const factory ContractAgent({
     required Reference actor,
     List<CodeableConcept>? role,
@@ -391,7 +391,7 @@ class ContractAgent with _$ContractAgent {
 
 @freezed
 class ContractSigner with _$ContractSigner {
-  ContractSigner._();
+  const ContractSigner._();
   const factory ContractSigner({
     required Coding type,
     required Reference party,
@@ -431,7 +431,7 @@ class ContractSigner with _$ContractSigner {
 
 @freezed
 class ContractValuedItem with _$ContractValuedItem {
-  ContractValuedItem._();
+  const ContractValuedItem._();
   const factory ContractValuedItem({
     CodeableConcept? entityCodeableConcept,
     Reference? entityReference,
@@ -480,7 +480,7 @@ class ContractValuedItem with _$ContractValuedItem {
 
 @freezed
 class ContractTerm with _$ContractTerm {
-  ContractTerm._();
+  const ContractTerm._();
   const factory ContractTerm({
     Identifier? identifier,
     String? issued,
@@ -532,7 +532,7 @@ class ContractTerm with _$ContractTerm {
 
 @freezed
 class ContractAgent1 with _$ContractAgent1 {
-  ContractAgent1._();
+  const ContractAgent1._();
   const factory ContractAgent1({
     required Reference actor,
     List<CodeableConcept>? role,
@@ -571,7 +571,7 @@ class ContractAgent1 with _$ContractAgent1 {
 
 @freezed
 class ContractValuedItem1 with _$ContractValuedItem1 {
-  ContractValuedItem1._();
+  const ContractValuedItem1._();
   const factory ContractValuedItem1({
     CodeableConcept? entityCodeableConcept,
     Reference? entityReference,
@@ -620,7 +620,7 @@ class ContractValuedItem1 with _$ContractValuedItem1 {
 
 @freezed
 class ContractFriendly with _$ContractFriendly {
-  ContractFriendly._();
+  const ContractFriendly._();
   const factory ContractFriendly({
     Attachment? contentAttachment,
     Reference? contentReference,
@@ -659,7 +659,7 @@ class ContractFriendly with _$ContractFriendly {
 
 @freezed
 class ContractLegal with _$ContractLegal {
-  ContractLegal._();
+  const ContractLegal._();
   const factory ContractLegal({
     Attachment? contentAttachment,
     Reference? contentReference,
@@ -698,7 +698,7 @@ class ContractLegal with _$ContractLegal {
 
 @freezed
 class ContractRule with _$ContractRule {
-  ContractRule._();
+  const ContractRule._();
   const factory ContractRule({
     Attachment? contentAttachment,
     Reference? contentReference,
@@ -737,7 +737,7 @@ class ContractRule with _$ContractRule {
 
 @freezed
 class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
-  ExplanationOfBenefit._();
+  const ExplanationOfBenefit._();
   const factory ExplanationOfBenefit({
     @Default(Stu3ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ExplanationOfBenefit)
@@ -828,7 +828,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
 
 @freezed
 class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
-  ExplanationOfBenefitRelated._();
+  const ExplanationOfBenefitRelated._();
   const factory ExplanationOfBenefitRelated({
     Reference? claim,
     CodeableConcept? relationship,
@@ -868,7 +868,7 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
 
 @freezed
 class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
-  ExplanationOfBenefitPayee._();
+  const ExplanationOfBenefitPayee._();
   const factory ExplanationOfBenefitPayee({
     CodeableConcept? type,
     Reference? party,
@@ -907,7 +907,7 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
 
 @freezed
 class ExplanationOfBenefitInformation with _$ExplanationOfBenefitInformation {
-  ExplanationOfBenefitInformation._();
+  const ExplanationOfBenefitInformation._();
   const factory ExplanationOfBenefitInformation({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -958,7 +958,7 @@ class ExplanationOfBenefitInformation with _$ExplanationOfBenefitInformation {
 
 @freezed
 class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
-  ExplanationOfBenefitCareTeam._();
+  const ExplanationOfBenefitCareTeam._();
   const factory ExplanationOfBenefitCareTeam({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -1002,7 +1002,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
 
 @freezed
 class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
-  ExplanationOfBenefitDiagnosis._();
+  const ExplanationOfBenefitDiagnosis._();
   const factory ExplanationOfBenefitDiagnosis({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -1045,7 +1045,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
 
 @freezed
 class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
-  ExplanationOfBenefitProcedure._();
+  const ExplanationOfBenefitProcedure._();
   const factory ExplanationOfBenefitProcedure({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -1088,7 +1088,7 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
 
 @freezed
 class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
-  ExplanationOfBenefitInsurance._();
+  const ExplanationOfBenefitInsurance._();
   const factory ExplanationOfBenefitInsurance({
     Reference? coverage,
     List<String>? preAuthRef,
@@ -1128,7 +1128,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
 
 @freezed
 class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
-  ExplanationOfBenefitAccident._();
+  const ExplanationOfBenefitAccident._();
   const factory ExplanationOfBenefitAccident({
     FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -1170,7 +1170,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
 
 @freezed
 class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
-  ExplanationOfBenefitItem._();
+  const ExplanationOfBenefitItem._();
   const factory ExplanationOfBenefitItem({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -1242,7 +1242,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
 
 @freezed
 class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
-  ExplanationOfBenefitAdjudication._();
+  const ExplanationOfBenefitAdjudication._();
   const factory ExplanationOfBenefitAdjudication({
     required CodeableConcept category,
     CodeableConcept? reason,
@@ -1273,7 +1273,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
 
 @freezed
 class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
-  ExplanationOfBenefitDetail._();
+  const ExplanationOfBenefitDetail._();
   const factory ExplanationOfBenefitDetail({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -1328,7 +1328,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
 
 @freezed
 class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
-  ExplanationOfBenefitSubDetail._();
+  const ExplanationOfBenefitSubDetail._();
   const factory ExplanationOfBenefitSubDetail({
     FhirDecimal? sequence,
     @JsonKey(name: '_sequence') Element? sequenceElement,
@@ -1382,7 +1382,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
 
 @freezed
 class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
-  ExplanationOfBenefitAddItem._();
+  const ExplanationOfBenefitAddItem._();
   const factory ExplanationOfBenefitAddItem({
     List<FhirId>? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') List<Element?>? sequenceLinkIdElement,
@@ -1430,7 +1430,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
 
 @freezed
 class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
-  ExplanationOfBenefitDetail1._();
+  const ExplanationOfBenefitDetail1._();
   const factory ExplanationOfBenefitDetail1({
     CodeableConcept? revenue,
     CodeableConcept? category,
@@ -1475,7 +1475,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
 
 @freezed
 class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
-  ExplanationOfBenefitPayment._();
+  const ExplanationOfBenefitPayment._();
   const factory ExplanationOfBenefitPayment({
     CodeableConcept? type,
     Money? adjustment,
@@ -1519,7 +1519,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
 
 @freezed
 class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
-  ExplanationOfBenefitProcessNote._();
+  const ExplanationOfBenefitProcessNote._();
   const factory ExplanationOfBenefitProcessNote({
     FhirDecimal? number,
     @JsonKey(name: '_number') Element? numberElement,
@@ -1564,7 +1564,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
 @freezed
 class ExplanationOfBenefitBenefitBalance
     with _$ExplanationOfBenefitBenefitBalance {
-  ExplanationOfBenefitBenefitBalance._();
+  const ExplanationOfBenefitBenefitBalance._();
   const factory ExplanationOfBenefitBenefitBalance({
     required CodeableConcept category,
     CodeableConcept? subCategory,
@@ -1602,7 +1602,7 @@ class ExplanationOfBenefitBenefitBalance
 
 @freezed
 class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
-  ExplanationOfBenefitFinancial._();
+  const ExplanationOfBenefitFinancial._();
   const factory ExplanationOfBenefitFinancial({
     required CodeableConcept type,
     FhirDecimal? allowedUnsignedInt,

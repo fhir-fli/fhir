@@ -3125,6 +3125,12 @@ mixin _$Parameters {
   FhirCode? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   List<ParametersParameter>? get parameter =>
       throw _privateConstructorUsedError;
 
@@ -3154,11 +3160,17 @@ abstract class $ParametersCopyWith<$Res> {
       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<ParametersParameter>? parameter});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
 }
 
 /// @nodoc
@@ -3182,6 +3194,10 @@ class _$ParametersCopyWithImpl<$Res, $Val extends Parameters>
     Object? implicitRulesElement = freezed,
     Object? language = freezed,
     Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
     Object? parameter = freezed,
   }) {
     return _then(_value.copyWith(
@@ -3217,6 +3233,22 @@ class _$ParametersCopyWithImpl<$Res, $Val extends Parameters>
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: freezed == contained
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: freezed == extension_
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       parameter: freezed == parameter
           ? _value.parameter
           : parameter // ignore: cast_nullable_to_non_nullable
@@ -3259,6 +3291,18 @@ class _$ParametersCopyWithImpl<$Res, $Val extends Parameters>
       return _then(_value.copyWith(languageElement: value) as $Val);
     });
   }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value) as $Val);
+    });
+  }
 }
 
 /// @nodoc
@@ -3283,6 +3327,11 @@ abstract class _$$_ParametersCopyWith<$Res>
       FhirCode? language,
       @JsonKey(name: '_language')
           Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       List<ParametersParameter>? parameter});
 
   @override
@@ -3291,6 +3340,8 @@ abstract class _$$_ParametersCopyWith<$Res>
   $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
   $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
 }
 
 /// @nodoc
@@ -3312,6 +3363,10 @@ class __$$_ParametersCopyWithImpl<$Res>
     Object? implicitRulesElement = freezed,
     Object? language = freezed,
     Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
     Object? parameter = freezed,
   }) {
     return _then(_$_Parameters(
@@ -3347,6 +3402,22 @@ class __$$_ParametersCopyWithImpl<$Res>
           ? _value.languageElement
           : languageElement // ignore: cast_nullable_to_non_nullable
               as Element?,
+      text: freezed == text
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: freezed == contained
+          ? _value._contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: freezed == extension_
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: freezed == modifierExtension
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       parameter: freezed == parameter
           ? _value._parameter
           : parameter // ignore: cast_nullable_to_non_nullable
@@ -3372,8 +3443,16 @@ class _$_Parameters extends _Parameters {
       this.language,
       @JsonKey(name: '_language')
           this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       final List<ParametersParameter>? parameter})
-      : _parameter = parameter,
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _parameter = parameter,
         super._();
 
   factory _$_Parameters.fromJson(Map<String, dynamic> json) =>
@@ -3400,6 +3479,40 @@ class _$_Parameters extends _Parameters {
   @override
   @JsonKey(name: '_language')
   final Element? languageElement;
+  @override
+  final Narrative? text;
+  final List<Resource>? _contained;
+  @override
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    if (_contained is EqualUnmodifiableListView) return _contained;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    if (_extension_ is EqualUnmodifiableListView) return _extension_;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    if (_modifierExtension is EqualUnmodifiableListView)
+      return _modifierExtension;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   final List<ParametersParameter>? _parameter;
   @override
   List<ParametersParameter>? get parameter {
@@ -3412,7 +3525,7 @@ class _$_Parameters extends _Parameters {
 
   @override
   String toString() {
-    return 'Parameters(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, parameter: $parameter)';
+    return 'Parameters(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, parameter: $parameter)';
   }
 
   @override
@@ -3433,6 +3546,13 @@ class _$_Parameters extends _Parameters {
                 other.language == language) &&
             (identical(other.languageElement, languageElement) ||
                 other.languageElement == languageElement) &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other._parameter, _parameter));
   }
@@ -3449,6 +3569,10 @@ class _$_Parameters extends _Parameters {
       implicitRulesElement,
       language,
       languageElement,
+      text,
+      const DeepCollectionEquality().hash(_contained),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
       const DeepCollectionEquality().hash(_parameter));
 
   @JsonKey(ignore: true)
@@ -3480,6 +3604,11 @@ abstract class _Parameters extends Parameters {
       final FhirCode? language,
       @JsonKey(name: '_language')
           final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
       final List<ParametersParameter>? parameter}) = _$_Parameters;
   const _Parameters._() : super._();
 
@@ -3507,6 +3636,15 @@ abstract class _Parameters extends Parameters {
   @override
   @JsonKey(name: '_language')
   Element? get languageElement;
+  @override
+  Narrative? get text;
+  @override
+  List<Resource>? get contained;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  List<FhirExtension>? get modifierExtension;
   @override
   List<ParametersParameter>? get parameter;
   @override

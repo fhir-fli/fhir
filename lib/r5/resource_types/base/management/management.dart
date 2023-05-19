@@ -25,7 +25,7 @@ class Encounter with Resource, _$Encounter {
   ///  health status of a patient.  Encounter is primarily used to record
   ///  information about the actual activities that occurred, where Appointment
   ///  is used to record planned activities.
-  Encounter._();
+  const Encounter._();
 
   /// [Encounter] An interaction between a patient and healthcare provider(s)
   ///  for the purpose of providing healthcare service(s) or assessing the
@@ -442,7 +442,7 @@ class EncounterParticipant with _$EncounterParticipant {
   ///  assessing the health status of a patient.  Encounter is primarily used
   ///  to record information about the actual activities that occurred, where
   ///  Appointment is used to record planned activities.
-  EncounterParticipant._();
+  const EncounterParticipant._();
 
   /// [EncounterParticipant] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
@@ -573,7 +573,7 @@ class EncounterReason with _$EncounterReason {
   ///  assessing the health status of a patient.  Encounter is primarily used
   ///  to record information about the actual activities that occurred, where
   ///  Appointment is used to record planned activities.
-  EncounterReason._();
+  const EncounterReason._();
 
   /// [EncounterReason] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
@@ -694,7 +694,7 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
   ///  assessing the health status of a patient.  Encounter is primarily used
   ///  to record information about the actual activities that occurred, where
   ///  Appointment is used to record planned activities.
-  EncounterDiagnosis._();
+  const EncounterDiagnosis._();
 
   /// [EncounterDiagnosis] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
@@ -815,7 +815,7 @@ class EncounterAdmission with _$EncounterAdmission {
   ///  assessing the health status of a patient.  Encounter is primarily used
   ///  to record information about the actual activities that occurred, where
   ///  Appointment is used to record planned activities.
-  EncounterAdmission._();
+  const EncounterAdmission._();
 
   /// [EncounterAdmission] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
@@ -958,7 +958,7 @@ class EncounterLocation with _$EncounterLocation {
   ///  assessing the health status of a patient.  Encounter is primarily used
   ///  to record information about the actual activities that occurred, where
   ///  Appointment is used to record planned activities.
-  EncounterLocation._();
+  const EncounterLocation._();
 
   /// [EncounterLocation] An interaction between a patient and healthcare
   ///  provider(s) for the purpose of providing healthcare service(s) or
@@ -1093,7 +1093,7 @@ class EncounterHistory with Resource, _$EncounterHistory {
   /// [EncounterHistory] A record of significant events/milestones key data
   ///  throughout the history of an Encounter, often tracked for specific
   ///  purposes such as billing.
-  EncounterHistory._();
+  const EncounterHistory._();
 
   /// [EncounterHistory] A record of significant events/milestones key data
   ///  throughout the history of an Encounter, often tracked for specific
@@ -1385,7 +1385,7 @@ class EncounterHistoryLocation with _$EncounterHistoryLocation {
   /// [EncounterHistoryLocation] A record of significant events/milestones key
   ///  data throughout the history of an Encounter, often tracked for specific
   ///  purposes such as billing.
-  EncounterHistoryLocation._();
+  const EncounterHistoryLocation._();
 
   /// [EncounterHistoryLocation] A record of significant events/milestones key
   ///  data throughout the history of an Encounter, often tracked for specific
@@ -1500,7 +1500,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
   ///  healthcare provider(s) during which time encounters may occur. The
   ///  managing organization assumes a level of responsibility for the patient
   ///  during this time.
-  EpisodeOfCare._();
+  const EpisodeOfCare._();
 
   /// [EpisodeOfCare] An association between a patient and an organization /
   ///  healthcare provider(s) during which time encounters may occur. The
@@ -1772,7 +1772,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   ///  organization / healthcare provider(s) during which time encounters may
   ///  occur. The managing organization assumes a level of responsibility for
   ///  the patient during this time.
-  EpisodeOfCareStatusHistory._();
+  const EpisodeOfCareStatusHistory._();
 
   /// [EpisodeOfCareStatusHistory] An association between a patient and an
   ///  organization / healthcare provider(s) during which time encounters may
@@ -1891,7 +1891,7 @@ class EpisodeOfCareReason with _$EpisodeOfCareReason {
   ///  organization / healthcare provider(s) during which time encounters may
   ///  occur. The managing organization assumes a level of responsibility for
   ///  the patient during this time.
-  EpisodeOfCareReason._();
+  const EpisodeOfCareReason._();
 
   /// [EpisodeOfCareReason] An association between a patient and an
   ///  organization / healthcare provider(s) during which time encounters may
@@ -2009,7 +2009,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   ///  organization / healthcare provider(s) during which time encounters may
   ///  occur. The managing organization assumes a level of responsibility for
   ///  the patient during this time.
-  EpisodeOfCareDiagnosis._();
+  const EpisodeOfCareDiagnosis._();
 
   /// [EpisodeOfCareDiagnosis] An association between a patient and an
   ///  organization / healthcare provider(s) during which time encounters may
@@ -2121,7 +2121,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
 class Flag with Resource, _$Flag {
   /// [Flag] Prospective warnings of potential issues when providing care to
   ///  the patient.
-  Flag._();
+  const Flag._();
 
   /// [Flag] Prospective warnings of potential issues when providing care to
   ///  the patient.
@@ -2356,7 +2356,7 @@ class Library with Resource, _$Library {
   ///  knowledge asset definitions. It can be used to describe and expose
   ///  existing knowledge assets such as logic libraries and information model
   ///  descriptions, as well as to describe a collection of knowledge assets.
-  Library._();
+  const Library._();
 
   /// [Library] The Library resource is a general-purpose container for
   ///  knowledge asset definitions. It can be used to describe and expose
@@ -2924,7 +2924,7 @@ class Library with Resource, _$Library {
 class FhirList with Resource, _$FhirList {
   /// [FhirList] A List is a curated collection of resources, for things such
   ///  as problem lists, allergy lists, facility list, organization list, etc.
-  FhirList._();
+  const FhirList._();
 
   /// [FhirList] A List is a curated collection of resources, for things such
   ///  as problem lists, allergy lists, facility list, organization list, etc.
@@ -3197,7 +3197,7 @@ class FhirList with Resource, _$FhirList {
 class FhirListEntry with _$FhirListEntry {
   /// [FhirListEntry] A List is a curated collection of resources, for things such
   ///  as problem lists, allergy lists, facility list, organization list, etc.
-  FhirListEntry._();
+  const FhirListEntry._();
 
   /// [FhirListEntry] A List is a curated collection of resources, for things such
   ///  as problem lists, allergy lists, facility list, organization list, etc.

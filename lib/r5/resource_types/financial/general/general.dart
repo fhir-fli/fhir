@@ -21,7 +21,7 @@ class Account with Resource, _$Account {
   /// [Account] A financial tool for tracking value accrued for a particular
   ///  purpose.  In the healthcare field, used to track charges for a patient,
   ///  cost centers, etc.
-  Account._();
+  const Account._();
 
   /// [Account] A financial tool for tracking value accrued for a particular
   ///  purpose.  In the healthcare field, used to track charges for a patient,
@@ -338,7 +338,7 @@ class AccountCoverage with _$AccountCoverage {
   /// [AccountCoverage] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for
   ///  a patient, cost centers, etc.
-  AccountCoverage._();
+  const AccountCoverage._();
 
   /// [AccountCoverage] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for
@@ -459,7 +459,7 @@ class AccountGuarantor with _$AccountGuarantor {
   /// [AccountGuarantor] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for
   ///  a patient, cost centers, etc.
-  AccountGuarantor._();
+  const AccountGuarantor._();
 
   /// [AccountGuarantor] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for
@@ -582,7 +582,7 @@ class AccountDiagnosis with _$AccountDiagnosis {
   /// [AccountDiagnosis] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for
   ///  a patient, cost centers, etc.
-  AccountDiagnosis._();
+  const AccountDiagnosis._();
 
   /// [AccountDiagnosis] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for
@@ -734,7 +734,7 @@ class AccountProcedure with _$AccountProcedure {
   /// [AccountProcedure] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for
   ///  a patient, cost centers, etc.
-  AccountProcedure._();
+  const AccountProcedure._();
 
   /// [AccountProcedure] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for
@@ -881,7 +881,7 @@ class AccountRelatedAccount with _$AccountRelatedAccount {
   /// [AccountRelatedAccount] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for
   ///  a patient, cost centers, etc.
-  AccountRelatedAccount._();
+  const AccountRelatedAccount._();
 
   /// [AccountRelatedAccount] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for
@@ -990,7 +990,7 @@ class AccountBalance with _$AccountBalance {
   /// [AccountBalance] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for
   ///  a patient, cost centers, etc.
-  AccountBalance._();
+  const AccountBalance._();
 
   /// [AccountBalance] A financial tool for tracking value accrued for a
   ///  particular purpose.  In the healthcare field, used to track charges for
@@ -1128,7 +1128,7 @@ class ChargeItem with Resource, _$ChargeItem {
   ///  provision, like date, time, amounts and participating organizations and
   ///  persons. Main Usage of the ChargeItem is to enable the billing process
   ///  and internal cost allocation.
-  ChargeItem._();
+  const ChargeItem._();
 
   /// [ChargeItem] The resource ChargeItem describes the provision of
   ///  healthcare provider products for a certain patient, therefore referring
@@ -1506,7 +1506,7 @@ class ChargeItemPerformer with _$ChargeItemPerformer {
   ///  provision, like date, time, amounts and participating organizations and
   ///  persons. Main Usage of the ChargeItem is to enable the billing process
   ///  and internal cost allocation.
-  ChargeItemPerformer._();
+  const ChargeItemPerformer._();
 
   /// [ChargeItemPerformer] The resource ChargeItem describes the provision of
   ///  healthcare provider products for a certain patient, therefore referring
@@ -1626,7 +1626,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   ///  costs and prices. The properties may differ largely depending on type
   ///  and realm, therefore this resource gives only a rough structure and
   ///  requires profiling for each type of billing code system.
-  ChargeItemDefinition._();
+  const ChargeItemDefinition._();
 
   /// [ChargeItemDefinition] The ChargeItemDefinition resource provides the
   ///  properties that apply to the (billing) codes necessary to calculate
@@ -2198,7 +2198,7 @@ class ChargeItemDefinitionApplicability
   ///  calculate costs and prices. The properties may differ largely depending
   ///  on type and realm, therefore this resource gives only a rough structure
   ///  and requires profiling for each type of billing code system.
-  ChargeItemDefinitionApplicability._();
+  const ChargeItemDefinitionApplicability._();
 
   /// [ChargeItemDefinitionApplicability] The ChargeItemDefinition resource
   ///  provides the properties that apply to the (billing) codes necessary to
@@ -2332,7 +2332,7 @@ class ChargeItemDefinitionPropertyGroup
   ///  calculate costs and prices. The properties may differ largely depending
   ///  on type and realm, therefore this resource gives only a rough structure
   ///  and requires profiling for each type of billing code system.
-  ChargeItemDefinitionPropertyGroup._();
+  const ChargeItemDefinitionPropertyGroup._();
 
   /// [ChargeItemDefinitionPropertyGroup] The ChargeItemDefinition resource
   ///  provides the properties that apply to the (billing) codes necessary to
@@ -2457,7 +2457,7 @@ class ChargeItemDefinitionPropertyGroup
 class Contract with Resource, _$Contract {
   /// [Contract] Legally enforceable, formally recorded unilateral or bilateral
   ///  directive i.e., a policy or agreement.
-  Contract._();
+  const Contract._();
 
   /// [Contract] Legally enforceable, formally recorded unilateral or bilateral
   ///  directive i.e., a policy or agreement.
@@ -2977,7 +2977,7 @@ class Contract with Resource, _$Contract {
 class ContractContentDefinition with _$ContractContentDefinition {
   /// [ContractContentDefinition] Legally enforceable, formally recorded
   ///  unilateral or bilateral directive i.e., a policy or agreement.
-  ContractContentDefinition._();
+  const ContractContentDefinition._();
 
   /// [ContractContentDefinition] Legally enforceable, formally recorded
   ///  unilateral or bilateral directive i.e., a policy or agreement.
@@ -3142,7 +3142,7 @@ class ContractContentDefinition with _$ContractContentDefinition {
 class ContractTerm with _$ContractTerm {
   /// [ContractTerm] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
-  ContractTerm._();
+  const ContractTerm._();
 
   /// [ContractTerm] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -3330,7 +3330,7 @@ class ContractTerm with _$ContractTerm {
 class ContractSecurityLabel with _$ContractSecurityLabel {
   /// [ContractSecurityLabel] Legally enforceable, formally recorded unilateral
   ///  or bilateral directive i.e., a policy or agreement.
-  ContractSecurityLabel._();
+  const ContractSecurityLabel._();
 
   /// [ContractSecurityLabel] Legally enforceable, formally recorded unilateral
   ///  or bilateral directive i.e., a policy or agreement.
@@ -3459,7 +3459,7 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
 class ContractOffer with _$ContractOffer {
   /// [ContractOffer] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
-  ContractOffer._();
+  const ContractOffer._();
 
   /// [ContractOffer] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -3634,7 +3634,7 @@ class ContractOffer with _$ContractOffer {
 class ContractParty with _$ContractParty {
   /// [ContractParty] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
-  ContractParty._();
+  const ContractParty._();
 
   /// [ContractParty] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -3740,7 +3740,7 @@ class ContractParty with _$ContractParty {
 class ContractAnswer with _$ContractAnswer {
   /// [ContractAnswer] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
-  ContractAnswer._();
+  const ContractAnswer._();
 
   /// [ContractAnswer] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -4008,7 +4008,7 @@ class ContractAnswer with _$ContractAnswer {
 class ContractAsset with _$ContractAsset {
   /// [ContractAsset] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
-  ContractAsset._();
+  const ContractAsset._();
 
   /// [ContractAsset] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -4214,7 +4214,7 @@ class ContractAsset with _$ContractAsset {
 class ContractContext with _$ContractContext {
   /// [ContractContext] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
-  ContractContext._();
+  const ContractContext._();
 
   /// [ContractContext] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -4336,7 +4336,7 @@ class ContractContext with _$ContractContext {
 class ContractValuedItem with _$ContractValuedItem {
   /// [ContractValuedItem] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
-  ContractValuedItem._();
+  const ContractValuedItem._();
 
   /// [ContractValuedItem] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -4579,7 +4579,7 @@ class ContractValuedItem with _$ContractValuedItem {
 class ContractAction with _$ContractAction {
   /// [ContractAction] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
-  ContractAction._();
+  const ContractAction._();
 
   /// [ContractAction] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -4869,7 +4869,7 @@ class ContractAction with _$ContractAction {
 class ContractSubject with _$ContractSubject {
   /// [ContractSubject] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
-  ContractSubject._();
+  const ContractSubject._();
 
   /// [ContractSubject] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -4976,7 +4976,7 @@ class ContractSubject with _$ContractSubject {
 class ContractSigner with _$ContractSigner {
   /// [ContractSigner] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
-  ContractSigner._();
+  const ContractSigner._();
 
   /// [ContractSigner] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -5087,7 +5087,7 @@ class ContractSigner with _$ContractSigner {
 class ContractFriendly with _$ContractFriendly {
   /// [ContractFriendly] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
-  ContractFriendly._();
+  const ContractFriendly._();
 
   /// [ContractFriendly] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -5201,7 +5201,7 @@ class ContractFriendly with _$ContractFriendly {
 class ContractLegal with _$ContractLegal {
   /// [ContractLegal] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
-  ContractLegal._();
+  const ContractLegal._();
 
   /// [ContractLegal] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -5307,7 +5307,7 @@ class ContractLegal with _$ContractLegal {
 class ContractRule with _$ContractRule {
   /// [ContractRule] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
-  ContractRule._();
+  const ContractRule._();
 
   /// [ContractRule] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -5421,7 +5421,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the
   ///  benefits provided.
-  ExplanationOfBenefit._();
+  const ExplanationOfBenefit._();
 
   /// [ExplanationOfBenefit] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
@@ -5999,7 +5999,7 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the
   ///  benefits provided.
-  ExplanationOfBenefitRelated._();
+  const ExplanationOfBenefitRelated._();
 
   /// [ExplanationOfBenefitRelated] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
@@ -6119,7 +6119,7 @@ class ExplanationOfBenefitEvent with _$ExplanationOfBenefitEvent {
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the
   ///  benefits provided.
-  ExplanationOfBenefitEvent._();
+  const ExplanationOfBenefitEvent._();
 
   /// [ExplanationOfBenefitEvent] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
@@ -6246,7 +6246,7 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the
   ///  benefits provided.
-  ExplanationOfBenefitPayee._();
+  const ExplanationOfBenefitPayee._();
 
   /// [ExplanationOfBenefitPayee] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
@@ -6360,7 +6360,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the
   ///  benefits provided.
-  ExplanationOfBenefitCareTeam._();
+  const ExplanationOfBenefitCareTeam._();
 
   /// [ExplanationOfBenefitCareTeam] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
@@ -6505,7 +6505,7 @@ class ExplanationOfBenefitSupportingInfo
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
-  ExplanationOfBenefitSupportingInfo._();
+  const ExplanationOfBenefitSupportingInfo._();
 
   /// [ExplanationOfBenefitSupportingInfo] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -6722,7 +6722,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
-  ExplanationOfBenefitDiagnosis._();
+  const ExplanationOfBenefitDiagnosis._();
 
   /// [ExplanationOfBenefitDiagnosis] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -6861,7 +6861,7 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
-  ExplanationOfBenefitProcedure._();
+  const ExplanationOfBenefitProcedure._();
 
   /// [ExplanationOfBenefitProcedure] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -7008,7 +7008,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
-  ExplanationOfBenefitInsurance._();
+  const ExplanationOfBenefitInsurance._();
 
   /// [ExplanationOfBenefitInsurance] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -7148,7 +7148,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the
   ///  benefits provided.
-  ExplanationOfBenefitAccident._();
+  const ExplanationOfBenefitAccident._();
 
   /// [ExplanationOfBenefitAccident] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
@@ -7282,7 +7282,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the
   ///  benefits provided.
-  ExplanationOfBenefitItem._();
+  const ExplanationOfBenefitItem._();
 
   /// [ExplanationOfBenefitItem] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
@@ -7650,7 +7650,7 @@ class ExplanationOfBenefitBodySite with _$ExplanationOfBenefitBodySite {
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the
   ///  benefits provided.
-  ExplanationOfBenefitBodySite._();
+  const ExplanationOfBenefitBodySite._();
 
   /// [ExplanationOfBenefitBodySite] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
@@ -7766,7 +7766,7 @@ class ExplanationOfBenefitReviewOutcome
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
-  ExplanationOfBenefitReviewOutcome._();
+  const ExplanationOfBenefitReviewOutcome._();
 
   /// [ExplanationOfBenefitReviewOutcome] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -7904,7 +7904,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
-  ExplanationOfBenefitAdjudication._();
+  const ExplanationOfBenefitAdjudication._();
 
   /// [ExplanationOfBenefitAdjudication] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -8042,7 +8042,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the
   ///  benefits provided.
-  ExplanationOfBenefitDetail._();
+  const ExplanationOfBenefitDetail._();
 
   /// [ExplanationOfBenefitDetail] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
@@ -8304,7 +8304,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
-  ExplanationOfBenefitSubDetail._();
+  const ExplanationOfBenefitSubDetail._();
 
   /// [ExplanationOfBenefitSubDetail] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -8562,7 +8562,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the
   ///  benefits provided.
-  ExplanationOfBenefitAddItem._();
+  const ExplanationOfBenefitAddItem._();
 
   /// [ExplanationOfBenefitAddItem] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
@@ -8891,7 +8891,7 @@ class ExplanationOfBenefitBodySite1 with _$ExplanationOfBenefitBodySite1 {
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
-  ExplanationOfBenefitBodySite1._();
+  const ExplanationOfBenefitBodySite1._();
 
   /// [ExplanationOfBenefitBodySite1] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -9006,7 +9006,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the
   ///  benefits provided.
-  ExplanationOfBenefitDetail1._();
+  const ExplanationOfBenefitDetail1._();
 
   /// [ExplanationOfBenefitDetail1] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
@@ -9241,7 +9241,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
-  ExplanationOfBenefitSubDetail1._();
+  const ExplanationOfBenefitSubDetail1._();
 
   /// [ExplanationOfBenefitSubDetail1] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -9471,7 +9471,7 @@ class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the
   ///  benefits provided.
-  ExplanationOfBenefitTotal._();
+  const ExplanationOfBenefitTotal._();
 
   /// [ExplanationOfBenefitTotal] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
@@ -9592,7 +9592,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   ///  adjudication details from the processing of a Claim; and optionally
   ///  account balance information, for informing the subscriber of the
   ///  benefits provided.
-  ExplanationOfBenefitPayment._();
+  const ExplanationOfBenefitPayment._();
 
   /// [ExplanationOfBenefitPayment] This resource provides: the claim details;
   ///  adjudication details from the processing of a Claim; and optionally
@@ -9736,7 +9736,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
-  ExplanationOfBenefitProcessNote._();
+  const ExplanationOfBenefitProcessNote._();
 
   /// [ExplanationOfBenefitProcessNote] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -9871,7 +9871,7 @@ class ExplanationOfBenefitBenefitBalance
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
-  ExplanationOfBenefitBenefitBalance._();
+  const ExplanationOfBenefitBenefitBalance._();
 
   /// [ExplanationOfBenefitBenefitBalance] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -10042,7 +10042,7 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   ///  details; adjudication details from the processing of a Claim; and
   ///  optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
-  ExplanationOfBenefitFinancial._();
+  const ExplanationOfBenefitFinancial._();
 
   /// [ExplanationOfBenefitFinancial] This resource provides: the claim
   ///  details; adjudication details from the processing of a Claim; and
@@ -10199,7 +10199,7 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
 class InsurancePlan with Resource, _$InsurancePlan {
   /// [InsurancePlan] Details of a Health Insurance product/plan provided by an
   ///  organization.
-  InsurancePlan._();
+  const InsurancePlan._();
 
   /// [InsurancePlan] Details of a Health Insurance product/plan provided by an
   ///  organization.
@@ -10486,7 +10486,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
 class InsurancePlanCoverage with _$InsurancePlanCoverage {
   /// [InsurancePlanCoverage] Details of a Health Insurance product/plan
   ///  provided by an organization.
-  InsurancePlanCoverage._();
+  const InsurancePlanCoverage._();
 
   /// [InsurancePlanCoverage] Details of a Health Insurance product/plan
   ///  provided by an organization.
@@ -10599,7 +10599,7 @@ class InsurancePlanCoverage with _$InsurancePlanCoverage {
 class InsurancePlanBenefit with _$InsurancePlanBenefit {
   /// [InsurancePlanBenefit] Details of a Health Insurance product/plan
   ///  provided by an organization.
-  InsurancePlanBenefit._();
+  const InsurancePlanBenefit._();
 
   /// [InsurancePlanBenefit] Details of a Health Insurance product/plan
   ///  provided by an organization.
@@ -10719,7 +10719,7 @@ class InsurancePlanBenefit with _$InsurancePlanBenefit {
 class InsurancePlanLimit with _$InsurancePlanLimit {
   /// [InsurancePlanLimit] Details of a Health Insurance product/plan provided
   ///  by an organization.
-  InsurancePlanLimit._();
+  const InsurancePlanLimit._();
 
   /// [InsurancePlanLimit] Details of a Health Insurance product/plan provided
   ///  by an organization.
@@ -10827,7 +10827,7 @@ class InsurancePlanLimit with _$InsurancePlanLimit {
 class InsurancePlanPlan with _$InsurancePlanPlan {
   /// [InsurancePlanPlan] Details of a Health Insurance product/plan provided
   ///  by an organization.
-  InsurancePlanPlan._();
+  const InsurancePlanPlan._();
 
   /// [InsurancePlanPlan] Details of a Health Insurance product/plan provided
   ///  by an organization.
@@ -10960,7 +10960,7 @@ class InsurancePlanPlan with _$InsurancePlanPlan {
 class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   /// [InsurancePlanGeneralCost] Details of a Health Insurance product/plan
   ///  provided by an organization.
-  InsurancePlanGeneralCost._();
+  const InsurancePlanGeneralCost._();
 
   /// [InsurancePlanGeneralCost] Details of a Health Insurance product/plan
   ///  provided by an organization.
@@ -11088,7 +11088,7 @@ class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
 class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
   /// [InsurancePlanSpecificCost] Details of a Health Insurance product/plan
   ///  provided by an organization.
-  InsurancePlanSpecificCost._();
+  const InsurancePlanSpecificCost._();
 
   /// [InsurancePlanSpecificCost] Details of a Health Insurance product/plan
   ///  provided by an organization.
@@ -11196,7 +11196,7 @@ class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
 class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
   /// [InsurancePlanBenefit1] Details of a Health Insurance product/plan
   ///  provided by an organization.
-  InsurancePlanBenefit1._();
+  const InsurancePlanBenefit1._();
 
   /// [InsurancePlanBenefit1] Details of a Health Insurance product/plan
   ///  provided by an organization.
@@ -11305,7 +11305,7 @@ class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
 class InsurancePlanCost with _$InsurancePlanCost {
   /// [InsurancePlanCost] Details of a Health Insurance product/plan provided
   ///  by an organization.
-  InsurancePlanCost._();
+  const InsurancePlanCost._();
 
   /// [InsurancePlanCost] Details of a Health Insurance product/plan provided
   ///  by an organization.

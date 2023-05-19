@@ -17,7 +17,7 @@ part 'entities1.g.dart';
 @freezed
 class FhirEndpoint with Resource, _$FhirEndpoint {
   /// [FhirEndpoint] The technical details of an endpoint that can be used for
-  FhirEndpoint._();
+  const FhirEndpoint._();
 
   /// [FhirEndpoint] The technical details of an endpoint that can be used for
   /// electronic services, such as for web services providing XDS.b or a REST
@@ -282,7 +282,7 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
 @freezed
 class HealthcareService with Resource, _$HealthcareService {
   /// [HealthcareService] The details of a healthcare service available at a
-  HealthcareService._();
+  const HealthcareService._();
 
   /// [HealthcareService] The details of a healthcare service available at a
   ///  location.
@@ -642,7 +642,7 @@ class HealthcareService with Resource, _$HealthcareService {
 @freezed
 class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   /// [HealthcareServiceEligibility] The details of a healthcare service
-  HealthcareServiceEligibility._();
+  const HealthcareServiceEligibility._();
 
   /// [HealthcareServiceEligibility] The details of a healthcare service
   ///  available at a location.
@@ -749,7 +749,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
 @freezed
 class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   /// [HealthcareServiceAvailableTime] The details of a healthcare service
-  HealthcareServiceAvailableTime._();
+  const HealthcareServiceAvailableTime._();
 
   /// [HealthcareServiceAvailableTime] The details of a healthcare service
   ///  available at a location.
@@ -890,7 +890,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 @freezed
 class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   /// [HealthcareServiceNotAvailable] The details of a healthcare service
-  HealthcareServiceNotAvailable._();
+  const HealthcareServiceNotAvailable._();
 
   /// [HealthcareServiceNotAvailable] The details of a healthcare service
   ///  available at a location.
@@ -1001,7 +1001,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
 @freezed
 class Location with Resource, _$Location {
   /// [Location] Details and position information for a physical place where
-  Location._();
+  const Location._();
 
   /// [Location] Details and position information for a physical place where
   /// services are provided and resources and participants may be stored, found,
@@ -1317,7 +1317,7 @@ class Location with Resource, _$Location {
 @freezed
 class LocationPosition with _$LocationPosition {
   /// [LocationPosition] Details and position information for a physical place
-  LocationPosition._();
+  const LocationPosition._();
 
   /// [LocationPosition] Details and position information for a physical place
   /// where services are provided and resources and participants may be stored,
@@ -1446,7 +1446,7 @@ class LocationPosition with _$LocationPosition {
 @freezed
 class LocationHoursOfOperation with _$LocationHoursOfOperation {
   /// [LocationHoursOfOperation] Details and position information for a
-  LocationHoursOfOperation._();
+  const LocationHoursOfOperation._();
 
   /// [LocationHoursOfOperation] Details and position information for a
   /// physical place where services are provided and resources and participants
@@ -1581,7 +1581,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
 @freezed
 class Organization with Resource, _$Organization {
   /// [Organization] A formally or informally recognized grouping of people or
-  Organization._();
+  const Organization._();
 
   /// [Organization] A formally or informally recognized grouping of people or
   /// organizations formed for the purpose of achieving some form of collective
@@ -1813,7 +1813,7 @@ class Organization with Resource, _$Organization {
 @freezed
 class OrganizationContact with _$OrganizationContact {
   /// [OrganizationContact] A formally or informally recognized grouping of
-  OrganizationContact._();
+  const OrganizationContact._();
 
   /// [OrganizationContact] A formally or informally recognized grouping of
   /// people or organizations formed for the purpose of achieving some form of
@@ -1930,7 +1930,7 @@ class OrganizationContact with _$OrganizationContact {
 @freezed
 class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   /// [OrganizationAffiliation] Defines an affiliation/assotiation/relationship
-  OrganizationAffiliation._();
+  const OrganizationAffiliation._();
 
   /// [OrganizationAffiliation] Defines an affiliation/assotiation/relationship
   /// between 2 distinct oganizations, that is not a part-of

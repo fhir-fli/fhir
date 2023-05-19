@@ -21,7 +21,7 @@ class Basic with Resource, _$Basic {
   /// [Basic] Basic is used for handling concepts not yet defined in FHIR,
   ///  narrative-only resources that don't map to an existing resource, and
   ///  custom resources not appropriate for inclusion in the FHIR specification.
-  Basic._();
+  const Basic._();
 
   /// [Basic] Basic is used for handling concepts not yet defined in FHIR,
   ///  narrative-only resources that don't map to an existing resource, and
@@ -229,7 +229,7 @@ class Binary with Resource, _$Binary {
   /// [Binary] A resource that represents the data of a single raw artifact as
   ///  digital content accessible in its native format.  A Binary resource can
   ///  contain any content, whether text, image, pdf, zip archive, etc.
-  Binary._();
+  const Binary._();
 
   /// [Binary] A resource that represents the data of a single raw artifact as
   ///  digital content accessible in its native format.  A Binary resource can
@@ -308,6 +308,46 @@ class Binary with Resource, _$Binary {
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
+    /// [text] A human-readable narrative that contains a summary of the
+    ///  resource and can be used to represent the content of the resource to a
+    ///  human. The narrative need not encode all the structured data, but is
+    ///  required to contain sufficient detail to make it "clinically safe" for
+    ///  a human to just read the narrative. Resource definitions may define
+    ///  what content should be represented in the narrative to ensure clinical
+    ///  safety.
+    Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart
+    ///  from the resource that contains them - they cannot be identified
+    ///  independently, nor can they have their own independent transaction
+    ///  scope. This is allowed to be a Parameters resource if and only if it
+    ///  is referenced by a resource that provides context/meaning.
+    List<Resource>? contained,
+
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the resource.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the resource and that
+    ///  modifies the understanding of the element that contains it and/or the
+    ///  understanding of the containing element's descendants. Usually
+    ///  modifier elements provide negation or qualification. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any
+    ///  implementer is allowed to define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension. Applications processing a resource are required to check
+    ///  for modifier extensions.Modifier extensions SHALL NOT change the
+    ///  meaning of any elements on Resource or DomainResource (including
+    ///  cannot change the meaning of modifierExtension itself).
+    List<FhirExtension>? modifierExtension,
+
     /// [contentType] MimeType of the binary content represented as a standard
     ///  MimeType (BCP 13).
     FhirCode? contentType,
@@ -370,7 +410,7 @@ class Binary with Resource, _$Binary {
 @freezed
 class Bundle with Resource, _$Bundle {
   /// [Bundle] A container for a collection of resources.
-  Bundle._();
+  const Bundle._();
 
   /// [Bundle] A container for a collection of resources.
   ///
@@ -431,30 +471,66 @@ class Bundle with Resource, _$Bundle {
     R5ResourceType resourceType,
     @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
-    /// [id] The logical id of the resource, as used in the URL for the
-    ///  resource. Once assigned, this value never changes.
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    ///  Once assigned, this value never changes.
     @JsonKey(name: 'id') FhirId? fhirId,
 
     /// [meta] The metadata about the resource. This is content that is
-    ///  maintained by the infrastructure. Changes to the content might not
-    ///  always be associated with version changes to the resource.
+    /// maintained by the infrastructure. Changes to the content might not always
+    ///  be associated with version changes to the resource.
     FhirMeta? meta,
 
-    /// [implicitRules] A reference to a set of rules that were followed when
-    ///  the resource was constructed, and which must be understood when
-    ///  processing the content. Often, this is a reference to an
-    ///  implementation guide that defines the special rules along with other
-    ///  profiles etc.
+    /// [implicitRules] A reference to a set of rules that were followed when the
+    /// resource was constructed, and which must be understood when processing the
+    /// content. Often, this is a reference to an implementation guide that
+    ///  defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
 
-    /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
+    /// [implicitRulesElement] Extensions for implicitRules
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
 
     /// [language] The base language in which the resource is written.
     FhirCode? language,
 
-    /// [languageElement] ("_language") Extensions for language
+    /// [languageElement] Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
+
+    /// [text] A human-readable narrative that contains a summary of the resource
+    /// and can be used to represent the content of the resource to a human. The
+    /// narrative need not encode all the structured data, but is required to
+    /// contain sufficient detail to make it "clinically safe" for a human to just
+    /// read the narrative. Resource definitions may define what content should be
+    ///  represented in the narrative to ensure clinical safety.
+    Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart
+    /// from the resource that contains them - they cannot be identified
+    /// independently, and nor can they have their own independent transaction
+    ///  scope.
+    List<Resource>? contained,
+
+    /// [extension_] May be used to represent additional information that is not
+    /// part of the basic definition of the resource. To make the use of
+    /// extensions safe and manageable, there is a strict set of governance
+    /// applied to the definition and use of extensions. Though any implementer
+    /// can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information that
+    /// is not part of the basic definition of the resource and that modifies the
+    /// understanding of the element that contains it and/or the understanding of
+    /// the containing element's descendants. Usually modifier elements provide
+    /// negation or qualification. To make the use of extensions safe and
+    /// manageable, there is a strict set of governance applied to the definition
+    /// and use of extensions. Though any implementer is allowed to define an
+    /// extension, there is a set of requirements that SHALL be met as part of the
+    /// definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.
+    /// Modifier extensions SHALL NOT change the meaning of any elements on
+    /// Resource or DomainResource (including cannot change the meaning of
+    ///  modifierExtension itself).
+    List<FhirExtension>? modifierExtension,
 
     /// [identifier] A persistent identifier for the bundle that won't change
     ///  as a bundle is copied from server to server.
@@ -534,7 +610,7 @@ class Bundle with Resource, _$Bundle {
 @freezed
 class BundleLink with _$BundleLink {
   /// [BundleLink] A container for a collection of resources.
-  BundleLink._();
+  const BundleLink._();
 
   /// [BundleLink] A container for a collection of resources.
   ///
@@ -651,7 +727,7 @@ class BundleLink with _$BundleLink {
 @freezed
 class BundleEntry with _$BundleEntry {
   /// [BundleEntry] A container for a collection of resources.
-  BundleEntry._();
+  const BundleEntry._();
 
   /// [BundleEntry] A container for a collection of resources.
   ///
@@ -820,7 +896,7 @@ class BundleEntry with _$BundleEntry {
 @freezed
 class BundleSearch with _$BundleSearch {
   /// [BundleSearch] A container for a collection of resources.
-  BundleSearch._();
+  const BundleSearch._();
 
   /// [BundleSearch] A container for a collection of resources.
   ///
@@ -937,7 +1013,7 @@ class BundleSearch with _$BundleSearch {
 @freezed
 class BundleRequest with _$BundleRequest {
   /// [BundleRequest] A container for a collection of resources.
-  BundleRequest._();
+  const BundleRequest._();
 
   /// [BundleRequest] A container for a collection of resources.
   ///
@@ -1117,7 +1193,7 @@ class BundleRequest with _$BundleRequest {
 @freezed
 class BundleResponse with _$BundleResponse {
   /// [BundleResponse] A container for a collection of resources.
-  BundleResponse._();
+  const BundleResponse._();
 
   /// [BundleResponse] A container for a collection of resources.
   ///
@@ -1272,7 +1348,7 @@ class BundleResponse with _$BundleResponse {
 class Linkage with Resource, _$Linkage {
   /// [Linkage] Identifies two or more records (resource instances) that refer
   ///  to the same real-world "occurrence".
-  Linkage._();
+  const Linkage._();
 
   /// [Linkage] Identifies two or more records (resource instances) that refer
   ///  to the same real-world "occurrence".
@@ -1472,7 +1548,7 @@ class Linkage with Resource, _$Linkage {
 class LinkageItem with _$LinkageItem {
   /// [LinkageItem] Identifies two or more records (resource instances) that
   ///  refer to the same real-world "occurrence".
-  LinkageItem._();
+  const LinkageItem._();
 
   /// [LinkageItem] Identifies two or more records (resource instances) that
   ///  refer to the same real-world "occurrence".
@@ -1591,7 +1667,7 @@ class MessageHeader with Resource, _$MessageHeader {
   ///  subject of the action as well as other information related to the action
   ///  are typically transmitted in a bundle in which the MessageHeader
   ///  resource instance is the first resource in the bundle.
-  MessageHeader._();
+  const MessageHeader._();
 
   /// [MessageHeader] The header for a message exchange that is either
   ///  requesting or responding to an action.  The reference(s) that are the
@@ -1864,7 +1940,7 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   ///  the subject of the action as well as other information related to the
   ///  action are typically transmitted in a bundle in which the MessageHeader
   ///  resource instance is the first resource in the bundle.
-  MessageHeaderDestination._();
+  const MessageHeaderDestination._();
 
   /// [MessageHeaderDestination] The header for a message exchange that is
   ///  either requesting or responding to an action.  The reference(s) that are
@@ -2010,7 +2086,7 @@ class MessageHeaderSource with _$MessageHeaderSource {
   ///  subject of the action as well as other information related to the action
   ///  are typically transmitted in a bundle in which the MessageHeader
   ///  resource instance is the first resource in the bundle.
-  MessageHeaderSource._();
+  const MessageHeaderSource._();
 
   /// [MessageHeaderSource] The header for a message exchange that is either
   ///  requesting or responding to an action.  The reference(s) that are the
@@ -2173,7 +2249,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   ///  subject of the action as well as other information related to the action
   ///  are typically transmitted in a bundle in which the MessageHeader
   ///  resource instance is the first resource in the bundle.
-  MessageHeaderResponse._();
+  const MessageHeaderResponse._();
 
   /// [MessageHeaderResponse] The header for a message exchange that is either
   ///  requesting or responding to an action.  The reference(s) that are the
@@ -2297,7 +2373,7 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
 class OperationOutcome with Resource, _$OperationOutcome {
   /// [OperationOutcome] A collection of error, warning, or information
   ///  messages that result from a system action.
-  OperationOutcome._();
+  const OperationOutcome._();
 
   /// [OperationOutcome] A collection of error, warning, or information
   ///  messages that result from a system action.
@@ -2474,7 +2550,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
 class OperationOutcomeIssue with _$OperationOutcomeIssue {
   /// [OperationOutcomeIssue] A collection of error, warning, or information
   ///  messages that result from a system action.
-  OperationOutcomeIssue._();
+  const OperationOutcomeIssue._();
 
   /// [OperationOutcomeIssue] A collection of error, warning, or information
   ///  messages that result from a system action.
@@ -2656,7 +2732,7 @@ class Parameters with Resource, _$Parameters {
   ///  an operation (whether invoked directly from REST or within a messaging
   ///  environment).  It is not persisted or allowed to be referenced by other
   ///  resources.
-  Parameters._();
+  const Parameters._();
 
   /// [Parameters] This resource is used to pass information into and back from
   ///  an operation (whether invoked directly from REST or within a messaging
@@ -2717,6 +2793,46 @@ class Parameters with Resource, _$Parameters {
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
+    /// [text] A human-readable narrative that contains a summary of the
+    ///  resource and can be used to represent the content of the resource to a
+    ///  human. The narrative need not encode all the structured data, but is
+    ///  required to contain sufficient detail to make it "clinically safe" for
+    ///  a human to just read the narrative. Resource definitions may define
+    ///  what content should be represented in the narrative to ensure clinical
+    ///  safety.
+    Narrative? text,
+
+    /// [contained] These resources do not have an independent existence apart
+    ///  from the resource that contains them - they cannot be identified
+    ///  independently, nor can they have their own independent transaction
+    ///  scope. This is allowed to be a Parameters resource if and only if it
+    ///  is referenced by a resource that provides context/meaning.
+    List<Resource>? contained,
+
+    /// [extension_] ("extension") May be used to represent additional
+    ///  information that is not part of the basic definition of the resource.
+    ///  To make the use of extensions safe and managable, there is a strict
+    ///  set of governance applied to the definition and use of extensions.
+    ///  Though any implementer can define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension.
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+
+    /// [modifierExtension] May be used to represent additional information
+    ///  that is not part of the basic definition of the resource and that
+    ///  modifies the understanding of the element that contains it and/or the
+    ///  understanding of the containing element's descendants. Usually
+    ///  modifier elements provide negation or qualification. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any
+    ///  implementer is allowed to define an extension, there is a set of
+    ///  requirements that SHALL be met as part of the definition of the
+    ///  extension. Applications processing a resource are required to check
+    ///  for modifier extensions.Modifier extensions SHALL NOT change the
+    ///  meaning of any elements on Resource or DomainResource (including
+    ///  cannot change the meaning of modifierExtension itself).
+    List<FhirExtension>? modifierExtension,
+
     /// [parameter] A parameter passed to or received from the operation.
     List<ParametersParameter>? parameter,
   }) = _Parameters;
@@ -2763,7 +2879,7 @@ class ParametersParameter with _$ParametersParameter {
   ///  back from an operation (whether invoked directly from REST or within a
   ///  messaging environment).  It is not persisted or allowed to be referenced
   ///  by other resources.
-  ParametersParameter._();
+  const ParametersParameter._();
 
   /// [ParametersParameter] This resource is used to pass information into and
   ///  back from an operation (whether invoked directly from REST or within a
@@ -3275,7 +3391,7 @@ class ParametersParameter with _$ParametersParameter {
 class Subscription with Resource, _$Subscription {
   /// [Subscription] The subscription resource describes a particular client's
   ///  request to be notified about a SubscriptionTopic.
-  Subscription._();
+  const Subscription._();
 
   /// [Subscription] The subscription resource describes a particular client's
   ///  request to be notified about a SubscriptionTopic.
@@ -3634,7 +3750,7 @@ class Subscription with Resource, _$Subscription {
 class SubscriptionFilterBy with _$SubscriptionFilterBy {
   /// [SubscriptionFilterBy] The subscription resource describes a particular
   ///  client's request to be notified about a SubscriptionTopic.
-  SubscriptionFilterBy._();
+  const SubscriptionFilterBy._();
 
   /// [SubscriptionFilterBy] The subscription resource describes a particular
   ///  client's request to be notified about a SubscriptionTopic.
@@ -3792,7 +3908,7 @@ class SubscriptionFilterBy with _$SubscriptionFilterBy {
 class SubscriptionParameter with _$SubscriptionParameter {
   /// [SubscriptionParameter] The subscription resource describes a particular
   ///  client's request to be notified about a SubscriptionTopic.
-  SubscriptionParameter._();
+  const SubscriptionParameter._();
 
   /// [SubscriptionParameter] The subscription resource describes a particular
   ///  client's request to be notified about a SubscriptionTopic.
@@ -3916,7 +4032,7 @@ class SubscriptionParameter with _$SubscriptionParameter {
 class SubscriptionStatus with Resource, _$SubscriptionStatus {
   /// [SubscriptionStatus] The SubscriptionStatus resource describes the state
   ///  of a Subscription during notifications.
-  SubscriptionStatus._();
+  const SubscriptionStatus._();
 
   /// [SubscriptionStatus] The SubscriptionStatus resource describes the state
   ///  of a Subscription during notifications.
@@ -4158,7 +4274,7 @@ class SubscriptionStatusNotificationEvent
     with _$SubscriptionStatusNotificationEvent {
   /// [SubscriptionStatusNotificationEvent] The SubscriptionStatus resource
   ///  describes the state of a Subscription during notifications.
-  SubscriptionStatusNotificationEvent._();
+  const SubscriptionStatusNotificationEvent._();
 
   /// [SubscriptionStatusNotificationEvent] The SubscriptionStatus resource
   ///  describes the state of a Subscription during notifications.
@@ -4300,7 +4416,7 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
   /// [SubscriptionTopic] Describes a stream of resource state changes or
   ///  events and annotated with labels useful to filter projections from this
   ///  topic.
-  SubscriptionTopic._();
+  const SubscriptionTopic._();
 
   /// [SubscriptionTopic] Describes a stream of resource state changes or
   ///  events and annotated with labels useful to filter projections from this
@@ -4788,7 +4904,7 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
   /// [SubscriptionTopicResourceTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  SubscriptionTopicResourceTrigger._();
+  const SubscriptionTopicResourceTrigger._();
 
   /// [SubscriptionTopicResourceTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -4969,7 +5085,7 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
   /// [SubscriptionTopicQueryCriteria] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  SubscriptionTopicQueryCriteria._();
+  const SubscriptionTopicQueryCriteria._();
 
   /// [SubscriptionTopicQueryCriteria] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -5147,7 +5263,7 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
   /// [SubscriptionTopicEventTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  SubscriptionTopicEventTrigger._();
+  const SubscriptionTopicEventTrigger._();
 
   /// [SubscriptionTopicEventTrigger] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -5294,7 +5410,7 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
   /// [SubscriptionTopicCanFilterBy] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  SubscriptionTopicCanFilterBy._();
+  const SubscriptionTopicCanFilterBy._();
 
   /// [SubscriptionTopicCanFilterBy] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
@@ -5481,7 +5597,7 @@ class SubscriptionTopicNotificationShape
   /// [SubscriptionTopicNotificationShape] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections
   ///  from this topic.
-  SubscriptionTopicNotificationShape._();
+  const SubscriptionTopicNotificationShape._();
 
   /// [SubscriptionTopicNotificationShape] Describes a stream of resource state
   ///  changes or events and annotated with labels useful to filter projections

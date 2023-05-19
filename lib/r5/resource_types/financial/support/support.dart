@@ -21,7 +21,7 @@ class Coverage with Resource, _$Coverage {
   /// [Coverage] Financial instrument which may be used to reimburse or pay for
   ///  health care products and services. Includes both insurance and
   ///  self-payment.
-  Coverage._();
+  const Coverage._();
 
   /// [Coverage] Financial instrument which may be used to reimburse or pay for
   ///  health care products and services. Includes both insurance and
@@ -376,7 +376,7 @@ class CoveragePaymentBy with _$CoveragePaymentBy {
   /// [CoveragePaymentBy] Financial instrument which may be used to reimburse
   ///  or pay for health care products and services. Includes both insurance
   ///  and self-payment.
-  CoveragePaymentBy._();
+  const CoveragePaymentBy._();
 
   /// [CoveragePaymentBy] Financial instrument which may be used to reimburse
   ///  or pay for health care products and services. Includes both insurance
@@ -493,7 +493,7 @@ class CoverageClass with _$CoverageClass {
   /// [CoverageClass] Financial instrument which may be used to reimburse or
   ///  pay for health care products and services. Includes both insurance and
   ///  self-payment.
-  CoverageClass._();
+  const CoverageClass._();
 
   /// [CoverageClass] Financial instrument which may be used to reimburse or
   ///  pay for health care products and services. Includes both insurance and
@@ -619,7 +619,7 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
   /// [CoverageCostToBeneficiary] Financial instrument which may be used to
   ///  reimburse or pay for health care products and services. Includes both
   ///  insurance and self-payment.
-  CoverageCostToBeneficiary._();
+  const CoverageCostToBeneficiary._();
 
   /// [CoverageCostToBeneficiary] Financial instrument which may be used to
   ///  reimburse or pay for health care products and services. Includes both
@@ -767,7 +767,7 @@ class CoverageException with _$CoverageException {
   /// [CoverageException] Financial instrument which may be used to reimburse
   ///  or pay for health care products and services. Includes both insurance
   ///  and self-payment.
-  CoverageException._();
+  const CoverageException._();
 
   /// [CoverageException] Financial instrument which may be used to reimburse
   ///  or pay for health care products and services. Includes both insurance
@@ -880,7 +880,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   ///  respond, in the form of an CoverageEligibilityResponse, with information
   ///  regarding whether the stated coverage is valid and in-force and
   ///  optionally to provide the insurance details of the policy.
-  CoverageEligibilityRequest._();
+  const CoverageEligibilityRequest._();
 
   /// [CoverageEligibilityRequest] The CoverageEligibilityRequest provides
   ///  patient and insurance coverage information to an insurer for them to
@@ -1191,7 +1191,7 @@ class CoverageEligibilityRequestEvent with _$CoverageEligibilityRequestEvent {
   ///  respond, in the form of an CoverageEligibilityResponse, with information
   ///  regarding whether the stated coverage is valid and in-force and
   ///  optionally to provide the insurance details of the policy.
-  CoverageEligibilityRequestEvent._();
+  const CoverageEligibilityRequestEvent._();
 
   /// [CoverageEligibilityRequestEvent] The CoverageEligibilityRequest provides
   ///  patient and insurance coverage information to an insurer for them to
@@ -1324,7 +1324,7 @@ class CoverageEligibilityRequestSupportingInfo
   ///  them to respond, in the form of an CoverageEligibilityResponse, with
   ///  information regarding whether the stated coverage is valid and in-force
   ///  and optionally to provide the insurance details of the policy.
-  CoverageEligibilityRequestSupportingInfo._();
+  const CoverageEligibilityRequestSupportingInfo._();
 
   /// [CoverageEligibilityRequestSupportingInfo] The CoverageEligibilityRequest
   ///  provides patient and insurance coverage information to an insurer for
@@ -1465,7 +1465,7 @@ class CoverageEligibilityRequestInsurance
   ///  them to respond, in the form of an CoverageEligibilityResponse, with
   ///  information regarding whether the stated coverage is valid and in-force
   ///  and optionally to provide the insurance details of the policy.
-  CoverageEligibilityRequestInsurance._();
+  const CoverageEligibilityRequestInsurance._();
 
   /// [CoverageEligibilityRequestInsurance] The CoverageEligibilityRequest
   ///  provides patient and insurance coverage information to an insurer for
@@ -1610,7 +1610,7 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
   ///  respond, in the form of an CoverageEligibilityResponse, with information
   ///  regarding whether the stated coverage is valid and in-force and
   ///  optionally to provide the insurance details of the policy.
-  CoverageEligibilityRequestItem._();
+  const CoverageEligibilityRequestItem._();
 
   /// [CoverageEligibilityRequestItem] The CoverageEligibilityRequest provides
   ///  patient and insurance coverage information to an insurer for them to
@@ -1790,7 +1790,7 @@ class CoverageEligibilityRequestDiagnosis
   ///  them to respond, in the form of an CoverageEligibilityResponse, with
   ///  information regarding whether the stated coverage is valid and in-force
   ///  and optionally to provide the insurance details of the policy.
-  CoverageEligibilityRequestDiagnosis._();
+  const CoverageEligibilityRequestDiagnosis._();
 
   /// [CoverageEligibilityRequestDiagnosis] The CoverageEligibilityRequest
   ///  provides patient and insurance coverage information to an insurer for
@@ -1906,7 +1906,7 @@ class CoverageEligibilityRequestDiagnosis
 class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   /// [CoverageEligibilityResponse] This resource provides eligibility and plan
   ///  details from the processing of an CoverageEligibilityRequest resource.
-  CoverageEligibilityResponse._();
+  const CoverageEligibilityResponse._();
 
   /// [CoverageEligibilityResponse] This resource provides eligibility and plan
   ///  details from the processing of an CoverageEligibilityRequest resource.
@@ -2226,7 +2226,7 @@ class CoverageEligibilityResponseEvent with _$CoverageEligibilityResponseEvent {
   /// [CoverageEligibilityResponseEvent] This resource provides eligibility and
   ///  plan details from the processing of an CoverageEligibilityRequest
   ///  resource.
-  CoverageEligibilityResponseEvent._();
+  const CoverageEligibilityResponseEvent._();
 
   /// [CoverageEligibilityResponseEvent] This resource provides eligibility and
   ///  plan details from the processing of an CoverageEligibilityRequest
@@ -2354,7 +2354,7 @@ class CoverageEligibilityResponseInsurance
   /// [CoverageEligibilityResponseInsurance] This resource provides eligibility
   ///  and plan details from the processing of an CoverageEligibilityRequest
   ///  resource.
-  CoverageEligibilityResponseInsurance._();
+  const CoverageEligibilityResponseInsurance._();
 
   /// [CoverageEligibilityResponseInsurance] This resource provides eligibility
   ///  and plan details from the processing of an CoverageEligibilityRequest
@@ -2492,7 +2492,7 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
   /// [CoverageEligibilityResponseItem] This resource provides eligibility and
   ///  plan details from the processing of an CoverageEligibilityRequest
   ///  resource.
-  CoverageEligibilityResponseItem._();
+  const CoverageEligibilityResponseItem._();
 
   /// [CoverageEligibilityResponseItem] This resource provides eligibility and
   ///  plan details from the processing of an CoverageEligibilityRequest
@@ -2716,7 +2716,7 @@ class CoverageEligibilityResponseBenefit
   /// [CoverageEligibilityResponseBenefit] This resource provides eligibility
   ///  and plan details from the processing of an CoverageEligibilityRequest
   ///  resource.
-  CoverageEligibilityResponseBenefit._();
+  const CoverageEligibilityResponseBenefit._();
 
   /// [CoverageEligibilityResponseBenefit] This resource provides eligibility
   ///  and plan details from the processing of an CoverageEligibilityRequest
@@ -2886,7 +2886,7 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
   /// [CoverageEligibilityResponseError] This resource provides eligibility and
   ///  plan details from the processing of an CoverageEligibilityRequest
   ///  resource.
-  CoverageEligibilityResponseError._();
+  const CoverageEligibilityResponseError._();
 
   /// [CoverageEligibilityResponseError] This resource provides eligibility and
   ///  plan details from the processing of an CoverageEligibilityRequest
@@ -3009,7 +3009,7 @@ class CoverageEligibilityResponseError with _$CoverageEligibilityResponseError {
 class EnrollmentRequest with Resource, _$EnrollmentRequest {
   /// [EnrollmentRequest] This resource provides the insurance enrollment
   ///  details to the insurer regarding a specified coverage.
-  EnrollmentRequest._();
+  const EnrollmentRequest._();
 
   /// [EnrollmentRequest] This resource provides the insurance enrollment
   ///  details to the insurer regarding a specified coverage.
@@ -3228,7 +3228,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
 class EnrollmentResponse with Resource, _$EnrollmentResponse {
   /// [EnrollmentResponse] This resource provides enrollment and plan details
   ///  from the processing of an EnrollmentRequest resource.
-  EnrollmentResponse._();
+  const EnrollmentResponse._();
 
   /// [EnrollmentResponse] This resource provides enrollment and plan details
   ///  from the processing of an EnrollmentRequest resource.

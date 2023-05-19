@@ -28,7 +28,11 @@ mixin _$Conformance {
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -90,7 +94,11 @@ abstract class $ConformanceCopyWith<$Res> {
           FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -128,6 +136,8 @@ abstract class $ConformanceCopyWith<$Res> {
       List<ConformanceDocument>? document});
 
   $FhirMetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get urlElement;
   $ConformanceSoftwareCopyWith<$Res>? get software;
@@ -154,7 +164,9 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
@@ -205,10 +217,18 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -338,6 +358,30 @@ class _$ConformanceCopyWithImpl<$Res, $Val extends Conformance>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
@@ -427,7 +471,11 @@ abstract class _$$_ConformanceCopyWith<$Res>
           FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -467,6 +515,10 @@ abstract class _$$_ConformanceCopyWith<$Res>
   @override
   $FhirMetaCopyWith<$Res>? get meta;
   @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
   $NarrativeCopyWith<$Res>? get text;
   @override
   $ElementCopyWith<$Res>? get urlElement;
@@ -496,7 +548,9 @@ class __$$_ConformanceCopyWithImpl<$Res>
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
@@ -547,10 +601,18 @@ class __$$_ConformanceCopyWithImpl<$Res>
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -679,7 +741,11 @@ class _$_Conformance extends _Conformance {
           this.fhirId,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -743,7 +809,13 @@ class _$_Conformance extends _Conformance {
   @override
   final FhirUri? implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
   final FhirCode? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -880,7 +952,7 @@ class _$_Conformance extends _Conformance {
 
   @override
   String toString() {
-    return 'Conformance(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, acceptUnknown: $acceptUnknown, acceptUnknownElement: $acceptUnknownElement, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
+    return 'Conformance(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, acceptUnknown: $acceptUnknown, acceptUnknownElement: $acceptUnknownElement, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
   }
 
   @override
@@ -895,8 +967,12 @@ class _$_Conformance extends _Conformance {
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
                 other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality()
                 .equals(other._contained, _contained) &&
@@ -952,7 +1028,9 @@ class _$_Conformance extends _Conformance {
         fhirId,
         meta,
         implicitRules,
+        implicitRulesElement,
         language,
+        languageElement,
         text,
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
@@ -1007,7 +1085,11 @@ abstract class _Conformance extends Conformance {
           final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
       final FhirCode? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -1062,7 +1144,13 @@ abstract class _Conformance extends Conformance {
   @override
   FhirUri? get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement;
+  @override
   FhirCode? get language;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement;
   @override
   Narrative? get text;
   @override
@@ -1146,7 +1234,11 @@ mixin _$CapabilityStatement {
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -1208,7 +1300,11 @@ abstract class $CapabilityStatementCopyWith<$Res> {
           FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -1246,6 +1342,8 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       List<ConformanceDocument>? document});
 
   $FhirMetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get urlElement;
   $ConformanceSoftwareCopyWith<$Res>? get software;
@@ -1272,7 +1370,9 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
@@ -1323,10 +1423,18 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -1456,6 +1564,30 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
@@ -1545,7 +1677,11 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
           FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -1585,6 +1721,10 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
   @override
   $FhirMetaCopyWith<$Res>? get meta;
   @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
   $NarrativeCopyWith<$Res>? get text;
   @override
   $ElementCopyWith<$Res>? get urlElement;
@@ -1614,7 +1754,9 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
@@ -1665,10 +1807,18 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -1797,7 +1947,11 @@ class _$_CapabilityStatement extends _CapabilityStatement {
           this.fhirId,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -1861,7 +2015,13 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @override
   final FhirUri? implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
   final FhirCode? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -1998,7 +2158,7 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
   @override
   String toString() {
-    return 'CapabilityStatement(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, acceptUnknown: $acceptUnknown, acceptUnknownElement: $acceptUnknownElement, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
+    return 'CapabilityStatement(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, copyright: $copyright, kind: $kind, software: $software, implementation: $implementation, fhirVersion: $fhirVersion, fhirVersionElement: $fhirVersionElement, acceptUnknown: $acceptUnknown, acceptUnknownElement: $acceptUnknownElement, format: $format, profile: $profile, rest: $rest, messaging: $messaging, document: $document)';
   }
 
   @override
@@ -2013,8 +2173,12 @@ class _$_CapabilityStatement extends _CapabilityStatement {
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
                 other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality()
                 .equals(other._contained, _contained) &&
@@ -2070,7 +2234,9 @@ class _$_CapabilityStatement extends _CapabilityStatement {
         fhirId,
         meta,
         implicitRules,
+        implicitRulesElement,
         language,
+        languageElement,
         text,
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
@@ -2126,7 +2292,11 @@ abstract class _CapabilityStatement extends CapabilityStatement {
           final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
       final FhirCode? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -2181,7 +2351,13 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @override
   FhirUri? get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement;
+  @override
   FhirCode? get language;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement;
   @override
   Narrative? get text;
   @override
@@ -7883,7 +8059,11 @@ mixin _$OperationDefinition {
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -7935,7 +8115,11 @@ abstract class $OperationDefinitionCopyWith<$Res> {
           FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -7964,6 +8148,8 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       List<OperationDefinitionParameter>? parameter});
 
   $FhirMetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ReferenceCopyWith<$Res>? get base;
 }
@@ -7986,7 +8172,9 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
@@ -8032,10 +8220,18 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -8145,6 +8341,30 @@ class _$OperationDefinitionCopyWithImpl<$Res, $Val extends OperationDefinition>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
@@ -8185,7 +8405,11 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
           FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -8216,6 +8440,10 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
   @override
   $FhirMetaCopyWith<$Res>? get meta;
   @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
   $NarrativeCopyWith<$Res>? get text;
   @override
   $ReferenceCopyWith<$Res>? get base;
@@ -8237,7 +8465,9 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
@@ -8283,10 +8513,18 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -8395,7 +8633,11 @@ class _$_OperationDefinition extends _OperationDefinition {
           this.fhirId,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -8447,7 +8689,13 @@ class _$_OperationDefinition extends _OperationDefinition {
   @override
   final FhirUri? implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
   final FhirCode? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -8548,7 +8796,7 @@ class _$_OperationDefinition extends _OperationDefinition {
 
   @override
   String toString() {
-    return 'OperationDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, kind: $kind, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, idempotent: $idempotent, code: $code, notes: $notes, base: $base, system: $system, type: $type, instance: $instance, parameter: $parameter)';
+    return 'OperationDefinition(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, version: $version, name: $name, status: $status, kind: $kind, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, description: $description, requirements: $requirements, idempotent: $idempotent, code: $code, notes: $notes, base: $base, system: $system, type: $type, instance: $instance, parameter: $parameter)';
   }
 
   @override
@@ -8563,8 +8811,12 @@ class _$_OperationDefinition extends _OperationDefinition {
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
                 other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality()
                 .equals(other._contained, _contained) &&
@@ -8609,7 +8861,9 @@ class _$_OperationDefinition extends _OperationDefinition {
         fhirId,
         meta,
         implicitRules,
+        implicitRulesElement,
         language,
+        languageElement,
         text,
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
@@ -8660,7 +8914,11 @@ abstract class _OperationDefinition extends OperationDefinition {
           final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
       final FhirCode? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -8706,7 +8964,13 @@ abstract class _OperationDefinition extends OperationDefinition {
   @override
   FhirUri? get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement;
+  @override
   FhirCode? get language;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement;
   @override
   Narrative? get text;
   @override
@@ -9899,7 +10163,11 @@ mixin _$SearchParameter {
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -9950,7 +10218,11 @@ abstract class $SearchParameterCopyWith<$Res> {
           FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -9978,6 +10250,8 @@ abstract class $SearchParameterCopyWith<$Res> {
       List<FhirCode>? target});
 
   $FhirMetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get requirementsElement;
 }
@@ -10000,7 +10274,9 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
@@ -10043,10 +10319,18 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -10144,6 +10428,30 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
@@ -10184,7 +10492,11 @@ abstract class _$$_SearchParameterCopyWith<$Res>
           FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -10214,6 +10526,10 @@ abstract class _$$_SearchParameterCopyWith<$Res>
   @override
   $FhirMetaCopyWith<$Res>? get meta;
   @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
   $NarrativeCopyWith<$Res>? get text;
   @override
   $ElementCopyWith<$Res>? get requirementsElement;
@@ -10235,7 +10551,9 @@ class __$$_SearchParameterCopyWithImpl<$Res>
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
@@ -10278,10 +10596,18 @@ class __$$_SearchParameterCopyWithImpl<$Res>
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -10378,7 +10704,11 @@ class _$_SearchParameter extends _SearchParameter {
           this.fhirId,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -10428,7 +10758,13 @@ class _$_SearchParameter extends _SearchParameter {
   @override
   final FhirUri? implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
   final FhirCode? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -10517,7 +10853,7 @@ class _$_SearchParameter extends _SearchParameter {
 
   @override
   String toString() {
-    return 'SearchParameter(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, requirements: $requirements, requirementsElement: $requirementsElement, code: $code, base: $base, type: $type, description: $description, xpath: $xpath, xpathUsage: $xpathUsage, target: $target)';
+    return 'SearchParameter(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, requirements: $requirements, requirementsElement: $requirementsElement, code: $code, base: $base, type: $type, description: $description, xpath: $xpath, xpathUsage: $xpathUsage, target: $target)';
   }
 
   @override
@@ -10532,8 +10868,12 @@ class _$_SearchParameter extends _SearchParameter {
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
                 other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality()
                 .equals(other._contained, _contained) &&
@@ -10574,7 +10914,9 @@ class _$_SearchParameter extends _SearchParameter {
         fhirId,
         meta,
         implicitRules,
+        implicitRulesElement,
         language,
+        languageElement,
         text,
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
@@ -10621,7 +10963,11 @@ abstract class _SearchParameter extends SearchParameter {
           final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
       final FhirCode? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -10666,7 +11012,13 @@ abstract class _SearchParameter extends SearchParameter {
   @override
   FhirUri? get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement;
+  @override
   FhirCode? get language;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement;
   @override
   Narrative? get text;
   @override

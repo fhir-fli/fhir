@@ -18,7 +18,7 @@ part 'general_types.g.dart';
 @freezed
 class Annotation with _$Annotation {
   /// [Annotation] A  text note which also  contains information about who made
-  Annotation._();
+  const Annotation._();
 
   /// [Annotation] A  text note which also  contains information about who made
   ///  the statement and when.
@@ -116,7 +116,7 @@ class Annotation with _$Annotation {
 @freezed
 class Attachment with _$Attachment {
   /// [Attachment] For referring to data content defined in other formats.
-  Attachment._();
+  const Attachment._();
 
   /// [Attachment] For referring to data content defined in other formats.
   ///
@@ -270,7 +270,7 @@ class Attachment with _$Attachment {
 @freezed
 class Identifier with _$Identifier {
   /// [Identifier] An identifier - identifies some entity uniquely and
-  Identifier._();
+  const Identifier._();
 
   /// [Identifier] An identifier - identifies some entity uniquely and
   ///  unambiguously. Typically this is used for business identifiers.
@@ -384,7 +384,7 @@ class Identifier with _$Identifier {
 @freezed
 class CodeableConcept with _$CodeableConcept {
   /// [CodeableConcept] A concept that may be defined by a formal reference to
-  CodeableConcept._();
+  const CodeableConcept._();
 
   /// [CodeableConcept] A concept that may be defined by a formal reference to
   ///  a terminology or ontology or may be provided by text.
@@ -466,7 +466,7 @@ class CodeableConcept with _$CodeableConcept {
 @freezed
 class Coding with _$Coding {
   /// [Coding] A reference to a code defined by a terminology system.
-  Coding._();
+  const Coding._();
 
   /// [Coding] A reference to a code defined by a terminology system.
   ///
@@ -597,7 +597,7 @@ class Coding with _$Coding {
 @freezed
 class Quantity with _$Quantity {
   /// [Quantity] A measured amount (or an amount that can potentially be
-  Quantity._();
+  const Quantity._();
 
   /// [Quantity] A measured amount (or an amount that can potentially be
   /// measured). Note that measured amounts include amounts that are not
@@ -725,7 +725,7 @@ class Quantity with _$Quantity {
 @freezed
 class FhirDuration with _$FhirDuration {
   /// [Duration] A length of time.
-  FhirDuration._();
+  const FhirDuration._();
 
   /// [Duration] A length of time.
   ///
@@ -850,7 +850,7 @@ class FhirDuration with _$FhirDuration {
 @freezed
 class Distance with _$Distance {
   /// [Distance] A length - a value with a unit that is a physical distance.
-  Distance._();
+  const Distance._();
 
   /// [Distance] A length - a value with a unit that is a physical distance.
   ///
@@ -975,7 +975,7 @@ class Distance with _$Distance {
 @freezed
 class Count with _$Count {
   /// [Count] A measured amount (or an amount that can potentially be
-  Count._();
+  const Count._();
 
   /// [Count] A measured amount (or an amount that can potentially be
   /// measured). Note that measured amounts include amounts that are not
@@ -1101,7 +1101,7 @@ class Count with _$Count {
 @freezed
 class Money with _$Money {
   /// [Money] An amount of economic utility in some recognized currency.
-  Money._();
+  const Money._();
 
   /// [Money] An amount of economic utility in some recognized currency.
   ///
@@ -1181,7 +1181,7 @@ class Money with _$Money {
 @freezed
 class Age with _$Age {
   /// [Age] A duration of time during which an organism (or a process) has
-  Age._();
+  const Age._();
 
   /// [Age] A duration of time during which an organism (or a process) has
   ///  existed.
@@ -1303,7 +1303,7 @@ class Age with _$Age {
 @freezed
 class Range with _$Range {
   /// [Range] A set of ordered Quantities defined by a low and high limit.
-  Range._();
+  const Range._();
 
   /// [Range] A set of ordered Quantities defined by a low and high limit.
   ///
@@ -1373,7 +1373,7 @@ class Range with _$Range {
 @freezed
 class Period with _$Period {
   /// [Period] A time period defined by a start and end date and optionally
-  Period._();
+  const Period._();
 
   /// [Period] A time period defined by a start and end date and optionally
   ///  time.
@@ -1461,7 +1461,7 @@ class Period with _$Period {
 @freezed
 class Ratio with _$Ratio {
   /// [Ratio] A relationship of two Quantity values - expressed as a numerator
-  Ratio._();
+  const Ratio._();
 
   /// [Ratio] A relationship of two Quantity values - expressed as a numerator
   ///  and a denominator.
@@ -1532,7 +1532,7 @@ class Ratio with _$Ratio {
 @freezed
 class RatioRange with _$RatioRange {
   /// [RatioRangeRange] "A range of ratios expressed as a low and high numerator and a denominator.",
-  RatioRange._();
+  const RatioRange._();
 
   /// [RatioRangeRange] "A range of ratios expressed as a low and high numerator and a denominator.",
   /// [id] "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
@@ -1592,7 +1592,7 @@ class RatioRange with _$RatioRange {
 @freezed
 class SampledData with _$SampledData {
   /// [SampledData] A series of measurements taken by a device, with upper and
-  SampledData._();
+  const SampledData._();
 
   /// [SampledData] A series of measurements taken by a device, with upper and
   ///  lower limits. There may be more than one dimension in the data.
@@ -1744,7 +1744,7 @@ class SampledData with _$SampledData {
 @freezed
 class Signature with _$Signature {
   /// [Signature] A signature along with supporting context. The signature may
-  Signature._();
+  const Signature._();
 
   /// [Signature] A signature along with supporting context. The signature may
   /// be a digital signature that is cryptographic in nature, or some other
@@ -1885,7 +1885,7 @@ class Signature with _$Signature {
 @freezed
 class HumanName with _$HumanName {
   /// [HumanName] A human's name with the ability to identify parts and usage.
-  HumanName._();
+  const HumanName._();
 
   /// [HumanName] A human's name with the ability to identify parts and usage.
   ///
@@ -2028,7 +2028,7 @@ class HumanName with _$HumanName {
 @freezed
 class Address with _$Address {
   /// [Address] An address expressed using postal conventions (as opposed to
-  Address._();
+  const Address._();
 
   /// [Address] An address expressed using postal conventions (as opposed to
   /// GPS or other location definition formats).  This data type may be used to
@@ -2211,7 +2211,7 @@ class Address with _$Address {
 @freezed
 class ContactPoint with _$ContactPoint {
   /// [ContactPoint] Details for all kinds of technology mediated contact
-  ContactPoint._();
+  const ContactPoint._();
 
   /// [ContactPoint] Details for all kinds of technology mediated contact
   ///  points for a person or organization, including telephone, email, etc.
@@ -2328,7 +2328,7 @@ class ContactPoint with _$ContactPoint {
 @freezed
 class Timing with _$Timing {
   /// [Timing] Specifies an event that may occur multiple times. Timing
-  Timing._();
+  const Timing._();
 
   /// [Timing] Specifies an event that may occur multiple times. Timing
   /// schedules are used to record when things are planned, expected or
@@ -2455,7 +2455,7 @@ class Timing with _$Timing {
 @freezed
 class TimingRepeat with _$TimingRepeat {
   /// [TimingRepeat] Specifies an event that may occur multiple times. Timing
-  TimingRepeat._();
+  const TimingRepeat._();
 
   /// [TimingRepeat] Specifies an event that may occur multiple times. Timing
   /// schedules are used to record when things are planned, expected or

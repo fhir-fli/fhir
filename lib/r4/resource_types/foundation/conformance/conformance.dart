@@ -17,7 +17,7 @@ part 'conformance.g.dart';
 @freezed
 class CapabilityStatement with Resource, _$CapabilityStatement {
   /// [CapabilityStatement] A Capability Statement documents a set of
-  CapabilityStatement._();
+  const CapabilityStatement._();
 
   /// [CapabilityStatement] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -493,7 +493,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
 @freezed
 class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
   /// [CapabilityStatementSoftware] A Capability Statement documents a set of
-  CapabilityStatementSoftware._();
+  const CapabilityStatementSoftware._();
 
   /// [CapabilityStatementSoftware] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -618,7 +618,7 @@ class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
 @freezed
 class CapabilityStatementImplementation
     with _$CapabilityStatementImplementation {
-  CapabilityStatementImplementation._();
+  const CapabilityStatementImplementation._();
 
   /// [CapabilityStatementImplementation] A Capability Statement documents a
   /// set of capabilities (behaviors) of a FHIR Server for a particular version
@@ -738,7 +738,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  CapabilityStatementRest._();
+  const CapabilityStatementRest._();
 
   /// [CapabilityStatementRest] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -910,7 +910,7 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  CapabilityStatementSecurity._();
+  const CapabilityStatementSecurity._();
 
   /// [CapabilityStatementSecurity] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -1039,7 +1039,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  CapabilityStatementResource._();
+  const CapabilityStatementResource._();
 
   /// [CapabilityStatementResource] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -1348,7 +1348,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
   /// of capabilities (behaviors) of a FHIR Server for a particular version of
   /// FHIR that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  CapabilityStatementInteraction._();
+  const CapabilityStatementInteraction._();
 
   /// [CapabilityStatementInteraction] A Capability Statement documents a set
   /// of capabilities (behaviors) of a FHIR Server for a particular version of
@@ -1477,7 +1477,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
   /// of capabilities (behaviors) of a FHIR Server for a particular version of
   /// FHIR that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  CapabilityStatementSearchParam._();
+  const CapabilityStatementSearchParam._();
 
   /// [CapabilityStatementSearchParam] A Capability Statement documents a set
   /// of capabilities (behaviors) of a FHIR Server for a particular version of
@@ -1625,7 +1625,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  CapabilityStatementOperation._();
+  const CapabilityStatementOperation._();
 
   /// [CapabilityStatementOperation] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -1774,7 +1774,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
   /// of capabilities (behaviors) of a FHIR Server for a particular version of
   /// FHIR that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  CapabilityStatementInteraction1._();
+  const CapabilityStatementInteraction1._();
 
   /// [CapabilityStatementInteraction1] A Capability Statement documents a set
   /// of capabilities (behaviors) of a FHIR Server for a particular version of
@@ -1899,7 +1899,7 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  CapabilityStatementMessaging._();
+  const CapabilityStatementMessaging._();
 
   /// [CapabilityStatementMessaging] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -2043,7 +2043,7 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  CapabilityStatementEndpoint._();
+  const CapabilityStatementEndpoint._();
 
   /// [CapabilityStatementEndpoint] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -2163,7 +2163,7 @@ class CapabilityStatementSupportedMessage
   /// set of capabilities (behaviors) of a FHIR Server for a particular version
   /// of FHIR that may be used as a statement of actual server functionality or
   ///  a statement of required or desired server implementation.
-  CapabilityStatementSupportedMessage._();
+  const CapabilityStatementSupportedMessage._();
 
   /// [CapabilityStatementSupportedMessage] A Capability Statement documents a
   /// set of capabilities (behaviors) of a FHIR Server for a particular version
@@ -2271,7 +2271,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
   /// that may be used as a statement of actual server functionality or a
   ///  statement of required or desired server implementation.
-  CapabilityStatementDocument._();
+  const CapabilityStatementDocument._();
 
   /// [CapabilityStatementDocument] A Capability Statement documents a set of
   /// capabilities (behaviors) of a FHIR Server for a particular version of FHIR
@@ -2398,7 +2398,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
 @freezed
 class CompartmentDefinition with Resource, _$CompartmentDefinition {
   /// [CompartmentDefinition] A compartment definition that defines how
-  CompartmentDefinition._();
+  const CompartmentDefinition._();
 
   /// [CompartmentDefinition] A compartment definition that defines how
   ///  resources are accessed on a server.
@@ -2742,7 +2742,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
 @freezed
 class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
   /// [CompartmentDefinitionResource] A compartment definition that defines
-  CompartmentDefinitionResource._();
+  const CompartmentDefinitionResource._();
 
   /// [CompartmentDefinitionResource] A compartment definition that defines
   ///  how resources are accessed on a server.
@@ -2870,7 +2870,7 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
 @freezed
 class ExampleScenario with Resource, _$ExampleScenario {
   /// [ExampleScenario] Example of workflow instance.
-  ExampleScenario._();
+  const ExampleScenario._();
 
   /// [ExampleScenario] Example of workflow instance.
   ///
@@ -3228,7 +3228,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
 @freezed
 class ExampleScenarioActor with _$ExampleScenarioActor {
   /// [ExampleScenarioActor] Example of workflow instance.
-  ExampleScenarioActor._();
+  const ExampleScenarioActor._();
 
   /// [ExampleScenarioActor] Example of workflow instance.
   ///
@@ -3359,7 +3359,7 @@ class ExampleScenarioActor with _$ExampleScenarioActor {
 @freezed
 class ExampleScenarioInstance with _$ExampleScenarioInstance {
   /// [ExampleScenarioInstance] Example of workflow instance.
-  ExampleScenarioInstance._();
+  const ExampleScenarioInstance._();
 
   /// [ExampleScenarioInstance] Example of workflow instance.
   ///
@@ -3502,7 +3502,7 @@ class ExampleScenarioInstance with _$ExampleScenarioInstance {
 @freezed
 class ExampleScenarioVersion with _$ExampleScenarioVersion {
   /// [ExampleScenarioVersion] Example of workflow instance.
-  ExampleScenarioVersion._();
+  const ExampleScenarioVersion._();
 
   /// [ExampleScenarioVersion] Example of workflow instance.
   ///
@@ -3613,7 +3613,7 @@ class ExampleScenarioVersion with _$ExampleScenarioVersion {
 @freezed
 class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
   /// [ExampleScenarioContainedInstance] Example of workflow instance.
-  ExampleScenarioContainedInstance._();
+  const ExampleScenarioContainedInstance._();
 
   /// [ExampleScenarioContainedInstance] Example of workflow instance.
   ///
@@ -3713,7 +3713,7 @@ class ExampleScenarioContainedInstance with _$ExampleScenarioContainedInstance {
 @freezed
 class ExampleScenarioProcess with _$ExampleScenarioProcess {
   /// [ExampleScenarioProcess] Example of workflow instance.
-  ExampleScenarioProcess._();
+  const ExampleScenarioProcess._();
 
   /// [ExampleScenarioProcess] Example of workflow instance.
   ///
@@ -3849,7 +3849,7 @@ class ExampleScenarioProcess with _$ExampleScenarioProcess {
 @freezed
 class ExampleScenarioStep with _$ExampleScenarioStep {
   /// [ExampleScenarioStep] Example of workflow instance.
-  ExampleScenarioStep._();
+  const ExampleScenarioStep._();
 
   /// [ExampleScenarioStep] Example of workflow instance.
   ///
@@ -3967,7 +3967,7 @@ class ExampleScenarioStep with _$ExampleScenarioStep {
 @freezed
 class ExampleScenarioOperation with _$ExampleScenarioOperation {
   /// [ExampleScenarioOperation] Example of workflow instance.
-  ExampleScenarioOperation._();
+  const ExampleScenarioOperation._();
 
   /// [ExampleScenarioOperation] Example of workflow instance.
   ///
@@ -4152,7 +4152,7 @@ class ExampleScenarioOperation with _$ExampleScenarioOperation {
 @freezed
 class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
   /// [ExampleScenarioAlternative] Example of workflow instance.
-  ExampleScenarioAlternative._();
+  const ExampleScenarioAlternative._();
 
   /// [ExampleScenarioAlternative] Example of workflow instance.
   ///
@@ -4272,7 +4272,7 @@ class ExampleScenarioAlternative with _$ExampleScenarioAlternative {
 @freezed
 class GraphDefinition with Resource, _$GraphDefinition {
   /// [GraphDefinition] A formal computable definition of a graph of resources
-  GraphDefinition._();
+  const GraphDefinition._();
 
   /// [GraphDefinition] A formal computable definition of a graph of resources
   /// - that is, a coherent set of resources that form a graph by following
@@ -4616,7 +4616,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
 @freezed
 class GraphDefinitionLink with _$GraphDefinitionLink {
   /// [GraphDefinitionLink] A formal computable definition of a graph of
-  GraphDefinitionLink._();
+  const GraphDefinitionLink._();
 
   /// [GraphDefinitionLink] A formal computable definition of a graph of
   /// resources - that is, a coherent set of resources that form a graph by
@@ -4769,7 +4769,7 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
 @freezed
 class GraphDefinitionTarget with _$GraphDefinitionTarget {
   /// [GraphDefinitionTarget] A formal computable definition of a graph of
-  GraphDefinitionTarget._();
+  const GraphDefinitionTarget._();
 
   /// [GraphDefinitionTarget] A formal computable definition of a graph of
   /// resources - that is, a coherent set of resources that form a graph by
@@ -4898,7 +4898,7 @@ class GraphDefinitionTarget with _$GraphDefinitionTarget {
 @freezed
 class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
   /// [GraphDefinitionCompartment] A formal computable definition of a graph
-  GraphDefinitionCompartment._();
+  const GraphDefinitionCompartment._();
 
   /// [GraphDefinitionCompartment] A formal computable definition of a graph
   /// of resources - that is, a coherent set of resources that form a graph by
@@ -5046,7 +5046,7 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
 @freezed
 class ImplementationGuide with Resource, _$ImplementationGuide {
   /// [ImplementationGuide] A set of rules of how a particular interoperability
-  ImplementationGuide._();
+  const ImplementationGuide._();
 
   /// [ImplementationGuide] A set of rules of how a particular interoperability
   /// or standards problem is solved - typically through the use of FHIR
@@ -5461,7 +5461,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
 @freezed
 class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
   /// [ImplementationGuideDependsOn] A set of rules of how a particular
-  ImplementationGuideDependsOn._();
+  const ImplementationGuideDependsOn._();
 
   /// [ImplementationGuideDependsOn] A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
@@ -5587,7 +5587,7 @@ class ImplementationGuideDependsOn with _$ImplementationGuideDependsOn {
 @freezed
 class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
   /// [ImplementationGuideGlobal] A set of rules of how a particular
-  ImplementationGuideGlobal._();
+  const ImplementationGuideGlobal._();
 
   /// [ImplementationGuideGlobal] A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
@@ -5697,7 +5697,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
 @freezed
 class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
   /// [ImplementationGuideDefinition] A set of rules of how a particular
-  ImplementationGuideDefinition._();
+  const ImplementationGuideDefinition._();
 
   /// [ImplementationGuideDefinition] A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
@@ -5827,7 +5827,7 @@ class ImplementationGuideDefinition with _$ImplementationGuideDefinition {
 @freezed
 class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
   /// [ImplementationGuideGrouping] A set of rules of how a particular
-  ImplementationGuideGrouping._();
+  const ImplementationGuideGrouping._();
 
   /// [ImplementationGuideGrouping] A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
@@ -5944,7 +5944,7 @@ class ImplementationGuideGrouping with _$ImplementationGuideGrouping {
 @freezed
 class ImplementationGuideResource with _$ImplementationGuideResource {
   /// [ImplementationGuideResource] A set of rules of how a particular
-  ImplementationGuideResource._();
+  const ImplementationGuideResource._();
 
   /// [ImplementationGuideResource] A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
@@ -6124,7 +6124,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
 @freezed
 class ImplementationGuidePage with _$ImplementationGuidePage {
   /// [ImplementationGuidePage] A set of rules of how a particular
-  ImplementationGuidePage._();
+  const ImplementationGuidePage._();
 
   /// [ImplementationGuidePage] A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
@@ -6261,7 +6261,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
 @freezed
 class ImplementationGuideParameter with _$ImplementationGuideParameter {
   /// [ImplementationGuideParameter] A set of rules of how a particular
-  ImplementationGuideParameter._();
+  const ImplementationGuideParameter._();
 
   /// [ImplementationGuideParameter] A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
@@ -6380,7 +6380,7 @@ class ImplementationGuideParameter with _$ImplementationGuideParameter {
 @freezed
 class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
   /// [ImplementationGuideTemplate] A set of rules of how a particular
-  ImplementationGuideTemplate._();
+  const ImplementationGuideTemplate._();
 
   /// [ImplementationGuideTemplate] A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
@@ -6505,7 +6505,7 @@ class ImplementationGuideTemplate with _$ImplementationGuideTemplate {
 @freezed
 class ImplementationGuideManifest with _$ImplementationGuideManifest {
   /// [ImplementationGuideManifest] A set of rules of how a particular
-  ImplementationGuideManifest._();
+  const ImplementationGuideManifest._();
 
   /// [ImplementationGuideManifest] A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
@@ -6652,7 +6652,7 @@ class ImplementationGuideManifest with _$ImplementationGuideManifest {
 @freezed
 class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
   /// [ImplementationGuideResource1] A set of rules of how a particular
-  ImplementationGuideResource1._();
+  const ImplementationGuideResource1._();
 
   /// [ImplementationGuideResource1] A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
@@ -6792,7 +6792,7 @@ class ImplementationGuideResource1 with _$ImplementationGuideResource1 {
 @freezed
 class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
   /// [ImplementationGuidePage1] A set of rules of how a particular
-  ImplementationGuidePage1._();
+  const ImplementationGuidePage1._();
 
   /// [ImplementationGuidePage1] A set of rules of how a particular
   /// interoperability or standards problem is solved - typically through the
@@ -6917,7 +6917,7 @@ class ImplementationGuidePage1 with _$ImplementationGuidePage1 {
 @freezed
 class MessageDefinition with Resource, _$MessageDefinition {
   /// [MessageDefinition] Defines the characteristics of a message that can be
-  MessageDefinition._();
+  const MessageDefinition._();
 
   /// [MessageDefinition] Defines the characteristics of a message that can be
   /// shared between systems, including the type of event that initiates the
@@ -7353,7 +7353,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
 @freezed
 class MessageDefinitionFocus with _$MessageDefinitionFocus {
   /// [MessageDefinitionFocus] Defines the characteristics of a message that
-  MessageDefinitionFocus._();
+  const MessageDefinitionFocus._();
 
   /// [MessageDefinitionFocus] Defines the characteristics of a message that
   /// can be shared between systems, including the type of event that initiates
@@ -7492,7 +7492,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
 @freezed
 class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
   /// [MessageDefinitionAllowedResponse] Defines the characteristics of a
-  MessageDefinitionAllowedResponse._();
+  const MessageDefinitionAllowedResponse._();
 
   /// [MessageDefinitionAllowedResponse] Defines the characteristics of a
   /// message that can be shared between systems, including the type of event
@@ -7594,7 +7594,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
 @freezed
 class OperationDefinition with Resource, _$OperationDefinition {
   /// [OperationDefinition] A formal computable definition of an operation (on
-  OperationDefinition._();
+  const OperationDefinition._();
 
   /// [OperationDefinition] A formal computable definition of an operation (on
   ///  the RESTful interface) or a named query (using the search interaction).
@@ -8061,7 +8061,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
 @freezed
 class OperationDefinitionParameter with _$OperationDefinitionParameter {
   /// [OperationDefinitionParameter] A formal computable definition of an
-  OperationDefinitionParameter._();
+  const OperationDefinitionParameter._();
 
   /// [OperationDefinitionParameter] A formal computable definition of an
   /// operation (on the RESTful interface) or a named query (using the search
@@ -8270,7 +8270,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
 @freezed
 class OperationDefinitionBinding with _$OperationDefinitionBinding {
   /// [OperationDefinitionBinding] A formal computable definition of an
-  OperationDefinitionBinding._();
+  const OperationDefinitionBinding._();
 
   /// [OperationDefinitionBinding] A formal computable definition of an
   /// operation (on the RESTful interface) or a named query (using the search
@@ -8383,7 +8383,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
 @freezed
 class OperationDefinitionReferencedFrom
     with _$OperationDefinitionReferencedFrom {
-  OperationDefinitionReferencedFrom._();
+  const OperationDefinitionReferencedFrom._();
 
   /// [OperationDefinitionReferencedFrom] A formal computable definition of an
   /// operation (on the RESTful interface) or a named query (using the search
@@ -8491,7 +8491,7 @@ class OperationDefinitionReferencedFrom
 @freezed
 class OperationDefinitionOverload with _$OperationDefinitionOverload {
   /// [OperationDefinitionOverload] A formal computable definition of an
-  OperationDefinitionOverload._();
+  const OperationDefinitionOverload._();
 
   /// [OperationDefinitionOverload] A formal computable definition of an
   /// operation (on the RESTful interface) or a named query (using the search
@@ -8604,7 +8604,7 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
 @freezed
 class SearchParameter with Resource, _$SearchParameter {
   /// [SearchParameter] A search parameter that defines a named search item
-  SearchParameter._();
+  const SearchParameter._();
 
   /// [SearchParameter] A search parameter that defines a named search item
   ///  that can be used to search/filter on a resource.
@@ -9092,7 +9092,7 @@ class SearchParameter with Resource, _$SearchParameter {
 @freezed
 class SearchParameterComponent with _$SearchParameterComponent {
   /// [SearchParameterComponent] A search parameter that defines a named
-  SearchParameterComponent._();
+  const SearchParameterComponent._();
 
   /// [SearchParameterComponent] A search parameter that defines a named
   ///  search item that can be used to search/filter on a resource.
@@ -9203,7 +9203,7 @@ class SearchParameterComponent with _$SearchParameterComponent {
 @freezed
 class StructureDefinition with Resource, _$StructureDefinition {
   /// [StructureDefinition] A definition of a FHIR structure. This resource is
-  StructureDefinition._();
+  const StructureDefinition._();
 
   /// [StructureDefinition] A definition of a FHIR structure. This resource is
   /// used to describe the underlying resources, data types defined in FHIR, and
@@ -9699,7 +9699,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
 @freezed
 class StructureDefinitionMapping with _$StructureDefinitionMapping {
   /// [StructureDefinitionMapping] A definition of a FHIR structure. This
-  StructureDefinitionMapping._();
+  const StructureDefinitionMapping._();
 
   /// [StructureDefinitionMapping] A definition of a FHIR structure. This
   /// resource is used to describe the underlying resources, data types defined
@@ -9839,7 +9839,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
 @freezed
 class StructureDefinitionContext with _$StructureDefinitionContext {
   /// [StructureDefinitionContext] A definition of a FHIR structure. This
-  StructureDefinitionContext._();
+  const StructureDefinitionContext._();
 
   /// [StructureDefinitionContext] A definition of a FHIR structure. This
   /// resource is used to describe the underlying resources, data types defined
@@ -9957,7 +9957,7 @@ class StructureDefinitionContext with _$StructureDefinitionContext {
 @freezed
 class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
   /// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
-  StructureDefinitionSnapshot._();
+  const StructureDefinitionSnapshot._();
 
   /// [StructureDefinitionSnapshot] A definition of a FHIR structure. This
   /// resource is used to describe the underlying resources, data types defined
@@ -10056,7 +10056,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
 @freezed
 class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
   /// [StructureDefinitionDifferential] A definition of a FHIR structure. This
-  StructureDefinitionDifferential._();
+  const StructureDefinitionDifferential._();
 
   /// [StructureDefinitionDifferential] A definition of a FHIR structure. This
   /// resource is used to describe the underlying resources, data types defined
@@ -10156,7 +10156,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
 @freezed
 class StructureMap with Resource, _$StructureMap {
   /// [StructureMap] A Map of relationships between 2 structures that can be
-  StructureMap._();
+  const StructureMap._();
 
   /// [StructureMap] A Map of relationships between 2 structures that can be
   ///  used to transform data.
@@ -10532,7 +10532,7 @@ class StructureMap with Resource, _$StructureMap {
 @freezed
 class StructureMapStructure with _$StructureMapStructure {
   /// [StructureMapStructure] A Map of relationships between 2 structures that
-  StructureMapStructure._();
+  const StructureMapStructure._();
 
   /// [StructureMapStructure] A Map of relationships between 2 structures that
   ///  can be used to transform data.
@@ -10661,7 +10661,7 @@ class StructureMapStructure with _$StructureMapStructure {
 @freezed
 class StructureMapGroup with _$StructureMapGroup {
   /// [StructureMapGroup] A Map of relationships between 2 structures that can
-  StructureMapGroup._();
+  const StructureMapGroup._();
 
   /// [StructureMapGroup] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -10809,7 +10809,7 @@ class StructureMapGroup with _$StructureMapGroup {
 @freezed
 class StructureMapInput with _$StructureMapInput {
   /// [StructureMapInput] A Map of relationships between 2 structures that can
-  StructureMapInput._();
+  const StructureMapInput._();
 
   /// [StructureMapInput] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -10941,7 +10941,7 @@ class StructureMapInput with _$StructureMapInput {
 @freezed
 class StructureMapRule with _$StructureMapRule {
   /// [StructureMapRule] A Map of relationships between 2 structures that can
-  StructureMapRule._();
+  const StructureMapRule._();
 
   /// [StructureMapRule] A Map of relationships between 2 structures that can
   ///  be used to transform data.
@@ -11073,7 +11073,7 @@ class StructureMapRule with _$StructureMapRule {
 @freezed
 class StructureMapSource with _$StructureMapSource {
   /// [StructureMapSource] A Map of relationships between 2 structures that
-  StructureMapSource._();
+  const StructureMapSource._();
 
   /// [StructureMapSource] A Map of relationships between 2 structures that
   ///  can be used to transform data.
@@ -11730,7 +11730,7 @@ class StructureMapSource with _$StructureMapSource {
 @freezed
 class StructureMapTarget with _$StructureMapTarget {
   /// [StructureMapTarget] A Map of relationships between 2 structures that
-  StructureMapTarget._();
+  const StructureMapTarget._();
 
   /// [StructureMapTarget] A Map of relationships between 2 structures that
   ///  can be used to transform data.
@@ -11897,7 +11897,7 @@ class StructureMapTarget with _$StructureMapTarget {
 @freezed
 class StructureMapParameter with _$StructureMapParameter {
   /// [StructureMapParameter] A Map of relationships between 2 structures that
-  StructureMapParameter._();
+  const StructureMapParameter._();
 
   /// [StructureMapParameter] A Map of relationships between 2 structures that
   ///  can be used to transform data.
@@ -12039,7 +12039,7 @@ class StructureMapParameter with _$StructureMapParameter {
 @freezed
 class StructureMapDependent with _$StructureMapDependent {
   /// [StructureMapDependent] A Map of relationships between 2 structures that
-  StructureMapDependent._();
+  const StructureMapDependent._();
 
   /// [StructureMapDependent] A Map of relationships between 2 structures that
   ///  can be used to transform data.

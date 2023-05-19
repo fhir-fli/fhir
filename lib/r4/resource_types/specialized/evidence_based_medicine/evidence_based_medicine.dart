@@ -17,7 +17,7 @@ part 'evidence_based_medicine.g.dart';
 @freezed
 class Citation with Resource, _$Citation {
   /// [Citation] The Citation Resource enables reference to any knowledge
-  Citation._();
+  const Citation._();
 
   /// [Citation] The Citation Resource enables reference to any knowledge
   /// artifact for purposes of identification and attribution. The Citation Resource
@@ -285,7 +285,7 @@ class Citation with Resource, _$Citation {
 @freezed
 class CitationSummary with _$CitationSummary {
   /// [CitationSummary] The Citation Resource enables reference to any
-  CitationSummary._();
+  const CitationSummary._();
 
   /// [CitationSummary] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -365,7 +365,7 @@ class CitationSummary with _$CitationSummary {
 @freezed
 class CitationClassification with _$CitationClassification {
   /// [CitationClassification] The Citation Resource enables reference to any
-  CitationClassification._();
+  const CitationClassification._();
 
   /// [CitationClassification] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -442,7 +442,7 @@ class CitationClassification with _$CitationClassification {
 @freezed
 class CitationStatusDate with _$CitationStatusDate {
   /// [CitationStatusDate] The Citation Resource enables reference to any
-  CitationStatusDate._();
+  const CitationStatusDate._();
 
   /// [CitationStatusDate] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -525,7 +525,7 @@ class CitationStatusDate with _$CitationStatusDate {
 @freezed
 class CitationRelatesTo with _$CitationRelatesTo {
   /// [CitationRelatesTo] The Citation Resource enables reference to any
-  CitationRelatesTo._();
+  const CitationRelatesTo._();
 
   /// [CitationRelatesTo] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -621,7 +621,7 @@ class CitationRelatesTo with _$CitationRelatesTo {
 @freezed
 class CitationCitedArtifact with _$CitationCitedArtifact {
   /// [CitationCitedArtifact] The Citation Resource enables reference to any
-  CitationCitedArtifact._();
+  const CitationCitedArtifact._();
 
   /// [CitationCitedArtifact] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -746,7 +746,7 @@ class CitationCitedArtifact with _$CitationCitedArtifact {
 @freezed
 class CitationVersion with _$CitationVersion {
   /// [CitationVersion] The Citation Resource enables reference to any
-  CitationVersion._();
+  const CitationVersion._();
 
   /// [CitationVersion] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -826,7 +826,7 @@ class CitationVersion with _$CitationVersion {
 @freezed
 class CitationStatusDate1 with _$CitationStatusDate1 {
   /// [CitationStatusDate1] The Citation Resource enables reference to any
-  CitationStatusDate1._();
+  const CitationStatusDate1._();
 
   /// [CitationStatusDate1] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -909,7 +909,7 @@ class CitationStatusDate1 with _$CitationStatusDate1 {
 @freezed
 class CitationTitle with _$CitationTitle {
   /// [CitationTitle] The Citation Resource enables reference to any knowledge
-  CitationTitle._();
+  const CitationTitle._();
 
   /// [CitationTitle] The Citation Resource enables reference to any knowledge
   /// artifact for purposes of identification and attribution. The Citation Resource
@@ -992,7 +992,7 @@ class CitationTitle with _$CitationTitle {
 @freezed
 class CitationAbstract with _$CitationAbstract {
   /// [CitationAbstract] The Citation Resource enables reference to any
-  CitationAbstract._();
+  const CitationAbstract._();
 
   /// [CitationAbstract] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -1081,7 +1081,7 @@ class CitationAbstract with _$CitationAbstract {
 @freezed
 class CitationPart with _$CitationPart {
   /// [CitationPart] The Citation Resource enables reference to any knowledge
-  CitationPart._();
+  const CitationPart._();
 
   /// [CitationPart] The Citation Resource enables reference to any knowledge
   /// artifact for purposes of identification and attribution. The Citation Resource
@@ -1164,7 +1164,7 @@ class CitationPart with _$CitationPart {
 @freezed
 class CitationRelatesTo1 with _$CitationRelatesTo1 {
   /// [CitationRelatesTo1] The Citation Resource enables reference to any
-  CitationRelatesTo1._();
+  const CitationRelatesTo1._();
 
   /// [CitationRelatesTo1] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -1259,7 +1259,7 @@ class CitationRelatesTo1 with _$CitationRelatesTo1 {
 @freezed
 class CitationPublicationForm with _$CitationPublicationForm {
   /// [CitationPublicationForm] The Citation Resource enables reference to any
-  CitationPublicationForm._();
+  const CitationPublicationForm._();
 
   /// [CitationPublicationForm] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -1391,7 +1391,7 @@ class CitationPublicationForm with _$CitationPublicationForm {
 @freezed
 class CitationPublishedIn with _$CitationPublishedIn {
   /// [CitationPublishedIn] The Citation Resource enables reference to any
-  CitationPublishedIn._();
+  const CitationPublishedIn._();
 
   /// [CitationPublishedIn] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -1485,7 +1485,7 @@ class CitationPublishedIn with _$CitationPublishedIn {
 @freezed
 class CitationPeriodicRelease with _$CitationPeriodicRelease {
   /// [CitationPeriodicRelease] The Citation Resource enables reference to any
-  CitationPeriodicRelease._();
+  const CitationPeriodicRelease._();
 
   /// [CitationPeriodicRelease] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -1577,7 +1577,7 @@ class CitationPeriodicRelease with _$CitationPeriodicRelease {
 @freezed
 class CitationDateOfPublication with _$CitationDateOfPublication {
   /// [CitationDateOfPublication] The Citation Resource enables reference to
-  CitationDateOfPublication._();
+  const CitationDateOfPublication._();
 
   /// [CitationDateOfPublication] The Citation Resource enables reference to
   /// any knowledge artifact for purposes of identification and attribution. The
@@ -1685,7 +1685,7 @@ class CitationDateOfPublication with _$CitationDateOfPublication {
 @freezed
 class CitationWebLocation with _$CitationWebLocation {
   /// [CitationWebLocation] The Citation Resource enables reference to any
-  CitationWebLocation._();
+  const CitationWebLocation._();
 
   /// [CitationWebLocation] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -1765,7 +1765,7 @@ class CitationWebLocation with _$CitationWebLocation {
 @freezed
 class CitationClassification1 with _$CitationClassification1 {
   /// [CitationClassification1] The Citation Resource enables reference to any
-  CitationClassification1._();
+  const CitationClassification1._();
 
   /// [CitationClassification1] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -1846,7 +1846,7 @@ class CitationClassification1 with _$CitationClassification1 {
 @freezed
 class CitationWhoClassified with _$CitationWhoClassified {
   /// [CitationWhoClassified] The Citation Resource enables reference to any
-  CitationWhoClassified._();
+  const CitationWhoClassified._();
 
   /// [CitationWhoClassified] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -1940,7 +1940,7 @@ class CitationWhoClassified with _$CitationWhoClassified {
 @freezed
 class CitationContributorship with _$CitationContributorship {
   /// [CitationContributorship] The Citation Resource enables reference to any
-  CitationContributorship._();
+  const CitationContributorship._();
 
   /// [CitationContributorship] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -2024,7 +2024,7 @@ class CitationContributorship with _$CitationContributorship {
 @freezed
 class CitationEntry with _$CitationEntry {
   /// [CitationEntry] The Citation Resource enables reference to any knowledge
-  CitationEntry._();
+  const CitationEntry._();
 
   /// [CitationEntry] The Citation Resource enables reference to any knowledge
   /// artifact for purposes of identification and attribution. The Citation Resource
@@ -2147,7 +2147,7 @@ class CitationEntry with _$CitationEntry {
 @freezed
 class CitationAffiliationInfo with _$CitationAffiliationInfo {
   /// [CitationAffiliationInfo] The Citation Resource enables reference to any
-  CitationAffiliationInfo._();
+  const CitationAffiliationInfo._();
 
   /// [CitationAffiliationInfo] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -2233,7 +2233,7 @@ class CitationAffiliationInfo with _$CitationAffiliationInfo {
 @freezed
 class CitationContributionInstance with _$CitationContributionInstance {
   /// [CitationContributionInstance] The Citation Resource enables reference to
-  CitationContributionInstance._();
+  const CitationContributionInstance._();
 
   /// [CitationContributionInstance] The Citation Resource enables reference to
   /// any knowledge artifact for purposes of identification and attribution. The
@@ -2313,7 +2313,7 @@ class CitationContributionInstance with _$CitationContributionInstance {
 @freezed
 class CitationSummary1 with _$CitationSummary1 {
   /// [CitationSummary1] The Citation Resource enables reference to any
-  CitationSummary1._();
+  const CitationSummary1._();
 
   /// [CitationSummary1] The Citation Resource enables reference to any
   /// knowledge artifact for purposes of identification and attribution. The Citation
@@ -2401,7 +2401,7 @@ class CitationSummary1 with _$CitationSummary1 {
 @freezed
 class Evidence with Resource, _$Evidence {
   /// [Evidence] The Evidence resource describes the conditional state
-  Evidence._();
+  const Evidence._();
 
   /// [Evidence] The Evidence resource describes the conditional state
   /// (population and any exposures being compared within the population) and
@@ -2681,7 +2681,7 @@ class Evidence with Resource, _$Evidence {
 @freezed
 class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
   /// [EvidenceVariableDefinition] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
-  EvidenceVariableDefinition._();
+  const EvidenceVariableDefinition._();
 
   /// [EvidenceVariableDefinition] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 
@@ -2755,7 +2755,7 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
 @freezed
 class EvidenceStatistic with _$EvidenceStatistic {
   /// [EvidenceStatistic] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
-  EvidenceStatistic._();
+  const EvidenceStatistic._();
 
   /// [EvidenceStatistic] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 
@@ -2845,7 +2845,7 @@ class EvidenceStatistic with _$EvidenceStatistic {
 @freezed
 class EvidenceSampleSize with _$EvidenceSampleSize {
   /// [EvidenceSampleSize] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
-  EvidenceSampleSize._();
+  const EvidenceSampleSize._();
 
   /// [EvidenceSampleSize] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 
@@ -2924,7 +2924,7 @@ class EvidenceSampleSize with _$EvidenceSampleSize {
 @freezed
 class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
   /// [EvidenceAttributeEstimate] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
-  EvidenceAttributeEstimate._();
+  const EvidenceAttributeEstimate._();
 
   /// [EvidenceAttributeEstimate] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 
@@ -3002,7 +3002,7 @@ class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
 @freezed
 class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
   /// [EvidenceModelCharacteristic] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
-  EvidenceModelCharacteristic._();
+  const EvidenceModelCharacteristic._();
 
   /// [EvidenceModelCharacteristic] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 
@@ -3065,7 +3065,7 @@ class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
 @freezed
 class EvidenceVar with _$EvidenceVar {
   /// [EvidenceVar] The Evidence Resource provides a machine-interpretable
-  EvidenceVar._();
+  const EvidenceVar._();
 
   /// [EvidenceVar] The Evidence Resource provides a machine-interpretable
   /// expression of an evidence concept including the evidence variables
@@ -3139,7 +3139,7 @@ class EvidenceVar with _$EvidenceVar {
 @freezed
 class EvidenceCertainty with _$EvidenceCertainty {
   /// [EvidenceCertainty] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
-  EvidenceCertainty._();
+  const EvidenceCertainty._();
 
   /// [EvidenceCertainty] The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (e.g., population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.
 
@@ -3216,7 +3216,7 @@ class EvidenceCertainty with _$EvidenceCertainty {
 @freezed
 class EvidenceReport with Resource, _$EvidenceReport {
   /// [EvidenceReport] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
-  EvidenceReport._();
+  const EvidenceReport._();
 
   /// [EvidenceReport] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
@@ -3406,7 +3406,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
 @freezed
 class EvidenceReportSubject with _$EvidenceReportSubject {
   /// [EvidenceReportSubject] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
-  EvidenceReportSubject._();
+  const EvidenceReportSubject._();
 
   /// [EvidenceReportSubject] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
@@ -3465,7 +3465,7 @@ class EvidenceReportSubject with _$EvidenceReportSubject {
 @freezed
 class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
   /// [EvidenceReportCharacteristic] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
-  EvidenceReportCharacteristic._();
+  const EvidenceReportCharacteristic._();
 
   /// [EvidenceReportCharacteristic] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
@@ -3548,7 +3548,7 @@ class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
 @freezed
 class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
   /// [EvidenceReportRelatesTo] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
-  EvidenceReportRelatesTo._();
+  const EvidenceReportRelatesTo._();
 
   /// [EvidenceReportRelatesTo] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
@@ -3611,7 +3611,7 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
 @freezed
 class EvidenceReportSection with _$EvidenceReportSection {
   /// [EvidenceReportSection] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
-  EvidenceReportSection._();
+  const EvidenceReportSection._();
 
   /// [EvidenceReportSection] The EvidenceReport Resource is a specialized container for a collection of resources and codeable concepts, adapted to support compositions of Evidence, EvidenceVariable, and Citation resources and related concepts.
 
@@ -3706,7 +3706,7 @@ class EvidenceReportSection with _$EvidenceReportSection {
 @freezed
 class EvidenceVariable with Resource, _$EvidenceVariable {
   /// [EvidenceVariable] The EvidenceVariable resource describes a "PICO"
-  EvidenceVariable._();
+  const EvidenceVariable._();
 
   /// [EvidenceVariable] The EvidenceVariable resource describes a "PICO"
   ///  element that knowledge (evidence, assertion, recommendation) is about.
@@ -3987,7 +3987,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
 @freezed
 class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// [EvidenceVariableCharacteristic] The EvidenceVariable resource describes
-  EvidenceVariableCharacteristic._();
+  const EvidenceVariableCharacteristic._();
 
   /// [EvidenceVariableCharacteristic] The EvidenceVariable resource describes
   /// a "PICO" element that knowledge (evidence, assertion, recommendation) is
@@ -4137,7 +4137,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
 @freezed
 class EvidenceVariableTimeFromStart with _$EvidenceVariableTimeFromStart {
   /// [EvidenceVariableTimeFromStart] The EvidenceVariable resource describes
-  EvidenceVariableTimeFromStart._();
+  const EvidenceVariableTimeFromStart._();
 
   /// [EvidenceVariableTimeFromStart] The EvidenceVariable resource describes
   /// an element that knowledge (Evidence) is about.
@@ -4222,7 +4222,7 @@ class EvidenceVariableTimeFromStart with _$EvidenceVariableTimeFromStart {
 @freezed
 class EvidenceVariableCategory with _$EvidenceVariableCategory {
   /// [EvidenceVariableCategory] The EvidenceVariable resource describes an element that knowledge (Evidence) is about.
-  EvidenceVariableCategory._();
+  const EvidenceVariableCategory._();
 
   /// [EvidenceVariableCategory] The EvidenceVariable resource describes an element that knowledge (Evidence) is about.
 
@@ -4290,7 +4290,7 @@ class EvidenceVariableCategory with _$EvidenceVariableCategory {
 @freezed
 class ResearchDefinition with Resource, _$ResearchDefinition {
   /// [ResearchDefinition] The ResearchDefinition resource describes the
-  ResearchDefinition._();
+  const ResearchDefinition._();
 
   /// [ResearchDefinition] The ResearchDefinition resource describes the
   /// conditional state (population and any exposures being compared within the
@@ -4619,7 +4619,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
 @freezed
 class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// [ResearchElementDefinition] The ResearchElementDefinition resource
-  ResearchElementDefinition._();
+  const ResearchElementDefinition._();
 
   /// [ResearchElementDefinition] The ResearchElementDefinition resource
   /// describes a "PICO" element that knowledge (evidence, assertion,
@@ -4955,7 +4955,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
 @freezed
 class ResearchElementDefinitionCharacteristic
     with _$ResearchElementDefinitionCharacteristic {
-  ResearchElementDefinitionCharacteristic._();
+  const ResearchElementDefinitionCharacteristic._();
 
   /// [ResearchElementDefinitionCharacteristic] The ResearchElementDefinition
   /// resource describes a "PICO" element that knowledge (evidence, assertion,

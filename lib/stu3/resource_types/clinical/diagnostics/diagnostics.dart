@@ -16,7 +16,7 @@ part 'diagnostics.g.dart';
 
 @freezed
 class BodySite with Resource, _$BodySite {
-  BodySite._();
+  const BodySite._();
   const factory BodySite({
     @Default(Stu3ResourceType.BodySite)
     @JsonKey(unknownEnumValue: Stu3ResourceType.BodySite)
@@ -73,7 +73,7 @@ class BodySite with Resource, _$BodySite {
 
 @freezed
 class DiagnosticReport with Resource, _$DiagnosticReport {
-  DiagnosticReport._();
+  const DiagnosticReport._();
   const factory DiagnosticReport({
     @Default(Stu3ResourceType.DiagnosticReport)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DiagnosticReport)
@@ -143,7 +143,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
 
 @freezed
 class DiagnosticReportPerformer with _$DiagnosticReportPerformer {
-  DiagnosticReportPerformer._();
+  const DiagnosticReportPerformer._();
   const factory DiagnosticReportPerformer({
     CodeableConcept? role,
     required Reference actor,
@@ -182,7 +182,7 @@ class DiagnosticReportPerformer with _$DiagnosticReportPerformer {
 
 @freezed
 class DiagnosticReportImage with _$DiagnosticReportImage {
-  DiagnosticReportImage._();
+  const DiagnosticReportImage._();
   const factory DiagnosticReportImage({
     String? comment,
     @JsonKey(name: '_comment') Element? commentElement,
@@ -222,7 +222,7 @@ class DiagnosticReportImage with _$DiagnosticReportImage {
 
 @freezed
 class ImagingManifest with Resource, _$ImagingManifest {
-  ImagingManifest._();
+  const ImagingManifest._();
   const factory ImagingManifest({
     @Default(Stu3ResourceType.ImagingManifest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingManifest)
@@ -278,7 +278,7 @@ class ImagingManifest with Resource, _$ImagingManifest {
 
 @freezed
 class ImagingManifestStudy with _$ImagingManifestStudy {
-  ImagingManifestStudy._();
+  const ImagingManifestStudy._();
   const factory ImagingManifestStudy({
     FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
@@ -320,7 +320,7 @@ class ImagingManifestStudy with _$ImagingManifestStudy {
 
 @freezed
 class ImagingManifestSeries with _$ImagingManifestSeries {
-  ImagingManifestSeries._();
+  const ImagingManifestSeries._();
   const factory ImagingManifestSeries({
     FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
@@ -361,7 +361,7 @@ class ImagingManifestSeries with _$ImagingManifestSeries {
 
 @freezed
 class ImagingManifestInstance with _$ImagingManifestInstance {
-  ImagingManifestInstance._();
+  const ImagingManifestInstance._();
   const factory ImagingManifestInstance({
     String? sopClass,
     @JsonKey(name: '_sopClass') Element? sopClassElement,
@@ -402,7 +402,7 @@ class ImagingManifestInstance with _$ImagingManifestInstance {
 
 @freezed
 class ImagingStudy with Resource, _$ImagingStudy {
-  ImagingStudy._();
+  const ImagingStudy._();
   const factory ImagingStudy({
     @Default(Stu3ResourceType.ImagingStudy)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImagingStudy)
@@ -475,7 +475,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
 
 @freezed
 class ImagingStudySeries with _$ImagingStudySeries {
-  ImagingStudySeries._();
+  const ImagingStudySeries._();
   const factory ImagingStudySeries({
     FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
@@ -530,7 +530,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
 
 @freezed
 class ImagingStudyInstance with _$ImagingStudyInstance {
-  ImagingStudyInstance._();
+  const ImagingStudyInstance._();
   const factory ImagingStudyInstance({
     FhirId? uid,
     @JsonKey(name: '_uid') Element? uidElement,
@@ -575,7 +575,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
 
 @freezed
 class Observation with Resource, _$Observation {
-  Observation._();
+  const Observation._();
   const factory Observation({
     @Default(Stu3ResourceType.Observation)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Observation)
@@ -663,7 +663,7 @@ class Observation with Resource, _$Observation {
 
 @freezed
 class ObservationReferenceRange with _$ObservationReferenceRange {
-  ObservationReferenceRange._();
+  const ObservationReferenceRange._();
   const factory ObservationReferenceRange({
     Quantity? low,
     Quantity? high,
@@ -707,7 +707,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
 
 @freezed
 class ObservationRelated with _$ObservationRelated {
-  ObservationRelated._();
+  const ObservationRelated._();
   const factory ObservationRelated({
     ObservationRelatedType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -747,7 +747,7 @@ class ObservationRelated with _$ObservationRelated {
 
 @freezed
 class ObservationComponent with _$ObservationComponent {
-  ObservationComponent._();
+  const ObservationComponent._();
   const factory ObservationComponent({
     required CodeableConcept code,
     Quantity? valueQuantity,
@@ -801,7 +801,7 @@ class ObservationComponent with _$ObservationComponent {
 
 @freezed
 class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
-  QuestionnaireResponse._();
+  const QuestionnaireResponse._();
   const factory QuestionnaireResponse({
     @Default(Stu3ResourceType.QuestionnaireResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.QuestionnaireResponse)
@@ -862,7 +862,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
 
 @freezed
 class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
-  QuestionnaireResponseItem._();
+  const QuestionnaireResponseItem._();
   const factory QuestionnaireResponseItem({
     String? linkId,
     @JsonKey(name: '_linkId') Element? linkIdElement,
@@ -908,7 +908,7 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
 
 @freezed
 class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
-  QuestionnaireResponseAnswer._();
+  const QuestionnaireResponseAnswer._();
   const factory QuestionnaireResponseAnswer({
     FhirBoolean? valueBoolean,
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
@@ -966,7 +966,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 
 @freezed
 class Sequence with Resource, _$Sequence {
-  Sequence._();
+  const Sequence._();
   const factory Sequence({
     @Default(Stu3ResourceType.Sequence)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Sequence)
@@ -1033,7 +1033,7 @@ class Sequence with Resource, _$Sequence {
 
 @freezed
 class SequenceReferenceSeq with _$SequenceReferenceSeq {
-  SequenceReferenceSeq._();
+  const SequenceReferenceSeq._();
   const factory SequenceReferenceSeq({
     CodeableConcept? chromosome,
     String? genomeBuild,
@@ -1083,7 +1083,7 @@ class SequenceReferenceSeq with _$SequenceReferenceSeq {
 
 @freezed
 class SequenceVariant with _$SequenceVariant {
-  SequenceVariant._();
+  const SequenceVariant._();
   const factory SequenceVariant({
     FhirDecimal? start,
     @JsonKey(name: '_start') Element? startElement,
@@ -1131,7 +1131,7 @@ class SequenceVariant with _$SequenceVariant {
 
 @freezed
 class SequenceQuality with _$SequenceQuality {
-  SequenceQuality._();
+  const SequenceQuality._();
   const factory SequenceQuality({
     SequenceQualityType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -1193,7 +1193,7 @@ class SequenceQuality with _$SequenceQuality {
 
 @freezed
 class SequenceRepository with _$SequenceRepository {
-  SequenceRepository._();
+  const SequenceRepository._();
   const factory SequenceRepository({
     SequenceRepositoryType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -1242,7 +1242,7 @@ class SequenceRepository with _$SequenceRepository {
 
 @freezed
 class Specimen with Resource, _$Specimen {
-  Specimen._();
+  const Specimen._();
   const factory Specimen({
     @Default(Stu3ResourceType.Specimen)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Specimen)
@@ -1304,7 +1304,7 @@ class Specimen with Resource, _$Specimen {
 
 @freezed
 class SpecimenCollection with _$SpecimenCollection {
-  SpecimenCollection._();
+  const SpecimenCollection._();
   const factory SpecimenCollection({
     Reference? collector,
     FhirDateTime? collectedDateTime,
@@ -1348,7 +1348,7 @@ class SpecimenCollection with _$SpecimenCollection {
 
 @freezed
 class SpecimenProcessing with _$SpecimenProcessing {
-  SpecimenProcessing._();
+  const SpecimenProcessing._();
   const factory SpecimenProcessing({
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -1392,7 +1392,7 @@ class SpecimenProcessing with _$SpecimenProcessing {
 
 @freezed
 class SpecimenContainer with _$SpecimenContainer {
-  SpecimenContainer._();
+  const SpecimenContainer._();
   const factory SpecimenContainer({
     List<Identifier>? identifier,
     String? description,

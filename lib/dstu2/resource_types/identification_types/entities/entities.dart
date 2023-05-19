@@ -16,7 +16,7 @@ part 'entities.g.dart';
 
 @freezed
 class Location with Resource, _$Location {
-  Location._();
+  const Location._();
   const factory Location({
     @Default(Dstu2ResourceType.Location)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Location)
@@ -80,7 +80,7 @@ class Location with Resource, _$Location {
 
 @freezed
 class LocationPosition with _$LocationPosition {
-  LocationPosition._();
+  const LocationPosition._();
   const factory LocationPosition({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -126,7 +126,7 @@ class LocationPosition with _$LocationPosition {
 
 @freezed
 class Substance with Resource, _$Substance {
-  Substance._();
+  const Substance._();
   const factory Substance({
     @Default(Dstu2ResourceType.Substance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Substance)
@@ -181,7 +181,7 @@ class Substance with Resource, _$Substance {
 
 @freezed
 class SubstanceInstance with _$SubstanceInstance {
-  SubstanceInstance._();
+  const SubstanceInstance._();
   const factory SubstanceInstance({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -225,7 +225,7 @@ class SubstanceInstance with _$SubstanceInstance {
 
 @freezed
 class SubstanceIngredient with _$SubstanceIngredient {
-  SubstanceIngredient._();
+  const SubstanceIngredient._();
   const factory SubstanceIngredient({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -267,7 +267,7 @@ class SubstanceIngredient with _$SubstanceIngredient {
 
 @freezed
 class Person with Resource, _$Person {
-  Person._();
+  const Person._();
   const factory Person({
     @Default(Dstu2ResourceType.Person)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Person)
@@ -327,7 +327,7 @@ class Person with Resource, _$Person {
 
 @freezed
 class PersonLink with _$PersonLink {
-  PersonLink._();
+  const PersonLink._();
   const factory PersonLink({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -370,7 +370,7 @@ class PersonLink with _$PersonLink {
 
 @freezed
 class Contract with Resource, _$Contract {
-  Contract._();
+  const Contract._();
   const factory Contract({
     @Default(Dstu2ResourceType.Contract)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Contract)
@@ -438,7 +438,7 @@ class Contract with Resource, _$Contract {
 
 @freezed
 class ContractActor with _$ContractActor {
-  ContractActor._();
+  const ContractActor._();
   const factory ContractActor({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -480,7 +480,7 @@ class ContractActor with _$ContractActor {
 
 @freezed
 class ContractValuedItem with _$ContractValuedItem {
-  ContractValuedItem._();
+  const ContractValuedItem._();
   const factory ContractValuedItem({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -533,7 +533,7 @@ class ContractValuedItem with _$ContractValuedItem {
 
 @freezed
 class ContractSigner with _$ContractSigner {
-  ContractSigner._();
+  const ContractSigner._();
   const factory ContractSigner({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -576,7 +576,7 @@ class ContractSigner with _$ContractSigner {
 
 @freezed
 class ContractTerm with _$ContractTerm {
-  ContractTerm._();
+  const ContractTerm._();
   const factory ContractTerm({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -630,7 +630,7 @@ class ContractTerm with _$ContractTerm {
 
 @freezed
 class ContractTermActor with _$ContractTermActor {
-  ContractTermActor._();
+  const ContractTermActor._();
   const factory ContractTermActor({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -672,7 +672,7 @@ class ContractTermActor with _$ContractTermActor {
 
 @freezed
 class ContractFriendly with _$ContractFriendly {
-  ContractFriendly._();
+  const ContractFriendly._();
   const factory ContractFriendly({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -714,7 +714,7 @@ class ContractFriendly with _$ContractFriendly {
 
 @freezed
 class ContractLegal with _$ContractLegal {
-  ContractLegal._();
+  const ContractLegal._();
   const factory ContractLegal({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -756,7 +756,7 @@ class ContractLegal with _$ContractLegal {
 
 @freezed
 class ContractRule with _$ContractRule {
-  ContractRule._();
+  const ContractRule._();
   const factory ContractRule({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

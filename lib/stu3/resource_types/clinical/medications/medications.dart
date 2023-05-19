@@ -16,7 +16,7 @@ part 'medications.g.dart';
 
 @freezed
 class Immunization with Resource, _$Immunization {
-  Immunization._();
+  const Immunization._();
   const factory Immunization({
     @Default(Stu3ResourceType.Immunization)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Immunization)
@@ -91,7 +91,7 @@ class Immunization with Resource, _$Immunization {
 
 @freezed
 class ImmunizationPractitioner with _$ImmunizationPractitioner {
-  ImmunizationPractitioner._();
+  const ImmunizationPractitioner._();
   const factory ImmunizationPractitioner({
     CodeableConcept? role,
     required Reference actor,
@@ -130,7 +130,7 @@ class ImmunizationPractitioner with _$ImmunizationPractitioner {
 
 @freezed
 class ImmunizationExplanation with _$ImmunizationExplanation {
-  ImmunizationExplanation._();
+  const ImmunizationExplanation._();
   const factory ImmunizationExplanation({
     List<CodeableConcept>? reason,
     List<CodeableConcept>? reasonNotGiven,
@@ -169,7 +169,7 @@ class ImmunizationExplanation with _$ImmunizationExplanation {
 
 @freezed
 class ImmunizationReaction with _$ImmunizationReaction {
-  ImmunizationReaction._();
+  const ImmunizationReaction._();
   const factory ImmunizationReaction({
     FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -211,7 +211,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
 
 @freezed
 class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol {
-  ImmunizationVaccinationProtocol._();
+  const ImmunizationVaccinationProtocol._();
   const factory ImmunizationVaccinationProtocol({
     FhirDecimal? doseSequence,
     @JsonKey(name: '_doseSequence') Element? doseSequenceElement,
@@ -261,7 +261,7 @@ class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol {
 
 @freezed
 class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
-  ImmunizationRecommendation._();
+  const ImmunizationRecommendation._();
   const factory ImmunizationRecommendation({
     @Default(Stu3ResourceType.ImmunizationRecommendation)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImmunizationRecommendation)
@@ -313,7 +313,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
 @freezed
 class ImmunizationRecommendationRecommendation
     with _$ImmunizationRecommendationRecommendation {
-  ImmunizationRecommendationRecommendation._();
+  const ImmunizationRecommendationRecommendation._();
   const factory ImmunizationRecommendationRecommendation({
     FhirDate? date,
     @JsonKey(name: '_date') Element? dateElement,
@@ -351,7 +351,7 @@ class ImmunizationRecommendationRecommendation
 @freezed
 class ImmunizationRecommendationDateCriterion
     with _$ImmunizationRecommendationDateCriterion {
-  ImmunizationRecommendationDateCriterion._();
+  const ImmunizationRecommendationDateCriterion._();
   const factory ImmunizationRecommendationDateCriterion({
     required CodeableConcept code,
     String? value,
@@ -381,7 +381,7 @@ class ImmunizationRecommendationDateCriterion
 @freezed
 class ImmunizationRecommendationProtocol
     with _$ImmunizationRecommendationProtocol {
-  ImmunizationRecommendationProtocol._();
+  const ImmunizationRecommendationProtocol._();
   const factory ImmunizationRecommendationProtocol({
     FhirDecimal? doseSequence,
     @JsonKey(name: '_doseSequence') Element? doseSequenceElement,
@@ -414,7 +414,7 @@ class ImmunizationRecommendationProtocol
 
 @freezed
 class Medication with Resource, _$Medication {
-  Medication._();
+  const Medication._();
   const factory Medication({
     @Default(Stu3ResourceType.Medication)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Medication)
@@ -474,7 +474,7 @@ class Medication with Resource, _$Medication {
 
 @freezed
 class MedicationIngredient with _$MedicationIngredient {
-  MedicationIngredient._();
+  const MedicationIngredient._();
   const factory MedicationIngredient({
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
@@ -516,7 +516,7 @@ class MedicationIngredient with _$MedicationIngredient {
 
 @freezed
 class MedicationPackage with _$MedicationPackage {
-  MedicationPackage._();
+  const MedicationPackage._();
   const factory MedicationPackage({
     CodeableConcept? container,
     List<MedicationContent>? content,
@@ -556,7 +556,7 @@ class MedicationPackage with _$MedicationPackage {
 
 @freezed
 class MedicationContent with _$MedicationContent {
-  MedicationContent._();
+  const MedicationContent._();
   const factory MedicationContent({
     CodeableConcept? itemCodeableConcept,
     Reference? itemReference,
@@ -596,7 +596,7 @@ class MedicationContent with _$MedicationContent {
 
 @freezed
 class MedicationBatch with _$MedicationBatch {
-  MedicationBatch._();
+  const MedicationBatch._();
   const factory MedicationBatch({
     String? lotNumber,
     @JsonKey(name: '_lotNumber') Element? lotNumberElement,
@@ -637,7 +637,7 @@ class MedicationBatch with _$MedicationBatch {
 
 @freezed
 class MedicationAdministration with Resource, _$MedicationAdministration {
-  MedicationAdministration._();
+  const MedicationAdministration._();
   const factory MedicationAdministration({
     @Default(Stu3ResourceType.MedicationAdministration)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationAdministration)
@@ -711,7 +711,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
 @freezed
 class MedicationAdministrationPerformer
     with _$MedicationAdministrationPerformer {
-  MedicationAdministrationPerformer._();
+  const MedicationAdministrationPerformer._();
   const factory MedicationAdministrationPerformer({
     required Reference actor,
     Reference? onBehalfOf,
@@ -739,7 +739,7 @@ class MedicationAdministrationPerformer
 
 @freezed
 class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
-  MedicationAdministrationDosage._();
+  const MedicationAdministrationDosage._();
   const factory MedicationAdministrationDosage({
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -785,7 +785,7 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
 
 @freezed
 class MedicationDispense with Resource, _$MedicationDispense {
-  MedicationDispense._();
+  const MedicationDispense._();
   const factory MedicationDispense({
     @Default(Stu3ResourceType.MedicationDispense)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationDispense)
@@ -863,7 +863,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
 
 @freezed
 class MedicationDispensePerformer with _$MedicationDispensePerformer {
-  MedicationDispensePerformer._();
+  const MedicationDispensePerformer._();
   const factory MedicationDispensePerformer({
     required Reference actor,
     Reference? onBehalfOf,
@@ -902,7 +902,7 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
 
 @freezed
 class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
-  MedicationDispenseSubstitution._();
+  const MedicationDispenseSubstitution._();
   const factory MedicationDispenseSubstitution({
     FhirBoolean? wasSubstituted,
     @JsonKey(name: '_wasSubstituted') Element? wasSubstitutedElement,
@@ -945,7 +945,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
 
 @freezed
 class MedicationRequest with Resource, _$MedicationRequest {
-  MedicationRequest._();
+  const MedicationRequest._();
   const factory MedicationRequest({
     @Default(Stu3ResourceType.MedicationRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationRequest)
@@ -1022,7 +1022,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
 
 @freezed
 class MedicationRequestRequester with _$MedicationRequestRequester {
-  MedicationRequestRequester._();
+  const MedicationRequestRequester._();
   const factory MedicationRequestRequester({
     required Reference agent,
     Reference? onBehalfOf,
@@ -1061,7 +1061,7 @@ class MedicationRequestRequester with _$MedicationRequestRequester {
 
 @freezed
 class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
-  MedicationRequestDispenseRequest._();
+  const MedicationRequestDispenseRequest._();
   const factory MedicationRequestDispenseRequest({
     Period? validityPeriod,
     FhirDecimal? numberOfRepeatsAllowed,
@@ -1094,7 +1094,7 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
 
 @freezed
 class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
-  MedicationRequestSubstitution._();
+  const MedicationRequestSubstitution._();
   const factory MedicationRequestSubstitution({
     FhirBoolean? allowed,
     @JsonKey(name: '_allowed') Element? allowedElement,
@@ -1134,7 +1134,7 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
 
 @freezed
 class MedicationStatement with Resource, _$MedicationStatement {
-  MedicationStatement._();
+  const MedicationStatement._();
   const factory MedicationStatement({
     @Default(Stu3ResourceType.MedicationStatement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationStatement)

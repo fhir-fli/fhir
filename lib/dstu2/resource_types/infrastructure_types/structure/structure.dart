@@ -16,7 +16,7 @@ part 'structure.g.dart';
 
 @freezed
 class Media with Resource, _$Media {
-  Media._();
+  const Media._();
   const factory Media({
     @Default(Dstu2ResourceType.Media)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
@@ -79,7 +79,7 @@ class Media with Resource, _$Media {
 
 @freezed
 class Binary with Resource, _$Binary {
-  Binary._();
+  const Binary._();
   const factory Binary({
     @Default(Dstu2ResourceType.Binary)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
@@ -91,6 +91,10 @@ class Binary with Resource, _$Binary {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     FhirCode? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
     FhirBase64Binary? content,
@@ -125,7 +129,7 @@ class Binary with Resource, _$Binary {
 
 @freezed
 class Bundle with Resource, _$Bundle {
-  Bundle._();
+  const Bundle._();
   const factory Bundle({
     @Default(Dstu2ResourceType.Bundle)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
@@ -137,6 +141,10 @@ class Bundle with Resource, _$Bundle {
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
     @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: BundleType.unknown) required BundleType type,
     @JsonKey(name: '_type') Element? typeElement,
     FhirUnsignedInt? total,
@@ -175,7 +183,7 @@ class Bundle with Resource, _$Bundle {
 
 @freezed
 class BundleLink with _$BundleLink {
-  BundleLink._();
+  const BundleLink._();
   const factory BundleLink({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -220,7 +228,7 @@ class BundleLink with _$BundleLink {
 
 @freezed
 class BundleEntry with _$BundleEntry {
-  BundleEntry._();
+  const BundleEntry._();
   const factory BundleEntry({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -311,7 +319,7 @@ class BundleEntry with _$BundleEntry {
 
 @freezed
 class BundleEntrySearch with _$BundleEntrySearch {
-  BundleEntrySearch._();
+  const BundleEntrySearch._();
   const factory BundleEntrySearch({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -356,7 +364,7 @@ class BundleEntrySearch with _$BundleEntrySearch {
 
 @freezed
 class BundleEntryRequest with _$BundleEntryRequest {
-  BundleEntryRequest._();
+  const BundleEntryRequest._();
   const factory BundleEntryRequest({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -410,7 +418,7 @@ class BundleEntryRequest with _$BundleEntryRequest {
 
 @freezed
 class BundleEntryResponse with _$BundleEntryResponse {
-  BundleEntryResponse._();
+  const BundleEntryResponse._();
   const factory BundleEntryResponse({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -459,7 +467,7 @@ class BundleEntryResponse with _$BundleEntryResponse {
 
 @freezed
 class Basic with Resource, _$Basic {
-  Basic._();
+  const Basic._();
   const factory Basic({
     @Default(Dstu2ResourceType.Basic)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)

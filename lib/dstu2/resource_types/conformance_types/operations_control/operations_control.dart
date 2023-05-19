@@ -16,7 +16,7 @@ part 'operations_control.g.dart';
 
 @freezed
 class Conformance with Resource, _$Conformance {
-  Conformance._();
+  const Conformance._();
   const factory Conformance({
     @Default(Dstu2ResourceType.Conformance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
@@ -25,7 +25,9 @@ class Conformance with Resource, _$Conformance {
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -89,7 +91,7 @@ class Conformance with Resource, _$Conformance {
 
 @freezed
 class CapabilityStatement with Resource, _$CapabilityStatement {
-  CapabilityStatement._();
+  const CapabilityStatement._();
   const factory CapabilityStatement({
     @Default(Dstu2ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
@@ -98,7 +100,9 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -162,7 +166,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
 
 @freezed
 class ConformanceContact with _$ConformanceContact {
-  ConformanceContact._();
+  const ConformanceContact._();
   const factory ConformanceContact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -204,7 +208,7 @@ class ConformanceContact with _$ConformanceContact {
 
 @freezed
 class ConformanceSoftware with _$ConformanceSoftware {
-  ConformanceSoftware._();
+  const ConformanceSoftware._();
   const factory ConformanceSoftware({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -247,7 +251,7 @@ class ConformanceSoftware with _$ConformanceSoftware {
 
 @freezed
 class ConformanceImplementation with _$ConformanceImplementation {
-  ConformanceImplementation._();
+  const ConformanceImplementation._();
   const factory ConformanceImplementation({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -289,7 +293,7 @@ class ConformanceImplementation with _$ConformanceImplementation {
 
 @freezed
 class ConformanceRest with _$ConformanceRest {
-  ConformanceRest._();
+  const ConformanceRest._();
   const factory ConformanceRest({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -341,7 +345,7 @@ class ConformanceRest with _$ConformanceRest {
 
 @freezed
 class ConformanceMessaging with _$ConformanceMessaging {
-  ConformanceMessaging._();
+  const ConformanceMessaging._();
   const factory ConformanceMessaging({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -386,7 +390,7 @@ class ConformanceMessaging with _$ConformanceMessaging {
 
 @freezed
 class ConformanceDocument with _$ConformanceDocument {
-  ConformanceDocument._();
+  const ConformanceDocument._();
   const factory ConformanceDocument({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -430,7 +434,7 @@ class ConformanceDocument with _$ConformanceDocument {
 
 @freezed
 class ConformanceRestSecurity with _$ConformanceRestSecurity {
-  ConformanceRestSecurity._();
+  const ConformanceRestSecurity._();
   const factory ConformanceRestSecurity({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -475,7 +479,7 @@ class ConformanceRestSecurity with _$ConformanceRestSecurity {
 
 @freezed
 class ConformanceRestResource with _$ConformanceRestResource {
-  ConformanceRestResource._();
+  const ConformanceRestResource._();
   const factory ConformanceRestResource({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -535,7 +539,7 @@ class ConformanceRestResource with _$ConformanceRestResource {
 
 @freezed
 class ConformanceResourceInteraction with _$ConformanceResourceInteraction {
-  ConformanceResourceInteraction._();
+  const ConformanceResourceInteraction._();
   const factory ConformanceResourceInteraction({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -579,7 +583,7 @@ class ConformanceResourceInteraction with _$ConformanceResourceInteraction {
 
 @freezed
 class ConformanceRestOperation with _$ConformanceRestOperation {
-  ConformanceRestOperation._();
+  const ConformanceRestOperation._();
   const factory ConformanceRestOperation({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -622,7 +626,7 @@ class ConformanceRestOperation with _$ConformanceRestOperation {
 
 @freezed
 class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint {
-  ConformanceMessagingEndpoint._();
+  const ConformanceMessagingEndpoint._();
   const factory ConformanceMessagingEndpoint({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -665,7 +669,7 @@ class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint {
 
 @freezed
 class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
-  ConformanceMessagingEvent._();
+  const ConformanceMessagingEvent._();
   const factory ConformanceMessagingEvent({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -713,7 +717,7 @@ class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
 
 @freezed
 class ConformanceSecurityCertificate with _$ConformanceSecurityCertificate {
-  ConformanceSecurityCertificate._();
+  const ConformanceSecurityCertificate._();
   const factory ConformanceSecurityCertificate({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -757,7 +761,7 @@ class ConformanceSecurityCertificate with _$ConformanceSecurityCertificate {
 
 @freezed
 class ConformanceRestInteraction with _$ConformanceRestInteraction {
-  ConformanceRestInteraction._();
+  const ConformanceRestInteraction._();
   const factory ConformanceRestInteraction({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -800,7 +804,7 @@ class ConformanceRestInteraction with _$ConformanceRestInteraction {
 
 @freezed
 class ConformanceResourceSearchParam with _$ConformanceResourceSearchParam {
-  ConformanceResourceSearchParam._();
+  const ConformanceResourceSearchParam._();
   const factory ConformanceResourceSearchParam({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -850,7 +854,7 @@ class ConformanceResourceSearchParam with _$ConformanceResourceSearchParam {
 
 @freezed
 class OperationDefinition with Resource, _$OperationDefinition {
-  OperationDefinition._();
+  const OperationDefinition._();
   const factory OperationDefinition({
     @Default(Dstu2ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
@@ -859,7 +863,9 @@ class OperationDefinition with Resource, _$OperationDefinition {
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -918,7 +924,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
 
 @freezed
 class OperationDefinitionContact with _$OperationDefinitionContact {
-  OperationDefinitionContact._();
+  const OperationDefinitionContact._();
   const factory OperationDefinitionContact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -960,7 +966,7 @@ class OperationDefinitionContact with _$OperationDefinitionContact {
 
 @freezed
 class OperationDefinitionParameter with _$OperationDefinitionParameter {
-  OperationDefinitionParameter._();
+  const OperationDefinitionParameter._();
   const factory OperationDefinitionParameter({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1011,7 +1017,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
 @freezed
 class OperationDefinitionParameterBinding
     with _$OperationDefinitionParameterBinding {
-  OperationDefinitionParameterBinding._();
+  const OperationDefinitionParameterBinding._();
   const factory OperationDefinitionParameterBinding({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1047,7 +1053,7 @@ class OperationDefinitionParameterBinding
 
 @freezed
 class SearchParameter with Resource, _$SearchParameter {
-  SearchParameter._();
+  const SearchParameter._();
   const factory SearchParameter({
     @Default(Dstu2ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
@@ -1056,7 +1062,9 @@ class SearchParameter with Resource, _$SearchParameter {
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1112,7 +1120,7 @@ class SearchParameter with Resource, _$SearchParameter {
 
 @freezed
 class SearchParameterContact with _$SearchParameterContact {
-  SearchParameterContact._();
+  const SearchParameterContact._();
   const factory SearchParameterContact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

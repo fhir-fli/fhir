@@ -16,7 +16,7 @@ part 'billing.g.dart';
 
 @freezed
 class Account with Resource, _$Account {
-  Account._();
+  const Account._();
   const factory Account({
     @Default(Dstu2ResourceType.Account)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
@@ -78,7 +78,7 @@ class Account with Resource, _$Account {
 
 @freezed
 class Claim with Resource, _$Claim {
-  Claim._();
+  const Claim._();
   const factory Claim({
     @Default(Dstu2ResourceType.Claim)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
@@ -155,7 +155,7 @@ class Claim with Resource, _$Claim {
 
 @freezed
 class ClaimPayee with _$ClaimPayee {
-  ClaimPayee._();
+  const ClaimPayee._();
   const factory ClaimPayee({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -199,7 +199,7 @@ class ClaimPayee with _$ClaimPayee {
 
 @freezed
 class ClaimDiagnosis with _$ClaimDiagnosis {
-  ClaimDiagnosis._();
+  const ClaimDiagnosis._();
   const factory ClaimDiagnosis({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -242,7 +242,7 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
 
 @freezed
 class ClaimCoverage with _$ClaimCoverage {
-  ClaimCoverage._();
+  const ClaimCoverage._();
   const factory ClaimCoverage({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -290,7 +290,7 @@ class ClaimCoverage with _$ClaimCoverage {
 
 @freezed
 class ClaimItem with _$ClaimItem {
-  ClaimItem._();
+  const ClaimItem._();
   const factory ClaimItem({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -350,7 +350,7 @@ class ClaimItem with _$ClaimItem {
 
 @freezed
 class ClaimItemDetail with _$ClaimItemDetail {
-  ClaimItemDetail._();
+  const ClaimItemDetail._();
   const factory ClaimItemDetail({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -402,7 +402,7 @@ class ClaimItemDetail with _$ClaimItemDetail {
 
 @freezed
 class ClaimDetailSubDetail with _$ClaimDetailSubDetail {
-  ClaimDetailSubDetail._();
+  const ClaimDetailSubDetail._();
   const factory ClaimDetailSubDetail({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -453,7 +453,7 @@ class ClaimDetailSubDetail with _$ClaimDetailSubDetail {
 
 @freezed
 class ClaimItemProsthesis with _$ClaimItemProsthesis {
-  ClaimItemProsthesis._();
+  const ClaimItemProsthesis._();
   const factory ClaimItemProsthesis({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -496,7 +496,7 @@ class ClaimItemProsthesis with _$ClaimItemProsthesis {
 
 @freezed
 class ClaimMissingTeeth with _$ClaimMissingTeeth {
-  ClaimMissingTeeth._();
+  const ClaimMissingTeeth._();
   const factory ClaimMissingTeeth({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -539,7 +539,7 @@ class ClaimMissingTeeth with _$ClaimMissingTeeth {
 
 @freezed
 class ClaimResponse with Resource, _$ClaimResponse {
-  ClaimResponse._();
+  const ClaimResponse._();
   const factory ClaimResponse({
     @Default(Dstu2ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
@@ -618,7 +618,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
 
 @freezed
 class ClaimResponseItem with _$ClaimResponseItem {
-  ClaimResponseItem._();
+  const ClaimResponseItem._();
   const factory ClaimResponseItem({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -664,7 +664,7 @@ class ClaimResponseItem with _$ClaimResponseItem {
 
 @freezed
 class ClaimResponseItemAdjudication with _$ClaimResponseItemAdjudication {
-  ClaimResponseItemAdjudication._();
+  const ClaimResponseItemAdjudication._();
   const factory ClaimResponseItemAdjudication({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -708,7 +708,7 @@ class ClaimResponseItemAdjudication with _$ClaimResponseItemAdjudication {
 
 @freezed
 class ClaimResponseItemDetail with _$ClaimResponseItemDetail {
-  ClaimResponseItemDetail._();
+  const ClaimResponseItemDetail._();
   const factory ClaimResponseItemDetail({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -751,7 +751,7 @@ class ClaimResponseItemDetail with _$ClaimResponseItemDetail {
 
 @freezed
 class ClaimResponseDetailSubDetail with _$ClaimResponseDetailSubDetail {
-  ClaimResponseDetailSubDetail._();
+  const ClaimResponseDetailSubDetail._();
   const factory ClaimResponseDetailSubDetail({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -793,7 +793,7 @@ class ClaimResponseDetailSubDetail with _$ClaimResponseDetailSubDetail {
 
 @freezed
 class ClaimResponseAddItem with _$ClaimResponseAddItem {
-  ClaimResponseAddItem._();
+  const ClaimResponseAddItem._();
   const factory ClaimResponseAddItem({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -839,7 +839,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
 
 @freezed
 class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail {
-  ClaimResponseAddItemDetail._();
+  const ClaimResponseAddItemDetail._();
   const factory ClaimResponseAddItemDetail({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -882,7 +882,7 @@ class ClaimResponseAddItemDetail with _$ClaimResponseAddItemDetail {
 
 @freezed
 class ClaimResponseError with _$ClaimResponseError {
-  ClaimResponseError._();
+  const ClaimResponseError._();
   const factory ClaimResponseError({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -926,7 +926,7 @@ class ClaimResponseError with _$ClaimResponseError {
 
 @freezed
 class ClaimResponseNote with _$ClaimResponseNote {
-  ClaimResponseNote._();
+  const ClaimResponseNote._();
   const factory ClaimResponseNote({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -972,7 +972,7 @@ class ClaimResponseNote with _$ClaimResponseNote {
 
 @freezed
 class ClaimResponseCoverage with _$ClaimResponseCoverage {
-  ClaimResponseCoverage._();
+  const ClaimResponseCoverage._();
   const factory ClaimResponseCoverage({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

@@ -17,7 +17,7 @@ part 'summary.g.dart';
 @freezed
 class AdverseEvent with Resource, _$AdverseEvent {
   /// [AdverseEvent] Actual or  potential/avoided event causing unintended
-  AdverseEvent._();
+  const AdverseEvent._();
 
   /// [AdverseEvent] Actual or  potential/avoided event causing unintended
   /// physical injury resulting from or contributed to by medical care, a
@@ -219,7 +219,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
 @freezed
 class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   /// [AdverseEventSuspectEntity] Actual or  potential/avoided event causing
-  AdverseEventSuspectEntity._();
+  const AdverseEventSuspectEntity._();
 
   /// [AdverseEventSuspectEntity] Actual or  potential/avoided event causing
   /// unintended physical injury resulting from or contributed to by medical
@@ -299,7 +299,7 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
 @freezed
 class AdverseEventCausality with _$AdverseEventCausality {
   /// [AdverseEventCausality] Actual or  potential/avoided event causing
-  AdverseEventCausality._();
+  const AdverseEventCausality._();
 
   /// [AdverseEventCausality] Actual or  potential/avoided event causing
   /// unintended physical injury resulting from or contributed to by medical
@@ -387,7 +387,7 @@ class AdverseEventCausality with _$AdverseEventCausality {
 @freezed
 class AllergyIntolerance with Resource, _$AllergyIntolerance {
   /// [AllergyIntolerance] Risk of harmful or undesirable, physiological
-  AllergyIntolerance._();
+  const AllergyIntolerance._();
 
   /// [AllergyIntolerance] Risk of harmful or undesirable, physiological
   /// response which is unique to an individual and associated with exposure to
@@ -608,7 +608,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
 @freezed
 class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   /// [AllergyIntoleranceReaction] Risk of harmful or undesirable,
-  AllergyIntoleranceReaction._();
+  const AllergyIntoleranceReaction._();
 
   /// [AllergyIntoleranceReaction] Risk of harmful or undesirable,
   /// physiological response which is unique to an individual and associated
@@ -723,7 +723,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
 @freezed
 class ClinicalImpression with Resource, _$ClinicalImpression {
   /// [ClinicalImpression] A record of a clinical assessment performed to
-  ClinicalImpression._();
+  const ClinicalImpression._();
 
   /// [ClinicalImpression] A record of a clinical assessment performed to
   /// determine what problem(s) may affect the patient and before planning the
@@ -936,7 +936,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
 @freezed
 class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
   /// [ClinicalImpressionInvestigation] A record of a clinical assessment
-  ClinicalImpressionInvestigation._();
+  const ClinicalImpressionInvestigation._();
 
   /// [ClinicalImpressionInvestigation] A record of a clinical assessment
   /// performed to determine what problem(s) may affect the patient and before
@@ -1021,7 +1021,7 @@ class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
 @freezed
 class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   /// [ClinicalImpressionFinding] A record of a clinical assessment performed
-  ClinicalImpressionFinding._();
+  const ClinicalImpressionFinding._();
 
   /// [ClinicalImpressionFinding] A record of a clinical assessment performed
   /// to determine what problem(s) may affect the patient and before planning
@@ -1110,7 +1110,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
 @freezed
 class Condition with Resource, _$Condition {
   /// [Condition] A clinical condition, problem, diagnosis, or other event,
-  Condition._();
+  const Condition._();
 
   /// [Condition] A clinical condition, problem, diagnosis, or other event,
   /// situation, issue, or clinical concept that has risen to a level of
@@ -1340,7 +1340,7 @@ class Condition with Resource, _$Condition {
 @freezed
 class ConditionStage with _$ConditionStage {
   /// [ConditionStage] A clinical condition, problem, diagnosis, or other
-  ConditionStage._();
+  const ConditionStage._();
 
   /// [ConditionStage] A clinical condition, problem, diagnosis, or other
   /// event, situation, issue, or clinical concept that has risen to a level of
@@ -1421,7 +1421,7 @@ class ConditionStage with _$ConditionStage {
 @freezed
 class ConditionEvidence with _$ConditionEvidence {
   /// [ConditionEvidence] A clinical condition, problem, diagnosis, or other
-  ConditionEvidence._();
+  const ConditionEvidence._();
 
   /// [ConditionEvidence] A clinical condition, problem, diagnosis, or other
   /// event, situation, issue, or clinical concept that has risen to a level of
@@ -1499,7 +1499,7 @@ class ConditionEvidence with _$ConditionEvidence {
 @freezed
 class DetectedIssue with Resource, _$DetectedIssue {
   /// [DetectedIssue] Indicates an actual or potential clinical issue with or
-  DetectedIssue._();
+  const DetectedIssue._();
 
   /// [DetectedIssue] Indicates an actual or potential clinical issue with or
   /// between one or more active or proposed clinical actions for a patient;
@@ -1675,7 +1675,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
 @freezed
 class DetectedIssueEvidence with _$DetectedIssueEvidence {
   /// [DetectedIssueEvidence] Indicates an actual or potential clinical issue
-  DetectedIssueEvidence._();
+  const DetectedIssueEvidence._();
 
   /// [DetectedIssueEvidence] Indicates an actual or potential clinical issue
   /// with or between one or more active or proposed clinical actions for a
@@ -1753,7 +1753,7 @@ class DetectedIssueEvidence with _$DetectedIssueEvidence {
 @freezed
 class DetectedIssueMitigation with _$DetectedIssueMitigation {
   /// [DetectedIssueMitigation] Indicates an actual or potential clinical
-  DetectedIssueMitigation._();
+  const DetectedIssueMitigation._();
 
   /// [DetectedIssueMitigation] Indicates an actual or potential clinical
   /// issue with or between one or more active or proposed clinical actions for
@@ -1839,7 +1839,7 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
 @freezed
 class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   /// [FamilyMemberHistory] Significant health conditions for a person related
-  FamilyMemberHistory._();
+  const FamilyMemberHistory._();
 
   /// [FamilyMemberHistory] Significant health conditions for a person related
   ///  to the patient relevant in the context of care for the patient.
@@ -2083,7 +2083,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
 @freezed
 class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   /// [FamilyMemberHistoryCondition] Significant health conditions for a
-  FamilyMemberHistoryCondition._();
+  const FamilyMemberHistoryCondition._();
 
   /// [FamilyMemberHistoryCondition] Significant health conditions for a
   /// person related to the patient relevant in the context of care for the
@@ -2198,7 +2198,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
 @freezed
 class Procedure with Resource, _$Procedure {
   /// [Procedure] An action that is or was performed on or for a patient. This
-  Procedure._();
+  const Procedure._();
 
   /// [Procedure] An action that is or was performed on or for a patient. This
   /// can be a physical intervention like an operation, or less invasive like
@@ -2461,7 +2461,7 @@ class Procedure with Resource, _$Procedure {
 @freezed
 class ProcedurePerformer with _$ProcedurePerformer {
   /// [ProcedurePerformer] An action that is or was performed on or for a
-  ProcedurePerformer._();
+  const ProcedurePerformer._();
 
   /// [ProcedurePerformer] An action that is or was performed on or for a
   /// patient. This can be a physical intervention like an operation, or less
@@ -2542,7 +2542,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
 @freezed
 class ProcedureFocalDevice with _$ProcedureFocalDevice {
   /// [ProcedureFocalDevice] An action that is or was performed on or for a
-  ProcedureFocalDevice._();
+  const ProcedureFocalDevice._();
 
   /// [ProcedureFocalDevice] An action that is or was performed on or for a
   /// patient. This can be a physical intervention like an operation, or less

@@ -513,25 +513,27 @@ _$_Parameters _$$_ParametersFromJson(Map<String, dynamic> json) =>
       languageElement: json['_language'] == null
           ? null
           : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
       parameter: (json['parameter'] as List<dynamic>?)
           ?.map((e) => ParametersParameter.fromJson(e as Map<String, dynamic>))
           .toList(),
-    )
-      ..text = json['text'] == null
-          ? null
-          : Narrative.fromJson(json['text'] as Map<String, dynamic>)
-      ..contained = (json['contained'] as List<dynamic>?)
-          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..extension_ = (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList()
-      ..modifierExtension = (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList();
+    );
 
 Map<String, dynamic> _$$_ParametersToJson(_$_Parameters instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -539,6 +541,12 @@ Map<String, dynamic> _$$_ParametersToJson(_$_Parameters instance) {
     }
   }
 
+  writeNotNull('id', instance.fhirId?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e.toJson()).toList());
@@ -546,13 +554,6 @@ Map<String, dynamic> _$$_ParametersToJson(_$_Parameters instance) {
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
-  writeNotNull('id', instance.fhirId?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull(
       'parameter', instance.parameter?.map((e) => e.toJson()).toList());
   return val;

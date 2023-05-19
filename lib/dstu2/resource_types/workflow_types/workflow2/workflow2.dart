@@ -16,7 +16,7 @@ part 'workflow2.g.dart';
 
 @freezed
 class ProcessRequest with Resource, _$ProcessRequest {
-  ProcessRequest._();
+  const ProcessRequest._();
   const factory ProcessRequest({
     @Default(Dstu2ResourceType.ProcessRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessRequest)
@@ -25,7 +25,9 @@ class ProcessRequest with Resource, _$ProcessRequest {
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -79,7 +81,7 @@ class ProcessRequest with Resource, _$ProcessRequest {
 
 @freezed
 class ProcessRequestItem with _$ProcessRequestItem {
-  ProcessRequestItem._();
+  const ProcessRequestItem._();
   const factory ProcessRequestItem({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -120,7 +122,7 @@ class ProcessRequestItem with _$ProcessRequestItem {
 
 @freezed
 class ProcessResponse with Resource, _$ProcessResponse {
-  ProcessResponse._();
+  const ProcessResponse._();
   const factory ProcessResponse({
     @Default(Dstu2ResourceType.ProcessResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcessResponse)
@@ -129,7 +131,9 @@ class ProcessResponse with Resource, _$ProcessResponse {
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -179,7 +183,7 @@ class ProcessResponse with Resource, _$ProcessResponse {
 
 @freezed
 class ProcessResponseNotes with _$ProcessResponseNotes {
-  ProcessResponseNotes._();
+  const ProcessResponseNotes._();
   const factory ProcessResponseNotes({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -221,7 +225,7 @@ class ProcessResponseNotes with _$ProcessResponseNotes {
 
 @freezed
 class SupplyRequest with Resource, _$SupplyRequest {
-  SupplyRequest._();
+  const SupplyRequest._();
   const factory SupplyRequest({
     @Default(Dstu2ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyRequest)
@@ -282,7 +286,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
 
 @freezed
 class SupplyRequestWhen with _$SupplyRequestWhen {
-  SupplyRequestWhen._();
+  const SupplyRequestWhen._();
   const factory SupplyRequestWhen({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -324,7 +328,7 @@ class SupplyRequestWhen with _$SupplyRequestWhen {
 
 @freezed
 class SupplyDelivery with Resource, _$SupplyDelivery {
-  SupplyDelivery._();
+  const SupplyDelivery._();
   const factory SupplyDelivery({
     @Default(Dstu2ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SupplyDelivery)

@@ -16,7 +16,7 @@ part 'request_and_response.g.dart';
 
 @freezed
 class Communication with Resource, _$Communication {
-  Communication._();
+  const Communication._();
   const factory Communication({
     @Default(Stu3ResourceType.Communication)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Communication)
@@ -88,7 +88,7 @@ class Communication with Resource, _$Communication {
 
 @freezed
 class CommunicationPayload with _$CommunicationPayload {
-  CommunicationPayload._();
+  const CommunicationPayload._();
   const factory CommunicationPayload({
     String? contentString,
     @JsonKey(name: '_contentString') Element? contentStringElement,
@@ -129,7 +129,7 @@ class CommunicationPayload with _$CommunicationPayload {
 
 @freezed
 class CommunicationRequest with Resource, _$CommunicationRequest {
-  CommunicationRequest._();
+  const CommunicationRequest._();
   const factory CommunicationRequest({
     @Default(Stu3ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CommunicationRequest)
@@ -202,7 +202,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 
 @freezed
 class CommunicationRequestPayload with _$CommunicationRequestPayload {
-  CommunicationRequestPayload._();
+  const CommunicationRequestPayload._();
   const factory CommunicationRequestPayload({
     String? contentString,
     @JsonKey(name: '_contentString') Element? contentStringElement,
@@ -243,7 +243,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
 
 @freezed
 class CommunicationRequestRequester with _$CommunicationRequestRequester {
-  CommunicationRequestRequester._();
+  const CommunicationRequestRequester._();
   const factory CommunicationRequestRequester({
     required Reference agent,
     Reference? onBehalfOf,
@@ -282,7 +282,7 @@ class CommunicationRequestRequester with _$CommunicationRequestRequester {
 
 @freezed
 class DeviceRequest with Resource, _$DeviceRequest {
-  DeviceRequest._();
+  const DeviceRequest._();
   const factory DeviceRequest({
     @Default(Stu3ResourceType.DeviceRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceRequest)
@@ -358,7 +358,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
 
 @freezed
 class DeviceRequestRequester with _$DeviceRequestRequester {
-  DeviceRequestRequester._();
+  const DeviceRequestRequester._();
   const factory DeviceRequestRequester({
     required Reference agent,
     Reference? onBehalfOf,
@@ -397,7 +397,7 @@ class DeviceRequestRequester with _$DeviceRequestRequester {
 
 @freezed
 class DeviceUseStatement with Resource, _$DeviceUseStatement {
-  DeviceUseStatement._();
+  const DeviceUseStatement._();
   const factory DeviceUseStatement({
     @Default(Stu3ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceUseStatement)
@@ -461,7 +461,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
 
 @freezed
 class SupplyDelivery with Resource, _$SupplyDelivery {
-  SupplyDelivery._();
+  const SupplyDelivery._();
   const factory SupplyDelivery({
     @Default(Stu3ResourceType.SupplyDelivery)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyDelivery)
@@ -524,7 +524,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
 
 @freezed
 class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
-  SupplyDeliverySuppliedItem._();
+  const SupplyDeliverySuppliedItem._();
   const factory SupplyDeliverySuppliedItem({
     Quantity? quantity,
     CodeableConcept? itemCodeableConcept,
@@ -564,7 +564,7 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
 
 @freezed
 class SupplyRequest with Resource, _$SupplyRequest {
-  SupplyRequest._();
+  const SupplyRequest._();
   const factory SupplyRequest({
     @Default(Stu3ResourceType.SupplyRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SupplyRequest)
@@ -631,7 +631,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
 
 @freezed
 class SupplyRequestOrderedItem with _$SupplyRequestOrderedItem {
-  SupplyRequestOrderedItem._();
+  const SupplyRequestOrderedItem._();
   const factory SupplyRequestOrderedItem({
     required Quantity quantity,
     CodeableConcept? itemCodeableConcept,
@@ -671,7 +671,7 @@ class SupplyRequestOrderedItem with _$SupplyRequestOrderedItem {
 
 @freezed
 class SupplyRequestRequester with _$SupplyRequestRequester {
-  SupplyRequestRequester._();
+  const SupplyRequestRequester._();
   const factory SupplyRequestRequester({
     required Reference agent,
     Reference? onBehalfOf,

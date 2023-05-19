@@ -20,7 +20,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   /// [PaymentNotice] This resource provides the status of the payment for
   ///  goods and services rendered, and the request and response resource
   ///  references.
-  PaymentNotice._();
+  const PaymentNotice._();
 
   /// [PaymentNotice] This resource provides the status of the payment for
   ///  goods and services rendered, and the request and response resource
@@ -273,7 +273,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
 class PaymentReconciliation with Resource, _$PaymentReconciliation {
   /// [PaymentReconciliation] This resource provides the details including
   ///  amount of a payment and allocates the payment items being paid.
-  PaymentReconciliation._();
+  const PaymentReconciliation._();
 
   /// [PaymentReconciliation] This resource provides the details including
   ///  amount of a payment and allocates the payment items being paid.
@@ -686,7 +686,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
 class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
   /// [PaymentReconciliationAllocation] This resource provides the details
   ///  including amount of a payment and allocates the payment items being paid.
-  PaymentReconciliationAllocation._();
+  const PaymentReconciliationAllocation._();
 
   /// [PaymentReconciliationAllocation] This resource provides the details
   ///  including amount of a payment and allocates the payment items being paid.
@@ -909,7 +909,7 @@ class PaymentReconciliationAllocation with _$PaymentReconciliationAllocation {
 class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   /// [PaymentReconciliationProcessNote] This resource provides the details
   ///  including amount of a payment and allocates the payment items being paid.
-  PaymentReconciliationProcessNote._();
+  const PaymentReconciliationProcessNote._();
 
   /// [PaymentReconciliationProcessNote] This resource provides the details
   ///  including amount of a payment and allocates the payment items being paid.

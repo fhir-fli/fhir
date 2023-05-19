@@ -17,7 +17,7 @@ part 'terminology.g.dart';
 @freezed
 class CodeSystem with Resource, _$CodeSystem {
   /// [CodeSystem] The CodeSystem resource is used to declare the existence of
-  CodeSystem._();
+  const CodeSystem._();
 
   /// [CodeSystem] The CodeSystem resource is used to declare the existence of
   /// and describe a code system or code system supplement and its key
@@ -488,7 +488,7 @@ class CodeSystem with Resource, _$CodeSystem {
 @freezed
 class CodeSystemFilter with _$CodeSystemFilter {
   /// [CodeSystemFilter] The CodeSystem resource is used to declare the
-  CodeSystemFilter._();
+  const CodeSystemFilter._();
 
   /// [CodeSystemFilter] The CodeSystem resource is used to declare the
   /// existence of and describe a code system or code system supplement and its
@@ -623,7 +623,7 @@ class CodeSystemFilter with _$CodeSystemFilter {
 @freezed
 class CodeSystemProperty with _$CodeSystemProperty {
   /// [CodeSystemProperty] The CodeSystem resource is used to declare the
-  CodeSystemProperty._();
+  const CodeSystemProperty._();
 
   /// [CodeSystemProperty] The CodeSystem resource is used to declare the
   /// existence of and describe a code system or code system supplement and its
@@ -770,7 +770,7 @@ class CodeSystemProperty with _$CodeSystemProperty {
 @freezed
 class CodeSystemConcept with _$CodeSystemConcept {
   /// [CodeSystemConcept] The CodeSystem resource is used to declare the
-  CodeSystemConcept._();
+  const CodeSystemConcept._();
 
   /// [CodeSystemConcept] The CodeSystem resource is used to declare the
   /// existence of and describe a code system or code system supplement and its
@@ -926,7 +926,7 @@ class CodeSystemConcept with _$CodeSystemConcept {
 @freezed
 class CodeSystemDesignation with _$CodeSystemDesignation {
   /// [CodeSystemDesignation] The CodeSystem resource is used to declare the
-  CodeSystemDesignation._();
+  const CodeSystemDesignation._();
 
   /// [CodeSystemDesignation] The CodeSystem resource is used to declare the
   /// existence of and describe a code system or code system supplement and its
@@ -1044,7 +1044,7 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
 @freezed
 class CodeSystemProperty1 with _$CodeSystemProperty1 {
   /// [CodeSystemProperty1] The CodeSystem resource is used to declare the
-  CodeSystemProperty1._();
+  const CodeSystemProperty1._();
 
   /// [CodeSystemProperty1] The CodeSystem resource is used to declare the
   /// existence of and describe a code system or code system supplement and its
@@ -1212,7 +1212,7 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
 @freezed
 class ConceptMap with Resource, _$ConceptMap {
   /// [ConceptMap] A statement of relationships from one set of concepts to one
-  ConceptMap._();
+  const ConceptMap._();
 
   /// [ConceptMap] A statement of relationships from one set of concepts to one
   /// or more other concepts - either concepts in code systems, or data
@@ -1631,7 +1631,7 @@ class ConceptMap with Resource, _$ConceptMap {
 @freezed
 class ConceptMapGroup with _$ConceptMapGroup {
   /// [ConceptMapGroup] A statement of relationships from one set of concepts
-  ConceptMapGroup._();
+  const ConceptMapGroup._();
 
   /// [ConceptMapGroup] A statement of relationships from one set of concepts
   /// to one or more other concepts - either concepts in code systems, or data
@@ -1790,7 +1790,7 @@ class ConceptMapGroup with _$ConceptMapGroup {
 @freezed
 class ConceptMapElement with _$ConceptMapElement {
   /// [ConceptMapElement] A statement of relationships from one set of
-  ConceptMapElement._();
+  const ConceptMapElement._();
 
   /// [ConceptMapElement] A statement of relationships from one set of
   /// concepts to one or more other concepts - either concepts in code systems,
@@ -1910,7 +1910,7 @@ class ConceptMapElement with _$ConceptMapElement {
 @freezed
 class ConceptMapTarget with _$ConceptMapTarget {
   /// [ConceptMapTarget] A statement of relationships from one set of concepts
-  ConceptMapTarget._();
+  const ConceptMapTarget._();
 
   /// [ConceptMapTarget] A statement of relationships from one set of concepts
   /// to one or more other concepts - either concepts in code systems, or data
@@ -2075,7 +2075,7 @@ class ConceptMapTarget with _$ConceptMapTarget {
 @freezed
 class ConceptMapDependsOn with _$ConceptMapDependsOn {
   /// [ConceptMapDependsOn] A statement of relationships from one set of
-  ConceptMapDependsOn._();
+  const ConceptMapDependsOn._();
 
   /// [ConceptMapDependsOn] A statement of relationships from one set of
   /// concepts to one or more other concepts - either concepts in code systems,
@@ -2217,7 +2217,7 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
 @freezed
 class ConceptMapUnmapped with _$ConceptMapUnmapped {
   /// [ConceptMapUnmapped] A statement of relationships from one set of
-  ConceptMapUnmapped._();
+  const ConceptMapUnmapped._();
 
   /// [ConceptMapUnmapped] A statement of relationships from one set of
   /// concepts to one or more other concepts - either concepts in code systems,
@@ -2363,7 +2363,7 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
 @freezed
 class NamingSystem with Resource, _$NamingSystem {
   /// [NamingSystem] A curated namespace that issues unique symbols within that
-  NamingSystem._();
+  const NamingSystem._();
 
   /// [NamingSystem] A curated namespace that issues unique symbols within that
   /// namespace for the identification of concepts, people, devices, etc.
@@ -2670,7 +2670,7 @@ class NamingSystem with Resource, _$NamingSystem {
 @freezed
 class NamingSystemUniqueId with _$NamingSystemUniqueId {
   /// [NamingSystemUniqueId] A curated namespace that issues unique symbols
-  NamingSystemUniqueId._();
+  const NamingSystemUniqueId._();
 
   /// [NamingSystemUniqueId] A curated namespace that issues unique symbols
   /// within that namespace for the identification of concepts, people, devices,
@@ -2819,7 +2819,7 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
 @freezed
 class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
-  TerminologyCapabilities._();
+  const TerminologyCapabilities._();
 
   /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
   /// set of capabilities (behaviors) of a FHIR Terminology Server that may be
@@ -3256,7 +3256,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
 @freezed
 class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
   /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
-  TerminologyCapabilitiesSoftware._();
+  const TerminologyCapabilitiesSoftware._();
 
   /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -3373,7 +3373,7 @@ class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
 @freezed
 class TerminologyCapabilitiesImplementation
     with _$TerminologyCapabilitiesImplementation {
-  TerminologyCapabilitiesImplementation._();
+  const TerminologyCapabilitiesImplementation._();
 
   /// [TerminologyCapabilitiesImplementation] A TerminologyCapabilities
   /// resource documents a set of capabilities (behaviors) of a FHIR Terminology
@@ -3477,7 +3477,7 @@ class TerminologyCapabilitiesImplementation
 @freezed
 class TerminologyCapabilitiesCodeSystem
     with _$TerminologyCapabilitiesCodeSystem {
-  TerminologyCapabilitiesCodeSystem._();
+  const TerminologyCapabilitiesCodeSystem._();
 
   /// [TerminologyCapabilitiesCodeSystem] A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -3584,7 +3584,7 @@ class TerminologyCapabilitiesCodeSystem
 @freezed
 class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
   /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
-  TerminologyCapabilitiesVersion._();
+  const TerminologyCapabilitiesVersion._();
 
   /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -3738,7 +3738,7 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
 @freezed
 class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
   /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
-  TerminologyCapabilitiesFilter._();
+  const TerminologyCapabilitiesFilter._();
 
   /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -3852,7 +3852,7 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
 @freezed
 class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
   /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
-  TerminologyCapabilitiesExpansion._();
+  const TerminologyCapabilitiesExpansion._();
 
   /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -3980,7 +3980,7 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
 @freezed
 class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
   /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
-  TerminologyCapabilitiesParameter._();
+  const TerminologyCapabilitiesParameter._();
 
   /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -4082,7 +4082,7 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
 @freezed
 class TerminologyCapabilitiesValidateCode
     with _$TerminologyCapabilitiesValidateCode {
-  TerminologyCapabilitiesValidateCode._();
+  const TerminologyCapabilitiesValidateCode._();
 
   /// [TerminologyCapabilitiesValidateCode] A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -4174,7 +4174,7 @@ class TerminologyCapabilitiesValidateCode
 @freezed
 class TerminologyCapabilitiesTranslation
     with _$TerminologyCapabilitiesTranslation {
-  TerminologyCapabilitiesTranslation._();
+  const TerminologyCapabilitiesTranslation._();
 
   /// [TerminologyCapabilitiesTranslation] A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -4267,7 +4267,7 @@ class TerminologyCapabilitiesTranslation
 @freezed
 class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
   /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
-  TerminologyCapabilitiesClosure._();
+  const TerminologyCapabilitiesClosure._();
 
   /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
   /// documents a set of capabilities (behaviors) of a FHIR Terminology Server
@@ -4372,7 +4372,7 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
 @freezed
 class ValueSet with Resource, _$ValueSet {
   /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn
-  ValueSet._();
+  const ValueSet._();
 
   /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn
   /// from one or more code systems, intended for use in a particular context.
@@ -4767,7 +4767,7 @@ class ValueSet with Resource, _$ValueSet {
 @freezed
 class ValueSetCompose with _$ValueSetCompose {
   /// [ValueSetCompose] A ValueSet resource instance specifies a set of codes
-  ValueSetCompose._();
+  const ValueSetCompose._();
 
   /// [ValueSetCompose] A ValueSet resource instance specifies a set of codes
   /// drawn from one or more code systems, intended for use in a particular
@@ -4911,7 +4911,7 @@ class ValueSetCompose with _$ValueSetCompose {
 @freezed
 class ValueSetInclude with _$ValueSetInclude {
   /// [ValueSetInclude] A ValueSet resource instance specifies a set of codes
-  ValueSetInclude._();
+  const ValueSetInclude._();
 
   /// [ValueSetInclude] A ValueSet resource instance specifies a set of codes
   /// drawn from one or more code systems, intended for use in a particular
@@ -5056,7 +5056,7 @@ class ValueSetInclude with _$ValueSetInclude {
 @freezed
 class ValueSetConcept with _$ValueSetConcept {
   /// [ValueSetConcept] A ValueSet resource instance specifies a set of codes
-  ValueSetConcept._();
+  const ValueSetConcept._();
 
   /// [ValueSetConcept] A ValueSet resource instance specifies a set of codes
   /// drawn from one or more code systems, intended for use in a particular
@@ -5183,7 +5183,7 @@ class ValueSetConcept with _$ValueSetConcept {
 @freezed
 class ValueSetDesignation with _$ValueSetDesignation {
   /// [ValueSetDesignation] A ValueSet resource instance specifies a set of
-  ValueSetDesignation._();
+  const ValueSetDesignation._();
 
   /// [ValueSetDesignation] A ValueSet resource instance specifies a set of
   /// codes drawn from one or more code systems, intended for use in a
@@ -5302,7 +5302,7 @@ class ValueSetDesignation with _$ValueSetDesignation {
 @freezed
 class ValueSetFilter with _$ValueSetFilter {
   /// [ValueSetFilter] A ValueSet resource instance specifies a set of codes
-  ValueSetFilter._();
+  const ValueSetFilter._();
 
   /// [ValueSetFilter] A ValueSet resource instance specifies a set of codes
   /// drawn from one or more code systems, intended for use in a particular
@@ -5438,7 +5438,7 @@ class ValueSetFilter with _$ValueSetFilter {
 @freezed
 class ValueSetExpansion with _$ValueSetExpansion {
   /// [ValueSetExpansion] A ValueSet resource instance specifies a set of
-  ValueSetExpansion._();
+  const ValueSetExpansion._();
 
   /// [ValueSetExpansion] A ValueSet resource instance specifies a set of
   /// codes drawn from one or more code systems, intended for use in a
@@ -5608,7 +5608,7 @@ class ValueSetExpansion with _$ValueSetExpansion {
 @freezed
 class ValueSetParameter with _$ValueSetParameter {
   /// [ValueSetParameter] A ValueSet resource instance specifies a set of
-  ValueSetParameter._();
+  const ValueSetParameter._();
 
   /// [ValueSetParameter] A ValueSet resource instance specifies a set of
   /// codes drawn from one or more code systems, intended for use in a
@@ -5786,7 +5786,7 @@ class ValueSetParameter with _$ValueSetParameter {
 @freezed
 class ValueSetContains with _$ValueSetContains {
   /// [ValueSetContains] A ValueSet resource instance specifies a set of codes
-  ValueSetContains._();
+  const ValueSetContains._();
 
   /// [ValueSetContains] A ValueSet resource instance specifies a set of codes
   /// drawn from one or more code systems, intended for use in a particular

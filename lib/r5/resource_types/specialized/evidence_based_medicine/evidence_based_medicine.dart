@@ -21,7 +21,7 @@ class ArtifactAssessment with Resource, _$ArtifactAssessment {
   /// [ArtifactAssessment] This Resource provides one or more comments,
   ///  classifiers or ratings about a Resource and supports attribution and
   ///  rights management metadata for the added content.
-  ArtifactAssessment._();
+  const ArtifactAssessment._();
 
   /// [ArtifactAssessment] This Resource provides one or more comments,
   ///  classifiers or ratings about a Resource and supports attribution and
@@ -358,7 +358,7 @@ class ArtifactAssessmentContent with _$ArtifactAssessmentContent {
   /// [ArtifactAssessmentContent] This Resource provides one or more comments,
   ///  classifiers or ratings about a Resource and supports attribution and
   ///  rights management metadata for the added content.
-  ArtifactAssessmentContent._();
+  const ArtifactAssessmentContent._();
 
   /// [ArtifactAssessmentContent] This Resource provides one or more comments,
   ///  classifiers or ratings about a Resource and supports attribution and
@@ -547,7 +547,7 @@ class Citation with Resource, _$Citation {
   ///  Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  Citation._();
+  const Citation._();
 
   /// [Citation] The Citation Resource enables reference to any knowledge
   ///  artifact for purposes of identification and attribution. The Citation
@@ -1066,7 +1066,7 @@ class CitationSummary with _$CitationSummary {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationSummary._();
+  const CitationSummary._();
 
   /// [CitationSummary] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -1186,7 +1186,7 @@ class CitationClassification with _$CitationClassification {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationClassification._();
+  const CitationClassification._();
 
   /// [CitationClassification] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -1301,7 +1301,7 @@ class CitationStatusDate with _$CitationStatusDate {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationStatusDate._();
+  const CitationStatusDate._();
 
   /// [CitationStatusDate] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -1430,7 +1430,7 @@ class CitationCitedArtifact with _$CitationCitedArtifact {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationCitedArtifact._();
+  const CitationCitedArtifact._();
 
   /// [CitationCitedArtifact] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -1634,7 +1634,7 @@ class CitationVersion with _$CitationVersion {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationVersion._();
+  const CitationVersion._();
 
   /// [CitationVersion] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -1754,7 +1754,7 @@ class CitationStatusDate1 with _$CitationStatusDate1 {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationStatusDate1._();
+  const CitationStatusDate1._();
 
   /// [CitationStatusDate1] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -1879,7 +1879,7 @@ class CitationTitle with _$CitationTitle {
   ///  Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationTitle._();
+  const CitationTitle._();
 
   /// [CitationTitle] The Citation Resource enables reference to any knowledge
   ///  artifact for purposes of identification and attribution. The Citation
@@ -2004,7 +2004,7 @@ class CitationAbstract with _$CitationAbstract {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationAbstract._();
+  const CitationAbstract._();
 
   /// [CitationAbstract] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -2139,7 +2139,7 @@ class CitationPart with _$CitationPart {
   ///  Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationPart._();
+  const CitationPart._();
 
   /// [CitationPart] The Citation Resource enables reference to any knowledge
   ///  artifact for purposes of identification and attribution. The Citation
@@ -2264,7 +2264,7 @@ class CitationRelatesTo with _$CitationRelatesTo {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationRelatesTo._();
+  const CitationRelatesTo._();
 
   /// [CitationRelatesTo] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -2449,7 +2449,7 @@ class CitationPublicationForm with _$CitationPublicationForm {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationPublicationForm._();
+  const CitationPublicationForm._();
 
   /// [CitationPublicationForm] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -2734,7 +2734,7 @@ class CitationPublishedIn with _$CitationPublishedIn {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationPublishedIn._();
+  const CitationPublishedIn._();
 
   /// [CitationPublishedIn] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -2878,7 +2878,7 @@ class CitationWebLocation with _$CitationWebLocation {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationWebLocation._();
+  const CitationWebLocation._();
 
   /// [CitationWebLocation] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -3000,7 +3000,7 @@ class CitationClassification1 with _$CitationClassification1 {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationClassification1._();
+  const CitationClassification1._();
 
   /// [CitationClassification1] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -3120,7 +3120,7 @@ class CitationContributorship with _$CitationContributorship {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationContributorship._();
+  const CitationContributorship._();
 
   /// [CitationContributorship] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -3250,7 +3250,7 @@ class CitationEntry with _$CitationEntry {
   ///  Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationEntry._();
+  const CitationEntry._();
 
   /// [CitationEntry] The Citation Resource enables reference to any knowledge
   ///  artifact for purposes of identification and attribution. The Citation
@@ -3425,7 +3425,7 @@ class CitationContributionInstance with _$CitationContributionInstance {
   ///  The Citation Resource supports existing reference structures and
   ///  developing publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationContributionInstance._();
+  const CitationContributionInstance._();
 
   /// [CitationContributionInstance] The Citation Resource enables reference to
   ///  any knowledge artifact for purposes of identification and attribution.
@@ -3546,7 +3546,7 @@ class CitationSummary1 with _$CitationSummary1 {
   ///  Citation Resource supports existing reference structures and developing
   ///  publication practices such as versioning, expressing complex
   ///  contributorship roles, and referencing computable resources.
-  CitationSummary1._();
+  const CitationSummary1._();
 
   /// [CitationSummary1] The Citation Resource enables reference to any
   ///  knowledge artifact for purposes of identification and attribution. The
@@ -3684,7 +3684,7 @@ class Evidence with Resource, _$Evidence {
   ///  (e.g., population, exposures/interventions, comparators, outcomes,
   ///  measured variables, confounding variables), the statistics, and the
   ///  certainty of this evidence.
-  Evidence._();
+  const Evidence._();
 
   /// [Evidence] The Evidence Resource provides a machine-interpretable
   ///  expression of an evidence concept including the evidence variables
@@ -4244,7 +4244,7 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
   ///  evidence variables (e.g., population, exposures/interventions,
   ///  comparators, outcomes, measured variables, confounding variables), the
   ///  statistics, and the certainty of this evidence.
-  EvidenceVariableDefinition._();
+  const EvidenceVariableDefinition._();
 
   /// [EvidenceVariableDefinition] The Evidence Resource provides a
   ///  machine-interpretable expression of an evidence concept including the
@@ -4389,7 +4389,7 @@ class EvidenceStatistic with _$EvidenceStatistic {
   ///  evidence variables (e.g., population, exposures/interventions,
   ///  comparators, outcomes, measured variables, confounding variables), the
   ///  statistics, and the certainty of this evidence.
-  EvidenceStatistic._();
+  const EvidenceStatistic._();
 
   /// [EvidenceStatistic] The Evidence Resource provides a
   ///  machine-interpretable expression of an evidence concept including the
@@ -4576,7 +4576,7 @@ class EvidenceSampleSize with _$EvidenceSampleSize {
   ///  evidence variables (e.g., population, exposures/interventions,
   ///  comparators, outcomes, measured variables, confounding variables), the
   ///  statistics, and the certainty of this evidence.
-  EvidenceSampleSize._();
+  const EvidenceSampleSize._();
 
   /// [EvidenceSampleSize] The Evidence Resource provides a
   ///  machine-interpretable expression of an evidence concept including the
@@ -4736,7 +4736,7 @@ class EvidenceAttributeEstimate with _$EvidenceAttributeEstimate {
   ///  evidence variables (e.g., population, exposures/interventions,
   ///  comparators, outcomes, measured variables, confounding variables), the
   ///  statistics, and the certainty of this evidence.
-  EvidenceAttributeEstimate._();
+  const EvidenceAttributeEstimate._();
 
   /// [EvidenceAttributeEstimate] The Evidence Resource provides a
   ///  machine-interpretable expression of an evidence concept including the
@@ -4894,7 +4894,7 @@ class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
   ///  evidence variables (e.g., population, exposures/interventions,
   ///  comparators, outcomes, measured variables, confounding variables), the
   ///  statistics, and the certainty of this evidence.
-  EvidenceModelCharacteristic._();
+  const EvidenceModelCharacteristic._();
 
   /// [EvidenceModelCharacteristic] The Evidence Resource provides a
   ///  machine-interpretable expression of an evidence concept including the
@@ -5019,7 +5019,7 @@ class EvidenceModelCharacteristic with _$EvidenceModelCharacteristic {
 class EvidenceVariable with Resource, _$EvidenceVariable {
   /// [EvidenceVariable] The EvidenceVariable resource describes an element
   ///  that knowledge (Evidence) is about.
-  EvidenceVariable._();
+  const EvidenceVariable._();
 
   /// [EvidenceVariable] The EvidenceVariable resource describes an element
   ///  that knowledge (Evidence) is about.
@@ -5582,7 +5582,7 @@ class EvidenceCertainty with _$EvidenceCertainty {
   ///  evidence variables (e.g., population, exposures/interventions,
   ///  comparators, outcomes, measured variables, confounding variables), the
   ///  statistics, and the certainty of this evidence.
-  EvidenceCertainty._();
+  const EvidenceCertainty._();
 
   /// [EvidenceCertainty] The Evidence Resource provides a
   ///  machine-interpretable expression of an evidence concept including the
@@ -5725,7 +5725,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
   ///  for a collection of resources and codeable concepts, adapted to support
   ///  compositions of Evidence, EvidenceVariable, and Citation resources and
   ///  related concepts.
-  EvidenceReport._();
+  const EvidenceReport._();
 
   /// [EvidenceReport] The EvidenceReport Resource is a specialized container
   ///  for a collection of resources and codeable concepts, adapted to support
@@ -6276,7 +6276,7 @@ class EvidenceReportSubject with _$EvidenceReportSubject {
   ///  container for a collection of resources and codeable concepts, adapted
   ///  to support compositions of Evidence, EvidenceVariable, and Citation
   ///  resources and related concepts.
-  EvidenceReportSubject._();
+  const EvidenceReportSubject._();
 
   /// [EvidenceReportSubject] The EvidenceReport Resource is a specialized
   ///  container for a collection of resources and codeable concepts, adapted
@@ -6388,7 +6388,7 @@ class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
   ///  specialized container for a collection of resources and codeable
   ///  concepts, adapted to support compositions of Evidence, EvidenceVariable,
   ///  and Citation resources and related concepts.
-  EvidenceReportCharacteristic._();
+  const EvidenceReportCharacteristic._();
 
   /// [EvidenceReportCharacteristic] The EvidenceReport Resource is a
   ///  specialized container for a collection of resources and codeable
@@ -6541,7 +6541,7 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
   ///  container for a collection of resources and codeable concepts, adapted
   ///  to support compositions of Evidence, EvidenceVariable, and Citation
   ///  resources and related concepts.
-  EvidenceReportRelatesTo._();
+  const EvidenceReportRelatesTo._();
 
   /// [EvidenceReportRelatesTo] The EvidenceReport Resource is a specialized
   ///  container for a collection of resources and codeable concepts, adapted
@@ -6660,7 +6660,7 @@ class EvidenceReportTarget with _$EvidenceReportTarget {
   ///  container for a collection of resources and codeable concepts, adapted
   ///  to support compositions of Evidence, EvidenceVariable, and Citation
   ///  resources and related concepts.
-  EvidenceReportTarget._();
+  const EvidenceReportTarget._();
 
   /// [EvidenceReportTarget] The EvidenceReport Resource is a specialized
   ///  container for a collection of resources and codeable concepts, adapted
@@ -6792,7 +6792,7 @@ class EvidenceReportSection with _$EvidenceReportSection {
   ///  container for a collection of resources and codeable concepts, adapted
   ///  to support compositions of Evidence, EvidenceVariable, and Citation
   ///  resources and related concepts.
-  EvidenceReportSection._();
+  const EvidenceReportSection._();
 
   /// [EvidenceReportSection] The EvidenceReport Resource is a specialized
   ///  container for a collection of resources and codeable concepts, adapted
@@ -6996,7 +6996,7 @@ class EvidenceReportSection with _$EvidenceReportSection {
 class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// [EvidenceVariableCharacteristic] The EvidenceVariable resource describes
   ///  an element that knowledge (Evidence) is about.
-  EvidenceVariableCharacteristic._();
+  const EvidenceVariableCharacteristic._();
 
   /// [EvidenceVariableCharacteristic] The EvidenceVariable resource describes
   ///  an element that knowledge (Evidence) is about.
@@ -7212,7 +7212,7 @@ class EvidenceVariableDefinitionByTypeAndValue
     with _$EvidenceVariableDefinitionByTypeAndValue {
   /// [EvidenceVariableDefinitionByTypeAndValue] The EvidenceVariable resource
   ///  describes an element that knowledge (Evidence) is about.
-  EvidenceVariableDefinitionByTypeAndValue._();
+  const EvidenceVariableDefinitionByTypeAndValue._();
 
   /// [EvidenceVariableDefinitionByTypeAndValue] The EvidenceVariable resource
   ///  describes an element that knowledge (Evidence) is about.
@@ -7386,7 +7386,7 @@ class EvidenceVariableDefinitionByCombination
     with _$EvidenceVariableDefinitionByCombination {
   /// [EvidenceVariableDefinitionByCombination] The EvidenceVariable resource
   ///  describes an element that knowledge (Evidence) is about.
-  EvidenceVariableDefinitionByCombination._();
+  const EvidenceVariableDefinitionByCombination._();
 
   /// [EvidenceVariableDefinitionByCombination] The EvidenceVariable resource
   ///  describes an element that knowledge (Evidence) is about.
@@ -7515,7 +7515,7 @@ class EvidenceVariableDefinitionByCombination
 class EvidenceVariableTimeFromEvent with _$EvidenceVariableTimeFromEvent {
   /// [EvidenceVariableTimeFromEvent] The EvidenceVariable resource describes
   ///  an element that knowledge (Evidence) is about.
-  EvidenceVariableTimeFromEvent._();
+  const EvidenceVariableTimeFromEvent._();
 
   /// [EvidenceVariableTimeFromEvent] The EvidenceVariable resource describes
   ///  an element that knowledge (Evidence) is about.
@@ -7677,7 +7677,7 @@ class EvidenceVariableTimeFromEvent with _$EvidenceVariableTimeFromEvent {
 class EvidenceVariableCategory with _$EvidenceVariableCategory {
   /// [EvidenceVariableCategory] The EvidenceVariable resource describes an
   ///  element that knowledge (Evidence) is about.
-  EvidenceVariableCategory._();
+  const EvidenceVariableCategory._();
 
   /// [EvidenceVariableCategory] The EvidenceVariable resource describes an
   ///  element that knowledge (Evidence) is about.

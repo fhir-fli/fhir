@@ -29,24 +29,19 @@ part 'resource_utils.dart';
 /// class also has it's own fromJson() function as well. The fromJson function
 /// in this class is only used if the resourceType is not previously known
 @JsonSerializable()
-mixin class Resource {
-  R4ResourceType? resourceType;
-  @JsonKey(name: 'id')
-  String? fhirId;
-  @JsonKey(includeFromJson: true, includeToJson: false)
-  int? dbId;
-  FhirMeta? meta;
-  FhirUri? implicitRules;
-  @JsonKey(name: '_implicitRules')
-  Element? implicitRulesElement;
-  FhirCode? language;
-  @JsonKey(name: '_language')
-  Element? languageElement;
-  Narrative? text;
-  List<Resource>? contained;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? extension_;
-  List<FhirExtension>? modifierExtension;
+abstract mixin class Resource {
+  R4ResourceType? get resourceType;
+  String? get fhirId;
+  int? get dbId;
+  FhirMeta? get meta;
+  FhirUri? get implicitRules;
+  Element? get implicitRulesElement;
+  FhirCode? get language;
+  Element? get languageElement;
+  Narrative? get text;
+  List<Resource>? get contained;
+  List<FhirExtension>? get extension_;
+  List<FhirExtension>? get modifierExtension;
 
   /// I don't like XML. However, there appears to be times when it's unavoidable.
   /// Thus, I'm going to include this so that we can work with it, yuck.
@@ -80,30 +75,6 @@ mixin class Resource {
               'Resource cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
-  static Resource copyWith({
-    R4ResourceType? resourceType,
-    String? fhirId,
-    int? dbId,
-    FhirMeta? meta,
-    FhirUri? implicitRules,
-    FhirCode? language,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-  }) =>
-      Resource.fromJson(<String, dynamic>{
-        'resourceType': resourceType?.toString(),
-        'id': fhirId?.toString(),
-        'dbId': dbId,
-        'meta': meta?.toString(),
-        'implicitRules': implicitRules?.toString(),
-        'text': text?.toString(),
-        'contained': contained?.toString(),
-        'extension': extension_?.toString(),
-        'modifierExtension': modifierExtension?.toString(),
-      });
-
   /// Returns a [Map<String, dynamic>] of the [Resource]
   Map<String, dynamic> toJson() {
     final val = <String, dynamic>{};
@@ -118,7 +89,9 @@ mixin class Resource {
     writeNotNull('id', fhirId);
     writeNotNull('meta', meta?.toJson());
     writeNotNull('implicitRules', implicitRules?.toJson());
+    writeNotNull('_implicitRules', implicitRulesElement?.toJson());
     writeNotNull('language', language?.toJson());
+    writeNotNull('_language', languageElement?.toJson());
     writeNotNull('text', text?.toJson());
     writeNotNull('contained', contained?.map((e) => e.toJson()).toList());
     writeNotNull('extension', extension_?.map((e) => e.toJson()).toList());
@@ -148,9 +121,6 @@ mixin class Resource {
   /// present)
   Resource newId() => _newId(this);
 
-  /// because so many DBs seem to want all entries to have an integer for an id
-  Resource newDbId(int id) => copyWith(dbId: id);
-
   /// The normal toJson ignores the dbId, and produces the fhirId as the id
   /// However, if you're going to use this as a database entry, you have to
   /// switch those two ids
@@ -168,7 +138,7 @@ mixin class Resource {
   /// Likewise, if you're using one of those DBs, then you may need to get that
   /// resource back, and so we'll need to switch those IDs back before we
   /// turn them into a Dart class again
-  Resource fromDbJson(Map<String, dynamic> json) {
+  static Resource fromDbJson(Map<String, dynamic> json) {
     /// Set the dbId to the current Id (integer from the database)
     json['dbId'] = json['id'];
 

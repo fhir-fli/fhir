@@ -23,7 +23,7 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
   ///  electronic services, such as for web services providing XDS.b, a REST
   ///  endpoint for another FHIR server, or a s/Mime email address. This may
   ///  include any security context information.
-  FhirEndpoint._();
+  const FhirEndpoint._();
 
   /// [FhirEndpoint] The technical details of an endpoint that can be used for
   ///  electronic services, such as for web services providing XDS.b, a REST
@@ -310,7 +310,7 @@ class FhirEndpointPayload with _$FhirEndpointPayload {
   ///  for electronic services, such as for web services providing XDS.b, a
   ///  REST endpoint for another FHIR server, or a s/Mime email address. This
   ///  may include any security context information.
-  FhirEndpointPayload._();
+  const FhirEndpointPayload._();
 
   /// [FhirEndpointPayload] The technical details of an endpoint that can be used
   ///  for electronic services, such as for web services providing XDS.b, a
@@ -431,7 +431,7 @@ class FhirEndpointPayload with _$FhirEndpointPayload {
 class HealthcareService with Resource, _$HealthcareService {
   /// [HealthcareService] The details of a healthcare service available at a
   ///  location.
-  HealthcareService._();
+  const HealthcareService._();
 
   /// [HealthcareService] The details of a healthcare service available at a
   ///  location.
@@ -797,7 +797,7 @@ class HealthcareService with Resource, _$HealthcareService {
 class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   /// [HealthcareServiceEligibility] The details of a healthcare service
   ///  available at a location.
-  HealthcareServiceEligibility._();
+  const HealthcareServiceEligibility._();
 
   /// [HealthcareServiceEligibility] The details of a healthcare service
   ///  available at a location.
@@ -911,7 +911,7 @@ class Location with Resource, _$Location {
   /// [Location] Details and position information for a place where services
   ///  are provided and resources and participants may be stored, found,
   ///  contained, or accommodated.
-  Location._();
+  const Location._();
 
   /// [Location] Details and position information for a place where services
   ///  are provided and resources and participants may be stored, found,
@@ -1238,7 +1238,7 @@ class LocationPosition with _$LocationPosition {
   /// [LocationPosition] Details and position information for a place where
   ///  services are provided and resources and participants may be stored,
   ///  found, contained, or accommodated.
-  LocationPosition._();
+  const LocationPosition._();
 
   /// [LocationPosition] Details and position information for a place where
   ///  services are provided and resources and participants may be stored,
@@ -1382,7 +1382,7 @@ class Organization with Resource, _$Organization {
   ///  collective action.  Includes companies, institutions, corporations,
   ///  departments, community groups, healthcare practice groups,
   ///  payer/insurer, etc.
-  Organization._();
+  const Organization._();
 
   /// [Organization] A formally or informally recognized grouping of people or
   ///  organizations formed for the purpose of achieving some form of
@@ -1654,7 +1654,7 @@ class OrganizationQualification with _$OrganizationQualification {
   ///  of collective action.  Includes companies, institutions, corporations,
   ///  departments, community groups, healthcare practice groups,
   ///  payer/insurer, etc.
-  OrganizationQualification._();
+  const OrganizationQualification._();
 
   /// [OrganizationQualification] A formally or informally recognized grouping
   ///  of people or organizations formed for the purpose of achieving some form
@@ -1777,7 +1777,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   /// [OrganizationAffiliation] Defines an affiliation/association/relationship
   ///  between 2 distinct organizations, that is not a part-of
   ///  relationship/sub-division relationship.
-  OrganizationAffiliation._();
+  const OrganizationAffiliation._();
 
   /// [OrganizationAffiliation] Defines an affiliation/association/relationship
   ///  between 2 distinct organizations, that is not a part-of

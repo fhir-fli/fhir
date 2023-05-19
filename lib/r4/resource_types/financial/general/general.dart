@@ -17,7 +17,7 @@ part 'general.g.dart';
 @freezed
 class Account with Resource, _$Account {
   /// [Account] A financial tool for tracking value accrued for a particular
-  Account._();
+  const Account._();
 
   /// [Account] A financial tool for tracking value accrued for a particular
   /// purpose.  In the healthcare field, used to track charges for a patient,
@@ -265,7 +265,7 @@ class Account with Resource, _$Account {
 @freezed
 class AccountCoverage with _$AccountCoverage {
   /// [AccountCoverage] A financial tool for tracking value accrued for a
-  AccountCoverage._();
+  const AccountCoverage._();
 
   /// [AccountCoverage] A financial tool for tracking value accrued for a
   /// particular purpose.  In the healthcare field, used to track charges for a
@@ -381,7 +381,7 @@ class AccountCoverage with _$AccountCoverage {
 @freezed
 class AccountGuarantor with _$AccountGuarantor {
   /// [AccountGuarantor] A financial tool for tracking value accrued for a
-  AccountGuarantor._();
+  const AccountGuarantor._();
 
   /// [AccountGuarantor] A financial tool for tracking value accrued for a
   /// particular purpose.  In the healthcare field, used to track charges for a
@@ -498,7 +498,7 @@ class AccountGuarantor with _$AccountGuarantor {
 @freezed
 class ChargeItem with Resource, _$ChargeItem {
   /// [ChargeItem] The resource ChargeItem describes the provision of
-  ChargeItem._();
+  const ChargeItem._();
 
   /// [ChargeItem] The resource ChargeItem describes the provision of
   /// healthcare provider products for a certain patient, therefore referring
@@ -874,7 +874,7 @@ class ChargeItem with Resource, _$ChargeItem {
 @freezed
 class ChargeItemPerformer with _$ChargeItemPerformer {
   /// [ChargeItemPerformer] The resource ChargeItem describes the provision of
-  ChargeItemPerformer._();
+  const ChargeItemPerformer._();
 
   /// [ChargeItemPerformer] The resource ChargeItem describes the provision of
   /// healthcare provider products for a certain patient, therefore referring
@@ -984,7 +984,7 @@ class ChargeItemPerformer with _$ChargeItemPerformer {
 @freezed
 class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   /// [ChargeItemDefinition] The ChargeItemDefinition resource provides the
-  ChargeItemDefinition._();
+  const ChargeItemDefinition._();
 
   /// [ChargeItemDefinition] The ChargeItemDefinition resource provides the
   /// properties that apply to the (billing) codes necessary to calculate costs
@@ -1416,7 +1416,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
 @freezed
 class ChargeItemDefinitionApplicability
     with _$ChargeItemDefinitionApplicability {
-  ChargeItemDefinitionApplicability._();
+  const ChargeItemDefinitionApplicability._();
 
   /// [ChargeItemDefinitionApplicability] The ChargeItemDefinition resource
   /// provides the properties that apply to the (billing) codes necessary to
@@ -1541,7 +1541,7 @@ class ChargeItemDefinitionApplicability
 @freezed
 class ChargeItemDefinitionPropertyGroup
     with _$ChargeItemDefinitionPropertyGroup {
-  ChargeItemDefinitionPropertyGroup._();
+  const ChargeItemDefinitionPropertyGroup._();
 
   /// [ChargeItemDefinitionPropertyGroup] The ChargeItemDefinition resource
   /// provides the properties that apply to the (billing) codes necessary to
@@ -1646,7 +1646,7 @@ class ChargeItemDefinitionPropertyGroup
 @freezed
 class ChargeItemDefinitionPriceComponent
     with _$ChargeItemDefinitionPriceComponent {
-  ChargeItemDefinitionPriceComponent._();
+  const ChargeItemDefinitionPriceComponent._();
 
   /// [ChargeItemDefinitionPriceComponent] The ChargeItemDefinition resource
   /// provides the properties that apply to the (billing) codes necessary to
@@ -1764,7 +1764,7 @@ class ChargeItemDefinitionPriceComponent
 @freezed
 class Contract with Resource, _$Contract {
   /// [Contract] Legally enforceable, formally recorded unilateral or bilateral
-  Contract._();
+  const Contract._();
 
   /// [Contract] Legally enforceable, formally recorded unilateral or bilateral
   ///  directive i.e., a policy or agreement.
@@ -2271,7 +2271,7 @@ class Contract with Resource, _$Contract {
 @freezed
 class ContractContentDefinition with _$ContractContentDefinition {
   /// [ContractContentDefinition] Legally enforceable, formally recorded
-  ContractContentDefinition._();
+  const ContractContentDefinition._();
 
   /// [ContractContentDefinition] Legally enforceable, formally recorded
   ///  unilateral or bilateral directive i.e., a policy or agreement.
@@ -2428,7 +2428,7 @@ class ContractContentDefinition with _$ContractContentDefinition {
 @freezed
 class ContractTerm with _$ContractTerm {
   /// [ContractTerm] Legally enforceable, formally recorded unilateral or
-  ContractTerm._();
+  const ContractTerm._();
 
   /// [ContractTerm] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -2611,7 +2611,7 @@ class ContractTerm with _$ContractTerm {
 @freezed
 class ContractSecurityLabel with _$ContractSecurityLabel {
   /// [ContractSecurityLabel] Legally enforceable, formally recorded
-  ContractSecurityLabel._();
+  const ContractSecurityLabel._();
 
   /// [ContractSecurityLabel] Legally enforceable, formally recorded
   ///  unilateral or bilateral directive i.e., a policy or agreement.
@@ -2736,7 +2736,7 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
 @freezed
 class ContractOffer with _$ContractOffer {
   /// [ContractOffer] Legally enforceable, formally recorded unilateral or
-  ContractOffer._();
+  const ContractOffer._();
 
   /// [ContractOffer] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -2904,7 +2904,7 @@ class ContractOffer with _$ContractOffer {
 @freezed
 class ContractParty with _$ContractParty {
   /// [ContractParty] Legally enforceable, formally recorded unilateral or
-  ContractParty._();
+  const ContractParty._();
 
   /// [ContractParty] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -3006,7 +3006,7 @@ class ContractParty with _$ContractParty {
 @freezed
 class ContractAnswer with _$ContractAnswer {
   /// [ContractAnswer] Legally enforceable, formally recorded unilateral or
-  ContractAnswer._();
+  const ContractAnswer._();
 
   /// [ContractAnswer] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -3270,7 +3270,7 @@ class ContractAnswer with _$ContractAnswer {
 @freezed
 class ContractAsset with _$ContractAsset {
   /// [ContractAsset] Legally enforceable, formally recorded unilateral or
-  ContractAsset._();
+  const ContractAsset._();
 
   /// [ContractAsset] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -3470,7 +3470,7 @@ class ContractAsset with _$ContractAsset {
 @freezed
 class ContractContext with _$ContractContext {
   /// [ContractContext] Legally enforceable, formally recorded unilateral or
-  ContractContext._();
+  const ContractContext._();
 
   /// [ContractContext] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -3588,7 +3588,7 @@ class ContractContext with _$ContractContext {
 @freezed
 class ContractValuedItem with _$ContractValuedItem {
   /// [ContractValuedItem] Legally enforceable, formally recorded unilateral
-  ContractValuedItem._();
+  const ContractValuedItem._();
 
   /// [ContractValuedItem] Legally enforceable, formally recorded unilateral
   ///  or bilateral directive i.e., a policy or agreement.
@@ -3825,7 +3825,7 @@ class ContractValuedItem with _$ContractValuedItem {
 @freezed
 class ContractAction with _$ContractAction {
   /// [ContractAction] Legally enforceable, formally recorded unilateral or
-  ContractAction._();
+  const ContractAction._();
 
   /// [ContractAction] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -4118,7 +4118,7 @@ class ContractAction with _$ContractAction {
 @freezed
 class ContractSubject with _$ContractSubject {
   /// [ContractSubject] Legally enforceable, formally recorded unilateral or
-  ContractSubject._();
+  const ContractSubject._();
 
   /// [ContractSubject] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -4222,7 +4222,7 @@ class ContractSubject with _$ContractSubject {
 @freezed
 class ContractSigner with _$ContractSigner {
   /// [ContractSigner] Legally enforceable, formally recorded unilateral or
-  ContractSigner._();
+  const ContractSigner._();
 
   /// [ContractSigner] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -4329,7 +4329,7 @@ class ContractSigner with _$ContractSigner {
 @freezed
 class ContractFriendly with _$ContractFriendly {
   /// [ContractFriendly] Legally enforceable, formally recorded unilateral or
-  ContractFriendly._();
+  const ContractFriendly._();
 
   /// [ContractFriendly] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -4439,7 +4439,7 @@ class ContractFriendly with _$ContractFriendly {
 @freezed
 class ContractLegal with _$ContractLegal {
   /// [ContractLegal] Legally enforceable, formally recorded unilateral or
-  ContractLegal._();
+  const ContractLegal._();
 
   /// [ContractLegal] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -4541,7 +4541,7 @@ class ContractLegal with _$ContractLegal {
 @freezed
 class ContractRule with _$ContractRule {
   /// [ContractRule] Legally enforceable, formally recorded unilateral or
-  ContractRule._();
+  const ContractRule._();
 
   /// [ContractRule] Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
@@ -4647,7 +4647,7 @@ class ContractRule with _$ContractRule {
 @freezed
 class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   /// [ExplanationOfBenefit] This resource provides: the claim details;
-  ExplanationOfBenefit._();
+  const ExplanationOfBenefit._();
 
   /// [ExplanationOfBenefit] This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
@@ -5138,7 +5138,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
 @freezed
 class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   /// [ExplanationOfBenefitRelated] This resource provides: the claim details;
-  ExplanationOfBenefitRelated._();
+  const ExplanationOfBenefitRelated._();
 
   /// [ExplanationOfBenefitRelated] This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
@@ -5249,7 +5249,7 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
 @freezed
 class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   /// [ExplanationOfBenefitPayee] This resource provides: the claim details;
-  ExplanationOfBenefitPayee._();
+  const ExplanationOfBenefitPayee._();
 
   /// [ExplanationOfBenefitPayee] This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
@@ -5355,7 +5355,7 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
 @freezed
 class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   /// [ExplanationOfBenefitCareTeam] This resource provides: the claim
-  ExplanationOfBenefitCareTeam._();
+  const ExplanationOfBenefitCareTeam._();
 
   /// [ExplanationOfBenefitCareTeam] This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
@@ -5489,7 +5489,7 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
 @freezed
 class ExplanationOfBenefitSupportingInfo
     with _$ExplanationOfBenefitSupportingInfo {
-  ExplanationOfBenefitSupportingInfo._();
+  const ExplanationOfBenefitSupportingInfo._();
 
   /// [ExplanationOfBenefitSupportingInfo] This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
@@ -5675,7 +5675,7 @@ class ExplanationOfBenefitSupportingInfo
 @freezed
 class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   /// [ExplanationOfBenefitDiagnosis] This resource provides: the claim
-  ExplanationOfBenefitDiagnosis._();
+  const ExplanationOfBenefitDiagnosis._();
 
   /// [ExplanationOfBenefitDiagnosis] This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
@@ -5814,7 +5814,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
 @freezed
 class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   /// [ExplanationOfBenefitProcedure] This resource provides: the claim
-  ExplanationOfBenefitProcedure._();
+  const ExplanationOfBenefitProcedure._();
 
   /// [ExplanationOfBenefitProcedure] This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
@@ -5952,7 +5952,7 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
 @freezed
 class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   /// [ExplanationOfBenefitInsurance] This resource provides: the claim
-  ExplanationOfBenefitInsurance._();
+  const ExplanationOfBenefitInsurance._();
 
   /// [ExplanationOfBenefitInsurance] This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
@@ -6083,7 +6083,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
 @freezed
 class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   /// [ExplanationOfBenefitAccident] This resource provides: the claim
-  ExplanationOfBenefitAccident._();
+  const ExplanationOfBenefitAccident._();
 
   /// [ExplanationOfBenefitAccident] This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
@@ -6208,7 +6208,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
 @freezed
 class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   /// [ExplanationOfBenefitItem] This resource provides: the claim details;
-  ExplanationOfBenefitItem._();
+  const ExplanationOfBenefitItem._();
 
   /// [ExplanationOfBenefitItem] This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
@@ -6513,7 +6513,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
 @freezed
 class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   /// [ExplanationOfBenefitAdjudication] This resource provides: the claim
-  ExplanationOfBenefitAdjudication._();
+  const ExplanationOfBenefitAdjudication._();
 
   /// [ExplanationOfBenefitAdjudication] This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
@@ -6633,7 +6633,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
 @freezed
 class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   /// [ExplanationOfBenefitDetail] This resource provides: the claim details;
-  ExplanationOfBenefitDetail._();
+  const ExplanationOfBenefitDetail._();
 
   /// [ExplanationOfBenefitDetail] This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
@@ -6838,7 +6838,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
 @freezed
 class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   /// [ExplanationOfBenefitSubDetail] This resource provides: the claim
-  ExplanationOfBenefitSubDetail._();
+  const ExplanationOfBenefitSubDetail._();
 
   /// [ExplanationOfBenefitSubDetail] This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
@@ -7038,7 +7038,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
 @freezed
 class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   /// [ExplanationOfBenefitAddItem] This resource provides: the claim details;
-  ExplanationOfBenefitAddItem._();
+  const ExplanationOfBenefitAddItem._();
 
   /// [ExplanationOfBenefitAddItem] This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
@@ -7302,7 +7302,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
 @freezed
 class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   /// [ExplanationOfBenefitDetail1] This resource provides: the claim details;
-  ExplanationOfBenefitDetail1._();
+  const ExplanationOfBenefitDetail1._();
 
   /// [ExplanationOfBenefitDetail1] This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
@@ -7473,7 +7473,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
 @freezed
 class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   /// [ExplanationOfBenefitSubDetail1] This resource provides: the claim
-  ExplanationOfBenefitSubDetail1._();
+  const ExplanationOfBenefitSubDetail1._();
 
   /// [ExplanationOfBenefitSubDetail1] This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
@@ -7638,7 +7638,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
 @freezed
 class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   /// [ExplanationOfBenefitTotal] This resource provides: the claim details;
-  ExplanationOfBenefitTotal._();
+  const ExplanationOfBenefitTotal._();
 
   /// [ExplanationOfBenefitTotal] This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
@@ -7750,7 +7750,7 @@ class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
 @freezed
 class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   /// [ExplanationOfBenefitPayment] This resource provides: the claim details;
-  ExplanationOfBenefitPayment._();
+  const ExplanationOfBenefitPayment._();
 
   /// [ExplanationOfBenefitPayment] This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
@@ -7885,7 +7885,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
 @freezed
 class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   /// [ExplanationOfBenefitProcessNote] This resource provides: the claim
-  ExplanationOfBenefitProcessNote._();
+  const ExplanationOfBenefitProcessNote._();
 
   /// [ExplanationOfBenefitProcessNote] This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
@@ -8014,7 +8014,7 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
 @freezed
 class ExplanationOfBenefitBenefitBalance
     with _$ExplanationOfBenefitBenefitBalance {
-  ExplanationOfBenefitBenefitBalance._();
+  const ExplanationOfBenefitBenefitBalance._();
 
   /// [ExplanationOfBenefitBenefitBalance] This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
@@ -8162,7 +8162,7 @@ class ExplanationOfBenefitBenefitBalance
 @freezed
 class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   /// [ExplanationOfBenefitFinancial] This resource provides: the claim
-  ExplanationOfBenefitFinancial._();
+  const ExplanationOfBenefitFinancial._();
 
   /// [ExplanationOfBenefitFinancial] This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
@@ -8309,7 +8309,7 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
 @freezed
 class InsurancePlan with Resource, _$InsurancePlan {
   /// [InsurancePlan] Details of a Health Insurance product/plan provided by an
-  InsurancePlan._();
+  const InsurancePlan._();
 
   /// [InsurancePlan] Details of a Health Insurance product/plan provided by an
   ///  organization.
@@ -8581,7 +8581,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
 @freezed
 class InsurancePlanContact with _$InsurancePlanContact {
   /// [InsurancePlanContact] Details of a Health Insurance product/plan
-  InsurancePlanContact._();
+  const InsurancePlanContact._();
 
   /// [InsurancePlanContact] Details of a Health Insurance product/plan
   ///  provided by an organization.
@@ -8695,7 +8695,7 @@ class InsurancePlanContact with _$InsurancePlanContact {
 @freezed
 class InsurancePlanCoverage with _$InsurancePlanCoverage {
   /// [InsurancePlanCoverage] Details of a Health Insurance product/plan
-  InsurancePlanCoverage._();
+  const InsurancePlanCoverage._();
 
   /// [InsurancePlanCoverage] Details of a Health Insurance product/plan
   ///  provided by an organization.
@@ -8804,7 +8804,7 @@ class InsurancePlanCoverage with _$InsurancePlanCoverage {
 @freezed
 class InsurancePlanBenefit with _$InsurancePlanBenefit {
   /// [InsurancePlanBenefit] Details of a Health Insurance product/plan
-  InsurancePlanBenefit._();
+  const InsurancePlanBenefit._();
 
   /// [InsurancePlanBenefit] Details of a Health Insurance product/plan
   ///  provided by an organization.
@@ -8920,7 +8920,7 @@ class InsurancePlanBenefit with _$InsurancePlanBenefit {
 @freezed
 class InsurancePlanLimit with _$InsurancePlanLimit {
   /// [InsurancePlanLimit] Details of a Health Insurance product/plan provided
-  InsurancePlanLimit._();
+  const InsurancePlanLimit._();
 
   /// [InsurancePlanLimit] Details of a Health Insurance product/plan provided
   ///  by an organization.
@@ -9024,7 +9024,7 @@ class InsurancePlanLimit with _$InsurancePlanLimit {
 @freezed
 class InsurancePlanPlan with _$InsurancePlanPlan {
   /// [InsurancePlanPlan] Details of a Health Insurance product/plan provided
-  InsurancePlanPlan._();
+  const InsurancePlanPlan._();
 
   /// [InsurancePlanPlan] Details of a Health Insurance product/plan provided
   ///  by an organization.
@@ -9154,7 +9154,7 @@ class InsurancePlanPlan with _$InsurancePlanPlan {
 @freezed
 class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   /// [InsurancePlanGeneralCost] Details of a Health Insurance product/plan
-  InsurancePlanGeneralCost._();
+  const InsurancePlanGeneralCost._();
 
   /// [InsurancePlanGeneralCost] Details of a Health Insurance product/plan
   ///  provided by an organization.
@@ -9278,7 +9278,7 @@ class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
 @freezed
 class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
   /// [InsurancePlanSpecificCost] Details of a Health Insurance product/plan
-  InsurancePlanSpecificCost._();
+  const InsurancePlanSpecificCost._();
 
   /// [InsurancePlanSpecificCost] Details of a Health Insurance product/plan
   ///  provided by an organization.
@@ -9382,7 +9382,7 @@ class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
 @freezed
 class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
   /// [InsurancePlanBenefit1] Details of a Health Insurance product/plan
-  InsurancePlanBenefit1._();
+  const InsurancePlanBenefit1._();
 
   /// [InsurancePlanBenefit1] Details of a Health Insurance product/plan
   ///  provided by an organization.
@@ -9486,7 +9486,7 @@ class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
 @freezed
 class InsurancePlanCost with _$InsurancePlanCost {
   /// [InsurancePlanCost] Details of a Health Insurance product/plan provided
-  InsurancePlanCost._();
+  const InsurancePlanCost._();
 
   /// [InsurancePlanCost] Details of a Health Insurance product/plan provided
   ///  by an organization.

@@ -710,8 +710,14 @@ _$_ReferralRequest _$$_ReferralRequestFromJson(Map<String, dynamic> json) =>
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
           json['language'] == null ? null : FhirCode.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
       text: json['text'] == null
           ? null
           : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -767,16 +773,12 @@ _$_ReferralRequest _$$_ReferralRequestFromJson(Map<String, dynamic> json) =>
       fulfillmentTime: json['fulfillmentTime'] == null
           ? null
           : Period.fromJson(json['fulfillmentTime'] as Map<String, dynamic>),
-    )
-      ..implicitRulesElement = json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
-      ..languageElement = json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>);
+    );
 
 Map<String, dynamic> _$$_ReferralRequestToJson(_$_ReferralRequest instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -784,13 +786,12 @@ Map<String, dynamic> _$$_ReferralRequestToJson(_$_ReferralRequest instance) {
     }
   }
 
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e.toJson()).toList());
@@ -846,8 +847,14 @@ _$_ProcedureRequest _$$_ProcedureRequestFromJson(Map<String, dynamic> json) =>
       implicitRules: json['implicitRules'] == null
           ? null
           : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
       language:
           json['language'] == null ? null : FhirCode.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
       text: json['text'] == null
           ? null
           : Narrative.fromJson(json['text'] as Map<String, dynamic>),
@@ -912,16 +919,12 @@ _$_ProcedureRequest _$$_ProcedureRequestFromJson(Map<String, dynamic> json) =>
       priority: $enumDecodeNullable(
           _$ProcedureRequestPriorityEnumMap, json['priority'],
           unknownValue: ProcedureRequestPriority.unknown),
-    )
-      ..implicitRulesElement = json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>)
-      ..languageElement = json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>);
+    );
 
 Map<String, dynamic> _$$_ProcedureRequestToJson(_$_ProcedureRequest instance) {
-  final val = <String, dynamic>{};
+  final val = <String, dynamic>{
+    'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
+  };
 
   void writeNotNull(String key, dynamic value) {
     if (value != null) {
@@ -929,13 +932,12 @@ Map<String, dynamic> _$$_ProcedureRequestToJson(_$_ProcedureRequest instance) {
     }
   }
 
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  val['resourceType'] = _$Dstu2ResourceTypeEnumMap[instance.resourceType]!;
   writeNotNull('id', instance.fhirId?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull(
       'contained', instance.contained?.map((e) => e.toJson()).toList());

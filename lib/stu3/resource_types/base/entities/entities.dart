@@ -16,7 +16,7 @@ part 'entities.g.dart';
 
 @freezed
 class Device with Resource, _$Device {
-  Device._();
+  const Device._();
   const factory Device({
     @Default(Stu3ResourceType.Device)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Device)
@@ -88,7 +88,7 @@ class Device with Resource, _$Device {
 
 @freezed
 class DeviceUdi with _$DeviceUdi {
-  DeviceUdi._();
+  const DeviceUdi._();
   const factory DeviceUdi({
     String? deviceIdentifier,
     @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
@@ -139,7 +139,7 @@ class DeviceUdi with _$DeviceUdi {
 
 @freezed
 class DeviceComponent with Resource, _$DeviceComponent {
-  DeviceComponent._();
+  const DeviceComponent._();
   const factory DeviceComponent({
     @Default(Stu3ResourceType.DeviceComponent)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceComponent)
@@ -201,7 +201,7 @@ class DeviceComponent with Resource, _$DeviceComponent {
 @freezed
 class DeviceComponentProductionSpecification
     with _$DeviceComponentProductionSpecification {
-  DeviceComponentProductionSpecification._();
+  const DeviceComponentProductionSpecification._();
   const factory DeviceComponentProductionSpecification({
     CodeableConcept? specType,
     Identifier? componentId,
@@ -231,7 +231,7 @@ class DeviceComponentProductionSpecification
 
 @freezed
 class DeviceMetric with Resource, _$DeviceMetric {
-  DeviceMetric._();
+  const DeviceMetric._();
   const factory DeviceMetric({
     @Default(Stu3ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DeviceMetric)
@@ -292,7 +292,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
 
 @freezed
 class DeviceMetricCalibration with _$DeviceMetricCalibration {
-  DeviceMetricCalibration._();
+  const DeviceMetricCalibration._();
   const factory DeviceMetricCalibration({
     DeviceMetricCalibrationType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -335,7 +335,7 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
 
 @freezed
 class FhirEndpoint with Resource, _$FhirEndpoint {
-  FhirEndpoint._();
+  const FhirEndpoint._();
   const factory FhirEndpoint({
     @Default(Stu3ResourceType.Endpoint)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Endpoint)
@@ -399,7 +399,7 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
 
 @freezed
 class HealthcareService with Resource, _$HealthcareService {
-  HealthcareService._();
+  const HealthcareService._();
   const factory HealthcareService({
     @Default(Stu3ResourceType.HealthcareService)
     @JsonKey(unknownEnumValue: Stu3ResourceType.HealthcareService)
@@ -480,7 +480,7 @@ class HealthcareService with Resource, _$HealthcareService {
 
 @freezed
 class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
-  HealthcareServiceAvailableTime._();
+  const HealthcareServiceAvailableTime._();
   const factory HealthcareServiceAvailableTime({
     List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
@@ -526,7 +526,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 
 @freezed
 class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
-  HealthcareServiceNotAvailable._();
+  const HealthcareServiceNotAvailable._();
   const factory HealthcareServiceNotAvailable({
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -566,7 +566,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
 
 @freezed
 class Location with Resource, _$Location {
-  Location._();
+  const Location._();
   const factory Location({
     @Default(Stu3ResourceType.Location)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Location)
@@ -634,7 +634,7 @@ class Location with Resource, _$Location {
 
 @freezed
 class LocationPosition with _$LocationPosition {
-  LocationPosition._();
+  const LocationPosition._();
   const factory LocationPosition({
     FhirDecimal? longitude,
     @JsonKey(name: '_longitude') Element? longitudeElement,
@@ -677,7 +677,7 @@ class LocationPosition with _$LocationPosition {
 
 @freezed
 class Organization with Resource, _$Organization {
-  Organization._();
+  const Organization._();
   const factory Organization({
     @Default(Stu3ResourceType.Organization)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Organization)
@@ -738,7 +738,7 @@ class Organization with Resource, _$Organization {
 
 @freezed
 class OrganizationContact with _$OrganizationContact {
-  OrganizationContact._();
+  const OrganizationContact._();
   const factory OrganizationContact({
     CodeableConcept? purpose,
     HumanName? name,
@@ -779,7 +779,7 @@ class OrganizationContact with _$OrganizationContact {
 
 @freezed
 class Substance with Resource, _$Substance {
-  Substance._();
+  const Substance._();
   const factory Substance({
     @Default(Stu3ResourceType.Substance)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Substance)
@@ -836,7 +836,7 @@ class Substance with Resource, _$Substance {
 
 @freezed
 class SubstanceInstance with _$SubstanceInstance {
-  SubstanceInstance._();
+  const SubstanceInstance._();
   const factory SubstanceInstance({
     Identifier? identifier,
     String? expiry,
@@ -877,7 +877,7 @@ class SubstanceInstance with _$SubstanceInstance {
 
 @freezed
 class SubstanceIngredient with _$SubstanceIngredient {
-  SubstanceIngredient._();
+  const SubstanceIngredient._();
   const factory SubstanceIngredient({
     Ratio? quantity,
     CodeableConcept? substanceCodeableConcept,

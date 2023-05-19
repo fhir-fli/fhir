@@ -18,7 +18,7 @@ part 'metadata_types.g.dart';
 @freezed
 class ContactDetail with _$ContactDetail {
   /// [ContactDetail] Specifies contact information for a person or
-  ContactDetail._();
+  const ContactDetail._();
 
   /// [ContactDetail] Specifies contact information for a person or
   ///  organization.
@@ -98,7 +98,7 @@ class ContactDetail with _$ContactDetail {
 @freezed
 class Contributor with _$Contributor {
   /// [Contributor] A contributor to the content of a knowledge asset,
-  Contributor._();
+  const Contributor._();
 
   /// [Contributor] A contributor to the content of a knowledge asset,
   ///  including authors, editors, reviewers, and endorsers.
@@ -190,7 +190,7 @@ class Contributor with _$Contributor {
 @freezed
 class DataRequirement with _$DataRequirement {
   /// [DataRequirement] Describes a required data item for evaluation in terms
-  DataRequirement._();
+  const DataRequirement._();
 
   /// [DataRequirement] Describes a required data item for evaluation in terms
   ///  of the type of data, and optional code or date-based filters of the data.
@@ -353,7 +353,7 @@ class DataRequirement with _$DataRequirement {
 @freezed
 class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// [DataRequirementCodeFilter] Describes a required data item for
-  DataRequirementCodeFilter._();
+  const DataRequirementCodeFilter._();
 
   /// [DataRequirementCodeFilter] Describes a required data item for
   /// evaluation in terms of the type of data, and optional code or date-based
@@ -508,7 +508,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
 @freezed
 class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// [DataRequirementDateFilter] Describes a required data item for
-  DataRequirementDateFilter._();
+  const DataRequirementDateFilter._();
 
   /// [DataRequirementDateFilter] Describes a required data item for
   /// evaluation in terms of the type of data, and optional code or date-based
@@ -689,7 +689,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
 @freezed
 class DataRequirementSort with _$DataRequirementSort {
   /// [DataRequirementSort] Describes a required data item for evaluation in
-  DataRequirementSort._();
+  const DataRequirementSort._();
 
   /// [DataRequirementSort] Describes a required data item for evaluation in
   /// terms of the type of data, and optional code or date-based filters of the
@@ -811,7 +811,7 @@ class DataRequirementSort with _$DataRequirementSort {
 @freezed
 class ParameterDefinition with _$ParameterDefinition {
   /// [ParameterDefinition] The parameters to the module. This collection
-  ParameterDefinition._();
+  const ParameterDefinition._();
 
   /// [ParameterDefinition] The parameters to the module. This collection
   /// specifies both the input and output parameters. Input parameters are
@@ -951,7 +951,7 @@ class ParameterDefinition with _$ParameterDefinition {
 @freezed
 class RelatedArtifact with _$RelatedArtifact {
   /// [RelatedArtifact] Related artifacts such as additional documentation,
-  RelatedArtifact._();
+  const RelatedArtifact._();
 
   /// [RelatedArtifact] Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
@@ -1087,7 +1087,7 @@ class RelatedArtifact with _$RelatedArtifact {
 @freezed
 class TriggerDefinition with _$TriggerDefinition {
   /// [TriggerDefinition] A description of a triggering event. Triggering
-  TriggerDefinition._();
+  const TriggerDefinition._();
 
   /// [TriggerDefinition] A description of a triggering event. Triggering
   /// events can be named events, data events, or periodic, as determined by the
@@ -1226,7 +1226,7 @@ class TriggerDefinition with _$TriggerDefinition {
 @freezed
 class UsageContext with _$UsageContext {
   /// [UsageContext] Specifies clinical/business/etc. metadata that can be used
-  UsageContext._();
+  const UsageContext._();
 
   /// [UsageContext] Specifies clinical/business/etc. metadata that can be used
   /// to retrieve, index and/or categorize an artifact. This metadata can either
@@ -1326,7 +1326,7 @@ class UsageContext with _$UsageContext {
 @freezed
 class FhirExpression with _$FhirExpression {
   /// [FhirExpression] A expression that is evaluated in a specified context and
-  FhirExpression._();
+  const FhirExpression._();
 
   /// [FhirExpression] A expression that is evaluated in a specified context and
   /// returns a value. The context of use of the expression must specify the

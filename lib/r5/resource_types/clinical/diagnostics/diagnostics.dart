@@ -21,7 +21,7 @@ class BodyStructure with Resource, _$BodyStructure {
   /// [BodyStructure] Record details about an anatomical structure.  This
   ///  resource may be used when a coded concept does not provide the necessary
   ///  detail needed for the use case.
-  BodyStructure._();
+  const BodyStructure._();
 
   /// [BodyStructure] Record details about an anatomical structure.  This
   ///  resource may be used when a coded concept does not provide the necessary
@@ -254,7 +254,7 @@ class BodyStructureIncludedStructure with _$BodyStructureIncludedStructure {
   /// [BodyStructureIncludedStructure] Record details about an anatomical
   ///  structure.  This resource may be used when a coded concept does not
   ///  provide the necessary detail needed for the use case.
-  BodyStructureIncludedStructure._();
+  const BodyStructureIncludedStructure._();
 
   /// [BodyStructureIncludedStructure] Record details about an anatomical
   ///  structure.  This resource may be used when a coded concept does not
@@ -383,7 +383,7 @@ class BodyStructureBodyLandmarkOrientation
   /// [BodyStructureBodyLandmarkOrientation] Record details about an anatomical
   ///  structure.  This resource may be used when a coded concept does not
   ///  provide the necessary detail needed for the use case.
-  BodyStructureBodyLandmarkOrientation._();
+  const BodyStructureBodyLandmarkOrientation._();
 
   /// [BodyStructureBodyLandmarkOrientation] Record details about an anatomical
   ///  structure.  This resource may be used when a coded concept does not
@@ -514,7 +514,7 @@ class BodyStructureDistanceFromLandmark
   /// [BodyStructureDistanceFromLandmark] Record details about an anatomical
   ///  structure.  This resource may be used when a coded concept does not
   ///  provide the necessary detail needed for the use case.
-  BodyStructureDistanceFromLandmark._();
+  const BodyStructureDistanceFromLandmark._();
 
   /// [BodyStructureDistanceFromLandmark] Record details about an anatomical
   ///  structure.  This resource may be used when a coded concept does not
@@ -636,7 +636,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   ///  and formatted representation of diagnostic reports. The report also
   ///  includes non-clinical context such as batch analysis and stability
   ///  reporting of products and substances.
-  DiagnosticReport._();
+  const DiagnosticReport._();
 
   /// [DiagnosticReport] The findings and interpretation of diagnostic tests
   ///  performed on patients, groups of patients, products, substances,
@@ -1034,7 +1034,7 @@ class DiagnosticReportSupportingInfo with _$DiagnosticReportSupportingInfo {
   ///  interpretations, and formatted representation of diagnostic reports. The
   ///  report also includes non-clinical context such as batch analysis and
   ///  stability reporting of products and substances.
-  DiagnosticReportSupportingInfo._();
+  const DiagnosticReportSupportingInfo._();
 
   /// [DiagnosticReportSupportingInfo] The findings and interpretation of
   ///  diagnostic tests performed on patients, groups of patients, products,
@@ -1164,7 +1164,7 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
   ///  and formatted representation of diagnostic reports. The report also
   ///  includes non-clinical context such as batch analysis and stability
   ///  reporting of products and substances.
-  DiagnosticReportMedia._();
+  const DiagnosticReportMedia._();
 
   /// [DiagnosticReportMedia] The findings and interpretation of diagnostic
   ///  tests performed on patients, groups of patients, products, substances,
@@ -1285,7 +1285,7 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
 class GenomicStudy with Resource, _$GenomicStudy {
   /// [GenomicStudy] A GenomicStudy is a set of analyses performed to analyze
   ///  and generate genomic data.
-  GenomicStudy._();
+  const GenomicStudy._();
 
   /// [GenomicStudy] A GenomicStudy is a set of analyses performed to analyze
   ///  and generate genomic data.
@@ -1563,7 +1563,7 @@ class GenomicStudy with Resource, _$GenomicStudy {
 class GenomicStudyAnalysis with _$GenomicStudyAnalysis {
   /// [GenomicStudyAnalysis] A GenomicStudy is a set of analyses performed to
   ///  analyze and generate genomic data.
-  GenomicStudyAnalysis._();
+  const GenomicStudyAnalysis._();
 
   /// [GenomicStudyAnalysis] A GenomicStudy is a set of analyses performed to
   ///  analyze and generate genomic data.
@@ -1791,7 +1791,7 @@ class GenomicStudyAnalysis with _$GenomicStudyAnalysis {
 class GenomicStudyInput with _$GenomicStudyInput {
   /// [GenomicStudyInput] A GenomicStudy is a set of analyses performed to
   ///  analyze and generate genomic data.
-  GenomicStudyInput._();
+  const GenomicStudyInput._();
 
   /// [GenomicStudyInput] A GenomicStudy is a set of analyses performed to
   ///  analyze and generate genomic data.
@@ -1911,7 +1911,7 @@ class GenomicStudyInput with _$GenomicStudyInput {
 class GenomicStudyOutput with _$GenomicStudyOutput {
   /// [GenomicStudyOutput] A GenomicStudy is a set of analyses performed to
   ///  analyze and generate genomic data.
-  GenomicStudyOutput._();
+  const GenomicStudyOutput._();
 
   /// [GenomicStudyOutput] A GenomicStudy is a set of analyses performed to
   ///  analyze and generate genomic data.
@@ -2017,7 +2017,7 @@ class GenomicStudyOutput with _$GenomicStudyOutput {
 class GenomicStudyPerformer with _$GenomicStudyPerformer {
   /// [GenomicStudyPerformer] A GenomicStudy is a set of analyses performed to
   ///  analyze and generate genomic data.
-  GenomicStudyPerformer._();
+  const GenomicStudyPerformer._();
 
   /// [GenomicStudyPerformer] A GenomicStudy is a set of analyses performed to
   ///  analyze and generate genomic data.
@@ -2125,7 +2125,7 @@ class GenomicStudyPerformer with _$GenomicStudyPerformer {
 class GenomicStudyDevice with _$GenomicStudyDevice {
   /// [GenomicStudyDevice] A GenomicStudy is a set of analyses performed to
   ///  analyze and generate genomic data.
-  GenomicStudyDevice._();
+  const GenomicStudyDevice._();
 
   /// [GenomicStudyDevice] A GenomicStudy is a set of analyses performed to
   ///  analyze and generate genomic data.
@@ -2239,7 +2239,7 @@ class ImagingSelection with Resource, _$ImagingSelection {
   ///  specifics such as an image region, an Observation UID or a Segmentation
   ///  Number, allowing linkage to an Observation Resource or transferring this
   ///  information along with the ImagingStudy Resource.
-  ImagingSelection._();
+  const ImagingSelection._();
 
   /// [ImagingSelection] A selection of DICOM SOP instances and/or frames
   ///  within a single Study and Series. This might include additional
@@ -2584,7 +2584,7 @@ class ImagingSelectionPerformer with _$ImagingSelectionPerformer {
   ///  specifics such as an image region, an Observation UID or a Segmentation
   ///  Number, allowing linkage to an Observation Resource or transferring this
   ///  information along with the ImagingStudy Resource.
-  ImagingSelectionPerformer._();
+  const ImagingSelectionPerformer._();
 
   /// [ImagingSelectionPerformer] A selection of DICOM SOP instances and/or
   ///  frames within a single Study and Series. This might include additional
@@ -2701,7 +2701,7 @@ class ImagingSelectionInstance with _$ImagingSelectionInstance {
   ///  specifics such as an image region, an Observation UID or a Segmentation
   ///  Number, allowing linkage to an Observation Resource or transferring this
   ///  information along with the ImagingStudy Resource.
-  ImagingSelectionInstance._();
+  const ImagingSelectionInstance._();
 
   /// [ImagingSelectionInstance] A selection of DICOM SOP instances and/or
   ///  frames within a single Study and Series. This might include additional
@@ -2878,7 +2878,7 @@ class ImagingSelectionImageRegion2D with _$ImagingSelectionImageRegion2D {
   ///  specifics such as an image region, an Observation UID or a Segmentation
   ///  Number, allowing linkage to an Observation Resource or transferring this
   ///  information along with the ImagingStudy Resource.
-  ImagingSelectionImageRegion2D._();
+  const ImagingSelectionImageRegion2D._();
 
   /// [ImagingSelectionImageRegion2D] A selection of DICOM SOP instances and/or
   ///  frames within a single Study and Series. This might include additional
@@ -3016,7 +3016,7 @@ class ImagingSelectionImageRegion3D with _$ImagingSelectionImageRegion3D {
   ///  specifics such as an image region, an Observation UID or a Segmentation
   ///  Number, allowing linkage to an Observation Resource or transferring this
   ///  information along with the ImagingStudy Resource.
-  ImagingSelectionImageRegion3D._();
+  const ImagingSelectionImageRegion3D._();
 
   /// [ImagingSelectionImageRegion3D] A selection of DICOM SOP instances and/or
   ///  frames within a single Study and Series. This might include additional
@@ -3151,7 +3151,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
   ///  acquired or produced in a common context.  A series is of only one
   ///  modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple
   ///  series of different modalities.
-  ImagingStudy._();
+  const ImagingStudy._();
 
   /// [ImagingStudy] Representation of the content produced in a DICOM imaging
   ///  study. A study comprises a set of series, each of which includes a set
@@ -3506,7 +3506,7 @@ class ImagingStudySeries with _$ImagingStudySeries {
   ///  data) acquired or produced in a common context.  A series is of only one
   ///  modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple
   ///  series of different modalities.
-  ImagingStudySeries._();
+  const ImagingStudySeries._();
 
   /// [ImagingStudySeries] Representation of the content produced in a DICOM
   ///  imaging study. A study comprises a set of series, each of which includes
@@ -3732,7 +3732,7 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
   ///  data) acquired or produced in a common context.  A series is of only one
   ///  modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple
   ///  series of different modalities.
-  ImagingStudyPerformer._();
+  const ImagingStudyPerformer._();
 
   /// [ImagingStudyPerformer] Representation of the content produced in a DICOM
   ///  imaging study. A study comprises a set of series, each of which includes
@@ -3852,7 +3852,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
   ///  data) acquired or produced in a common context.  A series is of only one
   ///  modality (e.g. X-ray, CT, MR, ultrasound), but a study may have multiple
   ///  series of different modalities.
-  ImagingStudyInstance._();
+  const ImagingStudyInstance._();
 
   /// [ImagingStudyInstance] Representation of the content produced in a DICOM
   ///  imaging study. A study comprises a set of series, each of which includes
@@ -3985,7 +3985,7 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
 @freezed
 class MolecularSequence with Resource, _$MolecularSequence {
   /// [MolecularSequence] Representation of a molecular sequence.
-  MolecularSequence._();
+  const MolecularSequence._();
 
   /// [MolecularSequence] Representation of a molecular sequence.
   ///
@@ -4224,7 +4224,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
 @freezed
 class MolecularSequenceRelative with _$MolecularSequenceRelative {
   /// [MolecularSequenceRelative] Representation of a molecular sequence.
-  MolecularSequenceRelative._();
+  const MolecularSequenceRelative._();
 
   /// [MolecularSequenceRelative] Representation of a molecular sequence.
   ///
@@ -4363,7 +4363,7 @@ class MolecularSequenceStartingSequence
     with _$MolecularSequenceStartingSequence {
   /// [MolecularSequenceStartingSequence] Representation of a molecular
   ///  sequence.
-  MolecularSequenceStartingSequence._();
+  const MolecularSequenceStartingSequence._();
 
   /// [MolecularSequenceStartingSequence] Representation of a molecular
   ///  sequence.
@@ -4561,7 +4561,7 @@ class MolecularSequenceStartingSequence
 @freezed
 class MolecularSequenceEdit with _$MolecularSequenceEdit {
   /// [MolecularSequenceEdit] Representation of a molecular sequence.
-  MolecularSequenceEdit._();
+  const MolecularSequenceEdit._();
 
   /// [MolecularSequenceEdit] Representation of a molecular sequence.
   ///
@@ -4726,7 +4726,7 @@ class MolecularSequenceEdit with _$MolecularSequenceEdit {
 class Observation with Resource, _$Observation {
   /// [Observation] Measurements and simple assertions made about a patient,
   ///  device or other subject.
-  Observation._();
+  const Observation._();
 
   /// [Observation] Measurements and simple assertions made about a patient,
   ///  device or other subject.
@@ -5323,7 +5323,7 @@ class Observation with Resource, _$Observation {
 class ObservationTriggeredBy with _$ObservationTriggeredBy {
   /// [ObservationTriggeredBy] Measurements and simple assertions made about a
   ///  patient, device or other subject.
-  ObservationTriggeredBy._();
+  const ObservationTriggeredBy._();
 
   /// [ObservationTriggeredBy] Measurements and simple assertions made about a
   ///  patient, device or other subject.
@@ -5446,7 +5446,7 @@ class ObservationTriggeredBy with _$ObservationTriggeredBy {
 class ObservationReferenceRange with _$ObservationReferenceRange {
   /// [ObservationReferenceRange] Measurements and simple assertions made about
   ///  a patient, device or other subject.
-  ObservationReferenceRange._();
+  const ObservationReferenceRange._();
 
   /// [ObservationReferenceRange] Measurements and simple assertions made about
   ///  a patient, device or other subject.
@@ -5614,7 +5614,7 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
 class ObservationComponent with _$ObservationComponent {
   /// [ObservationComponent] Measurements and simple assertions made about a
   ///  patient, device or other subject.
-  ObservationComponent._();
+  const ObservationComponent._();
 
   /// [ObservationComponent] Measurements and simple assertions made about a
   ///  patient, device or other subject.
@@ -5857,7 +5857,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   ///  The questions are ordered and grouped into coherent subsets,
   ///  corresponding to the structure of the grouping of the questionnaire
   ///  being responded to.
-  QuestionnaireResponse._();
+  const QuestionnaireResponse._();
 
   /// [QuestionnaireResponse] A structured set of questions and their answers.
   ///  The questions are ordered and grouped into coherent subsets,
@@ -6132,7 +6132,7 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
   ///  answers. The questions are ordered and grouped into coherent subsets,
   ///  corresponding to the structure of the grouping of the questionnaire
   ///  being responded to.
-  QuestionnaireResponseItem._();
+  const QuestionnaireResponseItem._();
 
   /// [QuestionnaireResponseItem] A structured set of questions and their
   ///  answers. The questions are ordered and grouped into coherent subsets,
@@ -6283,7 +6283,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
   ///  answers. The questions are ordered and grouped into coherent subsets,
   ///  corresponding to the structure of the grouping of the questionnaire
   ///  being responded to.
-  QuestionnaireResponseAnswer._();
+  const QuestionnaireResponseAnswer._();
 
   /// [QuestionnaireResponseAnswer] A structured set of questions and their
   ///  answers. The questions are ordered and grouped into coherent subsets,
@@ -6510,7 +6510,7 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
 @freezed
 class Specimen with Resource, _$Specimen {
   /// [Specimen] A sample to be used for analysis.
-  Specimen._();
+  const Specimen._();
 
   /// [Specimen] A sample to be used for analysis.
   ///
@@ -6809,7 +6809,7 @@ class Specimen with Resource, _$Specimen {
 @freezed
 class SpecimenFeature with _$SpecimenFeature {
   /// [SpecimenFeature] A sample to be used for analysis.
-  SpecimenFeature._();
+  const SpecimenFeature._();
 
   /// [SpecimenFeature] A sample to be used for analysis.
   ///
@@ -6917,7 +6917,7 @@ class SpecimenFeature with _$SpecimenFeature {
 @freezed
 class SpecimenCollection with _$SpecimenCollection {
   /// [SpecimenCollection] A sample to be used for analysis.
-  SpecimenCollection._();
+  const SpecimenCollection._();
 
   /// [SpecimenCollection] A sample to be used for analysis.
   ///
@@ -7096,7 +7096,7 @@ class SpecimenCollection with _$SpecimenCollection {
 @freezed
 class SpecimenProcessing with _$SpecimenProcessing {
   /// [SpecimenProcessing] A sample to be used for analysis.
-  SpecimenProcessing._();
+  const SpecimenProcessing._();
 
   /// [SpecimenProcessing] A sample to be used for analysis.
   ///
@@ -7233,7 +7233,7 @@ class SpecimenProcessing with _$SpecimenProcessing {
 @freezed
 class SpecimenContainer with _$SpecimenContainer {
   /// [SpecimenContainer] A sample to be used for analysis.
-  SpecimenContainer._();
+  const SpecimenContainer._();
 
   /// [SpecimenContainer] A sample to be used for analysis.
   ///

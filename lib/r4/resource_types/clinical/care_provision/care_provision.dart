@@ -17,7 +17,7 @@ part 'care_provision.g.dart';
 @freezed
 class CarePlan with Resource, _$CarePlan {
   /// [CarePlan] Describes the intention of how one or more practitioners
-  CarePlan._();
+  const CarePlan._();
 
   /// [CarePlan] Describes the intention of how one or more practitioners
   /// intend to deliver care for a particular patient, group or community for a
@@ -373,7 +373,7 @@ class CarePlan with Resource, _$CarePlan {
 @freezed
 class CarePlanActivity with _$CarePlanActivity {
   /// [CarePlanActivity] Describes the intention of how one or more
-  CarePlanActivity._();
+  const CarePlanActivity._();
 
   /// [CarePlanActivity] Describes the intention of how one or more
   /// practitioners intend to deliver care for a particular patient, group or
@@ -510,7 +510,7 @@ class CarePlanActivity with _$CarePlanActivity {
 @freezed
 class CarePlanDetail with _$CarePlanDetail {
   /// [CarePlanDetail] Describes the intention of how one or more
-  CarePlanDetail._();
+  const CarePlanDetail._();
 
   /// [CarePlanDetail] Describes the intention of how one or more
   /// practitioners intend to deliver care for a particular patient, group or
@@ -796,7 +796,7 @@ class CarePlanDetail with _$CarePlanDetail {
 @freezed
 class CareTeam with Resource, _$CareTeam {
   /// [CareTeam] The Care Team includes all the people and organizations who
-  CareTeam._();
+  const CareTeam._();
 
   /// [CareTeam] The Care Team includes all the people and organizations who
   /// plan to participate in the coordination and delivery of care for a
@@ -1051,7 +1051,7 @@ class CareTeam with Resource, _$CareTeam {
 @freezed
 class CareTeamParticipant with _$CareTeamParticipant {
   /// [CareTeamParticipant] The Care Team includes all the people and
-  CareTeamParticipant._();
+  const CareTeamParticipant._();
 
   /// [CareTeamParticipant] The Care Team includes all the people and
   /// organizations who plan to participate in the coordination and delivery of
@@ -1172,7 +1172,7 @@ class CareTeamParticipant with _$CareTeamParticipant {
 @freezed
 class Goal with Resource, _$Goal {
   /// [Goal] Describes the intended objective(s) for a patient, group or
-  Goal._();
+  const Goal._();
 
   /// [Goal] Describes the intended objective(s) for a patient, group or
   /// organization care, for example, weight loss, restoring an activity of
@@ -1462,7 +1462,7 @@ class Goal with Resource, _$Goal {
 @freezed
 class GoalTarget with _$GoalTarget {
   /// [GoalTarget] Describes the intended objective(s) for a patient, group or
-  GoalTarget._();
+  const GoalTarget._();
 
   /// [GoalTarget] Describes the intended objective(s) for a patient, group or
   /// organization care, for example, weight loss, restoring an activity of
@@ -1704,7 +1704,7 @@ class GoalTarget with _$GoalTarget {
 @freezed
 class NutritionOrder with Resource, _$NutritionOrder {
   /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or
-  NutritionOrder._();
+  const NutritionOrder._();
 
   /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or
   ///  oral nutritional supplement to a patient/resident.
@@ -2035,7 +2035,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
 @freezed
 class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
   /// [NutritionOrderOralDiet] A request to supply a diet, formula feeding
-  NutritionOrderOralDiet._();
+  const NutritionOrderOralDiet._();
 
   /// [NutritionOrderOralDiet] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
@@ -2180,7 +2180,7 @@ class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
 @freezed
 class NutritionOrderNutrient with _$NutritionOrderNutrient {
   /// [NutritionOrderNutrient] A request to supply a diet, formula feeding
-  NutritionOrderNutrient._();
+  const NutritionOrderNutrient._();
 
   /// [NutritionOrderNutrient] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
@@ -2284,7 +2284,7 @@ class NutritionOrderNutrient with _$NutritionOrderNutrient {
 @freezed
 class NutritionOrderTexture with _$NutritionOrderTexture {
   /// [NutritionOrderTexture] A request to supply a diet, formula feeding
-  NutritionOrderTexture._();
+  const NutritionOrderTexture._();
 
   /// [NutritionOrderTexture] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
@@ -2390,7 +2390,7 @@ class NutritionOrderTexture with _$NutritionOrderTexture {
 @freezed
 class NutritionOrderSupplement with _$NutritionOrderSupplement {
   /// [NutritionOrderSupplement] A request to supply a diet, formula feeding
-  NutritionOrderSupplement._();
+  const NutritionOrderSupplement._();
 
   /// [NutritionOrderSupplement] A request to supply a diet, formula feeding
   ///  (enteral) or oral nutritional supplement to a patient/resident.
@@ -2527,7 +2527,7 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
 @freezed
 class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
   /// [NutritionOrderEnteralFormula] A request to supply a diet, formula
-  NutritionOrderEnteralFormula._();
+  const NutritionOrderEnteralFormula._();
 
   /// [NutritionOrderEnteralFormula] A request to supply a diet, formula
   ///  feeding (enteral) or oral nutritional supplement to a patient/resident.
@@ -2715,7 +2715,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
 @freezed
 class NutritionOrderAdministration with _$NutritionOrderAdministration {
   /// [NutritionOrderAdministration] A request to supply a diet, formula
-  NutritionOrderAdministration._();
+  const NutritionOrderAdministration._();
 
   /// [NutritionOrderAdministration] A request to supply a diet, formula
   ///  feeding (enteral) or oral nutritional supplement to a patient/resident.
@@ -2835,7 +2835,7 @@ class NutritionOrderAdministration with _$NutritionOrderAdministration {
 @freezed
 class RequestGroup with Resource, _$RequestGroup {
   /// [RequestGroup] A group of related requests that can be used to capture
-  RequestGroup._();
+  const RequestGroup._();
 
   /// [RequestGroup] A group of related requests that can be used to capture
   /// intended activities that have inter-dependencies such as "give this
@@ -3146,7 +3146,7 @@ class RequestGroup with Resource, _$RequestGroup {
 @freezed
 class RequestGroupAction with _$RequestGroupAction {
   /// [RequestGroupAction] A group of related requests that can be used to
-  RequestGroupAction._();
+  const RequestGroupAction._();
 
   /// [RequestGroupAction] A group of related requests that can be used to
   /// capture intended activities that have inter-dependencies such as "give
@@ -3462,7 +3462,7 @@ class RequestGroupAction with _$RequestGroupAction {
 @freezed
 class RequestGroupCondition with _$RequestGroupCondition {
   /// [RequestGroupCondition] A group of related requests that can be used to
-  RequestGroupCondition._();
+  const RequestGroupCondition._();
 
   /// [RequestGroupCondition] A group of related requests that can be used to
   /// capture intended activities that have inter-dependencies such as "give
@@ -3572,7 +3572,7 @@ class RequestGroupCondition with _$RequestGroupCondition {
 @freezed
 class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
   /// [RequestGroupRelatedAction] A group of related requests that can be used
-  RequestGroupRelatedAction._();
+  const RequestGroupRelatedAction._();
 
   /// [RequestGroupRelatedAction] A group of related requests that can be used
   /// to capture intended activities that have inter-dependencies such as "give
@@ -3699,7 +3699,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
 @freezed
 class RiskAssessment with Resource, _$RiskAssessment {
   /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or
-  RiskAssessment._();
+  const RiskAssessment._();
 
   /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or
   ///  other subject as well as the likelihood of each outcome.
@@ -3983,7 +3983,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
 @freezed
 class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   /// [RiskAssessmentPrediction] An assessment of the likely outcome(s) for a
-  RiskAssessmentPrediction._();
+  const RiskAssessmentPrediction._();
 
   /// [RiskAssessmentPrediction] An assessment of the likely outcome(s) for a
   ///  patient or other subject as well as the likelihood of each outcome.
@@ -4150,7 +4150,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
 @freezed
 class ServiceRequest with Resource, _$ServiceRequest {
   /// [ServiceRequest] A record of a request for service such as diagnostic
-  ServiceRequest._();
+  const ServiceRequest._();
 
   /// [ServiceRequest] A record of a request for service such as diagnostic
   ///  investigations, treatments, or operations to be performed.
@@ -4660,7 +4660,7 @@ class ServiceRequest with Resource, _$ServiceRequest {
 @freezed
 class VisionPrescription with Resource, _$VisionPrescription {
   /// [VisionPrescription] An authorization for the provision of glasses and/or
-  VisionPrescription._();
+  const VisionPrescription._();
 
   /// [VisionPrescription] An authorization for the provision of glasses and/or
   ///  contact lenses to a patient.
@@ -4887,7 +4887,7 @@ class VisionPrescription with Resource, _$VisionPrescription {
 @freezed
 class VisionPrescriptionLensSpecification
     with _$VisionPrescriptionLensSpecification {
-  VisionPrescriptionLensSpecification._();
+  const VisionPrescriptionLensSpecification._();
 
   /// [VisionPrescriptionLensSpecification] An authorization for the provision
   ///  of glasses and/or contact lenses to a patient.
@@ -5096,7 +5096,7 @@ class VisionPrescriptionLensSpecification
 @freezed
 class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
   /// [VisionPrescriptionPrism] An authorization for the provision of glasses
-  VisionPrescriptionPrism._();
+  const VisionPrescriptionPrism._();
 
   /// [VisionPrescriptionPrism] An authorization for the provision of glasses
   ///  and/or contact lenses to a patient.

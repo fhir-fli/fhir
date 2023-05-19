@@ -5,6 +5,7 @@
 * Dart 3.0.0!
 * Added in a dbId field (in case you need an int for Id)
 * Changed Group to FhirGroup to avoid problems with other packages
+* Had to remove copyWith from generic Resource class
 
 ## [0.10.0]
 

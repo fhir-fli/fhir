@@ -16,7 +16,7 @@ part 'conformance.g.dart';
 
 @freezed
 class CapabilityStatement with Resource, _$CapabilityStatement {
-  CapabilityStatement._();
+  const CapabilityStatement._();
   const factory CapabilityStatement({
     @Default(Stu3ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
@@ -110,7 +110,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
 
 @freezed
 class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
-  CapabilityStatementSoftware._();
+  const CapabilityStatementSoftware._();
   const factory CapabilityStatementSoftware({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -154,7 +154,7 @@ class CapabilityStatementSoftware with _$CapabilityStatementSoftware {
 @freezed
 class CapabilityStatementImplementation
     with _$CapabilityStatementImplementation {
-  CapabilityStatementImplementation._();
+  const CapabilityStatementImplementation._();
   const factory CapabilityStatementImplementation({
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -184,7 +184,7 @@ class CapabilityStatementImplementation
 
 @freezed
 class CapabilityStatementRest with _$CapabilityStatementRest {
-  CapabilityStatementRest._();
+  const CapabilityStatementRest._();
   const factory CapabilityStatementRest({
     CapabilityStatementRestMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
@@ -232,7 +232,7 @@ class CapabilityStatementRest with _$CapabilityStatementRest {
 
 @freezed
 class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
-  CapabilityStatementSecurity._();
+  const CapabilityStatementSecurity._();
   const factory CapabilityStatementSecurity({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     FhirBoolean? cors,
@@ -276,7 +276,7 @@ class CapabilityStatementSecurity with _$CapabilityStatementSecurity {
 
 @freezed
 class CapabilityStatementCertificate with _$CapabilityStatementCertificate {
-  CapabilityStatementCertificate._();
+  const CapabilityStatementCertificate._();
   const factory CapabilityStatementCertificate({
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -318,7 +318,7 @@ class CapabilityStatementCertificate with _$CapabilityStatementCertificate {
 
 @freezed
 class CapabilityStatementResource with _$CapabilityStatementResource {
-  CapabilityStatementResource._();
+  const CapabilityStatementResource._();
   const factory CapabilityStatementResource({
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -382,7 +382,7 @@ class CapabilityStatementResource with _$CapabilityStatementResource {
 
 @freezed
 class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
-  CapabilityStatementInteraction._();
+  const CapabilityStatementInteraction._();
   const factory CapabilityStatementInteraction({
     CapabilityStatementInteractionCode? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -424,7 +424,7 @@ class CapabilityStatementInteraction with _$CapabilityStatementInteraction {
 
 @freezed
 class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
-  CapabilityStatementSearchParam._();
+  const CapabilityStatementSearchParam._();
   const factory CapabilityStatementSearchParam({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -470,7 +470,7 @@ class CapabilityStatementSearchParam with _$CapabilityStatementSearchParam {
 
 @freezed
 class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
-  CapabilityStatementInteraction1._();
+  const CapabilityStatementInteraction1._();
   const factory CapabilityStatementInteraction1({
     CapabilityStatementInteraction1Code? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -512,7 +512,7 @@ class CapabilityStatementInteraction1 with _$CapabilityStatementInteraction1 {
 
 @freezed
 class CapabilityStatementOperation with _$CapabilityStatementOperation {
-  CapabilityStatementOperation._();
+  const CapabilityStatementOperation._();
   const factory CapabilityStatementOperation({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -552,7 +552,7 @@ class CapabilityStatementOperation with _$CapabilityStatementOperation {
 
 @freezed
 class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
-  CapabilityStatementMessaging._();
+  const CapabilityStatementMessaging._();
   const factory CapabilityStatementMessaging({
     List<CapabilityStatementEndpoint>? endpoint,
     FhirDecimal? reliableCache,
@@ -596,7 +596,7 @@ class CapabilityStatementMessaging with _$CapabilityStatementMessaging {
 
 @freezed
 class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
-  CapabilityStatementEndpoint._();
+  const CapabilityStatementEndpoint._();
   const factory CapabilityStatementEndpoint({
     required Coding protocol,
     String? address,
@@ -637,7 +637,7 @@ class CapabilityStatementEndpoint with _$CapabilityStatementEndpoint {
 @freezed
 class CapabilityStatementSupportedMessage
     with _$CapabilityStatementSupportedMessage {
-  CapabilityStatementSupportedMessage._();
+  const CapabilityStatementSupportedMessage._();
   const factory CapabilityStatementSupportedMessage({
     CapabilityStatementSupportedMessageMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
@@ -666,7 +666,7 @@ class CapabilityStatementSupportedMessage
 
 @freezed
 class CapabilityStatementEvent with _$CapabilityStatementEvent {
-  CapabilityStatementEvent._();
+  const CapabilityStatementEvent._();
   const factory CapabilityStatementEvent({
     required Coding code,
     CapabilityStatementEventCategory? category,
@@ -714,7 +714,7 @@ class CapabilityStatementEvent with _$CapabilityStatementEvent {
 
 @freezed
 class CapabilityStatementDocument with _$CapabilityStatementDocument {
-  CapabilityStatementDocument._();
+  const CapabilityStatementDocument._();
   const factory CapabilityStatementDocument({
     CapabilityStatementDocumentMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
@@ -756,7 +756,7 @@ class CapabilityStatementDocument with _$CapabilityStatementDocument {
 
 @freezed
 class CompartmentDefinition with Resource, _$CompartmentDefinition {
-  CompartmentDefinition._();
+  const CompartmentDefinition._();
   const factory CompartmentDefinition({
     @Default(Stu3ResourceType.CompartmentDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
@@ -830,7 +830,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
 
 @freezed
 class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
-  CompartmentDefinitionResource._();
+  const CompartmentDefinitionResource._();
   const factory CompartmentDefinitionResource({
     FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -873,7 +873,7 @@ class CompartmentDefinitionResource with _$CompartmentDefinitionResource {
 
 @freezed
 class DataElement with Resource, _$DataElement {
-  DataElement._();
+  const DataElement._();
   const factory DataElement({
     @Default(Stu3ResourceType.DataElement)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
@@ -947,7 +947,7 @@ class DataElement with Resource, _$DataElement {
 
 @freezed
 class DataElementMapping with _$DataElementMapping {
-  DataElementMapping._();
+  const DataElementMapping._();
   const factory DataElementMapping({
     FhirId? identity,
     @JsonKey(name: '_identity') Element? identityElement,
@@ -992,7 +992,7 @@ class DataElementMapping with _$DataElementMapping {
 
 @freezed
 class GraphDefinition with Resource, _$GraphDefinition {
-  GraphDefinition._();
+  const GraphDefinition._();
   const factory GraphDefinition({
     @Default(Stu3ResourceType.GraphDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
@@ -1066,7 +1066,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
 
 @freezed
 class GraphDefinitionLink with _$GraphDefinitionLink {
-  GraphDefinitionLink._();
+  const GraphDefinitionLink._();
   const factory GraphDefinitionLink({
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -1114,7 +1114,7 @@ class GraphDefinitionLink with _$GraphDefinitionLink {
 
 @freezed
 class GraphDefinitionTarget with _$GraphDefinitionTarget {
-  GraphDefinitionTarget._();
+  const GraphDefinitionTarget._();
   const factory GraphDefinitionTarget({
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -1157,7 +1157,7 @@ class GraphDefinitionTarget with _$GraphDefinitionTarget {
 
 @freezed
 class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
-  GraphDefinitionCompartment._();
+  const GraphDefinitionCompartment._();
   const factory GraphDefinitionCompartment({
     FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -1202,7 +1202,7 @@ class GraphDefinitionCompartment with _$GraphDefinitionCompartment {
 
 @freezed
 class ImplementationGuide with Resource, _$ImplementationGuide {
-  ImplementationGuide._();
+  const ImplementationGuide._();
   const factory ImplementationGuide({
     @Default(Stu3ResourceType.ImplementationGuide)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
@@ -1279,7 +1279,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
 
 @freezed
 class ImplementationGuideDependency with _$ImplementationGuideDependency {
-  ImplementationGuideDependency._();
+  const ImplementationGuideDependency._();
   const factory ImplementationGuideDependency({
     ImplementationGuideDependencyType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -1320,7 +1320,7 @@ class ImplementationGuideDependency with _$ImplementationGuideDependency {
 
 @freezed
 class ImplementationGuidePackage with _$ImplementationGuidePackage {
-  ImplementationGuidePackage._();
+  const ImplementationGuidePackage._();
   const factory ImplementationGuidePackage({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -1362,7 +1362,7 @@ class ImplementationGuidePackage with _$ImplementationGuidePackage {
 
 @freezed
 class ImplementationGuideResource with _$ImplementationGuideResource {
-  ImplementationGuideResource._();
+  const ImplementationGuideResource._();
   const factory ImplementationGuideResource({
     FhirBoolean? example,
     @JsonKey(name: '_example') Element? exampleElement,
@@ -1411,7 +1411,7 @@ class ImplementationGuideResource with _$ImplementationGuideResource {
 
 @freezed
 class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
-  ImplementationGuideGlobal._();
+  const ImplementationGuideGlobal._();
   const factory ImplementationGuideGlobal({
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -1451,7 +1451,7 @@ class ImplementationGuideGlobal with _$ImplementationGuideGlobal {
 
 @freezed
 class ImplementationGuidePage with _$ImplementationGuidePage {
-  ImplementationGuidePage._();
+  const ImplementationGuidePage._();
   const factory ImplementationGuidePage({
     String? source,
     @JsonKey(name: '_source') Element? sourceElement,
@@ -1501,7 +1501,7 @@ class ImplementationGuidePage with _$ImplementationGuidePage {
 
 @freezed
 class MessageDefinition with Resource, _$MessageDefinition {
-  MessageDefinition._();
+  const MessageDefinition._();
   const factory MessageDefinition({
     @Default(Stu3ResourceType.MessageDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
@@ -1585,7 +1585,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
 
 @freezed
 class MessageDefinitionFocus with _$MessageDefinitionFocus {
-  MessageDefinitionFocus._();
+  const MessageDefinitionFocus._();
   const factory MessageDefinitionFocus({
     FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -1629,7 +1629,7 @@ class MessageDefinitionFocus with _$MessageDefinitionFocus {
 
 @freezed
 class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
-  MessageDefinitionAllowedResponse._();
+  const MessageDefinitionAllowedResponse._();
   const factory MessageDefinitionAllowedResponse({
     required Reference message,
     String? situation,
@@ -1658,7 +1658,7 @@ class MessageDefinitionAllowedResponse with _$MessageDefinitionAllowedResponse {
 
 @freezed
 class OperationDefinition with Resource, _$OperationDefinition {
-  OperationDefinition._();
+  const OperationDefinition._();
   const factory OperationDefinition({
     @Default(Stu3ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
@@ -1746,7 +1746,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
 
 @freezed
 class OperationDefinitionParameter with _$OperationDefinitionParameter {
-  OperationDefinitionParameter._();
+  const OperationDefinitionParameter._();
   const factory OperationDefinitionParameter({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -1800,7 +1800,7 @@ class OperationDefinitionParameter with _$OperationDefinitionParameter {
 
 @freezed
 class OperationDefinitionBinding with _$OperationDefinitionBinding {
-  OperationDefinitionBinding._();
+  const OperationDefinitionBinding._();
   const factory OperationDefinitionBinding({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     OperationDefinitionBindingStrength? strength,
@@ -1843,7 +1843,7 @@ class OperationDefinitionBinding with _$OperationDefinitionBinding {
 
 @freezed
 class OperationDefinitionOverload with _$OperationDefinitionOverload {
-  OperationDefinitionOverload._();
+  const OperationDefinitionOverload._();
   const factory OperationDefinitionOverload({
     List<String>? parameterName,
     @JsonKey(name: '_parameterName') List<Element?>? parameterNameElement,
@@ -1884,7 +1884,7 @@ class OperationDefinitionOverload with _$OperationDefinitionOverload {
 
 @freezed
 class SearchParameter with Resource, _$SearchParameter {
-  SearchParameter._();
+  const SearchParameter._();
   const factory SearchParameter({
     @Default(Stu3ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
@@ -1976,7 +1976,7 @@ class SearchParameter with Resource, _$SearchParameter {
 
 @freezed
 class SearchParameterComponent with _$SearchParameterComponent {
-  SearchParameterComponent._();
+  const SearchParameterComponent._();
   const factory SearchParameterComponent({
     required Reference definition,
     String? expression,
@@ -2016,7 +2016,7 @@ class SearchParameterComponent with _$SearchParameterComponent {
 
 @freezed
 class StructureDefinition with Resource, _$StructureDefinition {
-  StructureDefinition._();
+  const StructureDefinition._();
   const factory StructureDefinition({
     @Default(Stu3ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
@@ -2112,7 +2112,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
 
 @freezed
 class StructureDefinitionMapping with _$StructureDefinitionMapping {
-  StructureDefinitionMapping._();
+  const StructureDefinitionMapping._();
   const factory StructureDefinitionMapping({
     FhirId? identity,
     @JsonKey(name: '_identity') Element? identityElement,
@@ -2157,7 +2157,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
 
 @freezed
 class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
-  StructureDefinitionSnapshot._();
+  const StructureDefinitionSnapshot._();
   const factory StructureDefinitionSnapshot({
     required List<ElementDefinition> element,
   }) = _StructureDefinitionSnapshot;
@@ -2195,7 +2195,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
 
 @freezed
 class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
-  StructureDefinitionDifferential._();
+  const StructureDefinitionDifferential._();
   const factory StructureDefinitionDifferential({
     required List<ElementDefinition> element,
   }) = _StructureDefinitionDifferential;
@@ -2234,7 +2234,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
 
 @freezed
 class StructureMap with Resource, _$StructureMap {
-  StructureMap._();
+  const StructureMap._();
   const factory StructureMap({
     @Default(Stu3ResourceType.StructureMap)
     @JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
@@ -2312,7 +2312,7 @@ class StructureMap with Resource, _$StructureMap {
 
 @freezed
 class StructureMapStructure with _$StructureMapStructure {
-  StructureMapStructure._();
+  const StructureMapStructure._();
   const factory StructureMapStructure({
     String? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -2357,7 +2357,7 @@ class StructureMapStructure with _$StructureMapStructure {
 
 @freezed
 class StructureMapGroup with _$StructureMapGroup {
-  StructureMapGroup._();
+  const StructureMapGroup._();
   const factory StructureMapGroup({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -2404,7 +2404,7 @@ class StructureMapGroup with _$StructureMapGroup {
 
 @freezed
 class StructureMapInput with _$StructureMapInput {
-  StructureMapInput._();
+  const StructureMapInput._();
   const factory StructureMapInput({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -2449,7 +2449,7 @@ class StructureMapInput with _$StructureMapInput {
 
 @freezed
 class StructureMapRule with _$StructureMapRule {
-  StructureMapRule._();
+  const StructureMapRule._();
   const factory StructureMapRule({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -2494,7 +2494,7 @@ class StructureMapRule with _$StructureMapRule {
 
 @freezed
 class StructureMapSource with _$StructureMapSource {
-  StructureMapSource._();
+  const StructureMapSource._();
   const factory StructureMapSource({
     String? context,
     @JsonKey(name: '_context') Element? contextElement,
@@ -2624,7 +2624,7 @@ class StructureMapSource with _$StructureMapSource {
 
 @freezed
 class StructureMapTarget with _$StructureMapTarget {
-  StructureMapTarget._();
+  const StructureMapTarget._();
   const factory StructureMapTarget({
     String? context,
     @JsonKey(name: '_context') Element? contextElement,
@@ -2676,7 +2676,7 @@ class StructureMapTarget with _$StructureMapTarget {
 
 @freezed
 class StructureMapParameter with _$StructureMapParameter {
-  StructureMapParameter._();
+  const StructureMapParameter._();
   const factory StructureMapParameter({
     FhirId? valueId,
     @JsonKey(name: '_valueId') Element? valueIdElement,
@@ -2723,7 +2723,7 @@ class StructureMapParameter with _$StructureMapParameter {
 
 @freezed
 class StructureMapDependent with _$StructureMapDependent {
-  StructureMapDependent._();
+  const StructureMapDependent._();
   const factory StructureMapDependent({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,

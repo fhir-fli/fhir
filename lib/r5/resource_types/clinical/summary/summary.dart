@@ -43,7 +43,7 @@ class AdverseEvent with Resource, _$AdverseEvent {
   ///  consulting the domain specific implementation guides when implementing
   ///  the AdverseEvent Resource. The implementation guides include specific
   ///  extensions, value sets and constraints.
-  AdverseEvent._();
+  const AdverseEvent._();
 
   /// [AdverseEvent] An event (i.e. any change to current patient status) that
   ///  may be related to unintended effects on a patient or research
@@ -468,7 +468,7 @@ class AdverseEventParticipant with _$AdverseEventParticipant {
   ///  recommend consulting the domain specific implementation guides when
   ///  implementing the AdverseEvent Resource. The implementation guides
   ///  include specific extensions, value sets and constraints.
-  AdverseEventParticipant._();
+  const AdverseEventParticipant._();
 
   /// [AdverseEventParticipant] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or
@@ -612,7 +612,7 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
   ///  recommend consulting the domain specific implementation guides when
   ///  implementing the AdverseEvent Resource. The implementation guides
   ///  include specific extensions, value sets and constraints.
-  AdverseEventSuspectEntity._();
+  const AdverseEventSuspectEntity._();
 
   /// [AdverseEventSuspectEntity] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or
@@ -767,7 +767,7 @@ class AdverseEventCausality with _$AdverseEventCausality {
   ///  recommend consulting the domain specific implementation guides when
   ///  implementing the AdverseEvent Resource. The implementation guides
   ///  include specific extensions, value sets and constraints.
-  AdverseEventCausality._();
+  const AdverseEventCausality._();
 
   /// [AdverseEventCausality] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or
@@ -919,7 +919,7 @@ class AdverseEventContributingFactor with _$AdverseEventContributingFactor {
   ///  recommend consulting the domain specific implementation guides when
   ///  implementing the AdverseEvent Resource. The implementation guides
   ///  include specific extensions, value sets and constraints.
-  AdverseEventContributingFactor._();
+  const AdverseEventContributingFactor._();
 
   /// [AdverseEventContributingFactor] An event (i.e. any change to current
   ///  patient status) that may be related to unintended effects on a patient
@@ -1067,7 +1067,7 @@ class AdverseEventPreventiveAction with _$AdverseEventPreventiveAction {
   ///  recommend consulting the domain specific implementation guides when
   ///  implementing the AdverseEvent Resource. The implementation guides
   ///  include specific extensions, value sets and constraints.
-  AdverseEventPreventiveAction._();
+  const AdverseEventPreventiveAction._();
 
   /// [AdverseEventPreventiveAction] An event (i.e. any change to current
   ///  patient status) that may be related to unintended effects on a patient
@@ -1213,7 +1213,7 @@ class AdverseEventMitigatingAction with _$AdverseEventMitigatingAction {
   ///  recommend consulting the domain specific implementation guides when
   ///  implementing the AdverseEvent Resource. The implementation guides
   ///  include specific extensions, value sets and constraints.
-  AdverseEventMitigatingAction._();
+  const AdverseEventMitigatingAction._();
 
   /// [AdverseEventMitigatingAction] An event (i.e. any change to current
   ///  patient status) that may be related to unintended effects on a patient
@@ -1360,7 +1360,7 @@ class AdverseEventSupportingInfo with _$AdverseEventSupportingInfo {
   ///  recommend consulting the domain specific implementation guides when
   ///  implementing the AdverseEvent Resource. The implementation guides
   ///  include specific extensions, value sets and constraints.
-  AdverseEventSupportingInfo._();
+  const AdverseEventSupportingInfo._();
 
   /// [AdverseEventSupportingInfo] An event (i.e. any change to current patient
   ///  status) that may be related to unintended effects on a patient or
@@ -1516,7 +1516,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
   /// [AllergyIntolerance] Risk of harmful or undesirable physiological
   ///  response which is specific to an individual and associated with exposure
   ///  to a substance.
-  AllergyIntolerance._();
+  const AllergyIntolerance._();
 
   /// [AllergyIntolerance] Risk of harmful or undesirable physiological
   ///  response which is specific to an individual and associated with exposure
@@ -1884,7 +1884,7 @@ class AllergyIntoleranceParticipant with _$AllergyIntoleranceParticipant {
   /// [AllergyIntoleranceParticipant] Risk of harmful or undesirable
   ///  physiological response which is specific to an individual and associated
   ///  with exposure to a substance.
-  AllergyIntoleranceParticipant._();
+  const AllergyIntoleranceParticipant._();
 
   /// [AllergyIntoleranceParticipant] Risk of harmful or undesirable
   ///  physiological response which is specific to an individual and associated
@@ -1998,7 +1998,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   /// [AllergyIntoleranceReaction] Risk of harmful or undesirable physiological
   ///  response which is specific to an individual and associated with exposure
   ///  to a substance.
-  AllergyIntoleranceReaction._();
+  const AllergyIntoleranceReaction._();
 
   /// [AllergyIntoleranceReaction] Risk of harmful or undesirable physiological
   ///  response which is specific to an individual and associated with exposure
@@ -2187,7 +2187,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
   ///  This resource is called "ClinicalImpression" rather than
   ///  "ClinicalAssessment" to avoid confusion with the recording of assessment
   ///  tools such as Apgar score.
-  ClinicalImpression._();
+  const ClinicalImpression._();
 
   /// [ClinicalImpression] A record of a clinical assessment performed to
   ///  determine what problem(s) may affect the patient and before planning the
@@ -2546,7 +2546,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   ///  clinical workflow. This resource is called "ClinicalImpression" rather
   ///  than "ClinicalAssessment" to avoid confusion with the recording of
   ///  assessment tools such as Apgar score.
-  ClinicalImpressionFinding._();
+  const ClinicalImpressionFinding._();
 
   /// [ClinicalImpressionFinding] A record of a clinical assessment performed
   ///  to determine what problem(s) may affect the patient and before planning
@@ -2666,7 +2666,7 @@ class Condition with Resource, _$Condition {
   /// [Condition] A clinical condition, problem, diagnosis, or other event,
   ///  situation, issue, or clinical concept that has risen to a level of
   ///  concern.
-  Condition._();
+  const Condition._();
 
   /// [Condition] A clinical condition, problem, diagnosis, or other event,
   ///  situation, issue, or clinical concept that has risen to a level of
@@ -3072,7 +3072,7 @@ class ConditionParticipant with _$ConditionParticipant {
   /// [ConditionParticipant] A clinical condition, problem, diagnosis, or other
   ///  event, situation, issue, or clinical concept that has risen to a level
   ///  of concern.
-  ConditionParticipant._();
+  const ConditionParticipant._();
 
   /// [ConditionParticipant] A clinical condition, problem, diagnosis, or other
   ///  event, situation, issue, or clinical concept that has risen to a level
@@ -3184,7 +3184,7 @@ class ConditionStage with _$ConditionStage {
   /// [ConditionStage] A clinical condition, problem, diagnosis, or other
   ///  event, situation, issue, or clinical concept that has risen to a level
   ///  of concern.
-  ConditionStage._();
+  const ConditionStage._();
 
   /// [ConditionStage] A clinical condition, problem, diagnosis, or other
   ///  event, situation, issue, or clinical concept that has risen to a level
@@ -3308,7 +3308,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
   ///  between one or more active or proposed clinical actions for a patient;
   ///  e.g. Drug-drug interaction, Ineffective treatment frequency,
   ///  Procedure-condition conflict, gaps in care, etc.
-  DetectedIssue._();
+  const DetectedIssue._();
 
   /// [DetectedIssue] Indicates an actual or potential clinical issue with or
   ///  between one or more active or proposed clinical actions for a patient;
@@ -3616,7 +3616,7 @@ class DetectedIssueEvidence with _$DetectedIssueEvidence {
   ///  with or between one or more active or proposed clinical actions for a
   ///  patient; e.g. Drug-drug interaction, Ineffective treatment frequency,
   ///  Procedure-condition conflict, gaps in care, etc.
-  DetectedIssueEvidence._();
+  const DetectedIssueEvidence._();
 
   /// [DetectedIssueEvidence] Indicates an actual or potential clinical issue
   ///  with or between one or more active or proposed clinical actions for a
@@ -3730,7 +3730,7 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
   ///  with or between one or more active or proposed clinical actions for a
   ///  patient; e.g. Drug-drug interaction, Ineffective treatment frequency,
   ///  Procedure-condition conflict, gaps in care, etc.
-  DetectedIssueMitigation._();
+  const DetectedIssueMitigation._();
 
   /// [DetectedIssueMitigation] Indicates an actual or potential clinical issue
   ///  with or between one or more active or proposed clinical actions for a
@@ -3865,7 +3865,7 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
 class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   /// [FamilyMemberHistory] Significant health conditions for a person related
   ///  to the patient relevant in the context of care for the patient.
-  FamilyMemberHistory._();
+  const FamilyMemberHistory._();
 
   /// [FamilyMemberHistory] Significant health conditions for a person related
   ///  to the patient relevant in the context of care for the patient.
@@ -4294,7 +4294,7 @@ class FamilyMemberHistoryParticipant with _$FamilyMemberHistoryParticipant {
   /// [FamilyMemberHistoryParticipant] Significant health conditions for a
   ///  person related to the patient relevant in the context of care for the
   ///  patient.
-  FamilyMemberHistoryParticipant._();
+  const FamilyMemberHistoryParticipant._();
 
   /// [FamilyMemberHistoryParticipant] Significant health conditions for a
   ///  person related to the patient relevant in the context of care for the
@@ -4407,7 +4407,7 @@ class FamilyMemberHistoryParticipant with _$FamilyMemberHistoryParticipant {
 class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   /// [FamilyMemberHistoryCondition] Significant health conditions for a person
   ///  related to the patient relevant in the context of care for the patient.
-  FamilyMemberHistoryCondition._();
+  const FamilyMemberHistoryCondition._();
 
   /// [FamilyMemberHistoryCondition] Significant health conditions for a person
   ///  related to the patient relevant in the context of care for the patient.
@@ -4586,7 +4586,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
 class FamilyMemberHistoryProcedure with _$FamilyMemberHistoryProcedure {
   /// [FamilyMemberHistoryProcedure] Significant health conditions for a person
   ///  related to the patient relevant in the context of care for the patient.
-  FamilyMemberHistoryProcedure._();
+  const FamilyMemberHistoryProcedure._();
 
   /// [FamilyMemberHistoryProcedure] Significant health conditions for a person
   ///  related to the patient relevant in the context of care for the patient.
@@ -4800,7 +4800,7 @@ class Procedure with Resource, _$Procedure {
   ///  be a quality or safety inspection for a location, organization, or
   ///  device.  This can be an accreditation procedure on a practitioner for
   ///  licensing.
-  Procedure._();
+  const Procedure._();
 
   /// [Procedure] An action that is or was performed on or for a patient,
   ///  practitioner, device, organization, or location. For example, this can
@@ -5343,7 +5343,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
   ///  This can be a quality or safety inspection for a location, organization,
   ///  or device.  This can be an accreditation procedure on a practitioner for
   ///  licensing.
-  ProcedurePerformer._();
+  const ProcedurePerformer._();
 
   /// [ProcedurePerformer] An action that is or was performed on or for a
   ///  patient, practitioner, device, organization, or location. For example,
@@ -5480,7 +5480,7 @@ class ProcedureFocalDevice with _$ProcedureFocalDevice {
   ///  This can be a quality or safety inspection for a location, organization,
   ///  or device.  This can be an accreditation procedure on a practitioner for
   ///  licensing.
-  ProcedureFocalDevice._();
+  const ProcedureFocalDevice._();
 
   /// [ProcedureFocalDevice] An action that is or was performed on or for a
   ///  patient, practitioner, device, organization, or location. For example,

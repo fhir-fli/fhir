@@ -16,7 +16,7 @@ part 'content.g.dart';
 
 @freezed
 class StructureDefinition with Resource, _$StructureDefinition {
-  StructureDefinition._();
+  const StructureDefinition._();
   const factory StructureDefinition({
     @Default(Dstu2ResourceType.StructureDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
@@ -106,7 +106,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
 
 @freezed
 class StructureDefinitionContact with _$StructureDefinitionContact {
-  StructureDefinitionContact._();
+  const StructureDefinitionContact._();
   const factory StructureDefinitionContact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -148,7 +148,7 @@ class StructureDefinitionContact with _$StructureDefinitionContact {
 
 @freezed
 class StructureDefinitionMapping with _$StructureDefinitionMapping {
-  StructureDefinitionMapping._();
+  const StructureDefinitionMapping._();
   const factory StructureDefinitionMapping({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -197,7 +197,7 @@ class StructureDefinitionMapping with _$StructureDefinitionMapping {
 
 @freezed
 class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
-  StructureDefinitionSnapshot._();
+  const StructureDefinitionSnapshot._();
   const factory StructureDefinitionSnapshot({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -238,7 +238,7 @@ class StructureDefinitionSnapshot with _$StructureDefinitionSnapshot {
 
 @freezed
 class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
-  StructureDefinitionDifferential._();
+  const StructureDefinitionDifferential._();
   const factory StructureDefinitionDifferential({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -280,7 +280,7 @@ class StructureDefinitionDifferential with _$StructureDefinitionDifferential {
 
 @freezed
 class DataElement with Resource, _$DataElement {
-  DataElement._();
+  const DataElement._();
   const factory DataElement({
     @Default(Dstu2ResourceType.DataElement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
@@ -289,7 +289,9 @@ class DataElement with Resource, _$DataElement {
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -342,7 +344,7 @@ class DataElement with Resource, _$DataElement {
 
 @freezed
 class DataElementContact with _$DataElementContact {
-  DataElementContact._();
+  const DataElementContact._();
   const factory DataElementContact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -384,7 +386,7 @@ class DataElementContact with _$DataElementContact {
 
 @freezed
 class DataElementMapping with _$DataElementMapping {
-  DataElementMapping._();
+  const DataElementMapping._();
   const factory DataElementMapping({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

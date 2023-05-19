@@ -18,7 +18,7 @@ part 'quality_reporting_and_testing.g.dart';
 class Measure with Resource, _$Measure {
   /// [Measure] The Measure resource provides the definition of a quality
   ///  measure.
-  Measure._();
+  const Measure._();
 
   /// [Measure] The Measure resource provides the definition of a quality
   ///  measure.
@@ -743,7 +743,7 @@ class Measure with Resource, _$Measure {
 class MeasureTerm with _$MeasureTerm {
   /// [MeasureTerm] The Measure resource provides the definition of a quality
   ///  measure.
-  MeasureTerm._();
+  const MeasureTerm._();
 
   /// [MeasureTerm] The Measure resource provides the definition of a quality
   ///  measure.
@@ -856,7 +856,7 @@ class MeasureTerm with _$MeasureTerm {
 class MeasureGroup with _$MeasureGroup {
   /// [MeasureGroup] The Measure resource provides the definition of a quality
   ///  measure.
-  MeasureGroup._();
+  const MeasureGroup._();
 
   /// [MeasureGroup] The Measure resource provides the definition of a quality
   ///  measure.
@@ -1104,7 +1104,7 @@ class MeasureGroup with _$MeasureGroup {
 class MeasurePopulation with _$MeasurePopulation {
   /// [MeasurePopulation] The Measure resource provides the definition of a
   ///  quality measure.
-  MeasurePopulation._();
+  const MeasurePopulation._();
 
   /// [MeasurePopulation] The Measure resource provides the definition of a
   ///  quality measure.
@@ -1281,7 +1281,7 @@ class MeasurePopulation with _$MeasurePopulation {
 class MeasureStratifier with _$MeasureStratifier {
   /// [MeasureStratifier] The Measure resource provides the definition of a
   ///  quality measure.
-  MeasureStratifier._();
+  const MeasureStratifier._();
 
   /// [MeasureStratifier] The Measure resource provides the definition of a
   ///  quality measure.
@@ -1437,7 +1437,7 @@ class MeasureStratifier with _$MeasureStratifier {
 class MeasureComponent with _$MeasureComponent {
   /// [MeasureComponent] The Measure resource provides the definition of a
   ///  quality measure.
-  MeasureComponent._();
+  const MeasureComponent._();
 
   /// [MeasureComponent] The Measure resource provides the definition of a
   ///  quality measure.
@@ -1586,7 +1586,7 @@ class MeasureComponent with _$MeasureComponent {
 class MeasureSupplementalData with _$MeasureSupplementalData {
   /// [MeasureSupplementalData] The Measure resource provides the definition of
   ///  a quality measure.
-  MeasureSupplementalData._();
+  const MeasureSupplementalData._();
 
   /// [MeasureSupplementalData] The Measure resource provides the definition of
   ///  a quality measure.
@@ -1742,7 +1742,7 @@ class MeasureReport with Resource, _$MeasureReport {
   /// [MeasureReport] The MeasureReport resource contains the results of the
   ///  calculation of a measure; and optionally a reference to the resources
   ///  involved in that calculation.
-  MeasureReport._();
+  const MeasureReport._();
 
   /// [MeasureReport] The MeasureReport resource contains the results of the
   ///  calculation of a measure; and optionally a reference to the resources
@@ -2096,7 +2096,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
   /// [MeasureReportGroup] The MeasureReport resource contains the results of
   ///  the calculation of a measure; and optionally a reference to the
   ///  resources involved in that calculation.
-  MeasureReportGroup._();
+  const MeasureReportGroup._();
 
   /// [MeasureReportGroup] The MeasureReport resource contains the results of
   ///  the calculation of a measure; and optionally a reference to the
@@ -2299,7 +2299,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   /// [MeasureReportPopulation] The MeasureReport resource contains the results
   ///  of the calculation of a measure; and optionally a reference to the
   ///  resources involved in that calculation.
-  MeasureReportPopulation._();
+  const MeasureReportPopulation._();
 
   /// [MeasureReportPopulation] The MeasureReport resource contains the results
   ///  of the calculation of a measure; and optionally a reference to the
@@ -2446,7 +2446,7 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
   /// [MeasureReportStratifier] The MeasureReport resource contains the results
   ///  of the calculation of a measure; and optionally a reference to the
   ///  resources involved in that calculation.
-  MeasureReportStratifier._();
+  const MeasureReportStratifier._();
 
   /// [MeasureReportStratifier] The MeasureReport resource contains the results
   ///  of the calculation of a measure; and optionally a reference to the
@@ -2573,7 +2573,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
   /// [MeasureReportStratum] The MeasureReport resource contains the results of
   ///  the calculation of a measure; and optionally a reference to the
   ///  resources involved in that calculation.
-  MeasureReportStratum._();
+  const MeasureReportStratum._();
 
   /// [MeasureReportStratum] The MeasureReport resource contains the results of
   ///  the calculation of a measure; and optionally a reference to the
@@ -2805,7 +2805,7 @@ class MeasureReportComponent with _$MeasureReportComponent {
   /// [MeasureReportComponent] The MeasureReport resource contains the results
   ///  of the calculation of a measure; and optionally a reference to the
   ///  resources involved in that calculation.
-  MeasureReportComponent._();
+  const MeasureReportComponent._();
 
   /// [MeasureReportComponent] The MeasureReport resource contains the results
   ///  of the calculation of a measure; and optionally a reference to the
@@ -2951,7 +2951,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   /// [MeasureReportPopulation1] The MeasureReport resource contains the
   ///  results of the calculation of a measure; and optionally a reference to
   ///  the resources involved in that calculation.
-  MeasureReportPopulation1._();
+  const MeasureReportPopulation1._();
 
   /// [MeasureReportPopulation1] The MeasureReport resource contains the
   ///  results of the calculation of a measure; and optionally a reference to
@@ -3096,7 +3096,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
 @freezed
 class TestPlan with Resource, _$TestPlan {
   /// [TestPlan] A plan for executing testing on an artifact or specifications.
-  TestPlan._();
+  const TestPlan._();
 
   /// [TestPlan] A plan for executing testing on an artifact or specifications.
   ///
@@ -3554,7 +3554,7 @@ class TestPlan with Resource, _$TestPlan {
 class TestPlanDependency with _$TestPlanDependency {
   /// [TestPlanDependency] A plan for executing testing on an artifact or
   ///  specifications.
-  TestPlanDependency._();
+  const TestPlanDependency._();
 
   /// [TestPlanDependency] A plan for executing testing on an artifact or
   ///  specifications.
@@ -3671,7 +3671,7 @@ class TestPlanDependency with _$TestPlanDependency {
 class TestPlanTestCase with _$TestPlanTestCase {
   /// [TestPlanTestCase] A plan for executing testing on an artifact or
   ///  specifications.
-  TestPlanTestCase._();
+  const TestPlanTestCase._();
 
   /// [TestPlanTestCase] A plan for executing testing on an artifact or
   ///  specifications.
@@ -3810,7 +3810,7 @@ class TestPlanTestCase with _$TestPlanTestCase {
 class TestPlanDependency1 with _$TestPlanDependency1 {
   /// [TestPlanDependency1] A plan for executing testing on an artifact or
   ///  specifications.
-  TestPlanDependency1._();
+  const TestPlanDependency1._();
 
   /// [TestPlanDependency1] A plan for executing testing on an artifact or
   ///  specifications.
@@ -3921,7 +3921,7 @@ class TestPlanDependency1 with _$TestPlanDependency1 {
 class TestPlanTestRun with _$TestPlanTestRun {
   /// [TestPlanTestRun] A plan for executing testing on an artifact or
   ///  specifications.
-  TestPlanTestRun._();
+  const TestPlanTestRun._();
 
   /// [TestPlanTestRun] A plan for executing testing on an artifact or
   ///  specifications.
@@ -4034,7 +4034,7 @@ class TestPlanTestRun with _$TestPlanTestRun {
 class TestPlanScript with _$TestPlanScript {
   /// [TestPlanScript] A plan for executing testing on an artifact or
   ///  specifications.
-  TestPlanScript._();
+  const TestPlanScript._();
 
   /// [TestPlanScript] A plan for executing testing on an artifact or
   ///  specifications.
@@ -4154,7 +4154,7 @@ class TestPlanScript with _$TestPlanScript {
 class TestPlanTestData with _$TestPlanTestData {
   /// [TestPlanTestData] A plan for executing testing on an artifact or
   ///  specifications.
-  TestPlanTestData._();
+  const TestPlanTestData._();
 
   /// [TestPlanTestData] A plan for executing testing on an artifact or
   ///  specifications.
@@ -4279,7 +4279,7 @@ class TestPlanTestData with _$TestPlanTestData {
 class TestPlanAssertion with _$TestPlanAssertion {
   /// [TestPlanAssertion] A plan for executing testing on an artifact or
   ///  specifications.
-  TestPlanAssertion._();
+  const TestPlanAssertion._();
 
   /// [TestPlanAssertion] A plan for executing testing on an artifact or
   ///  specifications.
@@ -4396,7 +4396,7 @@ class TestPlanAssertion with _$TestPlanAssertion {
 class TestReport with Resource, _$TestReport {
   /// [TestReport] A summary of information based on the results of executing a
   ///  TestScript.
-  TestReport._();
+  const TestReport._();
 
   /// [TestReport] A summary of information based on the results of executing a
   ///  TestScript.
@@ -4676,7 +4676,7 @@ class TestReport with Resource, _$TestReport {
 class TestReportParticipant with _$TestReportParticipant {
   /// [TestReportParticipant] A summary of information based on the results of
   ///  executing a TestScript.
-  TestReportParticipant._();
+  const TestReportParticipant._();
 
   /// [TestReportParticipant] A summary of information based on the results of
   ///  executing a TestScript.
@@ -4802,7 +4802,7 @@ class TestReportParticipant with _$TestReportParticipant {
 class TestReportSetup with _$TestReportSetup {
   /// [TestReportSetup] A summary of information based on the results of
   ///  executing a TestScript.
-  TestReportSetup._();
+  const TestReportSetup._();
 
   /// [TestReportSetup] A summary of information based on the results of
   ///  executing a TestScript.
@@ -4903,7 +4903,7 @@ class TestReportSetup with _$TestReportSetup {
 class TestReportAction with _$TestReportAction {
   /// [TestReportAction] A summary of information based on the results of
   ///  executing a TestScript.
-  TestReportAction._();
+  const TestReportAction._();
 
   /// [TestReportAction] A summary of information based on the results of
   ///  executing a TestScript.
@@ -5011,7 +5011,7 @@ class TestReportAction with _$TestReportAction {
 class TestReportOperation with _$TestReportOperation {
   /// [TestReportOperation] A summary of information based on the results of
   ///  executing a TestScript.
-  TestReportOperation._();
+  const TestReportOperation._();
 
   /// [TestReportOperation] A summary of information based on the results of
   ///  executing a TestScript.
@@ -5137,7 +5137,7 @@ class TestReportOperation with _$TestReportOperation {
 class TestReportAssert with _$TestReportAssert {
   /// [TestReportAssert] A summary of information based on the results of
   ///  executing a TestScript.
-  TestReportAssert._();
+  const TestReportAssert._();
 
   /// [TestReportAssert] A summary of information based on the results of
   ///  executing a TestScript.
@@ -5270,7 +5270,7 @@ class TestReportAssert with _$TestReportAssert {
 class TestReportRequirement with _$TestReportRequirement {
   /// [TestReportRequirement] A summary of information based on the results of
   ///  executing a TestScript.
-  TestReportRequirement._();
+  const TestReportRequirement._();
 
   /// [TestReportRequirement] A summary of information based on the results of
   ///  executing a TestScript.
@@ -5390,7 +5390,7 @@ class TestReportRequirement with _$TestReportRequirement {
 class TestReportTest with _$TestReportTest {
   /// [TestReportTest] A summary of information based on the results of
   ///  executing a TestScript.
-  TestReportTest._();
+  const TestReportTest._();
 
   /// [TestReportTest] A summary of information based on the results of
   ///  executing a TestScript.
@@ -5515,7 +5515,7 @@ class TestReportTest with _$TestReportTest {
 class TestReportAction1 with _$TestReportAction1 {
   /// [TestReportAction1] A summary of information based on the results of
   ///  executing a TestScript.
-  TestReportAction1._();
+  const TestReportAction1._();
 
   /// [TestReportAction1] A summary of information based on the results of
   ///  executing a TestScript.
@@ -5623,7 +5623,7 @@ class TestReportAction1 with _$TestReportAction1 {
 class TestReportTeardown with _$TestReportTeardown {
   /// [TestReportTeardown] A summary of information based on the results of
   ///  executing a TestScript.
-  TestReportTeardown._();
+  const TestReportTeardown._();
 
   /// [TestReportTeardown] A summary of information based on the results of
   ///  executing a TestScript.
@@ -5724,7 +5724,7 @@ class TestReportTeardown with _$TestReportTeardown {
 class TestReportAction2 with _$TestReportAction2 {
   /// [TestReportAction2] A summary of information based on the results of
   ///  executing a TestScript.
-  TestReportAction2._();
+  const TestReportAction2._();
 
   /// [TestReportAction2] A summary of information based on the results of
   ///  executing a TestScript.
@@ -5825,7 +5825,7 @@ class TestReportAction2 with _$TestReportAction2 {
 class TestScript with Resource, _$TestScript {
   /// [TestScript] A structured set of tests against a FHIR server or client
   ///  implementation to determine compliance against the FHIR specification.
-  TestScript._();
+  const TestScript._();
 
   /// [TestScript] A structured set of tests against a FHIR server or client
   ///  implementation to determine compliance against the FHIR specification.
@@ -6301,7 +6301,7 @@ class TestScriptOrigin with _$TestScriptOrigin {
   /// [TestScriptOrigin] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptOrigin._();
+  const TestScriptOrigin._();
 
   /// [TestScriptOrigin] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -6428,7 +6428,7 @@ class TestScriptDestination with _$TestScriptDestination {
   /// [TestScriptDestination] A structured set of tests against a FHIR server
   ///  or client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptDestination._();
+  const TestScriptDestination._();
 
   /// [TestScriptDestination] A structured set of tests against a FHIR server
   ///  or client implementation to determine compliance against the FHIR
@@ -6556,7 +6556,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
   /// [TestScriptMetadata] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptMetadata._();
+  const TestScriptMetadata._();
 
   /// [TestScriptMetadata] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -6666,7 +6666,7 @@ class TestScriptLink with _$TestScriptLink {
   /// [TestScriptLink] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptLink._();
+  const TestScriptLink._();
 
   /// [TestScriptLink] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -6787,7 +6787,7 @@ class TestScriptCapability with _$TestScriptCapability {
   /// [TestScriptCapability] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptCapability._();
+  const TestScriptCapability._();
 
   /// [TestScriptCapability] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -6966,7 +6966,7 @@ class TestScriptScope with _$TestScriptScope {
   /// [TestScriptScope] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptScope._();
+  const TestScriptScope._();
 
   /// [TestScriptScope] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -7096,7 +7096,7 @@ class TestScriptFixture with _$TestScriptFixture {
   /// [TestScriptFixture] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptFixture._();
+  const TestScriptFixture._();
 
   /// [TestScriptFixture] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -7236,7 +7236,7 @@ class TestScriptVariable with _$TestScriptVariable {
   /// [TestScriptVariable] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptVariable._();
+  const TestScriptVariable._();
 
   /// [TestScriptVariable] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -7432,7 +7432,7 @@ class TestScriptSetup with _$TestScriptSetup {
   /// [TestScriptSetup] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptSetup._();
+  const TestScriptSetup._();
 
   /// [TestScriptSetup] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -7536,7 +7536,7 @@ class TestScriptAction with _$TestScriptAction {
   /// [TestScriptAction] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptAction._();
+  const TestScriptAction._();
 
   /// [TestScriptAction] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -7647,7 +7647,7 @@ class TestScriptOperation with _$TestScriptOperation {
   /// [TestScriptOperation] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptOperation._();
+  const TestScriptOperation._();
 
   /// [TestScriptOperation] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -7939,7 +7939,7 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
   /// [TestScriptRequestHeader] A structured set of tests against a FHIR server
   ///  or client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptRequestHeader._();
+  const TestScriptRequestHeader._();
 
   /// [TestScriptRequestHeader] A structured set of tests against a FHIR server
   ///  or client implementation to determine compliance against the FHIR
@@ -8058,7 +8058,7 @@ class TestScriptAssert with _$TestScriptAssert {
   /// [TestScriptAssert] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptAssert._();
+  const TestScriptAssert._();
 
   /// [TestScriptAssert] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -8486,7 +8486,7 @@ class TestScriptRequirement with _$TestScriptRequirement {
   /// [TestScriptRequirement] A structured set of tests against a FHIR server
   ///  or client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptRequirement._();
+  const TestScriptRequirement._();
 
   /// [TestScriptRequirement] A structured set of tests against a FHIR server
   ///  or client implementation to determine compliance against the FHIR
@@ -8608,7 +8608,7 @@ class TestScriptTest with _$TestScriptTest {
   /// [TestScriptTest] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptTest._();
+  const TestScriptTest._();
 
   /// [TestScriptTest] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -8736,7 +8736,7 @@ class TestScriptAction1 with _$TestScriptAction1 {
   /// [TestScriptAction1] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptAction1._();
+  const TestScriptAction1._();
 
   /// [TestScriptAction1] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -8847,7 +8847,7 @@ class TestScriptTeardown with _$TestScriptTeardown {
   /// [TestScriptTeardown] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptTeardown._();
+  const TestScriptTeardown._();
 
   /// [TestScriptTeardown] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
@@ -8951,7 +8951,7 @@ class TestScriptAction2 with _$TestScriptAction2 {
   /// [TestScriptAction2] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR
   ///  specification.
-  TestScriptAction2._();
+  const TestScriptAction2._();
 
   /// [TestScriptAction2] A structured set of tests against a FHIR server or
   ///  client implementation to determine compliance against the FHIR

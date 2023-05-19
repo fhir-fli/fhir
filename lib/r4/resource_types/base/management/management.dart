@@ -19,7 +19,7 @@ part 'management.g.dart';
 @freezed
 class Encounter with Resource, _$Encounter {
   /// [Encounter] An interaction between a patient and healthcare provider(s)
-  Encounter._();
+  const Encounter._();
 
   /// [Encounter] An interaction between a patient and healthcare provider(s)
   /// for the purpose of providing healthcare service(s) or assessing the health
@@ -363,7 +363,7 @@ class Encounter with Resource, _$Encounter {
 @freezed
 class EncounterStatusHistory with _$EncounterStatusHistory {
   /// [EncounterStatusHistory] An interaction between a patient and healthcare
-  EncounterStatusHistory._();
+  const EncounterStatusHistory._();
 
   /// [EncounterStatusHistory] An interaction between a patient and healthcare
   /// provider(s) for the purpose of providing healthcare service(s) or
@@ -473,7 +473,7 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
 @freezed
 class EncounterClassHistory with _$EncounterClassHistory {
   /// [EncounterClassHistory] An interaction between a patient and healthcare
-  EncounterClassHistory._();
+  const EncounterClassHistory._();
 
   /// [EncounterClassHistory] An interaction between a patient and healthcare
   /// provider(s) for the purpose of providing healthcare service(s) or
@@ -576,7 +576,7 @@ class EncounterClassHistory with _$EncounterClassHistory {
 @freezed
 class EncounterParticipant with _$EncounterParticipant {
   /// [EncounterParticipant] An interaction between a patient and healthcare
-  EncounterParticipant._();
+  const EncounterParticipant._();
 
   /// [EncounterParticipant] An interaction between a patient and healthcare
   /// provider(s) for the purpose of providing healthcare service(s) or
@@ -688,7 +688,7 @@ class EncounterParticipant with _$EncounterParticipant {
 @freezed
 class EncounterDiagnosis with _$EncounterDiagnosis {
   /// [EncounterDiagnosis] An interaction between a patient and healthcare
-  EncounterDiagnosis._();
+  const EncounterDiagnosis._();
 
   /// [EncounterDiagnosis] An interaction between a patient and healthcare
   /// provider(s) for the purpose of providing healthcare service(s) or
@@ -809,7 +809,7 @@ class EncounterDiagnosis with _$EncounterDiagnosis {
 @freezed
 class EncounterHospitalization with _$EncounterHospitalization {
   /// [EncounterHospitalization] An interaction between a patient and
-  EncounterHospitalization._();
+  const EncounterHospitalization._();
 
   /// [EncounterHospitalization] An interaction between a patient and
   /// healthcare provider(s) for the purpose of providing healthcare service(s)
@@ -957,7 +957,7 @@ class EncounterHospitalization with _$EncounterHospitalization {
 @freezed
 class EncounterLocation with _$EncounterLocation {
   /// [EncounterLocation] An interaction between a patient and healthcare
-  EncounterLocation._();
+  const EncounterLocation._();
 
   /// [EncounterLocation] An interaction between a patient and healthcare
   /// provider(s) for the purpose of providing healthcare service(s) or
@@ -1085,7 +1085,7 @@ class EncounterLocation with _$EncounterLocation {
 @freezed
 class EpisodeOfCare with Resource, _$EpisodeOfCare {
   /// [EpisodeOfCare] An association between a patient and an organization /
-  EpisodeOfCare._();
+  const EpisodeOfCare._();
 
   /// [EpisodeOfCare] An association between a patient and an organization /
   /// healthcare provider(s) during which time encounters may occur. The
@@ -1331,7 +1331,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
 @freezed
 class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   /// [EpisodeOfCareStatusHistory] An association between a patient and an
-  EpisodeOfCareStatusHistory._();
+  const EpisodeOfCareStatusHistory._();
 
   /// [EpisodeOfCareStatusHistory] An association between a patient and an
   /// organization / healthcare provider(s) during which time encounters may
@@ -1442,7 +1442,7 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
 @freezed
 class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   /// [EpisodeOfCareDiagnosis] An association between a patient and an
-  EpisodeOfCareDiagnosis._();
+  const EpisodeOfCareDiagnosis._();
 
   /// [EpisodeOfCareDiagnosis] An association between a patient and an
   /// organization / healthcare provider(s) during which time encounters may
@@ -1560,7 +1560,7 @@ class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
 @freezed
 class Flag with Resource, _$Flag {
   /// [Flag] Prospective warnings of potential issues when providing care to
-  Flag._();
+  const Flag._();
 
   /// [Flag] Prospective warnings of potential issues when providing care to
   ///  the patient.
@@ -1778,7 +1778,7 @@ class Flag with Resource, _$Flag {
 @freezed
 class Library with Resource, _$Library {
   /// [Library] The Library resource is a general-purpose container for
-  Library._();
+  const Library._();
 
   /// [Library] The Library resource is a general-purpose container for
   /// knowledge asset definitions. It can be used to describe and expose
@@ -2296,7 +2296,7 @@ class Library with Resource, _$Library {
 @freezed
 class FhirList with Resource, _$FhirList {
   /// [FhirList] A list is a curated collection of resources.
-  FhirList._();
+  const FhirList._();
 
   /// [FhirList] A list is a curated collection of resources.
   ///
@@ -2555,7 +2555,7 @@ class FhirList with Resource, _$FhirList {
 @freezed
 class FhirListEntry with _$FhirListEntry {
   /// [FhirListEntry] A list is a curated collection of resources.
-  FhirListEntry._();
+  const FhirListEntry._();
 
   /// [FhirListEntry] A list is a curated collection of resources.
   ///

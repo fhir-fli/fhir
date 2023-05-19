@@ -16,7 +16,7 @@ part 'definitional_artifacts.g.dart';
 
 @freezed
 class ActivityDefinition with Resource, _$ActivityDefinition {
-  ActivityDefinition._();
+  const ActivityDefinition._();
   const factory ActivityDefinition({
     @Default(Stu3ResourceType.ActivityDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ActivityDefinition)
@@ -118,7 +118,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
 
 @freezed
 class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
-  ActivityDefinitionParticipant._();
+  const ActivityDefinitionParticipant._();
   const factory ActivityDefinitionParticipant({
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -158,7 +158,7 @@ class ActivityDefinitionParticipant with _$ActivityDefinitionParticipant {
 
 @freezed
 class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
-  ActivityDefinitionDynamicValue._();
+  const ActivityDefinitionDynamicValue._();
   const factory ActivityDefinitionDynamicValue({
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -204,7 +204,7 @@ class ActivityDefinitionDynamicValue with _$ActivityDefinitionDynamicValue {
 
 @freezed
 class PlanDefinition with Resource, _$PlanDefinition {
-  PlanDefinition._();
+  const PlanDefinition._();
   const factory PlanDefinition({
     @Default(Stu3ResourceType.PlanDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PlanDefinition)
@@ -292,7 +292,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
 
 @freezed
 class PlanDefinitionGoal with _$PlanDefinitionGoal {
-  PlanDefinitionGoal._();
+  const PlanDefinitionGoal._();
   const factory PlanDefinitionGoal({
     CodeableConcept? category,
     required CodeableConcept description,
@@ -336,7 +336,7 @@ class PlanDefinitionGoal with _$PlanDefinitionGoal {
 
 @freezed
 class PlanDefinitionTarget with _$PlanDefinitionTarget {
-  PlanDefinitionTarget._();
+  const PlanDefinitionTarget._();
   const factory PlanDefinitionTarget({
     CodeableConcept? measure,
     Quantity? detailQuantity,
@@ -378,7 +378,7 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
 
 @freezed
 class PlanDefinitionAction with _$PlanDefinitionAction {
-  PlanDefinitionAction._();
+  const PlanDefinitionAction._();
   const factory PlanDefinitionAction({
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
@@ -455,7 +455,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
 
 @freezed
 class PlanDefinitionCondition with _$PlanDefinitionCondition {
-  PlanDefinitionCondition._();
+  const PlanDefinitionCondition._();
   const factory PlanDefinitionCondition({
     PlanDefinitionConditionKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
@@ -500,7 +500,7 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
 
 @freezed
 class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
-  PlanDefinitionRelatedAction._();
+  const PlanDefinitionRelatedAction._();
   const factory PlanDefinitionRelatedAction({
     FhirId? actionId,
     @JsonKey(name: '_actionId') Element? actionIdElement,
@@ -543,7 +543,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
 
 @freezed
 class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
-  PlanDefinitionParticipant._();
+  const PlanDefinitionParticipant._();
   const factory PlanDefinitionParticipant({
     PlanDefinitionParticipantType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -583,7 +583,7 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
 
 @freezed
 class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
-  PlanDefinitionDynamicValue._();
+  const PlanDefinitionDynamicValue._();
   const factory PlanDefinitionDynamicValue({
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -628,7 +628,7 @@ class PlanDefinitionDynamicValue with _$PlanDefinitionDynamicValue {
 
 @freezed
 class Questionnaire with Resource, _$Questionnaire {
-  Questionnaire._();
+  const Questionnaire._();
   const factory Questionnaire({
     @Default(Stu3ResourceType.Questionnaire)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Questionnaire)
@@ -711,7 +711,7 @@ class Questionnaire with Resource, _$Questionnaire {
 
 @freezed
 class QuestionnaireItem with _$QuestionnaireItem {
-  QuestionnaireItem._();
+  const QuestionnaireItem._();
   const factory QuestionnaireItem({
     String? linkId,
     @JsonKey(name: '_linkId') Element? linkIdElement,
@@ -792,7 +792,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
 
 @freezed
 class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
-  QuestionnaireEnableWhen._();
+  const QuestionnaireEnableWhen._();
   const factory QuestionnaireEnableWhen({
     String? question,
     @JsonKey(name: '_question') Element? questionElement,
@@ -853,7 +853,7 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
 
 @freezed
 class QuestionnaireOption with _$QuestionnaireOption {
-  QuestionnaireOption._();
+  const QuestionnaireOption._();
   const factory QuestionnaireOption({
     FhirDecimal? valueInteger,
     @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
@@ -899,7 +899,7 @@ class QuestionnaireOption with _$QuestionnaireOption {
 
 @freezed
 class ServiceDefinition with Resource, _$ServiceDefinition {
-  ServiceDefinition._();
+  const ServiceDefinition._();
   const factory ServiceDefinition({
     @Default(Stu3ResourceType.ServiceDefinition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ServiceDefinition)

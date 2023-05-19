@@ -21,7 +21,7 @@ class Narrative with _$Narrative {
   /// [Narrative] A human-readable summary of the resource conveying the essential
   /// clinical and business information for the resource.
 
-  Narrative._();
+  const Narrative._();
 
   /// [Narrative] A human-readable summary of the resource conveying the essential
   /// clinical and business information for the resource.
@@ -107,7 +107,7 @@ class CodeableReference with _$CodeableReference {
   /// [CodeableReference] A reference to a resource (by instance), or instead, a
   /// reference to a concept defined in a terminology or ontology (by class).
 
-  CodeableReference._();
+  const CodeableReference._();
 
   /// [CodeableReference] A reference to a resource (by instance), or instead, a
   /// reference to a concept defined in a terminology or ontology (by class).
@@ -184,7 +184,7 @@ class CodeableReference with _$CodeableReference {
 @freezed
 class Reference with _$Reference {
   /// [Reference] A reference from one resource to another.
-  Reference._();
+  const Reference._();
 
   /// [Reference] A reference from one resource to another.
   ///
@@ -327,7 +327,7 @@ class Reference with _$Reference {
 @freezed
 class FhirMeta with _$FhirMeta {
   /// [FhirMeta] The metadata about a resource. This is content in the resource
-  FhirMeta._();
+  const FhirMeta._();
 
   /// [FhirMeta] The metadata about a resource. This is content in the resource
   /// that is maintained by the infrastructure. Changes to the content might not
@@ -462,7 +462,7 @@ class FhirMeta with _$FhirMeta {
 @freezed
 class Dosage with _$Dosage {
   /// [Dosage] Indicates how the medication is/was taken or should be taken by
-  Dosage._();
+  const Dosage._();
 
   /// [Dosage] Indicates how the medication is/was taken or should be taken by
   ///  the patient.
@@ -663,7 +663,7 @@ class Dosage with _$Dosage {
 @freezed
 class DosageDoseAndRate with _$DosageDoseAndRate {
   /// [DosageDoseAndRate] Indicates how the medication is/was taken or should
-  DosageDoseAndRate._();
+  const DosageDoseAndRate._();
 
   /// [DosageDoseAndRate] Indicates how the medication is/was taken or should
   ///  be taken by the patient.
@@ -787,7 +787,7 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
 @freezed
 class ElementDefinition with _$ElementDefinition {
   /// [ElementDefinition] Captures constraints on each element within the
-  ElementDefinition._();
+  const ElementDefinition._();
 
   /// [ElementDefinition] Captures constraints on each element within the
   ///  resource, profile, or extension.
@@ -4423,7 +4423,7 @@ class ElementDefinition with _$ElementDefinition {
 @freezed
 class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   /// [ElementDefinitionSlicing] Captures constraints on each element within
-  ElementDefinitionSlicing._();
+  const ElementDefinitionSlicing._();
 
   /// [ElementDefinitionSlicing] Captures constraints on each element within
   ///  the resource, profile, or extension.
@@ -4573,7 +4573,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 @freezed
 class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   /// [ElementDefinitionDiscriminator] Captures constraints on each element
-  ElementDefinitionDiscriminator._();
+  const ElementDefinitionDiscriminator._();
 
   /// [ElementDefinitionDiscriminator] Captures constraints on each element
   ///  within the resource, profile, or extension.
@@ -4693,7 +4693,7 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
 @freezed
 class ElementDefinitionBase with _$ElementDefinitionBase {
   /// [ElementDefinitionBase] Captures constraints on each element within the
-  ElementDefinitionBase._();
+  const ElementDefinitionBase._();
 
   /// [ElementDefinitionBase] Captures constraints on each element within the
   ///  resource, profile, or extension.
@@ -4821,7 +4821,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
 @freezed
 class ElementDefinitionType with _$ElementDefinitionType {
   /// [ElementDefinitionType] Captures constraints on each element within the
-  ElementDefinitionType._();
+  const ElementDefinitionType._();
 
   /// [ElementDefinitionType] Captures constraints on each element within the
   ///  resource, profile, or extension.
@@ -4997,7 +4997,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
 @freezed
 class ElementDefinitionExample with _$ElementDefinitionExample {
   /// [ElementDefinitionExample] Captures constraints on each element within
-  ElementDefinitionExample._();
+  const ElementDefinitionExample._();
 
   /// [ElementDefinitionExample] Captures constraints on each element within
   ///  the resource, profile, or extension.
@@ -5546,7 +5546,7 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
 @freezed
 class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   /// [ElementDefinitionConstraint] Captures constraints on each element
-  ElementDefinitionConstraint._();
+  const ElementDefinitionConstraint._();
 
   /// [ElementDefinitionConstraint] Captures constraints on each element
   ///  within the resource, profile, or extension.
@@ -5720,7 +5720,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 @freezed
 class ElementDefinitionBinding with _$ElementDefinitionBinding {
   /// [ElementDefinitionBinding] Captures constraints on each element within
-  ElementDefinitionBinding._();
+  const ElementDefinitionBinding._();
 
   /// [ElementDefinitionBinding] Captures constraints on each element within
   ///  the resource, profile, or extension.
@@ -5844,7 +5844,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
 @freezed
 class ElementDefinitionMapping with _$ElementDefinitionMapping {
   /// [ElementDefinitionMapping] Captures constraints on each element within
-  ElementDefinitionMapping._();
+  const ElementDefinitionMapping._();
 
   /// [ElementDefinitionMapping] Captures constraints on each element within
   ///  the resource, profile, or extension.

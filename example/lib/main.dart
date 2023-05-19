@@ -6,12 +6,12 @@ void main() {
     fhirId: '12345',
     active: FhirBoolean(true),
     name: <HumanName>[
-      HumanName(
+      const HumanName(
         family: 'Atreides',
         given: ['Paul'],
       ),
     ],
-    address: <Address>[Address(postalCode: '12345')],
+    address: const <Address>[Address(postalCode: '12345')],
     gender: FhirCode('male'),
     birthDate: FhirDate(DateTime(3071, 04, 25)),
   );
@@ -19,7 +19,7 @@ void main() {
   print(patient.toYaml());
 
   final condition = Condition(
-    subject: Reference(reference: 'Patient/12345'),
+    subject: const Reference(reference: 'Patient/12345'),
     clinicalStatus: CodeableConcept(
       coding: <Coding>[
         Coding(
@@ -74,7 +74,7 @@ void main() {
   print(condition.toYaml());
 
   final observation = Observation(
-    subject: Reference(reference: 'Patient/12345'),
+    subject: const Reference(reference: 'Patient/12345'),
     status: FhirCode('final'),
     category: [
       CodeableConcept(

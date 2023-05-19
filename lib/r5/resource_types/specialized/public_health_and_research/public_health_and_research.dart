@@ -27,7 +27,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   ///  to new ways to screen, prevent, diagnose, and treat disease. They may
   ///  also study certain outcomes and certain groups of people by looking at
   ///  data collected in the past or future.
-  ResearchStudy._();
+  const ResearchStudy._();
 
   /// [ResearchStudy] A scientific study of nature that sometimes includes
   ///  processes involved in health and disease. For example, clinical trials
@@ -500,7 +500,7 @@ class ResearchStudyLabel with _$ResearchStudyLabel {
   ///  to new ways to screen, prevent, diagnose, and treat disease. They may
   ///  also study certain outcomes and certain groups of people by looking at
   ///  data collected in the past or future.
-  ResearchStudyLabel._();
+  const ResearchStudyLabel._();
 
   /// [ResearchStudyLabel] A scientific study of nature that sometimes includes
   ///  processes involved in health and disease. For example, clinical trials
@@ -623,7 +623,7 @@ class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
   ///  studies may be related to new ways to screen, prevent, diagnose, and
   ///  treat disease. They may also study certain outcomes and certain groups
   ///  of people by looking at data collected in the past or future.
-  ResearchStudyAssociatedParty._();
+  const ResearchStudyAssociatedParty._();
 
   /// [ResearchStudyAssociatedParty] A scientific study of nature that
   ///  sometimes includes processes involved in health and disease. For
@@ -766,7 +766,7 @@ class ResearchStudyProgressStatus with _$ResearchStudyProgressStatus {
   ///  related to new ways to screen, prevent, diagnose, and treat disease.
   ///  They may also study certain outcomes and certain groups of people by
   ///  looking at data collected in the past or future.
-  ResearchStudyProgressStatus._();
+  const ResearchStudyProgressStatus._();
 
   /// [ResearchStudyProgressStatus] A scientific study of nature that sometimes
   ///  includes processes involved in health and disease. For example, clinical
@@ -899,7 +899,7 @@ class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
   ///  related to new ways to screen, prevent, diagnose, and treat disease.
   ///  They may also study certain outcomes and certain groups of people by
   ///  looking at data collected in the past or future.
-  ResearchStudyRecruitment._();
+  const ResearchStudyRecruitment._();
 
   /// [ResearchStudyRecruitment] A scientific study of nature that sometimes
   ///  includes processes involved in health and disease. For example, clinical
@@ -1037,7 +1037,7 @@ class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
   ///  studies may be related to new ways to screen, prevent, diagnose, and
   ///  treat disease. They may also study certain outcomes and certain groups
   ///  of people by looking at data collected in the past or future.
-  ResearchStudyComparisonGroup._();
+  const ResearchStudyComparisonGroup._();
 
   /// [ResearchStudyComparisonGroup] A scientific study of nature that
   ///  sometimes includes processes involved in health and disease. For
@@ -1202,7 +1202,7 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
   ///  related to new ways to screen, prevent, diagnose, and treat disease.
   ///  They may also study certain outcomes and certain groups of people by
   ///  looking at data collected in the past or future.
-  ResearchStudyObjective._();
+  const ResearchStudyObjective._();
 
   /// [ResearchStudyObjective] A scientific study of nature that sometimes
   ///  includes processes involved in health and disease. For example, clinical
@@ -1339,7 +1339,7 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
   ///  related to new ways to screen, prevent, diagnose, and treat disease.
   ///  They may also study certain outcomes and certain groups of people by
   ///  looking at data collected in the past or future.
-  ResearchStudyOutcomeMeasure._();
+  const ResearchStudyOutcomeMeasure._();
 
   /// [ResearchStudyOutcomeMeasure] A scientific study of nature that sometimes
   ///  includes processes involved in health and disease. For example, clinical
@@ -1472,7 +1472,7 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
 class ResearchSubject with Resource, _$ResearchSubject {
   /// [ResearchSubject] A ResearchSubject is a participant or object which is
   ///  the recipient of investigative activities in a research study.
-  ResearchSubject._();
+  const ResearchSubject._();
 
   /// [ResearchSubject] A ResearchSubject is a participant or object which is
   ///  the recipient of investigative activities in a research study.
@@ -1720,7 +1720,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
 class ResearchSubjectProgress with _$ResearchSubjectProgress {
   /// [ResearchSubjectProgress] A ResearchSubject is a participant or object
   ///  which is the recipient of investigative activities in a research study.
-  ResearchSubjectProgress._();
+  const ResearchSubjectProgress._();
 
   /// [ResearchSubjectProgress] A ResearchSubject is a participant or object
   ///  which is the recipient of investigative activities in a research study.

@@ -17,7 +17,7 @@ part 'medications.g.dart';
 @freezed
 class Immunization with Resource, _$Immunization {
   /// [Immunization] Describes the event of a patient being administered a
-  Immunization._();
+  const Immunization._();
 
   /// [Immunization] Describes the event of a patient being administered a
   /// vaccine or a record of an immunization as reported by a patient, a
@@ -404,7 +404,7 @@ class Immunization with Resource, _$Immunization {
 @freezed
 class ImmunizationPerformer with _$ImmunizationPerformer {
   /// [ImmunizationPerformer] Describes the event of a patient being
-  ImmunizationPerformer._();
+  const ImmunizationPerformer._();
 
   /// [ImmunizationPerformer] Describes the event of a patient being
   /// administered a vaccine or a record of an immunization as reported by a
@@ -509,7 +509,7 @@ class ImmunizationPerformer with _$ImmunizationPerformer {
 @freezed
 class ImmunizationEducation with _$ImmunizationEducation {
   /// [ImmunizationEducation] Describes the event of a patient being
-  ImmunizationEducation._();
+  const ImmunizationEducation._();
 
   /// [ImmunizationEducation] Describes the event of a patient being
   /// administered a vaccine or a record of an immunization as reported by a
@@ -646,7 +646,7 @@ class ImmunizationEducation with _$ImmunizationEducation {
 @freezed
 class ImmunizationReaction with _$ImmunizationReaction {
   /// [ImmunizationReaction] Describes the event of a patient being
-  ImmunizationReaction._();
+  const ImmunizationReaction._();
 
   /// [ImmunizationReaction] Describes the event of a patient being
   /// administered a vaccine or a record of an immunization as reported by a
@@ -764,7 +764,7 @@ class ImmunizationReaction with _$ImmunizationReaction {
 @freezed
 class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
   /// [ImmunizationProtocolApplied] Describes the event of a patient being
-  ImmunizationProtocolApplied._();
+  const ImmunizationProtocolApplied._();
 
   /// [ImmunizationProtocolApplied] Describes the event of a patient being
   /// administered a vaccine or a record of an immunization as reported by a
@@ -927,7 +927,7 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
 @freezed
 class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
   /// [ImmunizationEvaluation] Describes a comparison of an immunization event
-  ImmunizationEvaluation._();
+  const ImmunizationEvaluation._();
 
   /// [ImmunizationEvaluation] Describes a comparison of an immunization event
   /// against published recommendations to determine if the administration is
@@ -1224,7 +1224,7 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
 @freezed
 class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   /// [ImmunizationRecommendation] A patient's point-in-time set of
-  ImmunizationRecommendation._();
+  const ImmunizationRecommendation._();
 
   /// [ImmunizationRecommendation] A patient's point-in-time set of
   /// recommendations (i.e. forecasting) according to a published schedule with
@@ -1417,7 +1417,7 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
 @freezed
 class ImmunizationRecommendationRecommendation
     with _$ImmunizationRecommendationRecommendation {
-  ImmunizationRecommendationRecommendation._();
+  const ImmunizationRecommendationRecommendation._();
 
   /// [ImmunizationRecommendationRecommendation] A patient's point-in-time set
   /// of recommendations (i.e. forecasting) according to a published schedule
@@ -1624,7 +1624,7 @@ class ImmunizationRecommendationRecommendation
 @freezed
 class ImmunizationRecommendationDateCriterion
     with _$ImmunizationRecommendationDateCriterion {
-  ImmunizationRecommendationDateCriterion._();
+  const ImmunizationRecommendationDateCriterion._();
 
   /// [ImmunizationRecommendationDateCriterion] A patient's point-in-time set
   /// of recommendations (i.e. forecasting) according to a published schedule
@@ -1723,7 +1723,7 @@ class ImmunizationRecommendationDateCriterion
 @freezed
 class Medication with Resource, _$Medication {
   /// [Medication] This resource is primarily used for the identification and
-  Medication._();
+  const Medication._();
 
   /// [Medication] This resource is primarily used for the identification and
   /// definition of a medication for the purposes of prescribing, dispensing,
@@ -1951,7 +1951,7 @@ class Medication with Resource, _$Medication {
 @freezed
 class MedicationIngredient with _$MedicationIngredient {
   /// [MedicationIngredient] This resource is primarily used for the
-  MedicationIngredient._();
+  const MedicationIngredient._();
 
   /// [MedicationIngredient] This resource is primarily used for the
   /// identification and definition of a medication for the purposes of
@@ -2080,7 +2080,7 @@ class MedicationIngredient with _$MedicationIngredient {
 @freezed
 class MedicationBatch with _$MedicationBatch {
   /// [MedicationBatch] This resource is primarily used for the identification
-  MedicationBatch._();
+  const MedicationBatch._();
 
   /// [MedicationBatch] This resource is primarily used for the identification
   /// and definition of a medication for the purposes of prescribing,
@@ -2194,7 +2194,7 @@ class MedicationBatch with _$MedicationBatch {
 @freezed
 class MedicationAdministration with Resource, _$MedicationAdministration {
   /// [MedicationAdministration] Describes the event of a patient consuming or
-  MedicationAdministration._();
+  const MedicationAdministration._();
 
   /// [MedicationAdministration] Describes the event of a patient consuming or
   /// otherwise being administered a medication.  This may be as simple as
@@ -2543,7 +2543,7 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
 @freezed
 class MedicationAdministrationPerformer
     with _$MedicationAdministrationPerformer {
-  MedicationAdministrationPerformer._();
+  const MedicationAdministrationPerformer._();
 
   /// [MedicationAdministrationPerformer] Describes the event of a patient
   /// consuming or otherwise being administered a medication.  This may be as
@@ -2639,7 +2639,7 @@ class MedicationAdministrationPerformer
 @freezed
 class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   /// [MedicationAdministrationDosage] Describes the event of a patient
-  MedicationAdministrationDosage._();
+  const MedicationAdministrationDosage._();
 
   /// [MedicationAdministrationDosage] Describes the event of a patient
   /// consuming or otherwise being administered a medication.  This may be as
@@ -2815,7 +2815,7 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
 @freezed
 class MedicationDispense with Resource, _$MedicationDispense {
   /// [MedicationDispense] Indicates that a medication product is to be or has
-  MedicationDispense._();
+  const MedicationDispense._();
 
   /// [MedicationDispense] Indicates that a medication product is to be or has
   /// been dispensed for a named person/patient.  This includes a description of
@@ -3196,7 +3196,7 @@ class MedicationDispense with Resource, _$MedicationDispense {
 @freezed
 class MedicationDispensePerformer with _$MedicationDispensePerformer {
   /// [MedicationDispensePerformer] Indicates that a medication product is to
-  MedicationDispensePerformer._();
+  const MedicationDispensePerformer._();
 
   /// [MedicationDispensePerformer] Indicates that a medication product is to
   /// be or has been dispensed for a named person/patient.  This includes a
@@ -3305,7 +3305,7 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
 @freezed
 class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   /// [MedicationDispenseSubstitution] Indicates that a medication product is
-  MedicationDispenseSubstitution._();
+  const MedicationDispenseSubstitution._();
 
   /// [MedicationDispenseSubstitution] Indicates that a medication product is
   /// to be or has been dispensed for a named person/patient.  This includes a
@@ -3434,7 +3434,7 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
 @freezed
 class MedicationKnowledge with Resource, _$MedicationKnowledge {
   /// [MedicationKnowledge] Information about a medication that is used to
-  MedicationKnowledge._();
+  const MedicationKnowledge._();
 
   /// [MedicationKnowledge] Information about a medication that is used to
   ///  support knowledge.
@@ -3771,7 +3771,7 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
 @freezed
 class MedicationKnowledgeRelatedMedicationKnowledge
     with _$MedicationKnowledgeRelatedMedicationKnowledge {
-  MedicationKnowledgeRelatedMedicationKnowledge._();
+  const MedicationKnowledgeRelatedMedicationKnowledge._();
 
   /// [MedicationKnowledgeRelatedMedicationKnowledge] Information about a
   ///  medication that is used to support knowledge.
@@ -3865,7 +3865,7 @@ class MedicationKnowledgeRelatedMedicationKnowledge
 @freezed
 class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
   /// [MedicationKnowledgeMonograph] Information about a medication that is
-  MedicationKnowledgeMonograph._();
+  const MedicationKnowledgeMonograph._();
 
   /// [MedicationKnowledgeMonograph] Information about a medication that is
   ///  used to support knowledge.
@@ -3969,7 +3969,7 @@ class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
 @freezed
 class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
   /// [MedicationKnowledgeIngredient] Information about a medication that is
-  MedicationKnowledgeIngredient._();
+  const MedicationKnowledgeIngredient._();
 
   /// [MedicationKnowledgeIngredient] Information about a medication that is
   ///  used to support knowledge.
@@ -4096,7 +4096,7 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
 @freezed
 class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
   /// [MedicationKnowledgeCost] Information about a medication that is used to
-  MedicationKnowledgeCost._();
+  const MedicationKnowledgeCost._();
 
   /// [MedicationKnowledgeCost] Information about a medication that is used to
   ///  support knowledge.
@@ -4209,7 +4209,7 @@ class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
 @freezed
 class MedicationKnowledgeMonitoringProgram
     with _$MedicationKnowledgeMonitoringProgram {
-  MedicationKnowledgeMonitoringProgram._();
+  const MedicationKnowledgeMonitoringProgram._();
 
   /// [MedicationKnowledgeMonitoringProgram] Information about a medication
   ///  that is used to support knowledge.
@@ -4304,7 +4304,7 @@ class MedicationKnowledgeMonitoringProgram
 @freezed
 class MedicationKnowledgeAdministrationGuidelines
     with _$MedicationKnowledgeAdministrationGuidelines {
-  MedicationKnowledgeAdministrationGuidelines._();
+  const MedicationKnowledgeAdministrationGuidelines._();
 
   /// [MedicationKnowledgeAdministrationGuidelines] Information about a
   ///  medication that is used to support knowledge.
@@ -4413,7 +4413,7 @@ class MedicationKnowledgeAdministrationGuidelines
 @freezed
 class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
   /// [MedicationKnowledgeDosage] Information about a medication that is used
-  MedicationKnowledgeDosage._();
+  const MedicationKnowledgeDosage._();
 
   /// [MedicationKnowledgeDosage] Information about a medication that is used
   ///  to support knowledge.
@@ -4516,7 +4516,7 @@ class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
 @freezed
 class MedicationKnowledgePatientCharacteristics
     with _$MedicationKnowledgePatientCharacteristics {
-  MedicationKnowledgePatientCharacteristics._();
+  const MedicationKnowledgePatientCharacteristics._();
 
   /// [MedicationKnowledgePatientCharacteristics] Information about a
   ///  medication that is used to support knowledge.
@@ -4620,7 +4620,7 @@ class MedicationKnowledgePatientCharacteristics
 @freezed
 class MedicationKnowledgeMedicineClassification
     with _$MedicationKnowledgeMedicineClassification {
-  MedicationKnowledgeMedicineClassification._();
+  const MedicationKnowledgeMedicineClassification._();
 
   /// [MedicationKnowledgeMedicineClassification] Information about a
   ///  medication that is used to support knowledge.
@@ -4715,7 +4715,7 @@ class MedicationKnowledgeMedicineClassification
 @freezed
 class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
   /// [MedicationKnowledgePackaging] Information about a medication that is
-  MedicationKnowledgePackaging._();
+  const MedicationKnowledgePackaging._();
 
   /// [MedicationKnowledgePackaging] Information about a medication that is
   ///  used to support knowledge.
@@ -4820,7 +4820,7 @@ class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
 @freezed
 class MedicationKnowledgeDrugCharacteristic
     with _$MedicationKnowledgeDrugCharacteristic {
-  MedicationKnowledgeDrugCharacteristic._();
+  const MedicationKnowledgeDrugCharacteristic._();
 
   /// [MedicationKnowledgeDrugCharacteristic] Information about a medication
   ///  that is used to support knowledge.
@@ -4938,7 +4938,7 @@ class MedicationKnowledgeDrugCharacteristic
 @freezed
 class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
   /// [MedicationKnowledgeRegulatory] Information about a medication that is
-  MedicationKnowledgeRegulatory._();
+  const MedicationKnowledgeRegulatory._();
 
   /// [MedicationKnowledgeRegulatory] Information about a medication that is
   ///  used to support knowledge.
@@ -5054,7 +5054,7 @@ class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
 @freezed
 class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
   /// [MedicationKnowledgeSubstitution] Information about a medication that is
-  MedicationKnowledgeSubstitution._();
+  const MedicationKnowledgeSubstitution._();
 
   /// [MedicationKnowledgeSubstitution] Information about a medication that is
   ///  used to support knowledge.
@@ -5164,7 +5164,7 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
 @freezed
 class MedicationKnowledgeSchedule with _$MedicationKnowledgeSchedule {
   /// [MedicationKnowledgeSchedule] Information about a medication that is
-  MedicationKnowledgeSchedule._();
+  const MedicationKnowledgeSchedule._();
 
   /// [MedicationKnowledgeSchedule] Information about a medication that is
   ///  used to support knowledge.
@@ -5261,7 +5261,7 @@ class MedicationKnowledgeSchedule with _$MedicationKnowledgeSchedule {
 @freezed
 class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
   /// [MedicationKnowledgeMaxDispense] Information about a medication that is
-  MedicationKnowledgeMaxDispense._();
+  const MedicationKnowledgeMaxDispense._();
 
   /// [MedicationKnowledgeMaxDispense] Information about a medication that is
   ///  used to support knowledge.
@@ -5366,7 +5366,7 @@ class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
 @freezed
 class MedicationKnowledgeKinetics with _$MedicationKnowledgeKinetics {
   /// [MedicationKnowledgeKinetics] Information about a medication that is
-  MedicationKnowledgeKinetics._();
+  const MedicationKnowledgeKinetics._();
 
   /// [MedicationKnowledgeKinetics] Information about a medication that is
   ///  used to support knowledge.
@@ -5477,7 +5477,7 @@ class MedicationKnowledgeKinetics with _$MedicationKnowledgeKinetics {
 @freezed
 class MedicationRequest with Resource, _$MedicationRequest {
   /// [MedicationRequest] An order or request for both supply of the medication
-  MedicationRequest._();
+  const MedicationRequest._();
 
   /// [MedicationRequest] An order or request for both supply of the medication
   /// and the instructions for administration of the medication to a patient.
@@ -5965,7 +5965,7 @@ class MedicationRequest with Resource, _$MedicationRequest {
 @freezed
 class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   /// [MedicationRequestDispenseRequest] An order or request for both supply
-  MedicationRequestDispenseRequest._();
+  const MedicationRequestDispenseRequest._();
 
   /// [MedicationRequestDispenseRequest] An order or request for both supply
   /// of the medication and the instructions for administration of the
@@ -6117,7 +6117,7 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
 @freezed
 class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
   /// [MedicationRequestInitialFill] An order or request for both supply of
-  MedicationRequestInitialFill._();
+  const MedicationRequestInitialFill._();
 
   /// [MedicationRequestInitialFill] An order or request for both supply of
   /// the medication and the instructions for administration of the medication
@@ -6227,7 +6227,7 @@ class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
 @freezed
 class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   /// [MedicationRequestSubstitution] An order or request for both supply of
-  MedicationRequestSubstitution._();
+  const MedicationRequestSubstitution._();
 
   /// [MedicationRequestSubstitution] An order or request for both supply of
   /// the medication and the instructions for administration of the medication
@@ -6349,7 +6349,7 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
 @freezed
 class MedicationStatement with Resource, _$MedicationStatement {
   /// [MedicationStatement] A record of a medication that is being consumed by
-  MedicationStatement._();
+  const MedicationStatement._();
 
   /// [MedicationStatement] A record of a medication that is being consumed by
   /// a patient.   A MedicationStatement may indicate that the patient may be

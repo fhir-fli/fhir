@@ -16,7 +16,7 @@ part 'quality_reporting.g.dart';
 
 @freezed
 class Measure with Resource, _$Measure {
-  Measure._();
+  const Measure._();
   const factory Measure({
     @Default(Stu3ResourceType.Measure)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
@@ -125,7 +125,7 @@ class Measure with Resource, _$Measure {
 
 @freezed
 class MeasureGroup with _$MeasureGroup {
-  MeasureGroup._();
+  const MeasureGroup._();
   const factory MeasureGroup({
     required Identifier identifier,
     String? name,
@@ -169,7 +169,7 @@ class MeasureGroup with _$MeasureGroup {
 
 @freezed
 class MeasurePopulation with _$MeasurePopulation {
-  MeasurePopulation._();
+  const MeasurePopulation._();
   const factory MeasurePopulation({
     Identifier? identifier,
     CodeableConcept? code,
@@ -214,7 +214,7 @@ class MeasurePopulation with _$MeasurePopulation {
 
 @freezed
 class MeasureStratifier with _$MeasureStratifier {
-  MeasureStratifier._();
+  const MeasureStratifier._();
   const factory MeasureStratifier({
     Identifier? identifier,
     String? criteria,
@@ -256,7 +256,7 @@ class MeasureStratifier with _$MeasureStratifier {
 
 @freezed
 class MeasureSupplementalData with _$MeasureSupplementalData {
-  MeasureSupplementalData._();
+  const MeasureSupplementalData._();
   const factory MeasureSupplementalData({
     Identifier? identifier,
     List<CodeableConcept>? usage,
@@ -299,7 +299,7 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
 
 @freezed
 class MeasureReport with Resource, _$MeasureReport {
-  MeasureReport._();
+  const MeasureReport._();
   const factory MeasureReport({
     @Default(Stu3ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
@@ -360,7 +360,7 @@ class MeasureReport with Resource, _$MeasureReport {
 
 @freezed
 class MeasureReportGroup with _$MeasureReportGroup {
-  MeasureReportGroup._();
+  const MeasureReportGroup._();
   const factory MeasureReportGroup({
     required Identifier identifier,
     List<MeasureReportPopulation>? population,
@@ -402,7 +402,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
 
 @freezed
 class MeasureReportPopulation with _$MeasureReportPopulation {
-  MeasureReportPopulation._();
+  const MeasureReportPopulation._();
   const factory MeasureReportPopulation({
     Identifier? identifier,
     CodeableConcept? code,
@@ -444,7 +444,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
 
 @freezed
 class MeasureReportStratifier with _$MeasureReportStratifier {
-  MeasureReportStratifier._();
+  const MeasureReportStratifier._();
   const factory MeasureReportStratifier({
     Identifier? identifier,
     List<MeasureReportStratum>? stratum,
@@ -483,7 +483,7 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
 
 @freezed
 class MeasureReportStratum with _$MeasureReportStratum {
-  MeasureReportStratum._();
+  const MeasureReportStratum._();
   const factory MeasureReportStratum({
     String? value,
     @JsonKey(name: '_value') Element? valueElement,
@@ -525,7 +525,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
 
 @freezed
 class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
-  MeasureReportPopulation1._();
+  const MeasureReportPopulation1._();
   const factory MeasureReportPopulation1({
     Identifier? identifier,
     CodeableConcept? code,

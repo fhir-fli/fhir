@@ -23,7 +23,7 @@ class Communication with Resource, _$Communication {
   ///  transmitted or shared; e.g. an alert that was sent to a responsible
   ///  provider, a public health agency communication to a provider/reporter in
   ///  response to a case report for a reportable condition.
-  Communication._();
+  const Communication._();
 
   /// [Communication] A clinical or business level record of information being
   ///  transmitted or shared; e.g. an alert that was sent to a responsible
@@ -378,7 +378,7 @@ class CommunicationPayload with _$CommunicationPayload {
   ///  responsible provider, a public health agency communication to a
   ///  provider/reporter in response to a case report for a reportable
   ///  condition.
-  CommunicationPayload._();
+  const CommunicationPayload._();
 
   /// [CommunicationPayload] A clinical or business level record of information
   ///  being transmitted or shared; e.g. an alert that was sent to a
@@ -502,7 +502,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   ///  system proposes that an alert be sent to a responsible provider, the CDS
   ///  system proposes that the public health agency be notified about a
   ///  reportable condition.
-  CommunicationRequest._();
+  const CommunicationRequest._();
 
   /// [CommunicationRequest] A request to convey information; e.g. the CDS
   ///  system proposes that an alert be sent to a responsible provider, the CDS
@@ -883,7 +883,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
   ///  CDS system proposes that an alert be sent to a responsible provider, the
   ///  CDS system proposes that the public health agency be notified about a
   ///  reportable condition.
-  CommunicationRequestPayload._();
+  const CommunicationRequestPayload._();
 
   /// [CommunicationRequestPayload] A request to convey information; e.g. the
   ///  CDS system proposes that an alert be sent to a responsible provider, the
@@ -1003,7 +1003,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
 class DeviceAssociation with Resource, _$DeviceAssociation {
   /// [DeviceAssociation] A record of association or dissociation of a device
   ///  with a patient.
-  DeviceAssociation._();
+  const DeviceAssociation._();
 
   /// [DeviceAssociation] A record of association or dissociation of a device
   ///  with a patient.
@@ -1222,7 +1222,7 @@ class DeviceAssociation with Resource, _$DeviceAssociation {
 class DeviceAssociationOperation with _$DeviceAssociationOperation {
   /// [DeviceAssociationOperation] A record of association or dissociation of a
   ///  device with a patient.
-  DeviceAssociationOperation._();
+  const DeviceAssociationOperation._();
 
   /// [DeviceAssociationOperation] A record of association or dissociation of a
   ///  device with a patient.
@@ -1335,7 +1335,7 @@ class DeviceAssociationOperation with _$DeviceAssociationOperation {
 class DeviceDispense with Resource, _$DeviceDispense {
   /// [DeviceDispense] A record of dispensation of a device - i.e., assigning a
   ///  device to a patient, or to a professional for their use.
-  DeviceDispense._();
+  const DeviceDispense._();
 
   /// [DeviceDispense] A record of dispensation of a device - i.e., assigning a
   ///  device to a patient, or to a professional for their use.
@@ -1662,7 +1662,7 @@ class DeviceDispense with Resource, _$DeviceDispense {
 class DeviceDispensePerformer with _$DeviceDispensePerformer {
   /// [DeviceDispensePerformer] A record of dispensation of a device - i.e.,
   ///  assigning a device to a patient, or to a professional for their use.
-  DeviceDispensePerformer._();
+  const DeviceDispensePerformer._();
 
   /// [DeviceDispensePerformer] A record of dispensation of a device - i.e.,
   ///  assigning a device to a patient, or to a professional for their use.
@@ -1774,7 +1774,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
   /// [DeviceRequest] Represents a request for a patient to employ a medical
   ///  device. The device may be an implantable device, or an external
   ///  assistive device, such as a walker.
-  DeviceRequest._();
+  const DeviceRequest._();
 
   /// [DeviceRequest] Represents a request for a patient to employ a medical
   ///  device. The device may be an implantable device, or an external
@@ -2220,7 +2220,7 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
   /// [DeviceRequestParameter] Represents a request for a patient to employ a
   ///  medical device. The device may be an implantable device, or an external
   ///  assistive device, such as a walker.
-  DeviceRequestParameter._();
+  const DeviceRequestParameter._();
 
   /// [DeviceRequestParameter] Represents a request for a patient to employ a
   ///  medical device. The device may be an implantable device, or an external
@@ -2348,7 +2348,7 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
 class DeviceUsage with Resource, _$DeviceUsage {
   /// [DeviceUsage] A record of a device being used by a patient where the
   ///  record is the result of a report from the patient or a clinician.
-  DeviceUsage._();
+  const DeviceUsage._();
 
   /// [DeviceUsage] A record of a device being used by a patient where the
   ///  record is the result of a report from the patient or a clinician.
@@ -2663,7 +2663,7 @@ class DeviceUsage with Resource, _$DeviceUsage {
 class DeviceUsageAdherence with _$DeviceUsageAdherence {
   /// [DeviceUsageAdherence] A record of a device being used by a patient where
   ///  the record is the result of a report from the patient or a clinician.
-  DeviceUsageAdherence._();
+  const DeviceUsageAdherence._();
 
   /// [DeviceUsageAdherence] A record of a device being used by a patient where
   ///  the record is the result of a report from the patient or a clinician.
@@ -2772,7 +2772,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   ///  guidance request, including any output parameters returned by the
   ///  evaluation, as well as the description of any proposed actions to be
   ///  taken.
-  GuidanceResponse._();
+  const GuidanceResponse._();
 
   /// [GuidanceResponse] A guidance response is the formal response to a
   ///  guidance request, including any output parameters returned by the
@@ -3119,7 +3119,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
 class InventoryItem with Resource, _$InventoryItem {
   /// [InventoryItem] A functional description of an inventory item used in
   ///  inventory and supply-related workflows.
-  InventoryItem._();
+  const InventoryItem._();
 
   /// [InventoryItem] A functional description of an inventory item used in
   ///  inventory and supply-related workflows.
@@ -3375,7 +3375,7 @@ class InventoryItem with Resource, _$InventoryItem {
 class InventoryItemName with _$InventoryItemName {
   /// [InventoryItemName] A functional description of an inventory item used in
   ///  inventory and supply-related workflows.
-  InventoryItemName._();
+  const InventoryItemName._();
 
   /// [InventoryItemName] A functional description of an inventory item used in
   ///  inventory and supply-related workflows.
@@ -3499,7 +3499,7 @@ class InventoryItemResponsibleOrganization
     with _$InventoryItemResponsibleOrganization {
   /// [InventoryItemResponsibleOrganization] A functional description of an
   ///  inventory item used in inventory and supply-related workflows.
-  InventoryItemResponsibleOrganization._();
+  const InventoryItemResponsibleOrganization._();
 
   /// [InventoryItemResponsibleOrganization] A functional description of an
   ///  inventory item used in inventory and supply-related workflows.
@@ -3610,7 +3610,7 @@ class InventoryItemResponsibleOrganization
 class InventoryItemDescription with _$InventoryItemDescription {
   /// [InventoryItemDescription] A functional description of an inventory item
   ///  used in inventory and supply-related workflows.
-  InventoryItemDescription._();
+  const InventoryItemDescription._();
 
   /// [InventoryItemDescription] A functional description of an inventory item
   ///  used in inventory and supply-related workflows.
@@ -3730,7 +3730,7 @@ class InventoryItemDescription with _$InventoryItemDescription {
 class InventoryItemAssociation with _$InventoryItemAssociation {
   /// [InventoryItemAssociation] A functional description of an inventory item
   ///  used in inventory and supply-related workflows.
-  InventoryItemAssociation._();
+  const InventoryItemAssociation._();
 
   /// [InventoryItemAssociation] A functional description of an inventory item
   ///  used in inventory and supply-related workflows.
@@ -3855,7 +3855,7 @@ class InventoryItemAssociation with _$InventoryItemAssociation {
 class InventoryItemCharacteristic with _$InventoryItemCharacteristic {
   /// [InventoryItemCharacteristic] A functional description of an inventory
   ///  item used in inventory and supply-related workflows.
-  InventoryItemCharacteristic._();
+  const InventoryItemCharacteristic._();
 
   /// [InventoryItemCharacteristic] A functional description of an inventory
   ///  item used in inventory and supply-related workflows.
@@ -4052,7 +4052,7 @@ class InventoryItemCharacteristic with _$InventoryItemCharacteristic {
 class InventoryItemInstance with _$InventoryItemInstance {
   /// [InventoryItemInstance] A functional description of an inventory item
   ///  used in inventory and supply-related workflows.
-  InventoryItemInstance._();
+  const InventoryItemInstance._();
 
   /// [InventoryItemInstance] A functional description of an inventory item
   ///  used in inventory and supply-related workflows.
@@ -4183,7 +4183,7 @@ class InventoryItemInstance with _$InventoryItemInstance {
 @freezed
 class InventoryReport with Resource, _$InventoryReport {
   /// [InventoryReport] A report of inventory or stock items.
-  InventoryReport._();
+  const InventoryReport._();
 
   /// [InventoryReport] A report of inventory or stock items.
   ///
@@ -4428,7 +4428,7 @@ class InventoryReport with Resource, _$InventoryReport {
 @freezed
 class InventoryReportInventoryListing with _$InventoryReportInventoryListing {
   /// [InventoryReportInventoryListing] A report of inventory or stock items.
-  InventoryReportInventoryListing._();
+  const InventoryReportInventoryListing._();
 
   /// [InventoryReportInventoryListing] A report of inventory or stock items.
   ///
@@ -4550,7 +4550,7 @@ class InventoryReportInventoryListing with _$InventoryReportInventoryListing {
 @freezed
 class InventoryReportItem with _$InventoryReportItem {
   /// [InventoryReportItem] A report of inventory or stock items.
-  InventoryReportItem._();
+  const InventoryReportItem._();
 
   /// [InventoryReportItem] A report of inventory or stock items.
   ///
@@ -4662,7 +4662,7 @@ class InventoryReportItem with _$InventoryReportItem {
 @freezed
 class SupplyDelivery with Resource, _$SupplyDelivery {
   /// [SupplyDelivery] Record of delivery of what is supplied.
-  SupplyDelivery._();
+  const SupplyDelivery._();
 
   /// [SupplyDelivery] Record of delivery of what is supplied.
   ///
@@ -4922,7 +4922,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
 @freezed
 class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   /// [SupplyDeliverySuppliedItem] Record of delivery of what is supplied.
-  SupplyDeliverySuppliedItem._();
+  const SupplyDeliverySuppliedItem._();
 
   /// [SupplyDeliverySuppliedItem] Record of delivery of what is supplied.
   ///
@@ -5048,7 +5048,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   /// [SupplyRequest] A record of a request to deliver a medication, substance
   ///  or device used in the healthcare setting to a particular destination for
   ///  a particular person or organization.
-  SupplyRequest._();
+  const SupplyRequest._();
 
   /// [SupplyRequest] A record of a request to deliver a medication, substance
   ///  or device used in the healthcare setting to a particular destination for
@@ -5349,7 +5349,7 @@ class SupplyRequestParameter with _$SupplyRequestParameter {
   /// [SupplyRequestParameter] A record of a request to deliver a medication,
   ///  substance or device used in the healthcare setting to a particular
   ///  destination for a particular person or organization.
-  SupplyRequestParameter._();
+  const SupplyRequestParameter._();
 
   /// [SupplyRequestParameter] A record of a request to deliver a medication,
   ///  substance or device used in the healthcare setting to a particular

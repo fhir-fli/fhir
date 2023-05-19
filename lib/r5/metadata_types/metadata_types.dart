@@ -19,7 +19,7 @@ part 'metadata_types.g.dart';
 class ContactDetail with _$ContactDetail {
   /// [ContactDetail] Specifies contact information for a person or
   ///  organization.
-  ContactDetail._();
+  const ContactDetail._();
 
   /// [ContactDetail] Specifies contact information for a person or
   ///  organization.
@@ -106,7 +106,7 @@ class ExtendedContactDetail with _$ExtendedContactDetail {
   /// [ExtendedContactDetail] Specifies contact information for a specific
   ///  purpose over a period of time, might be handled/monitored by a specific
   ///  named person or organization.
-  ExtendedContactDetail._();
+  const ExtendedContactDetail._();
 
   /// [ExtendedContactDetail] Specifies contact information for a specific
   ///  purpose over a period of time, might be handled/monitored by a specific
@@ -209,7 +209,7 @@ class ExtendedContactDetail with _$ExtendedContactDetail {
 @freezed
 class VirtualServiceDetail with _$VirtualServiceDetail {
   /// [VirtualServiceDetail] Virtual Service Contact Details.
-  VirtualServiceDetail._();
+  const VirtualServiceDetail._();
 
   /// [VirtualServiceDetail] Virtual Service Contact Details.
   ///
@@ -370,7 +370,7 @@ class VirtualServiceDetail with _$VirtualServiceDetail {
 @freezed
 class Availability with _$Availability {
   /// [Availability] Availability data for an {item}.
-  Availability._();
+  const Availability._();
 
   /// [Availability] Availability data for an {item}.
   ///
@@ -446,7 +446,7 @@ class Availability with _$Availability {
 @freezed
 class AvailabilityAvailableTime with _$AvailabilityAvailableTime {
   /// [AvailabilityAvailableTime] Availability data for an {item}.
-  AvailabilityAvailableTime._();
+  const AvailabilityAvailableTime._();
 
   /// [AvailabilityAvailableTime] Availability data for an {item}.
   ///
@@ -584,7 +584,7 @@ class AvailabilityAvailableTime with _$AvailabilityAvailableTime {
 @freezed
 class AvailabilityNotAvailableTime with _$AvailabilityNotAvailableTime {
   /// [AvailabilityNotAvailableTime] Availability data for an {item}.
-  AvailabilityNotAvailableTime._();
+  const AvailabilityNotAvailableTime._();
 
   /// [AvailabilityNotAvailableTime] Availability data for an {item}.
   ///
@@ -696,7 +696,7 @@ class AvailabilityNotAvailableTime with _$AvailabilityNotAvailableTime {
 @freezed
 class MonetaryComponent with _$MonetaryComponent {
   /// [MonetaryComponent] Availability data for an {item}.
-  MonetaryComponent._();
+  const MonetaryComponent._();
 
   /// [MonetaryComponent] Availability data for an {item}.
   ///
@@ -795,7 +795,7 @@ class MonetaryComponent with _$MonetaryComponent {
 class Contributor with _$Contributor {
   /// [Contributor] A contributor to the content of a knowledge asset,
   ///  including authors, editors, reviewers, and endorsers.
-  Contributor._();
+  const Contributor._();
 
   /// [Contributor] A contributor to the content of a knowledge asset,
   ///  including authors, editors, reviewers, and endorsers.
@@ -892,7 +892,7 @@ class Contributor with _$Contributor {
 class DataRequirement with _$DataRequirement {
   /// [DataRequirement] Describes a required data item for evaluation in terms
   ///  of the type of data, and optional code or date-based filters of the data.
-  DataRequirement._();
+  const DataRequirement._();
 
   /// [DataRequirement] Describes a required data item for evaluation in terms
   ///  of the type of data, and optional code or date-based filters of the data.
@@ -1074,7 +1074,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
   /// [DataRequirementCodeFilter] Describes a required data item for evaluation
   ///  in terms of the type of data, and optional code or date-based filters of
   ///  the data.
-  DataRequirementCodeFilter._();
+  const DataRequirementCodeFilter._();
 
   /// [DataRequirementCodeFilter] Describes a required data item for evaluation
   ///  in terms of the type of data, and optional code or date-based filters of
@@ -1237,7 +1237,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
   /// [DataRequirementDateFilter] Describes a required data item for evaluation
   ///  in terms of the type of data, and optional code or date-based filters of
   ///  the data.
-  DataRequirementDateFilter._();
+  const DataRequirementDateFilter._();
 
   /// [DataRequirementDateFilter] Describes a required data item for evaluation
   ///  in terms of the type of data, and optional code or date-based filters of
@@ -1433,7 +1433,7 @@ class DataRequirementValueFilter with _$DataRequirementValueFilter {
   /// [DataRequirementValueFilter] Describes a required data item for
   ///  evaluation in terms of the type of data, and optional code or date-based
   ///  filters of the data.
-  DataRequirementValueFilter._();
+  const DataRequirementValueFilter._();
 
   /// [DataRequirementValueFilter] Describes a required data item for
   ///  evaluation in terms of the type of data, and optional code or date-based
@@ -1606,7 +1606,7 @@ class DataRequirementSort with _$DataRequirementSort {
   /// [DataRequirementSort] Describes a required data item for evaluation in
   ///  terms of the type of data, and optional code or date-based filters of
   ///  the data.
-  DataRequirementSort._();
+  const DataRequirementSort._();
 
   /// [DataRequirementSort] Describes a required data item for evaluation in
   ///  terms of the type of data, and optional code or date-based filters of
@@ -1736,7 +1736,7 @@ class ParameterDefinition with _$ParameterDefinition {
   ///  specifies both the input and output parameters. Input parameters are
   ///  provided by the caller as part of the $evaluate operation. Output
   ///  parameters are included in the GuidanceResponse.
-  ParameterDefinition._();
+  const ParameterDefinition._();
 
   /// [ParameterDefinition] The parameters to the module. This collection
   ///  specifies both the input and output parameters. Input parameters are
@@ -1881,7 +1881,7 @@ class ParameterDefinition with _$ParameterDefinition {
 class RelatedArtifact with _$RelatedArtifact {
   /// [RelatedArtifact] Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
-  RelatedArtifact._();
+  const RelatedArtifact._();
 
   /// [RelatedArtifact] Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
@@ -2051,7 +2051,7 @@ class TriggerDefinition with _$TriggerDefinition {
   /// [TriggerDefinition] A description of a triggering event. Triggering
   ///  events can be named events, data events, or periodic, as determined by
   ///  the type element.
-  TriggerDefinition._();
+  const TriggerDefinition._();
 
   /// [TriggerDefinition] A description of a triggering event. Triggering
   ///  events can be named events, data events, or periodic, as determined by
@@ -2214,7 +2214,7 @@ class UsageContext with _$UsageContext {
   ///  either be specific to the applicable population (e.g., age category,
   ///  DRG) or the specific context of care (e.g., venue, care setting,
   ///  provider of care).
-  UsageContext._();
+  const UsageContext._();
 
   /// [UsageContext] Specifies clinical/business/etc. metadata that can be used
   ///  to retrieve, index and/or categorize an artifact. This metadata can
@@ -2325,7 +2325,7 @@ class FhirExpression with _$FhirExpression {
   ///  returns a value. The context of use of the expression must specify the
   ///  context in which the expression is evaluated, and how the result of the
   ///  expression is used.
-  FhirExpression._();
+  const FhirExpression._();
 
   /// [FhirExpression] A expression that is evaluated in a specified context and
   ///  returns a value. The context of use of the expression must specify the

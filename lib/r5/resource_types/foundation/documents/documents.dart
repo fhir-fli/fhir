@@ -35,7 +35,7 @@ class Composition with Resource, _$Composition {
   ///  Bundle.type=document, and any other resources referenced from
   ///  Composition must be included as subsequent entries in the Bundle (for
   ///  example Patient, Practitioner, Encounter, etc.).
-  Composition._();
+  const Composition._();
 
   /// [Composition] A set of healthcare-related information that is assembled
   ///  together into a single logical package that provides a single coherent
@@ -414,7 +414,7 @@ class CompositionAttester with _$CompositionAttester {
   ///  Bundle.type=document, and any other resources referenced from
   ///  Composition must be included as subsequent entries in the Bundle (for
   ///  example Patient, Practitioner, Encounter, etc.).
-  CompositionAttester._();
+  const CompositionAttester._();
 
   /// [CompositionAttester] A set of healthcare-related information that is
   ///  assembled together into a single logical package that provides a single
@@ -554,7 +554,7 @@ class CompositionEvent with _$CompositionEvent {
   ///  Bundle.type=document, and any other resources referenced from
   ///  Composition must be included as subsequent entries in the Bundle (for
   ///  example Patient, Practitioner, Encounter, etc.).
-  CompositionEvent._();
+  const CompositionEvent._();
 
   /// [CompositionEvent] A set of healthcare-related information that is
   ///  assembled together into a single logical package that provides a single
@@ -698,7 +698,7 @@ class CompositionSection with _$CompositionSection {
   ///  Bundle.type=document, and any other resources referenced from
   ///  Composition must be included as subsequent entries in the Bundle (for
   ///  example Patient, Practitioner, Encounter, etc.).
-  CompositionSection._();
+  const CompositionSection._();
 
   /// [CompositionSection] A set of healthcare-related information that is
   ///  assembled together into a single logical package that provides a single
@@ -905,7 +905,7 @@ class DocumentReference with Resource, _$DocumentReference {
   ///  document so that the document can be discovered and managed.  The actual
   ///  content may be inline base64 encoded data or provided by direct
   ///  reference.
-  DocumentReference._();
+  const DocumentReference._();
 
   /// [DocumentReference] A reference to a document of any kind for any
   ///  purpose. While the term “document” implies a more narrow focus, for this
@@ -1309,7 +1309,7 @@ class DocumentReferenceAttester with _$DocumentReferenceAttester {
   ///  document so that the document can be discovered and managed.  The actual
   ///  content may be inline base64 encoded data or provided by direct
   ///  reference.
-  DocumentReferenceAttester._();
+  const DocumentReferenceAttester._();
 
   /// [DocumentReferenceAttester] A reference to a document of any kind for any
   ///  purpose. While the term “document” implies a more narrow focus, for this
@@ -1448,7 +1448,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   ///  document so that the document can be discovered and managed.  The actual
   ///  content may be inline base64 encoded data or provided by direct
   ///  reference.
-  DocumentReferenceRelatesTo._();
+  const DocumentReferenceRelatesTo._();
 
   /// [DocumentReferenceRelatesTo] A reference to a document of any kind for
   ///  any purpose. While the term “document” implies a more narrow focus, for
@@ -1579,7 +1579,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
   ///  document so that the document can be discovered and managed.  The actual
   ///  content may be inline base64 encoded data or provided by direct
   ///  reference.
-  DocumentReferenceContent._();
+  const DocumentReferenceContent._();
 
   /// [DocumentReferenceContent] A reference to a document of any kind for any
   ///  purpose. While the term “document” implies a more narrow focus, for this
@@ -1714,7 +1714,7 @@ class DocumentReferenceProfile with _$DocumentReferenceProfile {
   ///  document so that the document can be discovered and managed.  The actual
   ///  content may be inline base64 encoded data or provided by direct
   ///  reference.
-  DocumentReferenceProfile._();
+  const DocumentReferenceProfile._();
 
   /// [DocumentReferenceProfile] A reference to a document of any kind for any
   ///  purpose. While the term “document” implies a more narrow focus, for this

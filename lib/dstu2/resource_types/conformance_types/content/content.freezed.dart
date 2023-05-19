@@ -3056,7 +3056,11 @@ mixin _$DataElement {
   FhirId? get fhirId => throw _privateConstructorUsedError;
   FhirMeta? get meta => throw _privateConstructorUsedError;
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   FhirCode? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
   Narrative? get text => throw _privateConstructorUsedError;
   List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
@@ -3101,7 +3105,11 @@ abstract class $DataElementCopyWith<$Res> {
           FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -3125,6 +3133,8 @@ abstract class $DataElementCopyWith<$Res> {
       List<ElementDefinition> element});
 
   $FhirMetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
 }
 
@@ -3146,7 +3156,9 @@ class _$DataElementCopyWithImpl<$Res, $Val extends DataElement>
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
@@ -3187,10 +3199,18 @@ class _$DataElementCopyWithImpl<$Res, $Val extends DataElement>
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -3280,6 +3300,30 @@ class _$DataElementCopyWithImpl<$Res, $Val extends DataElement>
 
   @override
   @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
@@ -3308,7 +3352,11 @@ abstract class _$$_DataElementCopyWith<$Res>
           FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
       FhirCode? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -3334,6 +3382,10 @@ abstract class _$$_DataElementCopyWith<$Res>
   @override
   $FhirMetaCopyWith<$Res>? get meta;
   @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
   $NarrativeCopyWith<$Res>? get text;
 }
 
@@ -3353,7 +3405,9 @@ class __$$_DataElementCopyWithImpl<$Res>
     Object? fhirId = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
     Object? language = freezed,
+    Object? languageElement = freezed,
     Object? text = freezed,
     Object? contained = freezed,
     Object? extension_ = freezed,
@@ -3394,10 +3448,18 @@ class __$$_DataElementCopyWithImpl<$Res>
           ? _value.implicitRules
           : implicitRules // ignore: cast_nullable_to_non_nullable
               as FhirUri?,
+      implicitRulesElement: freezed == implicitRulesElement
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       language: freezed == language
           ? _value.language
           : language // ignore: cast_nullable_to_non_nullable
               as FhirCode?,
+      languageElement: freezed == languageElement
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       text: freezed == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
@@ -3486,7 +3548,11 @@ class _$_DataElement extends _DataElement {
           this.fhirId,
       this.meta,
       this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
       this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
       this.text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -3535,7 +3601,13 @@ class _$_DataElement extends _DataElement {
   @override
   final FhirUri? implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
   final FhirCode? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
   @override
   final Narrative? text;
   final List<Resource>? _contained;
@@ -3640,7 +3712,7 @@ class _$_DataElement extends _DataElement {
 
   @override
   String toString() {
-    return 'DataElement(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, language: $language, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, useContext: $useContext, copyright: $copyright, stringency: $stringency, mapping: $mapping, element: $element)';
+    return 'DataElement(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, identifier: $identifier, version: $version, name: $name, status: $status, experimental: $experimental, publisher: $publisher, contact: $contact, date: $date, useContext: $useContext, copyright: $copyright, stringency: $stringency, mapping: $mapping, element: $element)';
   }
 
   @override
@@ -3655,8 +3727,12 @@ class _$_DataElement extends _DataElement {
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                other.implicitRulesElement == implicitRulesElement) &&
             (identical(other.language, language) ||
                 other.language == language) &&
+            (identical(other.languageElement, languageElement) ||
+                other.languageElement == languageElement) &&
             (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality()
                 .equals(other._contained, _contained) &&
@@ -3695,7 +3771,9 @@ class _$_DataElement extends _DataElement {
         fhirId,
         meta,
         implicitRules,
+        implicitRulesElement,
         language,
+        languageElement,
         text,
         const DeepCollectionEquality().hash(_contained),
         const DeepCollectionEquality().hash(_extension_),
@@ -3740,7 +3818,11 @@ abstract class _DataElement extends DataElement {
           final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          final Element? implicitRulesElement,
       final FhirCode? language,
+      @JsonKey(name: '_language')
+          final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
       @JsonKey(name: 'extension')
@@ -3781,7 +3863,13 @@ abstract class _DataElement extends DataElement {
   @override
   FhirUri? get implicitRules;
   @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement;
+  @override
   FhirCode? get language;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement;
   @override
   Narrative? get text;
   @override

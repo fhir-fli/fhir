@@ -16,7 +16,7 @@ part 'workflow1.g.dart';
 
 @freezed
 class Order with Resource, _$Order {
-  Order._();
+  const Order._();
   const factory Order({
     @Default(Dstu2ResourceType.Order)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
@@ -25,7 +25,9 @@ class Order with Resource, _$Order {
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -69,7 +71,7 @@ class Order with Resource, _$Order {
 
 @freezed
 class OrderWhen with _$OrderWhen {
-  OrderWhen._();
+  const OrderWhen._();
   const factory OrderWhen({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -112,7 +114,7 @@ class OrderWhen with _$OrderWhen {
 
 @freezed
 class OrderResponse with Resource, _$OrderResponse {
-  OrderResponse._();
+  const OrderResponse._();
   const factory OrderResponse({
     @Default(Dstu2ResourceType.OrderResponse)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
@@ -121,7 +123,9 @@ class OrderResponse with Resource, _$OrderResponse {
     @JsonKey(name: 'id') FhirId? fhirId,
     FhirMeta? meta,
     FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     FhirCode? language,
+    @JsonKey(name: '_language') Element? languageElement,
     Narrative? text,
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -167,7 +171,7 @@ class OrderResponse with Resource, _$OrderResponse {
 
 @freezed
 class CommunicationRequest with Resource, _$CommunicationRequest {
-  CommunicationRequest._();
+  const CommunicationRequest._();
   const factory CommunicationRequest({
     @Default(Dstu2ResourceType.CommunicationRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
@@ -233,7 +237,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 
 @freezed
 class CommunicationRequestPayload with _$CommunicationRequestPayload {
-  CommunicationRequestPayload._();
+  const CommunicationRequestPayload._();
   const factory CommunicationRequestPayload({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -277,7 +281,7 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
 
 @freezed
 class DeviceUseRequest with Resource, _$DeviceUseRequest {
-  DeviceUseRequest._();
+  const DeviceUseRequest._();
   const factory DeviceUseRequest({
     @Default(Dstu2ResourceType.DeviceUseRequest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
@@ -345,7 +349,7 @@ class DeviceUseRequest with Resource, _$DeviceUseRequest {
 
 @freezed
 class DeviceUseStatement with Resource, _$DeviceUseStatement {
-  DeviceUseStatement._();
+  const DeviceUseStatement._();
   const factory DeviceUseStatement({
     @Default(Dstu2ResourceType.DeviceUseStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)

@@ -18,7 +18,7 @@ part 'documents_and_lists.g.dart';
 
 @freezed
 class Composition with Resource, _$Composition {
-  Composition._();
+  const Composition._();
   const factory Composition({
     @Default(Dstu2ResourceType.Composition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Composition)
@@ -85,7 +85,7 @@ class Composition with Resource, _$Composition {
 
 @freezed
 class CompositionAttester with _$CompositionAttester {
-  CompositionAttester._();
+  const CompositionAttester._();
   const factory CompositionAttester({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -130,7 +130,7 @@ class CompositionAttester with _$CompositionAttester {
 
 @freezed
 class CompositionEvent with _$CompositionEvent {
-  CompositionEvent._();
+  const CompositionEvent._();
   const factory CompositionEvent({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -173,7 +173,7 @@ class CompositionEvent with _$CompositionEvent {
 
 @freezed
 class CompositionSection with _$CompositionSection {
-  CompositionSection._();
+  const CompositionSection._();
   const factory CompositionSection({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -224,7 +224,7 @@ class CompositionSection with _$CompositionSection {
 
 @freezed
 class DocumentManifest with Resource, _$DocumentManifest {
-  DocumentManifest._();
+  const DocumentManifest._();
   const factory DocumentManifest({
     @Default(Dstu2ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentManifest)
@@ -289,7 +289,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
 
 @freezed
 class DocumentManifestContent with _$DocumentManifestContent {
-  DocumentManifestContent._();
+  const DocumentManifestContent._();
   const factory DocumentManifestContent({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -331,7 +331,7 @@ class DocumentManifestContent with _$DocumentManifestContent {
 
 @freezed
 class DocumentManifestRelated with _$DocumentManifestRelated {
-  DocumentManifestRelated._();
+  const DocumentManifestRelated._();
   const factory DocumentManifestRelated({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -373,7 +373,7 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
 
 @freezed
 class DocumentReference with Resource, _$DocumentReference {
-  DocumentReference._();
+  const DocumentReference._();
   const factory DocumentReference({
     @Default(Dstu2ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DocumentReference)
@@ -442,7 +442,7 @@ class DocumentReference with Resource, _$DocumentReference {
 
 @freezed
 class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
-  DocumentReferenceRelatesTo._();
+  const DocumentReferenceRelatesTo._();
   const factory DocumentReferenceRelatesTo({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -486,7 +486,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
 
 @freezed
 class DocumentReferenceContent with _$DocumentReferenceContent {
-  DocumentReferenceContent._();
+  const DocumentReferenceContent._();
   const factory DocumentReferenceContent({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -528,7 +528,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
 
 @freezed
 class DocumentReferenceContext with _$DocumentReferenceContext {
-  DocumentReferenceContext._();
+  const DocumentReferenceContext._();
   const factory DocumentReferenceContext({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -575,7 +575,7 @@ class DocumentReferenceContext with _$DocumentReferenceContext {
 
 @freezed
 class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated {
-  DocumentReferenceContextRelated._();
+  const DocumentReferenceContextRelated._();
   const factory DocumentReferenceContextRelated({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -618,7 +618,7 @@ class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated {
 
 @freezed
 class FhirList with Resource, _$FhirList {
-  FhirList._();
+  const FhirList._();
   const factory FhirList({
     @Default(Dstu2ResourceType.FhirList)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.FhirList)
@@ -683,7 +683,7 @@ class FhirList with Resource, _$FhirList {
 
 @freezed
 class FhirListEntry with _$FhirListEntry {
-  FhirListEntry._();
+  const FhirListEntry._();
   const factory FhirListEntry({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

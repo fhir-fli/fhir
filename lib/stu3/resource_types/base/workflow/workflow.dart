@@ -16,7 +16,7 @@ part 'workflow.g.dart';
 
 @freezed
 class Appointment with Resource, _$Appointment {
-  Appointment._();
+  const Appointment._();
   const factory Appointment({
     @Default(Stu3ResourceType.Appointment)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
@@ -92,7 +92,7 @@ class Appointment with Resource, _$Appointment {
 
 @freezed
 class AppointmentParticipant with _$AppointmentParticipant {
-  AppointmentParticipant._();
+  const AppointmentParticipant._();
   const factory AppointmentParticipant({
     List<CodeableConcept>? type,
     Reference? actor,
@@ -135,7 +135,7 @@ class AppointmentParticipant with _$AppointmentParticipant {
 
 @freezed
 class AppointmentResponse with Resource, _$AppointmentResponse {
-  AppointmentResponse._();
+  const AppointmentResponse._();
   const factory AppointmentResponse({
     @Default(Stu3ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
@@ -195,7 +195,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
 
 @freezed
 class ProcessRequest with Resource, _$ProcessRequest {
-  ProcessRequest._();
+  const ProcessRequest._();
   const factory ProcessRequest({
     @Default(Stu3ResourceType.ProcessRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
@@ -265,7 +265,7 @@ class ProcessRequest with Resource, _$ProcessRequest {
 
 @freezed
 class ProcessRequestItem with _$ProcessRequestItem {
-  ProcessRequestItem._();
+  const ProcessRequestItem._();
   const factory ProcessRequestItem({
     FhirId? sequenceLinkId,
     @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
@@ -304,7 +304,7 @@ class ProcessRequestItem with _$ProcessRequestItem {
 
 @freezed
 class ProcessResponse with Resource, _$ProcessResponse {
-  ProcessResponse._();
+  const ProcessResponse._();
   const factory ProcessResponse({
     @Default(Stu3ResourceType.ProcessResponse)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
@@ -368,7 +368,7 @@ class ProcessResponse with Resource, _$ProcessResponse {
 
 @freezed
 class ProcessResponseProcessNote with _$ProcessResponseProcessNote {
-  ProcessResponseProcessNote._();
+  const ProcessResponseProcessNote._();
   const factory ProcessResponseProcessNote({
     CodeableConcept? type,
     String? text,
@@ -408,7 +408,7 @@ class ProcessResponseProcessNote with _$ProcessResponseProcessNote {
 
 @freezed
 class RequestGroup with Resource, _$RequestGroup {
-  RequestGroup._();
+  const RequestGroup._();
   const factory RequestGroup({
     @Default(Stu3ResourceType.RequestGroup)
     @JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
@@ -476,7 +476,7 @@ class RequestGroup with Resource, _$RequestGroup {
 
 @freezed
 class RequestGroupAction with _$RequestGroupAction {
-  RequestGroupAction._();
+  const RequestGroupAction._();
   const factory RequestGroupAction({
     String? label,
     @JsonKey(name: '_label') Element? labelElement,
@@ -545,7 +545,7 @@ class RequestGroupAction with _$RequestGroupAction {
 
 @freezed
 class RequestGroupCondition with _$RequestGroupCondition {
-  RequestGroupCondition._();
+  const RequestGroupCondition._();
   const factory RequestGroupCondition({
     String? kind,
     @JsonKey(name: '_kind') Element? kindElement,
@@ -590,7 +590,7 @@ class RequestGroupCondition with _$RequestGroupCondition {
 
 @freezed
 class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
-  RequestGroupRelatedAction._();
+  const RequestGroupRelatedAction._();
   const factory RequestGroupRelatedAction({
     FhirId? actionId,
     @JsonKey(name: '_actionId') Element? actionIdElement,
@@ -633,7 +633,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
 
 @freezed
 class Schedule with Resource, _$Schedule {
-  Schedule._();
+  const Schedule._();
   const factory Schedule({
     @Default(Stu3ResourceType.Schedule)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
@@ -691,7 +691,7 @@ class Schedule with Resource, _$Schedule {
 
 @freezed
 class Slot with Resource, _$Slot {
-  Slot._();
+  const Slot._();
   const factory Slot({
     @Default(Stu3ResourceType.Slot)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
@@ -753,7 +753,7 @@ class Slot with Resource, _$Slot {
 
 @freezed
 class Task with Resource, _$Task {
-  Task._();
+  const Task._();
   const factory Task({
     @Default(Stu3ResourceType.Task)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
@@ -834,7 +834,7 @@ class Task with Resource, _$Task {
 
 @freezed
 class TaskRequester with _$TaskRequester {
-  TaskRequester._();
+  const TaskRequester._();
   const factory TaskRequester({
     required Reference agent,
     Reference? onBehalfOf,
@@ -873,7 +873,7 @@ class TaskRequester with _$TaskRequester {
 
 @freezed
 class TaskRestriction with _$TaskRestriction {
-  TaskRestriction._();
+  const TaskRestriction._();
   const factory TaskRestriction({
     FhirDecimal? repetitions,
     @JsonKey(name: '_repetitions') Element? repetitionsElement,
@@ -914,7 +914,7 @@ class TaskRestriction with _$TaskRestriction {
 
 @freezed
 class TaskInput with _$TaskInput {
-  TaskInput._();
+  const TaskInput._();
   const factory TaskInput({
     required CodeableConcept type,
     FhirBoolean? valueBoolean,
@@ -1022,7 +1022,7 @@ class TaskInput with _$TaskInput {
 
 @freezed
 class TaskOutput with _$TaskOutput {
-  TaskOutput._();
+  const TaskOutput._();
   const factory TaskOutput({
     required CodeableConcept type,
     FhirBoolean? valueBoolean,

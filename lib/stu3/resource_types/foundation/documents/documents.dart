@@ -16,7 +16,7 @@ part 'documents.g.dart';
 
 @freezed
 class Composition with Resource, _$Composition {
-  Composition._();
+  const Composition._();
   const factory Composition({
     @Default(Stu3ResourceType.Composition)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Composition)
@@ -83,7 +83,7 @@ class Composition with Resource, _$Composition {
 
 @freezed
 class CompositionAttester with _$CompositionAttester {
-  CompositionAttester._();
+  const CompositionAttester._();
   const factory CompositionAttester({
     List<CompositionAttesterMode>? mode,
     @JsonKey(name: '_mode') List<Element?>? modeElement,
@@ -125,7 +125,7 @@ class CompositionAttester with _$CompositionAttester {
 
 @freezed
 class CompositionRelatesTo with _$CompositionRelatesTo {
-  CompositionRelatesTo._();
+  const CompositionRelatesTo._();
   const factory CompositionRelatesTo({
     FhirCode? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -166,7 +166,7 @@ class CompositionRelatesTo with _$CompositionRelatesTo {
 
 @freezed
 class CompositionEvent with _$CompositionEvent {
-  CompositionEvent._();
+  const CompositionEvent._();
   const factory CompositionEvent({
     List<CodeableConcept>? code,
     Period? period,
@@ -206,7 +206,7 @@ class CompositionEvent with _$CompositionEvent {
 
 @freezed
 class CompositionSection with _$CompositionSection {
-  CompositionSection._();
+  const CompositionSection._();
   const factory CompositionSection({
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
@@ -253,7 +253,7 @@ class CompositionSection with _$CompositionSection {
 
 @freezed
 class DocumentManifest with Resource, _$DocumentManifest {
-  DocumentManifest._();
+  const DocumentManifest._();
   const factory DocumentManifest({
     @Default(Stu3ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentManifest)
@@ -317,7 +317,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
 
 @freezed
 class DocumentManifestContent with _$DocumentManifestContent {
-  DocumentManifestContent._();
+  const DocumentManifestContent._();
   const factory DocumentManifestContent({
     Attachment? pAttachment,
     Reference? pReference,
@@ -356,7 +356,7 @@ class DocumentManifestContent with _$DocumentManifestContent {
 
 @freezed
 class DocumentManifestRelated with _$DocumentManifestRelated {
-  DocumentManifestRelated._();
+  const DocumentManifestRelated._();
   const factory DocumentManifestRelated({
     Identifier? identifier,
     Reference? ref,
@@ -395,7 +395,7 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
 
 @freezed
 class DocumentReference with Resource, _$DocumentReference {
-  DocumentReference._();
+  const DocumentReference._();
   const factory DocumentReference({
     @Default(Stu3ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: Stu3ResourceType.DocumentReference)
@@ -465,7 +465,7 @@ class DocumentReference with Resource, _$DocumentReference {
 
 @freezed
 class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
-  DocumentReferenceRelatesTo._();
+  const DocumentReferenceRelatesTo._();
   const factory DocumentReferenceRelatesTo({
     DocumentReferenceRelatesToCode? code,
     @JsonKey(name: '_code') Element? codeElement,
@@ -505,7 +505,7 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
 
 @freezed
 class DocumentReferenceContent with _$DocumentReferenceContent {
-  DocumentReferenceContent._();
+  const DocumentReferenceContent._();
   const factory DocumentReferenceContent({
     required Attachment attachment,
     Coding? format,
@@ -544,7 +544,7 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
 
 @freezed
 class DocumentReferenceContext with _$DocumentReferenceContext {
-  DocumentReferenceContext._();
+  const DocumentReferenceContext._();
   const factory DocumentReferenceContext({
     Reference? encounter,
     List<CodeableConcept>? event,
@@ -588,7 +588,7 @@ class DocumentReferenceContext with _$DocumentReferenceContext {
 
 @freezed
 class DocumentReferenceRelated with _$DocumentReferenceRelated {
-  DocumentReferenceRelated._();
+  const DocumentReferenceRelated._();
   const factory DocumentReferenceRelated({
     Identifier? identifier,
     Reference? ref,

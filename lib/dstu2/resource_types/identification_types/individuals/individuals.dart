@@ -16,7 +16,7 @@ part 'individuals.g.dart';
 
 @freezed
 class Patient with Resource, _$Patient {
-  Patient._();
+  const Patient._();
   const factory Patient({
     @Default(Dstu2ResourceType.Patient)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Patient)
@@ -93,7 +93,7 @@ class Patient with Resource, _$Patient {
 
 @freezed
 class PatientContact with _$PatientContact {
-  PatientContact._();
+  const PatientContact._();
   const factory PatientContact({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -141,7 +141,7 @@ class PatientContact with _$PatientContact {
 
 @freezed
 class PatientAnimal with _$PatientAnimal {
-  PatientAnimal._();
+  const PatientAnimal._();
   const factory PatientAnimal({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -184,7 +184,7 @@ class PatientAnimal with _$PatientAnimal {
 
 @freezed
 class PatientCommunication with _$PatientCommunication {
-  PatientCommunication._();
+  const PatientCommunication._();
   const factory PatientCommunication({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -227,7 +227,7 @@ class PatientCommunication with _$PatientCommunication {
 
 @freezed
 class PatientLink with _$PatientLink {
-  PatientLink._();
+  const PatientLink._();
   const factory PatientLink({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -270,7 +270,7 @@ class PatientLink with _$PatientLink {
 
 @freezed
 class Practitioner with Resource, _$Practitioner {
-  Practitioner._();
+  const Practitioner._();
   const factory Practitioner({
     @Default(Dstu2ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Practitioner)
@@ -333,7 +333,7 @@ class Practitioner with Resource, _$Practitioner {
 
 @freezed
 class PractitionerPractitionerRole with _$PractitionerPractitionerRole {
-  PractitionerPractitionerRole._();
+  const PractitionerPractitionerRole._();
   const factory PractitionerPractitionerRole({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -380,7 +380,7 @@ class PractitionerPractitionerRole with _$PractitionerPractitionerRole {
 
 @freezed
 class PractitionerQualification with _$PractitionerQualification {
-  PractitionerQualification._();
+  const PractitionerQualification._();
   const factory PractitionerQualification({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -424,7 +424,7 @@ class PractitionerQualification with _$PractitionerQualification {
 
 @freezed
 class RelatedPerson with Resource, _$RelatedPerson {
-  RelatedPerson._();
+  const RelatedPerson._();
   const factory RelatedPerson({
     @Default(Dstu2ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.RelatedPerson)

@@ -16,7 +16,7 @@ part 'care_provision.g.dart';
 
 @freezed
 class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
-  VisionPrescriptionDispense._();
+  const VisionPrescriptionDispense._();
   const factory VisionPrescriptionDispense({
     CodeableConcept? product,
     VisionPrescriptionDispenseEye? eye,
@@ -80,7 +80,7 @@ class VisionPrescriptionDispense with _$VisionPrescriptionDispense {
 
 @freezed
 class CarePlan with Resource, _$CarePlan {
-  CarePlan._();
+  const CarePlan._();
   const factory CarePlan({
     @Default(Stu3ResourceType.CarePlan)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CarePlan)
@@ -152,7 +152,7 @@ class CarePlan with Resource, _$CarePlan {
 
 @freezed
 class CarePlanActivity with _$CarePlanActivity {
-  CarePlanActivity._();
+  const CarePlanActivity._();
   const factory CarePlanActivity({
     List<CodeableConcept>? outcomeCodeableConcept,
     List<Reference>? outcomeReference,
@@ -194,7 +194,7 @@ class CarePlanActivity with _$CarePlanActivity {
 
 @freezed
 class CarePlanDetail with _$CarePlanDetail {
-  CarePlanDetail._();
+  const CarePlanDetail._();
   const factory CarePlanDetail({
     CodeableConcept? category,
     Reference? definition,
@@ -255,7 +255,7 @@ class CarePlanDetail with _$CarePlanDetail {
 
 @freezed
 class CareTeam with Resource, _$CareTeam {
-  CareTeam._();
+  const CareTeam._();
   const factory CareTeam({
     @Default(Stu3ResourceType.CareTeam)
     @JsonKey(unknownEnumValue: Stu3ResourceType.CareTeam)
@@ -317,7 +317,7 @@ class CareTeam with Resource, _$CareTeam {
 
 @freezed
 class CareTeamParticipant with _$CareTeamParticipant {
-  CareTeamParticipant._();
+  const CareTeamParticipant._();
   const factory CareTeamParticipant({
     CodeableConcept? role,
     Reference? member,
@@ -358,7 +358,7 @@ class CareTeamParticipant with _$CareTeamParticipant {
 
 @freezed
 class Goal with Resource, _$Goal {
-  Goal._();
+  const Goal._();
   const factory Goal({
     @Default(Stu3ResourceType.Goal)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Goal)
@@ -424,7 +424,7 @@ class Goal with Resource, _$Goal {
 
 @freezed
 class GoalTarget with _$GoalTarget {
-  GoalTarget._();
+  const GoalTarget._();
   const factory GoalTarget({
     CodeableConcept? measure,
     Quantity? detailQuantity,
@@ -468,7 +468,7 @@ class GoalTarget with _$GoalTarget {
 
 @freezed
 class NutritionOrder with Resource, _$NutritionOrder {
-  NutritionOrder._();
+  const NutritionOrder._();
   const factory NutritionOrder({
     @Default(Stu3ResourceType.NutritionOrder)
     @JsonKey(unknownEnumValue: Stu3ResourceType.NutritionOrder)
@@ -530,7 +530,7 @@ class NutritionOrder with Resource, _$NutritionOrder {
 
 @freezed
 class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
-  NutritionOrderOralDiet._();
+  const NutritionOrderOralDiet._();
   const factory NutritionOrderOralDiet({
     List<CodeableConcept>? type,
     List<Timing>? schedule,
@@ -574,7 +574,7 @@ class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
 
 @freezed
 class NutritionOrderNutrient with _$NutritionOrderNutrient {
-  NutritionOrderNutrient._();
+  const NutritionOrderNutrient._();
   const factory NutritionOrderNutrient({
     CodeableConcept? modifier,
     Quantity? amount,
@@ -613,7 +613,7 @@ class NutritionOrderNutrient with _$NutritionOrderNutrient {
 
 @freezed
 class NutritionOrderTexture with _$NutritionOrderTexture {
-  NutritionOrderTexture._();
+  const NutritionOrderTexture._();
   const factory NutritionOrderTexture({
     CodeableConcept? modifier,
     CodeableConcept? foodType,
@@ -652,7 +652,7 @@ class NutritionOrderTexture with _$NutritionOrderTexture {
 
 @freezed
 class NutritionOrderSupplement with _$NutritionOrderSupplement {
-  NutritionOrderSupplement._();
+  const NutritionOrderSupplement._();
   const factory NutritionOrderSupplement({
     CodeableConcept? type,
     String? productName,
@@ -696,7 +696,7 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
 
 @freezed
 class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
-  NutritionOrderEnteralFormula._();
+  const NutritionOrderEnteralFormula._();
   const factory NutritionOrderEnteralFormula({
     CodeableConcept? baseFormulaType,
     String? baseFormulaProductName,
@@ -747,7 +747,7 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
 
 @freezed
 class NutritionOrderAdministration with _$NutritionOrderAdministration {
-  NutritionOrderAdministration._();
+  const NutritionOrderAdministration._();
   const factory NutritionOrderAdministration({
     Timing? schedule,
     Quantity? quantity,
@@ -788,7 +788,7 @@ class NutritionOrderAdministration with _$NutritionOrderAdministration {
 
 @freezed
 class ProcedureRequest with Resource, _$ProcedureRequest {
-  ProcedureRequest._();
+  const ProcedureRequest._();
   const factory ProcedureRequest({
     @Default(Stu3ResourceType.ProcedureRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ProcedureRequest)
@@ -872,7 +872,7 @@ class ProcedureRequest with Resource, _$ProcedureRequest {
 
 @freezed
 class ProcedureRequestRequester with _$ProcedureRequestRequester {
-  ProcedureRequestRequester._();
+  const ProcedureRequestRequester._();
   const factory ProcedureRequestRequester({
     required Reference agent,
     Reference? onBehalfOf,
@@ -911,7 +911,7 @@ class ProcedureRequestRequester with _$ProcedureRequestRequester {
 
 @freezed
 class ReferralRequest with Resource, _$ReferralRequest {
-  ReferralRequest._();
+  const ReferralRequest._();
   const factory ReferralRequest({
     @Default(Stu3ResourceType.ReferralRequest)
     @JsonKey(unknownEnumValue: Stu3ResourceType.ReferralRequest)
@@ -989,7 +989,7 @@ class ReferralRequest with Resource, _$ReferralRequest {
 
 @freezed
 class ReferralRequestRequester with _$ReferralRequestRequester {
-  ReferralRequestRequester._();
+  const ReferralRequestRequester._();
   const factory ReferralRequestRequester({
     required Reference agent,
     Reference? onBehalfOf,
@@ -1028,7 +1028,7 @@ class ReferralRequestRequester with _$ReferralRequestRequester {
 
 @freezed
 class RiskAssessment with Resource, _$RiskAssessment {
-  RiskAssessment._();
+  const RiskAssessment._();
   const factory RiskAssessment({
     @Default(Stu3ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: Stu3ResourceType.RiskAssessment)
@@ -1098,7 +1098,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
 
 @freezed
 class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
-  RiskAssessmentPrediction._();
+  const RiskAssessmentPrediction._();
   const factory RiskAssessmentPrediction({
     required CodeableConcept outcome,
     FhirDecimal? probabilityDecimal,
@@ -1146,7 +1146,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
 
 @freezed
 class VisionPrescription with Resource, _$VisionPrescription {
-  VisionPrescription._();
+  const VisionPrescription._();
   const factory VisionPrescription({
     @Default(Stu3ResourceType.VisionPrescription)
     @JsonKey(unknownEnumValue: Stu3ResourceType.VisionPrescription)

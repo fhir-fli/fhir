@@ -16,7 +16,7 @@ part 'general.g.dart';
 
 @freezed
 class AllergyIntolerance with Resource, _$AllergyIntolerance {
-  AllergyIntolerance._();
+  const AllergyIntolerance._();
   const factory AllergyIntolerance({
     @Default(Dstu2ResourceType.AllergyIntolerance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.AllergyIntolerance)
@@ -88,7 +88,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
 
 @freezed
 class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
-  AllergyIntoleranceReaction._();
+  const AllergyIntoleranceReaction._();
   const factory AllergyIntoleranceReaction({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -143,7 +143,7 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
 
 @freezed
 class Condition with Resource, _$Condition {
-  Condition._();
+  const Condition._();
   const factory Condition({
     @Default(Dstu2ResourceType.Condition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Condition)
@@ -224,7 +224,7 @@ class Condition with Resource, _$Condition {
 
 @freezed
 class ConditionStage with _$ConditionStage {
-  ConditionStage._();
+  const ConditionStage._();
   const factory ConditionStage({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -267,7 +267,7 @@ class ConditionStage with _$ConditionStage {
 
 @freezed
 class ConditionEvidence with _$ConditionEvidence {
-  ConditionEvidence._();
+  const ConditionEvidence._();
   const factory ConditionEvidence({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -310,7 +310,7 @@ class ConditionEvidence with _$ConditionEvidence {
 
 @freezed
 class Procedure with Resource, _$Procedure {
-  Procedure._();
+  const Procedure._();
   const factory Procedure({
     @Default(Dstu2ResourceType.Procedure)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Procedure)
@@ -384,7 +384,7 @@ class Procedure with Resource, _$Procedure {
 
 @freezed
 class ProcedurePerformer with _$ProcedurePerformer {
-  ProcedurePerformer._();
+  const ProcedurePerformer._();
   const factory ProcedurePerformer({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -427,7 +427,7 @@ class ProcedurePerformer with _$ProcedurePerformer {
 
 @freezed
 class ProcedureFocalDevice with _$ProcedureFocalDevice {
-  ProcedureFocalDevice._();
+  const ProcedureFocalDevice._();
   const factory ProcedureFocalDevice({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -469,7 +469,7 @@ class ProcedureFocalDevice with _$ProcedureFocalDevice {
 
 @freezed
 class ClinicalImpression with Resource, _$ClinicalImpression {
-  ClinicalImpression._();
+  const ClinicalImpression._();
   const factory ClinicalImpression({
     @Default(Dstu2ResourceType.ClinicalImpression)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.ClinicalImpression)
@@ -541,7 +541,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
 
 @freezed
 class ClinicalImpressionInvestigations with _$ClinicalImpressionInvestigations {
-  ClinicalImpressionInvestigations._();
+  const ClinicalImpressionInvestigations._();
   const factory ClinicalImpressionInvestigations({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -572,7 +572,7 @@ class ClinicalImpressionInvestigations with _$ClinicalImpressionInvestigations {
 
 @freezed
 class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
-  ClinicalImpressionFinding._();
+  const ClinicalImpressionFinding._();
   const factory ClinicalImpressionFinding({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -614,7 +614,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
 
 @freezed
 class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
-  ClinicalImpressionRuledOut._();
+  const ClinicalImpressionRuledOut._();
   const factory ClinicalImpressionRuledOut({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -656,7 +656,7 @@ class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
 
 @freezed
 class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
-  FamilyMemberHistory._();
+  const FamilyMemberHistory._();
   const factory FamilyMemberHistory({
     @Default(Dstu2ResourceType.FamilyMemberHistory)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.FamilyMemberHistory)
@@ -736,7 +736,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
 
 @freezed
 class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
-  FamilyMemberHistoryCondition._();
+  const FamilyMemberHistoryCondition._();
   const factory FamilyMemberHistoryCondition({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -784,7 +784,7 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
 
 @freezed
 class RiskAssessment with Resource, _$RiskAssessment {
-  RiskAssessment._();
+  const RiskAssessment._();
   const factory RiskAssessment({
     @Default(Dstu2ResourceType.RiskAssessment)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.RiskAssessment)
@@ -843,7 +843,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
 
 @freezed
 class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
-  RiskAssessmentPrediction._();
+  const RiskAssessmentPrediction._();
   const factory RiskAssessmentPrediction({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -894,7 +894,7 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
 
 @freezed
 class DetectedIssue with Resource, _$DetectedIssue {
-  DetectedIssue._();
+  const DetectedIssue._();
   const factory DetectedIssue({
     @Default(Dstu2ResourceType.DetectedIssue)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.DetectedIssue)
@@ -956,7 +956,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
 
 @freezed
 class DetectedIssueMitigation with _$DetectedIssueMitigation {
-  DetectedIssueMitigation._();
+  const DetectedIssueMitigation._();
   const factory DetectedIssueMitigation({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,

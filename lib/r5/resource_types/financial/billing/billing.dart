@@ -21,7 +21,7 @@ class Claim with Resource, _$Claim {
   /// [Claim] A provider issued list of professional services and products
   ///  which have been provided, or are to be provided, to a patient which is
   ///  sent to an insurer for reimbursement.
-  Claim._();
+  const Claim._();
 
   /// [Claim] A provider issued list of professional services and products
   ///  which have been provided, or are to be provided, to a patient which is
@@ -454,7 +454,7 @@ class ClaimRelated with _$ClaimRelated {
   /// [ClaimRelated] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
-  ClaimRelated._();
+  const ClaimRelated._();
 
   /// [ClaimRelated] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -570,7 +570,7 @@ class ClaimPayee with _$ClaimPayee {
   /// [ClaimPayee] A provider issued list of professional services and products
   ///  which have been provided, or are to be provided, to a patient which is
   ///  sent to an insurer for reimbursement.
-  ClaimPayee._();
+  const ClaimPayee._();
 
   /// [ClaimPayee] A provider issued list of professional services and products
   ///  which have been provided, or are to be provided, to a patient which is
@@ -681,7 +681,7 @@ class ClaimEvent with _$ClaimEvent {
   /// [ClaimEvent] A provider issued list of professional services and products
   ///  which have been provided, or are to be provided, to a patient which is
   ///  sent to an insurer for reimbursement.
-  ClaimEvent._();
+  const ClaimEvent._();
 
   /// [ClaimEvent] A provider issued list of professional services and products
   ///  which have been provided, or are to be provided, to a patient which is
@@ -805,7 +805,7 @@ class ClaimCareTeam with _$ClaimCareTeam {
   /// [ClaimCareTeam] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
-  ClaimCareTeam._();
+  const ClaimCareTeam._();
 
   /// [ClaimCareTeam] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -945,7 +945,7 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
   /// [ClaimSupportingInfo] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
-  ClaimSupportingInfo._();
+  const ClaimSupportingInfo._();
 
   /// [ClaimSupportingInfo] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -1156,7 +1156,7 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
   /// [ClaimDiagnosis] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
-  ClaimDiagnosis._();
+  const ClaimDiagnosis._();
 
   /// [ClaimDiagnosis] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -1291,7 +1291,7 @@ class ClaimProcedure with _$ClaimProcedure {
   /// [ClaimProcedure] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
-  ClaimProcedure._();
+  const ClaimProcedure._();
 
   /// [ClaimProcedure] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -1434,7 +1434,7 @@ class ClaimInsurance with _$ClaimInsurance {
   /// [ClaimInsurance] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
-  ClaimInsurance._();
+  const ClaimInsurance._();
 
   /// [ClaimInsurance] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -1610,7 +1610,7 @@ class ClaimAccident with _$ClaimAccident {
   /// [ClaimAccident] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
-  ClaimAccident._();
+  const ClaimAccident._();
 
   /// [ClaimAccident] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -1740,7 +1740,7 @@ class ClaimItem with _$ClaimItem {
   /// [ClaimItem] A provider issued list of professional services and products
   ///  which have been provided, or are to be provided, to a patient which is
   ///  sent to an insurer for reimbursement.
-  ClaimItem._();
+  const ClaimItem._();
 
   /// [ClaimItem] A provider issued list of professional services and products
   ///  which have been provided, or are to be provided, to a patient which is
@@ -2077,7 +2077,7 @@ class ClaimBodySite with _$ClaimBodySite {
   /// [ClaimBodySite] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
-  ClaimBodySite._();
+  const ClaimBodySite._();
 
   /// [ClaimBodySite] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -2188,7 +2188,7 @@ class ClaimDetail with _$ClaimDetail {
   /// [ClaimDetail] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
-  ClaimDetail._();
+  const ClaimDetail._();
 
   /// [ClaimDetail] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -2423,7 +2423,7 @@ class ClaimSubDetail with _$ClaimSubDetail {
   /// [ClaimSubDetail] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
-  ClaimSubDetail._();
+  const ClaimSubDetail._();
 
   /// [ClaimSubDetail] A provider issued list of professional services and
   ///  products which have been provided, or are to be provided, to a patient
@@ -2649,7 +2649,7 @@ class ClaimSubDetail with _$ClaimSubDetail {
 class ClaimResponse with Resource, _$ClaimResponse {
   /// [ClaimResponse] This resource provides the adjudication details from the
   ///  processing of a Claim resource.
-  ClaimResponse._();
+  const ClaimResponse._();
 
   /// [ClaimResponse] This resource provides the adjudication details from the
   ///  processing of a Claim resource.
@@ -3082,7 +3082,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
 class ClaimResponseEvent with _$ClaimResponseEvent {
   /// [ClaimResponseEvent] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
-  ClaimResponseEvent._();
+  const ClaimResponseEvent._();
 
   /// [ClaimResponseEvent] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
@@ -3203,7 +3203,7 @@ class ClaimResponseEvent with _$ClaimResponseEvent {
 class ClaimResponseItem with _$ClaimResponseItem {
   /// [ClaimResponseItem] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
-  ClaimResponseItem._();
+  const ClaimResponseItem._();
 
   /// [ClaimResponseItem] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
@@ -3353,7 +3353,7 @@ class ClaimResponseItem with _$ClaimResponseItem {
 class ClaimResponseReviewOutcome with _$ClaimResponseReviewOutcome {
   /// [ClaimResponseReviewOutcome] This resource provides the adjudication
   ///  details from the processing of a Claim resource.
-  ClaimResponseReviewOutcome._();
+  const ClaimResponseReviewOutcome._();
 
   /// [ClaimResponseReviewOutcome] This resource provides the adjudication
   ///  details from the processing of a Claim resource.
@@ -3482,7 +3482,7 @@ class ClaimResponseReviewOutcome with _$ClaimResponseReviewOutcome {
 class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
   /// [ClaimResponseAdjudication] This resource provides the adjudication
   ///  details from the processing of a Claim resource.
-  ClaimResponseAdjudication._();
+  const ClaimResponseAdjudication._();
 
   /// [ClaimResponseAdjudication] This resource provides the adjudication
   ///  details from the processing of a Claim resource.
@@ -3611,7 +3611,7 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
 class ClaimResponseDetail with _$ClaimResponseDetail {
   /// [ClaimResponseDetail] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
-  ClaimResponseDetail._();
+  const ClaimResponseDetail._();
 
   /// [ClaimResponseDetail] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -3754,7 +3754,7 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
 class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   /// [ClaimResponseSubDetail] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
-  ClaimResponseSubDetail._();
+  const ClaimResponseSubDetail._();
 
   /// [ClaimResponseSubDetail] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -3895,7 +3895,7 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
 class ClaimResponseAddItem with _$ClaimResponseAddItem {
   /// [ClaimResponseAddItem] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
-  ClaimResponseAddItem._();
+  const ClaimResponseAddItem._();
 
   /// [ClaimResponseAddItem] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -4208,7 +4208,7 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
 class ClaimResponseBodySite with _$ClaimResponseBodySite {
   /// [ClaimResponseBodySite] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
-  ClaimResponseBodySite._();
+  const ClaimResponseBodySite._();
 
   /// [ClaimResponseBodySite] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -4316,7 +4316,7 @@ class ClaimResponseBodySite with _$ClaimResponseBodySite {
 class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
   /// [ClaimResponseDetail1] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
-  ClaimResponseDetail1._();
+  const ClaimResponseDetail1._();
 
   /// [ClaimResponseDetail1] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -4535,7 +4535,7 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
 class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
   /// [ClaimResponseSubDetail1] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
-  ClaimResponseSubDetail1._();
+  const ClaimResponseSubDetail1._();
 
   /// [ClaimResponseSubDetail1] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -4748,7 +4748,7 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
 class ClaimResponseTotal with _$ClaimResponseTotal {
   /// [ClaimResponseTotal] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
-  ClaimResponseTotal._();
+  const ClaimResponseTotal._();
 
   /// [ClaimResponseTotal] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
@@ -4863,7 +4863,7 @@ class ClaimResponseTotal with _$ClaimResponseTotal {
 class ClaimResponsePayment with _$ClaimResponsePayment {
   /// [ClaimResponsePayment] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
-  ClaimResponsePayment._();
+  const ClaimResponsePayment._();
 
   /// [ClaimResponsePayment] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -5000,7 +5000,7 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
 class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
   /// [ClaimResponseProcessNote] This resource provides the adjudication
   ///  details from the processing of a Claim resource.
-  ClaimResponseProcessNote._();
+  const ClaimResponseProcessNote._();
 
   /// [ClaimResponseProcessNote] This resource provides the adjudication
   ///  details from the processing of a Claim resource.
@@ -5126,7 +5126,7 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
 class ClaimResponseInsurance with _$ClaimResponseInsurance {
   /// [ClaimResponseInsurance] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
-  ClaimResponseInsurance._();
+  const ClaimResponseInsurance._();
 
   /// [ClaimResponseInsurance] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
@@ -5278,7 +5278,7 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
 class ClaimResponseError with _$ClaimResponseError {
   /// [ClaimResponseError] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
-  ClaimResponseError._();
+  const ClaimResponseError._();
 
   /// [ClaimResponseError] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
@@ -5442,7 +5442,7 @@ class ClaimResponseError with _$ClaimResponseError {
 class Invoice with Resource, _$Invoice {
   /// [Invoice] Invoice containing collected ChargeItems from an Account with
   ///  calculated individual and total price for Billing purpose.
-  Invoice._();
+  const Invoice._();
 
   /// [Invoice] Invoice containing collected ChargeItems from an Account with
   ///  calculated individual and total price for Billing purpose.
@@ -5767,7 +5767,7 @@ class Invoice with Resource, _$Invoice {
 class InvoiceParticipant with _$InvoiceParticipant {
   /// [InvoiceParticipant] Invoice containing collected ChargeItems from an
   ///  Account with calculated individual and total price for Billing purpose.
-  InvoiceParticipant._();
+  const InvoiceParticipant._();
 
   /// [InvoiceParticipant] Invoice containing collected ChargeItems from an
   ///  Account with calculated individual and total price for Billing purpose.
@@ -5879,7 +5879,7 @@ class InvoiceParticipant with _$InvoiceParticipant {
 class InvoiceLineItem with _$InvoiceLineItem {
   /// [InvoiceLineItem] Invoice containing collected ChargeItems from an
   ///  Account with calculated individual and total price for Billing purpose.
-  InvoiceLineItem._();
+  const InvoiceLineItem._();
 
   /// [InvoiceLineItem] Invoice containing collected ChargeItems from an
   ///  Account with calculated individual and total price for Billing purpose.

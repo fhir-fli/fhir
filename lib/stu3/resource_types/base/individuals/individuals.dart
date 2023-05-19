@@ -16,7 +16,7 @@ part 'individuals.g.dart';
 
 @freezed
 class FhirGroup with Resource, _$FhirGroup {
-  FhirGroup._();
+  const FhirGroup._();
   const factory FhirGroup({
     @Default(Stu3ResourceType.Group)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Group)
@@ -78,7 +78,7 @@ class FhirGroup with Resource, _$FhirGroup {
 
 @freezed
 class GroupCharacteristic with _$GroupCharacteristic {
-  GroupCharacteristic._();
+  const GroupCharacteristic._();
   const factory GroupCharacteristic({
     required CodeableConcept code,
     CodeableConcept? valueCodeableConcept,
@@ -124,7 +124,7 @@ class GroupCharacteristic with _$GroupCharacteristic {
 
 @freezed
 class GroupMember with _$GroupMember {
-  GroupMember._();
+  const GroupMember._();
   const factory GroupMember({
     required Reference entity,
     Period? period,
@@ -165,7 +165,7 @@ class GroupMember with _$GroupMember {
 
 @freezed
 class Patient with Resource, _$Patient {
-  Patient._();
+  const Patient._();
   const factory Patient({
     @Default(Stu3ResourceType.Patient)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Patient)
@@ -241,7 +241,7 @@ class Patient with Resource, _$Patient {
 
 @freezed
 class PatientContact with _$PatientContact {
-  PatientContact._();
+  const PatientContact._();
   const factory PatientContact({
     List<CodeableConcept>? relationship,
     HumanName? name,
@@ -286,7 +286,7 @@ class PatientContact with _$PatientContact {
 
 @freezed
 class PatientAnimal with _$PatientAnimal {
-  PatientAnimal._();
+  const PatientAnimal._();
   const factory PatientAnimal({
     required CodeableConcept species,
     CodeableConcept? breed,
@@ -326,7 +326,7 @@ class PatientAnimal with _$PatientAnimal {
 
 @freezed
 class PatientCommunication with _$PatientCommunication {
-  PatientCommunication._();
+  const PatientCommunication._();
   const factory PatientCommunication({
     required CodeableConcept language,
     FhirBoolean? preferred,
@@ -366,7 +366,7 @@ class PatientCommunication with _$PatientCommunication {
 
 @freezed
 class PatientLink with _$PatientLink {
-  PatientLink._();
+  const PatientLink._();
   const factory PatientLink({
     required Reference other,
     PatientLinkType? type,
@@ -406,7 +406,7 @@ class PatientLink with _$PatientLink {
 
 @freezed
 class Person with Resource, _$Person {
-  Person._();
+  const Person._();
   const factory Person({
     @Default(Stu3ResourceType.Person)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Person)
@@ -466,7 +466,7 @@ class Person with Resource, _$Person {
 
 @freezed
 class PersonLink with _$PersonLink {
-  PersonLink._();
+  const PersonLink._();
   const factory PersonLink({
     required Reference target,
     PersonLinkAssurance? assurance,
@@ -506,7 +506,7 @@ class PersonLink with _$PersonLink {
 
 @freezed
 class Practitioner with Resource, _$Practitioner {
-  Practitioner._();
+  const Practitioner._();
   const factory Practitioner({
     @Default(Stu3ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Practitioner)
@@ -567,7 +567,7 @@ class Practitioner with Resource, _$Practitioner {
 
 @freezed
 class PractitionerQualification with _$PractitionerQualification {
-  PractitionerQualification._();
+  const PractitionerQualification._();
   const factory PractitionerQualification({
     List<Identifier>? identifier,
     required CodeableConcept code,
@@ -608,7 +608,7 @@ class PractitionerQualification with _$PractitionerQualification {
 
 @freezed
 class PractitionerRole with Resource, _$PractitionerRole {
-  PractitionerRole._();
+  const PractitionerRole._();
   const factory PractitionerRole({
     @Default(Stu3ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: Stu3ResourceType.PractitionerRole)
@@ -673,7 +673,7 @@ class PractitionerRole with Resource, _$PractitionerRole {
 
 @freezed
 class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
-  PractitionerRoleAvailableTime._();
+  const PractitionerRoleAvailableTime._();
   const factory PractitionerRoleAvailableTime({
     List<String>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
@@ -718,7 +718,7 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
 
 @freezed
 class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
-  PractitionerRoleNotAvailable._();
+  const PractitionerRoleNotAvailable._();
   const factory PractitionerRoleNotAvailable({
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
@@ -758,7 +758,7 @@ class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
 
 @freezed
 class RelatedPerson with Resource, _$RelatedPerson {
-  RelatedPerson._();
+  const RelatedPerson._();
   const factory RelatedPerson({
     @Default(Stu3ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: Stu3ResourceType.RelatedPerson)

@@ -19,7 +19,7 @@ part 'security.g.dart';
 class AuditEvent with Resource, _$AuditEvent {
   /// [AuditEvent] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
-  AuditEvent._();
+  const AuditEvent._();
 
   /// [AuditEvent] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
@@ -309,7 +309,7 @@ class AuditEvent with Resource, _$AuditEvent {
 class AuditEventOutcome with _$AuditEventOutcome {
   /// [AuditEventOutcome] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
-  AuditEventOutcome._();
+  const AuditEventOutcome._();
 
   /// [AuditEventOutcome] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
@@ -417,7 +417,7 @@ class AuditEventOutcome with _$AuditEventOutcome {
 class AuditEventAgent with _$AuditEventAgent {
   /// [AuditEventAgent] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
-  AuditEventAgent._();
+  const AuditEventAgent._();
 
   /// [AuditEventAgent] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
@@ -611,7 +611,7 @@ class AuditEventAgent with _$AuditEventAgent {
 class AuditEventSource with _$AuditEventSource {
   /// [AuditEventSource] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
-  AuditEventSource._();
+  const AuditEventSource._();
 
   /// [AuditEventSource] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
@@ -726,7 +726,7 @@ class AuditEventSource with _$AuditEventSource {
 class AuditEventEntity with _$AuditEventEntity {
   /// [AuditEventEntity] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
-  AuditEventEntity._();
+  const AuditEventEntity._();
 
   /// [AuditEventEntity] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
@@ -874,7 +874,7 @@ class AuditEventEntity with _$AuditEventEntity {
 class AuditEventDetail with _$AuditEventDetail {
   /// [AuditEventDetail] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
-  AuditEventDetail._();
+  const AuditEventDetail._();
 
   /// [AuditEventDetail] A record of an event relevant for purposes such as
   ///  operations, privacy, security, maintenance, and performance analysis.
@@ -1066,7 +1066,7 @@ class Consent with Resource, _$Consent {
   ///  on their behalf by a third party, which permits or denies identified
   ///  recipient(s) or recipient role(s) to perform one or more actions within
   ///  a given policy context, for specific purposes and periods of time.
-  Consent._();
+  const Consent._();
 
   /// [Consent] A record of a healthcare consumer’s  choices  or choices made
   ///  on their behalf by a third party, which permits or denies identified
@@ -1387,7 +1387,7 @@ class ConsentPolicyBasis with _$ConsentPolicyBasis {
   ///  identified recipient(s) or recipient role(s) to perform one or more
   ///  actions within a given policy context, for specific purposes and periods
   ///  of time.
-  ConsentPolicyBasis._();
+  const ConsentPolicyBasis._();
 
   /// [ConsentPolicyBasis] A record of a healthcare consumer’s  choices  or
   ///  choices made on their behalf by a third party, which permits or denies
@@ -1511,7 +1511,7 @@ class ConsentVerification with _$ConsentVerification {
   ///  identified recipient(s) or recipient role(s) to perform one or more
   ///  actions within a given policy context, for specific purposes and periods
   ///  of time.
-  ConsentVerification._();
+  const ConsentVerification._();
 
   /// [ConsentVerification] A record of a healthcare consumer’s  choices  or
   ///  choices made on their behalf by a third party, which permits or denies
@@ -1658,7 +1658,7 @@ class ConsentProvision with _$ConsentProvision {
   ///  identified recipient(s) or recipient role(s) to perform one or more
   ///  actions within a given policy context, for specific purposes and periods
   ///  of time.
-  ConsentProvision._();
+  const ConsentProvision._();
 
   /// [ConsentProvision] A record of a healthcare consumer’s  choices  or
   ///  choices made on their behalf by a third party, which permits or denies
@@ -1848,7 +1848,7 @@ class ConsentActor with _$ConsentActor {
   ///  identified recipient(s) or recipient role(s) to perform one or more
   ///  actions within a given policy context, for specific purposes and periods
   ///  of time.
-  ConsentActor._();
+  const ConsentActor._();
 
   /// [ConsentActor] A record of a healthcare consumer’s  choices  or choices
   ///  made on their behalf by a third party, which permits or denies
@@ -1968,7 +1968,7 @@ class ConsentData with _$ConsentData {
   ///  identified recipient(s) or recipient role(s) to perform one or more
   ///  actions within a given policy context, for specific purposes and periods
   ///  of time.
-  ConsentData._();
+  const ConsentData._();
 
   /// [ConsentData] A record of a healthcare consumer’s  choices  or choices
   ///  made on their behalf by a third party, which permits or denies
@@ -2086,7 +2086,7 @@ class ConsentData with _$ConsentData {
 class Permission with Resource, _$Permission {
   /// [Permission] Permission resource holds access rules for a given data and
   ///  context.
-  Permission._();
+  const Permission._();
 
   /// [Permission] Permission resource holds access rules for a given data and
   ///  context.
@@ -2308,7 +2308,7 @@ class Permission with Resource, _$Permission {
 class PermissionJustification with _$PermissionJustification {
   /// [PermissionJustification] Permission resource holds access rules for a
   ///  given data and context.
-  PermissionJustification._();
+  const PermissionJustification._();
 
   /// [PermissionJustification] Permission resource holds access rules for a
   ///  given data and context.
@@ -2416,7 +2416,7 @@ class PermissionJustification with _$PermissionJustification {
 class PermissionRule with _$PermissionRule {
   /// [PermissionRule] Permission resource holds access rules for a given data
   ///  and context.
-  PermissionRule._();
+  const PermissionRule._();
 
   /// [PermissionRule] Permission resource holds access rules for a given data
   ///  and context.
@@ -2541,7 +2541,7 @@ class PermissionRule with _$PermissionRule {
 class PermissionData with _$PermissionData {
   /// [PermissionData] Permission resource holds access rules for a given data
   ///  and context.
-  PermissionData._();
+  const PermissionData._();
 
   /// [PermissionData] Permission resource holds access rules for a given data
   ///  and context.
@@ -2661,7 +2661,7 @@ class PermissionData with _$PermissionData {
 class PermissionResource with _$PermissionResource {
   /// [PermissionResource] Permission resource holds access rules for a given
   ///  data and context.
-  PermissionResource._();
+  const PermissionResource._();
 
   /// [PermissionResource] Permission resource holds access rules for a given
   ///  data and context.
@@ -2776,7 +2776,7 @@ class PermissionResource with _$PermissionResource {
 class PermissionActivity with _$PermissionActivity {
   /// [PermissionActivity] Permission resource holds access rules for a given
   ///  data and context.
-  PermissionActivity._();
+  const PermissionActivity._();
 
   /// [PermissionActivity] Permission resource holds access rules for a given
   ///  data and context.
@@ -2904,7 +2904,7 @@ class Provenance with Resource, _$Provenance {
   ///  and stage in lifecycle (e.g. Document Completion - has the artifact been
   ///  legally authenticated), all of which may impact security, privacy, and
   ///  trust policies.
-  Provenance._();
+  const Provenance._();
 
   /// [Provenance] Provenance of a resource is a record that describes entities
   ///  and processes involved in producing and delivering or otherwise
@@ -3220,7 +3220,7 @@ class ProvenanceAgent with _$ProvenanceAgent {
   ///  and stage in lifecycle (e.g. Document Completion - has the artifact been
   ///  legally authenticated), all of which may impact security, privacy, and
   ///  trust policies.
-  ProvenanceAgent._();
+  const ProvenanceAgent._();
 
   /// [ProvenanceAgent] Provenance of a resource is a record that describes
   ///  entities and processes involved in producing and delivering or otherwise
@@ -3368,7 +3368,7 @@ class ProvenanceEntity with _$ProvenanceEntity {
   ///  and stage in lifecycle (e.g. Document Completion - has the artifact been
   ///  legally authenticated), all of which may impact security, privacy, and
   ///  trust policies.
-  ProvenanceEntity._();
+  const ProvenanceEntity._();
 
   /// [ProvenanceEntity] Provenance of a resource is a record that describes
   ///  entities and processes involved in producing and delivering or otherwise

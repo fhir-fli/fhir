@@ -16,7 +16,7 @@ part 'metadata_types.g.dart';
 
 @freezed
 class ContactDetail with _$ContactDetail {
-  ContactDetail._();
+  const ContactDetail._();
   const factory ContactDetail({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -56,7 +56,7 @@ class ContactDetail with _$ContactDetail {
 
 @freezed
 class Contributor with _$Contributor {
-  Contributor._();
+  const Contributor._();
   const factory Contributor({
     ContributorType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -98,7 +98,7 @@ class Contributor with _$Contributor {
 
 @freezed
 class RelatedArtifact with _$RelatedArtifact {
-  RelatedArtifact._();
+  const RelatedArtifact._();
   const factory RelatedArtifact({
     RelatedArtifactType? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -145,7 +145,7 @@ class RelatedArtifact with _$RelatedArtifact {
 
 @freezed
 class UsageContext with _$UsageContext {
-  UsageContext._();
+  const UsageContext._();
   const factory UsageContext({
     required Coding code,
     CodeableConcept? valueCodeableConcept,
@@ -186,7 +186,7 @@ class UsageContext with _$UsageContext {
 
 @freezed
 class DataRequirement with _$DataRequirement {
-  DataRequirement._();
+  const DataRequirement._();
   const factory DataRequirement({
     String? type,
     @JsonKey(name: '_type') Element? typeElement,
@@ -231,7 +231,7 @@ class DataRequirement with _$DataRequirement {
 
 @freezed
 class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
-  DataRequirementCodeFilter._();
+  const DataRequirementCodeFilter._();
   const factory DataRequirementCodeFilter({
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -277,7 +277,7 @@ class DataRequirementCodeFilter with _$DataRequirementCodeFilter {
 
 @freezed
 class DataRequirementDateFilter with _$DataRequirementDateFilter {
-  DataRequirementDateFilter._();
+  const DataRequirementDateFilter._();
   const factory DataRequirementDateFilter({
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
@@ -320,7 +320,7 @@ class DataRequirementDateFilter with _$DataRequirementDateFilter {
 
 @freezed
 class ParameterDefinition with _$ParameterDefinition {
-  ParameterDefinition._();
+  const ParameterDefinition._();
   const factory ParameterDefinition({
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -370,7 +370,7 @@ class ParameterDefinition with _$ParameterDefinition {
 
 @freezed
 class TriggerDefinition with _$TriggerDefinition {
-  TriggerDefinition._();
+  const TriggerDefinition._();
   const factory TriggerDefinition({
     TriggerDefinitionType? type,
     @JsonKey(name: '_type') Element? typeElement,

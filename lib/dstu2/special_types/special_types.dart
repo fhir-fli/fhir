@@ -16,7 +16,7 @@ part 'special_types.g.dart';
 
 @freezed
 class FhirMeta with _$FhirMeta {
-  FhirMeta._();
+  const FhirMeta._();
   const factory FhirMeta({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -63,7 +63,7 @@ class FhirMeta with _$FhirMeta {
 
 @freezed
 class Reference with _$Reference {
-  Reference._();
+  const Reference._();
   const factory Reference({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -107,7 +107,7 @@ class Reference with _$Reference {
 
 @freezed
 class ElementDefinition with _$ElementDefinition {
-  ElementDefinition._();
+  const ElementDefinition._();
   const factory ElementDefinition({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -485,7 +485,7 @@ class ElementDefinition with _$ElementDefinition {
 
 @freezed
 class Narrative with _$Narrative {
-  Narrative._();
+  const Narrative._();
   const factory Narrative({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -529,7 +529,7 @@ class Narrative with _$Narrative {
 
 @freezed
 class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
-  ElementDefinitionSlicing._();
+  const ElementDefinitionSlicing._();
   const factory ElementDefinitionSlicing({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -576,7 +576,7 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
 
 @freezed
 class ElementDefinitionBase with _$ElementDefinitionBase {
-  ElementDefinitionBase._();
+  const ElementDefinitionBase._();
   const factory ElementDefinitionBase({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -621,7 +621,7 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
 
 @freezed
 class ElementDefinitionType with _$ElementDefinitionType {
-  ElementDefinitionType._();
+  const ElementDefinitionType._();
   const factory ElementDefinitionType({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -666,7 +666,7 @@ class ElementDefinitionType with _$ElementDefinitionType {
 
 @freezed
 class TypeCodeExtension with _$TypeCodeExtension {
-  TypeCodeExtension._();
+  const TypeCodeExtension._();
   const factory TypeCodeExtension({
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
   }) = _TypeCodeExtension;
@@ -704,7 +704,7 @@ class TypeCodeExtension with _$TypeCodeExtension {
 
 @freezed
 class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
-  ElementDefinitionConstraint._();
+  const ElementDefinitionConstraint._();
   const factory ElementDefinitionConstraint({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -754,7 +754,7 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
 
 @freezed
 class ElementDefinitionBinding with _$ElementDefinitionBinding {
-  ElementDefinitionBinding._();
+  const ElementDefinitionBinding._();
   const factory ElementDefinitionBinding({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -802,7 +802,7 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
 
 @freezed
 class ElementDefinitionMapping with _$ElementDefinitionMapping {
-  ElementDefinitionMapping._();
+  const ElementDefinitionMapping._();
   const factory ElementDefinitionMapping({
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
