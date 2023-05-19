@@ -13,7 +13,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../r5.dart';
 
-part 'resource.g.dart';
 part 'fhir_field_map.dart';
 part 'resource_from_json.dart';
 part 'resource_from_xml.dart';

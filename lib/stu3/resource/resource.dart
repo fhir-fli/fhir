@@ -12,7 +12,6 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import '../../stu3.dart';
 
-part 'resource.g.dart';
 part 'resource_from_json.dart';
 part 'resource_new_id.dart';
 part 'resource_new_version.dart';
