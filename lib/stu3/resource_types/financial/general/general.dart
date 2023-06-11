@@ -75,6 +75,11 @@ class Account with Resource, _$Account {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -115,6 +120,10 @@ class AccountCoverage with _$AccountCoverage {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -156,6 +165,10 @@ class AccountGuarantor with _$AccountGuarantor {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -235,6 +248,11 @@ class ChargeItem with Resource, _$ChargeItem {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -274,6 +292,10 @@ class ChargeItemParticipant with _$ChargeItemParticipant {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -348,6 +370,11 @@ class Contract with Resource, _$Contract {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -387,6 +414,10 @@ class ContractAgent with _$ContractAgent {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -427,6 +458,10 @@ class ContractSigner with _$ContractSigner {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -476,6 +511,10 @@ class ContractValuedItem with _$ContractValuedItem {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -528,6 +567,10 @@ class ContractTerm with _$ContractTerm {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -567,6 +610,10 @@ class ContractAgent1 with _$ContractAgent1 {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -616,6 +663,10 @@ class ContractValuedItem1 with _$ContractValuedItem1 {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -655,6 +706,10 @@ class ContractFriendly with _$ContractFriendly {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -694,6 +749,10 @@ class ContractLegal with _$ContractLegal {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -733,6 +792,10 @@ class ContractRule with _$ContractRule {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -824,6 +887,11 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -864,6 +932,10 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -903,6 +975,10 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -954,6 +1030,10 @@ class ExplanationOfBenefitInformation with _$ExplanationOfBenefitInformation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -998,6 +1078,10 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1041,6 +1125,10 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1084,6 +1172,10 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1124,6 +1216,10 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1166,6 +1262,10 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1238,6 +1338,10 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1324,6 +1428,10 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1378,6 +1486,10 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1426,6 +1538,10 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1471,6 +1587,10 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1515,6 +1635,10 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1559,6 +1683,10 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1644,4 +1772,8 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

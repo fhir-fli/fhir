@@ -367,6 +367,11 @@ class CarePlan with Resource, _$CarePlan {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CarePlanActivity] Describes the intention of how one or more
@@ -504,6 +509,10 @@ class CarePlanActivity with _$CarePlanActivity {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CarePlanDetail] Describes the intention of how one or more
@@ -790,6 +799,10 @@ class CarePlanDetail with _$CarePlanDetail {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CareTeam] The Care Team includes all the people and organizations who
@@ -1045,6 +1058,11 @@ class CareTeam with Resource, _$CareTeam {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CareTeamParticipant] The Care Team includes all the people and
@@ -1166,6 +1184,10 @@ class CareTeamParticipant with _$CareTeamParticipant {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Goal] Describes the intended objective(s) for a patient, group or
@@ -1456,6 +1478,11 @@ class Goal with Resource, _$Goal {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [GoalTarget] Describes the intended objective(s) for a patient, group or
@@ -1698,6 +1725,10 @@ class GoalTarget with _$GoalTarget {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NutritionOrder] A request to supply a diet, formula feeding (enteral) or
@@ -2029,6 +2060,11 @@ class NutritionOrder with Resource, _$NutritionOrder {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NutritionOrderOralDiet] A request to supply a diet, formula feeding
@@ -2174,6 +2210,10 @@ class NutritionOrderOralDiet with _$NutritionOrderOralDiet {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NutritionOrderNutrient] A request to supply a diet, formula feeding
@@ -2278,6 +2318,10 @@ class NutritionOrderNutrient with _$NutritionOrderNutrient {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NutritionOrderTexture] A request to supply a diet, formula feeding
@@ -2384,6 +2428,10 @@ class NutritionOrderTexture with _$NutritionOrderTexture {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NutritionOrderSupplement] A request to supply a diet, formula feeding
@@ -2521,6 +2569,10 @@ class NutritionOrderSupplement with _$NutritionOrderSupplement {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NutritionOrderEnteralFormula] A request to supply a diet, formula
@@ -2709,6 +2761,10 @@ class NutritionOrderEnteralFormula with _$NutritionOrderEnteralFormula {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NutritionOrderAdministration] A request to supply a diet, formula
@@ -2829,6 +2885,10 @@ class NutritionOrderAdministration with _$NutritionOrderAdministration {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [RequestGroup] A group of related requests that can be used to capture
@@ -3140,6 +3200,11 @@ class RequestGroup with Resource, _$RequestGroup {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [RequestGroupAction] A group of related requests that can be used to
@@ -3456,6 +3521,10 @@ class RequestGroupAction with _$RequestGroupAction {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [RequestGroupCondition] A group of related requests that can be used to
@@ -3566,6 +3635,10 @@ class RequestGroupCondition with _$RequestGroupCondition {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [RequestGroupRelatedAction] A group of related requests that can be used
@@ -3693,6 +3766,10 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [RiskAssessment] An assessment of the likely outcome(s) for a patient or
@@ -3977,6 +4054,11 @@ class RiskAssessment with Resource, _$RiskAssessment {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [RiskAssessmentPrediction] An assessment of the likely outcome(s) for a
@@ -4144,6 +4226,10 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ServiceRequest] A record of a request for service such as diagnostic
@@ -4654,6 +4740,11 @@ class ServiceRequest with Resource, _$ServiceRequest {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [VisionPrescription] An authorization for the provision of glasses and/or
@@ -4882,6 +4973,11 @@ class VisionPrescription with Resource, _$VisionPrescription {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -5204,4 +5300,8 @@ class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

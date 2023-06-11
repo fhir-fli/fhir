@@ -121,6 +121,11 @@ class Measure with Resource, _$Measure {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -165,6 +170,10 @@ class MeasureGroup with _$MeasureGroup {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -210,6 +219,10 @@ class MeasurePopulation with _$MeasurePopulation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -252,6 +265,10 @@ class MeasureStratifier with _$MeasureStratifier {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -295,6 +312,10 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -356,6 +377,11 @@ class MeasureReport with Resource, _$MeasureReport {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -398,6 +424,10 @@ class MeasureReportGroup with _$MeasureReportGroup {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -440,6 +470,10 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -479,6 +513,10 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -521,6 +559,10 @@ class MeasureReportStratum with _$MeasureReportStratum {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -563,4 +605,8 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

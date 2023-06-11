@@ -84,6 +84,11 @@ class Communication with Resource, _$Communication {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -125,6 +130,10 @@ class CommunicationPayload with _$CommunicationPayload {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -198,6 +207,11 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -239,6 +253,10 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -278,6 +296,10 @@ class CommunicationRequestRequester with _$CommunicationRequestRequester {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -354,6 +376,11 @@ class DeviceRequest with Resource, _$DeviceRequest {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -393,6 +420,10 @@ class DeviceRequestRequester with _$DeviceRequestRequester {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -457,6 +488,11 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -520,6 +556,11 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -560,6 +601,10 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -627,6 +672,11 @@ class SupplyRequest with Resource, _$SupplyRequest {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -667,6 +717,10 @@ class SupplyRequestOrderedItem with _$SupplyRequestOrderedItem {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -706,4 +760,8 @@ class SupplyRequestRequester with _$SupplyRequestRequester {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

@@ -301,6 +301,11 @@ class AuditEvent with Resource, _$AuditEvent {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AuditEventOutcome] A record of an event relevant for purposes such as
@@ -409,6 +414,10 @@ class AuditEventOutcome with _$AuditEventOutcome {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AuditEventAgent] A record of an event relevant for purposes such as
@@ -603,6 +612,10 @@ class AuditEventAgent with _$AuditEventAgent {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AuditEventSource] A record of an event relevant for purposes such as
@@ -718,6 +731,10 @@ class AuditEventSource with _$AuditEventSource {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AuditEventEntity] A record of an event relevant for purposes such as
@@ -866,6 +883,10 @@ class AuditEventEntity with _$AuditEventEntity {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AuditEventDetail] A record of an event relevant for purposes such as
@@ -1054,6 +1075,10 @@ class AuditEventDetail with _$AuditEventDetail {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Consent] A record of a healthcare consumer’s  choices  or choices made on
@@ -1373,6 +1398,11 @@ class Consent with Resource, _$Consent {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConsentPolicyBasis] A record of a healthcare consumer’s  choices  or
@@ -1497,6 +1527,10 @@ class ConsentPolicyBasis with _$ConsentPolicyBasis {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConsentVerification] A record of a healthcare consumer’s  choices  or
@@ -1645,6 +1679,10 @@ class ConsentVerification with _$ConsentVerification {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConsentProvision] A record of a healthcare consumer’s  choices  or choices
@@ -1835,6 +1873,10 @@ class ConsentProvision with _$ConsentProvision {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConsentActor] A record of a healthcare consumer’s  choices  or choices
@@ -1955,6 +1997,10 @@ class ConsentActor with _$ConsentActor {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConsentData] A record of a healthcare consumer’s  choices  or choices made
@@ -2078,6 +2124,10 @@ class ConsentData with _$ConsentData {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Permission] Permission resource holds access rules for a given data and
@@ -2300,6 +2350,11 @@ class Permission with Resource, _$Permission {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [PermissionJustification] Permission resource holds access rules for a
@@ -2408,6 +2463,10 @@ class PermissionJustification with _$PermissionJustification {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [PermissionRule] Permission resource holds access rules for a given data
@@ -2533,6 +2592,10 @@ class PermissionRule with _$PermissionRule {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [PermissionData] Permission resource holds access rules for a given data
@@ -2653,6 +2716,10 @@ class PermissionData with _$PermissionData {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [PermissionResource] Permission resource holds access rules for a given
@@ -2768,6 +2835,10 @@ class PermissionResource with _$PermissionResource {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [PermissionActivity] Permission resource holds access rules for a given
@@ -2879,6 +2950,10 @@ class PermissionActivity with _$PermissionActivity {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Provenance] Provenance of a resource is a record that describes entities
@@ -3195,6 +3270,11 @@ class Provenance with Resource, _$Provenance {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ProvenanceAgent] Provenance of a resource is a record that describes
@@ -3343,6 +3423,10 @@ class ProvenanceAgent with _$ProvenanceAgent {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ProvenanceEntity] Provenance of a resource is a record that describes
@@ -3493,4 +3577,8 @@ class ProvenanceEntity with _$ProvenanceEntity {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

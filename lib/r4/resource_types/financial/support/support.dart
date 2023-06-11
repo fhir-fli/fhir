@@ -324,6 +324,11 @@ class Coverage with Resource, _$Coverage {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CoverageClass] Financial instrument which may be used to reimburse or
@@ -448,6 +453,10 @@ class CoverageClass with _$CoverageClass {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CoverageCostToBeneficiary] Financial instrument which may be used to
@@ -563,6 +572,10 @@ class CoverageCostToBeneficiary with _$CoverageCostToBeneficiary {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CoverageException] Financial instrument which may be used to reimburse
@@ -666,6 +679,10 @@ class CoverageException with _$CoverageException {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CoverageEligibilityRequest] The CoverageEligibilityRequest provides
@@ -953,6 +970,11 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1352,6 +1374,10 @@ class CoverageEligibilityRequestItem with _$CoverageEligibilityRequestItem {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1749,6 +1775,11 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -2079,6 +2110,10 @@ class CoverageEligibilityResponseItem with _$CoverageEligibilityResponseItem {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -2522,6 +2557,11 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [EnrollmentResponse] This resource provides enrollment and plan details
@@ -2745,4 +2785,9 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }

@@ -621,6 +621,11 @@ class CodeSystem with Resource, _$CodeSystem {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CodeSystemFilter] The CodeSystem resource is used to declare the existence
@@ -764,6 +769,10 @@ class CodeSystemFilter with _$CodeSystemFilter {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CodeSystemProperty] The CodeSystem resource is used to declare the
@@ -917,6 +926,10 @@ class CodeSystemProperty with _$CodeSystemProperty {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CodeSystemConcept] The CodeSystem resource is used to declare the
@@ -1079,6 +1092,10 @@ class CodeSystemConcept with _$CodeSystemConcept {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CodeSystemDesignation] The CodeSystem resource is used to declare the
@@ -1210,6 +1227,10 @@ class CodeSystemDesignation with _$CodeSystemDesignation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CodeSystemProperty1] The CodeSystem resource is used to declare the
@@ -1384,6 +1405,10 @@ class CodeSystemProperty1 with _$CodeSystemProperty1 {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConceptMap] A statement of relationships from one set of concepts to one
@@ -1978,6 +2003,11 @@ class ConceptMap with Resource, _$ConceptMap {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConceptMapProperty] A statement of relationships from one set of concepts
@@ -2132,6 +2162,10 @@ class ConceptMapProperty with _$ConceptMapProperty {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConceptMapAdditionalAttribute] A statement of relationships from one set
@@ -2292,6 +2326,10 @@ class ConceptMapAdditionalAttribute with _$ConceptMapAdditionalAttribute {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConceptMapGroup] A statement of relationships from one set of concepts to
@@ -2425,6 +2463,10 @@ class ConceptMapGroup with _$ConceptMapGroup {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConceptMapElement] A statement of relationships from one set of concepts
@@ -2572,6 +2614,10 @@ class ConceptMapElement with _$ConceptMapElement {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConceptMapTarget] A statement of relationships from one set of concepts to
@@ -2755,6 +2801,10 @@ class ConceptMapTarget with _$ConceptMapTarget {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConceptMapProperty1] A statement of relationships from one set of concepts
@@ -2959,6 +3009,10 @@ class ConceptMapProperty1 with _$ConceptMapProperty1 {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConceptMapDependsOn] A statement of relationships from one set of concepts
@@ -3119,6 +3173,10 @@ class ConceptMapDependsOn with _$ConceptMapDependsOn {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConceptMapUnmapped] A statement of relationships from one set of concepts
@@ -3295,6 +3353,10 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NamingSystem] A curated namespace that issues unique symbols within that
@@ -3842,6 +3904,11 @@ class NamingSystem with Resource, _$NamingSystem {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NamingSystemUniqueId] A curated namespace that issues unique symbols
@@ -4011,6 +4078,10 @@ class NamingSystemUniqueId with _$NamingSystemUniqueId {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TerminologyCapabilities] A TerminologyCapabilities resource documents a
@@ -4533,6 +4604,11 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TerminologyCapabilitiesSoftware] A TerminologyCapabilities resource
@@ -4659,6 +4735,10 @@ class TerminologyCapabilitiesSoftware with _$TerminologyCapabilitiesSoftware {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TerminologyCapabilitiesImplementation] A TerminologyCapabilities resource
@@ -4789,6 +4869,10 @@ class TerminologyCapabilitiesImplementation
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TerminologyCapabilitiesCodeSystem] A TerminologyCapabilities resource
@@ -4931,6 +5015,10 @@ class TerminologyCapabilitiesCodeSystem
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TerminologyCapabilitiesVersion] A TerminologyCapabilities resource
@@ -5094,6 +5182,10 @@ class TerminologyCapabilitiesVersion with _$TerminologyCapabilitiesVersion {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TerminologyCapabilitiesFilter] A TerminologyCapabilities resource
@@ -5217,6 +5309,10 @@ class TerminologyCapabilitiesFilter with _$TerminologyCapabilitiesFilter {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TerminologyCapabilitiesExpansion] A TerminologyCapabilities resource
@@ -5367,6 +5463,10 @@ class TerminologyCapabilitiesExpansion with _$TerminologyCapabilitiesExpansion {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TerminologyCapabilitiesParameter] A TerminologyCapabilities resource
@@ -5492,6 +5592,10 @@ class TerminologyCapabilitiesParameter with _$TerminologyCapabilitiesParameter {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TerminologyCapabilitiesValidateCode] A TerminologyCapabilities resource
@@ -5608,6 +5712,10 @@ class TerminologyCapabilitiesValidateCode
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TerminologyCapabilitiesTranslation] A TerminologyCapabilities resource
@@ -5724,6 +5832,10 @@ class TerminologyCapabilitiesTranslation
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TerminologyCapabilitiesClosure] A TerminologyCapabilities resource
@@ -5838,6 +5950,10 @@ class TerminologyCapabilitiesClosure with _$TerminologyCapabilitiesClosure {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ValueSet] A ValueSet resource instance specifies a set of codes drawn from
@@ -6382,6 +6498,11 @@ class ValueSet with Resource, _$ValueSet {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ValueSetCompose] A ValueSet resource instance specifies a set of codes
@@ -6553,6 +6674,10 @@ class ValueSetCompose with _$ValueSetCompose {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ValueSetInclude] A ValueSet resource instance specifies a set of codes
@@ -6724,6 +6849,10 @@ class ValueSetInclude with _$ValueSetInclude {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ValueSetConcept] A ValueSet resource instance specifies a set of codes
@@ -6860,6 +6989,10 @@ class ValueSetConcept with _$ValueSetConcept {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ValueSetDesignation] A ValueSet resource instance specifies a set of codes
@@ -6996,6 +7129,10 @@ class ValueSetDesignation with _$ValueSetDesignation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ValueSetFilter] A ValueSet resource instance specifies a set of codes
@@ -7140,6 +7277,10 @@ class ValueSetFilter with _$ValueSetFilter {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ValueSetExpansion] A ValueSet resource instance specifies a set of codes
@@ -7338,6 +7479,10 @@ class ValueSetExpansion with _$ValueSetExpansion {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ValueSetParameter] A ValueSet resource instance specifies a set of codes
@@ -7524,6 +7669,10 @@ class ValueSetParameter with _$ValueSetParameter {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ValueSetProperty] A ValueSet resource instance specifies a set of codes
@@ -7652,6 +7801,10 @@ class ValueSetProperty with _$ValueSetProperty {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ValueSetContains] A ValueSet resource instance specifies a set of codes
@@ -7863,6 +8016,10 @@ class ValueSetContains with _$ValueSetContains {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ValueSetProperty1] A ValueSet resource instance specifies a set of codes
@@ -8045,6 +8202,10 @@ class ValueSetProperty1 with _$ValueSetProperty1 {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ValueSetSubProperty] A ValueSet resource instance specifies a set of codes
@@ -8224,6 +8385,10 @@ class ValueSetSubProperty with _$ValueSetSubProperty {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ValueSetScope] A ValueSet resource instance specifies a set of codes drawn
@@ -8354,4 +8519,8 @@ class ValueSetScope with _$ValueSetScope {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

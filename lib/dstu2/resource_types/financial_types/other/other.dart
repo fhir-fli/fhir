@@ -74,4 +74,9 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }

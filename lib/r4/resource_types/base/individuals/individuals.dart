@@ -265,6 +265,11 @@ class FhirGroup with Resource, _$FhirGroup {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [GroupCharacteristic] Represents a defined collection of entities that
@@ -423,6 +428,10 @@ class GroupCharacteristic with _$GroupCharacteristic {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [GroupMember] Represents a defined collection of entities that may be
@@ -543,6 +552,10 @@ class GroupMember with _$GroupMember {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Patient] Demographics and other administrative information about an
@@ -859,6 +872,11 @@ class Patient with Resource, _$Patient {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [PatientContact] Demographics and other administrative information about
@@ -1001,6 +1019,10 @@ class PatientContact with _$PatientContact {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [PatientCommunication] Demographics and other administrative information
@@ -1117,6 +1139,10 @@ class PatientCommunication with _$PatientCommunication {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [PatientLink] Demographics and other administrative information about an
@@ -1226,6 +1252,10 @@ class PatientLink with _$PatientLink {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Person] Demographics and administrative information about a person
@@ -1455,6 +1485,11 @@ class Person with Resource, _$Person {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [PersonLink] Demographics and administrative information about a person
@@ -1564,6 +1599,10 @@ class PersonLink with _$PersonLink {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Practitioner] A person who is directly or indirectly involved in the
@@ -1808,6 +1847,11 @@ class Practitioner with Resource, _$Practitioner {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [PractitionerQualification] A person who is directly or indirectly
@@ -1922,6 +1966,10 @@ class PractitionerQualification with _$PractitionerQualification {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [PractitionerRole] A specific set of Roles/Locations/specialties/services
@@ -2184,6 +2232,11 @@ class PractitionerRole with Resource, _$PractitionerRole {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [PractitionerRoleAvailableTime] A specific set of
@@ -2325,6 +2378,10 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [PractitionerRoleNotAvailable] A specific set of
@@ -2437,6 +2494,10 @@ class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [RelatedPerson] Information about a person that is involved in the care
@@ -2682,6 +2743,11 @@ class RelatedPerson with Resource, _$RelatedPerson {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [RelatedPersonCommunication] Information about a person that is involved
@@ -2798,4 +2864,8 @@ class RelatedPersonCommunication with _$RelatedPersonCommunication {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

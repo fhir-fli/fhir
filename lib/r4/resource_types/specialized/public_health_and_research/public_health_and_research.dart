@@ -364,6 +364,11 @@ class ResearchStudy with Resource, _$ResearchStudy {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ResearchStudyArm] A process where a researcher or organization plans
@@ -490,6 +495,10 @@ class ResearchStudyArm with _$ResearchStudyArm {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ResearchStudyObjective] A process where a researcher or organization
@@ -602,6 +611,10 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ResearchSubject] A physical entity which is the primary unit of
@@ -826,4 +839,9 @@ class ResearchSubject with Resource, _$ResearchSubject {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }

@@ -97,6 +97,10 @@ class Narrative with _$Narrative {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CodeableReference] A reference to a resource (by instance), or instead, a
@@ -178,6 +182,10 @@ class CodeableReference with _$CodeableReference {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Reference] A reference from one resource to another.
@@ -321,6 +329,10 @@ class Reference with _$Reference {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [FhirMeta] The metadata about a resource. This is content in the resource
@@ -456,6 +468,10 @@ class FhirMeta with _$FhirMeta {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Dosage] Indicates how the medication is/was taken or should be taken by
@@ -657,6 +673,10 @@ class Dosage with _$Dosage {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DosageDoseAndRate] Indicates how the medication is/was taken or should
@@ -781,6 +801,10 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ElementDefinition] Captures constraints on each element within the
@@ -4417,6 +4441,10 @@ class ElementDefinition with _$ElementDefinition {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ElementDefinitionSlicing] Captures constraints on each element within
@@ -4567,6 +4595,10 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ElementDefinitionDiscriminator] Captures constraints on each element
@@ -4687,6 +4719,10 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ElementDefinitionBase] Captures constraints on each element within the
@@ -4815,6 +4851,10 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ElementDefinitionType] Captures constraints on each element within the
@@ -4991,6 +5031,10 @@ class ElementDefinitionType with _$ElementDefinitionType {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ElementDefinitionExample] Captures constraints on each element within
@@ -5540,6 +5584,10 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ElementDefinitionConstraint] Captures constraints on each element
@@ -5714,6 +5762,10 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ElementDefinitionBinding] Captures constraints on each element within
@@ -5838,6 +5890,10 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ElementDefinitionMapping] Captures constraints on each element within
@@ -5974,4 +6030,8 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

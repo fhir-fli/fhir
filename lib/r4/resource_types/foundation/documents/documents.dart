@@ -271,6 +271,11 @@ class CatalogEntry with Resource, _$CatalogEntry {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CatalogEntryRelatedEntry] Catalog entries are wrappers that
@@ -380,6 +385,10 @@ class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Composition] A set of healthcare-related information that is assembled
@@ -678,6 +687,11 @@ class Composition with Resource, _$Composition {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CompositionAttester] A set of healthcare-related information that is
@@ -803,6 +817,10 @@ class CompositionAttester with _$CompositionAttester {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CompositionRelatesTo] A set of healthcare-related information that is
@@ -925,6 +943,10 @@ class CompositionRelatesTo with _$CompositionRelatesTo {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CompositionEvent] A set of healthcare-related information that is
@@ -1056,6 +1078,10 @@ class CompositionEvent with _$CompositionEvent {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CompositionSection] A set of healthcare-related information that is
@@ -1260,6 +1286,10 @@ class CompositionSection with _$CompositionSection {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DocumentManifest] A collection of documents compiled for a purpose
@@ -1531,6 +1561,11 @@ class DocumentManifest with Resource, _$DocumentManifest {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DocumentManifestRelated] A collection of documents compiled for a
@@ -1637,6 +1672,10 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DocumentReference] A reference to a document of any kind for any
@@ -1942,6 +1981,11 @@ class DocumentReference with Resource, _$DocumentReference {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DocumentReferenceRelatesTo] A reference to a document of any kind for
@@ -2055,6 +2099,10 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DocumentReferenceContent] A reference to a document of any kind for any
@@ -2167,6 +2215,10 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DocumentReferenceContext] A reference to a document of any kind for any
@@ -2318,4 +2370,8 @@ class DocumentReferenceContext with _$DocumentReferenceContext {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

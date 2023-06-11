@@ -484,6 +484,11 @@ class ResearchStudy with Resource, _$ResearchStudy {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ResearchStudyLabel] A scientific study of nature that sometimes includes
@@ -607,6 +612,10 @@ class ResearchStudyLabel with _$ResearchStudyLabel {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ResearchStudyAssociatedParty] A scientific study of nature that sometimes
@@ -750,6 +759,10 @@ class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ResearchStudyProgressStatus] A scientific study of nature that sometimes
@@ -883,6 +896,10 @@ class ResearchStudyProgressStatus with _$ResearchStudyProgressStatus {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ResearchStudyRecruitment] A scientific study of nature that sometimes
@@ -1021,6 +1038,10 @@ class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ResearchStudyComparisonGroup] A scientific study of nature that sometimes
@@ -1186,6 +1207,10 @@ class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ResearchStudyObjective] A scientific study of nature that sometimes
@@ -1323,6 +1348,10 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ResearchStudyOutcomeMeasure] A scientific study of nature that sometimes
@@ -1464,6 +1493,10 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ResearchSubject] A ResearchSubject is a participant or object which is the
@@ -1712,6 +1745,11 @@ class ResearchSubject with Resource, _$ResearchSubject {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ResearchSubjectProgress] A ResearchSubject is a participant or object
@@ -1852,4 +1890,8 @@ class ResearchSubjectProgress with _$ResearchSubjectProgress {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

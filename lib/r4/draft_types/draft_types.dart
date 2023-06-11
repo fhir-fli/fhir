@@ -129,6 +129,10 @@ class Population with _$Population {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ProductShelfLife] The shelf-life and storage information for a medicinal product item or container can be described using this class.
@@ -198,6 +202,10 @@ class ProductShelfLife with _$ProductShelfLife {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ProdCharacteristic] The marketing status describes the date when a
@@ -411,6 +419,10 @@ class ProdCharacteristic with _$ProdCharacteristic {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MarketingStatus] The marketing status describes the date when a
@@ -574,4 +586,8 @@ class MarketingStatus with _$MarketingStatus {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

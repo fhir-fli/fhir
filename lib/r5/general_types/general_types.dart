@@ -115,6 +115,10 @@ class Annotation with _$Annotation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Attachment] For referring to data content defined in other formats.
@@ -331,6 +335,10 @@ class Attachment with _$Attachment {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Identifier] An identifier - identifies some entity uniquely and
@@ -450,6 +458,10 @@ class Identifier with _$Identifier {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [CodeableConcept] A concept that may be defined by a formal reference to a
@@ -537,6 +549,10 @@ class CodeableConcept with _$CodeableConcept {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Coding] A reference to a code defined by a terminology system.
@@ -671,6 +687,10 @@ class Coding with _$Coding {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Quantity] A measured amount (or an amount that can potentially be
@@ -807,6 +827,10 @@ class Quantity with _$Quantity {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [FhirDuration] A length of time.
@@ -934,6 +958,10 @@ class FhirDuration with _$FhirDuration {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Distance] A length - a value with a unit that is a physical distance.
@@ -1061,6 +1089,10 @@ class Distance with _$Distance {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Count] A measured amount (or an amount that can potentially be measured).
@@ -1195,6 +1227,10 @@ class Count with _$Count {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Money] An amount of economic utility in some recognized currency.
@@ -1278,6 +1314,10 @@ class Money with _$Money {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Age] A duration of time during which an organism (or a process) has
@@ -1405,6 +1445,10 @@ class Age with _$Age {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Range] A set of ordered Quantities defined by a low and high limit.
@@ -1478,6 +1522,10 @@ class Range with _$Range {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Period] A time period defined by a start and end date and optionally time.
@@ -1570,6 +1618,10 @@ class Period with _$Period {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Ratio] A relationship of two Quantity values - expressed as a numerator
@@ -1646,6 +1698,10 @@ class Ratio with _$Ratio {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [RatioRange] A range of ratios expressed as a low and high numerator and a
@@ -1729,6 +1785,10 @@ class RatioRange with _$RatioRange {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [SampledData] A series of measurements taken by a device, with upper and
@@ -1922,6 +1982,10 @@ class SampledData with _$SampledData {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Signature] A signature along with supporting context. The signature may be
@@ -2076,6 +2140,10 @@ class Signature with _$Signature {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [HumanName] A name, normally of a human, that can be used for other living
@@ -2232,6 +2300,10 @@ class HumanName with _$HumanName {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Address] An address expressed using postal conventions (as opposed to GPS
@@ -2431,6 +2503,10 @@ class Address with _$Address {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ContactPoint] Details for all kinds of technology mediated contact points
@@ -2553,6 +2629,10 @@ class ContactPoint with _$ContactPoint {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Timing] Specifies an event that may occur multiple times. Timing schedules
@@ -2693,6 +2773,10 @@ class Timing with _$Timing {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TimingRepeat] Specifies an event that may occur multiple times. Timing
@@ -3017,4 +3101,8 @@ class TimingRepeat with _$TimingRepeat {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

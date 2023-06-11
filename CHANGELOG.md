@@ -1,8 +1,13 @@
 # fhir
 
+## [0.11.2]
+
+* Added toJsonString for ease of use in sending resources
+
 ## [0.11.1]
 
 * updated dependencies
+
 ## [0.11.0]
 
 * Dart 3.0.0!

@@ -63,6 +63,10 @@ abstract mixin class Resource {
     }
   }
 
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
+
   /// Returns a Resource, accepts a [String] in YAML format as an argument
   static Resource fromYaml(dynamic yaml) => yaml is String
       ? Resource.fromJson(

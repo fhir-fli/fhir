@@ -207,6 +207,11 @@ class Basic with Resource, _$Basic {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Binary] A resource that represents the data of a single raw artifact as
@@ -380,6 +385,11 @@ class Binary with Resource, _$Binary {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Bundle] A container for a collection of resources.
@@ -568,6 +578,11 @@ class Bundle with Resource, _$Bundle {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [BundleLink] A container for a collection of resources.
@@ -681,6 +696,10 @@ class BundleLink with _$BundleLink {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [BundleEntry] A container for a collection of resources.
@@ -889,6 +908,10 @@ class BundleEntry with _$BundleEntry {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [BundleSearch] A container for a collection of resources.
@@ -1004,6 +1027,10 @@ class BundleSearch with _$BundleSearch {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [BundleRequest] A container for a collection of resources.
@@ -1179,6 +1206,10 @@ class BundleRequest with _$BundleRequest {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [BundleResponse] A container for a collection of resources.
@@ -1331,6 +1362,10 @@ class BundleResponse with _$BundleResponse {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Linkage] Identifies two or more records (resource instances) that refer
@@ -1520,6 +1555,11 @@ class Linkage with Resource, _$Linkage {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [LinkageItem] Identifies two or more records (resource instances) that
@@ -1629,6 +1669,10 @@ class LinkageItem with _$LinkageItem {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MessageHeader] The header for a message exchange that is either
@@ -1896,6 +1940,11 @@ class MessageHeader with Resource, _$MessageHeader {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MessageHeaderDestination] The header for a message exchange that is
@@ -2027,6 +2076,10 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MessageHeaderSource] The header for a message exchange that is either
@@ -2173,6 +2226,10 @@ class MessageHeaderSource with _$MessageHeaderSource {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MessageHeaderResponse] The header for a message exchange that is either
@@ -2297,6 +2354,10 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [OperationOutcome] A collection of error, warning, or information
@@ -2466,6 +2527,11 @@ class OperationOutcome with Resource, _$OperationOutcome {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [OperationOutcomeIssue] A collection of error, warning, or information
@@ -2641,6 +2707,10 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Parameters] This resource is a non-persisted resource used to pass
@@ -2773,6 +2843,11 @@ class Parameters with Resource, _$Parameters {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ParametersParameter] This resource is a non-persisted resource used to
@@ -3231,6 +3306,10 @@ class ParametersParameter with _$ParametersParameter {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Subscription] The subscription resource is used to define a push-based
@@ -3464,6 +3543,11 @@ class Subscription with Resource, _$Subscription {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [SubscriptionChannel] The subscription resource is used to define a
@@ -3612,6 +3696,10 @@ class SubscriptionChannel with _$SubscriptionChannel {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [SubscriptionStatus] The SubscriptionStatus resource describes the state of a Subscription during notifications.
@@ -3760,6 +3848,11 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -3847,6 +3940,10 @@ class SubscriptionStatusNotificationEvent
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [SubscriptionTopic] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
@@ -4094,6 +4191,11 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [SubscriptionTopicResourceTrigger] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
@@ -4177,6 +4279,10 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [SubscriptionTopicQueryCriteria] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
@@ -4261,6 +4367,10 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [SubscriptionTopicEventTrigger] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
@@ -4329,6 +4439,10 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [SubscriptionTopicCanFilterBy] Describes a stream of resource state changes or events and annotated with labels useful to filter projections from this topic.
@@ -4412,6 +4526,10 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -4484,4 +4602,8 @@ class SubscriptionTopicNotificationShape
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

@@ -398,6 +398,11 @@ class Immunization with Resource, _$Immunization {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ImmunizationPerformer] Describes the event of a patient being
@@ -503,6 +508,10 @@ class ImmunizationPerformer with _$ImmunizationPerformer {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ImmunizationEducation] Describes the event of a patient being
@@ -640,6 +649,10 @@ class ImmunizationEducation with _$ImmunizationEducation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ImmunizationReaction] Describes the event of a patient being
@@ -758,6 +771,10 @@ class ImmunizationReaction with _$ImmunizationReaction {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ImmunizationProtocolApplied] Describes the event of a patient being
@@ -921,6 +938,10 @@ class ImmunizationProtocolApplied with _$ImmunizationProtocolApplied {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ImmunizationEvaluation] Describes a comparison of an immunization event
@@ -1218,6 +1239,11 @@ class ImmunizationEvaluation with Resource, _$ImmunizationEvaluation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ImmunizationRecommendation] A patient's point-in-time set of
@@ -1412,6 +1438,11 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1945,6 +1976,11 @@ class Medication with Resource, _$Medication {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationIngredient] This resource is primarily used for the
@@ -2074,6 +2110,10 @@ class MedicationIngredient with _$MedicationIngredient {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationBatch] This resource is primarily used for the identification
@@ -2188,6 +2228,10 @@ class MedicationBatch with _$MedicationBatch {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationAdministration] Describes the event of a patient consuming or
@@ -2538,6 +2582,11 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -2809,6 +2858,10 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationDispense] Indicates that a medication product is to be or has
@@ -3190,6 +3243,11 @@ class MedicationDispense with Resource, _$MedicationDispense {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationDispensePerformer] Indicates that a medication product is to
@@ -3299,6 +3357,10 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationDispenseSubstitution] Indicates that a medication product is
@@ -3428,6 +3490,10 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationKnowledge] Information about a medication that is used to
@@ -3766,6 +3832,11 @@ class MedicationKnowledge with Resource, _$MedicationKnowledge {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -3963,6 +4034,10 @@ class MedicationKnowledgeMonograph with _$MedicationKnowledgeMonograph {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationKnowledgeIngredient] Information about a medication that is
@@ -4090,6 +4165,10 @@ class MedicationKnowledgeIngredient with _$MedicationKnowledgeIngredient {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationKnowledgeCost] Information about a medication that is used to
@@ -4204,6 +4283,10 @@ class MedicationKnowledgeCost with _$MedicationKnowledgeCost {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -4511,6 +4594,10 @@ class MedicationKnowledgeDosage with _$MedicationKnowledgeDosage {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -4815,6 +4902,10 @@ class MedicationKnowledgePackaging with _$MedicationKnowledgePackaging {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -5048,6 +5139,10 @@ class MedicationKnowledgeRegulatory with _$MedicationKnowledgeRegulatory {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationKnowledgeSubstitution] Information about a medication that is
@@ -5158,6 +5253,10 @@ class MedicationKnowledgeSubstitution with _$MedicationKnowledgeSubstitution {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationKnowledgeSchedule] Information about a medication that is
@@ -5255,6 +5354,10 @@ class MedicationKnowledgeSchedule with _$MedicationKnowledgeSchedule {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationKnowledgeMaxDispense] Information about a medication that is
@@ -5360,6 +5463,10 @@ class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationKnowledgeKinetics] Information about a medication that is
@@ -5471,6 +5578,10 @@ class MedicationKnowledgeKinetics with _$MedicationKnowledgeKinetics {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationRequest] An order or request for both supply of the medication
@@ -5959,6 +6070,11 @@ class MedicationRequest with Resource, _$MedicationRequest {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationRequestDispenseRequest] An order or request for both supply
@@ -6221,6 +6337,10 @@ class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationRequestSubstitution] An order or request for both supply of
@@ -6343,6 +6463,10 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MedicationStatement] A record of a medication that is being consumed by
@@ -6695,4 +6819,9 @@ class MedicationStatement with Resource, _$MedicationStatement {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }

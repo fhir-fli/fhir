@@ -261,6 +261,11 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -1087,6 +1092,11 @@ class Device with Resource, _$Device {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DeviceUdiCarrier] A type of a manufactured item that is used in the
@@ -1282,6 +1292,10 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DeviceDeviceName] A type of a manufactured item that is used in the
@@ -1399,6 +1413,10 @@ class DeviceDeviceName with _$DeviceDeviceName {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DeviceSpecialization] A type of a manufactured item that is used in the
@@ -1509,6 +1527,10 @@ class DeviceSpecialization with _$DeviceSpecialization {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DeviceVersion] A type of a manufactured item that is used in the
@@ -1622,6 +1644,10 @@ class DeviceVersion with _$DeviceVersion {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DeviceProperty] A type of a manufactured item that is used in the
@@ -1732,6 +1758,10 @@ class DeviceProperty with _$DeviceProperty {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DeviceMetric] Describes a measurement, calculation or setting capability
@@ -2008,6 +2038,11 @@ class DeviceMetric with Resource, _$DeviceMetric {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DeviceMetricCalibration] Describes a measurement, calculation or
@@ -2130,6 +2165,10 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NutritionProduct] A food or supplement that is consumed by patients.
@@ -2276,6 +2315,11 @@ class NutritionProduct with Resource, _$NutritionProduct {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NutritionProductNutrient] A food or supplement that is consumed by patients.
@@ -2348,6 +2392,10 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NutritionProductIngredient] A food or supplement that is consumed by patients.
@@ -2420,6 +2468,10 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NutritionProductCharacteristic] A food or supplement that is consumed by patients.
@@ -2538,6 +2590,10 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [NutritionProductInstance] A food or supplement that is consumed by patients.
@@ -2622,6 +2678,10 @@ class NutritionProductInstance with _$NutritionProductInstance {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Substance] A homogeneous material with a definite composition.
@@ -2763,6 +2823,11 @@ class Substance with Resource, _$Substance {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [SubstanceInstance] A homogeneous material with a definite composition.
@@ -2845,6 +2910,10 @@ class SubstanceInstance with _$SubstanceInstance {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [SubstanceIngredient] A homogeneous material with a definite
@@ -2926,4 +2995,8 @@ class SubstanceIngredient with _$SubstanceIngredient {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

@@ -504,6 +504,11 @@ class Appointment with Resource, _$Appointment {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AppointmentParticipant] A booking of a healthcare event among patient(s),
@@ -642,6 +647,10 @@ class AppointmentParticipant with _$AppointmentParticipant {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AppointmentRecurrenceTemplate] A booking of a healthcare event among
@@ -833,6 +842,10 @@ class AppointmentRecurrenceTemplate with _$AppointmentRecurrenceTemplate {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AppointmentWeeklyTemplate] A booking of a healthcare event among
@@ -1025,6 +1038,10 @@ class AppointmentWeeklyTemplate with _$AppointmentWeeklyTemplate {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AppointmentMonthlyTemplate] A booking of a healthcare event among
@@ -1162,6 +1179,10 @@ class AppointmentMonthlyTemplate with _$AppointmentMonthlyTemplate {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AppointmentYearlyTemplate] A booking of a healthcare event among
@@ -1271,6 +1292,10 @@ class AppointmentYearlyTemplate with _$AppointmentYearlyTemplate {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AppointmentResponse] A reply to an appointment request for a patient
@@ -1583,6 +1608,11 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Schedule] A container for slots of time that may be available for booking
@@ -1837,6 +1867,11 @@ class Schedule with Resource, _$Schedule {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Slot] A slot of time on a schedule that may be available for booking
@@ -2105,6 +2140,11 @@ class Slot with Resource, _$Slot {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Task] A task to be performed.
@@ -2552,6 +2592,11 @@ class Task with Resource, _$Task {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TaskPerformer] A task to be performed.
@@ -2657,6 +2702,10 @@ class TaskPerformer with _$TaskPerformer {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TaskRestriction] A task to be performed.
@@ -2778,6 +2827,10 @@ class TaskRestriction with _$TaskRestriction {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TaskInput] A task to be performed.
@@ -3262,6 +3315,10 @@ class TaskInput with _$TaskInput {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TaskOutput] A task to be performed.
@@ -3749,6 +3806,10 @@ class TaskOutput with _$TaskOutput {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Transport] Record of transport of item.
@@ -4197,6 +4258,11 @@ class Transport with Resource, _$Transport {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TransportRestriction] Record of transport of item.
@@ -4314,6 +4380,10 @@ class TransportRestriction with _$TransportRestriction {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TransportInput] Record of transport of item.
@@ -4798,6 +4868,10 @@ class TransportInput with _$TransportInput {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TransportOutput] Record of transport of item.
@@ -5285,6 +5359,10 @@ class TransportOutput with _$TransportOutput {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [VerificationResult] Describes validation requirements, source(s), status
@@ -5570,6 +5648,11 @@ class VerificationResult with Resource, _$VerificationResult {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [VerificationResultPrimarySource] Describes validation requirements,
@@ -5722,6 +5805,10 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [VerificationResultAttestation] Describes validation requirements,
@@ -5896,6 +5983,10 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [VerificationResultValidator] Describes validation requirements, source(s),
@@ -6019,4 +6110,8 @@ class VerificationResultValidator with _$VerificationResultValidator {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

@@ -649,6 +649,11 @@ class Measure with Resource, _$Measure {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MeasureGroup] The Measure resource provides the definition of a quality
@@ -776,6 +781,10 @@ class MeasureGroup with _$MeasureGroup {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MeasurePopulation] The Measure resource provides the definition of a
@@ -890,6 +899,10 @@ class MeasurePopulation with _$MeasurePopulation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MeasureStratifier] The Measure resource provides the definition of a
@@ -1021,6 +1034,10 @@ class MeasureStratifier with _$MeasureStratifier {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MeasureComponent] The Measure resource provides the definition of a
@@ -1147,6 +1164,10 @@ class MeasureComponent with _$MeasureComponent {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MeasureSupplementalData] The Measure resource provides the definition
@@ -1284,6 +1305,10 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MeasureReport] The MeasureReport resource contains the results of the
@@ -1544,6 +1569,11 @@ class MeasureReport with Resource, _$MeasureReport {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MeasureReportGroup] The MeasureReport resource contains the results of
@@ -1667,6 +1697,10 @@ class MeasureReportGroup with _$MeasureReportGroup {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MeasureReportPopulation] The MeasureReport resource contains the
@@ -1782,6 +1816,10 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MeasureReportStratifier] The MeasureReport resource contains the
@@ -1891,6 +1929,10 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MeasureReportStratum] The MeasureReport resource contains the results
@@ -2014,6 +2056,10 @@ class MeasureReportStratum with _$MeasureReportStratum {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MeasureReportComponent] The MeasureReport resource contains the results
@@ -2117,6 +2163,10 @@ class MeasureReportComponent with _$MeasureReportComponent {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MeasureReportPopulation1] The MeasureReport resource contains the
@@ -2234,6 +2284,10 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestReport] A summary of information based on the results of executing a
@@ -2503,6 +2557,11 @@ class TestReport with Resource, _$TestReport {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestReportParticipant] A summary of information based on the results of
@@ -2625,6 +2684,10 @@ class TestReportParticipant with _$TestReportParticipant {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestReportSetup] A summary of information based on the results of
@@ -2722,6 +2785,10 @@ class TestReportSetup with _$TestReportSetup {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestReportAction] A summary of information based on the results of
@@ -2826,6 +2893,10 @@ class TestReportAction with _$TestReportAction {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestReportOperation] A summary of information based on the results of
@@ -2948,6 +3019,10 @@ class TestReportOperation with _$TestReportOperation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestReportAssert] A summary of information based on the results of
@@ -3070,6 +3145,10 @@ class TestReportAssert with _$TestReportAssert {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestReportTest] A summary of information based on the results of
@@ -3191,6 +3270,10 @@ class TestReportTest with _$TestReportTest {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestReportAction1] A summary of information based on the results of
@@ -3295,6 +3378,10 @@ class TestReportAction1 with _$TestReportAction1 {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestReportTeardown] A summary of information based on the results of
@@ -3392,6 +3479,10 @@ class TestReportTeardown with _$TestReportTeardown {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestReportAction2] A summary of information based on the results of
@@ -3489,6 +3580,10 @@ class TestReportAction2 with _$TestReportAction2 {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScript] A structured set of tests against a FHIR server or client
@@ -3901,6 +3996,11 @@ class TestScript with Resource, _$TestScript {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptOrigin] A structured set of tests against a FHIR server or
@@ -4011,6 +4111,10 @@ class TestScriptOrigin with _$TestScriptOrigin {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptDestination] A structured set of tests against a FHIR server
@@ -4121,6 +4225,10 @@ class TestScriptDestination with _$TestScriptDestination {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptMetadata] A structured set of tests against a FHIR server or
@@ -4226,6 +4334,10 @@ class TestScriptMetadata with _$TestScriptMetadata {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptLink] A structured set of tests against a FHIR server or
@@ -4341,6 +4453,10 @@ class TestScriptLink with _$TestScriptLink {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptCapability] A structured set of tests against a FHIR server
@@ -4513,6 +4629,10 @@ class TestScriptCapability with _$TestScriptCapability {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptFixture] A structured set of tests against a FHIR server or
@@ -4645,6 +4765,10 @@ class TestScriptFixture with _$TestScriptFixture {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptVariable] A structured set of tests against a FHIR server or
@@ -4836,6 +4960,10 @@ class TestScriptVariable with _$TestScriptVariable {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptSetup] A structured set of tests against a FHIR server or
@@ -4934,6 +5062,10 @@ class TestScriptSetup with _$TestScriptSetup {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptAction] A structured set of tests against a FHIR server or
@@ -5039,6 +5171,10 @@ class TestScriptAction with _$TestScriptAction {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptOperation] A structured set of tests against a FHIR server or
@@ -5320,6 +5456,10 @@ class TestScriptOperation with _$TestScriptOperation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptRequestHeader] A structured set of tests against a FHIR
@@ -5433,6 +5573,10 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptAssert] A structured set of tests against a FHIR server or
@@ -5793,6 +5937,10 @@ class TestScriptAssert with _$TestScriptAssert {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptTest] A structured set of tests against a FHIR server or
@@ -5915,6 +6063,10 @@ class TestScriptTest with _$TestScriptTest {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptAction1] A structured set of tests against a FHIR server or
@@ -6020,6 +6172,10 @@ class TestScriptAction1 with _$TestScriptAction1 {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptTeardown] A structured set of tests against a FHIR server or
@@ -6118,6 +6274,10 @@ class TestScriptTeardown with _$TestScriptTeardown {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [TestScriptAction2] A structured set of tests against a FHIR server or
@@ -6216,4 +6376,8 @@ class TestScriptAction2 with _$TestScriptAction2 {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

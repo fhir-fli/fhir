@@ -213,6 +213,11 @@ class AdverseEvent with Resource, _$AdverseEvent {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AdverseEventSuspectEntity] Actual or  potential/avoided event causing
@@ -293,6 +298,10 @@ class AdverseEventSuspectEntity with _$AdverseEventSuspectEntity {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AdverseEventCausality] Actual or  potential/avoided event causing
@@ -381,6 +390,10 @@ class AdverseEventCausality with _$AdverseEventCausality {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AllergyIntolerance] Risk of harmful or undesirable, physiological
@@ -602,6 +615,11 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [AllergyIntoleranceReaction] Risk of harmful or undesirable,
@@ -717,6 +735,10 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ClinicalImpression] A record of a clinical assessment performed to
@@ -930,6 +952,11 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ClinicalImpressionInvestigation] A record of a clinical assessment
@@ -1015,6 +1042,10 @@ class ClinicalImpressionInvestigation with _$ClinicalImpressionInvestigation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ClinicalImpressionFinding] A record of a clinical assessment performed
@@ -1104,6 +1135,10 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Condition] A clinical condition, problem, diagnosis, or other event,
@@ -1334,6 +1369,11 @@ class Condition with Resource, _$Condition {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConditionStage] A clinical condition, problem, diagnosis, or other
@@ -1415,6 +1455,10 @@ class ConditionStage with _$ConditionStage {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ConditionEvidence] A clinical condition, problem, diagnosis, or other
@@ -1493,6 +1537,10 @@ class ConditionEvidence with _$ConditionEvidence {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DetectedIssue] Indicates an actual or potential clinical issue with or
@@ -1669,6 +1717,11 @@ class DetectedIssue with Resource, _$DetectedIssue {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DetectedIssueEvidence] Indicates an actual or potential clinical issue
@@ -1747,6 +1800,10 @@ class DetectedIssueEvidence with _$DetectedIssueEvidence {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DetectedIssueMitigation] Indicates an actual or potential clinical
@@ -1833,6 +1890,10 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [FamilyMemberHistory] Significant health conditions for a person related
@@ -2077,6 +2138,11 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [FamilyMemberHistoryCondition] Significant health conditions for a
@@ -2192,6 +2258,10 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Procedure] An action that is or was performed on or for a patient. This
@@ -2455,6 +2525,11 @@ class Procedure with Resource, _$Procedure {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ProcedurePerformer] An action that is or was performed on or for a
@@ -2536,6 +2611,10 @@ class ProcedurePerformer with _$ProcedurePerformer {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ProcedureFocalDevice] An action that is or was performed on or for a
@@ -2614,4 +2693,8 @@ class ProcedureFocalDevice with _$ProcedureFocalDevice {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }

@@ -298,6 +298,11 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [FhirEndpointPayload] The technical details of an endpoint that can be used for
@@ -423,6 +428,10 @@ class FhirEndpointPayload with _$FhirEndpointPayload {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [HealthcareService] The details of a healthcare service available at a
@@ -789,6 +798,11 @@ class HealthcareService with Resource, _$HealthcareService {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [HealthcareServiceEligibility] The details of a healthcare service
@@ -901,6 +915,10 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Location] Details and position information for a place where services are
@@ -1228,6 +1246,11 @@ class Location with Resource, _$Location {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [LocationPosition] Details and position information for a place where
@@ -1369,6 +1392,10 @@ class LocationPosition with _$LocationPosition {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Organization] A formally or informally recognized grouping of people or
@@ -1640,6 +1667,11 @@ class Organization with Resource, _$Organization {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [OrganizationQualification] A formally or informally recognized grouping of
@@ -1767,6 +1799,10 @@ class OrganizationQualification with _$OrganizationQualification {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [OrganizationAffiliation] Defines an affiliation/association/relationship
@@ -2024,4 +2060,9 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }

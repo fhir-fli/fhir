@@ -233,6 +233,11 @@ class BodyStructure with Resource, _$BodyStructure {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DiagnosticReport] The findings and interpretation of diagnostic  tests
@@ -571,6 +576,11 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [DiagnosticReportMedia] The findings and interpretation of diagnostic
@@ -686,6 +696,10 @@ class DiagnosticReportMedia with _$DiagnosticReportMedia {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ImagingStudy] Representation of the content produced in a DICOM imaging
@@ -1022,6 +1036,11 @@ class ImagingStudy with Resource, _$ImagingStudy {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ImagingStudySeries] Representation of the content produced in a DICOM
@@ -1235,6 +1254,10 @@ class ImagingStudySeries with _$ImagingStudySeries {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ImagingStudyPerformer] Representation of the content produced in a
@@ -1343,6 +1366,10 @@ class ImagingStudyPerformer with _$ImagingStudyPerformer {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ImagingStudyInstance] Representation of the content produced in a DICOM
@@ -1474,6 +1501,10 @@ class ImagingStudyInstance with _$ImagingStudyInstance {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Media] A photo, video, or audio recording acquired or used in
@@ -1825,6 +1856,11 @@ class Media with Resource, _$Media {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MolecularSequence] Raw data describing a biological sequence.
@@ -2121,6 +2157,11 @@ class MolecularSequence with Resource, _$MolecularSequence {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MolecularSequenceReferenceSeq] Raw data describing a biological
@@ -2326,6 +2367,10 @@ class MolecularSequenceReferenceSeq with _$MolecularSequenceReferenceSeq {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MolecularSequenceVariant] Raw data describing a biological sequence.
@@ -2512,6 +2557,10 @@ class MolecularSequenceVariant with _$MolecularSequenceVariant {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MolecularSequenceQuality] Raw data describing a biological sequence.
@@ -2781,6 +2830,10 @@ class MolecularSequenceQuality with _$MolecularSequenceQuality {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MolecularSequenceRoc] Raw data describing a biological sequence.
@@ -2956,6 +3009,10 @@ class MolecularSequenceRoc with _$MolecularSequenceRoc {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MolecularSequenceRepository] Raw data describing a biological sequence.
@@ -3121,6 +3178,10 @@ class MolecularSequenceRepository with _$MolecularSequenceRepository {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 @freezed
@@ -3359,6 +3420,10 @@ class MolecularSequenceOuter with _$MolecularSequenceOuter {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [MolecularSequenceInner] Raw data describing a biological sequence.
@@ -3478,6 +3543,10 @@ class MolecularSequenceInner with _$MolecularSequenceInner {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Observation] Measurements and simple assertions made about a patient,
@@ -3995,6 +4064,11 @@ class Observation with Resource, _$Observation {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ObservationReferenceRange] Measurements and simple assertions made
@@ -4154,6 +4228,10 @@ class ObservationReferenceRange with _$ObservationReferenceRange {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [ObservationComponent] Measurements and simple assertions made about a
@@ -4376,6 +4454,10 @@ class ObservationComponent with _$ObservationComponent {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [QuestionnaireResponse] A structured set of questions and their answers.
@@ -4634,6 +4716,11 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [QuestionnaireResponseItem] A structured set of questions and their
@@ -4774,6 +4861,10 @@ class QuestionnaireResponseItem with _$QuestionnaireResponseItem {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [QuestionnaireResponseAnswer] A structured set of questions and their
@@ -4999,6 +5090,10 @@ class QuestionnaireResponseAnswer with _$QuestionnaireResponseAnswer {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [Specimen] A sample to be used for analysis.
@@ -5254,6 +5349,11 @@ class Specimen with Resource, _$Specimen {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  @override
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [SpecimenCollection] A sample to be used for analysis.
@@ -5415,6 +5515,10 @@ class SpecimenCollection with _$SpecimenCollection {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [SpecimenProcessing] A sample to be used for analysis.
@@ -5551,6 +5655,10 @@ class SpecimenProcessing with _$SpecimenProcessing {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
 
 /// [SpecimenContainer] A sample to be used for analysis.
@@ -5698,4 +5806,8 @@ class SpecimenContainer with _$SpecimenContainer {
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
+
+  /// Another convenience method because more and more I'm transmitting FHIR
+  /// data as a String and not a Map
+  String toJsonString() => jsonEncode(toJson());
 }
