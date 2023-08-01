@@ -82,49 +82,37 @@ abstract class $AppointmentCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-          AppointmentStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      AppointmentStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       CodeableConcept? reason,
       FhirUnsignedInt? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      @JsonKey(name: '_priority') Element? priorityElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       FhirInstant? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
+      @JsonKey(name: '_start') Element? startElement,
       FhirInstant? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
+      @JsonKey(name: '_end') Element? endElement,
       FhirPositiveInt? minutesDuration,
-      @JsonKey(name: '_minutesDuration')
-          Element? minutesDurationElement,
+      @JsonKey(name: '_minutesDuration') Element? minutesDurationElement,
       List<Reference>? slot,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      @JsonKey(name: '_comment') Element? commentElement,
       List<AppointmentParticipant> participant});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -482,49 +470,37 @@ abstract class _$$_AppointmentCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-          AppointmentStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      AppointmentStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       CodeableConcept? reason,
       FhirUnsignedInt? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      @JsonKey(name: '_priority') Element? priorityElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       FhirInstant? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
+      @JsonKey(name: '_start') Element? startElement,
       FhirInstant? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
+      @JsonKey(name: '_end') Element? endElement,
       FhirPositiveInt? minutesDuration,
-      @JsonKey(name: '_minutesDuration')
-          Element? minutesDurationElement,
+      @JsonKey(name: '_minutesDuration') Element? minutesDurationElement,
       List<Reference>? slot,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      @JsonKey(name: '_comment') Element? commentElement,
       List<AppointmentParticipant> participant});
 
   @override
@@ -732,49 +708,37 @@ class __$$_AppointmentCopyWithImpl<$Res>
 class _$_Appointment extends _Appointment {
   const _$_Appointment(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
-          this.resourceType = Dstu2ResourceType.Appointment,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Appointment,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-          required this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      required this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.type,
       this.reason,
       this.priority,
-      @JsonKey(name: '_priority')
-          this.priorityElement,
+      @JsonKey(name: '_priority') this.priorityElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.start,
-      @JsonKey(name: '_start')
-          this.startElement,
+      @JsonKey(name: '_start') this.startElement,
       this.end,
-      @JsonKey(name: '_end')
-          this.endElement,
+      @JsonKey(name: '_end') this.endElement,
       this.minutesDuration,
-      @JsonKey(name: '_minutesDuration')
-          this.minutesDurationElement,
+      @JsonKey(name: '_minutesDuration') this.minutesDurationElement,
       final List<Reference>? slot,
       this.comment,
-      @JsonKey(name: '_comment')
-          this.commentElement,
+      @JsonKey(name: '_comment') this.commentElement,
       required final List<AppointmentParticipant> participant})
       : _contained = contained,
         _extension_ = extension_,
@@ -1026,52 +990,40 @@ class _$_Appointment extends _Appointment {
 
 abstract class _Appointment extends Appointment {
   const factory _Appointment(
-          {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
-              final Dstu2ResourceType resourceType,
-          @JsonKey(includeFromJson: true, includeToJson: false)
-              final int? dbId,
-          @JsonKey(name: 'id')
-              final FhirId? fhirId,
-          final FhirMeta? meta,
-          final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              final Element? implicitRulesElement,
-          final FhirCode? language,
-          @JsonKey(name: '_language')
-              final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final List<Identifier>? identifier,
-          @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-              required final AppointmentStatus status,
-          @JsonKey(name: '_status')
-              final Element? statusElement,
-          final CodeableConcept? type,
-          final CodeableConcept? reason,
-          final FhirUnsignedInt? priority,
-          @JsonKey(name: '_priority')
-              final Element? priorityElement,
-          final String? description,
-          @JsonKey(name: '_description')
-              final Element? descriptionElement,
-          final FhirInstant? start,
-          @JsonKey(name: '_start')
-              final Element? startElement,
-          final FhirInstant? end,
-          @JsonKey(name: '_end')
-              final Element? endElement,
-          final FhirPositiveInt? minutesDuration,
-          @JsonKey(name: '_minutesDuration')
-              final Element? minutesDurationElement,
-          final List<Reference>? slot,
-          final String? comment,
-          @JsonKey(name: '_comment')
-              final Element? commentElement,
-          required final List<AppointmentParticipant> participant}) =
-      _$_Appointment;
+      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final FhirCode? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+      required final AppointmentStatus status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final CodeableConcept? type,
+      final CodeableConcept? reason,
+      final FhirUnsignedInt? priority,
+      @JsonKey(name: '_priority') final Element? priorityElement,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final FhirInstant? start,
+      @JsonKey(name: '_start') final Element? startElement,
+      final FhirInstant? end,
+      @JsonKey(name: '_end') final Element? endElement,
+      final FhirPositiveInt? minutesDuration,
+      @JsonKey(name: '_minutesDuration') final Element? minutesDurationElement,
+      final List<Reference>? slot,
+      final String? comment,
+      @JsonKey(name: '_comment') final Element? commentElement,
+      required final List<AppointmentParticipant>
+          participant}) = _$_Appointment;
   const _Appointment._() : super._();
 
   factory _Appointment.fromJson(Map<String, dynamic> json) =
@@ -1196,21 +1148,17 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
       _$AppointmentParticipantCopyWithImpl<$Res, AppointmentParticipant>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? type,
       Reference? actor,
       @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-          ParticipantRequired? required_,
-      @JsonKey(name: '_required')
-          Element? requiredElement,
+      ParticipantRequired? required_,
+      @JsonKey(name: '_required') Element? requiredElement,
       @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
-          ParticipantStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement});
+      ParticipantStatus status,
+      @JsonKey(name: '_status') Element? statusElement});
 
   $ReferenceCopyWith<$Res>? get actor;
   $ElementCopyWith<$Res>? get requiredElement;
@@ -1327,21 +1275,17 @@ abstract class _$$_AppointmentParticipantCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? type,
       Reference? actor,
       @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-          ParticipantRequired? required_,
-      @JsonKey(name: '_required')
-          Element? requiredElement,
+      ParticipantRequired? required_,
+      @JsonKey(name: '_required') Element? requiredElement,
       @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
-          ParticipantStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement});
+      ParticipantStatus status,
+      @JsonKey(name: '_status') Element? statusElement});
 
   @override
   $ReferenceCopyWith<$Res>? get actor;
@@ -1418,21 +1362,17 @@ class __$$_AppointmentParticipantCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_AppointmentParticipant extends _AppointmentParticipant {
   const _$_AppointmentParticipant(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? type,
       this.actor,
       @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-          this.required_,
-      @JsonKey(name: '_required')
-          this.requiredElement,
+      this.required_,
+      @JsonKey(name: '_required') this.requiredElement,
       @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
-          required this.status,
-      @JsonKey(name: '_status')
-          this.statusElement})
+      required this.status,
+      @JsonKey(name: '_status') this.statusElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _type = type,
@@ -1548,21 +1488,18 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 
 abstract class _AppointmentParticipant extends AppointmentParticipant {
   const factory _AppointmentParticipant(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? type,
       final Reference? actor,
       @JsonKey(unknownEnumValue: ParticipantRequired.unknown, name: 'required')
-          final ParticipantRequired? required_,
-      @JsonKey(name: '_required')
-          final Element? requiredElement,
+      final ParticipantRequired? required_,
+      @JsonKey(name: '_required') final Element? requiredElement,
       @JsonKey(unknownEnumValue: ParticipantStatus.unknown)
-          required final ParticipantStatus status,
+      required final ParticipantStatus status,
       @JsonKey(name: '_status')
-          final Element? statusElement}) = _$_AppointmentParticipant;
+      final Element? statusElement}) = _$_AppointmentParticipant;
   const _AppointmentParticipant._() : super._();
 
   factory _AppointmentParticipant.fromJson(Map<String, dynamic> json) =
@@ -1659,40 +1596,33 @@ abstract class $AppointmentResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference appointment,
       FhirInstant? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
+      @JsonKey(name: '_start') Element? startElement,
       FhirInstant? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
+      @JsonKey(name: '_end') Element? endElement,
       List<CodeableConcept>? participantType,
       Reference? actor,
-      @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
-          AppointmentResponseParticipantStatus participantStatus,
-      @JsonKey(name: '_participantStatus')
-          Element? participantStatusElement,
+      @JsonKey(
+          required: true,
+          unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
+      AppointmentResponseParticipantStatus participantStatus,
+      @JsonKey(name: '_participantStatus') Element? participantStatusElement,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement});
+      @JsonKey(name: '_comment') Element? commentElement});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -1971,40 +1901,33 @@ abstract class _$$_AppointmentResponseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference appointment,
       FhirInstant? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
+      @JsonKey(name: '_start') Element? startElement,
       FhirInstant? end,
-      @JsonKey(name: '_end')
-          Element? endElement,
+      @JsonKey(name: '_end') Element? endElement,
       List<CodeableConcept>? participantType,
       Reference? actor,
-      @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
-          AppointmentResponseParticipantStatus participantStatus,
-      @JsonKey(name: '_participantStatus')
-          Element? participantStatusElement,
+      @JsonKey(
+          required: true,
+          unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
+      AppointmentResponseParticipantStatus participantStatus,
+      @JsonKey(name: '_participantStatus') Element? participantStatusElement,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement});
+      @JsonKey(name: '_comment') Element? commentElement});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -2170,40 +2093,33 @@ class __$$_AppointmentResponseCopyWithImpl<$Res>
 class _$_AppointmentResponse extends _AppointmentResponse {
   const _$_AppointmentResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
-          this.resourceType = Dstu2ResourceType.AppointmentResponse,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.AppointmentResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       required this.appointment,
       this.start,
-      @JsonKey(name: '_start')
-          this.startElement,
+      @JsonKey(name: '_start') this.startElement,
       this.end,
-      @JsonKey(name: '_end')
-          this.endElement,
+      @JsonKey(name: '_end') this.endElement,
       final List<CodeableConcept>? participantType,
       this.actor,
-      @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
-          required this.participantStatus,
-      @JsonKey(name: '_participantStatus')
-          this.participantStatusElement,
+      @JsonKey(
+          required: true,
+          unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
+      required this.participantStatus,
+      @JsonKey(name: '_participantStatus') this.participantStatusElement,
       this.comment,
-      @JsonKey(name: '_comment')
-          this.commentElement})
+      @JsonKey(name: '_comment') this.commentElement})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -2417,41 +2333,36 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
 abstract class _AppointmentResponse extends AppointmentResponse {
   const factory _AppointmentResponse(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
+          {@JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
           final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
-      final FhirMeta? meta,
-      final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
-      final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      required final Reference appointment,
-      final FhirInstant? start,
-      @JsonKey(name: '_start')
-          final Element? startElement,
-      final FhirInstant? end,
-      @JsonKey(name: '_end')
-          final Element? endElement,
-      final List<CodeableConcept>? participantType,
-      final Reference? actor,
-      @JsonKey(required: true, unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
+          @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+          @JsonKey(name: 'id') final FhirId? fhirId,
+          final FhirMeta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final FhirCode? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          required final Reference appointment,
+          final FhirInstant? start,
+          @JsonKey(name: '_start') final Element? startElement,
+          final FhirInstant? end,
+          @JsonKey(name: '_end') final Element? endElement,
+          final List<CodeableConcept>? participantType,
+          final Reference? actor,
+          @JsonKey(
+              required: true,
+              unknownEnumValue: AppointmentResponseParticipantStatus.unknown)
           required final AppointmentResponseParticipantStatus participantStatus,
-      @JsonKey(name: '_participantStatus')
+          @JsonKey(name: '_participantStatus')
           final Element? participantStatusElement,
-      final String? comment,
-      @JsonKey(name: '_comment')
-          final Element? commentElement}) = _$_AppointmentResponse;
+          final String? comment,
+          @JsonKey(name: '_comment') final Element? commentElement}) =
+      _$_AppointmentResponse;
   const _AppointmentResponse._() : super._();
 
   factory _AppointmentResponse.fromJson(Map<String, dynamic> json) =
@@ -2570,30 +2481,24 @@ abstract class $ScheduleCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<CodeableConcept>? type,
       Reference actor,
       Period? planningHorizon,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement});
+      @JsonKey(name: '_comment') Element? commentElement});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -2802,30 +2707,24 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<CodeableConcept>? type,
       Reference actor,
       Period? planningHorizon,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement});
+      @JsonKey(name: '_comment') Element? commentElement});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -2955,30 +2854,24 @@ class __$$_ScheduleCopyWithImpl<$Res>
 class _$_Schedule extends _Schedule {
   const _$_Schedule(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
-          this.resourceType = Dstu2ResourceType.Schedule,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Schedule,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<CodeableConcept>? type,
       required this.actor,
       this.planningHorizon,
       this.comment,
-      @JsonKey(name: '_comment')
-          this.commentElement})
+      @JsonKey(name: '_comment') this.commentElement})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -3155,30 +3048,24 @@ class _$_Schedule extends _Schedule {
 abstract class _Schedule extends Schedule {
   const factory _Schedule(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<CodeableConcept>? type,
       required final Reference actor,
       final Period? planningHorizon,
       final String? comment,
-      @JsonKey(name: '_comment')
-          final Element? commentElement}) = _$_Schedule;
+      @JsonKey(name: '_comment') final Element? commentElement}) = _$_Schedule;
   const _Schedule._() : super._();
 
   factory _Schedule.fromJson(Map<String, dynamic> json) = _$_Schedule.fromJson;
@@ -3287,40 +3174,31 @@ abstract class $SlotCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? type,
       Reference schedule,
       @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
-          SlotFreeBusyType freeBusyType,
+      SlotFreeBusyType freeBusyType,
       FhirInstant start,
-      @JsonKey(name: '_start')
-          Element? startElement,
+      @JsonKey(name: '_start') Element? startElement,
       FhirInstant end,
-      @JsonKey(name: '_end')
-          Element? endElement,
+      @JsonKey(name: '_end') Element? endElement,
       FhirBoolean? overbooked,
-      @JsonKey(name: '_overbooked')
-          Element? overbookedElement,
+      @JsonKey(name: '_overbooked') Element? overbookedElement,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement});
+      @JsonKey(name: '_comment') Element? commentElement});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -3597,40 +3475,31 @@ abstract class _$$_SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? type,
       Reference schedule,
       @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
-          SlotFreeBusyType freeBusyType,
+      SlotFreeBusyType freeBusyType,
       FhirInstant start,
-      @JsonKey(name: '_start')
-          Element? startElement,
+      @JsonKey(name: '_start') Element? startElement,
       FhirInstant end,
-      @JsonKey(name: '_end')
-          Element? endElement,
+      @JsonKey(name: '_end') Element? endElement,
       FhirBoolean? overbooked,
-      @JsonKey(name: '_overbooked')
-          Element? overbookedElement,
+      @JsonKey(name: '_overbooked') Element? overbookedElement,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement});
+      @JsonKey(name: '_comment') Element? commentElement});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -3794,40 +3663,31 @@ class __$$_SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res, _$_Slot>
 class _$_Slot extends _Slot {
   const _$_Slot(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
-          this.resourceType = Dstu2ResourceType.Slot,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Slot,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.type,
       required this.schedule,
       @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
-          required this.freeBusyType,
+      required this.freeBusyType,
       required this.start,
-      @JsonKey(name: '_start')
-          this.startElement,
+      @JsonKey(name: '_start') this.startElement,
       required this.end,
-      @JsonKey(name: '_end')
-          this.endElement,
+      @JsonKey(name: '_end') this.endElement,
       this.overbooked,
-      @JsonKey(name: '_overbooked')
-          this.overbookedElement,
+      @JsonKey(name: '_overbooked') this.overbookedElement,
       this.comment,
-      @JsonKey(name: '_comment')
-          this.commentElement})
+      @JsonKey(name: '_comment') this.commentElement})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -4028,40 +3888,31 @@ class _$_Slot extends _Slot {
 abstract class _Slot extends Slot {
   const factory _Slot(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final CodeableConcept? type,
       required final Reference schedule,
       @JsonKey(unknownEnumValue: SlotFreeBusyType.unknown)
-          required final SlotFreeBusyType freeBusyType,
+      required final SlotFreeBusyType freeBusyType,
       required final FhirInstant start,
-      @JsonKey(name: '_start')
-          final Element? startElement,
+      @JsonKey(name: '_start') final Element? startElement,
       required final FhirInstant end,
-      @JsonKey(name: '_end')
-          final Element? endElement,
+      @JsonKey(name: '_end') final Element? endElement,
       final FhirBoolean? overbooked,
-      @JsonKey(name: '_overbooked')
-          final Element? overbookedElement,
+      @JsonKey(name: '_overbooked') final Element? overbookedElement,
       final String? comment,
-      @JsonKey(name: '_comment')
-          final Element? commentElement}) = _$_Slot;
+      @JsonKey(name: '_comment') final Element? commentElement}) = _$_Slot;
   const _Slot._() : super._();
 
   factory _Slot.fromJson(Map<String, dynamic> json) = _$_Slot.fromJson;

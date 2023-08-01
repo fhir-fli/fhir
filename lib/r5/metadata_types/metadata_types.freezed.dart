@@ -1265,28 +1265,22 @@ class __$$_VirtualServiceDetailCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_VirtualServiceDetail extends _VirtualServiceDetail {
   const _$_VirtualServiceDetail(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.channelType,
       this.addressUrl,
-      @JsonKey(name: '_addressUrl')
-          this.addressUrlElement,
+      @JsonKey(name: '_addressUrl') this.addressUrlElement,
       this.addressString,
-      @JsonKey(name: '_addressString')
-          this.addressStringElement,
+      @JsonKey(name: '_addressString') this.addressStringElement,
       this.addressContactPoint,
       this.addressExtendedContactDetail,
       final List<FhirUrl>? additionalInfo,
       @JsonKey(name: '_additionalInfo')
-          final List<Element>? additionalInfoElement,
+      final List<Element>? additionalInfoElement,
       this.maxParticipants,
-      @JsonKey(name: '_maxParticipants')
-          this.maxParticipantsElement,
+      @JsonKey(name: '_maxParticipants') this.maxParticipantsElement,
       this.sessionKey,
-      @JsonKey(name: '_sessionKey')
-          this.sessionKeyElement})
+      @JsonKey(name: '_sessionKey') this.sessionKeyElement})
       : _extension_ = extension_,
         _additionalInfo = additionalInfo,
         _additionalInfoElement = additionalInfoElement,
@@ -1500,28 +1494,23 @@ class _$_VirtualServiceDetail extends _VirtualServiceDetail {
 
 abstract class _VirtualServiceDetail extends VirtualServiceDetail {
   const factory _VirtualServiceDetail(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final Coding? channelType,
       final FhirUrl? addressUrl,
-      @JsonKey(name: '_addressUrl')
-          final Element? addressUrlElement,
+      @JsonKey(name: '_addressUrl') final Element? addressUrlElement,
       final String? addressString,
-      @JsonKey(name: '_addressString')
-          final Element? addressStringElement,
+      @JsonKey(name: '_addressString') final Element? addressStringElement,
       final ContactPoint? addressContactPoint,
       final ExtendedContactDetail? addressExtendedContactDetail,
       final List<FhirUrl>? additionalInfo,
       @JsonKey(name: '_additionalInfo')
-          final List<Element>? additionalInfoElement,
+      final List<Element>? additionalInfoElement,
       final FhirPositiveInt? maxParticipants,
-      @JsonKey(name: '_maxParticipants')
-          final Element? maxParticipantsElement,
+      @JsonKey(name: '_maxParticipants') final Element? maxParticipantsElement,
       final String? sessionKey,
       @JsonKey(name: '_sessionKey')
-          final Element? sessionKeyElement}) = _$_VirtualServiceDetail;
+      final Element? sessionKeyElement}) = _$_VirtualServiceDetail;
   const _VirtualServiceDetail._() : super._();
 
   factory _VirtualServiceDetail.fromJson(Map<String, dynamic> json) =
@@ -2457,24 +2446,19 @@ class _$_AvailabilityAvailableTime extends _AvailabilityAvailableTime {
 
 abstract class _AvailabilityAvailableTime extends AvailabilityAvailableTime {
   const factory _AvailabilityAvailableTime(
-          {@JsonKey(name: 'id')
-              final String? fhirId,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final List<FhirCode>? daysOfWeek,
-          @JsonKey(name: '_daysOfWeek')
-              final List<Element>? daysOfWeekElement,
-          final FhirBoolean? allDay,
-          @JsonKey(name: '_allDay')
-              final Element? allDayElement,
-          final FhirTime? availableStartTime,
-          @JsonKey(name: '_availableStartTime')
-              final Element? availableStartTimeElement,
-          final FhirTime? availableEndTime,
-          @JsonKey(name: '_availableEndTime')
-              final Element? availableEndTimeElement}) =
-      _$_AvailabilityAvailableTime;
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<FhirCode>? daysOfWeek,
+      @JsonKey(name: '_daysOfWeek') final List<Element>? daysOfWeekElement,
+      final FhirBoolean? allDay,
+      @JsonKey(name: '_allDay') final Element? allDayElement,
+      final FhirTime? availableStartTime,
+      @JsonKey(name: '_availableStartTime')
+      final Element? availableStartTimeElement,
+      final FhirTime? availableEndTime,
+      @JsonKey(name: '_availableEndTime')
+      final Element? availableEndTimeElement}) = _$_AvailabilityAvailableTime;
   const _AvailabilityAvailableTime._() : super._();
 
   factory _AvailabilityAvailableTime.fromJson(Map<String, dynamic> json) =
@@ -8594,32 +8578,26 @@ class _$_RelatedArtifact extends _RelatedArtifact {
 
 abstract class _RelatedArtifact extends RelatedArtifact {
   const factory _RelatedArtifact(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final RelatedArtifactType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      @JsonKey(name: '_type') final Element? typeElement,
       final List<CodeableConcept>? classifier,
       final String? label,
-      @JsonKey(name: '_label')
-          final Element? labelElement,
+      @JsonKey(name: '_label') final Element? labelElement,
       final String? display,
-      @JsonKey(name: '_display')
-          final Element? displayElement,
+      @JsonKey(name: '_display') final Element? displayElement,
       final FhirMarkdown? citation,
-      @JsonKey(name: '_citation')
-          final Element? citationElement,
+      @JsonKey(name: '_citation') final Element? citationElement,
       final Attachment? document,
       final FhirCanonical? resource,
       final Reference? resourceReference,
       final FhirCode? publicationStatus,
       @JsonKey(name: '_publicationStatus')
-          final Element? publicationStatusElement,
+      final Element? publicationStatusElement,
       final FhirDate? publicationDate,
       @JsonKey(name: '_publicationDate')
-          final Element? publicationDateElement}) = _$_RelatedArtifact;
+      final Element? publicationDateElement}) = _$_RelatedArtifact;
   const _RelatedArtifact._() : super._();
 
   factory _RelatedArtifact.fromJson(Map<String, dynamic> json) =

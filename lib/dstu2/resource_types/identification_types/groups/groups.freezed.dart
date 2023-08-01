@@ -66,31 +66,24 @@ abstract class $OrganizationCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirBoolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       CodeableConcept? type,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       List<ContactPoint>? telecom,
       List<Address>? address,
       Reference? partOf,
@@ -341,31 +334,24 @@ abstract class _$$_OrganizationCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirBoolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       CodeableConcept? type,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       List<ContactPoint>? telecom,
       List<Address>? address,
       Reference? partOf,
@@ -521,31 +507,24 @@ class __$$_OrganizationCopyWithImpl<$Res>
 class _$_Organization extends _Organization {
   const _$_Organization(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
-          this.resourceType = Dstu2ResourceType.Organization,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Organization,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.active,
-      @JsonKey(name: '_active')
-          this.activeElement,
+      @JsonKey(name: '_active') this.activeElement,
       this.type,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       final List<ContactPoint>? telecom,
       final List<Address>? address,
       this.partOf,
@@ -761,31 +740,24 @@ class _$_Organization extends _Organization {
 abstract class _Organization extends Organization {
   const factory _Organization(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Organization)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final FhirBoolean? active,
-      @JsonKey(name: '_active')
-          final Element? activeElement,
+      @JsonKey(name: '_active') final Element? activeElement,
       final CodeableConcept? type,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final List<ContactPoint>? telecom,
       final List<Address>? address,
       final Reference? partOf,
@@ -1319,22 +1291,17 @@ abstract class $HealthcareServiceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference? providedBy,
@@ -1343,11 +1310,9 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       Reference location,
       String? serviceName,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      @JsonKey(name: '_comment') Element? commentElement,
       String? extraDetails,
-      @JsonKey(name: '_extraDetails')
-          Element? extraDetailsElement,
+      @JsonKey(name: '_extraDetails') Element? extraDetailsElement,
       Attachment? photo,
       List<ContactPoint>? telecom,
       List<Reference>? coverageArea,
@@ -1360,12 +1325,12 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       String? publicKey,
       FhirBoolean? appointmentRequired,
       @JsonKey(name: '_appointmentRequired')
-          Element? appointmentRequiredElement,
+      Element? appointmentRequiredElement,
       List<HealthcareServiceAvailableTime>? availableTime,
       List<HealthcareServiceNotAvailable>? notAvailable,
       String? availabilityExceptions,
       @JsonKey(name: '_availabilityExceptions')
-          Element? availabilityExceptionsElement});
+      Element? availabilityExceptionsElement});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -1755,22 +1720,17 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference? providedBy,
@@ -1779,11 +1739,9 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
       Reference location,
       String? serviceName,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      @JsonKey(name: '_comment') Element? commentElement,
       String? extraDetails,
-      @JsonKey(name: '_extraDetails')
-          Element? extraDetailsElement,
+      @JsonKey(name: '_extraDetails') Element? extraDetailsElement,
       Attachment? photo,
       List<ContactPoint>? telecom,
       List<Reference>? coverageArea,
@@ -1796,12 +1754,12 @@ abstract class _$$_HealthcareServiceCopyWith<$Res>
       String? publicKey,
       FhirBoolean? appointmentRequired,
       @JsonKey(name: '_appointmentRequired')
-          Element? appointmentRequiredElement,
+      Element? appointmentRequiredElement,
       List<HealthcareServiceAvailableTime>? availableTime,
       List<HealthcareServiceNotAvailable>? notAvailable,
       String? availabilityExceptions,
       @JsonKey(name: '_availabilityExceptions')
-          Element? availabilityExceptionsElement});
+      Element? availabilityExceptionsElement});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -2043,22 +2001,17 @@ class __$$_HealthcareServiceCopyWithImpl<$Res>
 class _$_HealthcareService extends _HealthcareService {
   const _$_HealthcareService(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
-          this.resourceType = Dstu2ResourceType.HealthcareService,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.HealthcareService,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.providedBy,
@@ -2067,11 +2020,9 @@ class _$_HealthcareService extends _HealthcareService {
       required this.location,
       this.serviceName,
       this.comment,
-      @JsonKey(name: '_comment')
-          this.commentElement,
+      @JsonKey(name: '_comment') this.commentElement,
       this.extraDetails,
-      @JsonKey(name: '_extraDetails')
-          this.extraDetailsElement,
+      @JsonKey(name: '_extraDetails') this.extraDetailsElement,
       this.photo,
       final List<ContactPoint>? telecom,
       final List<Reference>? coverageArea,
@@ -2083,13 +2034,12 @@ class _$_HealthcareService extends _HealthcareService {
       final List<CodeableConcept>? referralMethod,
       this.publicKey,
       this.appointmentRequired,
-      @JsonKey(name: '_appointmentRequired')
-          this.appointmentRequiredElement,
+      @JsonKey(name: '_appointmentRequired') this.appointmentRequiredElement,
       final List<HealthcareServiceAvailableTime>? availableTime,
       final List<HealthcareServiceNotAvailable>? notAvailable,
       this.availabilityExceptions,
       @JsonKey(name: '_availabilityExceptions')
-          this.availabilityExceptionsElement})
+      this.availabilityExceptionsElement})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -2448,22 +2398,17 @@ class _$_HealthcareService extends _HealthcareService {
 abstract class _HealthcareService extends HealthcareService {
   const factory _HealthcareService(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.HealthcareService)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final Reference? providedBy,
@@ -2472,11 +2417,9 @@ abstract class _HealthcareService extends HealthcareService {
       required final Reference location,
       final String? serviceName,
       final String? comment,
-      @JsonKey(name: '_comment')
-          final Element? commentElement,
+      @JsonKey(name: '_comment') final Element? commentElement,
       final String? extraDetails,
-      @JsonKey(name: '_extraDetails')
-          final Element? extraDetailsElement,
+      @JsonKey(name: '_extraDetails') final Element? extraDetailsElement,
       final Attachment? photo,
       final List<ContactPoint>? telecom,
       final List<Reference>? coverageArea,
@@ -2489,12 +2432,12 @@ abstract class _HealthcareService extends HealthcareService {
       final String? publicKey,
       final FhirBoolean? appointmentRequired,
       @JsonKey(name: '_appointmentRequired')
-          final Element? appointmentRequiredElement,
+      final Element? appointmentRequiredElement,
       final List<HealthcareServiceAvailableTime>? availableTime,
       final List<HealthcareServiceNotAvailable>? notAvailable,
       final String? availabilityExceptions,
       @JsonKey(name: '_availabilityExceptions')
-          final Element? availabilityExceptionsElement}) = _$_HealthcareService;
+      final Element? availabilityExceptionsElement}) = _$_HealthcareService;
   const _HealthcareService._() : super._();
 
   factory _HealthcareService.fromJson(Map<String, dynamic> json) =
@@ -3316,23 +3259,19 @@ class _$_HealthcareServiceAvailableTime
 abstract class _HealthcareServiceAvailableTime
     extends HealthcareServiceAvailableTime {
   const factory _HealthcareServiceAvailableTime(
-          {@JsonKey(name: 'id')
-              final FhirId? fhirId,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<AvailableTimeDaysOfWeek>? daysOfWeek,
-          @JsonKey(name: '_daysOfWeek')
-              final Element? daysOfWeekElement,
+          @JsonKey(name: '_daysOfWeek') final Element? daysOfWeekElement,
           final FhirBoolean? allDay,
-          @JsonKey(name: '_allDay')
-              final Element? allDayElement,
+          @JsonKey(name: '_allDay') final Element? allDayElement,
           final FhirTime? availableStartTime,
           @JsonKey(name: '_availableStartTime')
-              final Element? availableStartTimeElement,
+          final Element? availableStartTimeElement,
           final FhirTime? availableEndTime,
           @JsonKey(name: '_availableEndTime')
-              final Element? availableEndTimeElement}) =
+          final Element? availableEndTimeElement}) =
       _$_HealthcareServiceAvailableTime;
   const _HealthcareServiceAvailableTime._() : super._();
 
@@ -3754,38 +3693,28 @@ abstract class $FhirGroupCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: GroupType.unknown)
-          GroupType type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(unknownEnumValue: GroupType.unknown) GroupType type,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirBoolean actual,
-      @JsonKey(name: '_actual')
-          Element? actualElement,
+      @JsonKey(name: '_actual') Element? actualElement,
       CodeableConcept? code,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       FhirUnsignedInt? quantity,
-      @JsonKey(name: '_quantity')
-          Element? quantityElement,
+      @JsonKey(name: '_quantity') Element? quantityElement,
       List<GroupCharacteristic>? characteristic,
       List<GroupMember>? member});
 
@@ -4056,38 +3985,28 @@ abstract class _$$_FhirGroupCopyWith<$Res> implements $FhirGroupCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: GroupType.unknown)
-          GroupType type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(unknownEnumValue: GroupType.unknown) GroupType type,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirBoolean actual,
-      @JsonKey(name: '_actual')
-          Element? actualElement,
+      @JsonKey(name: '_actual') Element? actualElement,
       CodeableConcept? code,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       FhirUnsignedInt? quantity,
-      @JsonKey(name: '_quantity')
-          Element? quantityElement,
+      @JsonKey(name: '_quantity') Element? quantityElement,
       List<GroupCharacteristic>? characteristic,
       List<GroupMember>? member});
 
@@ -4253,38 +4172,28 @@ class __$$_FhirGroupCopyWithImpl<$Res>
 class _$_FhirGroup extends _FhirGroup {
   const _$_FhirGroup(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
-          this.resourceType = Dstu2ResourceType.Group,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Group,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: GroupType.unknown)
-          required this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(unknownEnumValue: GroupType.unknown) required this.type,
+      @JsonKey(name: '_type') this.typeElement,
       required this.actual,
-      @JsonKey(name: '_actual')
-          this.actualElement,
+      @JsonKey(name: '_actual') this.actualElement,
       this.code,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.quantity,
-      @JsonKey(name: '_quantity')
-          this.quantityElement,
+      @JsonKey(name: '_quantity') this.quantityElement,
       final List<GroupCharacteristic>? characteristic,
       final List<GroupMember>? member})
       : _contained = contained,
@@ -4504,38 +4413,29 @@ class _$_FhirGroup extends _FhirGroup {
 abstract class _FhirGroup extends FhirGroup {
   const factory _FhirGroup(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Group)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: GroupType.unknown)
-          required final GroupType type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      required final GroupType type,
+      @JsonKey(name: '_type') final Element? typeElement,
       required final FhirBoolean actual,
-      @JsonKey(name: '_actual')
-          final Element? actualElement,
+      @JsonKey(name: '_actual') final Element? actualElement,
       final CodeableConcept? code,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final FhirUnsignedInt? quantity,
-      @JsonKey(name: '_quantity')
-          final Element? quantityElement,
+      @JsonKey(name: '_quantity') final Element? quantityElement,
       final List<GroupCharacteristic>? characteristic,
       final List<GroupMember>? member}) = _$_FhirGroup;
   const _FhirGroup._() : super._();

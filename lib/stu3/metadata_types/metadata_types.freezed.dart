@@ -2894,19 +2894,16 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {TriggerDefinitionType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       String? eventName,
-      @JsonKey(name: '_eventName')
-          Element? eventNameElement,
+      @JsonKey(name: '_eventName') Element? eventNameElement,
       Timing? eventTimingTiming,
       Reference? eventTimingReference,
       FhirDate? eventTimingDate,
-      @JsonKey(name: '_eventTimingDate')
-          Element? eventTimingDateElement,
+      @JsonKey(name: '_eventTimingDate') Element? eventTimingDateElement,
       FhirDateTime? eventTimingDateTime,
       @JsonKey(name: '_eventTimingDateTime')
-          Element? eventTimingDateTimeElement,
+      Element? eventTimingDateTimeElement,
       DataRequirement? eventData});
 
   $ElementCopyWith<$Res>? get typeElement;
@@ -3086,19 +3083,16 @@ abstract class _$$_TriggerDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {TriggerDefinitionType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       String? eventName,
-      @JsonKey(name: '_eventName')
-          Element? eventNameElement,
+      @JsonKey(name: '_eventName') Element? eventNameElement,
       Timing? eventTimingTiming,
       Reference? eventTimingReference,
       FhirDate? eventTimingDate,
-      @JsonKey(name: '_eventTimingDate')
-          Element? eventTimingDateElement,
+      @JsonKey(name: '_eventTimingDate') Element? eventTimingDateElement,
       FhirDateTime? eventTimingDateTime,
       @JsonKey(name: '_eventTimingDateTime')
-          Element? eventTimingDateTimeElement,
+      Element? eventTimingDateTimeElement,
       DataRequirement? eventData});
 
   @override
@@ -3305,19 +3299,16 @@ class _$_TriggerDefinition extends _TriggerDefinition {
 abstract class _TriggerDefinition extends TriggerDefinition {
   const factory _TriggerDefinition(
       {final TriggerDefinitionType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      @JsonKey(name: '_type') final Element? typeElement,
       final String? eventName,
-      @JsonKey(name: '_eventName')
-          final Element? eventNameElement,
+      @JsonKey(name: '_eventName') final Element? eventNameElement,
       final Timing? eventTimingTiming,
       final Reference? eventTimingReference,
       final FhirDate? eventTimingDate,
-      @JsonKey(name: '_eventTimingDate')
-          final Element? eventTimingDateElement,
+      @JsonKey(name: '_eventTimingDate') final Element? eventTimingDateElement,
       final FhirDateTime? eventTimingDateTime,
       @JsonKey(name: '_eventTimingDateTime')
-          final Element? eventTimingDateTimeElement,
+      final Element? eventTimingDateTimeElement,
       final DataRequirement? eventData}) = _$_TriggerDefinition;
   const _TriggerDefinition._() : super._();
 

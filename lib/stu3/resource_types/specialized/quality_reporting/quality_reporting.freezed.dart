@@ -141,63 +141,45 @@ abstract class $MeasureCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       MeasureStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       String? usage,
-      @JsonKey(name: '_usage')
-          Element? usageElement,
+      @JsonKey(name: '_usage') Element? usageElement,
       FhirDate? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
       FhirDate? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
@@ -205,42 +187,32 @@ abstract class $MeasureCopyWith<$Res> {
       List<Contributor>? contributor,
       List<ContactDetail>? contact,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       List<RelatedArtifact>? relatedArtifact,
-      @JsonKey(name: 'library')
-          List<Reference>? library_,
+      @JsonKey(name: 'library') List<Reference>? library_,
       String? disclaimer,
-      @JsonKey(name: '_disclaimer')
-          Element? disclaimerElement,
+      @JsonKey(name: '_disclaimer') Element? disclaimerElement,
       CodeableConcept? scoring,
       CodeableConcept? compositeScoring,
       List<CodeableConcept>? type,
       String? riskAdjustment,
-      @JsonKey(name: '_riskAdjustment')
-          Element? riskAdjustmentElement,
+      @JsonKey(name: '_riskAdjustment') Element? riskAdjustmentElement,
       String? rateAggregation,
-      @JsonKey(name: '_rateAggregation')
-          Element? rateAggregationElement,
+      @JsonKey(name: '_rateAggregation') Element? rateAggregationElement,
       String? rationale,
-      @JsonKey(name: '_rationale')
-          Element? rationaleElement,
+      @JsonKey(name: '_rationale') Element? rationaleElement,
       String? clinicalRecommendationStatement,
       @JsonKey(name: '_clinicalRecommendationStatement')
-          Element? clinicalRecommendationStatementElement,
+      Element? clinicalRecommendationStatementElement,
       String? improvementNotation,
       @JsonKey(name: '_improvementNotation')
-          Element? improvementNotationElement,
+      Element? improvementNotationElement,
       List<String>? definition,
-      @JsonKey(name: '_definition')
-          List<Element?>? definitionElement,
+      @JsonKey(name: '_definition') List<Element?>? definitionElement,
       String? guidance,
-      @JsonKey(name: '_guidance')
-          Element? guidanceElement,
-      @JsonKey(name: 'set')
-          String? set_,
-      @JsonKey(name: '_set')
-          Element? setElement,
+      @JsonKey(name: '_guidance') Element? guidanceElement,
+      @JsonKey(name: 'set') String? set_,
+      @JsonKey(name: '_set') Element? setElement,
       List<MeasureGroup>? group,
       List<MeasureSupplementalData>? supplementalData});
 
@@ -1015,63 +987,45 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       MeasureStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       String? usage,
-      @JsonKey(name: '_usage')
-          Element? usageElement,
+      @JsonKey(name: '_usage') Element? usageElement,
       FhirDate? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate') Element? approvalDateElement,
       FhirDate? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
       Period? effectivePeriod,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
@@ -1079,42 +1033,32 @@ abstract class _$$_MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       List<Contributor>? contributor,
       List<ContactDetail>? contact,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       List<RelatedArtifact>? relatedArtifact,
-      @JsonKey(name: 'library')
-          List<Reference>? library_,
+      @JsonKey(name: 'library') List<Reference>? library_,
       String? disclaimer,
-      @JsonKey(name: '_disclaimer')
-          Element? disclaimerElement,
+      @JsonKey(name: '_disclaimer') Element? disclaimerElement,
       CodeableConcept? scoring,
       CodeableConcept? compositeScoring,
       List<CodeableConcept>? type,
       String? riskAdjustment,
-      @JsonKey(name: '_riskAdjustment')
-          Element? riskAdjustmentElement,
+      @JsonKey(name: '_riskAdjustment') Element? riskAdjustmentElement,
       String? rateAggregation,
-      @JsonKey(name: '_rateAggregation')
-          Element? rateAggregationElement,
+      @JsonKey(name: '_rateAggregation') Element? rateAggregationElement,
       String? rationale,
-      @JsonKey(name: '_rationale')
-          Element? rationaleElement,
+      @JsonKey(name: '_rationale') Element? rationaleElement,
       String? clinicalRecommendationStatement,
       @JsonKey(name: '_clinicalRecommendationStatement')
-          Element? clinicalRecommendationStatementElement,
+      Element? clinicalRecommendationStatementElement,
       String? improvementNotation,
       @JsonKey(name: '_improvementNotation')
-          Element? improvementNotationElement,
+      Element? improvementNotationElement,
       List<String>? definition,
-      @JsonKey(name: '_definition')
-          List<Element?>? definitionElement,
+      @JsonKey(name: '_definition') List<Element?>? definitionElement,
       String? guidance,
-      @JsonKey(name: '_guidance')
-          Element? guidanceElement,
-      @JsonKey(name: 'set')
-          String? set_,
-      @JsonKey(name: '_set')
-          Element? setElement,
+      @JsonKey(name: '_guidance') Element? guidanceElement,
+      @JsonKey(name: 'set') String? set_,
+      @JsonKey(name: '_set') Element? setElement,
       List<MeasureGroup>? group,
       List<MeasureSupplementalData>? supplementalData});
 
@@ -1561,63 +1505,45 @@ class __$$_MeasureCopyWithImpl<$Res>
 class _$_Measure extends _Measure {
   const _$_Measure(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
-          this.resourceType = Stu3ResourceType.Measure,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.Measure,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       final List<Identifier>? identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.usage,
-      @JsonKey(name: '_usage')
-          this.usageElement,
+      @JsonKey(name: '_usage') this.usageElement,
       this.approvalDate,
-      @JsonKey(name: '_approvalDate')
-          this.approvalDateElement,
+      @JsonKey(name: '_approvalDate') this.approvalDateElement,
       this.lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          this.lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') this.lastReviewDateElement,
       this.effectivePeriod,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
@@ -1625,42 +1551,31 @@ class _$_Measure extends _Measure {
       final List<Contributor>? contributor,
       final List<ContactDetail>? contact,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       final List<RelatedArtifact>? relatedArtifact,
-      @JsonKey(name: 'library')
-          final List<Reference>? library_,
+      @JsonKey(name: 'library') final List<Reference>? library_,
       this.disclaimer,
-      @JsonKey(name: '_disclaimer')
-          this.disclaimerElement,
+      @JsonKey(name: '_disclaimer') this.disclaimerElement,
       this.scoring,
       this.compositeScoring,
       final List<CodeableConcept>? type,
       this.riskAdjustment,
-      @JsonKey(name: '_riskAdjustment')
-          this.riskAdjustmentElement,
+      @JsonKey(name: '_riskAdjustment') this.riskAdjustmentElement,
       this.rateAggregation,
-      @JsonKey(name: '_rateAggregation')
-          this.rateAggregationElement,
+      @JsonKey(name: '_rateAggregation') this.rateAggregationElement,
       this.rationale,
-      @JsonKey(name: '_rationale')
-          this.rationaleElement,
+      @JsonKey(name: '_rationale') this.rationaleElement,
       this.clinicalRecommendationStatement,
       @JsonKey(name: '_clinicalRecommendationStatement')
-          this.clinicalRecommendationStatementElement,
+      this.clinicalRecommendationStatementElement,
       this.improvementNotation,
-      @JsonKey(name: '_improvementNotation')
-          this.improvementNotationElement,
+      @JsonKey(name: '_improvementNotation') this.improvementNotationElement,
       final List<String>? definition,
-      @JsonKey(name: '_definition')
-          final List<Element?>? definitionElement,
+      @JsonKey(name: '_definition') final List<Element?>? definitionElement,
       this.guidance,
-      @JsonKey(name: '_guidance')
-          this.guidanceElement,
-      @JsonKey(name: 'set')
-          this.set_,
-      @JsonKey(name: '_set')
-          this.setElement,
+      @JsonKey(name: '_guidance') this.guidanceElement,
+      @JsonKey(name: 'set') this.set_,
+      @JsonKey(name: '_set') this.setElement,
       final List<MeasureGroup>? group,
       final List<MeasureSupplementalData>? supplementalData})
       : _contained = contained,
@@ -2212,63 +2127,45 @@ class _$_Measure extends _Measure {
 abstract class _Measure extends Measure {
   const factory _Measure(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
-      @JsonKey(name: '_title')
-          final Element? titleElement,
+      @JsonKey(name: '_title') final Element? titleElement,
       final MeasureStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
       final FhirDate? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final String? purpose,
-      @JsonKey(name: '_purpose')
-          final Element? purposeElement,
+      @JsonKey(name: '_purpose') final Element? purposeElement,
       final String? usage,
-      @JsonKey(name: '_usage')
-          final Element? usageElement,
+      @JsonKey(name: '_usage') final Element? usageElement,
       final FhirDate? approvalDate,
-      @JsonKey(name: '_approvalDate')
-          final Element? approvalDateElement,
+      @JsonKey(name: '_approvalDate') final Element? approvalDateElement,
       final FhirDate? lastReviewDate,
-      @JsonKey(name: '_lastReviewDate')
-          final Element? lastReviewDateElement,
+      @JsonKey(name: '_lastReviewDate') final Element? lastReviewDateElement,
       final Period? effectivePeriod,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
@@ -2276,42 +2173,32 @@ abstract class _Measure extends Measure {
       final List<Contributor>? contributor,
       final List<ContactDetail>? contact,
       final String? copyright,
-      @JsonKey(name: '_copyright')
-          final Element? copyrightElement,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
       final List<RelatedArtifact>? relatedArtifact,
-      @JsonKey(name: 'library')
-          final List<Reference>? library_,
+      @JsonKey(name: 'library') final List<Reference>? library_,
       final String? disclaimer,
-      @JsonKey(name: '_disclaimer')
-          final Element? disclaimerElement,
+      @JsonKey(name: '_disclaimer') final Element? disclaimerElement,
       final CodeableConcept? scoring,
       final CodeableConcept? compositeScoring,
       final List<CodeableConcept>? type,
       final String? riskAdjustment,
-      @JsonKey(name: '_riskAdjustment')
-          final Element? riskAdjustmentElement,
+      @JsonKey(name: '_riskAdjustment') final Element? riskAdjustmentElement,
       final String? rateAggregation,
-      @JsonKey(name: '_rateAggregation')
-          final Element? rateAggregationElement,
+      @JsonKey(name: '_rateAggregation') final Element? rateAggregationElement,
       final String? rationale,
-      @JsonKey(name: '_rationale')
-          final Element? rationaleElement,
+      @JsonKey(name: '_rationale') final Element? rationaleElement,
       final String? clinicalRecommendationStatement,
       @JsonKey(name: '_clinicalRecommendationStatement')
-          final Element? clinicalRecommendationStatementElement,
+      final Element? clinicalRecommendationStatementElement,
       final String? improvementNotation,
       @JsonKey(name: '_improvementNotation')
-          final Element? improvementNotationElement,
+      final Element? improvementNotationElement,
       final List<String>? definition,
-      @JsonKey(name: '_definition')
-          final List<Element?>? definitionElement,
+      @JsonKey(name: '_definition') final List<Element?>? definitionElement,
       final String? guidance,
-      @JsonKey(name: '_guidance')
-          final Element? guidanceElement,
-      @JsonKey(name: 'set')
-          final String? set_,
-      @JsonKey(name: '_set')
-          final Element? setElement,
+      @JsonKey(name: '_guidance') final Element? guidanceElement,
+      @JsonKey(name: 'set') final String? set_,
+      @JsonKey(name: '_set') final Element? setElement,
       final List<MeasureGroup>? group,
       final List<MeasureSupplementalData>? supplementalData}) = _$_Measure;
   const _Measure._() : super._();
@@ -3877,35 +3764,27 @@ abstract class $MeasureReportCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       MeasureReportStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       MeasureReportType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       Reference measure,
       Reference? patient,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       Reference? reportingOrganization,
       Period period,
       List<MeasureReportGroup>? group,
@@ -4228,35 +4107,27 @@ abstract class _$$_MeasureReportCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       MeasureReportStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       MeasureReportType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       Reference measure,
       Reference? patient,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       Reference? reportingOrganization,
       Period period,
       List<MeasureReportGroup>? group,
@@ -4437,35 +4308,27 @@ class __$$_MeasureReportCopyWithImpl<$Res>
 class _$_MeasureReport extends _MeasureReport {
   const _$_MeasureReport(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
-          this.resourceType = Stu3ResourceType.MeasureReport,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.MeasureReport,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: '_type') this.typeElement,
       required this.measure,
       this.patient,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.reportingOrganization,
       required this.period,
       final List<MeasureReportGroup>? group,
@@ -4671,35 +4534,27 @@ class _$_MeasureReport extends _MeasureReport {
 abstract class _MeasureReport extends MeasureReport {
   const factory _MeasureReport(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       final MeasureReportStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final MeasureReportType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      @JsonKey(name: '_type') final Element? typeElement,
       required final Reference measure,
       final Reference? patient,
       final FhirDate? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final Reference? reportingOrganization,
       required final Period period,
       final List<MeasureReportGroup>? group,

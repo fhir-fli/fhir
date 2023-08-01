@@ -162,37 +162,29 @@ abstract class $PaymentNoticeCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? request,
       Reference? response,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? reporter,
       Reference? payment,
       FhirDate? paymentDate,
-      @JsonKey(name: '_paymentDate')
-          Element? paymentDateElement,
+      @JsonKey(name: '_paymentDate') Element? paymentDateElement,
       Reference? payee,
       Reference recipient,
       Money amount,
@@ -551,37 +543,29 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? request,
       Reference? response,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? reporter,
       Reference? payment,
       FhirDate? paymentDate,
-      @JsonKey(name: '_paymentDate')
-          Element? paymentDateElement,
+      @JsonKey(name: '_paymentDate') Element? paymentDateElement,
       Reference? payee,
       Reference recipient,
       Money amount,
@@ -776,37 +760,29 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
 class _$_PaymentNotice extends _PaymentNotice {
   const _$_PaymentNotice(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
-          this.resourceType = R5ResourceType.PaymentNotice,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R5ResourceType.PaymentNotice,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.request,
       this.response,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.reporter,
       this.payment,
       this.paymentDate,
-      @JsonKey(name: '_paymentDate')
-          this.paymentDateElement,
+      @JsonKey(name: '_paymentDate') this.paymentDateElement,
       this.payee,
       required this.recipient,
       required this.amount,
@@ -1139,37 +1115,29 @@ class _$_PaymentNotice extends _PaymentNotice {
 abstract class _PaymentNotice extends PaymentNotice {
   const factory _PaymentNotice(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
-          final R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Reference? request,
       final Reference? response,
       final FhirDateTime? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final Reference? reporter,
       final Reference? payment,
       final FhirDate? paymentDate,
-      @JsonKey(name: '_paymentDate')
-          final Element? paymentDateElement,
+      @JsonKey(name: '_paymentDate') final Element? paymentDateElement,
       final Reference? payee,
       required final Reference recipient,
       required final Money amount,
@@ -1592,67 +1560,51 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept type,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? kind,
       Period? period,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       CodeableConcept? issuerType,
       Reference? paymentIssuer,
       Reference? request,
       Reference? requestor,
       FhirCode? outcome,
-      @JsonKey(name: '_outcome')
-          Element? outcomeElement,
+      @JsonKey(name: '_outcome') Element? outcomeElement,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       Reference? location,
       CodeableConcept? method,
       String? cardBrand,
-      @JsonKey(name: '_cardBrand')
-          Element? cardBrandElement,
+      @JsonKey(name: '_cardBrand') Element? cardBrandElement,
       String? accountNumber,
-      @JsonKey(name: '_accountNumber')
-          Element? accountNumberElement,
+      @JsonKey(name: '_accountNumber') Element? accountNumberElement,
       FhirDate? expirationDate,
-      @JsonKey(name: '_expirationDate')
-          Element? expirationDateElement,
+      @JsonKey(name: '_expirationDate') Element? expirationDateElement,
       String? processor,
-      @JsonKey(name: '_processor')
-          Element? processorElement,
+      @JsonKey(name: '_processor') Element? processorElement,
       String? referenceNumber,
-      @JsonKey(name: '_referenceNumber')
-          Element? referenceNumberElement,
+      @JsonKey(name: '_referenceNumber') Element? referenceNumberElement,
       String? authorization,
-      @JsonKey(name: '_authorization')
-          Element? authorizationElement,
+      @JsonKey(name: '_authorization') Element? authorizationElement,
       Money? tenderedAmount,
       Money? returnedAmount,
       Money amount,
@@ -2335,67 +2287,51 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept type,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? kind,
       Period? period,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       CodeableConcept? issuerType,
       Reference? paymentIssuer,
       Reference? request,
       Reference? requestor,
       FhirCode? outcome,
-      @JsonKey(name: '_outcome')
-          Element? outcomeElement,
+      @JsonKey(name: '_outcome') Element? outcomeElement,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       Reference? location,
       CodeableConcept? method,
       String? cardBrand,
-      @JsonKey(name: '_cardBrand')
-          Element? cardBrandElement,
+      @JsonKey(name: '_cardBrand') Element? cardBrandElement,
       String? accountNumber,
-      @JsonKey(name: '_accountNumber')
-          Element? accountNumberElement,
+      @JsonKey(name: '_accountNumber') Element? accountNumberElement,
       FhirDate? expirationDate,
-      @JsonKey(name: '_expirationDate')
-          Element? expirationDateElement,
+      @JsonKey(name: '_expirationDate') Element? expirationDateElement,
       String? processor,
-      @JsonKey(name: '_processor')
-          Element? processorElement,
+      @JsonKey(name: '_processor') Element? processorElement,
       String? referenceNumber,
-      @JsonKey(name: '_referenceNumber')
-          Element? referenceNumberElement,
+      @JsonKey(name: '_referenceNumber') Element? referenceNumberElement,
       String? authorization,
-      @JsonKey(name: '_authorization')
-          Element? authorizationElement,
+      @JsonKey(name: '_authorization') Element? authorizationElement,
       Money? tenderedAmount,
       Money? returnedAmount,
       Money amount,
@@ -2748,67 +2684,51 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
 class _$_PaymentReconciliation extends _PaymentReconciliation {
   const _$_PaymentReconciliation(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
-          this.resourceType = R5ResourceType.PaymentReconciliation,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R5ResourceType.PaymentReconciliation,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       required this.type,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.kind,
       this.period,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.enterer,
       this.issuerType,
       this.paymentIssuer,
       this.request,
       this.requestor,
       this.outcome,
-      @JsonKey(name: '_outcome')
-          this.outcomeElement,
+      @JsonKey(name: '_outcome') this.outcomeElement,
       this.disposition,
-      @JsonKey(name: '_disposition')
-          this.dispositionElement,
+      @JsonKey(name: '_disposition') this.dispositionElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.location,
       this.method,
       this.cardBrand,
-      @JsonKey(name: '_cardBrand')
-          this.cardBrandElement,
+      @JsonKey(name: '_cardBrand') this.cardBrandElement,
       this.accountNumber,
-      @JsonKey(name: '_accountNumber')
-          this.accountNumberElement,
+      @JsonKey(name: '_accountNumber') this.accountNumberElement,
       this.expirationDate,
-      @JsonKey(name: '_expirationDate')
-          this.expirationDateElement,
+      @JsonKey(name: '_expirationDate') this.expirationDateElement,
       this.processor,
-      @JsonKey(name: '_processor')
-          this.processorElement,
+      @JsonKey(name: '_processor') this.processorElement,
       this.referenceNumber,
-      @JsonKey(name: '_referenceNumber')
-          this.referenceNumberElement,
+      @JsonKey(name: '_referenceNumber') this.referenceNumberElement,
       this.authorization,
-      @JsonKey(name: '_authorization')
-          this.authorizationElement,
+      @JsonKey(name: '_authorization') this.authorizationElement,
       this.tenderedAmount,
       this.returnedAmount,
       required this.amount,
@@ -3364,76 +3284,60 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 
 abstract class _PaymentReconciliation extends PaymentReconciliation {
   const factory _PaymentReconciliation(
-          {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
-              final R5ResourceType resourceType,
-          @JsonKey(includeFromJson: true, includeToJson: false)
-              final int? dbId,
-          @JsonKey(name: 'id')
-              final FhirId? fhirId,
-          final FhirMeta? meta,
-          final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              final Element? implicitRulesElement,
-          final FhirCode? language,
-          @JsonKey(name: '_language')
-              final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final List<Identifier>? identifier,
-          required final CodeableConcept type,
-          final FhirCode? status,
-          @JsonKey(name: '_status')
-              final Element? statusElement,
-          final CodeableConcept? kind,
-          final Period? period,
-          final FhirDateTime? created,
-          @JsonKey(name: '_created')
-              final Element? createdElement,
-          final Reference? enterer,
-          final CodeableConcept? issuerType,
-          final Reference? paymentIssuer,
-          final Reference? request,
-          final Reference? requestor,
-          final FhirCode? outcome,
-          @JsonKey(name: '_outcome')
-              final Element? outcomeElement,
-          final String? disposition,
-          @JsonKey(name: '_disposition')
-              final Element? dispositionElement,
-          final FhirDate? date,
-          @JsonKey(name: '_date')
-              final Element? dateElement,
-          final Reference? location,
-          final CodeableConcept? method,
-          final String? cardBrand,
-          @JsonKey(name: '_cardBrand')
-              final Element? cardBrandElement,
-          final String? accountNumber,
-          @JsonKey(name: '_accountNumber')
-              final Element? accountNumberElement,
-          final FhirDate? expirationDate,
-          @JsonKey(name: '_expirationDate')
-              final Element? expirationDateElement,
-          final String? processor,
-          @JsonKey(name: '_processor')
-              final Element? processorElement,
-          final String? referenceNumber,
-          @JsonKey(name: '_referenceNumber')
-              final Element? referenceNumberElement,
-          final String? authorization,
-          @JsonKey(name: '_authorization')
-              final Element? authorizationElement,
-          final Money? tenderedAmount,
-          final Money? returnedAmount,
-          required final Money amount,
-          final Identifier? paymentIdentifier,
-          final List<PaymentReconciliationAllocation>? allocation,
-          final CodeableConcept? formCode,
-          final List<PaymentReconciliationProcessNote>? processNote}) =
-      _$_PaymentReconciliation;
+      {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
+      final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final FhirCode? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      required final CodeableConcept type,
+      final FhirCode? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final CodeableConcept? kind,
+      final Period? period,
+      final FhirDateTime? created,
+      @JsonKey(name: '_created') final Element? createdElement,
+      final Reference? enterer,
+      final CodeableConcept? issuerType,
+      final Reference? paymentIssuer,
+      final Reference? request,
+      final Reference? requestor,
+      final FhirCode? outcome,
+      @JsonKey(name: '_outcome') final Element? outcomeElement,
+      final String? disposition,
+      @JsonKey(name: '_disposition') final Element? dispositionElement,
+      final FhirDate? date,
+      @JsonKey(name: '_date') final Element? dateElement,
+      final Reference? location,
+      final CodeableConcept? method,
+      final String? cardBrand,
+      @JsonKey(name: '_cardBrand') final Element? cardBrandElement,
+      final String? accountNumber,
+      @JsonKey(name: '_accountNumber') final Element? accountNumberElement,
+      final FhirDate? expirationDate,
+      @JsonKey(name: '_expirationDate') final Element? expirationDateElement,
+      final String? processor,
+      @JsonKey(name: '_processor') final Element? processorElement,
+      final String? referenceNumber,
+      @JsonKey(name: '_referenceNumber') final Element? referenceNumberElement,
+      final String? authorization,
+      @JsonKey(name: '_authorization') final Element? authorizationElement,
+      final Money? tenderedAmount,
+      final Money? returnedAmount,
+      required final Money amount,
+      final Identifier? paymentIdentifier,
+      final List<PaymentReconciliationAllocation>? allocation,
+      final CodeableConcept? formCode,
+      final List<PaymentReconciliationProcessNote>?
+          processNote}) = _$_PaymentReconciliation;
   const _PaymentReconciliation._() : super._();
 
   factory _PaymentReconciliation.fromJson(Map<String, dynamic> json) =
@@ -3856,29 +3760,25 @@ abstract class $PaymentReconciliationAllocationCopyWith<$Res> {
           PaymentReconciliationAllocation>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Identifier? predecessor,
       Reference? target,
       String? targetItemString,
-      @JsonKey(name: '_targetItemString')
-          Element? targetItemStringElement,
+      @JsonKey(name: '_targetItemString') Element? targetItemStringElement,
       Identifier? targetItemIdentifier,
       FhirPositiveInt? targetItemPositiveInt,
       @JsonKey(name: '_targetItemPositiveInt')
-          Element? targetItemPositiveIntElement,
+      Element? targetItemPositiveIntElement,
       Reference? encounter,
       Reference? account,
       CodeableConcept? type,
       Reference? submitter,
       Reference? response,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       Reference? responsible,
       Reference? payee,
       Money? amount});
@@ -4217,29 +4117,25 @@ abstract class _$$_PaymentReconciliationAllocationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Identifier? predecessor,
       Reference? target,
       String? targetItemString,
-      @JsonKey(name: '_targetItemString')
-          Element? targetItemStringElement,
+      @JsonKey(name: '_targetItemString') Element? targetItemStringElement,
       Identifier? targetItemIdentifier,
       FhirPositiveInt? targetItemPositiveInt,
       @JsonKey(name: '_targetItemPositiveInt')
-          Element? targetItemPositiveIntElement,
+      Element? targetItemPositiveIntElement,
       Reference? encounter,
       Reference? account,
       CodeableConcept? type,
       Reference? submitter,
       Reference? response,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       Reference? responsible,
       Reference? payee,
       Money? amount});
@@ -4405,29 +4301,25 @@ class __$$_PaymentReconciliationAllocationCopyWithImpl<$Res>
 class _$_PaymentReconciliationAllocation
     extends _PaymentReconciliationAllocation {
   const _$_PaymentReconciliationAllocation(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.identifier,
       this.predecessor,
       this.target,
       this.targetItemString,
-      @JsonKey(name: '_targetItemString')
-          this.targetItemStringElement,
+      @JsonKey(name: '_targetItemString') this.targetItemStringElement,
       this.targetItemIdentifier,
       this.targetItemPositiveInt,
       @JsonKey(name: '_targetItemPositiveInt')
-          this.targetItemPositiveIntElement,
+      this.targetItemPositiveIntElement,
       this.encounter,
       this.account,
       this.type,
       this.submitter,
       this.response,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.responsible,
       this.payee,
       this.amount})
@@ -4698,29 +4590,26 @@ class _$_PaymentReconciliationAllocation
 abstract class _PaymentReconciliationAllocation
     extends PaymentReconciliationAllocation {
   const factory _PaymentReconciliationAllocation(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       final Identifier? predecessor,
       final Reference? target,
       final String? targetItemString,
       @JsonKey(name: '_targetItemString')
-          final Element? targetItemStringElement,
+      final Element? targetItemStringElement,
       final Identifier? targetItemIdentifier,
       final FhirPositiveInt? targetItemPositiveInt,
       @JsonKey(name: '_targetItemPositiveInt')
-          final Element? targetItemPositiveIntElement,
+      final Element? targetItemPositiveIntElement,
       final Reference? encounter,
       final Reference? account,
       final CodeableConcept? type,
       final Reference? submitter,
       final Reference? response,
       final FhirDate? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final Reference? responsible,
       final Reference? payee,
       final Money? amount}) = _$_PaymentReconciliationAllocation;

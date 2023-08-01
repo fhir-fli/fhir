@@ -75,43 +75,32 @@ abstract class $QuestionnaireCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: '_id')
-          Element? idElement,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: '_id') Element? idElement,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-          QuestionnaireStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      QuestionnaireStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactPoint>? telecom,
       List<FhirCode>? subjectType,
-      @JsonKey(name: '_subjectType')
-          List<Element?>? subjectTypeElement,
+      @JsonKey(name: '_subjectType') List<Element?>? subjectTypeElement,
       QuestionnaireGroup group});
 
   $ElementCopyWith<$Res>? get idElement;
@@ -401,43 +390,32 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: '_id')
-          Element? idElement,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: '_id') Element? idElement,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-          QuestionnaireStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      QuestionnaireStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactPoint>? telecom,
       List<FhirCode>? subjectType,
-      @JsonKey(name: '_subjectType')
-          List<Element?>? subjectTypeElement,
+      @JsonKey(name: '_subjectType') List<Element?>? subjectTypeElement,
       QuestionnaireGroup group});
 
   @override
@@ -614,43 +592,32 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
 class _$_Questionnaire extends _Questionnaire {
   const _$_Questionnaire(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
-          this.resourceType = Dstu2ResourceType.Questionnaire,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: '_id')
-          this.idElement,
+      this.resourceType = Dstu2ResourceType.Questionnaire,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: '_id') this.idElement,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-          required this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      required this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<ContactPoint>? telecom,
       final List<FhirCode>? subjectType,
-      @JsonKey(name: '_subjectType')
-          final List<Element?>? subjectTypeElement,
+      @JsonKey(name: '_subjectType') final List<Element?>? subjectTypeElement,
       required this.group})
       : _contained = contained,
         _extension_ = extension_,
@@ -892,43 +859,32 @@ class _$_Questionnaire extends _Questionnaire {
 abstract class _Questionnaire extends Questionnaire {
   const factory _Questionnaire(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: '_id')
-          final Element? idElement,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: '_id') final Element? idElement,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
-          required final QuestionnaireStatus status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      required final QuestionnaireStatus status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final FhirDateTime? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final List<ContactPoint>? telecom,
       final List<FhirCode>? subjectType,
-      @JsonKey(name: '_subjectType')
-          final List<Element?>? subjectTypeElement,
+      @JsonKey(name: '_subjectType') final List<Element?>? subjectTypeElement,
       required final QuestionnaireGroup group}) = _$_Questionnaire;
   const _Questionnaire._() : super._();
 
@@ -2129,36 +2085,29 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: '_id')
-          Element? idElement,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: '_id') Element? idElement,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Reference? questionnaire,
-      @JsonKey(required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
-          QuestionnaireResponseStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(
+          required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
+      QuestionnaireResponseStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
       Reference? author,
       FhirDateTime? authored,
-      @JsonKey(name: '_authored')
-          Element? authoredElement,
+      @JsonKey(name: '_authored') Element? authoredElement,
       Reference? source,
       Reference? encounter,
       QuestionnaireResponseGroup? group});
@@ -2497,36 +2446,29 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: '_id')
-          Element? idElement,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: '_id') Element? idElement,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       Reference? questionnaire,
-      @JsonKey(required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
-          QuestionnaireResponseStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(
+          required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
+      QuestionnaireResponseStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
       Reference? author,
       FhirDateTime? authored,
-      @JsonKey(name: '_authored')
-          Element? authoredElement,
+      @JsonKey(name: '_authored') Element? authoredElement,
       Reference? source,
       Reference? encounter,
       QuestionnaireResponseGroup? group});
@@ -2703,36 +2645,29 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
 class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   const _$_QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
-          this.resourceType = Dstu2ResourceType.QuestionnaireResponse,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: '_id')
-          this.idElement,
+      this.resourceType = Dstu2ResourceType.QuestionnaireResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: '_id') this.idElement,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.identifier,
       this.questionnaire,
-      @JsonKey(required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
-          required this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(
+          required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
+      required this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.subject,
       this.author,
       this.authored,
-      @JsonKey(name: '_authored')
-          this.authoredElement,
+      @JsonKey(name: '_authored') this.authoredElement,
       this.source,
       this.encounter,
       this.group})
@@ -2928,36 +2863,29 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
 abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   const factory _QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: '_id')
-          final Element? idElement,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: '_id') final Element? idElement,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       final Reference? questionnaire,
-      @JsonKey(required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
-          required final QuestionnaireResponseStatus status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(
+          required: true, unknownEnumValue: QuestionnaireResponseStatus.unknown)
+      required final QuestionnaireResponseStatus status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Reference? subject,
       final Reference? author,
       final FhirDateTime? authored,
-      @JsonKey(name: '_authored')
-          final Element? authoredElement,
+      @JsonKey(name: '_authored') final Element? authoredElement,
       final Reference? source,
       final Reference? encounter,
       final QuestionnaireResponseGroup? group}) = _$_QuestionnaireResponse;
@@ -4964,34 +4892,27 @@ abstract class $ProvenanceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Reference> target,
       Period? period,
       FhirInstant recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
       List<CodeableConcept>? reason,
       CodeableConcept? activity,
       Reference? location,
       List<FhirUri>? policy,
-      @JsonKey(name: '_policy')
-          List<Element?>? policyElement,
+      @JsonKey(name: '_policy') List<Element?>? policyElement,
       List<ProvenanceAgent>? agent,
       List<ProvenanceEntity>? entity,
       List<Signature>? signature});
@@ -5251,34 +5172,27 @@ abstract class _$$_ProvenanceCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Reference> target,
       Period? period,
       FhirInstant recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
       List<CodeableConcept>? reason,
       CodeableConcept? activity,
       Reference? location,
       List<FhirUri>? policy,
-      @JsonKey(name: '_policy')
-          List<Element?>? policyElement,
+      @JsonKey(name: '_policy') List<Element?>? policyElement,
       List<ProvenanceAgent>? agent,
       List<ProvenanceEntity>? entity,
       List<Signature>? signature});
@@ -5443,34 +5357,27 @@ class __$$_ProvenanceCopyWithImpl<$Res>
 class _$_Provenance extends _Provenance {
   const _$_Provenance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
-          this.resourceType = Dstu2ResourceType.Provenance,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Provenance,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<Reference> target,
       this.period,
       required this.recorded,
-      @JsonKey(name: '_recorded')
-          this.recordedElement,
+      @JsonKey(name: '_recorded') this.recordedElement,
       final List<CodeableConcept>? reason,
       this.activity,
       this.location,
       final List<FhirUri>? policy,
-      @JsonKey(name: '_policy')
-          final List<Element?>? policyElement,
+      @JsonKey(name: '_policy') final List<Element?>? policyElement,
       final List<ProvenanceAgent>? agent,
       final List<ProvenanceEntity>? entity,
       final List<Signature>? signature})
@@ -5721,34 +5628,27 @@ class _$_Provenance extends _Provenance {
 abstract class _Provenance extends Provenance {
   const factory _Provenance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<Reference> target,
       final Period? period,
       required final FhirInstant recorded,
-      @JsonKey(name: '_recorded')
-          final Element? recordedElement,
+      @JsonKey(name: '_recorded') final Element? recordedElement,
       final List<CodeableConcept>? reason,
       final CodeableConcept? activity,
       final Reference? location,
       final List<FhirUri>? policy,
-      @JsonKey(name: '_policy')
-          final List<Element?>? policyElement,
+      @JsonKey(name: '_policy') final List<Element?>? policyElement,
       final List<ProvenanceAgent>? agent,
       final List<ProvenanceEntity>? entity,
       final List<Signature>? signature}) = _$_Provenance;
@@ -6620,21 +6520,16 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
 
 abstract class _ProvenanceEntity extends ProvenanceEntity {
   const factory _ProvenanceEntity(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          final List<String>? fhirComments,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       @JsonKey(unknownEnumValue: EntityRole.unknown)
-          required final EntityRole role,
-      @JsonKey(name: '_role')
-          final Element? roleElement,
+      required final EntityRole role,
+      @JsonKey(name: '_role') final Element? roleElement,
       required final Coding type,
       required final FhirUri reference,
-      @JsonKey(name: '_reference')
-          final Element? referenceElement,
+      @JsonKey(name: '_reference') final Element? referenceElement,
       final String? display,
       final ProvenanceAgent? agent}) = _$_ProvenanceEntity;
   const _ProvenanceEntity._() : super._();
@@ -6999,22 +6894,17 @@ abstract class $AuditEventCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       AuditEventEvent event,
       List<AuditEventParticipant> participant,
@@ -7202,22 +7092,17 @@ abstract class _$$_AuditEventCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       AuditEventEvent event,
       List<AuditEventParticipant> participant,
@@ -7340,22 +7225,17 @@ class __$$_AuditEventCopyWithImpl<$Res>
 class _$_AuditEvent extends _AuditEvent {
   const _$_AuditEvent(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
-          this.resourceType = Dstu2ResourceType.AuditEvent,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.AuditEvent,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.event,
       required final List<AuditEventParticipant> participant,
@@ -7523,22 +7403,17 @@ class _$_AuditEvent extends _AuditEvent {
 abstract class _AuditEvent extends AuditEvent {
   const factory _AuditEvent(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final AuditEventEvent event,
       required final List<AuditEventParticipant> participant,

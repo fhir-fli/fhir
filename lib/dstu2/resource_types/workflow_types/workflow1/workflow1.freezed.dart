@@ -62,22 +62,17 @@ abstract class $OrderCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirDateTime? date,
@@ -354,22 +349,17 @@ abstract class _$$_OrderCopyWith<$Res> implements $OrderCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirDateTime? date,
@@ -528,22 +518,17 @@ class __$$_OrderCopyWithImpl<$Res> extends _$OrderCopyWithImpl<$Res, _$_Order>
 class _$_Order extends _Order {
   const _$_Order(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
-          this.resourceType = Dstu2ResourceType.Order,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Order,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.date,
@@ -739,22 +724,17 @@ class _$_Order extends _Order {
 abstract class _Order extends Order {
   const factory _Order(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final FhirDateTime? date,
@@ -1195,31 +1175,25 @@ abstract class $OrderResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference request,
       FhirDateTime? date,
       Reference? who,
       @JsonKey(unknownEnumValue: OrderResponseOrderStatus.unknown)
-          OrderResponseOrderStatus orderStatus,
-      @JsonKey(name: '_orderStatus')
-          Element? orderStatusElement,
+      OrderResponseOrderStatus orderStatus,
+      @JsonKey(name: '_orderStatus') Element? orderStatusElement,
       String? description,
       List<Reference>? fulfillment});
 
@@ -1441,31 +1415,25 @@ abstract class _$$_OrderResponseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference request,
       FhirDateTime? date,
       Reference? who,
       @JsonKey(unknownEnumValue: OrderResponseOrderStatus.unknown)
-          OrderResponseOrderStatus orderStatus,
-      @JsonKey(name: '_orderStatus')
-          Element? orderStatusElement,
+      OrderResponseOrderStatus orderStatus,
+      @JsonKey(name: '_orderStatus') Element? orderStatusElement,
       String? description,
       List<Reference>? fulfillment});
 
@@ -1607,31 +1575,25 @@ class __$$_OrderResponseCopyWithImpl<$Res>
 class _$_OrderResponse extends _OrderResponse {
   const _$_OrderResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
-          this.resourceType = Dstu2ResourceType.OrderResponse,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.OrderResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       required this.request,
       this.date,
       this.who,
       @JsonKey(unknownEnumValue: OrderResponseOrderStatus.unknown)
-          required this.orderStatus,
-      @JsonKey(name: '_orderStatus')
-          this.orderStatusElement,
+      required this.orderStatus,
+      @JsonKey(name: '_orderStatus') this.orderStatusElement,
       this.description,
       final List<Reference>? fulfillment})
       : _contained = contained,
@@ -1821,31 +1783,25 @@ class _$_OrderResponse extends _OrderResponse {
 abstract class _OrderResponse extends OrderResponse {
   const factory _OrderResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       required final Reference request,
       final FhirDateTime? date,
       final Reference? who,
       @JsonKey(unknownEnumValue: OrderResponseOrderStatus.unknown)
-          required final OrderResponseOrderStatus orderStatus,
-      @JsonKey(name: '_orderStatus')
-          final Element? orderStatusElement,
+      required final OrderResponseOrderStatus orderStatus,
+      @JsonKey(name: '_orderStatus') final Element? orderStatusElement,
       final String? description,
       final List<Reference>? fulfillment}) = _$_OrderResponse;
   const _OrderResponse._() : super._();
@@ -1968,22 +1924,17 @@ abstract class $CommunicationRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? category,
@@ -1993,9 +1944,8 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       List<CodeableConcept>? medium,
       Reference? requester,
       @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
-          CommunicationRequestStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      CommunicationRequestStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? encounter,
       FhirDateTime? scheduledDateTime,
       Period? scheduledPeriod,
@@ -2003,8 +1953,7 @@ abstract class $CommunicationRequestCopyWith<$Res> {
       FhirDateTime? requestedOn,
       Reference? subject,
       CodeableConcept? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement});
+      @JsonKey(name: '_priority') Element? priorityElement});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -2365,22 +2314,17 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? category,
@@ -2390,9 +2334,8 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
       List<CodeableConcept>? medium,
       Reference? requester,
       @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
-          CommunicationRequestStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      CommunicationRequestStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? encounter,
       FhirDateTime? scheduledDateTime,
       Period? scheduledPeriod,
@@ -2400,8 +2343,7 @@ abstract class _$$_CommunicationRequestCopyWith<$Res>
       FhirDateTime? requestedOn,
       Reference? subject,
       CodeableConcept? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement});
+      @JsonKey(name: '_priority') Element? priorityElement});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -2600,22 +2542,17 @@ class __$$_CommunicationRequestCopyWithImpl<$Res>
 class _$_CommunicationRequest extends _CommunicationRequest {
   const _$_CommunicationRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
-          this.resourceType = Dstu2ResourceType.CommunicationRequest,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.CommunicationRequest,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.category,
@@ -2625,9 +2562,8 @@ class _$_CommunicationRequest extends _CommunicationRequest {
       final List<CodeableConcept>? medium,
       this.requester,
       @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.encounter,
       this.scheduledDateTime,
       this.scheduledPeriod,
@@ -2635,8 +2571,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
       this.requestedOn,
       this.subject,
       this.priority,
-      @JsonKey(name: '_priority')
-          this.priorityElement})
+      @JsonKey(name: '_priority') this.priorityElement})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -2886,44 +2821,38 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 
 abstract class _CommunicationRequest extends CommunicationRequest {
   const factory _CommunicationRequest(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
+          {@JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
           final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
-      final FhirMeta? meta,
-      final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
-      final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final CodeableConcept? category,
-      final Reference? sender,
-      final List<Reference>? recipient,
-      final CommunicationRequestPayload? payload,
-      final List<CodeableConcept>? medium,
-      final Reference? requester,
-      @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
+          @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+          @JsonKey(name: 'id') final FhirId? fhirId,
+          final FhirMeta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final FhirCode? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final CodeableConcept? category,
+          final Reference? sender,
+          final List<Reference>? recipient,
+          final CommunicationRequestPayload? payload,
+          final List<CodeableConcept>? medium,
+          final Reference? requester,
+          @JsonKey(unknownEnumValue: CommunicationRequestStatus.unknown)
           final CommunicationRequestStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
-      final Reference? encounter,
-      final FhirDateTime? scheduledDateTime,
-      final Period? scheduledPeriod,
-      final List<CodeableConcept>? reason,
-      final FhirDateTime? requestedOn,
-      final Reference? subject,
-      final CodeableConcept? priority,
-      @JsonKey(name: '_priority')
-          final Element? priorityElement}) = _$_CommunicationRequest;
+          @JsonKey(name: '_status') final Element? statusElement,
+          final Reference? encounter,
+          final FhirDateTime? scheduledDateTime,
+          final Period? scheduledPeriod,
+          final List<CodeableConcept>? reason,
+          final FhirDateTime? requestedOn,
+          final Reference? subject,
+          final CodeableConcept? priority,
+          @JsonKey(name: '_priority') final Element? priorityElement}) =
+      _$_CommunicationRequest;
   const _CommunicationRequest._() : super._();
 
   factory _CommunicationRequest.fromJson(Map<String, dynamic> json) =
@@ -3426,29 +3355,23 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? bodySiteCodeableConcept,
       Reference? bodySiteReference,
       @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
-          DeviceUseRequestStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      DeviceUseRequestStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference device,
       Reference? encounter,
       List<Identifier>? identifier,
@@ -3462,9 +3385,8 @@ abstract class $DeviceUseRequestCopyWith<$Res> {
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
-          DeviceUseRequestPriority? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement});
+      DeviceUseRequestPriority? priority,
+      @JsonKey(name: '_priority') Element? priorityElement});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -3809,29 +3731,23 @@ abstract class _$$_DeviceUseRequestCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? bodySiteCodeableConcept,
       Reference? bodySiteReference,
       @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
-          DeviceUseRequestStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      DeviceUseRequestStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference device,
       Reference? encounter,
       List<Identifier>? identifier,
@@ -3845,9 +3761,8 @@ abstract class _$$_DeviceUseRequestCopyWith<$Res>
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
-          DeviceUseRequestPriority? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement});
+      DeviceUseRequestPriority? priority,
+      @JsonKey(name: '_priority') Element? priorityElement});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -4049,29 +3964,22 @@ class __$$_DeviceUseRequestCopyWithImpl<$Res>
 class _$_DeviceUseRequest extends _DeviceUseRequest {
   const _$_DeviceUseRequest(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
-          this.resourceType = Dstu2ResourceType.DeviceUseRequest,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.DeviceUseRequest,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.bodySiteCodeableConcept,
       this.bodySiteReference,
-      @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
       required this.device,
       this.encounter,
       final List<Identifier>? identifier,
@@ -4085,9 +3993,8 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
       this.timingPeriod,
       this.timingDateTime,
       @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
-          this.priority,
-      @JsonKey(name: '_priority')
-          this.priorityElement})
+      this.priority,
+      @JsonKey(name: '_priority') this.priorityElement})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -4336,46 +4243,40 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
 
 abstract class _DeviceUseRequest extends DeviceUseRequest {
   const factory _DeviceUseRequest(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
+          {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
           final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
-      final FhirMeta? meta,
-      final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
-      final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final CodeableConcept? bodySiteCodeableConcept,
-      final Reference? bodySiteReference,
-      @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
+          @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+          @JsonKey(name: 'id') final FhirId? fhirId,
+          final FhirMeta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final FhirCode? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? bodySiteCodeableConcept,
+          final Reference? bodySiteReference,
+          @JsonKey(unknownEnumValue: DeviceUseRequestStatus.unknown)
           final DeviceUseRequestStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
-      required final Reference device,
-      final Reference? encounter,
-      final List<Identifier>? identifier,
-      final List<CodeableConcept>? indication,
-      final String? notes,
-      final List<CodeableConcept>? prnReason,
-      final FhirDateTime? orderedOn,
-      final FhirDateTime? recordedOn,
-      required final Reference subject,
-      final Timing? timingTiming,
-      final Period? timingPeriod,
-      final FhirDateTime? timingDateTime,
-      @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
+          @JsonKey(name: '_status') final Element? statusElement,
+          required final Reference device,
+          final Reference? encounter,
+          final List<Identifier>? identifier,
+          final List<CodeableConcept>? indication,
+          final String? notes,
+          final List<CodeableConcept>? prnReason,
+          final FhirDateTime? orderedOn,
+          final FhirDateTime? recordedOn,
+          required final Reference subject,
+          final Timing? timingTiming,
+          final Period? timingPeriod,
+          final FhirDateTime? timingDateTime,
+          @JsonKey(unknownEnumValue: DeviceUseRequestPriority.unknown)
           final DeviceUseRequestPriority? priority,
-      @JsonKey(name: '_priority')
-          final Element? priorityElement}) = _$_DeviceUseRequest;
+          @JsonKey(name: '_priority') final Element? priorityElement}) =
+      _$_DeviceUseRequest;
   const _DeviceUseRequest._() : super._();
 
   factory _DeviceUseRequest.fromJson(Map<String, dynamic> json) =
@@ -4514,22 +4415,17 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? bodySiteCodeableConcept,
       Reference? bodySiteReference,
@@ -4539,14 +4435,12 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       List<CodeableConcept>? indication,
       List<String>? notes,
       FhirDateTime? recordedOn,
-      @JsonKey(name: '_recordedOn')
-          Element? recordedOnElement,
+      @JsonKey(name: '_recordedOn') Element? recordedOnElement,
       Reference subject,
       Timing? timingTiming,
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          Element? timingDateTimeElement});
+      @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -4871,22 +4765,17 @@ abstract class _$$_DeviceUseStatementCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? bodySiteCodeableConcept,
       Reference? bodySiteReference,
@@ -4896,14 +4785,12 @@ abstract class _$$_DeviceUseStatementCopyWith<$Res>
       List<CodeableConcept>? indication,
       List<String>? notes,
       FhirDateTime? recordedOn,
-      @JsonKey(name: '_recordedOn')
-          Element? recordedOnElement,
+      @JsonKey(name: '_recordedOn') Element? recordedOnElement,
       Reference subject,
       Timing? timingTiming,
       Period? timingPeriod,
       FhirDateTime? timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          Element? timingDateTimeElement});
+      @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -5085,22 +4972,17 @@ class __$$_DeviceUseStatementCopyWithImpl<$Res>
 class _$_DeviceUseStatement extends _DeviceUseStatement {
   const _$_DeviceUseStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
-          this.resourceType = Dstu2ResourceType.DeviceUseStatement,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.DeviceUseStatement,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.bodySiteCodeableConcept,
       this.bodySiteReference,
@@ -5110,14 +4992,12 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
       final List<CodeableConcept>? indication,
       final List<String>? notes,
       this.recordedOn,
-      @JsonKey(name: '_recordedOn')
-          this.recordedOnElement,
+      @JsonKey(name: '_recordedOn') this.recordedOnElement,
       required this.subject,
       this.timingTiming,
       this.timingPeriod,
       this.timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          this.timingDateTimeElement})
+      @JsonKey(name: '_timingDateTime') this.timingDateTimeElement})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -5347,22 +5227,17 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 abstract class _DeviceUseStatement extends DeviceUseStatement {
   const factory _DeviceUseStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? bodySiteCodeableConcept,
       final Reference? bodySiteReference,
@@ -5372,14 +5247,13 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
       final List<CodeableConcept>? indication,
       final List<String>? notes,
       final FhirDateTime? recordedOn,
-      @JsonKey(name: '_recordedOn')
-          final Element? recordedOnElement,
+      @JsonKey(name: '_recordedOn') final Element? recordedOnElement,
       required final Reference subject,
       final Timing? timingTiming,
       final Period? timingPeriod,
       final FhirDateTime? timingDateTime,
       @JsonKey(name: '_timingDateTime')
-          final Element? timingDateTimeElement}) = _$_DeviceUseStatement;
+      final Element? timingDateTimeElement}) = _$_DeviceUseStatement;
   const _DeviceUseStatement._() : super._();
 
   factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =

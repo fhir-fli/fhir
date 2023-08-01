@@ -173,41 +173,32 @@ abstract class $CatalogEntryCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? type,
       FhirBoolean? orderable,
-      @JsonKey(name: '_orderable')
-          Element? orderableElement,
+      @JsonKey(name: '_orderable') Element? orderableElement,
       Reference referencedItem,
       List<Identifier>? additionalIdentifier,
       List<CodeableConcept>? classification,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Period? validityPeriod,
       FhirDateTime? validTo,
-      @JsonKey(name: '_validTo')
-          Element? validToElement,
+      @JsonKey(name: '_validTo') Element? validToElement,
       FhirDateTime? lastUpdated,
-      @JsonKey(name: '_lastUpdated')
-          Element? lastUpdatedElement,
+      @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
       List<CodeableConcept>? additionalCharacteristic,
       List<CodeableConcept>? additionalClassification,
       List<CatalogEntryRelatedEntry>? relatedEntry});
@@ -527,41 +518,32 @@ abstract class _$$_CatalogEntryCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? type,
       FhirBoolean? orderable,
-      @JsonKey(name: '_orderable')
-          Element? orderableElement,
+      @JsonKey(name: '_orderable') Element? orderableElement,
       Reference referencedItem,
       List<Identifier>? additionalIdentifier,
       List<CodeableConcept>? classification,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Period? validityPeriod,
       FhirDateTime? validTo,
-      @JsonKey(name: '_validTo')
-          Element? validToElement,
+      @JsonKey(name: '_validTo') Element? validToElement,
       FhirDateTime? lastUpdated,
-      @JsonKey(name: '_lastUpdated')
-          Element? lastUpdatedElement,
+      @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
       List<CodeableConcept>? additionalCharacteristic,
       List<CodeableConcept>? additionalClassification,
       List<CatalogEntryRelatedEntry>? relatedEntry});
@@ -757,41 +739,32 @@ class __$$_CatalogEntryCopyWithImpl<$Res>
 class _$_CatalogEntry extends _CatalogEntry {
   const _$_CatalogEntry(
       {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
-          this.resourceType = R4ResourceType.CatalogEntry,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R4ResourceType.CatalogEntry,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.type,
       this.orderable,
-      @JsonKey(name: '_orderable')
-          this.orderableElement,
+      @JsonKey(name: '_orderable') this.orderableElement,
       required this.referencedItem,
       final List<Identifier>? additionalIdentifier,
       final List<CodeableConcept>? classification,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.validityPeriod,
       this.validTo,
-      @JsonKey(name: '_validTo')
-          this.validToElement,
+      @JsonKey(name: '_validTo') this.validToElement,
       this.lastUpdated,
-      @JsonKey(name: '_lastUpdated')
-          this.lastUpdatedElement,
+      @JsonKey(name: '_lastUpdated') this.lastUpdatedElement,
       final List<CodeableConcept>? additionalCharacteristic,
       final List<CodeableConcept>? additionalClassification,
       final List<CatalogEntryRelatedEntry>? relatedEntry})
@@ -1195,41 +1168,32 @@ class _$_CatalogEntry extends _CatalogEntry {
 abstract class _CatalogEntry extends CatalogEntry {
   const factory _CatalogEntry(
       {@JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
-          final R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final String? fhirId,
+      final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final CodeableConcept? type,
       final FhirBoolean? orderable,
-      @JsonKey(name: '_orderable')
-          final Element? orderableElement,
+      @JsonKey(name: '_orderable') final Element? orderableElement,
       required final Reference referencedItem,
       final List<Identifier>? additionalIdentifier,
       final List<CodeableConcept>? classification,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Period? validityPeriod,
       final FhirDateTime? validTo,
-      @JsonKey(name: '_validTo')
-          final Element? validToElement,
+      @JsonKey(name: '_validTo') final Element? validToElement,
       final FhirDateTime? lastUpdated,
-      @JsonKey(name: '_lastUpdated')
-          final Element? lastUpdatedElement,
+      @JsonKey(name: '_lastUpdated') final Element? lastUpdatedElement,
       final List<CodeableConcept>? additionalCharacteristic,
       final List<CodeableConcept>? additionalClassification,
       final List<CatalogEntryRelatedEntry>? relatedEntry}) = _$_CatalogEntry;
@@ -2001,41 +1965,32 @@ abstract class $CompositionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept type,
       List<CodeableConcept>? category,
       Reference? subject,
       Reference? encounter,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       List<Reference> author,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       FhirCode? confidentiality,
-      @JsonKey(name: '_confidentiality')
-          Element? confidentialityElement,
+      @JsonKey(name: '_confidentiality') Element? confidentialityElement,
       List<CompositionAttester>? attester,
       Reference? custodian,
       List<CompositionRelatesTo>? relatesTo,
@@ -2393,41 +2348,32 @@ abstract class _$$_CompositionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept type,
       List<CodeableConcept>? category,
       Reference? subject,
       Reference? encounter,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       List<Reference> author,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       FhirCode? confidentiality,
-      @JsonKey(name: '_confidentiality')
-          Element? confidentialityElement,
+      @JsonKey(name: '_confidentiality') Element? confidentialityElement,
       List<CompositionAttester>? attester,
       Reference? custodian,
       List<CompositionRelatesTo>? relatesTo,
@@ -2639,41 +2585,32 @@ class __$$_CompositionCopyWithImpl<$Res>
 class _$_Composition extends _Composition {
   const _$_Composition(
       {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
-          this.resourceType = R4ResourceType.Composition,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R4ResourceType.Composition,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       required this.type,
       final List<CodeableConcept>? category,
       this.subject,
       this.encounter,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       required final List<Reference> author,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       this.confidentiality,
-      @JsonKey(name: '_confidentiality')
-          this.confidentialityElement,
+      @JsonKey(name: '_confidentiality') this.confidentialityElement,
       final List<CompositionAttester>? attester,
       this.custodian,
       final List<CompositionRelatesTo>? relatesTo,
@@ -3093,41 +3030,32 @@ class _$_Composition extends _Composition {
 abstract class _Composition extends Composition {
   const factory _Composition(
       {@JsonKey(unknownEnumValue: R4ResourceType.Composition)
-          final R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final String? fhirId,
+      final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       required final CodeableConcept type,
       final List<CodeableConcept>? category,
       final Reference? subject,
       final Reference? encounter,
       final FhirDateTime? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       required final List<Reference> author,
       final String? title,
-      @JsonKey(name: '_title')
-          final Element? titleElement,
+      @JsonKey(name: '_title') final Element? titleElement,
       final FhirCode? confidentiality,
-      @JsonKey(name: '_confidentiality')
-          final Element? confidentialityElement,
+      @JsonKey(name: '_confidentiality') final Element? confidentialityElement,
       final List<CompositionAttester>? attester,
       final Reference? custodian,
       final List<CompositionRelatesTo>? relatesTo,
@@ -5740,41 +5668,32 @@ abstract class $DocumentManifestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       List<Reference>? author,
       List<Reference>? recipient,
       FhirUri? source,
-      @JsonKey(name: '_source')
-          Element? sourceElement,
+      @JsonKey(name: '_source') Element? sourceElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<Reference> content,
       List<DocumentManifestRelated>? related});
 
@@ -6092,41 +6011,32 @@ abstract class _$$_DocumentManifestCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       List<Reference>? author,
       List<Reference>? recipient,
       FhirUri? source,
-      @JsonKey(name: '_source')
-          Element? sourceElement,
+      @JsonKey(name: '_source') Element? sourceElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<Reference> content,
       List<DocumentManifestRelated>? related});
 
@@ -6316,41 +6226,32 @@ class __$$_DocumentManifestCopyWithImpl<$Res>
 class _$_DocumentManifest extends _DocumentManifest {
   const _$_DocumentManifest(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
-          this.resourceType = R4ResourceType.DocumentManifest,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R4ResourceType.DocumentManifest,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.masterIdentifier,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.type,
       this.subject,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       final List<Reference>? author,
       final List<Reference>? recipient,
       this.source,
-      @JsonKey(name: '_source')
-          this.sourceElement,
+      @JsonKey(name: '_source') this.sourceElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       required final List<Reference> content,
       final List<DocumentManifestRelated>? related})
       : _contained = contained,
@@ -6735,41 +6636,32 @@ class _$_DocumentManifest extends _DocumentManifest {
 abstract class _DocumentManifest extends DocumentManifest {
   const factory _DocumentManifest(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
-          final R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final String? fhirId,
+      final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? masterIdentifier,
       final List<Identifier>? identifier,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? type,
       final Reference? subject,
       final FhirDateTime? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final List<Reference>? author,
       final List<Reference>? recipient,
       final FhirUri? source,
-      @JsonKey(name: '_source')
-          final Element? sourceElement,
+      @JsonKey(name: '_source') final Element? sourceElement,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       required final List<Reference> content,
       final List<DocumentManifestRelated>? related}) = _$_DocumentManifest;
   const _DocumentManifest._() : super._();
@@ -7528,44 +7420,35 @@ abstract class $DocumentReferenceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirCode? docStatus,
-      @JsonKey(name: '_docStatus')
-          Element? docStatusElement,
+      @JsonKey(name: '_docStatus') Element? docStatusElement,
       CodeableConcept? type,
       List<CodeableConcept>? category,
       Reference? subject,
       FhirInstant? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       List<Reference>? author,
       Reference? authenticator,
       Reference? custodian,
       List<DocumentReferenceRelatesTo>? relatesTo,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<CodeableConcept>? securityLabel,
       List<DocumentReferenceContent> content,
       DocumentReferenceContext? context});
@@ -7943,44 +7826,35 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirCode? docStatus,
-      @JsonKey(name: '_docStatus')
-          Element? docStatusElement,
+      @JsonKey(name: '_docStatus') Element? docStatusElement,
       CodeableConcept? type,
       List<CodeableConcept>? category,
       Reference? subject,
       FhirInstant? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       List<Reference>? author,
       Reference? authenticator,
       Reference? custodian,
       List<DocumentReferenceRelatesTo>? relatesTo,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<CodeableConcept>? securityLabel,
       List<DocumentReferenceContent> content,
       DocumentReferenceContext? context});
@@ -8197,44 +8071,35 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
 class _$_DocumentReference extends _DocumentReference {
   const _$_DocumentReference(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
-          this.resourceType = R4ResourceType.DocumentReference,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R4ResourceType.DocumentReference,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.masterIdentifier,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.docStatus,
-      @JsonKey(name: '_docStatus')
-          this.docStatusElement,
+      @JsonKey(name: '_docStatus') this.docStatusElement,
       this.type,
       final List<CodeableConcept>? category,
       this.subject,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       final List<Reference>? author,
       this.authenticator,
       this.custodian,
       final List<DocumentReferenceRelatesTo>? relatesTo,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<CodeableConcept>? securityLabel,
       required final List<DocumentReferenceContent> content,
       this.context})
@@ -8670,44 +8535,35 @@ class _$_DocumentReference extends _DocumentReference {
 abstract class _DocumentReference extends DocumentReference {
   const factory _DocumentReference(
       {@JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
-          final R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final String? fhirId,
+      final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? masterIdentifier,
       final List<Identifier>? identifier,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final FhirCode? docStatus,
-      @JsonKey(name: '_docStatus')
-          final Element? docStatusElement,
+      @JsonKey(name: '_docStatus') final Element? docStatusElement,
       final CodeableConcept? type,
       final List<CodeableConcept>? category,
       final Reference? subject,
       final FhirInstant? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final List<Reference>? author,
       final Reference? authenticator,
       final Reference? custodian,
       final List<DocumentReferenceRelatesTo>? relatesTo,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<CodeableConcept>? securityLabel,
       required final List<DocumentReferenceContent> content,
       final DocumentReferenceContext? context}) = _$_DocumentReference;

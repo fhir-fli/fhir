@@ -1150,28 +1150,20 @@ abstract class $QuantityCopyWith<$Res> {
       _$QuantityCopyWithImpl<$Res, Quantity>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       FhirDecimal? value,
-      @JsonKey(name: '_value')
-          Element? valueElement,
+      @JsonKey(name: '_value') Element? valueElement,
       @JsonKey(unknownEnumValue: QuantityComparator.unknown)
-          QuantityComparator? comparator,
-      @JsonKey(name: '_comparator')
-          Element? comparatorElement,
+      QuantityComparator? comparator,
+      @JsonKey(name: '_comparator') Element? comparatorElement,
       String? unit,
-      @JsonKey(name: '_unit')
-          Element? unitElement,
+      @JsonKey(name: '_unit') Element? unitElement,
       FhirUri? system,
-      @JsonKey(name: '_system')
-          Element? systemElement,
+      @JsonKey(name: '_system') Element? systemElement,
       FhirCode? code,
-      @JsonKey(name: '_code')
-          Element? codeElement});
+      @JsonKey(name: '_code') Element? codeElement});
 
   $ElementCopyWith<$Res>? get valueElement;
   $ElementCopyWith<$Res>? get comparatorElement;
@@ -1332,28 +1324,20 @@ abstract class _$$_QuantityCopyWith<$Res> implements $QuantityCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       FhirDecimal? value,
-      @JsonKey(name: '_value')
-          Element? valueElement,
+      @JsonKey(name: '_value') Element? valueElement,
       @JsonKey(unknownEnumValue: QuantityComparator.unknown)
-          QuantityComparator? comparator,
-      @JsonKey(name: '_comparator')
-          Element? comparatorElement,
+      QuantityComparator? comparator,
+      @JsonKey(name: '_comparator') Element? comparatorElement,
       String? unit,
-      @JsonKey(name: '_unit')
-          Element? unitElement,
+      @JsonKey(name: '_unit') Element? unitElement,
       FhirUri? system,
-      @JsonKey(name: '_system')
-          Element? systemElement,
+      @JsonKey(name: '_system') Element? systemElement,
       FhirCode? code,
-      @JsonKey(name: '_code')
-          Element? codeElement});
+      @JsonKey(name: '_code') Element? codeElement});
 
   @override
   $ElementCopyWith<$Res>? get valueElement;
@@ -1592,28 +1576,20 @@ class _$_Quantity extends _Quantity {
 
 abstract class _Quantity extends Quantity {
   const factory _Quantity(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments')
-          final List<String>? fhirComments,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       final FhirDecimal? value,
-      @JsonKey(name: '_value')
-          final Element? valueElement,
+      @JsonKey(name: '_value') final Element? valueElement,
       @JsonKey(unknownEnumValue: QuantityComparator.unknown)
-          final QuantityComparator? comparator,
-      @JsonKey(name: '_comparator')
-          final Element? comparatorElement,
+      final QuantityComparator? comparator,
+      @JsonKey(name: '_comparator') final Element? comparatorElement,
       final String? unit,
-      @JsonKey(name: '_unit')
-          final Element? unitElement,
+      @JsonKey(name: '_unit') final Element? unitElement,
       final FhirUri? system,
-      @JsonKey(name: '_system')
-          final Element? systemElement,
+      @JsonKey(name: '_system') final Element? systemElement,
       final FhirCode? code,
-      @JsonKey(name: '_code')
-          final Element? codeElement}) = _$_Quantity;
+      @JsonKey(name: '_code') final Element? codeElement}) = _$_Quantity;
   const _Quantity._() : super._();
 
   factory _Quantity.fromJson(Map<String, dynamic> json) = _$_Quantity.fromJson;
@@ -4403,23 +4379,17 @@ class _$_Identifier extends _Identifier {
 
 abstract class _Identifier extends Identifier {
   const factory _Identifier(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments')
-          final List<String>? fhirComments,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       @JsonKey(unknownEnumValue: IdentifierUse.unknown)
-          final IdentifierUse? use,
-      @JsonKey(name: '_use')
-          final Element? useElement,
+      final IdentifierUse? use,
+      @JsonKey(name: '_use') final Element? useElement,
       final CodeableConcept? type,
       final FhirUri? system,
-      @JsonKey(name: '_system')
-          final Element? systemElement,
+      @JsonKey(name: '_system') final Element? systemElement,
       final String? value,
-      @JsonKey(name: '_value')
-          final Element? valueElement,
+      @JsonKey(name: '_value') final Element? valueElement,
       final Period? period,
       final Reference? assigner}) = _$_Identifier;
   const _Identifier._() : super._();
@@ -6849,26 +6819,18 @@ abstract class $ContactPointCopyWith<$Res> {
       _$ContactPointCopyWithImpl<$Res, ContactPoint>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-          ContactPointSystem? system,
-      @JsonKey(name: '_system')
-          Element? systemElement,
+      ContactPointSystem? system,
+      @JsonKey(name: '_system') Element? systemElement,
       String? value,
-      @JsonKey(name: '_value')
-          Element? valueElement,
-      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-          ContactPointUse? use,
-      @JsonKey(name: '_use')
-          Element? useElement,
+      @JsonKey(name: '_value') Element? valueElement,
+      @JsonKey(unknownEnumValue: ContactPointUse.unknown) ContactPointUse? use,
+      @JsonKey(name: '_use') Element? useElement,
       FhirPositiveInt? rank,
-      @JsonKey(name: '_rank')
-          Element? rankElement,
+      @JsonKey(name: '_rank') Element? rankElement,
       Period? period});
 
   $ElementCopyWith<$Res>? get systemElement;
@@ -7026,26 +6988,18 @@ abstract class _$$_ContactPointCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-          ContactPointSystem? system,
-      @JsonKey(name: '_system')
-          Element? systemElement,
+      ContactPointSystem? system,
+      @JsonKey(name: '_system') Element? systemElement,
       String? value,
-      @JsonKey(name: '_value')
-          Element? valueElement,
-      @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-          ContactPointUse? use,
-      @JsonKey(name: '_use')
-          Element? useElement,
+      @JsonKey(name: '_value') Element? valueElement,
+      @JsonKey(unknownEnumValue: ContactPointUse.unknown) ContactPointUse? use,
+      @JsonKey(name: '_use') Element? useElement,
       FhirPositiveInt? rank,
-      @JsonKey(name: '_rank')
-          Element? rankElement,
+      @JsonKey(name: '_rank') Element? rankElement,
       Period? period});
 
   @override
@@ -7273,26 +7227,19 @@ class _$_ContactPoint extends _ContactPoint {
 
 abstract class _ContactPoint extends ContactPoint {
   const factory _ContactPoint(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments')
-          final List<String>? fhirComments,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       @JsonKey(unknownEnumValue: ContactPointSystem.unknown)
-          final ContactPointSystem? system,
-      @JsonKey(name: '_system')
-          final Element? systemElement,
+      final ContactPointSystem? system,
+      @JsonKey(name: '_system') final Element? systemElement,
       final String? value,
-      @JsonKey(name: '_value')
-          final Element? valueElement,
+      @JsonKey(name: '_value') final Element? valueElement,
       @JsonKey(unknownEnumValue: ContactPointUse.unknown)
-          final ContactPointUse? use,
-      @JsonKey(name: '_use')
-          final Element? useElement,
+      final ContactPointUse? use,
+      @JsonKey(name: '_use') final Element? useElement,
       final FhirPositiveInt? rank,
-      @JsonKey(name: '_rank')
-          final Element? rankElement,
+      @JsonKey(name: '_rank') final Element? rankElement,
       final Period? period}) = _$_ContactPoint;
   const _ContactPoint._() : super._();
 
@@ -7399,47 +7346,33 @@ abstract class $TimingRepeatCopyWith<$Res> {
       _$TimingRepeatCopyWithImpl<$Res, TimingRepeat>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Quantity? boundsQuantity,
       Range? boundsRange,
       Period? boundsPeriod,
       FhirInteger? count,
-      @JsonKey(name: '_count')
-          Element? countElement,
+      @JsonKey(name: '_count') Element? countElement,
       FhirDecimal? duration,
-      @JsonKey(name: '_duration')
-          Element? durationElement,
+      @JsonKey(name: '_duration') Element? durationElement,
       FhirDecimal? durationMax,
-      @JsonKey(name: '_durationMax')
-          Element? durationMaxElement,
+      @JsonKey(name: '_durationMax') Element? durationMaxElement,
       @JsonKey(unknownEnumValue: RepeatUnits.unknown)
-          RepeatUnits? durationUnits,
-      @JsonKey(name: '_durationUnit')
-          Element? durationUnitElement,
+      RepeatUnits? durationUnits,
+      @JsonKey(name: '_durationUnit') Element? durationUnitElement,
       FhirInteger? frequency,
-      @JsonKey(name: '_frequency')
-          Element? frequencyElement,
+      @JsonKey(name: '_frequency') Element? frequencyElement,
       FhirInteger? frequencyMax,
-      @JsonKey(name: '_frequencyMax')
-          Element? frequencyMaxElement,
+      @JsonKey(name: '_frequencyMax') Element? frequencyMaxElement,
       FhirDecimal? period,
-      @JsonKey(name: '_period')
-          Element? periodElement,
+      @JsonKey(name: '_period') Element? periodElement,
       FhirDecimal? periodMax,
-      @JsonKey(name: '_periodMax')
-          Element? periodMaxElement,
-      @JsonKey(unknownEnumValue: RepeatUnits.unknown)
-          RepeatUnits? periodUnits,
-      @JsonKey(name: '_periodUnits')
-          Element? periodUnitElement,
+      @JsonKey(name: '_periodMax') Element? periodMaxElement,
+      @JsonKey(unknownEnumValue: RepeatUnits.unknown) RepeatUnits? periodUnits,
+      @JsonKey(name: '_periodUnits') Element? periodUnitElement,
       FhirCode? when,
-      @JsonKey(name: '_when')
-          Element? whenElement});
+      @JsonKey(name: '_when') Element? whenElement});
 
   $QuantityCopyWith<$Res>? get boundsQuantity;
   $RangeCopyWith<$Res>? get boundsRange;
@@ -7770,47 +7703,33 @@ abstract class _$$_TimingRepeatCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Quantity? boundsQuantity,
       Range? boundsRange,
       Period? boundsPeriod,
       FhirInteger? count,
-      @JsonKey(name: '_count')
-          Element? countElement,
+      @JsonKey(name: '_count') Element? countElement,
       FhirDecimal? duration,
-      @JsonKey(name: '_duration')
-          Element? durationElement,
+      @JsonKey(name: '_duration') Element? durationElement,
       FhirDecimal? durationMax,
-      @JsonKey(name: '_durationMax')
-          Element? durationMaxElement,
+      @JsonKey(name: '_durationMax') Element? durationMaxElement,
       @JsonKey(unknownEnumValue: RepeatUnits.unknown)
-          RepeatUnits? durationUnits,
-      @JsonKey(name: '_durationUnit')
-          Element? durationUnitElement,
+      RepeatUnits? durationUnits,
+      @JsonKey(name: '_durationUnit') Element? durationUnitElement,
       FhirInteger? frequency,
-      @JsonKey(name: '_frequency')
-          Element? frequencyElement,
+      @JsonKey(name: '_frequency') Element? frequencyElement,
       FhirInteger? frequencyMax,
-      @JsonKey(name: '_frequencyMax')
-          Element? frequencyMaxElement,
+      @JsonKey(name: '_frequencyMax') Element? frequencyMaxElement,
       FhirDecimal? period,
-      @JsonKey(name: '_period')
-          Element? periodElement,
+      @JsonKey(name: '_period') Element? periodElement,
       FhirDecimal? periodMax,
-      @JsonKey(name: '_periodMax')
-          Element? periodMaxElement,
-      @JsonKey(unknownEnumValue: RepeatUnits.unknown)
-          RepeatUnits? periodUnits,
-      @JsonKey(name: '_periodUnits')
-          Element? periodUnitElement,
+      @JsonKey(name: '_periodMax') Element? periodMaxElement,
+      @JsonKey(unknownEnumValue: RepeatUnits.unknown) RepeatUnits? periodUnits,
+      @JsonKey(name: '_periodUnits') Element? periodUnitElement,
       FhirCode? when,
-      @JsonKey(name: '_when')
-          Element? whenElement});
+      @JsonKey(name: '_when') Element? whenElement});
 
   @override
   $QuantityCopyWith<$Res>? get boundsQuantity;
@@ -8216,47 +8135,34 @@ class _$_TimingRepeat extends _TimingRepeat {
 
 abstract class _TimingRepeat extends TimingRepeat {
   const factory _TimingRepeat(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments')
-          final List<String>? fhirComments,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       final Quantity? boundsQuantity,
       final Range? boundsRange,
       final Period? boundsPeriod,
       final FhirInteger? count,
-      @JsonKey(name: '_count')
-          final Element? countElement,
+      @JsonKey(name: '_count') final Element? countElement,
       final FhirDecimal? duration,
-      @JsonKey(name: '_duration')
-          final Element? durationElement,
+      @JsonKey(name: '_duration') final Element? durationElement,
       final FhirDecimal? durationMax,
-      @JsonKey(name: '_durationMax')
-          final Element? durationMaxElement,
+      @JsonKey(name: '_durationMax') final Element? durationMaxElement,
       @JsonKey(unknownEnumValue: RepeatUnits.unknown)
-          final RepeatUnits? durationUnits,
-      @JsonKey(name: '_durationUnit')
-          final Element? durationUnitElement,
+      final RepeatUnits? durationUnits,
+      @JsonKey(name: '_durationUnit') final Element? durationUnitElement,
       final FhirInteger? frequency,
-      @JsonKey(name: '_frequency')
-          final Element? frequencyElement,
+      @JsonKey(name: '_frequency') final Element? frequencyElement,
       final FhirInteger? frequencyMax,
-      @JsonKey(name: '_frequencyMax')
-          final Element? frequencyMaxElement,
+      @JsonKey(name: '_frequencyMax') final Element? frequencyMaxElement,
       final FhirDecimal? period,
-      @JsonKey(name: '_period')
-          final Element? periodElement,
+      @JsonKey(name: '_period') final Element? periodElement,
       final FhirDecimal? periodMax,
-      @JsonKey(name: '_periodMax')
-          final Element? periodMaxElement,
+      @JsonKey(name: '_periodMax') final Element? periodMaxElement,
       @JsonKey(unknownEnumValue: RepeatUnits.unknown)
-          final RepeatUnits? periodUnits,
-      @JsonKey(name: '_periodUnits')
-          final Element? periodUnitElement,
+      final RepeatUnits? periodUnits,
+      @JsonKey(name: '_periodUnits') final Element? periodUnitElement,
       final FhirCode? when,
-      @JsonKey(name: '_when')
-          final Element? whenElement}) = _$_TimingRepeat;
+      @JsonKey(name: '_when') final Element? whenElement}) = _$_TimingRepeat;
   const _TimingRepeat._() : super._();
 
   factory _TimingRepeat.fromJson(Map<String, dynamic> json) =

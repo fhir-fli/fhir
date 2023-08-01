@@ -221,30 +221,23 @@ abstract class $CoverageCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Coverage)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirCode? kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
+      @JsonKey(name: '_kind') Element? kindElement,
       List<CoveragePaymentBy>? paymentBy,
       CodeableConcept? type,
       Reference? policyHolder,
@@ -252,23 +245,18 @@ abstract class $CoverageCopyWith<$Res> {
       List<Identifier>? subscriberId,
       Reference beneficiary,
       String? dependent,
-      @JsonKey(name: '_dependent')
-          Element? dependentElement,
+      @JsonKey(name: '_dependent') Element? dependentElement,
       CodeableConcept? relationship,
       Period? period,
       Reference? insurer,
-      @JsonKey(name: 'class')
-          List<CoverageClass>? class_,
+      @JsonKey(name: 'class') List<CoverageClass>? class_,
       FhirPositiveInt? order,
-      @JsonKey(name: '_order')
-          Element? orderElement,
+      @JsonKey(name: '_order') Element? orderElement,
       String? network,
-      @JsonKey(name: '_network')
-          Element? networkElement,
+      @JsonKey(name: '_network') Element? networkElement,
       List<CoverageCostToBeneficiary>? costToBeneficiary,
       FhirBoolean? subrogation,
-      @JsonKey(name: '_subrogation')
-          Element? subrogationElement,
+      @JsonKey(name: '_subrogation') Element? subrogationElement,
       List<Reference>? contract,
       Reference? insurancePlan});
 
@@ -722,30 +710,23 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Coverage)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirCode? kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
+      @JsonKey(name: '_kind') Element? kindElement,
       List<CoveragePaymentBy>? paymentBy,
       CodeableConcept? type,
       Reference? policyHolder,
@@ -753,23 +734,18 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
       List<Identifier>? subscriberId,
       Reference beneficiary,
       String? dependent,
-      @JsonKey(name: '_dependent')
-          Element? dependentElement,
+      @JsonKey(name: '_dependent') Element? dependentElement,
       CodeableConcept? relationship,
       Period? period,
       Reference? insurer,
-      @JsonKey(name: 'class')
-          List<CoverageClass>? class_,
+      @JsonKey(name: 'class') List<CoverageClass>? class_,
       FhirPositiveInt? order,
-      @JsonKey(name: '_order')
-          Element? orderElement,
+      @JsonKey(name: '_order') Element? orderElement,
       String? network,
-      @JsonKey(name: '_network')
-          Element? networkElement,
+      @JsonKey(name: '_network') Element? networkElement,
       List<CoverageCostToBeneficiary>? costToBeneficiary,
       FhirBoolean? subrogation,
-      @JsonKey(name: '_subrogation')
-          Element? subrogationElement,
+      @JsonKey(name: '_subrogation') Element? subrogationElement,
       List<Reference>? contract,
       Reference? insurancePlan});
 
@@ -1023,30 +999,23 @@ class __$$_CoverageCopyWithImpl<$Res>
 class _$_Coverage extends _Coverage {
   const _$_Coverage(
       {@JsonKey(unknownEnumValue: R5ResourceType.Coverage)
-          this.resourceType = R5ResourceType.Coverage,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R5ResourceType.Coverage,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.kind,
-      @JsonKey(name: '_kind')
-          this.kindElement,
+      @JsonKey(name: '_kind') this.kindElement,
       final List<CoveragePaymentBy>? paymentBy,
       this.type,
       this.policyHolder,
@@ -1054,23 +1023,18 @@ class _$_Coverage extends _Coverage {
       final List<Identifier>? subscriberId,
       required this.beneficiary,
       this.dependent,
-      @JsonKey(name: '_dependent')
-          this.dependentElement,
+      @JsonKey(name: '_dependent') this.dependentElement,
       this.relationship,
       this.period,
       this.insurer,
-      @JsonKey(name: 'class')
-          final List<CoverageClass>? class_,
+      @JsonKey(name: 'class') final List<CoverageClass>? class_,
       this.order,
-      @JsonKey(name: '_order')
-          this.orderElement,
+      @JsonKey(name: '_order') this.orderElement,
       this.network,
-      @JsonKey(name: '_network')
-          this.networkElement,
+      @JsonKey(name: '_network') this.networkElement,
       final List<CoverageCostToBeneficiary>? costToBeneficiary,
       this.subrogation,
-      @JsonKey(name: '_subrogation')
-          this.subrogationElement,
+      @JsonKey(name: '_subrogation') this.subrogationElement,
       final List<Reference>? contract,
       this.insurancePlan})
       : _contained = contained,
@@ -1555,30 +1519,23 @@ class _$_Coverage extends _Coverage {
 abstract class _Coverage extends Coverage {
   const factory _Coverage(
       {@JsonKey(unknownEnumValue: R5ResourceType.Coverage)
-          final R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final FhirCode? kind,
-      @JsonKey(name: '_kind')
-          final Element? kindElement,
+      @JsonKey(name: '_kind') final Element? kindElement,
       final List<CoveragePaymentBy>? paymentBy,
       final CodeableConcept? type,
       final Reference? policyHolder,
@@ -1586,23 +1543,18 @@ abstract class _Coverage extends Coverage {
       final List<Identifier>? subscriberId,
       required final Reference beneficiary,
       final String? dependent,
-      @JsonKey(name: '_dependent')
-          final Element? dependentElement,
+      @JsonKey(name: '_dependent') final Element? dependentElement,
       final CodeableConcept? relationship,
       final Period? period,
       final Reference? insurer,
-      @JsonKey(name: 'class')
-          final List<CoverageClass>? class_,
+      @JsonKey(name: 'class') final List<CoverageClass>? class_,
       final FhirPositiveInt? order,
-      @JsonKey(name: '_order')
-          final Element? orderElement,
+      @JsonKey(name: '_order') final Element? orderElement,
       final String? network,
-      @JsonKey(name: '_network')
-          final Element? networkElement,
+      @JsonKey(name: '_network') final Element? networkElement,
       final List<CoverageCostToBeneficiary>? costToBeneficiary,
       final FhirBoolean? subrogation,
-      @JsonKey(name: '_subrogation')
-          final Element? subrogationElement,
+      @JsonKey(name: '_subrogation') final Element? subrogationElement,
       final List<Reference>? contract,
       final Reference? insurancePlan}) = _$_Coverage;
   const _Coverage._() : super._();
@@ -2202,15 +2154,13 @@ class _$_CoveragePaymentBy extends _CoveragePaymentBy {
 
 abstract class _CoveragePaymentBy extends CoveragePaymentBy {
   const factory _CoveragePaymentBy(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference party,
       final String? responsibility,
       @JsonKey(name: '_responsibility')
-          final Element? responsibilityElement}) = _$_CoveragePaymentBy;
+      final Element? responsibilityElement}) = _$_CoveragePaymentBy;
   const _CoveragePaymentBy._() : super._();
 
   factory _CoveragePaymentBy.fromJson(Map<String, dynamic> json) =
@@ -3979,40 +3929,31 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? priority,
       List<FhirCode>? purpose,
-      @JsonKey(name: '_purpose')
-          List<Element>? purposeElement,
+      @JsonKey(name: '_purpose') List<Element>? purposeElement,
       Reference patient,
       List<CoverageEligibilityRequestEvent>? event,
       FhirDate? servicedDate,
-      @JsonKey(name: '_servicedDate')
-          Element? servicedDateElement,
+      @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       Period? servicedPeriod,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       Reference? provider,
       Reference insurer,
@@ -4388,40 +4329,31 @@ abstract class _$$_CoverageEligibilityRequestCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? priority,
       List<FhirCode>? purpose,
-      @JsonKey(name: '_purpose')
-          List<Element>? purposeElement,
+      @JsonKey(name: '_purpose') List<Element>? purposeElement,
       Reference patient,
       List<CoverageEligibilityRequestEvent>? event,
       FhirDate? servicedDate,
-      @JsonKey(name: '_servicedDate')
-          Element? servicedDateElement,
+      @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       Period? servicedPeriod,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       Reference? provider,
       Reference insurer,
@@ -4644,40 +4576,31 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
 class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   const _$_CoverageEligibilityRequest(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
-          this.resourceType = R5ResourceType.CoverageEligibilityRequest,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R5ResourceType.CoverageEligibilityRequest,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.priority,
       final List<FhirCode>? purpose,
-      @JsonKey(name: '_purpose')
-          final List<Element>? purposeElement,
+      @JsonKey(name: '_purpose') final List<Element>? purposeElement,
       required this.patient,
       final List<CoverageEligibilityRequestEvent>? event,
       this.servicedDate,
-      @JsonKey(name: '_servicedDate')
-          this.servicedDateElement,
+      @JsonKey(name: '_servicedDate') this.servicedDateElement,
       this.servicedPeriod,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.enterer,
       this.provider,
       required this.insurer,
@@ -5133,40 +5056,31 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
 abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   const factory _CoverageEligibilityRequest(
           {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
-              final R5ResourceType resourceType,
-          @JsonKey(includeFromJson: true, includeToJson: false)
-              final int? dbId,
-          @JsonKey(name: 'id')
-              final FhirId? fhirId,
+          final R5ResourceType resourceType,
+          @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+          @JsonKey(name: 'id') final FhirId? fhirId,
           final FhirMeta? meta,
           final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              final Element? implicitRulesElement,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
           final FhirCode? language,
-          @JsonKey(name: '_language')
-              final Element? languageElement,
+          @JsonKey(name: '_language') final Element? languageElement,
           final Narrative? text,
           final List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<Identifier>? identifier,
           final FhirCode? status,
-          @JsonKey(name: '_status')
-              final Element? statusElement,
+          @JsonKey(name: '_status') final Element? statusElement,
           final CodeableConcept? priority,
           final List<FhirCode>? purpose,
-          @JsonKey(name: '_purpose')
-              final List<Element>? purposeElement,
+          @JsonKey(name: '_purpose') final List<Element>? purposeElement,
           required final Reference patient,
           final List<CoverageEligibilityRequestEvent>? event,
           final FhirDate? servicedDate,
-          @JsonKey(name: '_servicedDate')
-              final Element? servicedDateElement,
+          @JsonKey(name: '_servicedDate') final Element? servicedDateElement,
           final Period? servicedPeriod,
           final FhirDateTime? created,
-          @JsonKey(name: '_created')
-              final Element? createdElement,
+          @JsonKey(name: '_created') final Element? createdElement,
           final Reference? enterer,
           final Reference? provider,
           required final Reference insurer,
@@ -6460,18 +6374,15 @@ abstract class $CoverageEligibilityRequestInsuranceCopyWith<$Res> {
           CoverageEligibilityRequestInsurance>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirBoolean? focal,
-      @JsonKey(name: '_focal')
-          Element? focalElement,
+      @JsonKey(name: '_focal') Element? focalElement,
       Reference coverage,
       String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          Element? businessArrangementElement});
+      Element? businessArrangementElement});
 
   $ElementCopyWith<$Res>? get focalElement;
   $ReferenceCopyWith<$Res> get coverage;
@@ -6580,18 +6491,15 @@ abstract class _$$_CoverageEligibilityRequestInsuranceCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirBoolean? focal,
-      @JsonKey(name: '_focal')
-          Element? focalElement,
+      @JsonKey(name: '_focal') Element? focalElement,
       Reference coverage,
       String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          Element? businessArrangementElement});
+      Element? businessArrangementElement});
 
   @override
   $ElementCopyWith<$Res>? get focalElement;
@@ -6839,18 +6747,15 @@ class _$_CoverageEligibilityRequestInsurance
 abstract class _CoverageEligibilityRequestInsurance
     extends CoverageEligibilityRequestInsurance {
   const factory _CoverageEligibilityRequestInsurance(
-          {@JsonKey(name: 'id')
-              final String? fhirId,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          {@JsonKey(name: 'id') final String? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final FhirBoolean? focal,
-          @JsonKey(name: '_focal')
-              final Element? focalElement,
+          @JsonKey(name: '_focal') final Element? focalElement,
           required final Reference coverage,
           final String? businessArrangement,
           @JsonKey(name: '_businessArrangement')
-              final Element? businessArrangementElement}) =
+          final Element? businessArrangementElement}) =
       _$_CoverageEligibilityRequestInsurance;
   const _CoverageEligibilityRequestInsurance._() : super._();
 
@@ -7024,14 +6929,12 @@ abstract class $CoverageEligibilityRequestItemCopyWith<$Res> {
           CoverageEligibilityRequestItem>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<FhirPositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
-          List<Element>? supportingInfoSequenceElement,
+      List<Element>? supportingInfoSequenceElement,
       CodeableConcept? category,
       CodeableConcept? productOrService,
       List<CodeableConcept>? modifier,
@@ -7222,14 +7125,12 @@ abstract class _$$_CoverageEligibilityRequestItemCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<FhirPositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
-          List<Element>? supportingInfoSequenceElement,
+      List<Element>? supportingInfoSequenceElement,
       CodeableConcept? category,
       CodeableConcept? productOrService,
       List<CodeableConcept>? modifier,
@@ -7348,14 +7249,12 @@ class __$$_CoverageEligibilityRequestItemCopyWithImpl<$Res>
 class _$_CoverageEligibilityRequestItem
     extends _CoverageEligibilityRequestItem {
   const _$_CoverageEligibilityRequestItem(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<FhirPositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
-          final List<Element>? supportingInfoSequenceElement,
+      final List<Element>? supportingInfoSequenceElement,
       this.category,
       this.productOrService,
       final List<CodeableConcept>? modifier,
@@ -7627,14 +7526,12 @@ class _$_CoverageEligibilityRequestItem
 abstract class _CoverageEligibilityRequestItem
     extends CoverageEligibilityRequestItem {
   const factory _CoverageEligibilityRequestItem(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<FhirPositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
-          final List<Element>? supportingInfoSequenceElement,
+      final List<Element>? supportingInfoSequenceElement,
       final CodeableConcept? category,
       final CodeableConcept? productOrService,
       final List<CodeableConcept>? modifier,
@@ -8357,52 +8254,40 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<FhirCode>? purpose,
-      @JsonKey(name: '_purpose')
-          List<Element>? purposeElement,
+      @JsonKey(name: '_purpose') List<Element>? purposeElement,
       Reference patient,
       List<CoverageEligibilityResponseEvent>? event,
       FhirDate? servicedDate,
-      @JsonKey(name: '_servicedDate')
-          Element? servicedDateElement,
+      @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       Period? servicedPeriod,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? requestor,
       Reference request,
       FhirCode? outcome,
-      @JsonKey(name: '_outcome')
-          Element? outcomeElement,
+      @JsonKey(name: '_outcome') Element? outcomeElement,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       Reference insurer,
       List<CoverageEligibilityResponseInsurance>? insurance,
       String? preAuthRef,
-      @JsonKey(name: '_preAuthRef')
-          Element? preAuthRefElement,
+      @JsonKey(name: '_preAuthRef') Element? preAuthRefElement,
       CodeableConcept? form,
       List<CoverageEligibilityResponseError>? error});
 
@@ -8815,52 +8700,40 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<FhirCode>? purpose,
-      @JsonKey(name: '_purpose')
-          List<Element>? purposeElement,
+      @JsonKey(name: '_purpose') List<Element>? purposeElement,
       Reference patient,
       List<CoverageEligibilityResponseEvent>? event,
       FhirDate? servicedDate,
-      @JsonKey(name: '_servicedDate')
-          Element? servicedDateElement,
+      @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       Period? servicedPeriod,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? requestor,
       Reference request,
       FhirCode? outcome,
-      @JsonKey(name: '_outcome')
-          Element? outcomeElement,
+      @JsonKey(name: '_outcome') Element? outcomeElement,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       Reference insurer,
       List<CoverageEligibilityResponseInsurance>? insurance,
       String? preAuthRef,
-      @JsonKey(name: '_preAuthRef')
-          Element? preAuthRefElement,
+      @JsonKey(name: '_preAuthRef') Element? preAuthRefElement,
       CodeableConcept? form,
       List<CoverageEligibilityResponseError>? error});
 
@@ -9102,52 +8975,40 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
 class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   const _$_CoverageEligibilityResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
-          this.resourceType = R5ResourceType.CoverageEligibilityResponse,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R5ResourceType.CoverageEligibilityResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       final List<FhirCode>? purpose,
-      @JsonKey(name: '_purpose')
-          final List<Element>? purposeElement,
+      @JsonKey(name: '_purpose') final List<Element>? purposeElement,
       required this.patient,
       final List<CoverageEligibilityResponseEvent>? event,
       this.servicedDate,
-      @JsonKey(name: '_servicedDate')
-          this.servicedDateElement,
+      @JsonKey(name: '_servicedDate') this.servicedDateElement,
       this.servicedPeriod,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.requestor,
       required this.request,
       this.outcome,
-      @JsonKey(name: '_outcome')
-          this.outcomeElement,
+      @JsonKey(name: '_outcome') this.outcomeElement,
       this.disposition,
-      @JsonKey(name: '_disposition')
-          this.dispositionElement,
+      @JsonKey(name: '_disposition') this.dispositionElement,
       required this.insurer,
       final List<CoverageEligibilityResponseInsurance>? insurance,
       this.preAuthRef,
-      @JsonKey(name: '_preAuthRef')
-          this.preAuthRefElement,
+      @JsonKey(name: '_preAuthRef') this.preAuthRefElement,
       this.form,
       final List<CoverageEligibilityResponseError>? error})
       : _contained = contained,
@@ -9611,56 +9472,45 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
 abstract class _CoverageEligibilityResponse
     extends CoverageEligibilityResponse {
   const factory _CoverageEligibilityResponse(
-      {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
+          {@JsonKey(
+              unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
           final R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
-      final FhirMeta? meta,
-      final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
-      final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
-      final List<FhirCode>? purpose,
-      @JsonKey(name: '_purpose')
-          final List<Element>? purposeElement,
-      required final Reference patient,
-      final List<CoverageEligibilityResponseEvent>? event,
-      final FhirDate? servicedDate,
-      @JsonKey(name: '_servicedDate')
-          final Element? servicedDateElement,
-      final Period? servicedPeriod,
-      final FhirDateTime? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
-      final Reference? requestor,
-      required final Reference request,
-      final FhirCode? outcome,
-      @JsonKey(name: '_outcome')
-          final Element? outcomeElement,
-      final String? disposition,
-      @JsonKey(name: '_disposition')
-          final Element? dispositionElement,
-      required final Reference insurer,
-      final List<CoverageEligibilityResponseInsurance>? insurance,
-      final String? preAuthRef,
-      @JsonKey(name: '_preAuthRef')
-          final Element? preAuthRefElement,
-      final CodeableConcept? form,
-      final List<CoverageEligibilityResponseError>?
-          error}) = _$_CoverageEligibilityResponse;
+          @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+          @JsonKey(name: 'id') final FhirId? fhirId,
+          final FhirMeta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final FhirCode? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final FhirCode? status,
+          @JsonKey(name: '_status') final Element? statusElement,
+          final List<FhirCode>? purpose,
+          @JsonKey(name: '_purpose') final List<Element>? purposeElement,
+          required final Reference patient,
+          final List<CoverageEligibilityResponseEvent>? event,
+          final FhirDate? servicedDate,
+          @JsonKey(name: '_servicedDate') final Element? servicedDateElement,
+          final Period? servicedPeriod,
+          final FhirDateTime? created,
+          @JsonKey(name: '_created') final Element? createdElement,
+          final Reference? requestor,
+          required final Reference request,
+          final FhirCode? outcome,
+          @JsonKey(name: '_outcome') final Element? outcomeElement,
+          final String? disposition,
+          @JsonKey(name: '_disposition') final Element? dispositionElement,
+          required final Reference insurer,
+          final List<CoverageEligibilityResponseInsurance>? insurance,
+          final String? preAuthRef,
+          @JsonKey(name: '_preAuthRef') final Element? preAuthRefElement,
+          final CodeableConcept? form,
+          final List<CoverageEligibilityResponseError>? error}) =
+      _$_CoverageEligibilityResponse;
   const _CoverageEligibilityResponse._() : super._();
 
   factory _CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =
@@ -11032,35 +10882,29 @@ abstract class $CoverageEligibilityResponseItemCopyWith<$Res> {
           CoverageEligibilityResponseItem>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? category,
       CodeableConcept? productOrService,
       List<CodeableConcept>? modifier,
       Reference? provider,
       FhirBoolean? excluded,
-      @JsonKey(name: '_excluded')
-          Element? excludedElement,
+      @JsonKey(name: '_excluded') Element? excludedElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       CodeableConcept? network,
       CodeableConcept? unit,
       CodeableConcept? term,
       List<CoverageEligibilityResponseBenefit>? benefit,
       FhirBoolean? authorizationRequired,
       @JsonKey(name: '_authorizationRequired')
-          Element? authorizationRequiredElement,
+      Element? authorizationRequiredElement,
       List<CodeableConcept>? authorizationSupporting,
       FhirUri? authorizationUrl,
-      @JsonKey(name: '_authorizationUrl')
-          Element? authorizationUrlElement});
+      @JsonKey(name: '_authorizationUrl') Element? authorizationUrlElement});
 
   $CodeableConceptCopyWith<$Res>? get category;
   $CodeableConceptCopyWith<$Res>? get productOrService;
@@ -11349,35 +11193,29 @@ abstract class _$$_CoverageEligibilityResponseItemCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? category,
       CodeableConcept? productOrService,
       List<CodeableConcept>? modifier,
       Reference? provider,
       FhirBoolean? excluded,
-      @JsonKey(name: '_excluded')
-          Element? excludedElement,
+      @JsonKey(name: '_excluded') Element? excludedElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       CodeableConcept? network,
       CodeableConcept? unit,
       CodeableConcept? term,
       List<CoverageEligibilityResponseBenefit>? benefit,
       FhirBoolean? authorizationRequired,
       @JsonKey(name: '_authorizationRequired')
-          Element? authorizationRequiredElement,
+      Element? authorizationRequiredElement,
       List<CodeableConcept>? authorizationSupporting,
       FhirUri? authorizationUrl,
-      @JsonKey(name: '_authorizationUrl')
-          Element? authorizationUrlElement});
+      @JsonKey(name: '_authorizationUrl') Element? authorizationUrlElement});
 
   @override
   $CodeableConceptCopyWith<$Res>? get category;
@@ -11537,35 +11375,29 @@ class __$$_CoverageEligibilityResponseItemCopyWithImpl<$Res>
 class _$_CoverageEligibilityResponseItem
     extends _CoverageEligibilityResponseItem {
   const _$_CoverageEligibilityResponseItem(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.category,
       this.productOrService,
       final List<CodeableConcept>? modifier,
       this.provider,
       this.excluded,
-      @JsonKey(name: '_excluded')
-          this.excludedElement,
+      @JsonKey(name: '_excluded') this.excludedElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.network,
       this.unit,
       this.term,
       final List<CoverageEligibilityResponseBenefit>? benefit,
       this.authorizationRequired,
       @JsonKey(name: '_authorizationRequired')
-          this.authorizationRequiredElement,
+      this.authorizationRequiredElement,
       final List<CodeableConcept>? authorizationSupporting,
       this.authorizationUrl,
-      @JsonKey(name: '_authorizationUrl')
-          this.authorizationUrlElement})
+      @JsonKey(name: '_authorizationUrl') this.authorizationUrlElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _modifier = modifier,
@@ -11871,35 +11703,30 @@ class _$_CoverageEligibilityResponseItem
 abstract class _CoverageEligibilityResponseItem
     extends CoverageEligibilityResponseItem {
   const factory _CoverageEligibilityResponseItem(
-          {@JsonKey(name: 'id')
-              final String? fhirId,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          {@JsonKey(name: 'id') final String? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? category,
           final CodeableConcept? productOrService,
           final List<CodeableConcept>? modifier,
           final Reference? provider,
           final FhirBoolean? excluded,
-          @JsonKey(name: '_excluded')
-              final Element? excludedElement,
+          @JsonKey(name: '_excluded') final Element? excludedElement,
           final String? name,
-          @JsonKey(name: '_name')
-              final Element? nameElement,
+          @JsonKey(name: '_name') final Element? nameElement,
           final String? description,
-          @JsonKey(name: '_description')
-              final Element? descriptionElement,
+          @JsonKey(name: '_description') final Element? descriptionElement,
           final CodeableConcept? network,
           final CodeableConcept? unit,
           final CodeableConcept? term,
           final List<CoverageEligibilityResponseBenefit>? benefit,
           final FhirBoolean? authorizationRequired,
           @JsonKey(name: '_authorizationRequired')
-              final Element? authorizationRequiredElement,
+          final Element? authorizationRequiredElement,
           final List<CodeableConcept>? authorizationSupporting,
           final FhirUri? authorizationUrl,
           @JsonKey(name: '_authorizationUrl')
-              final Element? authorizationUrlElement}) =
+          final Element? authorizationUrlElement}) =
       _$_CoverageEligibilityResponseItem;
   const _CoverageEligibilityResponseItem._() : super._();
 
@@ -12694,25 +12521,20 @@ class _$_CoverageEligibilityResponseBenefit
 abstract class _CoverageEligibilityResponseBenefit
     extends CoverageEligibilityResponseBenefit {
   const factory _CoverageEligibilityResponseBenefit(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
       final FhirUnsignedInt? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt')
-          final Element? allowedUnsignedIntElement,
+      final Element? allowedUnsignedIntElement,
       final String? allowedString,
-      @JsonKey(name: '_allowedString')
-          final Element? allowedStringElement,
+      @JsonKey(name: '_allowedString') final Element? allowedStringElement,
       final Money? allowedMoney,
       final FhirUnsignedInt? usedUnsignedInt,
-      @JsonKey(name: '_usedUnsignedInt')
-          final Element? usedUnsignedIntElement,
+      @JsonKey(name: '_usedUnsignedInt') final Element? usedUnsignedIntElement,
       final String? usedString,
-      @JsonKey(name: '_usedString')
-          final Element? usedStringElement,
+      @JsonKey(name: '_usedString') final Element? usedStringElement,
       final Money? usedMoney}) = _$_CoverageEligibilityResponseBenefit;
   const _CoverageEligibilityResponseBenefit._() : super._();
 
@@ -13203,15 +13025,13 @@ class _$_CoverageEligibilityResponseError
 abstract class _CoverageEligibilityResponseError
     extends CoverageEligibilityResponseError {
   const factory _CoverageEligibilityResponseError(
-          {@JsonKey(name: 'id')
-              final String? fhirId,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          {@JsonKey(name: 'id') final String? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept code,
           final List<String>? expression,
           @JsonKey(name: '_expression')
-              final List<Element>? expressionElement}) =
+          final List<Element>? expressionElement}) =
       _$_CoverageEligibilityResponseError;
   const _CoverageEligibilityResponseError._() : super._();
 
@@ -13402,30 +13222,23 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? insurer,
       Reference? provider,
       Reference? candidate,
@@ -13697,30 +13510,23 @@ abstract class _$$_EnrollmentRequestCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? insurer,
       Reference? provider,
       Reference? candidate,
@@ -13875,30 +13681,23 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   const _$_EnrollmentRequest(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
-          this.resourceType = R5ResourceType.EnrollmentRequest,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R5ResourceType.EnrollmentRequest,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.insurer,
       this.provider,
       this.candidate,
@@ -14190,30 +13989,23 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 abstract class _EnrollmentRequest extends EnrollmentRequest {
   const factory _EnrollmentRequest(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
-          final R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final FhirDateTime? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final Reference? insurer,
       final Reference? provider,
       final Reference? candidate,
@@ -14494,37 +14286,28 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? request,
       FhirCode? outcome,
-      @JsonKey(name: '_outcome')
-          Element? outcomeElement,
+      @JsonKey(name: '_outcome') Element? outcomeElement,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? organization,
       Reference? requestProvider});
 
@@ -14822,37 +14605,28 @@ abstract class _$$_EnrollmentResponseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? request,
       FhirCode? outcome,
-      @JsonKey(name: '_outcome')
-          Element? outcomeElement,
+      @JsonKey(name: '_outcome') Element? outcomeElement,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? organization,
       Reference? requestProvider});
 
@@ -15022,37 +14796,28 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   const _$_EnrollmentResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
-          this.resourceType = R5ResourceType.EnrollmentResponse,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R5ResourceType.EnrollmentResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.request,
       this.outcome,
-      @JsonKey(name: '_outcome')
-          this.outcomeElement,
+      @JsonKey(name: '_outcome') this.outcomeElement,
       this.disposition,
-      @JsonKey(name: '_disposition')
-          this.dispositionElement,
+      @JsonKey(name: '_disposition') this.dispositionElement,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.organization,
       this.requestProvider})
       : _contained = contained,
@@ -15364,37 +15129,28 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 abstract class _EnrollmentResponse extends EnrollmentResponse {
   const factory _EnrollmentResponse(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
-          final R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Reference? request,
       final FhirCode? outcome,
-      @JsonKey(name: '_outcome')
-          final Element? outcomeElement,
+      @JsonKey(name: '_outcome') final Element? outcomeElement,
       final String? disposition,
-      @JsonKey(name: '_disposition')
-          final Element? dispositionElement,
+      @JsonKey(name: '_disposition') final Element? dispositionElement,
       final FhirDateTime? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final Reference? organization,
       final Reference? requestProvider}) = _$_EnrollmentResponse;
   const _EnrollmentResponse._() : super._();

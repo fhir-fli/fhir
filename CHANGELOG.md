@@ -1,5 +1,9 @@
 # fhir
 
+## [0.11.3]
+
+* updated dependencies
+
 ## [0.11.2]
 
 * Added toJsonString for ease of use in sending resources

@@ -81,50 +81,39 @@ abstract class $CoverageCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? policyHolder,
       Reference? subscriber,
       String? subscriberId,
-      @JsonKey(name: '_subscriberId')
-          Element? subscriberIdElement,
+      @JsonKey(name: '_subscriberId') Element? subscriberIdElement,
       Reference? beneficiary,
       CodeableConcept? relationship,
       Period? period,
       List<Reference>? payor,
       CoverageGrouping? grouping,
       String? dependent,
-      @JsonKey(name: '_dependent')
-          Element? dependentElement,
+      @JsonKey(name: '_dependent') Element? dependentElement,
       String? sequence,
-      @JsonKey(name: '_sequence')
-          Element? sequenceElement,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
       FhirDecimal? order,
-      @JsonKey(name: '_order')
-          Element? orderElement,
+      @JsonKey(name: '_order') Element? orderElement,
       String? network,
-      @JsonKey(name: '_network')
-          Element? networkElement,
+      @JsonKey(name: '_network') Element? networkElement,
       List<Reference>? contract});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -548,50 +537,39 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? policyHolder,
       Reference? subscriber,
       String? subscriberId,
-      @JsonKey(name: '_subscriberId')
-          Element? subscriberIdElement,
+      @JsonKey(name: '_subscriberId') Element? subscriberIdElement,
       Reference? beneficiary,
       CodeableConcept? relationship,
       Period? period,
       List<Reference>? payor,
       CoverageGrouping? grouping,
       String? dependent,
-      @JsonKey(name: '_dependent')
-          Element? dependentElement,
+      @JsonKey(name: '_dependent') Element? dependentElement,
       String? sequence,
-      @JsonKey(name: '_sequence')
-          Element? sequenceElement,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
       FhirDecimal? order,
-      @JsonKey(name: '_order')
-          Element? orderElement,
+      @JsonKey(name: '_order') Element? orderElement,
       String? network,
-      @JsonKey(name: '_network')
-          Element? networkElement,
+      @JsonKey(name: '_network') Element? networkElement,
       List<Reference>? contract});
 
   @override
@@ -822,50 +800,39 @@ class __$$_CoverageCopyWithImpl<$Res>
 class _$_Coverage extends _Coverage {
   const _$_Coverage(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
-          this.resourceType = Stu3ResourceType.Coverage,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.Coverage,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.type,
       this.policyHolder,
       this.subscriber,
       this.subscriberId,
-      @JsonKey(name: '_subscriberId')
-          this.subscriberIdElement,
+      @JsonKey(name: '_subscriberId') this.subscriberIdElement,
       this.beneficiary,
       this.relationship,
       this.period,
       final List<Reference>? payor,
       this.grouping,
       this.dependent,
-      @JsonKey(name: '_dependent')
-          this.dependentElement,
+      @JsonKey(name: '_dependent') this.dependentElement,
       this.sequence,
-      @JsonKey(name: '_sequence')
-          this.sequenceElement,
+      @JsonKey(name: '_sequence') this.sequenceElement,
       this.order,
-      @JsonKey(name: '_order')
-          this.orderElement,
+      @JsonKey(name: '_order') this.orderElement,
       this.network,
-      @JsonKey(name: '_network')
-          this.networkElement,
+      @JsonKey(name: '_network') this.networkElement,
       final List<Reference>? contract})
       : _contained = contained,
         _extension_ = extension_,
@@ -1133,50 +1100,39 @@ class _$_Coverage extends _Coverage {
 abstract class _Coverage extends Coverage {
   const factory _Coverage(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final String? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? type,
       final Reference? policyHolder,
       final Reference? subscriber,
       final String? subscriberId,
-      @JsonKey(name: '_subscriberId')
-          final Element? subscriberIdElement,
+      @JsonKey(name: '_subscriberId') final Element? subscriberIdElement,
       final Reference? beneficiary,
       final CodeableConcept? relationship,
       final Period? period,
       final List<Reference>? payor,
       final CoverageGrouping? grouping,
       final String? dependent,
-      @JsonKey(name: '_dependent')
-          final Element? dependentElement,
+      @JsonKey(name: '_dependent') final Element? dependentElement,
       final String? sequence,
-      @JsonKey(name: '_sequence')
-          final Element? sequenceElement,
+      @JsonKey(name: '_sequence') final Element? sequenceElement,
       final FhirDecimal? order,
-      @JsonKey(name: '_order')
-          final Element? orderElement,
+      @JsonKey(name: '_order') final Element? orderElement,
       final String? network,
-      @JsonKey(name: '_network')
-          final Element? networkElement,
+      @JsonKey(name: '_network') final Element? networkElement,
       final List<Reference>? contract}) = _$_Coverage;
   const _Coverage._() : super._();
 
@@ -2042,42 +1998,30 @@ class _$_CoverageGrouping extends _CoverageGrouping {
 abstract class _CoverageGrouping extends CoverageGrouping {
   const factory _CoverageGrouping(
       {final String? group,
-      @JsonKey(name: '_group')
-          final Element? groupElement,
+      @JsonKey(name: '_group') final Element? groupElement,
       final String? groupDisplay,
-      @JsonKey(name: '_groupDisplay')
-          final Element? groupDisplayElement,
+      @JsonKey(name: '_groupDisplay') final Element? groupDisplayElement,
       final String? subGroup,
-      @JsonKey(name: '_subGroup')
-          final Element? subGroupElement,
+      @JsonKey(name: '_subGroup') final Element? subGroupElement,
       final String? subGroupDisplay,
-      @JsonKey(name: '_subGroupDisplay')
-          final Element? subGroupDisplayElement,
+      @JsonKey(name: '_subGroupDisplay') final Element? subGroupDisplayElement,
       final String? plan,
-      @JsonKey(name: '_plan')
-          final Element? planElement,
+      @JsonKey(name: '_plan') final Element? planElement,
       final String? planDisplay,
-      @JsonKey(name: '_planDisplay')
-          final Element? planDisplayElement,
+      @JsonKey(name: '_planDisplay') final Element? planDisplayElement,
       final String? subPlan,
-      @JsonKey(name: '_subPlan')
-          final Element? subPlanElement,
+      @JsonKey(name: '_subPlan') final Element? subPlanElement,
       final String? subPlanDisplay,
-      @JsonKey(name: '_subPlanDisplay')
-          final Element? subPlanDisplayElement,
-      @JsonKey(name: 'class')
-          final String? class_,
-      @JsonKey(name: '_class')
-          final Element? classElement,
+      @JsonKey(name: '_subPlanDisplay') final Element? subPlanDisplayElement,
+      @JsonKey(name: 'class') final String? class_,
+      @JsonKey(name: '_class') final Element? classElement,
       final String? classDisplay,
-      @JsonKey(name: '_classDisplay')
-          final Element? classDisplayElement,
+      @JsonKey(name: '_classDisplay') final Element? classDisplayElement,
       final String? subClass,
-      @JsonKey(name: '_subClass')
-          final Element? subClassElement,
+      @JsonKey(name: '_subClass') final Element? subClassElement,
       final String? subClassDisplay,
       @JsonKey(name: '_subClassDisplay')
-          final Element? subClassDisplayElement}) = _$_CoverageGrouping;
+      final Element? subClassDisplayElement}) = _$_CoverageGrouping;
   const _CoverageGrouping._() : super._();
 
   factory _CoverageGrouping.fromJson(Map<String, dynamic> json) =
@@ -2214,36 +2158,28 @@ abstract class $EligibilityRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? priority,
       Reference? patient,
       FhirDate? servicedDate,
-      @JsonKey(name: '_servicedDate')
-          Element? servicedDateElement,
+      @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       Period? servicedPeriod,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       Reference? provider,
       Reference? organization,
@@ -2252,7 +2188,7 @@ abstract class $EligibilityRequestCopyWith<$Res> {
       Reference? coverage,
       String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          Element? businessArrangementElement,
+      Element? businessArrangementElement,
       CodeableConcept? benefitCategory,
       CodeableConcept? benefitSubCategory});
 
@@ -2694,36 +2630,28 @@ abstract class _$$_EligibilityRequestCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? priority,
       Reference? patient,
       FhirDate? servicedDate,
-      @JsonKey(name: '_servicedDate')
-          Element? servicedDateElement,
+      @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       Period? servicedPeriod,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       Reference? provider,
       Reference? organization,
@@ -2732,7 +2660,7 @@ abstract class _$$_EligibilityRequestCopyWith<$Res>
       Reference? coverage,
       String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          Element? businessArrangementElement,
+      Element? businessArrangementElement,
       CodeableConcept? benefitCategory,
       CodeableConcept? benefitSubCategory});
 
@@ -2958,36 +2886,28 @@ class __$$_EligibilityRequestCopyWithImpl<$Res>
 class _$_EligibilityRequest extends _EligibilityRequest {
   const _$_EligibilityRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
-          this.resourceType = Stu3ResourceType.EligibilityRequest,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.EligibilityRequest,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.priority,
       this.patient,
       this.servicedDate,
-      @JsonKey(name: '_servicedDate')
-          this.servicedDateElement,
+      @JsonKey(name: '_servicedDate') this.servicedDateElement,
       this.servicedPeriod,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.enterer,
       this.provider,
       this.organization,
@@ -2995,8 +2915,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
       this.facility,
       this.coverage,
       this.businessArrangement,
-      @JsonKey(name: '_businessArrangement')
-          this.businessArrangementElement,
+      @JsonKey(name: '_businessArrangement') this.businessArrangementElement,
       this.benefitCategory,
       this.benefitSubCategory})
       : _contained = contained,
@@ -3241,36 +3160,28 @@ class _$_EligibilityRequest extends _EligibilityRequest {
 abstract class _EligibilityRequest extends EligibilityRequest {
   const factory _EligibilityRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final String? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? priority,
       final Reference? patient,
       final FhirDate? servicedDate,
-      @JsonKey(name: '_servicedDate')
-          final Element? servicedDateElement,
+      @JsonKey(name: '_servicedDate') final Element? servicedDateElement,
       final Period? servicedPeriod,
       final String? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final Reference? enterer,
       final Reference? provider,
       final Reference? organization,
@@ -3279,7 +3190,7 @@ abstract class _EligibilityRequest extends EligibilityRequest {
       final Reference? coverage,
       final String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          final Element? businessArrangementElement,
+      final Element? businessArrangementElement,
       final CodeableConcept? benefitCategory,
       final CodeableConcept? benefitSubCategory}) = _$_EligibilityRequest;
   const _EligibilityRequest._() : super._();
@@ -3430,41 +3341,32 @@ abstract class $EligibilityResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? requestProvider,
       Reference? requestOrganization,
       Reference? request,
       CodeableConcept? outcome,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       Reference? insurer,
       FhirBoolean? inforce,
-      @JsonKey(name: '_inforce')
-          Element? inforceElement,
+      @JsonKey(name: '_inforce') Element? inforceElement,
       List<EligibilityResponseInsurance>? insurance,
       CodeableConcept? form,
       List<EligibilityResponseError>? error});
@@ -3827,41 +3729,32 @@ abstract class _$$_EligibilityResponseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? requestProvider,
       Reference? requestOrganization,
       Reference? request,
       CodeableConcept? outcome,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       Reference? insurer,
       FhirBoolean? inforce,
-      @JsonKey(name: '_inforce')
-          Element? inforceElement,
+      @JsonKey(name: '_inforce') Element? inforceElement,
       List<EligibilityResponseInsurance>? insurance,
       CodeableConcept? form,
       List<EligibilityResponseError>? error});
@@ -4063,41 +3956,32 @@ class __$$_EligibilityResponseCopyWithImpl<$Res>
 class _$_EligibilityResponse extends _EligibilityResponse {
   const _$_EligibilityResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
-          this.resourceType = Stu3ResourceType.EligibilityResponse,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.EligibilityResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.requestProvider,
       this.requestOrganization,
       this.request,
       this.outcome,
       this.disposition,
-      @JsonKey(name: '_disposition')
-          this.dispositionElement,
+      @JsonKey(name: '_disposition') this.dispositionElement,
       this.insurer,
       this.inforce,
-      @JsonKey(name: '_inforce')
-          this.inforceElement,
+      @JsonKey(name: '_inforce') this.inforceElement,
       final List<EligibilityResponseInsurance>? insurance,
       this.form,
       final List<EligibilityResponseError>? error})
@@ -4340,41 +4224,32 @@ class _$_EligibilityResponse extends _EligibilityResponse {
 abstract class _EligibilityResponse extends EligibilityResponse {
   const factory _EligibilityResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final String? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final String? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final Reference? requestProvider,
       final Reference? requestOrganization,
       final Reference? request,
       final CodeableConcept? outcome,
       final String? disposition,
-      @JsonKey(name: '_disposition')
-          final Element? dispositionElement,
+      @JsonKey(name: '_disposition') final Element? dispositionElement,
       final Reference? insurer,
       final FhirBoolean? inforce,
-      @JsonKey(name: '_inforce')
-          final Element? inforceElement,
+      @JsonKey(name: '_inforce') final Element? inforceElement,
       final List<EligibilityResponseInsurance>? insurance,
       final CodeableConcept? form,
       final List<EligibilityResponseError>? error}) = _$_EligibilityResponse;
@@ -5617,14 +5492,12 @@ abstract class _EligibilityResponseFinancial
       {required final CodeableConcept type,
       final FhirDecimal? allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt')
-          final Element? allowedUnsignedIntElement,
+      final Element? allowedUnsignedIntElement,
       final String? allowedString,
-      @JsonKey(name: '_allowedString')
-          final Element? allowedStringElement,
+      @JsonKey(name: '_allowedString') final Element? allowedStringElement,
       final Money? allowedMoney,
       final FhirDecimal? usedUnsignedInt,
-      @JsonKey(name: '_usedUnsignedInt')
-          final Element? usedUnsignedIntElement,
+      @JsonKey(name: '_usedUnsignedInt') final Element? usedUnsignedIntElement,
       final Money? usedMoney}) = _$_EligibilityResponseFinancial;
   const _EligibilityResponseFinancial._() : super._();
 
@@ -5866,30 +5739,23 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? insurer,
       Reference? provider,
       Reference? organization,
@@ -6180,30 +6046,23 @@ abstract class _$$_EnrollmentRequestCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? insurer,
       Reference? provider,
       Reference? organization,
@@ -6366,30 +6225,23 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   const _$_EnrollmentRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
-          this.resourceType = Stu3ResourceType.EnrollmentRequest,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.EnrollmentRequest,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.insurer,
       this.provider,
       this.organization,
@@ -6584,30 +6436,23 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 abstract class _EnrollmentRequest extends EnrollmentRequest {
   const factory _EnrollmentRequest(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final String? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final String? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final Reference? insurer,
       final Reference? provider,
       final Reference? organization,
@@ -6731,35 +6576,27 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? request,
       CodeableConcept? outcome,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? organization,
       Reference? requestProvider,
       Reference? requestOrganization});
@@ -7071,35 +6908,27 @@ abstract class _$$_EnrollmentResponseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? request,
       CodeableConcept? outcome,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? organization,
       Reference? requestProvider,
       Reference? requestOrganization});
@@ -7272,35 +7101,27 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   const _$_EnrollmentResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
-          this.resourceType = Stu3ResourceType.EnrollmentResponse,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.EnrollmentResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.request,
       this.outcome,
       this.disposition,
-      @JsonKey(name: '_disposition')
-          this.dispositionElement,
+      @JsonKey(name: '_disposition') this.dispositionElement,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.organization,
       this.requestProvider,
       this.requestOrganization})
@@ -7504,35 +7325,27 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 abstract class _EnrollmentResponse extends EnrollmentResponse {
   const factory _EnrollmentResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final String? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Reference? request,
       final CodeableConcept? outcome,
       final String? disposition,
-      @JsonKey(name: '_disposition')
-          final Element? dispositionElement,
+      @JsonKey(name: '_disposition') final Element? dispositionElement,
       final String? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final Reference? organization,
       final Reference? requestProvider,
       final Reference? requestOrganization}) = _$_EnrollmentResponse;

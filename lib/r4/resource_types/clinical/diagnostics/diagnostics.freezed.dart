@@ -144,33 +144,26 @@ abstract class $BodyStructureCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirBoolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       CodeableConcept? morphology,
       CodeableConcept? location,
       List<CodeableConcept>? locationQualifier,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<Attachment>? image,
       Reference patient});
 
@@ -428,33 +421,26 @@ abstract class _$$_BodyStructureCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirBoolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       CodeableConcept? morphology,
       CodeableConcept? location,
       List<CodeableConcept>? locationQualifier,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<Attachment>? image,
       Reference patient});
 
@@ -610,33 +596,26 @@ class __$$_BodyStructureCopyWithImpl<$Res>
 class _$_BodyStructure extends _BodyStructure {
   const _$_BodyStructure(
       {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
-          this.resourceType = R4ResourceType.BodyStructure,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R4ResourceType.BodyStructure,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.active,
-      @JsonKey(name: '_active')
-          this.activeElement,
+      @JsonKey(name: '_active') this.activeElement,
       this.morphology,
       this.location,
       final List<CodeableConcept>? locationQualifier,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<Attachment>? image,
       required this.patient})
       : _contained = contained,
@@ -952,33 +931,26 @@ class _$_BodyStructure extends _BodyStructure {
 abstract class _BodyStructure extends BodyStructure {
   const factory _BodyStructure(
       {@JsonKey(unknownEnumValue: R4ResourceType.BodyStructure)
-          final R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final String? fhirId,
+      final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final FhirBoolean? active,
-      @JsonKey(name: '_active')
-          final Element? activeElement,
+      @JsonKey(name: '_active') final Element? activeElement,
       final CodeableConcept? morphology,
       final CodeableConcept? location,
       final List<CodeableConcept>? locationQualifier,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<Attachment>? image,
       required final Reference patient}) = _$_BodyStructure;
   const _BodyStructure._() : super._();
@@ -1316,39 +1288,31 @@ abstract class $DiagnosticReportCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       CodeableConcept code,
       Reference? subject,
       Reference? encounter,
       FhirDateTime? effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          Element? effectiveDateTimeElement,
+      @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
       Period? effectivePeriod,
       FhirInstant? issued,
-      @JsonKey(name: '_issued')
-          Element? issuedElement,
+      @JsonKey(name: '_issued') Element? issuedElement,
       List<Reference>? performer,
       List<Reference>? resultsInterpreter,
       List<Reference>? specimen,
@@ -1356,8 +1320,7 @@ abstract class $DiagnosticReportCopyWith<$Res> {
       List<Reference>? imagingStudy,
       List<DiagnosticReportMedia>? media,
       String? conclusion,
-      @JsonKey(name: '_conclusion')
-          Element? conclusionElement,
+      @JsonKey(name: '_conclusion') Element? conclusionElement,
       List<CodeableConcept>? conclusionCode,
       List<Attachment>? presentedForm});
 
@@ -1719,39 +1682,31 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       CodeableConcept code,
       Reference? subject,
       Reference? encounter,
       FhirDateTime? effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          Element? effectiveDateTimeElement,
+      @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
       Period? effectivePeriod,
       FhirInstant? issued,
-      @JsonKey(name: '_issued')
-          Element? issuedElement,
+      @JsonKey(name: '_issued') Element? issuedElement,
       List<Reference>? performer,
       List<Reference>? resultsInterpreter,
       List<Reference>? specimen,
@@ -1759,8 +1714,7 @@ abstract class _$$_DiagnosticReportCopyWith<$Res>
       List<Reference>? imagingStudy,
       List<DiagnosticReportMedia>? media,
       String? conclusion,
-      @JsonKey(name: '_conclusion')
-          Element? conclusionElement,
+      @JsonKey(name: '_conclusion') Element? conclusionElement,
       List<CodeableConcept>? conclusionCode,
       List<Attachment>? presentedForm});
 
@@ -1987,39 +1941,31 @@ class __$$_DiagnosticReportCopyWithImpl<$Res>
 class _$_DiagnosticReport extends _DiagnosticReport {
   const _$_DiagnosticReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
-          this.resourceType = R4ResourceType.DiagnosticReport,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R4ResourceType.DiagnosticReport,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       final List<CodeableConcept>? category,
       required this.code,
       this.subject,
       this.encounter,
       this.effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          this.effectiveDateTimeElement,
+      @JsonKey(name: '_effectiveDateTime') this.effectiveDateTimeElement,
       this.effectivePeriod,
       this.issued,
-      @JsonKey(name: '_issued')
-          this.issuedElement,
+      @JsonKey(name: '_issued') this.issuedElement,
       final List<Reference>? performer,
       final List<Reference>? resultsInterpreter,
       final List<Reference>? specimen,
@@ -2027,8 +1973,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
       final List<Reference>? imagingStudy,
       final List<DiagnosticReportMedia>? media,
       this.conclusion,
-      @JsonKey(name: '_conclusion')
-          this.conclusionElement,
+      @JsonKey(name: '_conclusion') this.conclusionElement,
       final List<CodeableConcept>? conclusionCode,
       final List<Attachment>? presentedForm})
       : _contained = contained,
@@ -2551,39 +2496,32 @@ class _$_DiagnosticReport extends _DiagnosticReport {
 abstract class _DiagnosticReport extends DiagnosticReport {
   const factory _DiagnosticReport(
       {@JsonKey(unknownEnumValue: R4ResourceType.DiagnosticReport)
-          final R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final String? fhirId,
+      final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final List<CodeableConcept>? category,
       required final CodeableConcept code,
       final Reference? subject,
       final Reference? encounter,
       final FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
-          final Element? effectiveDateTimeElement,
+      final Element? effectiveDateTimeElement,
       final Period? effectivePeriod,
       final FhirInstant? issued,
-      @JsonKey(name: '_issued')
-          final Element? issuedElement,
+      @JsonKey(name: '_issued') final Element? issuedElement,
       final List<Reference>? performer,
       final List<Reference>? resultsInterpreter,
       final List<Reference>? specimen,
@@ -2591,8 +2529,7 @@ abstract class _DiagnosticReport extends DiagnosticReport {
       final List<Reference>? imagingStudy,
       final List<DiagnosticReportMedia>? media,
       final String? conclusion,
-      @JsonKey(name: '_conclusion')
-          final Element? conclusionElement,
+      @JsonKey(name: '_conclusion') final Element? conclusionElement,
       final List<CodeableConcept>? conclusionCode,
       final List<Attachment>? presentedForm}) = _$_DiagnosticReport;
   const _DiagnosticReport._() : super._();
@@ -3434,43 +3371,34 @@ abstract class $ImagingStudyCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<Coding>? modality,
       Reference subject,
       Reference? encounter,
       FhirDateTime? started,
-      @JsonKey(name: '_started')
-          Element? startedElement,
+      @JsonKey(name: '_started') Element? startedElement,
       List<Reference>? basedOn,
       Reference? referrer,
       List<Reference>? interpreter,
       List<Reference>? endpoint,
       FhirUnsignedInt? numberOfSeries,
-      @JsonKey(name: '_numberOfSeries')
-          Element? numberOfSeriesElement,
+      @JsonKey(name: '_numberOfSeries') Element? numberOfSeriesElement,
       FhirUnsignedInt? numberOfInstances,
-      @JsonKey(name: '_numberOfInstances')
-          Element? numberOfInstancesElement,
+      @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
       Reference? procedureReference,
       List<CodeableConcept>? procedureCode,
       Reference? location,
@@ -3478,8 +3406,7 @@ abstract class $ImagingStudyCopyWith<$Res> {
       List<Reference>? reasonReference,
       List<Annotation>? note,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<ImagingStudySeries>? series});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -3876,43 +3803,34 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<Coding>? modality,
       Reference subject,
       Reference? encounter,
       FhirDateTime? started,
-      @JsonKey(name: '_started')
-          Element? startedElement,
+      @JsonKey(name: '_started') Element? startedElement,
       List<Reference>? basedOn,
       Reference? referrer,
       List<Reference>? interpreter,
       List<Reference>? endpoint,
       FhirUnsignedInt? numberOfSeries,
-      @JsonKey(name: '_numberOfSeries')
-          Element? numberOfSeriesElement,
+      @JsonKey(name: '_numberOfSeries') Element? numberOfSeriesElement,
       FhirUnsignedInt? numberOfInstances,
-      @JsonKey(name: '_numberOfInstances')
-          Element? numberOfInstancesElement,
+      @JsonKey(name: '_numberOfInstances') Element? numberOfInstancesElement,
       Reference? procedureReference,
       List<CodeableConcept>? procedureCode,
       Reference? location,
@@ -3920,8 +3838,7 @@ abstract class _$$_ImagingStudyCopyWith<$Res>
       List<Reference>? reasonReference,
       List<Annotation>? note,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<ImagingStudySeries>? series});
 
   @override
@@ -4161,43 +4078,34 @@ class __$$_ImagingStudyCopyWithImpl<$Res>
 class _$_ImagingStudy extends _ImagingStudy {
   const _$_ImagingStudy(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
-          this.resourceType = R4ResourceType.ImagingStudy,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R4ResourceType.ImagingStudy,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       final List<Coding>? modality,
       required this.subject,
       this.encounter,
       this.started,
-      @JsonKey(name: '_started')
-          this.startedElement,
+      @JsonKey(name: '_started') this.startedElement,
       final List<Reference>? basedOn,
       this.referrer,
       final List<Reference>? interpreter,
       final List<Reference>? endpoint,
       this.numberOfSeries,
-      @JsonKey(name: '_numberOfSeries')
-          this.numberOfSeriesElement,
+      @JsonKey(name: '_numberOfSeries') this.numberOfSeriesElement,
       this.numberOfInstances,
-      @JsonKey(name: '_numberOfInstances')
-          this.numberOfInstancesElement,
+      @JsonKey(name: '_numberOfInstances') this.numberOfInstancesElement,
       this.procedureReference,
       final List<CodeableConcept>? procedureCode,
       this.location,
@@ -4205,8 +4113,7 @@ class _$_ImagingStudy extends _ImagingStudy {
       final List<Reference>? reasonReference,
       final List<Annotation>? note,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<ImagingStudySeries>? series})
       : _contained = contained,
         _extension_ = extension_,
@@ -4724,43 +4631,35 @@ class _$_ImagingStudy extends _ImagingStudy {
 abstract class _ImagingStudy extends ImagingStudy {
   const factory _ImagingStudy(
       {@JsonKey(unknownEnumValue: R4ResourceType.ImagingStudy)
-          final R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final String? fhirId,
+      final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final List<Coding>? modality,
       required final Reference subject,
       final Reference? encounter,
       final FhirDateTime? started,
-      @JsonKey(name: '_started')
-          final Element? startedElement,
+      @JsonKey(name: '_started') final Element? startedElement,
       final List<Reference>? basedOn,
       final Reference? referrer,
       final List<Reference>? interpreter,
       final List<Reference>? endpoint,
       final FhirUnsignedInt? numberOfSeries,
-      @JsonKey(name: '_numberOfSeries')
-          final Element? numberOfSeriesElement,
+      @JsonKey(name: '_numberOfSeries') final Element? numberOfSeriesElement,
       final FhirUnsignedInt? numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
-          final Element? numberOfInstancesElement,
+      final Element? numberOfInstancesElement,
       final Reference? procedureReference,
       final List<CodeableConcept>? procedureCode,
       final Reference? location,
@@ -4768,8 +4667,7 @@ abstract class _ImagingStudy extends ImagingStudy {
       final List<Reference>? reasonReference,
       final List<Annotation>? note,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<ImagingStudySeries>? series}) = _$_ImagingStudy;
   const _ImagingStudy._() : super._();
 
@@ -5845,31 +5743,25 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
 
 abstract class _ImagingStudySeries extends ImagingStudySeries {
   const factory _ImagingStudySeries(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirId? uid,
-      @JsonKey(name: '_uid')
-          final Element? uidElement,
+      @JsonKey(name: '_uid') final Element? uidElement,
       final FhirUnsignedInt? number,
-      @JsonKey(name: '_number')
-          final Element? numberElement,
+      @JsonKey(name: '_number') final Element? numberElement,
       required final Coding modality,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final FhirUnsignedInt? numberOfInstances,
       @JsonKey(name: '_numberOfInstances')
-          final Element? numberOfInstancesElement,
+      final Element? numberOfInstancesElement,
       final List<Reference>? endpoint,
       final Coding? bodySite,
       final Coding? laterality,
       final List<Reference>? specimen,
       final FhirDateTime? started,
-      @JsonKey(name: '_started')
-          final Element? startedElement,
+      @JsonKey(name: '_started') final Element? startedElement,
       final List<ImagingStudyPerformer>? performer,
       final List<ImagingStudyInstance>? instance}) = _$_ImagingStudySeries;
   const _ImagingStudySeries._() : super._();
@@ -7172,61 +7064,47 @@ abstract class $MediaCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Media)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       CodeableConcept? modality,
       CodeableConcept? view,
       Reference? subject,
       Reference? encounter,
       FhirDateTime? createdDateTime,
-      @JsonKey(name: '_createdDateTime')
-          Element? createdDateTimeElement,
+      @JsonKey(name: '_createdDateTime') Element? createdDateTimeElement,
       Period? createdPeriod,
       FhirInstant? issued,
-      @JsonKey(name: '_issued')
-          Element? issuedElement,
-      @JsonKey(name: 'operator')
-          Reference? operator_,
+      @JsonKey(name: '_issued') Element? issuedElement,
+      @JsonKey(name: 'operator') Reference? operator_,
       List<CodeableConcept>? reasonCode,
       CodeableConcept? bodySite,
       String? deviceName,
-      @JsonKey(name: '_deviceName')
-          Element? deviceNameElement,
+      @JsonKey(name: '_deviceName') Element? deviceNameElement,
       Reference? device,
       FhirPositiveInt? height,
-      @JsonKey(name: '_height')
-          Element? heightElement,
+      @JsonKey(name: '_height') Element? heightElement,
       FhirPositiveInt? width,
-      @JsonKey(name: '_width')
-          Element? widthElement,
+      @JsonKey(name: '_width') Element? widthElement,
       FhirPositiveInt? frames,
-      @JsonKey(name: '_frames')
-          Element? framesElement,
+      @JsonKey(name: '_frames') Element? framesElement,
       FhirDecimal? duration,
-      @JsonKey(name: '_duration')
-          Element? durationElement,
+      @JsonKey(name: '_duration') Element? durationElement,
       Attachment content,
       List<Annotation>? note});
 
@@ -7756,61 +7634,47 @@ abstract class _$$_MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Media)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       CodeableConcept? modality,
       CodeableConcept? view,
       Reference? subject,
       Reference? encounter,
       FhirDateTime? createdDateTime,
-      @JsonKey(name: '_createdDateTime')
-          Element? createdDateTimeElement,
+      @JsonKey(name: '_createdDateTime') Element? createdDateTimeElement,
       Period? createdPeriod,
       FhirInstant? issued,
-      @JsonKey(name: '_issued')
-          Element? issuedElement,
-      @JsonKey(name: 'operator')
-          Reference? operator_,
+      @JsonKey(name: '_issued') Element? issuedElement,
+      @JsonKey(name: 'operator') Reference? operator_,
       List<CodeableConcept>? reasonCode,
       CodeableConcept? bodySite,
       String? deviceName,
-      @JsonKey(name: '_deviceName')
-          Element? deviceNameElement,
+      @JsonKey(name: '_deviceName') Element? deviceNameElement,
       Reference? device,
       FhirPositiveInt? height,
-      @JsonKey(name: '_height')
-          Element? heightElement,
+      @JsonKey(name: '_height') Element? heightElement,
       FhirPositiveInt? width,
-      @JsonKey(name: '_width')
-          Element? widthElement,
+      @JsonKey(name: '_width') Element? widthElement,
       FhirPositiveInt? frames,
-      @JsonKey(name: '_frames')
-          Element? framesElement,
+      @JsonKey(name: '_frames') Element? framesElement,
       FhirDecimal? duration,
-      @JsonKey(name: '_duration')
-          Element? durationElement,
+      @JsonKey(name: '_duration') Element? durationElement,
       Attachment content,
       List<Annotation>? note});
 
@@ -8095,61 +7959,47 @@ class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res, _$_Media>
 class _$_Media extends _Media {
   const _$_Media(
       {@JsonKey(unknownEnumValue: R4ResourceType.Media)
-          this.resourceType = R4ResourceType.Media,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R4ResourceType.Media,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.type,
       this.modality,
       this.view,
       this.subject,
       this.encounter,
       this.createdDateTime,
-      @JsonKey(name: '_createdDateTime')
-          this.createdDateTimeElement,
+      @JsonKey(name: '_createdDateTime') this.createdDateTimeElement,
       this.createdPeriod,
       this.issued,
-      @JsonKey(name: '_issued')
-          this.issuedElement,
-      @JsonKey(name: 'operator')
-          this.operator_,
+      @JsonKey(name: '_issued') this.issuedElement,
+      @JsonKey(name: 'operator') this.operator_,
       final List<CodeableConcept>? reasonCode,
       this.bodySite,
       this.deviceName,
-      @JsonKey(name: '_deviceName')
-          this.deviceNameElement,
+      @JsonKey(name: '_deviceName') this.deviceNameElement,
       this.device,
       this.height,
-      @JsonKey(name: '_height')
-          this.heightElement,
+      @JsonKey(name: '_height') this.heightElement,
       this.width,
-      @JsonKey(name: '_width')
-          this.widthElement,
+      @JsonKey(name: '_width') this.widthElement,
       this.frames,
-      @JsonKey(name: '_frames')
-          this.framesElement,
+      @JsonKey(name: '_frames') this.framesElement,
       this.duration,
-      @JsonKey(name: '_duration')
-          this.durationElement,
+      @JsonKey(name: '_duration') this.durationElement,
       required this.content,
       final List<Annotation>? note})
       : _contained = contained,
@@ -8645,61 +8495,47 @@ class _$_Media extends _Media {
 abstract class _Media extends Media {
   const factory _Media(
       {@JsonKey(unknownEnumValue: R4ResourceType.Media)
-          final R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final String? fhirId,
+      final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? type,
       final CodeableConcept? modality,
       final CodeableConcept? view,
       final Reference? subject,
       final Reference? encounter,
       final FhirDateTime? createdDateTime,
-      @JsonKey(name: '_createdDateTime')
-          final Element? createdDateTimeElement,
+      @JsonKey(name: '_createdDateTime') final Element? createdDateTimeElement,
       final Period? createdPeriod,
       final FhirInstant? issued,
-      @JsonKey(name: '_issued')
-          final Element? issuedElement,
-      @JsonKey(name: 'operator')
-          final Reference? operator_,
+      @JsonKey(name: '_issued') final Element? issuedElement,
+      @JsonKey(name: 'operator') final Reference? operator_,
       final List<CodeableConcept>? reasonCode,
       final CodeableConcept? bodySite,
       final String? deviceName,
-      @JsonKey(name: '_deviceName')
-          final Element? deviceNameElement,
+      @JsonKey(name: '_deviceName') final Element? deviceNameElement,
       final Reference? device,
       final FhirPositiveInt? height,
-      @JsonKey(name: '_height')
-          final Element? heightElement,
+      @JsonKey(name: '_height') final Element? heightElement,
       final FhirPositiveInt? width,
-      @JsonKey(name: '_width')
-          final Element? widthElement,
+      @JsonKey(name: '_width') final Element? widthElement,
       final FhirPositiveInt? frames,
-      @JsonKey(name: '_frames')
-          final Element? framesElement,
+      @JsonKey(name: '_frames') final Element? framesElement,
       final FhirDecimal? duration,
-      @JsonKey(name: '_duration')
-          final Element? durationElement,
+      @JsonKey(name: '_duration') final Element? durationElement,
       required final Attachment content,
       final List<Annotation>? note}) = _$_Media;
   const _Media._() : super._();
@@ -9124,30 +8960,23 @@ abstract class $MolecularSequenceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirInteger? coordinateSystem,
-      @JsonKey(name: '_coordinateSystem')
-          Element? coordinateSystemElement,
+      @JsonKey(name: '_coordinateSystem') Element? coordinateSystemElement,
       Reference? patient,
       Reference? specimen,
       Reference? device,
@@ -9156,12 +8985,10 @@ abstract class $MolecularSequenceCopyWith<$Res> {
       MolecularSequenceReferenceSeq? referenceSeq,
       List<MolecularSequenceVariant>? variant,
       String? observedSeq,
-      @JsonKey(name: '_observedSeq')
-          Element? observedSeqElement,
+      @JsonKey(name: '_observedSeq') Element? observedSeqElement,
       List<MolecularSequenceQuality>? quality,
       FhirInteger? readCoverage,
-      @JsonKey(name: '_readCoverage')
-          Element? readCoverageElement,
+      @JsonKey(name: '_readCoverage') Element? readCoverageElement,
       List<MolecularSequenceRepository>? repository,
       List<Reference>? pointer,
       List<MolecularSequenceStructureVariant>? structureVariant});
@@ -9540,30 +9367,23 @@ abstract class _$$_MolecularSequenceCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirInteger? coordinateSystem,
-      @JsonKey(name: '_coordinateSystem')
-          Element? coordinateSystemElement,
+      @JsonKey(name: '_coordinateSystem') Element? coordinateSystemElement,
       Reference? patient,
       Reference? specimen,
       Reference? device,
@@ -9572,12 +9392,10 @@ abstract class _$$_MolecularSequenceCopyWith<$Res>
       MolecularSequenceReferenceSeq? referenceSeq,
       List<MolecularSequenceVariant>? variant,
       String? observedSeq,
-      @JsonKey(name: '_observedSeq')
-          Element? observedSeqElement,
+      @JsonKey(name: '_observedSeq') Element? observedSeqElement,
       List<MolecularSequenceQuality>? quality,
       FhirInteger? readCoverage,
-      @JsonKey(name: '_readCoverage')
-          Element? readCoverageElement,
+      @JsonKey(name: '_readCoverage') Element? readCoverageElement,
       List<MolecularSequenceRepository>? repository,
       List<Reference>? pointer,
       List<MolecularSequenceStructureVariant>? structureVariant});
@@ -9794,30 +9612,23 @@ class __$$_MolecularSequenceCopyWithImpl<$Res>
 class _$_MolecularSequence extends _MolecularSequence {
   const _$_MolecularSequence(
       {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
-          this.resourceType = R4ResourceType.MolecularSequence,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R4ResourceType.MolecularSequence,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: '_type') this.typeElement,
       this.coordinateSystem,
-      @JsonKey(name: '_coordinateSystem')
-          this.coordinateSystemElement,
+      @JsonKey(name: '_coordinateSystem') this.coordinateSystemElement,
       this.patient,
       this.specimen,
       this.device,
@@ -9826,12 +9637,10 @@ class _$_MolecularSequence extends _MolecularSequence {
       this.referenceSeq,
       final List<MolecularSequenceVariant>? variant,
       this.observedSeq,
-      @JsonKey(name: '_observedSeq')
-          this.observedSeqElement,
+      @JsonKey(name: '_observedSeq') this.observedSeqElement,
       final List<MolecularSequenceQuality>? quality,
       this.readCoverage,
-      @JsonKey(name: '_readCoverage')
-          this.readCoverageElement,
+      @JsonKey(name: '_readCoverage') this.readCoverageElement,
       final List<MolecularSequenceRepository>? repository,
       final List<Reference>? pointer,
       final List<MolecularSequenceStructureVariant>? structureVariant})
@@ -10271,30 +10080,24 @@ class _$_MolecularSequence extends _MolecularSequence {
 abstract class _MolecularSequence extends MolecularSequence {
   const factory _MolecularSequence(
           {@JsonKey(unknownEnumValue: R4ResourceType.MolecularSequence)
-              final R4ResourceType resourceType,
-          @JsonKey(includeFromJson: true, includeToJson: false)
-              final int? dbId,
-          @JsonKey(name: 'id')
-              final String? fhirId,
+          final R4ResourceType resourceType,
+          @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+          @JsonKey(name: 'id') final String? fhirId,
           final FhirMeta? meta,
           final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              final Element? implicitRulesElement,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
           final FhirCode? language,
-          @JsonKey(name: '_language')
-              final Element? languageElement,
+          @JsonKey(name: '_language') final Element? languageElement,
           final Narrative? text,
           final List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<Identifier>? identifier,
           final FhirCode? type,
-          @JsonKey(name: '_type')
-              final Element? typeElement,
+          @JsonKey(name: '_type') final Element? typeElement,
           final FhirInteger? coordinateSystem,
           @JsonKey(name: '_coordinateSystem')
-              final Element? coordinateSystemElement,
+          final Element? coordinateSystemElement,
           final Reference? patient,
           final Reference? specimen,
           final Reference? device,
@@ -10303,12 +10106,10 @@ abstract class _MolecularSequence extends MolecularSequence {
           final MolecularSequenceReferenceSeq? referenceSeq,
           final List<MolecularSequenceVariant>? variant,
           final String? observedSeq,
-          @JsonKey(name: '_observedSeq')
-              final Element? observedSeqElement,
+          @JsonKey(name: '_observedSeq') final Element? observedSeqElement,
           final List<MolecularSequenceQuality>? quality,
           final FhirInteger? readCoverage,
-          @JsonKey(name: '_readCoverage')
-              final Element? readCoverageElement,
+          @JsonKey(name: '_readCoverage') final Element? readCoverageElement,
           final List<MolecularSequenceRepository>? repository,
           final List<Reference>? pointer,
           final List<MolecularSequenceStructureVariant>? structureVariant}) =
@@ -11307,32 +11108,26 @@ class _$_MolecularSequenceReferenceSeq extends _MolecularSequenceReferenceSeq {
 abstract class _MolecularSequenceReferenceSeq
     extends MolecularSequenceReferenceSeq {
   const factory _MolecularSequenceReferenceSeq(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final CodeableConcept? chromosome,
-      final String? genomeBuild,
-      @JsonKey(name: '_genomeBuild')
-          final Element? genomeBuildElement,
-      final FhirCode? orientation,
-      @JsonKey(name: '_orientation')
-          final Element? orientationElement,
-      final CodeableConcept? referenceSeqId,
-      final Reference? referenceSeqPointer,
-      final String? referenceSeqString,
-      @JsonKey(name: '_referenceSeqString')
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? chromosome,
+          final String? genomeBuild,
+          @JsonKey(name: '_genomeBuild') final Element? genomeBuildElement,
+          final FhirCode? orientation,
+          @JsonKey(name: '_orientation') final Element? orientationElement,
+          final CodeableConcept? referenceSeqId,
+          final Reference? referenceSeqPointer,
+          final String? referenceSeqString,
+          @JsonKey(name: '_referenceSeqString')
           final Element? referenceSeqStringElement,
-      final FhirCode? strand,
-      @JsonKey(name: '_strand')
-          final Element? strandElement,
-      final FhirInteger? windowStart,
-      @JsonKey(name: '_windowStart')
-          final Element? windowStartElement,
-      final FhirInteger? windowEnd,
-      @JsonKey(name: '_windowEnd')
-          final Element? windowEndElement}) = _$_MolecularSequenceReferenceSeq;
+          final FhirCode? strand,
+          @JsonKey(name: '_strand') final Element? strandElement,
+          final FhirInteger? windowStart,
+          @JsonKey(name: '_windowStart') final Element? windowStartElement,
+          final FhirInteger? windowEnd,
+          @JsonKey(name: '_windowEnd') final Element? windowEndElement}) =
+      _$_MolecularSequenceReferenceSeq;
   const _MolecularSequenceReferenceSeq._() : super._();
 
   factory _MolecularSequenceReferenceSeq.fromJson(Map<String, dynamic> json) =
@@ -14350,32 +14145,24 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
 
 abstract class _MolecularSequenceRoc extends MolecularSequenceRoc {
   const factory _MolecularSequenceRoc(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<FhirInteger>? score,
-      @JsonKey(name: '_score')
-          final List<Element?>? scoreElement,
+      @JsonKey(name: '_score') final List<Element?>? scoreElement,
       final List<FhirInteger>? numTP,
-      @JsonKey(name: '_numTP')
-          final List<Element?>? numTPElement,
+      @JsonKey(name: '_numTP') final List<Element?>? numTPElement,
       final List<FhirInteger>? numFP,
-      @JsonKey(name: '_numFP')
-          final List<Element?>? numFPElement,
+      @JsonKey(name: '_numFP') final List<Element?>? numFPElement,
       final List<FhirInteger>? numFN,
-      @JsonKey(name: '_numFN')
-          final List<Element?>? numFNElement,
+      @JsonKey(name: '_numFN') final List<Element?>? numFNElement,
       final List<FhirDecimal>? precision,
-      @JsonKey(name: '_precision')
-          final List<Element?>? precisionElement,
+      @JsonKey(name: '_precision') final List<Element?>? precisionElement,
       final List<FhirDecimal>? sensitivity,
-      @JsonKey(name: '_sensitivity')
-          final List<Element?>? sensitivityElement,
+      @JsonKey(name: '_sensitivity') final List<Element?>? sensitivityElement,
       final List<FhirDecimal>? fMeasure,
       @JsonKey(name: '_fMeasure')
-          final List<Element?>? fMeasureElement}) = _$_MolecularSequenceRoc;
+      final List<Element?>? fMeasureElement}) = _$_MolecularSequenceRoc;
   const _MolecularSequenceRoc._() : super._();
 
   factory _MolecularSequenceRoc.fromJson(Map<String, dynamic> json) =
@@ -17107,66 +16894,52 @@ abstract class $ObservationCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       CodeableConcept code,
       Reference? subject,
       List<Reference>? focus,
       Reference? encounter,
       FhirDateTime? effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          Element? effectiveDateTimeElement,
+      @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
       Period? effectivePeriod,
       Timing? effectiveTiming,
       FhirInstant? effectiveInstant,
-      @JsonKey(name: '_effectiveInstant')
-          Element? effectiveInstantElement,
+      @JsonKey(name: '_effectiveInstant') Element? effectiveInstantElement,
       FhirInstant? issued,
-      @JsonKey(name: '_issued')
-          Element? issuedElement,
+      @JsonKey(name: '_issued') Element? issuedElement,
       List<Reference>? performer,
       Quantity? valueQuantity,
       CodeableConcept? valueCodeableConcept,
       String? valueString,
-      @JsonKey(name: '_valueString')
-          Element? valueStringElement,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
       FhirBoolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean')
-          Element? valueBooleanElement,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirInteger? valueInteger,
-      @JsonKey(name: '_valueInteger')
-          Element? valueIntegerElement,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Range? valueRange,
       Ratio? valueRatio,
       SampledData? valueSampledData,
       FhirTime? valueTime,
-      @JsonKey(name: '_valueTime')
-          Element? valueTimeElement,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime')
-          Element? valueDateTimeElement,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Period? valuePeriod,
       CodeableConcept? dataAbsentReason,
       List<CodeableConcept>? interpretation,
@@ -17875,66 +17648,52 @@ abstract class _$$_ObservationCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       CodeableConcept code,
       Reference? subject,
       List<Reference>? focus,
       Reference? encounter,
       FhirDateTime? effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          Element? effectiveDateTimeElement,
+      @JsonKey(name: '_effectiveDateTime') Element? effectiveDateTimeElement,
       Period? effectivePeriod,
       Timing? effectiveTiming,
       FhirInstant? effectiveInstant,
-      @JsonKey(name: '_effectiveInstant')
-          Element? effectiveInstantElement,
+      @JsonKey(name: '_effectiveInstant') Element? effectiveInstantElement,
       FhirInstant? issued,
-      @JsonKey(name: '_issued')
-          Element? issuedElement,
+      @JsonKey(name: '_issued') Element? issuedElement,
       List<Reference>? performer,
       Quantity? valueQuantity,
       CodeableConcept? valueCodeableConcept,
       String? valueString,
-      @JsonKey(name: '_valueString')
-          Element? valueStringElement,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
       FhirBoolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean')
-          Element? valueBooleanElement,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
       FhirInteger? valueInteger,
-      @JsonKey(name: '_valueInteger')
-          Element? valueIntegerElement,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
       Range? valueRange,
       Ratio? valueRatio,
       SampledData? valueSampledData,
       FhirTime? valueTime,
-      @JsonKey(name: '_valueTime')
-          Element? valueTimeElement,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
       FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime')
-          Element? valueDateTimeElement,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
       Period? valuePeriod,
       CodeableConcept? dataAbsentReason,
       List<CodeableConcept>? interpretation,
@@ -18320,66 +18079,52 @@ class __$$_ObservationCopyWithImpl<$Res>
 class _$_Observation extends _Observation {
   const _$_Observation(
       {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
-          this.resourceType = R4ResourceType.Observation,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R4ResourceType.Observation,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       final List<CodeableConcept>? category,
       required this.code,
       this.subject,
       final List<Reference>? focus,
       this.encounter,
       this.effectiveDateTime,
-      @JsonKey(name: '_effectiveDateTime')
-          this.effectiveDateTimeElement,
+      @JsonKey(name: '_effectiveDateTime') this.effectiveDateTimeElement,
       this.effectivePeriod,
       this.effectiveTiming,
       this.effectiveInstant,
-      @JsonKey(name: '_effectiveInstant')
-          this.effectiveInstantElement,
+      @JsonKey(name: '_effectiveInstant') this.effectiveInstantElement,
       this.issued,
-      @JsonKey(name: '_issued')
-          this.issuedElement,
+      @JsonKey(name: '_issued') this.issuedElement,
       final List<Reference>? performer,
       this.valueQuantity,
       this.valueCodeableConcept,
       this.valueString,
-      @JsonKey(name: '_valueString')
-          this.valueStringElement,
+      @JsonKey(name: '_valueString') this.valueStringElement,
       this.valueBoolean,
-      @JsonKey(name: '_valueBoolean')
-          this.valueBooleanElement,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
       this.valueInteger,
-      @JsonKey(name: '_valueInteger')
-          this.valueIntegerElement,
+      @JsonKey(name: '_valueInteger') this.valueIntegerElement,
       this.valueRange,
       this.valueRatio,
       this.valueSampledData,
       this.valueTime,
-      @JsonKey(name: '_valueTime')
-          this.valueTimeElement,
+      @JsonKey(name: '_valueTime') this.valueTimeElement,
       this.valueDateTime,
-      @JsonKey(name: '_valueDateTime')
-          this.valueDateTimeElement,
+      @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
       this.valuePeriod,
       this.dataAbsentReason,
       final List<CodeableConcept>? interpretation,
@@ -19116,29 +18861,23 @@ class _$_Observation extends _Observation {
 abstract class _Observation extends Observation {
   const factory _Observation(
       {@JsonKey(unknownEnumValue: R4ResourceType.Observation)
-          final R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final String? fhirId,
+      final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final List<CodeableConcept>? category,
       required final CodeableConcept code,
       final Reference? subject,
@@ -19146,36 +18885,30 @@ abstract class _Observation extends Observation {
       final Reference? encounter,
       final FhirDateTime? effectiveDateTime,
       @JsonKey(name: '_effectiveDateTime')
-          final Element? effectiveDateTimeElement,
+      final Element? effectiveDateTimeElement,
       final Period? effectivePeriod,
       final Timing? effectiveTiming,
       final FhirInstant? effectiveInstant,
       @JsonKey(name: '_effectiveInstant')
-          final Element? effectiveInstantElement,
+      final Element? effectiveInstantElement,
       final FhirInstant? issued,
-      @JsonKey(name: '_issued')
-          final Element? issuedElement,
+      @JsonKey(name: '_issued') final Element? issuedElement,
       final List<Reference>? performer,
       final Quantity? valueQuantity,
       final CodeableConcept? valueCodeableConcept,
       final String? valueString,
-      @JsonKey(name: '_valueString')
-          final Element? valueStringElement,
+      @JsonKey(name: '_valueString') final Element? valueStringElement,
       final FhirBoolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean')
-          final Element? valueBooleanElement,
+      @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final FhirInteger? valueInteger,
-      @JsonKey(name: '_valueInteger')
-          final Element? valueIntegerElement,
+      @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
       final Range? valueRange,
       final Ratio? valueRatio,
       final SampledData? valueSampledData,
       final FhirTime? valueTime,
-      @JsonKey(name: '_valueTime')
-          final Element? valueTimeElement,
+      @JsonKey(name: '_valueTime') final Element? valueTimeElement,
       final FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime')
-          final Element? valueDateTimeElement,
+      @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
       final Period? valuePeriod,
       final CodeableConcept? dataAbsentReason,
       final List<CodeableConcept>? interpretation,
@@ -21478,37 +21211,29 @@ abstract class $QuestionnaireResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       FhirCanonical? questionnaire,
-      @JsonKey(name: '_questionnaire')
-          Element? questionnaireElement,
+      @JsonKey(name: '_questionnaire') Element? questionnaireElement,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
       Reference? encounter,
       FhirDateTime? authored,
-      @JsonKey(name: '_authored')
-          Element? authoredElement,
+      @JsonKey(name: '_authored') Element? authoredElement,
       Reference? author,
       Reference? source,
       List<QuestionnaireResponseItem>? item});
@@ -21831,37 +21556,29 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
       FhirCanonical? questionnaire,
-      @JsonKey(name: '_questionnaire')
-          Element? questionnaireElement,
+      @JsonKey(name: '_questionnaire') Element? questionnaireElement,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? subject,
       Reference? encounter,
       FhirDateTime? authored,
-      @JsonKey(name: '_authored')
-          Element? authoredElement,
+      @JsonKey(name: '_authored') Element? authoredElement,
       Reference? author,
       Reference? source,
       List<QuestionnaireResponseItem>? item});
@@ -22044,37 +21761,29 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
 class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   const _$_QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
-          this.resourceType = R4ResourceType.QuestionnaireResponse,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R4ResourceType.QuestionnaireResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.identifier,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
       this.questionnaire,
-      @JsonKey(name: '_questionnaire')
-          this.questionnaireElement,
+      @JsonKey(name: '_questionnaire') this.questionnaireElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.subject,
       this.encounter,
       this.authored,
-      @JsonKey(name: '_authored')
-          this.authoredElement,
+      @JsonKey(name: '_authored') this.authoredElement,
       this.author,
       this.source,
       final List<QuestionnaireResponseItem>? item})
@@ -22428,37 +22137,29 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
 abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   const factory _QuestionnaireResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.QuestionnaireResponse)
-          final R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final String? fhirId,
+      final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
       final FhirCanonical? questionnaire,
-      @JsonKey(name: '_questionnaire')
-          final Element? questionnaireElement,
+      @JsonKey(name: '_questionnaire') final Element? questionnaireElement,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Reference? subject,
       final Reference? encounter,
       final FhirDateTime? authored,
-      @JsonKey(name: '_authored')
-          final Element? authoredElement,
+      @JsonKey(name: '_authored') final Element? authoredElement,
       final Reference? author,
       final Reference? source,
       final List<QuestionnaireResponseItem>? item}) = _$_QuestionnaireResponse;
@@ -24551,33 +24252,26 @@ abstract class $SpecimenCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Identifier? accessionIdentifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
       FhirDateTime? receivedTime,
-      @JsonKey(name: '_receivedTime')
-          Element? receivedTimeElement,
+      @JsonKey(name: '_receivedTime') Element? receivedTimeElement,
       List<Reference>? parent,
       List<Reference>? request,
       SpecimenCollection? collection,
@@ -24881,33 +24575,26 @@ abstract class _$$_SpecimenCopyWith<$Res> implements $SpecimenCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)
-          R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Identifier? accessionIdentifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       Reference? subject,
       FhirDateTime? receivedTime,
-      @JsonKey(name: '_receivedTime')
-          Element? receivedTimeElement,
+      @JsonKey(name: '_receivedTime') Element? receivedTimeElement,
       List<Reference>? parent,
       List<Reference>? request,
       SpecimenCollection? collection,
@@ -25095,33 +24782,26 @@ class __$$_SpecimenCopyWithImpl<$Res>
 class _$_Specimen extends _Specimen {
   const _$_Specimen(
       {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)
-          this.resourceType = R4ResourceType.Specimen,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R4ResourceType.Specimen,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.accessionIdentifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.type,
       this.subject,
       this.receivedTime,
-      @JsonKey(name: '_receivedTime')
-          this.receivedTimeElement,
+      @JsonKey(name: '_receivedTime') this.receivedTimeElement,
       final List<Reference>? parent,
       final List<Reference>? request,
       this.collection,
@@ -25523,33 +25203,26 @@ class _$_Specimen extends _Specimen {
 abstract class _Specimen extends Specimen {
   const factory _Specimen(
       {@JsonKey(unknownEnumValue: R4ResourceType.Specimen)
-          final R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final String? fhirId,
+      final R4ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final Identifier? accessionIdentifier,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? type,
       final Reference? subject,
       final FhirDateTime? receivedTime,
-      @JsonKey(name: '_receivedTime')
-          final Element? receivedTimeElement,
+      @JsonKey(name: '_receivedTime') final Element? receivedTimeElement,
       final List<Reference>? parent,
       final List<Reference>? request,
       final SpecimenCollection? collection,
@@ -26373,15 +26046,13 @@ class _$_SpecimenCollection extends _SpecimenCollection {
 
 abstract class _SpecimenCollection extends SpecimenCollection {
   const factory _SpecimenCollection(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Reference? collector,
       final FhirDateTime? collectedDateTime,
       @JsonKey(name: '_collectedDateTime')
-          final Element? collectedDateTimeElement,
+      final Element? collectedDateTimeElement,
       final Period? collectedPeriod,
       final FhirDuration? duration,
       final Quantity? quantity,

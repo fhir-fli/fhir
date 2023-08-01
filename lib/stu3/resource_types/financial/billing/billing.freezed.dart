@@ -88,37 +88,29 @@ abstract class $ClaimCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       List<CodeableConcept>? subType,
       ClaimUse? use,
-      @JsonKey(name: '_use')
-          Element? useElement,
+      @JsonKey(name: '_use') Element? useElement,
       Reference? patient,
       Period? billablePeriod,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       Reference? insurer,
       Reference? provider,
@@ -721,37 +713,29 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? type,
       List<CodeableConcept>? subType,
       ClaimUse? use,
-      @JsonKey(name: '_use')
-          Element? useElement,
+      @JsonKey(name: '_use') Element? useElement,
       Reference? patient,
       Period? billablePeriod,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? enterer,
       Reference? insurer,
       Reference? provider,
@@ -1072,37 +1056,29 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
 class _$_Claim extends _Claim {
   const _$_Claim(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
-          this.resourceType = Stu3ResourceType.Claim,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.Claim,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.type,
       final List<CodeableConcept>? subType,
       this.use,
-      @JsonKey(name: '_use')
-          this.useElement,
+      @JsonKey(name: '_use') this.useElement,
       this.patient,
       this.billablePeriod,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.enterer,
       this.insurer,
       this.provider,
@@ -1492,37 +1468,29 @@ class _$_Claim extends _Claim {
 abstract class _Claim extends Claim {
   const factory _Claim(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Claim)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final String? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? type,
       final List<CodeableConcept>? subType,
       final ClaimUse? use,
-      @JsonKey(name: '_use')
-          final Element? useElement,
+      @JsonKey(name: '_use') final Element? useElement,
       final Reference? patient,
       final Period? billablePeriod,
       final String? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final Reference? enterer,
       final Reference? insurer,
       final Reference? provider,
@@ -3658,18 +3626,15 @@ abstract class $ClaimInsuranceCopyWith<$Res> {
   @useResult
   $Res call(
       {FhirDecimal? sequence,
-      @JsonKey(name: '_sequence')
-          Element? sequenceElement,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
       FhirBoolean? focal,
-      @JsonKey(name: '_focal')
-          Element? focalElement,
+      @JsonKey(name: '_focal') Element? focalElement,
       Reference coverage,
       String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          Element? businessArrangementElement,
+      Element? businessArrangementElement,
       List<String>? preAuthRef,
-      @JsonKey(name: '_preAuthRef')
-          List<Element?>? preAuthRefElement,
+      @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
       Reference? claimResponse});
 
   $ElementCopyWith<$Res>? get sequenceElement;
@@ -3814,18 +3779,15 @@ abstract class _$$_ClaimInsuranceCopyWith<$Res>
   @useResult
   $Res call(
       {FhirDecimal? sequence,
-      @JsonKey(name: '_sequence')
-          Element? sequenceElement,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
       FhirBoolean? focal,
-      @JsonKey(name: '_focal')
-          Element? focalElement,
+      @JsonKey(name: '_focal') Element? focalElement,
       Reference coverage,
       String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          Element? businessArrangementElement,
+      Element? businessArrangementElement,
       List<String>? preAuthRef,
-      @JsonKey(name: '_preAuthRef')
-          List<Element?>? preAuthRefElement,
+      @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
       Reference? claimResponse});
 
   @override
@@ -4035,18 +3997,15 @@ class _$_ClaimInsurance extends _ClaimInsurance {
 abstract class _ClaimInsurance extends ClaimInsurance {
   const factory _ClaimInsurance(
       {final FhirDecimal? sequence,
-      @JsonKey(name: '_sequence')
-          final Element? sequenceElement,
+      @JsonKey(name: '_sequence') final Element? sequenceElement,
       final FhirBoolean? focal,
-      @JsonKey(name: '_focal')
-          final Element? focalElement,
+      @JsonKey(name: '_focal') final Element? focalElement,
       required final Reference coverage,
       final String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          final Element? businessArrangementElement,
+      final Element? businessArrangementElement,
       final List<String>? preAuthRef,
-      @JsonKey(name: '_preAuthRef')
-          final List<Element?>? preAuthRefElement,
+      @JsonKey(name: '_preAuthRef') final List<Element?>? preAuthRefElement,
       final Reference? claimResponse}) = _$_ClaimInsurance;
   const _ClaimInsurance._() : super._();
 
@@ -4437,28 +4396,23 @@ abstract class $ClaimItemCopyWith<$Res> {
   @useResult
   $Res call(
       {FhirDecimal? sequence,
-      @JsonKey(name: '_sequence')
-          Element? sequenceElement,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
       List<FhirId>? careTeamLinkId,
-      @JsonKey(name: '_careTeamLinkId')
-          List<Element?>? careTeamLinkIdElement,
+      @JsonKey(name: '_careTeamLinkId') List<Element?>? careTeamLinkIdElement,
       List<FhirId>? diagnosisLinkId,
-      @JsonKey(name: '_diagnosisLinkId')
-          List<Element?>? diagnosisLinkIdElement,
+      @JsonKey(name: '_diagnosisLinkId') List<Element?>? diagnosisLinkIdElement,
       List<FhirId>? procedureLinkId,
-      @JsonKey(name: '_procedureLinkId')
-          List<Element?>? procedureLinkIdElement,
+      @JsonKey(name: '_procedureLinkId') List<Element?>? procedureLinkIdElement,
       List<FhirId>? informationLinkId,
       @JsonKey(name: '_informationLinkId')
-          List<Element>? informationLinkIdElement,
+      List<Element>? informationLinkIdElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? service,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
       FhirDate? servicedDate,
-      @JsonKey(name: '_servicedDate')
-          Element? servicedDateElement,
+      @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       Period? servicedPeriod,
       CodeableConcept? locationCodeableConcept,
       Address? locationAddress,
@@ -4466,8 +4420,7 @@ abstract class $ClaimItemCopyWith<$Res> {
       Quantity? quantity,
       Money? unitPrice,
       FhirDecimal? factor,
-      @JsonKey(name: '_factor')
-          Element? factorElement,
+      @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
       CodeableConcept? bodySite,
@@ -4843,28 +4796,23 @@ abstract class _$$_ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
   @useResult
   $Res call(
       {FhirDecimal? sequence,
-      @JsonKey(name: '_sequence')
-          Element? sequenceElement,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
       List<FhirId>? careTeamLinkId,
-      @JsonKey(name: '_careTeamLinkId')
-          List<Element?>? careTeamLinkIdElement,
+      @JsonKey(name: '_careTeamLinkId') List<Element?>? careTeamLinkIdElement,
       List<FhirId>? diagnosisLinkId,
-      @JsonKey(name: '_diagnosisLinkId')
-          List<Element?>? diagnosisLinkIdElement,
+      @JsonKey(name: '_diagnosisLinkId') List<Element?>? diagnosisLinkIdElement,
       List<FhirId>? procedureLinkId,
-      @JsonKey(name: '_procedureLinkId')
-          List<Element?>? procedureLinkIdElement,
+      @JsonKey(name: '_procedureLinkId') List<Element?>? procedureLinkIdElement,
       List<FhirId>? informationLinkId,
       @JsonKey(name: '_informationLinkId')
-          List<Element>? informationLinkIdElement,
+      List<Element>? informationLinkIdElement,
       CodeableConcept? revenue,
       CodeableConcept? category,
       CodeableConcept? service,
       List<CodeableConcept>? modifier,
       List<CodeableConcept>? programCode,
       FhirDate? servicedDate,
-      @JsonKey(name: '_servicedDate')
-          Element? servicedDateElement,
+      @JsonKey(name: '_servicedDate') Element? servicedDateElement,
       Period? servicedPeriod,
       CodeableConcept? locationCodeableConcept,
       Address? locationAddress,
@@ -4872,8 +4820,7 @@ abstract class _$$_ClaimItemCopyWith<$Res> implements $ClaimItemCopyWith<$Res> {
       Quantity? quantity,
       Money? unitPrice,
       FhirDecimal? factor,
-      @JsonKey(name: '_factor')
-          Element? factorElement,
+      @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<Reference>? udi,
       CodeableConcept? bodySite,
@@ -5088,28 +5035,26 @@ class __$$_ClaimItemCopyWithImpl<$Res>
 class _$_ClaimItem extends _ClaimItem {
   const _$_ClaimItem(
       {this.sequence,
-      @JsonKey(name: '_sequence')
-          this.sequenceElement,
+      @JsonKey(name: '_sequence') this.sequenceElement,
       final List<FhirId>? careTeamLinkId,
       @JsonKey(name: '_careTeamLinkId')
-          final List<Element?>? careTeamLinkIdElement,
+      final List<Element?>? careTeamLinkIdElement,
       final List<FhirId>? diagnosisLinkId,
       @JsonKey(name: '_diagnosisLinkId')
-          final List<Element?>? diagnosisLinkIdElement,
+      final List<Element?>? diagnosisLinkIdElement,
       final List<FhirId>? procedureLinkId,
       @JsonKey(name: '_procedureLinkId')
-          final List<Element?>? procedureLinkIdElement,
+      final List<Element?>? procedureLinkIdElement,
       final List<FhirId>? informationLinkId,
       @JsonKey(name: '_informationLinkId')
-          final List<Element>? informationLinkIdElement,
+      final List<Element>? informationLinkIdElement,
       this.revenue,
       this.category,
       this.service,
       final List<CodeableConcept>? modifier,
       final List<CodeableConcept>? programCode,
       this.servicedDate,
-      @JsonKey(name: '_servicedDate')
-          this.servicedDateElement,
+      @JsonKey(name: '_servicedDate') this.servicedDateElement,
       this.servicedPeriod,
       this.locationCodeableConcept,
       this.locationAddress,
@@ -5117,8 +5062,7 @@ class _$_ClaimItem extends _ClaimItem {
       this.quantity,
       this.unitPrice,
       this.factor,
-      @JsonKey(name: '_factor')
-          this.factorElement,
+      @JsonKey(name: '_factor') this.factorElement,
       this.net,
       final List<Reference>? udi,
       this.bodySite,
@@ -5451,28 +5395,26 @@ class _$_ClaimItem extends _ClaimItem {
 abstract class _ClaimItem extends ClaimItem {
   const factory _ClaimItem(
       {final FhirDecimal? sequence,
-      @JsonKey(name: '_sequence')
-          final Element? sequenceElement,
+      @JsonKey(name: '_sequence') final Element? sequenceElement,
       final List<FhirId>? careTeamLinkId,
       @JsonKey(name: '_careTeamLinkId')
-          final List<Element?>? careTeamLinkIdElement,
+      final List<Element?>? careTeamLinkIdElement,
       final List<FhirId>? diagnosisLinkId,
       @JsonKey(name: '_diagnosisLinkId')
-          final List<Element?>? diagnosisLinkIdElement,
+      final List<Element?>? diagnosisLinkIdElement,
       final List<FhirId>? procedureLinkId,
       @JsonKey(name: '_procedureLinkId')
-          final List<Element?>? procedureLinkIdElement,
+      final List<Element?>? procedureLinkIdElement,
       final List<FhirId>? informationLinkId,
       @JsonKey(name: '_informationLinkId')
-          final List<Element>? informationLinkIdElement,
+      final List<Element>? informationLinkIdElement,
       final CodeableConcept? revenue,
       final CodeableConcept? category,
       final CodeableConcept? service,
       final List<CodeableConcept>? modifier,
       final List<CodeableConcept>? programCode,
       final FhirDate? servicedDate,
-      @JsonKey(name: '_servicedDate')
-          final Element? servicedDateElement,
+      @JsonKey(name: '_servicedDate') final Element? servicedDateElement,
       final Period? servicedPeriod,
       final CodeableConcept? locationCodeableConcept,
       final Address? locationAddress,
@@ -5480,8 +5422,7 @@ abstract class _ClaimItem extends ClaimItem {
       final Quantity? quantity,
       final Money? unitPrice,
       final FhirDecimal? factor,
-      @JsonKey(name: '_factor')
-          final Element? factorElement,
+      @JsonKey(name: '_factor') final Element? factorElement,
       final Money? net,
       final List<Reference>? udi,
       final CodeableConcept? bodySite,
@@ -6785,39 +6726,31 @@ abstract class $ClaimResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? patient,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? insurer,
       Reference? requestProvider,
       Reference? requestOrganization,
       Reference? request,
       CodeableConcept? outcome,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       CodeableConcept? payeeType,
       List<ClaimResponseItem>? item,
       List<ClaimResponseAddItem>? addItem,
@@ -7313,39 +7246,31 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? patient,
       String? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? insurer,
       Reference? requestProvider,
       Reference? requestOrganization,
       Reference? request,
       CodeableConcept? outcome,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       CodeableConcept? payeeType,
       List<ClaimResponseItem>? item,
       List<ClaimResponseAddItem>? addItem,
@@ -7614,39 +7539,31 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
 class _$_ClaimResponse extends _ClaimResponse {
   const _$_ClaimResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
-          this.resourceType = Stu3ResourceType.ClaimResponse,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.ClaimResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.patient,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.insurer,
       this.requestProvider,
       this.requestOrganization,
       this.request,
       this.outcome,
       this.disposition,
-      @JsonKey(name: '_disposition')
-          this.dispositionElement,
+      @JsonKey(name: '_disposition') this.dispositionElement,
       this.payeeType,
       final List<ClaimResponseItem>? item,
       final List<ClaimResponseAddItem>? addItem,
@@ -7976,39 +7893,31 @@ class _$_ClaimResponse extends _ClaimResponse {
 abstract class _ClaimResponse extends ClaimResponse {
   const factory _ClaimResponse(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ClaimResponse)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final String? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Reference? patient,
       final String? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final Reference? insurer,
       final Reference? requestProvider,
       final Reference? requestOrganization,
       final Reference? request,
       final CodeableConcept? outcome,
       final String? disposition,
-      @JsonKey(name: '_disposition')
-          final Element? dispositionElement,
+      @JsonKey(name: '_disposition') final Element? dispositionElement,
       final CodeableConcept? payeeType,
       final List<ClaimResponseItem>? item,
       final List<ClaimResponseAddItem>? addItem,
@@ -9617,15 +9526,14 @@ class _$_ClaimResponseAddItem extends _ClaimResponseAddItem {
   const _$_ClaimResponseAddItem(
       {final List<FhirId>? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
-          final List<Element?>? sequenceLinkIdElement,
+      final List<Element?>? sequenceLinkIdElement,
       this.revenue,
       this.category,
       this.service,
       final List<CodeableConcept>? modifier,
       this.fee,
       final List<FhirDecimal>? noteNumber,
-      @JsonKey(name: '_noteNumber')
-          final List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
       final List<ClaimResponseAdjudication>? adjudication,
       final List<ClaimResponseDetail1>? detail})
       : _sequenceLinkId = sequenceLinkId,
@@ -9786,15 +9694,14 @@ abstract class _ClaimResponseAddItem extends ClaimResponseAddItem {
   const factory _ClaimResponseAddItem(
       {final List<FhirId>? sequenceLinkId,
       @JsonKey(name: '_sequenceLinkId')
-          final List<Element?>? sequenceLinkIdElement,
+      final List<Element?>? sequenceLinkIdElement,
       final CodeableConcept? revenue,
       final CodeableConcept? category,
       final CodeableConcept? service,
       final List<CodeableConcept>? modifier,
       final Money? fee,
       final List<FhirDecimal>? noteNumber,
-      @JsonKey(name: '_noteNumber')
-          final List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') final List<Element?>? noteNumberElement,
       final List<ClaimResponseAdjudication>? adjudication,
       final List<ClaimResponseDetail1>? detail}) = _$_ClaimResponseAddItem;
   const _ClaimResponseAddItem._() : super._();
@@ -10265,14 +10172,13 @@ abstract class $ClaimResponseErrorCopyWith<$Res> {
   @useResult
   $Res call(
       {FhirId? sequenceLinkId,
-      @JsonKey(name: '_sequenceLinkId')
-          Element? sequenceLinkIdElement,
+      @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
       FhirId? detailSequenceLinkId,
       @JsonKey(name: '_detailSequenceLinkId')
-          Element? detailSequenceLinkIdElement,
+      Element? detailSequenceLinkIdElement,
       FhirId? subdetailSequenceLinkId,
       @JsonKey(name: '_subdetailSequenceLinkId')
-          Element? subdetailSequenceLinkIdElement,
+      Element? subdetailSequenceLinkIdElement,
       CodeableConcept code});
 
   $ElementCopyWith<$Res>? get sequenceLinkIdElement;
@@ -10391,14 +10297,13 @@ abstract class _$$_ClaimResponseErrorCopyWith<$Res>
   @useResult
   $Res call(
       {FhirId? sequenceLinkId,
-      @JsonKey(name: '_sequenceLinkId')
-          Element? sequenceLinkIdElement,
+      @JsonKey(name: '_sequenceLinkId') Element? sequenceLinkIdElement,
       FhirId? detailSequenceLinkId,
       @JsonKey(name: '_detailSequenceLinkId')
-          Element? detailSequenceLinkIdElement,
+      Element? detailSequenceLinkIdElement,
       FhirId? subdetailSequenceLinkId,
       @JsonKey(name: '_subdetailSequenceLinkId')
-          Element? subdetailSequenceLinkIdElement,
+      Element? subdetailSequenceLinkIdElement,
       CodeableConcept code});
 
   @override
@@ -10468,14 +10373,12 @@ class __$$_ClaimResponseErrorCopyWithImpl<$Res>
 class _$_ClaimResponseError extends _ClaimResponseError {
   const _$_ClaimResponseError(
       {this.sequenceLinkId,
-      @JsonKey(name: '_sequenceLinkId')
-          this.sequenceLinkIdElement,
+      @JsonKey(name: '_sequenceLinkId') this.sequenceLinkIdElement,
       this.detailSequenceLinkId,
-      @JsonKey(name: '_detailSequenceLinkId')
-          this.detailSequenceLinkIdElement,
+      @JsonKey(name: '_detailSequenceLinkId') this.detailSequenceLinkIdElement,
       this.subdetailSequenceLinkId,
       @JsonKey(name: '_subdetailSequenceLinkId')
-          this.subdetailSequenceLinkIdElement,
+      this.subdetailSequenceLinkIdElement,
       required this.code})
       : super._();
 
@@ -10560,14 +10463,13 @@ class _$_ClaimResponseError extends _ClaimResponseError {
 abstract class _ClaimResponseError extends ClaimResponseError {
   const factory _ClaimResponseError(
       {final FhirId? sequenceLinkId,
-      @JsonKey(name: '_sequenceLinkId')
-          final Element? sequenceLinkIdElement,
+      @JsonKey(name: '_sequenceLinkId') final Element? sequenceLinkIdElement,
       final FhirId? detailSequenceLinkId,
       @JsonKey(name: '_detailSequenceLinkId')
-          final Element? detailSequenceLinkIdElement,
+      final Element? detailSequenceLinkIdElement,
       final FhirId? subdetailSequenceLinkId,
       @JsonKey(name: '_subdetailSequenceLinkId')
-          final Element? subdetailSequenceLinkIdElement,
+      final Element? subdetailSequenceLinkIdElement,
       required final CodeableConcept code}) = _$_ClaimResponseError;
   const _ClaimResponseError._() : super._();
 
@@ -11316,18 +11218,15 @@ abstract class $ClaimResponseInsuranceCopyWith<$Res> {
   @useResult
   $Res call(
       {FhirDecimal? sequence,
-      @JsonKey(name: '_sequence')
-          Element? sequenceElement,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
       FhirBoolean? focal,
-      @JsonKey(name: '_focal')
-          Element? focalElement,
+      @JsonKey(name: '_focal') Element? focalElement,
       Reference coverage,
       String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          Element? businessArrangementElement,
+      Element? businessArrangementElement,
       List<String>? preAuthRef,
-      @JsonKey(name: '_preAuthRef')
-          List<Element?>? preAuthRefElement,
+      @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
       Reference? claimResponse});
 
   $ElementCopyWith<$Res>? get sequenceElement;
@@ -11473,18 +11372,15 @@ abstract class _$$_ClaimResponseInsuranceCopyWith<$Res>
   @useResult
   $Res call(
       {FhirDecimal? sequence,
-      @JsonKey(name: '_sequence')
-          Element? sequenceElement,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
       FhirBoolean? focal,
-      @JsonKey(name: '_focal')
-          Element? focalElement,
+      @JsonKey(name: '_focal') Element? focalElement,
       Reference coverage,
       String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          Element? businessArrangementElement,
+      Element? businessArrangementElement,
       List<String>? preAuthRef,
-      @JsonKey(name: '_preAuthRef')
-          List<Element?>? preAuthRefElement,
+      @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
       Reference? claimResponse});
 
   @override
@@ -11696,18 +11592,15 @@ class _$_ClaimResponseInsurance extends _ClaimResponseInsurance {
 abstract class _ClaimResponseInsurance extends ClaimResponseInsurance {
   const factory _ClaimResponseInsurance(
       {final FhirDecimal? sequence,
-      @JsonKey(name: '_sequence')
-          final Element? sequenceElement,
+      @JsonKey(name: '_sequence') final Element? sequenceElement,
       final FhirBoolean? focal,
-      @JsonKey(name: '_focal')
-          final Element? focalElement,
+      @JsonKey(name: '_focal') final Element? focalElement,
       required final Reference coverage,
       final String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          final Element? businessArrangementElement,
+      final Element? businessArrangementElement,
       final List<String>? preAuthRef,
-      @JsonKey(name: '_preAuthRef')
-          final List<Element?>? preAuthRefElement,
+      @JsonKey(name: '_preAuthRef') final List<Element?>? preAuthRefElement,
       final Reference? claimResponse}) = _$_ClaimResponseInsurance;
   const _ClaimResponseInsurance._() : super._();
 

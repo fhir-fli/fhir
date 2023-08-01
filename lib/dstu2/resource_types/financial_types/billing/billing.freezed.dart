@@ -70,32 +70,24 @@ abstract class $AccountCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown)
-          AccountStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Period? activePeriod,
       Coding? currency,
       Quantity? balance,
@@ -103,8 +95,7 @@ abstract class $AccountCopyWith<$Res> {
       Reference? subject,
       Reference? owner,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement});
+      @JsonKey(name: '_description') Element? descriptionElement});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -448,32 +439,24 @@ abstract class _$$_AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown)
-          AccountStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Period? activePeriod,
       Coding? currency,
       Quantity? balance,
@@ -481,8 +464,7 @@ abstract class _$$_AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
       Reference? subject,
       Reference? owner,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement});
+      @JsonKey(name: '_description') Element? descriptionElement});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -665,32 +647,24 @@ class __$$_AccountCopyWithImpl<$Res>
 class _$_Account extends _Account {
   const _$_Account(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
-          this.resourceType = Dstu2ResourceType.Account,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Account,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.type,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.activePeriod,
       this.currency,
       this.balance,
@@ -698,8 +672,7 @@ class _$_Account extends _Account {
       this.subject,
       this.owner,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement})
+      @JsonKey(name: '_description') this.descriptionElement})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -907,42 +880,35 @@ class _$_Account extends _Account {
 
 abstract class _Account extends Account {
   const factory _Account(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
+          {@JsonKey(unknownEnumValue: Dstu2ResourceType.Account)
           final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
-      final FhirMeta? meta,
-      final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
-      final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
-      final CodeableConcept? type,
-      @JsonKey(unknownEnumValue: AccountStatus.unknown)
+          @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+          @JsonKey(name: 'id') final FhirId? fhirId,
+          final FhirMeta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final FhirCode? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final CodeableConcept? type,
+          @JsonKey(unknownEnumValue: AccountStatus.unknown)
           final AccountStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
-      final Period? activePeriod,
-      final Coding? currency,
-      final Quantity? balance,
-      final Period? coveragePeriod,
-      final Reference? subject,
-      final Reference? owner,
-      final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement}) = _$_Account;
+          @JsonKey(name: '_status') final Element? statusElement,
+          final Period? activePeriod,
+          final Coding? currency,
+          final Quantity? balance,
+          final Period? coveragePeriod,
+          final Reference? subject,
+          final Reference? owner,
+          final String? description,
+          @JsonKey(name: '_description') final Element? descriptionElement}) =
+      _$_Account;
   const _Account._() : super._();
 
   factory _Account.fromJson(Map<String, dynamic> json) = _$_Account.fromJson;
@@ -1089,38 +1055,29 @@ abstract class $ClaimCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ClaimType.unknown)
-          ClaimType type,
+      @JsonKey(unknownEnumValue: ClaimType.unknown) ClaimType type,
       List<Identifier>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? target,
       Reference? provider,
       Reference? organization,
-      @JsonKey(unknownEnumValue: ClaimUse.unknown)
-          ClaimUse? use,
-      @JsonKey(name: '_use')
-          Element? useElement,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse? use,
+      @JsonKey(name: '_use') Element? useElement,
       Coding? priority,
       Coding? fundsReserve,
       Reference? enterer,
@@ -1655,38 +1612,29 @@ abstract class _$$_ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ClaimType.unknown)
-          ClaimType type,
+      @JsonKey(unknownEnumValue: ClaimType.unknown) ClaimType type,
       List<Identifier>? identifier,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? target,
       Reference? provider,
       Reference? organization,
-      @JsonKey(unknownEnumValue: ClaimUse.unknown)
-          ClaimUse? use,
-      @JsonKey(name: '_use')
-          Element? useElement,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown) ClaimUse? use,
+      @JsonKey(name: '_use') Element? useElement,
       Coding? priority,
       Coding? fundsReserve,
       Reference? enterer,
@@ -1987,38 +1935,29 @@ class __$$_ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res, _$_Claim>
 class _$_Claim extends _Claim {
   const _$_Claim(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
-          this.resourceType = Dstu2ResourceType.Claim,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Claim,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ClaimType.unknown)
-          required this.type,
+      @JsonKey(unknownEnumValue: ClaimType.unknown) required this.type,
       final List<Identifier>? identifier,
       this.ruleset,
       this.originalRuleset,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.target,
       this.provider,
       this.organization,
-      @JsonKey(unknownEnumValue: ClaimUse.unknown)
-          this.use,
-      @JsonKey(name: '_use')
-          this.useElement,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown) this.use,
+      @JsonKey(name: '_use') this.useElement,
       this.priority,
       this.fundsReserve,
       this.enterer,
@@ -2400,38 +2339,30 @@ class _$_Claim extends _Claim {
 abstract class _Claim extends Claim {
   const factory _Claim(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Claim)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ClaimType.unknown)
-          required final ClaimType type,
+      required final ClaimType type,
       final List<Identifier>? identifier,
       final Coding? ruleset,
       final Coding? originalRuleset,
       final FhirDateTime? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final Reference? target,
       final Reference? provider,
       final Reference? organization,
-      @JsonKey(unknownEnumValue: ClaimUse.unknown)
-          final ClaimUse? use,
-      @JsonKey(name: '_use')
-          final Element? useElement,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown) final ClaimUse? use,
+      @JsonKey(name: '_use') final Element? useElement,
       final Coding? priority,
       final Coding? fundsReserve,
       final Reference? enterer,
@@ -6400,40 +6331,32 @@ abstract class $ClaimResponseCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference? request,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? organization,
       Reference? requestProvider,
       Reference? requestOrganization,
       @JsonKey(unknownEnumValue: ClaimResponseOutcome.unknown)
-          ClaimResponseOutcome? outcome,
-      @JsonKey(name: '_outcome')
-          Element? outcomeElement,
+      ClaimResponseOutcome? outcome,
+      @JsonKey(name: '_outcome') Element? outcomeElement,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       Coding? payeeType,
       List<ClaimResponseItem>? item,
       List<ClaimResponseAddItem>? addItem,
@@ -6444,8 +6367,7 @@ abstract class $ClaimResponseCopyWith<$Res> {
       Quantity? paymentAdjustment,
       Coding? paymentAdjustmentReason,
       FhirDate? paymentDate,
-      @JsonKey(name: '_paymentDate')
-          Element? paymentDateElement,
+      @JsonKey(name: '_paymentDate') Element? paymentDateElement,
       Quantity? paymentAmount,
       Identifier? paymentRef,
       Coding? reserved,
@@ -7006,40 +6928,32 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Reference? request,
       Coding? ruleset,
       Coding? originalRuleset,
       FhirDateTime? created,
-      @JsonKey(name: '_created')
-          Element? createdElement,
+      @JsonKey(name: '_created') Element? createdElement,
       Reference? organization,
       Reference? requestProvider,
       Reference? requestOrganization,
       @JsonKey(unknownEnumValue: ClaimResponseOutcome.unknown)
-          ClaimResponseOutcome? outcome,
-      @JsonKey(name: '_outcome')
-          Element? outcomeElement,
+      ClaimResponseOutcome? outcome,
+      @JsonKey(name: '_outcome') Element? outcomeElement,
       String? disposition,
-      @JsonKey(name: '_disposition')
-          Element? dispositionElement,
+      @JsonKey(name: '_disposition') Element? dispositionElement,
       Coding? payeeType,
       List<ClaimResponseItem>? item,
       List<ClaimResponseAddItem>? addItem,
@@ -7050,8 +6964,7 @@ abstract class _$$_ClaimResponseCopyWith<$Res>
       Quantity? paymentAdjustment,
       Coding? paymentAdjustmentReason,
       FhirDate? paymentDate,
-      @JsonKey(name: '_paymentDate')
-          Element? paymentDateElement,
+      @JsonKey(name: '_paymentDate') Element? paymentDateElement,
       Quantity? paymentAmount,
       Identifier? paymentRef,
       Coding? reserved,
@@ -7341,40 +7254,31 @@ class __$$_ClaimResponseCopyWithImpl<$Res>
 class _$_ClaimResponse extends _ClaimResponse {
   const _$_ClaimResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
-          this.resourceType = Dstu2ResourceType.ClaimResponse,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.ClaimResponse,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.request,
       this.ruleset,
       this.originalRuleset,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement,
+      @JsonKey(name: '_created') this.createdElement,
       this.organization,
       this.requestProvider,
       this.requestOrganization,
-      @JsonKey(unknownEnumValue: ClaimResponseOutcome.unknown)
-          this.outcome,
-      @JsonKey(name: '_outcome')
-          this.outcomeElement,
+      @JsonKey(unknownEnumValue: ClaimResponseOutcome.unknown) this.outcome,
+      @JsonKey(name: '_outcome') this.outcomeElement,
       this.disposition,
-      @JsonKey(name: '_disposition')
-          this.dispositionElement,
+      @JsonKey(name: '_disposition') this.dispositionElement,
       this.payeeType,
       final List<ClaimResponseItem>? item,
       final List<ClaimResponseAddItem>? addItem,
@@ -7385,8 +7289,7 @@ class _$_ClaimResponse extends _ClaimResponse {
       this.paymentAdjustment,
       this.paymentAdjustmentReason,
       this.paymentDate,
-      @JsonKey(name: '_paymentDate')
-          this.paymentDateElement,
+      @JsonKey(name: '_paymentDate') this.paymentDateElement,
       this.paymentAmount,
       this.paymentRef,
       this.reserved,
@@ -7723,40 +7626,32 @@ class _$_ClaimResponse extends _ClaimResponse {
 abstract class _ClaimResponse extends ClaimResponse {
   const factory _ClaimResponse(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ClaimResponse)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final Reference? request,
       final Coding? ruleset,
       final Coding? originalRuleset,
       final FhirDateTime? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement,
+      @JsonKey(name: '_created') final Element? createdElement,
       final Reference? organization,
       final Reference? requestProvider,
       final Reference? requestOrganization,
       @JsonKey(unknownEnumValue: ClaimResponseOutcome.unknown)
-          final ClaimResponseOutcome? outcome,
-      @JsonKey(name: '_outcome')
-          final Element? outcomeElement,
+      final ClaimResponseOutcome? outcome,
+      @JsonKey(name: '_outcome') final Element? outcomeElement,
       final String? disposition,
-      @JsonKey(name: '_disposition')
-          final Element? dispositionElement,
+      @JsonKey(name: '_disposition') final Element? dispositionElement,
       final Coding? payeeType,
       final List<ClaimResponseItem>? item,
       final List<ClaimResponseAddItem>? addItem,
@@ -7767,8 +7662,7 @@ abstract class _ClaimResponse extends ClaimResponse {
       final Quantity? paymentAdjustment,
       final Coding? paymentAdjustmentReason,
       final FhirDate? paymentDate,
-      @JsonKey(name: '_paymentDate')
-          final Element? paymentDateElement,
+      @JsonKey(name: '_paymentDate') final Element? paymentDateElement,
       final Quantity? paymentAmount,
       final Identifier? paymentRef,
       final Coding? reserved,

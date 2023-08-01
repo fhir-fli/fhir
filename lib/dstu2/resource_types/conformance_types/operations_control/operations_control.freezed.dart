@@ -87,30 +87,24 @@ abstract class $ConformanceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
       String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-          ConformanceStatus? status,
+      ConformanceStatus? status,
       FhirBoolean? experimental,
       String? publisher,
       List<ConformanceContact>? contact,
@@ -118,17 +112,14 @@ abstract class $ConformanceCopyWith<$Res> {
       String? description,
       String? requirements,
       String? copyright,
-      @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-          ConformanceKind kind,
+      @JsonKey(unknownEnumValue: ConformanceKind.unknown) ConformanceKind kind,
       ConformanceSoftware? software,
       ConformanceImplementation? implementation,
       FhirId fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-          ConformanceAcceptUnknown acceptUnknown,
-      @JsonKey(name: '_acceptUnknown')
-          Element? acceptUnknownElement,
+      ConformanceAcceptUnknown acceptUnknown,
+      @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
       List<ConformanceFormat> format,
       List<Reference>? profile,
       List<ConformanceRest>? rest,
@@ -464,30 +455,24 @@ abstract class _$$_ConformanceCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
       String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-          ConformanceStatus? status,
+      ConformanceStatus? status,
       FhirBoolean? experimental,
       String? publisher,
       List<ConformanceContact>? contact,
@@ -495,17 +480,14 @@ abstract class _$$_ConformanceCopyWith<$Res>
       String? description,
       String? requirements,
       String? copyright,
-      @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-          ConformanceKind kind,
+      @JsonKey(unknownEnumValue: ConformanceKind.unknown) ConformanceKind kind,
       ConformanceSoftware? software,
       ConformanceImplementation? implementation,
       FhirId fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-          ConformanceAcceptUnknown acceptUnknown,
-      @JsonKey(name: '_acceptUnknown')
-          Element? acceptUnknownElement,
+      ConformanceAcceptUnknown acceptUnknown,
+      @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
       List<ConformanceFormat> format,
       List<Reference>? profile,
       List<ConformanceRest>? rest,
@@ -734,30 +716,23 @@ class __$$_ConformanceCopyWithImpl<$Res>
 class _$_Conformance extends _Conformance {
   const _$_Conformance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
-          this.resourceType = Dstu2ResourceType.Conformance,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Conformance,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.version,
       this.name,
-      @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-          this.status,
+      @JsonKey(unknownEnumValue: ConformanceStatus.unknown) this.status,
       this.experimental,
       this.publisher,
       final List<ConformanceContact>? contact,
@@ -765,17 +740,14 @@ class _$_Conformance extends _Conformance {
       this.description,
       this.requirements,
       this.copyright,
-      @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-          required this.kind,
+      @JsonKey(unknownEnumValue: ConformanceKind.unknown) required this.kind,
       this.software,
       this.implementation,
       required this.fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          this.fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') this.fhirVersionElement,
       @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-          required this.acceptUnknown,
-      @JsonKey(name: '_acceptUnknown')
-          this.acceptUnknownElement,
+      required this.acceptUnknown,
+      @JsonKey(name: '_acceptUnknown') this.acceptUnknownElement,
       required final List<ConformanceFormat> format,
       final List<Reference>? profile,
       final List<ConformanceRest>? rest,
@@ -1078,30 +1050,24 @@ class _$_Conformance extends _Conformance {
 abstract class _Conformance extends Conformance {
   const factory _Conformance(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final String? version,
       final String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-          final ConformanceStatus? status,
+      final ConformanceStatus? status,
       final FhirBoolean? experimental,
       final String? publisher,
       final List<ConformanceContact>? contact,
@@ -1110,16 +1076,14 @@ abstract class _Conformance extends Conformance {
       final String? requirements,
       final String? copyright,
       @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-          required final ConformanceKind kind,
+      required final ConformanceKind kind,
       final ConformanceSoftware? software,
       final ConformanceImplementation? implementation,
       required final FhirId fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          final Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') final Element? fhirVersionElement,
       @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-          required final ConformanceAcceptUnknown acceptUnknown,
-      @JsonKey(name: '_acceptUnknown')
-          final Element? acceptUnknownElement,
+      required final ConformanceAcceptUnknown acceptUnknown,
+      @JsonKey(name: '_acceptUnknown') final Element? acceptUnknownElement,
       required final List<ConformanceFormat> format,
       final List<Reference>? profile,
       final List<ConformanceRest>? rest,
@@ -1293,30 +1257,24 @@ abstract class $CapabilityStatementCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
       String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-          ConformanceStatus? status,
+      ConformanceStatus? status,
       FhirBoolean? experimental,
       String? publisher,
       List<ConformanceContact>? contact,
@@ -1324,17 +1282,14 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       String? description,
       String? requirements,
       String? copyright,
-      @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-          ConformanceKind kind,
+      @JsonKey(unknownEnumValue: ConformanceKind.unknown) ConformanceKind kind,
       ConformanceSoftware? software,
       ConformanceImplementation? implementation,
       FhirId fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-          ConformanceAcceptUnknown acceptUnknown,
-      @JsonKey(name: '_acceptUnknown')
-          Element? acceptUnknownElement,
+      ConformanceAcceptUnknown acceptUnknown,
+      @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
       List<ConformanceFormat> format,
       List<Reference>? profile,
       List<ConformanceRest>? rest,
@@ -1670,30 +1625,24 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
       String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-          ConformanceStatus? status,
+      ConformanceStatus? status,
       FhirBoolean? experimental,
       String? publisher,
       List<ConformanceContact>? contact,
@@ -1701,17 +1650,14 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
       String? description,
       String? requirements,
       String? copyright,
-      @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-          ConformanceKind kind,
+      @JsonKey(unknownEnumValue: ConformanceKind.unknown) ConformanceKind kind,
       ConformanceSoftware? software,
       ConformanceImplementation? implementation,
       FhirId fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-          ConformanceAcceptUnknown acceptUnknown,
-      @JsonKey(name: '_acceptUnknown')
-          Element? acceptUnknownElement,
+      ConformanceAcceptUnknown acceptUnknown,
+      @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
       List<ConformanceFormat> format,
       List<Reference>? profile,
       List<ConformanceRest>? rest,
@@ -1940,30 +1886,23 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
 class _$_CapabilityStatement extends _CapabilityStatement {
   const _$_CapabilityStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
-          this.resourceType = Dstu2ResourceType.CapabilityStatement,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.CapabilityStatement,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.version,
       this.name,
-      @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-          this.status,
+      @JsonKey(unknownEnumValue: ConformanceStatus.unknown) this.status,
       this.experimental,
       this.publisher,
       final List<ConformanceContact>? contact,
@@ -1971,17 +1910,14 @@ class _$_CapabilityStatement extends _CapabilityStatement {
       this.description,
       this.requirements,
       this.copyright,
-      @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-          required this.kind,
+      @JsonKey(unknownEnumValue: ConformanceKind.unknown) required this.kind,
       this.software,
       this.implementation,
       required this.fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          this.fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') this.fhirVersionElement,
       @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-          required this.acceptUnknown,
-      @JsonKey(name: '_acceptUnknown')
-          this.acceptUnknownElement,
+      required this.acceptUnknown,
+      @JsonKey(name: '_acceptUnknown') this.acceptUnknownElement,
       required final List<ConformanceFormat> format,
       final List<Reference>? profile,
       final List<ConformanceRest>? rest,
@@ -2285,30 +2221,24 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 abstract class _CapabilityStatement extends CapabilityStatement {
   const factory _CapabilityStatement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final String? version,
       final String? name,
       @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-          final ConformanceStatus? status,
+      final ConformanceStatus? status,
       final FhirBoolean? experimental,
       final String? publisher,
       final List<ConformanceContact>? contact,
@@ -2317,16 +2247,14 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       final String? requirements,
       final String? copyright,
       @JsonKey(unknownEnumValue: ConformanceKind.unknown)
-          required final ConformanceKind kind,
+      required final ConformanceKind kind,
       final ConformanceSoftware? software,
       final ConformanceImplementation? implementation,
       required final FhirId fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          final Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') final Element? fhirVersionElement,
       @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
-          required final ConformanceAcceptUnknown acceptUnknown,
-      @JsonKey(name: '_acceptUnknown')
-          final Element? acceptUnknownElement,
+      required final ConformanceAcceptUnknown acceptUnknown,
+      @JsonKey(name: '_acceptUnknown') final Element? acceptUnknownElement,
       required final List<ConformanceFormat> format,
       final List<Reference>? profile,
       final List<ConformanceRest>? rest,
@@ -3280,23 +3208,18 @@ abstract class $ConformanceRestCopyWith<$Res> {
       _$ConformanceRestCopyWithImpl<$Res, ConformanceRest>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
-      @JsonKey(unknownEnumValue: RestMode.unknown)
-          RestMode mode,
-      @JsonKey(name: '_mode')
-          Element? modeElement,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      @JsonKey(unknownEnumValue: RestMode.unknown) RestMode mode,
+      @JsonKey(name: '_mode') Element? modeElement,
       String? documentation,
       ConformanceRestSecurity? security,
       List<ConformanceRestResource> resource,
       List<ConformanceRestInteraction>? interaction,
       @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
-          RestTransactionMode? transactionMode,
+      RestTransactionMode? transactionMode,
       List<ConformanceResourceSearchParam>? searchParam,
       List<ConformanceRestOperation>? operation,
       List<FhirUri>? compartment});
@@ -3427,23 +3350,18 @@ abstract class _$$_ConformanceRestCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
-      @JsonKey(unknownEnumValue: RestMode.unknown)
-          RestMode mode,
-      @JsonKey(name: '_mode')
-          Element? modeElement,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      @JsonKey(unknownEnumValue: RestMode.unknown) RestMode mode,
+      @JsonKey(name: '_mode') Element? modeElement,
       String? documentation,
       ConformanceRestSecurity? security,
       List<ConformanceRestResource> resource,
       List<ConformanceRestInteraction>? interaction,
       @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
-          RestTransactionMode? transactionMode,
+      RestTransactionMode? transactionMode,
       List<ConformanceResourceSearchParam>? searchParam,
       List<ConformanceRestOperation>? operation,
       List<FhirUri>? compartment});
@@ -3545,23 +3463,18 @@ class __$$_ConformanceRestCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceRest extends _ConformanceRest {
   const _$_ConformanceRest(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          final List<String>? fhirComments,
-      @JsonKey(unknownEnumValue: RestMode.unknown)
-          required this.mode,
-      @JsonKey(name: '_mode')
-          this.modeElement,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      @JsonKey(unknownEnumValue: RestMode.unknown) required this.mode,
+      @JsonKey(name: '_mode') this.modeElement,
       this.documentation,
       this.security,
       required final List<ConformanceRestResource> resource,
       final List<ConformanceRestInteraction>? interaction,
       @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
-          this.transactionMode,
+      this.transactionMode,
       final List<ConformanceResourceSearchParam>? searchParam,
       final List<ConformanceRestOperation>? operation,
       final List<FhirUri>? compartment})
@@ -3747,23 +3660,18 @@ class _$_ConformanceRest extends _ConformanceRest {
 
 abstract class _ConformanceRest extends ConformanceRest {
   const factory _ConformanceRest(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          final List<String>? fhirComments,
-      @JsonKey(unknownEnumValue: RestMode.unknown)
-          required final RestMode mode,
-      @JsonKey(name: '_mode')
-          final Element? modeElement,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      @JsonKey(unknownEnumValue: RestMode.unknown) required final RestMode mode,
+      @JsonKey(name: '_mode') final Element? modeElement,
       final String? documentation,
       final ConformanceRestSecurity? security,
       required final List<ConformanceRestResource> resource,
       final List<ConformanceRestInteraction>? interaction,
       @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
-          final RestTransactionMode? transactionMode,
+      final RestTransactionMode? transactionMode,
       final List<ConformanceResourceSearchParam>? searchParam,
       final List<ConformanceRestOperation>? operation,
       final List<FhirUri>? compartment}) = _$_ConformanceRest;
@@ -4459,15 +4367,12 @@ class _$_ConformanceDocument extends _ConformanceDocument {
 
 abstract class _ConformanceDocument extends ConformanceDocument {
   const factory _ConformanceDocument(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          final List<String>? fhirComments,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       @JsonKey(unknownEnumValue: DocumentMode.unknown)
-          required final DocumentMode mode,
+      required final DocumentMode mode,
       final String? documentation,
       required final Reference profile}) = _$_ConformanceDocument;
   const _ConformanceDocument._() : super._();
@@ -4920,33 +4825,25 @@ abstract class $ConformanceRestResourceCopyWith<$Res> {
       _$ConformanceRestResourceCopyWithImpl<$Res, ConformanceRestResource>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       FhirCode type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       Reference? profile,
-      @JsonKey(required: true)
-          List<ConformanceResourceInteraction> interaction,
+      @JsonKey(required: true) List<ConformanceResourceInteraction> interaction,
       @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-          ResourceVersioning? versioning,
+      ResourceVersioning? versioning,
       FhirBoolean? readHistory,
       FhirBoolean? updateCreate,
-      @JsonKey(name: '_updateCreate')
-          Element? updateCreateElement,
+      @JsonKey(name: '_updateCreate') Element? updateCreateElement,
       FhirBoolean? conditionalCreate,
-      @JsonKey(name: '_conditionalCreate')
-          Element? conditionalCreateElement,
+      @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
       FhirBoolean? conditionalUpdate,
       @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-          ResourceConditionalDelete? conditionalDelete,
-      @JsonKey(name: '_conditionalDelete')
-          Element? conditionalDeleteElement,
+      ResourceConditionalDelete? conditionalDelete,
+      @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
       List<String>? searchInclude,
       List<String>? searchRevInclude,
       List<ConformanceResourceSearchParam>? searchParam});
@@ -5147,33 +5044,25 @@ abstract class _$$_ConformanceRestResourceCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       FhirCode type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       Reference? profile,
-      @JsonKey(required: true)
-          List<ConformanceResourceInteraction> interaction,
+      @JsonKey(required: true) List<ConformanceResourceInteraction> interaction,
       @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-          ResourceVersioning? versioning,
+      ResourceVersioning? versioning,
       FhirBoolean? readHistory,
       FhirBoolean? updateCreate,
-      @JsonKey(name: '_updateCreate')
-          Element? updateCreateElement,
+      @JsonKey(name: '_updateCreate') Element? updateCreateElement,
       FhirBoolean? conditionalCreate,
-      @JsonKey(name: '_conditionalCreate')
-          Element? conditionalCreateElement,
+      @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
       FhirBoolean? conditionalUpdate,
       @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-          ResourceConditionalDelete? conditionalDelete,
-      @JsonKey(name: '_conditionalDelete')
-          Element? conditionalDeleteElement,
+      ResourceConditionalDelete? conditionalDelete,
+      @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
       List<String>? searchInclude,
       List<String>? searchRevInclude,
       List<ConformanceResourceSearchParam>? searchParam});
@@ -5312,33 +5201,25 @@ class __$$_ConformanceRestResourceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceRestResource extends _ConformanceRestResource {
   const _$_ConformanceRestResource(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          final List<String>? fhirComments,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: '_type') this.typeElement,
       this.profile,
       @JsonKey(required: true)
-          required final List<ConformanceResourceInteraction> interaction,
-      @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-          this.versioning,
+      required final List<ConformanceResourceInteraction> interaction,
+      @JsonKey(unknownEnumValue: ResourceVersioning.unknown) this.versioning,
       this.readHistory,
       this.updateCreate,
-      @JsonKey(name: '_updateCreate')
-          this.updateCreateElement,
+      @JsonKey(name: '_updateCreate') this.updateCreateElement,
       this.conditionalCreate,
-      @JsonKey(name: '_conditionalCreate')
-          this.conditionalCreateElement,
+      @JsonKey(name: '_conditionalCreate') this.conditionalCreateElement,
       this.conditionalUpdate,
       @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-          this.conditionalDelete,
-      @JsonKey(name: '_conditionalDelete')
-          this.conditionalDeleteElement,
+      this.conditionalDelete,
+      @JsonKey(name: '_conditionalDelete') this.conditionalDeleteElement,
       final List<String>? searchInclude,
       final List<String>? searchRevInclude,
       final List<ConformanceResourceSearchParam>? searchParam})
@@ -5555,33 +5436,28 @@ class _$_ConformanceRestResource extends _ConformanceRestResource {
 
 abstract class _ConformanceRestResource extends ConformanceRestResource {
   const factory _ConformanceRestResource(
-          {@JsonKey(name: 'id')
-              final FhirId? fhirId,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          @JsonKey(name: 'fhir_comments')
-              final List<String>? fhirComments,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
           required final FhirCode type,
-          @JsonKey(name: '_type')
-              final Element? typeElement,
+          @JsonKey(name: '_type') final Element? typeElement,
           final Reference? profile,
           @JsonKey(required: true)
-              required final List<ConformanceResourceInteraction> interaction,
+          required final List<ConformanceResourceInteraction> interaction,
           @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-              final ResourceVersioning? versioning,
+          final ResourceVersioning? versioning,
           final FhirBoolean? readHistory,
           final FhirBoolean? updateCreate,
-          @JsonKey(name: '_updateCreate')
-              final Element? updateCreateElement,
+          @JsonKey(name: '_updateCreate') final Element? updateCreateElement,
           final FhirBoolean? conditionalCreate,
           @JsonKey(name: '_conditionalCreate')
-              final Element? conditionalCreateElement,
+          final Element? conditionalCreateElement,
           final FhirBoolean? conditionalUpdate,
           @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-              final ResourceConditionalDelete? conditionalDelete,
+          final ResourceConditionalDelete? conditionalDelete,
           @JsonKey(name: '_conditionalDelete')
-              final Element? conditionalDeleteElement,
+          final Element? conditionalDeleteElement,
           final List<String>? searchInclude,
           final List<String>? searchRevInclude,
           final List<ConformanceResourceSearchParam>? searchParam}) =
@@ -5679,13 +5555,11 @@ abstract class $ConformanceResourceInteractionCopyWith<$Res> {
           ConformanceResourceInteraction>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
-          ResourceInteractionCode code,
+      ResourceInteractionCode code,
       String? documentation});
 }
 
@@ -5744,13 +5618,11 @@ abstract class _$$_ConformanceResourceInteractionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
-          ResourceInteractionCode code,
+      ResourceInteractionCode code,
       String? documentation});
 }
 
@@ -5803,13 +5675,11 @@ class __$$_ConformanceResourceInteractionCopyWithImpl<$Res>
 class _$_ConformanceResourceInteraction
     extends _ConformanceResourceInteraction {
   const _$_ConformanceResourceInteraction(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
-          required this.code,
+      required this.code,
       this.documentation})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -5898,13 +5768,11 @@ class _$_ConformanceResourceInteraction
 abstract class _ConformanceResourceInteraction
     extends ConformanceResourceInteraction {
   const factory _ConformanceResourceInteraction(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
-          required final ResourceInteractionCode code,
+      required final ResourceInteractionCode code,
       final String? documentation}) = _$_ConformanceResourceInteraction;
   const _ConformanceResourceInteraction._() : super._();
 
@@ -6961,18 +6829,15 @@ class _$_ConformanceMessagingEvent extends _ConformanceMessagingEvent {
 
 abstract class _ConformanceMessagingEvent extends ConformanceMessagingEvent {
   const factory _ConformanceMessagingEvent(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Coding code,
       @JsonKey(unknownEnumValue: EventCategory.unknown)
-          final EventCategory? category,
+      final EventCategory? category,
       @JsonKey(unknownEnumValue: EventMode.unknown)
-          required final EventMode mode,
-      @JsonKey(name: '_mode')
-          final Element? modeElement,
+      required final EventMode mode,
+      @JsonKey(name: '_mode') final Element? modeElement,
       required final FhirCode focus,
       required final Reference request,
       required final Reference response,
@@ -7356,13 +7221,11 @@ abstract class $ConformanceRestInteractionCopyWith<$Res> {
           ConformanceRestInteraction>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
-          RestInteractionCode code,
+      RestInteractionCode code,
       String? documentation});
 }
 
@@ -7421,13 +7284,11 @@ abstract class _$$_ConformanceRestInteractionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
-          RestInteractionCode code,
+      RestInteractionCode code,
       String? documentation});
 }
 
@@ -7479,13 +7340,11 @@ class __$$_ConformanceRestInteractionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
   const _$_ConformanceRestInteraction(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
-          required this.code,
+      required this.code,
       this.documentation})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -7572,13 +7431,11 @@ class _$_ConformanceRestInteraction extends _ConformanceRestInteraction {
 
 abstract class _ConformanceRestInteraction extends ConformanceRestInteraction {
   const factory _ConformanceRestInteraction(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
-          required final RestInteractionCode code,
+      required final RestInteractionCode code,
       final String? documentation}) = _$_ConformanceRestInteraction;
   const _ConformanceRestInteraction._() : super._();
 
@@ -7993,17 +7850,14 @@ class _$_ConformanceResourceSearchParam
 abstract class _ConformanceResourceSearchParam
     extends ConformanceResourceSearchParam {
   const factory _ConformanceResourceSearchParam(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          final List<String>? fhirComments,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       required final String name,
       final FhirUri? definition,
       @JsonKey(unknownEnumValue: SearchParamType.unknown)
-          required final SearchParamType type,
+      required final SearchParamType type,
       final String? documentation,
       final List<FhirCode>? target,
       final List<SearchParamModifier>? modifier,
@@ -8108,30 +7962,26 @@ abstract class $OperationDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
       String? version,
       String name,
-      @JsonKey(required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
-          OperationDefinitionStatus status,
+      @JsonKey(
+          required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
+      OperationDefinitionStatus status,
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-          OperationDefinitionKind kind,
+      OperationDefinitionKind kind,
       FhirBoolean? experimental,
       String? publisher,
       List<OperationDefinitionContact>? contact,
@@ -8398,30 +8248,26 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
       String? version,
       String name,
-      @JsonKey(required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
-          OperationDefinitionStatus status,
+      @JsonKey(
+          required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
+      OperationDefinitionStatus status,
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-          OperationDefinitionKind kind,
+      OperationDefinitionKind kind,
       FhirBoolean? experimental,
       String? publisher,
       List<OperationDefinitionContact>? contact,
@@ -8626,30 +8472,26 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
 class _$_OperationDefinition extends _OperationDefinition {
   const _$_OperationDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
-          this.resourceType = Dstu2ResourceType.OperationDefinition,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.OperationDefinition,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
       this.version,
       required this.name,
-      @JsonKey(required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
-          required this.status,
+      @JsonKey(
+          required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
+      required this.status,
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-          required this.kind,
+      required this.kind,
       this.experimental,
       this.publisher,
       final List<OperationDefinitionContact>? contact,
@@ -8907,30 +8749,26 @@ class _$_OperationDefinition extends _OperationDefinition {
 abstract class _OperationDefinition extends OperationDefinition {
   const factory _OperationDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
       final String? version,
       required final String name,
-      @JsonKey(required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
-          required final OperationDefinitionStatus status,
+      @JsonKey(
+          required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
+      required final OperationDefinitionStatus status,
       @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
-          required final OperationDefinitionKind kind,
+      required final OperationDefinitionKind kind,
       final FhirBoolean? experimental,
       final String? publisher,
       final List<OperationDefinitionContact>? contact,
@@ -8944,7 +8782,8 @@ abstract class _OperationDefinition extends OperationDefinition {
       required final FhirBoolean system,
       final List<FhirCode>? type,
       required final FhirBoolean instance,
-      final List<OperationDefinitionParameter>? parameter}) = _$_OperationDefinition;
+      final List<OperationDefinitionParameter>?
+          parameter}) = _$_OperationDefinition;
   const _OperationDefinition._() : super._();
 
   factory _OperationDefinition.fromJson(Map<String, dynamic> json) =
@@ -9738,16 +9577,13 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
 abstract class _OperationDefinitionParameter
     extends OperationDefinitionParameter {
   const factory _OperationDefinitionParameter(
-          {@JsonKey(name: 'id')
-              final FhirId? fhirId,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
-          @JsonKey(name: 'fhir_comments')
-              final List<String>? fhirComments,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
           required final FhirCode name,
           @JsonKey(unknownEnumValue: ParameterUse.unknown)
-              required final ParameterUse use,
+          required final ParameterUse use,
           required final FhirInteger min,
           required final String max,
           final String? documentation,
@@ -9755,7 +9591,7 @@ abstract class _OperationDefinitionParameter
           final Reference? profile,
           final OperationDefinitionParameterBinding? binding,
           @JsonKey(name: 'part')
-              final List<OperationDefinitionParameter>? part_}) =
+          final List<OperationDefinitionParameter>? part_}) =
       _$_OperationDefinitionParameter;
   const _OperationDefinitionParameter._() : super._();
 
@@ -9837,16 +9673,14 @@ abstract class $OperationDefinitionParameterBindingCopyWith<$Res> {
           OperationDefinitionParameterBinding>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(
           required: true,
           unknownEnumValue: OperationDefinitionBindingStrength.unknown)
       @JsonKey(required: true)
-          OperationDefinitionBindingStrength strength,
+      OperationDefinitionBindingStrength strength,
       FhirUri? valueSetUri,
       Reference? valueSetReference});
 
@@ -9925,16 +9759,14 @@ abstract class _$$_OperationDefinitionParameterBindingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(
           required: true,
           unknownEnumValue: OperationDefinitionBindingStrength.unknown)
       @JsonKey(required: true)
-          OperationDefinitionBindingStrength strength,
+      OperationDefinitionBindingStrength strength,
       FhirUri? valueSetUri,
       Reference? valueSetReference});
 
@@ -9996,16 +9828,14 @@ class __$$_OperationDefinitionParameterBindingCopyWithImpl<$Res>
 class _$_OperationDefinitionParameterBinding
     extends _OperationDefinitionParameterBinding {
   const _$_OperationDefinitionParameterBinding(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(
           required: true,
           unknownEnumValue: OperationDefinitionBindingStrength.unknown)
       @JsonKey(required: true)
-          required this.strength,
+      required this.strength,
       this.valueSetUri,
       this.valueSetReference})
       : _extension_ = extension_,
@@ -10105,16 +9935,14 @@ class _$_OperationDefinitionParameterBinding
 abstract class _OperationDefinitionParameterBinding
     extends OperationDefinitionParameterBinding {
   const factory _OperationDefinitionParameterBinding(
-          {@JsonKey(name: 'id')
-              final FhirId? fhirId,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           @JsonKey(
               required: true,
               unknownEnumValue: OperationDefinitionBindingStrength.unknown)
           @JsonKey(required: true)
-              required final OperationDefinitionBindingStrength strength,
+          required final OperationDefinitionBindingStrength strength,
           final FhirUri? valueSetUri,
           final Reference? valueSetReference}) =
       _$_OperationDefinitionParameterBinding;
@@ -10211,42 +10039,36 @@ abstract class $SearchParameterCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri url,
       String name,
       @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-          SearchParameterStatus? status,
+      SearchParameterStatus? status,
       FhirBoolean? experimental,
       String? publisher,
       List<SearchParameterContact>? contact,
       FhirDateTime? date,
       String? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
+      @JsonKey(name: '_requirements') Element? requirementsElement,
       FhirCode code,
       FhirCode? base,
       @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-          SearchParameterType type,
+      SearchParameterType type,
       String? description,
       String? xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-          SearchParameterXpathUsage? xpathUsage,
+      SearchParameterXpathUsage? xpathUsage,
       List<FhirCode>? target});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -10485,42 +10307,36 @@ abstract class _$$_SearchParameterCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri url,
       String name,
       @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-          SearchParameterStatus? status,
+      SearchParameterStatus? status,
       FhirBoolean? experimental,
       String? publisher,
       List<SearchParameterContact>? contact,
       FhirDateTime? date,
       String? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
+      @JsonKey(name: '_requirements') Element? requirementsElement,
       FhirCode code,
       FhirCode? base,
       @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-          SearchParameterType type,
+      SearchParameterType type,
       String? description,
       String? xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-          SearchParameterXpathUsage? xpathUsage,
+      SearchParameterXpathUsage? xpathUsage,
       List<FhirCode>? target});
 
   @override
@@ -10697,42 +10513,35 @@ class __$$_SearchParameterCopyWithImpl<$Res>
 class _$_SearchParameter extends _SearchParameter {
   const _$_SearchParameter(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
-          this.resourceType = Dstu2ResourceType.SearchParameter,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.SearchParameter,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.url,
       required this.name,
-      @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-          this.status,
+      @JsonKey(unknownEnumValue: SearchParameterStatus.unknown) this.status,
       this.experimental,
       this.publisher,
       final List<SearchParameterContact>? contact,
       this.date,
       this.requirements,
-      @JsonKey(name: '_requirements')
-          this.requirementsElement,
+      @JsonKey(name: '_requirements') this.requirementsElement,
       required this.code,
       this.base,
       @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-          required this.type,
+      required this.type,
       this.description,
       this.xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-          this.xpathUsage,
+      this.xpathUsage,
       final List<FhirCode>? target})
       : _contained = contained,
         _extension_ = extension_,
@@ -10956,42 +10765,36 @@ class _$_SearchParameter extends _SearchParameter {
 abstract class _SearchParameter extends SearchParameter {
   const factory _SearchParameter(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final FhirUri url,
       required final String name,
       @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-          final SearchParameterStatus? status,
+      final SearchParameterStatus? status,
       final FhirBoolean? experimental,
       final String? publisher,
       final List<SearchParameterContact>? contact,
       final FhirDateTime? date,
       final String? requirements,
-      @JsonKey(name: '_requirements')
-          final Element? requirementsElement,
+      @JsonKey(name: '_requirements') final Element? requirementsElement,
       required final FhirCode code,
       final FhirCode? base,
       @JsonKey(unknownEnumValue: SearchParameterType.unknown)
-          required final SearchParameterType type,
+      required final SearchParameterType type,
       final String? description,
       final String? xpath,
       @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-          final SearchParameterXpathUsage? xpathUsage,
+      final SearchParameterXpathUsage? xpathUsage,
       final List<FhirCode>? target}) = _$_SearchParameter;
   const _SearchParameter._() : super._();
 

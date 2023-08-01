@@ -76,46 +76,34 @@ abstract class $MediaCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MediaType.unknown)
-          MediaType type,
+      @JsonKey(unknownEnumValue: MediaType.unknown) MediaType type,
       CodeableConcept? subtype,
       List<Identifier>? identifier,
       Reference? subject,
-      @JsonKey(name: 'operator')
-          Reference? operator_,
+      @JsonKey(name: 'operator') Reference? operator_,
       CodeableConcept? view,
       String? deviceName,
-      @JsonKey(name: '_deviceName')
-          Element? deviceNameElement,
+      @JsonKey(name: '_deviceName') Element? deviceNameElement,
       FhirPositiveInt? height,
-      @JsonKey(name: '_height')
-          Element? heightElement,
+      @JsonKey(name: '_height') Element? heightElement,
       FhirPositiveInt? width,
-      @JsonKey(name: '_width')
-          Element? widthElement,
+      @JsonKey(name: '_width') Element? widthElement,
       FhirPositiveInt? frames,
-      @JsonKey(name: '_frames')
-          Element? framesElement,
+      @JsonKey(name: '_frames') Element? framesElement,
       FhirUnsignedInt? duration,
-      @JsonKey(name: '_duration')
-          Element? durationElement,
+      @JsonKey(name: '_duration') Element? durationElement,
       Attachment content});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -470,46 +458,34 @@ abstract class _$$_MediaCopyWith<$Res> implements $MediaCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MediaType.unknown)
-          MediaType type,
+      @JsonKey(unknownEnumValue: MediaType.unknown) MediaType type,
       CodeableConcept? subtype,
       List<Identifier>? identifier,
       Reference? subject,
-      @JsonKey(name: 'operator')
-          Reference? operator_,
+      @JsonKey(name: 'operator') Reference? operator_,
       CodeableConcept? view,
       String? deviceName,
-      @JsonKey(name: '_deviceName')
-          Element? deviceNameElement,
+      @JsonKey(name: '_deviceName') Element? deviceNameElement,
       FhirPositiveInt? height,
-      @JsonKey(name: '_height')
-          Element? heightElement,
+      @JsonKey(name: '_height') Element? heightElement,
       FhirPositiveInt? width,
-      @JsonKey(name: '_width')
-          Element? widthElement,
+      @JsonKey(name: '_width') Element? widthElement,
       FhirPositiveInt? frames,
-      @JsonKey(name: '_frames')
-          Element? framesElement,
+      @JsonKey(name: '_frames') Element? framesElement,
       FhirUnsignedInt? duration,
-      @JsonKey(name: '_duration')
-          Element? durationElement,
+      @JsonKey(name: '_duration') Element? durationElement,
       Attachment content});
 
   @override
@@ -707,46 +683,34 @@ class __$$_MediaCopyWithImpl<$Res> extends _$MediaCopyWithImpl<$Res, _$_Media>
 class _$_Media extends _Media {
   const _$_Media(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
-          this.resourceType = Dstu2ResourceType.Media,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Media,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: MediaType.unknown)
-          required this.type,
+      @JsonKey(unknownEnumValue: MediaType.unknown) required this.type,
       this.subtype,
       final List<Identifier>? identifier,
       this.subject,
-      @JsonKey(name: 'operator')
-          this.operator_,
+      @JsonKey(name: 'operator') this.operator_,
       this.view,
       this.deviceName,
-      @JsonKey(name: '_deviceName')
-          this.deviceNameElement,
+      @JsonKey(name: '_deviceName') this.deviceNameElement,
       this.height,
-      @JsonKey(name: '_height')
-          this.heightElement,
+      @JsonKey(name: '_height') this.heightElement,
       this.width,
-      @JsonKey(name: '_width')
-          this.widthElement,
+      @JsonKey(name: '_width') this.widthElement,
       this.frames,
-      @JsonKey(name: '_frames')
-          this.framesElement,
+      @JsonKey(name: '_frames') this.framesElement,
       this.duration,
-      @JsonKey(name: '_duration')
-          this.durationElement,
+      @JsonKey(name: '_duration') this.durationElement,
       required this.content})
       : _contained = contained,
         _extension_ = extension_,
@@ -972,46 +936,35 @@ class _$_Media extends _Media {
 abstract class _Media extends Media {
   const factory _Media(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: MediaType.unknown)
-          required final MediaType type,
+      required final MediaType type,
       final CodeableConcept? subtype,
       final List<Identifier>? identifier,
       final Reference? subject,
-      @JsonKey(name: 'operator')
-          final Reference? operator_,
+      @JsonKey(name: 'operator') final Reference? operator_,
       final CodeableConcept? view,
       final String? deviceName,
-      @JsonKey(name: '_deviceName')
-          final Element? deviceNameElement,
+      @JsonKey(name: '_deviceName') final Element? deviceNameElement,
       final FhirPositiveInt? height,
-      @JsonKey(name: '_height')
-          final Element? heightElement,
+      @JsonKey(name: '_height') final Element? heightElement,
       final FhirPositiveInt? width,
-      @JsonKey(name: '_width')
-          final Element? widthElement,
+      @JsonKey(name: '_width') final Element? widthElement,
       final FhirPositiveInt? frames,
-      @JsonKey(name: '_frames')
-          final Element? framesElement,
+      @JsonKey(name: '_frames') final Element? framesElement,
       final FhirUnsignedInt? duration,
-      @JsonKey(name: '_duration')
-          final Element? durationElement,
+      @JsonKey(name: '_duration') final Element? durationElement,
       required final Attachment content}) = _$_Media;
   const _Media._() : super._();
 
@@ -1136,26 +1089,20 @@ abstract class $BinaryCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirCode? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
+      @JsonKey(name: '_contentType') Element? contentTypeElement,
       FhirBase64Binary? content});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -1327,26 +1274,20 @@ abstract class _$$_BinaryCopyWith<$Res> implements $BinaryCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirCode? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
+      @JsonKey(name: '_contentType') Element? contentTypeElement,
       FhirBase64Binary? content});
 
   @override
@@ -1457,26 +1398,20 @@ class __$$_BinaryCopyWithImpl<$Res>
 class _$_Binary extends _Binary {
   const _$_Binary(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
-          this.resourceType = Dstu2ResourceType.Binary,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Binary,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.contentType,
-      @JsonKey(name: '_contentType')
-          this.contentTypeElement,
+      @JsonKey(name: '_contentType') this.contentTypeElement,
       this.content})
       : _contained = contained,
         _extension_ = extension_,
@@ -1623,26 +1558,20 @@ class _$_Binary extends _Binary {
 abstract class _Binary extends Binary {
   const factory _Binary(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirCode? contentType,
-      @JsonKey(name: '_contentType')
-          final Element? contentTypeElement,
+      @JsonKey(name: '_contentType') final Element? contentTypeElement,
       final FhirBase64Binary? content}) = _$_Binary;
   const _Binary._() : super._();
 
@@ -1739,30 +1668,22 @@ abstract class $BundleCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: BundleType.unknown)
-          BundleType type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(unknownEnumValue: BundleType.unknown) BundleType type,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirUnsignedInt? total,
-      @JsonKey(name: '_total')
-          Element? totalElement,
+      @JsonKey(name: '_total') Element? totalElement,
       List<BundleLink>? link,
       List<BundleEntry>? entry,
       Signature? signature});
@@ -1982,30 +1903,22 @@ abstract class _$$_BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: BundleType.unknown)
-          BundleType type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(unknownEnumValue: BundleType.unknown) BundleType type,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirUnsignedInt? total,
-      @JsonKey(name: '_total')
-          Element? totalElement,
+      @JsonKey(name: '_total') Element? totalElement,
       List<BundleLink>? link,
       List<BundleEntry>? entry,
       Signature? signature});
@@ -2142,30 +2055,22 @@ class __$$_BundleCopyWithImpl<$Res>
 class _$_Bundle extends _Bundle {
   const _$_Bundle(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
-          this.resourceType = Dstu2ResourceType.Bundle,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Bundle,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: BundleType.unknown)
-          required this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(unknownEnumValue: BundleType.unknown) required this.type,
+      @JsonKey(name: '_type') this.typeElement,
       this.total,
-      @JsonKey(name: '_total')
-          this.totalElement,
+      @JsonKey(name: '_total') this.totalElement,
       final List<BundleLink>? link,
       final List<BundleEntry>? entry,
       this.signature})
@@ -2352,30 +2257,23 @@ class _$_Bundle extends _Bundle {
 abstract class _Bundle extends Bundle {
   const factory _Bundle(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: BundleType.unknown)
-          required final BundleType type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      required final BundleType type,
+      @JsonKey(name: '_type') final Element? typeElement,
       final FhirUnsignedInt? total,
-      @JsonKey(name: '_total')
-          final Element? totalElement,
+      @JsonKey(name: '_total') final Element? totalElement,
       final List<BundleLink>? link,
       final List<BundleEntry>? entry,
       final Signature? signature}) = _$_Bundle;
@@ -4212,32 +4110,24 @@ class _$_BundleEntryRequest extends _BundleEntryRequest {
 
 abstract class _BundleEntryRequest extends BundleEntryRequest {
   const factory _BundleEntryRequest(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          final List<String>? fhirComments,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       @JsonKey(unknownEnumValue: RequestMethod.unknown)
-          required final RequestMethod method,
-      @JsonKey(name: '_method')
-          final Element? methodElement,
+      required final RequestMethod method,
+      @JsonKey(name: '_method') final Element? methodElement,
       required final FhirUri url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final String? ifNoneMatch,
-      @JsonKey(name: '_ifNoneMatch')
-          final Element? ifNoneMatchElement,
+      @JsonKey(name: '_ifNoneMatch') final Element? ifNoneMatchElement,
       final FhirInstant? ifModifiedSince,
-      @JsonKey(name: '_ifModifiedSince')
-          final Element? ifModifiedSinceElement,
+      @JsonKey(name: '_ifModifiedSince') final Element? ifModifiedSinceElement,
       final String? ifMatch,
-      @JsonKey(name: '_ifMatch')
-          final Element? ifMatchElement,
+      @JsonKey(name: '_ifMatch') final Element? ifMatchElement,
       final String? ifNoneExist,
       @JsonKey(name: '_ifNoneExist')
-          final Element? ifNoneExistElement}) = _$_BundleEntryRequest;
+      final Element? ifNoneExistElement}) = _$_BundleEntryRequest;
   const _BundleEntryRequest._() : super._();
 
   factory _BundleEntryRequest.fromJson(Map<String, dynamic> json) =
@@ -4834,30 +4724,24 @@ abstract class $BasicCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept code,
       Reference? subject,
       Reference? author,
       FhirDate? created,
-      @JsonKey(name: '_created')
-          Element? createdElement});
+      @JsonKey(name: '_created') Element? createdElement});
 
   $FhirMetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
@@ -5078,30 +4962,24 @@ abstract class _$$_BasicCopyWith<$Res> implements $BasicCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept code,
       Reference? subject,
       Reference? author,
       FhirDate? created,
-      @JsonKey(name: '_created')
-          Element? createdElement});
+      @JsonKey(name: '_created') Element? createdElement});
 
   @override
   $FhirMetaCopyWith<$Res>? get meta;
@@ -5231,30 +5109,24 @@ class __$$_BasicCopyWithImpl<$Res> extends _$BasicCopyWithImpl<$Res, _$_Basic>
 class _$_Basic extends _Basic {
   const _$_Basic(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
-          this.resourceType = Dstu2ResourceType.Basic,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Basic,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       required this.code,
       this.subject,
       this.author,
       this.created,
-      @JsonKey(name: '_created')
-          this.createdElement})
+      @JsonKey(name: '_created') this.createdElement})
       : _contained = contained,
         _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -5421,30 +5293,24 @@ class _$_Basic extends _Basic {
 abstract class _Basic extends Basic {
   const factory _Basic(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       required final CodeableConcept code,
       final Reference? subject,
       final Reference? author,
       final FhirDate? created,
-      @JsonKey(name: '_created')
-          final Element? createdElement}) = _$_Basic;
+      @JsonKey(name: '_created') final Element? createdElement}) = _$_Basic;
   const _Basic._() : super._();
 
   factory _Basic.fromJson(Map<String, dynamic> json) = _$_Basic.fromJson;

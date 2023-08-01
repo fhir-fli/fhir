@@ -2522,16 +2522,14 @@ abstract class $AdministrableProductDefinitionWithdrawalPeriodCopyWith<$Res> {
           AdministrableProductDefinitionWithdrawalPeriod>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept tissue,
       Quantity value,
       String? supportingInformation,
       @JsonKey(name: '_supportingInformation')
-          Element? supportingInformationElement});
+      Element? supportingInformationElement});
 
   $CodeableConceptCopyWith<$Res> get tissue;
   $QuantityCopyWith<$Res> get value;
@@ -2635,16 +2633,14 @@ abstract class _$$_AdministrableProductDefinitionWithdrawalPeriodCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept tissue,
       Quantity value,
       String? supportingInformation,
       @JsonKey(name: '_supportingInformation')
-          Element? supportingInformationElement});
+      Element? supportingInformationElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get tissue;
@@ -2714,16 +2710,14 @@ class __$$_AdministrableProductDefinitionWithdrawalPeriodCopyWithImpl<$Res>
 class _$_AdministrableProductDefinitionWithdrawalPeriod
     extends _AdministrableProductDefinitionWithdrawalPeriod {
   const _$_AdministrableProductDefinitionWithdrawalPeriod(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.tissue,
       required this.value,
       this.supportingInformation,
       @JsonKey(name: '_supportingInformation')
-          this.supportingInformationElement})
+      this.supportingInformationElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -2840,16 +2834,14 @@ class _$_AdministrableProductDefinitionWithdrawalPeriod
 abstract class _AdministrableProductDefinitionWithdrawalPeriod
     extends AdministrableProductDefinitionWithdrawalPeriod {
   const factory _AdministrableProductDefinitionWithdrawalPeriod(
-          {@JsonKey(name: 'id')
-              final FhirId? fhirId,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           required final CodeableConcept tissue,
           required final Quantity value,
           final String? supportingInformation,
           @JsonKey(name: '_supportingInformation')
-              final Element? supportingInformationElement}) =
+          final Element? supportingInformationElement}) =
       _$_AdministrableProductDefinitionWithdrawalPeriod;
   const _AdministrableProductDefinitionWithdrawalPeriod._() : super._();
 
@@ -2992,34 +2984,27 @@ abstract class $IngredientCopyWith<$Res> {
   @useResult
   $Res call(
       {R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      @JsonKey(name: 'for')
-          List<Reference>? for_,
+      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: 'for') List<Reference>? for_,
       CodeableConcept role,
       List<CodeableConcept>? function,
       CodeableConcept? group,
       FhirBoolean? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
-          Element? allergenicIndicatorElement,
+      Element? allergenicIndicatorElement,
       List<IngredientManufacturer>? manufacturer,
       IngredientSubstance substance});
 
@@ -3291,34 +3276,27 @@ abstract class _$$_IngredientCopyWith<$Res>
   @useResult
   $Res call(
       {R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      @JsonKey(name: 'for')
-          List<Reference>? for_,
+      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: 'for') List<Reference>? for_,
       CodeableConcept role,
       List<CodeableConcept>? function,
       CodeableConcept? group,
       FhirBoolean? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
-          Element? allergenicIndicatorElement,
+      Element? allergenicIndicatorElement,
       List<IngredientManufacturer>? manufacturer,
       IngredientSubstance substance});
 
@@ -3767,34 +3745,27 @@ class _$_Ingredient extends _Ingredient {
 abstract class _Ingredient extends Ingredient {
   const factory _Ingredient(
       {final R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final String? fhirId,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final String? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Identifier? identifier,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
-      @JsonKey(name: 'for')
-          final List<Reference>? for_,
+      @JsonKey(name: '_status') final Element? statusElement,
+      @JsonKey(name: 'for') final List<Reference>? for_,
       required final CodeableConcept role,
       final List<CodeableConcept>? function,
       final CodeableConcept? group,
       final FhirBoolean? allergenicIndicator,
       @JsonKey(name: '_allergenicIndicator')
-          final Element? allergenicIndicatorElement,
+      final Element? allergenicIndicatorElement,
       final List<IngredientManufacturer>? manufacturer,
       required final IngredientSubstance substance}) = _$_Ingredient;
   const _Ingredient._() : super._();
@@ -5193,24 +5164,22 @@ class _$_IngredientStrength extends _IngredientStrength {
 
 abstract class _IngredientStrength extends IngredientStrength {
   const factory _IngredientStrength(
-          {@JsonKey(name: 'id')
-              final FhirId? fhirId,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final Ratio? presentationRatio,
           final RatioRange? presentationRatioRange,
           final String? textPresentation,
           @JsonKey(name: '_textPresentation')
-              final Element? textPresentationElement,
+          final Element? textPresentationElement,
           final Ratio? concentrationRatio,
           final RatioRange? concentrationRatioRange,
           final String? textConcentration,
           @JsonKey(name: '_textConcentration')
-              final Element? textConcentrationElement,
+          final Element? textConcentrationElement,
           final String? measurementPoint,
           @JsonKey(name: '_measurementPoint')
-              final Element? measurementPointElement,
+          final Element? measurementPointElement,
           final List<CodeableConcept>? country,
           final List<IngredientReferenceStrength>? referenceStrength}) =
       _$_IngredientStrength;
@@ -5757,10 +5726,8 @@ class _$_IngredientReferenceStrength extends _IngredientReferenceStrength {
 abstract class _IngredientReferenceStrength
     extends IngredientReferenceStrength {
   const factory _IngredientReferenceStrength(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableReference? substance,
       final Ratio? strengthRatio,
@@ -5768,7 +5735,7 @@ abstract class _IngredientReferenceStrength
       final Quantity? strengthQuantity,
       final String? measurementPoint,
       @JsonKey(name: '_measurementPoint')
-          final Element? measurementPointElement,
+      final Element? measurementPointElement,
       final List<CodeableConcept>? country}) = _$_IngredientReferenceStrength;
   const _IngredientReferenceStrength._() : super._();
 
@@ -16041,42 +16008,34 @@ abstract class $PackagedProductDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
       List<Reference>? packageFor,
       CodeableConcept? status,
       FhirDateTime? statusDate,
-      @JsonKey(name: '_statusDate')
-          Element? statusDateElement,
+      @JsonKey(name: '_statusDate') Element? statusDateElement,
       List<Quantity>? containedItemQuantity,
       FhirMarkdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply,
       List<MarketingStatus>? marketingStatus,
       List<CodeableConcept>? characteristic,
       FhirBoolean? copackagedIndicator,
       @JsonKey(name: '_copackagedIndicator')
-          Element? copackagedIndicatorElement,
+      Element? copackagedIndicatorElement,
       List<Reference>? manufacturer,
       PackagedProductDefinitionPackage? package});
 
@@ -16407,42 +16366,34 @@ abstract class _$$_PackagedProductDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          String? fhirId,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') String? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept? type,
       List<Reference>? packageFor,
       CodeableConcept? status,
       FhirDateTime? statusDate,
-      @JsonKey(name: '_statusDate')
-          Element? statusDateElement,
+      @JsonKey(name: '_statusDate') Element? statusDateElement,
       List<Quantity>? containedItemQuantity,
       FhirMarkdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply,
       List<MarketingStatus>? marketingStatus,
       List<CodeableConcept>? characteristic,
       FhirBoolean? copackagedIndicator,
       @JsonKey(name: '_copackagedIndicator')
-          Element? copackagedIndicatorElement,
+      Element? copackagedIndicatorElement,
       List<Reference>? manufacturer,
       PackagedProductDefinitionPackage? package});
 
@@ -17031,37 +16982,39 @@ class _$_PackagedProductDefinition extends _PackagedProductDefinition {
 
 abstract class _PackagedProductDefinition extends PackagedProductDefinition {
   const factory _PackagedProductDefinition(
-      {final R4ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
-      @JsonKey(name: 'id') final String? fhirId,
-      final FhirMeta? meta,
-      final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
-      final FhirCode? language,
-      @JsonKey(name: '_language') final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<Identifier>? identifier,
-      final String? name,
-      @JsonKey(name: '_name') final Element? nameElement,
-      final CodeableConcept? type,
-      final List<Reference>? packageFor,
-      final CodeableConcept? status,
-      final FhirDateTime? statusDate,
-      @JsonKey(name: '_statusDate') final Element? statusDateElement,
-      final List<Quantity>? containedItemQuantity,
-      final FhirMarkdown? description,
-      @JsonKey(name: '_description') final Element? descriptionElement,
-      final List<PackagedProductDefinitionLegalStatusOfSupply>?
-          legalStatusOfSupply,
-      final List<MarketingStatus>? marketingStatus,
-      final List<CodeableConcept>? characteristic,
-      final FhirBoolean? copackagedIndicator,
-      @JsonKey(name: '_copackagedIndicator') final Element? copackagedIndicatorElement,
-      final List<Reference>? manufacturer,
-      final PackagedProductDefinitionPackage? package}) = _$_PackagedProductDefinition;
+          {final R4ResourceType resourceType,
+          @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+          @JsonKey(name: 'id') final String? fhirId,
+          final FhirMeta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final FhirCode? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<Identifier>? identifier,
+          final String? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          final CodeableConcept? type,
+          final List<Reference>? packageFor,
+          final CodeableConcept? status,
+          final FhirDateTime? statusDate,
+          @JsonKey(name: '_statusDate') final Element? statusDateElement,
+          final List<Quantity>? containedItemQuantity,
+          final FhirMarkdown? description,
+          @JsonKey(name: '_description') final Element? descriptionElement,
+          final List<PackagedProductDefinitionLegalStatusOfSupply>?
+              legalStatusOfSupply,
+          final List<MarketingStatus>? marketingStatus,
+          final List<CodeableConcept>? characteristic,
+          final FhirBoolean? copackagedIndicator,
+          @JsonKey(name: '_copackagedIndicator')
+          final Element? copackagedIndicatorElement,
+          final List<Reference>? manufacturer,
+          final PackagedProductDefinitionPackage? package}) =
+      _$_PackagedProductDefinition;
   const _PackagedProductDefinition._() : super._();
 
   factory _PackagedProductDefinition.fromJson(Map<String, dynamic> json) =
@@ -23477,25 +23430,21 @@ class _$_SubstanceDefinitionMoiety extends _SubstanceDefinitionMoiety {
 
 abstract class _SubstanceDefinitionMoiety extends SubstanceDefinitionMoiety {
   const factory _SubstanceDefinitionMoiety(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? role,
       final Identifier? identifier,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final CodeableConcept? stereochemistry,
       final CodeableConcept? opticalActivity,
       final String? molecularFormula,
       @JsonKey(name: '_molecularFormula')
-          final Element? molecularFormulaElement,
+      final Element? molecularFormulaElement,
       final Quantity? amountQuantity,
       final FhirMarkdown? amountString,
-      @JsonKey(name: '_amountString')
-          final Element? amountStringElement,
+      @JsonKey(name: '_amountString') final Element? amountStringElement,
       final CodeableConcept? measurementType}) = _$_SubstanceDefinitionMoiety;
   const _SubstanceDefinitionMoiety._() : super._();
 
@@ -24581,19 +24530,16 @@ abstract class $SubstanceDefinitionStructureCopyWith<$Res> {
           SubstanceDefinitionStructure>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? stereochemistry,
       CodeableConcept? opticalActivity,
       String? molecularFormula,
-      @JsonKey(name: '_molecularFormula')
-          Element? molecularFormulaElement,
+      @JsonKey(name: '_molecularFormula') Element? molecularFormulaElement,
       String? molecularFormulaByMoiety,
       @JsonKey(name: '_molecularFormulaByMoiety')
-          Element? molecularFormulaByMoietyElement,
+      Element? molecularFormulaByMoietyElement,
       SubstanceDefinitionMolecularWeight? molecularWeight,
       List<CodeableConcept>? technique,
       List<Reference>? sourceDocument,
@@ -24765,19 +24711,16 @@ abstract class _$$_SubstanceDefinitionStructureCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? stereochemistry,
       CodeableConcept? opticalActivity,
       String? molecularFormula,
-      @JsonKey(name: '_molecularFormula')
-          Element? molecularFormulaElement,
+      @JsonKey(name: '_molecularFormula') Element? molecularFormulaElement,
       String? molecularFormulaByMoiety,
       @JsonKey(name: '_molecularFormulaByMoiety')
-          Element? molecularFormulaByMoietyElement,
+      Element? molecularFormulaByMoietyElement,
       SubstanceDefinitionMolecularWeight? molecularWeight,
       List<CodeableConcept>? technique,
       List<Reference>? sourceDocument,
@@ -24884,19 +24827,16 @@ class __$$_SubstanceDefinitionStructureCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_SubstanceDefinitionStructure extends _SubstanceDefinitionStructure {
   const _$_SubstanceDefinitionStructure(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.stereochemistry,
       this.opticalActivity,
       this.molecularFormula,
-      @JsonKey(name: '_molecularFormula')
-          this.molecularFormulaElement,
+      @JsonKey(name: '_molecularFormula') this.molecularFormulaElement,
       this.molecularFormulaByMoiety,
       @JsonKey(name: '_molecularFormulaByMoiety')
-          this.molecularFormulaByMoietyElement,
+      this.molecularFormulaByMoietyElement,
       this.molecularWeight,
       final List<CodeableConcept>? technique,
       final List<Reference>? sourceDocument,
@@ -25090,19 +25030,17 @@ class _$_SubstanceDefinitionStructure extends _SubstanceDefinitionStructure {
 abstract class _SubstanceDefinitionStructure
     extends SubstanceDefinitionStructure {
   const factory _SubstanceDefinitionStructure(
-          {@JsonKey(name: 'id')
-              final FhirId? fhirId,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? stereochemistry,
           final CodeableConcept? opticalActivity,
           final String? molecularFormula,
           @JsonKey(name: '_molecularFormula')
-              final Element? molecularFormulaElement,
+          final Element? molecularFormulaElement,
           final String? molecularFormulaByMoiety,
           @JsonKey(name: '_molecularFormulaByMoiety')
-              final Element? molecularFormulaByMoietyElement,
+          final Element? molecularFormulaByMoietyElement,
           final SubstanceDefinitionMolecularWeight? molecularWeight,
           final List<CodeableConcept>? technique,
           final List<Reference>? sourceDocument,

@@ -59,14 +59,11 @@ abstract class $NarrativeCopyWith<$Res> {
       _$NarrativeCopyWithImpl<$Res, Narrative>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-          NarrativeStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      NarrativeStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       String div});
 
   $ElementCopyWith<$Res>? get statusElement;
@@ -136,14 +133,11 @@ abstract class _$$_NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-          NarrativeStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      NarrativeStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       String div});
 
   @override
@@ -298,14 +292,11 @@ class _$_Narrative extends _Narrative {
 
 abstract class _Narrative extends Narrative {
   const factory _Narrative(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-          final NarrativeStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      final NarrativeStatus? status,
+      @JsonKey(name: '_status') final Element? statusElement,
       required final String div}) = _$_Narrative;
   const _Narrative._() : super._();
 
@@ -2696,25 +2687,20 @@ class _$_Dosage extends _Dosage {
 
 abstract class _Dosage extends Dosage {
   const factory _Dosage(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirInteger? sequence,
-      @JsonKey(name: '_sequence')
-          final Element? sequenceElement,
+      @JsonKey(name: '_sequence') final Element? sequenceElement,
       final String? text,
-      @JsonKey(name: '_text')
-          final Element? textElement,
+      @JsonKey(name: '_text') final Element? textElement,
       final List<CodeableConcept>? additionalInstruction,
       final String? patientInstruction,
       @JsonKey(name: '_patientInstruction')
-          final Element? patientInstructionElement,
+      final Element? patientInstructionElement,
       final Timing? timing,
       final FhirBoolean? asNeededBoolean,
-      @JsonKey(name: '_asNeededBoolean')
-          final Element? asNeededBooleanElement,
+      @JsonKey(name: '_asNeededBoolean') final Element? asNeededBooleanElement,
       final CodeableConcept? asNeededCodeableConcept,
       final CodeableConcept? site,
       final CodeableConcept? route,
@@ -5508,111 +5494,88 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       _$ElementDefinitionCopyWithImpl<$Res, ElementDefinition>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement,
+      @JsonKey(name: '_path') Element? pathElement,
       List<ElementDefinitionRepresentation>? representation,
-      @JsonKey(name: '_representation')
-          List<Element?>? representationElement,
+      @JsonKey(name: '_representation') List<Element?>? representationElement,
       String? sliceName,
-      @JsonKey(name: '_sliceName')
-          Element? sliceNameElement,
+      @JsonKey(name: '_sliceName') Element? sliceNameElement,
       FhirBoolean? sliceIsConstraining,
       @JsonKey(name: '_sliceIsConstraining')
-          Element? sliceIsConstrainingElement,
+      Element? sliceIsConstrainingElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       List<Coding>? code,
       ElementDefinitionSlicing? slicing,
       String? short,
-      @JsonKey(name: '_short')
-          Element? shortElement,
+      @JsonKey(name: '_short') Element? shortElement,
       FhirMarkdown? definition,
-      @JsonKey(name: '_definition')
-          Element? definitionElement,
+      @JsonKey(name: '_definition') Element? definitionElement,
       FhirMarkdown? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      @JsonKey(name: '_comment') Element? commentElement,
       FhirMarkdown? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
+      @JsonKey(name: '_requirements') Element? requirementsElement,
       List<String>? alias,
-      @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+      @JsonKey(name: '_alias') List<Element?>? aliasElement,
       FhirUnsignedInt? min,
-      @JsonKey(name: '_min')
-          Element? minElement,
+      @JsonKey(name: '_min') Element? minElement,
       String? max,
-      @JsonKey(name: '_max')
-          Element? maxElement,
+      @JsonKey(name: '_max') Element? maxElement,
       ElementDefinitionBase? base,
       FhirUri? contentReference,
-      @JsonKey(name: '_contentReference')
-          Element? contentReferenceElement,
+      @JsonKey(name: '_contentReference') Element? contentReferenceElement,
       List<ElementDefinitionType>? type,
       FhirBase64Binary? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
-          Element? defaultValueBase64BinaryElement,
+      Element? defaultValueBase64BinaryElement,
       FhirBoolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
-          Element? defaultValueBooleanElement,
+      Element? defaultValueBooleanElement,
       FhirCanonical? defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
-          Element? defaultValueCanonicalElement,
+      Element? defaultValueCanonicalElement,
       FhirCode? defaultValueCode,
-      @JsonKey(name: '_defaultValueCode')
-          Element? defaultValueCodeElement,
+      @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
       FhirDate? defaultValueDate,
-      @JsonKey(name: '_defaultValueDate')
-          Element? defaultValueDateElement,
+      @JsonKey(name: '_defaultValueDate') Element? defaultValueDateElement,
       FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
-          Element? defaultValueDateTimeElement,
+      Element? defaultValueDateTimeElement,
       FhirDecimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
-          Element? defaultValueDecimalElement,
+      Element? defaultValueDecimalElement,
       FhirId? defaultValueId,
-      @JsonKey(name: '_defaultValueId')
-          Element? defaultValueIdElement,
+      @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
       FhirInstant? defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
-          Element? defaultValueInstantElement,
+      Element? defaultValueInstantElement,
       FhirInteger? defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
-          Element? defaultValueIntegerElement,
+      Element? defaultValueIntegerElement,
       FhirMarkdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
-          Element? defaultValueMarkdownElement,
+      Element? defaultValueMarkdownElement,
       FhirOid? defaultValueOid,
-      @JsonKey(name: '_defaultValueOid')
-          Element? defaultValueOidElement,
+      @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
       FhirPositiveInt? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
-          Element? defaultValuePositiveIntElement,
+      Element? defaultValuePositiveIntElement,
       String? defaultValueString,
-      @JsonKey(name: '_defaultValueString')
-          Element? defaultValueStringElement,
+      @JsonKey(name: '_defaultValueString') Element? defaultValueStringElement,
       FhirTime? defaultValueTime,
-      @JsonKey(name: '_defaultValueTime')
-          Element? defaultValueTimeElement,
+      @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
       FhirUnsignedInt? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
-          Element? defaultValueUnsignedIntElement,
+      Element? defaultValueUnsignedIntElement,
       FhirUri? defaultValueUri,
-      @JsonKey(name: '_defaultValueUri')
-          Element? defaultValueUriElement,
+      @JsonKey(name: '_defaultValueUri') Element? defaultValueUriElement,
       FhirUrl? defaultValueUrl,
-      @JsonKey(name: '_defaultValueUrl')
-          Element? defaultValueUrlElement,
+      @JsonKey(name: '_defaultValueUrl') Element? defaultValueUrlElement,
       FhirUuid? defaultValueUuid,
-      @JsonKey(name: '_defaultValueUuid')
-          Element? defaultValueUuidElement,
+      @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
       Address? defaultValueAddress,
       Age? defaultValueAge,
       Annotation? defaultValueAnnotation,
@@ -5646,68 +5609,47 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       UsageContext? defaultValueUsageContext,
       Dosage? defaultValueDosage,
       FhirMarkdown? meaningWhenMissing,
-      @JsonKey(name: '_meaningWhenMissing')
-          Element? meaningWhenMissingElement,
+      @JsonKey(name: '_meaningWhenMissing') Element? meaningWhenMissingElement,
       String? orderMeaning,
-      @JsonKey(name: '_orderMeaning')
-          Element? orderMeaningElement,
+      @JsonKey(name: '_orderMeaning') Element? orderMeaningElement,
       FhirBase64Binary? fixedBase64Binary,
-      @JsonKey(name: '_fixedBase64Binary')
-          Element? fixedBase64BinaryElement,
+      @JsonKey(name: '_fixedBase64Binary') Element? fixedBase64BinaryElement,
       FhirBoolean? fixedBoolean,
-      @JsonKey(name: '_fixedBoolean')
-          Element? fixedBooleanElement,
+      @JsonKey(name: '_fixedBoolean') Element? fixedBooleanElement,
       FhirCanonical? fixedCanonical,
-      @JsonKey(name: '_fixedCanonical')
-          Element? fixedCanonicalElement,
+      @JsonKey(name: '_fixedCanonical') Element? fixedCanonicalElement,
       FhirCode? fixedCode,
-      @JsonKey(name: '_fixedCode')
-          Element? fixedCodeElement,
+      @JsonKey(name: '_fixedCode') Element? fixedCodeElement,
       FhirDate? fixedDate,
-      @JsonKey(name: '_fixedDate')
-          Element? fixedDateElement,
+      @JsonKey(name: '_fixedDate') Element? fixedDateElement,
       FhirDateTime? fixedDateTime,
-      @JsonKey(name: '_fixedDateTime')
-          Element? fixedDateTimeElement,
+      @JsonKey(name: '_fixedDateTime') Element? fixedDateTimeElement,
       FhirDecimal? fixedDecimal,
-      @JsonKey(name: '_fixedDecimal')
-          Element? fixedDecimalElement,
+      @JsonKey(name: '_fixedDecimal') Element? fixedDecimalElement,
       FhirId? fixedId,
-      @JsonKey(name: '_fixedId')
-          Element? fixedIdElement,
+      @JsonKey(name: '_fixedId') Element? fixedIdElement,
       FhirInstant? fixedInstant,
-      @JsonKey(name: '_fixedInstant')
-          Element? fixedInstantElement,
+      @JsonKey(name: '_fixedInstant') Element? fixedInstantElement,
       FhirInteger? fixedInteger,
-      @JsonKey(name: '_fixedInteger')
-          Element? fixedIntegerElement,
+      @JsonKey(name: '_fixedInteger') Element? fixedIntegerElement,
       FhirMarkdown? fixedMarkdown,
-      @JsonKey(name: '_fixedMarkdown')
-          Element? fixedMarkdownElement,
+      @JsonKey(name: '_fixedMarkdown') Element? fixedMarkdownElement,
       FhirOid? fixedOid,
-      @JsonKey(name: '_fixedOid')
-          Element? fixedOidElement,
+      @JsonKey(name: '_fixedOid') Element? fixedOidElement,
       FhirPositiveInt? fixedPositiveInt,
-      @JsonKey(name: '_fixedPositiveInt')
-          Element? fixedPositiveIntElement,
+      @JsonKey(name: '_fixedPositiveInt') Element? fixedPositiveIntElement,
       String? fixedString,
-      @JsonKey(name: '_fixedString')
-          Element? fixedStringElement,
+      @JsonKey(name: '_fixedString') Element? fixedStringElement,
       FhirTime? fixedTime,
-      @JsonKey(name: '_fixedTime')
-          Element? fixedTimeElement,
+      @JsonKey(name: '_fixedTime') Element? fixedTimeElement,
       FhirUnsignedInt? fixedUnsignedInt,
-      @JsonKey(name: '_fixedUnsignedInt')
-          Element? fixedUnsignedIntElement,
+      @JsonKey(name: '_fixedUnsignedInt') Element? fixedUnsignedIntElement,
       FhirUri? fixedUri,
-      @JsonKey(name: '_fixedUri')
-          Element? fixedUriElement,
+      @JsonKey(name: '_fixedUri') Element? fixedUriElement,
       FhirUrl? fixedUrl,
-      @JsonKey(name: '_fixedUrl')
-          Element? fixedUrlElement,
+      @JsonKey(name: '_fixedUrl') Element? fixedUrlElement,
       FhirUuid? fixedUuid,
-      @JsonKey(name: '_fixedUuid')
-          Element? fixedUuidElement,
+      @JsonKey(name: '_fixedUuid') Element? fixedUuidElement,
       Address? fixedAddress,
       Age? fixedAge,
       Annotation? fixedAnnotation,
@@ -5742,61 +5684,43 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Dosage? fixedDosage,
       FhirBase64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
-          Element? patternBase64BinaryElement,
+      Element? patternBase64BinaryElement,
       FhirBoolean? patternBoolean,
-      @JsonKey(name: '_patternBoolean')
-          Element? patternBooleanElement,
+      @JsonKey(name: '_patternBoolean') Element? patternBooleanElement,
       FhirCanonical? patternCanonical,
-      @JsonKey(name: '_patternCanonical')
-          Element? patternCanonicalElement,
+      @JsonKey(name: '_patternCanonical') Element? patternCanonicalElement,
       FhirCode? patternCode,
-      @JsonKey(name: '_patternCode')
-          Element? patternCodeElement,
+      @JsonKey(name: '_patternCode') Element? patternCodeElement,
       FhirDate? patternDate,
-      @JsonKey(name: '_patternDate')
-          Element? patternDateElement,
+      @JsonKey(name: '_patternDate') Element? patternDateElement,
       FhirDateTime? patternDateTime,
-      @JsonKey(name: '_patternDateTime')
-          Element? patternDateTimeElement,
+      @JsonKey(name: '_patternDateTime') Element? patternDateTimeElement,
       FhirDecimal? patternDecimal,
-      @JsonKey(name: '_patternDecimal')
-          Element? patternDecimalElement,
+      @JsonKey(name: '_patternDecimal') Element? patternDecimalElement,
       FhirId? patternId,
-      @JsonKey(name: '_patternId')
-          Element? patternIdElement,
+      @JsonKey(name: '_patternId') Element? patternIdElement,
       FhirInstant? patternInstant,
-      @JsonKey(name: '_patternInstant')
-          Element? patternInstantElement,
+      @JsonKey(name: '_patternInstant') Element? patternInstantElement,
       FhirInteger? patternInteger,
-      @JsonKey(name: '_patternInteger')
-          Element? patternIntegerElement,
+      @JsonKey(name: '_patternInteger') Element? patternIntegerElement,
       FhirMarkdown? patternMarkdown,
-      @JsonKey(name: '_patternMarkdown')
-          Element? patternMarkdownElement,
+      @JsonKey(name: '_patternMarkdown') Element? patternMarkdownElement,
       FhirOid? patternOid,
-      @JsonKey(name: '_patternOid')
-          Element? patternOidElement,
+      @JsonKey(name: '_patternOid') Element? patternOidElement,
       FhirPositiveInt? patternPositiveInt,
-      @JsonKey(name: '_patternPositiveInt')
-          Element? patternPositiveIntElement,
+      @JsonKey(name: '_patternPositiveInt') Element? patternPositiveIntElement,
       String? patternString,
-      @JsonKey(name: '_patternString')
-          Element? patternStringElement,
+      @JsonKey(name: '_patternString') Element? patternStringElement,
       FhirTime? patternTime,
-      @JsonKey(name: '_patternTime')
-          Element? patternTimeElement,
+      @JsonKey(name: '_patternTime') Element? patternTimeElement,
       FhirUnsignedInt? patternUnsignedInt,
-      @JsonKey(name: '_patternUnsignedInt')
-          Element? patternUnsignedIntElement,
+      @JsonKey(name: '_patternUnsignedInt') Element? patternUnsignedIntElement,
       FhirUri? patternUri,
-      @JsonKey(name: '_patternUri')
-          Element? patternUriElement,
+      @JsonKey(name: '_patternUri') Element? patternUriElement,
       FhirUrl? patternUrl,
-      @JsonKey(name: '_patternUrl')
-          Element? patternUrlElement,
+      @JsonKey(name: '_patternUrl') Element? patternUrlElement,
       FhirUuid? patternUuid,
-      @JsonKey(name: '_patternUuid')
-          Element? patternUuidElement,
+      @JsonKey(name: '_patternUuid') Element? patternUuidElement,
       Address? patternAddress,
       Age? patternAge,
       Annotation? patternAnnotation,
@@ -5831,74 +5755,56 @@ abstract class $ElementDefinitionCopyWith<$Res> {
       Dosage? patternDosage,
       List<ElementDefinitionExample>? example,
       FhirDate? minValueDate,
-      @JsonKey(name: '_minValueDate')
-          Element? minValueDateElement,
+      @JsonKey(name: '_minValueDate') Element? minValueDateElement,
       FhirDateTime? minValueDateTime,
-      @JsonKey(name: '_minValueDateTime')
-          Element? minValueDateTimeElement,
+      @JsonKey(name: '_minValueDateTime') Element? minValueDateTimeElement,
       FhirInstant? minValueInstant,
-      @JsonKey(name: '_minValueInstant')
-          Element? minValueInstantElement,
+      @JsonKey(name: '_minValueInstant') Element? minValueInstantElement,
       FhirTime? minValueTime,
-      @JsonKey(name: '_minValueTime')
-          Element? minValueTimeElement,
+      @JsonKey(name: '_minValueTime') Element? minValueTimeElement,
       FhirDecimal? minValueDecimal,
-      @JsonKey(name: '_minValueDecimal')
-          Element? minValueDecimalElement,
+      @JsonKey(name: '_minValueDecimal') Element? minValueDecimalElement,
       FhirInteger? minValueInteger,
-      @JsonKey(name: '_minValueInteger')
-          Element? minValueIntegerElement,
+      @JsonKey(name: '_minValueInteger') Element? minValueIntegerElement,
       FhirPositiveInt? minValuePositiveInt,
       @JsonKey(name: '_minValuePositiveInt')
-          Element? minValuePositiveIntElement,
+      Element? minValuePositiveIntElement,
       FhirUnsignedInt? minValueUnsignedInt,
       @JsonKey(name: '_minValueUnsignedInt')
-          Element? minValueUnsignedIntElement,
+      Element? minValueUnsignedIntElement,
       Quantity? minValueQuantity,
       FhirDate? maxValueDate,
-      @JsonKey(name: '_maxValueDate')
-          Element? maxValueDateElement,
+      @JsonKey(name: '_maxValueDate') Element? maxValueDateElement,
       FhirDateTime? maxValueDateTime,
-      @JsonKey(name: '_maxValueDateTime')
-          Element? maxValueDateTimeElement,
+      @JsonKey(name: '_maxValueDateTime') Element? maxValueDateTimeElement,
       FhirInstant? maxValueInstant,
-      @JsonKey(name: '_maxValueInstant')
-          Element? maxValueInstantElement,
+      @JsonKey(name: '_maxValueInstant') Element? maxValueInstantElement,
       FhirTime? maxValueTime,
-      @JsonKey(name: '_maxValueTime')
-          Element? maxValueTimeElement,
+      @JsonKey(name: '_maxValueTime') Element? maxValueTimeElement,
       FhirDecimal? maxValueDecimal,
-      @JsonKey(name: '_maxValueDecimal')
-          Element? maxValueDecimalElement,
+      @JsonKey(name: '_maxValueDecimal') Element? maxValueDecimalElement,
       FhirInteger? maxValueInteger,
-      @JsonKey(name: '_maxValueInteger')
-          Element? maxValueIntegerElement,
+      @JsonKey(name: '_maxValueInteger') Element? maxValueIntegerElement,
       FhirPositiveInt? maxValuePositiveInt,
       @JsonKey(name: '_maxValuePositiveInt')
-          Element? maxValuePositiveIntElement,
+      Element? maxValuePositiveIntElement,
       FhirUnsignedInt? maxValueUnsignedInt,
       @JsonKey(name: '_maxValueUnsignedInt')
-          Element? maxValueUnsignedIntElement,
+      Element? maxValueUnsignedIntElement,
       Quantity? maxValueQuantity,
       FhirInteger? maxLength,
-      @JsonKey(name: '_maxLength')
-          Element? maxLengthElement,
+      @JsonKey(name: '_maxLength') Element? maxLengthElement,
       List<FhirId>? condition,
-      @JsonKey(name: '_condition')
-          List<Element?>? conditionElement,
+      @JsonKey(name: '_condition') List<Element?>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
       FhirBoolean? mustSupport,
-      @JsonKey(name: '_mustSupport')
-          Element? mustSupportElement,
+      @JsonKey(name: '_mustSupport') Element? mustSupportElement,
       FhirBoolean? isModifier,
-      @JsonKey(name: '_isModifier')
-          Element? isModifierElement,
+      @JsonKey(name: '_isModifier') Element? isModifierElement,
       String? isModifierReason,
-      @JsonKey(name: '_isModifierReason')
-          Element? isModifierReasonElement,
+      @JsonKey(name: '_isModifierReason') Element? isModifierReasonElement,
       FhirBoolean? isSummary,
-      @JsonKey(name: '_isSummary')
-          Element? isSummaryElement,
+      @JsonKey(name: '_isSummary') Element? isSummaryElement,
       ElementDefinitionBinding? binding,
       List<ElementDefinitionMapping>? mapping});
 
@@ -9948,111 +9854,88 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement,
+      @JsonKey(name: '_path') Element? pathElement,
       List<ElementDefinitionRepresentation>? representation,
-      @JsonKey(name: '_representation')
-          List<Element?>? representationElement,
+      @JsonKey(name: '_representation') List<Element?>? representationElement,
       String? sliceName,
-      @JsonKey(name: '_sliceName')
-          Element? sliceNameElement,
+      @JsonKey(name: '_sliceName') Element? sliceNameElement,
       FhirBoolean? sliceIsConstraining,
       @JsonKey(name: '_sliceIsConstraining')
-          Element? sliceIsConstrainingElement,
+      Element? sliceIsConstrainingElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       List<Coding>? code,
       ElementDefinitionSlicing? slicing,
       String? short,
-      @JsonKey(name: '_short')
-          Element? shortElement,
+      @JsonKey(name: '_short') Element? shortElement,
       FhirMarkdown? definition,
-      @JsonKey(name: '_definition')
-          Element? definitionElement,
+      @JsonKey(name: '_definition') Element? definitionElement,
       FhirMarkdown? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      @JsonKey(name: '_comment') Element? commentElement,
       FhirMarkdown? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
+      @JsonKey(name: '_requirements') Element? requirementsElement,
       List<String>? alias,
-      @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+      @JsonKey(name: '_alias') List<Element?>? aliasElement,
       FhirUnsignedInt? min,
-      @JsonKey(name: '_min')
-          Element? minElement,
+      @JsonKey(name: '_min') Element? minElement,
       String? max,
-      @JsonKey(name: '_max')
-          Element? maxElement,
+      @JsonKey(name: '_max') Element? maxElement,
       ElementDefinitionBase? base,
       FhirUri? contentReference,
-      @JsonKey(name: '_contentReference')
-          Element? contentReferenceElement,
+      @JsonKey(name: '_contentReference') Element? contentReferenceElement,
       List<ElementDefinitionType>? type,
       FhirBase64Binary? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
-          Element? defaultValueBase64BinaryElement,
+      Element? defaultValueBase64BinaryElement,
       FhirBoolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
-          Element? defaultValueBooleanElement,
+      Element? defaultValueBooleanElement,
       FhirCanonical? defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
-          Element? defaultValueCanonicalElement,
+      Element? defaultValueCanonicalElement,
       FhirCode? defaultValueCode,
-      @JsonKey(name: '_defaultValueCode')
-          Element? defaultValueCodeElement,
+      @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
       FhirDate? defaultValueDate,
-      @JsonKey(name: '_defaultValueDate')
-          Element? defaultValueDateElement,
+      @JsonKey(name: '_defaultValueDate') Element? defaultValueDateElement,
       FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
-          Element? defaultValueDateTimeElement,
+      Element? defaultValueDateTimeElement,
       FhirDecimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
-          Element? defaultValueDecimalElement,
+      Element? defaultValueDecimalElement,
       FhirId? defaultValueId,
-      @JsonKey(name: '_defaultValueId')
-          Element? defaultValueIdElement,
+      @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
       FhirInstant? defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
-          Element? defaultValueInstantElement,
+      Element? defaultValueInstantElement,
       FhirInteger? defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
-          Element? defaultValueIntegerElement,
+      Element? defaultValueIntegerElement,
       FhirMarkdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
-          Element? defaultValueMarkdownElement,
+      Element? defaultValueMarkdownElement,
       FhirOid? defaultValueOid,
-      @JsonKey(name: '_defaultValueOid')
-          Element? defaultValueOidElement,
+      @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
       FhirPositiveInt? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
-          Element? defaultValuePositiveIntElement,
+      Element? defaultValuePositiveIntElement,
       String? defaultValueString,
-      @JsonKey(name: '_defaultValueString')
-          Element? defaultValueStringElement,
+      @JsonKey(name: '_defaultValueString') Element? defaultValueStringElement,
       FhirTime? defaultValueTime,
-      @JsonKey(name: '_defaultValueTime')
-          Element? defaultValueTimeElement,
+      @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
       FhirUnsignedInt? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
-          Element? defaultValueUnsignedIntElement,
+      Element? defaultValueUnsignedIntElement,
       FhirUri? defaultValueUri,
-      @JsonKey(name: '_defaultValueUri')
-          Element? defaultValueUriElement,
+      @JsonKey(name: '_defaultValueUri') Element? defaultValueUriElement,
       FhirUrl? defaultValueUrl,
-      @JsonKey(name: '_defaultValueUrl')
-          Element? defaultValueUrlElement,
+      @JsonKey(name: '_defaultValueUrl') Element? defaultValueUrlElement,
       FhirUuid? defaultValueUuid,
-      @JsonKey(name: '_defaultValueUuid')
-          Element? defaultValueUuidElement,
+      @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
       Address? defaultValueAddress,
       Age? defaultValueAge,
       Annotation? defaultValueAnnotation,
@@ -10086,68 +9969,47 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       UsageContext? defaultValueUsageContext,
       Dosage? defaultValueDosage,
       FhirMarkdown? meaningWhenMissing,
-      @JsonKey(name: '_meaningWhenMissing')
-          Element? meaningWhenMissingElement,
+      @JsonKey(name: '_meaningWhenMissing') Element? meaningWhenMissingElement,
       String? orderMeaning,
-      @JsonKey(name: '_orderMeaning')
-          Element? orderMeaningElement,
+      @JsonKey(name: '_orderMeaning') Element? orderMeaningElement,
       FhirBase64Binary? fixedBase64Binary,
-      @JsonKey(name: '_fixedBase64Binary')
-          Element? fixedBase64BinaryElement,
+      @JsonKey(name: '_fixedBase64Binary') Element? fixedBase64BinaryElement,
       FhirBoolean? fixedBoolean,
-      @JsonKey(name: '_fixedBoolean')
-          Element? fixedBooleanElement,
+      @JsonKey(name: '_fixedBoolean') Element? fixedBooleanElement,
       FhirCanonical? fixedCanonical,
-      @JsonKey(name: '_fixedCanonical')
-          Element? fixedCanonicalElement,
+      @JsonKey(name: '_fixedCanonical') Element? fixedCanonicalElement,
       FhirCode? fixedCode,
-      @JsonKey(name: '_fixedCode')
-          Element? fixedCodeElement,
+      @JsonKey(name: '_fixedCode') Element? fixedCodeElement,
       FhirDate? fixedDate,
-      @JsonKey(name: '_fixedDate')
-          Element? fixedDateElement,
+      @JsonKey(name: '_fixedDate') Element? fixedDateElement,
       FhirDateTime? fixedDateTime,
-      @JsonKey(name: '_fixedDateTime')
-          Element? fixedDateTimeElement,
+      @JsonKey(name: '_fixedDateTime') Element? fixedDateTimeElement,
       FhirDecimal? fixedDecimal,
-      @JsonKey(name: '_fixedDecimal')
-          Element? fixedDecimalElement,
+      @JsonKey(name: '_fixedDecimal') Element? fixedDecimalElement,
       FhirId? fixedId,
-      @JsonKey(name: '_fixedId')
-          Element? fixedIdElement,
+      @JsonKey(name: '_fixedId') Element? fixedIdElement,
       FhirInstant? fixedInstant,
-      @JsonKey(name: '_fixedInstant')
-          Element? fixedInstantElement,
+      @JsonKey(name: '_fixedInstant') Element? fixedInstantElement,
       FhirInteger? fixedInteger,
-      @JsonKey(name: '_fixedInteger')
-          Element? fixedIntegerElement,
+      @JsonKey(name: '_fixedInteger') Element? fixedIntegerElement,
       FhirMarkdown? fixedMarkdown,
-      @JsonKey(name: '_fixedMarkdown')
-          Element? fixedMarkdownElement,
+      @JsonKey(name: '_fixedMarkdown') Element? fixedMarkdownElement,
       FhirOid? fixedOid,
-      @JsonKey(name: '_fixedOid')
-          Element? fixedOidElement,
+      @JsonKey(name: '_fixedOid') Element? fixedOidElement,
       FhirPositiveInt? fixedPositiveInt,
-      @JsonKey(name: '_fixedPositiveInt')
-          Element? fixedPositiveIntElement,
+      @JsonKey(name: '_fixedPositiveInt') Element? fixedPositiveIntElement,
       String? fixedString,
-      @JsonKey(name: '_fixedString')
-          Element? fixedStringElement,
+      @JsonKey(name: '_fixedString') Element? fixedStringElement,
       FhirTime? fixedTime,
-      @JsonKey(name: '_fixedTime')
-          Element? fixedTimeElement,
+      @JsonKey(name: '_fixedTime') Element? fixedTimeElement,
       FhirUnsignedInt? fixedUnsignedInt,
-      @JsonKey(name: '_fixedUnsignedInt')
-          Element? fixedUnsignedIntElement,
+      @JsonKey(name: '_fixedUnsignedInt') Element? fixedUnsignedIntElement,
       FhirUri? fixedUri,
-      @JsonKey(name: '_fixedUri')
-          Element? fixedUriElement,
+      @JsonKey(name: '_fixedUri') Element? fixedUriElement,
       FhirUrl? fixedUrl,
-      @JsonKey(name: '_fixedUrl')
-          Element? fixedUrlElement,
+      @JsonKey(name: '_fixedUrl') Element? fixedUrlElement,
       FhirUuid? fixedUuid,
-      @JsonKey(name: '_fixedUuid')
-          Element? fixedUuidElement,
+      @JsonKey(name: '_fixedUuid') Element? fixedUuidElement,
       Address? fixedAddress,
       Age? fixedAge,
       Annotation? fixedAnnotation,
@@ -10182,61 +10044,43 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Dosage? fixedDosage,
       FhirBase64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
-          Element? patternBase64BinaryElement,
+      Element? patternBase64BinaryElement,
       FhirBoolean? patternBoolean,
-      @JsonKey(name: '_patternBoolean')
-          Element? patternBooleanElement,
+      @JsonKey(name: '_patternBoolean') Element? patternBooleanElement,
       FhirCanonical? patternCanonical,
-      @JsonKey(name: '_patternCanonical')
-          Element? patternCanonicalElement,
+      @JsonKey(name: '_patternCanonical') Element? patternCanonicalElement,
       FhirCode? patternCode,
-      @JsonKey(name: '_patternCode')
-          Element? patternCodeElement,
+      @JsonKey(name: '_patternCode') Element? patternCodeElement,
       FhirDate? patternDate,
-      @JsonKey(name: '_patternDate')
-          Element? patternDateElement,
+      @JsonKey(name: '_patternDate') Element? patternDateElement,
       FhirDateTime? patternDateTime,
-      @JsonKey(name: '_patternDateTime')
-          Element? patternDateTimeElement,
+      @JsonKey(name: '_patternDateTime') Element? patternDateTimeElement,
       FhirDecimal? patternDecimal,
-      @JsonKey(name: '_patternDecimal')
-          Element? patternDecimalElement,
+      @JsonKey(name: '_patternDecimal') Element? patternDecimalElement,
       FhirId? patternId,
-      @JsonKey(name: '_patternId')
-          Element? patternIdElement,
+      @JsonKey(name: '_patternId') Element? patternIdElement,
       FhirInstant? patternInstant,
-      @JsonKey(name: '_patternInstant')
-          Element? patternInstantElement,
+      @JsonKey(name: '_patternInstant') Element? patternInstantElement,
       FhirInteger? patternInteger,
-      @JsonKey(name: '_patternInteger')
-          Element? patternIntegerElement,
+      @JsonKey(name: '_patternInteger') Element? patternIntegerElement,
       FhirMarkdown? patternMarkdown,
-      @JsonKey(name: '_patternMarkdown')
-          Element? patternMarkdownElement,
+      @JsonKey(name: '_patternMarkdown') Element? patternMarkdownElement,
       FhirOid? patternOid,
-      @JsonKey(name: '_patternOid')
-          Element? patternOidElement,
+      @JsonKey(name: '_patternOid') Element? patternOidElement,
       FhirPositiveInt? patternPositiveInt,
-      @JsonKey(name: '_patternPositiveInt')
-          Element? patternPositiveIntElement,
+      @JsonKey(name: '_patternPositiveInt') Element? patternPositiveIntElement,
       String? patternString,
-      @JsonKey(name: '_patternString')
-          Element? patternStringElement,
+      @JsonKey(name: '_patternString') Element? patternStringElement,
       FhirTime? patternTime,
-      @JsonKey(name: '_patternTime')
-          Element? patternTimeElement,
+      @JsonKey(name: '_patternTime') Element? patternTimeElement,
       FhirUnsignedInt? patternUnsignedInt,
-      @JsonKey(name: '_patternUnsignedInt')
-          Element? patternUnsignedIntElement,
+      @JsonKey(name: '_patternUnsignedInt') Element? patternUnsignedIntElement,
       FhirUri? patternUri,
-      @JsonKey(name: '_patternUri')
-          Element? patternUriElement,
+      @JsonKey(name: '_patternUri') Element? patternUriElement,
       FhirUrl? patternUrl,
-      @JsonKey(name: '_patternUrl')
-          Element? patternUrlElement,
+      @JsonKey(name: '_patternUrl') Element? patternUrlElement,
       FhirUuid? patternUuid,
-      @JsonKey(name: '_patternUuid')
-          Element? patternUuidElement,
+      @JsonKey(name: '_patternUuid') Element? patternUuidElement,
       Address? patternAddress,
       Age? patternAge,
       Annotation? patternAnnotation,
@@ -10271,74 +10115,56 @@ abstract class _$$_ElementDefinitionCopyWith<$Res>
       Dosage? patternDosage,
       List<ElementDefinitionExample>? example,
       FhirDate? minValueDate,
-      @JsonKey(name: '_minValueDate')
-          Element? minValueDateElement,
+      @JsonKey(name: '_minValueDate') Element? minValueDateElement,
       FhirDateTime? minValueDateTime,
-      @JsonKey(name: '_minValueDateTime')
-          Element? minValueDateTimeElement,
+      @JsonKey(name: '_minValueDateTime') Element? minValueDateTimeElement,
       FhirInstant? minValueInstant,
-      @JsonKey(name: '_minValueInstant')
-          Element? minValueInstantElement,
+      @JsonKey(name: '_minValueInstant') Element? minValueInstantElement,
       FhirTime? minValueTime,
-      @JsonKey(name: '_minValueTime')
-          Element? minValueTimeElement,
+      @JsonKey(name: '_minValueTime') Element? minValueTimeElement,
       FhirDecimal? minValueDecimal,
-      @JsonKey(name: '_minValueDecimal')
-          Element? minValueDecimalElement,
+      @JsonKey(name: '_minValueDecimal') Element? minValueDecimalElement,
       FhirInteger? minValueInteger,
-      @JsonKey(name: '_minValueInteger')
-          Element? minValueIntegerElement,
+      @JsonKey(name: '_minValueInteger') Element? minValueIntegerElement,
       FhirPositiveInt? minValuePositiveInt,
       @JsonKey(name: '_minValuePositiveInt')
-          Element? minValuePositiveIntElement,
+      Element? minValuePositiveIntElement,
       FhirUnsignedInt? minValueUnsignedInt,
       @JsonKey(name: '_minValueUnsignedInt')
-          Element? minValueUnsignedIntElement,
+      Element? minValueUnsignedIntElement,
       Quantity? minValueQuantity,
       FhirDate? maxValueDate,
-      @JsonKey(name: '_maxValueDate')
-          Element? maxValueDateElement,
+      @JsonKey(name: '_maxValueDate') Element? maxValueDateElement,
       FhirDateTime? maxValueDateTime,
-      @JsonKey(name: '_maxValueDateTime')
-          Element? maxValueDateTimeElement,
+      @JsonKey(name: '_maxValueDateTime') Element? maxValueDateTimeElement,
       FhirInstant? maxValueInstant,
-      @JsonKey(name: '_maxValueInstant')
-          Element? maxValueInstantElement,
+      @JsonKey(name: '_maxValueInstant') Element? maxValueInstantElement,
       FhirTime? maxValueTime,
-      @JsonKey(name: '_maxValueTime')
-          Element? maxValueTimeElement,
+      @JsonKey(name: '_maxValueTime') Element? maxValueTimeElement,
       FhirDecimal? maxValueDecimal,
-      @JsonKey(name: '_maxValueDecimal')
-          Element? maxValueDecimalElement,
+      @JsonKey(name: '_maxValueDecimal') Element? maxValueDecimalElement,
       FhirInteger? maxValueInteger,
-      @JsonKey(name: '_maxValueInteger')
-          Element? maxValueIntegerElement,
+      @JsonKey(name: '_maxValueInteger') Element? maxValueIntegerElement,
       FhirPositiveInt? maxValuePositiveInt,
       @JsonKey(name: '_maxValuePositiveInt')
-          Element? maxValuePositiveIntElement,
+      Element? maxValuePositiveIntElement,
       FhirUnsignedInt? maxValueUnsignedInt,
       @JsonKey(name: '_maxValueUnsignedInt')
-          Element? maxValueUnsignedIntElement,
+      Element? maxValueUnsignedIntElement,
       Quantity? maxValueQuantity,
       FhirInteger? maxLength,
-      @JsonKey(name: '_maxLength')
-          Element? maxLengthElement,
+      @JsonKey(name: '_maxLength') Element? maxLengthElement,
       List<FhirId>? condition,
-      @JsonKey(name: '_condition')
-          List<Element?>? conditionElement,
+      @JsonKey(name: '_condition') List<Element?>? conditionElement,
       List<ElementDefinitionConstraint>? constraint,
       FhirBoolean? mustSupport,
-      @JsonKey(name: '_mustSupport')
-          Element? mustSupportElement,
+      @JsonKey(name: '_mustSupport') Element? mustSupportElement,
       FhirBoolean? isModifier,
-      @JsonKey(name: '_isModifier')
-          Element? isModifierElement,
+      @JsonKey(name: '_isModifier') Element? isModifierElement,
       String? isModifierReason,
-      @JsonKey(name: '_isModifierReason')
-          Element? isModifierReasonElement,
+      @JsonKey(name: '_isModifierReason') Element? isModifierReasonElement,
       FhirBoolean? isSummary,
-      @JsonKey(name: '_isSummary')
-          Element? isSummaryElement,
+      @JsonKey(name: '_isSummary') Element? isSummaryElement,
       ElementDefinitionBinding? binding,
       List<ElementDefinitionMapping>? mapping});
 
@@ -12236,111 +12062,82 @@ class __$$_ElementDefinitionCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinition extends _ElementDefinition {
   const _$_ElementDefinition(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.path,
-      @JsonKey(name: '_path')
-          this.pathElement,
+      @JsonKey(name: '_path') this.pathElement,
       final List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
-          final List<Element?>? representationElement,
+      final List<Element?>? representationElement,
       this.sliceName,
-      @JsonKey(name: '_sliceName')
-          this.sliceNameElement,
+      @JsonKey(name: '_sliceName') this.sliceNameElement,
       this.sliceIsConstraining,
-      @JsonKey(name: '_sliceIsConstraining')
-          this.sliceIsConstrainingElement,
+      @JsonKey(name: '_sliceIsConstraining') this.sliceIsConstrainingElement,
       this.label,
-      @JsonKey(name: '_label')
-          this.labelElement,
+      @JsonKey(name: '_label') this.labelElement,
       final List<Coding>? code,
       this.slicing,
       this.short,
-      @JsonKey(name: '_short')
-          this.shortElement,
+      @JsonKey(name: '_short') this.shortElement,
       this.definition,
-      @JsonKey(name: '_definition')
-          this.definitionElement,
+      @JsonKey(name: '_definition') this.definitionElement,
       this.comment,
-      @JsonKey(name: '_comment')
-          this.commentElement,
+      @JsonKey(name: '_comment') this.commentElement,
       this.requirements,
-      @JsonKey(name: '_requirements')
-          this.requirementsElement,
+      @JsonKey(name: '_requirements') this.requirementsElement,
       final List<String>? alias,
-      @JsonKey(name: '_alias')
-          final List<Element?>? aliasElement,
+      @JsonKey(name: '_alias') final List<Element?>? aliasElement,
       this.min,
-      @JsonKey(name: '_min')
-          this.minElement,
+      @JsonKey(name: '_min') this.minElement,
       this.max,
-      @JsonKey(name: '_max')
-          this.maxElement,
+      @JsonKey(name: '_max') this.maxElement,
       this.base,
       this.contentReference,
-      @JsonKey(name: '_contentReference')
-          this.contentReferenceElement,
+      @JsonKey(name: '_contentReference') this.contentReferenceElement,
       final List<ElementDefinitionType>? type,
       this.defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
-          this.defaultValueBase64BinaryElement,
+      this.defaultValueBase64BinaryElement,
       this.defaultValueBoolean,
-      @JsonKey(name: '_defaultValueBoolean')
-          this.defaultValueBooleanElement,
+      @JsonKey(name: '_defaultValueBoolean') this.defaultValueBooleanElement,
       this.defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
-          this.defaultValueCanonicalElement,
+      this.defaultValueCanonicalElement,
       this.defaultValueCode,
-      @JsonKey(name: '_defaultValueCode')
-          this.defaultValueCodeElement,
+      @JsonKey(name: '_defaultValueCode') this.defaultValueCodeElement,
       this.defaultValueDate,
-      @JsonKey(name: '_defaultValueDate')
-          this.defaultValueDateElement,
+      @JsonKey(name: '_defaultValueDate') this.defaultValueDateElement,
       this.defaultValueDateTime,
-      @JsonKey(name: '_defaultValueDateTime')
-          this.defaultValueDateTimeElement,
+      @JsonKey(name: '_defaultValueDateTime') this.defaultValueDateTimeElement,
       this.defaultValueDecimal,
-      @JsonKey(name: '_defaultValueDecimal')
-          this.defaultValueDecimalElement,
+      @JsonKey(name: '_defaultValueDecimal') this.defaultValueDecimalElement,
       this.defaultValueId,
-      @JsonKey(name: '_defaultValueId')
-          this.defaultValueIdElement,
+      @JsonKey(name: '_defaultValueId') this.defaultValueIdElement,
       this.defaultValueInstant,
-      @JsonKey(name: '_defaultValueInstant')
-          this.defaultValueInstantElement,
+      @JsonKey(name: '_defaultValueInstant') this.defaultValueInstantElement,
       this.defaultValueInteger,
-      @JsonKey(name: '_defaultValueInteger')
-          this.defaultValueIntegerElement,
+      @JsonKey(name: '_defaultValueInteger') this.defaultValueIntegerElement,
       this.defaultValueMarkdown,
-      @JsonKey(name: '_defaultValueMarkdown')
-          this.defaultValueMarkdownElement,
+      @JsonKey(name: '_defaultValueMarkdown') this.defaultValueMarkdownElement,
       this.defaultValueOid,
-      @JsonKey(name: '_defaultValueOid')
-          this.defaultValueOidElement,
+      @JsonKey(name: '_defaultValueOid') this.defaultValueOidElement,
       this.defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
-          this.defaultValuePositiveIntElement,
+      this.defaultValuePositiveIntElement,
       this.defaultValueString,
-      @JsonKey(name: '_defaultValueString')
-          this.defaultValueStringElement,
+      @JsonKey(name: '_defaultValueString') this.defaultValueStringElement,
       this.defaultValueTime,
-      @JsonKey(name: '_defaultValueTime')
-          this.defaultValueTimeElement,
+      @JsonKey(name: '_defaultValueTime') this.defaultValueTimeElement,
       this.defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
-          this.defaultValueUnsignedIntElement,
+      this.defaultValueUnsignedIntElement,
       this.defaultValueUri,
-      @JsonKey(name: '_defaultValueUri')
-          this.defaultValueUriElement,
+      @JsonKey(name: '_defaultValueUri') this.defaultValueUriElement,
       this.defaultValueUrl,
-      @JsonKey(name: '_defaultValueUrl')
-          this.defaultValueUrlElement,
+      @JsonKey(name: '_defaultValueUrl') this.defaultValueUrlElement,
       this.defaultValueUuid,
-      @JsonKey(name: '_defaultValueUuid')
-          this.defaultValueUuidElement,
+      @JsonKey(name: '_defaultValueUuid') this.defaultValueUuidElement,
       this.defaultValueAddress,
       this.defaultValueAge,
       this.defaultValueAnnotation,
@@ -12374,68 +12171,47 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.defaultValueUsageContext,
       this.defaultValueDosage,
       this.meaningWhenMissing,
-      @JsonKey(name: '_meaningWhenMissing')
-          this.meaningWhenMissingElement,
+      @JsonKey(name: '_meaningWhenMissing') this.meaningWhenMissingElement,
       this.orderMeaning,
-      @JsonKey(name: '_orderMeaning')
-          this.orderMeaningElement,
+      @JsonKey(name: '_orderMeaning') this.orderMeaningElement,
       this.fixedBase64Binary,
-      @JsonKey(name: '_fixedBase64Binary')
-          this.fixedBase64BinaryElement,
+      @JsonKey(name: '_fixedBase64Binary') this.fixedBase64BinaryElement,
       this.fixedBoolean,
-      @JsonKey(name: '_fixedBoolean')
-          this.fixedBooleanElement,
+      @JsonKey(name: '_fixedBoolean') this.fixedBooleanElement,
       this.fixedCanonical,
-      @JsonKey(name: '_fixedCanonical')
-          this.fixedCanonicalElement,
+      @JsonKey(name: '_fixedCanonical') this.fixedCanonicalElement,
       this.fixedCode,
-      @JsonKey(name: '_fixedCode')
-          this.fixedCodeElement,
+      @JsonKey(name: '_fixedCode') this.fixedCodeElement,
       this.fixedDate,
-      @JsonKey(name: '_fixedDate')
-          this.fixedDateElement,
+      @JsonKey(name: '_fixedDate') this.fixedDateElement,
       this.fixedDateTime,
-      @JsonKey(name: '_fixedDateTime')
-          this.fixedDateTimeElement,
+      @JsonKey(name: '_fixedDateTime') this.fixedDateTimeElement,
       this.fixedDecimal,
-      @JsonKey(name: '_fixedDecimal')
-          this.fixedDecimalElement,
+      @JsonKey(name: '_fixedDecimal') this.fixedDecimalElement,
       this.fixedId,
-      @JsonKey(name: '_fixedId')
-          this.fixedIdElement,
+      @JsonKey(name: '_fixedId') this.fixedIdElement,
       this.fixedInstant,
-      @JsonKey(name: '_fixedInstant')
-          this.fixedInstantElement,
+      @JsonKey(name: '_fixedInstant') this.fixedInstantElement,
       this.fixedInteger,
-      @JsonKey(name: '_fixedInteger')
-          this.fixedIntegerElement,
+      @JsonKey(name: '_fixedInteger') this.fixedIntegerElement,
       this.fixedMarkdown,
-      @JsonKey(name: '_fixedMarkdown')
-          this.fixedMarkdownElement,
+      @JsonKey(name: '_fixedMarkdown') this.fixedMarkdownElement,
       this.fixedOid,
-      @JsonKey(name: '_fixedOid')
-          this.fixedOidElement,
+      @JsonKey(name: '_fixedOid') this.fixedOidElement,
       this.fixedPositiveInt,
-      @JsonKey(name: '_fixedPositiveInt')
-          this.fixedPositiveIntElement,
+      @JsonKey(name: '_fixedPositiveInt') this.fixedPositiveIntElement,
       this.fixedString,
-      @JsonKey(name: '_fixedString')
-          this.fixedStringElement,
+      @JsonKey(name: '_fixedString') this.fixedStringElement,
       this.fixedTime,
-      @JsonKey(name: '_fixedTime')
-          this.fixedTimeElement,
+      @JsonKey(name: '_fixedTime') this.fixedTimeElement,
       this.fixedUnsignedInt,
-      @JsonKey(name: '_fixedUnsignedInt')
-          this.fixedUnsignedIntElement,
+      @JsonKey(name: '_fixedUnsignedInt') this.fixedUnsignedIntElement,
       this.fixedUri,
-      @JsonKey(name: '_fixedUri')
-          this.fixedUriElement,
+      @JsonKey(name: '_fixedUri') this.fixedUriElement,
       this.fixedUrl,
-      @JsonKey(name: '_fixedUrl')
-          this.fixedUrlElement,
+      @JsonKey(name: '_fixedUrl') this.fixedUrlElement,
       this.fixedUuid,
-      @JsonKey(name: '_fixedUuid')
-          this.fixedUuidElement,
+      @JsonKey(name: '_fixedUuid') this.fixedUuidElement,
       this.fixedAddress,
       this.fixedAge,
       this.fixedAnnotation,
@@ -12469,62 +12245,43 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.fixedUsageContext,
       this.fixedDosage,
       this.patternBase64Binary,
-      @JsonKey(name: '_patternBase64Binary')
-          this.patternBase64BinaryElement,
+      @JsonKey(name: '_patternBase64Binary') this.patternBase64BinaryElement,
       this.patternBoolean,
-      @JsonKey(name: '_patternBoolean')
-          this.patternBooleanElement,
+      @JsonKey(name: '_patternBoolean') this.patternBooleanElement,
       this.patternCanonical,
-      @JsonKey(name: '_patternCanonical')
-          this.patternCanonicalElement,
+      @JsonKey(name: '_patternCanonical') this.patternCanonicalElement,
       this.patternCode,
-      @JsonKey(name: '_patternCode')
-          this.patternCodeElement,
+      @JsonKey(name: '_patternCode') this.patternCodeElement,
       this.patternDate,
-      @JsonKey(name: '_patternDate')
-          this.patternDateElement,
+      @JsonKey(name: '_patternDate') this.patternDateElement,
       this.patternDateTime,
-      @JsonKey(name: '_patternDateTime')
-          this.patternDateTimeElement,
+      @JsonKey(name: '_patternDateTime') this.patternDateTimeElement,
       this.patternDecimal,
-      @JsonKey(name: '_patternDecimal')
-          this.patternDecimalElement,
+      @JsonKey(name: '_patternDecimal') this.patternDecimalElement,
       this.patternId,
-      @JsonKey(name: '_patternId')
-          this.patternIdElement,
+      @JsonKey(name: '_patternId') this.patternIdElement,
       this.patternInstant,
-      @JsonKey(name: '_patternInstant')
-          this.patternInstantElement,
+      @JsonKey(name: '_patternInstant') this.patternInstantElement,
       this.patternInteger,
-      @JsonKey(name: '_patternInteger')
-          this.patternIntegerElement,
+      @JsonKey(name: '_patternInteger') this.patternIntegerElement,
       this.patternMarkdown,
-      @JsonKey(name: '_patternMarkdown')
-          this.patternMarkdownElement,
+      @JsonKey(name: '_patternMarkdown') this.patternMarkdownElement,
       this.patternOid,
-      @JsonKey(name: '_patternOid')
-          this.patternOidElement,
+      @JsonKey(name: '_patternOid') this.patternOidElement,
       this.patternPositiveInt,
-      @JsonKey(name: '_patternPositiveInt')
-          this.patternPositiveIntElement,
+      @JsonKey(name: '_patternPositiveInt') this.patternPositiveIntElement,
       this.patternString,
-      @JsonKey(name: '_patternString')
-          this.patternStringElement,
+      @JsonKey(name: '_patternString') this.patternStringElement,
       this.patternTime,
-      @JsonKey(name: '_patternTime')
-          this.patternTimeElement,
+      @JsonKey(name: '_patternTime') this.patternTimeElement,
       this.patternUnsignedInt,
-      @JsonKey(name: '_patternUnsignedInt')
-          this.patternUnsignedIntElement,
+      @JsonKey(name: '_patternUnsignedInt') this.patternUnsignedIntElement,
       this.patternUri,
-      @JsonKey(name: '_patternUri')
-          this.patternUriElement,
+      @JsonKey(name: '_patternUri') this.patternUriElement,
       this.patternUrl,
-      @JsonKey(name: '_patternUrl')
-          this.patternUrlElement,
+      @JsonKey(name: '_patternUrl') this.patternUrlElement,
       this.patternUuid,
-      @JsonKey(name: '_patternUuid')
-          this.patternUuidElement,
+      @JsonKey(name: '_patternUuid') this.patternUuidElement,
       this.patternAddress,
       this.patternAge,
       this.patternAnnotation,
@@ -12559,74 +12316,52 @@ class _$_ElementDefinition extends _ElementDefinition {
       this.patternDosage,
       final List<ElementDefinitionExample>? example,
       this.minValueDate,
-      @JsonKey(name: '_minValueDate')
-          this.minValueDateElement,
+      @JsonKey(name: '_minValueDate') this.minValueDateElement,
       this.minValueDateTime,
-      @JsonKey(name: '_minValueDateTime')
-          this.minValueDateTimeElement,
+      @JsonKey(name: '_minValueDateTime') this.minValueDateTimeElement,
       this.minValueInstant,
-      @JsonKey(name: '_minValueInstant')
-          this.minValueInstantElement,
+      @JsonKey(name: '_minValueInstant') this.minValueInstantElement,
       this.minValueTime,
-      @JsonKey(name: '_minValueTime')
-          this.minValueTimeElement,
+      @JsonKey(name: '_minValueTime') this.minValueTimeElement,
       this.minValueDecimal,
-      @JsonKey(name: '_minValueDecimal')
-          this.minValueDecimalElement,
+      @JsonKey(name: '_minValueDecimal') this.minValueDecimalElement,
       this.minValueInteger,
-      @JsonKey(name: '_minValueInteger')
-          this.minValueIntegerElement,
+      @JsonKey(name: '_minValueInteger') this.minValueIntegerElement,
       this.minValuePositiveInt,
-      @JsonKey(name: '_minValuePositiveInt')
-          this.minValuePositiveIntElement,
+      @JsonKey(name: '_minValuePositiveInt') this.minValuePositiveIntElement,
       this.minValueUnsignedInt,
-      @JsonKey(name: '_minValueUnsignedInt')
-          this.minValueUnsignedIntElement,
+      @JsonKey(name: '_minValueUnsignedInt') this.minValueUnsignedIntElement,
       this.minValueQuantity,
       this.maxValueDate,
-      @JsonKey(name: '_maxValueDate')
-          this.maxValueDateElement,
+      @JsonKey(name: '_maxValueDate') this.maxValueDateElement,
       this.maxValueDateTime,
-      @JsonKey(name: '_maxValueDateTime')
-          this.maxValueDateTimeElement,
+      @JsonKey(name: '_maxValueDateTime') this.maxValueDateTimeElement,
       this.maxValueInstant,
-      @JsonKey(name: '_maxValueInstant')
-          this.maxValueInstantElement,
+      @JsonKey(name: '_maxValueInstant') this.maxValueInstantElement,
       this.maxValueTime,
-      @JsonKey(name: '_maxValueTime')
-          this.maxValueTimeElement,
+      @JsonKey(name: '_maxValueTime') this.maxValueTimeElement,
       this.maxValueDecimal,
-      @JsonKey(name: '_maxValueDecimal')
-          this.maxValueDecimalElement,
+      @JsonKey(name: '_maxValueDecimal') this.maxValueDecimalElement,
       this.maxValueInteger,
-      @JsonKey(name: '_maxValueInteger')
-          this.maxValueIntegerElement,
+      @JsonKey(name: '_maxValueInteger') this.maxValueIntegerElement,
       this.maxValuePositiveInt,
-      @JsonKey(name: '_maxValuePositiveInt')
-          this.maxValuePositiveIntElement,
+      @JsonKey(name: '_maxValuePositiveInt') this.maxValuePositiveIntElement,
       this.maxValueUnsignedInt,
-      @JsonKey(name: '_maxValueUnsignedInt')
-          this.maxValueUnsignedIntElement,
+      @JsonKey(name: '_maxValueUnsignedInt') this.maxValueUnsignedIntElement,
       this.maxValueQuantity,
       this.maxLength,
-      @JsonKey(name: '_maxLength')
-          this.maxLengthElement,
+      @JsonKey(name: '_maxLength') this.maxLengthElement,
       final List<FhirId>? condition,
-      @JsonKey(name: '_condition')
-          final List<Element?>? conditionElement,
+      @JsonKey(name: '_condition') final List<Element?>? conditionElement,
       final List<ElementDefinitionConstraint>? constraint,
       this.mustSupport,
-      @JsonKey(name: '_mustSupport')
-          this.mustSupportElement,
+      @JsonKey(name: '_mustSupport') this.mustSupportElement,
       this.isModifier,
-      @JsonKey(name: '_isModifier')
-          this.isModifierElement,
+      @JsonKey(name: '_isModifier') this.isModifierElement,
       this.isModifierReason,
-      @JsonKey(name: '_isModifierReason')
-          this.isModifierReasonElement,
+      @JsonKey(name: '_isModifierReason') this.isModifierReasonElement,
       this.isSummary,
-      @JsonKey(name: '_isSummary')
-          this.isSummaryElement,
+      @JsonKey(name: '_isSummary') this.isSummaryElement,
       this.binding,
       final List<ElementDefinitionMapping>? mapping})
       : _extension_ = extension_,
@@ -15779,111 +15514,95 @@ class _$_ElementDefinition extends _ElementDefinition {
 
 abstract class _ElementDefinition extends ElementDefinition {
   const factory _ElementDefinition(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? path,
-      @JsonKey(name: '_path')
-          final Element? pathElement,
+      @JsonKey(name: '_path') final Element? pathElement,
       final List<ElementDefinitionRepresentation>? representation,
       @JsonKey(name: '_representation')
-          final List<Element?>? representationElement,
+      final List<Element?>? representationElement,
       final String? sliceName,
-      @JsonKey(name: '_sliceName')
-          final Element? sliceNameElement,
+      @JsonKey(name: '_sliceName') final Element? sliceNameElement,
       final FhirBoolean? sliceIsConstraining,
       @JsonKey(name: '_sliceIsConstraining')
-          final Element? sliceIsConstrainingElement,
+      final Element? sliceIsConstrainingElement,
       final String? label,
-      @JsonKey(name: '_label')
-          final Element? labelElement,
+      @JsonKey(name: '_label') final Element? labelElement,
       final List<Coding>? code,
       final ElementDefinitionSlicing? slicing,
       final String? short,
-      @JsonKey(name: '_short')
-          final Element? shortElement,
+      @JsonKey(name: '_short') final Element? shortElement,
       final FhirMarkdown? definition,
-      @JsonKey(name: '_definition')
-          final Element? definitionElement,
+      @JsonKey(name: '_definition') final Element? definitionElement,
       final FhirMarkdown? comment,
-      @JsonKey(name: '_comment')
-          final Element? commentElement,
+      @JsonKey(name: '_comment') final Element? commentElement,
       final FhirMarkdown? requirements,
-      @JsonKey(name: '_requirements')
-          final Element? requirementsElement,
+      @JsonKey(name: '_requirements') final Element? requirementsElement,
       final List<String>? alias,
-      @JsonKey(name: '_alias')
-          final List<Element?>? aliasElement,
+      @JsonKey(name: '_alias') final List<Element?>? aliasElement,
       final FhirUnsignedInt? min,
-      @JsonKey(name: '_min')
-          final Element? minElement,
+      @JsonKey(name: '_min') final Element? minElement,
       final String? max,
-      @JsonKey(name: '_max')
-          final Element? maxElement,
+      @JsonKey(name: '_max') final Element? maxElement,
       final ElementDefinitionBase? base,
       final FhirUri? contentReference,
       @JsonKey(name: '_contentReference')
-          final Element? contentReferenceElement,
+      final Element? contentReferenceElement,
       final List<ElementDefinitionType>? type,
       final FhirBase64Binary? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
-          final Element? defaultValueBase64BinaryElement,
+      final Element? defaultValueBase64BinaryElement,
       final FhirBoolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
-          final Element? defaultValueBooleanElement,
+      final Element? defaultValueBooleanElement,
       final FhirCanonical? defaultValueCanonical,
       @JsonKey(name: '_defaultValueCanonical')
-          final Element? defaultValueCanonicalElement,
+      final Element? defaultValueCanonicalElement,
       final FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
-          final Element? defaultValueCodeElement,
+      final Element? defaultValueCodeElement,
       final FhirDate? defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
-          final Element? defaultValueDateElement,
+      final Element? defaultValueDateElement,
       final FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
-          final Element? defaultValueDateTimeElement,
+      final Element? defaultValueDateTimeElement,
       final FhirDecimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
-          final Element? defaultValueDecimalElement,
+      final Element? defaultValueDecimalElement,
       final FhirId? defaultValueId,
-      @JsonKey(name: '_defaultValueId')
-          final Element? defaultValueIdElement,
+      @JsonKey(name: '_defaultValueId') final Element? defaultValueIdElement,
       final FhirInstant? defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
-          final Element? defaultValueInstantElement,
+      final Element? defaultValueInstantElement,
       final FhirInteger? defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
-          final Element? defaultValueIntegerElement,
+      final Element? defaultValueIntegerElement,
       final FhirMarkdown? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
-          final Element? defaultValueMarkdownElement,
+      final Element? defaultValueMarkdownElement,
       final FhirOid? defaultValueOid,
-      @JsonKey(name: '_defaultValueOid')
-          final Element? defaultValueOidElement,
+      @JsonKey(name: '_defaultValueOid') final Element? defaultValueOidElement,
       final FhirPositiveInt? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
-          final Element? defaultValuePositiveIntElement,
+      final Element? defaultValuePositiveIntElement,
       final String? defaultValueString,
       @JsonKey(name: '_defaultValueString')
-          final Element? defaultValueStringElement,
+      final Element? defaultValueStringElement,
       final FhirTime? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
-          final Element? defaultValueTimeElement,
+      final Element? defaultValueTimeElement,
       final FhirUnsignedInt? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
-          final Element? defaultValueUnsignedIntElement,
+      final Element? defaultValueUnsignedIntElement,
       final FhirUri? defaultValueUri,
-      @JsonKey(name: '_defaultValueUri')
-          final Element? defaultValueUriElement,
+      @JsonKey(name: '_defaultValueUri') final Element? defaultValueUriElement,
       final FhirUrl? defaultValueUrl,
-      @JsonKey(name: '_defaultValueUrl')
-          final Element? defaultValueUrlElement,
+      @JsonKey(name: '_defaultValueUrl') final Element? defaultValueUrlElement,
       final FhirUuid? defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
-          final Element? defaultValueUuidElement,
+      final Element? defaultValueUuidElement,
       final Address? defaultValueAddress,
       final Age? defaultValueAge,
       final Annotation? defaultValueAnnotation,
@@ -15918,67 +15637,50 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Dosage? defaultValueDosage,
       final FhirMarkdown? meaningWhenMissing,
       @JsonKey(name: '_meaningWhenMissing')
-          final Element? meaningWhenMissingElement,
+      final Element? meaningWhenMissingElement,
       final String? orderMeaning,
-      @JsonKey(name: '_orderMeaning')
-          final Element? orderMeaningElement,
+      @JsonKey(name: '_orderMeaning') final Element? orderMeaningElement,
       final FhirBase64Binary? fixedBase64Binary,
       @JsonKey(name: '_fixedBase64Binary')
-          final Element? fixedBase64BinaryElement,
+      final Element? fixedBase64BinaryElement,
       final FhirBoolean? fixedBoolean,
-      @JsonKey(name: '_fixedBoolean')
-          final Element? fixedBooleanElement,
+      @JsonKey(name: '_fixedBoolean') final Element? fixedBooleanElement,
       final FhirCanonical? fixedCanonical,
-      @JsonKey(name: '_fixedCanonical')
-          final Element? fixedCanonicalElement,
+      @JsonKey(name: '_fixedCanonical') final Element? fixedCanonicalElement,
       final FhirCode? fixedCode,
-      @JsonKey(name: '_fixedCode')
-          final Element? fixedCodeElement,
+      @JsonKey(name: '_fixedCode') final Element? fixedCodeElement,
       final FhirDate? fixedDate,
-      @JsonKey(name: '_fixedDate')
-          final Element? fixedDateElement,
+      @JsonKey(name: '_fixedDate') final Element? fixedDateElement,
       final FhirDateTime? fixedDateTime,
-      @JsonKey(name: '_fixedDateTime')
-          final Element? fixedDateTimeElement,
+      @JsonKey(name: '_fixedDateTime') final Element? fixedDateTimeElement,
       final FhirDecimal? fixedDecimal,
-      @JsonKey(name: '_fixedDecimal')
-          final Element? fixedDecimalElement,
+      @JsonKey(name: '_fixedDecimal') final Element? fixedDecimalElement,
       final FhirId? fixedId,
-      @JsonKey(name: '_fixedId')
-          final Element? fixedIdElement,
+      @JsonKey(name: '_fixedId') final Element? fixedIdElement,
       final FhirInstant? fixedInstant,
-      @JsonKey(name: '_fixedInstant')
-          final Element? fixedInstantElement,
+      @JsonKey(name: '_fixedInstant') final Element? fixedInstantElement,
       final FhirInteger? fixedInteger,
-      @JsonKey(name: '_fixedInteger')
-          final Element? fixedIntegerElement,
+      @JsonKey(name: '_fixedInteger') final Element? fixedIntegerElement,
       final FhirMarkdown? fixedMarkdown,
-      @JsonKey(name: '_fixedMarkdown')
-          final Element? fixedMarkdownElement,
+      @JsonKey(name: '_fixedMarkdown') final Element? fixedMarkdownElement,
       final FhirOid? fixedOid,
-      @JsonKey(name: '_fixedOid')
-          final Element? fixedOidElement,
+      @JsonKey(name: '_fixedOid') final Element? fixedOidElement,
       final FhirPositiveInt? fixedPositiveInt,
       @JsonKey(name: '_fixedPositiveInt')
-          final Element? fixedPositiveIntElement,
+      final Element? fixedPositiveIntElement,
       final String? fixedString,
-      @JsonKey(name: '_fixedString')
-          final Element? fixedStringElement,
+      @JsonKey(name: '_fixedString') final Element? fixedStringElement,
       final FhirTime? fixedTime,
-      @JsonKey(name: '_fixedTime')
-          final Element? fixedTimeElement,
+      @JsonKey(name: '_fixedTime') final Element? fixedTimeElement,
       final FhirUnsignedInt? fixedUnsignedInt,
       @JsonKey(name: '_fixedUnsignedInt')
-          final Element? fixedUnsignedIntElement,
+      final Element? fixedUnsignedIntElement,
       final FhirUri? fixedUri,
-      @JsonKey(name: '_fixedUri')
-          final Element? fixedUriElement,
+      @JsonKey(name: '_fixedUri') final Element? fixedUriElement,
       final FhirUrl? fixedUrl,
-      @JsonKey(name: '_fixedUrl')
-          final Element? fixedUrlElement,
+      @JsonKey(name: '_fixedUrl') final Element? fixedUrlElement,
       final FhirUuid? fixedUuid,
-      @JsonKey(name: '_fixedUuid')
-          final Element? fixedUuidElement,
+      @JsonKey(name: '_fixedUuid') final Element? fixedUuidElement,
       final Address? fixedAddress,
       final Age? fixedAge,
       final Annotation? fixedAnnotation,
@@ -16013,61 +15715,46 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Dosage? fixedDosage,
       final FhirBase64Binary? patternBase64Binary,
       @JsonKey(name: '_patternBase64Binary')
-          final Element? patternBase64BinaryElement,
+      final Element? patternBase64BinaryElement,
       final FhirBoolean? patternBoolean,
-      @JsonKey(name: '_patternBoolean')
-          final Element? patternBooleanElement,
+      @JsonKey(name: '_patternBoolean') final Element? patternBooleanElement,
       final FhirCanonical? patternCanonical,
       @JsonKey(name: '_patternCanonical')
-          final Element? patternCanonicalElement,
+      final Element? patternCanonicalElement,
       final FhirCode? patternCode,
-      @JsonKey(name: '_patternCode')
-          final Element? patternCodeElement,
+      @JsonKey(name: '_patternCode') final Element? patternCodeElement,
       final FhirDate? patternDate,
-      @JsonKey(name: '_patternDate')
-          final Element? patternDateElement,
+      @JsonKey(name: '_patternDate') final Element? patternDateElement,
       final FhirDateTime? patternDateTime,
-      @JsonKey(name: '_patternDateTime')
-          final Element? patternDateTimeElement,
+      @JsonKey(name: '_patternDateTime') final Element? patternDateTimeElement,
       final FhirDecimal? patternDecimal,
-      @JsonKey(name: '_patternDecimal')
-          final Element? patternDecimalElement,
+      @JsonKey(name: '_patternDecimal') final Element? patternDecimalElement,
       final FhirId? patternId,
-      @JsonKey(name: '_patternId')
-          final Element? patternIdElement,
+      @JsonKey(name: '_patternId') final Element? patternIdElement,
       final FhirInstant? patternInstant,
-      @JsonKey(name: '_patternInstant')
-          final Element? patternInstantElement,
+      @JsonKey(name: '_patternInstant') final Element? patternInstantElement,
       final FhirInteger? patternInteger,
-      @JsonKey(name: '_patternInteger')
-          final Element? patternIntegerElement,
+      @JsonKey(name: '_patternInteger') final Element? patternIntegerElement,
       final FhirMarkdown? patternMarkdown,
-      @JsonKey(name: '_patternMarkdown')
-          final Element? patternMarkdownElement,
+      @JsonKey(name: '_patternMarkdown') final Element? patternMarkdownElement,
       final FhirOid? patternOid,
-      @JsonKey(name: '_patternOid')
-          final Element? patternOidElement,
+      @JsonKey(name: '_patternOid') final Element? patternOidElement,
       final FhirPositiveInt? patternPositiveInt,
       @JsonKey(name: '_patternPositiveInt')
-          final Element? patternPositiveIntElement,
+      final Element? patternPositiveIntElement,
       final String? patternString,
-      @JsonKey(name: '_patternString')
-          final Element? patternStringElement,
+      @JsonKey(name: '_patternString') final Element? patternStringElement,
       final FhirTime? patternTime,
-      @JsonKey(name: '_patternTime')
-          final Element? patternTimeElement,
+      @JsonKey(name: '_patternTime') final Element? patternTimeElement,
       final FhirUnsignedInt? patternUnsignedInt,
       @JsonKey(name: '_patternUnsignedInt')
-          final Element? patternUnsignedIntElement,
+      final Element? patternUnsignedIntElement,
       final FhirUri? patternUri,
-      @JsonKey(name: '_patternUri')
-          final Element? patternUriElement,
+      @JsonKey(name: '_patternUri') final Element? patternUriElement,
       final FhirUrl? patternUrl,
-      @JsonKey(name: '_patternUrl')
-          final Element? patternUrlElement,
+      @JsonKey(name: '_patternUrl') final Element? patternUrlElement,
       final FhirUuid? patternUuid,
-      @JsonKey(name: '_patternUuid')
-          final Element? patternUuidElement,
+      @JsonKey(name: '_patternUuid') final Element? patternUuidElement,
       final Address? patternAddress,
       final Age? patternAge,
       final Annotation? patternAnnotation,
@@ -16102,74 +15789,59 @@ abstract class _ElementDefinition extends ElementDefinition {
       final Dosage? patternDosage,
       final List<ElementDefinitionExample>? example,
       final FhirDate? minValueDate,
-      @JsonKey(name: '_minValueDate')
-          final Element? minValueDateElement,
+      @JsonKey(name: '_minValueDate') final Element? minValueDateElement,
       final FhirDateTime? minValueDateTime,
       @JsonKey(name: '_minValueDateTime')
-          final Element? minValueDateTimeElement,
+      final Element? minValueDateTimeElement,
       final FhirInstant? minValueInstant,
-      @JsonKey(name: '_minValueInstant')
-          final Element? minValueInstantElement,
+      @JsonKey(name: '_minValueInstant') final Element? minValueInstantElement,
       final FhirTime? minValueTime,
-      @JsonKey(name: '_minValueTime')
-          final Element? minValueTimeElement,
+      @JsonKey(name: '_minValueTime') final Element? minValueTimeElement,
       final FhirDecimal? minValueDecimal,
-      @JsonKey(name: '_minValueDecimal')
-          final Element? minValueDecimalElement,
+      @JsonKey(name: '_minValueDecimal') final Element? minValueDecimalElement,
       final FhirInteger? minValueInteger,
-      @JsonKey(name: '_minValueInteger')
-          final Element? minValueIntegerElement,
+      @JsonKey(name: '_minValueInteger') final Element? minValueIntegerElement,
       final FhirPositiveInt? minValuePositiveInt,
       @JsonKey(name: '_minValuePositiveInt')
-          final Element? minValuePositiveIntElement,
+      final Element? minValuePositiveIntElement,
       final FhirUnsignedInt? minValueUnsignedInt,
       @JsonKey(name: '_minValueUnsignedInt')
-          final Element? minValueUnsignedIntElement,
+      final Element? minValueUnsignedIntElement,
       final Quantity? minValueQuantity,
       final FhirDate? maxValueDate,
-      @JsonKey(name: '_maxValueDate')
-          final Element? maxValueDateElement,
+      @JsonKey(name: '_maxValueDate') final Element? maxValueDateElement,
       final FhirDateTime? maxValueDateTime,
       @JsonKey(name: '_maxValueDateTime')
-          final Element? maxValueDateTimeElement,
+      final Element? maxValueDateTimeElement,
       final FhirInstant? maxValueInstant,
-      @JsonKey(name: '_maxValueInstant')
-          final Element? maxValueInstantElement,
+      @JsonKey(name: '_maxValueInstant') final Element? maxValueInstantElement,
       final FhirTime? maxValueTime,
-      @JsonKey(name: '_maxValueTime')
-          final Element? maxValueTimeElement,
+      @JsonKey(name: '_maxValueTime') final Element? maxValueTimeElement,
       final FhirDecimal? maxValueDecimal,
-      @JsonKey(name: '_maxValueDecimal')
-          final Element? maxValueDecimalElement,
+      @JsonKey(name: '_maxValueDecimal') final Element? maxValueDecimalElement,
       final FhirInteger? maxValueInteger,
-      @JsonKey(name: '_maxValueInteger')
-          final Element? maxValueIntegerElement,
+      @JsonKey(name: '_maxValueInteger') final Element? maxValueIntegerElement,
       final FhirPositiveInt? maxValuePositiveInt,
       @JsonKey(name: '_maxValuePositiveInt')
-          final Element? maxValuePositiveIntElement,
+      final Element? maxValuePositiveIntElement,
       final FhirUnsignedInt? maxValueUnsignedInt,
       @JsonKey(name: '_maxValueUnsignedInt')
-          final Element? maxValueUnsignedIntElement,
+      final Element? maxValueUnsignedIntElement,
       final Quantity? maxValueQuantity,
       final FhirInteger? maxLength,
-      @JsonKey(name: '_maxLength')
-          final Element? maxLengthElement,
+      @JsonKey(name: '_maxLength') final Element? maxLengthElement,
       final List<FhirId>? condition,
-      @JsonKey(name: '_condition')
-          final List<Element?>? conditionElement,
+      @JsonKey(name: '_condition') final List<Element?>? conditionElement,
       final List<ElementDefinitionConstraint>? constraint,
       final FhirBoolean? mustSupport,
-      @JsonKey(name: '_mustSupport')
-          final Element? mustSupportElement,
+      @JsonKey(name: '_mustSupport') final Element? mustSupportElement,
       final FhirBoolean? isModifier,
-      @JsonKey(name: '_isModifier')
-          final Element? isModifierElement,
+      @JsonKey(name: '_isModifier') final Element? isModifierElement,
       final String? isModifierReason,
       @JsonKey(name: '_isModifierReason')
-          final Element? isModifierReasonElement,
+      final Element? isModifierReasonElement,
       final FhirBoolean? isSummary,
-      @JsonKey(name: '_isSummary')
-          final Element? isSummaryElement,
+      @JsonKey(name: '_isSummary') final Element? isSummaryElement,
       final ElementDefinitionBinding? binding,
       final List<ElementDefinitionMapping>? mapping}) = _$_ElementDefinition;
   const _ElementDefinition._() : super._();
@@ -18591,22 +18263,17 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
       _$ElementDefinitionSlicingCopyWithImpl<$Res, ElementDefinitionSlicing>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<ElementDefinitionDiscriminator>? discriminator,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       FhirBoolean? ordered,
-      @JsonKey(name: '_ordered')
-          Element? orderedElement,
+      @JsonKey(name: '_ordered') Element? orderedElement,
       @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-          ElementDefinitionSlicingRules? rules,
-      @JsonKey(name: '_rules')
-          Element? rulesElement});
+      ElementDefinitionSlicingRules? rules,
+      @JsonKey(name: '_rules') Element? rulesElement});
 
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get orderedElement;
@@ -18729,22 +18396,17 @@ abstract class _$$_ElementDefinitionSlicingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<ElementDefinitionDiscriminator>? discriminator,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       FhirBoolean? ordered,
-      @JsonKey(name: '_ordered')
-          Element? orderedElement,
+      @JsonKey(name: '_ordered') Element? orderedElement,
       @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-          ElementDefinitionSlicingRules? rules,
-      @JsonKey(name: '_rules')
-          Element? rulesElement});
+      ElementDefinitionSlicingRules? rules,
+      @JsonKey(name: '_rules') Element? rulesElement});
 
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -18826,22 +18488,17 @@ class __$$_ElementDefinitionSlicingCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   const _$_ElementDefinitionSlicing(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<ElementDefinitionDiscriminator>? discriminator,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.ordered,
-      @JsonKey(name: '_ordered')
-          this.orderedElement,
+      @JsonKey(name: '_ordered') this.orderedElement,
       @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-          this.rules,
-      @JsonKey(name: '_rules')
-          this.rulesElement})
+      this.rules,
+      @JsonKey(name: '_rules') this.rulesElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _discriminator = discriminator,
@@ -19032,22 +18689,18 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
 
 abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
   const factory _ElementDefinitionSlicing(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final List<ElementDefinitionDiscriminator>? discriminator,
-      final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
-      final FhirBoolean? ordered,
-      @JsonKey(name: '_ordered')
-          final Element? orderedElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
+          {@JsonKey(name: 'id') final String? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final List<ElementDefinitionDiscriminator>? discriminator,
+          final String? description,
+          @JsonKey(name: '_description') final Element? descriptionElement,
+          final FhirBoolean? ordered,
+          @JsonKey(name: '_ordered') final Element? orderedElement,
+          @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
           final ElementDefinitionSlicingRules? rules,
-      @JsonKey(name: '_rules')
-          final Element? rulesElement}) = _$_ElementDefinitionSlicing;
+          @JsonKey(name: '_rules') final Element? rulesElement}) =
+      _$_ElementDefinitionSlicing;
   const _ElementDefinitionSlicing._() : super._();
 
   factory _ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =
@@ -19198,18 +18851,14 @@ abstract class $ElementDefinitionDiscriminatorCopyWith<$Res> {
           ElementDefinitionDiscriminator>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-          ElementDefinitionDiscriminatorType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      ElementDefinitionDiscriminatorType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement});
+      @JsonKey(name: '_path') Element? pathElement});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get pathElement;
@@ -19304,18 +18953,14 @@ abstract class _$$_ElementDefinitionDiscriminatorCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-          ElementDefinitionDiscriminatorType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      ElementDefinitionDiscriminatorType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement});
+      @JsonKey(name: '_path') Element? pathElement});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -19382,18 +19027,14 @@ class __$$_ElementDefinitionDiscriminatorCopyWithImpl<$Res>
 class _$_ElementDefinitionDiscriminator
     extends _ElementDefinitionDiscriminator {
   const _$_ElementDefinitionDiscriminator(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-          this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      this.type,
+      @JsonKey(name: '_type') this.typeElement,
       this.path,
-      @JsonKey(name: '_path')
-          this.pathElement})
+      @JsonKey(name: '_path') this.pathElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -19543,18 +19184,15 @@ class _$_ElementDefinitionDiscriminator
 abstract class _ElementDefinitionDiscriminator
     extends ElementDefinitionDiscriminator {
   const factory _ElementDefinitionDiscriminator(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
+          {@JsonKey(name: 'id') final String? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
           final ElementDefinitionDiscriminatorType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
-      final String? path,
-      @JsonKey(name: '_path')
-          final Element? pathElement}) = _$_ElementDefinitionDiscriminator;
+          @JsonKey(name: '_type') final Element? typeElement,
+          final String? path,
+          @JsonKey(name: '_path') final Element? pathElement}) =
+      _$_ElementDefinitionDiscriminator;
   const _ElementDefinitionDiscriminator._() : super._();
 
   factory _ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =
@@ -20254,25 +19892,19 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       _$ElementDefinitionTypeCopyWithImpl<$Res, ElementDefinitionType>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       List<FhirCanonical>? profile,
-      @JsonKey(name: '_profile')
-          List<Element?>? profileElement,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
       List<FhirCanonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation')
-          List<Element?>? aggregationElement,
+      @JsonKey(name: '_aggregation') List<Element?>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-          ElementDefinitionTypeVersioning? versioning,
-      @JsonKey(name: '_versioning')
-          Element? versioningElement});
+      ElementDefinitionTypeVersioning? versioning,
+      @JsonKey(name: '_versioning') Element? versioningElement});
 
   $ElementCopyWith<$Res>? get codeElement;
   $ElementCopyWith<$Res>? get versioningElement;
@@ -20391,25 +20023,19 @@ abstract class _$$_ElementDefinitionTypeCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       List<FhirCanonical>? profile,
-      @JsonKey(name: '_profile')
-          List<Element?>? profileElement,
+      @JsonKey(name: '_profile') List<Element?>? profileElement,
       List<FhirCanonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation')
-          List<Element?>? aggregationElement,
+      @JsonKey(name: '_aggregation') List<Element?>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-          ElementDefinitionTypeVersioning? versioning,
-      @JsonKey(name: '_versioning')
-          Element? versioningElement});
+      ElementDefinitionTypeVersioning? versioning,
+      @JsonKey(name: '_versioning') Element? versioningElement});
 
   @override
   $ElementCopyWith<$Res>? get codeElement;
@@ -20498,25 +20124,19 @@ class __$$_ElementDefinitionTypeCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionType extends _ElementDefinitionType {
   const _$_ElementDefinitionType(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.code,
-      @JsonKey(name: '_code')
-          this.codeElement,
+      @JsonKey(name: '_code') this.codeElement,
       final List<FhirCanonical>? profile,
-      @JsonKey(name: '_profile')
-          final List<Element?>? profileElement,
+      @JsonKey(name: '_profile') final List<Element?>? profileElement,
       final List<FhirCanonical>? targetProfile,
       final List<ElementDefinitionTypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation')
-          final List<Element?>? aggregationElement,
+      @JsonKey(name: '_aggregation') final List<Element?>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-          this.versioning,
-      @JsonKey(name: '_versioning')
-          this.versioningElement})
+      this.versioning,
+      @JsonKey(name: '_versioning') this.versioningElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _profile = profile,
@@ -20783,25 +20403,20 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 
 abstract class _ElementDefinitionType extends ElementDefinitionType {
   const factory _ElementDefinitionType(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? code,
-      @JsonKey(name: '_code')
-          final Element? codeElement,
+      @JsonKey(name: '_code') final Element? codeElement,
       final List<FhirCanonical>? profile,
-      @JsonKey(name: '_profile')
-          final List<Element?>? profileElement,
+      @JsonKey(name: '_profile') final List<Element?>? profileElement,
       final List<FhirCanonical>? targetProfile,
       final List<ElementDefinitionTypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation')
-          final List<Element?>? aggregationElement,
+      @JsonKey(name: '_aggregation') final List<Element?>? aggregationElement,
       @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-          final ElementDefinitionTypeVersioning? versioning,
+      final ElementDefinitionTypeVersioning? versioning,
       @JsonKey(name: '_versioning')
-          final Element? versioningElement}) = _$_ElementDefinitionType;
+      final Element? versioningElement}) = _$_ElementDefinitionType;
   const _ElementDefinitionType._() : super._();
 
   factory _ElementDefinitionType.fromJson(Map<String, dynamic> json) =
@@ -23743,71 +23358,52 @@ class _$_ElementDefinitionExample extends _ElementDefinitionExample {
 
 abstract class _ElementDefinitionExample extends ElementDefinitionExample {
   const factory _ElementDefinitionExample(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? label,
-      @JsonKey(name: '_label')
-          final Element? labelElement,
+      @JsonKey(name: '_label') final Element? labelElement,
       final FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary')
-          final Element? valueBase64BinaryElement,
+      final Element? valueBase64BinaryElement,
       final FhirBoolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean')
-          final Element? valueBooleanElement,
+      @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final FhirCanonical? valueCanonical,
-      @JsonKey(name: '_valueCanonical')
-          final Element? valueCanonicalElement,
+      @JsonKey(name: '_valueCanonical') final Element? valueCanonicalElement,
       final FhirCode? valueCode,
-      @JsonKey(name: '_valueCode')
-          final Element? valueCodeElement,
+      @JsonKey(name: '_valueCode') final Element? valueCodeElement,
       final FhirDate? valueDate,
-      @JsonKey(name: '_valueDate')
-          final Element? valueDateElement,
+      @JsonKey(name: '_valueDate') final Element? valueDateElement,
       final FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime')
-          final Element? valueDateTimeElement,
+      @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
       final FhirDecimal? valueDecimal,
-      @JsonKey(name: '_valueDecimal')
-          final Element? valueDecimalElement,
+      @JsonKey(name: '_valueDecimal') final Element? valueDecimalElement,
       final FhirId? valueId,
-      @JsonKey(name: '_valueId')
-          final Element? valueIdElement,
+      @JsonKey(name: '_valueId') final Element? valueIdElement,
       final FhirInstant? valueInstant,
-      @JsonKey(name: '_valueInstant')
-          final Element? valueInstantElement,
+      @JsonKey(name: '_valueInstant') final Element? valueInstantElement,
       final FhirInteger? valueInteger,
-      @JsonKey(name: '_valueInteger')
-          final Element? valueIntegerElement,
+      @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
       final FhirMarkdown? valueMarkdown,
-      @JsonKey(name: '_valueMarkdown')
-          final Element? valueMarkdownElement,
+      @JsonKey(name: '_valueMarkdown') final Element? valueMarkdownElement,
       final FhirOid? valueOid,
-      @JsonKey(name: '_valueOid')
-          final Element? valueOidElement,
+      @JsonKey(name: '_valueOid') final Element? valueOidElement,
       final FhirPositiveInt? valuePositiveInt,
       @JsonKey(name: '_valuePositiveInt')
-          final Element? valuePositiveIntElement,
+      final Element? valuePositiveIntElement,
       final String? valueString,
-      @JsonKey(name: '_valueString')
-          final Element? valueStringElement,
+      @JsonKey(name: '_valueString') final Element? valueStringElement,
       final FhirTime? valueTime,
-      @JsonKey(name: '_valueTime')
-          final Element? valueTimeElement,
+      @JsonKey(name: '_valueTime') final Element? valueTimeElement,
       final FhirUnsignedInt? valueUnsignedInt,
       @JsonKey(name: '_valueUnsignedInt')
-          final Element? valueUnsignedIntElement,
+      final Element? valueUnsignedIntElement,
       final FhirUri? valueUri,
-      @JsonKey(name: '_valueUri')
-          final Element? valueUriElement,
+      @JsonKey(name: '_valueUri') final Element? valueUriElement,
       final FhirUrl? valueUrl,
-      @JsonKey(name: '_valueUrl')
-          final Element? valueUrlElement,
+      @JsonKey(name: '_valueUrl') final Element? valueUrlElement,
       final FhirUuid? valueUuid,
-      @JsonKey(name: '_valueUuid')
-          final Element? valueUuidElement,
+      @JsonKey(name: '_valueUuid') final Element? valueUuidElement,
       final Address? valueAddress,
       final Age? valueAge,
       final Annotation? valueAnnotation,
@@ -24346,30 +23942,22 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
           ElementDefinitionConstraint>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirId? key,
-      @JsonKey(name: '_key')
-          Element? keyElement,
+      @JsonKey(name: '_key') Element? keyElement,
       String? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
+      @JsonKey(name: '_requirements') Element? requirementsElement,
       @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-          ElementDefinitionConstraintSeverity? severity,
-      @JsonKey(name: '_severity')
-          Element? severityElement,
+      ElementDefinitionConstraintSeverity? severity,
+      @JsonKey(name: '_severity') Element? severityElement,
       String? human,
-      @JsonKey(name: '_human')
-          Element? humanElement,
+      @JsonKey(name: '_human') Element? humanElement,
       String? expression,
-      @JsonKey(name: '_expression')
-          Element? expressionElement,
+      @JsonKey(name: '_expression') Element? expressionElement,
       String? xpath,
-      @JsonKey(name: '_xpath')
-          Element? xpathElement,
+      @JsonKey(name: '_xpath') Element? xpathElement,
       FhirCanonical? source});
 
   $ElementCopyWith<$Res>? get keyElement;
@@ -24562,30 +24150,22 @@ abstract class _$$_ElementDefinitionConstraintCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirId? key,
-      @JsonKey(name: '_key')
-          Element? keyElement,
+      @JsonKey(name: '_key') Element? keyElement,
       String? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
+      @JsonKey(name: '_requirements') Element? requirementsElement,
       @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-          ElementDefinitionConstraintSeverity? severity,
-      @JsonKey(name: '_severity')
-          Element? severityElement,
+      ElementDefinitionConstraintSeverity? severity,
+      @JsonKey(name: '_severity') Element? severityElement,
       String? human,
-      @JsonKey(name: '_human')
-          Element? humanElement,
+      @JsonKey(name: '_human') Element? humanElement,
       String? expression,
-      @JsonKey(name: '_expression')
-          Element? expressionElement,
+      @JsonKey(name: '_expression') Element? expressionElement,
       String? xpath,
-      @JsonKey(name: '_xpath')
-          Element? xpathElement,
+      @JsonKey(name: '_xpath') Element? xpathElement,
       FhirCanonical? source});
 
   @override
@@ -24705,30 +24285,22 @@ class __$$_ElementDefinitionConstraintCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   const _$_ElementDefinitionConstraint(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.key,
-      @JsonKey(name: '_key')
-          this.keyElement,
+      @JsonKey(name: '_key') this.keyElement,
       this.requirements,
-      @JsonKey(name: '_requirements')
-          this.requirementsElement,
+      @JsonKey(name: '_requirements') this.requirementsElement,
       @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-          this.severity,
-      @JsonKey(name: '_severity')
-          this.severityElement,
+      this.severity,
+      @JsonKey(name: '_severity') this.severityElement,
       this.human,
-      @JsonKey(name: '_human')
-          this.humanElement,
+      @JsonKey(name: '_human') this.humanElement,
       this.expression,
-      @JsonKey(name: '_expression')
-          this.expressionElement,
+      @JsonKey(name: '_expression') this.expressionElement,
       this.xpath,
-      @JsonKey(name: '_xpath')
-          this.xpathElement,
+      @JsonKey(name: '_xpath') this.xpathElement,
       this.source})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -24947,30 +24519,22 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
 abstract class _ElementDefinitionConstraint
     extends ElementDefinitionConstraint {
   const factory _ElementDefinitionConstraint(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirId? key,
-      @JsonKey(name: '_key')
-          final Element? keyElement,
+      @JsonKey(name: '_key') final Element? keyElement,
       final String? requirements,
-      @JsonKey(name: '_requirements')
-          final Element? requirementsElement,
+      @JsonKey(name: '_requirements') final Element? requirementsElement,
       @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-          final ElementDefinitionConstraintSeverity? severity,
-      @JsonKey(name: '_severity')
-          final Element? severityElement,
+      final ElementDefinitionConstraintSeverity? severity,
+      @JsonKey(name: '_severity') final Element? severityElement,
       final String? human,
-      @JsonKey(name: '_human')
-          final Element? humanElement,
+      @JsonKey(name: '_human') final Element? humanElement,
       final String? expression,
-      @JsonKey(name: '_expression')
-          final Element? expressionElement,
+      @JsonKey(name: '_expression') final Element? expressionElement,
       final String? xpath,
-      @JsonKey(name: '_xpath')
-          final Element? xpathElement,
+      @JsonKey(name: '_xpath') final Element? xpathElement,
       final FhirCanonical? source}) = _$_ElementDefinitionConstraint;
   const _ElementDefinitionConstraint._() : super._();
 
@@ -25147,18 +24711,14 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
       _$ElementDefinitionBindingCopyWithImpl<$Res, ElementDefinitionBinding>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-          ElementDefinitionBindingStrength? strength,
-      @JsonKey(name: '_strength')
-          Element? strengthElement,
+      ElementDefinitionBindingStrength? strength,
+      @JsonKey(name: '_strength') Element? strengthElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       FhirCanonical? valueSet});
 
   $ElementCopyWith<$Res>? get strengthElement;
@@ -25259,18 +24819,14 @@ abstract class _$$_ElementDefinitionBindingCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-          ElementDefinitionBindingStrength? strength,
-      @JsonKey(name: '_strength')
-          Element? strengthElement,
+      ElementDefinitionBindingStrength? strength,
+      @JsonKey(name: '_strength') Element? strengthElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       FhirCanonical? valueSet});
 
   @override
@@ -25341,18 +24897,14 @@ class __$$_ElementDefinitionBindingCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   const _$_ElementDefinitionBinding(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-          this.strength,
-      @JsonKey(name: '_strength')
-          this.strengthElement,
+      this.strength,
+      @JsonKey(name: '_strength') this.strengthElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.valueSet})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -25509,18 +25061,14 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 
 abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
   const factory _ElementDefinitionBinding(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-          final ElementDefinitionBindingStrength? strength,
-      @JsonKey(name: '_strength')
-          final Element? strengthElement,
+      final ElementDefinitionBindingStrength? strength,
+      @JsonKey(name: '_strength') final Element? strengthElement,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final FhirCanonical? valueSet}) = _$_ElementDefinitionBinding;
   const _ElementDefinitionBinding._() : super._();
 

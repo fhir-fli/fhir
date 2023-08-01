@@ -114,74 +114,56 @@ abstract class $StructureDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
-      @JsonKey(required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
-          StructureDefinitionStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_display') Element? displayElement,
+      @JsonKey(
+          required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
+      StructureDefinitionStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<StructureDefinitionContact>? contact,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<CodeableConcept>? useContext,
       String? requirements,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       List<Coding>? code,
       FhirId? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       List<StructureDefinitionMapping>? mapping,
       @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-          StructureDefinitionKind kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
+      StructureDefinitionKind kind,
+      @JsonKey(name: '_kind') Element? kindElement,
       FhirCode? constrainedType,
-      @JsonKey(name: 'abstract')
-          FhirBoolean abstract_,
-      @JsonKey(name: '_abstract')
-          Element? abstractElement,
+      @JsonKey(name: 'abstract') FhirBoolean abstract_,
+      @JsonKey(name: '_abstract') Element? abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-          StructureDefinitionContextType? contextType,
+      StructureDefinitionContextType? contextType,
       List<String>? context,
       FhirUri? base,
       StructureDefinitionSnapshot? snapshot,
@@ -717,74 +699,56 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
-      @JsonKey(required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
-          StructureDefinitionStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_display') Element? displayElement,
+      @JsonKey(
+          required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
+      StructureDefinitionStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<StructureDefinitionContact>? contact,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<CodeableConcept>? useContext,
       String? requirements,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       List<Coding>? code,
       FhirId? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       List<StructureDefinitionMapping>? mapping,
       @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-          StructureDefinitionKind kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
+      StructureDefinitionKind kind,
+      @JsonKey(name: '_kind') Element? kindElement,
       FhirCode? constrainedType,
-      @JsonKey(name: 'abstract')
-          FhirBoolean abstract_,
-      @JsonKey(name: '_abstract')
-          Element? abstractElement,
+      @JsonKey(name: 'abstract') FhirBoolean abstract_,
+      @JsonKey(name: '_abstract') Element? abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-          StructureDefinitionContextType? contextType,
+      StructureDefinitionContextType? contextType,
       List<String>? context,
       FhirUri? base,
       StructureDefinitionSnapshot? snapshot,
@@ -1102,74 +1066,56 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
 class _$_StructureDefinition extends _StructureDefinition {
   const _$_StructureDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
-          this.resourceType = Dstu2ResourceType.StructureDefinition,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.StructureDefinition,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       final List<Identifier>? identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       required this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.display,
-      @JsonKey(name: '_display')
-          this.displayElement,
-      @JsonKey(required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
-          required this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_display') this.displayElement,
+      @JsonKey(
+          required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
+      required this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<StructureDefinitionContact>? contact,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<CodeableConcept>? useContext,
       this.requirements,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       final List<Coding>? code,
       this.fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          this.fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') this.fhirVersionElement,
       final List<StructureDefinitionMapping>? mapping,
       @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-          required this.kind,
-      @JsonKey(name: '_kind')
-          this.kindElement,
+      required this.kind,
+      @JsonKey(name: '_kind') this.kindElement,
       this.constrainedType,
-      @JsonKey(name: 'abstract')
-          required this.abstract_,
-      @JsonKey(name: '_abstract')
-          this.abstractElement,
+      @JsonKey(name: 'abstract') required this.abstract_,
+      @JsonKey(name: '_abstract') this.abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-          this.contextType,
+      this.contextType,
       final List<String>? context,
       this.base,
       this.snapshot,
@@ -1555,78 +1501,61 @@ class _$_StructureDefinition extends _StructureDefinition {
 abstract class _StructureDefinition extends StructureDefinition {
   const factory _StructureDefinition(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final FhirUri url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       required final String name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final String? display,
-      @JsonKey(name: '_display')
-          final Element? displayElement,
-      @JsonKey(required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
-          required final StructureDefinitionStatus status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_display') final Element? displayElement,
+      @JsonKey(
+          required: true, unknownEnumValue: StructureDefinitionStatus.unknown)
+      required final StructureDefinitionStatus status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final List<StructureDefinitionContact>? contact,
       final FhirDateTime? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<CodeableConcept>? useContext,
       final String? requirements,
       final String? copyright,
-      @JsonKey(name: '_copyright')
-          final Element? copyrightElement,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
       final List<Coding>? code,
       final FhirId? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          final Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') final Element? fhirVersionElement,
       final List<StructureDefinitionMapping>? mapping,
       @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
-          required final StructureDefinitionKind kind,
-      @JsonKey(name: '_kind')
-          final Element? kindElement,
+      required final StructureDefinitionKind kind,
+      @JsonKey(name: '_kind') final Element? kindElement,
       final FhirCode? constrainedType,
-      @JsonKey(name: 'abstract')
-          required final FhirBoolean abstract_,
-      @JsonKey(name: '_abstract')
-          final Element? abstractElement,
+      @JsonKey(name: 'abstract') required final FhirBoolean abstract_,
+      @JsonKey(name: '_abstract') final Element? abstractElement,
       @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
-          final StructureDefinitionContextType? contextType,
+      final StructureDefinitionContextType? contextType,
       final List<String>? context,
       final FhirUri? base,
       final StructureDefinitionSnapshot? snapshot,
-      final StructureDefinitionDifferential? differential}) = _$_StructureDefinition;
+      final StructureDefinitionDifferential?
+          differential}) = _$_StructureDefinition;
   const _StructureDefinition._() : super._();
 
   factory _StructureDefinition.fromJson(Map<String, dynamic> json) =
@@ -3098,29 +3027,24 @@ abstract class $DataElementCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
       List<Identifier>? identifier,
       String? version,
       String? name,
       @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-          DataElementStatus status,
+      DataElementStatus status,
       FhirBoolean? experimental,
       String? publisher,
       List<DataElementContact>? contact,
@@ -3128,7 +3052,7 @@ abstract class $DataElementCopyWith<$Res> {
       List<CodeableConcept>? useContext,
       String? copyright,
       @JsonKey(unknownEnumValue: DataElementStringency.unknown)
-          DataElementStringency? stringency,
+      DataElementStringency? stringency,
       List<DataElementMapping>? mapping,
       List<ElementDefinition> element});
 
@@ -3345,29 +3269,24 @@ abstract class _$$_DataElementCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
       List<Identifier>? identifier,
       String? version,
       String? name,
       @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-          DataElementStatus status,
+      DataElementStatus status,
       FhirBoolean? experimental,
       String? publisher,
       List<DataElementContact>? contact,
@@ -3375,7 +3294,7 @@ abstract class _$$_DataElementCopyWith<$Res>
       List<CodeableConcept>? useContext,
       String? copyright,
       @JsonKey(unknownEnumValue: DataElementStringency.unknown)
-          DataElementStringency? stringency,
+      DataElementStringency? stringency,
       List<DataElementMapping>? mapping,
       List<ElementDefinition> element});
 
@@ -3541,37 +3460,31 @@ class __$$_DataElementCopyWithImpl<$Res>
 class _$_DataElement extends _DataElement {
   const _$_DataElement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
-          this.resourceType = Dstu2ResourceType.DataElement,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.DataElement,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
       final List<Identifier>? identifier,
       this.version,
       this.name,
       @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-          required this.status,
+      required this.status,
       this.experimental,
       this.publisher,
       final List<DataElementContact>? contact,
       this.date,
       final List<CodeableConcept>? useContext,
       this.copyright,
-      @JsonKey(unknownEnumValue: DataElementStringency.unknown)
-          this.stringency,
+      @JsonKey(unknownEnumValue: DataElementStringency.unknown) this.stringency,
       final List<DataElementMapping>? mapping,
       required final List<ElementDefinition> element})
       : _contained = contained,
@@ -3811,29 +3724,24 @@ class _$_DataElement extends _DataElement {
 abstract class _DataElement extends DataElement {
   const factory _DataElement(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
       final List<Identifier>? identifier,
       final String? version,
       final String? name,
       @JsonKey(unknownEnumValue: DataElementStatus.unknown)
-          required final DataElementStatus status,
+      required final DataElementStatus status,
       final FhirBoolean? experimental,
       final String? publisher,
       final List<DataElementContact>? contact,
@@ -3841,7 +3749,7 @@ abstract class _DataElement extends DataElement {
       final List<CodeableConcept>? useContext,
       final String? copyright,
       @JsonKey(unknownEnumValue: DataElementStringency.unknown)
-          final DataElementStringency? stringency,
+      final DataElementStringency? stringency,
       final List<DataElementMapping>? mapping,
       required final List<ElementDefinition> element}) = _$_DataElement;
   const _DataElement._() : super._();

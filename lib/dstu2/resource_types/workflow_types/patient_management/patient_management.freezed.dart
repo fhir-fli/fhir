@@ -81,33 +81,26 @@ abstract class $EncounterCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EncounterStatus.unknown)
-          EncounterStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      EncounterStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       List<EncounterStatusHistory>? statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
-          EncounterClass? class_,
-      @JsonKey(name: '_class')
-          Element? classElement,
+      EncounterClass? class_,
+      @JsonKey(name: '_class') Element? classElement,
       List<CodeableConcept>? type,
       CodeableConcept? priority,
       Reference? patient,
@@ -502,33 +495,26 @@ abstract class _$$_EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EncounterStatus.unknown)
-          EncounterStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      EncounterStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       List<EncounterStatusHistory>? statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
-          EncounterClass? class_,
-      @JsonKey(name: '_class')
-          Element? classElement,
+      EncounterClass? class_,
+      @JsonKey(name: '_class') Element? classElement,
       List<CodeableConcept>? type,
       CodeableConcept? priority,
       Reference? patient,
@@ -762,33 +748,25 @@ class __$$_EncounterCopyWithImpl<$Res>
 class _$_Encounter extends _Encounter {
   const _$_Encounter(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
-          this.resourceType = Dstu2ResourceType.Encounter,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Encounter,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: EncounterStatus.unknown)
-          required this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(unknownEnumValue: EncounterStatus.unknown) required this.status,
+      @JsonKey(name: '_status') this.statusElement,
       final List<EncounterStatusHistory>? statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
-          this.class_,
-      @JsonKey(name: '_class')
-          this.classElement,
+      this.class_,
+      @JsonKey(name: '_class') this.classElement,
       final List<CodeableConcept>? type,
       this.priority,
       this.patient,
@@ -1117,33 +1095,26 @@ class _$_Encounter extends _Encounter {
 abstract class _Encounter extends Encounter {
   const factory _Encounter(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Encounter)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EncounterStatus.unknown)
-          required final EncounterStatus status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      required final EncounterStatus status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final List<EncounterStatusHistory>? statusHistory,
       @JsonKey(unknownEnumValue: EncounterClass.unknown, name: 'class')
-          final EncounterClass? class_,
-      @JsonKey(name: '_class')
-          final Element? classElement,
+      final EncounterClass? class_,
+      @JsonKey(name: '_class') final Element? classElement,
       final List<CodeableConcept>? type,
       final CodeableConcept? priority,
       final Reference? patient,
@@ -1278,15 +1249,12 @@ abstract class $EncounterStatusHistoryCopyWith<$Res> {
       _$EncounterStatusHistoryCopyWithImpl<$Res, EncounterStatusHistory>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-          EncounterHistoryStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      EncounterHistoryStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
   $ElementCopyWith<$Res>? get statusElement;
@@ -1372,15 +1340,12 @@ abstract class _$$_EncounterStatusHistoryCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-          EncounterHistoryStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      EncounterHistoryStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
   @override
@@ -1441,15 +1406,12 @@ class __$$_EncounterStatusHistoryCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EncounterStatusHistory extends _EncounterStatusHistory {
   const _$_EncounterStatusHistory(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-          required this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      required this.status,
+      @JsonKey(name: '_status') this.statusElement,
       required this.period})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -1541,15 +1503,12 @@ class _$_EncounterStatusHistory extends _EncounterStatusHistory {
 
 abstract class _EncounterStatusHistory extends EncounterStatusHistory {
   const factory _EncounterStatusHistory(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: EncounterHistoryStatus.unknown)
-          required final EncounterHistoryStatus status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      required final EncounterHistoryStatus status,
+      @JsonKey(name: '_status') final Element? statusElement,
       required final Period period}) = _$_EncounterStatusHistory;
   const _EncounterStatusHistory._() : super._();
 
@@ -2569,16 +2528,13 @@ abstract class $EncounterLocationCopyWith<$Res> {
       _$EncounterLocationCopyWithImpl<$Res, EncounterLocation>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
-          EncounterLocationStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      EncounterLocationStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Period? period});
 
   $ReferenceCopyWith<$Res> get location;
@@ -2681,16 +2637,13 @@ abstract class _$$_EncounterLocationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
-          EncounterLocationStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      EncounterLocationStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Period? period});
 
   @override
@@ -2859,16 +2812,13 @@ class _$_EncounterLocation extends _EncounterLocation {
 
 abstract class _EncounterLocation extends EncounterLocation {
   const factory _EncounterLocation(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Reference location,
       @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
-          final EncounterLocationStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      final EncounterLocationStatus? status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Period? period}) = _$_EncounterLocation;
   const _EncounterLocation._() : super._();
 
@@ -2955,28 +2905,22 @@ abstract class $EpisodeOfCareCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
-          EpisodeOfCareStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      EpisodeOfCareStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       List<EpisodeOfCareStatusHistory>? statusHistory,
       List<CodeableConcept>? type,
       List<Reference>? condition,
@@ -3251,28 +3195,22 @@ abstract class _$$_EpisodeOfCareCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
-          EpisodeOfCareStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      EpisodeOfCareStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       List<EpisodeOfCareStatusHistory>? statusHistory,
       List<CodeableConcept>? type,
       List<Reference>? condition,
@@ -3445,28 +3383,22 @@ class __$$_EpisodeOfCareCopyWithImpl<$Res>
 class _$_EpisodeOfCare extends _EpisodeOfCare {
   const _$_EpisodeOfCare(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
-          this.resourceType = Dstu2ResourceType.EpisodeOfCare,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.EpisodeOfCare,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
-          required this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      required this.status,
+      @JsonKey(name: '_status') this.statusElement,
       final List<EpisodeOfCareStatusHistory>? statusHistory,
       final List<CodeableConcept>? type,
       final List<Reference>? condition,
@@ -3717,28 +3649,22 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 abstract class _EpisodeOfCare extends EpisodeOfCare {
   const factory _EpisodeOfCare(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.EpisodeOfCare)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
-          required final EpisodeOfCareStatus status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      required final EpisodeOfCareStatus status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final List<EpisodeOfCareStatusHistory>? statusHistory,
       final List<CodeableConcept>? type,
       final List<Reference>? condition,
@@ -3848,15 +3774,13 @@ abstract class $EpisodeOfCareStatusHistoryCopyWith<$Res> {
           EpisodeOfCareStatusHistory>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-          EpisodeOfCareHistoryStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(
+          required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
+      EpisodeOfCareHistoryStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
   $ElementCopyWith<$Res>? get statusElement;
@@ -3943,15 +3867,13 @@ abstract class _$$_EpisodeOfCareStatusHistoryCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-          EpisodeOfCareHistoryStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(
+          required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
+      EpisodeOfCareHistoryStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       Period period});
 
   @override
@@ -4013,15 +3935,13 @@ class __$$_EpisodeOfCareStatusHistoryCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
   const _$_EpisodeOfCareStatusHistory(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-          required this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(
+          required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
+      required this.status,
+      @JsonKey(name: '_status') this.statusElement,
       required this.period})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
@@ -4113,15 +4033,13 @@ class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
 
 abstract class _EpisodeOfCareStatusHistory extends EpisodeOfCareStatusHistory {
   const factory _EpisodeOfCareStatusHistory(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
-          required final EpisodeOfCareHistoryStatus status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(
+          required: true, unknownEnumValue: EpisodeOfCareHistoryStatus.unknown)
+      required final EpisodeOfCareHistoryStatus status,
+      @JsonKey(name: '_status') final Element? statusElement,
       required final Period period}) = _$_EpisodeOfCareStatusHistory;
   const _EpisodeOfCareStatusHistory._() : super._();
 
@@ -4531,22 +4449,17 @@ abstract class $CommunicationCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? category,
@@ -4555,16 +4468,13 @@ abstract class $CommunicationCopyWith<$Res> {
       List<CommunicationPayload>? payload,
       List<CodeableConcept>? medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
-          CommunicationStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      CommunicationStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? encounter,
       FhirDateTime? sent,
-      @JsonKey(name: '_sent')
-          Element? sentElement,
+      @JsonKey(name: '_sent') Element? sentElement,
       FhirDateTime? received,
-      @JsonKey(name: '_received')
-          Element? receivedElement,
+      @JsonKey(name: '_received') Element? receivedElement,
       List<CodeableConcept>? reason,
       Reference? subject,
       Reference? requestDetail});
@@ -4896,22 +4806,17 @@ abstract class _$$_CommunicationCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? category,
@@ -4920,16 +4825,13 @@ abstract class _$$_CommunicationCopyWith<$Res>
       List<CommunicationPayload>? payload,
       List<CodeableConcept>? medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
-          CommunicationStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      CommunicationStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? encounter,
       FhirDateTime? sent,
-      @JsonKey(name: '_sent')
-          Element? sentElement,
+      @JsonKey(name: '_sent') Element? sentElement,
       FhirDateTime? received,
-      @JsonKey(name: '_received')
-          Element? receivedElement,
+      @JsonKey(name: '_received') Element? receivedElement,
       List<CodeableConcept>? reason,
       Reference? subject,
       Reference? requestDetail});
@@ -5122,22 +5024,17 @@ class __$$_CommunicationCopyWithImpl<$Res>
 class _$_Communication extends _Communication {
   const _$_Communication(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
-          this.resourceType = Dstu2ResourceType.Communication,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Communication,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.category,
@@ -5145,17 +5042,13 @@ class _$_Communication extends _Communication {
       final List<Reference>? recipient,
       final List<CommunicationPayload>? payload,
       final List<CodeableConcept>? medium,
-      @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(unknownEnumValue: CommunicationStatus.unknown) this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.encounter,
       this.sent,
-      @JsonKey(name: '_sent')
-          this.sentElement,
+      @JsonKey(name: '_sent') this.sentElement,
       this.received,
-      @JsonKey(name: '_received')
-          this.receivedElement,
+      @JsonKey(name: '_received') this.receivedElement,
       final List<CodeableConcept>? reason,
       this.subject,
       this.requestDetail})
@@ -5412,22 +5305,17 @@ class _$_Communication extends _Communication {
 abstract class _Communication extends Communication {
   const factory _Communication(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Communication)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final CodeableConcept? category,
@@ -5436,16 +5324,13 @@ abstract class _Communication extends Communication {
       final List<CommunicationPayload>? payload,
       final List<CodeableConcept>? medium,
       @JsonKey(unknownEnumValue: CommunicationStatus.unknown)
-          final CommunicationStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      final CommunicationStatus? status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Reference? encounter,
       final FhirDateTime? sent,
-      @JsonKey(name: '_sent')
-          final Element? sentElement,
+      @JsonKey(name: '_sent') final Element? sentElement,
       final FhirDateTime? received,
-      @JsonKey(name: '_received')
-          final Element? receivedElement,
+      @JsonKey(name: '_received') final Element? receivedElement,
       final List<CodeableConcept>? reason,
       final Reference? subject,
       final Reference? requestDetail}) = _$_Communication;
@@ -5929,29 +5814,22 @@ abstract class $FlagCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? category,
-      @JsonKey(unknownEnumValue: FlagStatus.unknown)
-          FlagStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       Period? period,
       Reference subject,
       Reference? encounter,
@@ -6227,29 +6105,22 @@ abstract class _$$_FlagCopyWith<$Res> implements $FlagCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       CodeableConcept? category,
-      @JsonKey(unknownEnumValue: FlagStatus.unknown)
-          FlagStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       Period? period,
       Reference subject,
       Reference? encounter,
@@ -6405,29 +6276,22 @@ class __$$_FlagCopyWithImpl<$Res> extends _$FlagCopyWithImpl<$Res, _$_Flag>
 class _$_Flag extends _Flag {
   const _$_Flag(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
-          this.resourceType = Dstu2ResourceType.Flag,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.Flag,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.category,
-      @JsonKey(unknownEnumValue: FlagStatus.unknown)
-          required this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(unknownEnumValue: FlagStatus.unknown) required this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.period,
       required this.subject,
       this.encounter,
@@ -6614,29 +6478,23 @@ class _$_Flag extends _Flag {
 abstract class _Flag extends Flag {
   const factory _Flag(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Flag)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final CodeableConcept? category,
       @JsonKey(unknownEnumValue: FlagStatus.unknown)
-          required final FlagStatus status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      required final FlagStatus status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Period? period,
       required final Reference subject,
       final Reference? encounter,

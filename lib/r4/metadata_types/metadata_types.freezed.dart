@@ -696,17 +696,13 @@ class _$_Contributor extends _Contributor {
 
 abstract class _Contributor extends Contributor {
   const factory _Contributor(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: ContributorType.unknown)
-          final ContributorType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      final ContributorType? type,
+      @JsonKey(name: '_type') final Element? typeElement,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final List<ContactDetail>? contact}) = _$_Contributor;
   const _Contributor._() : super._();
 
@@ -2850,18 +2846,14 @@ abstract class $DataRequirementSortCopyWith<$Res> {
       _$DataRequirementSortCopyWithImpl<$Res, DataRequirementSort>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement,
+      @JsonKey(name: '_path') Element? pathElement,
       @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-          DataRequirementSortDirection? direction,
-      @JsonKey(name: '_direction')
-          Element? directionElement});
+      DataRequirementSortDirection? direction,
+      @JsonKey(name: '_direction') Element? directionElement});
 
   $ElementCopyWith<$Res>? get pathElement;
   $ElementCopyWith<$Res>? get directionElement;
@@ -2954,18 +2946,14 @@ abstract class _$$_DataRequirementSortCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement,
+      @JsonKey(name: '_path') Element? pathElement,
       @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-          DataRequirementSortDirection? direction,
-      @JsonKey(name: '_direction')
-          Element? directionElement});
+      DataRequirementSortDirection? direction,
+      @JsonKey(name: '_direction') Element? directionElement});
 
   @override
   $ElementCopyWith<$Res>? get pathElement;
@@ -3029,18 +3017,14 @@ class __$$_DataRequirementSortCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_DataRequirementSort extends _DataRequirementSort {
   const _$_DataRequirementSort(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.path,
-      @JsonKey(name: '_path')
-          this.pathElement,
+      @JsonKey(name: '_path') this.pathElement,
       @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-          this.direction,
-      @JsonKey(name: '_direction')
-          this.directionElement})
+      this.direction,
+      @JsonKey(name: '_direction') this.directionElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -3190,18 +3174,15 @@ class _$_DataRequirementSort extends _DataRequirementSort {
 
 abstract class _DataRequirementSort extends DataRequirementSort {
   const factory _DataRequirementSort(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final String? path,
-      @JsonKey(name: '_path')
-          final Element? pathElement,
-      @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
+          {@JsonKey(name: 'id') final String? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final String? path,
+          @JsonKey(name: '_path') final Element? pathElement,
+          @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
           final DataRequirementSortDirection? direction,
-      @JsonKey(name: '_direction')
-          final Element? directionElement}) = _$_DataRequirementSort;
+          @JsonKey(name: '_direction') final Element? directionElement}) =
+      _$_DataRequirementSort;
   const _DataRequirementSort._() : super._();
 
   factory _DataRequirementSort.fromJson(Map<String, dynamic> json) =
@@ -4044,26 +4025,19 @@ abstract class $RelatedArtifactCopyWith<$Res> {
       _$RelatedArtifactCopyWithImpl<$Res, RelatedArtifact>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-          RelatedArtifactType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      RelatedArtifactType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
+      @JsonKey(name: '_display') Element? displayElement,
       FhirMarkdown? citation,
-      @JsonKey(name: '_citation')
-          Element? citationElement,
+      @JsonKey(name: '_citation') Element? citationElement,
       FhirUrl? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       Attachment? document,
       FhirCanonical? resource});
 
@@ -4245,26 +4219,19 @@ abstract class _$$_RelatedArtifactCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-          RelatedArtifactType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      RelatedArtifactType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
+      @JsonKey(name: '_display') Element? displayElement,
       FhirMarkdown? citation,
-      @JsonKey(name: '_citation')
-          Element? citationElement,
+      @JsonKey(name: '_citation') Element? citationElement,
       FhirUrl? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       Attachment? document,
       FhirCanonical? resource});
 
@@ -4552,26 +4519,19 @@ class _$_RelatedArtifact extends _RelatedArtifact {
 
 abstract class _RelatedArtifact extends RelatedArtifact {
   const factory _RelatedArtifact(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-          final RelatedArtifactType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      final RelatedArtifactType? type,
+      @JsonKey(name: '_type') final Element? typeElement,
       final String? label,
-      @JsonKey(name: '_label')
-          final Element? labelElement,
+      @JsonKey(name: '_label') final Element? labelElement,
       final String? display,
-      @JsonKey(name: '_display')
-          final Element? displayElement,
+      @JsonKey(name: '_display') final Element? displayElement,
       final FhirMarkdown? citation,
-      @JsonKey(name: '_citation')
-          final Element? citationElement,
+      @JsonKey(name: '_citation') final Element? citationElement,
       final FhirUrl? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final Attachment? document,
       final FhirCanonical? resource}) = _$_RelatedArtifact;
   const _RelatedArtifact._() : super._();
@@ -4738,25 +4698,19 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
       _$TriggerDefinitionCopyWithImpl<$Res, TriggerDefinition>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-          TriggerDefinitionType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      TriggerDefinitionType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       Timing? timingTiming,
       Reference? timingReference,
       FhirDate? timingDate,
-      @JsonKey(name: '_timingDate')
-          Element? timingDateElement,
+      @JsonKey(name: '_timingDate') Element? timingDateElement,
       FhirDateTime? timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          Element? timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
       List<DataRequirement>? data,
       FhirExpression? condition});
 
@@ -4951,25 +4905,19 @@ abstract class _$$_TriggerDefinitionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-          TriggerDefinitionType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      TriggerDefinitionType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       Timing? timingTiming,
       Reference? timingReference,
       FhirDate? timingDate,
-      @JsonKey(name: '_timingDate')
-          Element? timingDateElement,
+      @JsonKey(name: '_timingDate') Element? timingDateElement,
       FhirDateTime? timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          Element? timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
       List<DataRequirement>? data,
       FhirExpression? condition});
 
@@ -5273,25 +5221,19 @@ class _$_TriggerDefinition extends _TriggerDefinition {
 
 abstract class _TriggerDefinition extends TriggerDefinition {
   const factory _TriggerDefinition(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-          final TriggerDefinitionType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      final TriggerDefinitionType? type,
+      @JsonKey(name: '_type') final Element? typeElement,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final Timing? timingTiming,
       final Reference? timingReference,
       final FhirDate? timingDate,
-      @JsonKey(name: '_timingDate')
-          final Element? timingDateElement,
+      @JsonKey(name: '_timingDate') final Element? timingDateElement,
       final FhirDateTime? timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          final Element? timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime') final Element? timingDateTimeElement,
       final List<DataRequirement>? data,
       final FhirExpression? condition}) = _$_TriggerDefinition;
   const _TriggerDefinition._() : super._();
@@ -5893,26 +5835,19 @@ abstract class $FhirExpressionCopyWith<$Res> {
       _$FhirExpressionCopyWithImpl<$Res, FhirExpression>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       FhirId? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       @JsonKey(unknownEnumValue: FhirExpressionLanguage.unknown)
-          FhirExpressionLanguage? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      FhirExpressionLanguage? language,
+      @JsonKey(name: '_language') Element? languageElement,
       String? expression,
-      @JsonKey(name: '_expression')
-          Element? expressionElement,
+      @JsonKey(name: '_expression') Element? expressionElement,
       FhirUri? reference,
-      @JsonKey(name: '_reference')
-          Element? referenceElement});
+      @JsonKey(name: '_reference') Element? referenceElement});
 
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get nameElement;
@@ -6069,26 +6004,19 @@ abstract class _$$_FhirExpressionCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       FhirId? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       @JsonKey(unknownEnumValue: FhirExpressionLanguage.unknown)
-          FhirExpressionLanguage? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      FhirExpressionLanguage? language,
+      @JsonKey(name: '_language') Element? languageElement,
       String? expression,
-      @JsonKey(name: '_expression')
-          Element? expressionElement,
+      @JsonKey(name: '_expression') Element? expressionElement,
       FhirUri? reference,
-      @JsonKey(name: '_reference')
-          Element? referenceElement});
+      @JsonKey(name: '_reference') Element? referenceElement});
 
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -6345,26 +6273,20 @@ class _$_FhirExpression extends _FhirExpression {
 
 abstract class _FhirExpression extends FhirExpression {
   const factory _FhirExpression(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
-      final FhirId? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
-      @JsonKey(unknownEnumValue: FhirExpressionLanguage.unknown)
+          {@JsonKey(name: 'id') final String? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final String? description,
+          @JsonKey(name: '_description') final Element? descriptionElement,
+          final FhirId? name,
+          @JsonKey(name: '_name') final Element? nameElement,
+          @JsonKey(unknownEnumValue: FhirExpressionLanguage.unknown)
           final FhirExpressionLanguage? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
-      final String? expression,
-      @JsonKey(name: '_expression')
-          final Element? expressionElement,
-      final FhirUri? reference,
-      @JsonKey(name: '_reference')
-          final Element? referenceElement}) = _$_FhirExpression;
+          @JsonKey(name: '_language') final Element? languageElement,
+          final String? expression,
+          @JsonKey(name: '_expression') final Element? expressionElement,
+          final FhirUri? reference,
+          @JsonKey(name: '_reference') final Element? referenceElement}) =
+      _$_FhirExpression;
   const _FhirExpression._() : super._();
 
   factory _FhirExpression.fromJson(Map<String, dynamic> json) =

@@ -291,46 +291,35 @@ abstract class $ResearchStudyCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       List<ResearchStudyLabel>? label,
       List<Reference>? protocol,
       List<Reference>? partOf,
       List<RelatedArtifact>? relatedArtifact,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? primaryPurposeType,
       CodeableConcept? phase,
       List<CodeableConcept>? studyDesign,
@@ -339,11 +328,9 @@ abstract class $ResearchStudyCopyWith<$Res> {
       List<CodeableConcept>? keyword,
       List<CodeableConcept>? region,
       FhirMarkdown? descriptionSummary,
-      @JsonKey(name: '_descriptionSummary')
-          Element? descriptionSummaryElement,
+      @JsonKey(name: '_descriptionSummary') Element? descriptionSummaryElement,
       FhirMarkdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Period? period,
       List<Reference>? site,
       List<Annotation>? note,
@@ -870,46 +857,35 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       List<ResearchStudyLabel>? label,
       List<Reference>? protocol,
       List<Reference>? partOf,
       List<RelatedArtifact>? relatedArtifact,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? primaryPurposeType,
       CodeableConcept? phase,
       List<CodeableConcept>? studyDesign,
@@ -918,11 +894,9 @@ abstract class _$$_ResearchStudyCopyWith<$Res>
       List<CodeableConcept>? keyword,
       List<CodeableConcept>? region,
       FhirMarkdown? descriptionSummary,
-      @JsonKey(name: '_descriptionSummary')
-          Element? descriptionSummaryElement,
+      @JsonKey(name: '_descriptionSummary') Element? descriptionSummaryElement,
       FhirMarkdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Period? period,
       List<Reference>? site,
       List<Annotation>? note,
@@ -1254,46 +1228,35 @@ class __$$_ResearchStudyCopyWithImpl<$Res>
 class _$_ResearchStudy extends _ResearchStudy {
   const _$_ResearchStudy(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          this.resourceType = R5ResourceType.ResearchStudy,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R5ResourceType.ResearchStudy,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       final List<Identifier>? identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       final List<ResearchStudyLabel>? label,
       final List<Reference>? protocol,
       final List<Reference>? partOf,
       final List<RelatedArtifact>? relatedArtifact,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.primaryPurposeType,
       this.phase,
       final List<CodeableConcept>? studyDesign,
@@ -1302,11 +1265,9 @@ class _$_ResearchStudy extends _ResearchStudy {
       final List<CodeableConcept>? keyword,
       final List<CodeableConcept>? region,
       this.descriptionSummary,
-      @JsonKey(name: '_descriptionSummary')
-          this.descriptionSummaryElement,
+      @JsonKey(name: '_descriptionSummary') this.descriptionSummaryElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.period,
       final List<Reference>? site,
       final List<Annotation>? note,
@@ -2073,46 +2034,35 @@ class _$_ResearchStudy extends _ResearchStudy {
 abstract class _ResearchStudy extends ResearchStudy {
   const factory _ResearchStudy(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          final R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUri? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
-      @JsonKey(name: '_title')
-          final Element? titleElement,
+      @JsonKey(name: '_title') final Element? titleElement,
       final List<ResearchStudyLabel>? label,
       final List<Reference>? protocol,
       final List<Reference>? partOf,
       final List<RelatedArtifact>? relatedArtifact,
       final FhirDateTime? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? primaryPurposeType,
       final CodeableConcept? phase,
       final List<CodeableConcept>? studyDesign,
@@ -2122,10 +2072,9 @@ abstract class _ResearchStudy extends ResearchStudy {
       final List<CodeableConcept>? region,
       final FhirMarkdown? descriptionSummary,
       @JsonKey(name: '_descriptionSummary')
-          final Element? descriptionSummaryElement,
+      final Element? descriptionSummaryElement,
       final FhirMarkdown? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final Period? period,
       final List<Reference>? site,
       final List<Annotation>? note,
@@ -6339,37 +6288,31 @@ abstract class $ResearchSubjectCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<ResearchSubjectProgress>? progress,
       Period? period,
       Reference study,
       Reference subject,
       FhirId? assignedComparisonGroup,
       @JsonKey(name: '_assignedComparisonGroup')
-          Element? assignedComparisonGroupElement,
+      Element? assignedComparisonGroupElement,
       FhirId? actualComparisonGroup,
       @JsonKey(name: '_actualComparisonGroup')
-          Element? actualComparisonGroupElement,
+      Element? actualComparisonGroupElement,
       List<Reference>? consent});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -6649,37 +6592,31 @@ abstract class _$$_ResearchSubjectCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<ResearchSubjectProgress>? progress,
       Period? period,
       Reference study,
       Reference subject,
       FhirId? assignedComparisonGroup,
       @JsonKey(name: '_assignedComparisonGroup')
-          Element? assignedComparisonGroupElement,
+      Element? assignedComparisonGroupElement,
       FhirId? actualComparisonGroup,
       @JsonKey(name: '_actualComparisonGroup')
-          Element? actualComparisonGroupElement,
+      Element? actualComparisonGroupElement,
       List<Reference>? consent});
 
   @override
@@ -6846,37 +6783,31 @@ class __$$_ResearchSubjectCopyWithImpl<$Res>
 class _$_ResearchSubject extends _ResearchSubject {
   const _$_ResearchSubject(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          this.resourceType = R5ResourceType.ResearchSubject,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R5ResourceType.ResearchSubject,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       final List<ResearchSubjectProgress>? progress,
       this.period,
       required this.study,
       required this.subject,
       this.assignedComparisonGroup,
       @JsonKey(name: '_assignedComparisonGroup')
-          this.assignedComparisonGroupElement,
+      this.assignedComparisonGroupElement,
       this.actualComparisonGroup,
       @JsonKey(name: '_actualComparisonGroup')
-          this.actualComparisonGroupElement,
+      this.actualComparisonGroupElement,
       final List<Reference>? consent})
       : _contained = contained,
         _extension_ = extension_,
@@ -7216,37 +7147,31 @@ class _$_ResearchSubject extends _ResearchSubject {
 abstract class _ResearchSubject extends ResearchSubject {
   const factory _ResearchSubject(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          final R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final List<ResearchSubjectProgress>? progress,
       final Period? period,
       required final Reference study,
       required final Reference subject,
       final FhirId? assignedComparisonGroup,
       @JsonKey(name: '_assignedComparisonGroup')
-          final Element? assignedComparisonGroupElement,
+      final Element? assignedComparisonGroupElement,
       final FhirId? actualComparisonGroup,
       @JsonKey(name: '_actualComparisonGroup')
-          final Element? actualComparisonGroupElement,
+      final Element? actualComparisonGroupElement,
       final List<Reference>? consent}) = _$_ResearchSubject;
   const _ResearchSubject._() : super._();
 

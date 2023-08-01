@@ -123,82 +123,60 @@ abstract class $CapabilityStatementCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       CapabilityStatementStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       CapabilityStatementKind? kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
+      @JsonKey(name: '_kind') Element? kindElement,
       List<FhirInstant>? instantiates,
-      @JsonKey(name: '_instantiates')
-          List<Element?>? instantiatesElement,
+      @JsonKey(name: '_instantiates') List<Element?>? instantiatesElement,
       CapabilityStatementSoftware? software,
       CapabilityStatementImplementation? implementation,
       String? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       CapabilityStatementAcceptUnknown? acceptUnknown,
-      @JsonKey(name: '_acceptUnknown')
-          Element? acceptUnknownElement,
+      @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
       List<String>? format,
-      @JsonKey(name: '_format')
-          List<Element?>? formatElement,
+      @JsonKey(name: '_format') List<Element?>? formatElement,
       List<String>? patchFormat,
-      @JsonKey(name: '_patchFormat')
-          List<Element?>? patchFormatElement,
+      @JsonKey(name: '_patchFormat') List<Element?>? patchFormatElement,
       List<FhirId>? implementationGuide,
       @JsonKey(name: '_implementationGuide')
-          List<Element>? implementationGuideElement,
+      List<Element>? implementationGuideElement,
       List<Reference>? profile,
       List<CapabilityStatementRest>? rest,
       List<CapabilityStatementMessaging>? messaging,
@@ -782,82 +760,60 @@ abstract class _$$_CapabilityStatementCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       CapabilityStatementStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       CapabilityStatementKind? kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
+      @JsonKey(name: '_kind') Element? kindElement,
       List<FhirInstant>? instantiates,
-      @JsonKey(name: '_instantiates')
-          List<Element?>? instantiatesElement,
+      @JsonKey(name: '_instantiates') List<Element?>? instantiatesElement,
       CapabilityStatementSoftware? software,
       CapabilityStatementImplementation? implementation,
       String? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       CapabilityStatementAcceptUnknown? acceptUnknown,
-      @JsonKey(name: '_acceptUnknown')
-          Element? acceptUnknownElement,
+      @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
       List<String>? format,
-      @JsonKey(name: '_format')
-          List<Element?>? formatElement,
+      @JsonKey(name: '_format') List<Element?>? formatElement,
       List<String>? patchFormat,
-      @JsonKey(name: '_patchFormat')
-          List<Element?>? patchFormatElement,
+      @JsonKey(name: '_patchFormat') List<Element?>? patchFormatElement,
       List<FhirId>? implementationGuide,
       @JsonKey(name: '_implementationGuide')
-          List<Element>? implementationGuideElement,
+      List<Element>? implementationGuideElement,
       List<Reference>? profile,
       List<CapabilityStatementRest>? rest,
       List<CapabilityStatementMessaging>? messaging,
@@ -1212,82 +1168,60 @@ class __$$_CapabilityStatementCopyWithImpl<$Res>
 class _$_CapabilityStatement extends _CapabilityStatement {
   const _$_CapabilityStatement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
-          this.resourceType = Stu3ResourceType.CapabilityStatement,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.CapabilityStatement,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<ContactDetail>? contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.kind,
-      @JsonKey(name: '_kind')
-          this.kindElement,
+      @JsonKey(name: '_kind') this.kindElement,
       final List<FhirInstant>? instantiates,
-      @JsonKey(name: '_instantiates')
-          final List<Element?>? instantiatesElement,
+      @JsonKey(name: '_instantiates') final List<Element?>? instantiatesElement,
       this.software,
       this.implementation,
       this.fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          this.fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') this.fhirVersionElement,
       this.acceptUnknown,
-      @JsonKey(name: '_acceptUnknown')
-          this.acceptUnknownElement,
+      @JsonKey(name: '_acceptUnknown') this.acceptUnknownElement,
       final List<String>? format,
-      @JsonKey(name: '_format')
-          final List<Element?>? formatElement,
+      @JsonKey(name: '_format') final List<Element?>? formatElement,
       final List<String>? patchFormat,
-      @JsonKey(name: '_patchFormat')
-          final List<Element?>? patchFormatElement,
+      @JsonKey(name: '_patchFormat') final List<Element?>? patchFormatElement,
       final List<FhirId>? implementationGuide,
       @JsonKey(name: '_implementationGuide')
-          final List<Element>? implementationGuideElement,
+      final List<Element>? implementationGuideElement,
       final List<Reference>? profile,
       final List<CapabilityStatementRest>? rest,
       final List<CapabilityStatementMessaging>? messaging,
@@ -1792,88 +1726,66 @@ class _$_CapabilityStatement extends _CapabilityStatement {
 
 abstract class _CapabilityStatement extends CapabilityStatement {
   const factory _CapabilityStatement(
-          {@JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
-              final Stu3ResourceType resourceType,
-          @JsonKey(includeFromJson: true, includeToJson: false)
-              final int? dbId,
-          @JsonKey(name: 'id')
-              final FhirId? fhirId,
-          final FhirMeta? meta,
-          final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              final Element? implicitRulesElement,
-          final FhirCode? language,
-          @JsonKey(name: '_language')
-              final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final String? url,
-          @JsonKey(name: '_url')
-              final Element? urlElement,
-          final String? version,
-          @JsonKey(name: '_version')
-              final Element? versionElement,
-          final String? name,
-          @JsonKey(name: '_name')
-              final Element? nameElement,
-          final String? title,
-          @JsonKey(name: '_title')
-              final Element? titleElement,
-          final CapabilityStatementStatus? status,
-          @JsonKey(name: '_status')
-              final Element? statusElement,
-          final FhirBoolean? experimental,
-          @JsonKey(name: '_experimental')
-              final Element? experimentalElement,
-          final FhirDateTime? date,
-          @JsonKey(name: '_date')
-              final Element? dateElement,
-          final String? publisher,
-          @JsonKey(name: '_publisher')
-              final Element? publisherElement,
-          final List<ContactDetail>? contact,
-          final String? description,
-          @JsonKey(name: '_description')
-              final Element? descriptionElement,
-          final List<UsageContext>? useContext,
-          final List<CodeableConcept>? jurisdiction,
-          final String? purpose,
-          @JsonKey(name: '_purpose')
-              final Element? purposeElement,
-          final String? copyright,
-          @JsonKey(name: '_copyright')
-              final Element? copyrightElement,
-          final CapabilityStatementKind? kind,
-          @JsonKey(name: '_kind')
-              final Element? kindElement,
-          final List<FhirInstant>? instantiates,
-          @JsonKey(name: '_instantiates')
-              final List<Element?>? instantiatesElement,
-          final CapabilityStatementSoftware? software,
-          final CapabilityStatementImplementation? implementation,
-          final String? fhirVersion,
-          @JsonKey(name: '_fhirVersion')
-              final Element? fhirVersionElement,
-          final CapabilityStatementAcceptUnknown? acceptUnknown,
-          @JsonKey(name: '_acceptUnknown')
-              final Element? acceptUnknownElement,
-          final List<String>? format,
-          @JsonKey(name: '_format')
-              final List<Element?>? formatElement,
-          final List<String>? patchFormat,
-          @JsonKey(name: '_patchFormat')
-              final List<Element?>? patchFormatElement,
-          final List<FhirId>? implementationGuide,
-          @JsonKey(name: '_implementationGuide')
-              final List<Element>? implementationGuideElement,
-          final List<Reference>? profile,
-          final List<CapabilityStatementRest>? rest,
-          final List<CapabilityStatementMessaging>? messaging,
-          final List<CapabilityStatementDocument>? document}) =
-      _$_CapabilityStatement;
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.CapabilityStatement)
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final FhirCode? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? url,
+      @JsonKey(name: '_url') final Element? urlElement,
+      final String? version,
+      @JsonKey(name: '_version') final Element? versionElement,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final String? title,
+      @JsonKey(name: '_title') final Element? titleElement,
+      final CapabilityStatementStatus? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final FhirBoolean? experimental,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
+      final FhirDateTime? date,
+      @JsonKey(name: '_date') final Element? dateElement,
+      final String? publisher,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
+      final List<ContactDetail>? contact,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      final String? purpose,
+      @JsonKey(name: '_purpose') final Element? purposeElement,
+      final String? copyright,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
+      final CapabilityStatementKind? kind,
+      @JsonKey(name: '_kind') final Element? kindElement,
+      final List<FhirInstant>? instantiates,
+      @JsonKey(name: '_instantiates') final List<Element?>? instantiatesElement,
+      final CapabilityStatementSoftware? software,
+      final CapabilityStatementImplementation? implementation,
+      final String? fhirVersion,
+      @JsonKey(name: '_fhirVersion') final Element? fhirVersionElement,
+      final CapabilityStatementAcceptUnknown? acceptUnknown,
+      @JsonKey(name: '_acceptUnknown') final Element? acceptUnknownElement,
+      final List<String>? format,
+      @JsonKey(name: '_format') final List<Element?>? formatElement,
+      final List<String>? patchFormat,
+      @JsonKey(name: '_patchFormat') final List<Element?>? patchFormatElement,
+      final List<FhirId>? implementationGuide,
+      @JsonKey(name: '_implementationGuide')
+      final List<Element>? implementationGuideElement,
+      final List<Reference>? profile,
+      final List<CapabilityStatementRest>? rest,
+      final List<CapabilityStatementMessaging>? messaging,
+      final List<CapabilityStatementDocument>?
+          document}) = _$_CapabilityStatement;
   const _CapabilityStatement._() : super._();
 
   factory _CapabilityStatement.fromJson(Map<String, dynamic> json) =
@@ -3032,21 +2944,18 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
 
 abstract class _CapabilityStatementRest extends CapabilityStatementRest {
   const factory _CapabilityStatementRest(
-          {final CapabilityStatementRestMode? mode,
-          @JsonKey(name: '_mode')
-              final Element? modeElement,
-          final String? documentation,
-          @JsonKey(name: '_documentation')
-              final Element? documentationElement,
-          final CapabilityStatementSecurity? security,
-          final List<CapabilityStatementResource>? resource,
-          final List<CapabilityStatementInteraction1>? interaction,
-          final List<CapabilityStatementSearchParam>? searchParam,
-          final List<CapabilityStatementOperation>? operation,
-          final List<String>? compartment,
-          @JsonKey(name: '_compartment')
-              final List<Element?>? compartmentElement}) =
-      _$_CapabilityStatementRest;
+      {final CapabilityStatementRestMode? mode,
+      @JsonKey(name: '_mode') final Element? modeElement,
+      final String? documentation,
+      @JsonKey(name: '_documentation') final Element? documentationElement,
+      final CapabilityStatementSecurity? security,
+      final List<CapabilityStatementResource>? resource,
+      final List<CapabilityStatementInteraction1>? interaction,
+      final List<CapabilityStatementSearchParam>? searchParam,
+      final List<CapabilityStatementOperation>? operation,
+      final List<String>? compartment,
+      @JsonKey(name: '_compartment')
+      final List<Element?>? compartmentElement}) = _$_CapabilityStatementRest;
   const _CapabilityStatementRest._() : super._();
 
   factory _CapabilityStatementRest.fromJson(Map<String, dynamic> json) =
@@ -3763,43 +3672,32 @@ abstract class $CapabilityStatementResourceCopyWith<$Res> {
   @useResult
   $Res call(
       {String? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       Reference? profile,
       String? documentation,
-      @JsonKey(name: '_documentation')
-          Element? documentationElement,
+      @JsonKey(name: '_documentation') Element? documentationElement,
       List<CapabilityStatementInteraction> interaction,
       CapabilityStatementResourceVersioning? versioning,
-      @JsonKey(name: '_versioning')
-          Element? versioningElement,
+      @JsonKey(name: '_versioning') Element? versioningElement,
       FhirBoolean? readHistory,
-      @JsonKey(name: '_readHistory')
-          Element? readHistoryElement,
+      @JsonKey(name: '_readHistory') Element? readHistoryElement,
       FhirBoolean? updateCreate,
-      @JsonKey(name: '_updateCreate')
-          Element? updateCreateElement,
+      @JsonKey(name: '_updateCreate') Element? updateCreateElement,
       FhirBoolean? conditionalCreate,
-      @JsonKey(name: '_conditionalCreate')
-          Element? conditionalCreateElement,
+      @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
       CapabilityStatementResourceConditionalRead? conditionalRead,
-      @JsonKey(name: '_conditionalRead')
-          Element? conditionalReadElement,
+      @JsonKey(name: '_conditionalRead') Element? conditionalReadElement,
       FhirBoolean? conditionalUpdate,
-      @JsonKey(name: '_conditionalUpdate')
-          Element? conditionalUpdateElement,
+      @JsonKey(name: '_conditionalUpdate') Element? conditionalUpdateElement,
       CapabilityStatementResourceConditionalDelete? conditionalDelete,
-      @JsonKey(name: '_conditionalDelete')
-          Element? conditionalDeleteElement,
+      @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
       List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
-      @JsonKey(name: '_referencePolicy')
-          List<Element?>? referencePolicyElement,
+      @JsonKey(name: '_referencePolicy') List<Element?>? referencePolicyElement,
       List<String>? searchInclude,
-      @JsonKey(name: '_searchInclude')
-          List<Element?>? searchIncludeElement,
+      @JsonKey(name: '_searchInclude') List<Element?>? searchIncludeElement,
       List<String>? searchRevInclude,
       @JsonKey(name: '_searchRevInclude')
-          List<Element?>? searchRevIncludeElement,
+      List<Element?>? searchRevIncludeElement,
       List<CapabilityStatementSearchParam>? searchParam});
 
   $ElementCopyWith<$Res>? get typeElement;
@@ -4100,43 +3998,32 @@ abstract class _$$_CapabilityStatementResourceCopyWith<$Res>
   @useResult
   $Res call(
       {String? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       Reference? profile,
       String? documentation,
-      @JsonKey(name: '_documentation')
-          Element? documentationElement,
+      @JsonKey(name: '_documentation') Element? documentationElement,
       List<CapabilityStatementInteraction> interaction,
       CapabilityStatementResourceVersioning? versioning,
-      @JsonKey(name: '_versioning')
-          Element? versioningElement,
+      @JsonKey(name: '_versioning') Element? versioningElement,
       FhirBoolean? readHistory,
-      @JsonKey(name: '_readHistory')
-          Element? readHistoryElement,
+      @JsonKey(name: '_readHistory') Element? readHistoryElement,
       FhirBoolean? updateCreate,
-      @JsonKey(name: '_updateCreate')
-          Element? updateCreateElement,
+      @JsonKey(name: '_updateCreate') Element? updateCreateElement,
       FhirBoolean? conditionalCreate,
-      @JsonKey(name: '_conditionalCreate')
-          Element? conditionalCreateElement,
+      @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
       CapabilityStatementResourceConditionalRead? conditionalRead,
-      @JsonKey(name: '_conditionalRead')
-          Element? conditionalReadElement,
+      @JsonKey(name: '_conditionalRead') Element? conditionalReadElement,
       FhirBoolean? conditionalUpdate,
-      @JsonKey(name: '_conditionalUpdate')
-          Element? conditionalUpdateElement,
+      @JsonKey(name: '_conditionalUpdate') Element? conditionalUpdateElement,
       CapabilityStatementResourceConditionalDelete? conditionalDelete,
-      @JsonKey(name: '_conditionalDelete')
-          Element? conditionalDeleteElement,
+      @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
       List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
-      @JsonKey(name: '_referencePolicy')
-          List<Element?>? referencePolicyElement,
+      @JsonKey(name: '_referencePolicy') List<Element?>? referencePolicyElement,
       List<String>? searchInclude,
-      @JsonKey(name: '_searchInclude')
-          List<Element?>? searchIncludeElement,
+      @JsonKey(name: '_searchInclude') List<Element?>? searchIncludeElement,
       List<String>? searchRevInclude,
       @JsonKey(name: '_searchRevInclude')
-          List<Element?>? searchRevIncludeElement,
+      List<Element?>? searchRevIncludeElement,
       List<CapabilityStatementSearchParam>? searchParam});
 
   @override
@@ -4320,43 +4207,34 @@ class __$$_CapabilityStatementResourceCopyWithImpl<$Res>
 class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   const _$_CapabilityStatementResource(
       {this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: '_type') this.typeElement,
       this.profile,
       this.documentation,
-      @JsonKey(name: '_documentation')
-          this.documentationElement,
+      @JsonKey(name: '_documentation') this.documentationElement,
       required final List<CapabilityStatementInteraction> interaction,
       this.versioning,
-      @JsonKey(name: '_versioning')
-          this.versioningElement,
+      @JsonKey(name: '_versioning') this.versioningElement,
       this.readHistory,
-      @JsonKey(name: '_readHistory')
-          this.readHistoryElement,
+      @JsonKey(name: '_readHistory') this.readHistoryElement,
       this.updateCreate,
-      @JsonKey(name: '_updateCreate')
-          this.updateCreateElement,
+      @JsonKey(name: '_updateCreate') this.updateCreateElement,
       this.conditionalCreate,
-      @JsonKey(name: '_conditionalCreate')
-          this.conditionalCreateElement,
+      @JsonKey(name: '_conditionalCreate') this.conditionalCreateElement,
       this.conditionalRead,
-      @JsonKey(name: '_conditionalRead')
-          this.conditionalReadElement,
+      @JsonKey(name: '_conditionalRead') this.conditionalReadElement,
       this.conditionalUpdate,
-      @JsonKey(name: '_conditionalUpdate')
-          this.conditionalUpdateElement,
+      @JsonKey(name: '_conditionalUpdate') this.conditionalUpdateElement,
       this.conditionalDelete,
-      @JsonKey(name: '_conditionalDelete')
-          this.conditionalDeleteElement,
+      @JsonKey(name: '_conditionalDelete') this.conditionalDeleteElement,
       final List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
       @JsonKey(name: '_referencePolicy')
-          final List<Element?>? referencePolicyElement,
+      final List<Element?>? referencePolicyElement,
       final List<String>? searchInclude,
       @JsonKey(name: '_searchInclude')
-          final List<Element?>? searchIncludeElement,
+      final List<Element?>? searchIncludeElement,
       final List<String>? searchRevInclude,
       @JsonKey(name: '_searchRevInclude')
-          final List<Element?>? searchRevIncludeElement,
+      final List<Element?>? searchRevIncludeElement,
       final List<CapabilityStatementSearchParam>? searchParam})
       : _interaction = interaction,
         _referencePolicy = referencePolicy,
@@ -4622,43 +4500,37 @@ abstract class _CapabilityStatementResource
     extends CapabilityStatementResource {
   const factory _CapabilityStatementResource(
       {final String? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      @JsonKey(name: '_type') final Element? typeElement,
       final Reference? profile,
       final String? documentation,
-      @JsonKey(name: '_documentation')
-          final Element? documentationElement,
+      @JsonKey(name: '_documentation') final Element? documentationElement,
       required final List<CapabilityStatementInteraction> interaction,
       final CapabilityStatementResourceVersioning? versioning,
-      @JsonKey(name: '_versioning')
-          final Element? versioningElement,
+      @JsonKey(name: '_versioning') final Element? versioningElement,
       final FhirBoolean? readHistory,
-      @JsonKey(name: '_readHistory')
-          final Element? readHistoryElement,
+      @JsonKey(name: '_readHistory') final Element? readHistoryElement,
       final FhirBoolean? updateCreate,
-      @JsonKey(name: '_updateCreate')
-          final Element? updateCreateElement,
+      @JsonKey(name: '_updateCreate') final Element? updateCreateElement,
       final FhirBoolean? conditionalCreate,
       @JsonKey(name: '_conditionalCreate')
-          final Element? conditionalCreateElement,
+      final Element? conditionalCreateElement,
       final CapabilityStatementResourceConditionalRead? conditionalRead,
-      @JsonKey(name: '_conditionalRead')
-          final Element? conditionalReadElement,
+      @JsonKey(name: '_conditionalRead') final Element? conditionalReadElement,
       final FhirBoolean? conditionalUpdate,
       @JsonKey(name: '_conditionalUpdate')
-          final Element? conditionalUpdateElement,
+      final Element? conditionalUpdateElement,
       final CapabilityStatementResourceConditionalDelete? conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
-          final Element? conditionalDeleteElement,
+      final Element? conditionalDeleteElement,
       final List<CapabilityStatementResourceReferencePolicy>? referencePolicy,
       @JsonKey(name: '_referencePolicy')
-          final List<Element?>? referencePolicyElement,
+      final List<Element?>? referencePolicyElement,
       final List<String>? searchInclude,
       @JsonKey(name: '_searchInclude')
-          final List<Element?>? searchIncludeElement,
+      final List<Element?>? searchIncludeElement,
       final List<String>? searchRevInclude,
       @JsonKey(name: '_searchRevInclude')
-          final List<Element?>? searchRevIncludeElement,
+      final List<Element?>? searchRevIncludeElement,
       final List<CapabilityStatementSearchParam>?
           searchParam}) = _$_CapabilityStatementResource;
   const _CapabilityStatementResource._() : super._();
@@ -4969,13 +4841,11 @@ class _$_CapabilityStatementInteraction
 abstract class _CapabilityStatementInteraction
     extends CapabilityStatementInteraction {
   const factory _CapabilityStatementInteraction(
-          {final CapabilityStatementInteractionCode? code,
-          @JsonKey(name: '_code')
-              final Element? codeElement,
-          final String? documentation,
-          @JsonKey(name: '_documentation')
-              final Element? documentationElement}) =
-      _$_CapabilityStatementInteraction;
+      {final CapabilityStatementInteractionCode? code,
+      @JsonKey(name: '_code') final Element? codeElement,
+      final String? documentation,
+      @JsonKey(name: '_documentation')
+      final Element? documentationElement}) = _$_CapabilityStatementInteraction;
   const _CapabilityStatementInteraction._() : super._();
 
   factory _CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =
@@ -5341,19 +5211,15 @@ class _$_CapabilityStatementSearchParam
 abstract class _CapabilityStatementSearchParam
     extends CapabilityStatementSearchParam {
   const factory _CapabilityStatementSearchParam(
-          {final String? name,
-          @JsonKey(name: '_name')
-              final Element? nameElement,
-          final String? definition,
-          @JsonKey(name: '_definition')
-              final Element? definitionElement,
-          final CapabilityStatementSearchParamType? type,
-          @JsonKey(name: '_type')
-              final Element? typeElement,
-          final String? documentation,
-          @JsonKey(name: '_documentation')
-              final Element? documentationElement}) =
-      _$_CapabilityStatementSearchParam;
+      {final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final String? definition,
+      @JsonKey(name: '_definition') final Element? definitionElement,
+      final CapabilityStatementSearchParamType? type,
+      @JsonKey(name: '_type') final Element? typeElement,
+      final String? documentation,
+      @JsonKey(name: '_documentation')
+      final Element? documentationElement}) = _$_CapabilityStatementSearchParam;
   const _CapabilityStatementSearchParam._() : super._();
 
   factory _CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =
@@ -5618,11 +5484,10 @@ abstract class _CapabilityStatementInteraction1
     extends CapabilityStatementInteraction1 {
   const factory _CapabilityStatementInteraction1(
           {final CapabilityStatementInteraction1Code? code,
-          @JsonKey(name: '_code')
-              final Element? codeElement,
+          @JsonKey(name: '_code') final Element? codeElement,
           final String? documentation,
           @JsonKey(name: '_documentation')
-              final Element? documentationElement}) =
+          final Element? documentationElement}) =
       _$_CapabilityStatementInteraction1;
   const _CapabilityStatementInteraction1._() : super._();
 
@@ -7109,19 +6974,16 @@ abstract class _CapabilityStatementEvent extends CapabilityStatementEvent {
   const factory _CapabilityStatementEvent(
       {required final Coding code,
       final CapabilityStatementEventCategory? category,
-      @JsonKey(name: '_category')
-          final Element? categoryElement,
+      @JsonKey(name: '_category') final Element? categoryElement,
       final CapabilityStatementEventMode? mode,
-      @JsonKey(name: '_mode')
-          final Element? modeElement,
+      @JsonKey(name: '_mode') final Element? modeElement,
       final String? focus,
-      @JsonKey(name: '_focus')
-          final Element? focusElement,
+      @JsonKey(name: '_focus') final Element? focusElement,
       required final Reference request,
       required final Reference response,
       final String? documentation,
       @JsonKey(name: '_documentation')
-          final Element? documentationElement}) = _$_CapabilityStatementEvent;
+      final Element? documentationElement}) = _$_CapabilityStatementEvent;
   const _CapabilityStatementEvent._() : super._();
 
   factory _CapabilityStatementEvent.fromJson(Map<String, dynamic> json) =
@@ -7523,59 +7385,43 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       CompartmentDefinitionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       CompartmentDefinitionCode? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       FhirBoolean? search,
-      @JsonKey(name: '_search')
-          Element? searchElement,
+      @JsonKey(name: '_search') Element? searchElement,
       List<CompartmentDefinitionResource>? resource});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -7995,59 +7841,43 @@ abstract class _$$_CompartmentDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       CompartmentDefinitionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       CompartmentDefinitionCode? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       FhirBoolean? search,
-      @JsonKey(name: '_search')
-          Element? searchElement,
+      @JsonKey(name: '_search') Element? searchElement,
       List<CompartmentDefinitionResource>? resource});
 
   @override
@@ -8294,59 +8124,43 @@ class __$$_CompartmentDefinitionCopyWithImpl<$Res>
 class _$_CompartmentDefinition extends _CompartmentDefinition {
   const _$_CompartmentDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
-          this.resourceType = Stu3ResourceType.CompartmentDefinition,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.CompartmentDefinition,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<ContactDetail>? contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.code,
-      @JsonKey(name: '_code')
-          this.codeElement,
+      @JsonKey(name: '_code') this.codeElement,
       this.search,
-      @JsonKey(name: '_search')
-          this.searchElement,
+      @JsonKey(name: '_search') this.searchElement,
       final List<CompartmentDefinitionResource>? resource})
       : _contained = contained,
         _extension_ = extension_,
@@ -8646,59 +8460,43 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
 abstract class _CompartmentDefinition extends CompartmentDefinition {
   const factory _CompartmentDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.CompartmentDefinition)
-              final Stu3ResourceType resourceType,
-          @JsonKey(includeFromJson: true, includeToJson: false)
-              final int? dbId,
-          @JsonKey(name: 'id')
-              final FhirId? fhirId,
+          final Stu3ResourceType resourceType,
+          @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+          @JsonKey(name: 'id') final FhirId? fhirId,
           final FhirMeta? meta,
           final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              final Element? implicitRulesElement,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
           final FhirCode? language,
-          @JsonKey(name: '_language')
-              final Element? languageElement,
+          @JsonKey(name: '_language') final Element? languageElement,
           final Narrative? text,
           final List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final String? url,
-          @JsonKey(name: '_url')
-              final Element? urlElement,
+          @JsonKey(name: '_url') final Element? urlElement,
           final String? name,
-          @JsonKey(name: '_name')
-              final Element? nameElement,
+          @JsonKey(name: '_name') final Element? nameElement,
           final String? title,
-          @JsonKey(name: '_title')
-              final Element? titleElement,
+          @JsonKey(name: '_title') final Element? titleElement,
           final CompartmentDefinitionStatus? status,
-          @JsonKey(name: '_status')
-              final Element? statusElement,
+          @JsonKey(name: '_status') final Element? statusElement,
           final FhirBoolean? experimental,
-          @JsonKey(name: '_experimental')
-              final Element? experimentalElement,
+          @JsonKey(name: '_experimental') final Element? experimentalElement,
           final FhirDateTime? date,
-          @JsonKey(name: '_date')
-              final Element? dateElement,
+          @JsonKey(name: '_date') final Element? dateElement,
           final String? publisher,
-          @JsonKey(name: '_publisher')
-              final Element? publisherElement,
+          @JsonKey(name: '_publisher') final Element? publisherElement,
           final List<ContactDetail>? contact,
           final String? description,
-          @JsonKey(name: '_description')
-              final Element? descriptionElement,
+          @JsonKey(name: '_description') final Element? descriptionElement,
           final String? purpose,
-          @JsonKey(name: '_purpose')
-              final Element? purposeElement,
+          @JsonKey(name: '_purpose') final Element? purposeElement,
           final List<UsageContext>? useContext,
           final List<CodeableConcept>? jurisdiction,
           final CompartmentDefinitionCode? code,
-          @JsonKey(name: '_code')
-              final Element? codeElement,
+          @JsonKey(name: '_code') final Element? codeElement,
           final FhirBoolean? search,
-          @JsonKey(name: '_search')
-              final Element? searchElement,
+          @JsonKey(name: '_search') final Element? searchElement,
           final List<CompartmentDefinitionResource>? resource}) =
       _$_CompartmentDefinition;
   const _CompartmentDefinition._() : super._();
@@ -9095,16 +8893,13 @@ class _$_CompartmentDefinitionResource extends _CompartmentDefinitionResource {
 abstract class _CompartmentDefinitionResource
     extends CompartmentDefinitionResource {
   const factory _CompartmentDefinitionResource(
-          {final FhirCode? code,
-          @JsonKey(name: '_code')
-              final Element? codeElement,
-          final List<String>? param,
-          @JsonKey(name: '_param')
-              final List<Element?>? paramElement,
-          final String? documentation,
-          @JsonKey(name: '_documentation')
-              final Element? documentationElement}) =
-      _$_CompartmentDefinitionResource;
+      {final FhirCode? code,
+      @JsonKey(name: '_code') final Element? codeElement,
+      final List<String>? param,
+      @JsonKey(name: '_param') final List<Element?>? paramElement,
+      final String? documentation,
+      @JsonKey(name: '_documentation')
+      final Element? documentationElement}) = _$_CompartmentDefinitionResource;
   const _CompartmentDefinitionResource._() : super._();
 
   factory _CompartmentDefinitionResource.fromJson(Map<String, dynamic> json) =
@@ -9207,57 +9002,42 @@ abstract class $DataElementCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       DataElementStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       List<ContactDetail>? contact,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       DataElementStringency? stringency,
-      @JsonKey(name: '_stringency')
-          Element? stringencyElement,
+      @JsonKey(name: '_stringency') Element? stringencyElement,
       List<DataElementMapping>? mapping,
       List<ElementDefinition> element});
 
@@ -9664,57 +9444,42 @@ abstract class _$$_DataElementCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       DataElementStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       List<ContactDetail>? contact,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       DataElementStringency? stringency,
-      @JsonKey(name: '_stringency')
-          Element? stringencyElement,
+      @JsonKey(name: '_stringency') Element? stringencyElement,
       List<DataElementMapping>? mapping,
       List<ElementDefinition> element});
 
@@ -9960,57 +9725,42 @@ class __$$_DataElementCopyWithImpl<$Res>
 class _$_DataElement extends _DataElement {
   const _$_DataElement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
-          this.resourceType = Stu3ResourceType.DataElement,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.DataElement,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       final List<Identifier>? identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       final List<ContactDetail>? contact,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.stringency,
-      @JsonKey(name: '_stringency')
-          this.stringencyElement,
+      @JsonKey(name: '_stringency') this.stringencyElement,
       final List<DataElementMapping>? mapping,
       required final List<ElementDefinition> element})
       : _contained = contained,
@@ -10326,57 +10076,42 @@ class _$_DataElement extends _DataElement {
 abstract class _DataElement extends DataElement {
   const factory _DataElement(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.DataElement)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       final DataElementStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
       final FhirDate? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
-      @JsonKey(name: '_title')
-          final Element? titleElement,
+      @JsonKey(name: '_title') final Element? titleElement,
       final List<ContactDetail>? contact,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       final String? copyright,
-      @JsonKey(name: '_copyright')
-          final Element? copyrightElement,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
       final DataElementStringency? stringency,
-      @JsonKey(name: '_stringency')
-          final Element? stringencyElement,
+      @JsonKey(name: '_stringency') final Element? stringencyElement,
       final List<DataElementMapping>? mapping,
       required final List<ElementDefinition> element}) = _$_DataElement;
   const _DataElement._() : super._();
@@ -10923,59 +10658,43 @@ abstract class $GraphDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       GraphDefinitionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       String? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
+      @JsonKey(name: '_start') Element? startElement,
       String? profile,
-      @JsonKey(name: '_profile')
-          Element? profileElement,
+      @JsonKey(name: '_profile') Element? profileElement,
       List<GraphDefinitionLink>? link});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -11394,59 +11113,43 @@ abstract class _$$_GraphDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       GraphDefinitionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       String? start,
-      @JsonKey(name: '_start')
-          Element? startElement,
+      @JsonKey(name: '_start') Element? startElement,
       String? profile,
-      @JsonKey(name: '_profile')
-          Element? profileElement,
+      @JsonKey(name: '_profile') Element? profileElement,
       List<GraphDefinitionLink>? link});
 
   @override
@@ -11693,59 +11396,43 @@ class __$$_GraphDefinitionCopyWithImpl<$Res>
 class _$_GraphDefinition extends _GraphDefinition {
   const _$_GraphDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
-          this.resourceType = Stu3ResourceType.GraphDefinition,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.GraphDefinition,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<ContactDetail>? contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.start,
-      @JsonKey(name: '_start')
-          this.startElement,
+      @JsonKey(name: '_start') this.startElement,
       this.profile,
-      @JsonKey(name: '_profile')
-          this.profileElement,
+      @JsonKey(name: '_profile') this.profileElement,
       final List<GraphDefinitionLink>? link})
       : _contained = contained,
         _extension_ = extension_,
@@ -12044,59 +11731,43 @@ class _$_GraphDefinition extends _GraphDefinition {
 abstract class _GraphDefinition extends GraphDefinition {
   const factory _GraphDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GraphDefinition)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final GraphDefinitionStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
       final FhirDate? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final List<ContactDetail>? contact,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       final String? purpose,
-      @JsonKey(name: '_purpose')
-          final Element? purposeElement,
+      @JsonKey(name: '_purpose') final Element? purposeElement,
       final String? start,
-      @JsonKey(name: '_start')
-          final Element? startElement,
+      @JsonKey(name: '_start') final Element? startElement,
       final String? profile,
-      @JsonKey(name: '_profile')
-          final Element? profileElement,
+      @JsonKey(name: '_profile') final Element? profileElement,
       final List<GraphDefinitionLink>? link}) = _$_GraphDefinition;
   const _GraphDefinition._() : super._();
 
@@ -13437,62 +13108,46 @@ abstract class $ImplementationGuideCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       ImplementationGuideStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       String? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       List<ImplementationGuideDependency>? dependency,
       List<ImplementationGuidePackage>? package,
       List<ImplementationGuideGlobal>? global,
       List<String>? binary,
-      @JsonKey(name: '_binary')
-          List<Element?>? binaryElement,
+      @JsonKey(name: '_binary') List<Element?>? binaryElement,
       ImplementationGuidePage? page});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -13926,62 +13581,46 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       ImplementationGuideStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       String? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       List<ImplementationGuideDependency>? dependency,
       List<ImplementationGuidePackage>? package,
       List<ImplementationGuideGlobal>? global,
       List<String>? binary,
-      @JsonKey(name: '_binary')
-          List<Element?>? binaryElement,
+      @JsonKey(name: '_binary') List<Element?>? binaryElement,
       ImplementationGuidePage? page});
 
   @override
@@ -14243,62 +13882,46 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
 class _$_ImplementationGuide extends _ImplementationGuide {
   const _$_ImplementationGuide(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
-          this.resourceType = Stu3ResourceType.ImplementationGuide,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.ImplementationGuide,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<ContactDetail>? contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          this.fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') this.fhirVersionElement,
       final List<ImplementationGuideDependency>? dependency,
       final List<ImplementationGuidePackage>? package,
       final List<ImplementationGuideGlobal>? global,
       final List<String>? binary,
-      @JsonKey(name: '_binary')
-          final List<Element?>? binaryElement,
+      @JsonKey(name: '_binary') final List<Element?>? binaryElement,
       this.page})
       : _contained = contained,
         _extension_ = extension_,
@@ -14650,62 +14273,46 @@ class _$_ImplementationGuide extends _ImplementationGuide {
 abstract class _ImplementationGuide extends ImplementationGuide {
   const factory _ImplementationGuide(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.ImplementationGuide)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final ImplementationGuideStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
       final FhirDate? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final List<ContactDetail>? contact,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       final String? copyright,
-      @JsonKey(name: '_copyright')
-          final Element? copyrightElement,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
       final String? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          final Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') final Element? fhirVersionElement,
       final List<ImplementationGuideDependency>? dependency,
       final List<ImplementationGuidePackage>? package,
       final List<ImplementationGuideGlobal>? global,
       final List<String>? binary,
-      @JsonKey(name: '_binary')
-          final List<Element?>? binaryElement,
+      @JsonKey(name: '_binary') final List<Element?>? binaryElement,
       final ImplementationGuidePage? page}) = _$_ImplementationGuide;
   const _ImplementationGuide._() : super._();
 
@@ -16707,71 +16314,53 @@ abstract class $MessageDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       Identifier? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       MessageDefinitionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       Reference? base,
       List<Reference>? parent,
       List<Reference>? replaces,
       Coding event,
       String? category,
-      @JsonKey(name: '_category')
-          Element? categoryElement,
+      @JsonKey(name: '_category') Element? categoryElement,
       List<MessageDefinitionFocus>? focus,
       FhirBoolean? responseRequired,
-      @JsonKey(name: '_responseRequired')
-          Element? responseRequiredElement,
+      @JsonKey(name: '_responseRequired') Element? responseRequiredElement,
       List<MessageDefinitionAllowedResponse>? allowedResponse});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -17301,71 +16890,53 @@ abstract class _$$_MessageDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       Identifier? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       MessageDefinitionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       Reference? base,
       List<Reference>? parent,
       List<Reference>? replaces,
       Coding event,
       String? category,
-      @JsonKey(name: '_category')
-          Element? categoryElement,
+      @JsonKey(name: '_category') Element? categoryElement,
       List<MessageDefinitionFocus>? focus,
       FhirBoolean? responseRequired,
-      @JsonKey(name: '_responseRequired')
-          Element? responseRequiredElement,
+      @JsonKey(name: '_responseRequired') Element? responseRequiredElement,
       List<MessageDefinitionAllowedResponse>? allowedResponse});
 
   @override
@@ -17672,71 +17243,53 @@ class __$$_MessageDefinitionCopyWithImpl<$Res>
 class _$_MessageDefinition extends _MessageDefinition {
   const _$_MessageDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
-          this.resourceType = Stu3ResourceType.MessageDefinition,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.MessageDefinition,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<ContactDetail>? contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.base,
       final List<Reference>? parent,
       final List<Reference>? replaces,
       required this.event,
       this.category,
-      @JsonKey(name: '_category')
-          this.categoryElement,
+      @JsonKey(name: '_category') this.categoryElement,
       final List<MessageDefinitionFocus>? focus,
       this.responseRequired,
-      @JsonKey(name: '_responseRequired')
-          this.responseRequiredElement,
+      @JsonKey(name: '_responseRequired') this.responseRequiredElement,
       final List<MessageDefinitionAllowedResponse>? allowedResponse})
       : _contained = contained,
         _extension_ = extension_,
@@ -18113,71 +17666,54 @@ class _$_MessageDefinition extends _MessageDefinition {
 abstract class _MessageDefinition extends MessageDefinition {
   const factory _MessageDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.MessageDefinition)
-              final Stu3ResourceType resourceType,
-          @JsonKey(includeFromJson: true, includeToJson: false)
-              final int? dbId,
-          @JsonKey(name: 'id')
-              final FhirId? fhirId,
+          final Stu3ResourceType resourceType,
+          @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+          @JsonKey(name: 'id') final FhirId? fhirId,
           final FhirMeta? meta,
           final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              final Element? implicitRulesElement,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
           final FhirCode? language,
-          @JsonKey(name: '_language')
-              final Element? languageElement,
+          @JsonKey(name: '_language') final Element? languageElement,
           final Narrative? text,
           final List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final String? url,
-          @JsonKey(name: '_url')
-              final Element? urlElement,
+          @JsonKey(name: '_url') final Element? urlElement,
           final Identifier? identifier,
           final String? version,
-          @JsonKey(name: '_version')
-              final Element? versionElement,
+          @JsonKey(name: '_version') final Element? versionElement,
           final String? name,
-          @JsonKey(name: '_name')
-              final Element? nameElement,
+          @JsonKey(name: '_name') final Element? nameElement,
           final String? title,
-          @JsonKey(name: '_title')
-              final Element? titleElement,
+          @JsonKey(name: '_title') final Element? titleElement,
           final MessageDefinitionStatus? status,
-          @JsonKey(name: '_status')
-              final Element? statusElement,
+          @JsonKey(name: '_status') final Element? statusElement,
           final FhirBoolean? experimental,
-          @JsonKey(name: '_experimental')
-              final Element? experimentalElement,
+          @JsonKey(name: '_experimental') final Element? experimentalElement,
           final FhirDate? date,
-          @JsonKey(name: '_date')
-              final Element? dateElement,
+          @JsonKey(name: '_date') final Element? dateElement,
           final String? publisher,
-          @JsonKey(name: '_publisher')
-              final Element? publisherElement,
+          @JsonKey(name: '_publisher') final Element? publisherElement,
           final List<ContactDetail>? contact,
           final String? description,
-          @JsonKey(name: '_description')
-              final Element? descriptionElement,
+          @JsonKey(name: '_description') final Element? descriptionElement,
           final List<UsageContext>? useContext,
           final List<CodeableConcept>? jurisdiction,
           final String? purpose,
-          @JsonKey(name: '_purpose')
-              final Element? purposeElement,
+          @JsonKey(name: '_purpose') final Element? purposeElement,
           final String? copyright,
-          @JsonKey(name: '_copyright')
-              final Element? copyrightElement,
+          @JsonKey(name: '_copyright') final Element? copyrightElement,
           final Reference? base,
           final List<Reference>? parent,
           final List<Reference>? replaces,
           required final Coding event,
           final String? category,
-          @JsonKey(name: '_category')
-              final Element? categoryElement,
+          @JsonKey(name: '_category') final Element? categoryElement,
           final List<MessageDefinitionFocus>? focus,
           final FhirBoolean? responseRequired,
           @JsonKey(name: '_responseRequired')
-              final Element? responseRequiredElement,
+          final Element? responseRequiredElement,
           final List<MessageDefinitionAllowedResponse>? allowedResponse}) =
       _$_MessageDefinition;
   const _MessageDefinition._() : super._();
@@ -18977,78 +18513,56 @@ abstract class $OperationDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       OperationDefinitionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       OperationDefinitionKind? kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
+      @JsonKey(name: '_kind') Element? kindElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       FhirBoolean? idempotent,
-      @JsonKey(name: '_idempotent')
-          Element? idempotentElement,
+      @JsonKey(name: '_idempotent') Element? idempotentElement,
       FhirCode? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      @JsonKey(name: '_comment') Element? commentElement,
       Reference? base,
       List<String>? resource,
-      @JsonKey(name: '_resource')
-          List<Element?>? resourceElement,
+      @JsonKey(name: '_resource') List<Element?>? resourceElement,
       FhirBoolean? system,
-      @JsonKey(name: '_system')
-          Element? systemElement,
+      @JsonKey(name: '_system') Element? systemElement,
       FhirBoolean? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirBoolean? instance,
-      @JsonKey(name: '_instance')
-          Element? instanceElement,
+      @JsonKey(name: '_instance') Element? instanceElement,
       List<OperationDefinitionParameter>? parameter,
       List<OperationDefinitionOverload>? overload});
 
@@ -19616,78 +19130,56 @@ abstract class _$$_OperationDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       OperationDefinitionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       OperationDefinitionKind? kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
+      @JsonKey(name: '_kind') Element? kindElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       FhirBoolean? idempotent,
-      @JsonKey(name: '_idempotent')
-          Element? idempotentElement,
+      @JsonKey(name: '_idempotent') Element? idempotentElement,
       FhirCode? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       String? comment,
-      @JsonKey(name: '_comment')
-          Element? commentElement,
+      @JsonKey(name: '_comment') Element? commentElement,
       Reference? base,
       List<String>? resource,
-      @JsonKey(name: '_resource')
-          List<Element?>? resourceElement,
+      @JsonKey(name: '_resource') List<Element?>? resourceElement,
       FhirBoolean? system,
-      @JsonKey(name: '_system')
-          Element? systemElement,
+      @JsonKey(name: '_system') Element? systemElement,
       FhirBoolean? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirBoolean? instance,
-      @JsonKey(name: '_instance')
-          Element? instanceElement,
+      @JsonKey(name: '_instance') Element? instanceElement,
       List<OperationDefinitionParameter>? parameter,
       List<OperationDefinitionOverload>? overload});
 
@@ -20017,78 +19509,56 @@ class __$$_OperationDefinitionCopyWithImpl<$Res>
 class _$_OperationDefinition extends _OperationDefinition {
   const _$_OperationDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
-          this.resourceType = Stu3ResourceType.OperationDefinition,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.OperationDefinition,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.kind,
-      @JsonKey(name: '_kind')
-          this.kindElement,
+      @JsonKey(name: '_kind') this.kindElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<ContactDetail>? contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.idempotent,
-      @JsonKey(name: '_idempotent')
-          this.idempotentElement,
+      @JsonKey(name: '_idempotent') this.idempotentElement,
       this.code,
-      @JsonKey(name: '_code')
-          this.codeElement,
+      @JsonKey(name: '_code') this.codeElement,
       this.comment,
-      @JsonKey(name: '_comment')
-          this.commentElement,
+      @JsonKey(name: '_comment') this.commentElement,
       this.base,
       final List<String>? resource,
-      @JsonKey(name: '_resource')
-          final List<Element?>? resourceElement,
+      @JsonKey(name: '_resource') final List<Element?>? resourceElement,
       this.system,
-      @JsonKey(name: '_system')
-          this.systemElement,
+      @JsonKey(name: '_system') this.systemElement,
       this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: '_type') this.typeElement,
       this.instance,
-      @JsonKey(name: '_instance')
-          this.instanceElement,
+      @JsonKey(name: '_instance') this.instanceElement,
       final List<OperationDefinitionParameter>? parameter,
       final List<OperationDefinitionOverload>? overload})
       : _contained = contained,
@@ -20487,78 +19957,56 @@ class _$_OperationDefinition extends _OperationDefinition {
 abstract class _OperationDefinition extends OperationDefinition {
   const factory _OperationDefinition(
           {@JsonKey(unknownEnumValue: Stu3ResourceType.OperationDefinition)
-              final Stu3ResourceType resourceType,
-          @JsonKey(includeFromJson: true, includeToJson: false)
-              final int? dbId,
-          @JsonKey(name: 'id')
-              final FhirId? fhirId,
+          final Stu3ResourceType resourceType,
+          @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+          @JsonKey(name: 'id') final FhirId? fhirId,
           final FhirMeta? meta,
           final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              final Element? implicitRulesElement,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
           final FhirCode? language,
-          @JsonKey(name: '_language')
-              final Element? languageElement,
+          @JsonKey(name: '_language') final Element? languageElement,
           final Narrative? text,
           final List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final String? url,
-          @JsonKey(name: '_url')
-              final Element? urlElement,
+          @JsonKey(name: '_url') final Element? urlElement,
           final String? version,
-          @JsonKey(name: '_version')
-              final Element? versionElement,
+          @JsonKey(name: '_version') final Element? versionElement,
           final String? name,
-          @JsonKey(name: '_name')
-              final Element? nameElement,
+          @JsonKey(name: '_name') final Element? nameElement,
           final OperationDefinitionStatus? status,
-          @JsonKey(name: '_status')
-              final Element? statusElement,
+          @JsonKey(name: '_status') final Element? statusElement,
           final OperationDefinitionKind? kind,
-          @JsonKey(name: '_kind')
-              final Element? kindElement,
+          @JsonKey(name: '_kind') final Element? kindElement,
           final FhirBoolean? experimental,
-          @JsonKey(name: '_experimental')
-              final Element? experimentalElement,
+          @JsonKey(name: '_experimental') final Element? experimentalElement,
           final FhirDateTime? date,
-          @JsonKey(name: '_date')
-              final Element? dateElement,
+          @JsonKey(name: '_date') final Element? dateElement,
           final String? publisher,
-          @JsonKey(name: '_publisher')
-              final Element? publisherElement,
+          @JsonKey(name: '_publisher') final Element? publisherElement,
           final List<ContactDetail>? contact,
           final String? description,
-          @JsonKey(name: '_description')
-              final Element? descriptionElement,
+          @JsonKey(name: '_description') final Element? descriptionElement,
           final List<UsageContext>? useContext,
           final List<CodeableConcept>? jurisdiction,
           final String? purpose,
-          @JsonKey(name: '_purpose')
-              final Element? purposeElement,
+          @JsonKey(name: '_purpose') final Element? purposeElement,
           final FhirBoolean? idempotent,
-          @JsonKey(name: '_idempotent')
-              final Element? idempotentElement,
+          @JsonKey(name: '_idempotent') final Element? idempotentElement,
           final FhirCode? code,
-          @JsonKey(name: '_code')
-              final Element? codeElement,
+          @JsonKey(name: '_code') final Element? codeElement,
           final String? comment,
-          @JsonKey(name: '_comment')
-              final Element? commentElement,
+          @JsonKey(name: '_comment') final Element? commentElement,
           final Reference? base,
           final List<String>? resource,
-          @JsonKey(name: '_resource')
-              final List<Element?>? resourceElement,
+          @JsonKey(name: '_resource') final List<Element?>? resourceElement,
           final FhirBoolean? system,
-          @JsonKey(name: '_system')
-              final Element? systemElement,
+          @JsonKey(name: '_system') final Element? systemElement,
           final FhirBoolean? type,
-          @JsonKey(name: '_type')
-              final Element? typeElement,
+          @JsonKey(name: '_type') final Element? typeElement,
           final FhirBoolean? instance,
-          @JsonKey(name: '_instance')
-              final Element? instanceElement,
+          @JsonKey(name: '_instance') final Element? instanceElement,
           final List<OperationDefinitionParameter>? parameter,
           final List<OperationDefinitionOverload>? overload}) =
       _$_OperationDefinition;
@@ -21301,30 +20749,23 @@ abstract class _OperationDefinitionParameter
     extends OperationDefinitionParameter {
   const factory _OperationDefinitionParameter(
           {final String? name,
-          @JsonKey(name: '_name')
-              final Element? nameElement,
+          @JsonKey(name: '_name') final Element? nameElement,
           final OperationDefinitionParameterUse? use,
-          @JsonKey(name: '_use')
-              final Element? useElement,
+          @JsonKey(name: '_use') final Element? useElement,
           final FhirDecimal? min,
-          @JsonKey(name: '_min')
-              final Element? minElement,
+          @JsonKey(name: '_min') final Element? minElement,
           final String? max,
-          @JsonKey(name: '_max')
-              final Element? maxElement,
+          @JsonKey(name: '_max') final Element? maxElement,
           final String? documentation,
-          @JsonKey(name: '_documentation')
-              final Element? documentationElement,
+          @JsonKey(name: '_documentation') final Element? documentationElement,
           final String? type,
-          @JsonKey(name: '_type')
-              final Element? typeElement,
+          @JsonKey(name: '_type') final Element? typeElement,
           final OperationDefinitionParameterSearchType? searchType,
-          @JsonKey(name: '_searchType')
-              final Element? searchTypeElement,
+          @JsonKey(name: '_searchType') final Element? searchTypeElement,
           final Reference? profile,
           final OperationDefinitionBinding? binding,
           @JsonKey(name: 'part')
-              final List<OperationDefinitionParameter>? part_}) =
+          final List<OperationDefinitionParameter>? part_}) =
       _$_OperationDefinitionParameter;
   const _OperationDefinitionParameter._() : super._();
 
@@ -21861,10 +21302,9 @@ class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
   const _$_OperationDefinitionOverload(
       {final List<String>? parameterName,
       @JsonKey(name: '_parameterName')
-          final List<Element?>? parameterNameElement,
+      final List<Element?>? parameterNameElement,
       this.comment,
-      @JsonKey(name: '_comment')
-          this.commentElement})
+      @JsonKey(name: '_comment') this.commentElement})
       : _parameterName = parameterName,
         _parameterNameElement = parameterNameElement,
         super._();
@@ -21946,12 +21386,12 @@ class _$_OperationDefinitionOverload extends _OperationDefinitionOverload {
 abstract class _OperationDefinitionOverload
     extends OperationDefinitionOverload {
   const factory _OperationDefinitionOverload(
-      {final List<String>? parameterName,
-      @JsonKey(name: '_parameterName')
+          {final List<String>? parameterName,
+          @JsonKey(name: '_parameterName')
           final List<Element?>? parameterNameElement,
-      final String? comment,
-      @JsonKey(name: '_comment')
-          final Element? commentElement}) = _$_OperationDefinitionOverload;
+          final String? comment,
+          @JsonKey(name: '_comment') final Element? commentElement}) =
+      _$_OperationDefinitionOverload;
   const _OperationDefinitionOverload._() : super._();
 
   factory _OperationDefinitionOverload.fromJson(Map<String, dynamic> json) =
@@ -22081,86 +21521,61 @@ abstract class $SearchParameterCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       SearchParameterStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       FhirCode? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       List<String>? base,
-      @JsonKey(name: '_base')
-          List<Element?>? baseElement,
+      @JsonKey(name: '_base') List<Element?>? baseElement,
       SearchParameterType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       String? derivedFrom,
-      @JsonKey(name: '_derivedFrom')
-          Element? derivedFromElement,
+      @JsonKey(name: '_derivedFrom') Element? derivedFromElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       String? expression,
-      @JsonKey(name: '_expression')
-          Element? expressionElement,
+      @JsonKey(name: '_expression') Element? expressionElement,
       String? xpath,
-      @JsonKey(name: '_xpath')
-          Element? xpathElement,
+      @JsonKey(name: '_xpath') Element? xpathElement,
       SearchParameterXpathUsage? xpathUsage,
-      @JsonKey(name: '_xpathUsage')
-          Element? xpathUsageElement,
+      @JsonKey(name: '_xpathUsage') Element? xpathUsageElement,
       List<String>? target,
-      @JsonKey(name: '_target')
-          List<Element?>? targetElement,
+      @JsonKey(name: '_target') List<Element?>? targetElement,
       List<SearchParameterComparator>? comparator,
-      @JsonKey(name: '_comparator')
-          List<Element?>? comparatorElement,
+      @JsonKey(name: '_comparator') List<Element?>? comparatorElement,
       List<SearchParameterModifier>? modifier,
-      @JsonKey(name: '_modifier')
-          List<Element?>? modifierElement,
+      @JsonKey(name: '_modifier') List<Element?>? modifierElement,
       List<String>? chain,
-      @JsonKey(name: '_chain')
-          List<Element?>? chainElement,
+      @JsonKey(name: '_chain') List<Element?>? chainElement,
       List<SearchParameterComponent>? component});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -22721,86 +22136,61 @@ abstract class _$$_SearchParameterCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       SearchParameterStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       FhirCode? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       List<String>? base,
-      @JsonKey(name: '_base')
-          List<Element?>? baseElement,
+      @JsonKey(name: '_base') List<Element?>? baseElement,
       SearchParameterType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       String? derivedFrom,
-      @JsonKey(name: '_derivedFrom')
-          Element? derivedFromElement,
+      @JsonKey(name: '_derivedFrom') Element? derivedFromElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       String? expression,
-      @JsonKey(name: '_expression')
-          Element? expressionElement,
+      @JsonKey(name: '_expression') Element? expressionElement,
       String? xpath,
-      @JsonKey(name: '_xpath')
-          Element? xpathElement,
+      @JsonKey(name: '_xpath') Element? xpathElement,
       SearchParameterXpathUsage? xpathUsage,
-      @JsonKey(name: '_xpathUsage')
-          Element? xpathUsageElement,
+      @JsonKey(name: '_xpathUsage') Element? xpathUsageElement,
       List<String>? target,
-      @JsonKey(name: '_target')
-          List<Element?>? targetElement,
+      @JsonKey(name: '_target') List<Element?>? targetElement,
       List<SearchParameterComparator>? comparator,
-      @JsonKey(name: '_comparator')
-          List<Element?>? comparatorElement,
+      @JsonKey(name: '_comparator') List<Element?>? comparatorElement,
       List<SearchParameterModifier>? modifier,
-      @JsonKey(name: '_modifier')
-          List<Element?>? modifierElement,
+      @JsonKey(name: '_modifier') List<Element?>? modifierElement,
       List<String>? chain,
-      @JsonKey(name: '_chain')
-          List<Element?>? chainElement,
+      @JsonKey(name: '_chain') List<Element?>? chainElement,
       List<SearchParameterComponent>? component});
 
   @override
@@ -23145,86 +22535,61 @@ class __$$_SearchParameterCopyWithImpl<$Res>
 class _$_SearchParameter extends _SearchParameter {
   const _$_SearchParameter(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
-          this.resourceType = Stu3ResourceType.SearchParameter,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.SearchParameter,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<ContactDetail>? contact,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.code,
-      @JsonKey(name: '_code')
-          this.codeElement,
+      @JsonKey(name: '_code') this.codeElement,
       final List<String>? base,
-      @JsonKey(name: '_base')
-          final List<Element?>? baseElement,
+      @JsonKey(name: '_base') final List<Element?>? baseElement,
       this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: '_type') this.typeElement,
       this.derivedFrom,
-      @JsonKey(name: '_derivedFrom')
-          this.derivedFromElement,
+      @JsonKey(name: '_derivedFrom') this.derivedFromElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.expression,
-      @JsonKey(name: '_expression')
-          this.expressionElement,
+      @JsonKey(name: '_expression') this.expressionElement,
       this.xpath,
-      @JsonKey(name: '_xpath')
-          this.xpathElement,
+      @JsonKey(name: '_xpath') this.xpathElement,
       this.xpathUsage,
-      @JsonKey(name: '_xpathUsage')
-          this.xpathUsageElement,
+      @JsonKey(name: '_xpathUsage') this.xpathUsageElement,
       final List<String>? target,
-      @JsonKey(name: '_target')
-          final List<Element?>? targetElement,
+      @JsonKey(name: '_target') final List<Element?>? targetElement,
       final List<SearchParameterComparator>? comparator,
-      @JsonKey(name: '_comparator')
-          final List<Element?>? comparatorElement,
+      @JsonKey(name: '_comparator') final List<Element?>? comparatorElement,
       final List<SearchParameterModifier>? modifier,
-      @JsonKey(name: '_modifier')
-          final List<Element?>? modifierElement,
+      @JsonKey(name: '_modifier') final List<Element?>? modifierElement,
       final List<String>? chain,
-      @JsonKey(name: '_chain')
-          final List<Element?>? chainElement,
+      @JsonKey(name: '_chain') final List<Element?>? chainElement,
       final List<SearchParameterComponent>? component})
       : _contained = contained,
         _extension_ = extension_,
@@ -23709,86 +23074,61 @@ class _$_SearchParameter extends _SearchParameter {
 abstract class _SearchParameter extends SearchParameter {
   const factory _SearchParameter(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.SearchParameter)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final SearchParameterStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
       final FhirDate? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final List<ContactDetail>? contact,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       final String? purpose,
-      @JsonKey(name: '_purpose')
-          final Element? purposeElement,
+      @JsonKey(name: '_purpose') final Element? purposeElement,
       final FhirCode? code,
-      @JsonKey(name: '_code')
-          final Element? codeElement,
+      @JsonKey(name: '_code') final Element? codeElement,
       final List<String>? base,
-      @JsonKey(name: '_base')
-          final List<Element?>? baseElement,
+      @JsonKey(name: '_base') final List<Element?>? baseElement,
       final SearchParameterType? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      @JsonKey(name: '_type') final Element? typeElement,
       final String? derivedFrom,
-      @JsonKey(name: '_derivedFrom')
-          final Element? derivedFromElement,
+      @JsonKey(name: '_derivedFrom') final Element? derivedFromElement,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final String? expression,
-      @JsonKey(name: '_expression')
-          final Element? expressionElement,
+      @JsonKey(name: '_expression') final Element? expressionElement,
       final String? xpath,
-      @JsonKey(name: '_xpath')
-          final Element? xpathElement,
+      @JsonKey(name: '_xpath') final Element? xpathElement,
       final SearchParameterXpathUsage? xpathUsage,
-      @JsonKey(name: '_xpathUsage')
-          final Element? xpathUsageElement,
+      @JsonKey(name: '_xpathUsage') final Element? xpathUsageElement,
       final List<String>? target,
-      @JsonKey(name: '_target')
-          final List<Element?>? targetElement,
+      @JsonKey(name: '_target') final List<Element?>? targetElement,
       final List<SearchParameterComparator>? comparator,
-      @JsonKey(name: '_comparator')
-          final List<Element?>? comparatorElement,
+      @JsonKey(name: '_comparator') final List<Element?>? comparatorElement,
       final List<SearchParameterModifier>? modifier,
-      @JsonKey(name: '_modifier')
-          final List<Element?>? modifierElement,
+      @JsonKey(name: '_modifier') final List<Element?>? modifierElement,
       final List<String>? chain,
-      @JsonKey(name: '_chain')
-          final List<Element?>? chainElement,
+      @JsonKey(name: '_chain') final List<Element?>? chainElement,
       final List<SearchParameterComponent>? component}) = _$_SearchParameter;
   const _SearchParameter._() : super._();
 
@@ -24277,90 +23617,65 @@ abstract class $StructureDefinitionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       StructureDefinitionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       List<Coding>? keyword,
       String? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       List<StructureDefinitionMapping>? mapping,
       StructureDefinitionKind? kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
-      @JsonKey(name: 'abstract')
-          FhirBoolean? abstract_,
-      @JsonKey(name: '_abstract')
-          Element? abstractElement,
+      @JsonKey(name: '_kind') Element? kindElement,
+      @JsonKey(name: 'abstract') FhirBoolean? abstract_,
+      @JsonKey(name: '_abstract') Element? abstractElement,
       StructureDefinitionContextType? contextType,
-      @JsonKey(name: '_contextType')
-          Element? contextTypeElement,
+      @JsonKey(name: '_contextType') Element? contextTypeElement,
       List<String>? context,
-      @JsonKey(name: '_context')
-          List<Element?>? contextElement,
+      @JsonKey(name: '_context') List<Element?>? contextElement,
       List<String>? contextInvariant,
       @JsonKey(name: '_contextInvariant')
-          List<Element?>? contextInvariantElement,
+      List<Element?>? contextInvariantElement,
       String? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       String? baseDefinition,
-      @JsonKey(name: '_baseDefinition')
-          Element? baseDefinitionElement,
+      @JsonKey(name: '_baseDefinition') Element? baseDefinitionElement,
       StructureDefinitionDerivation? derivation,
-      @JsonKey(name: '_derivation')
-          Element? derivationElement,
+      @JsonKey(name: '_derivation') Element? derivationElement,
       StructureDefinitionSnapshot? snapshot,
       StructureDefinitionDifferential? differential});
 
@@ -25009,90 +24324,65 @@ abstract class _$$_StructureDefinitionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       StructureDefinitionStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       List<Coding>? keyword,
       String? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          Element? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
       List<StructureDefinitionMapping>? mapping,
       StructureDefinitionKind? kind,
-      @JsonKey(name: '_kind')
-          Element? kindElement,
-      @JsonKey(name: 'abstract')
-          FhirBoolean? abstract_,
-      @JsonKey(name: '_abstract')
-          Element? abstractElement,
+      @JsonKey(name: '_kind') Element? kindElement,
+      @JsonKey(name: 'abstract') FhirBoolean? abstract_,
+      @JsonKey(name: '_abstract') Element? abstractElement,
       StructureDefinitionContextType? contextType,
-      @JsonKey(name: '_contextType')
-          Element? contextTypeElement,
+      @JsonKey(name: '_contextType') Element? contextTypeElement,
       List<String>? context,
-      @JsonKey(name: '_context')
-          List<Element?>? contextElement,
+      @JsonKey(name: '_context') List<Element?>? contextElement,
       List<String>? contextInvariant,
       @JsonKey(name: '_contextInvariant')
-          List<Element?>? contextInvariantElement,
+      List<Element?>? contextInvariantElement,
       String? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       String? baseDefinition,
-      @JsonKey(name: '_baseDefinition')
-          Element? baseDefinitionElement,
+      @JsonKey(name: '_baseDefinition') Element? baseDefinitionElement,
       StructureDefinitionDerivation? derivation,
-      @JsonKey(name: '_derivation')
-          Element? derivationElement,
+      @JsonKey(name: '_derivation') Element? derivationElement,
       StructureDefinitionSnapshot? snapshot,
       StructureDefinitionDifferential? differential});
 
@@ -25468,90 +24758,65 @@ class __$$_StructureDefinitionCopyWithImpl<$Res>
 class _$_StructureDefinition extends _StructureDefinition {
   const _$_StructureDefinition(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
-          this.resourceType = Stu3ResourceType.StructureDefinition,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.StructureDefinition,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       final List<Identifier>? identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<ContactDetail>? contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       final List<Coding>? keyword,
       this.fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          this.fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') this.fhirVersionElement,
       final List<StructureDefinitionMapping>? mapping,
       this.kind,
-      @JsonKey(name: '_kind')
-          this.kindElement,
-      @JsonKey(name: 'abstract')
-          this.abstract_,
-      @JsonKey(name: '_abstract')
-          this.abstractElement,
+      @JsonKey(name: '_kind') this.kindElement,
+      @JsonKey(name: 'abstract') this.abstract_,
+      @JsonKey(name: '_abstract') this.abstractElement,
       this.contextType,
-      @JsonKey(name: '_contextType')
-          this.contextTypeElement,
+      @JsonKey(name: '_contextType') this.contextTypeElement,
       final List<String>? context,
-      @JsonKey(name: '_context')
-          final List<Element?>? contextElement,
+      @JsonKey(name: '_context') final List<Element?>? contextElement,
       final List<String>? contextInvariant,
       @JsonKey(name: '_contextInvariant')
-          final List<Element?>? contextInvariantElement,
+      final List<Element?>? contextInvariantElement,
       this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: '_type') this.typeElement,
       this.baseDefinition,
-      @JsonKey(name: '_baseDefinition')
-          this.baseDefinitionElement,
+      @JsonKey(name: '_baseDefinition') this.baseDefinitionElement,
       this.derivation,
-      @JsonKey(name: '_derivation')
-          this.derivationElement,
+      @JsonKey(name: '_derivation') this.derivationElement,
       this.snapshot,
       this.differential})
       : _contained = contained,
@@ -26024,94 +25289,69 @@ class _$_StructureDefinition extends _StructureDefinition {
 
 abstract class _StructureDefinition extends StructureDefinition {
   const factory _StructureDefinition(
-          {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
-              final Stu3ResourceType resourceType,
-          @JsonKey(includeFromJson: true, includeToJson: false)
-              final int? dbId,
-          @JsonKey(name: 'id')
-              final FhirId? fhirId,
-          final FhirMeta? meta,
-          final FhirUri? implicitRules,
-          @JsonKey(name: '_implicitRules')
-              final Element? implicitRulesElement,
-          final FhirCode? language,
-          @JsonKey(name: '_language')
-              final Element? languageElement,
-          final Narrative? text,
-          final List<Resource>? contained,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final String? url,
-          @JsonKey(name: '_url')
-              final Element? urlElement,
-          final List<Identifier>? identifier,
-          final String? version,
-          @JsonKey(name: '_version')
-              final Element? versionElement,
-          final String? name,
-          @JsonKey(name: '_name')
-              final Element? nameElement,
-          final String? title,
-          @JsonKey(name: '_title')
-              final Element? titleElement,
-          final StructureDefinitionStatus? status,
-          @JsonKey(name: '_status')
-              final Element? statusElement,
-          final FhirBoolean? experimental,
-          @JsonKey(name: '_experimental')
-              final Element? experimentalElement,
-          final FhirDateTime? date,
-          @JsonKey(name: '_date')
-              final Element? dateElement,
-          final String? publisher,
-          @JsonKey(name: '_publisher')
-              final Element? publisherElement,
-          final List<ContactDetail>? contact,
-          final String? description,
-          @JsonKey(name: '_description')
-              final Element? descriptionElement,
-          final List<UsageContext>? useContext,
-          final List<CodeableConcept>? jurisdiction,
-          final String? purpose,
-          @JsonKey(name: '_purpose')
-              final Element? purposeElement,
-          final String? copyright,
-          @JsonKey(name: '_copyright')
-              final Element? copyrightElement,
-          final List<Coding>? keyword,
-          final String? fhirVersion,
-          @JsonKey(name: '_fhirVersion')
-              final Element? fhirVersionElement,
-          final List<StructureDefinitionMapping>? mapping,
-          final StructureDefinitionKind? kind,
-          @JsonKey(name: '_kind')
-              final Element? kindElement,
-          @JsonKey(name: 'abstract')
-              final FhirBoolean? abstract_,
-          @JsonKey(name: '_abstract')
-              final Element? abstractElement,
-          final StructureDefinitionContextType? contextType,
-          @JsonKey(name: '_contextType')
-              final Element? contextTypeElement,
-          final List<String>? context,
-          @JsonKey(name: '_context')
-              final List<Element?>? contextElement,
-          final List<String>? contextInvariant,
-          @JsonKey(name: '_contextInvariant')
-              final List<Element?>? contextInvariantElement,
-          final String? type,
-          @JsonKey(name: '_type')
-              final Element? typeElement,
-          final String? baseDefinition,
-          @JsonKey(name: '_baseDefinition')
-              final Element? baseDefinitionElement,
-          final StructureDefinitionDerivation? derivation,
-          @JsonKey(name: '_derivation')
-              final Element? derivationElement,
-          final StructureDefinitionSnapshot? snapshot,
-          final StructureDefinitionDifferential? differential}) =
-      _$_StructureDefinition;
+      {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureDefinition)
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
+      final FhirMeta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final FhirCode? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final String? url,
+      @JsonKey(name: '_url') final Element? urlElement,
+      final List<Identifier>? identifier,
+      final String? version,
+      @JsonKey(name: '_version') final Element? versionElement,
+      final String? name,
+      @JsonKey(name: '_name') final Element? nameElement,
+      final String? title,
+      @JsonKey(name: '_title') final Element? titleElement,
+      final StructureDefinitionStatus? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final FhirBoolean? experimental,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
+      final FhirDateTime? date,
+      @JsonKey(name: '_date') final Element? dateElement,
+      final String? publisher,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
+      final List<ContactDetail>? contact,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final List<UsageContext>? useContext,
+      final List<CodeableConcept>? jurisdiction,
+      final String? purpose,
+      @JsonKey(name: '_purpose') final Element? purposeElement,
+      final String? copyright,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
+      final List<Coding>? keyword,
+      final String? fhirVersion,
+      @JsonKey(name: '_fhirVersion') final Element? fhirVersionElement,
+      final List<StructureDefinitionMapping>? mapping,
+      final StructureDefinitionKind? kind,
+      @JsonKey(name: '_kind') final Element? kindElement,
+      @JsonKey(name: 'abstract') final FhirBoolean? abstract_,
+      @JsonKey(name: '_abstract') final Element? abstractElement,
+      final StructureDefinitionContextType? contextType,
+      @JsonKey(name: '_contextType') final Element? contextTypeElement,
+      final List<String>? context,
+      @JsonKey(name: '_context') final List<Element?>? contextElement,
+      final List<String>? contextInvariant,
+      @JsonKey(name: '_contextInvariant')
+      final List<Element?>? contextInvariantElement,
+      final String? type,
+      @JsonKey(name: '_type') final Element? typeElement,
+      final String? baseDefinition,
+      @JsonKey(name: '_baseDefinition') final Element? baseDefinitionElement,
+      final StructureDefinitionDerivation? derivation,
+      @JsonKey(name: '_derivation') final Element? derivationElement,
+      final StructureDefinitionSnapshot? snapshot,
+      final StructureDefinitionDifferential?
+          differential}) = _$_StructureDefinition;
   const _StructureDefinition._() : super._();
 
   factory _StructureDefinition.fromJson(Map<String, dynamic> json) =
@@ -27042,65 +26282,47 @@ abstract class $StructureMapCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       StructureMapStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       List<StructureMapStructure>? structure,
-      @JsonKey(name: 'import')
-          List<String>? import_,
-      @JsonKey(name: '_import')
-          List<Element?>? importElement,
+      @JsonKey(name: 'import') List<String>? import_,
+      @JsonKey(name: '_import') List<Element?>? importElement,
       List<StructureMapGroup> group});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -27539,65 +26761,47 @@ abstract class _$$_StructureMapCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
-          Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       StructureMapStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ContactDetail>? contact,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<UsageContext>? useContext,
       List<CodeableConcept>? jurisdiction,
       String? purpose,
-      @JsonKey(name: '_purpose')
-          Element? purposeElement,
+      @JsonKey(name: '_purpose') Element? purposeElement,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       List<StructureMapStructure>? structure,
-      @JsonKey(name: 'import')
-          List<String>? import_,
-      @JsonKey(name: '_import')
-          List<Element?>? importElement,
+      @JsonKey(name: 'import') List<String>? import_,
+      @JsonKey(name: '_import') List<Element?>? importElement,
       List<StructureMapGroup> group});
 
   @override
@@ -27864,65 +27068,47 @@ class __$$_StructureMapCopyWithImpl<$Res>
 class _$_StructureMap extends _StructureMap {
   const _$_StructureMap(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
-          this.resourceType = Stu3ResourceType.StructureMap,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Stu3ResourceType.StructureMap,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       final List<Identifier>? identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<ContactDetail>? contact,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       this.purpose,
-      @JsonKey(name: '_purpose')
-          this.purposeElement,
+      @JsonKey(name: '_purpose') this.purposeElement,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       final List<StructureMapStructure>? structure,
-      @JsonKey(name: 'import')
-          final List<String>? import_,
-      @JsonKey(name: '_import')
-          final List<Element?>? importElement,
+      @JsonKey(name: 'import') final List<String>? import_,
+      @JsonKey(name: '_import') final List<Element?>? importElement,
       required final List<StructureMapGroup> group})
       : _contained = contained,
         _extension_ = extension_,
@@ -28277,65 +27463,47 @@ class _$_StructureMap extends _StructureMap {
 abstract class _StructureMap extends StructureMap {
   const factory _StructureMap(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.StructureMap)
-          final Stu3ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Stu3ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final List<Identifier>? identifier,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
-      @JsonKey(name: '_title')
-          final Element? titleElement,
+      @JsonKey(name: '_title') final Element? titleElement,
       final StructureMapStatus? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
       final FhirDate? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final List<ContactDetail>? contact,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<UsageContext>? useContext,
       final List<CodeableConcept>? jurisdiction,
       final String? purpose,
-      @JsonKey(name: '_purpose')
-          final Element? purposeElement,
+      @JsonKey(name: '_purpose') final Element? purposeElement,
       final String? copyright,
-      @JsonKey(name: '_copyright')
-          final Element? copyrightElement,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
       final List<StructureMapStructure>? structure,
-      @JsonKey(name: 'import')
-          final List<String>? import_,
-      @JsonKey(name: '_import')
-          final List<Element?>? importElement,
+      @JsonKey(name: 'import') final List<String>? import_,
+      @JsonKey(name: '_import') final List<Element?>? importElement,
       required final List<StructureMapGroup> group}) = _$_StructureMap;
   const _StructureMap._() : super._();
 
@@ -28778,17 +27946,14 @@ class _$_StructureMapStructure extends _StructureMapStructure {
 abstract class _StructureMapStructure extends StructureMapStructure {
   const factory _StructureMapStructure(
       {final String? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final StructureMapStructureMode? mode,
-      @JsonKey(name: '_mode')
-          final Element? modeElement,
+      @JsonKey(name: '_mode') final Element? modeElement,
       final String? alias,
-      @JsonKey(name: '_alias')
-          final Element? aliasElement,
+      @JsonKey(name: '_alias') final Element? aliasElement,
       final String? documentation,
       @JsonKey(name: '_documentation')
-          final Element? documentationElement}) = _$_StructureMapStructure;
+      final Element? documentationElement}) = _$_StructureMapStructure;
   const _StructureMapStructure._() : super._();
 
   factory _StructureMapStructure.fromJson(Map<String, dynamic> json) =
@@ -29576,17 +28741,14 @@ class _$_StructureMapInput extends _StructureMapInput {
 abstract class _StructureMapInput extends StructureMapInput {
   const factory _StructureMapInput(
       {final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       final String? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      @JsonKey(name: '_type') final Element? typeElement,
       final StructureMapInputMode? mode,
-      @JsonKey(name: '_mode')
-          final Element? modeElement,
+      @JsonKey(name: '_mode') final Element? modeElement,
       final String? documentation,
       @JsonKey(name: '_documentation')
-          final Element? documentationElement}) = _$_StructureMapInput;
+      final Element? documentationElement}) = _$_StructureMapInput;
   const _StructureMapInput._() : super._();
 
   factory _StructureMapInput.fromJson(Map<String, dynamic> json) =
@@ -29950,15 +29112,14 @@ class _$_StructureMapRule extends _StructureMapRule {
 abstract class _StructureMapRule extends StructureMapRule {
   const factory _StructureMapRule(
       {final String? name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       required final List<StructureMapSource> source,
       final List<StructureMapTarget>? target,
       final List<StructureMapRule>? rule,
       final List<StructureMapDependent>? dependent,
       final String? documentation,
       @JsonKey(name: '_documentation')
-          final Element? documentationElement}) = _$_StructureMapRule;
+      final Element? documentationElement}) = _$_StructureMapRule;
   const _StructureMapRule._() : super._();
 
   factory _StructureMapRule.fromJson(Map<String, dynamic> json) =
@@ -30145,68 +29306,56 @@ abstract class $StructureMapSourceCopyWith<$Res> {
   @useResult
   $Res call(
       {String? context,
-      @JsonKey(name: '_context')
-          Element? contextElement,
+      @JsonKey(name: '_context') Element? contextElement,
       FhirDecimal? min,
-      @JsonKey(name: '_min')
-          Element? minElement,
+      @JsonKey(name: '_min') Element? minElement,
       String? max,
-      @JsonKey(name: '_max')
-          Element? maxElement,
+      @JsonKey(name: '_max') Element? maxElement,
       String? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirBoolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
-          Element? defaultValueBooleanElement,
+      Element? defaultValueBooleanElement,
       FhirDecimal? defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
-          Element? defaultValueIntegerElement,
+      Element? defaultValueIntegerElement,
       FhirDecimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
-          Element? defaultValueDecimalElement,
+      Element? defaultValueDecimalElement,
       String? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
-          Element? defaultValueBase64BinaryElement,
+      Element? defaultValueBase64BinaryElement,
       String? defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
-          Element? defaultValueInstantElement,
+      Element? defaultValueInstantElement,
       String? defaultValueString,
-      @JsonKey(name: '_defaultValueString')
-          Element? defaultValueStringElement,
+      @JsonKey(name: '_defaultValueString') Element? defaultValueStringElement,
       String? defaultValueUri,
-      @JsonKey(name: '_defaultValueUri')
-          Element? defaultValueUriElement,
+      @JsonKey(name: '_defaultValueUri') Element? defaultValueUriElement,
       FhirDate? defaultValueDate,
-      @JsonKey(name: '_defaultValueDate')
-          Element? defaultValueDateElement,
+      @JsonKey(name: '_defaultValueDate') Element? defaultValueDateElement,
       FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
-          Element? defaultValueDateTimeElement,
+      Element? defaultValueDateTimeElement,
       FhirTime? defaultValueTime,
-      @JsonKey(name: '_defaultValueTime')
-          Element? defaultValueTimeElement,
+      @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
       FhirCode? defaultValueCode,
-      @JsonKey(name: '_defaultValueCode')
-          Element? defaultValueCodeElement,
+      @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
       FhirId? defaultValueOid,
-      @JsonKey(name: '_defaultValueOid')
-          Element? defaultValueOidElement,
+      @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
       FhirId? defaultValueUuid,
-      @JsonKey(name: '_defaultValueUuid')
-          Element? defaultValueUuidElement,
+      @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
       FhirId? defaultValueId,
-      @JsonKey(name: '_defaultValueId')
-          Element? defaultValueIdElement,
+      @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
       FhirDecimal? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
-          Element? defaultValueUnsignedIntElement,
+      Element? defaultValueUnsignedIntElement,
       FhirDecimal? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
-          Element? defaultValuePositiveIntElement,
+      Element? defaultValuePositiveIntElement,
       String? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
-          Element? defaultValueMarkdownElement,
+      Element? defaultValueMarkdownElement,
       Element? defaultValueElement,
       FhirExtension? defaultValueExtension,
       BackboneElement? defaultValueBackboneElement,
@@ -30244,20 +29393,15 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       ParameterDefinition? defaultValueParameterDefinition,
       TriggerDefinition? defaultValueTriggerDefinition,
       String? element,
-      @JsonKey(name: '_element')
-          Element? elementElement,
+      @JsonKey(name: '_element') Element? elementElement,
       StructureMapSourceListMode? listMode,
-      @JsonKey(name: '_listMode')
-          Element? listModeElement,
+      @JsonKey(name: '_listMode') Element? listModeElement,
       String? variable,
-      @JsonKey(name: '_variable')
-          Element? variableElement,
+      @JsonKey(name: '_variable') Element? variableElement,
       String? condition,
-      @JsonKey(name: '_condition')
-          Element? conditionElement,
+      @JsonKey(name: '_condition') Element? conditionElement,
       String? check,
-      @JsonKey(name: '_check')
-          Element? checkElement});
+      @JsonKey(name: '_check') Element? checkElement});
 
   $ElementCopyWith<$Res>? get contextElement;
   $ElementCopyWith<$Res>? get minElement;
@@ -31557,68 +30701,56 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
   @useResult
   $Res call(
       {String? context,
-      @JsonKey(name: '_context')
-          Element? contextElement,
+      @JsonKey(name: '_context') Element? contextElement,
       FhirDecimal? min,
-      @JsonKey(name: '_min')
-          Element? minElement,
+      @JsonKey(name: '_min') Element? minElement,
       String? max,
-      @JsonKey(name: '_max')
-          Element? maxElement,
+      @JsonKey(name: '_max') Element? maxElement,
       String? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: '_type') Element? typeElement,
       FhirBoolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
-          Element? defaultValueBooleanElement,
+      Element? defaultValueBooleanElement,
       FhirDecimal? defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
-          Element? defaultValueIntegerElement,
+      Element? defaultValueIntegerElement,
       FhirDecimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
-          Element? defaultValueDecimalElement,
+      Element? defaultValueDecimalElement,
       String? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
-          Element? defaultValueBase64BinaryElement,
+      Element? defaultValueBase64BinaryElement,
       String? defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
-          Element? defaultValueInstantElement,
+      Element? defaultValueInstantElement,
       String? defaultValueString,
-      @JsonKey(name: '_defaultValueString')
-          Element? defaultValueStringElement,
+      @JsonKey(name: '_defaultValueString') Element? defaultValueStringElement,
       String? defaultValueUri,
-      @JsonKey(name: '_defaultValueUri')
-          Element? defaultValueUriElement,
+      @JsonKey(name: '_defaultValueUri') Element? defaultValueUriElement,
       FhirDate? defaultValueDate,
-      @JsonKey(name: '_defaultValueDate')
-          Element? defaultValueDateElement,
+      @JsonKey(name: '_defaultValueDate') Element? defaultValueDateElement,
       FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
-          Element? defaultValueDateTimeElement,
+      Element? defaultValueDateTimeElement,
       FhirTime? defaultValueTime,
-      @JsonKey(name: '_defaultValueTime')
-          Element? defaultValueTimeElement,
+      @JsonKey(name: '_defaultValueTime') Element? defaultValueTimeElement,
       FhirCode? defaultValueCode,
-      @JsonKey(name: '_defaultValueCode')
-          Element? defaultValueCodeElement,
+      @JsonKey(name: '_defaultValueCode') Element? defaultValueCodeElement,
       FhirId? defaultValueOid,
-      @JsonKey(name: '_defaultValueOid')
-          Element? defaultValueOidElement,
+      @JsonKey(name: '_defaultValueOid') Element? defaultValueOidElement,
       FhirId? defaultValueUuid,
-      @JsonKey(name: '_defaultValueUuid')
-          Element? defaultValueUuidElement,
+      @JsonKey(name: '_defaultValueUuid') Element? defaultValueUuidElement,
       FhirId? defaultValueId,
-      @JsonKey(name: '_defaultValueId')
-          Element? defaultValueIdElement,
+      @JsonKey(name: '_defaultValueId') Element? defaultValueIdElement,
       FhirDecimal? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
-          Element? defaultValueUnsignedIntElement,
+      Element? defaultValueUnsignedIntElement,
       FhirDecimal? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
-          Element? defaultValuePositiveIntElement,
+      Element? defaultValuePositiveIntElement,
       String? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
-          Element? defaultValueMarkdownElement,
+      Element? defaultValueMarkdownElement,
       Element? defaultValueElement,
       FhirExtension? defaultValueExtension,
       BackboneElement? defaultValueBackboneElement,
@@ -31656,20 +30788,15 @@ abstract class _$$_StructureMapSourceCopyWith<$Res>
       ParameterDefinition? defaultValueParameterDefinition,
       TriggerDefinition? defaultValueTriggerDefinition,
       String? element,
-      @JsonKey(name: '_element')
-          Element? elementElement,
+      @JsonKey(name: '_element') Element? elementElement,
       StructureMapSourceListMode? listMode,
-      @JsonKey(name: '_listMode')
-          Element? listModeElement,
+      @JsonKey(name: '_listMode') Element? listModeElement,
       String? variable,
-      @JsonKey(name: '_variable')
-          Element? variableElement,
+      @JsonKey(name: '_variable') Element? variableElement,
       String? condition,
-      @JsonKey(name: '_condition')
-          Element? conditionElement,
+      @JsonKey(name: '_condition') Element? conditionElement,
       String? check,
-      @JsonKey(name: '_check')
-          Element? checkElement});
+      @JsonKey(name: '_check') Element? checkElement});
 
   @override
   $ElementCopyWith<$Res>? get contextElement;
@@ -32261,68 +31388,50 @@ class __$$_StructureMapSourceCopyWithImpl<$Res>
 class _$_StructureMapSource extends _StructureMapSource {
   const _$_StructureMapSource(
       {this.context,
-      @JsonKey(name: '_context')
-          this.contextElement,
+      @JsonKey(name: '_context') this.contextElement,
       this.min,
-      @JsonKey(name: '_min')
-          this.minElement,
+      @JsonKey(name: '_min') this.minElement,
       this.max,
-      @JsonKey(name: '_max')
-          this.maxElement,
+      @JsonKey(name: '_max') this.maxElement,
       this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(name: '_type') this.typeElement,
       this.defaultValueBoolean,
-      @JsonKey(name: '_defaultValueBoolean')
-          this.defaultValueBooleanElement,
+      @JsonKey(name: '_defaultValueBoolean') this.defaultValueBooleanElement,
       this.defaultValueInteger,
-      @JsonKey(name: '_defaultValueInteger')
-          this.defaultValueIntegerElement,
+      @JsonKey(name: '_defaultValueInteger') this.defaultValueIntegerElement,
       this.defaultValueDecimal,
-      @JsonKey(name: '_defaultValueDecimal')
-          this.defaultValueDecimalElement,
+      @JsonKey(name: '_defaultValueDecimal') this.defaultValueDecimalElement,
       this.defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
-          this.defaultValueBase64BinaryElement,
+      this.defaultValueBase64BinaryElement,
       this.defaultValueInstant,
-      @JsonKey(name: '_defaultValueInstant')
-          this.defaultValueInstantElement,
+      @JsonKey(name: '_defaultValueInstant') this.defaultValueInstantElement,
       this.defaultValueString,
-      @JsonKey(name: '_defaultValueString')
-          this.defaultValueStringElement,
+      @JsonKey(name: '_defaultValueString') this.defaultValueStringElement,
       this.defaultValueUri,
-      @JsonKey(name: '_defaultValueUri')
-          this.defaultValueUriElement,
+      @JsonKey(name: '_defaultValueUri') this.defaultValueUriElement,
       this.defaultValueDate,
-      @JsonKey(name: '_defaultValueDate')
-          this.defaultValueDateElement,
+      @JsonKey(name: '_defaultValueDate') this.defaultValueDateElement,
       this.defaultValueDateTime,
-      @JsonKey(name: '_defaultValueDateTime')
-          this.defaultValueDateTimeElement,
+      @JsonKey(name: '_defaultValueDateTime') this.defaultValueDateTimeElement,
       this.defaultValueTime,
-      @JsonKey(name: '_defaultValueTime')
-          this.defaultValueTimeElement,
+      @JsonKey(name: '_defaultValueTime') this.defaultValueTimeElement,
       this.defaultValueCode,
-      @JsonKey(name: '_defaultValueCode')
-          this.defaultValueCodeElement,
+      @JsonKey(name: '_defaultValueCode') this.defaultValueCodeElement,
       this.defaultValueOid,
-      @JsonKey(name: '_defaultValueOid')
-          this.defaultValueOidElement,
+      @JsonKey(name: '_defaultValueOid') this.defaultValueOidElement,
       this.defaultValueUuid,
-      @JsonKey(name: '_defaultValueUuid')
-          this.defaultValueUuidElement,
+      @JsonKey(name: '_defaultValueUuid') this.defaultValueUuidElement,
       this.defaultValueId,
-      @JsonKey(name: '_defaultValueId')
-          this.defaultValueIdElement,
+      @JsonKey(name: '_defaultValueId') this.defaultValueIdElement,
       this.defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
-          this.defaultValueUnsignedIntElement,
+      this.defaultValueUnsignedIntElement,
       this.defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
-          this.defaultValuePositiveIntElement,
+      this.defaultValuePositiveIntElement,
       this.defaultValueMarkdown,
-      @JsonKey(name: '_defaultValueMarkdown')
-          this.defaultValueMarkdownElement,
+      @JsonKey(name: '_defaultValueMarkdown') this.defaultValueMarkdownElement,
       this.defaultValueElement,
       this.defaultValueExtension,
       this.defaultValueBackboneElement,
@@ -32360,20 +31469,15 @@ class _$_StructureMapSource extends _StructureMapSource {
       this.defaultValueParameterDefinition,
       this.defaultValueTriggerDefinition,
       this.element,
-      @JsonKey(name: '_element')
-          this.elementElement,
+      @JsonKey(name: '_element') this.elementElement,
       this.listMode,
-      @JsonKey(name: '_listMode')
-          this.listModeElement,
+      @JsonKey(name: '_listMode') this.listModeElement,
       this.variable,
-      @JsonKey(name: '_variable')
-          this.variableElement,
+      @JsonKey(name: '_variable') this.variableElement,
       this.condition,
-      @JsonKey(name: '_condition')
-          this.conditionElement,
+      @JsonKey(name: '_condition') this.conditionElement,
       this.check,
-      @JsonKey(name: '_check')
-          this.checkElement})
+      @JsonKey(name: '_check') this.checkElement})
       : super._();
 
   factory _$_StructureMapSource.fromJson(Map<String, dynamic> json) =>
@@ -32823,68 +31927,61 @@ class _$_StructureMapSource extends _StructureMapSource {
 abstract class _StructureMapSource extends StructureMapSource {
   const factory _StructureMapSource(
       {final String? context,
-      @JsonKey(name: '_context')
-          final Element? contextElement,
+      @JsonKey(name: '_context') final Element? contextElement,
       final FhirDecimal? min,
-      @JsonKey(name: '_min')
-          final Element? minElement,
+      @JsonKey(name: '_min') final Element? minElement,
       final String? max,
-      @JsonKey(name: '_max')
-          final Element? maxElement,
+      @JsonKey(name: '_max') final Element? maxElement,
       final String? type,
-      @JsonKey(name: '_type')
-          final Element? typeElement,
+      @JsonKey(name: '_type') final Element? typeElement,
       final FhirBoolean? defaultValueBoolean,
       @JsonKey(name: '_defaultValueBoolean')
-          final Element? defaultValueBooleanElement,
+      final Element? defaultValueBooleanElement,
       final FhirDecimal? defaultValueInteger,
       @JsonKey(name: '_defaultValueInteger')
-          final Element? defaultValueIntegerElement,
+      final Element? defaultValueIntegerElement,
       final FhirDecimal? defaultValueDecimal,
       @JsonKey(name: '_defaultValueDecimal')
-          final Element? defaultValueDecimalElement,
+      final Element? defaultValueDecimalElement,
       final String? defaultValueBase64Binary,
       @JsonKey(name: '_defaultValueBase64Binary')
-          final Element? defaultValueBase64BinaryElement,
+      final Element? defaultValueBase64BinaryElement,
       final String? defaultValueInstant,
       @JsonKey(name: '_defaultValueInstant')
-          final Element? defaultValueInstantElement,
+      final Element? defaultValueInstantElement,
       final String? defaultValueString,
       @JsonKey(name: '_defaultValueString')
-          final Element? defaultValueStringElement,
+      final Element? defaultValueStringElement,
       final String? defaultValueUri,
-      @JsonKey(name: '_defaultValueUri')
-          final Element? defaultValueUriElement,
+      @JsonKey(name: '_defaultValueUri') final Element? defaultValueUriElement,
       final FhirDate? defaultValueDate,
       @JsonKey(name: '_defaultValueDate')
-          final Element? defaultValueDateElement,
+      final Element? defaultValueDateElement,
       final FhirDateTime? defaultValueDateTime,
       @JsonKey(name: '_defaultValueDateTime')
-          final Element? defaultValueDateTimeElement,
+      final Element? defaultValueDateTimeElement,
       final FhirTime? defaultValueTime,
       @JsonKey(name: '_defaultValueTime')
-          final Element? defaultValueTimeElement,
+      final Element? defaultValueTimeElement,
       final FhirCode? defaultValueCode,
       @JsonKey(name: '_defaultValueCode')
-          final Element? defaultValueCodeElement,
+      final Element? defaultValueCodeElement,
       final FhirId? defaultValueOid,
-      @JsonKey(name: '_defaultValueOid')
-          final Element? defaultValueOidElement,
+      @JsonKey(name: '_defaultValueOid') final Element? defaultValueOidElement,
       final FhirId? defaultValueUuid,
       @JsonKey(name: '_defaultValueUuid')
-          final Element? defaultValueUuidElement,
+      final Element? defaultValueUuidElement,
       final FhirId? defaultValueId,
-      @JsonKey(name: '_defaultValueId')
-          final Element? defaultValueIdElement,
+      @JsonKey(name: '_defaultValueId') final Element? defaultValueIdElement,
       final FhirDecimal? defaultValueUnsignedInt,
       @JsonKey(name: '_defaultValueUnsignedInt')
-          final Element? defaultValueUnsignedIntElement,
+      final Element? defaultValueUnsignedIntElement,
       final FhirDecimal? defaultValuePositiveInt,
       @JsonKey(name: '_defaultValuePositiveInt')
-          final Element? defaultValuePositiveIntElement,
+      final Element? defaultValuePositiveIntElement,
       final String? defaultValueMarkdown,
       @JsonKey(name: '_defaultValueMarkdown')
-          final Element? defaultValueMarkdownElement,
+      final Element? defaultValueMarkdownElement,
       final Element? defaultValueElement,
       final FhirExtension? defaultValueExtension,
       final BackboneElement? defaultValueBackboneElement,
@@ -32922,20 +32019,16 @@ abstract class _StructureMapSource extends StructureMapSource {
       final ParameterDefinition? defaultValueParameterDefinition,
       final TriggerDefinition? defaultValueTriggerDefinition,
       final String? element,
-      @JsonKey(name: '_element')
-          final Element? elementElement,
+      @JsonKey(name: '_element') final Element? elementElement,
       final StructureMapSourceListMode? listMode,
-      @JsonKey(name: '_listMode')
-          final Element? listModeElement,
+      @JsonKey(name: '_listMode') final Element? listModeElement,
       final String? variable,
-      @JsonKey(name: '_variable')
-          final Element? variableElement,
+      @JsonKey(name: '_variable') final Element? variableElement,
       final String? condition,
-      @JsonKey(name: '_condition')
-          final Element? conditionElement,
+      @JsonKey(name: '_condition') final Element? conditionElement,
       final String? check,
       @JsonKey(name: '_check')
-          final Element? checkElement}) = _$_StructureMapSource;
+      final Element? checkElement}) = _$_StructureMapSource;
   const _StructureMapSource._() : super._();
 
   factory _StructureMapSource.fromJson(Map<String, dynamic> json) =

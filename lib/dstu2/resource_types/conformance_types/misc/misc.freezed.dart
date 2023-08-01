@@ -96,56 +96,42 @@ abstract class $ImplementationGuideCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      @JsonKey(required: true, unknownEnumValue: ImplementationGuideStatus.unknown)
-          ImplementationGuideStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(
+          required: true, unknownEnumValue: ImplementationGuideStatus.unknown)
+      ImplementationGuideStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ImplementationGuideContact>? contact,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<CodeableConcept>? useContext,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       FhirId? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          List<Element?>? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
       List<ImplementationGuideDependency>? dependency,
       List<ImplementationGuidePackage> package,
       List<ImplementationGuideGlobal>? global,
@@ -556,56 +542,42 @@ abstract class _$$_ImplementationGuideCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
-      @JsonKey(required: true, unknownEnumValue: ImplementationGuideStatus.unknown)
-          ImplementationGuideStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(
+          required: true, unknownEnumValue: ImplementationGuideStatus.unknown)
+      ImplementationGuideStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<ImplementationGuideContact>? contact,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<CodeableConcept>? useContext,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       FhirId? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          List<Element?>? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') List<Element?>? fhirVersionElement,
       List<ImplementationGuideDependency>? dependency,
       List<ImplementationGuidePackage> package,
       List<ImplementationGuideGlobal>? global,
@@ -859,56 +831,42 @@ class __$$_ImplementationGuideCopyWithImpl<$Res>
 class _$_ImplementationGuide extends _ImplementationGuide {
   const _$_ImplementationGuide(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
-          this.resourceType = Dstu2ResourceType.ImplementationGuide,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.ImplementationGuide,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       required this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @JsonKey(required: true, unknownEnumValue: ImplementationGuideStatus.unknown)
-          required this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(
+          required: true, unknownEnumValue: ImplementationGuideStatus.unknown)
+      required this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<ImplementationGuideContact>? contact,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<CodeableConcept>? useContext,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          final List<Element?>? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') final List<Element?>? fhirVersionElement,
       final List<ImplementationGuideDependency>? dependency,
       required final List<ImplementationGuidePackage> package,
       final List<ImplementationGuideGlobal>? global,
@@ -1244,56 +1202,42 @@ class _$_ImplementationGuide extends _ImplementationGuide {
 abstract class _ImplementationGuide extends ImplementationGuide {
   const factory _ImplementationGuide(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final FhirUri url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final String? version,
-      @JsonKey(name: '_version')
-          final Element? versionElement,
+      @JsonKey(name: '_version') final Element? versionElement,
       required final String name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
-      @JsonKey(required: true, unknownEnumValue: ImplementationGuideStatus.unknown)
-          required final ImplementationGuideStatus status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_name') final Element? nameElement,
+      @JsonKey(
+          required: true, unknownEnumValue: ImplementationGuideStatus.unknown)
+      required final ImplementationGuideStatus status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final List<ImplementationGuideContact>? contact,
       final FhirDateTime? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<CodeableConcept>? useContext,
       final String? copyright,
-      @JsonKey(name: '_copyright')
-          final Element? copyrightElement,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
       final FhirId? fhirVersion,
-      @JsonKey(name: '_fhirVersion')
-          final List<Element?>? fhirVersionElement,
+      @JsonKey(name: '_fhirVersion') final List<Element?>? fhirVersionElement,
       final List<ImplementationGuideDependency>? dependency,
       required final List<ImplementationGuidePackage> package,
       final List<ImplementationGuideGlobal>? global,
@@ -1954,16 +1898,14 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
 abstract class _ImplementationGuideDependency
     extends ImplementationGuideDependency {
   const factory _ImplementationGuideDependency(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: DependencyType.unknown)
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(unknownEnumValue: DependencyType.unknown)
           required final DependencyType type,
-      required final FhirUri uri,
-      @JsonKey(name: '_uri')
-          final Element? uriElement}) = _$_ImplementationGuideDependency;
+          required final FhirUri uri,
+          @JsonKey(name: '_uri') final Element? uriElement}) =
+      _$_ImplementationGuideDependency;
   const _ImplementationGuideDependency._() : super._();
 
   factory _ImplementationGuideDependency.fromJson(Map<String, dynamic> json) =
@@ -2024,15 +1966,13 @@ abstract class $ImplementationGuidePackageCopyWith<$Res> {
           ImplementationGuidePackage>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String name,
       String? description,
       @JsonKey(required: true)
-          List<ImplementationGuidePackageResource> resource});
+      List<ImplementationGuidePackageResource> resource});
 }
 
 /// @nodoc
@@ -2095,15 +2035,13 @@ abstract class _$$_ImplementationGuidePackageCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String name,
       String? description,
       @JsonKey(required: true)
-          List<ImplementationGuidePackageResource> resource});
+      List<ImplementationGuidePackageResource> resource});
 }
 
 /// @nodoc
@@ -2159,15 +2097,13 @@ class __$$_ImplementationGuidePackageCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
   const _$_ImplementationGuidePackage(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.name,
       this.description,
       @JsonKey(required: true)
-          required final List<ImplementationGuidePackageResource> resource})
+      required final List<ImplementationGuidePackageResource> resource})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _resource = resource,
@@ -2263,16 +2199,14 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
 
 abstract class _ImplementationGuidePackage extends ImplementationGuidePackage {
   const factory _ImplementationGuidePackage(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required final String name,
-      final String? description,
-      @JsonKey(required: true)
-          required final List<ImplementationGuidePackageResource>
-              resource}) = _$_ImplementationGuidePackage;
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final String name,
+          final String? description,
+          @JsonKey(required: true)
+          required final List<ImplementationGuidePackageResource> resource}) =
+      _$_ImplementationGuidePackage;
   const _ImplementationGuidePackage._() : super._();
 
   factory _ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =
@@ -3049,18 +2983,15 @@ abstract class $ImplementationGuidePackageResourceCopyWith<$Res> {
           ImplementationGuidePackageResource>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
-          ResourcePurpose purpose,
+      ResourcePurpose purpose,
       String? name,
       String? description,
       String? acronym,
-      @JsonKey(name: '_acronym')
-          Element? acronymElement,
+      @JsonKey(name: '_acronym') Element? acronymElement,
       FhirUri? sourceUri,
       Reference? sourceReference,
       Reference? exampleFor});
@@ -3191,18 +3122,15 @@ abstract class _$$_ImplementationGuidePackageResourceCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
-          ResourcePurpose purpose,
+      ResourcePurpose purpose,
       String? name,
       String? description,
       String? acronym,
-      @JsonKey(name: '_acronym')
-          Element? acronymElement,
+      @JsonKey(name: '_acronym') Element? acronymElement,
       FhirUri? sourceUri,
       Reference? sourceReference,
       Reference? exampleFor});
@@ -3422,18 +3350,15 @@ class _$_ImplementationGuidePackageResource
 abstract class _ImplementationGuidePackageResource
     extends ImplementationGuidePackageResource {
   const factory _ImplementationGuidePackageResource(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: ResourcePurpose.unknown)
-          required final ResourcePurpose purpose,
+      required final ResourcePurpose purpose,
       final String? name,
       final String? description,
       final String? acronym,
-      @JsonKey(name: '_acronym')
-          final Element? acronymElement,
+      @JsonKey(name: '_acronym') final Element? acronymElement,
       final FhirUri? sourceUri,
       final Reference? sourceReference,
       final Reference? exampleFor}) = _$_ImplementationGuidePackageResource;
@@ -3554,53 +3479,40 @@ abstract class $TestScriptCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
       String name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          TestScriptStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      TestScriptStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       Identifier? identifier,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<TestScriptContact>? contact,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<CodeableConcept>? useContext,
       String? requirements,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       TestScriptMetadata? metadata,
       FhirBoolean? multiserver,
       List<TestScriptFixture>? fixture,
@@ -4054,53 +3966,40 @@ abstract class _$$_TestScriptCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
-          Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       String? version,
       String name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          TestScriptStatus status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      TestScriptStatus status,
+      @JsonKey(name: '_status') Element? statusElement,
       Identifier? identifier,
       FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          Element? experimentalElement,
+      @JsonKey(name: '_experimental') Element? experimentalElement,
       String? publisher,
-      @JsonKey(name: '_publisher')
-          Element? publisherElement,
+      @JsonKey(name: '_publisher') Element? publisherElement,
       List<TestScriptContact>? contact,
       FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       List<CodeableConcept>? useContext,
       String? requirements,
       String? copyright,
-      @JsonKey(name: '_copyright')
-          Element? copyrightElement,
+      @JsonKey(name: '_copyright') Element? copyrightElement,
       TestScriptMetadata? metadata,
       FhirBoolean? multiserver,
       List<TestScriptFixture>? fixture,
@@ -4371,53 +4270,39 @@ class __$$_TestScriptCopyWithImpl<$Res>
 class _$_TestScript extends _TestScript {
   const _$_TestScript(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
-          this.resourceType = Dstu2ResourceType.TestScript,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = Dstu2ResourceType.TestScript,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.version,
       required this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
-      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          required this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(unknownEnumValue: TestScriptStatus.unknown) required this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.identifier,
       this.experimental,
-      @JsonKey(name: '_experimental')
-          this.experimentalElement,
+      @JsonKey(name: '_experimental') this.experimentalElement,
       this.publisher,
-      @JsonKey(name: '_publisher')
-          this.publisherElement,
+      @JsonKey(name: '_publisher') this.publisherElement,
       final List<TestScriptContact>? contact,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       final List<CodeableConcept>? useContext,
       this.requirements,
       this.copyright,
-      @JsonKey(name: '_copyright')
-          this.copyrightElement,
+      @JsonKey(name: '_copyright') this.copyrightElement,
       this.metadata,
       this.multiserver,
       final List<TestScriptFixture>? fixture,
@@ -4754,53 +4639,40 @@ class _$_TestScript extends _TestScript {
 abstract class _TestScript extends TestScript {
   const factory _TestScript(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
-          final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final Dstu2ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final FhirUri url,
-      @JsonKey(name: '_url')
-          final Element? urlElement,
+      @JsonKey(name: '_url') final Element? urlElement,
       final String? version,
       required final String name,
-      @JsonKey(name: '_name')
-          final Element? nameElement,
+      @JsonKey(name: '_name') final Element? nameElement,
       @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
-          required final TestScriptStatus status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      required final TestScriptStatus status,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Identifier? identifier,
       final FhirBoolean? experimental,
-      @JsonKey(name: '_experimental')
-          final Element? experimentalElement,
+      @JsonKey(name: '_experimental') final Element? experimentalElement,
       final String? publisher,
-      @JsonKey(name: '_publisher')
-          final Element? publisherElement,
+      @JsonKey(name: '_publisher') final Element? publisherElement,
       final List<TestScriptContact>? contact,
       final FhirDateTime? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       final List<CodeableConcept>? useContext,
       final String? requirements,
       final String? copyright,
-      @JsonKey(name: '_copyright')
-          final Element? copyrightElement,
+      @JsonKey(name: '_copyright') final Element? copyrightElement,
       final TestScriptMetadata? metadata,
       final FhirBoolean? multiserver,
       final List<TestScriptFixture>? fixture,
@@ -5325,14 +5197,12 @@ class __$$_TestScriptMetadataCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestScriptMetadata extends _TestScriptMetadata {
   const _$_TestScriptMetadata(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<TestScriptMetadataLink>? link,
       @JsonKey(required: true)
-          required final List<TestScriptMetadataCapability> capability})
+      required final List<TestScriptMetadataCapability> capability})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _link = link,
@@ -5433,14 +5303,12 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
 
 abstract class _TestScriptMetadata extends TestScriptMetadata {
   const factory _TestScriptMetadata(
-          {@JsonKey(name: 'id')
-              final FhirId? fhirId,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<TestScriptMetadataLink>? link,
           @JsonKey(required: true)
-              required final List<TestScriptMetadataCapability> capability}) =
+          required final List<TestScriptMetadataCapability> capability}) =
       _$_TestScriptMetadata;
   const _TestScriptMetadata._() : super._();
 
@@ -7906,53 +7774,38 @@ abstract class $TestScriptActionOperationCopyWith<$Res> {
       _$TestScriptActionOperationCopyWithImpl<$Res, TestScriptActionOperation>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Coding? type,
       FhirCode? resource,
-      @JsonKey(name: '_resource')
-          Element? resourceElement,
+      @JsonKey(name: '_resource') Element? resourceElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       @JsonKey(unknownEnumValue: OperationAccept.unknown)
-          OperationAccept? accept,
-      @JsonKey(name: '_accept')
-          Element? acceptElement,
+      OperationAccept? accept,
+      @JsonKey(name: '_accept') Element? acceptElement,
       @JsonKey(unknownEnumValue: OperationContentType.unknown)
-          OperationContentType? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
+      OperationContentType? contentType,
+      @JsonKey(name: '_contentType') Element? contentTypeElement,
       FhirInteger? destination,
-      @JsonKey(name: '_destination')
-          Element? destinationElement,
+      @JsonKey(name: '_destination') Element? destinationElement,
       FhirBoolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl')
-          Element? encodeRequestUrlElement,
+      @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
       String? params,
-      @JsonKey(name: '_params')
-          Element? paramsElement,
+      @JsonKey(name: '_params') Element? paramsElement,
       List<TestScriptOperationRequestHeader>? requestHeader,
       FhirId? responseId,
-      @JsonKey(name: '_responseId')
-          Element? responseIdElement,
+      @JsonKey(name: '_responseId') Element? responseIdElement,
       FhirId? sourceId,
-      @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
+      @JsonKey(name: '_sourceId') Element? sourceIdElement,
       FhirId? targetId,
-      @JsonKey(name: '_targetId')
-          Element? targetIdElement,
+      @JsonKey(name: '_targetId') Element? targetIdElement,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement});
+      @JsonKey(name: '_url') Element? urlElement});
 
   $CodingCopyWith<$Res>? get type;
   $ElementCopyWith<$Res>? get resourceElement;
@@ -8305,53 +8158,38 @@ abstract class _$$_TestScriptActionOperationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          List<String>? fhirComments,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
       Coding? type,
       FhirCode? resource,
-      @JsonKey(name: '_resource')
-          Element? resourceElement,
+      @JsonKey(name: '_resource') Element? resourceElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       @JsonKey(unknownEnumValue: OperationAccept.unknown)
-          OperationAccept? accept,
-      @JsonKey(name: '_accept')
-          Element? acceptElement,
+      OperationAccept? accept,
+      @JsonKey(name: '_accept') Element? acceptElement,
       @JsonKey(unknownEnumValue: OperationContentType.unknown)
-          OperationContentType? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
+      OperationContentType? contentType,
+      @JsonKey(name: '_contentType') Element? contentTypeElement,
       FhirInteger? destination,
-      @JsonKey(name: '_destination')
-          Element? destinationElement,
+      @JsonKey(name: '_destination') Element? destinationElement,
       FhirBoolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl')
-          Element? encodeRequestUrlElement,
+      @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
       String? params,
-      @JsonKey(name: '_params')
-          Element? paramsElement,
+      @JsonKey(name: '_params') Element? paramsElement,
       List<TestScriptOperationRequestHeader>? requestHeader,
       FhirId? responseId,
-      @JsonKey(name: '_responseId')
-          Element? responseIdElement,
+      @JsonKey(name: '_responseId') Element? responseIdElement,
       FhirId? sourceId,
-      @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
+      @JsonKey(name: '_sourceId') Element? sourceIdElement,
       FhirId? targetId,
-      @JsonKey(name: '_targetId')
-          Element? targetIdElement,
+      @JsonKey(name: '_targetId') Element? targetIdElement,
       String? url,
-      @JsonKey(name: '_url')
-          Element? urlElement});
+      @JsonKey(name: '_url') Element? urlElement});
 
   @override
   $CodingCopyWith<$Res>? get type;
@@ -8824,53 +8662,40 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
 
 abstract class _TestScriptActionOperation extends TestScriptActionOperation {
   const factory _TestScriptActionOperation(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments')
-          final List<String>? fhirComments,
-      final Coding? type,
-      final FhirCode? resource,
-      @JsonKey(name: '_resource')
-          final Element? resourceElement,
-      final String? label,
-      @JsonKey(name: '_label')
-          final Element? labelElement,
-      final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
-      @JsonKey(unknownEnumValue: OperationAccept.unknown)
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+          final Coding? type,
+          final FhirCode? resource,
+          @JsonKey(name: '_resource') final Element? resourceElement,
+          final String? label,
+          @JsonKey(name: '_label') final Element? labelElement,
+          final String? description,
+          @JsonKey(name: '_description') final Element? descriptionElement,
+          @JsonKey(unknownEnumValue: OperationAccept.unknown)
           final OperationAccept? accept,
-      @JsonKey(name: '_accept')
-          final Element? acceptElement,
-      @JsonKey(unknownEnumValue: OperationContentType.unknown)
+          @JsonKey(name: '_accept') final Element? acceptElement,
+          @JsonKey(unknownEnumValue: OperationContentType.unknown)
           final OperationContentType? contentType,
-      @JsonKey(name: '_contentType')
-          final Element? contentTypeElement,
-      final FhirInteger? destination,
-      @JsonKey(name: '_destination')
-          final Element? destinationElement,
-      final FhirBoolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl')
+          @JsonKey(name: '_contentType') final Element? contentTypeElement,
+          final FhirInteger? destination,
+          @JsonKey(name: '_destination') final Element? destinationElement,
+          final FhirBoolean? encodeRequestUrl,
+          @JsonKey(name: '_encodeRequestUrl')
           final Element? encodeRequestUrlElement,
-      final String? params,
-      @JsonKey(name: '_params')
-          final Element? paramsElement,
-      final List<TestScriptOperationRequestHeader>? requestHeader,
-      final FhirId? responseId,
-      @JsonKey(name: '_responseId')
-          final Element? responseIdElement,
-      final FhirId? sourceId,
-      @JsonKey(name: '_sourceId')
-          final Element? sourceIdElement,
-      final FhirId? targetId,
-      @JsonKey(name: '_targetId')
-          final Element? targetIdElement,
-      final String? url,
-      @JsonKey(name: '_url')
-          final Element? urlElement}) = _$_TestScriptActionOperation;
+          final String? params,
+          @JsonKey(name: '_params') final Element? paramsElement,
+          final List<TestScriptOperationRequestHeader>? requestHeader,
+          final FhirId? responseId,
+          @JsonKey(name: '_responseId') final Element? responseIdElement,
+          final FhirId? sourceId,
+          @JsonKey(name: '_sourceId') final Element? sourceIdElement,
+          final FhirId? targetId,
+          @JsonKey(name: '_targetId') final Element? targetIdElement,
+          final String? url,
+          @JsonKey(name: '_url') final Element? urlElement}) =
+      _$_TestScriptActionOperation;
   const _TestScriptActionOperation._() : super._();
 
   factory _TestScriptActionOperation.fromJson(Map<String, dynamic> json) =
@@ -9398,67 +9223,49 @@ abstract class $TestScriptActionAssertCopyWith<$Res> {
       _$TestScriptActionAssertCopyWithImpl<$Res, TestScriptActionAssert>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? label,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       @JsonKey(unknownEnumValue: AssertDirection.unknown)
-          AssertDirection? direction,
-      @JsonKey(name: '_direction')
-          Element? directionElement,
+      AssertDirection? direction,
+      @JsonKey(name: '_direction') Element? directionElement,
       String? compareToSourceId,
-      @JsonKey(name: '_compareToSourceId')
-          Element? compareToSourceIdElement,
+      @JsonKey(name: '_compareToSourceId') Element? compareToSourceIdElement,
       String? compareToSourcePath,
       @JsonKey(name: '_compareToSourcePath')
-          Element? compareToSourcePathElement,
+      Element? compareToSourcePathElement,
       @JsonKey(unknownEnumValue: AssertContentType.unknown)
-          AssertContentType? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
+      AssertContentType? contentType,
+      @JsonKey(name: '_contentType') Element? contentTypeElement,
       String? headerField,
-      @JsonKey(name: '_headerField')
-          Element? headerFieldElement,
+      @JsonKey(name: '_headerField') Element? headerFieldElement,
       String? minimumId,
-      @JsonKey(name: '_minimumId')
-          Element? minimumIdElement,
+      @JsonKey(name: '_minimumId') Element? minimumIdElement,
       FhirBoolean? navigationLinks,
-      @JsonKey(name: '_navigationLinks')
-          Element? navigationLinksElement,
+      @JsonKey(name: '_navigationLinks') Element? navigationLinksElement,
       @JsonKey(unknownEnumValue: AssertOperator.unknown, name: 'operator')
-          AssertOperator? operator_,
-      @JsonKey(name: '_operator')
-          Element? operatorElement,
+      AssertOperator? operator_,
+      @JsonKey(name: '_operator') Element? operatorElement,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement,
+      @JsonKey(name: '_path') Element? pathElement,
       FhirCode? resource,
-      @JsonKey(name: '_resource')
-          Element? resourceElement,
+      @JsonKey(name: '_resource') Element? resourceElement,
       @JsonKey(unknownEnumValue: AssertResponse.unknown)
-          AssertResponse? response,
-      @JsonKey(name: '_response')
-          Element? responseElement,
+      AssertResponse? response,
+      @JsonKey(name: '_response') Element? responseElement,
       String? responseCode,
-      @JsonKey(name: '_responseCode')
-          Element? responseCodeElement,
+      @JsonKey(name: '_responseCode') Element? responseCodeElement,
       FhirId? sourceId,
-      @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
+      @JsonKey(name: '_sourceId') Element? sourceIdElement,
       FhirId? validateProfileId,
-      @JsonKey(name: '_validateProfileId')
-          Element? validateProfileIdElement,
+      @JsonKey(name: '_validateProfileId') Element? validateProfileIdElement,
       String? value,
-      @JsonKey(name: '_value')
-          Element? valueElement,
+      @JsonKey(name: '_value') Element? valueElement,
       FhirBoolean? warningOnly,
-      @JsonKey(name: '_warningOnly')
-          Element? warningOnlyElement});
+      @JsonKey(name: '_warningOnly') Element? warningOnlyElement});
 
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get directionElement;
@@ -9902,67 +9709,49 @@ abstract class _$$_TestScriptActionAssertCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') FhirId? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? label,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       @JsonKey(unknownEnumValue: AssertDirection.unknown)
-          AssertDirection? direction,
-      @JsonKey(name: '_direction')
-          Element? directionElement,
+      AssertDirection? direction,
+      @JsonKey(name: '_direction') Element? directionElement,
       String? compareToSourceId,
-      @JsonKey(name: '_compareToSourceId')
-          Element? compareToSourceIdElement,
+      @JsonKey(name: '_compareToSourceId') Element? compareToSourceIdElement,
       String? compareToSourcePath,
       @JsonKey(name: '_compareToSourcePath')
-          Element? compareToSourcePathElement,
+      Element? compareToSourcePathElement,
       @JsonKey(unknownEnumValue: AssertContentType.unknown)
-          AssertContentType? contentType,
-      @JsonKey(name: '_contentType')
-          Element? contentTypeElement,
+      AssertContentType? contentType,
+      @JsonKey(name: '_contentType') Element? contentTypeElement,
       String? headerField,
-      @JsonKey(name: '_headerField')
-          Element? headerFieldElement,
+      @JsonKey(name: '_headerField') Element? headerFieldElement,
       String? minimumId,
-      @JsonKey(name: '_minimumId')
-          Element? minimumIdElement,
+      @JsonKey(name: '_minimumId') Element? minimumIdElement,
       FhirBoolean? navigationLinks,
-      @JsonKey(name: '_navigationLinks')
-          Element? navigationLinksElement,
+      @JsonKey(name: '_navigationLinks') Element? navigationLinksElement,
       @JsonKey(unknownEnumValue: AssertOperator.unknown, name: 'operator')
-          AssertOperator? operator_,
-      @JsonKey(name: '_operator')
-          Element? operatorElement,
+      AssertOperator? operator_,
+      @JsonKey(name: '_operator') Element? operatorElement,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement,
+      @JsonKey(name: '_path') Element? pathElement,
       FhirCode? resource,
-      @JsonKey(name: '_resource')
-          Element? resourceElement,
+      @JsonKey(name: '_resource') Element? resourceElement,
       @JsonKey(unknownEnumValue: AssertResponse.unknown)
-          AssertResponse? response,
-      @JsonKey(name: '_response')
-          Element? responseElement,
+      AssertResponse? response,
+      @JsonKey(name: '_response') Element? responseElement,
       String? responseCode,
-      @JsonKey(name: '_responseCode')
-          Element? responseCodeElement,
+      @JsonKey(name: '_responseCode') Element? responseCodeElement,
       FhirId? sourceId,
-      @JsonKey(name: '_sourceId')
-          Element? sourceIdElement,
+      @JsonKey(name: '_sourceId') Element? sourceIdElement,
       FhirId? validateProfileId,
-      @JsonKey(name: '_validateProfileId')
-          Element? validateProfileIdElement,
+      @JsonKey(name: '_validateProfileId') Element? validateProfileIdElement,
       String? value,
-      @JsonKey(name: '_value')
-          Element? valueElement,
+      @JsonKey(name: '_value') Element? valueElement,
       FhirBoolean? warningOnly,
-      @JsonKey(name: '_warningOnly')
-          Element? warningOnlyElement});
+      @JsonKey(name: '_warningOnly') Element? warningOnlyElement});
 
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -10212,67 +10001,45 @@ class __$$_TestScriptActionAssertCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_TestScriptActionAssert extends _TestScriptActionAssert {
   const _$_TestScriptActionAssert(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.label,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
-      @JsonKey(unknownEnumValue: AssertDirection.unknown)
-          this.direction,
-      @JsonKey(name: '_direction')
-          this.directionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(unknownEnumValue: AssertDirection.unknown) this.direction,
+      @JsonKey(name: '_direction') this.directionElement,
       this.compareToSourceId,
-      @JsonKey(name: '_compareToSourceId')
-          this.compareToSourceIdElement,
+      @JsonKey(name: '_compareToSourceId') this.compareToSourceIdElement,
       this.compareToSourcePath,
-      @JsonKey(name: '_compareToSourcePath')
-          this.compareToSourcePathElement,
-      @JsonKey(unknownEnumValue: AssertContentType.unknown)
-          this.contentType,
-      @JsonKey(name: '_contentType')
-          this.contentTypeElement,
+      @JsonKey(name: '_compareToSourcePath') this.compareToSourcePathElement,
+      @JsonKey(unknownEnumValue: AssertContentType.unknown) this.contentType,
+      @JsonKey(name: '_contentType') this.contentTypeElement,
       this.headerField,
-      @JsonKey(name: '_headerField')
-          this.headerFieldElement,
+      @JsonKey(name: '_headerField') this.headerFieldElement,
       this.minimumId,
-      @JsonKey(name: '_minimumId')
-          this.minimumIdElement,
+      @JsonKey(name: '_minimumId') this.minimumIdElement,
       this.navigationLinks,
-      @JsonKey(name: '_navigationLinks')
-          this.navigationLinksElement,
+      @JsonKey(name: '_navigationLinks') this.navigationLinksElement,
       @JsonKey(unknownEnumValue: AssertOperator.unknown, name: 'operator')
-          this.operator_,
-      @JsonKey(name: '_operator')
-          this.operatorElement,
+      this.operator_,
+      @JsonKey(name: '_operator') this.operatorElement,
       this.path,
-      @JsonKey(name: '_path')
-          this.pathElement,
+      @JsonKey(name: '_path') this.pathElement,
       this.resource,
-      @JsonKey(name: '_resource')
-          this.resourceElement,
-      @JsonKey(unknownEnumValue: AssertResponse.unknown)
-          this.response,
-      @JsonKey(name: '_response')
-          this.responseElement,
+      @JsonKey(name: '_resource') this.resourceElement,
+      @JsonKey(unknownEnumValue: AssertResponse.unknown) this.response,
+      @JsonKey(name: '_response') this.responseElement,
       this.responseCode,
-      @JsonKey(name: '_responseCode')
-          this.responseCodeElement,
+      @JsonKey(name: '_responseCode') this.responseCodeElement,
       this.sourceId,
-      @JsonKey(name: '_sourceId')
-          this.sourceIdElement,
+      @JsonKey(name: '_sourceId') this.sourceIdElement,
       this.validateProfileId,
-      @JsonKey(name: '_validateProfileId')
-          this.validateProfileIdElement,
+      @JsonKey(name: '_validateProfileId') this.validateProfileIdElement,
       this.value,
-      @JsonKey(name: '_value')
-          this.valueElement,
+      @JsonKey(name: '_value') this.valueElement,
       this.warningOnly,
-      @JsonKey(name: '_warningOnly')
-          this.warningOnlyElement})
+      @JsonKey(name: '_warningOnly') this.warningOnlyElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         super._();
@@ -10537,67 +10304,52 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
 
 abstract class _TestScriptActionAssert extends TestScriptActionAssert {
   const factory _TestScriptActionAssert(
-      {@JsonKey(name: 'id')
-          final FhirId? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? label,
       final String? description,
-      @JsonKey(name: '_description')
-          final Element? descriptionElement,
+      @JsonKey(name: '_description') final Element? descriptionElement,
       @JsonKey(unknownEnumValue: AssertDirection.unknown)
-          final AssertDirection? direction,
-      @JsonKey(name: '_direction')
-          final Element? directionElement,
+      final AssertDirection? direction,
+      @JsonKey(name: '_direction') final Element? directionElement,
       final String? compareToSourceId,
       @JsonKey(name: '_compareToSourceId')
-          final Element? compareToSourceIdElement,
+      final Element? compareToSourceIdElement,
       final String? compareToSourcePath,
       @JsonKey(name: '_compareToSourcePath')
-          final Element? compareToSourcePathElement,
+      final Element? compareToSourcePathElement,
       @JsonKey(unknownEnumValue: AssertContentType.unknown)
-          final AssertContentType? contentType,
-      @JsonKey(name: '_contentType')
-          final Element? contentTypeElement,
+      final AssertContentType? contentType,
+      @JsonKey(name: '_contentType') final Element? contentTypeElement,
       final String? headerField,
-      @JsonKey(name: '_headerField')
-          final Element? headerFieldElement,
+      @JsonKey(name: '_headerField') final Element? headerFieldElement,
       final String? minimumId,
-      @JsonKey(name: '_minimumId')
-          final Element? minimumIdElement,
+      @JsonKey(name: '_minimumId') final Element? minimumIdElement,
       final FhirBoolean? navigationLinks,
-      @JsonKey(name: '_navigationLinks')
-          final Element? navigationLinksElement,
+      @JsonKey(name: '_navigationLinks') final Element? navigationLinksElement,
       @JsonKey(unknownEnumValue: AssertOperator.unknown, name: 'operator')
-          final AssertOperator? operator_,
-      @JsonKey(name: '_operator')
-          final Element? operatorElement,
+      final AssertOperator? operator_,
+      @JsonKey(name: '_operator') final Element? operatorElement,
       final String? path,
-      @JsonKey(name: '_path')
-          final Element? pathElement,
+      @JsonKey(name: '_path') final Element? pathElement,
       final FhirCode? resource,
-      @JsonKey(name: '_resource')
-          final Element? resourceElement,
+      @JsonKey(name: '_resource') final Element? resourceElement,
       @JsonKey(unknownEnumValue: AssertResponse.unknown)
-          final AssertResponse? response,
-      @JsonKey(name: '_response')
-          final Element? responseElement,
+      final AssertResponse? response,
+      @JsonKey(name: '_response') final Element? responseElement,
       final String? responseCode,
-      @JsonKey(name: '_responseCode')
-          final Element? responseCodeElement,
+      @JsonKey(name: '_responseCode') final Element? responseCodeElement,
       final FhirId? sourceId,
-      @JsonKey(name: '_sourceId')
-          final Element? sourceIdElement,
+      @JsonKey(name: '_sourceId') final Element? sourceIdElement,
       final FhirId? validateProfileId,
       @JsonKey(name: '_validateProfileId')
-          final Element? validateProfileIdElement,
+      final Element? validateProfileIdElement,
       final String? value,
-      @JsonKey(name: '_value')
-          final Element? valueElement,
+      @JsonKey(name: '_value') final Element? valueElement,
       final FhirBoolean? warningOnly,
       @JsonKey(name: '_warningOnly')
-          final Element? warningOnlyElement}) = _$_TestScriptActionAssert;
+      final Element? warningOnlyElement}) = _$_TestScriptActionAssert;
   const _TestScriptActionAssert._() : super._();
 
   factory _TestScriptActionAssert.fromJson(Map<String, dynamic> json) =

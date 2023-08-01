@@ -185,38 +185,29 @@ abstract class $AuditEventCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.AuditEvent)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? category,
       CodeableConcept code,
       FhirCode? action,
-      @JsonKey(name: '_action')
-          Element? actionElement,
+      @JsonKey(name: '_action') Element? actionElement,
       FhirCode? severity,
-      @JsonKey(name: '_severity')
-          Element? severityElement,
+      @JsonKey(name: '_severity') Element? severityElement,
       Period? occurredPeriod,
       FhirDateTime? occurredDateTime,
-      @JsonKey(name: '_occurredDateTime')
-          Element? occurredDateTimeElement,
+      @JsonKey(name: '_occurredDateTime') Element? occurredDateTimeElement,
       FhirInstant? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
       AuditEventOutcome? outcome,
       List<CodeableConcept>? authorization,
       List<Reference>? basedOn,
@@ -586,38 +577,29 @@ abstract class _$$_AuditEventCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.AuditEvent)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? category,
       CodeableConcept code,
       FhirCode? action,
-      @JsonKey(name: '_action')
-          Element? actionElement,
+      @JsonKey(name: '_action') Element? actionElement,
       FhirCode? severity,
-      @JsonKey(name: '_severity')
-          Element? severityElement,
+      @JsonKey(name: '_severity') Element? severityElement,
       Period? occurredPeriod,
       FhirDateTime? occurredDateTime,
-      @JsonKey(name: '_occurredDateTime')
-          Element? occurredDateTimeElement,
+      @JsonKey(name: '_occurredDateTime') Element? occurredDateTimeElement,
       FhirInstant? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
       AuditEventOutcome? outcome,
       List<CodeableConcept>? authorization,
       List<Reference>? basedOn,
@@ -834,38 +816,29 @@ class __$$_AuditEventCopyWithImpl<$Res>
 class _$_AuditEvent extends _AuditEvent {
   const _$_AuditEvent(
       {@JsonKey(unknownEnumValue: R5ResourceType.AuditEvent)
-          this.resourceType = R5ResourceType.AuditEvent,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R5ResourceType.AuditEvent,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? category,
       required this.code,
       this.action,
-      @JsonKey(name: '_action')
-          this.actionElement,
+      @JsonKey(name: '_action') this.actionElement,
       this.severity,
-      @JsonKey(name: '_severity')
-          this.severityElement,
+      @JsonKey(name: '_severity') this.severityElement,
       this.occurredPeriod,
       this.occurredDateTime,
-      @JsonKey(name: '_occurredDateTime')
-          this.occurredDateTimeElement,
+      @JsonKey(name: '_occurredDateTime') this.occurredDateTimeElement,
       this.recorded,
-      @JsonKey(name: '_recorded')
-          this.recordedElement,
+      @JsonKey(name: '_recorded') this.recordedElement,
       this.outcome,
       final List<CodeableConcept>? authorization,
       final List<Reference>? basedOn,
@@ -1279,38 +1252,30 @@ class _$_AuditEvent extends _AuditEvent {
 abstract class _AuditEvent extends AuditEvent {
   const factory _AuditEvent(
       {@JsonKey(unknownEnumValue: R5ResourceType.AuditEvent)
-          final R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<CodeableConcept>? category,
       required final CodeableConcept code,
       final FhirCode? action,
-      @JsonKey(name: '_action')
-          final Element? actionElement,
+      @JsonKey(name: '_action') final Element? actionElement,
       final FhirCode? severity,
-      @JsonKey(name: '_severity')
-          final Element? severityElement,
+      @JsonKey(name: '_severity') final Element? severityElement,
       final Period? occurredPeriod,
       final FhirDateTime? occurredDateTime,
       @JsonKey(name: '_occurredDateTime')
-          final Element? occurredDateTimeElement,
+      final Element? occurredDateTimeElement,
       final FhirInstant? recorded,
-      @JsonKey(name: '_recorded')
-          final Element? recordedElement,
+      @JsonKey(name: '_recorded') final Element? recordedElement,
       final AuditEventOutcome? outcome,
       final List<CodeableConcept>? authorization,
       final List<Reference>? basedOn,
@@ -4712,35 +4677,28 @@ class _$_AuditEventDetail extends _AuditEventDetail {
 
 abstract class _AuditEventDetail extends AuditEventDetail {
   const factory _AuditEventDetail(
-      {@JsonKey(name: 'id')
-          final String? fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
       final Quantity? valueQuantity,
       final CodeableConcept? valueCodeableConcept,
       final String? valueString,
-      @JsonKey(name: '_valueString')
-          final Element? valueStringElement,
+      @JsonKey(name: '_valueString') final Element? valueStringElement,
       final FhirBoolean? valueBoolean,
-      @JsonKey(name: '_valueBoolean')
-          final Element? valueBooleanElement,
+      @JsonKey(name: '_valueBoolean') final Element? valueBooleanElement,
       final FhirInteger? valueInteger,
-      @JsonKey(name: '_valueInteger')
-          final Element? valueIntegerElement,
+      @JsonKey(name: '_valueInteger') final Element? valueIntegerElement,
       final Range? valueRange,
       final Ratio? valueRatio,
       final FhirTime? valueTime,
-      @JsonKey(name: '_valueTime')
-          final Element? valueTimeElement,
+      @JsonKey(name: '_valueTime') final Element? valueTimeElement,
       final FhirDateTime? valueDateTime,
-      @JsonKey(name: '_valueDateTime')
-          final Element? valueDateTimeElement,
+      @JsonKey(name: '_valueDateTime') final Element? valueDateTimeElement,
       final Period? valuePeriod,
       final FhirBase64Binary? valueBase64Binary,
       @JsonKey(name: '_valueBase64Binary')
-          final Element? valueBase64BinaryElement}) = _$_AuditEventDetail;
+      final Element? valueBase64BinaryElement}) = _$_AuditEventDetail;
   const _AuditEventDetail._() : super._();
 
   factory _AuditEventDetail.fromJson(Map<String, dynamic> json) =
@@ -5045,32 +5003,25 @@ abstract class $ConsentCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Consent)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       Reference? subject,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       Period? period,
       List<Reference>? grantor,
       List<Reference>? grantee,
@@ -5083,8 +5034,7 @@ abstract class $ConsentCopyWith<$Res> {
       List<Reference>? policyText,
       List<ConsentVerification>? verification,
       FhirCode? decision,
-      @JsonKey(name: '_decision')
-          Element? decisionElement,
+      @JsonKey(name: '_decision') Element? decisionElement,
       List<ConsentProvision>? provision});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -5412,32 +5362,25 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Consent)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept>? category,
       Reference? subject,
       FhirDate? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
+      @JsonKey(name: '_date') Element? dateElement,
       Period? period,
       List<Reference>? grantor,
       List<Reference>? grantee,
@@ -5450,8 +5393,7 @@ abstract class _$$_ConsentCopyWith<$Res> implements $ConsentCopyWith<$Res> {
       List<Reference>? policyText,
       List<ConsentVerification>? verification,
       FhirCode? decision,
-      @JsonKey(name: '_decision')
-          Element? decisionElement,
+      @JsonKey(name: '_decision') Element? decisionElement,
       List<ConsentProvision>? provision});
 
   @override
@@ -5662,32 +5604,25 @@ class __$$_ConsentCopyWithImpl<$Res>
 class _$_Consent extends _Consent {
   const _$_Consent(
       {@JsonKey(unknownEnumValue: R5ResourceType.Consent)
-          this.resourceType = R5ResourceType.Consent,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R5ResourceType.Consent,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       final List<CodeableConcept>? category,
       this.subject,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
+      @JsonKey(name: '_date') this.dateElement,
       this.period,
       final List<Reference>? grantor,
       final List<Reference>? grantee,
@@ -5700,8 +5635,7 @@ class _$_Consent extends _Consent {
       final List<Reference>? policyText,
       final List<ConsentVerification>? verification,
       this.decision,
-      @JsonKey(name: '_decision')
-          this.decisionElement,
+      @JsonKey(name: '_decision') this.decisionElement,
       final List<ConsentProvision>? provision})
       : _contained = contained,
         _extension_ = extension_,
@@ -6211,32 +6145,25 @@ class _$_Consent extends _Consent {
 abstract class _Consent extends Consent {
   const factory _Consent(
       {@JsonKey(unknownEnumValue: R5ResourceType.Consent)
-          final R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final List<CodeableConcept>? category,
       final Reference? subject,
       final FhirDate? date,
-      @JsonKey(name: '_date')
-          final Element? dateElement,
+      @JsonKey(name: '_date') final Element? dateElement,
       final Period? period,
       final List<Reference>? grantor,
       final List<Reference>? grantee,
@@ -6249,8 +6176,7 @@ abstract class _Consent extends Consent {
       final List<Reference>? policyText,
       final List<ConsentVerification>? verification,
       final FhirCode? decision,
-      @JsonKey(name: '_decision')
-          final Element? decisionElement,
+      @JsonKey(name: '_decision') final Element? decisionElement,
       final List<ConsentProvision>? provision}) = _$_Consent;
   const _Consent._() : super._();
 
@@ -6967,20 +6893,17 @@ abstract class $ConsentVerificationCopyWith<$Res> {
       _$ConsentVerificationCopyWithImpl<$Res, ConsentVerification>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirBoolean? verified,
-      @JsonKey(name: '_verified')
-          Element? verifiedElement,
+      @JsonKey(name: '_verified') Element? verifiedElement,
       CodeableConcept? verificationType,
       Reference? verifiedBy,
       Reference? verifiedWith,
       List<FhirDateTime>? verificationDate,
       @JsonKey(name: '_verificationDate')
-          List<Element>? verificationDateElement});
+      List<Element>? verificationDateElement});
 
   $ElementCopyWith<$Res>? get verifiedElement;
   $CodeableConceptCopyWith<$Res>? get verificationType;
@@ -7114,20 +7037,17 @@ abstract class _$$_ConsentVerificationCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id')
-          String? fhirId,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') String? fhirId,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirBoolean? verified,
-      @JsonKey(name: '_verified')
-          Element? verifiedElement,
+      @JsonKey(name: '_verified') Element? verifiedElement,
       CodeableConcept? verificationType,
       Reference? verifiedBy,
       Reference? verifiedWith,
       List<FhirDateTime>? verificationDate,
       @JsonKey(name: '_verificationDate')
-          List<Element>? verificationDateElement});
+      List<Element>? verificationDateElement});
 
   @override
   $ElementCopyWith<$Res>? get verifiedElement;
@@ -7210,20 +7130,17 @@ class __$$_ConsentVerificationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ConsentVerification extends _ConsentVerification {
   const _$_ConsentVerification(
-      {@JsonKey(name: 'id')
-          this.fhirId,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      {@JsonKey(name: 'id') this.fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.verified,
-      @JsonKey(name: '_verified')
-          this.verifiedElement,
+      @JsonKey(name: '_verified') this.verifiedElement,
       this.verificationType,
       this.verifiedBy,
       this.verifiedWith,
       final List<FhirDateTime>? verificationDate,
       @JsonKey(name: '_verificationDate')
-          final List<Element>? verificationDateElement})
+      final List<Element>? verificationDateElement})
       : _extension_ = extension_,
         _modifierExtension = modifierExtension,
         _verificationDate = verificationDate,
@@ -7421,21 +7338,17 @@ class _$_ConsentVerification extends _ConsentVerification {
 
 abstract class _ConsentVerification extends ConsentVerification {
   const factory _ConsentVerification(
-          {@JsonKey(name: 'id')
-              final String? fhirId,
-          @JsonKey(name: 'extension')
-              final List<FhirExtension>? extension_,
-          final List<FhirExtension>? modifierExtension,
-          final FhirBoolean? verified,
-          @JsonKey(name: '_verified')
-              final Element? verifiedElement,
-          final CodeableConcept? verificationType,
-          final Reference? verifiedBy,
-          final Reference? verifiedWith,
-          final List<FhirDateTime>? verificationDate,
-          @JsonKey(name: '_verificationDate')
-              final List<Element>? verificationDateElement}) =
-      _$_ConsentVerification;
+      {@JsonKey(name: 'id') final String? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final FhirBoolean? verified,
+      @JsonKey(name: '_verified') final Element? verifiedElement,
+      final CodeableConcept? verificationType,
+      final Reference? verifiedBy,
+      final Reference? verifiedWith,
+      final List<FhirDateTime>? verificationDate,
+      @JsonKey(name: '_verificationDate')
+      final List<Element>? verificationDateElement}) = _$_ConsentVerification;
   const _ConsentVerification._() : super._();
 
   factory _ConsentVerification.fromJson(Map<String, dynamic> json) =
@@ -9299,35 +9212,27 @@ abstract class $PermissionCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Permission)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? asserter,
       List<FhirDateTime>? date,
-      @JsonKey(name: '_date')
-          List<Element>? dateElement,
+      @JsonKey(name: '_date') List<Element>? dateElement,
       Period? validity,
       PermissionJustification? justification,
       FhirCode? combining,
-      @JsonKey(name: '_combining')
-          Element? combiningElement,
+      @JsonKey(name: '_combining') Element? combiningElement,
       List<PermissionRule>? rule});
 
   $FhirMetaCopyWith<$Res>? get meta;
@@ -9589,35 +9494,27 @@ abstract class _$$_PermissionCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Permission)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirCode? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: '_status') Element? statusElement,
       Reference? asserter,
       List<FhirDateTime>? date,
-      @JsonKey(name: '_date')
-          List<Element>? dateElement,
+      @JsonKey(name: '_date') List<Element>? dateElement,
       Period? validity,
       PermissionJustification? justification,
       FhirCode? combining,
-      @JsonKey(name: '_combining')
-          Element? combiningElement,
+      @JsonKey(name: '_combining') Element? combiningElement,
       List<PermissionRule>? rule});
 
   @override
@@ -9772,35 +9669,27 @@ class __$$_PermissionCopyWithImpl<$Res>
 class _$_Permission extends _Permission {
   const _$_Permission(
       {@JsonKey(unknownEnumValue: R5ResourceType.Permission)
-          this.resourceType = R5ResourceType.Permission,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R5ResourceType.Permission,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_status') this.statusElement,
       this.asserter,
       final List<FhirDateTime>? date,
-      @JsonKey(name: '_date')
-          final List<Element>? dateElement,
+      @JsonKey(name: '_date') final List<Element>? dateElement,
       this.validity,
       this.justification,
       this.combining,
-      @JsonKey(name: '_combining')
-          this.combiningElement,
+      @JsonKey(name: '_combining') this.combiningElement,
       final List<PermissionRule>? rule})
       : _contained = contained,
         _extension_ = extension_,
@@ -10115,35 +10004,27 @@ class _$_Permission extends _Permission {
 abstract class _Permission extends Permission {
   const factory _Permission(
       {@JsonKey(unknownEnumValue: R5ResourceType.Permission)
-          final R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirCode? status,
-      @JsonKey(name: '_status')
-          final Element? statusElement,
+      @JsonKey(name: '_status') final Element? statusElement,
       final Reference? asserter,
       final List<FhirDateTime>? date,
-      @JsonKey(name: '_date')
-          final List<Element>? dateElement,
+      @JsonKey(name: '_date') final List<Element>? dateElement,
       final Period? validity,
       final PermissionJustification? justification,
       final FhirCode? combining,
-      @JsonKey(name: '_combining')
-          final Element? combiningElement,
+      @JsonKey(name: '_combining') final Element? combiningElement,
       final List<PermissionRule>? rule}) = _$_Permission;
   const _Permission._() : super._();
 
@@ -12665,34 +12546,26 @@ abstract class $ProvenanceCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Provenance)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Reference> target,
       Period? occurredPeriod,
       FhirDateTime? occurredDateTime,
-      @JsonKey(name: '_occurredDateTime')
-          Element? occurredDateTimeElement,
+      @JsonKey(name: '_occurredDateTime') Element? occurredDateTimeElement,
       FhirInstant? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
       List<FhirUri>? policy,
-      @JsonKey(name: '_policy')
-          List<Element>? policyElement,
+      @JsonKey(name: '_policy') List<Element>? policyElement,
       Reference? location,
       List<CodeableReference>? authorization,
       CodeableConcept? activity,
@@ -13022,34 +12895,26 @@ abstract class _$$_ProvenanceCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.Provenance)
-          R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          int? dbId,
-      @JsonKey(name: 'id')
-          FhirId? fhirId,
+      R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
+      @JsonKey(name: 'id') FhirId? fhirId,
       FhirMeta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       FhirCode? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Reference> target,
       Period? occurredPeriod,
       FhirDateTime? occurredDateTime,
-      @JsonKey(name: '_occurredDateTime')
-          Element? occurredDateTimeElement,
+      @JsonKey(name: '_occurredDateTime') Element? occurredDateTimeElement,
       FhirInstant? recorded,
-      @JsonKey(name: '_recorded')
-          Element? recordedElement,
+      @JsonKey(name: '_recorded') Element? recordedElement,
       List<FhirUri>? policy,
-      @JsonKey(name: '_policy')
-          List<Element>? policyElement,
+      @JsonKey(name: '_policy') List<Element>? policyElement,
       Reference? location,
       List<CodeableReference>? authorization,
       CodeableConcept? activity,
@@ -13251,34 +13116,26 @@ class __$$_ProvenanceCopyWithImpl<$Res>
 class _$_Provenance extends _Provenance {
   const _$_Provenance(
       {@JsonKey(unknownEnumValue: R5ResourceType.Provenance)
-          this.resourceType = R5ResourceType.Provenance,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          this.dbId,
-      @JsonKey(name: 'id')
-          this.fhirId,
+      this.resourceType = R5ResourceType.Provenance,
+      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
+      @JsonKey(name: 'id') this.fhirId,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<Reference> target,
       this.occurredPeriod,
       this.occurredDateTime,
-      @JsonKey(name: '_occurredDateTime')
-          this.occurredDateTimeElement,
+      @JsonKey(name: '_occurredDateTime') this.occurredDateTimeElement,
       this.recorded,
-      @JsonKey(name: '_recorded')
-          this.recordedElement,
+      @JsonKey(name: '_recorded') this.recordedElement,
       final List<FhirUri>? policy,
-      @JsonKey(name: '_policy')
-          final List<Element>? policyElement,
+      @JsonKey(name: '_policy') final List<Element>? policyElement,
       this.location,
       final List<CodeableReference>? authorization,
       this.activity,
@@ -13721,34 +13578,27 @@ class _$_Provenance extends _Provenance {
 abstract class _Provenance extends Provenance {
   const factory _Provenance(
       {@JsonKey(unknownEnumValue: R5ResourceType.Provenance)
-          final R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false)
-          final int? dbId,
-      @JsonKey(name: 'id')
-          final FhirId? fhirId,
+      final R5ResourceType resourceType,
+      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+      @JsonKey(name: 'id') final FhirId? fhirId,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          final Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
       final FhirCode? language,
-      @JsonKey(name: '_language')
-          final Element? languageElement,
+      @JsonKey(name: '_language') final Element? languageElement,
       final Narrative? text,
       final List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          final List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final List<Reference> target,
       final Period? occurredPeriod,
       final FhirDateTime? occurredDateTime,
       @JsonKey(name: '_occurredDateTime')
-          final Element? occurredDateTimeElement,
+      final Element? occurredDateTimeElement,
       final FhirInstant? recorded,
-      @JsonKey(name: '_recorded')
-          final Element? recordedElement,
+      @JsonKey(name: '_recorded') final Element? recordedElement,
       final List<FhirUri>? policy,
-      @JsonKey(name: '_policy')
-          final List<Element>? policyElement,
+      @JsonKey(name: '_policy') final List<Element>? policyElement,
       final Reference? location,
       final List<CodeableReference>? authorization,
       final CodeableConcept? activity,
