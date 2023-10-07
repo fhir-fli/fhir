@@ -94,6 +94,252 @@ class Patient with Resource, _$Patient {
   /// data as a String and not a Map
   @override
   String toJsonString() => jsonEncode(toJson());
+
+  Patient updateDob(DateTime newDob) => copyWith(birthDate: FhirDate(newDob));
+
+  Patient updateSexAtBirth(PatientGender sexAtBirth) =>
+      copyWith(gender: sexAtBirth);
+
+  Patient updateHumanNameUse(HumanNameUse use, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(use: use)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(use: use)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(use: use),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateHumanNameText(String text, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(text: text)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(text: text)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(text: text),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateHumanNameFamily(List<String> family, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(family: family)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(family: family)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(family: family),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateHumanNameGiven(List<String> given, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(given: given)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(given: given)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(given: given),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateHumanNamePrefix(List<String> prefix, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(prefix: prefix)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(prefix: prefix)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(prefix: prefix),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateHumanNameSuffix(List<String> suffix, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(suffix: suffix)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(suffix: suffix)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(suffix: suffix),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateHumanNamePeriod(Period period, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(period: period)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(period: period)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(period: period),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateAddressUse(AddressUse use, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(use: use)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(use: use)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(use: use),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateAddressType(AddressType type, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(type: type)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(type: type)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(type: type),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateAddressText(String text, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(text: text)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(text: text)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(text: text),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateAddressLine(List<String> line, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(line: line)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(line: line)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(line: line),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateAddressCity(String city, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(city: city)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(city: city)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(city: city),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateAddressDistrict(String district, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(district: district)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(district: district)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(district: district),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateAddressState(String state, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(state: state)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(state: state)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(state: state),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateAddressPostalCode(String postalCode, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(postalCode: postalCode)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(postalCode: postalCode)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(postalCode: postalCode),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateAddressCountry(String country, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(country: country)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(country: country)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(country: country),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateAddressPeriod(Period period, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(period: period)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(period: period)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(period: period),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
 }
 
 @freezed
@@ -146,6 +392,35 @@ class PatientContact with _$PatientContact {
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
   String toJsonString() => jsonEncode(toJson());
+
+  PatientContact updateHumanNameUse(HumanNameUse use) =>
+      copyWith(name: name == null ? HumanName(use: use) : name!.updateUse(use));
+
+  PatientContact updateHumanNameText(String text) => copyWith(
+      name: name == null ? HumanName(text: text) : name!.updateText(text));
+
+  PatientContact updateHumanNameFamily(List<String> family) => copyWith(
+      name: name == null
+          ? HumanName(family: family)
+          : name!.updateFamily(family));
+
+  PatientContact updateHumanNameGiven(List<String> given) => copyWith(
+      name: name == null ? HumanName(given: given) : name!.updateGiven(given));
+
+  PatientContact updateHumanNamePrefix(List<String> prefix) => copyWith(
+      name: name == null
+          ? HumanName(prefix: prefix)
+          : name!.updatePrefix(prefix));
+
+  PatientContact updateHumanNameSuffix(List<String> suffix) => copyWith(
+      name: name == null
+          ? HumanName(suffix: suffix)
+          : name!.updateSuffix(suffix));
+
+  PatientContact updateHumanNamePeriod(Period period) => copyWith(
+      name: name == null
+          ? HumanName(period: period)
+          : name!.updatePeriod(period));
 }
 
 @freezed
@@ -355,6 +630,35 @@ class Practitioner with Resource, _$Practitioner {
   /// data as a String and not a Map
   @override
   String toJsonString() => jsonEncode(toJson());
+
+  Practitioner updateHumanNameUse(HumanNameUse use) =>
+      copyWith(name: name == null ? HumanName(use: use) : name!.updateUse(use));
+
+  Practitioner updateHumanNameText(String text) => copyWith(
+      name: name == null ? HumanName(text: text) : name!.updateText(text));
+
+  Practitioner updateHumanNameFamily(List<String> family) => copyWith(
+      name: name == null
+          ? HumanName(family: family)
+          : name!.updateFamily(family));
+
+  Practitioner updateHumanNameGiven(List<String> given) => copyWith(
+      name: name == null ? HumanName(given: given) : name!.updateGiven(given));
+
+  Practitioner updateHumanNamePrefix(List<String> prefix) => copyWith(
+      name: name == null
+          ? HumanName(prefix: prefix)
+          : name!.updatePrefix(prefix));
+
+  Practitioner updateHumanNameSuffix(List<String> suffix) => copyWith(
+      name: name == null
+          ? HumanName(suffix: suffix)
+          : name!.updateSuffix(suffix));
+
+  Practitioner updateHumanNamePeriod(Period period) => copyWith(
+      name: name == null
+          ? HumanName(period: period)
+          : name!.updatePeriod(period));
 }
 
 @freezed
@@ -522,4 +826,176 @@ class RelatedPerson with Resource, _$RelatedPerson {
   /// data as a String and not a Map
   @override
   String toJsonString() => jsonEncode(toJson());
+
+  RelatedPerson updateHumanNameUse(HumanNameUse use) =>
+      copyWith(name: name == null ? HumanName(use: use) : name!.updateUse(use));
+
+  RelatedPerson updateHumanNameText(String text) => copyWith(
+      name: name == null ? HumanName(text: text) : name!.updateText(text));
+
+  RelatedPerson updateHumanNameFamily(List<String> family) => copyWith(
+      name: name == null
+          ? HumanName(family: family)
+          : name!.updateFamily(family));
+
+  RelatedPerson updateHumanNameGiven(List<String> given) => copyWith(
+      name: name == null ? HumanName(given: given) : name!.updateGiven(given));
+
+  RelatedPerson updateHumanNamePrefix(List<String> prefix) => copyWith(
+      name: name == null
+          ? HumanName(prefix: prefix)
+          : name!.updatePrefix(prefix));
+
+  RelatedPerson updateHumanNameSuffix(List<String> suffix) => copyWith(
+      name: name == null
+          ? HumanName(suffix: suffix)
+          : name!.updateSuffix(suffix));
+
+  RelatedPerson updateHumanNamePeriod(Period period) => copyWith(
+      name: name == null
+          ? HumanName(period: period)
+          : name!.updatePeriod(period));
+
+  RelatedPerson updateAddressUse(AddressUse use, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(use: use)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(use: use)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(use: use),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  RelatedPerson updateAddressType(AddressType type, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(type: type)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(type: type)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(type: type),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  RelatedPerson updateAddressText(String text, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(text: text)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(text: text)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(text: text),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  RelatedPerson updateAddressLine(List<String> line, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(line: line)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(line: line)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(line: line),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  RelatedPerson updateAddressCity(String city, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(city: city)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(city: city)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(city: city),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  RelatedPerson updateAddressDistrict(String district, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(district: district)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(district: district)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(district: district),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  RelatedPerson updateAddressState(String state, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(state: state)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(state: state)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(state: state),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  RelatedPerson updateAddressPostalCode(String postalCode, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(postalCode: postalCode)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(postalCode: postalCode)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(postalCode: postalCode),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  RelatedPerson updateAddressCountry(String country, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(country: country)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(country: country)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(country: country),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  RelatedPerson updateAddressPeriod(Period period, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(period: period)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(period: period)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(period: period),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
 }

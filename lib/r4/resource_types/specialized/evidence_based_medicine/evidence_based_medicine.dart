@@ -2226,6 +2226,35 @@ class CitationEntry with _$CitationEntry {
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
   String toJsonString() => jsonEncode(toJson());
+
+  CitationEntry updateHumanNameUse(HumanNameUse use) =>
+      copyWith(name: name == null ? HumanName(use: use) : name!.updateUse(use));
+
+  CitationEntry updateHumanNameText(String text) => copyWith(
+      name: name == null ? HumanName(text: text) : name!.updateText(text));
+
+  CitationEntry updateHumanNameFamily(String family) => copyWith(
+      name: name == null
+          ? HumanName(family: family)
+          : name!.updateFamily(family));
+
+  CitationEntry updateHumanNameGiven(List<String> given) => copyWith(
+      name: name == null ? HumanName(given: given) : name!.updateGiven(given));
+
+  CitationEntry updateHumanNamePrefix(List<String> prefix) => copyWith(
+      name: name == null
+          ? HumanName(prefix: prefix)
+          : name!.updatePrefix(prefix));
+
+  CitationEntry updateHumanNameSuffix(List<String> suffix) => copyWith(
+      name: name == null
+          ? HumanName(suffix: suffix)
+          : name!.updateSuffix(suffix));
+
+  CitationEntry updateHumanNamePeriod(Period period) => copyWith(
+      name: name == null
+          ? HumanName(period: period)
+          : name!.updatePeriod(period));
 }
 
 /// [CitationAffiliationInfo] The Citation Resource enables reference to any

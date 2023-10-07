@@ -1,5 +1,10 @@
 # fhir
 
+## [0.11.4]
+
+* updated dependencies
+* added convenience methods for Address, HumanName, Patient
+
 ## [0.11.3]
 
 * updated dependencies

@@ -8863,6 +8863,35 @@ class InsurancePlanContact with _$InsurancePlanContact {
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
   String toJsonString() => jsonEncode(toJson());
+
+  InsurancePlanContact updateHumanNameUse(HumanNameUse use) =>
+      copyWith(name: name == null ? HumanName(use: use) : name!.updateUse(use));
+
+  InsurancePlanContact updateHumanNameText(String text) => copyWith(
+      name: name == null ? HumanName(text: text) : name!.updateText(text));
+
+  InsurancePlanContact updateHumanNameFamily(String family) => copyWith(
+      name: name == null
+          ? HumanName(family: family)
+          : name!.updateFamily(family));
+
+  InsurancePlanContact updateHumanNameGiven(List<String> given) => copyWith(
+      name: name == null ? HumanName(given: given) : name!.updateGiven(given));
+
+  InsurancePlanContact updateHumanNamePrefix(List<String> prefix) => copyWith(
+      name: name == null
+          ? HumanName(prefix: prefix)
+          : name!.updatePrefix(prefix));
+
+  InsurancePlanContact updateHumanNameSuffix(List<String> suffix) => copyWith(
+      name: name == null
+          ? HumanName(suffix: suffix)
+          : name!.updateSuffix(suffix));
+
+  InsurancePlanContact updateHumanNamePeriod(Period period) => copyWith(
+      name: name == null
+          ? HumanName(period: period)
+          : name!.updatePeriod(period));
 }
 
 /// [InsurancePlanCoverage] Details of a Health Insurance product/plan

@@ -684,6 +684,28 @@ class Address with _$Address {
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
   String toJsonString() => jsonEncode(toJson());
+
+  /// Because this is a common class that's updated
+  Address updateUse(AddressUse use) => copyWith(use: use);
+
+  Address updateType(AddressType type) => copyWith(type: type);
+
+  Address updateText(String text) => copyWith(text: text);
+
+  Address updateLine(List<String> line) => copyWith(line: line);
+
+  Address updateCity(String city) => copyWith(city: city);
+
+  Address updateDistrict(String district) => copyWith(district: district);
+
+  Address updateState(String state) => copyWith(state: state);
+
+  Address updatePostalCode(String postalCode) =>
+      copyWith(postalCode: postalCode);
+
+  Address updateCountry(String country) => copyWith(country: country);
+
+  Address updatePeriod(Period period) => copyWith(period: period);
 }
 
 @freezed
@@ -741,6 +763,20 @@ class HumanName with _$HumanName {
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
   String toJsonString() => jsonEncode(toJson());
+
+  HumanName updateUse(HumanNameUse use) => copyWith(use: use);
+
+  HumanName updateText(String text) => copyWith(text: text);
+
+  HumanName updateFamily(List<String> family) => copyWith(family: family);
+
+  HumanName updateGiven(List<String> given) => copyWith(given: given);
+
+  HumanName updatePrefix(List<String> prefix) => copyWith(prefix: prefix);
+
+  HumanName updateSuffix(List<String> suffix) => copyWith(suffix: suffix);
+
+  HumanName updatePeriod(Period period) => copyWith(period: period);
 }
 
 @freezed

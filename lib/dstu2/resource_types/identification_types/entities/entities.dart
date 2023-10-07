@@ -350,6 +350,247 @@ class Person with Resource, _$Person {
   /// data as a String and not a Map
   @override
   String toJsonString() => jsonEncode(toJson());
+
+  Person updateHumanNameUse(HumanNameUse use, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(use: use)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(use: use)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(use: use),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateHumanNameText(String text, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(text: text)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(text: text)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(text: text),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateHumanNameFamily(List<String> family, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(family: family)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(family: family)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(family: family),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateHumanNameGiven(List<String> given, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(given: given)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(given: given)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(given: given),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateHumanNamePrefix(List<String> prefix, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(prefix: prefix)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(prefix: prefix)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(prefix: prefix),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateHumanNameSuffix(List<String> suffix, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(suffix: suffix)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(suffix: suffix)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(suffix: suffix),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateHumanNamePeriod(Period period, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(period: period)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(period: period)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(period: period),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateAddressUse(AddressUse use, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(use: use)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(use: use)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(use: use),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateAddressType(AddressType type, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(type: type)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(type: type)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(type: type),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateAddressText(String text, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(text: text)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(text: text)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(text: text),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateAddressLine(List<String> line, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(line: line)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(line: line)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(line: line),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateAddressCity(String city, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(city: city)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(city: city)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(city: city),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateAddressDistrict(String district, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(district: district)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(district: district)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(district: district),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateAddressState(String state, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(state: state)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(state: state)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(state: state),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateAddressPostalCode(String postalCode, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(postalCode: postalCode)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(postalCode: postalCode)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(postalCode: postalCode),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateAddressCountry(String country, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(country: country)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(country: country)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(country: country),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Person updateAddressPeriod(Period period, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(period: period)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(period: period)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(period: period),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
 }
 
 @freezed

@@ -211,6 +211,156 @@ class ExtendedContactDetail with _$ExtendedContactDetail {
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
   String toJsonString() => jsonEncode(toJson());
+
+  ExtendedContactDetail updateHumanNameUse(HumanNameUse use, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(use: use)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(use: use)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(use: use),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ExtendedContactDetail updateHumanNameText(String text, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(text: text)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(text: text)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(text: text),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ExtendedContactDetail updateHumanNameFamily(String family, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(family: family)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(family: family)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(family: family),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ExtendedContactDetail updateHumanNameGiven(List<String> given,
+      [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(given: given)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(given: given)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(given: given),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ExtendedContactDetail updateHumanNamePrefix(List<String> prefix,
+      [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(prefix: prefix)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(prefix: prefix)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(prefix: prefix),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ExtendedContactDetail updateHumanNameSuffix(List<String> suffix,
+      [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(suffix: suffix)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(suffix: suffix)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(suffix: suffix),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ExtendedContactDetail updateHumanNamePeriod(Period period, [int index = 0]) {
+    if (name == null || name!.isEmpty) {
+      return copyWith(name: <HumanName>[HumanName(period: period)]);
+    } else if (index >= name!.length) {
+      return copyWith(name: <HumanName>[...name!, HumanName(period: period)]);
+    } else {
+      return copyWith(name: <HumanName>[
+        ...name!.sublist(0, index),
+        name![index].copyWith(period: period),
+        ...name!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ExtendedContactDetail updateAddressUse(AddressUse use) => copyWith(
+      address:
+          address == null ? Address(use: use) : address!.copyWith(use: use));
+
+  ExtendedContactDetail updateAddressType(AddressType type) => copyWith(
+      address: address == null
+          ? Address(type: type)
+          : address!.copyWith(type: type));
+
+  ExtendedContactDetail updateAddressText(String text) => copyWith(
+      address: address == null
+          ? Address(text: text)
+          : address!.copyWith(text: text));
+
+  ExtendedContactDetail updateAddressLine(List<String> line) => copyWith(
+      address: address == null
+          ? Address(line: line)
+          : address!.copyWith(line: line));
+
+  ExtendedContactDetail updateAddressCity(String city) => copyWith(
+      address: address == null
+          ? Address(city: city)
+          : address!.copyWith(city: city));
+
+  ExtendedContactDetail updateAddressDistrict(String district) => copyWith(
+      address: address == null
+          ? Address(district: district)
+          : address!.copyWith(district: district));
+
+  ExtendedContactDetail updateAddressState(String state) => copyWith(
+      address: address == null
+          ? Address(state: state)
+          : address!.copyWith(state: state));
+
+  ExtendedContactDetail updateAddressPostalCode(String postalCode) => copyWith(
+      address: address == null
+          ? Address(postalCode: postalCode)
+          : address!.copyWith(postalCode: postalCode));
+
+  ExtendedContactDetail updateAddressCountry(String country) => copyWith(
+      address: address == null
+          ? Address(country: country)
+          : address!.copyWith(country: country));
+
+  ExtendedContactDetail updateAddressPeriod(Period period) => copyWith(
+      address: address == null
+          ? Address(period: period)
+          : address!.copyWith(period: period));
 }
 
 /// [VirtualServiceDetail] Virtual Service Contact Details.
