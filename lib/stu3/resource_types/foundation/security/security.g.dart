@@ -6,8 +6,8 @@ part of 'security.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
-    _$_AuditEvent(
+_$AuditEventImpl _$$AuditEventImplFromJson(Map<String, dynamic> json) =>
+    _$AuditEventImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.AuditEvent) ??
@@ -72,7 +72,7 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AuditEventToJson(_$_AuditEvent instance) {
+Map<String, dynamic> _$$AuditEventImplToJson(_$AuditEventImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -251,8 +251,9 @@ const _$AuditEventOutcomeEnumMap = {
   AuditEventOutcome.unknown: 'unknown',
 };
 
-_$_AuditEventAgent _$$_AuditEventAgentFromJson(Map<String, dynamic> json) =>
-    _$_AuditEventAgent(
+_$AuditEventAgentImpl _$$AuditEventAgentImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AuditEventAgentImpl(
       role: (json['role'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -296,7 +297,8 @@ _$_AuditEventAgent _$$_AuditEventAgentFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AuditEventAgentToJson(_$_AuditEventAgent instance) {
+Map<String, dynamic> _$$AuditEventAgentImplToJson(
+    _$AuditEventAgentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -325,8 +327,9 @@ Map<String, dynamic> _$$_AuditEventAgentToJson(_$_AuditEventAgent instance) {
   return val;
 }
 
-_$_AuditEventNetwork _$$_AuditEventNetworkFromJson(Map<String, dynamic> json) =>
-    _$_AuditEventNetwork(
+_$AuditEventNetworkImpl _$$AuditEventNetworkImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AuditEventNetworkImpl(
       address: json['address'] as String?,
       addressElement: json['_address'] == null
           ? null
@@ -337,8 +340,8 @@ _$_AuditEventNetwork _$$_AuditEventNetworkFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AuditEventNetworkToJson(
-    _$_AuditEventNetwork instance) {
+Map<String, dynamic> _$$AuditEventNetworkImplToJson(
+    _$AuditEventNetworkImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -363,8 +366,9 @@ const _$AuditEventNetworkTypeEnumMap = {
   AuditEventNetworkType.unknown: 'unknown',
 };
 
-_$_AuditEventSource _$$_AuditEventSourceFromJson(Map<String, dynamic> json) =>
-    _$_AuditEventSource(
+_$AuditEventSourceImpl _$$AuditEventSourceImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AuditEventSourceImpl(
       site: json['site'] as String?,
       siteElement: json['_site'] == null
           ? null
@@ -376,7 +380,8 @@ _$_AuditEventSource _$$_AuditEventSourceFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AuditEventSourceToJson(_$_AuditEventSource instance) {
+Map<String, dynamic> _$$AuditEventSourceImplToJson(
+    _$AuditEventSourceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -392,8 +397,9 @@ Map<String, dynamic> _$$_AuditEventSourceToJson(_$_AuditEventSource instance) {
   return val;
 }
 
-_$_AuditEventEntity _$$_AuditEventEntityFromJson(Map<String, dynamic> json) =>
-    _$_AuditEventEntity(
+_$AuditEventEntityImpl _$$AuditEventEntityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AuditEventEntityImpl(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -429,7 +435,8 @@ _$_AuditEventEntity _$$_AuditEventEntityFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AuditEventEntityToJson(_$_AuditEventEntity instance) {
+Map<String, dynamic> _$$AuditEventEntityImplToJson(
+    _$AuditEventEntityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -455,8 +462,9 @@ Map<String, dynamic> _$$_AuditEventEntityToJson(_$_AuditEventEntity instance) {
   return val;
 }
 
-_$_AuditEventDetail _$$_AuditEventDetailFromJson(Map<String, dynamic> json) =>
-    _$_AuditEventDetail(
+_$AuditEventDetailImpl _$$AuditEventDetailImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AuditEventDetailImpl(
       type: json['type'] as String?,
       typeElement: json['_type'] == null
           ? null
@@ -467,7 +475,8 @@ _$_AuditEventDetail _$$_AuditEventDetailFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AuditEventDetailToJson(_$_AuditEventDetail instance) {
+Map<String, dynamic> _$$AuditEventDetailImplToJson(
+    _$AuditEventDetailImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -483,7 +492,8 @@ Map<String, dynamic> _$$_AuditEventDetailToJson(_$_AuditEventDetail instance) {
   return val;
 }
 
-_$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
+_$ConsentImpl _$$ConsentImplFromJson(Map<String, dynamic> json) =>
+    _$ConsentImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Consent) ??
@@ -583,7 +593,7 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
+Map<String, dynamic> _$$ConsentImplToJson(_$ConsentImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -646,20 +656,20 @@ const _$ConsentStatusEnumMap = {
   ConsentStatus.unknown: 'unknown',
 };
 
-_$_ConsentActor _$$_ConsentActorFromJson(Map<String, dynamic> json) =>
-    _$_ConsentActor(
+_$ConsentActorImpl _$$ConsentActorImplFromJson(Map<String, dynamic> json) =>
+    _$ConsentActorImpl(
       role: CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
       reference: Reference.fromJson(json['reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ConsentActorToJson(_$_ConsentActor instance) =>
+Map<String, dynamic> _$$ConsentActorImplToJson(_$ConsentActorImpl instance) =>
     <String, dynamic>{
       'role': instance.role.toJson(),
       'reference': instance.reference.toJson(),
     };
 
-_$_ConsentPolicy _$$_ConsentPolicyFromJson(Map<String, dynamic> json) =>
-    _$_ConsentPolicy(
+_$ConsentPolicyImpl _$$ConsentPolicyImplFromJson(Map<String, dynamic> json) =>
+    _$ConsentPolicyImpl(
       authority: json['authority'] as String?,
       authorityElement: json['_authority'] == null
           ? null
@@ -670,7 +680,7 @@ _$_ConsentPolicy _$$_ConsentPolicyFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_uri'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ConsentPolicyToJson(_$_ConsentPolicy instance) {
+Map<String, dynamic> _$$ConsentPolicyImplToJson(_$ConsentPolicyImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -686,8 +696,8 @@ Map<String, dynamic> _$$_ConsentPolicyToJson(_$_ConsentPolicy instance) {
   return val;
 }
 
-_$_ConsentData _$$_ConsentDataFromJson(Map<String, dynamic> json) =>
-    _$_ConsentData(
+_$ConsentDataImpl _$$ConsentDataImplFromJson(Map<String, dynamic> json) =>
+    _$ConsentDataImpl(
       meaning:
           $enumDecodeNullable(_$ConsentDataMeaningEnumMap, json['meaning']),
       meaningElement: json['_meaning'] == null
@@ -696,7 +706,7 @@ _$_ConsentData _$$_ConsentDataFromJson(Map<String, dynamic> json) =>
       reference: Reference.fromJson(json['reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ConsentDataToJson(_$_ConsentData instance) {
+Map<String, dynamic> _$$ConsentDataImplToJson(_$ConsentDataImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -719,8 +729,8 @@ const _$ConsentDataMeaningEnumMap = {
   ConsentDataMeaning.unknown: 'unknown',
 };
 
-_$_ConsentExcept _$$_ConsentExceptFromJson(Map<String, dynamic> json) =>
-    _$_ConsentExcept(
+_$ConsentExceptImpl _$$ConsentExceptImplFromJson(Map<String, dynamic> json) =>
+    _$ConsentExceptImpl(
       type: $enumDecodeNullable(_$ConsentExceptTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
@@ -754,7 +764,7 @@ _$_ConsentExcept _$$_ConsentExceptFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ConsentExceptToJson(_$_ConsentExcept instance) {
+Map<String, dynamic> _$$ConsentExceptImplToJson(_$ConsentExceptImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -784,20 +794,20 @@ const _$ConsentExceptTypeEnumMap = {
   ConsentExceptType.unknown: 'unknown',
 };
 
-_$_ConsentActor1 _$$_ConsentActor1FromJson(Map<String, dynamic> json) =>
-    _$_ConsentActor1(
+_$ConsentActor1Impl _$$ConsentActor1ImplFromJson(Map<String, dynamic> json) =>
+    _$ConsentActor1Impl(
       role: CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
       reference: Reference.fromJson(json['reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ConsentActor1ToJson(_$_ConsentActor1 instance) =>
+Map<String, dynamic> _$$ConsentActor1ImplToJson(_$ConsentActor1Impl instance) =>
     <String, dynamic>{
       'role': instance.role.toJson(),
       'reference': instance.reference.toJson(),
     };
 
-_$_ConsentData1 _$$_ConsentData1FromJson(Map<String, dynamic> json) =>
-    _$_ConsentData1(
+_$ConsentData1Impl _$$ConsentData1ImplFromJson(Map<String, dynamic> json) =>
+    _$ConsentData1Impl(
       meaning:
           $enumDecodeNullable(_$ConsentData1MeaningEnumMap, json['meaning']),
       meaningElement: json['_meaning'] == null
@@ -806,7 +816,7 @@ _$_ConsentData1 _$$_ConsentData1FromJson(Map<String, dynamic> json) =>
       reference: Reference.fromJson(json['reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ConsentData1ToJson(_$_ConsentData1 instance) {
+Map<String, dynamic> _$$ConsentData1ImplToJson(_$ConsentData1Impl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -829,8 +839,8 @@ const _$ConsentData1MeaningEnumMap = {
   ConsentData1Meaning.unknown: 'unknown',
 };
 
-_$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
-    _$_Provenance(
+_$ProvenanceImpl _$$ProvenanceImplFromJson(Map<String, dynamic> json) =>
+    _$ProvenanceImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Provenance) ??
@@ -899,7 +909,7 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ProvenanceToJson(_$_Provenance instance) {
+Map<String, dynamic> _$$ProvenanceImplToJson(_$ProvenanceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -940,8 +950,9 @@ Map<String, dynamic> _$$_ProvenanceToJson(_$_Provenance instance) {
   return val;
 }
 
-_$_ProvenanceAgent _$$_ProvenanceAgentFromJson(Map<String, dynamic> json) =>
-    _$_ProvenanceAgent(
+_$ProvenanceAgentImpl _$$ProvenanceAgentImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ProvenanceAgentImpl(
       role: (json['role'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -966,7 +977,8 @@ _$_ProvenanceAgent _$$_ProvenanceAgentFromJson(Map<String, dynamic> json) =>
               json['relatedAgentType'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ProvenanceAgentToJson(_$_ProvenanceAgent instance) {
+Map<String, dynamic> _$$ProvenanceAgentImplToJson(
+    _$ProvenanceAgentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -986,8 +998,9 @@ Map<String, dynamic> _$$_ProvenanceAgentToJson(_$_ProvenanceAgent instance) {
   return val;
 }
 
-_$_ProvenanceEntity _$$_ProvenanceEntityFromJson(Map<String, dynamic> json) =>
-    _$_ProvenanceEntity(
+_$ProvenanceEntityImpl _$$ProvenanceEntityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ProvenanceEntityImpl(
       role: $enumDecodeNullable(_$ProvenanceEntityRoleEnumMap, json['role']),
       roleElement: json['_role'] == null
           ? null
@@ -1007,7 +1020,8 @@ _$_ProvenanceEntity _$$_ProvenanceEntityFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ProvenanceEntityToJson(_$_ProvenanceEntity instance) {
+Map<String, dynamic> _$$ProvenanceEntityImplToJson(
+    _$ProvenanceEntityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

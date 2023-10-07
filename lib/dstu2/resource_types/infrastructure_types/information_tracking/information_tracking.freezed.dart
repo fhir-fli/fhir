@@ -381,11 +381,11 @@ class _$QuestionnaireCopyWithImpl<$Res, $Val extends Questionnaire>
 }
 
 /// @nodoc
-abstract class _$$_QuestionnaireCopyWith<$Res>
+abstract class _$$QuestionnaireImplCopyWith<$Res>
     implements $QuestionnaireCopyWith<$Res> {
-  factory _$$_QuestionnaireCopyWith(
-          _$_Questionnaire value, $Res Function(_$_Questionnaire) then) =
-      __$$_QuestionnaireCopyWithImpl<$Res>;
+  factory _$$QuestionnaireImplCopyWith(
+          _$QuestionnaireImpl value, $Res Function(_$QuestionnaireImpl) then) =
+      __$$QuestionnaireImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -441,11 +441,11 @@ abstract class _$$_QuestionnaireCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_QuestionnaireCopyWithImpl<$Res>
-    extends _$QuestionnaireCopyWithImpl<$Res, _$_Questionnaire>
-    implements _$$_QuestionnaireCopyWith<$Res> {
-  __$$_QuestionnaireCopyWithImpl(
-      _$_Questionnaire _value, $Res Function(_$_Questionnaire) _then)
+class __$$QuestionnaireImplCopyWithImpl<$Res>
+    extends _$QuestionnaireCopyWithImpl<$Res, _$QuestionnaireImpl>
+    implements _$$QuestionnaireImplCopyWith<$Res> {
+  __$$QuestionnaireImplCopyWithImpl(
+      _$QuestionnaireImpl _value, $Res Function(_$QuestionnaireImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -478,7 +478,7 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
     Object? subjectTypeElement = freezed,
     Object? group = null,
   }) {
-    return _then(_$_Questionnaire(
+    return _then(_$QuestionnaireImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -589,8 +589,8 @@ class __$$_QuestionnaireCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Questionnaire extends _Questionnaire {
-  const _$_Questionnaire(
+class _$QuestionnaireImpl extends _Questionnaire {
+  const _$QuestionnaireImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
       this.resourceType = Dstu2ResourceType.Questionnaire,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -628,8 +628,8 @@ class _$_Questionnaire extends _Questionnaire {
         _subjectTypeElement = subjectTypeElement,
         super._();
 
-  factory _$_Questionnaire.fromJson(Map<String, dynamic> json) =>
-      _$$_QuestionnaireFromJson(json);
+  factory _$QuestionnaireImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QuestionnaireImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
@@ -764,7 +764,7 @@ class _$_Questionnaire extends _Questionnaire {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Questionnaire &&
+            other is _$QuestionnaireImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -845,12 +845,12 @@ class _$_Questionnaire extends _Questionnaire {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QuestionnaireCopyWith<_$_Questionnaire> get copyWith =>
-      __$$_QuestionnaireCopyWithImpl<_$_Questionnaire>(this, _$identity);
+  _$$QuestionnaireImplCopyWith<_$QuestionnaireImpl> get copyWith =>
+      __$$QuestionnaireImplCopyWithImpl<_$QuestionnaireImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireToJson(
+    return _$$QuestionnaireImplToJson(
       this,
     );
   }
@@ -885,11 +885,11 @@ abstract class _Questionnaire extends Questionnaire {
       final List<ContactPoint>? telecom,
       final List<FhirCode>? subjectType,
       @JsonKey(name: '_subjectType') final List<Element?>? subjectTypeElement,
-      required final QuestionnaireGroup group}) = _$_Questionnaire;
+      required final QuestionnaireGroup group}) = _$QuestionnaireImpl;
   const _Questionnaire._() : super._();
 
   factory _Questionnaire.fromJson(Map<String, dynamic> json) =
-      _$_Questionnaire.fromJson;
+      _$QuestionnaireImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Questionnaire)
@@ -958,7 +958,7 @@ abstract class _Questionnaire extends Questionnaire {
   QuestionnaireGroup get group;
   @override
   @JsonKey(ignore: true)
-  _$$_QuestionnaireCopyWith<_$_Questionnaire> get copyWith =>
+  _$$QuestionnaireImplCopyWith<_$QuestionnaireImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1137,11 +1137,11 @@ class _$QuestionnaireGroupCopyWithImpl<$Res, $Val extends QuestionnaireGroup>
 }
 
 /// @nodoc
-abstract class _$$_QuestionnaireGroupCopyWith<$Res>
+abstract class _$$QuestionnaireGroupImplCopyWith<$Res>
     implements $QuestionnaireGroupCopyWith<$Res> {
-  factory _$$_QuestionnaireGroupCopyWith(_$_QuestionnaireGroup value,
-          $Res Function(_$_QuestionnaireGroup) then) =
-      __$$_QuestionnaireGroupCopyWithImpl<$Res>;
+  factory _$$QuestionnaireGroupImplCopyWith(_$QuestionnaireGroupImpl value,
+          $Res Function(_$QuestionnaireGroupImpl) then) =
+      __$$QuestionnaireGroupImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1167,11 +1167,11 @@ abstract class _$$_QuestionnaireGroupCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_QuestionnaireGroupCopyWithImpl<$Res>
-    extends _$QuestionnaireGroupCopyWithImpl<$Res, _$_QuestionnaireGroup>
-    implements _$$_QuestionnaireGroupCopyWith<$Res> {
-  __$$_QuestionnaireGroupCopyWithImpl(
-      _$_QuestionnaireGroup _value, $Res Function(_$_QuestionnaireGroup) _then)
+class __$$QuestionnaireGroupImplCopyWithImpl<$Res>
+    extends _$QuestionnaireGroupCopyWithImpl<$Res, _$QuestionnaireGroupImpl>
+    implements _$$QuestionnaireGroupImplCopyWith<$Res> {
+  __$$QuestionnaireGroupImplCopyWithImpl(_$QuestionnaireGroupImpl _value,
+      $Res Function(_$QuestionnaireGroupImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1192,7 +1192,7 @@ class __$$_QuestionnaireGroupCopyWithImpl<$Res>
     Object? group = freezed,
     Object? question = freezed,
   }) {
-    return _then(_$_QuestionnaireGroup(
+    return _then(_$QuestionnaireGroupImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1255,8 +1255,8 @@ class __$$_QuestionnaireGroupCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_QuestionnaireGroup extends _QuestionnaireGroup {
-  const _$_QuestionnaireGroup(
+class _$QuestionnaireGroupImpl extends _QuestionnaireGroup {
+  const _$QuestionnaireGroupImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1279,8 +1279,8 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
         _question = question,
         super._();
 
-  factory _$_QuestionnaireGroup.fromJson(Map<String, dynamic> json) =>
-      _$$_QuestionnaireGroupFromJson(json);
+  factory _$QuestionnaireGroupImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QuestionnaireGroupImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -1374,7 +1374,7 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QuestionnaireGroup &&
+            other is _$QuestionnaireGroupImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -1419,13 +1419,13 @@ class _$_QuestionnaireGroup extends _QuestionnaireGroup {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QuestionnaireGroupCopyWith<_$_QuestionnaireGroup> get copyWith =>
-      __$$_QuestionnaireGroupCopyWithImpl<_$_QuestionnaireGroup>(
+  _$$QuestionnaireGroupImplCopyWith<_$QuestionnaireGroupImpl> get copyWith =>
+      __$$QuestionnaireGroupImplCopyWithImpl<_$QuestionnaireGroupImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireGroupToJson(
+    return _$$QuestionnaireGroupImplToJson(
       this,
     );
   }
@@ -1447,11 +1447,11 @@ abstract class _QuestionnaireGroup extends QuestionnaireGroup {
           final FhirBoolean? repeats,
           final List<QuestionnaireGroup>? group,
           final List<QuestionnaireGroupQuestion>? question}) =
-      _$_QuestionnaireGroup;
+      _$QuestionnaireGroupImpl;
   const _QuestionnaireGroup._() : super._();
 
   factory _QuestionnaireGroup.fromJson(Map<String, dynamic> json) =
-      _$_QuestionnaireGroup.fromJson;
+      _$QuestionnaireGroupImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1489,7 +1489,7 @@ abstract class _QuestionnaireGroup extends QuestionnaireGroup {
   List<QuestionnaireGroupQuestion>? get question;
   @override
   @JsonKey(ignore: true)
-  _$$_QuestionnaireGroupCopyWith<_$_QuestionnaireGroup> get copyWith =>
+  _$$QuestionnaireGroupImplCopyWith<_$QuestionnaireGroupImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1670,12 +1670,12 @@ class _$QuestionnaireGroupQuestionCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_QuestionnaireGroupQuestionCopyWith<$Res>
+abstract class _$$QuestionnaireGroupQuestionImplCopyWith<$Res>
     implements $QuestionnaireGroupQuestionCopyWith<$Res> {
-  factory _$$_QuestionnaireGroupQuestionCopyWith(
-          _$_QuestionnaireGroupQuestion value,
-          $Res Function(_$_QuestionnaireGroupQuestion) then) =
-      __$$_QuestionnaireGroupQuestionCopyWithImpl<$Res>;
+  factory _$$QuestionnaireGroupQuestionImplCopyWith(
+          _$QuestionnaireGroupQuestionImpl value,
+          $Res Function(_$QuestionnaireGroupQuestionImpl) then) =
+      __$$QuestionnaireGroupQuestionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1701,13 +1701,13 @@ abstract class _$$_QuestionnaireGroupQuestionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_QuestionnaireGroupQuestionCopyWithImpl<$Res>
+class __$$QuestionnaireGroupQuestionImplCopyWithImpl<$Res>
     extends _$QuestionnaireGroupQuestionCopyWithImpl<$Res,
-        _$_QuestionnaireGroupQuestion>
-    implements _$$_QuestionnaireGroupQuestionCopyWith<$Res> {
-  __$$_QuestionnaireGroupQuestionCopyWithImpl(
-      _$_QuestionnaireGroupQuestion _value,
-      $Res Function(_$_QuestionnaireGroupQuestion) _then)
+        _$QuestionnaireGroupQuestionImpl>
+    implements _$$QuestionnaireGroupQuestionImplCopyWith<$Res> {
+  __$$QuestionnaireGroupQuestionImplCopyWithImpl(
+      _$QuestionnaireGroupQuestionImpl _value,
+      $Res Function(_$QuestionnaireGroupQuestionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1728,7 +1728,7 @@ class __$$_QuestionnaireGroupQuestionCopyWithImpl<$Res>
     Object? option = freezed,
     Object? group = freezed,
   }) {
-    return _then(_$_QuestionnaireGroupQuestion(
+    return _then(_$QuestionnaireGroupQuestionImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1791,8 +1791,8 @@ class __$$_QuestionnaireGroupQuestionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
-  const _$_QuestionnaireGroupQuestion(
+class _$QuestionnaireGroupQuestionImpl extends _QuestionnaireGroupQuestion {
+  const _$QuestionnaireGroupQuestionImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1815,8 +1815,9 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
         _group = group,
         super._();
 
-  factory _$_QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =>
-      _$$_QuestionnaireGroupQuestionFromJson(json);
+  factory _$QuestionnaireGroupQuestionImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$QuestionnaireGroupQuestionImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -1910,7 +1911,7 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QuestionnaireGroupQuestion &&
+            other is _$QuestionnaireGroupQuestionImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -1954,13 +1955,13 @@ class _$_QuestionnaireGroupQuestion extends _QuestionnaireGroupQuestion {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QuestionnaireGroupQuestionCopyWith<_$_QuestionnaireGroupQuestion>
-      get copyWith => __$$_QuestionnaireGroupQuestionCopyWithImpl<
-          _$_QuestionnaireGroupQuestion>(this, _$identity);
+  _$$QuestionnaireGroupQuestionImplCopyWith<_$QuestionnaireGroupQuestionImpl>
+      get copyWith => __$$QuestionnaireGroupQuestionImplCopyWithImpl<
+          _$QuestionnaireGroupQuestionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireGroupQuestionToJson(
+    return _$$QuestionnaireGroupQuestionImplToJson(
       this,
     );
   }
@@ -1981,11 +1982,12 @@ abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
       final FhirBoolean? repeats,
       final Reference? options,
       final List<Coding>? option,
-      final List<QuestionnaireGroup>? group}) = _$_QuestionnaireGroupQuestion;
+      final List<QuestionnaireGroup>?
+          group}) = _$QuestionnaireGroupQuestionImpl;
   const _QuestionnaireGroupQuestion._() : super._();
 
   factory _QuestionnaireGroupQuestion.fromJson(Map<String, dynamic> json) =
-      _$_QuestionnaireGroupQuestion.fromJson;
+      _$QuestionnaireGroupQuestionImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2023,7 +2025,7 @@ abstract class _QuestionnaireGroupQuestion extends QuestionnaireGroupQuestion {
   List<QuestionnaireGroup>? get group;
   @override
   @JsonKey(ignore: true)
-  _$$_QuestionnaireGroupQuestionCopyWith<_$_QuestionnaireGroupQuestion>
+  _$$QuestionnaireGroupQuestionImplCopyWith<_$QuestionnaireGroupQuestionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -2437,11 +2439,12 @@ class _$QuestionnaireResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_QuestionnaireResponseCopyWith<$Res>
+abstract class _$$QuestionnaireResponseImplCopyWith<$Res>
     implements $QuestionnaireResponseCopyWith<$Res> {
-  factory _$$_QuestionnaireResponseCopyWith(_$_QuestionnaireResponse value,
-          $Res Function(_$_QuestionnaireResponse) then) =
-      __$$_QuestionnaireResponseCopyWithImpl<$Res>;
+  factory _$$QuestionnaireResponseImplCopyWith(
+          _$QuestionnaireResponseImpl value,
+          $Res Function(_$QuestionnaireResponseImpl) then) =
+      __$$QuestionnaireResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2504,11 +2507,12 @@ abstract class _$$_QuestionnaireResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_QuestionnaireResponseCopyWithImpl<$Res>
-    extends _$QuestionnaireResponseCopyWithImpl<$Res, _$_QuestionnaireResponse>
-    implements _$$_QuestionnaireResponseCopyWith<$Res> {
-  __$$_QuestionnaireResponseCopyWithImpl(_$_QuestionnaireResponse _value,
-      $Res Function(_$_QuestionnaireResponse) _then)
+class __$$QuestionnaireResponseImplCopyWithImpl<$Res>
+    extends _$QuestionnaireResponseCopyWithImpl<$Res,
+        _$QuestionnaireResponseImpl>
+    implements _$$QuestionnaireResponseImplCopyWith<$Res> {
+  __$$QuestionnaireResponseImplCopyWithImpl(_$QuestionnaireResponseImpl _value,
+      $Res Function(_$QuestionnaireResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2539,7 +2543,7 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
     Object? encounter = freezed,
     Object? group = freezed,
   }) {
-    return _then(_$_QuestionnaireResponse(
+    return _then(_$QuestionnaireResponseImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -2642,8 +2646,8 @@ class __$$_QuestionnaireResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_QuestionnaireResponse extends _QuestionnaireResponse {
-  const _$_QuestionnaireResponse(
+class _$QuestionnaireResponseImpl extends _QuestionnaireResponse {
+  const _$QuestionnaireResponseImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
       this.resourceType = Dstu2ResourceType.QuestionnaireResponse,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -2676,8 +2680,8 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_QuestionnaireResponseFromJson(json);
+  factory _$QuestionnaireResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$QuestionnaireResponseImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
@@ -2773,7 +2777,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QuestionnaireResponse &&
+            other is _$QuestionnaireResponseImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -2848,13 +2852,13 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QuestionnaireResponseCopyWith<_$_QuestionnaireResponse> get copyWith =>
-      __$$_QuestionnaireResponseCopyWithImpl<_$_QuestionnaireResponse>(
-          this, _$identity);
+  _$$QuestionnaireResponseImplCopyWith<_$QuestionnaireResponseImpl>
+      get copyWith => __$$QuestionnaireResponseImplCopyWithImpl<
+          _$QuestionnaireResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseToJson(
+    return _$$QuestionnaireResponseImplToJson(
       this,
     );
   }
@@ -2888,11 +2892,11 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
       @JsonKey(name: '_authored') final Element? authoredElement,
       final Reference? source,
       final Reference? encounter,
-      final QuestionnaireResponseGroup? group}) = _$_QuestionnaireResponse;
+      final QuestionnaireResponseGroup? group}) = _$QuestionnaireResponseImpl;
   const _QuestionnaireResponse._() : super._();
 
   factory _QuestionnaireResponse.fromJson(Map<String, dynamic> json) =
-      _$_QuestionnaireResponse.fromJson;
+      _$QuestionnaireResponseImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.QuestionnaireResponse)
@@ -2955,8 +2959,8 @@ abstract class _QuestionnaireResponse extends QuestionnaireResponse {
   QuestionnaireResponseGroup? get group;
   @override
   @JsonKey(ignore: true)
-  _$$_QuestionnaireResponseCopyWith<_$_QuestionnaireResponse> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$QuestionnaireResponseImplCopyWith<_$QuestionnaireResponseImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 QuestionnaireResponseGroup _$QuestionnaireResponseGroupFromJson(
@@ -3136,12 +3140,12 @@ class _$QuestionnaireResponseGroupCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_QuestionnaireResponseGroupCopyWith<$Res>
+abstract class _$$QuestionnaireResponseGroupImplCopyWith<$Res>
     implements $QuestionnaireResponseGroupCopyWith<$Res> {
-  factory _$$_QuestionnaireResponseGroupCopyWith(
-          _$_QuestionnaireResponseGroup value,
-          $Res Function(_$_QuestionnaireResponseGroup) then) =
-      __$$_QuestionnaireResponseGroupCopyWithImpl<$Res>;
+  factory _$$QuestionnaireResponseGroupImplCopyWith(
+          _$QuestionnaireResponseGroupImpl value,
+          $Res Function(_$QuestionnaireResponseGroupImpl) then) =
+      __$$QuestionnaireResponseGroupImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3167,13 +3171,13 @@ abstract class _$$_QuestionnaireResponseGroupCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_QuestionnaireResponseGroupCopyWithImpl<$Res>
+class __$$QuestionnaireResponseGroupImplCopyWithImpl<$Res>
     extends _$QuestionnaireResponseGroupCopyWithImpl<$Res,
-        _$_QuestionnaireResponseGroup>
-    implements _$$_QuestionnaireResponseGroupCopyWith<$Res> {
-  __$$_QuestionnaireResponseGroupCopyWithImpl(
-      _$_QuestionnaireResponseGroup _value,
-      $Res Function(_$_QuestionnaireResponseGroup) _then)
+        _$QuestionnaireResponseGroupImpl>
+    implements _$$QuestionnaireResponseGroupImplCopyWith<$Res> {
+  __$$QuestionnaireResponseGroupImplCopyWithImpl(
+      _$QuestionnaireResponseGroupImpl _value,
+      $Res Function(_$QuestionnaireResponseGroupImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3192,7 +3196,7 @@ class __$$_QuestionnaireResponseGroupCopyWithImpl<$Res>
     Object? group = freezed,
     Object? question = freezed,
   }) {
-    return _then(_$_QuestionnaireResponseGroup(
+    return _then(_$QuestionnaireResponseGroupImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3247,8 +3251,8 @@ class __$$_QuestionnaireResponseGroupCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
-  const _$_QuestionnaireResponseGroup(
+class _$QuestionnaireResponseGroupImpl extends _QuestionnaireResponseGroup {
+  const _$QuestionnaireResponseGroupImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3268,8 +3272,9 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
         _question = question,
         super._();
 
-  factory _$_QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =>
-      _$$_QuestionnaireResponseGroupFromJson(json);
+  factory _$QuestionnaireResponseGroupImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$QuestionnaireResponseGroupImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -3350,7 +3355,7 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QuestionnaireResponseGroup &&
+            other is _$QuestionnaireResponseGroupImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -3390,13 +3395,13 @@ class _$_QuestionnaireResponseGroup extends _QuestionnaireResponseGroup {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QuestionnaireResponseGroupCopyWith<_$_QuestionnaireResponseGroup>
-      get copyWith => __$$_QuestionnaireResponseGroupCopyWithImpl<
-          _$_QuestionnaireResponseGroup>(this, _$identity);
+  _$$QuestionnaireResponseGroupImplCopyWith<_$QuestionnaireResponseGroupImpl>
+      get copyWith => __$$QuestionnaireResponseGroupImplCopyWithImpl<
+          _$QuestionnaireResponseGroupImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseGroupToJson(
+    return _$$QuestionnaireResponseGroupImplToJson(
       this,
     );
   }
@@ -3416,11 +3421,11 @@ abstract class _QuestionnaireResponseGroup extends QuestionnaireResponseGroup {
           final Reference? subject,
           final List<QuestionnaireResponseGroup>? group,
           final List<QuestionnaireResponseGroupQuestion>? question}) =
-      _$_QuestionnaireResponseGroup;
+      _$QuestionnaireResponseGroupImpl;
   const _QuestionnaireResponseGroup._() : super._();
 
   factory _QuestionnaireResponseGroup.fromJson(Map<String, dynamic> json) =
-      _$_QuestionnaireResponseGroup.fromJson;
+      _$QuestionnaireResponseGroupImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3453,7 +3458,7 @@ abstract class _QuestionnaireResponseGroup extends QuestionnaireResponseGroup {
   List<QuestionnaireResponseGroupQuestion>? get question;
   @override
   @JsonKey(ignore: true)
-  _$$_QuestionnaireResponseGroupCopyWith<_$_QuestionnaireResponseGroup>
+  _$$QuestionnaireResponseGroupImplCopyWith<_$QuestionnaireResponseGroupImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3580,12 +3585,12 @@ class _$QuestionnaireResponseGroupQuestionCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_QuestionnaireResponseGroupQuestionCopyWith<$Res>
+abstract class _$$QuestionnaireResponseGroupQuestionImplCopyWith<$Res>
     implements $QuestionnaireResponseGroupQuestionCopyWith<$Res> {
-  factory _$$_QuestionnaireResponseGroupQuestionCopyWith(
-          _$_QuestionnaireResponseGroupQuestion value,
-          $Res Function(_$_QuestionnaireResponseGroupQuestion) then) =
-      __$$_QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>;
+  factory _$$QuestionnaireResponseGroupQuestionImplCopyWith(
+          _$QuestionnaireResponseGroupQuestionImpl value,
+          $Res Function(_$QuestionnaireResponseGroupQuestionImpl) then) =
+      __$$QuestionnaireResponseGroupQuestionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3603,13 +3608,13 @@ abstract class _$$_QuestionnaireResponseGroupQuestionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
+class __$$QuestionnaireResponseGroupQuestionImplCopyWithImpl<$Res>
     extends _$QuestionnaireResponseGroupQuestionCopyWithImpl<$Res,
-        _$_QuestionnaireResponseGroupQuestion>
-    implements _$$_QuestionnaireResponseGroupQuestionCopyWith<$Res> {
-  __$$_QuestionnaireResponseGroupQuestionCopyWithImpl(
-      _$_QuestionnaireResponseGroupQuestion _value,
-      $Res Function(_$_QuestionnaireResponseGroupQuestion) _then)
+        _$QuestionnaireResponseGroupQuestionImpl>
+    implements _$$QuestionnaireResponseGroupQuestionImplCopyWith<$Res> {
+  __$$QuestionnaireResponseGroupQuestionImplCopyWithImpl(
+      _$QuestionnaireResponseGroupQuestionImpl _value,
+      $Res Function(_$QuestionnaireResponseGroupQuestionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3624,7 +3629,7 @@ class __$$_QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
     Object? text = freezed,
     Object? answer = freezed,
   }) {
-    return _then(_$_QuestionnaireResponseGroupQuestion(
+    return _then(_$QuestionnaireResponseGroupQuestionImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3663,9 +3668,9 @@ class __$$_QuestionnaireResponseGroupQuestionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_QuestionnaireResponseGroupQuestion
+class _$QuestionnaireResponseGroupQuestionImpl
     extends _QuestionnaireResponseGroupQuestion {
-  const _$_QuestionnaireResponseGroupQuestion(
+  const _$QuestionnaireResponseGroupQuestionImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3680,9 +3685,9 @@ class _$_QuestionnaireResponseGroupQuestion
         _answer = answer,
         super._();
 
-  factory _$_QuestionnaireResponseGroupQuestion.fromJson(
+  factory _$QuestionnaireResponseGroupQuestionImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_QuestionnaireResponseGroupQuestionFromJson(json);
+      _$$QuestionnaireResponseGroupQuestionImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -3746,7 +3751,7 @@ class _$_QuestionnaireResponseGroupQuestion
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QuestionnaireResponseGroupQuestion &&
+            other is _$QuestionnaireResponseGroupQuestionImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -3777,14 +3782,14 @@ class _$_QuestionnaireResponseGroupQuestion
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QuestionnaireResponseGroupQuestionCopyWith<
-          _$_QuestionnaireResponseGroupQuestion>
-      get copyWith => __$$_QuestionnaireResponseGroupQuestionCopyWithImpl<
-          _$_QuestionnaireResponseGroupQuestion>(this, _$identity);
+  _$$QuestionnaireResponseGroupQuestionImplCopyWith<
+          _$QuestionnaireResponseGroupQuestionImpl>
+      get copyWith => __$$QuestionnaireResponseGroupQuestionImplCopyWithImpl<
+          _$QuestionnaireResponseGroupQuestionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseGroupQuestionToJson(
+    return _$$QuestionnaireResponseGroupQuestionImplToJson(
       this,
     );
   }
@@ -3801,12 +3806,12 @@ abstract class _QuestionnaireResponseGroupQuestion
           @JsonKey(name: '_linkId') final Element? linkIdElement,
           final String? text,
           final List<QuestionnaireResponseQuestionAnswer>? answer}) =
-      _$_QuestionnaireResponseGroupQuestion;
+      _$QuestionnaireResponseGroupQuestionImpl;
   const _QuestionnaireResponseGroupQuestion._() : super._();
 
   factory _QuestionnaireResponseGroupQuestion.fromJson(
           Map<String, dynamic> json) =
-      _$_QuestionnaireResponseGroupQuestion.fromJson;
+      _$QuestionnaireResponseGroupQuestionImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -3830,8 +3835,8 @@ abstract class _QuestionnaireResponseGroupQuestion
   List<QuestionnaireResponseQuestionAnswer>? get answer;
   @override
   @JsonKey(ignore: true)
-  _$$_QuestionnaireResponseGroupQuestionCopyWith<
-          _$_QuestionnaireResponseGroupQuestion>
+  _$$QuestionnaireResponseGroupQuestionImplCopyWith<
+          _$QuestionnaireResponseGroupQuestionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -4255,12 +4260,12 @@ class _$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_QuestionnaireResponseQuestionAnswerCopyWith<$Res>
+abstract class _$$QuestionnaireResponseQuestionAnswerImplCopyWith<$Res>
     implements $QuestionnaireResponseQuestionAnswerCopyWith<$Res> {
-  factory _$$_QuestionnaireResponseQuestionAnswerCopyWith(
-          _$_QuestionnaireResponseQuestionAnswer value,
-          $Res Function(_$_QuestionnaireResponseQuestionAnswer) then) =
-      __$$_QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>;
+  factory _$$QuestionnaireResponseQuestionAnswerImplCopyWith(
+          _$QuestionnaireResponseQuestionAnswerImpl value,
+          $Res Function(_$QuestionnaireResponseQuestionAnswerImpl) then) =
+      __$$QuestionnaireResponseQuestionAnswerImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4321,13 +4326,13 @@ abstract class _$$_QuestionnaireResponseQuestionAnswerCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
+class __$$QuestionnaireResponseQuestionAnswerImplCopyWithImpl<$Res>
     extends _$QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res,
-        _$_QuestionnaireResponseQuestionAnswer>
-    implements _$$_QuestionnaireResponseQuestionAnswerCopyWith<$Res> {
-  __$$_QuestionnaireResponseQuestionAnswerCopyWithImpl(
-      _$_QuestionnaireResponseQuestionAnswer _value,
-      $Res Function(_$_QuestionnaireResponseQuestionAnswer) _then)
+        _$QuestionnaireResponseQuestionAnswerImpl>
+    implements _$$QuestionnaireResponseQuestionAnswerImplCopyWith<$Res> {
+  __$$QuestionnaireResponseQuestionAnswerImplCopyWithImpl(
+      _$QuestionnaireResponseQuestionAnswerImpl _value,
+      $Res Function(_$QuestionnaireResponseQuestionAnswerImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4361,7 +4366,7 @@ class __$$_QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
     Object? valueReference = freezed,
     Object? group = freezed,
   }) {
-    return _then(_$_QuestionnaireResponseQuestionAnswer(
+    return _then(_$QuestionnaireResponseQuestionAnswerImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4476,9 +4481,9 @@ class __$$_QuestionnaireResponseQuestionAnswerCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_QuestionnaireResponseQuestionAnswer
+class _$QuestionnaireResponseQuestionAnswerImpl
     extends _QuestionnaireResponseQuestionAnswer {
-  const _$_QuestionnaireResponseQuestionAnswer(
+  const _$QuestionnaireResponseQuestionAnswerImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4512,9 +4517,9 @@ class _$_QuestionnaireResponseQuestionAnswer
         _group = group,
         super._();
 
-  factory _$_QuestionnaireResponseQuestionAnswer.fromJson(
+  factory _$QuestionnaireResponseQuestionAnswerImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_QuestionnaireResponseQuestionAnswerFromJson(json);
+      _$$QuestionnaireResponseQuestionAnswerImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -4624,7 +4629,7 @@ class _$_QuestionnaireResponseQuestionAnswer
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_QuestionnaireResponseQuestionAnswer &&
+            other is _$QuestionnaireResponseQuestionAnswerImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -4715,14 +4720,14 @@ class _$_QuestionnaireResponseQuestionAnswer
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_QuestionnaireResponseQuestionAnswerCopyWith<
-          _$_QuestionnaireResponseQuestionAnswer>
-      get copyWith => __$$_QuestionnaireResponseQuestionAnswerCopyWithImpl<
-          _$_QuestionnaireResponseQuestionAnswer>(this, _$identity);
+  _$$QuestionnaireResponseQuestionAnswerImplCopyWith<
+          _$QuestionnaireResponseQuestionAnswerImpl>
+      get copyWith => __$$QuestionnaireResponseQuestionAnswerImplCopyWithImpl<
+          _$QuestionnaireResponseQuestionAnswerImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_QuestionnaireResponseQuestionAnswerToJson(
+    return _$$QuestionnaireResponseQuestionAnswerImplToJson(
       this,
     );
   }
@@ -4758,12 +4763,12 @@ abstract class _QuestionnaireResponseQuestionAnswer
           final Quantity? valueQuantity,
           final Reference? valueReference,
           final List<QuestionnaireResponseGroup>? group}) =
-      _$_QuestionnaireResponseQuestionAnswer;
+      _$QuestionnaireResponseQuestionAnswerImpl;
   const _QuestionnaireResponseQuestionAnswer._() : super._();
 
   factory _QuestionnaireResponseQuestionAnswer.fromJson(
           Map<String, dynamic> json) =
-      _$_QuestionnaireResponseQuestionAnswer.fromJson;
+      _$QuestionnaireResponseQuestionAnswerImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4833,8 +4838,8 @@ abstract class _QuestionnaireResponseQuestionAnswer
   List<QuestionnaireResponseGroup>? get group;
   @override
   @JsonKey(ignore: true)
-  _$$_QuestionnaireResponseQuestionAnswerCopyWith<
-          _$_QuestionnaireResponseQuestionAnswer>
+  _$$QuestionnaireResponseQuestionAnswerImplCopyWith<
+          _$QuestionnaireResponseQuestionAnswerImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5163,11 +5168,11 @@ class _$ProvenanceCopyWithImpl<$Res, $Val extends Provenance>
 }
 
 /// @nodoc
-abstract class _$$_ProvenanceCopyWith<$Res>
+abstract class _$$ProvenanceImplCopyWith<$Res>
     implements $ProvenanceCopyWith<$Res> {
-  factory _$$_ProvenanceCopyWith(
-          _$_Provenance value, $Res Function(_$_Provenance) then) =
-      __$$_ProvenanceCopyWithImpl<$Res>;
+  factory _$$ProvenanceImplCopyWith(
+          _$ProvenanceImpl value, $Res Function(_$ProvenanceImpl) then) =
+      __$$ProvenanceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5216,11 +5221,11 @@ abstract class _$$_ProvenanceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProvenanceCopyWithImpl<$Res>
-    extends _$ProvenanceCopyWithImpl<$Res, _$_Provenance>
-    implements _$$_ProvenanceCopyWith<$Res> {
-  __$$_ProvenanceCopyWithImpl(
-      _$_Provenance _value, $Res Function(_$_Provenance) _then)
+class __$$ProvenanceImplCopyWithImpl<$Res>
+    extends _$ProvenanceCopyWithImpl<$Res, _$ProvenanceImpl>
+    implements _$$ProvenanceImplCopyWith<$Res> {
+  __$$ProvenanceImplCopyWithImpl(
+      _$ProvenanceImpl _value, $Res Function(_$ProvenanceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5251,7 +5256,7 @@ class __$$_ProvenanceCopyWithImpl<$Res>
     Object? entity = freezed,
     Object? signature = freezed,
   }) {
-    return _then(_$_Provenance(
+    return _then(_$ProvenanceImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -5354,8 +5359,8 @@ class __$$_ProvenanceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Provenance extends _Provenance {
-  const _$_Provenance(
+class _$ProvenanceImpl extends _Provenance {
+  const _$ProvenanceImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
       this.resourceType = Dstu2ResourceType.Provenance,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -5393,8 +5398,8 @@ class _$_Provenance extends _Provenance {
         _signature = signature,
         super._();
 
-  factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
-      _$$_ProvenanceFromJson(json);
+  factory _$ProvenanceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProvenanceImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
@@ -5540,7 +5545,7 @@ class _$_Provenance extends _Provenance {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Provenance &&
+            other is _$ProvenanceImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -5614,12 +5619,12 @@ class _$_Provenance extends _Provenance {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProvenanceCopyWith<_$_Provenance> get copyWith =>
-      __$$_ProvenanceCopyWithImpl<_$_Provenance>(this, _$identity);
+  _$$ProvenanceImplCopyWith<_$ProvenanceImpl> get copyWith =>
+      __$$ProvenanceImplCopyWithImpl<_$ProvenanceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceToJson(
+    return _$$ProvenanceImplToJson(
       this,
     );
   }
@@ -5651,11 +5656,11 @@ abstract class _Provenance extends Provenance {
       @JsonKey(name: '_policy') final List<Element?>? policyElement,
       final List<ProvenanceAgent>? agent,
       final List<ProvenanceEntity>? entity,
-      final List<Signature>? signature}) = _$_Provenance;
+      final List<Signature>? signature}) = _$ProvenanceImpl;
   const _Provenance._() : super._();
 
   factory _Provenance.fromJson(Map<String, dynamic> json) =
-      _$_Provenance.fromJson;
+      _$ProvenanceImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Provenance)
@@ -5715,7 +5720,7 @@ abstract class _Provenance extends Provenance {
   List<Signature>? get signature;
   @override
   @JsonKey(ignore: true)
-  _$$_ProvenanceCopyWith<_$_Provenance> get copyWith =>
+  _$$ProvenanceImplCopyWith<_$ProvenanceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5858,11 +5863,11 @@ class _$ProvenanceAgentCopyWithImpl<$Res, $Val extends ProvenanceAgent>
 }
 
 /// @nodoc
-abstract class _$$_ProvenanceAgentCopyWith<$Res>
+abstract class _$$ProvenanceAgentImplCopyWith<$Res>
     implements $ProvenanceAgentCopyWith<$Res> {
-  factory _$$_ProvenanceAgentCopyWith(
-          _$_ProvenanceAgent value, $Res Function(_$_ProvenanceAgent) then) =
-      __$$_ProvenanceAgentCopyWithImpl<$Res>;
+  factory _$$ProvenanceAgentImplCopyWith(_$ProvenanceAgentImpl value,
+          $Res Function(_$ProvenanceAgentImpl) then) =
+      __$$ProvenanceAgentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5884,11 +5889,11 @@ abstract class _$$_ProvenanceAgentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProvenanceAgentCopyWithImpl<$Res>
-    extends _$ProvenanceAgentCopyWithImpl<$Res, _$_ProvenanceAgent>
-    implements _$$_ProvenanceAgentCopyWith<$Res> {
-  __$$_ProvenanceAgentCopyWithImpl(
-      _$_ProvenanceAgent _value, $Res Function(_$_ProvenanceAgent) _then)
+class __$$ProvenanceAgentImplCopyWithImpl<$Res>
+    extends _$ProvenanceAgentCopyWithImpl<$Res, _$ProvenanceAgentImpl>
+    implements _$$ProvenanceAgentImplCopyWith<$Res> {
+  __$$ProvenanceAgentImplCopyWithImpl(
+      _$ProvenanceAgentImpl _value, $Res Function(_$ProvenanceAgentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5903,7 +5908,7 @@ class __$$_ProvenanceAgentCopyWithImpl<$Res>
     Object? userId = freezed,
     Object? relatedAgent = freezed,
   }) {
-    return _then(_$_ProvenanceAgent(
+    return _then(_$ProvenanceAgentImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5942,8 +5947,8 @@ class __$$_ProvenanceAgentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProvenanceAgent extends _ProvenanceAgent {
-  const _$_ProvenanceAgent(
+class _$ProvenanceAgentImpl extends _ProvenanceAgent {
+  const _$ProvenanceAgentImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5958,8 +5963,8 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
         _relatedAgent = relatedAgent,
         super._();
 
-  factory _$_ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
-      _$$_ProvenanceAgentFromJson(json);
+  factory _$ProvenanceAgentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProvenanceAgentImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -6022,7 +6027,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProvenanceAgent &&
+            other is _$ProvenanceAgentImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -6053,12 +6058,13 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProvenanceAgentCopyWith<_$_ProvenanceAgent> get copyWith =>
-      __$$_ProvenanceAgentCopyWithImpl<_$_ProvenanceAgent>(this, _$identity);
+  _$$ProvenanceAgentImplCopyWith<_$ProvenanceAgentImpl> get copyWith =>
+      __$$ProvenanceAgentImplCopyWithImpl<_$ProvenanceAgentImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceAgentToJson(
+    return _$$ProvenanceAgentImplToJson(
       this,
     );
   }
@@ -6074,11 +6080,11 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
           final Reference? actor,
           final Identifier? userId,
           final List<ProvenanceAgentRelatedAgent>? relatedAgent}) =
-      _$_ProvenanceAgent;
+      _$ProvenanceAgentImpl;
   const _ProvenanceAgent._() : super._();
 
   factory _ProvenanceAgent.fromJson(Map<String, dynamic> json) =
-      _$_ProvenanceAgent.fromJson;
+      _$ProvenanceAgentImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6101,7 +6107,7 @@ abstract class _ProvenanceAgent extends ProvenanceAgent {
   List<ProvenanceAgentRelatedAgent>? get relatedAgent;
   @override
   @JsonKey(ignore: true)
-  _$$_ProvenanceAgentCopyWith<_$_ProvenanceAgent> get copyWith =>
+  _$$ProvenanceAgentImplCopyWith<_$ProvenanceAgentImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6280,11 +6286,11 @@ class _$ProvenanceEntityCopyWithImpl<$Res, $Val extends ProvenanceEntity>
 }
 
 /// @nodoc
-abstract class _$$_ProvenanceEntityCopyWith<$Res>
+abstract class _$$ProvenanceEntityImplCopyWith<$Res>
     implements $ProvenanceEntityCopyWith<$Res> {
-  factory _$$_ProvenanceEntityCopyWith(
-          _$_ProvenanceEntity value, $Res Function(_$_ProvenanceEntity) then) =
-      __$$_ProvenanceEntityCopyWithImpl<$Res>;
+  factory _$$ProvenanceEntityImplCopyWith(_$ProvenanceEntityImpl value,
+          $Res Function(_$ProvenanceEntityImpl) then) =
+      __$$ProvenanceEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6311,11 +6317,11 @@ abstract class _$$_ProvenanceEntityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProvenanceEntityCopyWithImpl<$Res>
-    extends _$ProvenanceEntityCopyWithImpl<$Res, _$_ProvenanceEntity>
-    implements _$$_ProvenanceEntityCopyWith<$Res> {
-  __$$_ProvenanceEntityCopyWithImpl(
-      _$_ProvenanceEntity _value, $Res Function(_$_ProvenanceEntity) _then)
+class __$$ProvenanceEntityImplCopyWithImpl<$Res>
+    extends _$ProvenanceEntityCopyWithImpl<$Res, _$ProvenanceEntityImpl>
+    implements _$$ProvenanceEntityImplCopyWith<$Res> {
+  __$$ProvenanceEntityImplCopyWithImpl(_$ProvenanceEntityImpl _value,
+      $Res Function(_$ProvenanceEntityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6333,7 +6339,7 @@ class __$$_ProvenanceEntityCopyWithImpl<$Res>
     Object? display = freezed,
     Object? agent = freezed,
   }) {
-    return _then(_$_ProvenanceEntity(
+    return _then(_$ProvenanceEntityImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6384,8 +6390,8 @@ class __$$_ProvenanceEntityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProvenanceEntity extends _ProvenanceEntity {
-  const _$_ProvenanceEntity(
+class _$ProvenanceEntityImpl extends _ProvenanceEntity {
+  const _$ProvenanceEntityImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6402,8 +6408,8 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
-      _$$_ProvenanceEntityFromJson(json);
+  factory _$ProvenanceEntityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProvenanceEntityImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -6468,7 +6474,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProvenanceEntity &&
+            other is _$ProvenanceEntityImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -6507,12 +6513,13 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProvenanceEntityCopyWith<_$_ProvenanceEntity> get copyWith =>
-      __$$_ProvenanceEntityCopyWithImpl<_$_ProvenanceEntity>(this, _$identity);
+  _$$ProvenanceEntityImplCopyWith<_$ProvenanceEntityImpl> get copyWith =>
+      __$$ProvenanceEntityImplCopyWithImpl<_$ProvenanceEntityImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceEntityToJson(
+    return _$$ProvenanceEntityImplToJson(
       this,
     );
   }
@@ -6531,11 +6538,11 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
       required final FhirUri reference,
       @JsonKey(name: '_reference') final Element? referenceElement,
       final String? display,
-      final ProvenanceAgent? agent}) = _$_ProvenanceEntity;
+      final ProvenanceAgent? agent}) = _$ProvenanceEntityImpl;
   const _ProvenanceEntity._() : super._();
 
   factory _ProvenanceEntity.fromJson(Map<String, dynamic> json) =
-      _$_ProvenanceEntity.fromJson;
+      _$ProvenanceEntityImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6567,7 +6574,7 @@ abstract class _ProvenanceEntity extends ProvenanceEntity {
   ProvenanceAgent? get agent;
   @override
   @JsonKey(ignore: true)
-  _$$_ProvenanceEntityCopyWith<_$_ProvenanceEntity> get copyWith =>
+  _$$ProvenanceEntityImplCopyWith<_$ProvenanceEntityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6665,12 +6672,12 @@ class _$ProvenanceAgentRelatedAgentCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ProvenanceAgentRelatedAgentCopyWith<$Res>
+abstract class _$$ProvenanceAgentRelatedAgentImplCopyWith<$Res>
     implements $ProvenanceAgentRelatedAgentCopyWith<$Res> {
-  factory _$$_ProvenanceAgentRelatedAgentCopyWith(
-          _$_ProvenanceAgentRelatedAgent value,
-          $Res Function(_$_ProvenanceAgentRelatedAgent) then) =
-      __$$_ProvenanceAgentRelatedAgentCopyWithImpl<$Res>;
+  factory _$$ProvenanceAgentRelatedAgentImplCopyWith(
+          _$ProvenanceAgentRelatedAgentImpl value,
+          $Res Function(_$ProvenanceAgentRelatedAgentImpl) then) =
+      __$$ProvenanceAgentRelatedAgentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6685,13 +6692,13 @@ abstract class _$$_ProvenanceAgentRelatedAgentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProvenanceAgentRelatedAgentCopyWithImpl<$Res>
+class __$$ProvenanceAgentRelatedAgentImplCopyWithImpl<$Res>
     extends _$ProvenanceAgentRelatedAgentCopyWithImpl<$Res,
-        _$_ProvenanceAgentRelatedAgent>
-    implements _$$_ProvenanceAgentRelatedAgentCopyWith<$Res> {
-  __$$_ProvenanceAgentRelatedAgentCopyWithImpl(
-      _$_ProvenanceAgentRelatedAgent _value,
-      $Res Function(_$_ProvenanceAgentRelatedAgent) _then)
+        _$ProvenanceAgentRelatedAgentImpl>
+    implements _$$ProvenanceAgentRelatedAgentImplCopyWith<$Res> {
+  __$$ProvenanceAgentRelatedAgentImplCopyWithImpl(
+      _$ProvenanceAgentRelatedAgentImpl _value,
+      $Res Function(_$ProvenanceAgentRelatedAgentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6703,7 +6710,7 @@ class __$$_ProvenanceAgentRelatedAgentCopyWithImpl<$Res>
     Object? type = null,
     Object? target = null,
   }) {
-    return _then(_$_ProvenanceAgentRelatedAgent(
+    return _then(_$ProvenanceAgentRelatedAgentImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6730,8 +6737,8 @@ class __$$_ProvenanceAgentRelatedAgentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
-  const _$_ProvenanceAgentRelatedAgent(
+class _$ProvenanceAgentRelatedAgentImpl extends _ProvenanceAgentRelatedAgent {
+  const _$ProvenanceAgentRelatedAgentImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6741,8 +6748,9 @@ class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =>
-      _$$_ProvenanceAgentRelatedAgentFromJson(json);
+  factory _$ProvenanceAgentRelatedAgentImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$ProvenanceAgentRelatedAgentImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -6783,7 +6791,7 @@ class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProvenanceAgentRelatedAgent &&
+            other is _$ProvenanceAgentRelatedAgentImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -6806,13 +6814,13 @@ class _$_ProvenanceAgentRelatedAgent extends _ProvenanceAgentRelatedAgent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProvenanceAgentRelatedAgentCopyWith<_$_ProvenanceAgentRelatedAgent>
-      get copyWith => __$$_ProvenanceAgentRelatedAgentCopyWithImpl<
-          _$_ProvenanceAgentRelatedAgent>(this, _$identity);
+  _$$ProvenanceAgentRelatedAgentImplCopyWith<_$ProvenanceAgentRelatedAgentImpl>
+      get copyWith => __$$ProvenanceAgentRelatedAgentImplCopyWithImpl<
+          _$ProvenanceAgentRelatedAgentImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProvenanceAgentRelatedAgentToJson(
+    return _$$ProvenanceAgentRelatedAgentImplToJson(
       this,
     );
   }
@@ -6825,11 +6833,11 @@ abstract class _ProvenanceAgentRelatedAgent
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
-      required final FhirUri target}) = _$_ProvenanceAgentRelatedAgent;
+      required final FhirUri target}) = _$ProvenanceAgentRelatedAgentImpl;
   const _ProvenanceAgentRelatedAgent._() : super._();
 
   factory _ProvenanceAgentRelatedAgent.fromJson(Map<String, dynamic> json) =
-      _$_ProvenanceAgentRelatedAgent.fromJson;
+      _$ProvenanceAgentRelatedAgentImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -6845,7 +6853,7 @@ abstract class _ProvenanceAgentRelatedAgent
   FhirUri get target;
   @override
   @JsonKey(ignore: true)
-  _$$_ProvenanceAgentRelatedAgentCopyWith<_$_ProvenanceAgentRelatedAgent>
+  _$$ProvenanceAgentRelatedAgentImplCopyWith<_$ProvenanceAgentRelatedAgentImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -7083,11 +7091,11 @@ class _$AuditEventCopyWithImpl<$Res, $Val extends AuditEvent>
 }
 
 /// @nodoc
-abstract class _$$_AuditEventCopyWith<$Res>
+abstract class _$$AuditEventImplCopyWith<$Res>
     implements $AuditEventCopyWith<$Res> {
-  factory _$$_AuditEventCopyWith(
-          _$_AuditEvent value, $Res Function(_$_AuditEvent) then) =
-      __$$_AuditEventCopyWithImpl<$Res>;
+  factory _$$AuditEventImplCopyWith(
+          _$AuditEventImpl value, $Res Function(_$AuditEventImpl) then) =
+      __$$AuditEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7124,11 +7132,11 @@ abstract class _$$_AuditEventCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuditEventCopyWithImpl<$Res>
-    extends _$AuditEventCopyWithImpl<$Res, _$_AuditEvent>
-    implements _$$_AuditEventCopyWith<$Res> {
-  __$$_AuditEventCopyWithImpl(
-      _$_AuditEvent _value, $Res Function(_$_AuditEvent) _then)
+class __$$AuditEventImplCopyWithImpl<$Res>
+    extends _$AuditEventCopyWithImpl<$Res, _$AuditEventImpl>
+    implements _$$AuditEventImplCopyWith<$Res> {
+  __$$AuditEventImplCopyWithImpl(
+      _$AuditEventImpl _value, $Res Function(_$AuditEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7151,7 +7159,7 @@ class __$$_AuditEventCopyWithImpl<$Res>
     Object? source = null,
     Object? object = freezed,
   }) {
-    return _then(_$_AuditEvent(
+    return _then(_$AuditEventImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -7222,8 +7230,8 @@ class __$$_AuditEventCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuditEvent extends _AuditEvent {
-  const _$_AuditEvent(
+class _$AuditEventImpl extends _AuditEvent {
+  const _$AuditEventImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
       this.resourceType = Dstu2ResourceType.AuditEvent,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -7248,8 +7256,8 @@ class _$_AuditEvent extends _AuditEvent {
         _object = object,
         super._();
 
-  factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
-      _$$_AuditEventFromJson(json);
+  factory _$AuditEventImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuditEventImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
@@ -7337,7 +7345,7 @@ class _$_AuditEvent extends _AuditEvent {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuditEvent &&
+            other is _$AuditEventImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -7389,12 +7397,12 @@ class _$_AuditEvent extends _AuditEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuditEventCopyWith<_$_AuditEvent> get copyWith =>
-      __$$_AuditEventCopyWithImpl<_$_AuditEvent>(this, _$identity);
+  _$$AuditEventImplCopyWith<_$AuditEventImpl> get copyWith =>
+      __$$AuditEventImplCopyWithImpl<_$AuditEventImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventToJson(
+    return _$$AuditEventImplToJson(
       this,
     );
   }
@@ -7418,11 +7426,11 @@ abstract class _AuditEvent extends AuditEvent {
       required final AuditEventEvent event,
       required final List<AuditEventParticipant> participant,
       required final AuditEventSource source,
-      final List<AuditEventObject>? object}) = _$_AuditEvent;
+      final List<AuditEventObject>? object}) = _$AuditEventImpl;
   const _AuditEvent._() : super._();
 
   factory _AuditEvent.fromJson(Map<String, dynamic> json) =
-      _$_AuditEvent.fromJson;
+      _$AuditEventImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AuditEvent)
@@ -7464,7 +7472,7 @@ abstract class _AuditEvent extends AuditEvent {
   List<AuditEventObject>? get object;
   @override
   @JsonKey(ignore: true)
-  _$$_AuditEventCopyWith<_$_AuditEvent> get copyWith =>
+  _$$AuditEventImplCopyWith<_$AuditEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7593,11 +7601,11 @@ class _$AuditEventEventCopyWithImpl<$Res, $Val extends AuditEventEvent>
 }
 
 /// @nodoc
-abstract class _$$_AuditEventEventCopyWith<$Res>
+abstract class _$$AuditEventEventImplCopyWith<$Res>
     implements $AuditEventEventCopyWith<$Res> {
-  factory _$$_AuditEventEventCopyWith(
-          _$_AuditEventEvent value, $Res Function(_$_AuditEventEvent) then) =
-      __$$_AuditEventEventCopyWithImpl<$Res>;
+  factory _$$AuditEventEventImplCopyWith(_$AuditEventEventImpl value,
+          $Res Function(_$AuditEventEventImpl) then) =
+      __$$AuditEventEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7617,11 +7625,11 @@ abstract class _$$_AuditEventEventCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuditEventEventCopyWithImpl<$Res>
-    extends _$AuditEventEventCopyWithImpl<$Res, _$_AuditEventEvent>
-    implements _$$_AuditEventEventCopyWith<$Res> {
-  __$$_AuditEventEventCopyWithImpl(
-      _$_AuditEventEvent _value, $Res Function(_$_AuditEventEvent) _then)
+class __$$AuditEventEventImplCopyWithImpl<$Res>
+    extends _$AuditEventEventCopyWithImpl<$Res, _$AuditEventEventImpl>
+    implements _$$AuditEventEventImplCopyWith<$Res> {
+  __$$AuditEventEventImplCopyWithImpl(
+      _$AuditEventEventImpl _value, $Res Function(_$AuditEventEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7638,7 +7646,7 @@ class __$$_AuditEventEventCopyWithImpl<$Res>
     Object? outcomeDesc = freezed,
     Object? purposeOfEvent = freezed,
   }) {
-    return _then(_$_AuditEventEvent(
+    return _then(_$AuditEventEventImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7685,8 +7693,8 @@ class __$$_AuditEventEventCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuditEventEvent extends _AuditEventEvent {
-  const _$_AuditEventEvent(
+class _$AuditEventEventImpl extends _AuditEventEvent {
+  const _$AuditEventEventImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7703,8 +7711,8 @@ class _$_AuditEventEvent extends _AuditEventEvent {
         _purposeOfEvent = purposeOfEvent,
         super._();
 
-  factory _$_AuditEventEvent.fromJson(Map<String, dynamic> json) =>
-      _$$_AuditEventEventFromJson(json);
+  factory _$AuditEventEventImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuditEventEventImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -7770,7 +7778,7 @@ class _$_AuditEventEvent extends _AuditEventEvent {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuditEventEvent &&
+            other is _$AuditEventEventImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -7806,12 +7814,13 @@ class _$_AuditEventEvent extends _AuditEventEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuditEventEventCopyWith<_$_AuditEventEvent> get copyWith =>
-      __$$_AuditEventEventCopyWithImpl<_$_AuditEventEvent>(this, _$identity);
+  _$$AuditEventEventImplCopyWith<_$AuditEventEventImpl> get copyWith =>
+      __$$AuditEventEventImplCopyWithImpl<_$AuditEventEventImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventEventToJson(
+    return _$$AuditEventEventImplToJson(
       this,
     );
   }
@@ -7828,11 +7837,11 @@ abstract class _AuditEventEvent extends AuditEventEvent {
       required final FhirInstant dateTime,
       final FhirCode? outcome,
       final String? outcomeDesc,
-      final List<Coding>? purposeOfEvent}) = _$_AuditEventEvent;
+      final List<Coding>? purposeOfEvent}) = _$AuditEventEventImpl;
   const _AuditEventEvent._() : super._();
 
   factory _AuditEventEvent.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventEvent.fromJson;
+      _$AuditEventEventImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -7858,7 +7867,7 @@ abstract class _AuditEventEvent extends AuditEventEvent {
   List<Coding>? get purposeOfEvent;
   @override
   @JsonKey(ignore: true)
-  _$$_AuditEventEventCopyWith<_$_AuditEventEvent> get copyWith =>
+  _$$AuditEventEventImplCopyWith<_$AuditEventEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -8096,11 +8105,12 @@ class _$AuditEventParticipantCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_AuditEventParticipantCopyWith<$Res>
+abstract class _$$AuditEventParticipantImplCopyWith<$Res>
     implements $AuditEventParticipantCopyWith<$Res> {
-  factory _$$_AuditEventParticipantCopyWith(_$_AuditEventParticipant value,
-          $Res Function(_$_AuditEventParticipant) then) =
-      __$$_AuditEventParticipantCopyWithImpl<$Res>;
+  factory _$$AuditEventParticipantImplCopyWith(
+          _$AuditEventParticipantImpl value,
+          $Res Function(_$AuditEventParticipantImpl) then) =
+      __$$AuditEventParticipantImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -8135,11 +8145,12 @@ abstract class _$$_AuditEventParticipantCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuditEventParticipantCopyWithImpl<$Res>
-    extends _$AuditEventParticipantCopyWithImpl<$Res, _$_AuditEventParticipant>
-    implements _$$_AuditEventParticipantCopyWith<$Res> {
-  __$$_AuditEventParticipantCopyWithImpl(_$_AuditEventParticipant _value,
-      $Res Function(_$_AuditEventParticipant) _then)
+class __$$AuditEventParticipantImplCopyWithImpl<$Res>
+    extends _$AuditEventParticipantCopyWithImpl<$Res,
+        _$AuditEventParticipantImpl>
+    implements _$$AuditEventParticipantImplCopyWith<$Res> {
+  __$$AuditEventParticipantImplCopyWithImpl(_$AuditEventParticipantImpl _value,
+      $Res Function(_$AuditEventParticipantImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -8161,7 +8172,7 @@ class __$$_AuditEventParticipantCopyWithImpl<$Res>
     Object? network = freezed,
     Object? purposeOfUse = freezed,
   }) {
-    return _then(_$_AuditEventParticipant(
+    return _then(_$AuditEventParticipantImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -8228,8 +8239,8 @@ class __$$_AuditEventParticipantCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuditEventParticipant extends _AuditEventParticipant {
-  const _$_AuditEventParticipant(
+class _$AuditEventParticipantImpl extends _AuditEventParticipant {
+  const _$AuditEventParticipantImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8252,8 +8263,8 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
         _purposeOfUse = purposeOfUse,
         super._();
 
-  factory _$_AuditEventParticipant.fromJson(Map<String, dynamic> json) =>
-      _$$_AuditEventParticipantFromJson(json);
+  factory _$AuditEventParticipantImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuditEventParticipantImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -8338,7 +8349,7 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuditEventParticipant &&
+            other is _$AuditEventParticipantImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -8386,13 +8397,13 @@ class _$_AuditEventParticipant extends _AuditEventParticipant {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuditEventParticipantCopyWith<_$_AuditEventParticipant> get copyWith =>
-      __$$_AuditEventParticipantCopyWithImpl<_$_AuditEventParticipant>(
-          this, _$identity);
+  _$$AuditEventParticipantImplCopyWith<_$AuditEventParticipantImpl>
+      get copyWith => __$$AuditEventParticipantImplCopyWithImpl<
+          _$AuditEventParticipantImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventParticipantToJson(
+    return _$$AuditEventParticipantImplToJson(
       this,
     );
   }
@@ -8414,11 +8425,11 @@ abstract class _AuditEventParticipant extends AuditEventParticipant {
       final List<FhirUri>? policy,
       final Coding? media,
       final AuditEventParticipantNetwork? network,
-      final List<Coding>? purposeOfUse}) = _$_AuditEventParticipant;
+      final List<Coding>? purposeOfUse}) = _$AuditEventParticipantImpl;
   const _AuditEventParticipant._() : super._();
 
   factory _AuditEventParticipant.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventParticipant.fromJson;
+      _$AuditEventParticipantImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -8455,8 +8466,8 @@ abstract class _AuditEventParticipant extends AuditEventParticipant {
   List<Coding>? get purposeOfUse;
   @override
   @JsonKey(ignore: true)
-  _$$_AuditEventParticipantCopyWith<_$_AuditEventParticipant> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AuditEventParticipantImplCopyWith<_$AuditEventParticipantImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 AuditEventSource _$AuditEventSourceFromJson(Map<String, dynamic> json) {
@@ -8577,11 +8588,11 @@ class _$AuditEventSourceCopyWithImpl<$Res, $Val extends AuditEventSource>
 }
 
 /// @nodoc
-abstract class _$$_AuditEventSourceCopyWith<$Res>
+abstract class _$$AuditEventSourceImplCopyWith<$Res>
     implements $AuditEventSourceCopyWith<$Res> {
-  factory _$$_AuditEventSourceCopyWith(
-          _$_AuditEventSource value, $Res Function(_$_AuditEventSource) then) =
-      __$$_AuditEventSourceCopyWithImpl<$Res>;
+  factory _$$AuditEventSourceImplCopyWith(_$AuditEventSourceImpl value,
+          $Res Function(_$AuditEventSourceImpl) then) =
+      __$$AuditEventSourceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -8600,11 +8611,11 @@ abstract class _$$_AuditEventSourceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuditEventSourceCopyWithImpl<$Res>
-    extends _$AuditEventSourceCopyWithImpl<$Res, _$_AuditEventSource>
-    implements _$$_AuditEventSourceCopyWith<$Res> {
-  __$$_AuditEventSourceCopyWithImpl(
-      _$_AuditEventSource _value, $Res Function(_$_AuditEventSource) _then)
+class __$$AuditEventSourceImplCopyWithImpl<$Res>
+    extends _$AuditEventSourceCopyWithImpl<$Res, _$AuditEventSourceImpl>
+    implements _$$AuditEventSourceImplCopyWith<$Res> {
+  __$$AuditEventSourceImplCopyWithImpl(_$AuditEventSourceImpl _value,
+      $Res Function(_$AuditEventSourceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -8618,7 +8629,7 @@ class __$$_AuditEventSourceCopyWithImpl<$Res>
     Object? identifier = null,
     Object? type = freezed,
   }) {
-    return _then(_$_AuditEventSource(
+    return _then(_$AuditEventSourceImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -8653,8 +8664,8 @@ class __$$_AuditEventSourceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuditEventSource extends _AuditEventSource {
-  const _$_AuditEventSource(
+class _$AuditEventSourceImpl extends _AuditEventSource {
+  const _$AuditEventSourceImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8667,8 +8678,8 @@ class _$_AuditEventSource extends _AuditEventSource {
         _type = type,
         super._();
 
-  factory _$_AuditEventSource.fromJson(Map<String, dynamic> json) =>
-      _$$_AuditEventSourceFromJson(json);
+  factory _$AuditEventSourceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuditEventSourceImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -8721,7 +8732,7 @@ class _$_AuditEventSource extends _AuditEventSource {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuditEventSource &&
+            other is _$AuditEventSourceImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -8750,12 +8761,13 @@ class _$_AuditEventSource extends _AuditEventSource {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuditEventSourceCopyWith<_$_AuditEventSource> get copyWith =>
-      __$$_AuditEventSourceCopyWithImpl<_$_AuditEventSource>(this, _$identity);
+  _$$AuditEventSourceImplCopyWith<_$AuditEventSourceImpl> get copyWith =>
+      __$$AuditEventSourceImplCopyWithImpl<_$AuditEventSourceImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventSourceToJson(
+    return _$$AuditEventSourceImplToJson(
       this,
     );
   }
@@ -8769,11 +8781,11 @@ abstract class _AuditEventSource extends AuditEventSource {
       final String? site,
       @JsonKey(name: '_site') final Element? siteElement,
       required final Identifier identifier,
-      final List<Coding>? type}) = _$_AuditEventSource;
+      final List<Coding>? type}) = _$AuditEventSourceImpl;
   const _AuditEventSource._() : super._();
 
   factory _AuditEventSource.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventSource.fromJson;
+      _$AuditEventSourceImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -8794,7 +8806,7 @@ abstract class _AuditEventSource extends AuditEventSource {
   List<Coding>? get type;
   @override
   @JsonKey(ignore: true)
-  _$$_AuditEventSourceCopyWith<_$_AuditEventSource> get copyWith =>
+  _$$AuditEventSourceImplCopyWith<_$AuditEventSourceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -9022,11 +9034,11 @@ class _$AuditEventObjectCopyWithImpl<$Res, $Val extends AuditEventObject>
 }
 
 /// @nodoc
-abstract class _$$_AuditEventObjectCopyWith<$Res>
+abstract class _$$AuditEventObjectImplCopyWith<$Res>
     implements $AuditEventObjectCopyWith<$Res> {
-  factory _$$_AuditEventObjectCopyWith(
-          _$_AuditEventObject value, $Res Function(_$_AuditEventObject) then) =
-      __$$_AuditEventObjectCopyWithImpl<$Res>;
+  factory _$$AuditEventObjectImplCopyWith(_$AuditEventObjectImpl value,
+          $Res Function(_$AuditEventObjectImpl) then) =
+      __$$AuditEventObjectImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9060,11 +9072,11 @@ abstract class _$$_AuditEventObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuditEventObjectCopyWithImpl<$Res>
-    extends _$AuditEventObjectCopyWithImpl<$Res, _$_AuditEventObject>
-    implements _$$_AuditEventObjectCopyWith<$Res> {
-  __$$_AuditEventObjectCopyWithImpl(
-      _$_AuditEventObject _value, $Res Function(_$_AuditEventObject) _then)
+class __$$AuditEventObjectImplCopyWithImpl<$Res>
+    extends _$AuditEventObjectCopyWithImpl<$Res, _$AuditEventObjectImpl>
+    implements _$$AuditEventObjectImplCopyWith<$Res> {
+  __$$AuditEventObjectImplCopyWithImpl(_$AuditEventObjectImpl _value,
+      $Res Function(_$AuditEventObjectImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9085,7 +9097,7 @@ class __$$_AuditEventObjectCopyWithImpl<$Res>
     Object? queryElement = freezed,
     Object? detail = freezed,
   }) {
-    return _then(_$_AuditEventObject(
+    return _then(_$AuditEventObjectImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9148,8 +9160,8 @@ class __$$_AuditEventObjectCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuditEventObject extends _AuditEventObject {
-  const _$_AuditEventObject(
+class _$AuditEventObjectImpl extends _AuditEventObject {
+  const _$AuditEventObjectImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9170,8 +9182,8 @@ class _$_AuditEventObject extends _AuditEventObject {
         _detail = detail,
         super._();
 
-  factory _$_AuditEventObject.fromJson(Map<String, dynamic> json) =>
-      _$$_AuditEventObjectFromJson(json);
+  factory _$AuditEventObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuditEventObjectImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -9246,7 +9258,7 @@ class _$_AuditEventObject extends _AuditEventObject {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuditEventObject &&
+            other is _$AuditEventObjectImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -9293,12 +9305,13 @@ class _$_AuditEventObject extends _AuditEventObject {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuditEventObjectCopyWith<_$_AuditEventObject> get copyWith =>
-      __$$_AuditEventObjectCopyWithImpl<_$_AuditEventObject>(this, _$identity);
+  _$$AuditEventObjectImplCopyWith<_$AuditEventObjectImpl> get copyWith =>
+      __$$AuditEventObjectImplCopyWithImpl<_$AuditEventObjectImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventObjectToJson(
+    return _$$AuditEventObjectImplToJson(
       this,
     );
   }
@@ -9319,11 +9332,11 @@ abstract class _AuditEventObject extends AuditEventObject {
       final String? description,
       final FhirBase64Binary? query,
       @JsonKey(name: '_query') final Element? queryElement,
-      final List<AuditEventObjectDetail>? detail}) = _$_AuditEventObject;
+      final List<AuditEventObjectDetail>? detail}) = _$AuditEventObjectImpl;
   const _AuditEventObject._() : super._();
 
   factory _AuditEventObject.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventObject.fromJson;
+      _$AuditEventObjectImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -9358,7 +9371,7 @@ abstract class _AuditEventObject extends AuditEventObject {
   List<AuditEventObjectDetail>? get detail;
   @override
   @JsonKey(ignore: true)
-  _$$_AuditEventObjectCopyWith<_$_AuditEventObject> get copyWith =>
+  _$$AuditEventObjectImplCopyWith<_$AuditEventObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -9489,12 +9502,12 @@ class _$AuditEventParticipantNetworkCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_AuditEventParticipantNetworkCopyWith<$Res>
+abstract class _$$AuditEventParticipantNetworkImplCopyWith<$Res>
     implements $AuditEventParticipantNetworkCopyWith<$Res> {
-  factory _$$_AuditEventParticipantNetworkCopyWith(
-          _$_AuditEventParticipantNetwork value,
-          $Res Function(_$_AuditEventParticipantNetwork) then) =
-      __$$_AuditEventParticipantNetworkCopyWithImpl<$Res>;
+  factory _$$AuditEventParticipantNetworkImplCopyWith(
+          _$AuditEventParticipantNetworkImpl value,
+          $Res Function(_$AuditEventParticipantNetworkImpl) then) =
+      __$$AuditEventParticipantNetworkImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9513,13 +9526,13 @@ abstract class _$$_AuditEventParticipantNetworkCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuditEventParticipantNetworkCopyWithImpl<$Res>
+class __$$AuditEventParticipantNetworkImplCopyWithImpl<$Res>
     extends _$AuditEventParticipantNetworkCopyWithImpl<$Res,
-        _$_AuditEventParticipantNetwork>
-    implements _$$_AuditEventParticipantNetworkCopyWith<$Res> {
-  __$$_AuditEventParticipantNetworkCopyWithImpl(
-      _$_AuditEventParticipantNetwork _value,
-      $Res Function(_$_AuditEventParticipantNetwork) _then)
+        _$AuditEventParticipantNetworkImpl>
+    implements _$$AuditEventParticipantNetworkImplCopyWith<$Res> {
+  __$$AuditEventParticipantNetworkImplCopyWithImpl(
+      _$AuditEventParticipantNetworkImpl _value,
+      $Res Function(_$AuditEventParticipantNetworkImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9533,7 +9546,7 @@ class __$$_AuditEventParticipantNetworkCopyWithImpl<$Res>
     Object? type = freezed,
     Object? typeElement = freezed,
   }) {
-    return _then(_$_AuditEventParticipantNetwork(
+    return _then(_$AuditEventParticipantNetworkImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9568,8 +9581,8 @@ class __$$_AuditEventParticipantNetworkCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
-  const _$_AuditEventParticipantNetwork(
+class _$AuditEventParticipantNetworkImpl extends _AuditEventParticipantNetwork {
+  const _$AuditEventParticipantNetworkImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9581,8 +9594,9 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =>
-      _$$_AuditEventParticipantNetworkFromJson(json);
+  factory _$AuditEventParticipantNetworkImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$AuditEventParticipantNetworkImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -9629,7 +9643,7 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuditEventParticipantNetwork &&
+            other is _$AuditEventParticipantNetworkImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -9658,13 +9672,14 @@ class _$_AuditEventParticipantNetwork extends _AuditEventParticipantNetwork {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuditEventParticipantNetworkCopyWith<_$_AuditEventParticipantNetwork>
-      get copyWith => __$$_AuditEventParticipantNetworkCopyWithImpl<
-          _$_AuditEventParticipantNetwork>(this, _$identity);
+  _$$AuditEventParticipantNetworkImplCopyWith<
+          _$AuditEventParticipantNetworkImpl>
+      get copyWith => __$$AuditEventParticipantNetworkImplCopyWithImpl<
+          _$AuditEventParticipantNetworkImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventParticipantNetworkToJson(
+    return _$$AuditEventParticipantNetworkImplToJson(
       this,
     );
   }
@@ -9680,11 +9695,11 @@ abstract class _AuditEventParticipantNetwork
           @JsonKey(name: '_address') final Element? addressElement,
           final FhirCode? type,
           @JsonKey(name: '_type') final Element? typeElement}) =
-      _$_AuditEventParticipantNetwork;
+      _$AuditEventParticipantNetworkImpl;
   const _AuditEventParticipantNetwork._() : super._();
 
   factory _AuditEventParticipantNetwork.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventParticipantNetwork.fromJson;
+      _$AuditEventParticipantNetworkImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -9706,7 +9721,8 @@ abstract class _AuditEventParticipantNetwork
   Element? get typeElement;
   @override
   @JsonKey(ignore: true)
-  _$$_AuditEventParticipantNetworkCopyWith<_$_AuditEventParticipantNetwork>
+  _$$AuditEventParticipantNetworkImplCopyWith<
+          _$AuditEventParticipantNetworkImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9814,11 +9830,12 @@ class _$AuditEventObjectDetailCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_AuditEventObjectDetailCopyWith<$Res>
+abstract class _$$AuditEventObjectDetailImplCopyWith<$Res>
     implements $AuditEventObjectDetailCopyWith<$Res> {
-  factory _$$_AuditEventObjectDetailCopyWith(_$_AuditEventObjectDetail value,
-          $Res Function(_$_AuditEventObjectDetail) then) =
-      __$$_AuditEventObjectDetailCopyWithImpl<$Res>;
+  factory _$$AuditEventObjectDetailImplCopyWith(
+          _$AuditEventObjectDetailImpl value,
+          $Res Function(_$AuditEventObjectDetailImpl) then) =
+      __$$AuditEventObjectDetailImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9834,12 +9851,13 @@ abstract class _$$_AuditEventObjectDetailCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_AuditEventObjectDetailCopyWithImpl<$Res>
+class __$$AuditEventObjectDetailImplCopyWithImpl<$Res>
     extends _$AuditEventObjectDetailCopyWithImpl<$Res,
-        _$_AuditEventObjectDetail>
-    implements _$$_AuditEventObjectDetailCopyWith<$Res> {
-  __$$_AuditEventObjectDetailCopyWithImpl(_$_AuditEventObjectDetail _value,
-      $Res Function(_$_AuditEventObjectDetail) _then)
+        _$AuditEventObjectDetailImpl>
+    implements _$$AuditEventObjectDetailImplCopyWith<$Res> {
+  __$$AuditEventObjectDetailImplCopyWithImpl(
+      _$AuditEventObjectDetailImpl _value,
+      $Res Function(_$AuditEventObjectDetailImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9852,7 +9870,7 @@ class __$$_AuditEventObjectDetailCopyWithImpl<$Res>
     Object? typeElement = freezed,
     Object? value = freezed,
   }) {
-    return _then(_$_AuditEventObjectDetail(
+    return _then(_$AuditEventObjectDetailImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9883,8 +9901,8 @@ class __$$_AuditEventObjectDetailCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
-  const _$_AuditEventObjectDetail(
+class _$AuditEventObjectDetailImpl extends _AuditEventObjectDetail {
+  const _$AuditEventObjectDetailImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9895,8 +9913,8 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =>
-      _$$_AuditEventObjectDetailFromJson(json);
+  factory _$AuditEventObjectDetailImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AuditEventObjectDetailImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -9940,7 +9958,7 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AuditEventObjectDetail &&
+            other is _$AuditEventObjectDetailImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -9966,13 +9984,13 @@ class _$_AuditEventObjectDetail extends _AuditEventObjectDetail {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AuditEventObjectDetailCopyWith<_$_AuditEventObjectDetail> get copyWith =>
-      __$$_AuditEventObjectDetailCopyWithImpl<_$_AuditEventObjectDetail>(
-          this, _$identity);
+  _$$AuditEventObjectDetailImplCopyWith<_$AuditEventObjectDetailImpl>
+      get copyWith => __$$AuditEventObjectDetailImplCopyWithImpl<
+          _$AuditEventObjectDetailImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_AuditEventObjectDetailToJson(
+    return _$$AuditEventObjectDetailImplToJson(
       this,
     );
   }
@@ -9985,11 +10003,11 @@ abstract class _AuditEventObjectDetail extends AuditEventObjectDetail {
       final List<FhirExtension>? modifierExtension,
       required final String type,
       @JsonKey(name: '_type') final Element? typeElement,
-      required final FhirBase64Binary? value}) = _$_AuditEventObjectDetail;
+      required final FhirBase64Binary? value}) = _$AuditEventObjectDetailImpl;
   const _AuditEventObjectDetail._() : super._();
 
   factory _AuditEventObjectDetail.fromJson(Map<String, dynamic> json) =
-      _$_AuditEventObjectDetail.fromJson;
+      _$AuditEventObjectDetailImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -10008,6 +10026,6 @@ abstract class _AuditEventObjectDetail extends AuditEventObjectDetail {
   FhirBase64Binary? get value;
   @override
   @JsonKey(ignore: true)
-  _$$_AuditEventObjectDetailCopyWith<_$_AuditEventObjectDetail> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$AuditEventObjectDetailImplCopyWith<_$AuditEventObjectDetailImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

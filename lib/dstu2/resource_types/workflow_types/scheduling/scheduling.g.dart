@@ -6,8 +6,8 @@ part of 'scheduling.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
-    _$_Appointment(
+_$AppointmentImpl _$$AppointmentImplFromJson(Map<String, dynamic> json) =>
+    _$AppointmentImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Appointment) ??
@@ -91,7 +91,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
+Map<String, dynamic> _$$AppointmentImplToJson(_$AppointmentImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -247,9 +247,9 @@ const _$AppointmentStatusEnumMap = {
   AppointmentStatus.unknown: 'unknown',
 };
 
-_$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
+_$AppointmentParticipantImpl _$$AppointmentParticipantImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AppointmentParticipant(
+    _$AppointmentParticipantImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -276,8 +276,8 @@ _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AppointmentParticipantToJson(
-    _$_AppointmentParticipant instance) {
+Map<String, dynamic> _$$AppointmentParticipantImplToJson(
+    _$AppointmentParticipantImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -315,13 +315,13 @@ const _$ParticipantStatusEnumMap = {
   ParticipantStatus.unknown: 'unknown',
 };
 
-_$_AppointmentResponse _$$_AppointmentResponseFromJson(
+_$AppointmentResponseImpl _$$AppointmentResponseImplFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
     requiredKeys: const ['participantStatus'],
   );
-  return _$_AppointmentResponse(
+  return _$AppointmentResponseImpl(
     resourceType: $enumDecodeNullable(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.AppointmentResponse) ??
@@ -387,8 +387,8 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
   );
 }
 
-Map<String, dynamic> _$$_AppointmentResponseToJson(
-    _$_AppointmentResponse instance) {
+Map<String, dynamic> _$$AppointmentResponseImplToJson(
+    _$AppointmentResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -441,7 +441,8 @@ const _$AppointmentResponseParticipantStatusEnumMap = {
   AppointmentResponseParticipantStatus.unknown: 'unknown',
 };
 
-_$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
+_$ScheduleImpl _$$ScheduleImplFromJson(Map<String, dynamic> json) =>
+    _$ScheduleImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Schedule) ??
@@ -490,7 +491,7 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
+Map<String, dynamic> _$$ScheduleImplToJson(_$ScheduleImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -524,7 +525,7 @@ Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
   return val;
 }
 
-_$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
+_$SlotImpl _$$SlotImplFromJson(Map<String, dynamic> json) => _$SlotImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Slot) ??
@@ -586,7 +587,7 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SlotToJson(_$_Slot instance) {
+Map<String, dynamic> _$$SlotImplToJson(_$SlotImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };

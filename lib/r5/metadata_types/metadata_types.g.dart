@@ -6,8 +6,8 @@ part of 'metadata_types.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ContactDetail _$$_ContactDetailFromJson(Map<String, dynamic> json) =>
-    _$_ContactDetail(
+_$ContactDetailImpl _$$ContactDetailImplFromJson(Map<String, dynamic> json) =>
+    _$ContactDetailImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -21,7 +21,7 @@ _$_ContactDetail _$$_ContactDetailFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ContactDetailToJson(_$_ContactDetail instance) {
+Map<String, dynamic> _$$ContactDetailImplToJson(_$ContactDetailImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -39,9 +39,9 @@ Map<String, dynamic> _$$_ContactDetailToJson(_$_ContactDetail instance) {
   return val;
 }
 
-_$_ExtendedContactDetail _$$_ExtendedContactDetailFromJson(
+_$ExtendedContactDetailImpl _$$ExtendedContactDetailImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExtendedContactDetail(
+    _$ExtendedContactDetailImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -66,8 +66,8 @@ _$_ExtendedContactDetail _$$_ExtendedContactDetailFromJson(
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExtendedContactDetailToJson(
-    _$_ExtendedContactDetail instance) {
+Map<String, dynamic> _$$ExtendedContactDetailImplToJson(
+    _$ExtendedContactDetailImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -88,9 +88,9 @@ Map<String, dynamic> _$$_ExtendedContactDetailToJson(
   return val;
 }
 
-_$_VirtualServiceDetail _$$_VirtualServiceDetailFromJson(
+_$VirtualServiceDetailImpl _$$VirtualServiceDetailImplFromJson(
         Map<String, dynamic> json) =>
-    _$_VirtualServiceDetail(
+    _$VirtualServiceDetailImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -134,8 +134,8 @@ _$_VirtualServiceDetail _$$_VirtualServiceDetailFromJson(
           : Element.fromJson(json['_sessionKey'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_VirtualServiceDetailToJson(
-    _$_VirtualServiceDetail instance) {
+Map<String, dynamic> _$$VirtualServiceDetailImplToJson(
+    _$VirtualServiceDetailImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -166,8 +166,8 @@ Map<String, dynamic> _$$_VirtualServiceDetailToJson(
   return val;
 }
 
-_$_Availability _$$_AvailabilityFromJson(Map<String, dynamic> json) =>
-    _$_Availability(
+_$AvailabilityImpl _$$AvailabilityImplFromJson(Map<String, dynamic> json) =>
+    _$AvailabilityImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -182,7 +182,7 @@ _$_Availability _$$_AvailabilityFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AvailabilityToJson(_$_Availability instance) {
+Map<String, dynamic> _$$AvailabilityImplToJson(_$AvailabilityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -201,9 +201,9 @@ Map<String, dynamic> _$$_AvailabilityToJson(_$_Availability instance) {
   return val;
 }
 
-_$_AvailabilityAvailableTime _$$_AvailabilityAvailableTimeFromJson(
+_$AvailabilityAvailableTimeImpl _$$AvailabilityAvailableTimeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AvailabilityAvailableTime(
+    _$AvailabilityAvailableTimeImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -237,8 +237,8 @@ _$_AvailabilityAvailableTime _$$_AvailabilityAvailableTimeFromJson(
           : Element.fromJson(json['_availableEndTime'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AvailabilityAvailableTimeToJson(
-    _$_AvailabilityAvailableTime instance) {
+Map<String, dynamic> _$$AvailabilityAvailableTimeImplToJson(
+    _$AvailabilityAvailableTimeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -266,9 +266,9 @@ Map<String, dynamic> _$$_AvailabilityAvailableTimeToJson(
   return val;
 }
 
-_$_AvailabilityNotAvailableTime _$$_AvailabilityNotAvailableTimeFromJson(
+_$AvailabilityNotAvailableTimeImpl _$$AvailabilityNotAvailableTimeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AvailabilityNotAvailableTime(
+    _$AvailabilityNotAvailableTimeImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -285,8 +285,8 @@ _$_AvailabilityNotAvailableTime _$$_AvailabilityNotAvailableTimeFromJson(
           : Period.fromJson(json['during'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AvailabilityNotAvailableTimeToJson(
-    _$_AvailabilityNotAvailableTime instance) {
+Map<String, dynamic> _$$AvailabilityNotAvailableTimeImplToJson(
+    _$AvailabilityNotAvailableTimeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -306,8 +306,9 @@ Map<String, dynamic> _$$_AvailabilityNotAvailableTimeToJson(
   return val;
 }
 
-_$_MonetaryComponent _$$_MonetaryComponentFromJson(Map<String, dynamic> json) =>
-    _$_MonetaryComponent(
+_$MonetaryComponentImpl _$$MonetaryComponentImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MonetaryComponentImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -329,8 +330,8 @@ _$_MonetaryComponent _$$_MonetaryComponentFromJson(Map<String, dynamic> json) =>
           : Money.fromJson(json['amount'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MonetaryComponentToJson(
-    _$_MonetaryComponent instance) {
+Map<String, dynamic> _$$MonetaryComponentImplToJson(
+    _$MonetaryComponentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -351,8 +352,8 @@ Map<String, dynamic> _$$_MonetaryComponentToJson(
   return val;
 }
 
-_$_Contributor _$$_ContributorFromJson(Map<String, dynamic> json) =>
-    _$_Contributor(
+_$ContributorImpl _$$ContributorImplFromJson(Map<String, dynamic> json) =>
+    _$ContributorImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -370,7 +371,7 @@ _$_Contributor _$$_ContributorFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ContributorToJson(_$_Contributor instance) {
+Map<String, dynamic> _$$ContributorImplToJson(_$ContributorImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -397,8 +398,9 @@ const _$ContributorTypeEnumMap = {
   ContributorType.endorser: 'endorser',
 };
 
-_$_DataRequirement _$$_DataRequirementFromJson(Map<String, dynamic> json) =>
-    _$_DataRequirement(
+_$DataRequirementImpl _$$DataRequirementImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DataRequirementImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -447,7 +449,8 @@ _$_DataRequirement _$$_DataRequirementFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DataRequirementToJson(_$_DataRequirement instance) {
+Map<String, dynamic> _$$DataRequirementImplToJson(
+    _$DataRequirementImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -480,9 +483,9 @@ Map<String, dynamic> _$$_DataRequirementToJson(_$_DataRequirement instance) {
   return val;
 }
 
-_$_DataRequirementCodeFilter _$$_DataRequirementCodeFilterFromJson(
+_$DataRequirementCodeFilterImpl _$$DataRequirementCodeFilterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DataRequirementCodeFilter(
+    _$DataRequirementCodeFilterImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -506,8 +509,8 @@ _$_DataRequirementCodeFilter _$$_DataRequirementCodeFilterFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_DataRequirementCodeFilterToJson(
-    _$_DataRequirementCodeFilter instance) {
+Map<String, dynamic> _$$DataRequirementCodeFilterImplToJson(
+    _$DataRequirementCodeFilterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -530,9 +533,9 @@ Map<String, dynamic> _$$_DataRequirementCodeFilterToJson(
   return val;
 }
 
-_$_DataRequirementDateFilter _$$_DataRequirementDateFilterFromJson(
+_$DataRequirementDateFilterImpl _$$DataRequirementDateFilterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DataRequirementDateFilter(
+    _$DataRequirementDateFilterImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -563,8 +566,8 @@ _$_DataRequirementDateFilter _$$_DataRequirementDateFilterFromJson(
               json['valueDuration'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DataRequirementDateFilterToJson(
-    _$_DataRequirementDateFilter instance) {
+Map<String, dynamic> _$$DataRequirementDateFilterImplToJson(
+    _$DataRequirementDateFilterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -589,9 +592,9 @@ Map<String, dynamic> _$$_DataRequirementDateFilterToJson(
   return val;
 }
 
-_$_DataRequirementValueFilter _$$_DataRequirementValueFilterFromJson(
+_$DataRequirementValueFilterImpl _$$DataRequirementValueFilterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DataRequirementValueFilter(
+    _$DataRequirementValueFilterImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -628,8 +631,8 @@ _$_DataRequirementValueFilter _$$_DataRequirementValueFilterFromJson(
               json['valueDuration'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DataRequirementValueFilterToJson(
-    _$_DataRequirementValueFilter instance) {
+Map<String, dynamic> _$$DataRequirementValueFilterImplToJson(
+    _$DataRequirementValueFilterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -656,9 +659,9 @@ Map<String, dynamic> _$$_DataRequirementValueFilterToJson(
   return val;
 }
 
-_$_DataRequirementSort _$$_DataRequirementSortFromJson(
+_$DataRequirementSortImpl _$$DataRequirementSortImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DataRequirementSort(
+    _$DataRequirementSortImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -677,8 +680,8 @@ _$_DataRequirementSort _$$_DataRequirementSortFromJson(
           : Element.fromJson(json['_direction'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DataRequirementSortToJson(
-    _$_DataRequirementSort instance) {
+Map<String, dynamic> _$$DataRequirementSortImplToJson(
+    _$DataRequirementSortImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -705,9 +708,9 @@ const _$DataRequirementSortDirectionEnumMap = {
   DataRequirementSortDirection.descending: 'descending',
 };
 
-_$_ParameterDefinition _$$_ParameterDefinitionFromJson(
+_$ParameterDefinitionImpl _$$ParameterDefinitionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ParameterDefinition(
+    _$ParameterDefinitionImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -741,8 +744,8 @@ _$_ParameterDefinition _$$_ParameterDefinitionFromJson(
           : FhirCanonical.fromJson(json['profile']),
     );
 
-Map<String, dynamic> _$$_ParameterDefinitionToJson(
-    _$_ParameterDefinition instance) {
+Map<String, dynamic> _$$ParameterDefinitionImplToJson(
+    _$ParameterDefinitionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -770,8 +773,9 @@ Map<String, dynamic> _$$_ParameterDefinitionToJson(
   return val;
 }
 
-_$_RelatedArtifact _$$_RelatedArtifactFromJson(Map<String, dynamic> json) =>
-    _$_RelatedArtifact(
+_$RelatedArtifactImpl _$$RelatedArtifactImplFromJson(
+        Map<String, dynamic> json) =>
+    _$RelatedArtifactImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -822,7 +826,8 @@ _$_RelatedArtifact _$$_RelatedArtifactFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_publicationDate'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_RelatedArtifactToJson(_$_RelatedArtifact instance) {
+Map<String, dynamic> _$$RelatedArtifactImplToJson(
+    _$RelatedArtifactImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -890,8 +895,9 @@ const _$RelatedArtifactTypeEnumMap = {
   RelatedArtifactType.transformed_with: 'transformed-with',
 };
 
-_$_TriggerDefinition _$$_TriggerDefinitionFromJson(Map<String, dynamic> json) =>
-    _$_TriggerDefinition(
+_$TriggerDefinitionImpl _$$TriggerDefinitionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TriggerDefinitionImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -936,8 +942,8 @@ _$_TriggerDefinition _$$_TriggerDefinitionFromJson(Map<String, dynamic> json) =>
           : FhirExpression.fromJson(json['condition'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TriggerDefinitionToJson(
-    _$_TriggerDefinition instance) {
+Map<String, dynamic> _$$TriggerDefinitionImplToJson(
+    _$TriggerDefinitionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -977,8 +983,8 @@ const _$TriggerDefinitionTypeEnumMap = {
   TriggerDefinitionType.data_access_ended: 'data-access-ended',
 };
 
-_$_UsageContext _$$_UsageContextFromJson(Map<String, dynamic> json) =>
-    _$_UsageContext(
+_$UsageContextImpl _$$UsageContextImplFromJson(Map<String, dynamic> json) =>
+    _$UsageContextImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -999,7 +1005,7 @@ _$_UsageContext _$$_UsageContextFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_UsageContextToJson(_$_UsageContext instance) {
+Map<String, dynamic> _$$UsageContextImplToJson(_$UsageContextImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1019,8 +1025,8 @@ Map<String, dynamic> _$$_UsageContextToJson(_$_UsageContext instance) {
   return val;
 }
 
-_$_FhirExpression _$$_FhirExpressionFromJson(Map<String, dynamic> json) =>
-    _$_FhirExpression(
+_$FhirExpressionImpl _$$FhirExpressionImplFromJson(Map<String, dynamic> json) =>
+    _$FhirExpressionImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1050,7 +1056,8 @@ _$_FhirExpression _$$_FhirExpressionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_FhirExpressionToJson(_$_FhirExpression instance) {
+Map<String, dynamic> _$$FhirExpressionImplToJson(
+    _$FhirExpressionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

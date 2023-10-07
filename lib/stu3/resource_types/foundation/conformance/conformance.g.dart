@@ -6,9 +6,9 @@ part of 'conformance.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CapabilityStatement _$$_CapabilityStatementFromJson(
+_$CapabilityStatementImpl _$$CapabilityStatementImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CapabilityStatement(
+    _$CapabilityStatementImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.CapabilityStatement) ??
@@ -162,8 +162,8 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CapabilityStatementToJson(
-    _$_CapabilityStatement instance) {
+Map<String, dynamic> _$$CapabilityStatementImplToJson(
+    _$CapabilityStatementImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -387,9 +387,9 @@ const _$CapabilityStatementAcceptUnknownEnumMap = {
   CapabilityStatementAcceptUnknown.unknown: 'unknown',
 };
 
-_$_CapabilityStatementSoftware _$$_CapabilityStatementSoftwareFromJson(
+_$CapabilityStatementSoftwareImpl _$$CapabilityStatementSoftwareImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CapabilityStatementSoftware(
+    _$CapabilityStatementSoftwareImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -406,8 +406,8 @@ _$_CapabilityStatementSoftware _$$_CapabilityStatementSoftwareFromJson(
           : Element.fromJson(json['_releaseDate'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CapabilityStatementSoftwareToJson(
-    _$_CapabilityStatementSoftware instance) {
+Map<String, dynamic> _$$CapabilityStatementSoftwareImplToJson(
+    _$CapabilityStatementSoftwareImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -425,9 +425,10 @@ Map<String, dynamic> _$$_CapabilityStatementSoftwareToJson(
   return val;
 }
 
-_$_CapabilityStatementImplementation
-    _$$_CapabilityStatementImplementationFromJson(Map<String, dynamic> json) =>
-        _$_CapabilityStatementImplementation(
+_$CapabilityStatementImplementationImpl
+    _$$CapabilityStatementImplementationImplFromJson(
+            Map<String, dynamic> json) =>
+        _$CapabilityStatementImplementationImpl(
           description: json['description'] as String?,
           descriptionElement: json['_description'] == null
               ? null
@@ -438,8 +439,8 @@ _$_CapabilityStatementImplementation
               : Element.fromJson(json['_url'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_CapabilityStatementImplementationToJson(
-    _$_CapabilityStatementImplementation instance) {
+Map<String, dynamic> _$$CapabilityStatementImplementationImplToJson(
+    _$CapabilityStatementImplementationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -455,9 +456,9 @@ Map<String, dynamic> _$$_CapabilityStatementImplementationToJson(
   return val;
 }
 
-_$_CapabilityStatementRest _$$_CapabilityStatementRestFromJson(
+_$CapabilityStatementRestImpl _$$CapabilityStatementRestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CapabilityStatementRest(
+    _$CapabilityStatementRestImpl(
       mode: $enumDecodeNullable(
           _$CapabilityStatementRestModeEnumMap, json['mode']),
       modeElement: json['_mode'] == null
@@ -496,8 +497,8 @@ _$_CapabilityStatementRest _$$_CapabilityStatementRestFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CapabilityStatementRestToJson(
-    _$_CapabilityStatementRest instance) {
+Map<String, dynamic> _$$CapabilityStatementRestImplToJson(
+    _$CapabilityStatementRestImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -530,9 +531,9 @@ const _$CapabilityStatementRestModeEnumMap = {
   CapabilityStatementRestMode.unknown: 'unknown',
 };
 
-_$_CapabilityStatementSecurity _$$_CapabilityStatementSecurityFromJson(
+_$CapabilityStatementSecurityImpl _$$CapabilityStatementSecurityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CapabilityStatementSecurity(
+    _$CapabilityStatementSecurityImpl(
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -553,8 +554,8 @@ _$_CapabilityStatementSecurity _$$_CapabilityStatementSecurityFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CapabilityStatementSecurityToJson(
-    _$_CapabilityStatementSecurity instance) {
+Map<String, dynamic> _$$CapabilityStatementSecurityImplToJson(
+    _$CapabilityStatementSecurityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -575,21 +576,21 @@ Map<String, dynamic> _$$_CapabilityStatementSecurityToJson(
   return val;
 }
 
-_$_CapabilityStatementCertificate _$$_CapabilityStatementCertificateFromJson(
-        Map<String, dynamic> json) =>
-    _$_CapabilityStatementCertificate(
-      type: json['type'] as String?,
-      typeElement: json['_type'] == null
-          ? null
-          : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      blob: json['blob'] as String?,
-      blobElement: json['_blob'] == null
-          ? null
-          : Element.fromJson(json['_blob'] as Map<String, dynamic>),
-    );
+_$CapabilityStatementCertificateImpl
+    _$$CapabilityStatementCertificateImplFromJson(Map<String, dynamic> json) =>
+        _$CapabilityStatementCertificateImpl(
+          type: json['type'] as String?,
+          typeElement: json['_type'] == null
+              ? null
+              : Element.fromJson(json['_type'] as Map<String, dynamic>),
+          blob: json['blob'] as String?,
+          blobElement: json['_blob'] == null
+              ? null
+              : Element.fromJson(json['_blob'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_CapabilityStatementCertificateToJson(
-    _$_CapabilityStatementCertificate instance) {
+Map<String, dynamic> _$$CapabilityStatementCertificateImplToJson(
+    _$CapabilityStatementCertificateImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -605,9 +606,9 @@ Map<String, dynamic> _$$_CapabilityStatementCertificateToJson(
   return val;
 }
 
-_$_CapabilityStatementResource _$$_CapabilityStatementResourceFromJson(
+_$CapabilityStatementResourceImpl _$$CapabilityStatementResourceImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CapabilityStatementResource(
+    _$CapabilityStatementResourceImpl(
       type: json['type'] as String?,
       typeElement: json['_type'] == null
           ? null
@@ -695,8 +696,8 @@ _$_CapabilityStatementResource _$$_CapabilityStatementResourceFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CapabilityStatementResourceToJson(
-    _$_CapabilityStatementResource instance) {
+Map<String, dynamic> _$$CapabilityStatementResourceImplToJson(
+    _$CapabilityStatementResourceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -784,22 +785,23 @@ const _$CapabilityStatementResourceReferencePolicyEnumMap = {
   CapabilityStatementResourceReferencePolicy.unknown: 'unknown',
 };
 
-_$_CapabilityStatementInteraction _$$_CapabilityStatementInteractionFromJson(
-        Map<String, dynamic> json) =>
-    _$_CapabilityStatementInteraction(
-      code: $enumDecodeNullable(
-          _$CapabilityStatementInteractionCodeEnumMap, json['code']),
-      codeElement: json['_code'] == null
-          ? null
-          : Element.fromJson(json['_code'] as Map<String, dynamic>),
-      documentation: json['documentation'] as String?,
-      documentationElement: json['_documentation'] == null
-          ? null
-          : Element.fromJson(json['_documentation'] as Map<String, dynamic>),
-    );
+_$CapabilityStatementInteractionImpl
+    _$$CapabilityStatementInteractionImplFromJson(Map<String, dynamic> json) =>
+        _$CapabilityStatementInteractionImpl(
+          code: $enumDecodeNullable(
+              _$CapabilityStatementInteractionCodeEnumMap, json['code']),
+          codeElement: json['_code'] == null
+              ? null
+              : Element.fromJson(json['_code'] as Map<String, dynamic>),
+          documentation: json['documentation'] as String?,
+          documentationElement: json['_documentation'] == null
+              ? null
+              : Element.fromJson(
+                  json['_documentation'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_CapabilityStatementInteractionToJson(
-    _$_CapabilityStatementInteraction instance) {
+Map<String, dynamic> _$$CapabilityStatementInteractionImplToJson(
+    _$CapabilityStatementInteractionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -829,30 +831,31 @@ const _$CapabilityStatementInteractionCodeEnumMap = {
   CapabilityStatementInteractionCode.unknown: 'unknown',
 };
 
-_$_CapabilityStatementSearchParam _$$_CapabilityStatementSearchParamFromJson(
-        Map<String, dynamic> json) =>
-    _$_CapabilityStatementSearchParam(
-      name: json['name'] as String?,
-      nameElement: json['_name'] == null
-          ? null
-          : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      definition: json['definition'] as String?,
-      definitionElement: json['_definition'] == null
-          ? null
-          : Element.fromJson(json['_definition'] as Map<String, dynamic>),
-      type: $enumDecodeNullable(
-          _$CapabilityStatementSearchParamTypeEnumMap, json['type']),
-      typeElement: json['_type'] == null
-          ? null
-          : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      documentation: json['documentation'] as String?,
-      documentationElement: json['_documentation'] == null
-          ? null
-          : Element.fromJson(json['_documentation'] as Map<String, dynamic>),
-    );
+_$CapabilityStatementSearchParamImpl
+    _$$CapabilityStatementSearchParamImplFromJson(Map<String, dynamic> json) =>
+        _$CapabilityStatementSearchParamImpl(
+          name: json['name'] as String?,
+          nameElement: json['_name'] == null
+              ? null
+              : Element.fromJson(json['_name'] as Map<String, dynamic>),
+          definition: json['definition'] as String?,
+          definitionElement: json['_definition'] == null
+              ? null
+              : Element.fromJson(json['_definition'] as Map<String, dynamic>),
+          type: $enumDecodeNullable(
+              _$CapabilityStatementSearchParamTypeEnumMap, json['type']),
+          typeElement: json['_type'] == null
+              ? null
+              : Element.fromJson(json['_type'] as Map<String, dynamic>),
+          documentation: json['documentation'] as String?,
+          documentationElement: json['_documentation'] == null
+              ? null
+              : Element.fromJson(
+                  json['_documentation'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_CapabilityStatementSearchParamToJson(
-    _$_CapabilityStatementSearchParam instance) {
+Map<String, dynamic> _$$CapabilityStatementSearchParamImplToJson(
+    _$CapabilityStatementSearchParamImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -885,22 +888,23 @@ const _$CapabilityStatementSearchParamTypeEnumMap = {
   CapabilityStatementSearchParamType.unknown: 'unknown',
 };
 
-_$_CapabilityStatementInteraction1 _$$_CapabilityStatementInteraction1FromJson(
-        Map<String, dynamic> json) =>
-    _$_CapabilityStatementInteraction1(
-      code: $enumDecodeNullable(
-          _$CapabilityStatementInteraction1CodeEnumMap, json['code']),
-      codeElement: json['_code'] == null
-          ? null
-          : Element.fromJson(json['_code'] as Map<String, dynamic>),
-      documentation: json['documentation'] as String?,
-      documentationElement: json['_documentation'] == null
-          ? null
-          : Element.fromJson(json['_documentation'] as Map<String, dynamic>),
-    );
+_$CapabilityStatementInteraction1Impl
+    _$$CapabilityStatementInteraction1ImplFromJson(Map<String, dynamic> json) =>
+        _$CapabilityStatementInteraction1Impl(
+          code: $enumDecodeNullable(
+              _$CapabilityStatementInteraction1CodeEnumMap, json['code']),
+          codeElement: json['_code'] == null
+              ? null
+              : Element.fromJson(json['_code'] as Map<String, dynamic>),
+          documentation: json['documentation'] as String?,
+          documentationElement: json['_documentation'] == null
+              ? null
+              : Element.fromJson(
+                  json['_documentation'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_CapabilityStatementInteraction1ToJson(
-    _$_CapabilityStatementInteraction1 instance) {
+Map<String, dynamic> _$$CapabilityStatementInteraction1ImplToJson(
+    _$CapabilityStatementInteraction1Impl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -925,9 +929,9 @@ const _$CapabilityStatementInteraction1CodeEnumMap = {
   CapabilityStatementInteraction1Code.unknown: 'unknown',
 };
 
-_$_CapabilityStatementOperation _$$_CapabilityStatementOperationFromJson(
+_$CapabilityStatementOperationImpl _$$CapabilityStatementOperationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CapabilityStatementOperation(
+    _$CapabilityStatementOperationImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -936,8 +940,8 @@ _$_CapabilityStatementOperation _$$_CapabilityStatementOperationFromJson(
           Reference.fromJson(json['definition'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CapabilityStatementOperationToJson(
-    _$_CapabilityStatementOperation instance) {
+Map<String, dynamic> _$$CapabilityStatementOperationImplToJson(
+    _$CapabilityStatementOperationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -952,9 +956,9 @@ Map<String, dynamic> _$$_CapabilityStatementOperationToJson(
   return val;
 }
 
-_$_CapabilityStatementMessaging _$$_CapabilityStatementMessagingFromJson(
+_$CapabilityStatementMessagingImpl _$$CapabilityStatementMessagingImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CapabilityStatementMessaging(
+    _$CapabilityStatementMessagingImpl(
       endpoint: (json['endpoint'] as List<dynamic>?)
           ?.map((e) =>
               CapabilityStatementEndpoint.fromJson(e as Map<String, dynamic>))
@@ -979,8 +983,8 @@ _$_CapabilityStatementMessaging _$$_CapabilityStatementMessagingFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CapabilityStatementMessagingToJson(
-    _$_CapabilityStatementMessaging instance) {
+Map<String, dynamic> _$$CapabilityStatementMessagingImplToJson(
+    _$CapabilityStatementMessagingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1000,9 +1004,9 @@ Map<String, dynamic> _$$_CapabilityStatementMessagingToJson(
   return val;
 }
 
-_$_CapabilityStatementEndpoint _$$_CapabilityStatementEndpointFromJson(
+_$CapabilityStatementEndpointImpl _$$CapabilityStatementEndpointImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CapabilityStatementEndpoint(
+    _$CapabilityStatementEndpointImpl(
       protocol: Coding.fromJson(json['protocol'] as Map<String, dynamic>),
       address: json['address'] as String?,
       addressElement: json['_address'] == null
@@ -1010,8 +1014,8 @@ _$_CapabilityStatementEndpoint _$$_CapabilityStatementEndpointFromJson(
           : Element.fromJson(json['_address'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CapabilityStatementEndpointToJson(
-    _$_CapabilityStatementEndpoint instance) {
+Map<String, dynamic> _$$CapabilityStatementEndpointImplToJson(
+    _$CapabilityStatementEndpointImpl instance) {
   final val = <String, dynamic>{
     'protocol': instance.protocol.toJson(),
   };
@@ -1027,10 +1031,10 @@ Map<String, dynamic> _$$_CapabilityStatementEndpointToJson(
   return val;
 }
 
-_$_CapabilityStatementSupportedMessage
-    _$$_CapabilityStatementSupportedMessageFromJson(
+_$CapabilityStatementSupportedMessageImpl
+    _$$CapabilityStatementSupportedMessageImplFromJson(
             Map<String, dynamic> json) =>
-        _$_CapabilityStatementSupportedMessage(
+        _$CapabilityStatementSupportedMessageImpl(
           mode: $enumDecodeNullable(
               _$CapabilityStatementSupportedMessageModeEnumMap, json['mode']),
           modeElement: json['_mode'] == null
@@ -1040,8 +1044,8 @@ _$_CapabilityStatementSupportedMessage
               Reference.fromJson(json['definition'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_CapabilityStatementSupportedMessageToJson(
-    _$_CapabilityStatementSupportedMessage instance) {
+Map<String, dynamic> _$$CapabilityStatementSupportedMessageImplToJson(
+    _$CapabilityStatementSupportedMessageImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1063,9 +1067,9 @@ const _$CapabilityStatementSupportedMessageModeEnumMap = {
   CapabilityStatementSupportedMessageMode.unknown: 'unknown',
 };
 
-_$_CapabilityStatementEvent _$$_CapabilityStatementEventFromJson(
+_$CapabilityStatementEventImpl _$$CapabilityStatementEventImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CapabilityStatementEvent(
+    _$CapabilityStatementEventImpl(
       code: Coding.fromJson(json['code'] as Map<String, dynamic>),
       category: $enumDecodeNullable(
           _$CapabilityStatementEventCategoryEnumMap, json['category']),
@@ -1089,8 +1093,8 @@ _$_CapabilityStatementEvent _$$_CapabilityStatementEventFromJson(
           : Element.fromJson(json['_documentation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CapabilityStatementEventToJson(
-    _$_CapabilityStatementEvent instance) {
+Map<String, dynamic> _$$CapabilityStatementEventImplToJson(
+    _$CapabilityStatementEventImpl instance) {
   final val = <String, dynamic>{
     'code': instance.code.toJson(),
   };
@@ -1128,9 +1132,9 @@ const _$CapabilityStatementEventModeEnumMap = {
   CapabilityStatementEventMode.unknown: 'unknown',
 };
 
-_$_CapabilityStatementDocument _$$_CapabilityStatementDocumentFromJson(
+_$CapabilityStatementDocumentImpl _$$CapabilityStatementDocumentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CapabilityStatementDocument(
+    _$CapabilityStatementDocumentImpl(
       mode: $enumDecodeNullable(
           _$CapabilityStatementDocumentModeEnumMap, json['mode']),
       modeElement: json['_mode'] == null
@@ -1143,8 +1147,8 @@ _$_CapabilityStatementDocument _$$_CapabilityStatementDocumentFromJson(
       profile: Reference.fromJson(json['profile'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CapabilityStatementDocumentToJson(
-    _$_CapabilityStatementDocument instance) {
+Map<String, dynamic> _$$CapabilityStatementDocumentImplToJson(
+    _$CapabilityStatementDocumentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1167,9 +1171,9 @@ const _$CapabilityStatementDocumentModeEnumMap = {
   CapabilityStatementDocumentMode.unknown: 'unknown',
 };
 
-_$_CompartmentDefinition _$$_CompartmentDefinitionFromJson(
+_$CompartmentDefinitionImpl _$$CompartmentDefinitionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CompartmentDefinition(
+    _$CompartmentDefinitionImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.CompartmentDefinition) ??
@@ -1266,8 +1270,8 @@ _$_CompartmentDefinition _$$_CompartmentDefinitionFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CompartmentDefinitionToJson(
-    _$_CompartmentDefinition instance) {
+Map<String, dynamic> _$$CompartmentDefinitionImplToJson(
+    _$CompartmentDefinitionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1338,27 +1342,30 @@ const _$CompartmentDefinitionCodeEnumMap = {
   CompartmentDefinitionCode.unknown: 'unknown',
 };
 
-_$_CompartmentDefinitionResource _$$_CompartmentDefinitionResourceFromJson(
-        Map<String, dynamic> json) =>
-    _$_CompartmentDefinitionResource(
-      code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
-      codeElement: json['_code'] == null
-          ? null
-          : Element.fromJson(json['_code'] as Map<String, dynamic>),
-      param:
-          (json['param'] as List<dynamic>?)?.map((e) => e as String).toList(),
-      paramElement: (json['_param'] as List<dynamic>?)
-          ?.map((e) =>
-              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      documentation: json['documentation'] as String?,
-      documentationElement: json['_documentation'] == null
-          ? null
-          : Element.fromJson(json['_documentation'] as Map<String, dynamic>),
-    );
+_$CompartmentDefinitionResourceImpl
+    _$$CompartmentDefinitionResourceImplFromJson(Map<String, dynamic> json) =>
+        _$CompartmentDefinitionResourceImpl(
+          code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
+          codeElement: json['_code'] == null
+              ? null
+              : Element.fromJson(json['_code'] as Map<String, dynamic>),
+          param: (json['param'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList(),
+          paramElement: (json['_param'] as List<dynamic>?)
+              ?.map((e) => e == null
+                  ? null
+                  : Element.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          documentation: json['documentation'] as String?,
+          documentationElement: json['_documentation'] == null
+              ? null
+              : Element.fromJson(
+                  json['_documentation'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_CompartmentDefinitionResourceToJson(
-    _$_CompartmentDefinitionResource instance) {
+Map<String, dynamic> _$$CompartmentDefinitionResourceImplToJson(
+    _$CompartmentDefinitionResourceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1377,8 +1384,8 @@ Map<String, dynamic> _$$_CompartmentDefinitionResourceToJson(
   return val;
 }
 
-_$_DataElement _$$_DataElementFromJson(Map<String, dynamic> json) =>
-    _$_DataElement(
+_$DataElementImpl _$$DataElementImplFromJson(Map<String, dynamic> json) =>
+    _$DataElementImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DataElement) ??
@@ -1474,7 +1481,7 @@ _$_DataElement _$$_DataElementFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DataElementToJson(_$_DataElement instance) {
+Map<String, dynamic> _$$DataElementImplToJson(_$DataElementImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1548,9 +1555,9 @@ const _$DataElementStringencyEnumMap = {
   DataElementStringency.unknown: 'unknown',
 };
 
-_$_DataElementMapping _$$_DataElementMappingFromJson(
+_$DataElementMappingImpl _$$DataElementMappingImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DataElementMapping(
+    _$DataElementMappingImpl(
       identity:
           json['identity'] == null ? null : FhirId.fromJson(json['identity']),
       identityElement: json['_identity'] == null
@@ -1570,8 +1577,8 @@ _$_DataElementMapping _$$_DataElementMappingFromJson(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DataElementMappingToJson(
-    _$_DataElementMapping instance) {
+Map<String, dynamic> _$$DataElementMappingImplToJson(
+    _$DataElementMappingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1591,8 +1598,9 @@ Map<String, dynamic> _$$_DataElementMappingToJson(
   return val;
 }
 
-_$_GraphDefinition _$$_GraphDefinitionFromJson(Map<String, dynamic> json) =>
-    _$_GraphDefinition(
+_$GraphDefinitionImpl _$$GraphDefinitionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GraphDefinitionImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.GraphDefinition) ??
@@ -1686,7 +1694,8 @@ _$_GraphDefinition _$$_GraphDefinitionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_GraphDefinitionToJson(_$_GraphDefinition instance) {
+Map<String, dynamic> _$$GraphDefinitionImplToJson(
+    _$GraphDefinitionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1748,9 +1757,9 @@ const _$GraphDefinitionStatusEnumMap = {
   GraphDefinitionStatus.unknown: 'unknown',
 };
 
-_$_GraphDefinitionLink _$$_GraphDefinitionLinkFromJson(
+_$GraphDefinitionLinkImpl _$$GraphDefinitionLinkImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GraphDefinitionLink(
+    _$GraphDefinitionLinkImpl(
       path: json['path'] as String?,
       pathElement: json['_path'] == null
           ? null
@@ -1776,8 +1785,8 @@ _$_GraphDefinitionLink _$$_GraphDefinitionLinkFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_GraphDefinitionLinkToJson(
-    _$_GraphDefinitionLink instance) {
+Map<String, dynamic> _$$GraphDefinitionLinkImplToJson(
+    _$GraphDefinitionLinkImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1800,9 +1809,9 @@ Map<String, dynamic> _$$_GraphDefinitionLinkToJson(
   return val;
 }
 
-_$_GraphDefinitionTarget _$$_GraphDefinitionTargetFromJson(
+_$GraphDefinitionTargetImpl _$$GraphDefinitionTargetImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GraphDefinitionTarget(
+    _$GraphDefinitionTargetImpl(
       type: json['type'] as String?,
       typeElement: json['_type'] == null
           ? null
@@ -1820,8 +1829,8 @@ _$_GraphDefinitionTarget _$$_GraphDefinitionTargetFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_GraphDefinitionTargetToJson(
-    _$_GraphDefinitionTarget instance) {
+Map<String, dynamic> _$$GraphDefinitionTargetImplToJson(
+    _$GraphDefinitionTargetImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1840,9 +1849,9 @@ Map<String, dynamic> _$$_GraphDefinitionTargetToJson(
   return val;
 }
 
-_$_GraphDefinitionCompartment _$$_GraphDefinitionCompartmentFromJson(
+_$GraphDefinitionCompartmentImpl _$$GraphDefinitionCompartmentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GraphDefinitionCompartment(
+    _$GraphDefinitionCompartmentImpl(
       code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
@@ -1862,8 +1871,8 @@ _$_GraphDefinitionCompartment _$$_GraphDefinitionCompartmentFromJson(
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GraphDefinitionCompartmentToJson(
-    _$_GraphDefinitionCompartment instance) {
+Map<String, dynamic> _$$GraphDefinitionCompartmentImplToJson(
+    _$GraphDefinitionCompartmentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1891,9 +1900,9 @@ const _$GraphDefinitionCompartmentRuleEnumMap = {
   GraphDefinitionCompartmentRule.unknown: 'unknown',
 };
 
-_$_ImplementationGuide _$$_ImplementationGuideFromJson(
+_$ImplementationGuideImpl _$$ImplementationGuideImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ImplementationGuide(
+    _$ImplementationGuideImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ImplementationGuide) ??
@@ -2002,8 +2011,8 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
               json['page'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ImplementationGuideToJson(
-    _$_ImplementationGuide instance) {
+Map<String, dynamic> _$$ImplementationGuideImplToJson(
+    _$ImplementationGuideImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -2070,22 +2079,22 @@ const _$ImplementationGuideStatusEnumMap = {
   ImplementationGuideStatus.unknown: 'unknown',
 };
 
-_$_ImplementationGuideDependency _$$_ImplementationGuideDependencyFromJson(
-        Map<String, dynamic> json) =>
-    _$_ImplementationGuideDependency(
-      type: $enumDecodeNullable(
-          _$ImplementationGuideDependencyTypeEnumMap, json['type']),
-      typeElement: json['_type'] == null
-          ? null
-          : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      uri: json['uri'] as String?,
-      uriElement: json['_uri'] == null
-          ? null
-          : Element.fromJson(json['_uri'] as Map<String, dynamic>),
-    );
+_$ImplementationGuideDependencyImpl
+    _$$ImplementationGuideDependencyImplFromJson(Map<String, dynamic> json) =>
+        _$ImplementationGuideDependencyImpl(
+          type: $enumDecodeNullable(
+              _$ImplementationGuideDependencyTypeEnumMap, json['type']),
+          typeElement: json['_type'] == null
+              ? null
+              : Element.fromJson(json['_type'] as Map<String, dynamic>),
+          uri: json['uri'] as String?,
+          uriElement: json['_uri'] == null
+              ? null
+              : Element.fromJson(json['_uri'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_ImplementationGuideDependencyToJson(
-    _$_ImplementationGuideDependency instance) {
+Map<String, dynamic> _$$ImplementationGuideDependencyImplToJson(
+    _$ImplementationGuideDependencyImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2108,9 +2117,9 @@ const _$ImplementationGuideDependencyTypeEnumMap = {
   ImplementationGuideDependencyType.unknown: 'unknown',
 };
 
-_$_ImplementationGuidePackage _$$_ImplementationGuidePackageFromJson(
+_$ImplementationGuidePackageImpl _$$ImplementationGuidePackageImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ImplementationGuidePackage(
+    _$ImplementationGuidePackageImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -2125,8 +2134,8 @@ _$_ImplementationGuidePackage _$$_ImplementationGuidePackageFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ImplementationGuidePackageToJson(
-    _$_ImplementationGuidePackage instance) {
+Map<String, dynamic> _$$ImplementationGuidePackageImplToJson(
+    _$ImplementationGuidePackageImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2143,9 +2152,9 @@ Map<String, dynamic> _$$_ImplementationGuidePackageToJson(
   return val;
 }
 
-_$_ImplementationGuideResource _$$_ImplementationGuideResourceFromJson(
+_$ImplementationGuideResourceImpl _$$ImplementationGuideResourceImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ImplementationGuideResource(
+    _$ImplementationGuideResourceImpl(
       example: json['example'] == null
           ? null
           : FhirBoolean.fromJson(json['example']),
@@ -2176,8 +2185,8 @@ _$_ImplementationGuideResource _$$_ImplementationGuideResourceFromJson(
           : Reference.fromJson(json['exampleFor'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ImplementationGuideResourceToJson(
-    _$_ImplementationGuideResource instance) {
+Map<String, dynamic> _$$ImplementationGuideResourceImplToJson(
+    _$ImplementationGuideResourceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2201,9 +2210,9 @@ Map<String, dynamic> _$$_ImplementationGuideResourceToJson(
   return val;
 }
 
-_$_ImplementationGuideGlobal _$$_ImplementationGuideGlobalFromJson(
+_$ImplementationGuideGlobalImpl _$$ImplementationGuideGlobalImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ImplementationGuideGlobal(
+    _$ImplementationGuideGlobalImpl(
       type: json['type'] as String?,
       typeElement: json['_type'] == null
           ? null
@@ -2211,8 +2220,8 @@ _$_ImplementationGuideGlobal _$$_ImplementationGuideGlobalFromJson(
       profile: Reference.fromJson(json['profile'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ImplementationGuideGlobalToJson(
-    _$_ImplementationGuideGlobal instance) {
+Map<String, dynamic> _$$ImplementationGuideGlobalImplToJson(
+    _$ImplementationGuideGlobalImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2227,9 +2236,9 @@ Map<String, dynamic> _$$_ImplementationGuideGlobalToJson(
   return val;
 }
 
-_$_ImplementationGuidePage _$$_ImplementationGuidePageFromJson(
+_$ImplementationGuidePageImpl _$$ImplementationGuidePageImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ImplementationGuidePage(
+    _$ImplementationGuidePageImpl(
       source: json['source'] as String?,
       sourceElement: json['_source'] == null
           ? null
@@ -2264,8 +2273,8 @@ _$_ImplementationGuidePage _$$_ImplementationGuidePageFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ImplementationGuidePageToJson(
-    _$_ImplementationGuidePage instance) {
+Map<String, dynamic> _$$ImplementationGuidePageImplToJson(
+    _$ImplementationGuidePageImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2303,8 +2312,9 @@ const _$ImplementationGuidePageKindEnumMap = {
   ImplementationGuidePageKind.unknown: 'unknown',
 };
 
-_$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
-    _$_MessageDefinition(
+_$MessageDefinitionImpl _$$MessageDefinitionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MessageDefinitionImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.MessageDefinition) ??
@@ -2426,8 +2436,8 @@ _$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_MessageDefinitionToJson(
-    _$_MessageDefinition instance) {
+Map<String, dynamic> _$$MessageDefinitionImplToJson(
+    _$MessageDefinitionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -2500,9 +2510,9 @@ const _$MessageDefinitionStatusEnumMap = {
   MessageDefinitionStatus.unknown: 'unknown',
 };
 
-_$_MessageDefinitionFocus _$$_MessageDefinitionFocusFromJson(
+_$MessageDefinitionFocusImpl _$$MessageDefinitionFocusImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MessageDefinitionFocus(
+    _$MessageDefinitionFocusImpl(
       code: json['code'] == null ? null : FhirCode.fromJson(json['code']),
       codeElement: json['_code'] == null
           ? null
@@ -2520,8 +2530,8 @@ _$_MessageDefinitionFocus _$$_MessageDefinitionFocusFromJson(
           : Element.fromJson(json['_max'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MessageDefinitionFocusToJson(
-    _$_MessageDefinitionFocus instance) {
+Map<String, dynamic> _$$MessageDefinitionFocusImplToJson(
+    _$MessageDefinitionFocusImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2540,9 +2550,10 @@ Map<String, dynamic> _$$_MessageDefinitionFocusToJson(
   return val;
 }
 
-_$_MessageDefinitionAllowedResponse
-    _$$_MessageDefinitionAllowedResponseFromJson(Map<String, dynamic> json) =>
-        _$_MessageDefinitionAllowedResponse(
+_$MessageDefinitionAllowedResponseImpl
+    _$$MessageDefinitionAllowedResponseImplFromJson(
+            Map<String, dynamic> json) =>
+        _$MessageDefinitionAllowedResponseImpl(
           message: Reference.fromJson(json['message'] as Map<String, dynamic>),
           situation: json['situation'] as String?,
           situationElement: json['_situation'] == null
@@ -2550,8 +2561,8 @@ _$_MessageDefinitionAllowedResponse
               : Element.fromJson(json['_situation'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_MessageDefinitionAllowedResponseToJson(
-    _$_MessageDefinitionAllowedResponse instance) {
+Map<String, dynamic> _$$MessageDefinitionAllowedResponseImplToJson(
+    _$MessageDefinitionAllowedResponseImpl instance) {
   final val = <String, dynamic>{
     'message': instance.message.toJson(),
   };
@@ -2567,9 +2578,9 @@ Map<String, dynamic> _$$_MessageDefinitionAllowedResponseToJson(
   return val;
 }
 
-_$_OperationDefinition _$$_OperationDefinitionFromJson(
+_$OperationDefinitionImpl _$$OperationDefinitionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_OperationDefinition(
+    _$OperationDefinitionImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.OperationDefinition) ??
@@ -2703,8 +2714,8 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_OperationDefinitionToJson(
-    _$_OperationDefinition instance) {
+Map<String, dynamic> _$$OperationDefinitionImplToJson(
+    _$OperationDefinitionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -2788,9 +2799,9 @@ const _$OperationDefinitionKindEnumMap = {
   OperationDefinitionKind.unknown: 'unknown',
 };
 
-_$_OperationDefinitionParameter _$$_OperationDefinitionParameterFromJson(
+_$OperationDefinitionParameterImpl _$$OperationDefinitionParameterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_OperationDefinitionParameter(
+    _$OperationDefinitionParameterImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -2834,8 +2845,8 @@ _$_OperationDefinitionParameter _$$_OperationDefinitionParameterFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_OperationDefinitionParameterToJson(
-    _$_OperationDefinitionParameter instance) {
+Map<String, dynamic> _$$OperationDefinitionParameterImplToJson(
+    _$OperationDefinitionParameterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2883,9 +2894,9 @@ const _$OperationDefinitionParameterSearchTypeEnumMap = {
   OperationDefinitionParameterSearchType.unknown: 'unknown',
 };
 
-_$_OperationDefinitionBinding _$$_OperationDefinitionBindingFromJson(
+_$OperationDefinitionBindingImpl _$$OperationDefinitionBindingImplFromJson(
         Map<String, dynamic> json) =>
-    _$_OperationDefinitionBinding(
+    _$OperationDefinitionBindingImpl(
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2904,8 +2915,8 @@ _$_OperationDefinitionBinding _$$_OperationDefinitionBindingFromJson(
               json['valueSetReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_OperationDefinitionBindingToJson(
-    _$_OperationDefinitionBinding instance) {
+Map<String, dynamic> _$$OperationDefinitionBindingImplToJson(
+    _$OperationDefinitionBindingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2933,9 +2944,9 @@ const _$OperationDefinitionBindingStrengthEnumMap = {
   OperationDefinitionBindingStrength.unknown: 'unknown',
 };
 
-_$_OperationDefinitionOverload _$$_OperationDefinitionOverloadFromJson(
+_$OperationDefinitionOverloadImpl _$$OperationDefinitionOverloadImplFromJson(
         Map<String, dynamic> json) =>
-    _$_OperationDefinitionOverload(
+    _$OperationDefinitionOverloadImpl(
       parameterName: (json['parameterName'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
@@ -2949,8 +2960,8 @@ _$_OperationDefinitionOverload _$$_OperationDefinitionOverloadFromJson(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_OperationDefinitionOverloadToJson(
-    _$_OperationDefinitionOverload instance) {
+Map<String, dynamic> _$$OperationDefinitionOverloadImplToJson(
+    _$OperationDefinitionOverloadImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2967,8 +2978,9 @@ Map<String, dynamic> _$$_OperationDefinitionOverloadToJson(
   return val;
 }
 
-_$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
-    _$_SearchParameter(
+_$SearchParameterImpl _$$SearchParameterImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SearchParameterImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.SearchParameter) ??
@@ -3111,7 +3123,8 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_SearchParameterToJson(_$_SearchParameter instance) {
+Map<String, dynamic> _$$SearchParameterImplToJson(
+    _$SearchParameterImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -3253,9 +3266,9 @@ const _$SearchParameterModifierEnumMap = {
   SearchParameterModifier.unknown: 'unknown',
 };
 
-_$_SearchParameterComponent _$$_SearchParameterComponentFromJson(
+_$SearchParameterComponentImpl _$$SearchParameterComponentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SearchParameterComponent(
+    _$SearchParameterComponentImpl(
       definition:
           Reference.fromJson(json['definition'] as Map<String, dynamic>),
       expression: json['expression'] as String?,
@@ -3264,8 +3277,8 @@ _$_SearchParameterComponent _$$_SearchParameterComponentFromJson(
           : Element.fromJson(json['_expression'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SearchParameterComponentToJson(
-    _$_SearchParameterComponent instance) {
+Map<String, dynamic> _$$SearchParameterComponentImplToJson(
+    _$SearchParameterComponentImpl instance) {
   final val = <String, dynamic>{
     'definition': instance.definition.toJson(),
   };
@@ -3281,9 +3294,9 @@ Map<String, dynamic> _$$_SearchParameterComponentToJson(
   return val;
 }
 
-_$_StructureDefinition _$$_StructureDefinitionFromJson(
+_$StructureDefinitionImpl _$$StructureDefinitionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_StructureDefinition(
+    _$StructureDefinitionImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.StructureDefinition) ??
@@ -3437,8 +3450,8 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
               json['differential'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_StructureDefinitionToJson(
-    _$_StructureDefinition instance) {
+Map<String, dynamic> _$$StructureDefinitionImplToJson(
+    _$StructureDefinitionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -3548,9 +3561,9 @@ const _$StructureDefinitionDerivationEnumMap = {
   StructureDefinitionDerivation.unknown: 'unknown',
 };
 
-_$_StructureDefinitionMapping _$$_StructureDefinitionMappingFromJson(
+_$StructureDefinitionMappingImpl _$$StructureDefinitionMappingImplFromJson(
         Map<String, dynamic> json) =>
-    _$_StructureDefinitionMapping(
+    _$StructureDefinitionMappingImpl(
       identity:
           json['identity'] == null ? null : FhirId.fromJson(json['identity']),
       identityElement: json['_identity'] == null
@@ -3570,8 +3583,8 @@ _$_StructureDefinitionMapping _$$_StructureDefinitionMappingFromJson(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_StructureDefinitionMappingToJson(
-    _$_StructureDefinitionMapping instance) {
+Map<String, dynamic> _$$StructureDefinitionMappingImplToJson(
+    _$StructureDefinitionMappingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -3591,36 +3604,36 @@ Map<String, dynamic> _$$_StructureDefinitionMappingToJson(
   return val;
 }
 
-_$_StructureDefinitionSnapshot _$$_StructureDefinitionSnapshotFromJson(
+_$StructureDefinitionSnapshotImpl _$$StructureDefinitionSnapshotImplFromJson(
         Map<String, dynamic> json) =>
-    _$_StructureDefinitionSnapshot(
+    _$StructureDefinitionSnapshotImpl(
       element: (json['element'] as List<dynamic>)
           .map((e) => ElementDefinition.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_StructureDefinitionSnapshotToJson(
-        _$_StructureDefinitionSnapshot instance) =>
+Map<String, dynamic> _$$StructureDefinitionSnapshotImplToJson(
+        _$StructureDefinitionSnapshotImpl instance) =>
     <String, dynamic>{
       'element': instance.element.map((e) => e.toJson()).toList(),
     };
 
-_$_StructureDefinitionDifferential _$$_StructureDefinitionDifferentialFromJson(
-        Map<String, dynamic> json) =>
-    _$_StructureDefinitionDifferential(
-      element: (json['element'] as List<dynamic>)
-          .map((e) => ElementDefinition.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+_$StructureDefinitionDifferentialImpl
+    _$$StructureDefinitionDifferentialImplFromJson(Map<String, dynamic> json) =>
+        _$StructureDefinitionDifferentialImpl(
+          element: (json['element'] as List<dynamic>)
+              .map((e) => ElementDefinition.fromJson(e as Map<String, dynamic>))
+              .toList(),
+        );
 
-Map<String, dynamic> _$$_StructureDefinitionDifferentialToJson(
-        _$_StructureDefinitionDifferential instance) =>
+Map<String, dynamic> _$$StructureDefinitionDifferentialImplToJson(
+        _$StructureDefinitionDifferentialImpl instance) =>
     <String, dynamic>{
       'element': instance.element.map((e) => e.toJson()).toList(),
     };
 
-_$_StructureMap _$$_StructureMapFromJson(Map<String, dynamic> json) =>
-    _$_StructureMap(
+_$StructureMapImpl _$$StructureMapImplFromJson(Map<String, dynamic> json) =>
+    _$StructureMapImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.StructureMap) ??
@@ -3726,7 +3739,7 @@ _$_StructureMap _$$_StructureMapFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_StructureMapToJson(_$_StructureMap instance) {
+Map<String, dynamic> _$$StructureMapImplToJson(_$StructureMapImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -3795,9 +3808,9 @@ const _$StructureMapStatusEnumMap = {
   StructureMapStatus.unknown: 'unknown',
 };
 
-_$_StructureMapStructure _$$_StructureMapStructureFromJson(
+_$StructureMapStructureImpl _$$StructureMapStructureImplFromJson(
         Map<String, dynamic> json) =>
-    _$_StructureMapStructure(
+    _$StructureMapStructureImpl(
       url: json['url'] as String?,
       urlElement: json['_url'] == null
           ? null
@@ -3817,8 +3830,8 @@ _$_StructureMapStructure _$$_StructureMapStructureFromJson(
           : Element.fromJson(json['_documentation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_StructureMapStructureToJson(
-    _$_StructureMapStructure instance) {
+Map<String, dynamic> _$$StructureMapStructureImplToJson(
+    _$StructureMapStructureImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -3846,8 +3859,9 @@ const _$StructureMapStructureModeEnumMap = {
   StructureMapStructureMode.unknown: 'unknown',
 };
 
-_$_StructureMapGroup _$$_StructureMapGroupFromJson(Map<String, dynamic> json) =>
-    _$_StructureMapGroup(
+_$StructureMapGroupImpl _$$StructureMapGroupImplFromJson(
+        Map<String, dynamic> json) =>
+    _$StructureMapGroupImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -3873,8 +3887,8 @@ _$_StructureMapGroup _$$_StructureMapGroupFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_StructureMapGroupToJson(
-    _$_StructureMapGroup instance) {
+Map<String, dynamic> _$$StructureMapGroupImplToJson(
+    _$StructureMapGroupImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -3904,8 +3918,9 @@ const _$StructureMapGroupTypeModeEnumMap = {
   StructureMapGroupTypeMode.unknown: 'unknown',
 };
 
-_$_StructureMapInput _$$_StructureMapInputFromJson(Map<String, dynamic> json) =>
-    _$_StructureMapInput(
+_$StructureMapInputImpl _$$StructureMapInputImplFromJson(
+        Map<String, dynamic> json) =>
+    _$StructureMapInputImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -3924,8 +3939,8 @@ _$_StructureMapInput _$$_StructureMapInputFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_documentation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_StructureMapInputToJson(
-    _$_StructureMapInput instance) {
+Map<String, dynamic> _$$StructureMapInputImplToJson(
+    _$StructureMapInputImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -3951,8 +3966,9 @@ const _$StructureMapInputModeEnumMap = {
   StructureMapInputMode.unknown: 'unknown',
 };
 
-_$_StructureMapRule _$$_StructureMapRuleFromJson(Map<String, dynamic> json) =>
-    _$_StructureMapRule(
+_$StructureMapRuleImpl _$$StructureMapRuleImplFromJson(
+        Map<String, dynamic> json) =>
+    _$StructureMapRuleImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -3976,7 +3992,8 @@ _$_StructureMapRule _$$_StructureMapRuleFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_documentation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_StructureMapRuleToJson(_$_StructureMapRule instance) {
+Map<String, dynamic> _$$StructureMapRuleImplToJson(
+    _$StructureMapRuleImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -3997,9 +4014,9 @@ Map<String, dynamic> _$$_StructureMapRuleToJson(_$_StructureMapRule instance) {
   return val;
 }
 
-_$_StructureMapSource _$$_StructureMapSourceFromJson(
+_$StructureMapSourceImpl _$$StructureMapSourceImplFromJson(
         Map<String, dynamic> json) =>
-    _$_StructureMapSource(
+    _$StructureMapSourceImpl(
       context: json['context'] as String?,
       contextElement: json['_context'] == null
           ? null
@@ -4279,8 +4296,8 @@ _$_StructureMapSource _$$_StructureMapSourceFromJson(
           : Element.fromJson(json['_check'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_StructureMapSourceToJson(
-    _$_StructureMapSource instance) {
+Map<String, dynamic> _$$StructureMapSourceImplToJson(
+    _$StructureMapSourceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -4423,9 +4440,9 @@ const _$StructureMapSourceListModeEnumMap = {
   StructureMapSourceListMode.unknown: 'unknown',
 };
 
-_$_StructureMapTarget _$$_StructureMapTargetFromJson(
+_$StructureMapTargetImpl _$$StructureMapTargetImplFromJson(
         Map<String, dynamic> json) =>
-    _$_StructureMapTarget(
+    _$StructureMapTargetImpl(
       context: json['context'] as String?,
       contextElement: json['_context'] == null
           ? null
@@ -4467,8 +4484,8 @@ _$_StructureMapTarget _$$_StructureMapTargetFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_StructureMapTargetToJson(
-    _$_StructureMapTarget instance) {
+Map<String, dynamic> _$$StructureMapTargetImplToJson(
+    _$StructureMapTargetImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -4538,9 +4555,9 @@ const _$StructureMapTargetTransformEnumMap = {
   StructureMapTargetTransform.unknown: 'unknown',
 };
 
-_$_StructureMapParameter _$$_StructureMapParameterFromJson(
+_$StructureMapParameterImpl _$$StructureMapParameterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_StructureMapParameter(
+    _$StructureMapParameterImpl(
       valueId:
           json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
       valueIdElement: json['_valueId'] == null
@@ -4570,8 +4587,8 @@ _$_StructureMapParameter _$$_StructureMapParameterFromJson(
           : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_StructureMapParameterToJson(
-    _$_StructureMapParameter instance) {
+Map<String, dynamic> _$$StructureMapParameterImplToJson(
+    _$StructureMapParameterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -4593,9 +4610,9 @@ Map<String, dynamic> _$$_StructureMapParameterToJson(
   return val;
 }
 
-_$_StructureMapDependent _$$_StructureMapDependentFromJson(
+_$StructureMapDependentImpl _$$StructureMapDependentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_StructureMapDependent(
+    _$StructureMapDependentImpl(
       name: json['name'] as String?,
       nameElement: json['_name'] == null
           ? null
@@ -4609,8 +4626,8 @@ _$_StructureMapDependent _$$_StructureMapDependentFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_StructureMapDependentToJson(
-    _$_StructureMapDependent instance) {
+Map<String, dynamic> _$$StructureMapDependentImplToJson(
+    _$StructureMapDependentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

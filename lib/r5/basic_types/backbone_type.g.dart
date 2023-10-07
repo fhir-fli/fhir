@@ -6,8 +6,8 @@ part of 'backbone_type.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_BackboneType _$$_BackboneTypeFromJson(Map<String, dynamic> json) =>
-    _$_BackboneType(
+_$BackboneTypeImpl _$$BackboneTypeImplFromJson(Map<String, dynamic> json) =>
+    _$BackboneTypeImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -17,7 +17,7 @@ _$_BackboneType _$$_BackboneTypeFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_BackboneTypeToJson(_$_BackboneType instance) {
+Map<String, dynamic> _$$BackboneTypeImplToJson(_$BackboneTypeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

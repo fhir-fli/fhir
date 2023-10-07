@@ -6,7 +6,8 @@ part of 'diagnostics.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_BodySite _$$_BodySiteFromJson(Map<String, dynamic> json) => _$_BodySite(
+_$BodySiteImpl _$$BodySiteImplFromJson(Map<String, dynamic> json) =>
+    _$BodySiteImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.BodySite) ??
@@ -63,7 +64,7 @@ _$_BodySite _$$_BodySiteFromJson(Map<String, dynamic> json) => _$_BodySite(
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_BodySiteToJson(_$_BodySite instance) {
+Map<String, dynamic> _$$BodySiteImplToJson(_$BodySiteImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -221,8 +222,9 @@ const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_DiagnosticReport _$$_DiagnosticReportFromJson(Map<String, dynamic> json) =>
-    _$_DiagnosticReport(
+_$DiagnosticReportImpl _$$DiagnosticReportImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DiagnosticReportImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DiagnosticReport) ??
@@ -319,7 +321,8 @@ _$_DiagnosticReport _$$_DiagnosticReportFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DiagnosticReportToJson(_$_DiagnosticReport instance) {
+Map<String, dynamic> _$$DiagnosticReportImplToJson(
+    _$DiagnosticReportImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -387,17 +390,17 @@ const _$DiagnosticReportStatusEnumMap = {
   DiagnosticReportStatus.unknown: 'unknown',
 };
 
-_$_DiagnosticReportPerformer _$$_DiagnosticReportPerformerFromJson(
+_$DiagnosticReportPerformerImpl _$$DiagnosticReportPerformerImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DiagnosticReportPerformer(
+    _$DiagnosticReportPerformerImpl(
       role: json['role'] == null
           ? null
           : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
       actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DiagnosticReportPerformerToJson(
-    _$_DiagnosticReportPerformer instance) {
+Map<String, dynamic> _$$DiagnosticReportPerformerImplToJson(
+    _$DiagnosticReportPerformerImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -411,9 +414,9 @@ Map<String, dynamic> _$$_DiagnosticReportPerformerToJson(
   return val;
 }
 
-_$_DiagnosticReportImage _$$_DiagnosticReportImageFromJson(
+_$DiagnosticReportImageImpl _$$DiagnosticReportImageImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DiagnosticReportImage(
+    _$DiagnosticReportImageImpl(
       comment: json['comment'] as String?,
       commentElement: json['_comment'] == null
           ? null
@@ -421,8 +424,8 @@ _$_DiagnosticReportImage _$$_DiagnosticReportImageFromJson(
       link: Reference.fromJson(json['link'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DiagnosticReportImageToJson(
-    _$_DiagnosticReportImage instance) {
+Map<String, dynamic> _$$DiagnosticReportImageImplToJson(
+    _$DiagnosticReportImageImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -437,8 +440,9 @@ Map<String, dynamic> _$$_DiagnosticReportImageToJson(
   return val;
 }
 
-_$_ImagingManifest _$$_ImagingManifestFromJson(Map<String, dynamic> json) =>
-    _$_ImagingManifest(
+_$ImagingManifestImpl _$$ImagingManifestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ImagingManifestImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ImagingManifest) ??
@@ -493,7 +497,8 @@ _$_ImagingManifest _$$_ImagingManifestFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ImagingManifestToJson(_$_ImagingManifest instance) {
+Map<String, dynamic> _$$ImagingManifestImplToJson(
+    _$ImagingManifestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -528,9 +533,9 @@ Map<String, dynamic> _$$_ImagingManifestToJson(_$_ImagingManifest instance) {
   return val;
 }
 
-_$_ImagingManifestStudy _$$_ImagingManifestStudyFromJson(
+_$ImagingManifestStudyImpl _$$ImagingManifestStudyImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ImagingManifestStudy(
+    _$ImagingManifestStudyImpl(
       uid: json['uid'] == null ? null : FhirId.fromJson(json['uid']),
       uidElement: json['_uid'] == null
           ? null
@@ -546,8 +551,8 @@ _$_ImagingManifestStudy _$$_ImagingManifestStudyFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ImagingManifestStudyToJson(
-    _$_ImagingManifestStudy instance) {
+Map<String, dynamic> _$$ImagingManifestStudyImplToJson(
+    _$ImagingManifestStudyImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -564,9 +569,9 @@ Map<String, dynamic> _$$_ImagingManifestStudyToJson(
   return val;
 }
 
-_$_ImagingManifestSeries _$$_ImagingManifestSeriesFromJson(
+_$ImagingManifestSeriesImpl _$$ImagingManifestSeriesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ImagingManifestSeries(
+    _$ImagingManifestSeriesImpl(
       uid: json['uid'] == null ? null : FhirId.fromJson(json['uid']),
       uidElement: json['_uid'] == null
           ? null
@@ -580,8 +585,8 @@ _$_ImagingManifestSeries _$$_ImagingManifestSeriesFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ImagingManifestSeriesToJson(
-    _$_ImagingManifestSeries instance) {
+Map<String, dynamic> _$$ImagingManifestSeriesImplToJson(
+    _$ImagingManifestSeriesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -597,9 +602,9 @@ Map<String, dynamic> _$$_ImagingManifestSeriesToJson(
   return val;
 }
 
-_$_ImagingManifestInstance _$$_ImagingManifestInstanceFromJson(
+_$ImagingManifestInstanceImpl _$$ImagingManifestInstanceImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ImagingManifestInstance(
+    _$ImagingManifestInstanceImpl(
       sopClass: json['sopClass'] as String?,
       sopClassElement: json['_sopClass'] == null
           ? null
@@ -610,8 +615,8 @@ _$_ImagingManifestInstance _$$_ImagingManifestInstanceFromJson(
           : Element.fromJson(json['_uid'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ImagingManifestInstanceToJson(
-    _$_ImagingManifestInstance instance) {
+Map<String, dynamic> _$$ImagingManifestInstanceImplToJson(
+    _$ImagingManifestInstanceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -627,8 +632,8 @@ Map<String, dynamic> _$$_ImagingManifestInstanceToJson(
   return val;
 }
 
-_$_ImagingStudy _$$_ImagingStudyFromJson(Map<String, dynamic> json) =>
-    _$_ImagingStudy(
+_$ImagingStudyImpl _$$ImagingStudyImplFromJson(Map<String, dynamic> json) =>
+    _$ImagingStudyImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ImagingStudy) ??
@@ -730,7 +735,7 @@ _$_ImagingStudy _$$_ImagingStudyFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ImagingStudyToJson(_$_ImagingStudy instance) {
+Map<String, dynamic> _$$ImagingStudyImplToJson(_$ImagingStudyImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -797,9 +802,9 @@ const _$ImagingStudyAvailabilityEnumMap = {
   ImagingStudyAvailability.unknown: 'unknown',
 };
 
-_$_ImagingStudySeries _$$_ImagingStudySeriesFromJson(
+_$ImagingStudySeriesImpl _$$ImagingStudySeriesImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ImagingStudySeries(
+    _$ImagingStudySeriesImpl(
       uid: json['uid'] == null ? null : FhirId.fromJson(json['uid']),
       uidElement: json['_uid'] == null
           ? null
@@ -847,8 +852,8 @@ _$_ImagingStudySeries _$$_ImagingStudySeriesFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ImagingStudySeriesToJson(
-    _$_ImagingStudySeries instance) {
+Map<String, dynamic> _$$ImagingStudySeriesImplToJson(
+    _$ImagingStudySeriesImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -889,9 +894,9 @@ const _$ImagingStudySeriesAvailabilityEnumMap = {
   ImagingStudySeriesAvailability.unknown: 'unknown',
 };
 
-_$_ImagingStudyInstance _$$_ImagingStudyInstanceFromJson(
+_$ImagingStudyInstanceImpl _$$ImagingStudyInstanceImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ImagingStudyInstance(
+    _$ImagingStudyInstanceImpl(
       uid: json['uid'] == null ? null : FhirId.fromJson(json['uid']),
       uidElement: json['_uid'] == null
           ? null
@@ -911,8 +916,8 @@ _$_ImagingStudyInstance _$$_ImagingStudyInstanceFromJson(
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ImagingStudyInstanceToJson(
-    _$_ImagingStudyInstance instance) {
+Map<String, dynamic> _$$ImagingStudyInstanceImplToJson(
+    _$ImagingStudyInstanceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -932,8 +937,8 @@ Map<String, dynamic> _$$_ImagingStudyInstanceToJson(
   return val;
 }
 
-_$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
-    _$_Observation(
+_$ObservationImpl _$$ObservationImplFromJson(Map<String, dynamic> json) =>
+    _$ObservationImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Observation) ??
@@ -1086,7 +1091,7 @@ _$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ObservationToJson(_$_Observation instance) {
+Map<String, dynamic> _$$ObservationImplToJson(_$ObservationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1169,9 +1174,9 @@ const _$ObservationStatusEnumMap = {
   ObservationStatus.unknown: 'unknown',
 };
 
-_$_ObservationReferenceRange _$$_ObservationReferenceRangeFromJson(
+_$ObservationReferenceRangeImpl _$$ObservationReferenceRangeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ObservationReferenceRange(
+    _$ObservationReferenceRangeImpl(
       low: json['low'] == null
           ? null
           : Quantity.fromJson(json['low'] as Map<String, dynamic>),
@@ -1193,8 +1198,8 @@ _$_ObservationReferenceRange _$$_ObservationReferenceRangeFromJson(
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ObservationReferenceRangeToJson(
-    _$_ObservationReferenceRange instance) {
+Map<String, dynamic> _$$ObservationReferenceRangeImplToJson(
+    _$ObservationReferenceRangeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1214,9 +1219,9 @@ Map<String, dynamic> _$$_ObservationReferenceRangeToJson(
   return val;
 }
 
-_$_ObservationRelated _$$_ObservationRelatedFromJson(
+_$ObservationRelatedImpl _$$ObservationRelatedImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ObservationRelated(
+    _$ObservationRelatedImpl(
       type: $enumDecodeNullable(_$ObservationRelatedTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
@@ -1224,8 +1229,8 @@ _$_ObservationRelated _$$_ObservationRelatedFromJson(
       target: Reference.fromJson(json['target'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ObservationRelatedToJson(
-    _$_ObservationRelated instance) {
+Map<String, dynamic> _$$ObservationRelatedImplToJson(
+    _$ObservationRelatedImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1250,9 +1255,9 @@ const _$ObservationRelatedTypeEnumMap = {
   ObservationRelatedType.unknown: 'unknown',
 };
 
-_$_ObservationComponent _$$_ObservationComponentFromJson(
+_$ObservationComponentImpl _$$ObservationComponentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ObservationComponent(
+    _$ObservationComponentImpl(
       code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
       valueQuantity: json['valueQuantity'] == null
           ? null
@@ -1308,8 +1313,8 @@ _$_ObservationComponent _$$_ObservationComponentFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ObservationComponentToJson(
-    _$_ObservationComponent instance) {
+Map<String, dynamic> _$$ObservationComponentImplToJson(
+    _$ObservationComponentImpl instance) {
   final val = <String, dynamic>{
     'code': instance.code.toJson(),
   };
@@ -1340,9 +1345,9 @@ Map<String, dynamic> _$$_ObservationComponentToJson(
   return val;
 }
 
-_$_QuestionnaireResponse _$$_QuestionnaireResponseFromJson(
+_$QuestionnaireResponseImpl _$$QuestionnaireResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_QuestionnaireResponse(
+    _$QuestionnaireResponseImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.QuestionnaireResponse) ??
@@ -1414,8 +1419,8 @@ _$_QuestionnaireResponse _$$_QuestionnaireResponseFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_QuestionnaireResponseToJson(
-    _$_QuestionnaireResponse instance) {
+Map<String, dynamic> _$$QuestionnaireResponseImplToJson(
+    _$QuestionnaireResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1464,9 +1469,9 @@ const _$QuestionnaireResponseStatusEnumMap = {
   QuestionnaireResponseStatus.unknown: 'unknown',
 };
 
-_$_QuestionnaireResponseItem _$$_QuestionnaireResponseItemFromJson(
+_$QuestionnaireResponseItemImpl _$$QuestionnaireResponseItemImplFromJson(
         Map<String, dynamic> json) =>
-    _$_QuestionnaireResponseItem(
+    _$QuestionnaireResponseItemImpl(
       linkId: json['linkId'] as String?,
       linkIdElement: json['_linkId'] == null
           ? null
@@ -1492,8 +1497,8 @@ _$_QuestionnaireResponseItem _$$_QuestionnaireResponseItemFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_QuestionnaireResponseItemToJson(
-    _$_QuestionnaireResponseItem instance) {
+Map<String, dynamic> _$$QuestionnaireResponseItemImplToJson(
+    _$QuestionnaireResponseItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1514,9 +1519,9 @@ Map<String, dynamic> _$$_QuestionnaireResponseItemToJson(
   return val;
 }
 
-_$_QuestionnaireResponseAnswer _$$_QuestionnaireResponseAnswerFromJson(
+_$QuestionnaireResponseAnswerImpl _$$QuestionnaireResponseAnswerImplFromJson(
         Map<String, dynamic> json) =>
-    _$_QuestionnaireResponseAnswer(
+    _$QuestionnaireResponseAnswerImpl(
       valueBoolean: json['valueBoolean'] == null
           ? null
           : FhirBoolean.fromJson(json['valueBoolean']),
@@ -1580,8 +1585,8 @@ _$_QuestionnaireResponseAnswer _$$_QuestionnaireResponseAnswerFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_QuestionnaireResponseAnswerToJson(
-    _$_QuestionnaireResponseAnswer instance) {
+Map<String, dynamic> _$$QuestionnaireResponseAnswerImplToJson(
+    _$QuestionnaireResponseAnswerImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1614,7 +1619,8 @@ Map<String, dynamic> _$$_QuestionnaireResponseAnswerToJson(
   return val;
 }
 
-_$_Sequence _$$_SequenceFromJson(Map<String, dynamic> json) => _$_Sequence(
+_$SequenceImpl _$$SequenceImplFromJson(Map<String, dynamic> json) =>
+    _$SequenceImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Sequence) ??
@@ -1703,7 +1709,7 @@ _$_Sequence _$$_SequenceFromJson(Map<String, dynamic> json) => _$_Sequence(
           .toList(),
     );
 
-Map<String, dynamic> _$$_SequenceToJson(_$_Sequence instance) {
+Map<String, dynamic> _$$SequenceImplToJson(_$SequenceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1758,9 +1764,9 @@ const _$SequenceTypeEnumMap = {
   SequenceType.unknown: 'unknown',
 };
 
-_$_SequenceReferenceSeq _$$_SequenceReferenceSeqFromJson(
+_$SequenceReferenceSeqImpl _$$SequenceReferenceSeqImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SequenceReferenceSeq(
+    _$SequenceReferenceSeqImpl(
       chromosome: json['chromosome'] == null
           ? null
           : CodeableConcept.fromJson(
@@ -1801,8 +1807,8 @@ _$_SequenceReferenceSeq _$$_SequenceReferenceSeqFromJson(
           : Element.fromJson(json['_windowEnd'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SequenceReferenceSeqToJson(
-    _$_SequenceReferenceSeq instance) {
+Map<String, dynamic> _$$SequenceReferenceSeqImplToJson(
+    _$SequenceReferenceSeqImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1828,8 +1834,9 @@ Map<String, dynamic> _$$_SequenceReferenceSeqToJson(
   return val;
 }
 
-_$_SequenceVariant _$$_SequenceVariantFromJson(Map<String, dynamic> json) =>
-    _$_SequenceVariant(
+_$SequenceVariantImpl _$$SequenceVariantImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SequenceVariantImpl(
       start: json['start'] == null ? null : FhirDecimal.fromJson(json['start']),
       startElement: json['_start'] == null
           ? null
@@ -1855,7 +1862,8 @@ _$_SequenceVariant _$$_SequenceVariantFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['variantPointer'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SequenceVariantToJson(_$_SequenceVariant instance) {
+Map<String, dynamic> _$$SequenceVariantImplToJson(
+    _$SequenceVariantImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1878,8 +1886,9 @@ Map<String, dynamic> _$$_SequenceVariantToJson(_$_SequenceVariant instance) {
   return val;
 }
 
-_$_SequenceQuality _$$_SequenceQualityFromJson(Map<String, dynamic> json) =>
-    _$_SequenceQuality(
+_$SequenceQualityImpl _$$SequenceQualityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SequenceQualityImpl(
       type: $enumDecodeNullable(_$SequenceQualityTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
@@ -1948,7 +1957,8 @@ _$_SequenceQuality _$$_SequenceQualityFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_fScore'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SequenceQualityToJson(_$_SequenceQuality instance) {
+Map<String, dynamic> _$$SequenceQualityImplToJson(
+    _$SequenceQualityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1991,9 +2001,9 @@ const _$SequenceQualityTypeEnumMap = {
   SequenceQualityType.unknown: 'unknown',
 };
 
-_$_SequenceRepository _$$_SequenceRepositoryFromJson(
+_$SequenceRepositoryImpl _$$SequenceRepositoryImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SequenceRepository(
+    _$SequenceRepositoryImpl(
       type: $enumDecodeNullable(_$SequenceRepositoryTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
@@ -2020,8 +2030,8 @@ _$_SequenceRepository _$$_SequenceRepositoryFromJson(
           : Element.fromJson(json['_readsetId'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SequenceRepositoryToJson(
-    _$_SequenceRepository instance) {
+Map<String, dynamic> _$$SequenceRepositoryImplToJson(
+    _$SequenceRepositoryImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2054,7 +2064,8 @@ const _$SequenceRepositoryTypeEnumMap = {
   SequenceRepositoryType.unknown: 'unknown',
 };
 
-_$_Specimen _$$_SpecimenFromJson(Map<String, dynamic> json) => _$_Specimen(
+_$SpecimenImpl _$$SpecimenImplFromJson(Map<String, dynamic> json) =>
+    _$SpecimenImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Specimen) ??
@@ -2129,7 +2140,7 @@ _$_Specimen _$$_SpecimenFromJson(Map<String, dynamic> json) => _$_Specimen(
           .toList(),
     );
 
-Map<String, dynamic> _$$_SpecimenToJson(_$_Specimen instance) {
+Map<String, dynamic> _$$SpecimenImplToJson(_$SpecimenImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -2181,9 +2192,9 @@ const _$SpecimenStatusEnumMap = {
   SpecimenStatus.unknown: 'unknown',
 };
 
-_$_SpecimenCollection _$$_SpecimenCollectionFromJson(
+_$SpecimenCollectionImpl _$$SpecimenCollectionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SpecimenCollection(
+    _$SpecimenCollectionImpl(
       collector: json['collector'] == null
           ? null
           : Reference.fromJson(json['collector'] as Map<String, dynamic>),
@@ -2208,8 +2219,8 @@ _$_SpecimenCollection _$$_SpecimenCollectionFromJson(
           : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SpecimenCollectionToJson(
-    _$_SpecimenCollection instance) {
+Map<String, dynamic> _$$SpecimenCollectionImplToJson(
+    _$SpecimenCollectionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2229,9 +2240,9 @@ Map<String, dynamic> _$$_SpecimenCollectionToJson(
   return val;
 }
 
-_$_SpecimenProcessing _$$_SpecimenProcessingFromJson(
+_$SpecimenProcessingImpl _$$SpecimenProcessingImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SpecimenProcessing(
+    _$SpecimenProcessingImpl(
       description: json['description'] as String?,
       descriptionElement: json['_description'] == null
           ? null
@@ -2253,8 +2264,8 @@ _$_SpecimenProcessing _$$_SpecimenProcessingFromJson(
           : Period.fromJson(json['timePeriod'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SpecimenProcessingToJson(
-    _$_SpecimenProcessing instance) {
+Map<String, dynamic> _$$SpecimenProcessingImplToJson(
+    _$SpecimenProcessingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2273,8 +2284,9 @@ Map<String, dynamic> _$$_SpecimenProcessingToJson(
   return val;
 }
 
-_$_SpecimenContainer _$$_SpecimenContainerFromJson(Map<String, dynamic> json) =>
-    _$_SpecimenContainer(
+_$SpecimenContainerImpl _$$SpecimenContainerImplFromJson(
+        Map<String, dynamic> json) =>
+    _$SpecimenContainerImpl(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2301,8 +2313,8 @@ _$_SpecimenContainer _$$_SpecimenContainerFromJson(Map<String, dynamic> json) =>
               json['additiveReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SpecimenContainerToJson(
-    _$_SpecimenContainer instance) {
+Map<String, dynamic> _$$SpecimenContainerImplToJson(
+    _$SpecimenContainerImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

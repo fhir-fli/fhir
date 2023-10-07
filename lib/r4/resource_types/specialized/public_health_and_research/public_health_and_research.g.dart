@@ -6,8 +6,8 @@ part of 'public_health_and_research.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
-    _$_ResearchStudy(
+_$ResearchStudyImpl _$$ResearchStudyImplFromJson(Map<String, dynamic> json) =>
+    _$ResearchStudyImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ResearchStudy) ??
@@ -123,7 +123,7 @@ _$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ResearchStudyToJson(_$_ResearchStudy instance) {
+Map<String, dynamic> _$$ResearchStudyImplToJson(_$ResearchStudyImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -328,8 +328,9 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_ResearchStudyArm _$$_ResearchStudyArmFromJson(Map<String, dynamic> json) =>
-    _$_ResearchStudyArm(
+_$ResearchStudyArmImpl _$$ResearchStudyArmImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ResearchStudyArmImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -350,7 +351,8 @@ _$_ResearchStudyArm _$$_ResearchStudyArmFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchStudyArmToJson(_$_ResearchStudyArm instance) {
+Map<String, dynamic> _$$ResearchStudyArmImplToJson(
+    _$ResearchStudyArmImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -372,9 +374,9 @@ Map<String, dynamic> _$$_ResearchStudyArmToJson(_$_ResearchStudyArm instance) {
   return val;
 }
 
-_$_ResearchStudyObjective _$$_ResearchStudyObjectiveFromJson(
+_$ResearchStudyObjectiveImpl _$$ResearchStudyObjectiveImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ResearchStudyObjective(
+    _$ResearchStudyObjectiveImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -391,8 +393,8 @@ _$_ResearchStudyObjective _$$_ResearchStudyObjectiveFromJson(
           : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchStudyObjectiveToJson(
-    _$_ResearchStudyObjective instance) {
+Map<String, dynamic> _$$ResearchStudyObjectiveImplToJson(
+    _$ResearchStudyObjectiveImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -412,8 +414,9 @@ Map<String, dynamic> _$$_ResearchStudyObjectiveToJson(
   return val;
 }
 
-_$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
-    _$_ResearchSubject(
+_$ResearchSubjectImpl _$$ResearchSubjectImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ResearchSubjectImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ResearchSubject) ??
@@ -472,7 +475,8 @@ _$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['consent'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ResearchSubjectToJson(_$_ResearchSubject instance) {
+Map<String, dynamic> _$$ResearchSubjectImplToJson(
+    _$ResearchSubjectImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };

@@ -534,11 +534,11 @@ class _$PaymentNoticeCopyWithImpl<$Res, $Val extends PaymentNotice>
 }
 
 /// @nodoc
-abstract class _$$_PaymentNoticeCopyWith<$Res>
+abstract class _$$PaymentNoticeImplCopyWith<$Res>
     implements $PaymentNoticeCopyWith<$Res> {
-  factory _$$_PaymentNoticeCopyWith(
-          _$_PaymentNotice value, $Res Function(_$_PaymentNotice) then) =
-      __$$_PaymentNoticeCopyWithImpl<$Res>;
+  factory _$$PaymentNoticeImplCopyWith(
+          _$PaymentNoticeImpl value, $Res Function(_$PaymentNoticeImpl) then) =
+      __$$PaymentNoticeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -604,11 +604,11 @@ abstract class _$$_PaymentNoticeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PaymentNoticeCopyWithImpl<$Res>
-    extends _$PaymentNoticeCopyWithImpl<$Res, _$_PaymentNotice>
-    implements _$$_PaymentNoticeCopyWith<$Res> {
-  __$$_PaymentNoticeCopyWithImpl(
-      _$_PaymentNotice _value, $Res Function(_$_PaymentNotice) _then)
+class __$$PaymentNoticeImplCopyWithImpl<$Res>
+    extends _$PaymentNoticeCopyWithImpl<$Res, _$PaymentNoticeImpl>
+    implements _$$PaymentNoticeImplCopyWith<$Res> {
+  __$$PaymentNoticeImplCopyWithImpl(
+      _$PaymentNoticeImpl _value, $Res Function(_$PaymentNoticeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -642,7 +642,7 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
     Object? amount = null,
     Object? paymentStatus = freezed,
   }) {
-    return _then(_$_PaymentNotice(
+    return _then(_$PaymentNoticeImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -757,8 +757,8 @@ class __$$_PaymentNoticeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PaymentNotice extends _PaymentNotice {
-  const _$_PaymentNotice(
+class _$PaymentNoticeImpl extends _PaymentNotice {
+  const _$PaymentNoticeImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentNotice)
       this.resourceType = R5ResourceType.PaymentNotice,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -793,8 +793,8 @@ class _$_PaymentNotice extends _PaymentNotice {
         _identifier = identifier,
         super._();
 
-  factory _$_PaymentNotice.fromJson(Map<String, dynamic> json) =>
-      _$$_PaymentNoticeFromJson(json);
+  factory _$PaymentNoticeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PaymentNoticeImplFromJson(json);
 
   /// [resourceType] This is a PaymentNotice resource
   @override
@@ -1018,7 +1018,7 @@ class _$_PaymentNotice extends _PaymentNotice {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PaymentNotice &&
+            other is _$PaymentNoticeImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -1101,12 +1101,12 @@ class _$_PaymentNotice extends _PaymentNotice {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PaymentNoticeCopyWith<_$_PaymentNotice> get copyWith =>
-      __$$_PaymentNoticeCopyWithImpl<_$_PaymentNotice>(this, _$identity);
+  _$$PaymentNoticeImplCopyWith<_$PaymentNoticeImpl> get copyWith =>
+      __$$PaymentNoticeImplCopyWithImpl<_$PaymentNoticeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PaymentNoticeToJson(
+    return _$$PaymentNoticeImplToJson(
       this,
     );
   }
@@ -1141,11 +1141,11 @@ abstract class _PaymentNotice extends PaymentNotice {
       final Reference? payee,
       required final Reference recipient,
       required final Money amount,
-      final CodeableConcept? paymentStatus}) = _$_PaymentNotice;
+      final CodeableConcept? paymentStatus}) = _$PaymentNoticeImpl;
   const _PaymentNotice._() : super._();
 
   factory _PaymentNotice.fromJson(Map<String, dynamic> json) =
-      _$_PaymentNotice.fromJson;
+      _$PaymentNoticeImpl.fromJson;
 
   @override
 
@@ -1303,7 +1303,7 @@ abstract class _PaymentNotice extends PaymentNotice {
   CodeableConcept? get paymentStatus;
   @override
   @JsonKey(ignore: true)
-  _$$_PaymentNoticeCopyWith<_$_PaymentNotice> get copyWith =>
+  _$$PaymentNoticeImplCopyWith<_$PaymentNoticeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2278,11 +2278,12 @@ class _$PaymentReconciliationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PaymentReconciliationCopyWith<$Res>
+abstract class _$$PaymentReconciliationImplCopyWith<$Res>
     implements $PaymentReconciliationCopyWith<$Res> {
-  factory _$$_PaymentReconciliationCopyWith(_$_PaymentReconciliation value,
-          $Res Function(_$_PaymentReconciliation) then) =
-      __$$_PaymentReconciliationCopyWithImpl<$Res>;
+  factory _$$PaymentReconciliationImplCopyWith(
+          _$PaymentReconciliationImpl value,
+          $Res Function(_$PaymentReconciliationImpl) then) =
+      __$$PaymentReconciliationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2403,11 +2404,12 @@ abstract class _$$_PaymentReconciliationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PaymentReconciliationCopyWithImpl<$Res>
-    extends _$PaymentReconciliationCopyWithImpl<$Res, _$_PaymentReconciliation>
-    implements _$$_PaymentReconciliationCopyWith<$Res> {
-  __$$_PaymentReconciliationCopyWithImpl(_$_PaymentReconciliation _value,
-      $Res Function(_$_PaymentReconciliation) _then)
+class __$$PaymentReconciliationImplCopyWithImpl<$Res>
+    extends _$PaymentReconciliationCopyWithImpl<$Res,
+        _$PaymentReconciliationImpl>
+    implements _$$PaymentReconciliationImplCopyWith<$Res> {
+  __$$PaymentReconciliationImplCopyWithImpl(_$PaymentReconciliationImpl _value,
+      $Res Function(_$PaymentReconciliationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2466,7 +2468,7 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
     Object? formCode = freezed,
     Object? processNote = freezed,
   }) {
-    return _then(_$_PaymentReconciliation(
+    return _then(_$PaymentReconciliationImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -2681,8 +2683,8 @@ class __$$_PaymentReconciliationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PaymentReconciliation extends _PaymentReconciliation {
-  const _$_PaymentReconciliation(
+class _$PaymentReconciliationImpl extends _PaymentReconciliation {
+  const _$PaymentReconciliationImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.PaymentReconciliation)
       this.resourceType = R5ResourceType.PaymentReconciliation,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -2744,8 +2746,8 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
         _processNote = processNote,
         super._();
 
-  factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
-      _$$_PaymentReconciliationFromJson(json);
+  factory _$PaymentReconciliationImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PaymentReconciliationImplFromJson(json);
 
   /// [resourceType] This is a PaymentReconciliation resource
   @override
@@ -3117,7 +3119,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PaymentReconciliation &&
+            other is _$PaymentReconciliationImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -3270,13 +3272,13 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PaymentReconciliationCopyWith<_$_PaymentReconciliation> get copyWith =>
-      __$$_PaymentReconciliationCopyWithImpl<_$_PaymentReconciliation>(
-          this, _$identity);
+  _$$PaymentReconciliationImplCopyWith<_$PaymentReconciliationImpl>
+      get copyWith => __$$PaymentReconciliationImplCopyWithImpl<
+          _$PaymentReconciliationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PaymentReconciliationToJson(
+    return _$$PaymentReconciliationImplToJson(
       this,
     );
   }
@@ -3337,11 +3339,11 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
       final List<PaymentReconciliationAllocation>? allocation,
       final CodeableConcept? formCode,
       final List<PaymentReconciliationProcessNote>?
-          processNote}) = _$_PaymentReconciliation;
+          processNote}) = _$PaymentReconciliationImpl;
   const _PaymentReconciliation._() : super._();
 
   factory _PaymentReconciliation.fromJson(Map<String, dynamic> json) =
-      _$_PaymentReconciliation.fromJson;
+      _$PaymentReconciliationImpl.fromJson;
 
   @override
 
@@ -3626,8 +3628,8 @@ abstract class _PaymentReconciliation extends PaymentReconciliation {
   List<PaymentReconciliationProcessNote>? get processNote;
   @override
   @JsonKey(ignore: true)
-  _$$_PaymentReconciliationCopyWith<_$_PaymentReconciliation> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PaymentReconciliationImplCopyWith<_$PaymentReconciliationImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 PaymentReconciliationAllocation _$PaymentReconciliationAllocationFromJson(
@@ -4108,12 +4110,12 @@ class _$PaymentReconciliationAllocationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PaymentReconciliationAllocationCopyWith<$Res>
+abstract class _$$PaymentReconciliationAllocationImplCopyWith<$Res>
     implements $PaymentReconciliationAllocationCopyWith<$Res> {
-  factory _$$_PaymentReconciliationAllocationCopyWith(
-          _$_PaymentReconciliationAllocation value,
-          $Res Function(_$_PaymentReconciliationAllocation) then) =
-      __$$_PaymentReconciliationAllocationCopyWithImpl<$Res>;
+  factory _$$PaymentReconciliationAllocationImplCopyWith(
+          _$PaymentReconciliationAllocationImpl value,
+          $Res Function(_$PaymentReconciliationAllocationImpl) then) =
+      __$$PaymentReconciliationAllocationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4173,13 +4175,13 @@ abstract class _$$_PaymentReconciliationAllocationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PaymentReconciliationAllocationCopyWithImpl<$Res>
+class __$$PaymentReconciliationAllocationImplCopyWithImpl<$Res>
     extends _$PaymentReconciliationAllocationCopyWithImpl<$Res,
-        _$_PaymentReconciliationAllocation>
-    implements _$$_PaymentReconciliationAllocationCopyWith<$Res> {
-  __$$_PaymentReconciliationAllocationCopyWithImpl(
-      _$_PaymentReconciliationAllocation _value,
-      $Res Function(_$_PaymentReconciliationAllocation) _then)
+        _$PaymentReconciliationAllocationImpl>
+    implements _$$PaymentReconciliationAllocationImplCopyWith<$Res> {
+  __$$PaymentReconciliationAllocationImplCopyWithImpl(
+      _$PaymentReconciliationAllocationImpl _value,
+      $Res Function(_$PaymentReconciliationAllocationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4207,7 +4209,7 @@ class __$$_PaymentReconciliationAllocationCopyWithImpl<$Res>
     Object? payee = freezed,
     Object? amount = freezed,
   }) {
-    return _then(_$_PaymentReconciliationAllocation(
+    return _then(_$PaymentReconciliationAllocationImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4298,9 +4300,9 @@ class __$$_PaymentReconciliationAllocationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PaymentReconciliationAllocation
+class _$PaymentReconciliationAllocationImpl
     extends _PaymentReconciliationAllocation {
-  const _$_PaymentReconciliationAllocation(
+  const _$PaymentReconciliationAllocationImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4327,9 +4329,9 @@ class _$_PaymentReconciliationAllocation
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_PaymentReconciliationAllocation.fromJson(
+  factory _$PaymentReconciliationAllocationImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_PaymentReconciliationAllocationFromJson(json);
+      _$$PaymentReconciliationAllocationImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -4503,7 +4505,7 @@ class _$_PaymentReconciliationAllocation
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PaymentReconciliationAllocation &&
+            other is _$PaymentReconciliationAllocationImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -4574,14 +4576,14 @@ class _$_PaymentReconciliationAllocation
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PaymentReconciliationAllocationCopyWith<
-          _$_PaymentReconciliationAllocation>
-      get copyWith => __$$_PaymentReconciliationAllocationCopyWithImpl<
-          _$_PaymentReconciliationAllocation>(this, _$identity);
+  _$$PaymentReconciliationAllocationImplCopyWith<
+          _$PaymentReconciliationAllocationImpl>
+      get copyWith => __$$PaymentReconciliationAllocationImplCopyWithImpl<
+          _$PaymentReconciliationAllocationImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PaymentReconciliationAllocationToJson(
+    return _$$PaymentReconciliationAllocationImplToJson(
       this,
     );
   }
@@ -4612,11 +4614,11 @@ abstract class _PaymentReconciliationAllocation
       @JsonKey(name: '_date') final Element? dateElement,
       final Reference? responsible,
       final Reference? payee,
-      final Money? amount}) = _$_PaymentReconciliationAllocation;
+      final Money? amount}) = _$PaymentReconciliationAllocationImpl;
   const _PaymentReconciliationAllocation._() : super._();
 
   factory _PaymentReconciliationAllocation.fromJson(Map<String, dynamic> json) =
-      _$_PaymentReconciliationAllocation.fromJson;
+      _$PaymentReconciliationAllocationImpl.fromJson;
 
   @override
 
@@ -4746,8 +4748,8 @@ abstract class _PaymentReconciliationAllocation
   Money? get amount;
   @override
   @JsonKey(ignore: true)
-  _$$_PaymentReconciliationAllocationCopyWith<
-          _$_PaymentReconciliationAllocation>
+  _$$PaymentReconciliationAllocationImplCopyWith<
+          _$PaymentReconciliationAllocationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -4910,12 +4912,12 @@ class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_PaymentReconciliationProcessNoteCopyWith<$Res>
+abstract class _$$PaymentReconciliationProcessNoteImplCopyWith<$Res>
     implements $PaymentReconciliationProcessNoteCopyWith<$Res> {
-  factory _$$_PaymentReconciliationProcessNoteCopyWith(
-          _$_PaymentReconciliationProcessNote value,
-          $Res Function(_$_PaymentReconciliationProcessNote) then) =
-      __$$_PaymentReconciliationProcessNoteCopyWithImpl<$Res>;
+  factory _$$PaymentReconciliationProcessNoteImplCopyWith(
+          _$PaymentReconciliationProcessNoteImpl value,
+          $Res Function(_$PaymentReconciliationProcessNoteImpl) then) =
+      __$$PaymentReconciliationProcessNoteImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4934,13 +4936,13 @@ abstract class _$$_PaymentReconciliationProcessNoteCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_PaymentReconciliationProcessNoteCopyWithImpl<$Res>
+class __$$PaymentReconciliationProcessNoteImplCopyWithImpl<$Res>
     extends _$PaymentReconciliationProcessNoteCopyWithImpl<$Res,
-        _$_PaymentReconciliationProcessNote>
-    implements _$$_PaymentReconciliationProcessNoteCopyWith<$Res> {
-  __$$_PaymentReconciliationProcessNoteCopyWithImpl(
-      _$_PaymentReconciliationProcessNote _value,
-      $Res Function(_$_PaymentReconciliationProcessNote) _then)
+        _$PaymentReconciliationProcessNoteImpl>
+    implements _$$PaymentReconciliationProcessNoteImplCopyWith<$Res> {
+  __$$PaymentReconciliationProcessNoteImplCopyWithImpl(
+      _$PaymentReconciliationProcessNoteImpl _value,
+      $Res Function(_$PaymentReconciliationProcessNoteImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4954,7 +4956,7 @@ class __$$_PaymentReconciliationProcessNoteCopyWithImpl<$Res>
     Object? text = freezed,
     Object? textElement = freezed,
   }) {
-    return _then(_$_PaymentReconciliationProcessNote(
+    return _then(_$PaymentReconciliationProcessNoteImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4989,9 +4991,9 @@ class __$$_PaymentReconciliationProcessNoteCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_PaymentReconciliationProcessNote
+class _$PaymentReconciliationProcessNoteImpl
     extends _PaymentReconciliationProcessNote {
-  const _$_PaymentReconciliationProcessNote(
+  const _$PaymentReconciliationProcessNoteImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5003,9 +5005,9 @@ class _$_PaymentReconciliationProcessNote
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_PaymentReconciliationProcessNote.fromJson(
+  factory _$PaymentReconciliationProcessNoteImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_PaymentReconciliationProcessNoteFromJson(json);
+      _$$PaymentReconciliationProcessNoteImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -5104,7 +5106,7 @@ class _$_PaymentReconciliationProcessNote
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PaymentReconciliationProcessNote &&
+            other is _$PaymentReconciliationProcessNoteImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -5133,14 +5135,14 @@ class _$_PaymentReconciliationProcessNote
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PaymentReconciliationProcessNoteCopyWith<
-          _$_PaymentReconciliationProcessNote>
-      get copyWith => __$$_PaymentReconciliationProcessNoteCopyWithImpl<
-          _$_PaymentReconciliationProcessNote>(this, _$identity);
+  _$$PaymentReconciliationProcessNoteImplCopyWith<
+          _$PaymentReconciliationProcessNoteImpl>
+      get copyWith => __$$PaymentReconciliationProcessNoteImplCopyWithImpl<
+          _$PaymentReconciliationProcessNoteImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_PaymentReconciliationProcessNoteToJson(
+    return _$$PaymentReconciliationProcessNoteImplToJson(
       this,
     );
   }
@@ -5156,11 +5158,12 @@ abstract class _PaymentReconciliationProcessNote
           @JsonKey(name: '_type') final Element? typeElement,
           final String? text,
           @JsonKey(name: '_text') final Element? textElement}) =
-      _$_PaymentReconciliationProcessNote;
+      _$PaymentReconciliationProcessNoteImpl;
   const _PaymentReconciliationProcessNote._() : super._();
 
   factory _PaymentReconciliationProcessNote.fromJson(
-      Map<String, dynamic> json) = _$_PaymentReconciliationProcessNote.fromJson;
+          Map<String, dynamic> json) =
+      _$PaymentReconciliationProcessNoteImpl.fromJson;
 
   @override
 
@@ -5215,7 +5218,7 @@ abstract class _PaymentReconciliationProcessNote
   Element? get textElement;
   @override
   @JsonKey(ignore: true)
-  _$$_PaymentReconciliationProcessNoteCopyWith<
-          _$_PaymentReconciliationProcessNote>
+  _$$PaymentReconciliationProcessNoteImplCopyWith<
+          _$PaymentReconciliationProcessNoteImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

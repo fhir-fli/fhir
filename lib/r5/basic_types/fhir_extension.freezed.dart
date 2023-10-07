@@ -1565,11 +1565,11 @@ class _$FhirExtensionCopyWithImpl<$Res, $Val extends FhirExtension>
 }
 
 /// @nodoc
-abstract class _$$_FhirExtensionCopyWith<$Res>
+abstract class _$$FhirExtensionImplCopyWith<$Res>
     implements $FhirExtensionCopyWith<$Res> {
-  factory _$$_FhirExtensionCopyWith(
-          _$_FhirExtension value, $Res Function(_$_FhirExtension) then) =
-      __$$_FhirExtensionCopyWithImpl<$Res>;
+  factory _$$FhirExtensionImplCopyWith(
+          _$FhirExtensionImpl value, $Res Function(_$FhirExtensionImpl) then) =
+      __$$FhirExtensionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1762,11 +1762,11 @@ abstract class _$$_FhirExtensionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_FhirExtensionCopyWithImpl<$Res>
-    extends _$FhirExtensionCopyWithImpl<$Res, _$_FhirExtension>
-    implements _$$_FhirExtensionCopyWith<$Res> {
-  __$$_FhirExtensionCopyWithImpl(
-      _$_FhirExtension _value, $Res Function(_$_FhirExtension) _then)
+class __$$FhirExtensionImplCopyWithImpl<$Res>
+    extends _$FhirExtensionCopyWithImpl<$Res, _$FhirExtensionImpl>
+    implements _$$FhirExtensionImplCopyWith<$Res> {
+  __$$FhirExtensionImplCopyWithImpl(
+      _$FhirExtensionImpl _value, $Res Function(_$FhirExtensionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1850,7 +1850,7 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
     Object? valueDosage = freezed,
     Object? valueMeta = freezed,
   }) {
-    return _then(_$_FhirExtension(
+    return _then(_$FhirExtensionImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2165,8 +2165,8 @@ class __$$_FhirExtensionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_FhirExtension extends _FhirExtension {
-  const _$_FhirExtension(
+class _$FhirExtensionImpl extends _FhirExtension {
+  const _$FhirExtensionImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       this.url,
@@ -2247,8 +2247,8 @@ class _$_FhirExtension extends _FhirExtension {
       : _extension_ = extension_,
         super._();
 
-  factory _$_FhirExtension.fromJson(Map<String, dynamic> json) =>
-      _$$_FhirExtensionFromJson(json);
+  factory _$FhirExtensionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$FhirExtensionImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -2685,7 +2685,7 @@ class _$_FhirExtension extends _FhirExtension {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_FhirExtension &&
+            other is _$FhirExtensionImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -2883,12 +2883,12 @@ class _$_FhirExtension extends _FhirExtension {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FhirExtensionCopyWith<_$_FhirExtension> get copyWith =>
-      __$$_FhirExtensionCopyWithImpl<_$_FhirExtension>(this, _$identity);
+  _$$FhirExtensionImplCopyWith<_$FhirExtensionImpl> get copyWith =>
+      __$$FhirExtensionImplCopyWithImpl<_$FhirExtensionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_FhirExtensionToJson(
+    return _$$FhirExtensionImplToJson(
       this,
     );
   }
@@ -2975,11 +2975,11 @@ abstract class _FhirExtension extends FhirExtension {
       final TriggerDefinition? valueTriggerDefinition,
       final UsageContext? valueUsageContext,
       final Dosage? valueDosage,
-      final FhirMeta? valueMeta}) = _$_FhirExtension;
+      final FhirMeta? valueMeta}) = _$FhirExtensionImpl;
   const _FhirExtension._() : super._();
 
   factory _FhirExtension.fromJson(Map<String, dynamic> json) =
-      _$_FhirExtension.fromJson;
+      _$FhirExtensionImpl.fromJson;
 
   @override
 
@@ -3393,6 +3393,6 @@ abstract class _FhirExtension extends FhirExtension {
   FhirMeta? get valueMeta;
   @override
   @JsonKey(ignore: true)
-  _$$_FhirExtensionCopyWith<_$_FhirExtension> get copyWith =>
+  _$$FhirExtensionImplCopyWith<_$FhirExtensionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

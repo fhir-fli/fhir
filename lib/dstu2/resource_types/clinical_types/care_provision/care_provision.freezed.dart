@@ -409,10 +409,11 @@ class _$CarePlanCopyWithImpl<$Res, $Val extends CarePlan>
 }
 
 /// @nodoc
-abstract class _$$_CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
-  factory _$$_CarePlanCopyWith(
-          _$_CarePlan value, $Res Function(_$_CarePlan) then) =
-      __$$_CarePlanCopyWithImpl<$Res>;
+abstract class _$$CarePlanImplCopyWith<$Res>
+    implements $CarePlanCopyWith<$Res> {
+  factory _$$CarePlanImplCopyWith(
+          _$CarePlanImpl value, $Res Function(_$CarePlanImpl) then) =
+      __$$CarePlanImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -471,11 +472,11 @@ abstract class _$$_CarePlanCopyWith<$Res> implements $CarePlanCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CarePlanCopyWithImpl<$Res>
-    extends _$CarePlanCopyWithImpl<$Res, _$_CarePlan>
-    implements _$$_CarePlanCopyWith<$Res> {
-  __$$_CarePlanCopyWithImpl(
-      _$_CarePlan _value, $Res Function(_$_CarePlan) _then)
+class __$$CarePlanImplCopyWithImpl<$Res>
+    extends _$CarePlanCopyWithImpl<$Res, _$CarePlanImpl>
+    implements _$$CarePlanImplCopyWith<$Res> {
+  __$$CarePlanImplCopyWithImpl(
+      _$CarePlanImpl _value, $Res Function(_$CarePlanImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -512,7 +513,7 @@ class __$$_CarePlanCopyWithImpl<$Res>
     Object? activity = freezed,
     Object? note = freezed,
   }) {
-    return _then(_$_CarePlan(
+    return _then(_$CarePlanImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -639,8 +640,8 @@ class __$$_CarePlanCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CarePlan extends _CarePlan {
-  const _$_CarePlan(
+class _$CarePlanImpl extends _CarePlan {
+  const _$CarePlanImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.CarePlan)
       this.resourceType = Dstu2ResourceType.CarePlan,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -686,8 +687,8 @@ class _$_CarePlan extends _CarePlan {
         _activity = activity,
         super._();
 
-  factory _$_CarePlan.fromJson(Map<String, dynamic> json) =>
-      _$$_CarePlanFromJson(json);
+  factory _$CarePlanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CarePlanImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CarePlan)
@@ -865,7 +866,7 @@ class _$_CarePlan extends _CarePlan {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CarePlan &&
+            other is _$CarePlanImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -953,12 +954,12 @@ class _$_CarePlan extends _CarePlan {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CarePlanCopyWith<_$_CarePlan> get copyWith =>
-      __$$_CarePlanCopyWithImpl<_$_CarePlan>(this, _$identity);
+  _$$CarePlanImplCopyWith<_$CarePlanImpl> get copyWith =>
+      __$$CarePlanImplCopyWithImpl<_$CarePlanImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CarePlanToJson(
+    return _$$CarePlanImplToJson(
       this,
     );
   }
@@ -997,10 +998,11 @@ abstract class _CarePlan extends CarePlan {
       final List<CarePlanParticipant>? participant,
       final List<Reference>? goal,
       final List<CarePlanActivity>? activity,
-      final Annotation? note}) = _$_CarePlan;
+      final Annotation? note}) = _$CarePlanImpl;
   const _CarePlan._() : super._();
 
-  factory _CarePlan.fromJson(Map<String, dynamic> json) = _$_CarePlan.fromJson;
+  factory _CarePlan.fromJson(Map<String, dynamic> json) =
+      _$CarePlanImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CarePlan)
@@ -1073,7 +1075,7 @@ abstract class _CarePlan extends CarePlan {
   Annotation? get note;
   @override
   @JsonKey(ignore: true)
-  _$$_CarePlanCopyWith<_$_CarePlan> get copyWith =>
+  _$$CarePlanImplCopyWith<_$CarePlanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1168,11 +1170,11 @@ class _$CarePlanRelatedPlanCopyWithImpl<$Res, $Val extends CarePlanRelatedPlan>
 }
 
 /// @nodoc
-abstract class _$$_CarePlanRelatedPlanCopyWith<$Res>
+abstract class _$$CarePlanRelatedPlanImplCopyWith<$Res>
     implements $CarePlanRelatedPlanCopyWith<$Res> {
-  factory _$$_CarePlanRelatedPlanCopyWith(_$_CarePlanRelatedPlan value,
-          $Res Function(_$_CarePlanRelatedPlan) then) =
-      __$$_CarePlanRelatedPlanCopyWithImpl<$Res>;
+  factory _$$CarePlanRelatedPlanImplCopyWith(_$CarePlanRelatedPlanImpl value,
+          $Res Function(_$CarePlanRelatedPlanImpl) then) =
+      __$$CarePlanRelatedPlanImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1187,11 +1189,11 @@ abstract class _$$_CarePlanRelatedPlanCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CarePlanRelatedPlanCopyWithImpl<$Res>
-    extends _$CarePlanRelatedPlanCopyWithImpl<$Res, _$_CarePlanRelatedPlan>
-    implements _$$_CarePlanRelatedPlanCopyWith<$Res> {
-  __$$_CarePlanRelatedPlanCopyWithImpl(_$_CarePlanRelatedPlan _value,
-      $Res Function(_$_CarePlanRelatedPlan) _then)
+class __$$CarePlanRelatedPlanImplCopyWithImpl<$Res>
+    extends _$CarePlanRelatedPlanCopyWithImpl<$Res, _$CarePlanRelatedPlanImpl>
+    implements _$$CarePlanRelatedPlanImplCopyWith<$Res> {
+  __$$CarePlanRelatedPlanImplCopyWithImpl(_$CarePlanRelatedPlanImpl _value,
+      $Res Function(_$CarePlanRelatedPlanImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1203,7 +1205,7 @@ class __$$_CarePlanRelatedPlanCopyWithImpl<$Res>
     Object? code = freezed,
     Object? plan = null,
   }) {
-    return _then(_$_CarePlanRelatedPlan(
+    return _then(_$CarePlanRelatedPlanImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1230,8 +1232,8 @@ class __$$_CarePlanRelatedPlanCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CarePlanRelatedPlan extends _CarePlanRelatedPlan {
-  const _$_CarePlanRelatedPlan(
+class _$CarePlanRelatedPlanImpl extends _CarePlanRelatedPlan {
+  const _$CarePlanRelatedPlanImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1241,8 +1243,8 @@ class _$_CarePlanRelatedPlan extends _CarePlanRelatedPlan {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CarePlanRelatedPlan.fromJson(Map<String, dynamic> json) =>
-      _$$_CarePlanRelatedPlanFromJson(json);
+  factory _$CarePlanRelatedPlanImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CarePlanRelatedPlanImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -1284,7 +1286,7 @@ class _$_CarePlanRelatedPlan extends _CarePlanRelatedPlan {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CarePlanRelatedPlan &&
+            other is _$CarePlanRelatedPlanImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -1307,13 +1309,13 @@ class _$_CarePlanRelatedPlan extends _CarePlanRelatedPlan {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CarePlanRelatedPlanCopyWith<_$_CarePlanRelatedPlan> get copyWith =>
-      __$$_CarePlanRelatedPlanCopyWithImpl<_$_CarePlanRelatedPlan>(
+  _$$CarePlanRelatedPlanImplCopyWith<_$CarePlanRelatedPlanImpl> get copyWith =>
+      __$$CarePlanRelatedPlanImplCopyWithImpl<_$CarePlanRelatedPlanImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CarePlanRelatedPlanToJson(
+    return _$$CarePlanRelatedPlanImplToJson(
       this,
     );
   }
@@ -1326,11 +1328,11 @@ abstract class _CarePlanRelatedPlan extends CarePlanRelatedPlan {
       final List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: RelatedPlanCode.unknown)
       final RelatedPlanCode? code,
-      required final Reference plan}) = _$_CarePlanRelatedPlan;
+      required final Reference plan}) = _$CarePlanRelatedPlanImpl;
   const _CarePlanRelatedPlan._() : super._();
 
   factory _CarePlanRelatedPlan.fromJson(Map<String, dynamic> json) =
-      _$_CarePlanRelatedPlan.fromJson;
+      _$CarePlanRelatedPlanImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1347,7 +1349,7 @@ abstract class _CarePlanRelatedPlan extends CarePlanRelatedPlan {
   Reference get plan;
   @override
   @JsonKey(ignore: true)
-  _$$_CarePlanRelatedPlanCopyWith<_$_CarePlanRelatedPlan> get copyWith =>
+  _$$CarePlanRelatedPlanImplCopyWith<_$CarePlanRelatedPlanImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1458,11 +1460,11 @@ class _$CarePlanParticipantCopyWithImpl<$Res, $Val extends CarePlanParticipant>
 }
 
 /// @nodoc
-abstract class _$$_CarePlanParticipantCopyWith<$Res>
+abstract class _$$CarePlanParticipantImplCopyWith<$Res>
     implements $CarePlanParticipantCopyWith<$Res> {
-  factory _$$_CarePlanParticipantCopyWith(_$_CarePlanParticipant value,
-          $Res Function(_$_CarePlanParticipant) then) =
-      __$$_CarePlanParticipantCopyWithImpl<$Res>;
+  factory _$$CarePlanParticipantImplCopyWith(_$CarePlanParticipantImpl value,
+          $Res Function(_$CarePlanParticipantImpl) then) =
+      __$$CarePlanParticipantImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1479,11 +1481,11 @@ abstract class _$$_CarePlanParticipantCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CarePlanParticipantCopyWithImpl<$Res>
-    extends _$CarePlanParticipantCopyWithImpl<$Res, _$_CarePlanParticipant>
-    implements _$$_CarePlanParticipantCopyWith<$Res> {
-  __$$_CarePlanParticipantCopyWithImpl(_$_CarePlanParticipant _value,
-      $Res Function(_$_CarePlanParticipant) _then)
+class __$$CarePlanParticipantImplCopyWithImpl<$Res>
+    extends _$CarePlanParticipantCopyWithImpl<$Res, _$CarePlanParticipantImpl>
+    implements _$$CarePlanParticipantImplCopyWith<$Res> {
+  __$$CarePlanParticipantImplCopyWithImpl(_$CarePlanParticipantImpl _value,
+      $Res Function(_$CarePlanParticipantImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1495,7 +1497,7 @@ class __$$_CarePlanParticipantCopyWithImpl<$Res>
     Object? role = freezed,
     Object? member = freezed,
   }) {
-    return _then(_$_CarePlanParticipant(
+    return _then(_$CarePlanParticipantImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1522,8 +1524,8 @@ class __$$_CarePlanParticipantCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CarePlanParticipant extends _CarePlanParticipant {
-  const _$_CarePlanParticipant(
+class _$CarePlanParticipantImpl extends _CarePlanParticipant {
+  const _$CarePlanParticipantImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1533,8 +1535,8 @@ class _$_CarePlanParticipant extends _CarePlanParticipant {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CarePlanParticipant.fromJson(Map<String, dynamic> json) =>
-      _$$_CarePlanParticipantFromJson(json);
+  factory _$CarePlanParticipantImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CarePlanParticipantImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -1575,7 +1577,7 @@ class _$_CarePlanParticipant extends _CarePlanParticipant {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CarePlanParticipant &&
+            other is _$CarePlanParticipantImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -1598,13 +1600,13 @@ class _$_CarePlanParticipant extends _CarePlanParticipant {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CarePlanParticipantCopyWith<_$_CarePlanParticipant> get copyWith =>
-      __$$_CarePlanParticipantCopyWithImpl<_$_CarePlanParticipant>(
+  _$$CarePlanParticipantImplCopyWith<_$CarePlanParticipantImpl> get copyWith =>
+      __$$CarePlanParticipantImplCopyWithImpl<_$CarePlanParticipantImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CarePlanParticipantToJson(
+    return _$$CarePlanParticipantImplToJson(
       this,
     );
   }
@@ -1616,11 +1618,11 @@ abstract class _CarePlanParticipant extends CarePlanParticipant {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? role,
-      final Reference? member}) = _$_CarePlanParticipant;
+      final Reference? member}) = _$CarePlanParticipantImpl;
   const _CarePlanParticipant._() : super._();
 
   factory _CarePlanParticipant.fromJson(Map<String, dynamic> json) =
-      _$_CarePlanParticipant.fromJson;
+      _$CarePlanParticipantImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -1636,7 +1638,7 @@ abstract class _CarePlanParticipant extends CarePlanParticipant {
   Reference? get member;
   @override
   @JsonKey(ignore: true)
-  _$$_CarePlanParticipantCopyWith<_$_CarePlanParticipant> get copyWith =>
+  _$$CarePlanParticipantImplCopyWith<_$CarePlanParticipantImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1769,11 +1771,11 @@ class _$CarePlanActivityCopyWithImpl<$Res, $Val extends CarePlanActivity>
 }
 
 /// @nodoc
-abstract class _$$_CarePlanActivityCopyWith<$Res>
+abstract class _$$CarePlanActivityImplCopyWith<$Res>
     implements $CarePlanActivityCopyWith<$Res> {
-  factory _$$_CarePlanActivityCopyWith(
-          _$_CarePlanActivity value, $Res Function(_$_CarePlanActivity) then) =
-      __$$_CarePlanActivityCopyWithImpl<$Res>;
+  factory _$$CarePlanActivityImplCopyWith(_$CarePlanActivityImpl value,
+          $Res Function(_$CarePlanActivityImpl) then) =
+      __$$CarePlanActivityImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1793,11 +1795,11 @@ abstract class _$$_CarePlanActivityCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CarePlanActivityCopyWithImpl<$Res>
-    extends _$CarePlanActivityCopyWithImpl<$Res, _$_CarePlanActivity>
-    implements _$$_CarePlanActivityCopyWith<$Res> {
-  __$$_CarePlanActivityCopyWithImpl(
-      _$_CarePlanActivity _value, $Res Function(_$_CarePlanActivity) _then)
+class __$$CarePlanActivityImplCopyWithImpl<$Res>
+    extends _$CarePlanActivityCopyWithImpl<$Res, _$CarePlanActivityImpl>
+    implements _$$CarePlanActivityImplCopyWith<$Res> {
+  __$$CarePlanActivityImplCopyWithImpl(_$CarePlanActivityImpl _value,
+      $Res Function(_$CarePlanActivityImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1812,7 +1814,7 @@ class __$$_CarePlanActivityCopyWithImpl<$Res>
     Object? reference = freezed,
     Object? detail = freezed,
   }) {
-    return _then(_$_CarePlanActivity(
+    return _then(_$CarePlanActivityImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1851,8 +1853,8 @@ class __$$_CarePlanActivityCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CarePlanActivity extends _CarePlanActivity {
-  const _$_CarePlanActivity(
+class _$CarePlanActivityImpl extends _CarePlanActivity {
+  const _$CarePlanActivityImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1868,8 +1870,8 @@ class _$_CarePlanActivity extends _CarePlanActivity {
         _progress = progress,
         super._();
 
-  factory _$_CarePlanActivity.fromJson(Map<String, dynamic> json) =>
-      _$$_CarePlanActivityFromJson(json);
+  factory _$CarePlanActivityImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CarePlanActivityImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -1941,7 +1943,7 @@ class _$_CarePlanActivity extends _CarePlanActivity {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CarePlanActivity &&
+            other is _$CarePlanActivityImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -1973,12 +1975,13 @@ class _$_CarePlanActivity extends _CarePlanActivity {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CarePlanActivityCopyWith<_$_CarePlanActivity> get copyWith =>
-      __$$_CarePlanActivityCopyWithImpl<_$_CarePlanActivity>(this, _$identity);
+  _$$CarePlanActivityImplCopyWith<_$CarePlanActivityImpl> get copyWith =>
+      __$$CarePlanActivityImplCopyWithImpl<_$CarePlanActivityImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CarePlanActivityToJson(
+    return _$$CarePlanActivityImplToJson(
       this,
     );
   }
@@ -1993,11 +1996,11 @@ abstract class _CarePlanActivity extends CarePlanActivity {
       final List<Reference>? actionResulting,
       final List<Annotation>? progress,
       final Reference? reference,
-      final CarePlanActivityDetail? detail}) = _$_CarePlanActivity;
+      final CarePlanActivityDetail? detail}) = _$CarePlanActivityImpl;
   const _CarePlanActivity._() : super._();
 
   factory _CarePlanActivity.fromJson(Map<String, dynamic> json) =
-      _$_CarePlanActivity.fromJson;
+      _$CarePlanActivityImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2020,7 +2023,7 @@ abstract class _CarePlanActivity extends CarePlanActivity {
   CarePlanActivityDetail? get detail;
   @override
   @JsonKey(ignore: true)
-  _$$_CarePlanActivityCopyWith<_$_CarePlanActivity> get copyWith =>
+  _$$CarePlanActivityImplCopyWith<_$CarePlanActivityImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2423,11 +2426,12 @@ class _$CarePlanActivityDetailCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CarePlanActivityDetailCopyWith<$Res>
+abstract class _$$CarePlanActivityDetailImplCopyWith<$Res>
     implements $CarePlanActivityDetailCopyWith<$Res> {
-  factory _$$_CarePlanActivityDetailCopyWith(_$_CarePlanActivityDetail value,
-          $Res Function(_$_CarePlanActivityDetail) then) =
-      __$$_CarePlanActivityDetailCopyWithImpl<$Res>;
+  factory _$$CarePlanActivityDetailImplCopyWith(
+          _$CarePlanActivityDetailImpl value,
+          $Res Function(_$CarePlanActivityDetailImpl) then) =
+      __$$CarePlanActivityDetailImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2486,12 +2490,13 @@ abstract class _$$_CarePlanActivityDetailCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CarePlanActivityDetailCopyWithImpl<$Res>
+class __$$CarePlanActivityDetailImplCopyWithImpl<$Res>
     extends _$CarePlanActivityDetailCopyWithImpl<$Res,
-        _$_CarePlanActivityDetail>
-    implements _$$_CarePlanActivityDetailCopyWith<$Res> {
-  __$$_CarePlanActivityDetailCopyWithImpl(_$_CarePlanActivityDetail _value,
-      $Res Function(_$_CarePlanActivityDetail) _then)
+        _$CarePlanActivityDetailImpl>
+    implements _$$CarePlanActivityDetailImplCopyWith<$Res> {
+  __$$CarePlanActivityDetailImplCopyWithImpl(
+      _$CarePlanActivityDetailImpl _value,
+      $Res Function(_$CarePlanActivityDetailImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2523,7 +2528,7 @@ class __$$_CarePlanActivityDetailCopyWithImpl<$Res>
     Object? description = freezed,
     Object? descriptionElement = freezed,
   }) {
-    return _then(_$_CarePlanActivityDetail(
+    return _then(_$CarePlanActivityDetailImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2630,8 +2635,8 @@ class __$$_CarePlanActivityDetailCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CarePlanActivityDetail extends _CarePlanActivityDetail {
-  const _$_CarePlanActivityDetail(
+class _$CarePlanActivityDetailImpl extends _CarePlanActivityDetail {
+  const _$CarePlanActivityDetailImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2666,8 +2671,8 @@ class _$_CarePlanActivityDetail extends _CarePlanActivityDetail {
         _performer = performer,
         super._();
 
-  factory _$_CarePlanActivityDetail.fromJson(Map<String, dynamic> json) =>
-      _$$_CarePlanActivityDetailFromJson(json);
+  factory _$CarePlanActivityDetailImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CarePlanActivityDetailImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -2793,7 +2798,7 @@ class _$_CarePlanActivityDetail extends _CarePlanActivityDetail {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CarePlanActivityDetail &&
+            other is _$CarePlanActivityDetailImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -2876,13 +2881,13 @@ class _$_CarePlanActivityDetail extends _CarePlanActivityDetail {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CarePlanActivityDetailCopyWith<_$_CarePlanActivityDetail> get copyWith =>
-      __$$_CarePlanActivityDetailCopyWithImpl<_$_CarePlanActivityDetail>(
-          this, _$identity);
+  _$$CarePlanActivityDetailImplCopyWith<_$CarePlanActivityDetailImpl>
+      get copyWith => __$$CarePlanActivityDetailImplCopyWithImpl<
+          _$CarePlanActivityDetailImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CarePlanActivityDetailToJson(
+    return _$$CarePlanActivityDetailImplToJson(
       this,
     );
   }
@@ -2916,11 +2921,11 @@ abstract class _CarePlanActivityDetail extends CarePlanActivityDetail {
       final Quantity? quantity,
       final String? description,
       @JsonKey(name: '_description')
-      final Element? descriptionElement}) = _$_CarePlanActivityDetail;
+      final Element? descriptionElement}) = _$CarePlanActivityDetailImpl;
   const _CarePlanActivityDetail._() : super._();
 
   factory _CarePlanActivityDetail.fromJson(Map<String, dynamic> json) =
-      _$_CarePlanActivityDetail.fromJson;
+      _$CarePlanActivityDetailImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -2981,8 +2986,8 @@ abstract class _CarePlanActivityDetail extends CarePlanActivityDetail {
   Element? get descriptionElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CarePlanActivityDetailCopyWith<_$_CarePlanActivityDetail> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$CarePlanActivityDetailImplCopyWith<_$CarePlanActivityDetailImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 Goal _$GoalFromJson(Map<String, dynamic> json) {
@@ -3426,9 +3431,10 @@ class _$GoalCopyWithImpl<$Res, $Val extends Goal>
 }
 
 /// @nodoc
-abstract class _$$_GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
-  factory _$$_GoalCopyWith(_$_Goal value, $Res Function(_$_Goal) then) =
-      __$$_GoalCopyWithImpl<$Res>;
+abstract class _$$GoalImplCopyWith<$Res> implements $GoalCopyWith<$Res> {
+  factory _$$GoalImplCopyWith(
+          _$GoalImpl value, $Res Function(_$GoalImpl) then) =
+      __$$GoalImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3494,9 +3500,10 @@ abstract class _$$_GoalCopyWith<$Res> implements $GoalCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res, _$_Goal>
-    implements _$$_GoalCopyWith<$Res> {
-  __$$_GoalCopyWithImpl(_$_Goal _value, $Res Function(_$_Goal) _then)
+class __$$GoalImplCopyWithImpl<$Res>
+    extends _$GoalCopyWithImpl<$Res, _$GoalImpl>
+    implements _$$GoalImplCopyWith<$Res> {
+  __$$GoalImplCopyWithImpl(_$GoalImpl _value, $Res Function(_$GoalImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3534,7 +3541,7 @@ class __$$_GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res, _$_Goal>
     Object? note = freezed,
     Object? outcome = freezed,
   }) {
-    return _then(_$_Goal(
+    return _then(_$GoalImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -3665,8 +3672,8 @@ class __$$_GoalCopyWithImpl<$Res> extends _$GoalCopyWithImpl<$Res, _$_Goal>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Goal extends _Goal {
-  const _$_Goal(
+class _$GoalImpl extends _Goal {
+  const _$GoalImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Goal)
       this.resourceType = Dstu2ResourceType.Goal,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -3709,7 +3716,8 @@ class _$_Goal extends _Goal {
         _outcome = outcome,
         super._();
 
-  factory _$_Goal.fromJson(Map<String, dynamic> json) => _$$_GoalFromJson(json);
+  factory _$GoalImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GoalImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Goal)
@@ -3857,7 +3865,7 @@ class _$_Goal extends _Goal {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Goal &&
+            other is _$GoalImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -3952,12 +3960,12 @@ class _$_Goal extends _Goal {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GoalCopyWith<_$_Goal> get copyWith =>
-      __$$_GoalCopyWithImpl<_$_Goal>(this, _$identity);
+  _$$GoalImplCopyWith<_$GoalImpl> get copyWith =>
+      __$$GoalImplCopyWithImpl<_$GoalImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GoalToJson(
+    return _$$GoalImplToJson(
       this,
     );
   }
@@ -3997,10 +4005,10 @@ abstract class _Goal extends Goal {
       final CodeableConcept? priority,
       final List<Reference>? addresses,
       final List<Annotation>? note,
-      final List<GoalOutcome>? outcome}) = _$_Goal;
+      final List<GoalOutcome>? outcome}) = _$GoalImpl;
   const _Goal._() : super._();
 
-  factory _Goal.fromJson(Map<String, dynamic> json) = _$_Goal.fromJson;
+  factory _Goal.fromJson(Map<String, dynamic> json) = _$GoalImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Goal)
@@ -4076,7 +4084,8 @@ abstract class _Goal extends Goal {
   List<GoalOutcome>? get outcome;
   @override
   @JsonKey(ignore: true)
-  _$$_GoalCopyWith<_$_Goal> get copyWith => throw _privateConstructorUsedError;
+  _$$GoalImplCopyWith<_$GoalImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 GoalOutcome _$GoalOutcomeFromJson(Map<String, dynamic> json) {
@@ -4188,11 +4197,11 @@ class _$GoalOutcomeCopyWithImpl<$Res, $Val extends GoalOutcome>
 }
 
 /// @nodoc
-abstract class _$$_GoalOutcomeCopyWith<$Res>
+abstract class _$$GoalOutcomeImplCopyWith<$Res>
     implements $GoalOutcomeCopyWith<$Res> {
-  factory _$$_GoalOutcomeCopyWith(
-          _$_GoalOutcome value, $Res Function(_$_GoalOutcome) then) =
-      __$$_GoalOutcomeCopyWithImpl<$Res>;
+  factory _$$GoalOutcomeImplCopyWith(
+          _$GoalOutcomeImpl value, $Res Function(_$GoalOutcomeImpl) then) =
+      __$$GoalOutcomeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4209,11 +4218,11 @@ abstract class _$$_GoalOutcomeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GoalOutcomeCopyWithImpl<$Res>
-    extends _$GoalOutcomeCopyWithImpl<$Res, _$_GoalOutcome>
-    implements _$$_GoalOutcomeCopyWith<$Res> {
-  __$$_GoalOutcomeCopyWithImpl(
-      _$_GoalOutcome _value, $Res Function(_$_GoalOutcome) _then)
+class __$$GoalOutcomeImplCopyWithImpl<$Res>
+    extends _$GoalOutcomeCopyWithImpl<$Res, _$GoalOutcomeImpl>
+    implements _$$GoalOutcomeImplCopyWith<$Res> {
+  __$$GoalOutcomeImplCopyWithImpl(
+      _$GoalOutcomeImpl _value, $Res Function(_$GoalOutcomeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4225,7 +4234,7 @@ class __$$_GoalOutcomeCopyWithImpl<$Res>
     Object? resultCodeableConcept = freezed,
     Object? resultReference = freezed,
   }) {
-    return _then(_$_GoalOutcome(
+    return _then(_$GoalOutcomeImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -4252,8 +4261,8 @@ class __$$_GoalOutcomeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GoalOutcome extends _GoalOutcome {
-  const _$_GoalOutcome(
+class _$GoalOutcomeImpl extends _GoalOutcome {
+  const _$GoalOutcomeImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -4263,8 +4272,8 @@ class _$_GoalOutcome extends _GoalOutcome {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_GoalOutcome.fromJson(Map<String, dynamic> json) =>
-      _$$_GoalOutcomeFromJson(json);
+  factory _$GoalOutcomeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GoalOutcomeImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -4305,7 +4314,7 @@ class _$_GoalOutcome extends _GoalOutcome {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GoalOutcome &&
+            other is _$GoalOutcomeImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -4330,12 +4339,12 @@ class _$_GoalOutcome extends _GoalOutcome {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GoalOutcomeCopyWith<_$_GoalOutcome> get copyWith =>
-      __$$_GoalOutcomeCopyWithImpl<_$_GoalOutcome>(this, _$identity);
+  _$$GoalOutcomeImplCopyWith<_$GoalOutcomeImpl> get copyWith =>
+      __$$GoalOutcomeImplCopyWithImpl<_$GoalOutcomeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GoalOutcomeToJson(
+    return _$$GoalOutcomeImplToJson(
       this,
     );
   }
@@ -4347,11 +4356,11 @@ abstract class _GoalOutcome extends GoalOutcome {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final CodeableConcept? resultCodeableConcept,
-      final Reference? resultReference}) = _$_GoalOutcome;
+      final Reference? resultReference}) = _$GoalOutcomeImpl;
   const _GoalOutcome._() : super._();
 
   factory _GoalOutcome.fromJson(Map<String, dynamic> json) =
-      _$_GoalOutcome.fromJson;
+      _$GoalOutcomeImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -4367,7 +4376,7 @@ abstract class _GoalOutcome extends GoalOutcome {
   Reference? get resultReference;
   @override
   @JsonKey(ignore: true)
-  _$$_GoalOutcomeCopyWith<_$_GoalOutcome> get copyWith =>
+  _$$GoalOutcomeImplCopyWith<_$GoalOutcomeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4778,11 +4787,11 @@ class _$ReferralRequestCopyWithImpl<$Res, $Val extends ReferralRequest>
 }
 
 /// @nodoc
-abstract class _$$_ReferralRequestCopyWith<$Res>
+abstract class _$$ReferralRequestImplCopyWith<$Res>
     implements $ReferralRequestCopyWith<$Res> {
-  factory _$$_ReferralRequestCopyWith(
-          _$_ReferralRequest value, $Res Function(_$_ReferralRequest) then) =
-      __$$_ReferralRequestCopyWithImpl<$Res>;
+  factory _$$ReferralRequestImplCopyWith(_$ReferralRequestImpl value,
+          $Res Function(_$ReferralRequestImpl) then) =
+      __$$ReferralRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4844,11 +4853,11 @@ abstract class _$$_ReferralRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ReferralRequestCopyWithImpl<$Res>
-    extends _$ReferralRequestCopyWithImpl<$Res, _$_ReferralRequest>
-    implements _$$_ReferralRequestCopyWith<$Res> {
-  __$$_ReferralRequestCopyWithImpl(
-      _$_ReferralRequest _value, $Res Function(_$_ReferralRequest) _then)
+class __$$ReferralRequestImplCopyWithImpl<$Res>
+    extends _$ReferralRequestCopyWithImpl<$Res, _$ReferralRequestImpl>
+    implements _$$ReferralRequestImplCopyWith<$Res> {
+  __$$ReferralRequestImplCopyWithImpl(
+      _$ReferralRequestImpl _value, $Res Function(_$ReferralRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4883,7 +4892,7 @@ class __$$_ReferralRequestCopyWithImpl<$Res>
     Object? supportingInformation = freezed,
     Object? fulfillmentTime = freezed,
   }) {
-    return _then(_$_ReferralRequest(
+    return _then(_$ReferralRequestImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -5002,8 +5011,8 @@ class __$$_ReferralRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ReferralRequest extends _ReferralRequest {
-  const _$_ReferralRequest(
+class _$ReferralRequestImpl extends _ReferralRequest {
+  const _$ReferralRequestImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ReferralRequest)
       this.resourceType = Dstu2ResourceType.ReferralRequest,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -5043,8 +5052,8 @@ class _$_ReferralRequest extends _ReferralRequest {
         _supportingInformation = supportingInformation,
         super._();
 
-  factory _$_ReferralRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_ReferralRequestFromJson(json);
+  factory _$ReferralRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ReferralRequestImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ReferralRequest)
@@ -5178,7 +5187,7 @@ class _$_ReferralRequest extends _ReferralRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ReferralRequest &&
+            other is _$ReferralRequestImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -5265,12 +5274,13 @@ class _$_ReferralRequest extends _ReferralRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ReferralRequestCopyWith<_$_ReferralRequest> get copyWith =>
-      __$$_ReferralRequestCopyWithImpl<_$_ReferralRequest>(this, _$identity);
+  _$$ReferralRequestImplCopyWith<_$ReferralRequestImpl> get copyWith =>
+      __$$ReferralRequestImplCopyWithImpl<_$ReferralRequestImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ReferralRequestToJson(
+    return _$$ReferralRequestImplToJson(
       this,
     );
   }
@@ -5307,11 +5317,11 @@ abstract class _ReferralRequest extends ReferralRequest {
       final String? description,
       final List<CodeableConcept>? serviceRequested,
       final List<Reference>? supportingInformation,
-      final Period? fulfillmentTime}) = _$_ReferralRequest;
+      final Period? fulfillmentTime}) = _$ReferralRequestImpl;
   const _ReferralRequest._() : super._();
 
   factory _ReferralRequest.fromJson(Map<String, dynamic> json) =
-      _$_ReferralRequest.fromJson;
+      _$ReferralRequestImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ReferralRequest)
@@ -5378,7 +5388,7 @@ abstract class _ReferralRequest extends ReferralRequest {
   Period? get fulfillmentTime;
   @override
   @JsonKey(ignore: true)
-  _$$_ReferralRequestCopyWith<_$_ReferralRequest> get copyWith =>
+  _$$ReferralRequestImplCopyWith<_$ReferralRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5825,11 +5835,11 @@ class _$ProcedureRequestCopyWithImpl<$Res, $Val extends ProcedureRequest>
 }
 
 /// @nodoc
-abstract class _$$_ProcedureRequestCopyWith<$Res>
+abstract class _$$ProcedureRequestImplCopyWith<$Res>
     implements $ProcedureRequestCopyWith<$Res> {
-  factory _$$_ProcedureRequestCopyWith(
-          _$_ProcedureRequest value, $Res Function(_$_ProcedureRequest) then) =
-      __$$_ProcedureRequestCopyWithImpl<$Res>;
+  factory _$$ProcedureRequestImplCopyWith(_$ProcedureRequestImpl value,
+          $Res Function(_$ProcedureRequestImpl) then) =
+      __$$ProcedureRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5898,11 +5908,11 @@ abstract class _$$_ProcedureRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ProcedureRequestCopyWithImpl<$Res>
-    extends _$ProcedureRequestCopyWithImpl<$Res, _$_ProcedureRequest>
-    implements _$$_ProcedureRequestCopyWith<$Res> {
-  __$$_ProcedureRequestCopyWithImpl(
-      _$_ProcedureRequest _value, $Res Function(_$_ProcedureRequest) _then)
+class __$$ProcedureRequestImplCopyWithImpl<$Res>
+    extends _$ProcedureRequestCopyWithImpl<$Res, _$ProcedureRequestImpl>
+    implements _$$ProcedureRequestImplCopyWith<$Res> {
+  __$$ProcedureRequestImplCopyWithImpl(_$ProcedureRequestImpl _value,
+      $Res Function(_$ProcedureRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5939,7 +5949,7 @@ class __$$_ProcedureRequestCopyWithImpl<$Res>
     Object? orderer = freezed,
     Object? priority = freezed,
   }) {
-    return _then(_$_ProcedureRequest(
+    return _then(_$ProcedureRequestImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -6066,8 +6076,8 @@ class __$$_ProcedureRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ProcedureRequest extends _ProcedureRequest {
-  const _$_ProcedureRequest(
+class _$ProcedureRequestImpl extends _ProcedureRequest {
+  const _$ProcedureRequestImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ProcedureRequest)
       this.resourceType = Dstu2ResourceType.ProcedureRequest,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -6108,8 +6118,8 @@ class _$_ProcedureRequest extends _ProcedureRequest {
         _notes = notes,
         super._();
 
-  factory _$_ProcedureRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_ProcedureRequestFromJson(json);
+  factory _$ProcedureRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProcedureRequestImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcedureRequest)
@@ -6238,7 +6248,7 @@ class _$_ProcedureRequest extends _ProcedureRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ProcedureRequest &&
+            other is _$ProcedureRequestImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -6331,12 +6341,13 @@ class _$_ProcedureRequest extends _ProcedureRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ProcedureRequestCopyWith<_$_ProcedureRequest> get copyWith =>
-      __$$_ProcedureRequestCopyWithImpl<_$_ProcedureRequest>(this, _$identity);
+  _$$ProcedureRequestImplCopyWith<_$ProcedureRequestImpl> get copyWith =>
+      __$$ProcedureRequestImplCopyWithImpl<_$ProcedureRequestImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ProcedureRequestToJson(
+    return _$$ProcedureRequestImplToJson(
       this,
     );
   }
@@ -6376,11 +6387,11 @@ abstract class _ProcedureRequest extends ProcedureRequest {
       final FhirDateTime? orderedOn,
       final Reference? orderer,
       @JsonKey(unknownEnumValue: ProcedureRequestPriority.unknown)
-      final ProcedureRequestPriority? priority}) = _$_ProcedureRequest;
+      final ProcedureRequestPriority? priority}) = _$ProcedureRequestImpl;
   const _ProcedureRequest._() : super._();
 
   factory _ProcedureRequest.fromJson(Map<String, dynamic> json) =
-      _$_ProcedureRequest.fromJson;
+      _$ProcedureRequestImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ProcedureRequest)
@@ -6452,7 +6463,7 @@ abstract class _ProcedureRequest extends ProcedureRequest {
   ProcedureRequestPriority? get priority;
   @override
   @JsonKey(ignore: true)
-  _$$_ProcedureRequestCopyWith<_$_ProcedureRequest> get copyWith =>
+  _$$ProcedureRequestImplCopyWith<_$ProcedureRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6837,11 +6848,11 @@ class _$NutritionOrderCopyWithImpl<$Res, $Val extends NutritionOrder>
 }
 
 /// @nodoc
-abstract class _$$_NutritionOrderCopyWith<$Res>
+abstract class _$$NutritionOrderImplCopyWith<$Res>
     implements $NutritionOrderCopyWith<$Res> {
-  factory _$$_NutritionOrderCopyWith(
-          _$_NutritionOrder value, $Res Function(_$_NutritionOrder) then) =
-      __$$_NutritionOrderCopyWithImpl<$Res>;
+  factory _$$NutritionOrderImplCopyWith(_$NutritionOrderImpl value,
+          $Res Function(_$NutritionOrderImpl) then) =
+      __$$NutritionOrderImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6899,11 +6910,11 @@ abstract class _$$_NutritionOrderCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NutritionOrderCopyWithImpl<$Res>
-    extends _$NutritionOrderCopyWithImpl<$Res, _$_NutritionOrder>
-    implements _$$_NutritionOrderCopyWith<$Res> {
-  __$$_NutritionOrderCopyWithImpl(
-      _$_NutritionOrder _value, $Res Function(_$_NutritionOrder) _then)
+class __$$NutritionOrderImplCopyWithImpl<$Res>
+    extends _$NutritionOrderCopyWithImpl<$Res, _$NutritionOrderImpl>
+    implements _$$NutritionOrderImplCopyWith<$Res> {
+  __$$NutritionOrderImplCopyWithImpl(
+      _$NutritionOrderImpl _value, $Res Function(_$NutritionOrderImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6936,7 +6947,7 @@ class __$$_NutritionOrderCopyWithImpl<$Res>
     Object? supplement = freezed,
     Object? enteralFormula = freezed,
   }) {
-    return _then(_$_NutritionOrder(
+    return _then(_$NutritionOrderImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -7047,8 +7058,8 @@ class __$$_NutritionOrderCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NutritionOrder extends _NutritionOrder {
-  const _$_NutritionOrder(
+class _$NutritionOrderImpl extends _NutritionOrder {
+  const _$NutritionOrderImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.NutritionOrder)
       this.resourceType = Dstu2ResourceType.NutritionOrder,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -7086,8 +7097,8 @@ class _$_NutritionOrder extends _NutritionOrder {
         _supplement = supplement,
         super._();
 
-  factory _$_NutritionOrder.fromJson(Map<String, dynamic> json) =>
-      _$$_NutritionOrderFromJson(json);
+  factory _$NutritionOrderImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NutritionOrderImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.NutritionOrder)
@@ -7228,7 +7239,7 @@ class _$_NutritionOrder extends _NutritionOrder {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NutritionOrder &&
+            other is _$NutritionOrderImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -7311,12 +7322,13 @@ class _$_NutritionOrder extends _NutritionOrder {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NutritionOrderCopyWith<_$_NutritionOrder> get copyWith =>
-      __$$_NutritionOrderCopyWithImpl<_$_NutritionOrder>(this, _$identity);
+  _$$NutritionOrderImplCopyWith<_$NutritionOrderImpl> get copyWith =>
+      __$$NutritionOrderImplCopyWithImpl<_$NutritionOrderImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderToJson(
+    return _$$NutritionOrderImplToJson(
       this,
     );
   }
@@ -7324,38 +7336,39 @@ class _$_NutritionOrder extends _NutritionOrder {
 
 abstract class _NutritionOrder extends NutritionOrder {
   const factory _NutritionOrder(
-      {@JsonKey(unknownEnumValue: Dstu2ResourceType.NutritionOrder)
-      final Dstu2ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
-      @JsonKey(name: 'id') final FhirId? fhirId,
-      final FhirMeta? meta,
-      final FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
-      final FhirCode? language,
-      @JsonKey(name: '_language') final Element? languageElement,
-      final Narrative? text,
-      final List<Resource>? contained,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required final Reference patient,
-      final Reference? orderer,
-      final List<Identifier>? identifier,
-      final Reference? encounter,
-      required final FhirDateTime dateTime,
-      @JsonKey(name: '_dateTime') final Element? dateTimeElement,
-      @JsonKey(unknownEnumValue: NutritionOrderStatus.unknown)
-      final NutritionOrderStatus? status,
-      @JsonKey(name: '_status') final Element? statusElement,
-      final List<Reference>? allergyIntolerance,
-      final List<CodeableConcept>? foodPreferenceModifier,
-      final List<CodeableConcept>? excludeFoodModifier,
-      final NutritionOrderOralDiet? oralDiet,
-      final List<NutritionOrderSupplement>? supplement,
-      final NutritionOrderEnteralFormula? enteralFormula}) = _$_NutritionOrder;
+          {@JsonKey(unknownEnumValue: Dstu2ResourceType.NutritionOrder)
+          final Dstu2ResourceType resourceType,
+          @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
+          @JsonKey(name: 'id') final FhirId? fhirId,
+          final FhirMeta? meta,
+          final FhirUri? implicitRules,
+          @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+          final FhirCode? language,
+          @JsonKey(name: '_language') final Element? languageElement,
+          final Narrative? text,
+          final List<Resource>? contained,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final Reference patient,
+          final Reference? orderer,
+          final List<Identifier>? identifier,
+          final Reference? encounter,
+          required final FhirDateTime dateTime,
+          @JsonKey(name: '_dateTime') final Element? dateTimeElement,
+          @JsonKey(unknownEnumValue: NutritionOrderStatus.unknown)
+          final NutritionOrderStatus? status,
+          @JsonKey(name: '_status') final Element? statusElement,
+          final List<Reference>? allergyIntolerance,
+          final List<CodeableConcept>? foodPreferenceModifier,
+          final List<CodeableConcept>? excludeFoodModifier,
+          final NutritionOrderOralDiet? oralDiet,
+          final List<NutritionOrderSupplement>? supplement,
+          final NutritionOrderEnteralFormula? enteralFormula}) =
+      _$NutritionOrderImpl;
   const _NutritionOrder._() : super._();
 
   factory _NutritionOrder.fromJson(Map<String, dynamic> json) =
-      _$_NutritionOrder.fromJson;
+      _$NutritionOrderImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.NutritionOrder)
@@ -7420,7 +7433,7 @@ abstract class _NutritionOrder extends NutritionOrder {
   NutritionOrderEnteralFormula? get enteralFormula;
   @override
   @JsonKey(ignore: true)
-  _$$_NutritionOrderCopyWith<_$_NutritionOrder> get copyWith =>
+  _$$NutritionOrderImplCopyWith<_$NutritionOrderImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -7567,11 +7580,12 @@ class _$NutritionOrderOralDietCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_NutritionOrderOralDietCopyWith<$Res>
+abstract class _$$NutritionOrderOralDietImplCopyWith<$Res>
     implements $NutritionOrderOralDietCopyWith<$Res> {
-  factory _$$_NutritionOrderOralDietCopyWith(_$_NutritionOrderOralDiet value,
-          $Res Function(_$_NutritionOrderOralDiet) then) =
-      __$$_NutritionOrderOralDietCopyWithImpl<$Res>;
+  factory _$$NutritionOrderOralDietImplCopyWith(
+          _$NutritionOrderOralDietImpl value,
+          $Res Function(_$NutritionOrderOralDietImpl) then) =
+      __$$NutritionOrderOralDietImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7592,12 +7606,13 @@ abstract class _$$_NutritionOrderOralDietCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NutritionOrderOralDietCopyWithImpl<$Res>
+class __$$NutritionOrderOralDietImplCopyWithImpl<$Res>
     extends _$NutritionOrderOralDietCopyWithImpl<$Res,
-        _$_NutritionOrderOralDiet>
-    implements _$$_NutritionOrderOralDietCopyWith<$Res> {
-  __$$_NutritionOrderOralDietCopyWithImpl(_$_NutritionOrderOralDiet _value,
-      $Res Function(_$_NutritionOrderOralDiet) _then)
+        _$NutritionOrderOralDietImpl>
+    implements _$$NutritionOrderOralDietImplCopyWith<$Res> {
+  __$$NutritionOrderOralDietImplCopyWithImpl(
+      _$NutritionOrderOralDietImpl _value,
+      $Res Function(_$NutritionOrderOralDietImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7615,7 +7630,7 @@ class __$$_NutritionOrderOralDietCopyWithImpl<$Res>
     Object? instruction = freezed,
     Object? instructionElement = freezed,
   }) {
-    return _then(_$_NutritionOrderOralDiet(
+    return _then(_$NutritionOrderOralDietImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7666,8 +7681,8 @@ class __$$_NutritionOrderOralDietCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NutritionOrderOralDiet extends _NutritionOrderOralDiet {
-  const _$_NutritionOrderOralDiet(
+class _$NutritionOrderOralDietImpl extends _NutritionOrderOralDiet {
+  const _$NutritionOrderOralDietImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7689,8 +7704,8 @@ class _$_NutritionOrderOralDiet extends _NutritionOrderOralDiet {
         _fluidConsistencyType = fluidConsistencyType,
         super._();
 
-  factory _$_NutritionOrderOralDiet.fromJson(Map<String, dynamic> json) =>
-      _$$_NutritionOrderOralDietFromJson(json);
+  factory _$NutritionOrderOralDietImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NutritionOrderOralDietImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -7794,7 +7809,7 @@ class _$_NutritionOrderOralDiet extends _NutritionOrderOralDiet {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NutritionOrderOralDiet &&
+            other is _$NutritionOrderOralDietImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -7833,13 +7848,13 @@ class _$_NutritionOrderOralDiet extends _NutritionOrderOralDiet {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NutritionOrderOralDietCopyWith<_$_NutritionOrderOralDiet> get copyWith =>
-      __$$_NutritionOrderOralDietCopyWithImpl<_$_NutritionOrderOralDiet>(
-          this, _$identity);
+  _$$NutritionOrderOralDietImplCopyWith<_$NutritionOrderOralDietImpl>
+      get copyWith => __$$NutritionOrderOralDietImplCopyWithImpl<
+          _$NutritionOrderOralDietImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderOralDietToJson(
+    return _$$NutritionOrderOralDietImplToJson(
       this,
     );
   }
@@ -7858,11 +7873,11 @@ abstract class _NutritionOrderOralDiet extends NutritionOrderOralDiet {
           final List<CodeableConcept>? fluidConsistencyType,
           final String? instruction,
           @JsonKey(name: '_instruction') final Element? instructionElement}) =
-      _$_NutritionOrderOralDiet;
+      _$NutritionOrderOralDietImpl;
   const _NutritionOrderOralDiet._() : super._();
 
   factory _NutritionOrderOralDiet.fromJson(Map<String, dynamic> json) =
-      _$_NutritionOrderOralDiet.fromJson;
+      _$NutritionOrderOralDietImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -7892,8 +7907,8 @@ abstract class _NutritionOrderOralDiet extends NutritionOrderOralDiet {
   Element? get instructionElement;
   @override
   @JsonKey(ignore: true)
-  _$$_NutritionOrderOralDietCopyWith<_$_NutritionOrderOralDiet> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$NutritionOrderOralDietImplCopyWith<_$NutritionOrderOralDietImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 NutritionOrderSupplement _$NutritionOrderSupplementFromJson(
@@ -8076,12 +8091,12 @@ class _$NutritionOrderSupplementCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_NutritionOrderSupplementCopyWith<$Res>
+abstract class _$$NutritionOrderSupplementImplCopyWith<$Res>
     implements $NutritionOrderSupplementCopyWith<$Res> {
-  factory _$$_NutritionOrderSupplementCopyWith(
-          _$_NutritionOrderSupplement value,
-          $Res Function(_$_NutritionOrderSupplement) then) =
-      __$$_NutritionOrderSupplementCopyWithImpl<$Res>;
+  factory _$$NutritionOrderSupplementImplCopyWith(
+          _$NutritionOrderSupplementImpl value,
+          $Res Function(_$NutritionOrderSupplementImpl) then) =
+      __$$NutritionOrderSupplementImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -8108,12 +8123,13 @@ abstract class _$$_NutritionOrderSupplementCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NutritionOrderSupplementCopyWithImpl<$Res>
+class __$$NutritionOrderSupplementImplCopyWithImpl<$Res>
     extends _$NutritionOrderSupplementCopyWithImpl<$Res,
-        _$_NutritionOrderSupplement>
-    implements _$$_NutritionOrderSupplementCopyWith<$Res> {
-  __$$_NutritionOrderSupplementCopyWithImpl(_$_NutritionOrderSupplement _value,
-      $Res Function(_$_NutritionOrderSupplement) _then)
+        _$NutritionOrderSupplementImpl>
+    implements _$$NutritionOrderSupplementImplCopyWith<$Res> {
+  __$$NutritionOrderSupplementImplCopyWithImpl(
+      _$NutritionOrderSupplementImpl _value,
+      $Res Function(_$NutritionOrderSupplementImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -8131,7 +8147,7 @@ class __$$_NutritionOrderSupplementCopyWithImpl<$Res>
     Object? instruction = freezed,
     Object? instructionElement = freezed,
   }) {
-    return _then(_$_NutritionOrderSupplement(
+    return _then(_$NutritionOrderSupplementImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -8182,8 +8198,8 @@ class __$$_NutritionOrderSupplementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NutritionOrderSupplement extends _NutritionOrderSupplement {
-  const _$_NutritionOrderSupplement(
+class _$NutritionOrderSupplementImpl extends _NutritionOrderSupplement {
+  const _$NutritionOrderSupplementImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8201,8 +8217,8 @@ class _$_NutritionOrderSupplement extends _NutritionOrderSupplement {
         _schedule = schedule,
         super._();
 
-  factory _$_NutritionOrderSupplement.fromJson(Map<String, dynamic> json) =>
-      _$$_NutritionOrderSupplementFromJson(json);
+  factory _$NutritionOrderSupplementImpl.fromJson(Map<String, dynamic> json) =>
+      _$$NutritionOrderSupplementImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -8274,7 +8290,7 @@ class _$_NutritionOrderSupplement extends _NutritionOrderSupplement {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NutritionOrderSupplement &&
+            other is _$NutritionOrderSupplementImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -8315,13 +8331,13 @@ class _$_NutritionOrderSupplement extends _NutritionOrderSupplement {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NutritionOrderSupplementCopyWith<_$_NutritionOrderSupplement>
-      get copyWith => __$$_NutritionOrderSupplementCopyWithImpl<
-          _$_NutritionOrderSupplement>(this, _$identity);
+  _$$NutritionOrderSupplementImplCopyWith<_$NutritionOrderSupplementImpl>
+      get copyWith => __$$NutritionOrderSupplementImplCopyWithImpl<
+          _$NutritionOrderSupplementImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderSupplementToJson(
+    return _$$NutritionOrderSupplementImplToJson(
       this,
     );
   }
@@ -8340,11 +8356,11 @@ abstract class _NutritionOrderSupplement extends NutritionOrderSupplement {
           final Quantity? quantity,
           final String? instruction,
           @JsonKey(name: '_instruction') final Element? instructionElement}) =
-      _$_NutritionOrderSupplement;
+      _$NutritionOrderSupplementImpl;
   const _NutritionOrderSupplement._() : super._();
 
   factory _NutritionOrderSupplement.fromJson(Map<String, dynamic> json) =
-      _$_NutritionOrderSupplement.fromJson;
+      _$NutritionOrderSupplementImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -8375,7 +8391,7 @@ abstract class _NutritionOrderSupplement extends NutritionOrderSupplement {
   Element? get instructionElement;
   @override
   @JsonKey(ignore: true)
-  _$$_NutritionOrderSupplementCopyWith<_$_NutritionOrderSupplement>
+  _$$NutritionOrderSupplementImplCopyWith<_$NutritionOrderSupplementImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -8662,12 +8678,12 @@ class _$NutritionOrderEnteralFormulaCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_NutritionOrderEnteralFormulaCopyWith<$Res>
+abstract class _$$NutritionOrderEnteralFormulaImplCopyWith<$Res>
     implements $NutritionOrderEnteralFormulaCopyWith<$Res> {
-  factory _$$_NutritionOrderEnteralFormulaCopyWith(
-          _$_NutritionOrderEnteralFormula value,
-          $Res Function(_$_NutritionOrderEnteralFormula) then) =
-      __$$_NutritionOrderEnteralFormulaCopyWithImpl<$Res>;
+  factory _$$NutritionOrderEnteralFormulaImplCopyWith(
+          _$NutritionOrderEnteralFormulaImpl value,
+          $Res Function(_$NutritionOrderEnteralFormulaImpl) then) =
+      __$$NutritionOrderEnteralFormulaImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -8710,13 +8726,13 @@ abstract class _$$_NutritionOrderEnteralFormulaCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NutritionOrderEnteralFormulaCopyWithImpl<$Res>
+class __$$NutritionOrderEnteralFormulaImplCopyWithImpl<$Res>
     extends _$NutritionOrderEnteralFormulaCopyWithImpl<$Res,
-        _$_NutritionOrderEnteralFormula>
-    implements _$$_NutritionOrderEnteralFormulaCopyWith<$Res> {
-  __$$_NutritionOrderEnteralFormulaCopyWithImpl(
-      _$_NutritionOrderEnteralFormula _value,
-      $Res Function(_$_NutritionOrderEnteralFormula) _then)
+        _$NutritionOrderEnteralFormulaImpl>
+    implements _$$NutritionOrderEnteralFormulaImplCopyWith<$Res> {
+  __$$NutritionOrderEnteralFormulaImplCopyWithImpl(
+      _$NutritionOrderEnteralFormulaImpl _value,
+      $Res Function(_$NutritionOrderEnteralFormulaImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -8739,7 +8755,7 @@ class __$$_NutritionOrderEnteralFormulaCopyWithImpl<$Res>
     Object? administrationInstruction = freezed,
     Object? administrationInstructionElement = freezed,
   }) {
-    return _then(_$_NutritionOrderEnteralFormula(
+    return _then(_$NutritionOrderEnteralFormulaImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -8811,8 +8827,8 @@ class __$$_NutritionOrderEnteralFormulaCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NutritionOrderEnteralFormula extends _NutritionOrderEnteralFormula {
-  const _$_NutritionOrderEnteralFormula(
+class _$NutritionOrderEnteralFormulaImpl extends _NutritionOrderEnteralFormula {
+  const _$NutritionOrderEnteralFormulaImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -8837,8 +8853,9 @@ class _$_NutritionOrderEnteralFormula extends _NutritionOrderEnteralFormula {
         _administration = administration,
         super._();
 
-  factory _$_NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =>
-      _$$_NutritionOrderEnteralFormulaFromJson(json);
+  factory _$NutritionOrderEnteralFormulaImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$NutritionOrderEnteralFormulaImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -8921,7 +8938,7 @@ class _$_NutritionOrderEnteralFormula extends _NutritionOrderEnteralFormula {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NutritionOrderEnteralFormula &&
+            other is _$NutritionOrderEnteralFormulaImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -8986,13 +9003,14 @@ class _$_NutritionOrderEnteralFormula extends _NutritionOrderEnteralFormula {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NutritionOrderEnteralFormulaCopyWith<_$_NutritionOrderEnteralFormula>
-      get copyWith => __$$_NutritionOrderEnteralFormulaCopyWithImpl<
-          _$_NutritionOrderEnteralFormula>(this, _$identity);
+  _$$NutritionOrderEnteralFormulaImplCopyWith<
+          _$NutritionOrderEnteralFormulaImpl>
+      get copyWith => __$$NutritionOrderEnteralFormulaImplCopyWithImpl<
+          _$NutritionOrderEnteralFormulaImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderEnteralFormulaToJson(
+    return _$$NutritionOrderEnteralFormulaImplToJson(
       this,
     );
   }
@@ -9001,30 +9019,30 @@ class _$_NutritionOrderEnteralFormula extends _NutritionOrderEnteralFormula {
 abstract class _NutritionOrderEnteralFormula
     extends NutritionOrderEnteralFormula {
   const factory _NutritionOrderEnteralFormula(
-      {@JsonKey(name: 'id') final FhirId? fhirId,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
-      final CodeableConcept? baseFormulaType,
-      final String? baseFormulaProductName,
-      @JsonKey(name: '_baseFormulaProductName')
-      final Element? baseFormulaProductNameElement,
-      final CodeableConcept? additiveType,
-      @JsonKey(name: '_additiveProductName')
-      final Element? additiveProductNameElement,
-      final String? additiveProductName,
-      final Quantity? caloricDensity,
-      final CodeableConcept? routeofAdministration,
-      final List<NutritionOrderEnteralFormulaAdministration>? administration,
-      final Quantity? maxVolumeToDeliver,
-      final String? administrationInstruction,
-      @JsonKey(name: '_administrationInstruction')
-      final Element?
-          administrationInstructionElement}) = _$_NutritionOrderEnteralFormula;
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+          final CodeableConcept? baseFormulaType,
+          final String? baseFormulaProductName,
+          @JsonKey(name: '_baseFormulaProductName')
+          final Element? baseFormulaProductNameElement,
+          final CodeableConcept? additiveType,
+          @JsonKey(name: '_additiveProductName')
+          final Element? additiveProductNameElement,
+          final String? additiveProductName,
+          final Quantity? caloricDensity,
+          final CodeableConcept? routeofAdministration,
+          final List<NutritionOrderEnteralFormulaAdministration>? administration,
+          final Quantity? maxVolumeToDeliver,
+          final String? administrationInstruction,
+          @JsonKey(name: '_administrationInstruction')
+          final Element? administrationInstructionElement}) =
+      _$NutritionOrderEnteralFormulaImpl;
   const _NutritionOrderEnteralFormula._() : super._();
 
   factory _NutritionOrderEnteralFormula.fromJson(Map<String, dynamic> json) =
-      _$_NutritionOrderEnteralFormula.fromJson;
+      _$NutritionOrderEnteralFormulaImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -9066,7 +9084,8 @@ abstract class _NutritionOrderEnteralFormula
   Element? get administrationInstructionElement;
   @override
   @JsonKey(ignore: true)
-  _$$_NutritionOrderEnteralFormulaCopyWith<_$_NutritionOrderEnteralFormula>
+  _$$NutritionOrderEnteralFormulaImplCopyWith<
+          _$NutritionOrderEnteralFormulaImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9189,12 +9208,12 @@ class _$NutritionOrderOralDietNutrientCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_NutritionOrderOralDietNutrientCopyWith<$Res>
+abstract class _$$NutritionOrderOralDietNutrientImplCopyWith<$Res>
     implements $NutritionOrderOralDietNutrientCopyWith<$Res> {
-  factory _$$_NutritionOrderOralDietNutrientCopyWith(
-          _$_NutritionOrderOralDietNutrient value,
-          $Res Function(_$_NutritionOrderOralDietNutrient) then) =
-      __$$_NutritionOrderOralDietNutrientCopyWithImpl<$Res>;
+  factory _$$NutritionOrderOralDietNutrientImplCopyWith(
+          _$NutritionOrderOralDietNutrientImpl value,
+          $Res Function(_$NutritionOrderOralDietNutrientImpl) then) =
+      __$$NutritionOrderOralDietNutrientImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9212,13 +9231,13 @@ abstract class _$$_NutritionOrderOralDietNutrientCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NutritionOrderOralDietNutrientCopyWithImpl<$Res>
+class __$$NutritionOrderOralDietNutrientImplCopyWithImpl<$Res>
     extends _$NutritionOrderOralDietNutrientCopyWithImpl<$Res,
-        _$_NutritionOrderOralDietNutrient>
-    implements _$$_NutritionOrderOralDietNutrientCopyWith<$Res> {
-  __$$_NutritionOrderOralDietNutrientCopyWithImpl(
-      _$_NutritionOrderOralDietNutrient _value,
-      $Res Function(_$_NutritionOrderOralDietNutrient) _then)
+        _$NutritionOrderOralDietNutrientImpl>
+    implements _$$NutritionOrderOralDietNutrientImplCopyWith<$Res> {
+  __$$NutritionOrderOralDietNutrientImplCopyWithImpl(
+      _$NutritionOrderOralDietNutrientImpl _value,
+      $Res Function(_$NutritionOrderOralDietNutrientImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9231,7 +9250,7 @@ class __$$_NutritionOrderOralDietNutrientCopyWithImpl<$Res>
     Object? modifier = freezed,
     Object? amount = freezed,
   }) {
-    return _then(_$_NutritionOrderOralDietNutrient(
+    return _then(_$NutritionOrderOralDietNutrientImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9262,9 +9281,9 @@ class __$$_NutritionOrderOralDietNutrientCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NutritionOrderOralDietNutrient
+class _$NutritionOrderOralDietNutrientImpl
     extends _NutritionOrderOralDietNutrient {
-  const _$_NutritionOrderOralDietNutrient(
+  const _$NutritionOrderOralDietNutrientImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9276,9 +9295,9 @@ class _$_NutritionOrderOralDietNutrient
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_NutritionOrderOralDietNutrient.fromJson(
+  factory _$NutritionOrderOralDietNutrientImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_NutritionOrderOralDietNutrientFromJson(json);
+      _$$NutritionOrderOralDietNutrientImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -9330,7 +9349,7 @@ class _$_NutritionOrderOralDietNutrient
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NutritionOrderOralDietNutrient &&
+            other is _$NutritionOrderOralDietNutrientImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -9357,13 +9376,14 @@ class _$_NutritionOrderOralDietNutrient
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NutritionOrderOralDietNutrientCopyWith<_$_NutritionOrderOralDietNutrient>
-      get copyWith => __$$_NutritionOrderOralDietNutrientCopyWithImpl<
-          _$_NutritionOrderOralDietNutrient>(this, _$identity);
+  _$$NutritionOrderOralDietNutrientImplCopyWith<
+          _$NutritionOrderOralDietNutrientImpl>
+      get copyWith => __$$NutritionOrderOralDietNutrientImplCopyWithImpl<
+          _$NutritionOrderOralDietNutrientImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderOralDietNutrientToJson(
+    return _$$NutritionOrderOralDietNutrientImplToJson(
       this,
     );
   }
@@ -9377,11 +9397,11 @@ abstract class _NutritionOrderOralDietNutrient
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       final CodeableConcept? modifier,
-      final Quantity? amount}) = _$_NutritionOrderOralDietNutrient;
+      final Quantity? amount}) = _$NutritionOrderOralDietNutrientImpl;
   const _NutritionOrderOralDietNutrient._() : super._();
 
   factory _NutritionOrderOralDietNutrient.fromJson(Map<String, dynamic> json) =
-      _$_NutritionOrderOralDietNutrient.fromJson;
+      _$NutritionOrderOralDietNutrientImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -9400,7 +9420,8 @@ abstract class _NutritionOrderOralDietNutrient
   Quantity? get amount;
   @override
   @JsonKey(ignore: true)
-  _$$_NutritionOrderOralDietNutrientCopyWith<_$_NutritionOrderOralDietNutrient>
+  _$$NutritionOrderOralDietNutrientImplCopyWith<
+          _$NutritionOrderOralDietNutrientImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9523,12 +9544,12 @@ class _$NutritionOrderOralDietTextureCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_NutritionOrderOralDietTextureCopyWith<$Res>
+abstract class _$$NutritionOrderOralDietTextureImplCopyWith<$Res>
     implements $NutritionOrderOralDietTextureCopyWith<$Res> {
-  factory _$$_NutritionOrderOralDietTextureCopyWith(
-          _$_NutritionOrderOralDietTexture value,
-          $Res Function(_$_NutritionOrderOralDietTexture) then) =
-      __$$_NutritionOrderOralDietTextureCopyWithImpl<$Res>;
+  factory _$$NutritionOrderOralDietTextureImplCopyWith(
+          _$NutritionOrderOralDietTextureImpl value,
+          $Res Function(_$NutritionOrderOralDietTextureImpl) then) =
+      __$$NutritionOrderOralDietTextureImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9546,13 +9567,13 @@ abstract class _$$_NutritionOrderOralDietTextureCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NutritionOrderOralDietTextureCopyWithImpl<$Res>
+class __$$NutritionOrderOralDietTextureImplCopyWithImpl<$Res>
     extends _$NutritionOrderOralDietTextureCopyWithImpl<$Res,
-        _$_NutritionOrderOralDietTexture>
-    implements _$$_NutritionOrderOralDietTextureCopyWith<$Res> {
-  __$$_NutritionOrderOralDietTextureCopyWithImpl(
-      _$_NutritionOrderOralDietTexture _value,
-      $Res Function(_$_NutritionOrderOralDietTexture) _then)
+        _$NutritionOrderOralDietTextureImpl>
+    implements _$$NutritionOrderOralDietTextureImplCopyWith<$Res> {
+  __$$NutritionOrderOralDietTextureImplCopyWithImpl(
+      _$NutritionOrderOralDietTextureImpl _value,
+      $Res Function(_$NutritionOrderOralDietTextureImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9565,7 +9586,7 @@ class __$$_NutritionOrderOralDietTextureCopyWithImpl<$Res>
     Object? modifier = freezed,
     Object? foodType = freezed,
   }) {
-    return _then(_$_NutritionOrderOralDietTexture(
+    return _then(_$NutritionOrderOralDietTextureImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9596,8 +9617,9 @@ class __$$_NutritionOrderOralDietTextureCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NutritionOrderOralDietTexture extends _NutritionOrderOralDietTexture {
-  const _$_NutritionOrderOralDietTexture(
+class _$NutritionOrderOralDietTextureImpl
+    extends _NutritionOrderOralDietTexture {
+  const _$NutritionOrderOralDietTextureImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9609,9 +9631,9 @@ class _$_NutritionOrderOralDietTexture extends _NutritionOrderOralDietTexture {
         _fhirComments = fhirComments,
         super._();
 
-  factory _$_NutritionOrderOralDietTexture.fromJson(
+  factory _$NutritionOrderOralDietTextureImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_NutritionOrderOralDietTextureFromJson(json);
+      _$$NutritionOrderOralDietTextureImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -9663,7 +9685,7 @@ class _$_NutritionOrderOralDietTexture extends _NutritionOrderOralDietTexture {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NutritionOrderOralDietTexture &&
+            other is _$NutritionOrderOralDietTextureImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -9691,13 +9713,14 @@ class _$_NutritionOrderOralDietTexture extends _NutritionOrderOralDietTexture {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NutritionOrderOralDietTextureCopyWith<_$_NutritionOrderOralDietTexture>
-      get copyWith => __$$_NutritionOrderOralDietTextureCopyWithImpl<
-          _$_NutritionOrderOralDietTexture>(this, _$identity);
+  _$$NutritionOrderOralDietTextureImplCopyWith<
+          _$NutritionOrderOralDietTextureImpl>
+      get copyWith => __$$NutritionOrderOralDietTextureImplCopyWithImpl<
+          _$NutritionOrderOralDietTextureImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderOralDietTextureToJson(
+    return _$$NutritionOrderOralDietTextureImplToJson(
       this,
     );
   }
@@ -9711,11 +9734,11 @@ abstract class _NutritionOrderOralDietTexture
       final List<FhirExtension>? modifierExtension,
       @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
       final CodeableConcept? modifier,
-      final CodeableConcept? foodType}) = _$_NutritionOrderOralDietTexture;
+      final CodeableConcept? foodType}) = _$NutritionOrderOralDietTextureImpl;
   const _NutritionOrderOralDietTexture._() : super._();
 
   factory _NutritionOrderOralDietTexture.fromJson(Map<String, dynamic> json) =
-      _$_NutritionOrderOralDietTexture.fromJson;
+      _$NutritionOrderOralDietTextureImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -9734,7 +9757,8 @@ abstract class _NutritionOrderOralDietTexture
   CodeableConcept? get foodType;
   @override
   @JsonKey(ignore: true)
-  _$$_NutritionOrderOralDietTextureCopyWith<_$_NutritionOrderOralDietTexture>
+  _$$NutritionOrderOralDietTextureImplCopyWith<
+          _$NutritionOrderOralDietTextureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9892,12 +9916,13 @@ class _$NutritionOrderEnteralFormulaAdministrationCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_NutritionOrderEnteralFormulaAdministrationCopyWith<$Res>
+abstract class _$$NutritionOrderEnteralFormulaAdministrationImplCopyWith<$Res>
     implements $NutritionOrderEnteralFormulaAdministrationCopyWith<$Res> {
-  factory _$$_NutritionOrderEnteralFormulaAdministrationCopyWith(
-          _$_NutritionOrderEnteralFormulaAdministration value,
-          $Res Function(_$_NutritionOrderEnteralFormulaAdministration) then) =
-      __$$_NutritionOrderEnteralFormulaAdministrationCopyWithImpl<$Res>;
+  factory _$$NutritionOrderEnteralFormulaAdministrationImplCopyWith(
+          _$NutritionOrderEnteralFormulaAdministrationImpl value,
+          $Res Function(_$NutritionOrderEnteralFormulaAdministrationImpl)
+              then) =
+      __$$NutritionOrderEnteralFormulaAdministrationImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9920,13 +9945,13 @@ abstract class _$$_NutritionOrderEnteralFormulaAdministrationCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_NutritionOrderEnteralFormulaAdministrationCopyWithImpl<$Res>
+class __$$NutritionOrderEnteralFormulaAdministrationImplCopyWithImpl<$Res>
     extends _$NutritionOrderEnteralFormulaAdministrationCopyWithImpl<$Res,
-        _$_NutritionOrderEnteralFormulaAdministration>
-    implements _$$_NutritionOrderEnteralFormulaAdministrationCopyWith<$Res> {
-  __$$_NutritionOrderEnteralFormulaAdministrationCopyWithImpl(
-      _$_NutritionOrderEnteralFormulaAdministration _value,
-      $Res Function(_$_NutritionOrderEnteralFormulaAdministration) _then)
+        _$NutritionOrderEnteralFormulaAdministrationImpl>
+    implements _$$NutritionOrderEnteralFormulaAdministrationImplCopyWith<$Res> {
+  __$$NutritionOrderEnteralFormulaAdministrationImplCopyWithImpl(
+      _$NutritionOrderEnteralFormulaAdministrationImpl _value,
+      $Res Function(_$NutritionOrderEnteralFormulaAdministrationImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9940,7 +9965,7 @@ class __$$_NutritionOrderEnteralFormulaAdministrationCopyWithImpl<$Res>
     Object? rateQuantity = freezed,
     Object? rateRatio = freezed,
   }) {
-    return _then(_$_NutritionOrderEnteralFormulaAdministration(
+    return _then(_$NutritionOrderEnteralFormulaAdministrationImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9975,9 +10000,9 @@ class __$$_NutritionOrderEnteralFormulaAdministrationCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_NutritionOrderEnteralFormulaAdministration
+class _$NutritionOrderEnteralFormulaAdministrationImpl
     extends _NutritionOrderEnteralFormulaAdministration {
-  const _$_NutritionOrderEnteralFormulaAdministration(
+  const _$NutritionOrderEnteralFormulaAdministrationImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9989,9 +10014,9 @@ class _$_NutritionOrderEnteralFormulaAdministration
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_NutritionOrderEnteralFormulaAdministration.fromJson(
+  factory _$NutritionOrderEnteralFormulaAdministrationImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_NutritionOrderEnteralFormulaAdministrationFromJson(json);
+      _$$NutritionOrderEnteralFormulaAdministrationImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -10036,7 +10061,7 @@ class _$_NutritionOrderEnteralFormulaAdministration
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_NutritionOrderEnteralFormulaAdministration &&
+            other is _$NutritionOrderEnteralFormulaAdministrationImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -10067,15 +10092,16 @@ class _$_NutritionOrderEnteralFormulaAdministration
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_NutritionOrderEnteralFormulaAdministrationCopyWith<
-          _$_NutritionOrderEnteralFormulaAdministration>
+  _$$NutritionOrderEnteralFormulaAdministrationImplCopyWith<
+          _$NutritionOrderEnteralFormulaAdministrationImpl>
       get copyWith =>
-          __$$_NutritionOrderEnteralFormulaAdministrationCopyWithImpl<
-              _$_NutritionOrderEnteralFormulaAdministration>(this, _$identity);
+          __$$NutritionOrderEnteralFormulaAdministrationImplCopyWithImpl<
+                  _$NutritionOrderEnteralFormulaAdministrationImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_NutritionOrderEnteralFormulaAdministrationToJson(
+    return _$$NutritionOrderEnteralFormulaAdministrationImplToJson(
       this,
     );
   }
@@ -10084,18 +10110,19 @@ class _$_NutritionOrderEnteralFormulaAdministration
 abstract class _NutritionOrderEnteralFormulaAdministration
     extends NutritionOrderEnteralFormulaAdministration {
   const factory _NutritionOrderEnteralFormulaAdministration(
-      {@JsonKey(name: 'id') final FhirId? fhirId,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final Timing? schedule,
-      final Quantity? quantity,
-      final Quantity? rateQuantity,
-      final Ratio? rateRatio}) = _$_NutritionOrderEnteralFormulaAdministration;
+          {@JsonKey(name: 'id') final FhirId? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final Timing? schedule,
+          final Quantity? quantity,
+          final Quantity? rateQuantity,
+          final Ratio? rateRatio}) =
+      _$NutritionOrderEnteralFormulaAdministrationImpl;
   const _NutritionOrderEnteralFormulaAdministration._() : super._();
 
   factory _NutritionOrderEnteralFormulaAdministration.fromJson(
           Map<String, dynamic> json) =
-      _$_NutritionOrderEnteralFormulaAdministration.fromJson;
+      _$NutritionOrderEnteralFormulaAdministrationImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -10115,8 +10142,8 @@ abstract class _NutritionOrderEnteralFormulaAdministration
   Ratio? get rateRatio;
   @override
   @JsonKey(ignore: true)
-  _$$_NutritionOrderEnteralFormulaAdministrationCopyWith<
-          _$_NutritionOrderEnteralFormulaAdministration>
+  _$$NutritionOrderEnteralFormulaAdministrationImplCopyWith<
+          _$NutritionOrderEnteralFormulaAdministrationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -10319,12 +10346,12 @@ class _$VisionPrescriptionDispenseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_VisionPrescriptionDispenseCopyWith<$Res>
+abstract class _$$VisionPrescriptionDispenseImplCopyWith<$Res>
     implements $VisionPrescriptionDispenseCopyWith<$Res> {
-  factory _$$_VisionPrescriptionDispenseCopyWith(
-          _$_VisionPrescriptionDispense value,
-          $Res Function(_$_VisionPrescriptionDispense) then) =
-      __$$_VisionPrescriptionDispenseCopyWithImpl<$Res>;
+  factory _$$VisionPrescriptionDispenseImplCopyWith(
+          _$VisionPrescriptionDispenseImpl value,
+          $Res Function(_$VisionPrescriptionDispenseImpl) then) =
+      __$$VisionPrescriptionDispenseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -10354,13 +10381,13 @@ abstract class _$$_VisionPrescriptionDispenseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_VisionPrescriptionDispenseCopyWithImpl<$Res>
+class __$$VisionPrescriptionDispenseImplCopyWithImpl<$Res>
     extends _$VisionPrescriptionDispenseCopyWithImpl<$Res,
-        _$_VisionPrescriptionDispense>
-    implements _$$_VisionPrescriptionDispenseCopyWith<$Res> {
-  __$$_VisionPrescriptionDispenseCopyWithImpl(
-      _$_VisionPrescriptionDispense _value,
-      $Res Function(_$_VisionPrescriptionDispense) _then)
+        _$VisionPrescriptionDispenseImpl>
+    implements _$$VisionPrescriptionDispenseImplCopyWith<$Res> {
+  __$$VisionPrescriptionDispenseImplCopyWithImpl(
+      _$VisionPrescriptionDispenseImpl _value,
+      $Res Function(_$VisionPrescriptionDispenseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -10385,7 +10412,7 @@ class __$$_VisionPrescriptionDispenseCopyWithImpl<$Res>
     Object? brand = freezed,
     Object? notes = freezed,
   }) {
-    return _then(_$_VisionPrescriptionDispense(
+    return _then(_$VisionPrescriptionDispenseImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -10464,8 +10491,8 @@ class __$$_VisionPrescriptionDispenseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VisionPrescriptionDispense extends _VisionPrescriptionDispense {
-  const _$_VisionPrescriptionDispense(
+class _$VisionPrescriptionDispenseImpl extends _VisionPrescriptionDispense {
+  const _$VisionPrescriptionDispenseImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -10488,8 +10515,9 @@ class _$_VisionPrescriptionDispense extends _VisionPrescriptionDispense {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_VisionPrescriptionDispense.fromJson(Map<String, dynamic> json) =>
-      _$$_VisionPrescriptionDispenseFromJson(json);
+  factory _$VisionPrescriptionDispenseImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$VisionPrescriptionDispenseImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
@@ -10558,7 +10586,7 @@ class _$_VisionPrescriptionDispense extends _VisionPrescriptionDispense {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VisionPrescriptionDispense &&
+            other is _$VisionPrescriptionDispenseImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -10611,13 +10639,13 @@ class _$_VisionPrescriptionDispense extends _VisionPrescriptionDispense {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VisionPrescriptionDispenseCopyWith<_$_VisionPrescriptionDispense>
-      get copyWith => __$$_VisionPrescriptionDispenseCopyWithImpl<
-          _$_VisionPrescriptionDispense>(this, _$identity);
+  _$$VisionPrescriptionDispenseImplCopyWith<_$VisionPrescriptionDispenseImpl>
+      get copyWith => __$$VisionPrescriptionDispenseImplCopyWithImpl<
+          _$VisionPrescriptionDispenseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VisionPrescriptionDispenseToJson(
+    return _$$VisionPrescriptionDispenseImplToJson(
       this,
     );
   }
@@ -10642,11 +10670,11 @@ abstract class _VisionPrescriptionDispense extends VisionPrescriptionDispense {
       final Quantity? duration,
       final String? color,
       final String? brand,
-      final String? notes}) = _$_VisionPrescriptionDispense;
+      final String? notes}) = _$VisionPrescriptionDispenseImpl;
   const _VisionPrescriptionDispense._() : super._();
 
   factory _VisionPrescriptionDispense.fromJson(Map<String, dynamic> json) =
-      _$_VisionPrescriptionDispense.fromJson;
+      _$VisionPrescriptionDispenseImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
@@ -10690,7 +10718,7 @@ abstract class _VisionPrescriptionDispense extends VisionPrescriptionDispense {
   String? get notes;
   @override
   @JsonKey(ignore: true)
-  _$$_VisionPrescriptionDispenseCopyWith<_$_VisionPrescriptionDispense>
+  _$$VisionPrescriptionDispenseImplCopyWith<_$VisionPrescriptionDispenseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -11026,11 +11054,11 @@ class _$VisionPrescriptionCopyWithImpl<$Res, $Val extends VisionPrescription>
 }
 
 /// @nodoc
-abstract class _$$_VisionPrescriptionCopyWith<$Res>
+abstract class _$$VisionPrescriptionImplCopyWith<$Res>
     implements $VisionPrescriptionCopyWith<$Res> {
-  factory _$$_VisionPrescriptionCopyWith(_$_VisionPrescription value,
-          $Res Function(_$_VisionPrescription) then) =
-      __$$_VisionPrescriptionCopyWithImpl<$Res>;
+  factory _$$VisionPrescriptionImplCopyWith(_$VisionPrescriptionImpl value,
+          $Res Function(_$VisionPrescriptionImpl) then) =
+      __$$VisionPrescriptionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -11080,11 +11108,11 @@ abstract class _$$_VisionPrescriptionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_VisionPrescriptionCopyWithImpl<$Res>
-    extends _$VisionPrescriptionCopyWithImpl<$Res, _$_VisionPrescription>
-    implements _$$_VisionPrescriptionCopyWith<$Res> {
-  __$$_VisionPrescriptionCopyWithImpl(
-      _$_VisionPrescription _value, $Res Function(_$_VisionPrescription) _then)
+class __$$VisionPrescriptionImplCopyWithImpl<$Res>
+    extends _$VisionPrescriptionCopyWithImpl<$Res, _$VisionPrescriptionImpl>
+    implements _$$VisionPrescriptionImplCopyWith<$Res> {
+  __$$VisionPrescriptionImplCopyWithImpl(_$VisionPrescriptionImpl _value,
+      $Res Function(_$VisionPrescriptionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -11112,7 +11140,7 @@ class __$$_VisionPrescriptionCopyWithImpl<$Res>
     Object? reasonReference = freezed,
     Object? dispense = freezed,
   }) {
-    return _then(_$_VisionPrescription(
+    return _then(_$VisionPrescriptionImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -11203,8 +11231,8 @@ class __$$_VisionPrescriptionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_VisionPrescription extends _VisionPrescription {
-  const _$_VisionPrescription(
+class _$VisionPrescriptionImpl extends _VisionPrescription {
+  const _$VisionPrescriptionImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.VisionPrescription)
       this.resourceType = Dstu2ResourceType.VisionPrescription,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -11234,8 +11262,8 @@ class _$_VisionPrescription extends _VisionPrescription {
         _dispense = dispense,
         super._();
 
-  factory _$_VisionPrescription.fromJson(Map<String, dynamic> json) =>
-      _$$_VisionPrescriptionFromJson(json);
+  factory _$VisionPrescriptionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$VisionPrescriptionImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.VisionPrescription)
@@ -11336,7 +11364,7 @@ class _$_VisionPrescription extends _VisionPrescription {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_VisionPrescription &&
+            other is _$VisionPrescriptionImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -11405,13 +11433,13 @@ class _$_VisionPrescription extends _VisionPrescription {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_VisionPrescriptionCopyWith<_$_VisionPrescription> get copyWith =>
-      __$$_VisionPrescriptionCopyWithImpl<_$_VisionPrescription>(
+  _$$VisionPrescriptionImplCopyWith<_$VisionPrescriptionImpl> get copyWith =>
+      __$$VisionPrescriptionImplCopyWithImpl<_$VisionPrescriptionImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_VisionPrescriptionToJson(
+    return _$$VisionPrescriptionImplToJson(
       this,
     );
   }
@@ -11441,11 +11469,11 @@ abstract class _VisionPrescription extends VisionPrescription {
           final CodeableConcept? reasonCodeableConcept,
           final Reference? reasonReference,
           final List<VisionPrescriptionDispense>? dispense}) =
-      _$_VisionPrescription;
+      _$VisionPrescriptionImpl;
   const _VisionPrescription._() : super._();
 
   factory _VisionPrescription.fromJson(Map<String, dynamic> json) =
-      _$_VisionPrescription.fromJson;
+      _$VisionPrescriptionImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.VisionPrescription)
@@ -11498,6 +11526,6 @@ abstract class _VisionPrescription extends VisionPrescription {
   List<VisionPrescriptionDispense>? get dispense;
   @override
   @JsonKey(ignore: true)
-  _$$_VisionPrescriptionCopyWith<_$_VisionPrescription> get copyWith =>
+  _$$VisionPrescriptionImplCopyWith<_$VisionPrescriptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

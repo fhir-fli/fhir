@@ -485,11 +485,11 @@ class _$GuidanceResponseCopyWithImpl<$Res, $Val extends GuidanceResponse>
 }
 
 /// @nodoc
-abstract class _$$_GuidanceResponseCopyWith<$Res>
+abstract class _$$GuidanceResponseImplCopyWith<$Res>
     implements $GuidanceResponseCopyWith<$Res> {
-  factory _$$_GuidanceResponseCopyWith(
-          _$_GuidanceResponse value, $Res Function(_$_GuidanceResponse) then) =
-      __$$_GuidanceResponseCopyWithImpl<$Res>;
+  factory _$$GuidanceResponseImplCopyWith(_$GuidanceResponseImpl value,
+          $Res Function(_$GuidanceResponseImpl) then) =
+      __$$GuidanceResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -560,11 +560,11 @@ abstract class _$$_GuidanceResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_GuidanceResponseCopyWithImpl<$Res>
-    extends _$GuidanceResponseCopyWithImpl<$Res, _$_GuidanceResponse>
-    implements _$$_GuidanceResponseCopyWith<$Res> {
-  __$$_GuidanceResponseCopyWithImpl(
-      _$_GuidanceResponse _value, $Res Function(_$_GuidanceResponse) _then)
+class __$$GuidanceResponseImplCopyWithImpl<$Res>
+    extends _$GuidanceResponseCopyWithImpl<$Res, _$GuidanceResponseImpl>
+    implements _$$GuidanceResponseImplCopyWith<$Res> {
+  __$$GuidanceResponseImplCopyWithImpl(_$GuidanceResponseImpl _value,
+      $Res Function(_$GuidanceResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -601,7 +601,7 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
     Object? result = freezed,
     Object? dataRequirement = freezed,
   }) {
-    return _then(_$_GuidanceResponse(
+    return _then(_$GuidanceResponseImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -728,8 +728,8 @@ class __$$_GuidanceResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_GuidanceResponse extends _GuidanceResponse {
-  const _$_GuidanceResponse(
+class _$GuidanceResponseImpl extends _GuidanceResponse {
+  const _$GuidanceResponseImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
       this.resourceType = Stu3ResourceType.GuidanceResponse,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -769,8 +769,8 @@ class _$_GuidanceResponse extends _GuidanceResponse {
         _dataRequirement = dataRequirement,
         super._();
 
-  factory _$_GuidanceResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_GuidanceResponseFromJson(json);
+  factory _$GuidanceResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$GuidanceResponseImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
@@ -900,7 +900,7 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_GuidanceResponse &&
+            other is _$GuidanceResponseImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -993,12 +993,13 @@ class _$_GuidanceResponse extends _GuidanceResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_GuidanceResponseCopyWith<_$_GuidanceResponse> get copyWith =>
-      __$$_GuidanceResponseCopyWithImpl<_$_GuidanceResponse>(this, _$identity);
+  _$$GuidanceResponseImplCopyWith<_$GuidanceResponseImpl> get copyWith =>
+      __$$GuidanceResponseImplCopyWithImpl<_$GuidanceResponseImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_GuidanceResponseToJson(
+    return _$$GuidanceResponseImplToJson(
       this,
     );
   }
@@ -1037,11 +1038,11 @@ abstract class _GuidanceResponse extends GuidanceResponse {
       final List<Reference>? evaluationMessage,
       final Reference? outputParameters,
       final Reference? result,
-      final List<DataRequirement>? dataRequirement}) = _$_GuidanceResponse;
+      final List<DataRequirement>? dataRequirement}) = _$GuidanceResponseImpl;
   const _GuidanceResponse._() : super._();
 
   factory _GuidanceResponse.fromJson(Map<String, dynamic> json) =
-      _$_GuidanceResponse.fromJson;
+      _$GuidanceResponseImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.GuidanceResponse)
@@ -1114,6 +1115,6 @@ abstract class _GuidanceResponse extends GuidanceResponse {
   List<DataRequirement>? get dataRequirement;
   @override
   @JsonKey(ignore: true)
-  _$$_GuidanceResponseCopyWith<_$_GuidanceResponse> get copyWith =>
+  _$$GuidanceResponseImplCopyWith<_$GuidanceResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

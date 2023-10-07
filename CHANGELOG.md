@@ -3,7 +3,7 @@
 ## [0.11.4]
 
 * updated dependencies
-* added convenience methods for Address, HumanName, Patient
+* added convenience methods for Address, HumanName, ContactPoint to multiple classes to make updating them easier
 
 ## [0.11.3]
 

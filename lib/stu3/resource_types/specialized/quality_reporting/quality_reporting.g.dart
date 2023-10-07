@@ -6,7 +6,8 @@ part of 'quality_reporting.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
+_$MeasureImpl _$$MeasureImplFromJson(Map<String, dynamic> json) =>
+    _$MeasureImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Measure) ??
@@ -190,7 +191,7 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
           .toList(),
     );
 
-Map<String, dynamic> _$$_MeasureToJson(_$_Measure instance) {
+Map<String, dynamic> _$$MeasureImplToJson(_$MeasureImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -414,8 +415,8 @@ const _$MeasureStatusEnumMap = {
   MeasureStatus.unknown: 'unknown',
 };
 
-_$_MeasureGroup _$$_MeasureGroupFromJson(Map<String, dynamic> json) =>
-    _$_MeasureGroup(
+_$MeasureGroupImpl _$$MeasureGroupImplFromJson(Map<String, dynamic> json) =>
+    _$MeasureGroupImpl(
       identifier:
           Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
       name: json['name'] as String?,
@@ -434,7 +435,7 @@ _$_MeasureGroup _$$_MeasureGroupFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_MeasureGroupToJson(_$_MeasureGroup instance) {
+Map<String, dynamic> _$$MeasureGroupImplToJson(_$MeasureGroupImpl instance) {
   final val = <String, dynamic>{
     'identifier': instance.identifier.toJson(),
   };
@@ -456,8 +457,9 @@ Map<String, dynamic> _$$_MeasureGroupToJson(_$_MeasureGroup instance) {
   return val;
 }
 
-_$_MeasurePopulation _$$_MeasurePopulationFromJson(Map<String, dynamic> json) =>
-    _$_MeasurePopulation(
+_$MeasurePopulationImpl _$$MeasurePopulationImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MeasurePopulationImpl(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -478,8 +480,8 @@ _$_MeasurePopulation _$$_MeasurePopulationFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_criteria'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MeasurePopulationToJson(
-    _$_MeasurePopulation instance) {
+Map<String, dynamic> _$$MeasurePopulationImplToJson(
+    _$MeasurePopulationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -499,8 +501,9 @@ Map<String, dynamic> _$$_MeasurePopulationToJson(
   return val;
 }
 
-_$_MeasureStratifier _$$_MeasureStratifierFromJson(Map<String, dynamic> json) =>
-    _$_MeasureStratifier(
+_$MeasureStratifierImpl _$$MeasureStratifierImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MeasureStratifierImpl(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -514,8 +517,8 @@ _$_MeasureStratifier _$$_MeasureStratifierFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MeasureStratifierToJson(
-    _$_MeasureStratifier instance) {
+Map<String, dynamic> _$$MeasureStratifierImplToJson(
+    _$MeasureStratifierImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -532,9 +535,9 @@ Map<String, dynamic> _$$_MeasureStratifierToJson(
   return val;
 }
 
-_$_MeasureSupplementalData _$$_MeasureSupplementalDataFromJson(
+_$MeasureSupplementalDataImpl _$$MeasureSupplementalDataImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MeasureSupplementalData(
+    _$MeasureSupplementalDataImpl(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -551,8 +554,8 @@ _$_MeasureSupplementalData _$$_MeasureSupplementalDataFromJson(
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MeasureSupplementalDataToJson(
-    _$_MeasureSupplementalData instance) {
+Map<String, dynamic> _$$MeasureSupplementalDataImplToJson(
+    _$MeasureSupplementalDataImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -570,8 +573,8 @@ Map<String, dynamic> _$$_MeasureSupplementalDataToJson(
   return val;
 }
 
-_$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
-    _$_MeasureReport(
+_$MeasureReportImpl _$$MeasureReportImplFromJson(Map<String, dynamic> json) =>
+    _$MeasureReportImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.MeasureReport) ??
@@ -637,7 +640,7 @@ _$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
               json['evaluatedResources'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MeasureReportToJson(_$_MeasureReport instance) {
+Map<String, dynamic> _$$MeasureReportImplToJson(_$MeasureReportImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -692,9 +695,9 @@ const _$MeasureReportTypeEnumMap = {
   MeasureReportType.unknown: 'unknown',
 };
 
-_$_MeasureReportGroup _$$_MeasureReportGroupFromJson(
+_$MeasureReportGroupImpl _$$MeasureReportGroupImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MeasureReportGroup(
+    _$MeasureReportGroupImpl(
       identifier:
           Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
       population: (json['population'] as List<dynamic>?)
@@ -713,8 +716,8 @@ _$_MeasureReportGroup _$$_MeasureReportGroupFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_MeasureReportGroupToJson(
-    _$_MeasureReportGroup instance) {
+Map<String, dynamic> _$$MeasureReportGroupImplToJson(
+    _$MeasureReportGroupImpl instance) {
   final val = <String, dynamic>{
     'identifier': instance.identifier.toJson(),
   };
@@ -734,9 +737,9 @@ Map<String, dynamic> _$$_MeasureReportGroupToJson(
   return val;
 }
 
-_$_MeasureReportPopulation _$$_MeasureReportPopulationFromJson(
+_$MeasureReportPopulationImpl _$$MeasureReportPopulationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MeasureReportPopulation(
+    _$MeasureReportPopulationImpl(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -752,8 +755,8 @@ _$_MeasureReportPopulation _$$_MeasureReportPopulationFromJson(
           : Reference.fromJson(json['patients'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MeasureReportPopulationToJson(
-    _$_MeasureReportPopulation instance) {
+Map<String, dynamic> _$$MeasureReportPopulationImplToJson(
+    _$MeasureReportPopulationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -770,9 +773,9 @@ Map<String, dynamic> _$$_MeasureReportPopulationToJson(
   return val;
 }
 
-_$_MeasureReportStratifier _$$_MeasureReportStratifierFromJson(
+_$MeasureReportStratifierImpl _$$MeasureReportStratifierImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MeasureReportStratifier(
+    _$MeasureReportStratifierImpl(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -781,8 +784,8 @@ _$_MeasureReportStratifier _$$_MeasureReportStratifierFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_MeasureReportStratifierToJson(
-    _$_MeasureReportStratifier instance) {
+Map<String, dynamic> _$$MeasureReportStratifierImplToJson(
+    _$MeasureReportStratifierImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -796,9 +799,9 @@ Map<String, dynamic> _$$_MeasureReportStratifierToJson(
   return val;
 }
 
-_$_MeasureReportStratum _$$_MeasureReportStratumFromJson(
+_$MeasureReportStratumImpl _$$MeasureReportStratumImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MeasureReportStratum(
+    _$MeasureReportStratumImpl(
       value: json['value'] as String?,
       valueElement: json['_value'] == null
           ? null
@@ -815,8 +818,8 @@ _$_MeasureReportStratum _$$_MeasureReportStratumFromJson(
           : Element.fromJson(json['_measureScore'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MeasureReportStratumToJson(
-    _$_MeasureReportStratum instance) {
+Map<String, dynamic> _$$MeasureReportStratumImplToJson(
+    _$MeasureReportStratumImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -834,9 +837,9 @@ Map<String, dynamic> _$$_MeasureReportStratumToJson(
   return val;
 }
 
-_$_MeasureReportPopulation1 _$$_MeasureReportPopulation1FromJson(
+_$MeasureReportPopulation1Impl _$$MeasureReportPopulation1ImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MeasureReportPopulation1(
+    _$MeasureReportPopulation1Impl(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -852,8 +855,8 @@ _$_MeasureReportPopulation1 _$$_MeasureReportPopulation1FromJson(
           : Reference.fromJson(json['patients'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MeasureReportPopulation1ToJson(
-    _$_MeasureReportPopulation1 instance) {
+Map<String, dynamic> _$$MeasureReportPopulation1ImplToJson(
+    _$MeasureReportPopulation1Impl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

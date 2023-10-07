@@ -6,8 +6,8 @@ part of 'workflow.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
-    _$_Appointment(
+_$AppointmentImpl _$$AppointmentImplFromJson(Map<String, dynamic> json) =>
+    _$AppointmentImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Appointment) ??
@@ -117,7 +117,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
+Map<String, dynamic> _$$AppointmentImplToJson(_$AppointmentImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -311,9 +311,9 @@ const _$AppointmentStatusEnumMap = {
   AppointmentStatus.unknown: 'unknown',
 };
 
-_$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
+_$AppointmentParticipantImpl _$$AppointmentParticipantImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AppointmentParticipant(
+    _$AppointmentParticipantImpl(
       type: (json['type'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -332,8 +332,8 @@ _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AppointmentParticipantToJson(
-    _$_AppointmentParticipant instance) {
+Map<String, dynamic> _$$AppointmentParticipantImplToJson(
+    _$AppointmentParticipantImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -368,9 +368,9 @@ const _$AppointmentParticipantStatusEnumMap = {
   AppointmentParticipantStatus.unknown: 'unknown',
 };
 
-_$_AppointmentResponse _$$_AppointmentResponseFromJson(
+_$AppointmentResponseImpl _$$AppointmentResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AppointmentResponse(
+    _$AppointmentResponseImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.AppointmentResponse) ??
@@ -433,8 +433,8 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AppointmentResponseToJson(
-    _$_AppointmentResponse instance) {
+Map<String, dynamic> _$$AppointmentResponseImplToJson(
+    _$AppointmentResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -476,8 +476,8 @@ Map<String, dynamic> _$$_AppointmentResponseToJson(
   return val;
 }
 
-_$_ProcessRequest _$$_ProcessRequestFromJson(Map<String, dynamic> json) =>
-    _$_ProcessRequest(
+_$ProcessRequestImpl _$$ProcessRequestImplFromJson(Map<String, dynamic> json) =>
+    _$ProcessRequestImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ProcessRequest) ??
@@ -571,7 +571,8 @@ _$_ProcessRequest _$$_ProcessRequestFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ProcessRequestToJson(_$_ProcessRequest instance) {
+Map<String, dynamic> _$$ProcessRequestImplToJson(
+    _$ProcessRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -631,9 +632,9 @@ const _$ProcessRequestActionEnumMap = {
   ProcessRequestAction.unknown: 'unknown',
 };
 
-_$_ProcessRequestItem _$$_ProcessRequestItemFromJson(
+_$ProcessRequestItemImpl _$$ProcessRequestItemImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ProcessRequestItem(
+    _$ProcessRequestItemImpl(
       sequenceLinkId: json['sequenceLinkId'] == null
           ? null
           : FhirId.fromJson(json['sequenceLinkId']),
@@ -642,8 +643,8 @@ _$_ProcessRequestItem _$$_ProcessRequestItemFromJson(
           : Element.fromJson(json['_sequenceLinkId'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ProcessRequestItemToJson(
-    _$_ProcessRequestItem instance) {
+Map<String, dynamic> _$$ProcessRequestItemImplToJson(
+    _$ProcessRequestItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -657,8 +658,9 @@ Map<String, dynamic> _$$_ProcessRequestItemToJson(
   return val;
 }
 
-_$_ProcessResponse _$$_ProcessResponseFromJson(Map<String, dynamic> json) =>
-    _$_ProcessResponse(
+_$ProcessResponseImpl _$$ProcessResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ProcessResponseImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ProcessResponse) ??
@@ -737,7 +739,8 @@ _$_ProcessResponse _$$_ProcessResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ProcessResponseToJson(_$_ProcessResponse instance) {
+Map<String, dynamic> _$$ProcessResponseImplToJson(
+    _$ProcessResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -783,9 +786,9 @@ Map<String, dynamic> _$$_ProcessResponseToJson(_$_ProcessResponse instance) {
   return val;
 }
 
-_$_ProcessResponseProcessNote _$$_ProcessResponseProcessNoteFromJson(
+_$ProcessResponseProcessNoteImpl _$$ProcessResponseProcessNoteImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ProcessResponseProcessNote(
+    _$ProcessResponseProcessNoteImpl(
       type: json['type'] == null
           ? null
           : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -795,8 +798,8 @@ _$_ProcessResponseProcessNote _$$_ProcessResponseProcessNoteFromJson(
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ProcessResponseProcessNoteToJson(
-    _$_ProcessResponseProcessNote instance) {
+Map<String, dynamic> _$$ProcessResponseProcessNoteImplToJson(
+    _$ProcessResponseProcessNoteImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -811,8 +814,8 @@ Map<String, dynamic> _$$_ProcessResponseProcessNoteToJson(
   return val;
 }
 
-_$_RequestGroup _$$_RequestGroupFromJson(Map<String, dynamic> json) =>
-    _$_RequestGroup(
+_$RequestGroupImpl _$$RequestGroupImplFromJson(Map<String, dynamic> json) =>
+    _$RequestGroupImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.RequestGroup) ??
@@ -901,7 +904,7 @@ _$_RequestGroup _$$_RequestGroupFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_RequestGroupToJson(_$_RequestGroup instance) {
+Map<String, dynamic> _$$RequestGroupImplToJson(_$RequestGroupImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -951,9 +954,9 @@ Map<String, dynamic> _$$_RequestGroupToJson(_$_RequestGroup instance) {
   return val;
 }
 
-_$_RequestGroupAction _$$_RequestGroupActionFromJson(
+_$RequestGroupActionImpl _$$RequestGroupActionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_RequestGroupAction(
+    _$RequestGroupActionImpl(
       label: json['label'] as String?,
       labelElement: json['_label'] == null
           ? null
@@ -1039,8 +1042,8 @@ _$_RequestGroupAction _$$_RequestGroupActionFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_RequestGroupActionToJson(
-    _$_RequestGroupAction instance) {
+Map<String, dynamic> _$$RequestGroupActionImplToJson(
+    _$RequestGroupActionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1090,9 +1093,9 @@ Map<String, dynamic> _$$_RequestGroupActionToJson(
   return val;
 }
 
-_$_RequestGroupCondition _$$_RequestGroupConditionFromJson(
+_$RequestGroupConditionImpl _$$RequestGroupConditionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_RequestGroupCondition(
+    _$RequestGroupConditionImpl(
       kind: json['kind'] as String?,
       kindElement: json['_kind'] == null
           ? null
@@ -1111,8 +1114,8 @@ _$_RequestGroupCondition _$$_RequestGroupConditionFromJson(
           : Element.fromJson(json['_expression'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_RequestGroupConditionToJson(
-    _$_RequestGroupCondition instance) {
+Map<String, dynamic> _$$RequestGroupConditionImplToJson(
+    _$RequestGroupConditionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1132,9 +1135,9 @@ Map<String, dynamic> _$$_RequestGroupConditionToJson(
   return val;
 }
 
-_$_RequestGroupRelatedAction _$$_RequestGroupRelatedActionFromJson(
+_$RequestGroupRelatedActionImpl _$$RequestGroupRelatedActionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_RequestGroupRelatedAction(
+    _$RequestGroupRelatedActionImpl(
       actionId:
           json['actionId'] == null ? null : FhirId.fromJson(json['actionId']),
       actionIdElement: json['_actionId'] == null
@@ -1153,8 +1156,8 @@ _$_RequestGroupRelatedAction _$$_RequestGroupRelatedActionFromJson(
           : Range.fromJson(json['offsetRange'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_RequestGroupRelatedActionToJson(
-    _$_RequestGroupRelatedAction instance) {
+Map<String, dynamic> _$$RequestGroupRelatedActionImplToJson(
+    _$RequestGroupRelatedActionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1172,7 +1175,8 @@ Map<String, dynamic> _$$_RequestGroupRelatedActionToJson(
   return val;
 }
 
-_$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
+_$ScheduleImpl _$$ScheduleImplFromJson(Map<String, dynamic> json) =>
+    _$ScheduleImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Schedule) ??
@@ -1235,7 +1239,7 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
+Map<String, dynamic> _$$ScheduleImplToJson(_$ScheduleImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1275,7 +1279,7 @@ Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
   return val;
 }
 
-_$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
+_$SlotImpl _$$SlotImplFromJson(Map<String, dynamic> json) => _$SlotImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Slot) ??
@@ -1350,7 +1354,7 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SlotToJson(_$_Slot instance) {
+Map<String, dynamic> _$$SlotImplToJson(_$SlotImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1405,7 +1409,7 @@ const _$SlotStatusEnumMap = {
   SlotStatus.unknown: 'unknown',
 };
 
-_$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
+_$TaskImpl _$$TaskImplFromJson(Map<String, dynamic> json) => _$TaskImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Task) ??
@@ -1536,7 +1540,7 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
           .toList(),
     );
 
-Map<String, dynamic> _$$_TaskToJson(_$_Task instance) {
+Map<String, dynamic> _$$TaskImplToJson(_$TaskImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1617,15 +1621,15 @@ const _$TaskStatusEnumMap = {
   TaskStatus.unknown: 'unknown',
 };
 
-_$_TaskRequester _$$_TaskRequesterFromJson(Map<String, dynamic> json) =>
-    _$_TaskRequester(
+_$TaskRequesterImpl _$$TaskRequesterImplFromJson(Map<String, dynamic> json) =>
+    _$TaskRequesterImpl(
       agent: Reference.fromJson(json['agent'] as Map<String, dynamic>),
       onBehalfOf: json['onBehalfOf'] == null
           ? null
           : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TaskRequesterToJson(_$_TaskRequester instance) {
+Map<String, dynamic> _$$TaskRequesterImplToJson(_$TaskRequesterImpl instance) {
   final val = <String, dynamic>{
     'agent': instance.agent.toJson(),
   };
@@ -1640,8 +1644,9 @@ Map<String, dynamic> _$$_TaskRequesterToJson(_$_TaskRequester instance) {
   return val;
 }
 
-_$_TaskRestriction _$$_TaskRestrictionFromJson(Map<String, dynamic> json) =>
-    _$_TaskRestriction(
+_$TaskRestrictionImpl _$$TaskRestrictionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TaskRestrictionImpl(
       repetitions: json['repetitions'] == null
           ? null
           : FhirDecimal.fromJson(json['repetitions']),
@@ -1656,7 +1661,8 @@ _$_TaskRestriction _$$_TaskRestrictionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_TaskRestrictionToJson(_$_TaskRestriction instance) {
+Map<String, dynamic> _$$TaskRestrictionImplToJson(
+    _$TaskRestrictionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1673,7 +1679,8 @@ Map<String, dynamic> _$$_TaskRestrictionToJson(_$_TaskRestriction instance) {
   return val;
 }
 
-_$_TaskInput _$$_TaskInputFromJson(Map<String, dynamic> json) => _$_TaskInput(
+_$TaskInputImpl _$$TaskInputImplFromJson(Map<String, dynamic> json) =>
+    _$TaskInputImpl(
       type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       valueBoolean: json['valueBoolean'] == null
           ? null
@@ -1893,7 +1900,7 @@ _$_TaskInput _$$_TaskInputFromJson(Map<String, dynamic> json) => _$_TaskInput(
               json['valueTriggerDefinition'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TaskInputToJson(_$_TaskInput instance) {
+Map<String, dynamic> _$$TaskInputImplToJson(_$TaskInputImpl instance) {
   final val = <String, dynamic>{
     'type': instance.type.toJson(),
   };
@@ -1981,8 +1988,8 @@ Map<String, dynamic> _$$_TaskInputToJson(_$_TaskInput instance) {
   return val;
 }
 
-_$_TaskOutput _$$_TaskOutputFromJson(Map<String, dynamic> json) =>
-    _$_TaskOutput(
+_$TaskOutputImpl _$$TaskOutputImplFromJson(Map<String, dynamic> json) =>
+    _$TaskOutputImpl(
       type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       valueBoolean: json['valueBoolean'] == null
           ? null
@@ -2202,7 +2209,7 @@ _$_TaskOutput _$$_TaskOutputFromJson(Map<String, dynamic> json) =>
               json['valueTriggerDefinition'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TaskOutputToJson(_$_TaskOutput instance) {
+Map<String, dynamic> _$$TaskOutputImplToJson(_$TaskOutputImpl instance) {
   final val = <String, dynamic>{
     'type': instance.type.toJson(),
   };

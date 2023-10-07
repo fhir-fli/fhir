@@ -6,8 +6,8 @@ part of 'payment.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
-    _$_PaymentNotice(
+_$PaymentNoticeImpl _$$PaymentNoticeImplFromJson(Map<String, dynamic> json) =>
+    _$PaymentNoticeImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.PaymentNotice) ??
@@ -82,7 +82,7 @@ _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
               json['paymentStatus'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
+Map<String, dynamic> _$$PaymentNoticeImplToJson(_$PaymentNoticeImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -288,9 +288,9 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
+_$PaymentReconciliationImpl _$$PaymentReconciliationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PaymentReconciliation(
+    _$PaymentReconciliationImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.PaymentReconciliation) ??
@@ -428,8 +428,8 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_PaymentReconciliationToJson(
-    _$_PaymentReconciliation instance) {
+Map<String, dynamic> _$$PaymentReconciliationImplToJson(
+    _$PaymentReconciliationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -499,72 +499,74 @@ Map<String, dynamic> _$$_PaymentReconciliationToJson(
   return val;
 }
 
-_$_PaymentReconciliationAllocation _$$_PaymentReconciliationAllocationFromJson(
-        Map<String, dynamic> json) =>
-    _$_PaymentReconciliationAllocation(
-      fhirId: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      identifier: json['identifier'] == null
-          ? null
-          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      predecessor: json['predecessor'] == null
-          ? null
-          : Identifier.fromJson(json['predecessor'] as Map<String, dynamic>),
-      target: json['target'] == null
-          ? null
-          : Reference.fromJson(json['target'] as Map<String, dynamic>),
-      targetItemString: json['targetItemString'] as String?,
-      targetItemStringElement: json['_targetItemString'] == null
-          ? null
-          : Element.fromJson(json['_targetItemString'] as Map<String, dynamic>),
-      targetItemIdentifier: json['targetItemIdentifier'] == null
-          ? null
-          : Identifier.fromJson(
-              json['targetItemIdentifier'] as Map<String, dynamic>),
-      targetItemPositiveInt: json['targetItemPositiveInt'] == null
-          ? null
-          : FhirPositiveInt.fromJson(json['targetItemPositiveInt']),
-      targetItemPositiveIntElement: json['_targetItemPositiveInt'] == null
-          ? null
-          : Element.fromJson(
-              json['_targetItemPositiveInt'] as Map<String, dynamic>),
-      encounter: json['encounter'] == null
-          ? null
-          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      account: json['account'] == null
-          ? null
-          : Reference.fromJson(json['account'] as Map<String, dynamic>),
-      type: json['type'] == null
-          ? null
-          : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      submitter: json['submitter'] == null
-          ? null
-          : Reference.fromJson(json['submitter'] as Map<String, dynamic>),
-      response: json['response'] == null
-          ? null
-          : Reference.fromJson(json['response'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
-      dateElement: json['_date'] == null
-          ? null
-          : Element.fromJson(json['_date'] as Map<String, dynamic>),
-      responsible: json['responsible'] == null
-          ? null
-          : Reference.fromJson(json['responsible'] as Map<String, dynamic>),
-      payee: json['payee'] == null
-          ? null
-          : Reference.fromJson(json['payee'] as Map<String, dynamic>),
-      amount: json['amount'] == null
-          ? null
-          : Money.fromJson(json['amount'] as Map<String, dynamic>),
-    );
+_$PaymentReconciliationAllocationImpl
+    _$$PaymentReconciliationAllocationImplFromJson(Map<String, dynamic> json) =>
+        _$PaymentReconciliationAllocationImpl(
+          fhirId: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          identifier: json['identifier'] == null
+              ? null
+              : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+          predecessor: json['predecessor'] == null
+              ? null
+              : Identifier.fromJson(
+                  json['predecessor'] as Map<String, dynamic>),
+          target: json['target'] == null
+              ? null
+              : Reference.fromJson(json['target'] as Map<String, dynamic>),
+          targetItemString: json['targetItemString'] as String?,
+          targetItemStringElement: json['_targetItemString'] == null
+              ? null
+              : Element.fromJson(
+                  json['_targetItemString'] as Map<String, dynamic>),
+          targetItemIdentifier: json['targetItemIdentifier'] == null
+              ? null
+              : Identifier.fromJson(
+                  json['targetItemIdentifier'] as Map<String, dynamic>),
+          targetItemPositiveInt: json['targetItemPositiveInt'] == null
+              ? null
+              : FhirPositiveInt.fromJson(json['targetItemPositiveInt']),
+          targetItemPositiveIntElement: json['_targetItemPositiveInt'] == null
+              ? null
+              : Element.fromJson(
+                  json['_targetItemPositiveInt'] as Map<String, dynamic>),
+          encounter: json['encounter'] == null
+              ? null
+              : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
+          account: json['account'] == null
+              ? null
+              : Reference.fromJson(json['account'] as Map<String, dynamic>),
+          type: json['type'] == null
+              ? null
+              : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+          submitter: json['submitter'] == null
+              ? null
+              : Reference.fromJson(json['submitter'] as Map<String, dynamic>),
+          response: json['response'] == null
+              ? null
+              : Reference.fromJson(json['response'] as Map<String, dynamic>),
+          date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+          dateElement: json['_date'] == null
+              ? null
+              : Element.fromJson(json['_date'] as Map<String, dynamic>),
+          responsible: json['responsible'] == null
+              ? null
+              : Reference.fromJson(json['responsible'] as Map<String, dynamic>),
+          payee: json['payee'] == null
+              ? null
+              : Reference.fromJson(json['payee'] as Map<String, dynamic>),
+          amount: json['amount'] == null
+              ? null
+              : Money.fromJson(json['amount'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_PaymentReconciliationAllocationToJson(
-    _$_PaymentReconciliationAllocation instance) {
+Map<String, dynamic> _$$PaymentReconciliationAllocationImplToJson(
+    _$PaymentReconciliationAllocationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -601,9 +603,10 @@ Map<String, dynamic> _$$_PaymentReconciliationAllocationToJson(
   return val;
 }
 
-_$_PaymentReconciliationProcessNote
-    _$$_PaymentReconciliationProcessNoteFromJson(Map<String, dynamic> json) =>
-        _$_PaymentReconciliationProcessNote(
+_$PaymentReconciliationProcessNoteImpl
+    _$$PaymentReconciliationProcessNoteImplFromJson(
+            Map<String, dynamic> json) =>
+        _$PaymentReconciliationProcessNoteImpl(
           fhirId: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -621,8 +624,8 @@ _$_PaymentReconciliationProcessNote
               : Element.fromJson(json['_text'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_PaymentReconciliationProcessNoteToJson(
-    _$_PaymentReconciliationProcessNote instance) {
+Map<String, dynamic> _$$PaymentReconciliationProcessNoteImplToJson(
+    _$PaymentReconciliationProcessNoteImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

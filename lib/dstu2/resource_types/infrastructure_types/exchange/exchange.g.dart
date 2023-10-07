@@ -6,8 +6,8 @@ part of 'exchange.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_MessageHeader _$$_MessageHeaderFromJson(Map<String, dynamic> json) =>
-    _$_MessageHeader(
+_$MessageHeaderImpl _$$MessageHeaderImplFromJson(Map<String, dynamic> json) =>
+    _$MessageHeaderImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.MessageHeader) ??
@@ -72,7 +72,7 @@ _$_MessageHeader _$$_MessageHeaderFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_MessageHeaderToJson(_$_MessageHeader instance) {
+Map<String, dynamic> _$$MessageHeaderImplToJson(_$MessageHeaderImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -209,9 +209,9 @@ const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_MessageHeaderResponse _$$_MessageHeaderResponseFromJson(
+_$MessageHeaderResponseImpl _$$MessageHeaderResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MessageHeaderResponse(
+    _$MessageHeaderResponseImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -233,8 +233,8 @@ _$_MessageHeaderResponse _$$_MessageHeaderResponseFromJson(
           : Reference.fromJson(json['details'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MessageHeaderResponseToJson(
-    _$_MessageHeaderResponse instance) {
+Map<String, dynamic> _$$MessageHeaderResponseImplToJson(
+    _$MessageHeaderResponseImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -263,9 +263,9 @@ const _$ResponseCodeEnumMap = {
   ResponseCode.unknown: 'unknown',
 };
 
-_$_MessageHeaderSource _$$_MessageHeaderSourceFromJson(
+_$MessageHeaderSourceImpl _$$MessageHeaderSourceImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MessageHeaderSource(
+    _$MessageHeaderSourceImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -294,8 +294,8 @@ _$_MessageHeaderSource _$$_MessageHeaderSourceFromJson(
           : Element.fromJson(json['_endpoint'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MessageHeaderSourceToJson(
-    _$_MessageHeaderSource instance) {
+Map<String, dynamic> _$$MessageHeaderSourceImplToJson(
+    _$MessageHeaderSourceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -321,9 +321,9 @@ Map<String, dynamic> _$$_MessageHeaderSourceToJson(
   return val;
 }
 
-_$_MessageHeaderDestination _$$_MessageHeaderDestinationFromJson(
+_$MessageHeaderDestinationImpl _$$MessageHeaderDestinationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_MessageHeaderDestination(
+    _$MessageHeaderDestinationImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -344,8 +344,8 @@ _$_MessageHeaderDestination _$$_MessageHeaderDestinationFromJson(
           : Element.fromJson(json['_endpoint'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MessageHeaderDestinationToJson(
-    _$_MessageHeaderDestination instance) {
+Map<String, dynamic> _$$MessageHeaderDestinationImplToJson(
+    _$MessageHeaderDestinationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -367,8 +367,9 @@ Map<String, dynamic> _$$_MessageHeaderDestinationToJson(
   return val;
 }
 
-_$_OperationOutcome _$$_OperationOutcomeFromJson(Map<String, dynamic> json) =>
-    _$_OperationOutcome(
+_$OperationOutcomeImpl _$$OperationOutcomeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$OperationOutcomeImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.OperationOutcome) ??
@@ -409,7 +410,8 @@ _$_OperationOutcome _$$_OperationOutcomeFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_OperationOutcomeToJson(_$_OperationOutcome instance) {
+Map<String, dynamic> _$$OperationOutcomeImplToJson(
+    _$OperationOutcomeImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -438,9 +440,9 @@ Map<String, dynamic> _$$_OperationOutcomeToJson(_$_OperationOutcome instance) {
   return val;
 }
 
-_$_OperationOutcomeIssue _$$_OperationOutcomeIssueFromJson(
+_$OperationOutcomeIssueImpl _$$OperationOutcomeIssueImplFromJson(
         Map<String, dynamic> json) =>
-    _$_OperationOutcomeIssue(
+    _$OperationOutcomeIssueImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -460,8 +462,8 @@ _$_OperationOutcomeIssue _$$_OperationOutcomeIssueFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_OperationOutcomeIssueToJson(
-    _$_OperationOutcomeIssue instance) {
+Map<String, dynamic> _$$OperationOutcomeIssueImplToJson(
+    _$OperationOutcomeIssueImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -491,8 +493,8 @@ const _$IssueSeverityEnumMap = {
   IssueSeverity.unknown: 'unknown',
 };
 
-_$_Parameters _$$_ParametersFromJson(Map<String, dynamic> json) =>
-    _$_Parameters(
+_$ParametersImpl _$$ParametersImplFromJson(Map<String, dynamic> json) =>
+    _$ParametersImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Parameters) ??
@@ -530,7 +532,7 @@ _$_Parameters _$$_ParametersFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ParametersToJson(_$_Parameters instance) {
+Map<String, dynamic> _$$ParametersImplToJson(_$ParametersImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -559,9 +561,9 @@ Map<String, dynamic> _$$_ParametersToJson(_$_Parameters instance) {
   return val;
 }
 
-_$_ParametersParameter _$$_ParametersParameterFromJson(
+_$ParametersParameterImpl _$$ParametersParameterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ParametersParameter(
+    _$ParametersParameterImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -682,8 +684,8 @@ _$_ParametersParameter _$$_ParametersParameterFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ParametersParameterToJson(
-    _$_ParametersParameter instance) {
+Map<String, dynamic> _$$ParametersParameterImplToJson(
+    _$ParametersParameterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -738,8 +740,8 @@ Map<String, dynamic> _$$_ParametersParameterToJson(
   return val;
 }
 
-_$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
-    _$_Subscription(
+_$SubscriptionImpl _$$SubscriptionImplFromJson(Map<String, dynamic> json) =>
+    _$SubscriptionImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Subscription) ??
@@ -803,7 +805,7 @@ _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_SubscriptionToJson(_$_Subscription instance) {
+Map<String, dynamic> _$$SubscriptionImplToJson(_$SubscriptionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -851,9 +853,9 @@ const _$SubscriptionStatusEnumMap = {
   SubscriptionStatus.unknown: 'unknown',
 };
 
-_$_SubscriptionChannel _$$_SubscriptionChannelFromJson(
+_$SubscriptionChannelImpl _$$SubscriptionChannelImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SubscriptionChannel(
+    _$SubscriptionChannelImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -882,8 +884,8 @@ _$_SubscriptionChannel _$$_SubscriptionChannelFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_SubscriptionChannelToJson(
-    _$_SubscriptionChannel instance) {
+Map<String, dynamic> _$$SubscriptionChannelImplToJson(
+    _$SubscriptionChannelImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

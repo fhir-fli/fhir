@@ -6,7 +6,8 @@ part of 'general.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
+_$AccountImpl _$$AccountImplFromJson(Map<String, dynamic> json) =>
+    _$AccountImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Account) ??
@@ -80,7 +81,7 @@ _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
           .toList(),
     );
 
-Map<String, dynamic> _$$_AccountToJson(_$_Account instance) {
+Map<String, dynamic> _$$AccountImplToJson(_$AccountImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -251,8 +252,9 @@ const _$AccountStatusEnumMap = {
   AccountStatus.unknown: 'unknown',
 };
 
-_$_AccountCoverage _$$_AccountCoverageFromJson(Map<String, dynamic> json) =>
-    _$_AccountCoverage(
+_$AccountCoverageImpl _$$AccountCoverageImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AccountCoverageImpl(
       coverage: Reference.fromJson(json['coverage'] as Map<String, dynamic>),
       priority: json['priority'] == null
           ? null
@@ -262,7 +264,8 @@ _$_AccountCoverage _$$_AccountCoverageFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_priority'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AccountCoverageToJson(_$_AccountCoverage instance) {
+Map<String, dynamic> _$$AccountCoverageImplToJson(
+    _$AccountCoverageImpl instance) {
   final val = <String, dynamic>{
     'coverage': instance.coverage.toJson(),
   };
@@ -278,8 +281,9 @@ Map<String, dynamic> _$$_AccountCoverageToJson(_$_AccountCoverage instance) {
   return val;
 }
 
-_$_AccountGuarantor _$$_AccountGuarantorFromJson(Map<String, dynamic> json) =>
-    _$_AccountGuarantor(
+_$AccountGuarantorImpl _$$AccountGuarantorImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AccountGuarantorImpl(
       party: Reference.fromJson(json['party'] as Map<String, dynamic>),
       onHold:
           json['onHold'] == null ? null : FhirBoolean.fromJson(json['onHold']),
@@ -291,7 +295,8 @@ _$_AccountGuarantor _$$_AccountGuarantorFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AccountGuarantorToJson(_$_AccountGuarantor instance) {
+Map<String, dynamic> _$$AccountGuarantorImplToJson(
+    _$AccountGuarantorImpl instance) {
   final val = <String, dynamic>{
     'party': instance.party.toJson(),
   };
@@ -308,8 +313,8 @@ Map<String, dynamic> _$$_AccountGuarantorToJson(_$_AccountGuarantor instance) {
   return val;
 }
 
-_$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
-    _$_ChargeItem(
+_$ChargeItemImpl _$$ChargeItemImplFromJson(Map<String, dynamic> json) =>
+    _$ChargeItemImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ChargeItem) ??
@@ -434,7 +439,7 @@ _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ChargeItemToJson(_$_ChargeItem instance) {
+Map<String, dynamic> _$$ChargeItemImplToJson(_$ChargeItemImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -508,17 +513,17 @@ const _$ChargeItemStatusEnumMap = {
   ChargeItemStatus.unknown: 'unknown',
 };
 
-_$_ChargeItemParticipant _$$_ChargeItemParticipantFromJson(
+_$ChargeItemParticipantImpl _$$ChargeItemParticipantImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ChargeItemParticipant(
+    _$ChargeItemParticipantImpl(
       role: json['role'] == null
           ? null
           : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
       actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ChargeItemParticipantToJson(
-    _$_ChargeItemParticipant instance) {
+Map<String, dynamic> _$$ChargeItemParticipantImplToJson(
+    _$ChargeItemParticipantImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -532,7 +537,8 @@ Map<String, dynamic> _$$_ChargeItemParticipantToJson(
   return val;
 }
 
-_$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
+_$ContractImpl _$$ContractImplFromJson(Map<String, dynamic> json) =>
+    _$ContractImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Contract) ??
@@ -645,7 +651,7 @@ _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ContractToJson(_$_Contract instance) {
+Map<String, dynamic> _$$ContractImplToJson(_$ContractImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -702,15 +708,15 @@ Map<String, dynamic> _$$_ContractToJson(_$_Contract instance) {
   return val;
 }
 
-_$_ContractAgent _$$_ContractAgentFromJson(Map<String, dynamic> json) =>
-    _$_ContractAgent(
+_$ContractAgentImpl _$$ContractAgentImplFromJson(Map<String, dynamic> json) =>
+    _$ContractAgentImpl(
       actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
       role: (json['role'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_ContractAgentToJson(_$_ContractAgent instance) {
+Map<String, dynamic> _$$ContractAgentImplToJson(_$ContractAgentImpl instance) {
   final val = <String, dynamic>{
     'actor': instance.actor.toJson(),
   };
@@ -725,8 +731,8 @@ Map<String, dynamic> _$$_ContractAgentToJson(_$_ContractAgent instance) {
   return val;
 }
 
-_$_ContractSigner _$$_ContractSignerFromJson(Map<String, dynamic> json) =>
-    _$_ContractSigner(
+_$ContractSignerImpl _$$ContractSignerImplFromJson(Map<String, dynamic> json) =>
+    _$ContractSignerImpl(
       type: Coding.fromJson(json['type'] as Map<String, dynamic>),
       party: Reference.fromJson(json['party'] as Map<String, dynamic>),
       signature: (json['signature'] as List<dynamic>)
@@ -734,16 +740,17 @@ _$_ContractSigner _$$_ContractSignerFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ContractSignerToJson(_$_ContractSigner instance) =>
+Map<String, dynamic> _$$ContractSignerImplToJson(
+        _$ContractSignerImpl instance) =>
     <String, dynamic>{
       'type': instance.type.toJson(),
       'party': instance.party.toJson(),
       'signature': instance.signature.map((e) => e.toJson()).toList(),
     };
 
-_$_ContractValuedItem _$$_ContractValuedItemFromJson(
+_$ContractValuedItemImpl _$$ContractValuedItemImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ContractValuedItem(
+    _$ContractValuedItemImpl(
       entityCodeableConcept: json['entityCodeableConcept'] == null
           ? null
           : CodeableConcept.fromJson(
@@ -781,8 +788,8 @@ _$_ContractValuedItem _$$_ContractValuedItemFromJson(
           : Money.fromJson(json['net'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ContractValuedItemToJson(
-    _$_ContractValuedItem instance) {
+Map<String, dynamic> _$$ContractValuedItemImplToJson(
+    _$ContractValuedItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -807,8 +814,8 @@ Map<String, dynamic> _$$_ContractValuedItemToJson(
   return val;
 }
 
-_$_ContractTerm _$$_ContractTermFromJson(Map<String, dynamic> json) =>
-    _$_ContractTerm(
+_$ContractTermImpl _$$ContractTermImplFromJson(Map<String, dynamic> json) =>
+    _$ContractTermImpl(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -852,7 +859,7 @@ _$_ContractTerm _$$_ContractTermFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ContractTermToJson(_$_ContractTerm instance) {
+Map<String, dynamic> _$$ContractTermImplToJson(_$ContractTermImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -882,15 +889,16 @@ Map<String, dynamic> _$$_ContractTermToJson(_$_ContractTerm instance) {
   return val;
 }
 
-_$_ContractAgent1 _$$_ContractAgent1FromJson(Map<String, dynamic> json) =>
-    _$_ContractAgent1(
+_$ContractAgent1Impl _$$ContractAgent1ImplFromJson(Map<String, dynamic> json) =>
+    _$ContractAgent1Impl(
       actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
       role: (json['role'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_ContractAgent1ToJson(_$_ContractAgent1 instance) {
+Map<String, dynamic> _$$ContractAgent1ImplToJson(
+    _$ContractAgent1Impl instance) {
   final val = <String, dynamic>{
     'actor': instance.actor.toJson(),
   };
@@ -905,9 +913,9 @@ Map<String, dynamic> _$$_ContractAgent1ToJson(_$_ContractAgent1 instance) {
   return val;
 }
 
-_$_ContractValuedItem1 _$$_ContractValuedItem1FromJson(
+_$ContractValuedItem1Impl _$$ContractValuedItem1ImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ContractValuedItem1(
+    _$ContractValuedItem1Impl(
       entityCodeableConcept: json['entityCodeableConcept'] == null
           ? null
           : CodeableConcept.fromJson(
@@ -945,8 +953,8 @@ _$_ContractValuedItem1 _$$_ContractValuedItem1FromJson(
           : Money.fromJson(json['net'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ContractValuedItem1ToJson(
-    _$_ContractValuedItem1 instance) {
+Map<String, dynamic> _$$ContractValuedItem1ImplToJson(
+    _$ContractValuedItem1Impl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -971,87 +979,89 @@ Map<String, dynamic> _$$_ContractValuedItem1ToJson(
   return val;
 }
 
-_$_ContractFriendly _$$_ContractFriendlyFromJson(Map<String, dynamic> json) =>
-    _$_ContractFriendly(
-      contentAttachment: json['contentAttachment'] == null
-          ? null
-          : Attachment.fromJson(
-              json['contentAttachment'] as Map<String, dynamic>),
-      contentReference: json['contentReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['contentReference'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_ContractFriendlyToJson(_$_ContractFriendly instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('contentAttachment', instance.contentAttachment?.toJson());
-  writeNotNull('contentReference', instance.contentReference?.toJson());
-  return val;
-}
-
-_$_ContractLegal _$$_ContractLegalFromJson(Map<String, dynamic> json) =>
-    _$_ContractLegal(
-      contentAttachment: json['contentAttachment'] == null
-          ? null
-          : Attachment.fromJson(
-              json['contentAttachment'] as Map<String, dynamic>),
-      contentReference: json['contentReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['contentReference'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_ContractLegalToJson(_$_ContractLegal instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('contentAttachment', instance.contentAttachment?.toJson());
-  writeNotNull('contentReference', instance.contentReference?.toJson());
-  return val;
-}
-
-_$_ContractRule _$$_ContractRuleFromJson(Map<String, dynamic> json) =>
-    _$_ContractRule(
-      contentAttachment: json['contentAttachment'] == null
-          ? null
-          : Attachment.fromJson(
-              json['contentAttachment'] as Map<String, dynamic>),
-      contentReference: json['contentReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['contentReference'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_ContractRuleToJson(_$_ContractRule instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('contentAttachment', instance.contentAttachment?.toJson());
-  writeNotNull('contentReference', instance.contentReference?.toJson());
-  return val;
-}
-
-_$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
+_$ContractFriendlyImpl _$$ContractFriendlyImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefit(
+    _$ContractFriendlyImpl(
+      contentAttachment: json['contentAttachment'] == null
+          ? null
+          : Attachment.fromJson(
+              json['contentAttachment'] as Map<String, dynamic>),
+      contentReference: json['contentReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['contentReference'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$ContractFriendlyImplToJson(
+    _$ContractFriendlyImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('contentAttachment', instance.contentAttachment?.toJson());
+  writeNotNull('contentReference', instance.contentReference?.toJson());
+  return val;
+}
+
+_$ContractLegalImpl _$$ContractLegalImplFromJson(Map<String, dynamic> json) =>
+    _$ContractLegalImpl(
+      contentAttachment: json['contentAttachment'] == null
+          ? null
+          : Attachment.fromJson(
+              json['contentAttachment'] as Map<String, dynamic>),
+      contentReference: json['contentReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['contentReference'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$ContractLegalImplToJson(_$ContractLegalImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('contentAttachment', instance.contentAttachment?.toJson());
+  writeNotNull('contentReference', instance.contentReference?.toJson());
+  return val;
+}
+
+_$ContractRuleImpl _$$ContractRuleImplFromJson(Map<String, dynamic> json) =>
+    _$ContractRuleImpl(
+      contentAttachment: json['contentAttachment'] == null
+          ? null
+          : Attachment.fromJson(
+              json['contentAttachment'] as Map<String, dynamic>),
+      contentReference: json['contentReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['contentReference'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$ContractRuleImplToJson(_$ContractRuleImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('contentAttachment', instance.contentAttachment?.toJson());
+  writeNotNull('contentReference', instance.contentReference?.toJson());
+  return val;
+}
+
+_$ExplanationOfBenefitImpl _$$ExplanationOfBenefitImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ExplanationOfBenefitImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ExplanationOfBenefit) ??
@@ -1224,8 +1234,8 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitToJson(
-    _$_ExplanationOfBenefit instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitImplToJson(
+    _$ExplanationOfBenefitImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1309,9 +1319,9 @@ const _$ExplanationOfBenefitStatusEnumMap = {
   ExplanationOfBenefitStatus.unknown: 'unknown',
 };
 
-_$_ExplanationOfBenefitRelated _$$_ExplanationOfBenefitRelatedFromJson(
+_$ExplanationOfBenefitRelatedImpl _$$ExplanationOfBenefitRelatedImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitRelated(
+    _$ExplanationOfBenefitRelatedImpl(
       claim: json['claim'] == null
           ? null
           : Reference.fromJson(json['claim'] as Map<String, dynamic>),
@@ -1324,8 +1334,8 @@ _$_ExplanationOfBenefitRelated _$$_ExplanationOfBenefitRelatedFromJson(
           : Identifier.fromJson(json['reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitRelatedToJson(
-    _$_ExplanationOfBenefitRelated instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitRelatedImplToJson(
+    _$ExplanationOfBenefitRelatedImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1340,9 +1350,9 @@ Map<String, dynamic> _$$_ExplanationOfBenefitRelatedToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitPayee _$$_ExplanationOfBenefitPayeeFromJson(
+_$ExplanationOfBenefitPayeeImpl _$$ExplanationOfBenefitPayeeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitPayee(
+    _$ExplanationOfBenefitPayeeImpl(
       type: json['type'] == null
           ? null
           : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -1351,8 +1361,8 @@ _$_ExplanationOfBenefitPayee _$$_ExplanationOfBenefitPayeeFromJson(
           : Reference.fromJson(json['party'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitPayeeToJson(
-    _$_ExplanationOfBenefitPayee instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitPayeeImplToJson(
+    _$ExplanationOfBenefitPayeeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1366,50 +1376,52 @@ Map<String, dynamic> _$$_ExplanationOfBenefitPayeeToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitInformation _$$_ExplanationOfBenefitInformationFromJson(
-        Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitInformation(
-      sequence: json['sequence'] == null
-          ? null
-          : FhirDecimal.fromJson(json['sequence']),
-      sequenceElement: json['_sequence'] == null
-          ? null
-          : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
-      category:
-          CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-      code: json['code'] == null
-          ? null
-          : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      timingDate: json['timingDate'] == null
-          ? null
-          : FhirDate.fromJson(json['timingDate']),
-      timingDateElement: json['_timingDate'] == null
-          ? null
-          : Element.fromJson(json['_timingDate'] as Map<String, dynamic>),
-      timingPeriod: json['timingPeriod'] == null
-          ? null
-          : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
-      valueString: json['valueString'] as String?,
-      valueStringElement: json['_valueString'] == null
-          ? null
-          : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
-      valueQuantity: json['valueQuantity'] == null
-          ? null
-          : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
-      valueAttachment: json['valueAttachment'] == null
-          ? null
-          : Attachment.fromJson(
-              json['valueAttachment'] as Map<String, dynamic>),
-      valueReference: json['valueReference'] == null
-          ? null
-          : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
-      reason: json['reason'] == null
-          ? null
-          : Coding.fromJson(json['reason'] as Map<String, dynamic>),
-    );
+_$ExplanationOfBenefitInformationImpl
+    _$$ExplanationOfBenefitInformationImplFromJson(Map<String, dynamic> json) =>
+        _$ExplanationOfBenefitInformationImpl(
+          sequence: json['sequence'] == null
+              ? null
+              : FhirDecimal.fromJson(json['sequence']),
+          sequenceElement: json['_sequence'] == null
+              ? null
+              : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
+          category: CodeableConcept.fromJson(
+              json['category'] as Map<String, dynamic>),
+          code: json['code'] == null
+              ? null
+              : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
+          timingDate: json['timingDate'] == null
+              ? null
+              : FhirDate.fromJson(json['timingDate']),
+          timingDateElement: json['_timingDate'] == null
+              ? null
+              : Element.fromJson(json['_timingDate'] as Map<String, dynamic>),
+          timingPeriod: json['timingPeriod'] == null
+              ? null
+              : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
+          valueString: json['valueString'] as String?,
+          valueStringElement: json['_valueString'] == null
+              ? null
+              : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+          valueQuantity: json['valueQuantity'] == null
+              ? null
+              : Quantity.fromJson(
+                  json['valueQuantity'] as Map<String, dynamic>),
+          valueAttachment: json['valueAttachment'] == null
+              ? null
+              : Attachment.fromJson(
+                  json['valueAttachment'] as Map<String, dynamic>),
+          valueReference: json['valueReference'] == null
+              ? null
+              : Reference.fromJson(
+                  json['valueReference'] as Map<String, dynamic>),
+          reason: json['reason'] == null
+              ? null
+              : Coding.fromJson(json['reason'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitInformationToJson(
-    _$_ExplanationOfBenefitInformation instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitInformationImplToJson(
+    _$ExplanationOfBenefitInformationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1434,9 +1446,9 @@ Map<String, dynamic> _$$_ExplanationOfBenefitInformationToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitCareTeam _$$_ExplanationOfBenefitCareTeamFromJson(
+_$ExplanationOfBenefitCareTeamImpl _$$ExplanationOfBenefitCareTeamImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitCareTeam(
+    _$ExplanationOfBenefitCareTeamImpl(
       sequence: json['sequence'] == null
           ? null
           : FhirDecimal.fromJson(json['sequence']),
@@ -1459,8 +1471,8 @@ _$_ExplanationOfBenefitCareTeam _$$_ExplanationOfBenefitCareTeamFromJson(
               json['qualification'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitCareTeamToJson(
-    _$_ExplanationOfBenefitCareTeam instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitCareTeamImplToJson(
+    _$ExplanationOfBenefitCareTeamImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1479,34 +1491,34 @@ Map<String, dynamic> _$$_ExplanationOfBenefitCareTeamToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitDiagnosis _$$_ExplanationOfBenefitDiagnosisFromJson(
-        Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitDiagnosis(
-      sequence: json['sequence'] == null
-          ? null
-          : FhirDecimal.fromJson(json['sequence']),
-      sequenceElement: json['_sequence'] == null
-          ? null
-          : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
-      diagnosisCodeableConcept: json['diagnosisCodeableConcept'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['diagnosisCodeableConcept'] as Map<String, dynamic>),
-      diagnosisReference: json['diagnosisReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['diagnosisReference'] as Map<String, dynamic>),
-      type: (json['type'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      packageCode: json['packageCode'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['packageCode'] as Map<String, dynamic>),
-    );
+_$ExplanationOfBenefitDiagnosisImpl
+    _$$ExplanationOfBenefitDiagnosisImplFromJson(Map<String, dynamic> json) =>
+        _$ExplanationOfBenefitDiagnosisImpl(
+          sequence: json['sequence'] == null
+              ? null
+              : FhirDecimal.fromJson(json['sequence']),
+          sequenceElement: json['_sequence'] == null
+              ? null
+              : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
+          diagnosisCodeableConcept: json['diagnosisCodeableConcept'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['diagnosisCodeableConcept'] as Map<String, dynamic>),
+          diagnosisReference: json['diagnosisReference'] == null
+              ? null
+              : Reference.fromJson(
+                  json['diagnosisReference'] as Map<String, dynamic>),
+          type: (json['type'] as List<dynamic>?)
+              ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          packageCode: json['packageCode'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['packageCode'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitDiagnosisToJson(
-    _$_ExplanationOfBenefitDiagnosis instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitDiagnosisImplToJson(
+    _$ExplanationOfBenefitDiagnosisImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1525,31 +1537,31 @@ Map<String, dynamic> _$$_ExplanationOfBenefitDiagnosisToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitProcedure _$$_ExplanationOfBenefitProcedureFromJson(
-        Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitProcedure(
-      sequence: json['sequence'] == null
-          ? null
-          : FhirDecimal.fromJson(json['sequence']),
-      sequenceElement: json['_sequence'] == null
-          ? null
-          : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
-      dateElement: json['_date'] == null
-          ? null
-          : Element.fromJson(json['_date'] as Map<String, dynamic>),
-      procedureCodeableConcept: json['procedureCodeableConcept'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['procedureCodeableConcept'] as Map<String, dynamic>),
-      procedureReference: json['procedureReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['procedureReference'] as Map<String, dynamic>),
-    );
+_$ExplanationOfBenefitProcedureImpl
+    _$$ExplanationOfBenefitProcedureImplFromJson(Map<String, dynamic> json) =>
+        _$ExplanationOfBenefitProcedureImpl(
+          sequence: json['sequence'] == null
+              ? null
+              : FhirDecimal.fromJson(json['sequence']),
+          sequenceElement: json['_sequence'] == null
+              ? null
+              : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
+          date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+          dateElement: json['_date'] == null
+              ? null
+              : Element.fromJson(json['_date'] as Map<String, dynamic>),
+          procedureCodeableConcept: json['procedureCodeableConcept'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['procedureCodeableConcept'] as Map<String, dynamic>),
+          procedureReference: json['procedureReference'] == null
+              ? null
+              : Reference.fromJson(
+                  json['procedureReference'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitProcedureToJson(
-    _$_ExplanationOfBenefitProcedure instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitProcedureImplToJson(
+    _$ExplanationOfBenefitProcedureImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1568,23 +1580,24 @@ Map<String, dynamic> _$$_ExplanationOfBenefitProcedureToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitInsurance _$$_ExplanationOfBenefitInsuranceFromJson(
-        Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitInsurance(
-      coverage: json['coverage'] == null
-          ? null
-          : Reference.fromJson(json['coverage'] as Map<String, dynamic>),
-      preAuthRef: (json['preAuthRef'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      preAuthRefElement: (json['_preAuthRef'] as List<dynamic>?)
-          ?.map((e) =>
-              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+_$ExplanationOfBenefitInsuranceImpl
+    _$$ExplanationOfBenefitInsuranceImplFromJson(Map<String, dynamic> json) =>
+        _$ExplanationOfBenefitInsuranceImpl(
+          coverage: json['coverage'] == null
+              ? null
+              : Reference.fromJson(json['coverage'] as Map<String, dynamic>),
+          preAuthRef: (json['preAuthRef'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList(),
+          preAuthRefElement: (json['_preAuthRef'] as List<dynamic>?)
+              ?.map((e) => e == null
+                  ? null
+                  : Element.fromJson(e as Map<String, dynamic>))
+              .toList(),
+        );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitInsuranceToJson(
-    _$_ExplanationOfBenefitInsurance instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitInsuranceImplToJson(
+    _$ExplanationOfBenefitInsuranceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1600,9 +1613,9 @@ Map<String, dynamic> _$$_ExplanationOfBenefitInsuranceToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitAccident _$$_ExplanationOfBenefitAccidentFromJson(
+_$ExplanationOfBenefitAccidentImpl _$$ExplanationOfBenefitAccidentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitAccident(
+    _$ExplanationOfBenefitAccidentImpl(
       date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
       dateElement: json['_date'] == null
           ? null
@@ -1619,8 +1632,8 @@ _$_ExplanationOfBenefitAccident _$$_ExplanationOfBenefitAccidentFromJson(
               json['locationReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitAccidentToJson(
-    _$_ExplanationOfBenefitAccident instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitAccidentImplToJson(
+    _$ExplanationOfBenefitAccidentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1637,9 +1650,9 @@ Map<String, dynamic> _$$_ExplanationOfBenefitAccidentToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitItem _$$_ExplanationOfBenefitItemFromJson(
+_$ExplanationOfBenefitItemImpl _$$ExplanationOfBenefitItemImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitItem(
+    _$ExplanationOfBenefitItemImpl(
       sequence: json['sequence'] == null
           ? null
           : FhirDecimal.fromJson(json['sequence']),
@@ -1751,8 +1764,8 @@ _$_ExplanationOfBenefitItem _$$_ExplanationOfBenefitItemFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitItemToJson(
-    _$_ExplanationOfBenefitItem instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitItemImplToJson(
+    _$ExplanationOfBenefitItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1812,9 +1825,10 @@ Map<String, dynamic> _$$_ExplanationOfBenefitItemToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitAdjudication
-    _$$_ExplanationOfBenefitAdjudicationFromJson(Map<String, dynamic> json) =>
-        _$_ExplanationOfBenefitAdjudication(
+_$ExplanationOfBenefitAdjudicationImpl
+    _$$ExplanationOfBenefitAdjudicationImplFromJson(
+            Map<String, dynamic> json) =>
+        _$ExplanationOfBenefitAdjudicationImpl(
           category: CodeableConcept.fromJson(
               json['category'] as Map<String, dynamic>),
           reason: json['reason'] == null
@@ -1832,8 +1846,8 @@ _$_ExplanationOfBenefitAdjudication
               : Element.fromJson(json['_value'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitAdjudicationToJson(
-    _$_ExplanationOfBenefitAdjudication instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitAdjudicationImplToJson(
+    _$ExplanationOfBenefitAdjudicationImpl instance) {
   final val = <String, dynamic>{
     'category': instance.category.toJson(),
   };
@@ -1851,9 +1865,9 @@ Map<String, dynamic> _$$_ExplanationOfBenefitAdjudicationToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitDetail _$$_ExplanationOfBenefitDetailFromJson(
+_$ExplanationOfBenefitDetailImpl _$$ExplanationOfBenefitDetailImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitDetail(
+    _$ExplanationOfBenefitDetailImpl(
       sequence: json['sequence'] == null
           ? null
           : FhirDecimal.fromJson(json['sequence']),
@@ -1910,8 +1924,8 @@ _$_ExplanationOfBenefitDetail _$$_ExplanationOfBenefitDetailFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitDetailToJson(
-    _$_ExplanationOfBenefitDetail instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitDetailImplToJson(
+    _$ExplanationOfBenefitDetailImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1946,63 +1960,68 @@ Map<String, dynamic> _$$_ExplanationOfBenefitDetailToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitSubDetail _$$_ExplanationOfBenefitSubDetailFromJson(
-        Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitSubDetail(
-      sequence: json['sequence'] == null
-          ? null
-          : FhirDecimal.fromJson(json['sequence']),
-      sequenceElement: json['_sequence'] == null
-          ? null
-          : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
-      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      revenue: json['revenue'] == null
-          ? null
-          : CodeableConcept.fromJson(json['revenue'] as Map<String, dynamic>),
-      category: json['category'] == null
-          ? null
-          : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-      service: json['service'] == null
-          ? null
-          : CodeableConcept.fromJson(json['service'] as Map<String, dynamic>),
-      modifier: (json['modifier'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      programCode: (json['programCode'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      quantity: json['quantity'] == null
-          ? null
-          : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
-      unitPrice: json['unitPrice'] == null
-          ? null
-          : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      factor:
-          json['factor'] == null ? null : FhirDecimal.fromJson(json['factor']),
-      factorElement: json['_factor'] == null
-          ? null
-          : Element.fromJson(json['_factor'] as Map<String, dynamic>),
-      net: json['net'] == null
-          ? null
-          : Money.fromJson(json['net'] as Map<String, dynamic>),
-      udi: (json['udi'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      noteNumber: (json['noteNumber'] as List<dynamic>?)
-          ?.map(FhirDecimal.fromJson)
-          .toList(),
-      noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
-          ?.map((e) =>
-              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      adjudication: (json['adjudication'] as List<dynamic>?)
-          ?.map((e) => ExplanationOfBenefitAdjudication.fromJson(
-              e as Map<String, dynamic>))
-          .toList(),
-    );
+_$ExplanationOfBenefitSubDetailImpl
+    _$$ExplanationOfBenefitSubDetailImplFromJson(Map<String, dynamic> json) =>
+        _$ExplanationOfBenefitSubDetailImpl(
+          sequence: json['sequence'] == null
+              ? null
+              : FhirDecimal.fromJson(json['sequence']),
+          sequenceElement: json['_sequence'] == null
+              ? null
+              : Element.fromJson(json['_sequence'] as Map<String, dynamic>),
+          type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+          revenue: json['revenue'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['revenue'] as Map<String, dynamic>),
+          category: json['category'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['category'] as Map<String, dynamic>),
+          service: json['service'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['service'] as Map<String, dynamic>),
+          modifier: (json['modifier'] as List<dynamic>?)
+              ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          programCode: (json['programCode'] as List<dynamic>?)
+              ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          quantity: json['quantity'] == null
+              ? null
+              : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+          unitPrice: json['unitPrice'] == null
+              ? null
+              : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
+          factor: json['factor'] == null
+              ? null
+              : FhirDecimal.fromJson(json['factor']),
+          factorElement: json['_factor'] == null
+              ? null
+              : Element.fromJson(json['_factor'] as Map<String, dynamic>),
+          net: json['net'] == null
+              ? null
+              : Money.fromJson(json['net'] as Map<String, dynamic>),
+          udi: (json['udi'] as List<dynamic>?)
+              ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          noteNumber: (json['noteNumber'] as List<dynamic>?)
+              ?.map(FhirDecimal.fromJson)
+              .toList(),
+          noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
+              ?.map((e) => e == null
+                  ? null
+                  : Element.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          adjudication: (json['adjudication'] as List<dynamic>?)
+              ?.map((e) => ExplanationOfBenefitAdjudication.fromJson(
+                  e as Map<String, dynamic>))
+              .toList(),
+        );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitSubDetailToJson(
-    _$_ExplanationOfBenefitSubDetail instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitSubDetailImplToJson(
+    _$ExplanationOfBenefitSubDetailImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2035,9 +2054,9 @@ Map<String, dynamic> _$$_ExplanationOfBenefitSubDetailToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitAddItem _$$_ExplanationOfBenefitAddItemFromJson(
+_$ExplanationOfBenefitAddItemImpl _$$ExplanationOfBenefitAddItemImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitAddItem(
+    _$ExplanationOfBenefitAddItemImpl(
       sequenceLinkId: (json['sequenceLinkId'] as List<dynamic>?)
           ?.map(FhirId.fromJson)
           .toList(),
@@ -2077,8 +2096,8 @@ _$_ExplanationOfBenefitAddItem _$$_ExplanationOfBenefitAddItemFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitAddItemToJson(
-    _$_ExplanationOfBenefitAddItem instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitAddItemImplToJson(
+    _$ExplanationOfBenefitAddItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2106,9 +2125,9 @@ Map<String, dynamic> _$$_ExplanationOfBenefitAddItemToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitDetail1 _$$_ExplanationOfBenefitDetail1FromJson(
+_$ExplanationOfBenefitDetail1Impl _$$ExplanationOfBenefitDetail1ImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitDetail1(
+    _$ExplanationOfBenefitDetail1Impl(
       revenue: json['revenue'] == null
           ? null
           : CodeableConcept.fromJson(json['revenue'] as Map<String, dynamic>),
@@ -2137,8 +2156,8 @@ _$_ExplanationOfBenefitDetail1 _$$_ExplanationOfBenefitDetail1FromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitDetail1ToJson(
-    _$_ExplanationOfBenefitDetail1 instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitDetail1ImplToJson(
+    _$ExplanationOfBenefitDetail1Impl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2161,9 +2180,9 @@ Map<String, dynamic> _$$_ExplanationOfBenefitDetail1ToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitPayment _$$_ExplanationOfBenefitPaymentFromJson(
+_$ExplanationOfBenefitPaymentImpl _$$ExplanationOfBenefitPaymentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitPayment(
+    _$ExplanationOfBenefitPaymentImpl(
       type: json['type'] == null
           ? null
           : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -2186,8 +2205,8 @@ _$_ExplanationOfBenefitPayment _$$_ExplanationOfBenefitPaymentFromJson(
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitPaymentToJson(
-    _$_ExplanationOfBenefitPayment instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitPaymentImplToJson(
+    _$ExplanationOfBenefitPaymentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2206,28 +2225,30 @@ Map<String, dynamic> _$$_ExplanationOfBenefitPaymentToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitProcessNote _$$_ExplanationOfBenefitProcessNoteFromJson(
-        Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitProcessNote(
-      number:
-          json['number'] == null ? null : FhirDecimal.fromJson(json['number']),
-      numberElement: json['_number'] == null
-          ? null
-          : Element.fromJson(json['_number'] as Map<String, dynamic>),
-      type: json['type'] == null
-          ? null
-          : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      text: json['text'] as String?,
-      textElement: json['_text'] == null
-          ? null
-          : Element.fromJson(json['_text'] as Map<String, dynamic>),
-      language: json['language'] == null
-          ? null
-          : CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
-    );
+_$ExplanationOfBenefitProcessNoteImpl
+    _$$ExplanationOfBenefitProcessNoteImplFromJson(Map<String, dynamic> json) =>
+        _$ExplanationOfBenefitProcessNoteImpl(
+          number: json['number'] == null
+              ? null
+              : FhirDecimal.fromJson(json['number']),
+          numberElement: json['_number'] == null
+              ? null
+              : Element.fromJson(json['_number'] as Map<String, dynamic>),
+          type: json['type'] == null
+              ? null
+              : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+          text: json['text'] as String?,
+          textElement: json['_text'] == null
+              ? null
+              : Element.fromJson(json['_text'] as Map<String, dynamic>),
+          language: json['language'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['language'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitProcessNoteToJson(
-    _$_ExplanationOfBenefitProcessNote instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitProcessNoteImplToJson(
+    _$ExplanationOfBenefitProcessNoteImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2245,9 +2266,10 @@ Map<String, dynamic> _$$_ExplanationOfBenefitProcessNoteToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitBenefitBalance
-    _$$_ExplanationOfBenefitBenefitBalanceFromJson(Map<String, dynamic> json) =>
-        _$_ExplanationOfBenefitBenefitBalance(
+_$ExplanationOfBenefitBenefitBalanceImpl
+    _$$ExplanationOfBenefitBenefitBalanceImplFromJson(
+            Map<String, dynamic> json) =>
+        _$ExplanationOfBenefitBenefitBalanceImpl(
           category: CodeableConcept.fromJson(
               json['category'] as Map<String, dynamic>),
           subCategory: json['subCategory'] == null
@@ -2284,8 +2306,8 @@ _$_ExplanationOfBenefitBenefitBalance
               .toList(),
         );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitBenefitBalanceToJson(
-    _$_ExplanationOfBenefitBenefitBalance instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitBenefitBalanceImplToJson(
+    _$ExplanationOfBenefitBenefitBalanceImpl instance) {
   final val = <String, dynamic>{
     'category': instance.category.toJson(),
   };
@@ -2311,37 +2333,39 @@ Map<String, dynamic> _$$_ExplanationOfBenefitBenefitBalanceToJson(
   return val;
 }
 
-_$_ExplanationOfBenefitFinancial _$$_ExplanationOfBenefitFinancialFromJson(
-        Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefitFinancial(
-      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      allowedUnsignedInt: json['allowedUnsignedInt'] == null
-          ? null
-          : FhirDecimal.fromJson(json['allowedUnsignedInt']),
-      allowedUnsignedIntElement: json['_allowedUnsignedInt'] == null
-          ? null
-          : Element.fromJson(
-              json['_allowedUnsignedInt'] as Map<String, dynamic>),
-      allowedString: json['allowedString'] as String?,
-      allowedStringElement: json['_allowedString'] == null
-          ? null
-          : Element.fromJson(json['_allowedString'] as Map<String, dynamic>),
-      allowedMoney: json['allowedMoney'] == null
-          ? null
-          : Money.fromJson(json['allowedMoney'] as Map<String, dynamic>),
-      usedUnsignedInt: json['usedUnsignedInt'] == null
-          ? null
-          : FhirDecimal.fromJson(json['usedUnsignedInt']),
-      usedUnsignedIntElement: json['_usedUnsignedInt'] == null
-          ? null
-          : Element.fromJson(json['_usedUnsignedInt'] as Map<String, dynamic>),
-      usedMoney: json['usedMoney'] == null
-          ? null
-          : Money.fromJson(json['usedMoney'] as Map<String, dynamic>),
-    );
+_$ExplanationOfBenefitFinancialImpl
+    _$$ExplanationOfBenefitFinancialImplFromJson(Map<String, dynamic> json) =>
+        _$ExplanationOfBenefitFinancialImpl(
+          type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+          allowedUnsignedInt: json['allowedUnsignedInt'] == null
+              ? null
+              : FhirDecimal.fromJson(json['allowedUnsignedInt']),
+          allowedUnsignedIntElement: json['_allowedUnsignedInt'] == null
+              ? null
+              : Element.fromJson(
+                  json['_allowedUnsignedInt'] as Map<String, dynamic>),
+          allowedString: json['allowedString'] as String?,
+          allowedStringElement: json['_allowedString'] == null
+              ? null
+              : Element.fromJson(
+                  json['_allowedString'] as Map<String, dynamic>),
+          allowedMoney: json['allowedMoney'] == null
+              ? null
+              : Money.fromJson(json['allowedMoney'] as Map<String, dynamic>),
+          usedUnsignedInt: json['usedUnsignedInt'] == null
+              ? null
+              : FhirDecimal.fromJson(json['usedUnsignedInt']),
+          usedUnsignedIntElement: json['_usedUnsignedInt'] == null
+              ? null
+              : Element.fromJson(
+                  json['_usedUnsignedInt'] as Map<String, dynamic>),
+          usedMoney: json['usedMoney'] == null
+              ? null
+              : Money.fromJson(json['usedMoney'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitFinancialToJson(
-    _$_ExplanationOfBenefitFinancial instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitFinancialImplToJson(
+    _$ExplanationOfBenefitFinancialImpl instance) {
   final val = <String, dynamic>{
     'type': instance.type.toJson(),
   };

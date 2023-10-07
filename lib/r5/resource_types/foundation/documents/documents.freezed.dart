@@ -631,11 +631,11 @@ class _$CompositionCopyWithImpl<$Res, $Val extends Composition>
 }
 
 /// @nodoc
-abstract class _$$_CompositionCopyWith<$Res>
+abstract class _$$CompositionImplCopyWith<$Res>
     implements $CompositionCopyWith<$Res> {
-  factory _$$_CompositionCopyWith(
-          _$_Composition value, $Res Function(_$_Composition) then) =
-      __$$_CompositionCopyWithImpl<$Res>;
+  factory _$$CompositionImplCopyWith(
+          _$CompositionImpl value, $Res Function(_$CompositionImpl) then) =
+      __$$CompositionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -707,11 +707,11 @@ abstract class _$$_CompositionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CompositionCopyWithImpl<$Res>
-    extends _$CompositionCopyWithImpl<$Res, _$_Composition>
-    implements _$$_CompositionCopyWith<$Res> {
-  __$$_CompositionCopyWithImpl(
-      _$_Composition _value, $Res Function(_$_Composition) _then)
+class __$$CompositionImplCopyWithImpl<$Res>
+    extends _$CompositionCopyWithImpl<$Res, _$CompositionImpl>
+    implements _$$CompositionImplCopyWith<$Res> {
+  __$$CompositionImplCopyWithImpl(
+      _$CompositionImpl _value, $Res Function(_$CompositionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -755,7 +755,7 @@ class __$$_CompositionCopyWithImpl<$Res>
     Object? event = freezed,
     Object? section = freezed,
   }) {
-    return _then(_$_Composition(
+    return _then(_$CompositionImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -910,8 +910,8 @@ class __$$_CompositionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Composition extends _Composition {
-  const _$_Composition(
+class _$CompositionImpl extends _Composition {
+  const _$CompositionImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.Composition)
       this.resourceType = R5ResourceType.Composition,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -965,8 +965,8 @@ class _$_Composition extends _Composition {
         _section = section,
         super._();
 
-  factory _$_Composition.fromJson(Map<String, dynamic> json) =>
-      _$$_CompositionFromJson(json);
+  factory _$CompositionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompositionImplFromJson(json);
 
   /// [resourceType] This is a Composition resource
   @override
@@ -1352,7 +1352,7 @@ class _$_Composition extends _Composition {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Composition &&
+            other is _$CompositionImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -1457,12 +1457,12 @@ class _$_Composition extends _Composition {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CompositionCopyWith<_$_Composition> get copyWith =>
-      __$$_CompositionCopyWithImpl<_$_Composition>(this, _$identity);
+  _$$CompositionImplCopyWith<_$CompositionImpl> get copyWith =>
+      __$$CompositionImplCopyWithImpl<_$CompositionImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompositionToJson(
+    return _$$CompositionImplToJson(
       this,
     );
   }
@@ -1507,11 +1507,11 @@ abstract class _Composition extends Composition {
       final Reference? custodian,
       final List<RelatedArtifact>? relatesTo,
       final List<CompositionEvent>? event,
-      final List<CompositionSection>? section}) = _$_Composition;
+      final List<CompositionSection>? section}) = _$CompositionImpl;
   const _Composition._() : super._();
 
   factory _Composition.fromJson(Map<String, dynamic> json) =
-      _$_Composition.fromJson;
+      _$CompositionImpl.fromJson;
 
   @override
 
@@ -1738,7 +1738,7 @@ abstract class _Composition extends Composition {
   List<CompositionSection>? get section;
   @override
   @JsonKey(ignore: true)
-  _$$_CompositionCopyWith<_$_Composition> get copyWith =>
+  _$$CompositionImplCopyWith<_$CompositionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1905,11 +1905,11 @@ class _$CompositionAttesterCopyWithImpl<$Res, $Val extends CompositionAttester>
 }
 
 /// @nodoc
-abstract class _$$_CompositionAttesterCopyWith<$Res>
+abstract class _$$CompositionAttesterImplCopyWith<$Res>
     implements $CompositionAttesterCopyWith<$Res> {
-  factory _$$_CompositionAttesterCopyWith(_$_CompositionAttester value,
-          $Res Function(_$_CompositionAttester) then) =
-      __$$_CompositionAttesterCopyWithImpl<$Res>;
+  factory _$$CompositionAttesterImplCopyWith(_$CompositionAttesterImpl value,
+          $Res Function(_$CompositionAttesterImpl) then) =
+      __$$CompositionAttesterImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1930,11 +1930,11 @@ abstract class _$$_CompositionAttesterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CompositionAttesterCopyWithImpl<$Res>
-    extends _$CompositionAttesterCopyWithImpl<$Res, _$_CompositionAttester>
-    implements _$$_CompositionAttesterCopyWith<$Res> {
-  __$$_CompositionAttesterCopyWithImpl(_$_CompositionAttester _value,
-      $Res Function(_$_CompositionAttester) _then)
+class __$$CompositionAttesterImplCopyWithImpl<$Res>
+    extends _$CompositionAttesterCopyWithImpl<$Res, _$CompositionAttesterImpl>
+    implements _$$CompositionAttesterImplCopyWith<$Res> {
+  __$$CompositionAttesterImplCopyWithImpl(_$CompositionAttesterImpl _value,
+      $Res Function(_$CompositionAttesterImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1948,7 +1948,7 @@ class __$$_CompositionAttesterCopyWithImpl<$Res>
     Object? timeElement = freezed,
     Object? party = freezed,
   }) {
-    return _then(_$_CompositionAttester(
+    return _then(_$CompositionAttesterImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -1983,8 +1983,8 @@ class __$$_CompositionAttesterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CompositionAttester extends _CompositionAttester {
-  const _$_CompositionAttester(
+class _$CompositionAttesterImpl extends _CompositionAttester {
+  const _$CompositionAttesterImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -1996,8 +1996,8 @@ class _$_CompositionAttester extends _CompositionAttester {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CompositionAttester.fromJson(Map<String, dynamic> json) =>
-      _$$_CompositionAttesterFromJson(json);
+  factory _$CompositionAttesterImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompositionAttesterImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -2095,7 +2095,7 @@ class _$_CompositionAttester extends _CompositionAttester {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CompositionAttester &&
+            other is _$CompositionAttesterImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -2123,13 +2123,13 @@ class _$_CompositionAttester extends _CompositionAttester {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CompositionAttesterCopyWith<_$_CompositionAttester> get copyWith =>
-      __$$_CompositionAttesterCopyWithImpl<_$_CompositionAttester>(
+  _$$CompositionAttesterImplCopyWith<_$CompositionAttesterImpl> get copyWith =>
+      __$$CompositionAttesterImplCopyWithImpl<_$CompositionAttesterImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompositionAttesterToJson(
+    return _$$CompositionAttesterImplToJson(
       this,
     );
   }
@@ -2143,11 +2143,11 @@ abstract class _CompositionAttester extends CompositionAttester {
       required final CodeableConcept mode,
       final FhirDateTime? time,
       @JsonKey(name: '_time') final Element? timeElement,
-      final Reference? party}) = _$_CompositionAttester;
+      final Reference? party}) = _$CompositionAttesterImpl;
   const _CompositionAttester._() : super._();
 
   factory _CompositionAttester.fromJson(Map<String, dynamic> json) =
-      _$_CompositionAttester.fromJson;
+      _$CompositionAttesterImpl.fromJson;
 
   @override
 
@@ -2201,7 +2201,7 @@ abstract class _CompositionAttester extends CompositionAttester {
   Reference? get party;
   @override
   @JsonKey(ignore: true)
-  _$$_CompositionAttesterCopyWith<_$_CompositionAttester> get copyWith =>
+  _$$CompositionAttesterImplCopyWith<_$CompositionAttesterImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2334,11 +2334,11 @@ class _$CompositionEventCopyWithImpl<$Res, $Val extends CompositionEvent>
 }
 
 /// @nodoc
-abstract class _$$_CompositionEventCopyWith<$Res>
+abstract class _$$CompositionEventImplCopyWith<$Res>
     implements $CompositionEventCopyWith<$Res> {
-  factory _$$_CompositionEventCopyWith(
-          _$_CompositionEvent value, $Res Function(_$_CompositionEvent) then) =
-      __$$_CompositionEventCopyWithImpl<$Res>;
+  factory _$$CompositionEventImplCopyWith(_$CompositionEventImpl value,
+          $Res Function(_$CompositionEventImpl) then) =
+      __$$CompositionEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2353,11 +2353,11 @@ abstract class _$$_CompositionEventCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CompositionEventCopyWithImpl<$Res>
-    extends _$CompositionEventCopyWithImpl<$Res, _$_CompositionEvent>
-    implements _$$_CompositionEventCopyWith<$Res> {
-  __$$_CompositionEventCopyWithImpl(
-      _$_CompositionEvent _value, $Res Function(_$_CompositionEvent) _then)
+class __$$CompositionEventImplCopyWithImpl<$Res>
+    extends _$CompositionEventCopyWithImpl<$Res, _$CompositionEventImpl>
+    implements _$$CompositionEventImplCopyWith<$Res> {
+  __$$CompositionEventImplCopyWithImpl(_$CompositionEventImpl _value,
+      $Res Function(_$CompositionEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2369,7 +2369,7 @@ class __$$_CompositionEventCopyWithImpl<$Res>
     Object? period = freezed,
     Object? detail = freezed,
   }) {
-    return _then(_$_CompositionEvent(
+    return _then(_$CompositionEventImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2396,8 +2396,8 @@ class __$$_CompositionEventCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CompositionEvent extends _CompositionEvent {
-  const _$_CompositionEvent(
+class _$CompositionEventImpl extends _CompositionEvent {
+  const _$CompositionEventImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2408,8 +2408,8 @@ class _$_CompositionEvent extends _CompositionEvent {
         _detail = detail,
         super._();
 
-  factory _$_CompositionEvent.fromJson(Map<String, dynamic> json) =>
-      _$$_CompositionEventFromJson(json);
+  factory _$CompositionEventImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompositionEventImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -2519,7 +2519,7 @@ class _$_CompositionEvent extends _CompositionEvent {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CompositionEvent &&
+            other is _$CompositionEventImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -2542,12 +2542,13 @@ class _$_CompositionEvent extends _CompositionEvent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CompositionEventCopyWith<_$_CompositionEvent> get copyWith =>
-      __$$_CompositionEventCopyWithImpl<_$_CompositionEvent>(this, _$identity);
+  _$$CompositionEventImplCopyWith<_$CompositionEventImpl> get copyWith =>
+      __$$CompositionEventImplCopyWithImpl<_$CompositionEventImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompositionEventToJson(
+    return _$$CompositionEventImplToJson(
       this,
     );
   }
@@ -2559,11 +2560,11 @@ abstract class _CompositionEvent extends CompositionEvent {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Period? period,
-      final List<CodeableReference>? detail}) = _$_CompositionEvent;
+      final List<CodeableReference>? detail}) = _$CompositionEventImpl;
   const _CompositionEvent._() : super._();
 
   factory _CompositionEvent.fromJson(Map<String, dynamic> json) =
-      _$_CompositionEvent.fromJson;
+      _$CompositionEventImpl.fromJson;
 
   @override
 
@@ -2615,7 +2616,7 @@ abstract class _CompositionEvent extends CompositionEvent {
   List<CodeableReference>? get detail;
   @override
   @JsonKey(ignore: true)
-  _$$_CompositionEventCopyWith<_$_CompositionEvent> get copyWith =>
+  _$$CompositionEventImplCopyWith<_$CompositionEventImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2898,11 +2899,11 @@ class _$CompositionSectionCopyWithImpl<$Res, $Val extends CompositionSection>
 }
 
 /// @nodoc
-abstract class _$$_CompositionSectionCopyWith<$Res>
+abstract class _$$CompositionSectionImplCopyWith<$Res>
     implements $CompositionSectionCopyWith<$Res> {
-  factory _$$_CompositionSectionCopyWith(_$_CompositionSection value,
-          $Res Function(_$_CompositionSection) then) =
-      __$$_CompositionSectionCopyWithImpl<$Res>;
+  factory _$$CompositionSectionImplCopyWith(_$CompositionSectionImpl value,
+          $Res Function(_$CompositionSectionImpl) then) =
+      __$$CompositionSectionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2935,11 +2936,11 @@ abstract class _$$_CompositionSectionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CompositionSectionCopyWithImpl<$Res>
-    extends _$CompositionSectionCopyWithImpl<$Res, _$_CompositionSection>
-    implements _$$_CompositionSectionCopyWith<$Res> {
-  __$$_CompositionSectionCopyWithImpl(
-      _$_CompositionSection _value, $Res Function(_$_CompositionSection) _then)
+class __$$CompositionSectionImplCopyWithImpl<$Res>
+    extends _$CompositionSectionCopyWithImpl<$Res, _$CompositionSectionImpl>
+    implements _$$CompositionSectionImplCopyWith<$Res> {
+  __$$CompositionSectionImplCopyWithImpl(_$CompositionSectionImpl _value,
+      $Res Function(_$CompositionSectionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2959,7 +2960,7 @@ class __$$_CompositionSectionCopyWithImpl<$Res>
     Object? emptyReason = freezed,
     Object? section = freezed,
   }) {
-    return _then(_$_CompositionSection(
+    return _then(_$CompositionSectionImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3018,8 +3019,8 @@ class __$$_CompositionSectionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CompositionSection extends _CompositionSection {
-  const _$_CompositionSection(
+class _$CompositionSectionImpl extends _CompositionSection {
+  const _$CompositionSectionImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3040,8 +3041,8 @@ class _$_CompositionSection extends _CompositionSection {
         _section = section,
         super._();
 
-  factory _$_CompositionSection.fromJson(Map<String, dynamic> json) =>
-      _$$_CompositionSectionFromJson(json);
+  factory _$CompositionSectionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CompositionSectionImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -3211,7 +3212,7 @@ class _$_CompositionSection extends _CompositionSection {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CompositionSection &&
+            other is _$CompositionSectionImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -3253,13 +3254,13 @@ class _$_CompositionSection extends _CompositionSection {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CompositionSectionCopyWith<_$_CompositionSection> get copyWith =>
-      __$$_CompositionSectionCopyWithImpl<_$_CompositionSection>(
+  _$$CompositionSectionImplCopyWith<_$CompositionSectionImpl> get copyWith =>
+      __$$CompositionSectionImplCopyWithImpl<_$CompositionSectionImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CompositionSectionToJson(
+    return _$$CompositionSectionImplToJson(
       this,
     );
   }
@@ -3279,11 +3280,11 @@ abstract class _CompositionSection extends CompositionSection {
       final CodeableConcept? orderedBy,
       final List<Reference>? entry,
       final CodeableConcept? emptyReason,
-      final List<CompositionSection>? section}) = _$_CompositionSection;
+      final List<CompositionSection>? section}) = _$CompositionSectionImpl;
   const _CompositionSection._() : super._();
 
   factory _CompositionSection.fromJson(Map<String, dynamic> json) =
-      _$_CompositionSection.fromJson;
+      _$CompositionSectionImpl.fromJson;
 
   @override
 
@@ -3380,7 +3381,7 @@ abstract class _CompositionSection extends CompositionSection {
   List<CompositionSection>? get section;
   @override
   @JsonKey(ignore: true)
-  _$$_CompositionSectionCopyWith<_$_CompositionSection> get copyWith =>
+  _$$CompositionSectionImplCopyWith<_$CompositionSectionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4067,11 +4068,11 @@ class _$DocumentReferenceCopyWithImpl<$Res, $Val extends DocumentReference>
 }
 
 /// @nodoc
-abstract class _$$_DocumentReferenceCopyWith<$Res>
+abstract class _$$DocumentReferenceImplCopyWith<$Res>
     implements $DocumentReferenceCopyWith<$Res> {
-  factory _$$_DocumentReferenceCopyWith(_$_DocumentReference value,
-          $Res Function(_$_DocumentReference) then) =
-      __$$_DocumentReferenceCopyWithImpl<$Res>;
+  factory _$$DocumentReferenceImplCopyWith(_$DocumentReferenceImpl value,
+          $Res Function(_$DocumentReferenceImpl) then) =
+      __$$DocumentReferenceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4150,11 +4151,11 @@ abstract class _$$_DocumentReferenceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentReferenceCopyWithImpl<$Res>
-    extends _$DocumentReferenceCopyWithImpl<$Res, _$_DocumentReference>
-    implements _$$_DocumentReferenceCopyWith<$Res> {
-  __$$_DocumentReferenceCopyWithImpl(
-      _$_DocumentReference _value, $Res Function(_$_DocumentReference) _then)
+class __$$DocumentReferenceImplCopyWithImpl<$Res>
+    extends _$DocumentReferenceCopyWithImpl<$Res, _$DocumentReferenceImpl>
+    implements _$$DocumentReferenceImplCopyWith<$Res> {
+  __$$DocumentReferenceImplCopyWithImpl(_$DocumentReferenceImpl _value,
+      $Res Function(_$DocumentReferenceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4201,7 +4202,7 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
     Object? securityLabel = freezed,
     Object? content = null,
   }) {
-    return _then(_$_DocumentReference(
+    return _then(_$DocumentReferenceImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -4368,8 +4369,8 @@ class __$$_DocumentReferenceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentReference extends _DocumentReference {
-  const _$_DocumentReference(
+class _$DocumentReferenceImpl extends _DocumentReference {
+  const _$DocumentReferenceImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.DocumentReference)
       this.resourceType = R5ResourceType.DocumentReference,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -4428,8 +4429,8 @@ class _$_DocumentReference extends _DocumentReference {
         _content = content,
         super._();
 
-  factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentReferenceFromJson(json);
+  factory _$DocumentReferenceImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DocumentReferenceImplFromJson(json);
 
   /// [resourceType] This is a DocumentReference resource
   @override
@@ -4862,7 +4863,7 @@ class _$_DocumentReference extends _DocumentReference {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentReference &&
+            other is _$DocumentReferenceImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -4975,13 +4976,13 @@ class _$_DocumentReference extends _DocumentReference {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentReferenceCopyWith<_$_DocumentReference> get copyWith =>
-      __$$_DocumentReferenceCopyWithImpl<_$_DocumentReference>(
+  _$$DocumentReferenceImplCopyWith<_$DocumentReferenceImpl> get copyWith =>
+      __$$DocumentReferenceImplCopyWithImpl<_$DocumentReferenceImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceToJson(
+    return _$$DocumentReferenceImplToJson(
       this,
     );
   }
@@ -5030,11 +5031,11 @@ abstract class _DocumentReference extends DocumentReference {
           @JsonKey(name: '_description') final Element? descriptionElement,
           final List<CodeableConcept>? securityLabel,
           required final List<DocumentReferenceContent> content}) =
-      _$_DocumentReference;
+      _$DocumentReferenceImpl;
   const _DocumentReference._() : super._();
 
   factory _DocumentReference.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReference.fromJson;
+      _$DocumentReferenceImpl.fromJson;
 
   @override
 
@@ -5278,7 +5279,7 @@ abstract class _DocumentReference extends DocumentReference {
   List<DocumentReferenceContent> get content;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentReferenceCopyWith<_$_DocumentReference> get copyWith =>
+  _$$DocumentReferenceImplCopyWith<_$DocumentReferenceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -5447,12 +5448,12 @@ class _$DocumentReferenceAttesterCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_DocumentReferenceAttesterCopyWith<$Res>
+abstract class _$$DocumentReferenceAttesterImplCopyWith<$Res>
     implements $DocumentReferenceAttesterCopyWith<$Res> {
-  factory _$$_DocumentReferenceAttesterCopyWith(
-          _$_DocumentReferenceAttester value,
-          $Res Function(_$_DocumentReferenceAttester) then) =
-      __$$_DocumentReferenceAttesterCopyWithImpl<$Res>;
+  factory _$$DocumentReferenceAttesterImplCopyWith(
+          _$DocumentReferenceAttesterImpl value,
+          $Res Function(_$DocumentReferenceAttesterImpl) then) =
+      __$$DocumentReferenceAttesterImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5473,13 +5474,13 @@ abstract class _$$_DocumentReferenceAttesterCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentReferenceAttesterCopyWithImpl<$Res>
+class __$$DocumentReferenceAttesterImplCopyWithImpl<$Res>
     extends _$DocumentReferenceAttesterCopyWithImpl<$Res,
-        _$_DocumentReferenceAttester>
-    implements _$$_DocumentReferenceAttesterCopyWith<$Res> {
-  __$$_DocumentReferenceAttesterCopyWithImpl(
-      _$_DocumentReferenceAttester _value,
-      $Res Function(_$_DocumentReferenceAttester) _then)
+        _$DocumentReferenceAttesterImpl>
+    implements _$$DocumentReferenceAttesterImplCopyWith<$Res> {
+  __$$DocumentReferenceAttesterImplCopyWithImpl(
+      _$DocumentReferenceAttesterImpl _value,
+      $Res Function(_$DocumentReferenceAttesterImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5493,7 +5494,7 @@ class __$$_DocumentReferenceAttesterCopyWithImpl<$Res>
     Object? timeElement = freezed,
     Object? party = freezed,
   }) {
-    return _then(_$_DocumentReferenceAttester(
+    return _then(_$DocumentReferenceAttesterImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5528,8 +5529,8 @@ class __$$_DocumentReferenceAttesterCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentReferenceAttester extends _DocumentReferenceAttester {
-  const _$_DocumentReferenceAttester(
+class _$DocumentReferenceAttesterImpl extends _DocumentReferenceAttester {
+  const _$DocumentReferenceAttesterImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5541,8 +5542,8 @@ class _$_DocumentReferenceAttester extends _DocumentReferenceAttester {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DocumentReferenceAttester.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentReferenceAttesterFromJson(json);
+  factory _$DocumentReferenceAttesterImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DocumentReferenceAttesterImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -5640,7 +5641,7 @@ class _$_DocumentReferenceAttester extends _DocumentReferenceAttester {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentReferenceAttester &&
+            other is _$DocumentReferenceAttesterImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -5668,13 +5669,13 @@ class _$_DocumentReferenceAttester extends _DocumentReferenceAttester {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentReferenceAttesterCopyWith<_$_DocumentReferenceAttester>
-      get copyWith => __$$_DocumentReferenceAttesterCopyWithImpl<
-          _$_DocumentReferenceAttester>(this, _$identity);
+  _$$DocumentReferenceAttesterImplCopyWith<_$DocumentReferenceAttesterImpl>
+      get copyWith => __$$DocumentReferenceAttesterImplCopyWithImpl<
+          _$DocumentReferenceAttesterImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceAttesterToJson(
+    return _$$DocumentReferenceAttesterImplToJson(
       this,
     );
   }
@@ -5688,11 +5689,11 @@ abstract class _DocumentReferenceAttester extends DocumentReferenceAttester {
       required final CodeableConcept mode,
       final FhirDateTime? time,
       @JsonKey(name: '_time') final Element? timeElement,
-      final Reference? party}) = _$_DocumentReferenceAttester;
+      final Reference? party}) = _$DocumentReferenceAttesterImpl;
   const _DocumentReferenceAttester._() : super._();
 
   factory _DocumentReferenceAttester.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReferenceAttester.fromJson;
+      _$DocumentReferenceAttesterImpl.fromJson;
 
   @override
 
@@ -5746,7 +5747,7 @@ abstract class _DocumentReferenceAttester extends DocumentReferenceAttester {
   Reference? get party;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentReferenceAttesterCopyWith<_$_DocumentReferenceAttester>
+  _$$DocumentReferenceAttesterImplCopyWith<_$DocumentReferenceAttesterImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5881,12 +5882,12 @@ class _$DocumentReferenceRelatesToCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_DocumentReferenceRelatesToCopyWith<$Res>
+abstract class _$$DocumentReferenceRelatesToImplCopyWith<$Res>
     implements $DocumentReferenceRelatesToCopyWith<$Res> {
-  factory _$$_DocumentReferenceRelatesToCopyWith(
-          _$_DocumentReferenceRelatesTo value,
-          $Res Function(_$_DocumentReferenceRelatesTo) then) =
-      __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>;
+  factory _$$DocumentReferenceRelatesToImplCopyWith(
+          _$DocumentReferenceRelatesToImpl value,
+          $Res Function(_$DocumentReferenceRelatesToImpl) then) =
+      __$$DocumentReferenceRelatesToImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5903,13 +5904,13 @@ abstract class _$$_DocumentReferenceRelatesToCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>
+class __$$DocumentReferenceRelatesToImplCopyWithImpl<$Res>
     extends _$DocumentReferenceRelatesToCopyWithImpl<$Res,
-        _$_DocumentReferenceRelatesTo>
-    implements _$$_DocumentReferenceRelatesToCopyWith<$Res> {
-  __$$_DocumentReferenceRelatesToCopyWithImpl(
-      _$_DocumentReferenceRelatesTo _value,
-      $Res Function(_$_DocumentReferenceRelatesTo) _then)
+        _$DocumentReferenceRelatesToImpl>
+    implements _$$DocumentReferenceRelatesToImplCopyWith<$Res> {
+  __$$DocumentReferenceRelatesToImplCopyWithImpl(
+      _$DocumentReferenceRelatesToImpl _value,
+      $Res Function(_$DocumentReferenceRelatesToImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5921,7 +5922,7 @@ class __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>
     Object? code = null,
     Object? target = null,
   }) {
-    return _then(_$_DocumentReferenceRelatesTo(
+    return _then(_$DocumentReferenceRelatesToImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5948,8 +5949,8 @@ class __$$_DocumentReferenceRelatesToCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
-  const _$_DocumentReferenceRelatesTo(
+class _$DocumentReferenceRelatesToImpl extends _DocumentReferenceRelatesTo {
+  const _$DocumentReferenceRelatesToImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5959,8 +5960,9 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentReferenceRelatesToFromJson(json);
+  factory _$DocumentReferenceRelatesToImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$DocumentReferenceRelatesToImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -6050,7 +6052,7 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentReferenceRelatesTo &&
+            other is _$DocumentReferenceRelatesToImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -6073,13 +6075,13 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentReferenceRelatesToCopyWith<_$_DocumentReferenceRelatesTo>
-      get copyWith => __$$_DocumentReferenceRelatesToCopyWithImpl<
-          _$_DocumentReferenceRelatesTo>(this, _$identity);
+  _$$DocumentReferenceRelatesToImplCopyWith<_$DocumentReferenceRelatesToImpl>
+      get copyWith => __$$DocumentReferenceRelatesToImplCopyWithImpl<
+          _$DocumentReferenceRelatesToImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceRelatesToToJson(
+    return _$$DocumentReferenceRelatesToImplToJson(
       this,
     );
   }
@@ -6091,11 +6093,11 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept code,
-      required final Reference target}) = _$_DocumentReferenceRelatesTo;
+      required final Reference target}) = _$DocumentReferenceRelatesToImpl;
   const _DocumentReferenceRelatesTo._() : super._();
 
   factory _DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReferenceRelatesTo.fromJson;
+      _$DocumentReferenceRelatesToImpl.fromJson;
 
   @override
 
@@ -6141,7 +6143,7 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
   Reference get target;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentReferenceRelatesToCopyWith<_$_DocumentReferenceRelatesTo>
+  _$$DocumentReferenceRelatesToImplCopyWith<_$DocumentReferenceRelatesToImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -6269,12 +6271,12 @@ class _$DocumentReferenceContentCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_DocumentReferenceContentCopyWith<$Res>
+abstract class _$$DocumentReferenceContentImplCopyWith<$Res>
     implements $DocumentReferenceContentCopyWith<$Res> {
-  factory _$$_DocumentReferenceContentCopyWith(
-          _$_DocumentReferenceContent value,
-          $Res Function(_$_DocumentReferenceContent) then) =
-      __$$_DocumentReferenceContentCopyWithImpl<$Res>;
+  factory _$$DocumentReferenceContentImplCopyWith(
+          _$DocumentReferenceContentImpl value,
+          $Res Function(_$DocumentReferenceContentImpl) then) =
+      __$$DocumentReferenceContentImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6289,12 +6291,13 @@ abstract class _$$_DocumentReferenceContentCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentReferenceContentCopyWithImpl<$Res>
+class __$$DocumentReferenceContentImplCopyWithImpl<$Res>
     extends _$DocumentReferenceContentCopyWithImpl<$Res,
-        _$_DocumentReferenceContent>
-    implements _$$_DocumentReferenceContentCopyWith<$Res> {
-  __$$_DocumentReferenceContentCopyWithImpl(_$_DocumentReferenceContent _value,
-      $Res Function(_$_DocumentReferenceContent) _then)
+        _$DocumentReferenceContentImpl>
+    implements _$$DocumentReferenceContentImplCopyWith<$Res> {
+  __$$DocumentReferenceContentImplCopyWithImpl(
+      _$DocumentReferenceContentImpl _value,
+      $Res Function(_$DocumentReferenceContentImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6306,7 +6309,7 @@ class __$$_DocumentReferenceContentCopyWithImpl<$Res>
     Object? attachment = null,
     Object? profile = freezed,
   }) {
-    return _then(_$_DocumentReferenceContent(
+    return _then(_$DocumentReferenceContentImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6333,8 +6336,8 @@ class __$$_DocumentReferenceContentCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentReferenceContent extends _DocumentReferenceContent {
-  const _$_DocumentReferenceContent(
+class _$DocumentReferenceContentImpl extends _DocumentReferenceContent {
+  const _$DocumentReferenceContentImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6345,8 +6348,8 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
         _profile = profile,
         super._();
 
-  factory _$_DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentReferenceContentFromJson(json);
+  factory _$DocumentReferenceContentImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DocumentReferenceContentImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -6449,7 +6452,7 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentReferenceContent &&
+            other is _$DocumentReferenceContentImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -6473,13 +6476,13 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentReferenceContentCopyWith<_$_DocumentReferenceContent>
-      get copyWith => __$$_DocumentReferenceContentCopyWithImpl<
-          _$_DocumentReferenceContent>(this, _$identity);
+  _$$DocumentReferenceContentImplCopyWith<_$DocumentReferenceContentImpl>
+      get copyWith => __$$DocumentReferenceContentImplCopyWithImpl<
+          _$DocumentReferenceContentImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceContentToJson(
+    return _$$DocumentReferenceContentImplToJson(
       this,
     );
   }
@@ -6492,11 +6495,11 @@ abstract class _DocumentReferenceContent extends DocumentReferenceContent {
           final List<FhirExtension>? modifierExtension,
           required final Attachment attachment,
           final List<DocumentReferenceProfile>? profile}) =
-      _$_DocumentReferenceContent;
+      _$DocumentReferenceContentImpl;
   const _DocumentReferenceContent._() : super._();
 
   factory _DocumentReferenceContent.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReferenceContent.fromJson;
+      _$DocumentReferenceContentImpl.fromJson;
 
   @override
 
@@ -6544,7 +6547,7 @@ abstract class _DocumentReferenceContent extends DocumentReferenceContent {
   List<DocumentReferenceProfile>? get profile;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentReferenceContentCopyWith<_$_DocumentReferenceContent>
+  _$$DocumentReferenceContentImplCopyWith<_$DocumentReferenceContentImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -6728,12 +6731,12 @@ class _$DocumentReferenceProfileCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_DocumentReferenceProfileCopyWith<$Res>
+abstract class _$$DocumentReferenceProfileImplCopyWith<$Res>
     implements $DocumentReferenceProfileCopyWith<$Res> {
-  factory _$$_DocumentReferenceProfileCopyWith(
-          _$_DocumentReferenceProfile value,
-          $Res Function(_$_DocumentReferenceProfile) then) =
-      __$$_DocumentReferenceProfileCopyWithImpl<$Res>;
+  factory _$$DocumentReferenceProfileImplCopyWith(
+          _$DocumentReferenceProfileImpl value,
+          $Res Function(_$DocumentReferenceProfileImpl) then) =
+      __$$DocumentReferenceProfileImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6755,12 +6758,13 @@ abstract class _$$_DocumentReferenceProfileCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_DocumentReferenceProfileCopyWithImpl<$Res>
+class __$$DocumentReferenceProfileImplCopyWithImpl<$Res>
     extends _$DocumentReferenceProfileCopyWithImpl<$Res,
-        _$_DocumentReferenceProfile>
-    implements _$$_DocumentReferenceProfileCopyWith<$Res> {
-  __$$_DocumentReferenceProfileCopyWithImpl(_$_DocumentReferenceProfile _value,
-      $Res Function(_$_DocumentReferenceProfile) _then)
+        _$DocumentReferenceProfileImpl>
+    implements _$$DocumentReferenceProfileImplCopyWith<$Res> {
+  __$$DocumentReferenceProfileImplCopyWithImpl(
+      _$DocumentReferenceProfileImpl _value,
+      $Res Function(_$DocumentReferenceProfileImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6775,7 +6779,7 @@ class __$$_DocumentReferenceProfileCopyWithImpl<$Res>
     Object? valueCanonical = freezed,
     Object? valueCanonicalElement = freezed,
   }) {
-    return _then(_$_DocumentReferenceProfile(
+    return _then(_$DocumentReferenceProfileImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6814,8 +6818,8 @@ class __$$_DocumentReferenceProfileCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DocumentReferenceProfile extends _DocumentReferenceProfile {
-  const _$_DocumentReferenceProfile(
+class _$DocumentReferenceProfileImpl extends _DocumentReferenceProfile {
+  const _$DocumentReferenceProfileImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6828,8 +6832,8 @@ class _$_DocumentReferenceProfile extends _DocumentReferenceProfile {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_DocumentReferenceProfile.fromJson(Map<String, dynamic> json) =>
-      _$$_DocumentReferenceProfileFromJson(json);
+  factory _$DocumentReferenceProfileImpl.fromJson(Map<String, dynamic> json) =>
+      _$$DocumentReferenceProfileImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -6933,7 +6937,7 @@ class _$_DocumentReferenceProfile extends _DocumentReferenceProfile {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DocumentReferenceProfile &&
+            other is _$DocumentReferenceProfileImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -6967,13 +6971,13 @@ class _$_DocumentReferenceProfile extends _DocumentReferenceProfile {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_DocumentReferenceProfileCopyWith<_$_DocumentReferenceProfile>
-      get copyWith => __$$_DocumentReferenceProfileCopyWithImpl<
-          _$_DocumentReferenceProfile>(this, _$identity);
+  _$$DocumentReferenceProfileImplCopyWith<_$DocumentReferenceProfileImpl>
+      get copyWith => __$$DocumentReferenceProfileImplCopyWithImpl<
+          _$DocumentReferenceProfileImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DocumentReferenceProfileToJson(
+    return _$$DocumentReferenceProfileImplToJson(
       this,
     );
   }
@@ -6989,11 +6993,11 @@ abstract class _DocumentReferenceProfile extends DocumentReferenceProfile {
       @JsonKey(name: '_valueUri') final Element? valueUriElement,
       final FhirCanonical? valueCanonical,
       @JsonKey(name: '_valueCanonical')
-      final Element? valueCanonicalElement}) = _$_DocumentReferenceProfile;
+      final Element? valueCanonicalElement}) = _$DocumentReferenceProfileImpl;
   const _DocumentReferenceProfile._() : super._();
 
   factory _DocumentReferenceProfile.fromJson(Map<String, dynamic> json) =
-      _$_DocumentReferenceProfile.fromJson;
+      _$DocumentReferenceProfileImpl.fromJson;
 
   @override
 
@@ -7053,6 +7057,6 @@ abstract class _DocumentReferenceProfile extends DocumentReferenceProfile {
   Element? get valueCanonicalElement;
   @override
   @JsonKey(ignore: true)
-  _$$_DocumentReferenceProfileCopyWith<_$_DocumentReferenceProfile>
+  _$$DocumentReferenceProfileImplCopyWith<_$DocumentReferenceProfileImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

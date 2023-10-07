@@ -6,8 +6,8 @@ part of 'draft_types.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Population _$$_PopulationFromJson(Map<String, dynamic> json) =>
-    _$_Population(
+_$PopulationImpl _$$PopulationImplFromJson(Map<String, dynamic> json) =>
+    _$PopulationImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -34,7 +34,7 @@ _$_Population _$$_PopulationFromJson(Map<String, dynamic> json) =>
               json['physiologicalCondition'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PopulationToJson(_$_Population instance) {
+Map<String, dynamic> _$$PopulationImplToJson(_$PopulationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -57,8 +57,9 @@ Map<String, dynamic> _$$_PopulationToJson(_$_Population instance) {
   return val;
 }
 
-_$_ProductShelfLife _$$_ProductShelfLifeFromJson(Map<String, dynamic> json) =>
-    _$_ProductShelfLife(
+_$ProductShelfLifeImpl _$$ProductShelfLifeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ProductShelfLifeImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -81,7 +82,8 @@ _$_ProductShelfLife _$$_ProductShelfLifeFromJson(Map<String, dynamic> json) =>
               .toList(),
     );
 
-Map<String, dynamic> _$$_ProductShelfLifeToJson(_$_ProductShelfLife instance) {
+Map<String, dynamic> _$$ProductShelfLifeImplToJson(
+    _$ProductShelfLifeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -103,9 +105,9 @@ Map<String, dynamic> _$$_ProductShelfLifeToJson(_$_ProductShelfLife instance) {
   return val;
 }
 
-_$_ProdCharacteristic _$$_ProdCharacteristicFromJson(
+_$ProdCharacteristicImpl _$$ProdCharacteristicImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ProdCharacteristic(
+    _$ProdCharacteristicImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -155,8 +157,8 @@ _$_ProdCharacteristic _$$_ProdCharacteristicFromJson(
           : CodeableConcept.fromJson(json['scoring'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ProdCharacteristicToJson(
-    _$_ProdCharacteristic instance) {
+Map<String, dynamic> _$$ProdCharacteristicImplToJson(
+    _$ProdCharacteristicImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -189,8 +191,9 @@ Map<String, dynamic> _$$_ProdCharacteristicToJson(
   return val;
 }
 
-_$_MarketingStatus _$$_MarketingStatusFromJson(Map<String, dynamic> json) =>
-    _$_MarketingStatus(
+_$MarketingStatusImpl _$$MarketingStatusImplFromJson(
+        Map<String, dynamic> json) =>
+    _$MarketingStatusImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -217,7 +220,8 @@ _$_MarketingStatus _$$_MarketingStatusFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_restoreDate'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MarketingStatusToJson(_$_MarketingStatus instance) {
+Map<String, dynamic> _$$MarketingStatusImplToJson(
+    _$MarketingStatusImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

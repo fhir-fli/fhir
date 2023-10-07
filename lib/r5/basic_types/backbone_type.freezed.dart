@@ -106,11 +106,11 @@ class _$BackboneTypeCopyWithImpl<$Res, $Val extends BackboneType>
 }
 
 /// @nodoc
-abstract class _$$_BackboneTypeCopyWith<$Res>
+abstract class _$$BackboneTypeImplCopyWith<$Res>
     implements $BackboneTypeCopyWith<$Res> {
-  factory _$$_BackboneTypeCopyWith(
-          _$_BackboneType value, $Res Function(_$_BackboneType) then) =
-      __$$_BackboneTypeCopyWithImpl<$Res>;
+  factory _$$BackboneTypeImplCopyWith(
+          _$BackboneTypeImpl value, $Res Function(_$BackboneTypeImpl) then) =
+      __$$BackboneTypeImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -120,11 +120,11 @@ abstract class _$$_BackboneTypeCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_BackboneTypeCopyWithImpl<$Res>
-    extends _$BackboneTypeCopyWithImpl<$Res, _$_BackboneType>
-    implements _$$_BackboneTypeCopyWith<$Res> {
-  __$$_BackboneTypeCopyWithImpl(
-      _$_BackboneType _value, $Res Function(_$_BackboneType) _then)
+class __$$BackboneTypeImplCopyWithImpl<$Res>
+    extends _$BackboneTypeCopyWithImpl<$Res, _$BackboneTypeImpl>
+    implements _$$BackboneTypeImplCopyWith<$Res> {
+  __$$BackboneTypeImplCopyWithImpl(
+      _$BackboneTypeImpl _value, $Res Function(_$BackboneTypeImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -134,7 +134,7 @@ class __$$_BackboneTypeCopyWithImpl<$Res>
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
   }) {
-    return _then(_$_BackboneType(
+    return _then(_$BackboneTypeImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -153,8 +153,8 @@ class __$$_BackboneTypeCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_BackboneType extends _BackboneType {
-  const _$_BackboneType(
+class _$BackboneTypeImpl extends _BackboneType {
+  const _$BackboneTypeImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension})
@@ -162,8 +162,8 @@ class _$_BackboneType extends _BackboneType {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_BackboneType.fromJson(Map<String, dynamic> json) =>
-      _$$_BackboneTypeFromJson(json);
+  factory _$BackboneTypeImpl.fromJson(Map<String, dynamic> json) =>
+      _$$BackboneTypeImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references).
@@ -247,7 +247,7 @@ class _$_BackboneType extends _BackboneType {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_BackboneType &&
+            other is _$BackboneTypeImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -266,12 +266,12 @@ class _$_BackboneType extends _BackboneType {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BackboneTypeCopyWith<_$_BackboneType> get copyWith =>
-      __$$_BackboneTypeCopyWithImpl<_$_BackboneType>(this, _$identity);
+  _$$BackboneTypeImplCopyWith<_$BackboneTypeImpl> get copyWith =>
+      __$$BackboneTypeImplCopyWithImpl<_$BackboneTypeImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_BackboneTypeToJson(
+    return _$$BackboneTypeImplToJson(
       this,
     );
   }
@@ -281,11 +281,11 @@ abstract class _BackboneType extends BackboneType {
   const factory _BackboneType(
       {@JsonKey(name: 'id') final String? fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension}) = _$_BackboneType;
+      final List<FhirExtension>? modifierExtension}) = _$BackboneTypeImpl;
   const _BackboneType._() : super._();
 
   factory _BackboneType.fromJson(Map<String, dynamic> json) =
-      _$_BackboneType.fromJson;
+      _$BackboneTypeImpl.fromJson;
 
   @override
 
@@ -324,6 +324,6 @@ abstract class _BackboneType extends BackboneType {
   List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(ignore: true)
-  _$$_BackboneTypeCopyWith<_$_BackboneType> get copyWith =>
+  _$$BackboneTypeImplCopyWith<_$BackboneTypeImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

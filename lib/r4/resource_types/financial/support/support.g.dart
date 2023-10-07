@@ -6,7 +6,8 @@ part of 'support.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
+_$CoverageImpl _$$CoverageImplFromJson(Map<String, dynamic> json) =>
+    _$CoverageImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Coverage) ??
@@ -103,7 +104,7 @@ _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
+Map<String, dynamic> _$$CoverageImplToJson(_$CoverageImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -300,8 +301,8 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_CoverageClass _$$_CoverageClassFromJson(Map<String, dynamic> json) =>
-    _$_CoverageClass(
+_$CoverageClassImpl _$$CoverageClassImplFromJson(Map<String, dynamic> json) =>
+    _$CoverageClassImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -320,7 +321,7 @@ _$_CoverageClass _$$_CoverageClassFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CoverageClassToJson(_$_CoverageClass instance) {
+Map<String, dynamic> _$$CoverageClassImplToJson(_$CoverageClassImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -342,9 +343,9 @@ Map<String, dynamic> _$$_CoverageClassToJson(_$_CoverageClass instance) {
   return val;
 }
 
-_$_CoverageCostToBeneficiary _$$_CoverageCostToBeneficiaryFromJson(
+_$CoverageCostToBeneficiaryImpl _$$CoverageCostToBeneficiaryImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CoverageCostToBeneficiary(
+    _$CoverageCostToBeneficiaryImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -366,8 +367,8 @@ _$_CoverageCostToBeneficiary _$$_CoverageCostToBeneficiaryFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CoverageCostToBeneficiaryToJson(
-    _$_CoverageCostToBeneficiary instance) {
+Map<String, dynamic> _$$CoverageCostToBeneficiaryImplToJson(
+    _$CoverageCostToBeneficiaryImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -389,8 +390,9 @@ Map<String, dynamic> _$$_CoverageCostToBeneficiaryToJson(
   return val;
 }
 
-_$_CoverageException _$$_CoverageExceptionFromJson(Map<String, dynamic> json) =>
-    _$_CoverageException(
+_$CoverageExceptionImpl _$$CoverageExceptionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CoverageExceptionImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -404,8 +406,8 @@ _$_CoverageException _$$_CoverageExceptionFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CoverageExceptionToJson(
-    _$_CoverageException instance) {
+Map<String, dynamic> _$$CoverageExceptionImplToJson(
+    _$CoverageExceptionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -424,9 +426,9 @@ Map<String, dynamic> _$$_CoverageExceptionToJson(
   return val;
 }
 
-_$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
+_$CoverageEligibilityRequestImpl _$$CoverageEligibilityRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CoverageEligibilityRequest(
+    _$CoverageEligibilityRequestImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CoverageEligibilityRequest) ??
@@ -515,8 +517,8 @@ _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CoverageEligibilityRequestToJson(
-    _$_CoverageEligibilityRequest instance) {
+Map<String, dynamic> _$$CoverageEligibilityRequestImplToJson(
+    _$CoverageEligibilityRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -566,10 +568,10 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestToJson(
   return val;
 }
 
-_$_CoverageEligibilityRequestSupportingInfo
-    _$$_CoverageEligibilityRequestSupportingInfoFromJson(
+_$CoverageEligibilityRequestSupportingInfoImpl
+    _$$CoverageEligibilityRequestSupportingInfoImplFromJson(
             Map<String, dynamic> json) =>
-        _$_CoverageEligibilityRequestSupportingInfo(
+        _$CoverageEligibilityRequestSupportingInfoImpl(
           fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -593,8 +595,8 @@ _$_CoverageEligibilityRequestSupportingInfo
               : Element.fromJson(json['_appliesToAll'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_CoverageEligibilityRequestSupportingInfoToJson(
-    _$_CoverageEligibilityRequestSupportingInfo instance) {
+Map<String, dynamic> _$$CoverageEligibilityRequestSupportingInfoImplToJson(
+    _$CoverageEligibilityRequestSupportingInfoImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -616,10 +618,10 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestSupportingInfoToJson(
   return val;
 }
 
-_$_CoverageEligibilityRequestInsurance
-    _$$_CoverageEligibilityRequestInsuranceFromJson(
+_$CoverageEligibilityRequestInsuranceImpl
+    _$$CoverageEligibilityRequestInsuranceImplFromJson(
             Map<String, dynamic> json) =>
-        _$_CoverageEligibilityRequestInsurance(
+        _$CoverageEligibilityRequestInsuranceImpl(
           fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -642,8 +644,8 @@ _$_CoverageEligibilityRequestInsurance
                   json['_businessArrangement'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_CoverageEligibilityRequestInsuranceToJson(
-    _$_CoverageEligibilityRequestInsurance instance) {
+Map<String, dynamic> _$$CoverageEligibilityRequestInsuranceImplToJson(
+    _$CoverageEligibilityRequestInsuranceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -666,56 +668,58 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestInsuranceToJson(
   return val;
 }
 
-_$_CoverageEligibilityRequestItem _$$_CoverageEligibilityRequestItemFromJson(
-        Map<String, dynamic> json) =>
-    _$_CoverageEligibilityRequestItem(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      supportingInfoSequence: (json['supportingInfoSequence'] as List<dynamic>?)
-          ?.map(FhirPositiveInt.fromJson)
-          .toList(),
-      supportingInfoSequenceElement:
-          (json['_supportingInfoSequence'] as List<dynamic>?)
-              ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+_$CoverageEligibilityRequestItemImpl
+    _$$CoverageEligibilityRequestItemImplFromJson(Map<String, dynamic> json) =>
+        _$CoverageEligibilityRequestItemImpl(
+          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
-      category: json['category'] == null
-          ? null
-          : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-      productOrService: json['productOrService'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['productOrService'] as Map<String, dynamic>),
-      modifier: (json['modifier'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      provider: json['provider'] == null
-          ? null
-          : Reference.fromJson(json['provider'] as Map<String, dynamic>),
-      quantity: json['quantity'] == null
-          ? null
-          : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
-      unitPrice: json['unitPrice'] == null
-          ? null
-          : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
-      facility: json['facility'] == null
-          ? null
-          : Reference.fromJson(json['facility'] as Map<String, dynamic>),
-      diagnosis: (json['diagnosis'] as List<dynamic>?)
-          ?.map((e) => CoverageEligibilityRequestDiagnosis.fromJson(
-              e as Map<String, dynamic>))
-          .toList(),
-      detail: (json['detail'] as List<dynamic>?)
-          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          supportingInfoSequence:
+              (json['supportingInfoSequence'] as List<dynamic>?)
+                  ?.map(FhirPositiveInt.fromJson)
+                  .toList(),
+          supportingInfoSequenceElement:
+              (json['_supportingInfoSequence'] as List<dynamic>?)
+                  ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+                  .toList(),
+          category: json['category'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['category'] as Map<String, dynamic>),
+          productOrService: json['productOrService'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['productOrService'] as Map<String, dynamic>),
+          modifier: (json['modifier'] as List<dynamic>?)
+              ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          provider: json['provider'] == null
+              ? null
+              : Reference.fromJson(json['provider'] as Map<String, dynamic>),
+          quantity: json['quantity'] == null
+              ? null
+              : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+          unitPrice: json['unitPrice'] == null
+              ? null
+              : Money.fromJson(json['unitPrice'] as Map<String, dynamic>),
+          facility: json['facility'] == null
+              ? null
+              : Reference.fromJson(json['facility'] as Map<String, dynamic>),
+          diagnosis: (json['diagnosis'] as List<dynamic>?)
+              ?.map((e) => CoverageEligibilityRequestDiagnosis.fromJson(
+                  e as Map<String, dynamic>))
+              .toList(),
+          detail: (json['detail'] as List<dynamic>?)
+              ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+              .toList(),
+        );
 
-Map<String, dynamic> _$$_CoverageEligibilityRequestItemToJson(
-    _$_CoverageEligibilityRequestItem instance) {
+Map<String, dynamic> _$$CoverageEligibilityRequestItemImplToJson(
+    _$CoverageEligibilityRequestItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -746,10 +750,10 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestItemToJson(
   return val;
 }
 
-_$_CoverageEligibilityRequestDiagnosis
-    _$$_CoverageEligibilityRequestDiagnosisFromJson(
+_$CoverageEligibilityRequestDiagnosisImpl
+    _$$CoverageEligibilityRequestDiagnosisImplFromJson(
             Map<String, dynamic> json) =>
-        _$_CoverageEligibilityRequestDiagnosis(
+        _$CoverageEligibilityRequestDiagnosisImpl(
           fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -767,8 +771,8 @@ _$_CoverageEligibilityRequestDiagnosis
                   json['diagnosisReference'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_CoverageEligibilityRequestDiagnosisToJson(
-    _$_CoverageEligibilityRequestDiagnosis instance) {
+Map<String, dynamic> _$$CoverageEligibilityRequestDiagnosisImplToJson(
+    _$CoverageEligibilityRequestDiagnosisImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -788,9 +792,9 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestDiagnosisToJson(
   return val;
 }
 
-_$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
+_$CoverageEligibilityResponseImpl _$$CoverageEligibilityResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CoverageEligibilityResponse(
+    _$CoverageEligibilityResponseImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CoverageEligibilityResponse) ??
@@ -883,8 +887,8 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
-    _$_CoverageEligibilityResponse instance) {
+Map<String, dynamic> _$$CoverageEligibilityResponseImplToJson(
+    _$CoverageEligibilityResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -937,10 +941,10 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
   return val;
 }
 
-_$_CoverageEligibilityResponseInsurance
-    _$$_CoverageEligibilityResponseInsuranceFromJson(
+_$CoverageEligibilityResponseInsuranceImpl
+    _$$CoverageEligibilityResponseInsuranceImplFromJson(
             Map<String, dynamic> json) =>
-        _$_CoverageEligibilityResponseInsurance(
+        _$CoverageEligibilityResponseInsuranceImpl(
           fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -965,8 +969,8 @@ _$_CoverageEligibilityResponseInsurance
               .toList(),
         );
 
-Map<String, dynamic> _$$_CoverageEligibilityResponseInsuranceToJson(
-    _$_CoverageEligibilityResponseInsurance instance) {
+Map<String, dynamic> _$$CoverageEligibilityResponseInsuranceImplToJson(
+    _$CoverageEligibilityResponseInsuranceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -988,77 +992,80 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseInsuranceToJson(
   return val;
 }
 
-_$_CoverageEligibilityResponseItem _$$_CoverageEligibilityResponseItemFromJson(
-        Map<String, dynamic> json) =>
-    _$_CoverageEligibilityResponseItem(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      category: json['category'] == null
-          ? null
-          : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-      productOrService: json['productOrService'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['productOrService'] as Map<String, dynamic>),
-      modifier: (json['modifier'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      provider: json['provider'] == null
-          ? null
-          : Reference.fromJson(json['provider'] as Map<String, dynamic>),
-      excluded: json['excluded'] == null
-          ? null
-          : FhirBoolean.fromJson(json['excluded']),
-      excludedElement: json['_excluded'] == null
-          ? null
-          : Element.fromJson(json['_excluded'] as Map<String, dynamic>),
-      name: json['name'] as String?,
-      nameElement: json['_name'] == null
-          ? null
-          : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      description: json['description'] as String?,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      network: json['network'] == null
-          ? null
-          : CodeableConcept.fromJson(json['network'] as Map<String, dynamic>),
-      unit: json['unit'] == null
-          ? null
-          : CodeableConcept.fromJson(json['unit'] as Map<String, dynamic>),
-      term: json['term'] == null
-          ? null
-          : CodeableConcept.fromJson(json['term'] as Map<String, dynamic>),
-      benefit: (json['benefit'] as List<dynamic>?)
-          ?.map((e) => CoverageEligibilityResponseBenefit.fromJson(
-              e as Map<String, dynamic>))
-          .toList(),
-      authorizationRequired: json['authorizationRequired'] == null
-          ? null
-          : FhirBoolean.fromJson(json['authorizationRequired']),
-      authorizationRequiredElement: json['_authorizationRequired'] == null
-          ? null
-          : Element.fromJson(
-              json['_authorizationRequired'] as Map<String, dynamic>),
-      authorizationSupporting:
-          (json['authorizationSupporting'] as List<dynamic>?)
+_$CoverageEligibilityResponseItemImpl
+    _$$CoverageEligibilityResponseItemImplFromJson(Map<String, dynamic> json) =>
+        _$CoverageEligibilityResponseItemImpl(
+          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          category: json['category'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['category'] as Map<String, dynamic>),
+          productOrService: json['productOrService'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['productOrService'] as Map<String, dynamic>),
+          modifier: (json['modifier'] as List<dynamic>?)
               ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
               .toList(),
-      authorizationUrl: json['authorizationUrl'] == null
-          ? null
-          : FhirUri.fromJson(json['authorizationUrl']),
-      authorizationUrlElement: json['_authorizationUrl'] == null
-          ? null
-          : Element.fromJson(json['_authorizationUrl'] as Map<String, dynamic>),
-    );
+          provider: json['provider'] == null
+              ? null
+              : Reference.fromJson(json['provider'] as Map<String, dynamic>),
+          excluded: json['excluded'] == null
+              ? null
+              : FhirBoolean.fromJson(json['excluded']),
+          excludedElement: json['_excluded'] == null
+              ? null
+              : Element.fromJson(json['_excluded'] as Map<String, dynamic>),
+          name: json['name'] as String?,
+          nameElement: json['_name'] == null
+              ? null
+              : Element.fromJson(json['_name'] as Map<String, dynamic>),
+          description: json['description'] as String?,
+          descriptionElement: json['_description'] == null
+              ? null
+              : Element.fromJson(json['_description'] as Map<String, dynamic>),
+          network: json['network'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['network'] as Map<String, dynamic>),
+          unit: json['unit'] == null
+              ? null
+              : CodeableConcept.fromJson(json['unit'] as Map<String, dynamic>),
+          term: json['term'] == null
+              ? null
+              : CodeableConcept.fromJson(json['term'] as Map<String, dynamic>),
+          benefit: (json['benefit'] as List<dynamic>?)
+              ?.map((e) => CoverageEligibilityResponseBenefit.fromJson(
+                  e as Map<String, dynamic>))
+              .toList(),
+          authorizationRequired: json['authorizationRequired'] == null
+              ? null
+              : FhirBoolean.fromJson(json['authorizationRequired']),
+          authorizationRequiredElement: json['_authorizationRequired'] == null
+              ? null
+              : Element.fromJson(
+                  json['_authorizationRequired'] as Map<String, dynamic>),
+          authorizationSupporting: (json['authorizationSupporting']
+                  as List<dynamic>?)
+              ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          authorizationUrl: json['authorizationUrl'] == null
+              ? null
+              : FhirUri.fromJson(json['authorizationUrl']),
+          authorizationUrlElement: json['_authorizationUrl'] == null
+              ? null
+              : Element.fromJson(
+                  json['_authorizationUrl'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_CoverageEligibilityResponseItemToJson(
-    _$_CoverageEligibilityResponseItem instance) {
+Map<String, dynamic> _$$CoverageEligibilityResponseItemImplToJson(
+    _$CoverageEligibilityResponseItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1097,9 +1104,10 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseItemToJson(
   return val;
 }
 
-_$_CoverageEligibilityResponseBenefit
-    _$$_CoverageEligibilityResponseBenefitFromJson(Map<String, dynamic> json) =>
-        _$_CoverageEligibilityResponseBenefit(
+_$CoverageEligibilityResponseBenefitImpl
+    _$$CoverageEligibilityResponseBenefitImplFromJson(
+            Map<String, dynamic> json) =>
+        _$CoverageEligibilityResponseBenefitImpl(
           fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1139,8 +1147,8 @@ _$_CoverageEligibilityResponseBenefit
               : Money.fromJson(json['usedMoney'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_CoverageEligibilityResponseBenefitToJson(
-    _$_CoverageEligibilityResponseBenefit instance) {
+Map<String, dynamic> _$$CoverageEligibilityResponseBenefitImplToJson(
+    _$CoverageEligibilityResponseBenefitImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1169,9 +1177,10 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseBenefitToJson(
   return val;
 }
 
-_$_CoverageEligibilityResponseError
-    _$$_CoverageEligibilityResponseErrorFromJson(Map<String, dynamic> json) =>
-        _$_CoverageEligibilityResponseError(
+_$CoverageEligibilityResponseErrorImpl
+    _$$CoverageEligibilityResponseErrorImplFromJson(
+            Map<String, dynamic> json) =>
+        _$CoverageEligibilityResponseErrorImpl(
           fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1182,8 +1191,8 @@ _$_CoverageEligibilityResponseError
           code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_CoverageEligibilityResponseErrorToJson(
-    _$_CoverageEligibilityResponseError instance) {
+Map<String, dynamic> _$$CoverageEligibilityResponseErrorImplToJson(
+    _$CoverageEligibilityResponseErrorImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1201,8 +1210,9 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseErrorToJson(
   return val;
 }
 
-_$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
-    _$_EnrollmentRequest(
+_$EnrollmentRequestImpl _$$EnrollmentRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$EnrollmentRequestImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.EnrollmentRequest) ??
@@ -1262,8 +1272,8 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['coverage'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_EnrollmentRequestToJson(
-    _$_EnrollmentRequest instance) {
+Map<String, dynamic> _$$EnrollmentRequestImplToJson(
+    _$EnrollmentRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1300,9 +1310,9 @@ Map<String, dynamic> _$$_EnrollmentRequestToJson(
   return val;
 }
 
-_$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
+_$EnrollmentResponseImpl _$$EnrollmentResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_EnrollmentResponse(
+    _$EnrollmentResponseImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.EnrollmentResponse) ??
@@ -1368,8 +1378,8 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
           : Reference.fromJson(json['requestProvider'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_EnrollmentResponseToJson(
-    _$_EnrollmentResponse instance) {
+Map<String, dynamic> _$$EnrollmentResponseImplToJson(
+    _$EnrollmentResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };

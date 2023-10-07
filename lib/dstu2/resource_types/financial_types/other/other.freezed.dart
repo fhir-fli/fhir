@@ -416,11 +416,11 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
+abstract class _$$ExplanationOfBenefitImplCopyWith<$Res>
     implements $ExplanationOfBenefitCopyWith<$Res> {
-  factory _$$_ExplanationOfBenefitCopyWith(_$_ExplanationOfBenefit value,
-          $Res Function(_$_ExplanationOfBenefit) then) =
-      __$$_ExplanationOfBenefitCopyWithImpl<$Res>;
+  factory _$$ExplanationOfBenefitImplCopyWith(_$ExplanationOfBenefitImpl value,
+          $Res Function(_$ExplanationOfBenefitImpl) then) =
+      __$$ExplanationOfBenefitImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -481,11 +481,11 @@ abstract class _$$_ExplanationOfBenefitCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
-    extends _$ExplanationOfBenefitCopyWithImpl<$Res, _$_ExplanationOfBenefit>
-    implements _$$_ExplanationOfBenefitCopyWith<$Res> {
-  __$$_ExplanationOfBenefitCopyWithImpl(_$_ExplanationOfBenefit _value,
-      $Res Function(_$_ExplanationOfBenefit) _then)
+class __$$ExplanationOfBenefitImplCopyWithImpl<$Res>
+    extends _$ExplanationOfBenefitCopyWithImpl<$Res, _$ExplanationOfBenefitImpl>
+    implements _$$ExplanationOfBenefitImplCopyWith<$Res> {
+  __$$ExplanationOfBenefitImplCopyWithImpl(_$ExplanationOfBenefitImpl _value,
+      $Res Function(_$ExplanationOfBenefitImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -517,7 +517,7 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
     Object? requestProvider = freezed,
     Object? requestOrganization = freezed,
   }) {
-    return _then(_$_ExplanationOfBenefit(
+    return _then(_$ExplanationOfBenefitImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -624,8 +624,8 @@ class __$$_ExplanationOfBenefitCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
-  const _$_ExplanationOfBenefit(
+class _$ExplanationOfBenefitImpl extends _ExplanationOfBenefit {
+  const _$ExplanationOfBenefitImpl(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
       this.resourceType = Dstu2ResourceType.ExplanationOfBenefit,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -659,8 +659,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
         _identifier = identifier,
         super._();
 
-  factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
-      _$$_ExplanationOfBenefitFromJson(json);
+  factory _$ExplanationOfBenefitImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ExplanationOfBenefitImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
@@ -765,7 +765,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_ExplanationOfBenefit &&
+            other is _$ExplanationOfBenefitImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -844,13 +844,14 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_ExplanationOfBenefitCopyWith<_$_ExplanationOfBenefit> get copyWith =>
-      __$$_ExplanationOfBenefitCopyWithImpl<_$_ExplanationOfBenefit>(
-          this, _$identity);
+  _$$ExplanationOfBenefitImplCopyWith<_$ExplanationOfBenefitImpl>
+      get copyWith =>
+          __$$ExplanationOfBenefitImplCopyWithImpl<_$ExplanationOfBenefitImpl>(
+              this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_ExplanationOfBenefitToJson(
+    return _$$ExplanationOfBenefitImplToJson(
       this,
     );
   }
@@ -884,11 +885,11 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
       @JsonKey(name: '_created') final Element? createdElement,
       final Reference? organization,
       final Reference? requestProvider,
-      final Reference? requestOrganization}) = _$_ExplanationOfBenefit;
+      final Reference? requestOrganization}) = _$ExplanationOfBenefitImpl;
   const _ExplanationOfBenefit._() : super._();
 
   factory _ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =
-      _$_ExplanationOfBenefit.fromJson;
+      _$ExplanationOfBenefitImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
@@ -952,6 +953,6 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   Reference? get requestOrganization;
   @override
   @JsonKey(ignore: true)
-  _$$_ExplanationOfBenefitCopyWith<_$_ExplanationOfBenefit> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$ExplanationOfBenefitImplCopyWith<_$ExplanationOfBenefitImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

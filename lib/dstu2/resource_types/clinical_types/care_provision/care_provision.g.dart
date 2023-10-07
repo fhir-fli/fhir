@@ -6,7 +6,8 @@ part of 'care_provision.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CarePlan _$$_CarePlanFromJson(Map<String, dynamic> json) => _$_CarePlan(
+_$CarePlanImpl _$$CarePlanImplFromJson(Map<String, dynamic> json) =>
+    _$CarePlanImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.CarePlan) ??
@@ -92,7 +93,7 @@ _$_CarePlan _$$_CarePlanFromJson(Map<String, dynamic> json) => _$_CarePlan(
           : Annotation.fromJson(json['note'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CarePlanToJson(_$_CarePlan instance) {
+Map<String, dynamic> _$$CarePlanImplToJson(_$CarePlanImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -248,9 +249,9 @@ const _$CarePlanStatusEnumMap = {
   CarePlanStatus.unknown: 'unknown',
 };
 
-_$_CarePlanRelatedPlan _$$_CarePlanRelatedPlanFromJson(
+_$CarePlanRelatedPlanImpl _$$CarePlanRelatedPlanImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CarePlanRelatedPlan(
+    _$CarePlanRelatedPlanImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -263,8 +264,8 @@ _$_CarePlanRelatedPlan _$$_CarePlanRelatedPlanFromJson(
       plan: Reference.fromJson(json['plan'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CarePlanRelatedPlanToJson(
-    _$_CarePlanRelatedPlan instance) {
+Map<String, dynamic> _$$CarePlanRelatedPlanImplToJson(
+    _$CarePlanRelatedPlanImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -290,9 +291,9 @@ const _$RelatedPlanCodeEnumMap = {
   RelatedPlanCode.unknown: 'unknown',
 };
 
-_$_CarePlanParticipant _$$_CarePlanParticipantFromJson(
+_$CarePlanParticipantImpl _$$CarePlanParticipantImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CarePlanParticipant(
+    _$CarePlanParticipantImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -308,8 +309,8 @@ _$_CarePlanParticipant _$$_CarePlanParticipantFromJson(
           : Reference.fromJson(json['member'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CarePlanParticipantToJson(
-    _$_CarePlanParticipant instance) {
+Map<String, dynamic> _$$CarePlanParticipantImplToJson(
+    _$CarePlanParticipantImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -328,8 +329,9 @@ Map<String, dynamic> _$$_CarePlanParticipantToJson(
   return val;
 }
 
-_$_CarePlanActivity _$$_CarePlanActivityFromJson(Map<String, dynamic> json) =>
-    _$_CarePlanActivity(
+_$CarePlanActivityImpl _$$CarePlanActivityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CarePlanActivityImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -355,7 +357,8 @@ _$_CarePlanActivity _$$_CarePlanActivityFromJson(Map<String, dynamic> json) =>
               json['detail'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CarePlanActivityToJson(_$_CarePlanActivity instance) {
+Map<String, dynamic> _$$CarePlanActivityImplToJson(
+    _$CarePlanActivityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -378,9 +381,9 @@ Map<String, dynamic> _$$_CarePlanActivityToJson(_$_CarePlanActivity instance) {
   return val;
 }
 
-_$_CarePlanActivityDetail _$$_CarePlanActivityDetailFromJson(
+_$CarePlanActivityDetailImpl _$$CarePlanActivityDetailImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CarePlanActivityDetail(
+    _$CarePlanActivityDetailImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -452,8 +455,8 @@ _$_CarePlanActivityDetail _$$_CarePlanActivityDetailFromJson(
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CarePlanActivityDetailToJson(
-    _$_CarePlanActivityDetail instance) {
+Map<String, dynamic> _$$CarePlanActivityDetailImplToJson(
+    _$CarePlanActivityDetailImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -506,7 +509,7 @@ const _$DetailStatusEnumMap = {
   DetailStatus.unknown: 'unknown',
 };
 
-_$_Goal _$$_GoalFromJson(Map<String, dynamic> json) => _$_Goal(
+_$GoalImpl _$$GoalImplFromJson(Map<String, dynamic> json) => _$GoalImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Goal) ??
@@ -597,7 +600,7 @@ _$_Goal _$$_GoalFromJson(Map<String, dynamic> json) => _$_Goal(
           .toList(),
     );
 
-Map<String, dynamic> _$$_GoalToJson(_$_Goal instance) {
+Map<String, dynamic> _$$GoalImplToJson(_$GoalImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -658,8 +661,8 @@ const _$GoalStatusEnumMap = {
   GoalStatus.unknown: 'unknown',
 };
 
-_$_GoalOutcome _$$_GoalOutcomeFromJson(Map<String, dynamic> json) =>
-    _$_GoalOutcome(
+_$GoalOutcomeImpl _$$GoalOutcomeImplFromJson(Map<String, dynamic> json) =>
+    _$GoalOutcomeImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -676,7 +679,7 @@ _$_GoalOutcome _$$_GoalOutcomeFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['resultReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GoalOutcomeToJson(_$_GoalOutcome instance) {
+Map<String, dynamic> _$$GoalOutcomeImplToJson(_$GoalOutcomeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -696,8 +699,9 @@ Map<String, dynamic> _$$_GoalOutcomeToJson(_$_GoalOutcome instance) {
   return val;
 }
 
-_$_ReferralRequest _$$_ReferralRequestFromJson(Map<String, dynamic> json) =>
-    _$_ReferralRequest(
+_$ReferralRequestImpl _$$ReferralRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ReferralRequestImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ReferralRequest) ??
@@ -775,7 +779,8 @@ _$_ReferralRequest _$$_ReferralRequestFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['fulfillmentTime'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ReferralRequestToJson(_$_ReferralRequest instance) {
+Map<String, dynamic> _$$ReferralRequestImplToJson(
+    _$ReferralRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -833,8 +838,9 @@ const _$ReferralRequestStatusEnumMap = {
   ReferralRequestStatus.unknown: 'unknown',
 };
 
-_$_ProcedureRequest _$$_ProcedureRequestFromJson(Map<String, dynamic> json) =>
-    _$_ProcedureRequest(
+_$ProcedureRequestImpl _$$ProcedureRequestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ProcedureRequestImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ProcedureRequest) ??
@@ -921,7 +927,8 @@ _$_ProcedureRequest _$$_ProcedureRequestFromJson(Map<String, dynamic> json) =>
           unknownValue: ProcedureRequestPriority.unknown),
     );
 
-Map<String, dynamic> _$$_ProcedureRequestToJson(_$_ProcedureRequest instance) {
+Map<String, dynamic> _$$ProcedureRequestImplToJson(
+    _$ProcedureRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -992,8 +999,8 @@ const _$ProcedureRequestPriorityEnumMap = {
   ProcedureRequestPriority.unknown: 'unknown',
 };
 
-_$_NutritionOrder _$$_NutritionOrderFromJson(Map<String, dynamic> json) =>
-    _$_NutritionOrder(
+_$NutritionOrderImpl _$$NutritionOrderImplFromJson(Map<String, dynamic> json) =>
+    _$NutritionOrderImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.NutritionOrder) ??
@@ -1068,7 +1075,8 @@ _$_NutritionOrder _$$_NutritionOrderFromJson(Map<String, dynamic> json) =>
               json['enteralFormula'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_NutritionOrderToJson(_$_NutritionOrder instance) {
+Map<String, dynamic> _$$NutritionOrderImplToJson(
+    _$NutritionOrderImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1126,9 +1134,9 @@ const _$NutritionOrderStatusEnumMap = {
   NutritionOrderStatus.unknown: 'unknown',
 };
 
-_$_NutritionOrderOralDiet _$$_NutritionOrderOralDietFromJson(
+_$NutritionOrderOralDietImpl _$$NutritionOrderOralDietImplFromJson(
         Map<String, dynamic> json) =>
-    _$_NutritionOrderOralDiet(
+    _$NutritionOrderOralDietImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1162,8 +1170,8 @@ _$_NutritionOrderOralDiet _$$_NutritionOrderOralDietFromJson(
           : Element.fromJson(json['_instruction'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_NutritionOrderOralDietToJson(
-    _$_NutritionOrderOralDiet instance) {
+Map<String, dynamic> _$$NutritionOrderOralDietImplToJson(
+    _$NutritionOrderOralDietImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1189,9 +1197,9 @@ Map<String, dynamic> _$$_NutritionOrderOralDietToJson(
   return val;
 }
 
-_$_NutritionOrderSupplement _$$_NutritionOrderSupplementFromJson(
+_$NutritionOrderSupplementImpl _$$NutritionOrderSupplementImplFromJson(
         Map<String, dynamic> json) =>
-    _$_NutritionOrderSupplement(
+    _$NutritionOrderSupplementImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1221,8 +1229,8 @@ _$_NutritionOrderSupplement _$$_NutritionOrderSupplementFromJson(
           : Element.fromJson(json['_instruction'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_NutritionOrderSupplementToJson(
-    _$_NutritionOrderSupplement instance) {
+Map<String, dynamic> _$$NutritionOrderSupplementImplToJson(
+    _$NutritionOrderSupplementImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1247,9 +1255,9 @@ Map<String, dynamic> _$$_NutritionOrderSupplementToJson(
   return val;
 }
 
-_$_NutritionOrderEnteralFormula _$$_NutritionOrderEnteralFormulaFromJson(
+_$NutritionOrderEnteralFormulaImpl _$$NutritionOrderEnteralFormulaImplFromJson(
         Map<String, dynamic> json) =>
-    _$_NutritionOrderEnteralFormula(
+    _$NutritionOrderEnteralFormulaImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1301,8 +1309,8 @@ _$_NutritionOrderEnteralFormula _$$_NutritionOrderEnteralFormulaFromJson(
                   json['_administrationInstruction'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_NutritionOrderEnteralFormulaToJson(
-    _$_NutritionOrderEnteralFormula instance) {
+Map<String, dynamic> _$$NutritionOrderEnteralFormulaImplToJson(
+    _$NutritionOrderEnteralFormulaImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1337,29 +1345,30 @@ Map<String, dynamic> _$$_NutritionOrderEnteralFormulaToJson(
   return val;
 }
 
-_$_NutritionOrderOralDietNutrient _$$_NutritionOrderOralDietNutrientFromJson(
-        Map<String, dynamic> json) =>
-    _$_NutritionOrderOralDietNutrient(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      fhirComments: (json['fhir_comments'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      modifier: json['modifier'] == null
-          ? null
-          : CodeableConcept.fromJson(json['modifier'] as Map<String, dynamic>),
-      amount: json['amount'] == null
-          ? null
-          : Quantity.fromJson(json['amount'] as Map<String, dynamic>),
-    );
+_$NutritionOrderOralDietNutrientImpl
+    _$$NutritionOrderOralDietNutrientImplFromJson(Map<String, dynamic> json) =>
+        _$NutritionOrderOralDietNutrientImpl(
+          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          fhirComments: (json['fhir_comments'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList(),
+          modifier: json['modifier'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['modifier'] as Map<String, dynamic>),
+          amount: json['amount'] == null
+              ? null
+              : Quantity.fromJson(json['amount'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_NutritionOrderOralDietNutrientToJson(
-    _$_NutritionOrderOralDietNutrient instance) {
+Map<String, dynamic> _$$NutritionOrderOralDietNutrientImplToJson(
+    _$NutritionOrderOralDietNutrientImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1379,29 +1388,31 @@ Map<String, dynamic> _$$_NutritionOrderOralDietNutrientToJson(
   return val;
 }
 
-_$_NutritionOrderOralDietTexture _$$_NutritionOrderOralDietTextureFromJson(
-        Map<String, dynamic> json) =>
-    _$_NutritionOrderOralDietTexture(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      fhirComments: (json['fhir_comments'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      modifier: json['modifier'] == null
-          ? null
-          : CodeableConcept.fromJson(json['modifier'] as Map<String, dynamic>),
-      foodType: json['foodType'] == null
-          ? null
-          : CodeableConcept.fromJson(json['foodType'] as Map<String, dynamic>),
-    );
+_$NutritionOrderOralDietTextureImpl
+    _$$NutritionOrderOralDietTextureImplFromJson(Map<String, dynamic> json) =>
+        _$NutritionOrderOralDietTextureImpl(
+          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          fhirComments: (json['fhir_comments'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList(),
+          modifier: json['modifier'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['modifier'] as Map<String, dynamic>),
+          foodType: json['foodType'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['foodType'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_NutritionOrderOralDietTextureToJson(
-    _$_NutritionOrderOralDietTexture instance) {
+Map<String, dynamic> _$$NutritionOrderOralDietTextureImplToJson(
+    _$NutritionOrderOralDietTextureImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1421,10 +1432,10 @@ Map<String, dynamic> _$$_NutritionOrderOralDietTextureToJson(
   return val;
 }
 
-_$_NutritionOrderEnteralFormulaAdministration
-    _$$_NutritionOrderEnteralFormulaAdministrationFromJson(
+_$NutritionOrderEnteralFormulaAdministrationImpl
+    _$$NutritionOrderEnteralFormulaAdministrationImplFromJson(
             Map<String, dynamic> json) =>
-        _$_NutritionOrderEnteralFormulaAdministration(
+        _$NutritionOrderEnteralFormulaAdministrationImpl(
           fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1446,8 +1457,8 @@ _$_NutritionOrderEnteralFormulaAdministration
               : Ratio.fromJson(json['rateRatio'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_NutritionOrderEnteralFormulaAdministrationToJson(
-    _$_NutritionOrderEnteralFormulaAdministration instance) {
+Map<String, dynamic> _$$NutritionOrderEnteralFormulaAdministrationImplToJson(
+    _$NutritionOrderEnteralFormulaAdministrationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1468,9 +1479,9 @@ Map<String, dynamic> _$$_NutritionOrderEnteralFormulaAdministrationToJson(
   return val;
 }
 
-_$_VisionPrescriptionDispense _$$_VisionPrescriptionDispenseFromJson(
+_$VisionPrescriptionDispenseImpl _$$VisionPrescriptionDispenseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_VisionPrescriptionDispense(
+    _$VisionPrescriptionDispenseImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1506,8 +1517,8 @@ _$_VisionPrescriptionDispense _$$_VisionPrescriptionDispenseFromJson(
       notes: json['notes'] as String?,
     );
 
-Map<String, dynamic> _$$_VisionPrescriptionDispenseToJson(
-    _$_VisionPrescriptionDispense instance) {
+Map<String, dynamic> _$$VisionPrescriptionDispenseImplToJson(
+    _$VisionPrescriptionDispenseImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1553,9 +1564,9 @@ const _$DispenseBaseEnumMap = {
   DispenseBase.unknown: 'unknown',
 };
 
-_$_VisionPrescription _$$_VisionPrescriptionFromJson(
+_$VisionPrescriptionImpl _$$VisionPrescriptionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_VisionPrescription(
+    _$VisionPrescriptionImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.VisionPrescription) ??
@@ -1619,8 +1630,8 @@ _$_VisionPrescription _$$_VisionPrescriptionFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_VisionPrescriptionToJson(
-    _$_VisionPrescription instance) {
+Map<String, dynamic> _$$VisionPrescriptionImplToJson(
+    _$VisionPrescriptionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };

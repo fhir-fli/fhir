@@ -6,9 +6,9 @@ part of 'definitional_artifacts.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ActivityDefinition _$$_ActivityDefinitionFromJson(
+_$ActivityDefinitionImpl _$$ActivityDefinitionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ActivityDefinition(
+    _$ActivityDefinitionImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ActivityDefinition) ??
@@ -186,8 +186,8 @@ _$_ActivityDefinition _$$_ActivityDefinitionFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ActivityDefinitionToJson(
-    _$_ActivityDefinition instance) {
+Map<String, dynamic> _$$ActivityDefinitionImplToJson(
+    _$ActivityDefinitionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -403,20 +403,20 @@ const _$ActivityDefinitionStatusEnumMap = {
   ActivityDefinitionStatus.unknown: 'unknown',
 };
 
-_$_ActivityDefinitionParticipant _$$_ActivityDefinitionParticipantFromJson(
-        Map<String, dynamic> json) =>
-    _$_ActivityDefinitionParticipant(
-      type: json['type'] as String?,
-      typeElement: json['_type'] == null
-          ? null
-          : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      role: json['role'] == null
-          ? null
-          : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
-    );
+_$ActivityDefinitionParticipantImpl
+    _$$ActivityDefinitionParticipantImplFromJson(Map<String, dynamic> json) =>
+        _$ActivityDefinitionParticipantImpl(
+          type: json['type'] as String?,
+          typeElement: json['_type'] == null
+              ? null
+              : Element.fromJson(json['_type'] as Map<String, dynamic>),
+          role: json['role'] == null
+              ? null
+              : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_ActivityDefinitionParticipantToJson(
-    _$_ActivityDefinitionParticipant instance) {
+Map<String, dynamic> _$$ActivityDefinitionParticipantImplToJson(
+    _$ActivityDefinitionParticipantImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -431,29 +431,29 @@ Map<String, dynamic> _$$_ActivityDefinitionParticipantToJson(
   return val;
 }
 
-_$_ActivityDefinitionDynamicValue _$$_ActivityDefinitionDynamicValueFromJson(
-        Map<String, dynamic> json) =>
-    _$_ActivityDefinitionDynamicValue(
-      description: json['description'] as String?,
-      descriptionElement: json['_description'] == null
-          ? null
-          : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      path: json['path'] as String?,
-      pathElement: json['_path'] == null
-          ? null
-          : Element.fromJson(json['_path'] as Map<String, dynamic>),
-      language: json['language'] as String?,
-      languageElement: json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>),
-      expression: json['expression'] as String?,
-      expressionElement: json['_expression'] == null
-          ? null
-          : Element.fromJson(json['_expression'] as Map<String, dynamic>),
-    );
+_$ActivityDefinitionDynamicValueImpl
+    _$$ActivityDefinitionDynamicValueImplFromJson(Map<String, dynamic> json) =>
+        _$ActivityDefinitionDynamicValueImpl(
+          description: json['description'] as String?,
+          descriptionElement: json['_description'] == null
+              ? null
+              : Element.fromJson(json['_description'] as Map<String, dynamic>),
+          path: json['path'] as String?,
+          pathElement: json['_path'] == null
+              ? null
+              : Element.fromJson(json['_path'] as Map<String, dynamic>),
+          language: json['language'] as String?,
+          languageElement: json['_language'] == null
+              ? null
+              : Element.fromJson(json['_language'] as Map<String, dynamic>),
+          expression: json['expression'] as String?,
+          expressionElement: json['_expression'] == null
+              ? null
+              : Element.fromJson(json['_expression'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_ActivityDefinitionDynamicValueToJson(
-    _$_ActivityDefinitionDynamicValue instance) {
+Map<String, dynamic> _$$ActivityDefinitionDynamicValueImplToJson(
+    _$ActivityDefinitionDynamicValueImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -473,8 +473,8 @@ Map<String, dynamic> _$$_ActivityDefinitionDynamicValueToJson(
   return val;
 }
 
-_$_PlanDefinition _$$_PlanDefinitionFromJson(Map<String, dynamic> json) =>
-    _$_PlanDefinition(
+_$PlanDefinitionImpl _$$PlanDefinitionImplFromJson(Map<String, dynamic> json) =>
+    _$PlanDefinitionImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.PlanDefinition) ??
@@ -608,7 +608,8 @@ _$_PlanDefinition _$$_PlanDefinitionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_PlanDefinitionToJson(_$_PlanDefinition instance) {
+Map<String, dynamic> _$$PlanDefinitionImplToJson(
+    _$PlanDefinitionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -687,9 +688,9 @@ const _$PlanDefinitionStatusEnumMap = {
   PlanDefinitionStatus.unknown: 'unknown',
 };
 
-_$_PlanDefinitionGoal _$$_PlanDefinitionGoalFromJson(
+_$PlanDefinitionGoalImpl _$$PlanDefinitionGoalImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PlanDefinitionGoal(
+    _$PlanDefinitionGoalImpl(
       category: json['category'] == null
           ? null
           : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
@@ -712,8 +713,8 @@ _$_PlanDefinitionGoal _$$_PlanDefinitionGoalFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_PlanDefinitionGoalToJson(
-    _$_PlanDefinitionGoal instance) {
+Map<String, dynamic> _$$PlanDefinitionGoalImplToJson(
+    _$PlanDefinitionGoalImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -734,9 +735,9 @@ Map<String, dynamic> _$$_PlanDefinitionGoalToJson(
   return val;
 }
 
-_$_PlanDefinitionTarget _$$_PlanDefinitionTargetFromJson(
+_$PlanDefinitionTargetImpl _$$PlanDefinitionTargetImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PlanDefinitionTarget(
+    _$PlanDefinitionTargetImpl(
       measure: json['measure'] == null
           ? null
           : CodeableConcept.fromJson(json['measure'] as Map<String, dynamic>),
@@ -755,8 +756,8 @@ _$_PlanDefinitionTarget _$$_PlanDefinitionTargetFromJson(
           : FhirDuration.fromJson(json['due'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PlanDefinitionTargetToJson(
-    _$_PlanDefinitionTarget instance) {
+Map<String, dynamic> _$$PlanDefinitionTargetImplToJson(
+    _$PlanDefinitionTargetImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -774,9 +775,9 @@ Map<String, dynamic> _$$_PlanDefinitionTargetToJson(
   return val;
 }
 
-_$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
+_$PlanDefinitionActionImpl _$$PlanDefinitionActionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PlanDefinitionAction(
+    _$PlanDefinitionActionImpl(
       label: json['label'] as String?,
       labelElement: json['_label'] == null
           ? null
@@ -897,8 +898,8 @@ _$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_PlanDefinitionActionToJson(
-    _$_PlanDefinitionAction instance) {
+Map<String, dynamic> _$$PlanDefinitionActionImplToJson(
+    _$PlanDefinitionActionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1005,9 +1006,9 @@ const _$PlanDefinitionActionCardinalityBehaviorEnumMap = {
   PlanDefinitionActionCardinalityBehavior.unknown: 'unknown',
 };
 
-_$_PlanDefinitionCondition _$$_PlanDefinitionConditionFromJson(
+_$PlanDefinitionConditionImpl _$$PlanDefinitionConditionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PlanDefinitionCondition(
+    _$PlanDefinitionConditionImpl(
       kind: $enumDecodeNullable(
           _$PlanDefinitionConditionKindEnumMap, json['kind']),
       kindElement: json['_kind'] == null
@@ -1027,8 +1028,8 @@ _$_PlanDefinitionCondition _$$_PlanDefinitionConditionFromJson(
           : Element.fromJson(json['_expression'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PlanDefinitionConditionToJson(
-    _$_PlanDefinitionCondition instance) {
+Map<String, dynamic> _$$PlanDefinitionConditionImplToJson(
+    _$PlanDefinitionConditionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1055,9 +1056,9 @@ const _$PlanDefinitionConditionKindEnumMap = {
   PlanDefinitionConditionKind.unknown: 'unknown',
 };
 
-_$_PlanDefinitionRelatedAction _$$_PlanDefinitionRelatedActionFromJson(
+_$PlanDefinitionRelatedActionImpl _$$PlanDefinitionRelatedActionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PlanDefinitionRelatedAction(
+    _$PlanDefinitionRelatedActionImpl(
       actionId:
           json['actionId'] == null ? null : FhirId.fromJson(json['actionId']),
       actionIdElement: json['_actionId'] == null
@@ -1078,8 +1079,8 @@ _$_PlanDefinitionRelatedAction _$$_PlanDefinitionRelatedActionFromJson(
           : Range.fromJson(json['offsetRange'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PlanDefinitionRelatedActionToJson(
-    _$_PlanDefinitionRelatedAction instance) {
+Map<String, dynamic> _$$PlanDefinitionRelatedActionImplToJson(
+    _$PlanDefinitionRelatedActionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1113,9 +1114,9 @@ const _$PlanDefinitionRelatedActionRelationshipEnumMap = {
   PlanDefinitionRelatedActionRelationship.unknown: 'unknown',
 };
 
-_$_PlanDefinitionParticipant _$$_PlanDefinitionParticipantFromJson(
+_$PlanDefinitionParticipantImpl _$$PlanDefinitionParticipantImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PlanDefinitionParticipant(
+    _$PlanDefinitionParticipantImpl(
       type: $enumDecodeNullable(
           _$PlanDefinitionParticipantTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
@@ -1126,8 +1127,8 @@ _$_PlanDefinitionParticipant _$$_PlanDefinitionParticipantFromJson(
           : CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PlanDefinitionParticipantToJson(
-    _$_PlanDefinitionParticipant instance) {
+Map<String, dynamic> _$$PlanDefinitionParticipantImplToJson(
+    _$PlanDefinitionParticipantImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1149,9 +1150,9 @@ const _$PlanDefinitionParticipantTypeEnumMap = {
   PlanDefinitionParticipantType.unknown: 'unknown',
 };
 
-_$_PlanDefinitionDynamicValue _$$_PlanDefinitionDynamicValueFromJson(
+_$PlanDefinitionDynamicValueImpl _$$PlanDefinitionDynamicValueImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PlanDefinitionDynamicValue(
+    _$PlanDefinitionDynamicValueImpl(
       description: json['description'] as String?,
       descriptionElement: json['_description'] == null
           ? null
@@ -1170,8 +1171,8 @@ _$_PlanDefinitionDynamicValue _$$_PlanDefinitionDynamicValueFromJson(
           : Element.fromJson(json['_expression'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PlanDefinitionDynamicValueToJson(
-    _$_PlanDefinitionDynamicValue instance) {
+Map<String, dynamic> _$$PlanDefinitionDynamicValueImplToJson(
+    _$PlanDefinitionDynamicValueImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1191,8 +1192,8 @@ Map<String, dynamic> _$$_PlanDefinitionDynamicValueToJson(
   return val;
 }
 
-_$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
-    _$_Questionnaire(
+_$QuestionnaireImpl _$$QuestionnaireImplFromJson(Map<String, dynamic> json) =>
+    _$QuestionnaireImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Questionnaire) ??
@@ -1313,7 +1314,7 @@ _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_QuestionnaireToJson(_$_Questionnaire instance) {
+Map<String, dynamic> _$$QuestionnaireImplToJson(_$QuestionnaireImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1386,8 +1387,9 @@ const _$QuestionnaireStatusEnumMap = {
   QuestionnaireStatus.unknown: 'unknown',
 };
 
-_$_QuestionnaireItem _$$_QuestionnaireItemFromJson(Map<String, dynamic> json) =>
-    _$_QuestionnaireItem(
+_$QuestionnaireItemImpl _$$QuestionnaireItemImplFromJson(
+        Map<String, dynamic> json) =>
+    _$QuestionnaireItemImpl(
       linkId: json['linkId'] as String?,
       linkIdElement: json['_linkId'] == null
           ? null
@@ -1511,8 +1513,8 @@ _$_QuestionnaireItem _$$_QuestionnaireItemFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_QuestionnaireItemToJson(
-    _$_QuestionnaireItem instance) {
+Map<String, dynamic> _$$QuestionnaireItemImplToJson(
+    _$QuestionnaireItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1590,9 +1592,9 @@ const _$QuestionnaireItemTypeEnumMap = {
   QuestionnaireItemType.unknown: 'unknown',
 };
 
-_$_QuestionnaireEnableWhen _$$_QuestionnaireEnableWhenFromJson(
+_$QuestionnaireEnableWhenImpl _$$QuestionnaireEnableWhenImplFromJson(
         Map<String, dynamic> json) =>
-    _$_QuestionnaireEnableWhen(
+    _$QuestionnaireEnableWhenImpl(
       question: json['question'] as String?,
       questionElement: json['_question'] == null
           ? null
@@ -1662,8 +1664,8 @@ _$_QuestionnaireEnableWhen _$$_QuestionnaireEnableWhenFromJson(
           : Reference.fromJson(json['answerReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_QuestionnaireEnableWhenToJson(
-    _$_QuestionnaireEnableWhen instance) {
+Map<String, dynamic> _$$QuestionnaireEnableWhenImplToJson(
+    _$QuestionnaireEnableWhenImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1699,9 +1701,9 @@ Map<String, dynamic> _$$_QuestionnaireEnableWhenToJson(
   return val;
 }
 
-_$_QuestionnaireOption _$$_QuestionnaireOptionFromJson(
+_$QuestionnaireOptionImpl _$$QuestionnaireOptionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_QuestionnaireOption(
+    _$QuestionnaireOptionImpl(
       valueInteger: json['valueInteger'] == null
           ? null
           : FhirDecimal.fromJson(json['valueInteger']),
@@ -1729,8 +1731,8 @@ _$_QuestionnaireOption _$$_QuestionnaireOptionFromJson(
           : Coding.fromJson(json['valueCoding'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_QuestionnaireOptionToJson(
-    _$_QuestionnaireOption instance) {
+Map<String, dynamic> _$$QuestionnaireOptionImplToJson(
+    _$QuestionnaireOptionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1751,8 +1753,9 @@ Map<String, dynamic> _$$_QuestionnaireOptionToJson(
   return val;
 }
 
-_$_ServiceDefinition _$$_ServiceDefinitionFromJson(Map<String, dynamic> json) =>
-    _$_ServiceDefinition(
+_$ServiceDefinitionImpl _$$ServiceDefinitionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ServiceDefinitionImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ServiceDefinition) ??
@@ -1884,8 +1887,8 @@ _$_ServiceDefinition _$$_ServiceDefinitionFromJson(Map<String, dynamic> json) =>
               json['operationDefinition'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ServiceDefinitionToJson(
-    _$_ServiceDefinition instance) {
+Map<String, dynamic> _$$ServiceDefinitionImplToJson(
+    _$ServiceDefinitionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };

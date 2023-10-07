@@ -6,8 +6,8 @@ part of 'entities1.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FhirEndpoint _$$_FhirEndpointFromJson(Map<String, dynamic> json) =>
-    _$_FhirEndpoint(
+_$FhirEndpointImpl _$$FhirEndpointImplFromJson(Map<String, dynamic> json) =>
+    _$FhirEndpointImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Endpoint) ??
@@ -86,7 +86,7 @@ _$_FhirEndpoint _$$_FhirEndpointFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_FhirEndpointToJson(_$_FhirEndpoint instance) {
+Map<String, dynamic> _$$FhirEndpointImplToJson(_$FhirEndpointImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -297,9 +297,9 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_FhirEndpointPayload _$$_FhirEndpointPayloadFromJson(
+_$FhirEndpointPayloadImpl _$$FhirEndpointPayloadImplFromJson(
         Map<String, dynamic> json) =>
-    _$_FhirEndpointPayload(
+    _$FhirEndpointPayloadImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -317,8 +317,8 @@ _$_FhirEndpointPayload _$$_FhirEndpointPayloadFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_FhirEndpointPayloadToJson(
-    _$_FhirEndpointPayload instance) {
+Map<String, dynamic> _$$FhirEndpointPayloadImplToJson(
+    _$FhirEndpointPayloadImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -339,8 +339,9 @@ Map<String, dynamic> _$$_FhirEndpointPayloadToJson(
   return val;
 }
 
-_$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
-    _$_HealthcareService(
+_$HealthcareServiceImpl _$$HealthcareServiceImplFromJson(
+        Map<String, dynamic> json) =>
+    _$HealthcareServiceImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.HealthcareService) ??
@@ -459,8 +460,8 @@ _$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_HealthcareServiceToJson(
-    _$_HealthcareService instance) {
+Map<String, dynamic> _$$HealthcareServiceImplToJson(
+    _$HealthcareServiceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -526,9 +527,9 @@ Map<String, dynamic> _$$_HealthcareServiceToJson(
   return val;
 }
 
-_$_HealthcareServiceEligibility _$$_HealthcareServiceEligibilityFromJson(
+_$HealthcareServiceEligibilityImpl _$$HealthcareServiceEligibilityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_HealthcareServiceEligibility(
+    _$HealthcareServiceEligibilityImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -547,8 +548,8 @@ _$_HealthcareServiceEligibility _$$_HealthcareServiceEligibilityFromJson(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_HealthcareServiceEligibilityToJson(
-    _$_HealthcareServiceEligibility instance) {
+Map<String, dynamic> _$$HealthcareServiceEligibilityImplToJson(
+    _$HealthcareServiceEligibilityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -568,7 +569,8 @@ Map<String, dynamic> _$$_HealthcareServiceEligibilityToJson(
   return val;
 }
 
-_$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
+_$LocationImpl _$$LocationImplFromJson(Map<String, dynamic> json) =>
+    _$LocationImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Location) ??
@@ -667,7 +669,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
           .toList(),
     );
 
-Map<String, dynamic> _$$_LocationToJson(_$_Location instance) {
+Map<String, dynamic> _$$LocationImplToJson(_$LocationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -722,8 +724,9 @@ Map<String, dynamic> _$$_LocationToJson(_$_Location instance) {
   return val;
 }
 
-_$_LocationPosition _$$_LocationPositionFromJson(Map<String, dynamic> json) =>
-    _$_LocationPosition(
+_$LocationPositionImpl _$$LocationPositionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$LocationPositionImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -751,7 +754,8 @@ _$_LocationPosition _$$_LocationPositionFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_altitude'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_LocationPositionToJson(_$_LocationPosition instance) {
+Map<String, dynamic> _$$LocationPositionImplToJson(
+    _$LocationPositionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -774,8 +778,8 @@ Map<String, dynamic> _$$_LocationPositionToJson(_$_LocationPosition instance) {
   return val;
 }
 
-_$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
-    _$_Organization(
+_$OrganizationImpl _$$OrganizationImplFromJson(Map<String, dynamic> json) =>
+    _$OrganizationImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Organization) ??
@@ -850,7 +854,7 @@ _$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_OrganizationToJson(_$_Organization instance) {
+Map<String, dynamic> _$$OrganizationImplToJson(_$OrganizationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -894,9 +898,9 @@ Map<String, dynamic> _$$_OrganizationToJson(_$_Organization instance) {
   return val;
 }
 
-_$_OrganizationQualification _$$_OrganizationQualificationFromJson(
+_$OrganizationQualificationImpl _$$OrganizationQualificationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_OrganizationQualification(
+    _$OrganizationQualificationImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -916,8 +920,8 @@ _$_OrganizationQualification _$$_OrganizationQualificationFromJson(
           : Reference.fromJson(json['issuer'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_OrganizationQualificationToJson(
-    _$_OrganizationQualification instance) {
+Map<String, dynamic> _$$OrganizationQualificationImplToJson(
+    _$OrganizationQualificationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -939,9 +943,9 @@ Map<String, dynamic> _$$_OrganizationQualificationToJson(
   return val;
 }
 
-_$_OrganizationAffiliation _$$_OrganizationAffiliationFromJson(
+_$OrganizationAffiliationImpl _$$OrganizationAffiliationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_OrganizationAffiliation(
+    _$OrganizationAffiliationImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.OrganizationAffiliation) ??
@@ -1016,8 +1020,8 @@ _$_OrganizationAffiliation _$$_OrganizationAffiliationFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_OrganizationAffiliationToJson(
-    _$_OrganizationAffiliation instance) {
+Map<String, dynamic> _$$OrganizationAffiliationImplToJson(
+    _$OrganizationAffiliationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };

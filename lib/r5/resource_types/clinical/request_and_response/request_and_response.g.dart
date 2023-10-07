@@ -6,8 +6,8 @@ part of 'request_and_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Communication _$$_CommunicationFromJson(Map<String, dynamic> json) =>
-    _$_Communication(
+_$CommunicationImpl _$$CommunicationImplFromJson(Map<String, dynamic> json) =>
+    _$CommunicationImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Communication) ??
@@ -119,7 +119,7 @@ _$_Communication _$$_CommunicationFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_CommunicationToJson(_$_Communication instance) {
+Map<String, dynamic> _$$CommunicationImplToJson(_$CommunicationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -342,9 +342,9 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_CommunicationPayload _$$_CommunicationPayloadFromJson(
+_$CommunicationPayloadImpl _$$CommunicationPayloadImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CommunicationPayload(
+    _$CommunicationPayloadImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -366,8 +366,8 @@ _$_CommunicationPayload _$$_CommunicationPayloadFromJson(
               json['contentCodeableConcept'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CommunicationPayloadToJson(
-    _$_CommunicationPayload instance) {
+Map<String, dynamic> _$$CommunicationPayloadImplToJson(
+    _$CommunicationPayloadImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -388,9 +388,9 @@ Map<String, dynamic> _$$_CommunicationPayloadToJson(
   return val;
 }
 
-_$_CommunicationRequest _$$_CommunicationRequestFromJson(
+_$CommunicationRequestImpl _$$CommunicationRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CommunicationRequest(
+    _$CommunicationRequestImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.CommunicationRequest) ??
@@ -511,8 +511,8 @@ _$_CommunicationRequest _$$_CommunicationRequestFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CommunicationRequestToJson(
-    _$_CommunicationRequest instance) {
+Map<String, dynamic> _$$CommunicationRequestImplToJson(
+    _$CommunicationRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -572,9 +572,9 @@ Map<String, dynamic> _$$_CommunicationRequestToJson(
   return val;
 }
 
-_$_CommunicationRequestPayload _$$_CommunicationRequestPayloadFromJson(
+_$CommunicationRequestPayloadImpl _$$CommunicationRequestPayloadImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CommunicationRequestPayload(
+    _$CommunicationRequestPayloadImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -596,8 +596,8 @@ _$_CommunicationRequestPayload _$$_CommunicationRequestPayloadFromJson(
               json['contentCodeableConcept'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CommunicationRequestPayloadToJson(
-    _$_CommunicationRequestPayload instance) {
+Map<String, dynamic> _$$CommunicationRequestPayloadImplToJson(
+    _$CommunicationRequestPayloadImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -618,8 +618,9 @@ Map<String, dynamic> _$$_CommunicationRequestPayloadToJson(
   return val;
 }
 
-_$_DeviceAssociation _$$_DeviceAssociationFromJson(Map<String, dynamic> json) =>
-    _$_DeviceAssociation(
+_$DeviceAssociationImpl _$$DeviceAssociationImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DeviceAssociationImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DeviceAssociation) ??
@@ -678,8 +679,8 @@ _$_DeviceAssociation _$$_DeviceAssociationFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DeviceAssociationToJson(
-    _$_DeviceAssociation instance) {
+Map<String, dynamic> _$$DeviceAssociationImplToJson(
+    _$DeviceAssociationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -718,9 +719,9 @@ Map<String, dynamic> _$$_DeviceAssociationToJson(
   return val;
 }
 
-_$_DeviceAssociationOperation _$$_DeviceAssociationOperationFromJson(
+_$DeviceAssociationOperationImpl _$$DeviceAssociationOperationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DeviceAssociationOperation(
+    _$DeviceAssociationOperationImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -737,8 +738,8 @@ _$_DeviceAssociationOperation _$$_DeviceAssociationOperationFromJson(
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceAssociationOperationToJson(
-    _$_DeviceAssociationOperation instance) {
+Map<String, dynamic> _$$DeviceAssociationOperationImplToJson(
+    _$DeviceAssociationOperationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -758,8 +759,8 @@ Map<String, dynamic> _$$_DeviceAssociationOperationToJson(
   return val;
 }
 
-_$_DeviceDispense _$$_DeviceDispenseFromJson(Map<String, dynamic> json) =>
-    _$_DeviceDispense(
+_$DeviceDispenseImpl _$$DeviceDispenseImplFromJson(Map<String, dynamic> json) =>
+    _$DeviceDispenseImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DeviceDispense) ??
@@ -866,7 +867,8 @@ _$_DeviceDispense _$$_DeviceDispenseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DeviceDispenseToJson(_$_DeviceDispense instance) {
+Map<String, dynamic> _$$DeviceDispenseImplToJson(
+    _$DeviceDispenseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -922,9 +924,9 @@ Map<String, dynamic> _$$_DeviceDispenseToJson(_$_DeviceDispense instance) {
   return val;
 }
 
-_$_DeviceDispensePerformer _$$_DeviceDispensePerformerFromJson(
+_$DeviceDispensePerformerImpl _$$DeviceDispensePerformerImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DeviceDispensePerformer(
+    _$DeviceDispensePerformerImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -938,8 +940,8 @@ _$_DeviceDispensePerformer _$$_DeviceDispensePerformerFromJson(
       actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceDispensePerformerToJson(
-    _$_DeviceDispensePerformer instance) {
+Map<String, dynamic> _$$DeviceDispensePerformerImplToJson(
+    _$DeviceDispensePerformerImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -958,8 +960,8 @@ Map<String, dynamic> _$$_DeviceDispensePerformerToJson(
   return val;
 }
 
-_$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
-    _$_DeviceRequest(
+_$DeviceRequestImpl _$$DeviceRequestImplFromJson(Map<String, dynamic> json) =>
+    _$DeviceRequestImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DeviceRequest) ??
@@ -1101,7 +1103,7 @@ _$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DeviceRequestToJson(_$_DeviceRequest instance) {
+Map<String, dynamic> _$$DeviceRequestImplToJson(_$DeviceRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1174,9 +1176,9 @@ Map<String, dynamic> _$$_DeviceRequestToJson(_$_DeviceRequest instance) {
   return val;
 }
 
-_$_DeviceRequestParameter _$$_DeviceRequestParameterFromJson(
+_$DeviceRequestParameterImpl _$$DeviceRequestParameterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DeviceRequestParameter(
+    _$DeviceRequestParameterImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1205,8 +1207,8 @@ _$_DeviceRequestParameter _$$_DeviceRequestParameterFromJson(
           : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceRequestParameterToJson(
-    _$_DeviceRequestParameter instance) {
+Map<String, dynamic> _$$DeviceRequestParameterImplToJson(
+    _$DeviceRequestParameterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1229,8 +1231,8 @@ Map<String, dynamic> _$$_DeviceRequestParameterToJson(
   return val;
 }
 
-_$_DeviceUsage _$$_DeviceUsageFromJson(Map<String, dynamic> json) =>
-    _$_DeviceUsage(
+_$DeviceUsageImpl _$$DeviceUsageImplFromJson(Map<String, dynamic> json) =>
+    _$DeviceUsageImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DeviceUsage) ??
@@ -1330,7 +1332,7 @@ _$_DeviceUsage _$$_DeviceUsageFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DeviceUsageToJson(_$_DeviceUsage instance) {
+Map<String, dynamic> _$$DeviceUsageImplToJson(_$DeviceUsageImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1382,9 +1384,9 @@ Map<String, dynamic> _$$_DeviceUsageToJson(_$_DeviceUsage instance) {
   return val;
 }
 
-_$_DeviceUsageAdherence _$$_DeviceUsageAdherenceFromJson(
+_$DeviceUsageAdherenceImpl _$$DeviceUsageAdherenceImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DeviceUsageAdherence(
+    _$DeviceUsageAdherenceImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1398,8 +1400,8 @@ _$_DeviceUsageAdherence _$$_DeviceUsageAdherenceFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_DeviceUsageAdherenceToJson(
-    _$_DeviceUsageAdherence instance) {
+Map<String, dynamic> _$$DeviceUsageAdherenceImplToJson(
+    _$DeviceUsageAdherenceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1418,8 +1420,9 @@ Map<String, dynamic> _$$_DeviceUsageAdherenceToJson(
   return val;
 }
 
-_$_GuidanceResponse _$$_GuidanceResponseFromJson(Map<String, dynamic> json) =>
-    _$_GuidanceResponse(
+_$GuidanceResponseImpl _$$GuidanceResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GuidanceResponseImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.GuidanceResponse) ??
@@ -1517,7 +1520,8 @@ _$_GuidanceResponse _$$_GuidanceResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
+Map<String, dynamic> _$$GuidanceResponseImplToJson(
+    _$GuidanceResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1568,8 +1572,8 @@ Map<String, dynamic> _$$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
   return val;
 }
 
-_$_InventoryItem _$$_InventoryItemFromJson(Map<String, dynamic> json) =>
-    _$_InventoryItem(
+_$InventoryItemImpl _$$InventoryItemImplFromJson(Map<String, dynamic> json) =>
+    _$InventoryItemImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.InventoryItem) ??
@@ -1654,7 +1658,7 @@ _$_InventoryItem _$$_InventoryItemFromJson(Map<String, dynamic> json) =>
               json['productReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_InventoryItemToJson(_$_InventoryItem instance) {
+Map<String, dynamic> _$$InventoryItemImplToJson(_$InventoryItemImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1701,8 +1705,9 @@ Map<String, dynamic> _$$_InventoryItemToJson(_$_InventoryItem instance) {
   return val;
 }
 
-_$_InventoryItemName _$$_InventoryItemNameFromJson(Map<String, dynamic> json) =>
-    _$_InventoryItemName(
+_$InventoryItemNameImpl _$$InventoryItemNameImplFromJson(
+        Map<String, dynamic> json) =>
+    _$InventoryItemNameImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1722,8 +1727,8 @@ _$_InventoryItemName _$$_InventoryItemNameFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_InventoryItemNameToJson(
-    _$_InventoryItemName instance) {
+Map<String, dynamic> _$$InventoryItemNameImplToJson(
+    _$InventoryItemNameImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1745,10 +1750,10 @@ Map<String, dynamic> _$$_InventoryItemNameToJson(
   return val;
 }
 
-_$_InventoryItemResponsibleOrganization
-    _$$_InventoryItemResponsibleOrganizationFromJson(
+_$InventoryItemResponsibleOrganizationImpl
+    _$$InventoryItemResponsibleOrganizationImplFromJson(
             Map<String, dynamic> json) =>
-        _$_InventoryItemResponsibleOrganization(
+        _$InventoryItemResponsibleOrganizationImpl(
           fhirId: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1761,8 +1766,8 @@ _$_InventoryItemResponsibleOrganization
               Reference.fromJson(json['organization'] as Map<String, dynamic>),
         );
 
-Map<String, dynamic> _$$_InventoryItemResponsibleOrganizationToJson(
-    _$_InventoryItemResponsibleOrganization instance) {
+Map<String, dynamic> _$$InventoryItemResponsibleOrganizationImplToJson(
+    _$InventoryItemResponsibleOrganizationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1781,9 +1786,9 @@ Map<String, dynamic> _$$_InventoryItemResponsibleOrganizationToJson(
   return val;
 }
 
-_$_InventoryItemDescription _$$_InventoryItemDescriptionFromJson(
+_$InventoryItemDescriptionImpl _$$InventoryItemDescriptionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_InventoryItemDescription(
+    _$InventoryItemDescriptionImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1802,8 +1807,8 @@ _$_InventoryItemDescription _$$_InventoryItemDescriptionFromJson(
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_InventoryItemDescriptionToJson(
-    _$_InventoryItemDescription instance) {
+Map<String, dynamic> _$$InventoryItemDescriptionImplToJson(
+    _$InventoryItemDescriptionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1824,9 +1829,9 @@ Map<String, dynamic> _$$_InventoryItemDescriptionToJson(
   return val;
 }
 
-_$_InventoryItemAssociation _$$_InventoryItemAssociationFromJson(
+_$InventoryItemAssociationImpl _$$InventoryItemAssociationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_InventoryItemAssociation(
+    _$InventoryItemAssociationImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1841,8 +1846,8 @@ _$_InventoryItemAssociation _$$_InventoryItemAssociationFromJson(
       quantity: Ratio.fromJson(json['quantity'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_InventoryItemAssociationToJson(
-    _$_InventoryItemAssociation instance) {
+Map<String, dynamic> _$$InventoryItemAssociationImplToJson(
+    _$InventoryItemAssociationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1862,9 +1867,9 @@ Map<String, dynamic> _$$_InventoryItemAssociationToJson(
   return val;
 }
 
-_$_InventoryItemCharacteristic _$$_InventoryItemCharacteristicFromJson(
+_$InventoryItemCharacteristicImpl _$$InventoryItemCharacteristicImplFromJson(
         Map<String, dynamic> json) =>
-    _$_InventoryItemCharacteristic(
+    _$InventoryItemCharacteristicImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1933,8 +1938,8 @@ _$_InventoryItemCharacteristic _$$_InventoryItemCharacteristicFromJson(
               json['valueCodeableConcept'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_InventoryItemCharacteristicToJson(
-    _$_InventoryItemCharacteristic instance) {
+Map<String, dynamic> _$$InventoryItemCharacteristicImplToJson(
+    _$InventoryItemCharacteristicImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1971,9 +1976,9 @@ Map<String, dynamic> _$$_InventoryItemCharacteristicToJson(
   return val;
 }
 
-_$_InventoryItemInstance _$$_InventoryItemInstanceFromJson(
+_$InventoryItemInstanceImpl _$$InventoryItemInstanceImplFromJson(
         Map<String, dynamic> json) =>
-    _$_InventoryItemInstance(
+    _$InventoryItemInstanceImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2001,8 +2006,8 @@ _$_InventoryItemInstance _$$_InventoryItemInstanceFromJson(
           : Reference.fromJson(json['location'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_InventoryItemInstanceToJson(
-    _$_InventoryItemInstance instance) {
+Map<String, dynamic> _$$InventoryItemInstanceImplToJson(
+    _$InventoryItemInstanceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2027,8 +2032,9 @@ Map<String, dynamic> _$$_InventoryItemInstanceToJson(
   return val;
 }
 
-_$_InventoryReport _$$_InventoryReportFromJson(Map<String, dynamic> json) =>
-    _$_InventoryReport(
+_$InventoryReportImpl _$$InventoryReportImplFromJson(
+        Map<String, dynamic> json) =>
+    _$InventoryReportImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.InventoryReport) ??
@@ -2103,7 +2109,8 @@ _$_InventoryReport _$$_InventoryReportFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_InventoryReportToJson(_$_InventoryReport instance) {
+Map<String, dynamic> _$$InventoryReportImplToJson(
+    _$InventoryReportImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -2145,36 +2152,38 @@ Map<String, dynamic> _$$_InventoryReportToJson(_$_InventoryReport instance) {
   return val;
 }
 
-_$_InventoryReportInventoryListing _$$_InventoryReportInventoryListingFromJson(
-        Map<String, dynamic> json) =>
-    _$_InventoryReportInventoryListing(
-      fhirId: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      location: json['location'] == null
-          ? null
-          : Reference.fromJson(json['location'] as Map<String, dynamic>),
-      itemStatus: json['itemStatus'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['itemStatus'] as Map<String, dynamic>),
-      countingDateTime: json['countingDateTime'] == null
-          ? null
-          : FhirDateTime.fromJson(json['countingDateTime']),
-      countingDateTimeElement: json['_countingDateTime'] == null
-          ? null
-          : Element.fromJson(json['_countingDateTime'] as Map<String, dynamic>),
-      item: (json['item'] as List<dynamic>?)
-          ?.map((e) => InventoryReportItem.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+_$InventoryReportInventoryListingImpl
+    _$$InventoryReportInventoryListingImplFromJson(Map<String, dynamic> json) =>
+        _$InventoryReportInventoryListingImpl(
+          fhirId: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          location: json['location'] == null
+              ? null
+              : Reference.fromJson(json['location'] as Map<String, dynamic>),
+          itemStatus: json['itemStatus'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['itemStatus'] as Map<String, dynamic>),
+          countingDateTime: json['countingDateTime'] == null
+              ? null
+              : FhirDateTime.fromJson(json['countingDateTime']),
+          countingDateTimeElement: json['_countingDateTime'] == null
+              ? null
+              : Element.fromJson(
+                  json['_countingDateTime'] as Map<String, dynamic>),
+          item: (json['item'] as List<dynamic>?)
+              ?.map((e) =>
+                  InventoryReportItem.fromJson(e as Map<String, dynamic>))
+              .toList(),
+        );
 
-Map<String, dynamic> _$$_InventoryReportInventoryListingToJson(
-    _$_InventoryReportInventoryListing instance) {
+Map<String, dynamic> _$$InventoryReportInventoryListingImplToJson(
+    _$InventoryReportInventoryListingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2196,9 +2205,9 @@ Map<String, dynamic> _$$_InventoryReportInventoryListingToJson(
   return val;
 }
 
-_$_InventoryReportItem _$$_InventoryReportItemFromJson(
+_$InventoryReportItemImpl _$$InventoryReportItemImplFromJson(
         Map<String, dynamic> json) =>
-    _$_InventoryReportItem(
+    _$InventoryReportItemImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2213,8 +2222,8 @@ _$_InventoryReportItem _$$_InventoryReportItemFromJson(
       item: CodeableReference.fromJson(json['item'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_InventoryReportItemToJson(
-    _$_InventoryReportItem instance) {
+Map<String, dynamic> _$$InventoryReportItemImplToJson(
+    _$InventoryReportItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2234,8 +2243,8 @@ Map<String, dynamic> _$$_InventoryReportItemToJson(
   return val;
 }
 
-_$_SupplyDelivery _$$_SupplyDeliveryFromJson(Map<String, dynamic> json) =>
-    _$_SupplyDelivery(
+_$SupplyDeliveryImpl _$$SupplyDeliveryImplFromJson(Map<String, dynamic> json) =>
+    _$SupplyDeliveryImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SupplyDelivery) ??
@@ -2315,7 +2324,8 @@ _$_SupplyDelivery _$$_SupplyDeliveryFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_SupplyDeliveryToJson(_$_SupplyDelivery instance) {
+Map<String, dynamic> _$$SupplyDeliveryImplToJson(
+    _$SupplyDeliveryImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -2360,9 +2370,9 @@ Map<String, dynamic> _$$_SupplyDeliveryToJson(_$_SupplyDelivery instance) {
   return val;
 }
 
-_$_SupplyDeliverySuppliedItem _$$_SupplyDeliverySuppliedItemFromJson(
+_$SupplyDeliverySuppliedItemImpl _$$SupplyDeliverySuppliedItemImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SupplyDeliverySuppliedItem(
+    _$SupplyDeliverySuppliedItemImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2382,8 +2392,8 @@ _$_SupplyDeliverySuppliedItem _$$_SupplyDeliverySuppliedItemFromJson(
           : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SupplyDeliverySuppliedItemToJson(
-    _$_SupplyDeliverySuppliedItem instance) {
+Map<String, dynamic> _$$SupplyDeliverySuppliedItemImplToJson(
+    _$SupplyDeliverySuppliedItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2403,8 +2413,8 @@ Map<String, dynamic> _$$_SupplyDeliverySuppliedItemToJson(
   return val;
 }
 
-_$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
-    _$_SupplyRequest(
+_$SupplyRequestImpl _$$SupplyRequestImplFromJson(Map<String, dynamic> json) =>
+    _$SupplyRequestImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SupplyRequest) ??
@@ -2500,7 +2510,7 @@ _$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['deliverTo'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SupplyRequestToJson(_$_SupplyRequest instance) {
+Map<String, dynamic> _$$SupplyRequestImplToJson(_$SupplyRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -2552,9 +2562,9 @@ Map<String, dynamic> _$$_SupplyRequestToJson(_$_SupplyRequest instance) {
   return val;
 }
 
-_$_SupplyRequestParameter _$$_SupplyRequestParameterFromJson(
+_$SupplyRequestParameterImpl _$$SupplyRequestParameterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SupplyRequestParameter(
+    _$SupplyRequestParameterImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2583,8 +2593,8 @@ _$_SupplyRequestParameter _$$_SupplyRequestParameterFromJson(
           : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SupplyRequestParameterToJson(
-    _$_SupplyRequestParameter instance) {
+Map<String, dynamic> _$$SupplyRequestParameterImplToJson(
+    _$SupplyRequestParameterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

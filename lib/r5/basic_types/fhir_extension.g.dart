@@ -6,8 +6,8 @@ part of 'fhir_extension.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FhirExtension _$$_FhirExtensionFromJson(Map<String, dynamic> json) =>
-    _$_FhirExtension(
+_$FhirExtensionImpl _$$FhirExtensionImplFromJson(Map<String, dynamic> json) =>
+    _$FhirExtensionImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -249,7 +249,7 @@ _$_FhirExtension _$$_FhirExtensionFromJson(Map<String, dynamic> json) =>
           : FhirMeta.fromJson(json['valueMeta'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_FhirExtensionToJson(_$_FhirExtension instance) {
+Map<String, dynamic> _$$FhirExtensionImplToJson(_$FhirExtensionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

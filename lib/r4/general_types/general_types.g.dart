@@ -6,8 +6,8 @@ part of 'general_types.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Annotation _$$_AnnotationFromJson(Map<String, dynamic> json) =>
-    _$_Annotation(
+_$AnnotationImpl _$$AnnotationImplFromJson(Map<String, dynamic> json) =>
+    _$AnnotationImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -29,7 +29,7 @@ _$_Annotation _$$_AnnotationFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AnnotationToJson(_$_Annotation instance) {
+Map<String, dynamic> _$$AnnotationImplToJson(_$AnnotationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -51,8 +51,8 @@ Map<String, dynamic> _$$_AnnotationToJson(_$_Annotation instance) {
   return val;
 }
 
-_$_Attachment _$$_AttachmentFromJson(Map<String, dynamic> json) =>
-    _$_Attachment(
+_$AttachmentImpl _$$AttachmentImplFromJson(Map<String, dynamic> json) =>
+    _$AttachmentImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -99,7 +99,7 @@ _$_Attachment _$$_AttachmentFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_creation'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AttachmentToJson(_$_Attachment instance) {
+Map<String, dynamic> _$$AttachmentImplToJson(_$AttachmentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -130,8 +130,8 @@ Map<String, dynamic> _$$_AttachmentToJson(_$_Attachment instance) {
   return val;
 }
 
-_$_Identifier _$$_IdentifierFromJson(Map<String, dynamic> json) =>
-    _$_Identifier(
+_$IdentifierImpl _$$IdentifierImplFromJson(Map<String, dynamic> json) =>
+    _$IdentifierImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -160,7 +160,7 @@ _$_Identifier _$$_IdentifierFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['assigner'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_IdentifierToJson(_$_Identifier instance) {
+Map<String, dynamic> _$$IdentifierImplToJson(_$IdentifierImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -193,8 +193,9 @@ const _$IdentifierUseEnumMap = {
   IdentifierUse.unknown: 'unknown',
 };
 
-_$_CodeableConcept _$$_CodeableConceptFromJson(Map<String, dynamic> json) =>
-    _$_CodeableConcept(
+_$CodeableConceptImpl _$$CodeableConceptImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CodeableConceptImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -208,7 +209,8 @@ _$_CodeableConcept _$$_CodeableConceptFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CodeableConceptToJson(_$_CodeableConcept instance) {
+Map<String, dynamic> _$$CodeableConceptImplToJson(
+    _$CodeableConceptImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -226,7 +228,7 @@ Map<String, dynamic> _$$_CodeableConceptToJson(_$_CodeableConcept instance) {
   return val;
 }
 
-_$_Coding _$$_CodingFromJson(Map<String, dynamic> json) => _$_Coding(
+_$CodingImpl _$$CodingImplFromJson(Map<String, dynamic> json) => _$CodingImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -255,7 +257,7 @@ _$_Coding _$$_CodingFromJson(Map<String, dynamic> json) => _$_Coding(
           : Element.fromJson(json['_userSelected'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CodingToJson(_$_Coding instance) {
+Map<String, dynamic> _$$CodingImplToJson(_$CodingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -280,7 +282,8 @@ Map<String, dynamic> _$$_CodingToJson(_$_Coding instance) {
   return val;
 }
 
-_$_Quantity _$$_QuantityFromJson(Map<String, dynamic> json) => _$_Quantity(
+_$QuantityImpl _$$QuantityImplFromJson(Map<String, dynamic> json) =>
+    _$QuantityImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -309,7 +312,7 @@ _$_Quantity _$$_QuantityFromJson(Map<String, dynamic> json) => _$_Quantity(
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_QuantityToJson(_$_Quantity instance) {
+Map<String, dynamic> _$$QuantityImplToJson(_$QuantityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -342,8 +345,8 @@ const _$QuantityComparatorEnumMap = {
   QuantityComparator.unknown: 'unknown',
 };
 
-_$_FhirDuration _$$_FhirDurationFromJson(Map<String, dynamic> json) =>
-    _$_FhirDuration(
+_$FhirDurationImpl _$$FhirDurationImplFromJson(Map<String, dynamic> json) =>
+    _$FhirDurationImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -372,7 +375,7 @@ _$_FhirDuration _$$_FhirDurationFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_FhirDurationToJson(_$_FhirDuration instance) {
+Map<String, dynamic> _$$FhirDurationImplToJson(_$FhirDurationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -405,7 +408,8 @@ const _$DurationComparatorEnumMap = {
   DurationComparator.unknown: 'unknown',
 };
 
-_$_Distance _$$_DistanceFromJson(Map<String, dynamic> json) => _$_Distance(
+_$DistanceImpl _$$DistanceImplFromJson(Map<String, dynamic> json) =>
+    _$DistanceImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -434,7 +438,7 @@ _$_Distance _$$_DistanceFromJson(Map<String, dynamic> json) => _$_Distance(
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DistanceToJson(_$_Distance instance) {
+Map<String, dynamic> _$$DistanceImplToJson(_$DistanceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -467,7 +471,7 @@ const _$DistanceComparatorEnumMap = {
   DistanceComparator.unknown: 'unknown',
 };
 
-_$_Count _$$_CountFromJson(Map<String, dynamic> json) => _$_Count(
+_$CountImpl _$$CountImplFromJson(Map<String, dynamic> json) => _$CountImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -496,7 +500,7 @@ _$_Count _$$_CountFromJson(Map<String, dynamic> json) => _$_Count(
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CountToJson(_$_Count instance) {
+Map<String, dynamic> _$$CountImplToJson(_$CountImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -529,7 +533,7 @@ const _$CountComparatorEnumMap = {
   CountComparator.unknown: 'unknown',
 };
 
-_$_Money _$$_MoneyFromJson(Map<String, dynamic> json) => _$_Money(
+_$MoneyImpl _$$MoneyImplFromJson(Map<String, dynamic> json) => _$MoneyImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -545,7 +549,7 @@ _$_Money _$$_MoneyFromJson(Map<String, dynamic> json) => _$_Money(
           : Element.fromJson(json['_currency'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_MoneyToJson(_$_Money instance) {
+Map<String, dynamic> _$$MoneyImplToJson(_$MoneyImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -564,7 +568,7 @@ Map<String, dynamic> _$$_MoneyToJson(_$_Money instance) {
   return val;
 }
 
-_$_Age _$$_AgeFromJson(Map<String, dynamic> json) => _$_Age(
+_$AgeImpl _$$AgeImplFromJson(Map<String, dynamic> json) => _$AgeImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -593,7 +597,7 @@ _$_Age _$$_AgeFromJson(Map<String, dynamic> json) => _$_Age(
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AgeToJson(_$_Age instance) {
+Map<String, dynamic> _$$AgeImplToJson(_$AgeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -626,7 +630,7 @@ const _$AgeComparatorEnumMap = {
   AgeComparator.unknown: 'unknown',
 };
 
-_$_Range _$$_RangeFromJson(Map<String, dynamic> json) => _$_Range(
+_$RangeImpl _$$RangeImplFromJson(Map<String, dynamic> json) => _$RangeImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -639,7 +643,7 @@ _$_Range _$$_RangeFromJson(Map<String, dynamic> json) => _$_Range(
           : Quantity.fromJson(json['high'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_RangeToJson(_$_Range instance) {
+Map<String, dynamic> _$$RangeImplToJson(_$RangeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -656,7 +660,7 @@ Map<String, dynamic> _$$_RangeToJson(_$_Range instance) {
   return val;
 }
 
-_$_Period _$$_PeriodFromJson(Map<String, dynamic> json) => _$_Period(
+_$PeriodImpl _$$PeriodImplFromJson(Map<String, dynamic> json) => _$PeriodImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -672,7 +676,7 @@ _$_Period _$$_PeriodFromJson(Map<String, dynamic> json) => _$_Period(
           : Element.fromJson(json['_end'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PeriodToJson(_$_Period instance) {
+Map<String, dynamic> _$$PeriodImplToJson(_$PeriodImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -691,7 +695,7 @@ Map<String, dynamic> _$$_PeriodToJson(_$_Period instance) {
   return val;
 }
 
-_$_Ratio _$$_RatioFromJson(Map<String, dynamic> json) => _$_Ratio(
+_$RatioImpl _$$RatioImplFromJson(Map<String, dynamic> json) => _$RatioImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -704,7 +708,7 @@ _$_Ratio _$$_RatioFromJson(Map<String, dynamic> json) => _$_Ratio(
           : Quantity.fromJson(json['denominator'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_RatioToJson(_$_Ratio instance) {
+Map<String, dynamic> _$$RatioImplToJson(_$RatioImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -721,8 +725,8 @@ Map<String, dynamic> _$$_RatioToJson(_$_Ratio instance) {
   return val;
 }
 
-_$_RatioRange _$$_RatioRangeFromJson(Map<String, dynamic> json) =>
-    _$_RatioRange(
+_$RatioRangeImpl _$$RatioRangeImplFromJson(Map<String, dynamic> json) =>
+    _$RatioRangeImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -738,7 +742,7 @@ _$_RatioRange _$$_RatioRangeFromJson(Map<String, dynamic> json) =>
           : Quantity.fromJson(json['denominator'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_RatioRangeToJson(_$_RatioRange instance) {
+Map<String, dynamic> _$$RatioRangeImplToJson(_$RatioRangeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -756,8 +760,8 @@ Map<String, dynamic> _$$_RatioRangeToJson(_$_RatioRange instance) {
   return val;
 }
 
-_$_SampledData _$$_SampledDataFromJson(Map<String, dynamic> json) =>
-    _$_SampledData(
+_$SampledDataImpl _$$SampledDataImplFromJson(Map<String, dynamic> json) =>
+    _$SampledDataImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -797,7 +801,7 @@ _$_SampledData _$$_SampledDataFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_data'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SampledDataToJson(_$_SampledData instance) {
+Map<String, dynamic> _$$SampledDataImplToJson(_$SampledDataImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -825,7 +829,8 @@ Map<String, dynamic> _$$_SampledDataToJson(_$_SampledData instance) {
   return val;
 }
 
-_$_Signature _$$_SignatureFromJson(Map<String, dynamic> json) => _$_Signature(
+_$SignatureImpl _$$SignatureImplFromJson(Map<String, dynamic> json) =>
+    _$SignatureImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -860,7 +865,7 @@ _$_Signature _$$_SignatureFromJson(Map<String, dynamic> json) => _$_Signature(
           : Element.fromJson(json['_data'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SignatureToJson(_$_Signature instance) {
+Map<String, dynamic> _$$SignatureImplToJson(_$SignatureImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -886,7 +891,8 @@ Map<String, dynamic> _$$_SignatureToJson(_$_Signature instance) {
   return val;
 }
 
-_$_HumanName _$$_HumanNameFromJson(Map<String, dynamic> json) => _$_HumanName(
+_$HumanNameImpl _$$HumanNameImplFromJson(Map<String, dynamic> json) =>
+    _$HumanNameImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -927,7 +933,7 @@ _$_HumanName _$$_HumanNameFromJson(Map<String, dynamic> json) => _$_HumanName(
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_HumanNameToJson(_$_HumanName instance) {
+Map<String, dynamic> _$$HumanNameImplToJson(_$HumanNameImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -969,7 +975,8 @@ const _$HumanNameUseEnumMap = {
   HumanNameUse.unknown: 'unknown',
 };
 
-_$_Address _$$_AddressFromJson(Map<String, dynamic> json) => _$_Address(
+_$AddressImpl _$$AddressImplFromJson(Map<String, dynamic> json) =>
+    _$AddressImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1018,7 +1025,7 @@ _$_Address _$$_AddressFromJson(Map<String, dynamic> json) => _$_Address(
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AddressToJson(_$_Address instance) {
+Map<String, dynamic> _$$AddressImplToJson(_$AddressImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1068,8 +1075,8 @@ const _$AddressTypeEnumMap = {
   AddressType.unknown: 'unknown',
 };
 
-_$_ContactPoint _$$_ContactPointFromJson(Map<String, dynamic> json) =>
-    _$_ContactPoint(
+_$ContactPointImpl _$$ContactPointImplFromJson(Map<String, dynamic> json) =>
+    _$ContactPointImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1098,7 +1105,7 @@ _$_ContactPoint _$$_ContactPointFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ContactPointToJson(_$_ContactPoint instance) {
+Map<String, dynamic> _$$ContactPointImplToJson(_$ContactPointImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1142,7 +1149,7 @@ const _$ContactPointUseEnumMap = {
   ContactPointUse.unknown: 'unknown',
 };
 
-_$_Timing _$$_TimingFromJson(Map<String, dynamic> json) => _$_Timing(
+_$TimingImpl _$$TimingImplFromJson(Map<String, dynamic> json) => _$TimingImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1165,7 +1172,7 @@ _$_Timing _$$_TimingFromJson(Map<String, dynamic> json) => _$_Timing(
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TimingToJson(_$_Timing instance) {
+Map<String, dynamic> _$$TimingImplToJson(_$TimingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1187,8 +1194,8 @@ Map<String, dynamic> _$$_TimingToJson(_$_Timing instance) {
   return val;
 }
 
-_$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
-    _$_TimingRepeat(
+_$TimingRepeatImpl _$$TimingRepeatImplFromJson(Map<String, dynamic> json) =>
+    _$TimingRepeatImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1294,7 +1301,7 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_offset'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TimingRepeatToJson(_$_TimingRepeat instance) {
+Map<String, dynamic> _$$TimingRepeatImplToJson(_$TimingRepeatImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

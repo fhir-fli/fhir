@@ -6,8 +6,8 @@ part of 'workflow.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
-    _$_Appointment(
+_$AppointmentImpl _$$AppointmentImplFromJson(Map<String, dynamic> json) =>
+    _$AppointmentImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Appointment) ??
@@ -164,7 +164,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
+Map<String, dynamic> _$$AppointmentImplToJson(_$AppointmentImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -406,9 +406,9 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
+_$AppointmentParticipantImpl _$$AppointmentParticipantImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AppointmentParticipant(
+    _$AppointmentParticipantImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -437,8 +437,8 @@ _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AppointmentParticipantToJson(
-    _$_AppointmentParticipant instance) {
+Map<String, dynamic> _$$AppointmentParticipantImplToJson(
+    _$AppointmentParticipantImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -462,69 +462,72 @@ Map<String, dynamic> _$$_AppointmentParticipantToJson(
   return val;
 }
 
-_$_AppointmentRecurrenceTemplate _$$_AppointmentRecurrenceTemplateFromJson(
-        Map<String, dynamic> json) =>
-    _$_AppointmentRecurrenceTemplate(
-      fhirId: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      timezone: json['timezone'] == null
-          ? null
-          : CodeableConcept.fromJson(json['timezone'] as Map<String, dynamic>),
-      recurrenceType: CodeableConcept.fromJson(
-          json['recurrenceType'] as Map<String, dynamic>),
-      lastOccurrenceDate: json['lastOccurrenceDate'] == null
-          ? null
-          : FhirDate.fromJson(json['lastOccurrenceDate']),
-      lastOccurrenceDateElement: json['_lastOccurrenceDate'] == null
-          ? null
-          : Element.fromJson(
-              json['_lastOccurrenceDate'] as Map<String, dynamic>),
-      occurrenceCount: json['occurrenceCount'] == null
-          ? null
-          : FhirPositiveInt.fromJson(json['occurrenceCount']),
-      occurrenceCountElement: json['_occurrenceCount'] == null
-          ? null
-          : Element.fromJson(json['_occurrenceCount'] as Map<String, dynamic>),
-      occurrenceDate: (json['occurrenceDate'] as List<dynamic>?)
-          ?.map(FhirDate.fromJson)
-          .toList(),
-      occurrenceDateElement: (json['_occurrenceDate'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      weeklyTemplate: json['weeklyTemplate'] == null
-          ? null
-          : AppointmentWeeklyTemplate.fromJson(
-              json['weeklyTemplate'] as Map<String, dynamic>),
-      monthlyTemplate: json['monthlyTemplate'] == null
-          ? null
-          : AppointmentMonthlyTemplate.fromJson(
-              json['monthlyTemplate'] as Map<String, dynamic>),
-      yearlyTemplate: json['yearlyTemplate'] == null
-          ? null
-          : AppointmentYearlyTemplate.fromJson(
-              json['yearlyTemplate'] as Map<String, dynamic>),
-      excludingDate: (json['excludingDate'] as List<dynamic>?)
-          ?.map(FhirDate.fromJson)
-          .toList(),
-      excludingDateElement: (json['_excludingDate'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      excludingRecurrenceId: (json['excludingRecurrenceId'] as List<dynamic>?)
-          ?.map(FhirPositiveInt.fromJson)
-          .toList(),
-      excludingRecurrenceIdElement:
-          (json['_excludingRecurrenceId'] as List<dynamic>?)
+_$AppointmentRecurrenceTemplateImpl
+    _$$AppointmentRecurrenceTemplateImplFromJson(Map<String, dynamic> json) =>
+        _$AppointmentRecurrenceTemplateImpl(
+          fhirId: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          timezone: json['timezone'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['timezone'] as Map<String, dynamic>),
+          recurrenceType: CodeableConcept.fromJson(
+              json['recurrenceType'] as Map<String, dynamic>),
+          lastOccurrenceDate: json['lastOccurrenceDate'] == null
+              ? null
+              : FhirDate.fromJson(json['lastOccurrenceDate']),
+          lastOccurrenceDateElement: json['_lastOccurrenceDate'] == null
+              ? null
+              : Element.fromJson(
+                  json['_lastOccurrenceDate'] as Map<String, dynamic>),
+          occurrenceCount: json['occurrenceCount'] == null
+              ? null
+              : FhirPositiveInt.fromJson(json['occurrenceCount']),
+          occurrenceCountElement: json['_occurrenceCount'] == null
+              ? null
+              : Element.fromJson(
+                  json['_occurrenceCount'] as Map<String, dynamic>),
+          occurrenceDate: (json['occurrenceDate'] as List<dynamic>?)
+              ?.map(FhirDate.fromJson)
+              .toList(),
+          occurrenceDateElement: (json['_occurrenceDate'] as List<dynamic>?)
               ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
               .toList(),
-    );
+          weeklyTemplate: json['weeklyTemplate'] == null
+              ? null
+              : AppointmentWeeklyTemplate.fromJson(
+                  json['weeklyTemplate'] as Map<String, dynamic>),
+          monthlyTemplate: json['monthlyTemplate'] == null
+              ? null
+              : AppointmentMonthlyTemplate.fromJson(
+                  json['monthlyTemplate'] as Map<String, dynamic>),
+          yearlyTemplate: json['yearlyTemplate'] == null
+              ? null
+              : AppointmentYearlyTemplate.fromJson(
+                  json['yearlyTemplate'] as Map<String, dynamic>),
+          excludingDate: (json['excludingDate'] as List<dynamic>?)
+              ?.map(FhirDate.fromJson)
+              .toList(),
+          excludingDateElement: (json['_excludingDate'] as List<dynamic>?)
+              ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          excludingRecurrenceId:
+              (json['excludingRecurrenceId'] as List<dynamic>?)
+                  ?.map(FhirPositiveInt.fromJson)
+                  .toList(),
+          excludingRecurrenceIdElement:
+              (json['_excludingRecurrenceId'] as List<dynamic>?)
+                  ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+                  .toList(),
+        );
 
-Map<String, dynamic> _$$_AppointmentRecurrenceTemplateToJson(
-    _$_AppointmentRecurrenceTemplate instance) {
+Map<String, dynamic> _$$AppointmentRecurrenceTemplateImplToJson(
+    _$AppointmentRecurrenceTemplateImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -563,9 +566,9 @@ Map<String, dynamic> _$$_AppointmentRecurrenceTemplateToJson(
   return val;
 }
 
-_$_AppointmentWeeklyTemplate _$$_AppointmentWeeklyTemplateFromJson(
+_$AppointmentWeeklyTemplateImpl _$$AppointmentWeeklyTemplateImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AppointmentWeeklyTemplate(
+    _$AppointmentWeeklyTemplateImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -620,8 +623,8 @@ _$_AppointmentWeeklyTemplate _$$_AppointmentWeeklyTemplateFromJson(
           : Element.fromJson(json['_weekInterval'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AppointmentWeeklyTemplateToJson(
-    _$_AppointmentWeeklyTemplate instance) {
+Map<String, dynamic> _$$AppointmentWeeklyTemplateImplToJson(
+    _$AppointmentWeeklyTemplateImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -654,9 +657,9 @@ Map<String, dynamic> _$$_AppointmentWeeklyTemplateToJson(
   return val;
 }
 
-_$_AppointmentMonthlyTemplate _$$_AppointmentMonthlyTemplateFromJson(
+_$AppointmentMonthlyTemplateImpl _$$AppointmentMonthlyTemplateImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AppointmentMonthlyTemplate(
+    _$AppointmentMonthlyTemplateImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -684,8 +687,8 @@ _$_AppointmentMonthlyTemplate _$$_AppointmentMonthlyTemplateFromJson(
           : Element.fromJson(json['_monthInterval'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AppointmentMonthlyTemplateToJson(
-    _$_AppointmentMonthlyTemplate instance) {
+Map<String, dynamic> _$$AppointmentMonthlyTemplateImplToJson(
+    _$AppointmentMonthlyTemplateImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -708,9 +711,9 @@ Map<String, dynamic> _$$_AppointmentMonthlyTemplateToJson(
   return val;
 }
 
-_$_AppointmentYearlyTemplate _$$_AppointmentYearlyTemplateFromJson(
+_$AppointmentYearlyTemplateImpl _$$AppointmentYearlyTemplateImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AppointmentYearlyTemplate(
+    _$AppointmentYearlyTemplateImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -726,8 +729,8 @@ _$_AppointmentYearlyTemplate _$$_AppointmentYearlyTemplateFromJson(
           : Element.fromJson(json['_yearInterval'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AppointmentYearlyTemplateToJson(
-    _$_AppointmentYearlyTemplate instance) {
+Map<String, dynamic> _$$AppointmentYearlyTemplateImplToJson(
+    _$AppointmentYearlyTemplateImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -746,9 +749,9 @@ Map<String, dynamic> _$$_AppointmentYearlyTemplateToJson(
   return val;
 }
 
-_$_AppointmentResponse _$$_AppointmentResponseFromJson(
+_$AppointmentResponseImpl _$$AppointmentResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AppointmentResponse(
+    _$AppointmentResponseImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.AppointmentResponse) ??
@@ -839,8 +842,8 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
           : Element.fromJson(json['_recurrenceId'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AppointmentResponseToJson(
-    _$_AppointmentResponse instance) {
+Map<String, dynamic> _$$AppointmentResponseImplToJson(
+    _$AppointmentResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -890,7 +893,8 @@ Map<String, dynamic> _$$_AppointmentResponseToJson(
   return val;
 }
 
-_$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
+_$ScheduleImpl _$$ScheduleImplFromJson(Map<String, dynamic> json) =>
+    _$ScheduleImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Schedule) ??
@@ -958,7 +962,7 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
+Map<String, dynamic> _$$ScheduleImplToJson(_$ScheduleImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1001,7 +1005,7 @@ Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
   return val;
 }
 
-_$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
+_$SlotImpl _$$SlotImplFromJson(Map<String, dynamic> json) => _$SlotImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Slot) ??
@@ -1074,7 +1078,7 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SlotToJson(_$_Slot instance) {
+Map<String, dynamic> _$$SlotImplToJson(_$SlotImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1122,7 +1126,7 @@ Map<String, dynamic> _$$_SlotToJson(_$_Slot instance) {
   return val;
 }
 
-_$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
+_$TaskImpl _$$TaskImplFromJson(Map<String, dynamic> json) => _$TaskImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Task) ??
@@ -1277,7 +1281,7 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
           .toList(),
     );
 
-Map<String, dynamic> _$$_TaskToJson(_$_Task instance) {
+Map<String, dynamic> _$$TaskImplToJson(_$TaskImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1351,8 +1355,8 @@ Map<String, dynamic> _$$_TaskToJson(_$_Task instance) {
   return val;
 }
 
-_$_TaskPerformer _$$_TaskPerformerFromJson(Map<String, dynamic> json) =>
-    _$_TaskPerformer(
+_$TaskPerformerImpl _$$TaskPerformerImplFromJson(Map<String, dynamic> json) =>
+    _$TaskPerformerImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1366,7 +1370,7 @@ _$_TaskPerformer _$$_TaskPerformerFromJson(Map<String, dynamic> json) =>
       actor: Reference.fromJson(json['actor'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TaskPerformerToJson(_$_TaskPerformer instance) {
+Map<String, dynamic> _$$TaskPerformerImplToJson(_$TaskPerformerImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1385,8 +1389,9 @@ Map<String, dynamic> _$$_TaskPerformerToJson(_$_TaskPerformer instance) {
   return val;
 }
 
-_$_TaskRestriction _$$_TaskRestrictionFromJson(Map<String, dynamic> json) =>
-    _$_TaskRestriction(
+_$TaskRestrictionImpl _$$TaskRestrictionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TaskRestrictionImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1408,7 +1413,8 @@ _$_TaskRestriction _$$_TaskRestrictionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_TaskRestrictionToJson(_$_TaskRestriction instance) {
+Map<String, dynamic> _$$TaskRestrictionImplToJson(
+    _$TaskRestrictionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1430,7 +1436,8 @@ Map<String, dynamic> _$$_TaskRestrictionToJson(_$_TaskRestriction instance) {
   return val;
 }
 
-_$_TaskInput _$$_TaskInputFromJson(Map<String, dynamic> json) => _$_TaskInput(
+_$TaskInputImpl _$$TaskInputImplFromJson(Map<String, dynamic> json) =>
+    _$TaskInputImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1675,7 +1682,7 @@ _$_TaskInput _$$_TaskInputFromJson(Map<String, dynamic> json) => _$_TaskInput(
           : FhirMeta.fromJson(json['valueMeta'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TaskInputToJson(_$_TaskInput instance) {
+Map<String, dynamic> _$$TaskInputImplToJson(_$TaskInputImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1772,8 +1779,8 @@ Map<String, dynamic> _$$_TaskInputToJson(_$_TaskInput instance) {
   return val;
 }
 
-_$_TaskOutput _$$_TaskOutputFromJson(Map<String, dynamic> json) =>
-    _$_TaskOutput(
+_$TaskOutputImpl _$$TaskOutputImplFromJson(Map<String, dynamic> json) =>
+    _$TaskOutputImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2018,7 +2025,7 @@ _$_TaskOutput _$$_TaskOutputFromJson(Map<String, dynamic> json) =>
           : FhirMeta.fromJson(json['valueMeta'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TaskOutputToJson(_$_TaskOutput instance) {
+Map<String, dynamic> _$$TaskOutputImplToJson(_$TaskOutputImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2115,7 +2122,8 @@ Map<String, dynamic> _$$_TaskOutputToJson(_$_TaskOutput instance) {
   return val;
 }
 
-_$_Transport _$$_TransportFromJson(Map<String, dynamic> json) => _$_Transport(
+_$TransportImpl _$$TransportImplFromJson(Map<String, dynamic> json) =>
+    _$TransportImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Transport) ??
@@ -2264,7 +2272,7 @@ _$_Transport _$$_TransportFromJson(Map<String, dynamic> json) => _$_Transport(
           : Reference.fromJson(json['history'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TransportToJson(_$_Transport instance) {
+Map<String, dynamic> _$$TransportImplToJson(_$TransportImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -2336,9 +2344,9 @@ Map<String, dynamic> _$$_TransportToJson(_$_Transport instance) {
   return val;
 }
 
-_$_TransportRestriction _$$_TransportRestrictionFromJson(
+_$TransportRestrictionImpl _$$TransportRestrictionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_TransportRestriction(
+    _$TransportRestrictionImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2360,8 +2368,8 @@ _$_TransportRestriction _$$_TransportRestrictionFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_TransportRestrictionToJson(
-    _$_TransportRestriction instance) {
+Map<String, dynamic> _$$TransportRestrictionImplToJson(
+    _$TransportRestrictionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2383,8 +2391,8 @@ Map<String, dynamic> _$$_TransportRestrictionToJson(
   return val;
 }
 
-_$_TransportInput _$$_TransportInputFromJson(Map<String, dynamic> json) =>
-    _$_TransportInput(
+_$TransportInputImpl _$$TransportInputImplFromJson(Map<String, dynamic> json) =>
+    _$TransportInputImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -2629,7 +2637,8 @@ _$_TransportInput _$$_TransportInputFromJson(Map<String, dynamic> json) =>
           : FhirMeta.fromJson(json['valueMeta'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TransportInputToJson(_$_TransportInput instance) {
+Map<String, dynamic> _$$TransportInputImplToJson(
+    _$TransportInputImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -2726,352 +2735,354 @@ Map<String, dynamic> _$$_TransportInputToJson(_$_TransportInput instance) {
   return val;
 }
 
-_$_TransportOutput _$$_TransportOutputFromJson(Map<String, dynamic> json) =>
-    _$_TransportOutput(
-      fhirId: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      valueBase64Binary: json['valueBase64Binary'] == null
-          ? null
-          : FhirBase64Binary.fromJson(json['valueBase64Binary']),
-      valueBase64BinaryElement: json['_valueBase64Binary'] == null
-          ? null
-          : Element.fromJson(
-              json['_valueBase64Binary'] as Map<String, dynamic>),
-      valueBoolean: json['valueBoolean'] == null
-          ? null
-          : FhirBoolean.fromJson(json['valueBoolean']),
-      valueBooleanElement: json['_valueBoolean'] == null
-          ? null
-          : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
-      valueCanonical: json['valueCanonical'] == null
-          ? null
-          : FhirCanonical.fromJson(json['valueCanonical']),
-      valueCanonicalElement: json['_valueCanonical'] == null
-          ? null
-          : Element.fromJson(json['_valueCanonical'] as Map<String, dynamic>),
-      valueCode: json['valueCode'] == null
-          ? null
-          : FhirCode.fromJson(json['valueCode']),
-      valueCodeElement: json['_valueCode'] == null
-          ? null
-          : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
-      valueDate: json['valueDate'] == null
-          ? null
-          : FhirDate.fromJson(json['valueDate']),
-      valueDateElement: json['_valueDate'] == null
-          ? null
-          : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
-      valueDateTime: json['valueDateTime'] == null
-          ? null
-          : FhirDateTime.fromJson(json['valueDateTime']),
-      valueDateTimeElement: json['_valueDateTime'] == null
-          ? null
-          : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
-      valueDecimal: json['valueDecimal'] == null
-          ? null
-          : FhirDecimal.fromJson(json['valueDecimal']),
-      valueDecimalElement: json['_valueDecimal'] == null
-          ? null
-          : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
-      valueId:
-          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
-      valueIdElement: json['_valueId'] == null
-          ? null
-          : Element.fromJson(json['_valueId'] as Map<String, dynamic>),
-      valueInstant: json['valueInstant'] == null
-          ? null
-          : FhirInstant.fromJson(json['valueInstant']),
-      valueInstantElement: json['_valueInstant'] == null
-          ? null
-          : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),
-      valueInteger: json['valueInteger'] == null
-          ? null
-          : FhirInteger.fromJson(json['valueInteger']),
-      valueIntegerElement: json['_valueInteger'] == null
-          ? null
-          : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
-      valueInteger64: json['valueInteger64'] == null
-          ? null
-          : FhirInteger64.fromJson(json['valueInteger64']),
-      valueInteger64Element: json['_valueInteger64'] == null
-          ? null
-          : Element.fromJson(json['_valueInteger64'] as Map<String, dynamic>),
-      valueMarkdown: json['valueMarkdown'] == null
-          ? null
-          : FhirMarkdown.fromJson(json['valueMarkdown']),
-      valueMarkdownElement: json['_valueMarkdown'] == null
-          ? null
-          : Element.fromJson(json['_valueMarkdown'] as Map<String, dynamic>),
-      valueOid:
-          json['valueOid'] == null ? null : FhirId.fromJson(json['valueOid']),
-      valueOidElement: json['_valueOid'] == null
-          ? null
-          : Element.fromJson(json['_valueOid'] as Map<String, dynamic>),
-      valuePositiveInt: json['valuePositiveInt'] == null
-          ? null
-          : FhirPositiveInt.fromJson(json['valuePositiveInt']),
-      valuePositiveIntElement: json['_valuePositiveInt'] == null
-          ? null
-          : Element.fromJson(json['_valuePositiveInt'] as Map<String, dynamic>),
-      valueString: json['valueString'] as String?,
-      valueStringElement: json['_valueString'] == null
-          ? null
-          : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
-      valueTime: json['valueTime'] == null
-          ? null
-          : FhirTime.fromJson(json['valueTime']),
-      valueTimeElement: json['_valueTime'] == null
-          ? null
-          : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
-      valueUnsignedInt: json['valueUnsignedInt'] == null
-          ? null
-          : FhirUnsignedInt.fromJson(json['valueUnsignedInt']),
-      valueUnsignedIntElement: json['_valueUnsignedInt'] == null
-          ? null
-          : Element.fromJson(json['_valueUnsignedInt'] as Map<String, dynamic>),
-      valueUri:
-          json['valueUri'] == null ? null : FhirUri.fromJson(json['valueUri']),
-      valueUriElement: json['_valueUri'] == null
-          ? null
-          : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
-      valueUrl:
-          json['valueUrl'] == null ? null : FhirUrl.fromJson(json['valueUrl']),
-      valueUrlElement: json['_valueUrl'] == null
-          ? null
-          : Element.fromJson(json['_valueUrl'] as Map<String, dynamic>),
-      valueUuid:
-          json['valueUuid'] == null ? null : FhirId.fromJson(json['valueUuid']),
-      valueUuidElement: json['_valueUuid'] == null
-          ? null
-          : Element.fromJson(json['_valueUuid'] as Map<String, dynamic>),
-      valueAddress: json['valueAddress'] == null
-          ? null
-          : Address.fromJson(json['valueAddress'] as Map<String, dynamic>),
-      valueAge: json['valueAge'] == null
-          ? null
-          : Age.fromJson(json['valueAge'] as Map<String, dynamic>),
-      valueAnnotation: json['valueAnnotation'] == null
-          ? null
-          : Annotation.fromJson(
-              json['valueAnnotation'] as Map<String, dynamic>),
-      valueAttachment: json['valueAttachment'] == null
-          ? null
-          : Attachment.fromJson(
-              json['valueAttachment'] as Map<String, dynamic>),
-      valueCodeableConcept: json['valueCodeableConcept'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['valueCodeableConcept'] as Map<String, dynamic>),
-      valueCodeableReference: json['valueCodeableReference'] == null
-          ? null
-          : CodeableReference.fromJson(
-              json['valueCodeableReference'] as Map<String, dynamic>),
-      valueCoding: json['valueCoding'] == null
-          ? null
-          : Coding.fromJson(json['valueCoding'] as Map<String, dynamic>),
-      valueContactPoint: json['valueContactPoint'] == null
-          ? null
-          : ContactPoint.fromJson(
-              json['valueContactPoint'] as Map<String, dynamic>),
-      valueCount: json['valueCount'] == null
-          ? null
-          : Count.fromJson(json['valueCount'] as Map<String, dynamic>),
-      valueDistance: json['valueDistance'] == null
-          ? null
-          : Distance.fromJson(json['valueDistance'] as Map<String, dynamic>),
-      valueDuration: json['valueDuration'] == null
-          ? null
-          : FhirDuration.fromJson(
-              json['valueDuration'] as Map<String, dynamic>),
-      valueHumanName: json['valueHumanName'] == null
-          ? null
-          : HumanName.fromJson(json['valueHumanName'] as Map<String, dynamic>),
-      valueIdentifier: json['valueIdentifier'] == null
-          ? null
-          : Identifier.fromJson(
-              json['valueIdentifier'] as Map<String, dynamic>),
-      valueMoney: json['valueMoney'] == null
-          ? null
-          : Money.fromJson(json['valueMoney'] as Map<String, dynamic>),
-      valuePeriod: json['valuePeriod'] == null
-          ? null
-          : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
-      valueQuantity: json['valueQuantity'] == null
-          ? null
-          : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
-      valueRange: json['valueRange'] == null
-          ? null
-          : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
-      valueRatio: json['valueRatio'] == null
-          ? null
-          : Ratio.fromJson(json['valueRatio'] as Map<String, dynamic>),
-      valueRatioRange: json['valueRatioRange'] == null
-          ? null
-          : RatioRange.fromJson(
-              json['valueRatioRange'] as Map<String, dynamic>),
-      valueReference: json['valueReference'] == null
-          ? null
-          : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
-      valueSampledData: json['valueSampledData'] == null
-          ? null
-          : SampledData.fromJson(
-              json['valueSampledData'] as Map<String, dynamic>),
-      valueSignature: json['valueSignature'] == null
-          ? null
-          : Signature.fromJson(json['valueSignature'] as Map<String, dynamic>),
-      valueTiming: json['valueTiming'] == null
-          ? null
-          : Timing.fromJson(json['valueTiming'] as Map<String, dynamic>),
-      valueContactDetail: json['valueContactDetail'] == null
-          ? null
-          : ContactDetail.fromJson(
-              json['valueContactDetail'] as Map<String, dynamic>),
-      valueDataRequirement: json['valueDataRequirement'] == null
-          ? null
-          : DataRequirement.fromJson(
-              json['valueDataRequirement'] as Map<String, dynamic>),
-      valueExpression: json['valueExpression'] == null
-          ? null
-          : FhirExpression.fromJson(
-              json['valueExpression'] as Map<String, dynamic>),
-      valueParameterDefinition: json['valueParameterDefinition'] == null
-          ? null
-          : ParameterDefinition.fromJson(
-              json['valueParameterDefinition'] as Map<String, dynamic>),
-      valueRelatedArtifact: json['valueRelatedArtifact'] == null
-          ? null
-          : RelatedArtifact.fromJson(
-              json['valueRelatedArtifact'] as Map<String, dynamic>),
-      valueTriggerDefinition: json['valueTriggerDefinition'] == null
-          ? null
-          : TriggerDefinition.fromJson(
-              json['valueTriggerDefinition'] as Map<String, dynamic>),
-      valueUsageContext: json['valueUsageContext'] == null
-          ? null
-          : UsageContext.fromJson(
-              json['valueUsageContext'] as Map<String, dynamic>),
-      valueAvailability: json['valueAvailability'] == null
-          ? null
-          : Availability.fromJson(
-              json['valueAvailability'] as Map<String, dynamic>),
-      valueExtendedContactDetail: json['valueExtendedContactDetail'] == null
-          ? null
-          : ExtendedContactDetail.fromJson(
-              json['valueExtendedContactDetail'] as Map<String, dynamic>),
-      valueDosage: json['valueDosage'] == null
-          ? null
-          : Dosage.fromJson(json['valueDosage'] as Map<String, dynamic>),
-      valueMeta: json['valueMeta'] == null
-          ? null
-          : FhirMeta.fromJson(json['valueMeta'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_TransportOutputToJson(_$_TransportOutput instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.fhirId);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  val['type'] = instance.type.toJson();
-  writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());
-  writeNotNull(
-      '_valueBase64Binary', instance.valueBase64BinaryElement?.toJson());
-  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
-  writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
-  writeNotNull('valueCanonical', instance.valueCanonical?.toJson());
-  writeNotNull('_valueCanonical', instance.valueCanonicalElement?.toJson());
-  writeNotNull('valueCode', instance.valueCode?.toJson());
-  writeNotNull('_valueCode', instance.valueCodeElement?.toJson());
-  writeNotNull('valueDate', instance.valueDate?.toJson());
-  writeNotNull('_valueDate', instance.valueDateElement?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
-  writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
-  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
-  writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
-  writeNotNull('valueId', instance.valueId?.toJson());
-  writeNotNull('_valueId', instance.valueIdElement?.toJson());
-  writeNotNull('valueInstant', instance.valueInstant?.toJson());
-  writeNotNull('_valueInstant', instance.valueInstantElement?.toJson());
-  writeNotNull('valueInteger', instance.valueInteger?.toJson());
-  writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
-  writeNotNull('valueInteger64', instance.valueInteger64?.toJson());
-  writeNotNull('_valueInteger64', instance.valueInteger64Element?.toJson());
-  writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
-  writeNotNull('_valueMarkdown', instance.valueMarkdownElement?.toJson());
-  writeNotNull('valueOid', instance.valueOid?.toJson());
-  writeNotNull('_valueOid', instance.valueOidElement?.toJson());
-  writeNotNull('valuePositiveInt', instance.valuePositiveInt?.toJson());
-  writeNotNull('_valuePositiveInt', instance.valuePositiveIntElement?.toJson());
-  writeNotNull('valueString', instance.valueString);
-  writeNotNull('_valueString', instance.valueStringElement?.toJson());
-  writeNotNull('valueTime', instance.valueTime?.toJson());
-  writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
-  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt?.toJson());
-  writeNotNull('_valueUnsignedInt', instance.valueUnsignedIntElement?.toJson());
-  writeNotNull('valueUri', instance.valueUri?.toJson());
-  writeNotNull('_valueUri', instance.valueUriElement?.toJson());
-  writeNotNull('valueUrl', instance.valueUrl?.toJson());
-  writeNotNull('_valueUrl', instance.valueUrlElement?.toJson());
-  writeNotNull('valueUuid', instance.valueUuid?.toJson());
-  writeNotNull('_valueUuid', instance.valueUuidElement?.toJson());
-  writeNotNull('valueAddress', instance.valueAddress?.toJson());
-  writeNotNull('valueAge', instance.valueAge?.toJson());
-  writeNotNull('valueAnnotation', instance.valueAnnotation?.toJson());
-  writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
-  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
-  writeNotNull(
-      'valueCodeableReference', instance.valueCodeableReference?.toJson());
-  writeNotNull('valueCoding', instance.valueCoding?.toJson());
-  writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
-  writeNotNull('valueCount', instance.valueCount?.toJson());
-  writeNotNull('valueDistance', instance.valueDistance?.toJson());
-  writeNotNull('valueDuration', instance.valueDuration?.toJson());
-  writeNotNull('valueHumanName', instance.valueHumanName?.toJson());
-  writeNotNull('valueIdentifier', instance.valueIdentifier?.toJson());
-  writeNotNull('valueMoney', instance.valueMoney?.toJson());
-  writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
-  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
-  writeNotNull('valueRange', instance.valueRange?.toJson());
-  writeNotNull('valueRatio', instance.valueRatio?.toJson());
-  writeNotNull('valueRatioRange', instance.valueRatioRange?.toJson());
-  writeNotNull('valueReference', instance.valueReference?.toJson());
-  writeNotNull('valueSampledData', instance.valueSampledData?.toJson());
-  writeNotNull('valueSignature', instance.valueSignature?.toJson());
-  writeNotNull('valueTiming', instance.valueTiming?.toJson());
-  writeNotNull('valueContactDetail', instance.valueContactDetail?.toJson());
-  writeNotNull('valueDataRequirement', instance.valueDataRequirement?.toJson());
-  writeNotNull('valueExpression', instance.valueExpression?.toJson());
-  writeNotNull(
-      'valueParameterDefinition', instance.valueParameterDefinition?.toJson());
-  writeNotNull('valueRelatedArtifact', instance.valueRelatedArtifact?.toJson());
-  writeNotNull(
-      'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
-  writeNotNull('valueUsageContext', instance.valueUsageContext?.toJson());
-  writeNotNull('valueAvailability', instance.valueAvailability?.toJson());
-  writeNotNull('valueExtendedContactDetail',
-      instance.valueExtendedContactDetail?.toJson());
-  writeNotNull('valueDosage', instance.valueDosage?.toJson());
-  writeNotNull('valueMeta', instance.valueMeta?.toJson());
-  return val;
-}
-
-_$_VerificationResult _$$_VerificationResultFromJson(
+_$TransportOutputImpl _$$TransportOutputImplFromJson(
         Map<String, dynamic> json) =>
-    _$_VerificationResult(
+    _$TransportOutputImpl(
+      fhirId: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      valueBase64Binary: json['valueBase64Binary'] == null
+          ? null
+          : FhirBase64Binary.fromJson(json['valueBase64Binary']),
+      valueBase64BinaryElement: json['_valueBase64Binary'] == null
+          ? null
+          : Element.fromJson(
+              json['_valueBase64Binary'] as Map<String, dynamic>),
+      valueBoolean: json['valueBoolean'] == null
+          ? null
+          : FhirBoolean.fromJson(json['valueBoolean']),
+      valueBooleanElement: json['_valueBoolean'] == null
+          ? null
+          : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
+      valueCanonical: json['valueCanonical'] == null
+          ? null
+          : FhirCanonical.fromJson(json['valueCanonical']),
+      valueCanonicalElement: json['_valueCanonical'] == null
+          ? null
+          : Element.fromJson(json['_valueCanonical'] as Map<String, dynamic>),
+      valueCode: json['valueCode'] == null
+          ? null
+          : FhirCode.fromJson(json['valueCode']),
+      valueCodeElement: json['_valueCode'] == null
+          ? null
+          : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
+      valueDate: json['valueDate'] == null
+          ? null
+          : FhirDate.fromJson(json['valueDate']),
+      valueDateElement: json['_valueDate'] == null
+          ? null
+          : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
+      valueDateTime: json['valueDateTime'] == null
+          ? null
+          : FhirDateTime.fromJson(json['valueDateTime']),
+      valueDateTimeElement: json['_valueDateTime'] == null
+          ? null
+          : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
+      valueDecimal: json['valueDecimal'] == null
+          ? null
+          : FhirDecimal.fromJson(json['valueDecimal']),
+      valueDecimalElement: json['_valueDecimal'] == null
+          ? null
+          : Element.fromJson(json['_valueDecimal'] as Map<String, dynamic>),
+      valueId:
+          json['valueId'] == null ? null : FhirId.fromJson(json['valueId']),
+      valueIdElement: json['_valueId'] == null
+          ? null
+          : Element.fromJson(json['_valueId'] as Map<String, dynamic>),
+      valueInstant: json['valueInstant'] == null
+          ? null
+          : FhirInstant.fromJson(json['valueInstant']),
+      valueInstantElement: json['_valueInstant'] == null
+          ? null
+          : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),
+      valueInteger: json['valueInteger'] == null
+          ? null
+          : FhirInteger.fromJson(json['valueInteger']),
+      valueIntegerElement: json['_valueInteger'] == null
+          ? null
+          : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+      valueInteger64: json['valueInteger64'] == null
+          ? null
+          : FhirInteger64.fromJson(json['valueInteger64']),
+      valueInteger64Element: json['_valueInteger64'] == null
+          ? null
+          : Element.fromJson(json['_valueInteger64'] as Map<String, dynamic>),
+      valueMarkdown: json['valueMarkdown'] == null
+          ? null
+          : FhirMarkdown.fromJson(json['valueMarkdown']),
+      valueMarkdownElement: json['_valueMarkdown'] == null
+          ? null
+          : Element.fromJson(json['_valueMarkdown'] as Map<String, dynamic>),
+      valueOid:
+          json['valueOid'] == null ? null : FhirId.fromJson(json['valueOid']),
+      valueOidElement: json['_valueOid'] == null
+          ? null
+          : Element.fromJson(json['_valueOid'] as Map<String, dynamic>),
+      valuePositiveInt: json['valuePositiveInt'] == null
+          ? null
+          : FhirPositiveInt.fromJson(json['valuePositiveInt']),
+      valuePositiveIntElement: json['_valuePositiveInt'] == null
+          ? null
+          : Element.fromJson(json['_valuePositiveInt'] as Map<String, dynamic>),
+      valueString: json['valueString'] as String?,
+      valueStringElement: json['_valueString'] == null
+          ? null
+          : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
+      valueTime: json['valueTime'] == null
+          ? null
+          : FhirTime.fromJson(json['valueTime']),
+      valueTimeElement: json['_valueTime'] == null
+          ? null
+          : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
+      valueUnsignedInt: json['valueUnsignedInt'] == null
+          ? null
+          : FhirUnsignedInt.fromJson(json['valueUnsignedInt']),
+      valueUnsignedIntElement: json['_valueUnsignedInt'] == null
+          ? null
+          : Element.fromJson(json['_valueUnsignedInt'] as Map<String, dynamic>),
+      valueUri:
+          json['valueUri'] == null ? null : FhirUri.fromJson(json['valueUri']),
+      valueUriElement: json['_valueUri'] == null
+          ? null
+          : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
+      valueUrl:
+          json['valueUrl'] == null ? null : FhirUrl.fromJson(json['valueUrl']),
+      valueUrlElement: json['_valueUrl'] == null
+          ? null
+          : Element.fromJson(json['_valueUrl'] as Map<String, dynamic>),
+      valueUuid:
+          json['valueUuid'] == null ? null : FhirId.fromJson(json['valueUuid']),
+      valueUuidElement: json['_valueUuid'] == null
+          ? null
+          : Element.fromJson(json['_valueUuid'] as Map<String, dynamic>),
+      valueAddress: json['valueAddress'] == null
+          ? null
+          : Address.fromJson(json['valueAddress'] as Map<String, dynamic>),
+      valueAge: json['valueAge'] == null
+          ? null
+          : Age.fromJson(json['valueAge'] as Map<String, dynamic>),
+      valueAnnotation: json['valueAnnotation'] == null
+          ? null
+          : Annotation.fromJson(
+              json['valueAnnotation'] as Map<String, dynamic>),
+      valueAttachment: json['valueAttachment'] == null
+          ? null
+          : Attachment.fromJson(
+              json['valueAttachment'] as Map<String, dynamic>),
+      valueCodeableConcept: json['valueCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['valueCodeableConcept'] as Map<String, dynamic>),
+      valueCodeableReference: json['valueCodeableReference'] == null
+          ? null
+          : CodeableReference.fromJson(
+              json['valueCodeableReference'] as Map<String, dynamic>),
+      valueCoding: json['valueCoding'] == null
+          ? null
+          : Coding.fromJson(json['valueCoding'] as Map<String, dynamic>),
+      valueContactPoint: json['valueContactPoint'] == null
+          ? null
+          : ContactPoint.fromJson(
+              json['valueContactPoint'] as Map<String, dynamic>),
+      valueCount: json['valueCount'] == null
+          ? null
+          : Count.fromJson(json['valueCount'] as Map<String, dynamic>),
+      valueDistance: json['valueDistance'] == null
+          ? null
+          : Distance.fromJson(json['valueDistance'] as Map<String, dynamic>),
+      valueDuration: json['valueDuration'] == null
+          ? null
+          : FhirDuration.fromJson(
+              json['valueDuration'] as Map<String, dynamic>),
+      valueHumanName: json['valueHumanName'] == null
+          ? null
+          : HumanName.fromJson(json['valueHumanName'] as Map<String, dynamic>),
+      valueIdentifier: json['valueIdentifier'] == null
+          ? null
+          : Identifier.fromJson(
+              json['valueIdentifier'] as Map<String, dynamic>),
+      valueMoney: json['valueMoney'] == null
+          ? null
+          : Money.fromJson(json['valueMoney'] as Map<String, dynamic>),
+      valuePeriod: json['valuePeriod'] == null
+          ? null
+          : Period.fromJson(json['valuePeriod'] as Map<String, dynamic>),
+      valueQuantity: json['valueQuantity'] == null
+          ? null
+          : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
+      valueRange: json['valueRange'] == null
+          ? null
+          : Range.fromJson(json['valueRange'] as Map<String, dynamic>),
+      valueRatio: json['valueRatio'] == null
+          ? null
+          : Ratio.fromJson(json['valueRatio'] as Map<String, dynamic>),
+      valueRatioRange: json['valueRatioRange'] == null
+          ? null
+          : RatioRange.fromJson(
+              json['valueRatioRange'] as Map<String, dynamic>),
+      valueReference: json['valueReference'] == null
+          ? null
+          : Reference.fromJson(json['valueReference'] as Map<String, dynamic>),
+      valueSampledData: json['valueSampledData'] == null
+          ? null
+          : SampledData.fromJson(
+              json['valueSampledData'] as Map<String, dynamic>),
+      valueSignature: json['valueSignature'] == null
+          ? null
+          : Signature.fromJson(json['valueSignature'] as Map<String, dynamic>),
+      valueTiming: json['valueTiming'] == null
+          ? null
+          : Timing.fromJson(json['valueTiming'] as Map<String, dynamic>),
+      valueContactDetail: json['valueContactDetail'] == null
+          ? null
+          : ContactDetail.fromJson(
+              json['valueContactDetail'] as Map<String, dynamic>),
+      valueDataRequirement: json['valueDataRequirement'] == null
+          ? null
+          : DataRequirement.fromJson(
+              json['valueDataRequirement'] as Map<String, dynamic>),
+      valueExpression: json['valueExpression'] == null
+          ? null
+          : FhirExpression.fromJson(
+              json['valueExpression'] as Map<String, dynamic>),
+      valueParameterDefinition: json['valueParameterDefinition'] == null
+          ? null
+          : ParameterDefinition.fromJson(
+              json['valueParameterDefinition'] as Map<String, dynamic>),
+      valueRelatedArtifact: json['valueRelatedArtifact'] == null
+          ? null
+          : RelatedArtifact.fromJson(
+              json['valueRelatedArtifact'] as Map<String, dynamic>),
+      valueTriggerDefinition: json['valueTriggerDefinition'] == null
+          ? null
+          : TriggerDefinition.fromJson(
+              json['valueTriggerDefinition'] as Map<String, dynamic>),
+      valueUsageContext: json['valueUsageContext'] == null
+          ? null
+          : UsageContext.fromJson(
+              json['valueUsageContext'] as Map<String, dynamic>),
+      valueAvailability: json['valueAvailability'] == null
+          ? null
+          : Availability.fromJson(
+              json['valueAvailability'] as Map<String, dynamic>),
+      valueExtendedContactDetail: json['valueExtendedContactDetail'] == null
+          ? null
+          : ExtendedContactDetail.fromJson(
+              json['valueExtendedContactDetail'] as Map<String, dynamic>),
+      valueDosage: json['valueDosage'] == null
+          ? null
+          : Dosage.fromJson(json['valueDosage'] as Map<String, dynamic>),
+      valueMeta: json['valueMeta'] == null
+          ? null
+          : FhirMeta.fromJson(json['valueMeta'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$TransportOutputImplToJson(
+    _$TransportOutputImpl instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.fhirId);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  val['type'] = instance.type.toJson();
+  writeNotNull('valueBase64Binary', instance.valueBase64Binary?.toJson());
+  writeNotNull(
+      '_valueBase64Binary', instance.valueBase64BinaryElement?.toJson());
+  writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
+  writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
+  writeNotNull('valueCanonical', instance.valueCanonical?.toJson());
+  writeNotNull('_valueCanonical', instance.valueCanonicalElement?.toJson());
+  writeNotNull('valueCode', instance.valueCode?.toJson());
+  writeNotNull('_valueCode', instance.valueCodeElement?.toJson());
+  writeNotNull('valueDate', instance.valueDate?.toJson());
+  writeNotNull('_valueDate', instance.valueDateElement?.toJson());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
+  writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
+  writeNotNull('valueDecimal', instance.valueDecimal?.toJson());
+  writeNotNull('_valueDecimal', instance.valueDecimalElement?.toJson());
+  writeNotNull('valueId', instance.valueId?.toJson());
+  writeNotNull('_valueId', instance.valueIdElement?.toJson());
+  writeNotNull('valueInstant', instance.valueInstant?.toJson());
+  writeNotNull('_valueInstant', instance.valueInstantElement?.toJson());
+  writeNotNull('valueInteger', instance.valueInteger?.toJson());
+  writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
+  writeNotNull('valueInteger64', instance.valueInteger64?.toJson());
+  writeNotNull('_valueInteger64', instance.valueInteger64Element?.toJson());
+  writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
+  writeNotNull('_valueMarkdown', instance.valueMarkdownElement?.toJson());
+  writeNotNull('valueOid', instance.valueOid?.toJson());
+  writeNotNull('_valueOid', instance.valueOidElement?.toJson());
+  writeNotNull('valuePositiveInt', instance.valuePositiveInt?.toJson());
+  writeNotNull('_valuePositiveInt', instance.valuePositiveIntElement?.toJson());
+  writeNotNull('valueString', instance.valueString);
+  writeNotNull('_valueString', instance.valueStringElement?.toJson());
+  writeNotNull('valueTime', instance.valueTime?.toJson());
+  writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
+  writeNotNull('valueUnsignedInt', instance.valueUnsignedInt?.toJson());
+  writeNotNull('_valueUnsignedInt', instance.valueUnsignedIntElement?.toJson());
+  writeNotNull('valueUri', instance.valueUri?.toJson());
+  writeNotNull('_valueUri', instance.valueUriElement?.toJson());
+  writeNotNull('valueUrl', instance.valueUrl?.toJson());
+  writeNotNull('_valueUrl', instance.valueUrlElement?.toJson());
+  writeNotNull('valueUuid', instance.valueUuid?.toJson());
+  writeNotNull('_valueUuid', instance.valueUuidElement?.toJson());
+  writeNotNull('valueAddress', instance.valueAddress?.toJson());
+  writeNotNull('valueAge', instance.valueAge?.toJson());
+  writeNotNull('valueAnnotation', instance.valueAnnotation?.toJson());
+  writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
+  writeNotNull('valueCodeableConcept', instance.valueCodeableConcept?.toJson());
+  writeNotNull(
+      'valueCodeableReference', instance.valueCodeableReference?.toJson());
+  writeNotNull('valueCoding', instance.valueCoding?.toJson());
+  writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
+  writeNotNull('valueCount', instance.valueCount?.toJson());
+  writeNotNull('valueDistance', instance.valueDistance?.toJson());
+  writeNotNull('valueDuration', instance.valueDuration?.toJson());
+  writeNotNull('valueHumanName', instance.valueHumanName?.toJson());
+  writeNotNull('valueIdentifier', instance.valueIdentifier?.toJson());
+  writeNotNull('valueMoney', instance.valueMoney?.toJson());
+  writeNotNull('valuePeriod', instance.valuePeriod?.toJson());
+  writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
+  writeNotNull('valueRange', instance.valueRange?.toJson());
+  writeNotNull('valueRatio', instance.valueRatio?.toJson());
+  writeNotNull('valueRatioRange', instance.valueRatioRange?.toJson());
+  writeNotNull('valueReference', instance.valueReference?.toJson());
+  writeNotNull('valueSampledData', instance.valueSampledData?.toJson());
+  writeNotNull('valueSignature', instance.valueSignature?.toJson());
+  writeNotNull('valueTiming', instance.valueTiming?.toJson());
+  writeNotNull('valueContactDetail', instance.valueContactDetail?.toJson());
+  writeNotNull('valueDataRequirement', instance.valueDataRequirement?.toJson());
+  writeNotNull('valueExpression', instance.valueExpression?.toJson());
+  writeNotNull(
+      'valueParameterDefinition', instance.valueParameterDefinition?.toJson());
+  writeNotNull('valueRelatedArtifact', instance.valueRelatedArtifact?.toJson());
+  writeNotNull(
+      'valueTriggerDefinition', instance.valueTriggerDefinition?.toJson());
+  writeNotNull('valueUsageContext', instance.valueUsageContext?.toJson());
+  writeNotNull('valueAvailability', instance.valueAvailability?.toJson());
+  writeNotNull('valueExtendedContactDetail',
+      instance.valueExtendedContactDetail?.toJson());
+  writeNotNull('valueDosage', instance.valueDosage?.toJson());
+  writeNotNull('valueMeta', instance.valueMeta?.toJson());
+  return val;
+}
+
+_$VerificationResultImpl _$$VerificationResultImplFromJson(
+        Map<String, dynamic> json) =>
+    _$VerificationResultImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.VerificationResult) ??
@@ -3166,8 +3177,8 @@ _$_VerificationResult _$$_VerificationResultFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_VerificationResultToJson(
-    _$_VerificationResult instance) {
+Map<String, dynamic> _$$VerificationResultImplToJson(
+    _$VerificationResultImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -3217,46 +3228,47 @@ Map<String, dynamic> _$$_VerificationResultToJson(
   return val;
 }
 
-_$_VerificationResultPrimarySource _$$_VerificationResultPrimarySourceFromJson(
-        Map<String, dynamic> json) =>
-    _$_VerificationResultPrimarySource(
-      fhirId: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      who: json['who'] == null
-          ? null
-          : Reference.fromJson(json['who'] as Map<String, dynamic>),
-      type: (json['type'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      communicationMethod: (json['communicationMethod'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      validationStatus: json['validationStatus'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['validationStatus'] as Map<String, dynamic>),
-      validationDate: json['validationDate'] == null
-          ? null
-          : FhirDateTime.fromJson(json['validationDate']),
-      validationDateElement: json['_validationDate'] == null
-          ? null
-          : Element.fromJson(json['_validationDate'] as Map<String, dynamic>),
-      canPushUpdates: json['canPushUpdates'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['canPushUpdates'] as Map<String, dynamic>),
-      pushTypeAvailable: (json['pushTypeAvailable'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+_$VerificationResultPrimarySourceImpl
+    _$$VerificationResultPrimarySourceImplFromJson(Map<String, dynamic> json) =>
+        _$VerificationResultPrimarySourceImpl(
+          fhirId: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          who: json['who'] == null
+              ? null
+              : Reference.fromJson(json['who'] as Map<String, dynamic>),
+          type: (json['type'] as List<dynamic>?)
+              ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          communicationMethod: (json['communicationMethod'] as List<dynamic>?)
+              ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          validationStatus: json['validationStatus'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['validationStatus'] as Map<String, dynamic>),
+          validationDate: json['validationDate'] == null
+              ? null
+              : FhirDateTime.fromJson(json['validationDate']),
+          validationDateElement: json['_validationDate'] == null
+              ? null
+              : Element.fromJson(
+                  json['_validationDate'] as Map<String, dynamic>),
+          canPushUpdates: json['canPushUpdates'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['canPushUpdates'] as Map<String, dynamic>),
+          pushTypeAvailable: (json['pushTypeAvailable'] as List<dynamic>?)
+              ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+              .toList(),
+        );
 
-Map<String, dynamic> _$$_VerificationResultPrimarySourceToJson(
-    _$_VerificationResultPrimarySource instance) {
+Map<String, dynamic> _$$VerificationResultPrimarySourceImplToJson(
+    _$VerificationResultPrimarySourceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -3283,51 +3295,55 @@ Map<String, dynamic> _$$_VerificationResultPrimarySourceToJson(
   return val;
 }
 
-_$_VerificationResultAttestation _$$_VerificationResultAttestationFromJson(
-        Map<String, dynamic> json) =>
-    _$_VerificationResultAttestation(
-      fhirId: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      who: json['who'] == null
-          ? null
-          : Reference.fromJson(json['who'] as Map<String, dynamic>),
-      onBehalfOf: json['onBehalfOf'] == null
-          ? null
-          : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
-      communicationMethod: json['communicationMethod'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['communicationMethod'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
-      dateElement: json['_date'] == null
-          ? null
-          : Element.fromJson(json['_date'] as Map<String, dynamic>),
-      sourceIdentityCertificate: json['sourceIdentityCertificate'] as String?,
-      sourceIdentityCertificateElement:
-          json['_sourceIdentityCertificate'] == null
+_$VerificationResultAttestationImpl
+    _$$VerificationResultAttestationImplFromJson(Map<String, dynamic> json) =>
+        _$VerificationResultAttestationImpl(
+          fhirId: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          who: json['who'] == null
+              ? null
+              : Reference.fromJson(json['who'] as Map<String, dynamic>),
+          onBehalfOf: json['onBehalfOf'] == null
+              ? null
+              : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
+          communicationMethod: json['communicationMethod'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['communicationMethod'] as Map<String, dynamic>),
+          date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+          dateElement: json['_date'] == null
+              ? null
+              : Element.fromJson(json['_date'] as Map<String, dynamic>),
+          sourceIdentityCertificate:
+              json['sourceIdentityCertificate'] as String?,
+          sourceIdentityCertificateElement:
+              json['_sourceIdentityCertificate'] == null
+                  ? null
+                  : Element.fromJson(json['_sourceIdentityCertificate']
+                      as Map<String, dynamic>),
+          proxyIdentityCertificate: json['proxyIdentityCertificate'] as String?,
+          proxyIdentityCertificateElement: json['_proxyIdentityCertificate'] ==
+                  null
               ? null
               : Element.fromJson(
-                  json['_sourceIdentityCertificate'] as Map<String, dynamic>),
-      proxyIdentityCertificate: json['proxyIdentityCertificate'] as String?,
-      proxyIdentityCertificateElement: json['_proxyIdentityCertificate'] == null
-          ? null
-          : Element.fromJson(
-              json['_proxyIdentityCertificate'] as Map<String, dynamic>),
-      proxySignature: json['proxySignature'] == null
-          ? null
-          : Signature.fromJson(json['proxySignature'] as Map<String, dynamic>),
-      sourceSignature: json['sourceSignature'] == null
-          ? null
-          : Signature.fromJson(json['sourceSignature'] as Map<String, dynamic>),
-    );
+                  json['_proxyIdentityCertificate'] as Map<String, dynamic>),
+          proxySignature: json['proxySignature'] == null
+              ? null
+              : Signature.fromJson(
+                  json['proxySignature'] as Map<String, dynamic>),
+          sourceSignature: json['sourceSignature'] == null
+              ? null
+              : Signature.fromJson(
+                  json['sourceSignature'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_VerificationResultAttestationToJson(
-    _$_VerificationResultAttestation instance) {
+Map<String, dynamic> _$$VerificationResultAttestationImplToJson(
+    _$VerificationResultAttestationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -3357,9 +3373,9 @@ Map<String, dynamic> _$$_VerificationResultAttestationToJson(
   return val;
 }
 
-_$_VerificationResultValidator _$$_VerificationResultValidatorFromJson(
+_$VerificationResultValidatorImpl _$$VerificationResultValidatorImplFromJson(
         Map<String, dynamic> json) =>
-    _$_VerificationResultValidator(
+    _$VerificationResultValidatorImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -3380,8 +3396,8 @@ _$_VerificationResultValidator _$$_VerificationResultValidatorFromJson(
               json['attestationSignature'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_VerificationResultValidatorToJson(
-    _$_VerificationResultValidator instance) {
+Map<String, dynamic> _$$VerificationResultValidatorImplToJson(
+    _$VerificationResultValidatorImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

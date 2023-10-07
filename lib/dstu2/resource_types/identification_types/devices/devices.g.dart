@@ -6,7 +6,7 @@ part of 'devices.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
+_$DeviceImpl _$$DeviceImplFromJson(Map<String, dynamic> json) => _$DeviceImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Device) ??
@@ -91,7 +91,7 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
           : Element.fromJson(json['_url'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceToJson(_$_Device instance) {
+Map<String, dynamic> _$$DeviceImplToJson(_$DeviceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -246,8 +246,9 @@ const _$DeviceStatusEnumMap = {
   DeviceStatus.unknown: 'unknown',
 };
 
-_$_DeviceComponent _$$_DeviceComponentFromJson(Map<String, dynamic> json) =>
-    _$_DeviceComponent(
+_$DeviceComponentImpl _$$DeviceComponentImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DeviceComponentImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceComponent) ??
@@ -312,7 +313,8 @@ _$_DeviceComponent _$$_DeviceComponentFromJson(Map<String, dynamic> json) =>
               json['languageCode'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceComponentToJson(_$_DeviceComponent instance) {
+Map<String, dynamic> _$$DeviceComponentImplToJson(
+    _$DeviceComponentImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -369,10 +371,10 @@ const _$DeviceComponentMeasurementPrincipleEnumMap = {
   DeviceComponentMeasurementPrinciple.unknown: 'unknown',
 };
 
-_$_DeviceComponentProductionSpecification
-    _$$_DeviceComponentProductionSpecificationFromJson(
+_$DeviceComponentProductionSpecificationImpl
+    _$$DeviceComponentProductionSpecificationImplFromJson(
             Map<String, dynamic> json) =>
-        _$_DeviceComponentProductionSpecification(
+        _$DeviceComponentProductionSpecificationImpl(
           fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -391,8 +393,8 @@ _$_DeviceComponentProductionSpecification
           productionSpec: json['productionSpec'] as String?,
         );
 
-Map<String, dynamic> _$$_DeviceComponentProductionSpecificationToJson(
-    _$_DeviceComponentProductionSpecification instance) {
+Map<String, dynamic> _$$DeviceComponentProductionSpecificationImplToJson(
+    _$DeviceComponentProductionSpecificationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -412,8 +414,8 @@ Map<String, dynamic> _$$_DeviceComponentProductionSpecificationToJson(
   return val;
 }
 
-_$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
-    _$_DeviceMetric(
+_$DeviceMetricImpl _$$DeviceMetricImplFromJson(Map<String, dynamic> json) =>
+    _$DeviceMetricImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceMetric) ??
@@ -484,7 +486,7 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DeviceMetricToJson(_$_DeviceMetric instance) {
+Map<String, dynamic> _$$DeviceMetricImplToJson(_$DeviceMetricImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -554,9 +556,9 @@ const _$DeviceMetricCategoryEnumMap = {
   DeviceMetricCategory.unknown: 'unknown',
 };
 
-_$_DeviceMetricCalibration _$$_DeviceMetricCalibrationFromJson(
+_$DeviceMetricCalibrationImpl _$$DeviceMetricCalibrationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DeviceMetricCalibration(
+    _$DeviceMetricCalibrationImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -580,8 +582,8 @@ _$_DeviceMetricCalibration _$$_DeviceMetricCalibrationFromJson(
           : Element.fromJson(json['_time'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceMetricCalibrationToJson(
-    _$_DeviceMetricCalibration instance) {
+Map<String, dynamic> _$$DeviceMetricCalibrationImplToJson(
+    _$DeviceMetricCalibrationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

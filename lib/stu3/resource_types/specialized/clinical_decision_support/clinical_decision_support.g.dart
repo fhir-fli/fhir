@@ -6,8 +6,9 @@ part of 'clinical_decision_support.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_GuidanceResponse _$$_GuidanceResponseFromJson(Map<String, dynamic> json) =>
-    _$_GuidanceResponse(
+_$GuidanceResponseImpl _$$GuidanceResponseImplFromJson(
+        Map<String, dynamic> json) =>
+    _$GuidanceResponseImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.GuidanceResponse) ??
@@ -95,7 +96,8 @@ _$_GuidanceResponse _$$_GuidanceResponseFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
+Map<String, dynamic> _$$GuidanceResponseImplToJson(
+    _$GuidanceResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };

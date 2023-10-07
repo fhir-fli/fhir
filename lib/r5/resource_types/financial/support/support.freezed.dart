@@ -702,10 +702,11 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
 }
 
 /// @nodoc
-abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
-  factory _$$_CoverageCopyWith(
-          _$_Coverage value, $Res Function(_$_Coverage) then) =
-      __$$_CoverageCopyWithImpl<$Res>;
+abstract class _$$CoverageImplCopyWith<$Res>
+    implements $CoverageCopyWith<$Res> {
+  factory _$$CoverageImplCopyWith(
+          _$CoverageImpl value, $Res Function(_$CoverageImpl) then) =
+      __$$CoverageImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -788,11 +789,11 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CoverageCopyWithImpl<$Res>
-    extends _$CoverageCopyWithImpl<$Res, _$_Coverage>
-    implements _$$_CoverageCopyWith<$Res> {
-  __$$_CoverageCopyWithImpl(
-      _$_Coverage _value, $Res Function(_$_Coverage) _then)
+class __$$CoverageImplCopyWithImpl<$Res>
+    extends _$CoverageCopyWithImpl<$Res, _$CoverageImpl>
+    implements _$$CoverageImplCopyWith<$Res> {
+  __$$CoverageImplCopyWithImpl(
+      _$CoverageImpl _value, $Res Function(_$CoverageImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -837,7 +838,7 @@ class __$$_CoverageCopyWithImpl<$Res>
     Object? contract = freezed,
     Object? insurancePlan = freezed,
   }) {
-    return _then(_$_Coverage(
+    return _then(_$CoverageImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -996,8 +997,8 @@ class __$$_CoverageCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Coverage extends _Coverage {
-  const _$_Coverage(
+class _$CoverageImpl extends _Coverage {
+  const _$CoverageImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.Coverage)
       this.resourceType = R5ResourceType.Coverage,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -1048,8 +1049,8 @@ class _$_Coverage extends _Coverage {
         _contract = contract,
         super._();
 
-  factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
-      _$$_CoverageFromJson(json);
+  factory _$CoverageImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CoverageImplFromJson(json);
 
   /// [resourceType] This is a Coverage resource
   @override
@@ -1392,7 +1393,7 @@ class _$_Coverage extends _Coverage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Coverage &&
+            other is _$CoverageImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -1505,12 +1506,12 @@ class _$_Coverage extends _Coverage {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageCopyWith<_$_Coverage> get copyWith =>
-      __$$_CoverageCopyWithImpl<_$_Coverage>(this, _$identity);
+  _$$CoverageImplCopyWith<_$CoverageImpl> get copyWith =>
+      __$$CoverageImplCopyWithImpl<_$CoverageImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageToJson(
+    return _$$CoverageImplToJson(
       this,
     );
   }
@@ -1556,10 +1557,11 @@ abstract class _Coverage extends Coverage {
       final FhirBoolean? subrogation,
       @JsonKey(name: '_subrogation') final Element? subrogationElement,
       final List<Reference>? contract,
-      final Reference? insurancePlan}) = _$_Coverage;
+      final Reference? insurancePlan}) = _$CoverageImpl;
   const _Coverage._() : super._();
 
-  factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
+  factory _Coverage.fromJson(Map<String, dynamic> json) =
+      _$CoverageImpl.fromJson;
 
   @override
 
@@ -1787,7 +1789,7 @@ abstract class _Coverage extends Coverage {
   Reference? get insurancePlan;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageCopyWith<_$_Coverage> get copyWith =>
+  _$$CoverageImplCopyWith<_$CoverageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1934,11 +1936,11 @@ class _$CoveragePaymentByCopyWithImpl<$Res, $Val extends CoveragePaymentBy>
 }
 
 /// @nodoc
-abstract class _$$_CoveragePaymentByCopyWith<$Res>
+abstract class _$$CoveragePaymentByImplCopyWith<$Res>
     implements $CoveragePaymentByCopyWith<$Res> {
-  factory _$$_CoveragePaymentByCopyWith(_$_CoveragePaymentBy value,
-          $Res Function(_$_CoveragePaymentBy) then) =
-      __$$_CoveragePaymentByCopyWithImpl<$Res>;
+  factory _$$CoveragePaymentByImplCopyWith(_$CoveragePaymentByImpl value,
+          $Res Function(_$CoveragePaymentByImpl) then) =
+      __$$CoveragePaymentByImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1956,11 +1958,11 @@ abstract class _$$_CoveragePaymentByCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoveragePaymentByCopyWithImpl<$Res>
-    extends _$CoveragePaymentByCopyWithImpl<$Res, _$_CoveragePaymentBy>
-    implements _$$_CoveragePaymentByCopyWith<$Res> {
-  __$$_CoveragePaymentByCopyWithImpl(
-      _$_CoveragePaymentBy _value, $Res Function(_$_CoveragePaymentBy) _then)
+class __$$CoveragePaymentByImplCopyWithImpl<$Res>
+    extends _$CoveragePaymentByCopyWithImpl<$Res, _$CoveragePaymentByImpl>
+    implements _$$CoveragePaymentByImplCopyWith<$Res> {
+  __$$CoveragePaymentByImplCopyWithImpl(_$CoveragePaymentByImpl _value,
+      $Res Function(_$CoveragePaymentByImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1973,7 +1975,7 @@ class __$$_CoveragePaymentByCopyWithImpl<$Res>
     Object? responsibility = freezed,
     Object? responsibilityElement = freezed,
   }) {
-    return _then(_$_CoveragePaymentBy(
+    return _then(_$CoveragePaymentByImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2004,8 +2006,8 @@ class __$$_CoveragePaymentByCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoveragePaymentBy extends _CoveragePaymentBy {
-  const _$_CoveragePaymentBy(
+class _$CoveragePaymentByImpl extends _CoveragePaymentBy {
+  const _$CoveragePaymentByImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2016,8 +2018,8 @@ class _$_CoveragePaymentBy extends _CoveragePaymentBy {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoveragePaymentBy.fromJson(Map<String, dynamic> json) =>
-      _$$_CoveragePaymentByFromJson(json);
+  factory _$CoveragePaymentByImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CoveragePaymentByImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -2113,7 +2115,7 @@ class _$_CoveragePaymentBy extends _CoveragePaymentBy {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoveragePaymentBy &&
+            other is _$CoveragePaymentByImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -2140,13 +2142,13 @@ class _$_CoveragePaymentBy extends _CoveragePaymentBy {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoveragePaymentByCopyWith<_$_CoveragePaymentBy> get copyWith =>
-      __$$_CoveragePaymentByCopyWithImpl<_$_CoveragePaymentBy>(
+  _$$CoveragePaymentByImplCopyWith<_$CoveragePaymentByImpl> get copyWith =>
+      __$$CoveragePaymentByImplCopyWithImpl<_$CoveragePaymentByImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoveragePaymentByToJson(
+    return _$$CoveragePaymentByImplToJson(
       this,
     );
   }
@@ -2160,11 +2162,11 @@ abstract class _CoveragePaymentBy extends CoveragePaymentBy {
       required final Reference party,
       final String? responsibility,
       @JsonKey(name: '_responsibility')
-      final Element? responsibilityElement}) = _$_CoveragePaymentBy;
+      final Element? responsibilityElement}) = _$CoveragePaymentByImpl;
   const _CoveragePaymentBy._() : super._();
 
   factory _CoveragePaymentBy.fromJson(Map<String, dynamic> json) =
-      _$_CoveragePaymentBy.fromJson;
+      _$CoveragePaymentByImpl.fromJson;
 
   @override
 
@@ -2216,7 +2218,7 @@ abstract class _CoveragePaymentBy extends CoveragePaymentBy {
   Element? get responsibilityElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CoveragePaymentByCopyWith<_$_CoveragePaymentBy> get copyWith =>
+  _$$CoveragePaymentByImplCopyWith<_$CoveragePaymentByImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2383,11 +2385,11 @@ class _$CoverageClassCopyWithImpl<$Res, $Val extends CoverageClass>
 }
 
 /// @nodoc
-abstract class _$$_CoverageClassCopyWith<$Res>
+abstract class _$$CoverageClassImplCopyWith<$Res>
     implements $CoverageClassCopyWith<$Res> {
-  factory _$$_CoverageClassCopyWith(
-          _$_CoverageClass value, $Res Function(_$_CoverageClass) then) =
-      __$$_CoverageClassCopyWithImpl<$Res>;
+  factory _$$CoverageClassImplCopyWith(
+          _$CoverageClassImpl value, $Res Function(_$CoverageClassImpl) then) =
+      __$$CoverageClassImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2408,11 +2410,11 @@ abstract class _$$_CoverageClassCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageClassCopyWithImpl<$Res>
-    extends _$CoverageClassCopyWithImpl<$Res, _$_CoverageClass>
-    implements _$$_CoverageClassCopyWith<$Res> {
-  __$$_CoverageClassCopyWithImpl(
-      _$_CoverageClass _value, $Res Function(_$_CoverageClass) _then)
+class __$$CoverageClassImplCopyWithImpl<$Res>
+    extends _$CoverageClassCopyWithImpl<$Res, _$CoverageClassImpl>
+    implements _$$CoverageClassImplCopyWith<$Res> {
+  __$$CoverageClassImplCopyWithImpl(
+      _$CoverageClassImpl _value, $Res Function(_$CoverageClassImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2426,7 +2428,7 @@ class __$$_CoverageClassCopyWithImpl<$Res>
     Object? name = freezed,
     Object? nameElement = freezed,
   }) {
-    return _then(_$_CoverageClass(
+    return _then(_$CoverageClassImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -2461,8 +2463,8 @@ class __$$_CoverageClassCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageClass extends _CoverageClass {
-  const _$_CoverageClass(
+class _$CoverageClassImpl extends _CoverageClass {
+  const _$CoverageClassImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -2474,8 +2476,8 @@ class _$_CoverageClass extends _CoverageClass {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoverageClass.fromJson(Map<String, dynamic> json) =>
-      _$$_CoverageClassFromJson(json);
+  factory _$CoverageClassImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CoverageClassImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -2577,7 +2579,7 @@ class _$_CoverageClass extends _CoverageClass {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageClass &&
+            other is _$CoverageClassImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -2605,12 +2607,12 @@ class _$_CoverageClass extends _CoverageClass {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageClassCopyWith<_$_CoverageClass> get copyWith =>
-      __$$_CoverageClassCopyWithImpl<_$_CoverageClass>(this, _$identity);
+  _$$CoverageClassImplCopyWith<_$CoverageClassImpl> get copyWith =>
+      __$$CoverageClassImplCopyWithImpl<_$CoverageClassImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageClassToJson(
+    return _$$CoverageClassImplToJson(
       this,
     );
   }
@@ -2618,17 +2620,18 @@ class _$_CoverageClass extends _CoverageClass {
 
 abstract class _CoverageClass extends CoverageClass {
   const factory _CoverageClass(
-      {@JsonKey(name: 'id') final String? fhirId,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      required final CodeableConcept type,
-      required final Identifier value,
-      final String? name,
-      @JsonKey(name: '_name') final Element? nameElement}) = _$_CoverageClass;
+          {@JsonKey(name: 'id') final String? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          required final CodeableConcept type,
+          required final Identifier value,
+          final String? name,
+          @JsonKey(name: '_name') final Element? nameElement}) =
+      _$CoverageClassImpl;
   const _CoverageClass._() : super._();
 
   factory _CoverageClass.fromJson(Map<String, dynamic> json) =
-      _$_CoverageClass.fromJson;
+      _$CoverageClassImpl.fromJson;
 
   @override
 
@@ -2686,7 +2689,7 @@ abstract class _CoverageClass extends CoverageClass {
   Element? get nameElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageClassCopyWith<_$_CoverageClass> get copyWith =>
+  _$$CoverageClassImplCopyWith<_$CoverageClassImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2951,12 +2954,12 @@ class _$CoverageCostToBeneficiaryCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CoverageCostToBeneficiaryCopyWith<$Res>
+abstract class _$$CoverageCostToBeneficiaryImplCopyWith<$Res>
     implements $CoverageCostToBeneficiaryCopyWith<$Res> {
-  factory _$$_CoverageCostToBeneficiaryCopyWith(
-          _$_CoverageCostToBeneficiary value,
-          $Res Function(_$_CoverageCostToBeneficiary) then) =
-      __$$_CoverageCostToBeneficiaryCopyWithImpl<$Res>;
+  factory _$$CoverageCostToBeneficiaryImplCopyWith(
+          _$CoverageCostToBeneficiaryImpl value,
+          $Res Function(_$CoverageCostToBeneficiaryImpl) then) =
+      __$$CoverageCostToBeneficiaryImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2989,13 +2992,13 @@ abstract class _$$_CoverageCostToBeneficiaryCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageCostToBeneficiaryCopyWithImpl<$Res>
+class __$$CoverageCostToBeneficiaryImplCopyWithImpl<$Res>
     extends _$CoverageCostToBeneficiaryCopyWithImpl<$Res,
-        _$_CoverageCostToBeneficiary>
-    implements _$$_CoverageCostToBeneficiaryCopyWith<$Res> {
-  __$$_CoverageCostToBeneficiaryCopyWithImpl(
-      _$_CoverageCostToBeneficiary _value,
-      $Res Function(_$_CoverageCostToBeneficiary) _then)
+        _$CoverageCostToBeneficiaryImpl>
+    implements _$$CoverageCostToBeneficiaryImplCopyWith<$Res> {
+  __$$CoverageCostToBeneficiaryImplCopyWithImpl(
+      _$CoverageCostToBeneficiaryImpl _value,
+      $Res Function(_$CoverageCostToBeneficiaryImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3013,7 +3016,7 @@ class __$$_CoverageCostToBeneficiaryCopyWithImpl<$Res>
     Object? valueMoney = freezed,
     Object? exception = freezed,
   }) {
-    return _then(_$_CoverageCostToBeneficiary(
+    return _then(_$CoverageCostToBeneficiaryImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3064,8 +3067,8 @@ class __$$_CoverageCostToBeneficiaryCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
-  const _$_CoverageCostToBeneficiary(
+class _$CoverageCostToBeneficiaryImpl extends _CoverageCostToBeneficiary {
+  const _$CoverageCostToBeneficiaryImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3082,8 +3085,8 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
         _exception = exception,
         super._();
 
-  factory _$_CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =>
-      _$$_CoverageCostToBeneficiaryFromJson(json);
+  factory _$CoverageCostToBeneficiaryImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CoverageCostToBeneficiaryImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -3211,7 +3214,7 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageCostToBeneficiary &&
+            other is _$CoverageCostToBeneficiaryImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -3250,13 +3253,13 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageCostToBeneficiaryCopyWith<_$_CoverageCostToBeneficiary>
-      get copyWith => __$$_CoverageCostToBeneficiaryCopyWithImpl<
-          _$_CoverageCostToBeneficiary>(this, _$identity);
+  _$$CoverageCostToBeneficiaryImplCopyWith<_$CoverageCostToBeneficiaryImpl>
+      get copyWith => __$$CoverageCostToBeneficiaryImplCopyWithImpl<
+          _$CoverageCostToBeneficiaryImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageCostToBeneficiaryToJson(
+    return _$$CoverageCostToBeneficiaryImplToJson(
       this,
     );
   }
@@ -3264,21 +3267,22 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
 
 abstract class _CoverageCostToBeneficiary extends CoverageCostToBeneficiary {
   const factory _CoverageCostToBeneficiary(
-      {@JsonKey(name: 'id') final String? fhirId,
-      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      final List<FhirExtension>? modifierExtension,
-      final CodeableConcept? type,
-      final CodeableConcept? category,
-      final CodeableConcept? network,
-      final CodeableConcept? unit,
-      final CodeableConcept? term,
-      final Quantity? valueQuantity,
-      final Money? valueMoney,
-      final List<CoverageException>? exception}) = _$_CoverageCostToBeneficiary;
+          {@JsonKey(name: 'id') final String? fhirId,
+          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+          final List<FhirExtension>? modifierExtension,
+          final CodeableConcept? type,
+          final CodeableConcept? category,
+          final CodeableConcept? network,
+          final CodeableConcept? unit,
+          final CodeableConcept? term,
+          final Quantity? valueQuantity,
+          final Money? valueMoney,
+          final List<CoverageException>? exception}) =
+      _$CoverageCostToBeneficiaryImpl;
   const _CoverageCostToBeneficiary._() : super._();
 
   factory _CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =
-      _$_CoverageCostToBeneficiary.fromJson;
+      _$CoverageCostToBeneficiaryImpl.fromJson;
 
   @override
 
@@ -3352,7 +3356,7 @@ abstract class _CoverageCostToBeneficiary extends CoverageCostToBeneficiary {
   List<CoverageException>? get exception;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageCostToBeneficiaryCopyWith<_$_CoverageCostToBeneficiary>
+  _$$CoverageCostToBeneficiaryImplCopyWith<_$CoverageCostToBeneficiaryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -3487,11 +3491,11 @@ class _$CoverageExceptionCopyWithImpl<$Res, $Val extends CoverageException>
 }
 
 /// @nodoc
-abstract class _$$_CoverageExceptionCopyWith<$Res>
+abstract class _$$CoverageExceptionImplCopyWith<$Res>
     implements $CoverageExceptionCopyWith<$Res> {
-  factory _$$_CoverageExceptionCopyWith(_$_CoverageException value,
-          $Res Function(_$_CoverageException) then) =
-      __$$_CoverageExceptionCopyWithImpl<$Res>;
+  factory _$$CoverageExceptionImplCopyWith(_$CoverageExceptionImpl value,
+          $Res Function(_$CoverageExceptionImpl) then) =
+      __$$CoverageExceptionImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3508,11 +3512,11 @@ abstract class _$$_CoverageExceptionCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageExceptionCopyWithImpl<$Res>
-    extends _$CoverageExceptionCopyWithImpl<$Res, _$_CoverageException>
-    implements _$$_CoverageExceptionCopyWith<$Res> {
-  __$$_CoverageExceptionCopyWithImpl(
-      _$_CoverageException _value, $Res Function(_$_CoverageException) _then)
+class __$$CoverageExceptionImplCopyWithImpl<$Res>
+    extends _$CoverageExceptionCopyWithImpl<$Res, _$CoverageExceptionImpl>
+    implements _$$CoverageExceptionImplCopyWith<$Res> {
+  __$$CoverageExceptionImplCopyWithImpl(_$CoverageExceptionImpl _value,
+      $Res Function(_$CoverageExceptionImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3524,7 +3528,7 @@ class __$$_CoverageExceptionCopyWithImpl<$Res>
     Object? type = null,
     Object? period = freezed,
   }) {
-    return _then(_$_CoverageException(
+    return _then(_$CoverageExceptionImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -3551,8 +3555,8 @@ class __$$_CoverageExceptionCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageException extends _CoverageException {
-  const _$_CoverageException(
+class _$CoverageExceptionImpl extends _CoverageException {
+  const _$CoverageExceptionImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -3562,8 +3566,8 @@ class _$_CoverageException extends _CoverageException {
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoverageException.fromJson(Map<String, dynamic> json) =>
-      _$$_CoverageExceptionFromJson(json);
+  factory _$CoverageExceptionImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CoverageExceptionImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -3652,7 +3656,7 @@ class _$_CoverageException extends _CoverageException {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageException &&
+            other is _$CoverageExceptionImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -3675,13 +3679,13 @@ class _$_CoverageException extends _CoverageException {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageExceptionCopyWith<_$_CoverageException> get copyWith =>
-      __$$_CoverageExceptionCopyWithImpl<_$_CoverageException>(
+  _$$CoverageExceptionImplCopyWith<_$CoverageExceptionImpl> get copyWith =>
+      __$$CoverageExceptionImplCopyWithImpl<_$CoverageExceptionImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageExceptionToJson(
+    return _$$CoverageExceptionImplToJson(
       this,
     );
   }
@@ -3693,11 +3697,11 @@ abstract class _CoverageException extends CoverageException {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept type,
-      final Period? period}) = _$_CoverageException;
+      final Period? period}) = _$CoverageExceptionImpl;
   const _CoverageException._() : super._();
 
   factory _CoverageException.fromJson(Map<String, dynamic> json) =
-      _$_CoverageException.fromJson;
+      _$CoverageExceptionImpl.fromJson;
 
   @override
 
@@ -3742,7 +3746,7 @@ abstract class _CoverageException extends CoverageException {
   Period? get period;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageExceptionCopyWith<_$_CoverageException> get copyWith =>
+  _$$CoverageExceptionImplCopyWith<_$CoverageExceptionImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4319,12 +4323,12 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CoverageEligibilityRequestCopyWith<$Res>
+abstract class _$$CoverageEligibilityRequestImplCopyWith<$Res>
     implements $CoverageEligibilityRequestCopyWith<$Res> {
-  factory _$$_CoverageEligibilityRequestCopyWith(
-          _$_CoverageEligibilityRequest value,
-          $Res Function(_$_CoverageEligibilityRequest) then) =
-      __$$_CoverageEligibilityRequestCopyWithImpl<$Res>;
+  factory _$$CoverageEligibilityRequestImplCopyWith(
+          _$CoverageEligibilityRequestImpl value,
+          $Res Function(_$CoverageEligibilityRequestImpl) then) =
+      __$$CoverageEligibilityRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4393,13 +4397,13 @@ abstract class _$$_CoverageEligibilityRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
+class __$$CoverageEligibilityRequestImplCopyWithImpl<$Res>
     extends _$CoverageEligibilityRequestCopyWithImpl<$Res,
-        _$_CoverageEligibilityRequest>
-    implements _$$_CoverageEligibilityRequestCopyWith<$Res> {
-  __$$_CoverageEligibilityRequestCopyWithImpl(
-      _$_CoverageEligibilityRequest _value,
-      $Res Function(_$_CoverageEligibilityRequest) _then)
+        _$CoverageEligibilityRequestImpl>
+    implements _$$CoverageEligibilityRequestImplCopyWith<$Res> {
+  __$$CoverageEligibilityRequestImplCopyWithImpl(
+      _$CoverageEligibilityRequestImpl _value,
+      $Res Function(_$CoverageEligibilityRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4438,7 +4442,7 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
     Object? insurance = freezed,
     Object? item = freezed,
   }) {
-    return _then(_$_CoverageEligibilityRequest(
+    return _then(_$CoverageEligibilityRequestImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -4573,8 +4577,8 @@ class __$$_CoverageEligibilityRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
-  const _$_CoverageEligibilityRequest(
+class _$CoverageEligibilityRequestImpl extends _CoverageEligibilityRequest {
+  const _$CoverageEligibilityRequestImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityRequest)
       this.resourceType = R5ResourceType.CoverageEligibilityRequest,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -4620,8 +4624,9 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
         _item = item,
         super._();
 
-  factory _$_CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityRequestFromJson(json);
+  factory _$CoverageEligibilityRequestImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$CoverageEligibilityRequestImplFromJson(json);
 
   /// [resourceType] This is a CoverageEligibilityRequest resource
   @override
@@ -4945,7 +4950,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageEligibilityRequest &&
+            other is _$CoverageEligibilityRequestImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -5041,13 +5046,13 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageEligibilityRequestCopyWith<_$_CoverageEligibilityRequest>
-      get copyWith => __$$_CoverageEligibilityRequestCopyWithImpl<
-          _$_CoverageEligibilityRequest>(this, _$identity);
+  _$$CoverageEligibilityRequestImplCopyWith<_$CoverageEligibilityRequestImpl>
+      get copyWith => __$$CoverageEligibilityRequestImplCopyWithImpl<
+          _$CoverageEligibilityRequestImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityRequestToJson(
+    return _$$CoverageEligibilityRequestImplToJson(
       this,
     );
   }
@@ -5088,11 +5093,11 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
           final List<CoverageEligibilityRequestSupportingInfo>? supportingInfo,
           final List<CoverageEligibilityRequestInsurance>? insurance,
           final List<CoverageEligibilityRequestItem>? item}) =
-      _$_CoverageEligibilityRequest;
+      _$CoverageEligibilityRequestImpl;
   const _CoverageEligibilityRequest._() : super._();
 
   factory _CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =
-      _$_CoverageEligibilityRequest.fromJson;
+      _$CoverageEligibilityRequestImpl.fromJson;
 
   @override
 
@@ -5284,7 +5289,7 @@ abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
   List<CoverageEligibilityRequestItem>? get item;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageEligibilityRequestCopyWith<_$_CoverageEligibilityRequest>
+  _$$CoverageEligibilityRequestImplCopyWith<_$CoverageEligibilityRequestImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5458,12 +5463,12 @@ class _$CoverageEligibilityRequestEventCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CoverageEligibilityRequestEventCopyWith<$Res>
+abstract class _$$CoverageEligibilityRequestEventImplCopyWith<$Res>
     implements $CoverageEligibilityRequestEventCopyWith<$Res> {
-  factory _$$_CoverageEligibilityRequestEventCopyWith(
-          _$_CoverageEligibilityRequestEvent value,
-          $Res Function(_$_CoverageEligibilityRequestEvent) then) =
-      __$$_CoverageEligibilityRequestEventCopyWithImpl<$Res>;
+  factory _$$CoverageEligibilityRequestEventImplCopyWith(
+          _$CoverageEligibilityRequestEventImpl value,
+          $Res Function(_$CoverageEligibilityRequestEventImpl) then) =
+      __$$CoverageEligibilityRequestEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5484,13 +5489,13 @@ abstract class _$$_CoverageEligibilityRequestEventCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageEligibilityRequestEventCopyWithImpl<$Res>
+class __$$CoverageEligibilityRequestEventImplCopyWithImpl<$Res>
     extends _$CoverageEligibilityRequestEventCopyWithImpl<$Res,
-        _$_CoverageEligibilityRequestEvent>
-    implements _$$_CoverageEligibilityRequestEventCopyWith<$Res> {
-  __$$_CoverageEligibilityRequestEventCopyWithImpl(
-      _$_CoverageEligibilityRequestEvent _value,
-      $Res Function(_$_CoverageEligibilityRequestEvent) _then)
+        _$CoverageEligibilityRequestEventImpl>
+    implements _$$CoverageEligibilityRequestEventImplCopyWith<$Res> {
+  __$$CoverageEligibilityRequestEventImplCopyWithImpl(
+      _$CoverageEligibilityRequestEventImpl _value,
+      $Res Function(_$CoverageEligibilityRequestEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5504,7 +5509,7 @@ class __$$_CoverageEligibilityRequestEventCopyWithImpl<$Res>
     Object? whenDateTimeElement = freezed,
     Object? whenPeriod = freezed,
   }) {
-    return _then(_$_CoverageEligibilityRequestEvent(
+    return _then(_$CoverageEligibilityRequestEventImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -5539,9 +5544,9 @@ class __$$_CoverageEligibilityRequestEventCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageEligibilityRequestEvent
+class _$CoverageEligibilityRequestEventImpl
     extends _CoverageEligibilityRequestEvent {
-  const _$_CoverageEligibilityRequestEvent(
+  const _$CoverageEligibilityRequestEventImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -5553,9 +5558,9 @@ class _$_CoverageEligibilityRequestEvent
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoverageEligibilityRequestEvent.fromJson(
+  factory _$CoverageEligibilityRequestEventImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityRequestEventFromJson(json);
+      _$$CoverageEligibilityRequestEventImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -5656,7 +5661,7 @@ class _$_CoverageEligibilityRequestEvent
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageEligibilityRequestEvent &&
+            other is _$CoverageEligibilityRequestEventImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -5686,14 +5691,14 @@ class _$_CoverageEligibilityRequestEvent
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageEligibilityRequestEventCopyWith<
-          _$_CoverageEligibilityRequestEvent>
-      get copyWith => __$$_CoverageEligibilityRequestEventCopyWithImpl<
-          _$_CoverageEligibilityRequestEvent>(this, _$identity);
+  _$$CoverageEligibilityRequestEventImplCopyWith<
+          _$CoverageEligibilityRequestEventImpl>
+      get copyWith => __$$CoverageEligibilityRequestEventImplCopyWithImpl<
+          _$CoverageEligibilityRequestEventImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityRequestEventToJson(
+    return _$$CoverageEligibilityRequestEventImplToJson(
       this,
     );
   }
@@ -5708,11 +5713,11 @@ abstract class _CoverageEligibilityRequestEvent
       required final CodeableConcept type,
       final FhirDateTime? whenDateTime,
       @JsonKey(name: '_whenDateTime') final Element? whenDateTimeElement,
-      final Period? whenPeriod}) = _$_CoverageEligibilityRequestEvent;
+      final Period? whenPeriod}) = _$CoverageEligibilityRequestEventImpl;
   const _CoverageEligibilityRequestEvent._() : super._();
 
   factory _CoverageEligibilityRequestEvent.fromJson(Map<String, dynamic> json) =
-      _$_CoverageEligibilityRequestEvent.fromJson;
+      _$CoverageEligibilityRequestEventImpl.fromJson;
 
   @override
 
@@ -5769,8 +5774,8 @@ abstract class _CoverageEligibilityRequestEvent
   Period? get whenPeriod;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageEligibilityRequestEventCopyWith<
-          _$_CoverageEligibilityRequestEvent>
+  _$$CoverageEligibilityRequestEventImplCopyWith<
+          _$CoverageEligibilityRequestEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5957,12 +5962,12 @@ class _$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CoverageEligibilityRequestSupportingInfoCopyWith<$Res>
+abstract class _$$CoverageEligibilityRequestSupportingInfoImplCopyWith<$Res>
     implements $CoverageEligibilityRequestSupportingInfoCopyWith<$Res> {
-  factory _$$_CoverageEligibilityRequestSupportingInfoCopyWith(
-          _$_CoverageEligibilityRequestSupportingInfo value,
-          $Res Function(_$_CoverageEligibilityRequestSupportingInfo) then) =
-      __$$_CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>;
+  factory _$$CoverageEligibilityRequestSupportingInfoImplCopyWith(
+          _$CoverageEligibilityRequestSupportingInfoImpl value,
+          $Res Function(_$CoverageEligibilityRequestSupportingInfoImpl) then) =
+      __$$CoverageEligibilityRequestSupportingInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5984,13 +5989,13 @@ abstract class _$$_CoverageEligibilityRequestSupportingInfoCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
+class __$$CoverageEligibilityRequestSupportingInfoImplCopyWithImpl<$Res>
     extends _$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res,
-        _$_CoverageEligibilityRequestSupportingInfo>
-    implements _$$_CoverageEligibilityRequestSupportingInfoCopyWith<$Res> {
-  __$$_CoverageEligibilityRequestSupportingInfoCopyWithImpl(
-      _$_CoverageEligibilityRequestSupportingInfo _value,
-      $Res Function(_$_CoverageEligibilityRequestSupportingInfo) _then)
+        _$CoverageEligibilityRequestSupportingInfoImpl>
+    implements _$$CoverageEligibilityRequestSupportingInfoImplCopyWith<$Res> {
+  __$$CoverageEligibilityRequestSupportingInfoImplCopyWithImpl(
+      _$CoverageEligibilityRequestSupportingInfoImpl _value,
+      $Res Function(_$CoverageEligibilityRequestSupportingInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6005,7 +6010,7 @@ class __$$_CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
     Object? appliesToAll = freezed,
     Object? appliesToAllElement = freezed,
   }) {
-    return _then(_$_CoverageEligibilityRequestSupportingInfo(
+    return _then(_$CoverageEligibilityRequestSupportingInfoImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6044,9 +6049,9 @@ class __$$_CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageEligibilityRequestSupportingInfo
+class _$CoverageEligibilityRequestSupportingInfoImpl
     extends _CoverageEligibilityRequestSupportingInfo {
-  const _$_CoverageEligibilityRequestSupportingInfo(
+  const _$CoverageEligibilityRequestSupportingInfoImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6059,9 +6064,9 @@ class _$_CoverageEligibilityRequestSupportingInfo
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoverageEligibilityRequestSupportingInfo.fromJson(
+  factory _$CoverageEligibilityRequestSupportingInfoImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityRequestSupportingInfoFromJson(json);
+      _$$CoverageEligibilityRequestSupportingInfoImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -6167,7 +6172,7 @@ class _$_CoverageEligibilityRequestSupportingInfo
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageEligibilityRequestSupportingInfo &&
+            other is _$CoverageEligibilityRequestSupportingInfoImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -6201,14 +6206,15 @@ class _$_CoverageEligibilityRequestSupportingInfo
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageEligibilityRequestSupportingInfoCopyWith<
-          _$_CoverageEligibilityRequestSupportingInfo>
-      get copyWith => __$$_CoverageEligibilityRequestSupportingInfoCopyWithImpl<
-          _$_CoverageEligibilityRequestSupportingInfo>(this, _$identity);
+  _$$CoverageEligibilityRequestSupportingInfoImplCopyWith<
+          _$CoverageEligibilityRequestSupportingInfoImpl>
+      get copyWith =>
+          __$$CoverageEligibilityRequestSupportingInfoImplCopyWithImpl<
+              _$CoverageEligibilityRequestSupportingInfoImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityRequestSupportingInfoToJson(
+    return _$$CoverageEligibilityRequestSupportingInfoImplToJson(
       this,
     );
   }
@@ -6225,12 +6231,12 @@ abstract class _CoverageEligibilityRequestSupportingInfo
           required final Reference information,
           final FhirBoolean? appliesToAll,
           @JsonKey(name: '_appliesToAll') final Element? appliesToAllElement}) =
-      _$_CoverageEligibilityRequestSupportingInfo;
+      _$CoverageEligibilityRequestSupportingInfoImpl;
   const _CoverageEligibilityRequestSupportingInfo._() : super._();
 
   factory _CoverageEligibilityRequestSupportingInfo.fromJson(
           Map<String, dynamic> json) =
-      _$_CoverageEligibilityRequestSupportingInfo.fromJson;
+      _$CoverageEligibilityRequestSupportingInfoImpl.fromJson;
 
   @override
 
@@ -6292,8 +6298,8 @@ abstract class _CoverageEligibilityRequestSupportingInfo
   Element? get appliesToAllElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageEligibilityRequestSupportingInfoCopyWith<
-          _$_CoverageEligibilityRequestSupportingInfo>
+  _$$CoverageEligibilityRequestSupportingInfoImplCopyWith<
+          _$CoverageEligibilityRequestSupportingInfoImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -6482,12 +6488,12 @@ class _$CoverageEligibilityRequestInsuranceCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CoverageEligibilityRequestInsuranceCopyWith<$Res>
+abstract class _$$CoverageEligibilityRequestInsuranceImplCopyWith<$Res>
     implements $CoverageEligibilityRequestInsuranceCopyWith<$Res> {
-  factory _$$_CoverageEligibilityRequestInsuranceCopyWith(
-          _$_CoverageEligibilityRequestInsurance value,
-          $Res Function(_$_CoverageEligibilityRequestInsurance) then) =
-      __$$_CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>;
+  factory _$$CoverageEligibilityRequestInsuranceImplCopyWith(
+          _$CoverageEligibilityRequestInsuranceImpl value,
+          $Res Function(_$CoverageEligibilityRequestInsuranceImpl) then) =
+      __$$CoverageEligibilityRequestInsuranceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6510,13 +6516,13 @@ abstract class _$$_CoverageEligibilityRequestInsuranceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
+class __$$CoverageEligibilityRequestInsuranceImplCopyWithImpl<$Res>
     extends _$CoverageEligibilityRequestInsuranceCopyWithImpl<$Res,
-        _$_CoverageEligibilityRequestInsurance>
-    implements _$$_CoverageEligibilityRequestInsuranceCopyWith<$Res> {
-  __$$_CoverageEligibilityRequestInsuranceCopyWithImpl(
-      _$_CoverageEligibilityRequestInsurance _value,
-      $Res Function(_$_CoverageEligibilityRequestInsurance) _then)
+        _$CoverageEligibilityRequestInsuranceImpl>
+    implements _$$CoverageEligibilityRequestInsuranceImplCopyWith<$Res> {
+  __$$CoverageEligibilityRequestInsuranceImplCopyWithImpl(
+      _$CoverageEligibilityRequestInsuranceImpl _value,
+      $Res Function(_$CoverageEligibilityRequestInsuranceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6531,7 +6537,7 @@ class __$$_CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
     Object? businessArrangement = freezed,
     Object? businessArrangementElement = freezed,
   }) {
-    return _then(_$_CoverageEligibilityRequestInsurance(
+    return _then(_$CoverageEligibilityRequestInsuranceImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -6570,9 +6576,9 @@ class __$$_CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageEligibilityRequestInsurance
+class _$CoverageEligibilityRequestInsuranceImpl
     extends _CoverageEligibilityRequestInsurance {
-  const _$_CoverageEligibilityRequestInsurance(
+  const _$CoverageEligibilityRequestInsuranceImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -6585,9 +6591,9 @@ class _$_CoverageEligibilityRequestInsurance
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoverageEligibilityRequestInsurance.fromJson(
+  factory _$CoverageEligibilityRequestInsuranceImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityRequestInsuranceFromJson(json);
+      _$$CoverageEligibilityRequestInsuranceImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -6696,7 +6702,7 @@ class _$_CoverageEligibilityRequestInsurance
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageEligibilityRequestInsurance &&
+            other is _$CoverageEligibilityRequestInsuranceImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -6731,14 +6737,14 @@ class _$_CoverageEligibilityRequestInsurance
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageEligibilityRequestInsuranceCopyWith<
-          _$_CoverageEligibilityRequestInsurance>
-      get copyWith => __$$_CoverageEligibilityRequestInsuranceCopyWithImpl<
-          _$_CoverageEligibilityRequestInsurance>(this, _$identity);
+  _$$CoverageEligibilityRequestInsuranceImplCopyWith<
+          _$CoverageEligibilityRequestInsuranceImpl>
+      get copyWith => __$$CoverageEligibilityRequestInsuranceImplCopyWithImpl<
+          _$CoverageEligibilityRequestInsuranceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityRequestInsuranceToJson(
+    return _$$CoverageEligibilityRequestInsuranceImplToJson(
       this,
     );
   }
@@ -6756,12 +6762,12 @@ abstract class _CoverageEligibilityRequestInsurance
           final String? businessArrangement,
           @JsonKey(name: '_businessArrangement')
           final Element? businessArrangementElement}) =
-      _$_CoverageEligibilityRequestInsurance;
+      _$CoverageEligibilityRequestInsuranceImpl;
   const _CoverageEligibilityRequestInsurance._() : super._();
 
   factory _CoverageEligibilityRequestInsurance.fromJson(
           Map<String, dynamic> json) =
-      _$_CoverageEligibilityRequestInsurance.fromJson;
+      _$CoverageEligibilityRequestInsuranceImpl.fromJson;
 
   @override
 
@@ -6826,8 +6832,8 @@ abstract class _CoverageEligibilityRequestInsurance
   Element? get businessArrangementElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageEligibilityRequestInsuranceCopyWith<
-          _$_CoverageEligibilityRequestInsurance>
+  _$$CoverageEligibilityRequestInsuranceImplCopyWith<
+          _$CoverageEligibilityRequestInsuranceImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -7116,12 +7122,12 @@ class _$CoverageEligibilityRequestItemCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CoverageEligibilityRequestItemCopyWith<$Res>
+abstract class _$$CoverageEligibilityRequestItemImplCopyWith<$Res>
     implements $CoverageEligibilityRequestItemCopyWith<$Res> {
-  factory _$$_CoverageEligibilityRequestItemCopyWith(
-          _$_CoverageEligibilityRequestItem value,
-          $Res Function(_$_CoverageEligibilityRequestItem) then) =
-      __$$_CoverageEligibilityRequestItemCopyWithImpl<$Res>;
+  factory _$$CoverageEligibilityRequestItemImplCopyWith(
+          _$CoverageEligibilityRequestItemImpl value,
+          $Res Function(_$CoverageEligibilityRequestItemImpl) then) =
+      __$$CoverageEligibilityRequestItemImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7156,13 +7162,13 @@ abstract class _$$_CoverageEligibilityRequestItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageEligibilityRequestItemCopyWithImpl<$Res>
+class __$$CoverageEligibilityRequestItemImplCopyWithImpl<$Res>
     extends _$CoverageEligibilityRequestItemCopyWithImpl<$Res,
-        _$_CoverageEligibilityRequestItem>
-    implements _$$_CoverageEligibilityRequestItemCopyWith<$Res> {
-  __$$_CoverageEligibilityRequestItemCopyWithImpl(
-      _$_CoverageEligibilityRequestItem _value,
-      $Res Function(_$_CoverageEligibilityRequestItem) _then)
+        _$CoverageEligibilityRequestItemImpl>
+    implements _$$CoverageEligibilityRequestItemImplCopyWith<$Res> {
+  __$$CoverageEligibilityRequestItemImplCopyWithImpl(
+      _$CoverageEligibilityRequestItemImpl _value,
+      $Res Function(_$CoverageEligibilityRequestItemImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7183,7 +7189,7 @@ class __$$_CoverageEligibilityRequestItemCopyWithImpl<$Res>
     Object? diagnosis = freezed,
     Object? detail = freezed,
   }) {
-    return _then(_$_CoverageEligibilityRequestItem(
+    return _then(_$CoverageEligibilityRequestItemImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7246,9 +7252,9 @@ class __$$_CoverageEligibilityRequestItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageEligibilityRequestItem
+class _$CoverageEligibilityRequestItemImpl
     extends _CoverageEligibilityRequestItem {
-  const _$_CoverageEligibilityRequestItem(
+  const _$CoverageEligibilityRequestItemImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7273,9 +7279,9 @@ class _$_CoverageEligibilityRequestItem
         _detail = detail,
         super._();
 
-  factory _$_CoverageEligibilityRequestItem.fromJson(
+  factory _$CoverageEligibilityRequestItemImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityRequestItemFromJson(json);
+      _$$CoverageEligibilityRequestItemImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -7460,7 +7466,7 @@ class _$_CoverageEligibilityRequestItem
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageEligibilityRequestItem &&
+            other is _$CoverageEligibilityRequestItemImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -7511,13 +7517,14 @@ class _$_CoverageEligibilityRequestItem
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageEligibilityRequestItemCopyWith<_$_CoverageEligibilityRequestItem>
-      get copyWith => __$$_CoverageEligibilityRequestItemCopyWithImpl<
-          _$_CoverageEligibilityRequestItem>(this, _$identity);
+  _$$CoverageEligibilityRequestItemImplCopyWith<
+          _$CoverageEligibilityRequestItemImpl>
+      get copyWith => __$$CoverageEligibilityRequestItemImplCopyWithImpl<
+          _$CoverageEligibilityRequestItemImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityRequestItemToJson(
+    return _$$CoverageEligibilityRequestItemImplToJson(
       this,
     );
   }
@@ -7540,11 +7547,11 @@ abstract class _CoverageEligibilityRequestItem
       final Money? unitPrice,
       final Reference? facility,
       final List<CoverageEligibilityRequestDiagnosis>? diagnosis,
-      final List<Reference>? detail}) = _$_CoverageEligibilityRequestItem;
+      final List<Reference>? detail}) = _$CoverageEligibilityRequestItemImpl;
   const _CoverageEligibilityRequestItem._() : super._();
 
   factory _CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =
-      _$_CoverageEligibilityRequestItem.fromJson;
+      _$CoverageEligibilityRequestItemImpl.fromJson;
 
   @override
 
@@ -7634,7 +7641,8 @@ abstract class _CoverageEligibilityRequestItem
   List<Reference>? get detail;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageEligibilityRequestItemCopyWith<_$_CoverageEligibilityRequestItem>
+  _$$CoverageEligibilityRequestItemImplCopyWith<
+          _$CoverageEligibilityRequestItemImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -7782,12 +7790,12 @@ class _$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CoverageEligibilityRequestDiagnosisCopyWith<$Res>
+abstract class _$$CoverageEligibilityRequestDiagnosisImplCopyWith<$Res>
     implements $CoverageEligibilityRequestDiagnosisCopyWith<$Res> {
-  factory _$$_CoverageEligibilityRequestDiagnosisCopyWith(
-          _$_CoverageEligibilityRequestDiagnosis value,
-          $Res Function(_$_CoverageEligibilityRequestDiagnosis) then) =
-      __$$_CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>;
+  factory _$$CoverageEligibilityRequestDiagnosisImplCopyWith(
+          _$CoverageEligibilityRequestDiagnosisImpl value,
+          $Res Function(_$CoverageEligibilityRequestDiagnosisImpl) then) =
+      __$$CoverageEligibilityRequestDiagnosisImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -7804,13 +7812,13 @@ abstract class _$$_CoverageEligibilityRequestDiagnosisCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
+class __$$CoverageEligibilityRequestDiagnosisImplCopyWithImpl<$Res>
     extends _$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res,
-        _$_CoverageEligibilityRequestDiagnosis>
-    implements _$$_CoverageEligibilityRequestDiagnosisCopyWith<$Res> {
-  __$$_CoverageEligibilityRequestDiagnosisCopyWithImpl(
-      _$_CoverageEligibilityRequestDiagnosis _value,
-      $Res Function(_$_CoverageEligibilityRequestDiagnosis) _then)
+        _$CoverageEligibilityRequestDiagnosisImpl>
+    implements _$$CoverageEligibilityRequestDiagnosisImplCopyWith<$Res> {
+  __$$CoverageEligibilityRequestDiagnosisImplCopyWithImpl(
+      _$CoverageEligibilityRequestDiagnosisImpl _value,
+      $Res Function(_$CoverageEligibilityRequestDiagnosisImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -7822,7 +7830,7 @@ class __$$_CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
     Object? diagnosisCodeableConcept = freezed,
     Object? diagnosisReference = freezed,
   }) {
-    return _then(_$_CoverageEligibilityRequestDiagnosis(
+    return _then(_$CoverageEligibilityRequestDiagnosisImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -7849,9 +7857,9 @@ class __$$_CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageEligibilityRequestDiagnosis
+class _$CoverageEligibilityRequestDiagnosisImpl
     extends _CoverageEligibilityRequestDiagnosis {
-  const _$_CoverageEligibilityRequestDiagnosis(
+  const _$CoverageEligibilityRequestDiagnosisImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -7861,9 +7869,9 @@ class _$_CoverageEligibilityRequestDiagnosis
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoverageEligibilityRequestDiagnosis.fromJson(
+  factory _$CoverageEligibilityRequestDiagnosisImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityRequestDiagnosisFromJson(json);
+      _$$CoverageEligibilityRequestDiagnosisImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -7954,7 +7962,7 @@ class _$_CoverageEligibilityRequestDiagnosis
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageEligibilityRequestDiagnosis &&
+            other is _$CoverageEligibilityRequestDiagnosisImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -7980,14 +7988,14 @@ class _$_CoverageEligibilityRequestDiagnosis
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageEligibilityRequestDiagnosisCopyWith<
-          _$_CoverageEligibilityRequestDiagnosis>
-      get copyWith => __$$_CoverageEligibilityRequestDiagnosisCopyWithImpl<
-          _$_CoverageEligibilityRequestDiagnosis>(this, _$identity);
+  _$$CoverageEligibilityRequestDiagnosisImplCopyWith<
+          _$CoverageEligibilityRequestDiagnosisImpl>
+      get copyWith => __$$CoverageEligibilityRequestDiagnosisImplCopyWithImpl<
+          _$CoverageEligibilityRequestDiagnosisImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityRequestDiagnosisToJson(
+    return _$$CoverageEligibilityRequestDiagnosisImplToJson(
       this,
     );
   }
@@ -8001,12 +8009,12 @@ abstract class _CoverageEligibilityRequestDiagnosis
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? diagnosisCodeableConcept,
           final Reference? diagnosisReference}) =
-      _$_CoverageEligibilityRequestDiagnosis;
+      _$CoverageEligibilityRequestDiagnosisImpl;
   const _CoverageEligibilityRequestDiagnosis._() : super._();
 
   factory _CoverageEligibilityRequestDiagnosis.fromJson(
           Map<String, dynamic> json) =
-      _$_CoverageEligibilityRequestDiagnosis.fromJson;
+      _$CoverageEligibilityRequestDiagnosisImpl.fromJson;
 
   @override
 
@@ -8053,8 +8061,8 @@ abstract class _CoverageEligibilityRequestDiagnosis
   Reference? get diagnosisReference;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageEligibilityRequestDiagnosisCopyWith<
-          _$_CoverageEligibilityRequestDiagnosis>
+  _$$CoverageEligibilityRequestDiagnosisImplCopyWith<
+          _$CoverageEligibilityRequestDiagnosisImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -8690,12 +8698,12 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
+abstract class _$$CoverageEligibilityResponseImplCopyWith<$Res>
     implements $CoverageEligibilityResponseCopyWith<$Res> {
-  factory _$$_CoverageEligibilityResponseCopyWith(
-          _$_CoverageEligibilityResponse value,
-          $Res Function(_$_CoverageEligibilityResponse) then) =
-      __$$_CoverageEligibilityResponseCopyWithImpl<$Res>;
+  factory _$$CoverageEligibilityResponseImplCopyWith(
+          _$CoverageEligibilityResponseImpl value,
+          $Res Function(_$CoverageEligibilityResponseImpl) then) =
+      __$$CoverageEligibilityResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -8772,13 +8780,13 @@ abstract class _$$_CoverageEligibilityResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
+class __$$CoverageEligibilityResponseImplCopyWithImpl<$Res>
     extends _$CoverageEligibilityResponseCopyWithImpl<$Res,
-        _$_CoverageEligibilityResponse>
-    implements _$$_CoverageEligibilityResponseCopyWith<$Res> {
-  __$$_CoverageEligibilityResponseCopyWithImpl(
-      _$_CoverageEligibilityResponse _value,
-      $Res Function(_$_CoverageEligibilityResponse) _then)
+        _$CoverageEligibilityResponseImpl>
+    implements _$$CoverageEligibilityResponseImplCopyWith<$Res> {
+  __$$CoverageEligibilityResponseImplCopyWithImpl(
+      _$CoverageEligibilityResponseImpl _value,
+      $Res Function(_$CoverageEligibilityResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -8821,7 +8829,7 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
     Object? form = freezed,
     Object? error = freezed,
   }) {
-    return _then(_$_CoverageEligibilityResponse(
+    return _then(_$CoverageEligibilityResponseImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -8972,8 +8980,8 @@ class __$$_CoverageEligibilityResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
-  const _$_CoverageEligibilityResponse(
+class _$CoverageEligibilityResponseImpl extends _CoverageEligibilityResponse {
+  const _$CoverageEligibilityResponseImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.CoverageEligibilityResponse)
       this.resourceType = R5ResourceType.CoverageEligibilityResponse,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -9022,8 +9030,9 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
         _error = error,
         super._();
 
-  factory _$_CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityResponseFromJson(json);
+  factory _$CoverageEligibilityResponseImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$CoverageEligibilityResponseImplFromJson(json);
 
   /// [resourceType] This is a CoverageEligibilityResponse resource
   @override
@@ -9351,7 +9360,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageEligibilityResponse &&
+            other is _$CoverageEligibilityResponseImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -9457,13 +9466,13 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageEligibilityResponseCopyWith<_$_CoverageEligibilityResponse>
-      get copyWith => __$$_CoverageEligibilityResponseCopyWithImpl<
-          _$_CoverageEligibilityResponse>(this, _$identity);
+  _$$CoverageEligibilityResponseImplCopyWith<_$CoverageEligibilityResponseImpl>
+      get copyWith => __$$CoverageEligibilityResponseImplCopyWithImpl<
+          _$CoverageEligibilityResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityResponseToJson(
+    return _$$CoverageEligibilityResponseImplToJson(
       this,
     );
   }
@@ -9510,11 +9519,11 @@ abstract class _CoverageEligibilityResponse
           @JsonKey(name: '_preAuthRef') final Element? preAuthRefElement,
           final CodeableConcept? form,
           final List<CoverageEligibilityResponseError>? error}) =
-      _$_CoverageEligibilityResponse;
+      _$CoverageEligibilityResponseImpl;
   const _CoverageEligibilityResponse._() : super._();
 
   factory _CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =
-      _$_CoverageEligibilityResponse.fromJson;
+      _$CoverageEligibilityResponseImpl.fromJson;
 
   @override
 
@@ -9723,7 +9732,7 @@ abstract class _CoverageEligibilityResponse
   List<CoverageEligibilityResponseError>? get error;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageEligibilityResponseCopyWith<_$_CoverageEligibilityResponse>
+  _$$CoverageEligibilityResponseImplCopyWith<_$CoverageEligibilityResponseImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -9897,12 +9906,12 @@ class _$CoverageEligibilityResponseEventCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CoverageEligibilityResponseEventCopyWith<$Res>
+abstract class _$$CoverageEligibilityResponseEventImplCopyWith<$Res>
     implements $CoverageEligibilityResponseEventCopyWith<$Res> {
-  factory _$$_CoverageEligibilityResponseEventCopyWith(
-          _$_CoverageEligibilityResponseEvent value,
-          $Res Function(_$_CoverageEligibilityResponseEvent) then) =
-      __$$_CoverageEligibilityResponseEventCopyWithImpl<$Res>;
+  factory _$$CoverageEligibilityResponseEventImplCopyWith(
+          _$CoverageEligibilityResponseEventImpl value,
+          $Res Function(_$CoverageEligibilityResponseEventImpl) then) =
+      __$$CoverageEligibilityResponseEventImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -9923,13 +9932,13 @@ abstract class _$$_CoverageEligibilityResponseEventCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageEligibilityResponseEventCopyWithImpl<$Res>
+class __$$CoverageEligibilityResponseEventImplCopyWithImpl<$Res>
     extends _$CoverageEligibilityResponseEventCopyWithImpl<$Res,
-        _$_CoverageEligibilityResponseEvent>
-    implements _$$_CoverageEligibilityResponseEventCopyWith<$Res> {
-  __$$_CoverageEligibilityResponseEventCopyWithImpl(
-      _$_CoverageEligibilityResponseEvent _value,
-      $Res Function(_$_CoverageEligibilityResponseEvent) _then)
+        _$CoverageEligibilityResponseEventImpl>
+    implements _$$CoverageEligibilityResponseEventImplCopyWith<$Res> {
+  __$$CoverageEligibilityResponseEventImplCopyWithImpl(
+      _$CoverageEligibilityResponseEventImpl _value,
+      $Res Function(_$CoverageEligibilityResponseEventImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -9943,7 +9952,7 @@ class __$$_CoverageEligibilityResponseEventCopyWithImpl<$Res>
     Object? whenDateTimeElement = freezed,
     Object? whenPeriod = freezed,
   }) {
-    return _then(_$_CoverageEligibilityResponseEvent(
+    return _then(_$CoverageEligibilityResponseEventImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -9978,9 +9987,9 @@ class __$$_CoverageEligibilityResponseEventCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageEligibilityResponseEvent
+class _$CoverageEligibilityResponseEventImpl
     extends _CoverageEligibilityResponseEvent {
-  const _$_CoverageEligibilityResponseEvent(
+  const _$CoverageEligibilityResponseEventImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -9992,9 +10001,9 @@ class _$_CoverageEligibilityResponseEvent
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoverageEligibilityResponseEvent.fromJson(
+  factory _$CoverageEligibilityResponseEventImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityResponseEventFromJson(json);
+      _$$CoverageEligibilityResponseEventImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -10095,7 +10104,7 @@ class _$_CoverageEligibilityResponseEvent
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageEligibilityResponseEvent &&
+            other is _$CoverageEligibilityResponseEventImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -10125,14 +10134,14 @@ class _$_CoverageEligibilityResponseEvent
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageEligibilityResponseEventCopyWith<
-          _$_CoverageEligibilityResponseEvent>
-      get copyWith => __$$_CoverageEligibilityResponseEventCopyWithImpl<
-          _$_CoverageEligibilityResponseEvent>(this, _$identity);
+  _$$CoverageEligibilityResponseEventImplCopyWith<
+          _$CoverageEligibilityResponseEventImpl>
+      get copyWith => __$$CoverageEligibilityResponseEventImplCopyWithImpl<
+          _$CoverageEligibilityResponseEventImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityResponseEventToJson(
+    return _$$CoverageEligibilityResponseEventImplToJson(
       this,
     );
   }
@@ -10147,11 +10156,12 @@ abstract class _CoverageEligibilityResponseEvent
       required final CodeableConcept type,
       final FhirDateTime? whenDateTime,
       @JsonKey(name: '_whenDateTime') final Element? whenDateTimeElement,
-      final Period? whenPeriod}) = _$_CoverageEligibilityResponseEvent;
+      final Period? whenPeriod}) = _$CoverageEligibilityResponseEventImpl;
   const _CoverageEligibilityResponseEvent._() : super._();
 
   factory _CoverageEligibilityResponseEvent.fromJson(
-      Map<String, dynamic> json) = _$_CoverageEligibilityResponseEvent.fromJson;
+          Map<String, dynamic> json) =
+      _$CoverageEligibilityResponseEventImpl.fromJson;
 
   @override
 
@@ -10208,8 +10218,8 @@ abstract class _CoverageEligibilityResponseEvent
   Period? get whenPeriod;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageEligibilityResponseEventCopyWith<
-          _$_CoverageEligibilityResponseEvent>
+  _$$CoverageEligibilityResponseEventImplCopyWith<
+          _$CoverageEligibilityResponseEventImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -10397,12 +10407,12 @@ class _$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CoverageEligibilityResponseInsuranceCopyWith<$Res>
+abstract class _$$CoverageEligibilityResponseInsuranceImplCopyWith<$Res>
     implements $CoverageEligibilityResponseInsuranceCopyWith<$Res> {
-  factory _$$_CoverageEligibilityResponseInsuranceCopyWith(
-          _$_CoverageEligibilityResponseInsurance value,
-          $Res Function(_$_CoverageEligibilityResponseInsurance) then) =
-      __$$_CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>;
+  factory _$$CoverageEligibilityResponseInsuranceImplCopyWith(
+          _$CoverageEligibilityResponseInsuranceImpl value,
+          $Res Function(_$CoverageEligibilityResponseInsuranceImpl) then) =
+      __$$CoverageEligibilityResponseInsuranceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -10424,13 +10434,13 @@ abstract class _$$_CoverageEligibilityResponseInsuranceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
+class __$$CoverageEligibilityResponseInsuranceImplCopyWithImpl<$Res>
     extends _$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res,
-        _$_CoverageEligibilityResponseInsurance>
-    implements _$$_CoverageEligibilityResponseInsuranceCopyWith<$Res> {
-  __$$_CoverageEligibilityResponseInsuranceCopyWithImpl(
-      _$_CoverageEligibilityResponseInsurance _value,
-      $Res Function(_$_CoverageEligibilityResponseInsurance) _then)
+        _$CoverageEligibilityResponseInsuranceImpl>
+    implements _$$CoverageEligibilityResponseInsuranceImplCopyWith<$Res> {
+  __$$CoverageEligibilityResponseInsuranceImplCopyWithImpl(
+      _$CoverageEligibilityResponseInsuranceImpl _value,
+      $Res Function(_$CoverageEligibilityResponseInsuranceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -10445,7 +10455,7 @@ class __$$_CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
     Object? benefitPeriod = freezed,
     Object? item = freezed,
   }) {
-    return _then(_$_CoverageEligibilityResponseInsurance(
+    return _then(_$CoverageEligibilityResponseInsuranceImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -10484,9 +10494,9 @@ class __$$_CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageEligibilityResponseInsurance
+class _$CoverageEligibilityResponseInsuranceImpl
     extends _CoverageEligibilityResponseInsurance {
-  const _$_CoverageEligibilityResponseInsurance(
+  const _$CoverageEligibilityResponseInsuranceImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -10500,9 +10510,9 @@ class _$_CoverageEligibilityResponseInsurance
         _item = item,
         super._();
 
-  factory _$_CoverageEligibilityResponseInsurance.fromJson(
+  factory _$CoverageEligibilityResponseInsuranceImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityResponseInsuranceFromJson(json);
+      _$$CoverageEligibilityResponseInsuranceImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -10620,7 +10630,7 @@ class _$_CoverageEligibilityResponseInsurance
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageEligibilityResponseInsurance &&
+            other is _$CoverageEligibilityResponseInsuranceImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -10652,14 +10662,14 @@ class _$_CoverageEligibilityResponseInsurance
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageEligibilityResponseInsuranceCopyWith<
-          _$_CoverageEligibilityResponseInsurance>
-      get copyWith => __$$_CoverageEligibilityResponseInsuranceCopyWithImpl<
-          _$_CoverageEligibilityResponseInsurance>(this, _$identity);
+  _$$CoverageEligibilityResponseInsuranceImplCopyWith<
+          _$CoverageEligibilityResponseInsuranceImpl>
+      get copyWith => __$$CoverageEligibilityResponseInsuranceImplCopyWithImpl<
+          _$CoverageEligibilityResponseInsuranceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityResponseInsuranceToJson(
+    return _$$CoverageEligibilityResponseInsuranceImplToJson(
       this,
     );
   }
@@ -10676,12 +10686,12 @@ abstract class _CoverageEligibilityResponseInsurance
           @JsonKey(name: '_inforce') final Element? inforceElement,
           final Period? benefitPeriod,
           final List<CoverageEligibilityResponseItem>? item}) =
-      _$_CoverageEligibilityResponseInsurance;
+      _$CoverageEligibilityResponseInsuranceImpl;
   const _CoverageEligibilityResponseInsurance._() : super._();
 
   factory _CoverageEligibilityResponseInsurance.fromJson(
           Map<String, dynamic> json) =
-      _$_CoverageEligibilityResponseInsurance.fromJson;
+      _$CoverageEligibilityResponseInsuranceImpl.fromJson;
 
   @override
 
@@ -10745,8 +10755,8 @@ abstract class _CoverageEligibilityResponseInsurance
   List<CoverageEligibilityResponseItem>? get item;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageEligibilityResponseInsuranceCopyWith<
-          _$_CoverageEligibilityResponseInsurance>
+  _$$CoverageEligibilityResponseInsuranceImplCopyWith<
+          _$CoverageEligibilityResponseInsuranceImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -11184,12 +11194,12 @@ class _$CoverageEligibilityResponseItemCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CoverageEligibilityResponseItemCopyWith<$Res>
+abstract class _$$CoverageEligibilityResponseItemImplCopyWith<$Res>
     implements $CoverageEligibilityResponseItemCopyWith<$Res> {
-  factory _$$_CoverageEligibilityResponseItemCopyWith(
-          _$_CoverageEligibilityResponseItem value,
-          $Res Function(_$_CoverageEligibilityResponseItem) then) =
-      __$$_CoverageEligibilityResponseItemCopyWithImpl<$Res>;
+  factory _$$CoverageEligibilityResponseItemImplCopyWith(
+          _$CoverageEligibilityResponseItemImpl value,
+          $Res Function(_$CoverageEligibilityResponseItemImpl) then) =
+      __$$CoverageEligibilityResponseItemImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -11242,13 +11252,13 @@ abstract class _$$_CoverageEligibilityResponseItemCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageEligibilityResponseItemCopyWithImpl<$Res>
+class __$$CoverageEligibilityResponseItemImplCopyWithImpl<$Res>
     extends _$CoverageEligibilityResponseItemCopyWithImpl<$Res,
-        _$_CoverageEligibilityResponseItem>
-    implements _$$_CoverageEligibilityResponseItemCopyWith<$Res> {
-  __$$_CoverageEligibilityResponseItemCopyWithImpl(
-      _$_CoverageEligibilityResponseItem _value,
-      $Res Function(_$_CoverageEligibilityResponseItem) _then)
+        _$CoverageEligibilityResponseItemImpl>
+    implements _$$CoverageEligibilityResponseItemImplCopyWith<$Res> {
+  __$$CoverageEligibilityResponseItemImplCopyWithImpl(
+      _$CoverageEligibilityResponseItemImpl _value,
+      $Res Function(_$CoverageEligibilityResponseItemImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -11277,7 +11287,7 @@ class __$$_CoverageEligibilityResponseItemCopyWithImpl<$Res>
     Object? authorizationUrl = freezed,
     Object? authorizationUrlElement = freezed,
   }) {
-    return _then(_$_CoverageEligibilityResponseItem(
+    return _then(_$CoverageEligibilityResponseItemImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -11372,9 +11382,9 @@ class __$$_CoverageEligibilityResponseItemCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageEligibilityResponseItem
+class _$CoverageEligibilityResponseItemImpl
     extends _CoverageEligibilityResponseItem {
-  const _$_CoverageEligibilityResponseItem(
+  const _$CoverageEligibilityResponseItemImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -11405,9 +11415,9 @@ class _$_CoverageEligibilityResponseItem
         _authorizationSupporting = authorizationSupporting,
         super._();
 
-  factory _$_CoverageEligibilityResponseItem.fromJson(
+  factory _$CoverageEligibilityResponseItemImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityResponseItemFromJson(json);
+      _$$CoverageEligibilityResponseItemImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -11613,7 +11623,7 @@ class _$_CoverageEligibilityResponseItem
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageEligibilityResponseItem &&
+            other is _$CoverageEligibilityResponseItemImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -11687,14 +11697,14 @@ class _$_CoverageEligibilityResponseItem
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageEligibilityResponseItemCopyWith<
-          _$_CoverageEligibilityResponseItem>
-      get copyWith => __$$_CoverageEligibilityResponseItemCopyWithImpl<
-          _$_CoverageEligibilityResponseItem>(this, _$identity);
+  _$$CoverageEligibilityResponseItemImplCopyWith<
+          _$CoverageEligibilityResponseItemImpl>
+      get copyWith => __$$CoverageEligibilityResponseItemImplCopyWithImpl<
+          _$CoverageEligibilityResponseItemImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityResponseItemToJson(
+    return _$$CoverageEligibilityResponseItemImplToJson(
       this,
     );
   }
@@ -11727,11 +11737,11 @@ abstract class _CoverageEligibilityResponseItem
           final FhirUri? authorizationUrl,
           @JsonKey(name: '_authorizationUrl')
           final Element? authorizationUrlElement}) =
-      _$_CoverageEligibilityResponseItem;
+      _$CoverageEligibilityResponseItemImpl;
   const _CoverageEligibilityResponseItem._() : super._();
 
   factory _CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =
-      _$_CoverageEligibilityResponseItem.fromJson;
+      _$CoverageEligibilityResponseItemImpl.fromJson;
 
   @override
 
@@ -11863,8 +11873,8 @@ abstract class _CoverageEligibilityResponseItem
   Element? get authorizationUrlElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageEligibilityResponseItemCopyWith<
-          _$_CoverageEligibilityResponseItem>
+  _$$CoverageEligibilityResponseItemImplCopyWith<
+          _$CoverageEligibilityResponseItemImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -12162,12 +12172,12 @@ class _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CoverageEligibilityResponseBenefitCopyWith<$Res>
+abstract class _$$CoverageEligibilityResponseBenefitImplCopyWith<$Res>
     implements $CoverageEligibilityResponseBenefitCopyWith<$Res> {
-  factory _$$_CoverageEligibilityResponseBenefitCopyWith(
-          _$_CoverageEligibilityResponseBenefit value,
-          $Res Function(_$_CoverageEligibilityResponseBenefit) then) =
-      __$$_CoverageEligibilityResponseBenefitCopyWithImpl<$Res>;
+  factory _$$CoverageEligibilityResponseBenefitImplCopyWith(
+          _$CoverageEligibilityResponseBenefitImpl value,
+          $Res Function(_$CoverageEligibilityResponseBenefitImpl) then) =
+      __$$CoverageEligibilityResponseBenefitImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -12203,13 +12213,13 @@ abstract class _$$_CoverageEligibilityResponseBenefitCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
+class __$$CoverageEligibilityResponseBenefitImplCopyWithImpl<$Res>
     extends _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res,
-        _$_CoverageEligibilityResponseBenefit>
-    implements _$$_CoverageEligibilityResponseBenefitCopyWith<$Res> {
-  __$$_CoverageEligibilityResponseBenefitCopyWithImpl(
-      _$_CoverageEligibilityResponseBenefit _value,
-      $Res Function(_$_CoverageEligibilityResponseBenefit) _then)
+        _$CoverageEligibilityResponseBenefitImpl>
+    implements _$$CoverageEligibilityResponseBenefitImplCopyWith<$Res> {
+  __$$CoverageEligibilityResponseBenefitImplCopyWithImpl(
+      _$CoverageEligibilityResponseBenefitImpl _value,
+      $Res Function(_$CoverageEligibilityResponseBenefitImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -12230,7 +12240,7 @@ class __$$_CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
     Object? usedStringElement = freezed,
     Object? usedMoney = freezed,
   }) {
-    return _then(_$_CoverageEligibilityResponseBenefit(
+    return _then(_$CoverageEligibilityResponseBenefitImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -12293,9 +12303,9 @@ class __$$_CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageEligibilityResponseBenefit
+class _$CoverageEligibilityResponseBenefitImpl
     extends _CoverageEligibilityResponseBenefit {
-  const _$_CoverageEligibilityResponseBenefit(
+  const _$CoverageEligibilityResponseBenefitImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12314,9 +12324,9 @@ class _$_CoverageEligibilityResponseBenefit
         _modifierExtension = modifierExtension,
         super._();
 
-  factory _$_CoverageEligibilityResponseBenefit.fromJson(
+  factory _$CoverageEligibilityResponseBenefitImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityResponseBenefitFromJson(json);
+      _$$CoverageEligibilityResponseBenefitImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -12453,7 +12463,7 @@ class _$_CoverageEligibilityResponseBenefit
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageEligibilityResponseBenefit &&
+            other is _$CoverageEligibilityResponseBenefitImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -12505,14 +12515,14 @@ class _$_CoverageEligibilityResponseBenefit
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageEligibilityResponseBenefitCopyWith<
-          _$_CoverageEligibilityResponseBenefit>
-      get copyWith => __$$_CoverageEligibilityResponseBenefitCopyWithImpl<
-          _$_CoverageEligibilityResponseBenefit>(this, _$identity);
+  _$$CoverageEligibilityResponseBenefitImplCopyWith<
+          _$CoverageEligibilityResponseBenefitImpl>
+      get copyWith => __$$CoverageEligibilityResponseBenefitImplCopyWithImpl<
+          _$CoverageEligibilityResponseBenefitImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityResponseBenefitToJson(
+    return _$$CoverageEligibilityResponseBenefitImplToJson(
       this,
     );
   }
@@ -12535,12 +12545,12 @@ abstract class _CoverageEligibilityResponseBenefit
       @JsonKey(name: '_usedUnsignedInt') final Element? usedUnsignedIntElement,
       final String? usedString,
       @JsonKey(name: '_usedString') final Element? usedStringElement,
-      final Money? usedMoney}) = _$_CoverageEligibilityResponseBenefit;
+      final Money? usedMoney}) = _$CoverageEligibilityResponseBenefitImpl;
   const _CoverageEligibilityResponseBenefit._() : super._();
 
   factory _CoverageEligibilityResponseBenefit.fromJson(
           Map<String, dynamic> json) =
-      _$_CoverageEligibilityResponseBenefit.fromJson;
+      _$CoverageEligibilityResponseBenefitImpl.fromJson;
 
   @override
 
@@ -12633,8 +12643,8 @@ abstract class _CoverageEligibilityResponseBenefit
   Money? get usedMoney;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageEligibilityResponseBenefitCopyWith<
-          _$_CoverageEligibilityResponseBenefit>
+  _$$CoverageEligibilityResponseBenefitImplCopyWith<
+          _$CoverageEligibilityResponseBenefitImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -12774,12 +12784,12 @@ class _$CoverageEligibilityResponseErrorCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_CoverageEligibilityResponseErrorCopyWith<$Res>
+abstract class _$$CoverageEligibilityResponseErrorImplCopyWith<$Res>
     implements $CoverageEligibilityResponseErrorCopyWith<$Res> {
-  factory _$$_CoverageEligibilityResponseErrorCopyWith(
-          _$_CoverageEligibilityResponseError value,
-          $Res Function(_$_CoverageEligibilityResponseError) then) =
-      __$$_CoverageEligibilityResponseErrorCopyWithImpl<$Res>;
+  factory _$$CoverageEligibilityResponseErrorImplCopyWith(
+          _$CoverageEligibilityResponseErrorImpl value,
+          $Res Function(_$CoverageEligibilityResponseErrorImpl) then) =
+      __$$CoverageEligibilityResponseErrorImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -12795,13 +12805,13 @@ abstract class _$$_CoverageEligibilityResponseErrorCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageEligibilityResponseErrorCopyWithImpl<$Res>
+class __$$CoverageEligibilityResponseErrorImplCopyWithImpl<$Res>
     extends _$CoverageEligibilityResponseErrorCopyWithImpl<$Res,
-        _$_CoverageEligibilityResponseError>
-    implements _$$_CoverageEligibilityResponseErrorCopyWith<$Res> {
-  __$$_CoverageEligibilityResponseErrorCopyWithImpl(
-      _$_CoverageEligibilityResponseError _value,
-      $Res Function(_$_CoverageEligibilityResponseError) _then)
+        _$CoverageEligibilityResponseErrorImpl>
+    implements _$$CoverageEligibilityResponseErrorImplCopyWith<$Res> {
+  __$$CoverageEligibilityResponseErrorImplCopyWithImpl(
+      _$CoverageEligibilityResponseErrorImpl _value,
+      $Res Function(_$CoverageEligibilityResponseErrorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -12814,7 +12824,7 @@ class __$$_CoverageEligibilityResponseErrorCopyWithImpl<$Res>
     Object? expression = freezed,
     Object? expressionElement = freezed,
   }) {
-    return _then(_$_CoverageEligibilityResponseError(
+    return _then(_$CoverageEligibilityResponseErrorImpl(
       fhirId: freezed == fhirId
           ? _value.fhirId
           : fhirId // ignore: cast_nullable_to_non_nullable
@@ -12845,9 +12855,9 @@ class __$$_CoverageEligibilityResponseErrorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageEligibilityResponseError
+class _$CoverageEligibilityResponseErrorImpl
     extends _CoverageEligibilityResponseError {
-  const _$_CoverageEligibilityResponseError(
+  const _$CoverageEligibilityResponseErrorImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
@@ -12860,9 +12870,9 @@ class _$_CoverageEligibilityResponseError
         _expressionElement = expressionElement,
         super._();
 
-  factory _$_CoverageEligibilityResponseError.fromJson(
+  factory _$CoverageEligibilityResponseErrorImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_CoverageEligibilityResponseErrorFromJson(json);
+      _$$CoverageEligibilityResponseErrorImplFromJson(json);
 
   /// [id] Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
@@ -12982,7 +12992,7 @@ class _$_CoverageEligibilityResponseError
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageEligibilityResponseError &&
+            other is _$CoverageEligibilityResponseErrorImpl &&
             (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
@@ -13009,14 +13019,14 @@ class _$_CoverageEligibilityResponseError
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageEligibilityResponseErrorCopyWith<
-          _$_CoverageEligibilityResponseError>
-      get copyWith => __$$_CoverageEligibilityResponseErrorCopyWithImpl<
-          _$_CoverageEligibilityResponseError>(this, _$identity);
+  _$$CoverageEligibilityResponseErrorImplCopyWith<
+          _$CoverageEligibilityResponseErrorImpl>
+      get copyWith => __$$CoverageEligibilityResponseErrorImplCopyWithImpl<
+          _$CoverageEligibilityResponseErrorImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageEligibilityResponseErrorToJson(
+    return _$$CoverageEligibilityResponseErrorImplToJson(
       this,
     );
   }
@@ -13032,11 +13042,12 @@ abstract class _CoverageEligibilityResponseError
           final List<String>? expression,
           @JsonKey(name: '_expression')
           final List<Element>? expressionElement}) =
-      _$_CoverageEligibilityResponseError;
+      _$CoverageEligibilityResponseErrorImpl;
   const _CoverageEligibilityResponseError._() : super._();
 
   factory _CoverageEligibilityResponseError.fromJson(
-      Map<String, dynamic> json) = _$_CoverageEligibilityResponseError.fromJson;
+          Map<String, dynamic> json) =
+      _$CoverageEligibilityResponseErrorImpl.fromJson;
 
   @override
 
@@ -13090,8 +13101,8 @@ abstract class _CoverageEligibilityResponseError
   List<Element>? get expressionElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageEligibilityResponseErrorCopyWith<
-          _$_CoverageEligibilityResponseError>
+  _$$CoverageEligibilityResponseErrorImplCopyWith<
+          _$CoverageEligibilityResponseErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -13501,11 +13512,11 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
 }
 
 /// @nodoc
-abstract class _$$_EnrollmentRequestCopyWith<$Res>
+abstract class _$$EnrollmentRequestImplCopyWith<$Res>
     implements $EnrollmentRequestCopyWith<$Res> {
-  factory _$$_EnrollmentRequestCopyWith(_$_EnrollmentRequest value,
-          $Res Function(_$_EnrollmentRequest) then) =
-      __$$_EnrollmentRequestCopyWithImpl<$Res>;
+  factory _$$EnrollmentRequestImplCopyWith(_$EnrollmentRequestImpl value,
+          $Res Function(_$EnrollmentRequestImpl) then) =
+      __$$EnrollmentRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -13555,11 +13566,11 @@ abstract class _$$_EnrollmentRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EnrollmentRequestCopyWithImpl<$Res>
-    extends _$EnrollmentRequestCopyWithImpl<$Res, _$_EnrollmentRequest>
-    implements _$$_EnrollmentRequestCopyWith<$Res> {
-  __$$_EnrollmentRequestCopyWithImpl(
-      _$_EnrollmentRequest _value, $Res Function(_$_EnrollmentRequest) _then)
+class __$$EnrollmentRequestImplCopyWithImpl<$Res>
+    extends _$EnrollmentRequestCopyWithImpl<$Res, _$EnrollmentRequestImpl>
+    implements _$$EnrollmentRequestImplCopyWith<$Res> {
+  __$$EnrollmentRequestImplCopyWithImpl(_$EnrollmentRequestImpl _value,
+      $Res Function(_$EnrollmentRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -13587,7 +13598,7 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
     Object? candidate = freezed,
     Object? coverage = freezed,
   }) {
-    return _then(_$_EnrollmentRequest(
+    return _then(_$EnrollmentRequestImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -13678,8 +13689,8 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EnrollmentRequest extends _EnrollmentRequest {
-  const _$_EnrollmentRequest(
+class _$EnrollmentRequestImpl extends _EnrollmentRequest {
+  const _$EnrollmentRequestImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentRequest)
       this.resourceType = R5ResourceType.EnrollmentRequest,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -13708,8 +13719,8 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
         _identifier = identifier,
         super._();
 
-  factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_EnrollmentRequestFromJson(json);
+  factory _$EnrollmentRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EnrollmentRequestImplFromJson(json);
 
   /// [resourceType] This is a EnrollmentRequest resource
   @override
@@ -13906,7 +13917,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EnrollmentRequest &&
+            other is _$EnrollmentRequestImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -13974,13 +13985,13 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EnrollmentRequestCopyWith<_$_EnrollmentRequest> get copyWith =>
-      __$$_EnrollmentRequestCopyWithImpl<_$_EnrollmentRequest>(
+  _$$EnrollmentRequestImplCopyWith<_$EnrollmentRequestImpl> get copyWith =>
+      __$$EnrollmentRequestImplCopyWithImpl<_$EnrollmentRequestImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EnrollmentRequestToJson(
+    return _$$EnrollmentRequestImplToJson(
       this,
     );
   }
@@ -14009,11 +14020,11 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       final Reference? insurer,
       final Reference? provider,
       final Reference? candidate,
-      final Reference? coverage}) = _$_EnrollmentRequest;
+      final Reference? coverage}) = _$EnrollmentRequestImpl;
   const _EnrollmentRequest._() : super._();
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
-      _$_EnrollmentRequest.fromJson;
+      _$EnrollmentRequestImpl.fromJson;
 
   @override
 
@@ -14144,7 +14155,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   Reference? get coverage;
   @override
   @JsonKey(ignore: true)
-  _$$_EnrollmentRequestCopyWith<_$_EnrollmentRequest> get copyWith =>
+  _$$EnrollmentRequestImplCopyWith<_$EnrollmentRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -14596,11 +14607,11 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
 }
 
 /// @nodoc
-abstract class _$$_EnrollmentResponseCopyWith<$Res>
+abstract class _$$EnrollmentResponseImplCopyWith<$Res>
     implements $EnrollmentResponseCopyWith<$Res> {
-  factory _$$_EnrollmentResponseCopyWith(_$_EnrollmentResponse value,
-          $Res Function(_$_EnrollmentResponse) then) =
-      __$$_EnrollmentResponseCopyWithImpl<$Res>;
+  factory _$$EnrollmentResponseImplCopyWith(_$EnrollmentResponseImpl value,
+          $Res Function(_$EnrollmentResponseImpl) then) =
+      __$$EnrollmentResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -14655,11 +14666,11 @@ abstract class _$$_EnrollmentResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EnrollmentResponseCopyWithImpl<$Res>
-    extends _$EnrollmentResponseCopyWithImpl<$Res, _$_EnrollmentResponse>
-    implements _$$_EnrollmentResponseCopyWith<$Res> {
-  __$$_EnrollmentResponseCopyWithImpl(
-      _$_EnrollmentResponse _value, $Res Function(_$_EnrollmentResponse) _then)
+class __$$EnrollmentResponseImplCopyWithImpl<$Res>
+    extends _$EnrollmentResponseCopyWithImpl<$Res, _$EnrollmentResponseImpl>
+    implements _$$EnrollmentResponseImplCopyWith<$Res> {
+  __$$EnrollmentResponseImplCopyWithImpl(_$EnrollmentResponseImpl _value,
+      $Res Function(_$EnrollmentResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -14690,7 +14701,7 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
     Object? organization = freezed,
     Object? requestProvider = freezed,
   }) {
-    return _then(_$_EnrollmentResponse(
+    return _then(_$EnrollmentResponseImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -14793,8 +14804,8 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EnrollmentResponse extends _EnrollmentResponse {
-  const _$_EnrollmentResponse(
+class _$EnrollmentResponseImpl extends _EnrollmentResponse {
+  const _$EnrollmentResponseImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.EnrollmentResponse)
       this.resourceType = R5ResourceType.EnrollmentResponse,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -14826,8 +14837,8 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
         _identifier = identifier,
         super._();
 
-  factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_EnrollmentResponseFromJson(json);
+  factory _$EnrollmentResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EnrollmentResponseImplFromJson(json);
 
   /// [resourceType] This is a EnrollmentResponse resource
   @override
@@ -15038,7 +15049,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EnrollmentResponse &&
+            other is _$EnrollmentResponseImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -15114,13 +15125,13 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EnrollmentResponseCopyWith<_$_EnrollmentResponse> get copyWith =>
-      __$$_EnrollmentResponseCopyWithImpl<_$_EnrollmentResponse>(
+  _$$EnrollmentResponseImplCopyWith<_$EnrollmentResponseImpl> get copyWith =>
+      __$$EnrollmentResponseImplCopyWithImpl<_$EnrollmentResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EnrollmentResponseToJson(
+    return _$$EnrollmentResponseImplToJson(
       this,
     );
   }
@@ -15152,11 +15163,11 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       final FhirDateTime? created,
       @JsonKey(name: '_created') final Element? createdElement,
       final Reference? organization,
-      final Reference? requestProvider}) = _$_EnrollmentResponse;
+      final Reference? requestProvider}) = _$EnrollmentResponseImpl;
   const _EnrollmentResponse._() : super._();
 
   factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
-      _$_EnrollmentResponse.fromJson;
+      _$EnrollmentResponseImpl.fromJson;
 
   @override
 
@@ -15301,6 +15312,6 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   Reference? get requestProvider;
   @override
   @JsonKey(ignore: true)
-  _$$_EnrollmentResponseCopyWith<_$_EnrollmentResponse> get copyWith =>
+  _$$EnrollmentResponseImplCopyWith<_$EnrollmentResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

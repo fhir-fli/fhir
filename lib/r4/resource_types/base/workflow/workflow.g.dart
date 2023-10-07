@@ -6,8 +6,8 @@ part of 'workflow.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
-    _$_Appointment(
+_$AppointmentImpl _$$AppointmentImplFromJson(Map<String, dynamic> json) =>
+    _$AppointmentImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Appointment) ??
@@ -127,7 +127,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
+Map<String, dynamic> _$$AppointmentImplToJson(_$AppointmentImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -339,9 +339,9 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
+_$AppointmentParticipantImpl _$$AppointmentParticipantImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AppointmentParticipant(
+    _$AppointmentParticipantImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -369,8 +369,8 @@ _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AppointmentParticipantToJson(
-    _$_AppointmentParticipant instance) {
+Map<String, dynamic> _$$AppointmentParticipantImplToJson(
+    _$AppointmentParticipantImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -394,9 +394,9 @@ Map<String, dynamic> _$$_AppointmentParticipantToJson(
   return val;
 }
 
-_$_AppointmentResponse _$$_AppointmentResponseFromJson(
+_$AppointmentResponseImpl _$$AppointmentResponseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_AppointmentResponse(
+    _$AppointmentResponseImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.AppointmentResponse) ??
@@ -461,8 +461,8 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AppointmentResponseToJson(
-    _$_AppointmentResponse instance) {
+Map<String, dynamic> _$$AppointmentResponseImplToJson(
+    _$AppointmentResponseImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -504,7 +504,8 @@ Map<String, dynamic> _$$_AppointmentResponseToJson(
   return val;
 }
 
-_$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
+_$ScheduleImpl _$$ScheduleImplFromJson(Map<String, dynamic> json) =>
+    _$ScheduleImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Schedule) ??
@@ -566,7 +567,7 @@ _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
+Map<String, dynamic> _$$ScheduleImplToJson(_$ScheduleImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -607,7 +608,7 @@ Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
   return val;
 }
 
-_$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
+_$SlotImpl _$$SlotImplFromJson(Map<String, dynamic> json) => _$SlotImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Slot) ??
@@ -681,7 +682,7 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SlotToJson(_$_Slot instance) {
+Map<String, dynamic> _$$SlotImplToJson(_$SlotImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -728,7 +729,7 @@ Map<String, dynamic> _$$_SlotToJson(_$_Slot instance) {
   return val;
 }
 
-_$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
+_$TaskImpl _$$TaskImplFromJson(Map<String, dynamic> json) => _$TaskImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Task) ??
@@ -875,7 +876,7 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
           .toList(),
     );
 
-Map<String, dynamic> _$$_TaskToJson(_$_Task instance) {
+Map<String, dynamic> _$$TaskImplToJson(_$TaskImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -945,8 +946,9 @@ Map<String, dynamic> _$$_TaskToJson(_$_Task instance) {
   return val;
 }
 
-_$_TaskRestriction _$$_TaskRestrictionFromJson(Map<String, dynamic> json) =>
-    _$_TaskRestriction(
+_$TaskRestrictionImpl _$$TaskRestrictionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TaskRestrictionImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -968,7 +970,8 @@ _$_TaskRestriction _$$_TaskRestrictionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_TaskRestrictionToJson(_$_TaskRestriction instance) {
+Map<String, dynamic> _$$TaskRestrictionImplToJson(
+    _$TaskRestrictionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -990,7 +993,8 @@ Map<String, dynamic> _$$_TaskRestrictionToJson(_$_TaskRestriction instance) {
   return val;
 }
 
-_$_TaskInput _$$_TaskInputFromJson(Map<String, dynamic> json) => _$_TaskInput(
+_$TaskInputImpl _$$TaskInputImplFromJson(Map<String, dynamic> json) =>
+    _$TaskInputImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1218,7 +1222,7 @@ _$_TaskInput _$$_TaskInputFromJson(Map<String, dynamic> json) => _$_TaskInput(
           : FhirMeta.fromJson(json['valueMeta'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TaskInputToJson(_$_TaskInput instance) {
+Map<String, dynamic> _$$TaskInputImplToJson(_$TaskInputImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1308,8 +1312,8 @@ Map<String, dynamic> _$$_TaskInputToJson(_$_TaskInput instance) {
   return val;
 }
 
-_$_TaskOutput _$$_TaskOutputFromJson(Map<String, dynamic> json) =>
-    _$_TaskOutput(
+_$TaskOutputImpl _$$TaskOutputImplFromJson(Map<String, dynamic> json) =>
+    _$TaskOutputImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1537,7 +1541,7 @@ _$_TaskOutput _$$_TaskOutputFromJson(Map<String, dynamic> json) =>
           : FhirMeta.fromJson(json['valueMeta'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_TaskOutputToJson(_$_TaskOutput instance) {
+Map<String, dynamic> _$$TaskOutputImplToJson(_$TaskOutputImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1627,9 +1631,9 @@ Map<String, dynamic> _$$_TaskOutputToJson(_$_TaskOutput instance) {
   return val;
 }
 
-_$_VerificationResult _$$_VerificationResultFromJson(
+_$VerificationResultImpl _$$VerificationResultImplFromJson(
         Map<String, dynamic> json) =>
-    _$_VerificationResult(
+    _$VerificationResultImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.VerificationResult) ??
@@ -1725,8 +1729,8 @@ _$_VerificationResult _$$_VerificationResultFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_VerificationResultToJson(
-    _$_VerificationResult instance) {
+Map<String, dynamic> _$$VerificationResultImplToJson(
+    _$VerificationResultImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1776,46 +1780,47 @@ Map<String, dynamic> _$$_VerificationResultToJson(
   return val;
 }
 
-_$_VerificationResultPrimarySource _$$_VerificationResultPrimarySourceFromJson(
-        Map<String, dynamic> json) =>
-    _$_VerificationResultPrimarySource(
-      fhirId: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      who: json['who'] == null
-          ? null
-          : Reference.fromJson(json['who'] as Map<String, dynamic>),
-      type: (json['type'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      communicationMethod: (json['communicationMethod'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      validationStatus: json['validationStatus'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['validationStatus'] as Map<String, dynamic>),
-      validationDate: json['validationDate'] == null
-          ? null
-          : FhirDateTime.fromJson(json['validationDate']),
-      validationDateElement: json['_validationDate'] == null
-          ? null
-          : Element.fromJson(json['_validationDate'] as Map<String, dynamic>),
-      canPushUpdates: json['canPushUpdates'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['canPushUpdates'] as Map<String, dynamic>),
-      pushTypeAvailable: (json['pushTypeAvailable'] as List<dynamic>?)
-          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+_$VerificationResultPrimarySourceImpl
+    _$$VerificationResultPrimarySourceImplFromJson(Map<String, dynamic> json) =>
+        _$VerificationResultPrimarySourceImpl(
+          fhirId: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          who: json['who'] == null
+              ? null
+              : Reference.fromJson(json['who'] as Map<String, dynamic>),
+          type: (json['type'] as List<dynamic>?)
+              ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          communicationMethod: (json['communicationMethod'] as List<dynamic>?)
+              ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          validationStatus: json['validationStatus'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['validationStatus'] as Map<String, dynamic>),
+          validationDate: json['validationDate'] == null
+              ? null
+              : FhirDateTime.fromJson(json['validationDate']),
+          validationDateElement: json['_validationDate'] == null
+              ? null
+              : Element.fromJson(
+                  json['_validationDate'] as Map<String, dynamic>),
+          canPushUpdates: json['canPushUpdates'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['canPushUpdates'] as Map<String, dynamic>),
+          pushTypeAvailable: (json['pushTypeAvailable'] as List<dynamic>?)
+              ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+              .toList(),
+        );
 
-Map<String, dynamic> _$$_VerificationResultPrimarySourceToJson(
-    _$_VerificationResultPrimarySource instance) {
+Map<String, dynamic> _$$VerificationResultPrimarySourceImplToJson(
+    _$VerificationResultPrimarySourceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1842,51 +1847,55 @@ Map<String, dynamic> _$$_VerificationResultPrimarySourceToJson(
   return val;
 }
 
-_$_VerificationResultAttestation _$$_VerificationResultAttestationFromJson(
-        Map<String, dynamic> json) =>
-    _$_VerificationResultAttestation(
-      fhirId: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      who: json['who'] == null
-          ? null
-          : Reference.fromJson(json['who'] as Map<String, dynamic>),
-      onBehalfOf: json['onBehalfOf'] == null
-          ? null
-          : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
-      communicationMethod: json['communicationMethod'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['communicationMethod'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
-      dateElement: json['_date'] == null
-          ? null
-          : Element.fromJson(json['_date'] as Map<String, dynamic>),
-      sourceIdentityCertificate: json['sourceIdentityCertificate'] as String?,
-      sourceIdentityCertificateElement:
-          json['_sourceIdentityCertificate'] == null
+_$VerificationResultAttestationImpl
+    _$$VerificationResultAttestationImplFromJson(Map<String, dynamic> json) =>
+        _$VerificationResultAttestationImpl(
+          fhirId: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          who: json['who'] == null
+              ? null
+              : Reference.fromJson(json['who'] as Map<String, dynamic>),
+          onBehalfOf: json['onBehalfOf'] == null
+              ? null
+              : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
+          communicationMethod: json['communicationMethod'] == null
+              ? null
+              : CodeableConcept.fromJson(
+                  json['communicationMethod'] as Map<String, dynamic>),
+          date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+          dateElement: json['_date'] == null
+              ? null
+              : Element.fromJson(json['_date'] as Map<String, dynamic>),
+          sourceIdentityCertificate:
+              json['sourceIdentityCertificate'] as String?,
+          sourceIdentityCertificateElement:
+              json['_sourceIdentityCertificate'] == null
+                  ? null
+                  : Element.fromJson(json['_sourceIdentityCertificate']
+                      as Map<String, dynamic>),
+          proxyIdentityCertificate: json['proxyIdentityCertificate'] as String?,
+          proxyIdentityCertificateElement: json['_proxyIdentityCertificate'] ==
+                  null
               ? null
               : Element.fromJson(
-                  json['_sourceIdentityCertificate'] as Map<String, dynamic>),
-      proxyIdentityCertificate: json['proxyIdentityCertificate'] as String?,
-      proxyIdentityCertificateElement: json['_proxyIdentityCertificate'] == null
-          ? null
-          : Element.fromJson(
-              json['_proxyIdentityCertificate'] as Map<String, dynamic>),
-      proxySignature: json['proxySignature'] == null
-          ? null
-          : Signature.fromJson(json['proxySignature'] as Map<String, dynamic>),
-      sourceSignature: json['sourceSignature'] == null
-          ? null
-          : Signature.fromJson(json['sourceSignature'] as Map<String, dynamic>),
-    );
+                  json['_proxyIdentityCertificate'] as Map<String, dynamic>),
+          proxySignature: json['proxySignature'] == null
+              ? null
+              : Signature.fromJson(
+                  json['proxySignature'] as Map<String, dynamic>),
+          sourceSignature: json['sourceSignature'] == null
+              ? null
+              : Signature.fromJson(
+                  json['sourceSignature'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_VerificationResultAttestationToJson(
-    _$_VerificationResultAttestation instance) {
+Map<String, dynamic> _$$VerificationResultAttestationImplToJson(
+    _$VerificationResultAttestationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1916,9 +1925,9 @@ Map<String, dynamic> _$$_VerificationResultAttestationToJson(
   return val;
 }
 
-_$_VerificationResultValidator _$$_VerificationResultValidatorFromJson(
+_$VerificationResultValidatorImpl _$$VerificationResultValidatorImplFromJson(
         Map<String, dynamic> json) =>
-    _$_VerificationResultValidator(
+    _$VerificationResultValidatorImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1939,8 +1948,8 @@ _$_VerificationResultValidator _$$_VerificationResultValidatorFromJson(
               json['attestationSignature'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_VerificationResultValidatorToJson(
-    _$_VerificationResultValidator instance) {
+Map<String, dynamic> _$$VerificationResultValidatorImplToJson(
+    _$VerificationResultValidatorImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

@@ -6,13 +6,13 @@ part of 'content.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_StructureDefinition _$$_StructureDefinitionFromJson(
+_$StructureDefinitionImpl _$$StructureDefinitionImplFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
     requiredKeys: const ['status'],
   );
-  return _$_StructureDefinition(
+  return _$StructureDefinitionImpl(
     resourceType: $enumDecodeNullable(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.StructureDefinition) ??
@@ -141,8 +141,8 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
   );
 }
 
-Map<String, dynamic> _$$_StructureDefinitionToJson(
-    _$_StructureDefinition instance) {
+Map<String, dynamic> _$$StructureDefinitionImplToJson(
+    _$StructureDefinitionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -330,9 +330,9 @@ const _$StructureDefinitionContextTypeEnumMap = {
   StructureDefinitionContextType.unknown: 'unknown',
 };
 
-_$_StructureDefinitionContact _$$_StructureDefinitionContactFromJson(
+_$StructureDefinitionContactImpl _$$StructureDefinitionContactImplFromJson(
         Map<String, dynamic> json) =>
-    _$_StructureDefinitionContact(
+    _$StructureDefinitionContactImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -346,8 +346,8 @@ _$_StructureDefinitionContact _$$_StructureDefinitionContactFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_StructureDefinitionContactToJson(
-    _$_StructureDefinitionContact instance) {
+Map<String, dynamic> _$$StructureDefinitionContactImplToJson(
+    _$StructureDefinitionContactImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -366,9 +366,9 @@ Map<String, dynamic> _$$_StructureDefinitionContactToJson(
   return val;
 }
 
-_$_StructureDefinitionMapping _$$_StructureDefinitionMappingFromJson(
+_$StructureDefinitionMappingImpl _$$StructureDefinitionMappingImplFromJson(
         Map<String, dynamic> json) =>
-    _$_StructureDefinitionMapping(
+    _$StructureDefinitionMappingImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -397,8 +397,8 @@ _$_StructureDefinitionMapping _$$_StructureDefinitionMappingFromJson(
           : Element.fromJson(json['_comments'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_StructureDefinitionMappingToJson(
-    _$_StructureDefinitionMapping instance) {
+Map<String, dynamic> _$$StructureDefinitionMappingImplToJson(
+    _$StructureDefinitionMappingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -424,9 +424,9 @@ Map<String, dynamic> _$$_StructureDefinitionMappingToJson(
   return val;
 }
 
-_$_StructureDefinitionSnapshot _$$_StructureDefinitionSnapshotFromJson(
+_$StructureDefinitionSnapshotImpl _$$StructureDefinitionSnapshotImplFromJson(
         Map<String, dynamic> json) =>
-    _$_StructureDefinitionSnapshot(
+    _$StructureDefinitionSnapshotImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -439,8 +439,8 @@ _$_StructureDefinitionSnapshot _$$_StructureDefinitionSnapshotFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_StructureDefinitionSnapshotToJson(
-    _$_StructureDefinitionSnapshot instance) {
+Map<String, dynamic> _$$StructureDefinitionSnapshotImplToJson(
+    _$StructureDefinitionSnapshotImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -458,23 +458,23 @@ Map<String, dynamic> _$$_StructureDefinitionSnapshotToJson(
   return val;
 }
 
-_$_StructureDefinitionDifferential _$$_StructureDefinitionDifferentialFromJson(
-        Map<String, dynamic> json) =>
-    _$_StructureDefinitionDifferential(
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      element: (json['element'] as List<dynamic>)
-          .map((e) => ElementDefinition.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
+_$StructureDefinitionDifferentialImpl
+    _$$StructureDefinitionDifferentialImplFromJson(Map<String, dynamic> json) =>
+        _$StructureDefinitionDifferentialImpl(
+          fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          element: (json['element'] as List<dynamic>)
+              .map((e) => ElementDefinition.fromJson(e as Map<String, dynamic>))
+              .toList(),
+        );
 
-Map<String, dynamic> _$$_StructureDefinitionDifferentialToJson(
-    _$_StructureDefinitionDifferential instance) {
+Map<String, dynamic> _$$StructureDefinitionDifferentialImplToJson(
+    _$StructureDefinitionDifferentialImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -492,8 +492,8 @@ Map<String, dynamic> _$$_StructureDefinitionDifferentialToJson(
   return val;
 }
 
-_$_DataElement _$$_DataElementFromJson(Map<String, dynamic> json) =>
-    _$_DataElement(
+_$DataElementImpl _$$DataElementImplFromJson(Map<String, dynamic> json) =>
+    _$DataElementImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DataElement) ??
@@ -557,7 +557,7 @@ _$_DataElement _$$_DataElementFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DataElementToJson(_$_DataElement instance) {
+Map<String, dynamic> _$$DataElementImplToJson(_$DataElementImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -618,9 +618,9 @@ const _$DataElementStringencyEnumMap = {
   DataElementStringency.unknown: 'unknown',
 };
 
-_$_DataElementContact _$$_DataElementContactFromJson(
+_$DataElementContactImpl _$$DataElementContactImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DataElementContact(
+    _$DataElementContactImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -634,8 +634,8 @@ _$_DataElementContact _$$_DataElementContactFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_DataElementContactToJson(
-    _$_DataElementContact instance) {
+Map<String, dynamic> _$$DataElementContactImplToJson(
+    _$DataElementContactImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -654,9 +654,9 @@ Map<String, dynamic> _$$_DataElementContactToJson(
   return val;
 }
 
-_$_DataElementMapping _$$_DataElementMappingFromJson(
+_$DataElementMappingImpl _$$DataElementMappingImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DataElementMapping(
+    _$DataElementMappingImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -685,8 +685,8 @@ _$_DataElementMapping _$$_DataElementMappingFromJson(
           : Element.fromJson(json['_comment'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DataElementMappingToJson(
-    _$_DataElementMapping instance) {
+Map<String, dynamic> _$$DataElementMappingImplToJson(
+    _$DataElementMappingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

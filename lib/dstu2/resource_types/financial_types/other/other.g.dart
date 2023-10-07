@@ -6,9 +6,9 @@ part of 'other.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
+_$ExplanationOfBenefitImpl _$$ExplanationOfBenefitImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ExplanationOfBenefit(
+    _$ExplanationOfBenefitImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ExplanationOfBenefit) ??
@@ -81,8 +81,8 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
               json['requestOrganization'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ExplanationOfBenefitToJson(
-    _$_ExplanationOfBenefit instance) {
+Map<String, dynamic> _$$ExplanationOfBenefitImplToJson(
+    _$ExplanationOfBenefitImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };

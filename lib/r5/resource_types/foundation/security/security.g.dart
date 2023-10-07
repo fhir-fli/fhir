@@ -6,8 +6,8 @@ part of 'security.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
-    _$_AuditEvent(
+_$AuditEventImpl _$$AuditEventImplFromJson(Map<String, dynamic> json) =>
+    _$AuditEventImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.AuditEvent) ??
@@ -92,7 +92,7 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AuditEventToJson(_$_AuditEvent instance) {
+Map<String, dynamic> _$$AuditEventImplToJson(_$AuditEventImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -302,8 +302,9 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_AuditEventOutcome _$$_AuditEventOutcomeFromJson(Map<String, dynamic> json) =>
-    _$_AuditEventOutcome(
+_$AuditEventOutcomeImpl _$$AuditEventOutcomeImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AuditEventOutcomeImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -317,8 +318,8 @@ _$_AuditEventOutcome _$$_AuditEventOutcomeFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AuditEventOutcomeToJson(
-    _$_AuditEventOutcome instance) {
+Map<String, dynamic> _$$AuditEventOutcomeImplToJson(
+    _$AuditEventOutcomeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -337,8 +338,9 @@ Map<String, dynamic> _$$_AuditEventOutcomeToJson(
   return val;
 }
 
-_$_AuditEventAgent _$$_AuditEventAgentFromJson(Map<String, dynamic> json) =>
-    _$_AuditEventAgent(
+_$AuditEventAgentImpl _$$AuditEventAgentImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AuditEventAgentImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -386,7 +388,8 @@ _$_AuditEventAgent _$$_AuditEventAgentFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AuditEventAgentToJson(_$_AuditEventAgent instance) {
+Map<String, dynamic> _$$AuditEventAgentImplToJson(
+    _$AuditEventAgentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -419,8 +422,9 @@ Map<String, dynamic> _$$_AuditEventAgentToJson(_$_AuditEventAgent instance) {
   return val;
 }
 
-_$_AuditEventSource _$$_AuditEventSourceFromJson(Map<String, dynamic> json) =>
-    _$_AuditEventSource(
+_$AuditEventSourceImpl _$$AuditEventSourceImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AuditEventSourceImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -437,7 +441,8 @@ _$_AuditEventSource _$$_AuditEventSourceFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AuditEventSourceToJson(_$_AuditEventSource instance) {
+Map<String, dynamic> _$$AuditEventSourceImplToJson(
+    _$AuditEventSourceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -457,8 +462,9 @@ Map<String, dynamic> _$$_AuditEventSourceToJson(_$_AuditEventSource instance) {
   return val;
 }
 
-_$_AuditEventEntity _$$_AuditEventEntityFromJson(Map<String, dynamic> json) =>
-    _$_AuditEventEntity(
+_$AuditEventEntityImpl _$$AuditEventEntityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AuditEventEntityImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -489,7 +495,8 @@ _$_AuditEventEntity _$$_AuditEventEntityFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_AuditEventEntityToJson(_$_AuditEventEntity instance) {
+Map<String, dynamic> _$$AuditEventEntityImplToJson(
+    _$AuditEventEntityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -514,8 +521,9 @@ Map<String, dynamic> _$$_AuditEventEntityToJson(_$_AuditEventEntity instance) {
   return val;
 }
 
-_$_AuditEventDetail _$$_AuditEventDetailFromJson(Map<String, dynamic> json) =>
-    _$_AuditEventDetail(
+_$AuditEventDetailImpl _$$AuditEventDetailImplFromJson(
+        Map<String, dynamic> json) =>
+    _$AuditEventDetailImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -577,7 +585,8 @@ _$_AuditEventDetail _$$_AuditEventDetailFromJson(Map<String, dynamic> json) =>
               json['_valueBase64Binary'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_AuditEventDetailToJson(_$_AuditEventDetail instance) {
+Map<String, dynamic> _$$AuditEventDetailImplToJson(
+    _$AuditEventDetailImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -613,7 +622,8 @@ Map<String, dynamic> _$$_AuditEventDetailToJson(_$_AuditEventDetail instance) {
   return val;
 }
 
-_$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
+_$ConsentImpl _$$ConsentImplFromJson(Map<String, dynamic> json) =>
+    _$ConsentImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Consent) ??
@@ -707,7 +717,7 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
+Map<String, dynamic> _$$ConsentImplToJson(_$ConsentImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -763,9 +773,9 @@ Map<String, dynamic> _$$_ConsentToJson(_$_Consent instance) {
   return val;
 }
 
-_$_ConsentPolicyBasis _$$_ConsentPolicyBasisFromJson(
+_$ConsentPolicyBasisImpl _$$ConsentPolicyBasisImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ConsentPolicyBasis(
+    _$ConsentPolicyBasisImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -782,8 +792,8 @@ _$_ConsentPolicyBasis _$$_ConsentPolicyBasisFromJson(
           : Element.fromJson(json['_url'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ConsentPolicyBasisToJson(
-    _$_ConsentPolicyBasis instance) {
+Map<String, dynamic> _$$ConsentPolicyBasisImplToJson(
+    _$ConsentPolicyBasisImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -803,9 +813,9 @@ Map<String, dynamic> _$$_ConsentPolicyBasisToJson(
   return val;
 }
 
-_$_ConsentVerification _$$_ConsentVerificationFromJson(
+_$ConsentVerificationImpl _$$ConsentVerificationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ConsentVerification(
+    _$ConsentVerificationImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -837,8 +847,8 @@ _$_ConsentVerification _$$_ConsentVerificationFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ConsentVerificationToJson(
-    _$_ConsentVerification instance) {
+Map<String, dynamic> _$$ConsentVerificationImplToJson(
+    _$ConsentVerificationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -864,8 +874,9 @@ Map<String, dynamic> _$$_ConsentVerificationToJson(
   return val;
 }
 
-_$_ConsentProvision _$$_ConsentProvisionFromJson(Map<String, dynamic> json) =>
-    _$_ConsentProvision(
+_$ConsentProvisionImpl _$$ConsentProvisionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ConsentProvisionImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -911,7 +922,8 @@ _$_ConsentProvision _$$_ConsentProvisionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ConsentProvisionToJson(_$_ConsentProvision instance) {
+Map<String, dynamic> _$$ConsentProvisionImplToJson(
+    _$ConsentProvisionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -944,8 +956,8 @@ Map<String, dynamic> _$$_ConsentProvisionToJson(_$_ConsentProvision instance) {
   return val;
 }
 
-_$_ConsentActor _$$_ConsentActorFromJson(Map<String, dynamic> json) =>
-    _$_ConsentActor(
+_$ConsentActorImpl _$$ConsentActorImplFromJson(Map<String, dynamic> json) =>
+    _$ConsentActorImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -961,7 +973,7 @@ _$_ConsentActor _$$_ConsentActorFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ConsentActorToJson(_$_ConsentActor instance) {
+Map<String, dynamic> _$$ConsentActorImplToJson(_$ConsentActorImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -980,8 +992,8 @@ Map<String, dynamic> _$$_ConsentActorToJson(_$_ConsentActor instance) {
   return val;
 }
 
-_$_ConsentData _$$_ConsentDataFromJson(Map<String, dynamic> json) =>
-    _$_ConsentData(
+_$ConsentDataImpl _$$ConsentDataImplFromJson(Map<String, dynamic> json) =>
+    _$ConsentDataImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -997,7 +1009,7 @@ _$_ConsentData _$$_ConsentDataFromJson(Map<String, dynamic> json) =>
       reference: Reference.fromJson(json['reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ConsentDataToJson(_$_ConsentData instance) {
+Map<String, dynamic> _$$ConsentDataImplToJson(_$ConsentDataImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1017,8 +1029,8 @@ Map<String, dynamic> _$$_ConsentDataToJson(_$_ConsentData instance) {
   return val;
 }
 
-_$_Permission _$$_PermissionFromJson(Map<String, dynamic> json) =>
-    _$_Permission(
+_$PermissionImpl _$$PermissionImplFromJson(Map<String, dynamic> json) =>
+    _$PermissionImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Permission) ??
@@ -1081,7 +1093,7 @@ _$_Permission _$$_PermissionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_PermissionToJson(_$_Permission instance) {
+Map<String, dynamic> _$$PermissionImplToJson(_$PermissionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1118,9 +1130,9 @@ Map<String, dynamic> _$$_PermissionToJson(_$_Permission instance) {
   return val;
 }
 
-_$_PermissionJustification _$$_PermissionJustificationFromJson(
+_$PermissionJustificationImpl _$$PermissionJustificationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PermissionJustification(
+    _$PermissionJustificationImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1136,8 +1148,8 @@ _$_PermissionJustification _$$_PermissionJustificationFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_PermissionJustificationToJson(
-    _$_PermissionJustification instance) {
+Map<String, dynamic> _$$PermissionJustificationImplToJson(
+    _$PermissionJustificationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1156,8 +1168,8 @@ Map<String, dynamic> _$$_PermissionJustificationToJson(
   return val;
 }
 
-_$_PermissionRule _$$_PermissionRuleFromJson(Map<String, dynamic> json) =>
-    _$_PermissionRule(
+_$PermissionRuleImpl _$$PermissionRuleImplFromJson(Map<String, dynamic> json) =>
+    _$PermissionRuleImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1180,7 +1192,8 @@ _$_PermissionRule _$$_PermissionRuleFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_PermissionRuleToJson(_$_PermissionRule instance) {
+Map<String, dynamic> _$$PermissionRuleImplToJson(
+    _$PermissionRuleImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1202,8 +1215,8 @@ Map<String, dynamic> _$$_PermissionRuleToJson(_$_PermissionRule instance) {
   return val;
 }
 
-_$_PermissionData _$$_PermissionDataFromJson(Map<String, dynamic> json) =>
-    _$_PermissionData(
+_$PermissionDataImpl _$$PermissionDataImplFromJson(Map<String, dynamic> json) =>
+    _$PermissionDataImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1225,7 +1238,8 @@ _$_PermissionData _$$_PermissionDataFromJson(Map<String, dynamic> json) =>
           : FhirExpression.fromJson(json['expression'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PermissionDataToJson(_$_PermissionData instance) {
+Map<String, dynamic> _$$PermissionDataImplToJson(
+    _$PermissionDataImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1246,9 +1260,9 @@ Map<String, dynamic> _$$_PermissionDataToJson(_$_PermissionData instance) {
   return val;
 }
 
-_$_PermissionResource _$$_PermissionResourceFromJson(
+_$PermissionResourceImpl _$$PermissionResourceImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PermissionResource(
+    _$PermissionResourceImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1264,8 +1278,8 @@ _$_PermissionResource _$$_PermissionResourceFromJson(
       reference: Reference.fromJson(json['reference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PermissionResourceToJson(
-    _$_PermissionResource instance) {
+Map<String, dynamic> _$$PermissionResourceImplToJson(
+    _$PermissionResourceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1285,9 +1299,9 @@ Map<String, dynamic> _$$_PermissionResourceToJson(
   return val;
 }
 
-_$_PermissionActivity _$$_PermissionActivityFromJson(
+_$PermissionActivityImpl _$$PermissionActivityImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PermissionActivity(
+    _$PermissionActivityImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1306,8 +1320,8 @@ _$_PermissionActivity _$$_PermissionActivityFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_PermissionActivityToJson(
-    _$_PermissionActivity instance) {
+Map<String, dynamic> _$$PermissionActivityImplToJson(
+    _$PermissionActivityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1327,8 +1341,8 @@ Map<String, dynamic> _$$_PermissionActivityToJson(
   return val;
 }
 
-_$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
-    _$_Provenance(
+_$ProvenanceImpl _$$ProvenanceImplFromJson(Map<String, dynamic> json) =>
+    _$ProvenanceImpl(
       resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Provenance) ??
@@ -1413,7 +1427,7 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ProvenanceToJson(_$_Provenance instance) {
+Map<String, dynamic> _$$ProvenanceImplToJson(_$ProvenanceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1460,8 +1474,9 @@ Map<String, dynamic> _$$_ProvenanceToJson(_$_Provenance instance) {
   return val;
 }
 
-_$_ProvenanceAgent _$$_ProvenanceAgentFromJson(Map<String, dynamic> json) =>
-    _$_ProvenanceAgent(
+_$ProvenanceAgentImpl _$$ProvenanceAgentImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ProvenanceAgentImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1481,7 +1496,8 @@ _$_ProvenanceAgent _$$_ProvenanceAgentFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ProvenanceAgentToJson(_$_ProvenanceAgent instance) {
+Map<String, dynamic> _$$ProvenanceAgentImplToJson(
+    _$ProvenanceAgentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1502,8 +1518,9 @@ Map<String, dynamic> _$$_ProvenanceAgentToJson(_$_ProvenanceAgent instance) {
   return val;
 }
 
-_$_ProvenanceEntity _$$_ProvenanceEntityFromJson(Map<String, dynamic> json) =>
-    _$_ProvenanceEntity(
+_$ProvenanceEntityImpl _$$ProvenanceEntityImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ProvenanceEntityImpl(
       fhirId: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1521,7 +1538,8 @@ _$_ProvenanceEntity _$$_ProvenanceEntityFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ProvenanceEntityToJson(_$_ProvenanceEntity instance) {
+Map<String, dynamic> _$$ProvenanceEntityImplToJson(
+    _$ProvenanceEntityImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

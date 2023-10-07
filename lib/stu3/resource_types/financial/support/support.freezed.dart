@@ -529,10 +529,11 @@ class _$CoverageCopyWithImpl<$Res, $Val extends Coverage>
 }
 
 /// @nodoc
-abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
-  factory _$$_CoverageCopyWith(
-          _$_Coverage value, $Res Function(_$_Coverage) then) =
-      __$$_CoverageCopyWithImpl<$Res>;
+abstract class _$$CoverageImplCopyWith<$Res>
+    implements $CoverageCopyWith<$Res> {
+  factory _$$CoverageImplCopyWith(
+          _$CoverageImpl value, $Res Function(_$CoverageImpl) then) =
+      __$$CoverageImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -609,11 +610,11 @@ abstract class _$$_CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_CoverageCopyWithImpl<$Res>
-    extends _$CoverageCopyWithImpl<$Res, _$_Coverage>
-    implements _$$_CoverageCopyWith<$Res> {
-  __$$_CoverageCopyWithImpl(
-      _$_Coverage _value, $Res Function(_$_Coverage) _then)
+class __$$CoverageImplCopyWithImpl<$Res>
+    extends _$CoverageCopyWithImpl<$Res, _$CoverageImpl>
+    implements _$$CoverageImplCopyWith<$Res> {
+  __$$CoverageImplCopyWithImpl(
+      _$CoverageImpl _value, $Res Function(_$CoverageImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -654,7 +655,7 @@ class __$$_CoverageCopyWithImpl<$Res>
     Object? networkElement = freezed,
     Object? contract = freezed,
   }) {
-    return _then(_$_Coverage(
+    return _then(_$CoverageImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -797,8 +798,8 @@ class __$$_CoverageCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_Coverage extends _Coverage {
-  const _$_Coverage(
+class _$CoverageImpl extends _Coverage {
+  const _$CoverageImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
       this.resourceType = Stu3ResourceType.Coverage,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -842,8 +843,8 @@ class _$_Coverage extends _Coverage {
         _contract = contract,
         super._();
 
-  factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
-      _$$_CoverageFromJson(json);
+  factory _$CoverageImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CoverageImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
@@ -983,7 +984,7 @@ class _$_Coverage extends _Coverage {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Coverage &&
+            other is _$CoverageImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -1086,12 +1087,12 @@ class _$_Coverage extends _Coverage {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageCopyWith<_$_Coverage> get copyWith =>
-      __$$_CoverageCopyWithImpl<_$_Coverage>(this, _$identity);
+  _$$CoverageImplCopyWith<_$CoverageImpl> get copyWith =>
+      __$$CoverageImplCopyWithImpl<_$CoverageImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageToJson(
+    return _$$CoverageImplToJson(
       this,
     );
   }
@@ -1133,10 +1134,11 @@ abstract class _Coverage extends Coverage {
       @JsonKey(name: '_order') final Element? orderElement,
       final String? network,
       @JsonKey(name: '_network') final Element? networkElement,
-      final List<Reference>? contract}) = _$_Coverage;
+      final List<Reference>? contract}) = _$CoverageImpl;
   const _Coverage._() : super._();
 
-  factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
+  factory _Coverage.fromJson(Map<String, dynamic> json) =
+      _$CoverageImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
@@ -1220,7 +1222,7 @@ abstract class _Coverage extends Coverage {
   List<Reference>? get contract;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageCopyWith<_$_Coverage> get copyWith =>
+  _$$CoverageImplCopyWith<_$CoverageImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -1604,11 +1606,11 @@ class _$CoverageGroupingCopyWithImpl<$Res, $Val extends CoverageGrouping>
 }
 
 /// @nodoc
-abstract class _$$_CoverageGroupingCopyWith<$Res>
+abstract class _$$CoverageGroupingImplCopyWith<$Res>
     implements $CoverageGroupingCopyWith<$Res> {
-  factory _$$_CoverageGroupingCopyWith(
-          _$_CoverageGrouping value, $Res Function(_$_CoverageGrouping) then) =
-      __$$_CoverageGroupingCopyWithImpl<$Res>;
+  factory _$$CoverageGroupingImplCopyWith(_$CoverageGroupingImpl value,
+          $Res Function(_$CoverageGroupingImpl) then) =
+      __$$CoverageGroupingImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -1664,11 +1666,11 @@ abstract class _$$_CoverageGroupingCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_CoverageGroupingCopyWithImpl<$Res>
-    extends _$CoverageGroupingCopyWithImpl<$Res, _$_CoverageGrouping>
-    implements _$$_CoverageGroupingCopyWith<$Res> {
-  __$$_CoverageGroupingCopyWithImpl(
-      _$_CoverageGrouping _value, $Res Function(_$_CoverageGrouping) _then)
+class __$$CoverageGroupingImplCopyWithImpl<$Res>
+    extends _$CoverageGroupingCopyWithImpl<$Res, _$CoverageGroupingImpl>
+    implements _$$CoverageGroupingImplCopyWith<$Res> {
+  __$$CoverageGroupingImplCopyWithImpl(_$CoverageGroupingImpl _value,
+      $Res Function(_$CoverageGroupingImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1699,7 +1701,7 @@ class __$$_CoverageGroupingCopyWithImpl<$Res>
     Object? subClassDisplay = freezed,
     Object? subClassDisplayElement = freezed,
   }) {
-    return _then(_$_CoverageGrouping(
+    return _then(_$CoverageGroupingImpl(
       group: freezed == group
           ? _value.group
           : group // ignore: cast_nullable_to_non_nullable
@@ -1802,8 +1804,8 @@ class __$$_CoverageGroupingCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_CoverageGrouping extends _CoverageGrouping {
-  const _$_CoverageGrouping(
+class _$CoverageGroupingImpl extends _CoverageGrouping {
+  const _$CoverageGroupingImpl(
       {this.group,
       @JsonKey(name: '_group') this.groupElement,
       this.groupDisplay,
@@ -1830,8 +1832,8 @@ class _$_CoverageGrouping extends _CoverageGrouping {
       @JsonKey(name: '_subClassDisplay') this.subClassDisplayElement})
       : super._();
 
-  factory _$_CoverageGrouping.fromJson(Map<String, dynamic> json) =>
-      _$$_CoverageGroupingFromJson(json);
+  factory _$CoverageGroupingImpl.fromJson(Map<String, dynamic> json) =>
+      _$$CoverageGroupingImplFromJson(json);
 
   @override
   final String? group;
@@ -1904,7 +1906,7 @@ class _$_CoverageGrouping extends _CoverageGrouping {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CoverageGrouping &&
+            other is _$CoverageGroupingImpl &&
             (identical(other.group, group) || other.group == group) &&
             (identical(other.groupElement, groupElement) ||
                 other.groupElement == groupElement) &&
@@ -1984,12 +1986,13 @@ class _$_CoverageGrouping extends _CoverageGrouping {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_CoverageGroupingCopyWith<_$_CoverageGrouping> get copyWith =>
-      __$$_CoverageGroupingCopyWithImpl<_$_CoverageGrouping>(this, _$identity);
+  _$$CoverageGroupingImplCopyWith<_$CoverageGroupingImpl> get copyWith =>
+      __$$CoverageGroupingImplCopyWithImpl<_$CoverageGroupingImpl>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_CoverageGroupingToJson(
+    return _$$CoverageGroupingImplToJson(
       this,
     );
   }
@@ -2021,11 +2024,11 @@ abstract class _CoverageGrouping extends CoverageGrouping {
       @JsonKey(name: '_subClass') final Element? subClassElement,
       final String? subClassDisplay,
       @JsonKey(name: '_subClassDisplay')
-      final Element? subClassDisplayElement}) = _$_CoverageGrouping;
+      final Element? subClassDisplayElement}) = _$CoverageGroupingImpl;
   const _CoverageGrouping._() : super._();
 
   factory _CoverageGrouping.fromJson(Map<String, dynamic> json) =
-      _$_CoverageGrouping.fromJson;
+      _$CoverageGroupingImpl.fromJson;
 
   @override
   String? get group;
@@ -2090,7 +2093,7 @@ abstract class _CoverageGrouping extends CoverageGrouping {
   Element? get subClassDisplayElement;
   @override
   @JsonKey(ignore: true)
-  _$$_CoverageGroupingCopyWith<_$_CoverageGrouping> get copyWith =>
+  _$$CoverageGroupingImplCopyWith<_$CoverageGroupingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -2621,11 +2624,11 @@ class _$EligibilityRequestCopyWithImpl<$Res, $Val extends EligibilityRequest>
 }
 
 /// @nodoc
-abstract class _$$_EligibilityRequestCopyWith<$Res>
+abstract class _$$EligibilityRequestImplCopyWith<$Res>
     implements $EligibilityRequestCopyWith<$Res> {
-  factory _$$_EligibilityRequestCopyWith(_$_EligibilityRequest value,
-          $Res Function(_$_EligibilityRequest) then) =
-      __$$_EligibilityRequestCopyWithImpl<$Res>;
+  factory _$$EligibilityRequestImplCopyWith(_$EligibilityRequestImpl value,
+          $Res Function(_$EligibilityRequestImpl) then) =
+      __$$EligibilityRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -2705,11 +2708,11 @@ abstract class _$$_EligibilityRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EligibilityRequestCopyWithImpl<$Res>
-    extends _$EligibilityRequestCopyWithImpl<$Res, _$_EligibilityRequest>
-    implements _$$_EligibilityRequestCopyWith<$Res> {
-  __$$_EligibilityRequestCopyWithImpl(
-      _$_EligibilityRequest _value, $Res Function(_$_EligibilityRequest) _then)
+class __$$EligibilityRequestImplCopyWithImpl<$Res>
+    extends _$EligibilityRequestCopyWithImpl<$Res, _$EligibilityRequestImpl>
+    implements _$$EligibilityRequestImplCopyWith<$Res> {
+  __$$EligibilityRequestImplCopyWithImpl(_$EligibilityRequestImpl _value,
+      $Res Function(_$EligibilityRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2748,7 +2751,7 @@ class __$$_EligibilityRequestCopyWithImpl<$Res>
     Object? benefitCategory = freezed,
     Object? benefitSubCategory = freezed,
   }) {
-    return _then(_$_EligibilityRequest(
+    return _then(_$EligibilityRequestImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -2883,8 +2886,8 @@ class __$$_EligibilityRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EligibilityRequest extends _EligibilityRequest {
-  const _$_EligibilityRequest(
+class _$EligibilityRequestImpl extends _EligibilityRequest {
+  const _$EligibilityRequestImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
       this.resourceType = Stu3ResourceType.EligibilityRequest,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -2924,8 +2927,8 @@ class _$_EligibilityRequest extends _EligibilityRequest {
         _identifier = identifier,
         super._();
 
-  factory _$_EligibilityRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_EligibilityRequestFromJson(json);
+  factory _$EligibilityRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EligibilityRequestImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
@@ -3044,7 +3047,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EligibilityRequest &&
+            other is _$EligibilityRequestImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -3145,13 +3148,13 @@ class _$_EligibilityRequest extends _EligibilityRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EligibilityRequestCopyWith<_$_EligibilityRequest> get copyWith =>
-      __$$_EligibilityRequestCopyWithImpl<_$_EligibilityRequest>(
+  _$$EligibilityRequestImplCopyWith<_$EligibilityRequestImpl> get copyWith =>
+      __$$EligibilityRequestImplCopyWithImpl<_$EligibilityRequestImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EligibilityRequestToJson(
+    return _$$EligibilityRequestImplToJson(
       this,
     );
   }
@@ -3192,11 +3195,11 @@ abstract class _EligibilityRequest extends EligibilityRequest {
       @JsonKey(name: '_businessArrangement')
       final Element? businessArrangementElement,
       final CodeableConcept? benefitCategory,
-      final CodeableConcept? benefitSubCategory}) = _$_EligibilityRequest;
+      final CodeableConcept? benefitSubCategory}) = _$EligibilityRequestImpl;
   const _EligibilityRequest._() : super._();
 
   factory _EligibilityRequest.fromJson(Map<String, dynamic> json) =
-      _$_EligibilityRequest.fromJson;
+      _$EligibilityRequestImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
@@ -3274,7 +3277,7 @@ abstract class _EligibilityRequest extends EligibilityRequest {
   CodeableConcept? get benefitSubCategory;
   @override
   @JsonKey(ignore: true)
-  _$$_EligibilityRequestCopyWith<_$_EligibilityRequest> get copyWith =>
+  _$$EligibilityRequestImplCopyWith<_$EligibilityRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -3720,11 +3723,11 @@ class _$EligibilityResponseCopyWithImpl<$Res, $Val extends EligibilityResponse>
 }
 
 /// @nodoc
-abstract class _$$_EligibilityResponseCopyWith<$Res>
+abstract class _$$EligibilityResponseImplCopyWith<$Res>
     implements $EligibilityResponseCopyWith<$Res> {
-  factory _$$_EligibilityResponseCopyWith(_$_EligibilityResponse value,
-          $Res Function(_$_EligibilityResponse) then) =
-      __$$_EligibilityResponseCopyWithImpl<$Res>;
+  factory _$$EligibilityResponseImplCopyWith(_$EligibilityResponseImpl value,
+          $Res Function(_$EligibilityResponseImpl) then) =
+      __$$EligibilityResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -3790,11 +3793,11 @@ abstract class _$$_EligibilityResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EligibilityResponseCopyWithImpl<$Res>
-    extends _$EligibilityResponseCopyWithImpl<$Res, _$_EligibilityResponse>
-    implements _$$_EligibilityResponseCopyWith<$Res> {
-  __$$_EligibilityResponseCopyWithImpl(_$_EligibilityResponse _value,
-      $Res Function(_$_EligibilityResponse) _then)
+class __$$EligibilityResponseImplCopyWithImpl<$Res>
+    extends _$EligibilityResponseCopyWithImpl<$Res, _$EligibilityResponseImpl>
+    implements _$$EligibilityResponseImplCopyWith<$Res> {
+  __$$EligibilityResponseImplCopyWithImpl(_$EligibilityResponseImpl _value,
+      $Res Function(_$EligibilityResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -3830,7 +3833,7 @@ class __$$_EligibilityResponseCopyWithImpl<$Res>
     Object? form = freezed,
     Object? error = freezed,
   }) {
-    return _then(_$_EligibilityResponse(
+    return _then(_$EligibilityResponseImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -3953,8 +3956,8 @@ class __$$_EligibilityResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EligibilityResponse extends _EligibilityResponse {
-  const _$_EligibilityResponse(
+class _$EligibilityResponseImpl extends _EligibilityResponse {
+  const _$EligibilityResponseImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
       this.resourceType = Stu3ResourceType.EligibilityResponse,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -3993,8 +3996,8 @@ class _$_EligibilityResponse extends _EligibilityResponse {
         _error = error,
         super._();
 
-  factory _$_EligibilityResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_EligibilityResponseFromJson(json);
+  factory _$EligibilityResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EligibilityResponseImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
@@ -4122,7 +4125,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EligibilityResponse &&
+            other is _$EligibilityResponseImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -4209,13 +4212,13 @@ class _$_EligibilityResponse extends _EligibilityResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EligibilityResponseCopyWith<_$_EligibilityResponse> get copyWith =>
-      __$$_EligibilityResponseCopyWithImpl<_$_EligibilityResponse>(
+  _$$EligibilityResponseImplCopyWith<_$EligibilityResponseImpl> get copyWith =>
+      __$$EligibilityResponseImplCopyWithImpl<_$EligibilityResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EligibilityResponseToJson(
+    return _$$EligibilityResponseImplToJson(
       this,
     );
   }
@@ -4252,11 +4255,11 @@ abstract class _EligibilityResponse extends EligibilityResponse {
       @JsonKey(name: '_inforce') final Element? inforceElement,
       final List<EligibilityResponseInsurance>? insurance,
       final CodeableConcept? form,
-      final List<EligibilityResponseError>? error}) = _$_EligibilityResponse;
+      final List<EligibilityResponseError>? error}) = _$EligibilityResponseImpl;
   const _EligibilityResponse._() : super._();
 
   factory _EligibilityResponse.fromJson(Map<String, dynamic> json) =
-      _$_EligibilityResponse.fromJson;
+      _$EligibilityResponseImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
@@ -4328,7 +4331,7 @@ abstract class _EligibilityResponse extends EligibilityResponse {
   List<EligibilityResponseError>? get error;
   @override
   @JsonKey(ignore: true)
-  _$$_EligibilityResponseCopyWith<_$_EligibilityResponse> get copyWith =>
+  _$$EligibilityResponseImplCopyWith<_$EligibilityResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -4427,12 +4430,12 @@ class _$EligibilityResponseInsuranceCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EligibilityResponseInsuranceCopyWith<$Res>
+abstract class _$$EligibilityResponseInsuranceImplCopyWith<$Res>
     implements $EligibilityResponseInsuranceCopyWith<$Res> {
-  factory _$$_EligibilityResponseInsuranceCopyWith(
-          _$_EligibilityResponseInsurance value,
-          $Res Function(_$_EligibilityResponseInsurance) then) =
-      __$$_EligibilityResponseInsuranceCopyWithImpl<$Res>;
+  factory _$$EligibilityResponseInsuranceImplCopyWith(
+          _$EligibilityResponseInsuranceImpl value,
+          $Res Function(_$EligibilityResponseInsuranceImpl) then) =
+      __$$EligibilityResponseInsuranceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4447,13 +4450,13 @@ abstract class _$$_EligibilityResponseInsuranceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EligibilityResponseInsuranceCopyWithImpl<$Res>
+class __$$EligibilityResponseInsuranceImplCopyWithImpl<$Res>
     extends _$EligibilityResponseInsuranceCopyWithImpl<$Res,
-        _$_EligibilityResponseInsurance>
-    implements _$$_EligibilityResponseInsuranceCopyWith<$Res> {
-  __$$_EligibilityResponseInsuranceCopyWithImpl(
-      _$_EligibilityResponseInsurance _value,
-      $Res Function(_$_EligibilityResponseInsurance) _then)
+        _$EligibilityResponseInsuranceImpl>
+    implements _$$EligibilityResponseInsuranceImplCopyWith<$Res> {
+  __$$EligibilityResponseInsuranceImplCopyWithImpl(
+      _$EligibilityResponseInsuranceImpl _value,
+      $Res Function(_$EligibilityResponseInsuranceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4463,7 +4466,7 @@ class __$$_EligibilityResponseInsuranceCopyWithImpl<$Res>
     Object? contract = freezed,
     Object? benefitBalance = freezed,
   }) {
-    return _then(_$_EligibilityResponseInsurance(
+    return _then(_$EligibilityResponseInsuranceImpl(
       coverage: freezed == coverage
           ? _value.coverage
           : coverage // ignore: cast_nullable_to_non_nullable
@@ -4482,16 +4485,17 @@ class __$$_EligibilityResponseInsuranceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
-  const _$_EligibilityResponseInsurance(
+class _$EligibilityResponseInsuranceImpl extends _EligibilityResponseInsurance {
+  const _$EligibilityResponseInsuranceImpl(
       {this.coverage,
       this.contract,
       final List<EligibilityResponseBenefitBalance>? benefitBalance})
       : _benefitBalance = benefitBalance,
         super._();
 
-  factory _$_EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =>
-      _$$_EligibilityResponseInsuranceFromJson(json);
+  factory _$EligibilityResponseInsuranceImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$EligibilityResponseInsuranceImplFromJson(json);
 
   @override
   final Reference? coverage;
@@ -4516,7 +4520,7 @@ class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EligibilityResponseInsurance &&
+            other is _$EligibilityResponseInsuranceImpl &&
             (identical(other.coverage, coverage) ||
                 other.coverage == coverage) &&
             (identical(other.contract, contract) ||
@@ -4533,13 +4537,14 @@ class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EligibilityResponseInsuranceCopyWith<_$_EligibilityResponseInsurance>
-      get copyWith => __$$_EligibilityResponseInsuranceCopyWithImpl<
-          _$_EligibilityResponseInsurance>(this, _$identity);
+  _$$EligibilityResponseInsuranceImplCopyWith<
+          _$EligibilityResponseInsuranceImpl>
+      get copyWith => __$$EligibilityResponseInsuranceImplCopyWithImpl<
+          _$EligibilityResponseInsuranceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EligibilityResponseInsuranceToJson(
+    return _$$EligibilityResponseInsuranceImplToJson(
       this,
     );
   }
@@ -4551,11 +4556,11 @@ abstract class _EligibilityResponseInsurance
           {final Reference? coverage,
           final Reference? contract,
           final List<EligibilityResponseBenefitBalance>? benefitBalance}) =
-      _$_EligibilityResponseInsurance;
+      _$EligibilityResponseInsuranceImpl;
   const _EligibilityResponseInsurance._() : super._();
 
   factory _EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =
-      _$_EligibilityResponseInsurance.fromJson;
+      _$EligibilityResponseInsuranceImpl.fromJson;
 
   @override
   Reference? get coverage;
@@ -4565,7 +4570,8 @@ abstract class _EligibilityResponseInsurance
   List<EligibilityResponseBenefitBalance>? get benefitBalance;
   @override
   @JsonKey(ignore: true)
-  _$$_EligibilityResponseInsuranceCopyWith<_$_EligibilityResponseInsurance>
+  _$$EligibilityResponseInsuranceImplCopyWith<
+          _$EligibilityResponseInsuranceImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -4804,12 +4810,12 @@ class _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EligibilityResponseBenefitBalanceCopyWith<$Res>
+abstract class _$$EligibilityResponseBenefitBalanceImplCopyWith<$Res>
     implements $EligibilityResponseBenefitBalanceCopyWith<$Res> {
-  factory _$$_EligibilityResponseBenefitBalanceCopyWith(
-          _$_EligibilityResponseBenefitBalance value,
-          $Res Function(_$_EligibilityResponseBenefitBalance) then) =
-      __$$_EligibilityResponseBenefitBalanceCopyWithImpl<$Res>;
+  factory _$$EligibilityResponseBenefitBalanceImplCopyWith(
+          _$EligibilityResponseBenefitBalanceImpl value,
+          $Res Function(_$EligibilityResponseBenefitBalanceImpl) then) =
+      __$$EligibilityResponseBenefitBalanceImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -4845,13 +4851,13 @@ abstract class _$$_EligibilityResponseBenefitBalanceCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
+class __$$EligibilityResponseBenefitBalanceImplCopyWithImpl<$Res>
     extends _$EligibilityResponseBenefitBalanceCopyWithImpl<$Res,
-        _$_EligibilityResponseBenefitBalance>
-    implements _$$_EligibilityResponseBenefitBalanceCopyWith<$Res> {
-  __$$_EligibilityResponseBenefitBalanceCopyWithImpl(
-      _$_EligibilityResponseBenefitBalance _value,
-      $Res Function(_$_EligibilityResponseBenefitBalance) _then)
+        _$EligibilityResponseBenefitBalanceImpl>
+    implements _$$EligibilityResponseBenefitBalanceImplCopyWith<$Res> {
+  __$$EligibilityResponseBenefitBalanceImplCopyWithImpl(
+      _$EligibilityResponseBenefitBalanceImpl _value,
+      $Res Function(_$EligibilityResponseBenefitBalanceImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -4870,7 +4876,7 @@ class __$$_EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
     Object? term = freezed,
     Object? financial = freezed,
   }) {
-    return _then(_$_EligibilityResponseBenefitBalance(
+    return _then(_$EligibilityResponseBenefitBalanceImpl(
       category: null == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -4925,9 +4931,9 @@ class __$$_EligibilityResponseBenefitBalanceCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EligibilityResponseBenefitBalance
+class _$EligibilityResponseBenefitBalanceImpl
     extends _EligibilityResponseBenefitBalance {
-  const _$_EligibilityResponseBenefitBalance(
+  const _$EligibilityResponseBenefitBalanceImpl(
       {required this.category,
       this.subCategory,
       this.excluded,
@@ -4943,9 +4949,9 @@ class _$_EligibilityResponseBenefitBalance
       : _financial = financial,
         super._();
 
-  factory _$_EligibilityResponseBenefitBalance.fromJson(
+  factory _$EligibilityResponseBenefitBalanceImpl.fromJson(
           Map<String, dynamic> json) =>
-      _$$_EligibilityResponseBenefitBalanceFromJson(json);
+      _$$EligibilityResponseBenefitBalanceImplFromJson(json);
 
   @override
   final CodeableConcept category;
@@ -4991,7 +4997,7 @@ class _$_EligibilityResponseBenefitBalance
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EligibilityResponseBenefitBalance &&
+            other is _$EligibilityResponseBenefitBalanceImpl &&
             (identical(other.category, category) ||
                 other.category == category) &&
             (identical(other.subCategory, subCategory) ||
@@ -5034,14 +5040,14 @@ class _$_EligibilityResponseBenefitBalance
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EligibilityResponseBenefitBalanceCopyWith<
-          _$_EligibilityResponseBenefitBalance>
-      get copyWith => __$$_EligibilityResponseBenefitBalanceCopyWithImpl<
-          _$_EligibilityResponseBenefitBalance>(this, _$identity);
+  _$$EligibilityResponseBenefitBalanceImplCopyWith<
+          _$EligibilityResponseBenefitBalanceImpl>
+      get copyWith => __$$EligibilityResponseBenefitBalanceImplCopyWithImpl<
+          _$EligibilityResponseBenefitBalanceImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EligibilityResponseBenefitBalanceToJson(
+    return _$$EligibilityResponseBenefitBalanceImplToJson(
       this,
     );
   }
@@ -5062,12 +5068,12 @@ abstract class _EligibilityResponseBenefitBalance
           final CodeableConcept? unit,
           final CodeableConcept? term,
           final List<EligibilityResponseFinancial>? financial}) =
-      _$_EligibilityResponseBenefitBalance;
+      _$EligibilityResponseBenefitBalanceImpl;
   const _EligibilityResponseBenefitBalance._() : super._();
 
   factory _EligibilityResponseBenefitBalance.fromJson(
           Map<String, dynamic> json) =
-      _$_EligibilityResponseBenefitBalance.fromJson;
+      _$EligibilityResponseBenefitBalanceImpl.fromJson;
 
   @override
   CodeableConcept get category;
@@ -5098,8 +5104,8 @@ abstract class _EligibilityResponseBenefitBalance
   List<EligibilityResponseFinancial>? get financial;
   @override
   @JsonKey(ignore: true)
-  _$$_EligibilityResponseBenefitBalanceCopyWith<
-          _$_EligibilityResponseBenefitBalance>
+  _$$EligibilityResponseBenefitBalanceImplCopyWith<
+          _$EligibilityResponseBenefitBalanceImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5290,12 +5296,12 @@ class _$EligibilityResponseFinancialCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EligibilityResponseFinancialCopyWith<$Res>
+abstract class _$$EligibilityResponseFinancialImplCopyWith<$Res>
     implements $EligibilityResponseFinancialCopyWith<$Res> {
-  factory _$$_EligibilityResponseFinancialCopyWith(
-          _$_EligibilityResponseFinancial value,
-          $Res Function(_$_EligibilityResponseFinancial) then) =
-      __$$_EligibilityResponseFinancialCopyWithImpl<$Res>;
+  factory _$$EligibilityResponseFinancialImplCopyWith(
+          _$EligibilityResponseFinancialImpl value,
+          $Res Function(_$EligibilityResponseFinancialImpl) then) =
+      __$$EligibilityResponseFinancialImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -5324,13 +5330,13 @@ abstract class _$$_EligibilityResponseFinancialCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EligibilityResponseFinancialCopyWithImpl<$Res>
+class __$$EligibilityResponseFinancialImplCopyWithImpl<$Res>
     extends _$EligibilityResponseFinancialCopyWithImpl<$Res,
-        _$_EligibilityResponseFinancial>
-    implements _$$_EligibilityResponseFinancialCopyWith<$Res> {
-  __$$_EligibilityResponseFinancialCopyWithImpl(
-      _$_EligibilityResponseFinancial _value,
-      $Res Function(_$_EligibilityResponseFinancial) _then)
+        _$EligibilityResponseFinancialImpl>
+    implements _$$EligibilityResponseFinancialImplCopyWith<$Res> {
+  __$$EligibilityResponseFinancialImplCopyWithImpl(
+      _$EligibilityResponseFinancialImpl _value,
+      $Res Function(_$EligibilityResponseFinancialImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5346,7 +5352,7 @@ class __$$_EligibilityResponseFinancialCopyWithImpl<$Res>
     Object? usedUnsignedIntElement = freezed,
     Object? usedMoney = freezed,
   }) {
-    return _then(_$_EligibilityResponseFinancial(
+    return _then(_$EligibilityResponseFinancialImpl(
       type: null == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -5389,8 +5395,8 @@ class __$$_EligibilityResponseFinancialCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
-  const _$_EligibilityResponseFinancial(
+class _$EligibilityResponseFinancialImpl extends _EligibilityResponseFinancial {
+  const _$EligibilityResponseFinancialImpl(
       {required this.type,
       this.allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') this.allowedUnsignedIntElement,
@@ -5402,8 +5408,9 @@ class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
       this.usedMoney})
       : super._();
 
-  factory _$_EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =>
-      _$$_EligibilityResponseFinancialFromJson(json);
+  factory _$EligibilityResponseFinancialImpl.fromJson(
+          Map<String, dynamic> json) =>
+      _$$EligibilityResponseFinancialImplFromJson(json);
 
   @override
   final CodeableConcept type;
@@ -5436,7 +5443,7 @@ class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EligibilityResponseFinancial &&
+            other is _$EligibilityResponseFinancialImpl &&
             (identical(other.type, type) || other.type == type) &&
             (identical(other.allowedUnsignedInt, allowedUnsignedInt) ||
                 other.allowedUnsignedInt == allowedUnsignedInt) &&
@@ -5474,13 +5481,14 @@ class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EligibilityResponseFinancialCopyWith<_$_EligibilityResponseFinancial>
-      get copyWith => __$$_EligibilityResponseFinancialCopyWithImpl<
-          _$_EligibilityResponseFinancial>(this, _$identity);
+  _$$EligibilityResponseFinancialImplCopyWith<
+          _$EligibilityResponseFinancialImpl>
+      get copyWith => __$$EligibilityResponseFinancialImplCopyWithImpl<
+          _$EligibilityResponseFinancialImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EligibilityResponseFinancialToJson(
+    return _$$EligibilityResponseFinancialImplToJson(
       this,
     );
   }
@@ -5498,11 +5506,11 @@ abstract class _EligibilityResponseFinancial
       final Money? allowedMoney,
       final FhirDecimal? usedUnsignedInt,
       @JsonKey(name: '_usedUnsignedInt') final Element? usedUnsignedIntElement,
-      final Money? usedMoney}) = _$_EligibilityResponseFinancial;
+      final Money? usedMoney}) = _$EligibilityResponseFinancialImpl;
   const _EligibilityResponseFinancial._() : super._();
 
   factory _EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =
-      _$_EligibilityResponseFinancial.fromJson;
+      _$EligibilityResponseFinancialImpl.fromJson;
 
   @override
   CodeableConcept get type;
@@ -5527,7 +5535,8 @@ abstract class _EligibilityResponseFinancial
   Money? get usedMoney;
   @override
   @JsonKey(ignore: true)
-  _$$_EligibilityResponseFinancialCopyWith<_$_EligibilityResponseFinancial>
+  _$$EligibilityResponseFinancialImplCopyWith<
+          _$EligibilityResponseFinancialImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5591,12 +5600,12 @@ class _$EligibilityResponseErrorCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_EligibilityResponseErrorCopyWith<$Res>
+abstract class _$$EligibilityResponseErrorImplCopyWith<$Res>
     implements $EligibilityResponseErrorCopyWith<$Res> {
-  factory _$$_EligibilityResponseErrorCopyWith(
-          _$_EligibilityResponseError value,
-          $Res Function(_$_EligibilityResponseError) then) =
-      __$$_EligibilityResponseErrorCopyWithImpl<$Res>;
+  factory _$$EligibilityResponseErrorImplCopyWith(
+          _$EligibilityResponseErrorImpl value,
+          $Res Function(_$EligibilityResponseErrorImpl) then) =
+      __$$EligibilityResponseErrorImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({CodeableConcept code});
@@ -5606,12 +5615,13 @@ abstract class _$$_EligibilityResponseErrorCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EligibilityResponseErrorCopyWithImpl<$Res>
+class __$$EligibilityResponseErrorImplCopyWithImpl<$Res>
     extends _$EligibilityResponseErrorCopyWithImpl<$Res,
-        _$_EligibilityResponseError>
-    implements _$$_EligibilityResponseErrorCopyWith<$Res> {
-  __$$_EligibilityResponseErrorCopyWithImpl(_$_EligibilityResponseError _value,
-      $Res Function(_$_EligibilityResponseError) _then)
+        _$EligibilityResponseErrorImpl>
+    implements _$$EligibilityResponseErrorImplCopyWith<$Res> {
+  __$$EligibilityResponseErrorImplCopyWithImpl(
+      _$EligibilityResponseErrorImpl _value,
+      $Res Function(_$EligibilityResponseErrorImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -5619,7 +5629,7 @@ class __$$_EligibilityResponseErrorCopyWithImpl<$Res>
   $Res call({
     Object? code = null,
   }) {
-    return _then(_$_EligibilityResponseError(
+    return _then(_$EligibilityResponseErrorImpl(
       code: null == code
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
@@ -5630,11 +5640,11 @@ class __$$_EligibilityResponseErrorCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EligibilityResponseError extends _EligibilityResponseError {
-  const _$_EligibilityResponseError({required this.code}) : super._();
+class _$EligibilityResponseErrorImpl extends _EligibilityResponseError {
+  const _$EligibilityResponseErrorImpl({required this.code}) : super._();
 
-  factory _$_EligibilityResponseError.fromJson(Map<String, dynamic> json) =>
-      _$$_EligibilityResponseErrorFromJson(json);
+  factory _$EligibilityResponseErrorImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EligibilityResponseErrorImplFromJson(json);
 
   @override
   final CodeableConcept code;
@@ -5648,7 +5658,7 @@ class _$_EligibilityResponseError extends _EligibilityResponseError {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EligibilityResponseError &&
+            other is _$EligibilityResponseErrorImpl &&
             (identical(other.code, code) || other.code == code));
   }
 
@@ -5659,13 +5669,13 @@ class _$_EligibilityResponseError extends _EligibilityResponseError {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EligibilityResponseErrorCopyWith<_$_EligibilityResponseError>
-      get copyWith => __$$_EligibilityResponseErrorCopyWithImpl<
-          _$_EligibilityResponseError>(this, _$identity);
+  _$$EligibilityResponseErrorImplCopyWith<_$EligibilityResponseErrorImpl>
+      get copyWith => __$$EligibilityResponseErrorImplCopyWithImpl<
+          _$EligibilityResponseErrorImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EligibilityResponseErrorToJson(
+    return _$$EligibilityResponseErrorImplToJson(
       this,
     );
   }
@@ -5673,17 +5683,17 @@ class _$_EligibilityResponseError extends _EligibilityResponseError {
 
 abstract class _EligibilityResponseError extends EligibilityResponseError {
   const factory _EligibilityResponseError(
-      {required final CodeableConcept code}) = _$_EligibilityResponseError;
+      {required final CodeableConcept code}) = _$EligibilityResponseErrorImpl;
   const _EligibilityResponseError._() : super._();
 
   factory _EligibilityResponseError.fromJson(Map<String, dynamic> json) =
-      _$_EligibilityResponseError.fromJson;
+      _$EligibilityResponseErrorImpl.fromJson;
 
   @override
   CodeableConcept get code;
   @override
   @JsonKey(ignore: true)
-  _$$_EligibilityResponseErrorCopyWith<_$_EligibilityResponseError>
+  _$$EligibilityResponseErrorImplCopyWith<_$EligibilityResponseErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -6037,11 +6047,11 @@ class _$EnrollmentRequestCopyWithImpl<$Res, $Val extends EnrollmentRequest>
 }
 
 /// @nodoc
-abstract class _$$_EnrollmentRequestCopyWith<$Res>
+abstract class _$$EnrollmentRequestImplCopyWith<$Res>
     implements $EnrollmentRequestCopyWith<$Res> {
-  factory _$$_EnrollmentRequestCopyWith(_$_EnrollmentRequest value,
-          $Res Function(_$_EnrollmentRequest) then) =
-      __$$_EnrollmentRequestCopyWithImpl<$Res>;
+  factory _$$EnrollmentRequestImplCopyWith(_$EnrollmentRequestImpl value,
+          $Res Function(_$EnrollmentRequestImpl) then) =
+      __$$EnrollmentRequestImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6094,11 +6104,11 @@ abstract class _$$_EnrollmentRequestCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EnrollmentRequestCopyWithImpl<$Res>
-    extends _$EnrollmentRequestCopyWithImpl<$Res, _$_EnrollmentRequest>
-    implements _$$_EnrollmentRequestCopyWith<$Res> {
-  __$$_EnrollmentRequestCopyWithImpl(
-      _$_EnrollmentRequest _value, $Res Function(_$_EnrollmentRequest) _then)
+class __$$EnrollmentRequestImplCopyWithImpl<$Res>
+    extends _$EnrollmentRequestCopyWithImpl<$Res, _$EnrollmentRequestImpl>
+    implements _$$EnrollmentRequestImplCopyWith<$Res> {
+  __$$EnrollmentRequestImplCopyWithImpl(_$EnrollmentRequestImpl _value,
+      $Res Function(_$EnrollmentRequestImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6127,7 +6137,7 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
     Object? subject = freezed,
     Object? coverage = freezed,
   }) {
-    return _then(_$_EnrollmentRequest(
+    return _then(_$EnrollmentRequestImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -6222,8 +6232,8 @@ class __$$_EnrollmentRequestCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EnrollmentRequest extends _EnrollmentRequest {
-  const _$_EnrollmentRequest(
+class _$EnrollmentRequestImpl extends _EnrollmentRequest {
+  const _$EnrollmentRequestImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
       this.resourceType = Stu3ResourceType.EnrollmentRequest,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -6253,8 +6263,8 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
         _identifier = identifier,
         super._();
 
-  factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
-      _$$_EnrollmentRequestFromJson(json);
+  factory _$EnrollmentRequestImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EnrollmentRequestImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
@@ -6351,7 +6361,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EnrollmentRequest &&
+            other is _$EnrollmentRequestImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -6421,13 +6431,13 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EnrollmentRequestCopyWith<_$_EnrollmentRequest> get copyWith =>
-      __$$_EnrollmentRequestCopyWithImpl<_$_EnrollmentRequest>(
+  _$$EnrollmentRequestImplCopyWith<_$EnrollmentRequestImpl> get copyWith =>
+      __$$EnrollmentRequestImplCopyWithImpl<_$EnrollmentRequestImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EnrollmentRequestToJson(
+    return _$$EnrollmentRequestImplToJson(
       this,
     );
   }
@@ -6457,11 +6467,11 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
       final Reference? provider,
       final Reference? organization,
       final Reference? subject,
-      final Reference? coverage}) = _$_EnrollmentRequest;
+      final Reference? coverage}) = _$EnrollmentRequestImpl;
   const _EnrollmentRequest._() : super._();
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
-      _$_EnrollmentRequest.fromJson;
+      _$EnrollmentRequestImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
@@ -6517,7 +6527,7 @@ abstract class _EnrollmentRequest extends EnrollmentRequest {
   Reference? get coverage;
   @override
   @JsonKey(ignore: true)
-  _$$_EnrollmentRequestCopyWith<_$_EnrollmentRequest> get copyWith =>
+  _$$EnrollmentRequestImplCopyWith<_$EnrollmentRequestImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6899,11 +6909,11 @@ class _$EnrollmentResponseCopyWithImpl<$Res, $Val extends EnrollmentResponse>
 }
 
 /// @nodoc
-abstract class _$$_EnrollmentResponseCopyWith<$Res>
+abstract class _$$EnrollmentResponseImplCopyWith<$Res>
     implements $EnrollmentResponseCopyWith<$Res> {
-  factory _$$_EnrollmentResponseCopyWith(_$_EnrollmentResponse value,
-          $Res Function(_$_EnrollmentResponse) then) =
-      __$$_EnrollmentResponseCopyWithImpl<$Res>;
+  factory _$$EnrollmentResponseImplCopyWith(_$EnrollmentResponseImpl value,
+          $Res Function(_$EnrollmentResponseImpl) then) =
+      __$$EnrollmentResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -6960,11 +6970,11 @@ abstract class _$$_EnrollmentResponseCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_EnrollmentResponseCopyWithImpl<$Res>
-    extends _$EnrollmentResponseCopyWithImpl<$Res, _$_EnrollmentResponse>
-    implements _$$_EnrollmentResponseCopyWith<$Res> {
-  __$$_EnrollmentResponseCopyWithImpl(
-      _$_EnrollmentResponse _value, $Res Function(_$_EnrollmentResponse) _then)
+class __$$EnrollmentResponseImplCopyWithImpl<$Res>
+    extends _$EnrollmentResponseCopyWithImpl<$Res, _$EnrollmentResponseImpl>
+    implements _$$EnrollmentResponseImplCopyWith<$Res> {
+  __$$EnrollmentResponseImplCopyWithImpl(_$EnrollmentResponseImpl _value,
+      $Res Function(_$EnrollmentResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -6995,7 +7005,7 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
     Object? requestProvider = freezed,
     Object? requestOrganization = freezed,
   }) {
-    return _then(_$_EnrollmentResponse(
+    return _then(_$EnrollmentResponseImpl(
       resourceType: null == resourceType
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -7098,8 +7108,8 @@ class __$$_EnrollmentResponseCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_EnrollmentResponse extends _EnrollmentResponse {
-  const _$_EnrollmentResponse(
+class _$EnrollmentResponseImpl extends _EnrollmentResponse {
+  const _$EnrollmentResponseImpl(
       {@JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
       this.resourceType = Stu3ResourceType.EnrollmentResponse,
       @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
@@ -7131,8 +7141,8 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
         _identifier = identifier,
         super._();
 
-  factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
-      _$$_EnrollmentResponseFromJson(json);
+  factory _$EnrollmentResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$EnrollmentResponseImplFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
@@ -7234,7 +7244,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_EnrollmentResponse &&
+            other is _$EnrollmentResponseImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
             (identical(other.dbId, dbId) || other.dbId == dbId) &&
@@ -7310,13 +7320,13 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_EnrollmentResponseCopyWith<_$_EnrollmentResponse> get copyWith =>
-      __$$_EnrollmentResponseCopyWithImpl<_$_EnrollmentResponse>(
+  _$$EnrollmentResponseImplCopyWith<_$EnrollmentResponseImpl> get copyWith =>
+      __$$EnrollmentResponseImplCopyWithImpl<_$EnrollmentResponseImpl>(
           this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_EnrollmentResponseToJson(
+    return _$$EnrollmentResponseImplToJson(
       this,
     );
   }
@@ -7348,11 +7358,11 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       @JsonKey(name: '_created') final Element? createdElement,
       final Reference? organization,
       final Reference? requestProvider,
-      final Reference? requestOrganization}) = _$_EnrollmentResponse;
+      final Reference? requestOrganization}) = _$EnrollmentResponseImpl;
   const _EnrollmentResponse._() : super._();
 
   factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
-      _$_EnrollmentResponse.fromJson;
+      _$EnrollmentResponseImpl.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
@@ -7413,6 +7423,6 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   Reference? get requestOrganization;
   @override
   @JsonKey(ignore: true)
-  _$$_EnrollmentResponseCopyWith<_$_EnrollmentResponse> get copyWith =>
+  _$$EnrollmentResponseImplCopyWith<_$EnrollmentResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

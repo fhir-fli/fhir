@@ -6,8 +6,8 @@ part of 'request_and_response.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Communication _$$_CommunicationFromJson(Map<String, dynamic> json) =>
-    _$_Communication(
+_$CommunicationImpl _$$CommunicationImplFromJson(Map<String, dynamic> json) =>
+    _$CommunicationImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Communication) ??
@@ -109,7 +109,7 @@ _$_Communication _$$_CommunicationFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_CommunicationToJson(_$_Communication instance) {
+Map<String, dynamic> _$$CommunicationImplToJson(_$CommunicationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -285,9 +285,9 @@ const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_CommunicationPayload _$$_CommunicationPayloadFromJson(
+_$CommunicationPayloadImpl _$$CommunicationPayloadImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CommunicationPayload(
+    _$CommunicationPayloadImpl(
       contentString: json['contentString'] as String?,
       contentStringElement: json['_contentString'] == null
           ? null
@@ -302,8 +302,8 @@ _$_CommunicationPayload _$$_CommunicationPayloadFromJson(
               json['contentReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CommunicationPayloadToJson(
-    _$_CommunicationPayload instance) {
+Map<String, dynamic> _$$CommunicationPayloadImplToJson(
+    _$CommunicationPayloadImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -319,9 +319,9 @@ Map<String, dynamic> _$$_CommunicationPayloadToJson(
   return val;
 }
 
-_$_CommunicationRequest _$$_CommunicationRequestFromJson(
+_$CommunicationRequestImpl _$$CommunicationRequestImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CommunicationRequest(
+    _$CommunicationRequestImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.CommunicationRequest) ??
@@ -429,8 +429,8 @@ _$_CommunicationRequest _$$_CommunicationRequestFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CommunicationRequestToJson(
-    _$_CommunicationRequest instance) {
+Map<String, dynamic> _$$CommunicationRequestImplToJson(
+    _$CommunicationRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -487,9 +487,9 @@ Map<String, dynamic> _$$_CommunicationRequestToJson(
   return val;
 }
 
-_$_CommunicationRequestPayload _$$_CommunicationRequestPayloadFromJson(
+_$CommunicationRequestPayloadImpl _$$CommunicationRequestPayloadImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CommunicationRequestPayload(
+    _$CommunicationRequestPayloadImpl(
       contentString: json['contentString'] as String?,
       contentStringElement: json['_contentString'] == null
           ? null
@@ -504,8 +504,8 @@ _$_CommunicationRequestPayload _$$_CommunicationRequestPayloadFromJson(
               json['contentReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CommunicationRequestPayloadToJson(
-    _$_CommunicationRequestPayload instance) {
+Map<String, dynamic> _$$CommunicationRequestPayloadImplToJson(
+    _$CommunicationRequestPayloadImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -521,17 +521,17 @@ Map<String, dynamic> _$$_CommunicationRequestPayloadToJson(
   return val;
 }
 
-_$_CommunicationRequestRequester _$$_CommunicationRequestRequesterFromJson(
-        Map<String, dynamic> json) =>
-    _$_CommunicationRequestRequester(
-      agent: Reference.fromJson(json['agent'] as Map<String, dynamic>),
-      onBehalfOf: json['onBehalfOf'] == null
-          ? null
-          : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
-    );
+_$CommunicationRequestRequesterImpl
+    _$$CommunicationRequestRequesterImplFromJson(Map<String, dynamic> json) =>
+        _$CommunicationRequestRequesterImpl(
+          agent: Reference.fromJson(json['agent'] as Map<String, dynamic>),
+          onBehalfOf: json['onBehalfOf'] == null
+              ? null
+              : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_CommunicationRequestRequesterToJson(
-    _$_CommunicationRequestRequester instance) {
+Map<String, dynamic> _$$CommunicationRequestRequesterImplToJson(
+    _$CommunicationRequestRequesterImpl instance) {
   final val = <String, dynamic>{
     'agent': instance.agent.toJson(),
   };
@@ -546,8 +546,8 @@ Map<String, dynamic> _$$_CommunicationRequestRequesterToJson(
   return val;
 }
 
-_$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
-    _$_DeviceRequest(
+_$DeviceRequestImpl _$$DeviceRequestImplFromJson(Map<String, dynamic> json) =>
+    _$DeviceRequestImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DeviceRequest) ??
@@ -661,7 +661,7 @@ _$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DeviceRequestToJson(_$_DeviceRequest instance) {
+Map<String, dynamic> _$$DeviceRequestImplToJson(_$DeviceRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -724,17 +724,17 @@ Map<String, dynamic> _$$_DeviceRequestToJson(_$_DeviceRequest instance) {
   return val;
 }
 
-_$_DeviceRequestRequester _$$_DeviceRequestRequesterFromJson(
+_$DeviceRequestRequesterImpl _$$DeviceRequestRequesterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DeviceRequestRequester(
+    _$DeviceRequestRequesterImpl(
       agent: Reference.fromJson(json['agent'] as Map<String, dynamic>),
       onBehalfOf: json['onBehalfOf'] == null
           ? null
           : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DeviceRequestRequesterToJson(
-    _$_DeviceRequestRequester instance) {
+Map<String, dynamic> _$$DeviceRequestRequesterImplToJson(
+    _$DeviceRequestRequesterImpl instance) {
   final val = <String, dynamic>{
     'agent': instance.agent.toJson(),
   };
@@ -749,9 +749,9 @@ Map<String, dynamic> _$$_DeviceRequestRequesterToJson(
   return val;
 }
 
-_$_DeviceUseStatement _$$_DeviceUseStatementFromJson(
+_$DeviceUseStatementImpl _$$DeviceUseStatementImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DeviceUseStatement(
+    _$DeviceUseStatementImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DeviceUseStatement) ??
@@ -827,8 +827,8 @@ _$_DeviceUseStatement _$$_DeviceUseStatementFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_DeviceUseStatementToJson(
-    _$_DeviceUseStatement instance) {
+Map<String, dynamic> _$$DeviceUseStatementImplToJson(
+    _$DeviceUseStatementImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -883,8 +883,8 @@ const _$DeviceUseStatementStatusEnumMap = {
   DeviceUseStatementStatus.unknown: 'unknown',
 };
 
-_$_SupplyDelivery _$$_SupplyDeliveryFromJson(Map<String, dynamic> json) =>
-    _$_SupplyDelivery(
+_$SupplyDeliveryImpl _$$SupplyDeliveryImplFromJson(Map<String, dynamic> json) =>
+    _$SupplyDeliveryImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.SupplyDelivery) ??
@@ -965,7 +965,8 @@ _$_SupplyDelivery _$$_SupplyDeliveryFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_SupplyDeliveryToJson(_$_SupplyDelivery instance) {
+Map<String, dynamic> _$$SupplyDeliveryImplToJson(
+    _$SupplyDeliveryImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1016,9 +1017,9 @@ const _$SupplyDeliveryStatusEnumMap = {
   SupplyDeliveryStatus.unknown: 'unknown',
 };
 
-_$_SupplyDeliverySuppliedItem _$$_SupplyDeliverySuppliedItemFromJson(
+_$SupplyDeliverySuppliedItemImpl _$$SupplyDeliverySuppliedItemImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SupplyDeliverySuppliedItem(
+    _$SupplyDeliverySuppliedItemImpl(
       quantity: json['quantity'] == null
           ? null
           : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -1031,8 +1032,8 @@ _$_SupplyDeliverySuppliedItem _$$_SupplyDeliverySuppliedItemFromJson(
           : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SupplyDeliverySuppliedItemToJson(
-    _$_SupplyDeliverySuppliedItem instance) {
+Map<String, dynamic> _$$SupplyDeliverySuppliedItemImplToJson(
+    _$SupplyDeliverySuppliedItemImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1047,8 +1048,8 @@ Map<String, dynamic> _$$_SupplyDeliverySuppliedItemToJson(
   return val;
 }
 
-_$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
-    _$_SupplyRequest(
+_$SupplyRequestImpl _$$SupplyRequestImplFromJson(Map<String, dynamic> json) =>
+    _$SupplyRequestImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.SupplyRequest) ??
@@ -1138,7 +1139,7 @@ _$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['deliverTo'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SupplyRequestToJson(_$_SupplyRequest instance) {
+Map<String, dynamic> _$$SupplyRequestImplToJson(_$SupplyRequestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1196,9 +1197,9 @@ const _$SupplyRequestStatusEnumMap = {
   SupplyRequestStatus.unknown: 'unknown',
 };
 
-_$_SupplyRequestOrderedItem _$$_SupplyRequestOrderedItemFromJson(
+_$SupplyRequestOrderedItemImpl _$$SupplyRequestOrderedItemImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SupplyRequestOrderedItem(
+    _$SupplyRequestOrderedItemImpl(
       quantity: Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
       itemCodeableConcept: json['itemCodeableConcept'] == null
           ? null
@@ -1209,8 +1210,8 @@ _$_SupplyRequestOrderedItem _$$_SupplyRequestOrderedItemFromJson(
           : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SupplyRequestOrderedItemToJson(
-    _$_SupplyRequestOrderedItem instance) {
+Map<String, dynamic> _$$SupplyRequestOrderedItemImplToJson(
+    _$SupplyRequestOrderedItemImpl instance) {
   final val = <String, dynamic>{
     'quantity': instance.quantity.toJson(),
   };
@@ -1226,17 +1227,17 @@ Map<String, dynamic> _$$_SupplyRequestOrderedItemToJson(
   return val;
 }
 
-_$_SupplyRequestRequester _$$_SupplyRequestRequesterFromJson(
+_$SupplyRequestRequesterImpl _$$SupplyRequestRequesterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_SupplyRequestRequester(
+    _$SupplyRequestRequesterImpl(
       agent: Reference.fromJson(json['agent'] as Map<String, dynamic>),
       onBehalfOf: json['onBehalfOf'] == null
           ? null
           : Reference.fromJson(json['onBehalfOf'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_SupplyRequestRequesterToJson(
-    _$_SupplyRequestRequester instance) {
+Map<String, dynamic> _$$SupplyRequestRequesterImplToJson(
+    _$SupplyRequestRequesterImpl instance) {
   final val = <String, dynamic>{
     'agent': instance.agent.toJson(),
   };

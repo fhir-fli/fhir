@@ -6,7 +6,8 @@ part of 'individuals.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FhirGroup _$$_FhirGroupFromJson(Map<String, dynamic> json) => _$_FhirGroup(
+_$FhirGroupImpl _$$FhirGroupImplFromJson(Map<String, dynamic> json) =>
+    _$FhirGroupImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Group) ??
@@ -77,7 +78,7 @@ _$_FhirGroup _$$_FhirGroupFromJson(Map<String, dynamic> json) => _$_FhirGroup(
           .toList(),
     );
 
-Map<String, dynamic> _$$_FhirGroupToJson(_$_FhirGroup instance) {
+Map<String, dynamic> _$$FhirGroupImplToJson(_$FhirGroupImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -250,9 +251,9 @@ const _$GroupTypeEnumMap = {
   GroupType.unknown: 'unknown',
 };
 
-_$_GroupCharacteristic _$$_GroupCharacteristicFromJson(
+_$GroupCharacteristicImpl _$$GroupCharacteristicImplFromJson(
         Map<String, dynamic> json) =>
-    _$_GroupCharacteristic(
+    _$GroupCharacteristicImpl(
       code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
       valueCodeableConcept: json['valueCodeableConcept'] == null
           ? null
@@ -281,8 +282,8 @@ _$_GroupCharacteristic _$$_GroupCharacteristicFromJson(
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GroupCharacteristicToJson(
-    _$_GroupCharacteristic instance) {
+Map<String, dynamic> _$$GroupCharacteristicImplToJson(
+    _$GroupCharacteristicImpl instance) {
   final val = <String, dynamic>{
     'code': instance.code.toJson(),
   };
@@ -304,8 +305,8 @@ Map<String, dynamic> _$$_GroupCharacteristicToJson(
   return val;
 }
 
-_$_GroupMember _$$_GroupMemberFromJson(Map<String, dynamic> json) =>
-    _$_GroupMember(
+_$GroupMemberImpl _$$GroupMemberImplFromJson(Map<String, dynamic> json) =>
+    _$GroupMemberImpl(
       entity: Reference.fromJson(json['entity'] as Map<String, dynamic>),
       period: json['period'] == null
           ? null
@@ -318,7 +319,7 @@ _$_GroupMember _$$_GroupMemberFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_inactive'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_GroupMemberToJson(_$_GroupMember instance) {
+Map<String, dynamic> _$$GroupMemberImplToJson(_$GroupMemberImpl instance) {
   final val = <String, dynamic>{
     'entity': instance.entity.toJson(),
   };
@@ -335,7 +336,8 @@ Map<String, dynamic> _$$_GroupMemberToJson(_$_GroupMember instance) {
   return val;
 }
 
-_$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
+_$PatientImpl _$$PatientImplFromJson(Map<String, dynamic> json) =>
+    _$PatientImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Patient) ??
@@ -449,7 +451,7 @@ _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
           .toList(),
     );
 
-Map<String, dynamic> _$$_PatientToJson(_$_Patient instance) {
+Map<String, dynamic> _$$PatientImplToJson(_$PatientImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -514,8 +516,8 @@ const _$PatientGenderEnumMap = {
   PatientGender.unknown: 'unknown',
 };
 
-_$_PatientContact _$$_PatientContactFromJson(Map<String, dynamic> json) =>
-    _$_PatientContact(
+_$PatientContactImpl _$$PatientContactImplFromJson(Map<String, dynamic> json) =>
+    _$PatientContactImpl(
       relationship: (json['relationship'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -541,7 +543,8 @@ _$_PatientContact _$$_PatientContactFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PatientContactToJson(_$_PatientContact instance) {
+Map<String, dynamic> _$$PatientContactImplToJson(
+    _$PatientContactImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -569,8 +572,8 @@ const _$PatientContactGenderEnumMap = {
   PatientContactGender.unknown: 'unknown',
 };
 
-_$_PatientAnimal _$$_PatientAnimalFromJson(Map<String, dynamic> json) =>
-    _$_PatientAnimal(
+_$PatientAnimalImpl _$$PatientAnimalImplFromJson(Map<String, dynamic> json) =>
+    _$PatientAnimalImpl(
       species:
           CodeableConcept.fromJson(json['species'] as Map<String, dynamic>),
       breed: json['breed'] == null
@@ -582,7 +585,7 @@ _$_PatientAnimal _$$_PatientAnimalFromJson(Map<String, dynamic> json) =>
               json['genderStatus'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PatientAnimalToJson(_$_PatientAnimal instance) {
+Map<String, dynamic> _$$PatientAnimalImplToJson(_$PatientAnimalImpl instance) {
   final val = <String, dynamic>{
     'species': instance.species.toJson(),
   };
@@ -598,9 +601,9 @@ Map<String, dynamic> _$$_PatientAnimalToJson(_$_PatientAnimal instance) {
   return val;
 }
 
-_$_PatientCommunication _$$_PatientCommunicationFromJson(
+_$PatientCommunicationImpl _$$PatientCommunicationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PatientCommunication(
+    _$PatientCommunicationImpl(
       language:
           CodeableConcept.fromJson(json['language'] as Map<String, dynamic>),
       preferred: json['preferred'] == null
@@ -611,8 +614,8 @@ _$_PatientCommunication _$$_PatientCommunicationFromJson(
           : Element.fromJson(json['_preferred'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PatientCommunicationToJson(
-    _$_PatientCommunication instance) {
+Map<String, dynamic> _$$PatientCommunicationImplToJson(
+    _$PatientCommunicationImpl instance) {
   final val = <String, dynamic>{
     'language': instance.language.toJson(),
   };
@@ -628,8 +631,8 @@ Map<String, dynamic> _$$_PatientCommunicationToJson(
   return val;
 }
 
-_$_PatientLink _$$_PatientLinkFromJson(Map<String, dynamic> json) =>
-    _$_PatientLink(
+_$PatientLinkImpl _$$PatientLinkImplFromJson(Map<String, dynamic> json) =>
+    _$PatientLinkImpl(
       other: Reference.fromJson(json['other'] as Map<String, dynamic>),
       type: $enumDecodeNullable(_$PatientLinkTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
@@ -637,7 +640,7 @@ _$_PatientLink _$$_PatientLinkFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PatientLinkToJson(_$_PatientLink instance) {
+Map<String, dynamic> _$$PatientLinkImplToJson(_$PatientLinkImpl instance) {
   final val = <String, dynamic>{
     'other': instance.other.toJson(),
   };
@@ -661,7 +664,7 @@ const _$PatientLinkTypeEnumMap = {
   PatientLinkType.unknown: 'unknown',
 };
 
-_$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
+_$PersonImpl _$$PersonImplFromJson(Map<String, dynamic> json) => _$PersonImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Person) ??
@@ -733,7 +736,7 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
           .toList(),
     );
 
-Map<String, dynamic> _$$_PersonToJson(_$_Person instance) {
+Map<String, dynamic> _$$PersonImplToJson(_$PersonImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -781,8 +784,8 @@ const _$PersonGenderEnumMap = {
   PersonGender.unknown: 'unknown',
 };
 
-_$_PersonLink _$$_PersonLinkFromJson(Map<String, dynamic> json) =>
-    _$_PersonLink(
+_$PersonLinkImpl _$$PersonLinkImplFromJson(Map<String, dynamic> json) =>
+    _$PersonLinkImpl(
       target: Reference.fromJson(json['target'] as Map<String, dynamic>),
       assurance:
           $enumDecodeNullable(_$PersonLinkAssuranceEnumMap, json['assurance']),
@@ -791,7 +794,7 @@ _$_PersonLink _$$_PersonLinkFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_assurance'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PersonLinkToJson(_$_PersonLink instance) {
+Map<String, dynamic> _$$PersonLinkImplToJson(_$PersonLinkImpl instance) {
   final val = <String, dynamic>{
     'target': instance.target.toJson(),
   };
@@ -815,8 +818,8 @@ const _$PersonLinkAssuranceEnumMap = {
   PersonLinkAssurance.unknown: 'unknown',
 };
 
-_$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
-    _$_Practitioner(
+_$PractitionerImpl _$$PractitionerImplFromJson(Map<String, dynamic> json) =>
+    _$PractitionerImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Practitioner) ??
@@ -888,7 +891,7 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_PractitionerToJson(_$_Practitioner instance) {
+Map<String, dynamic> _$$PractitionerImplToJson(_$PractitionerImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -938,9 +941,9 @@ const _$PractitionerGenderEnumMap = {
   PractitionerGender.unknown: 'unknown',
 };
 
-_$_PractitionerQualification _$$_PractitionerQualificationFromJson(
+_$PractitionerQualificationImpl _$$PractitionerQualificationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PractitionerQualification(
+    _$PractitionerQualificationImpl(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -953,8 +956,8 @@ _$_PractitionerQualification _$$_PractitionerQualificationFromJson(
           : Reference.fromJson(json['issuer'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PractitionerQualificationToJson(
-    _$_PractitionerQualification instance) {
+Map<String, dynamic> _$$PractitionerQualificationImplToJson(
+    _$PractitionerQualificationImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -971,8 +974,9 @@ Map<String, dynamic> _$$_PractitionerQualificationToJson(
   return val;
 }
 
-_$_PractitionerRole _$$_PractitionerRoleFromJson(Map<String, dynamic> json) =>
-    _$_PractitionerRole(
+_$PractitionerRoleImpl _$$PractitionerRoleImplFromJson(
+        Map<String, dynamic> json) =>
+    _$PractitionerRoleImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.PractitionerRole) ??
@@ -1055,7 +1059,8 @@ _$_PractitionerRole _$$_PractitionerRoleFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_PractitionerRoleToJson(_$_PractitionerRole instance) {
+Map<String, dynamic> _$$PractitionerRoleImplToJson(
+    _$PractitionerRoleImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -1104,38 +1109,41 @@ Map<String, dynamic> _$$_PractitionerRoleToJson(_$_PractitionerRole instance) {
   return val;
 }
 
-_$_PractitionerRoleAvailableTime _$$_PractitionerRoleAvailableTimeFromJson(
-        Map<String, dynamic> json) =>
-    _$_PractitionerRoleAvailableTime(
-      daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => e as String)
-          .toList(),
-      daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
-          ?.map((e) =>
-              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      allDay:
-          json['allDay'] == null ? null : FhirBoolean.fromJson(json['allDay']),
-      allDayElement: json['_allDay'] == null
-          ? null
-          : Element.fromJson(json['_allDay'] as Map<String, dynamic>),
-      availableStartTime: json['availableStartTime'] == null
-          ? null
-          : FhirTime.fromJson(json['availableStartTime']),
-      availableStartTimeElement: json['_availableStartTime'] == null
-          ? null
-          : Element.fromJson(
-              json['_availableStartTime'] as Map<String, dynamic>),
-      availableEndTime: json['availableEndTime'] == null
-          ? null
-          : FhirTime.fromJson(json['availableEndTime']),
-      availableEndTimeElement: json['_availableEndTime'] == null
-          ? null
-          : Element.fromJson(json['_availableEndTime'] as Map<String, dynamic>),
-    );
+_$PractitionerRoleAvailableTimeImpl
+    _$$PractitionerRoleAvailableTimeImplFromJson(Map<String, dynamic> json) =>
+        _$PractitionerRoleAvailableTimeImpl(
+          daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList(),
+          daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
+              ?.map((e) => e == null
+                  ? null
+                  : Element.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          allDay: json['allDay'] == null
+              ? null
+              : FhirBoolean.fromJson(json['allDay']),
+          allDayElement: json['_allDay'] == null
+              ? null
+              : Element.fromJson(json['_allDay'] as Map<String, dynamic>),
+          availableStartTime: json['availableStartTime'] == null
+              ? null
+              : FhirTime.fromJson(json['availableStartTime']),
+          availableStartTimeElement: json['_availableStartTime'] == null
+              ? null
+              : Element.fromJson(
+                  json['_availableStartTime'] as Map<String, dynamic>),
+          availableEndTime: json['availableEndTime'] == null
+              ? null
+              : FhirTime.fromJson(json['availableEndTime']),
+          availableEndTimeElement: json['_availableEndTime'] == null
+              ? null
+              : Element.fromJson(
+                  json['_availableEndTime'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$$_PractitionerRoleAvailableTimeToJson(
-    _$_PractitionerRoleAvailableTime instance) {
+Map<String, dynamic> _$$PractitionerRoleAvailableTimeImplToJson(
+    _$PractitionerRoleAvailableTimeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1157,9 +1165,9 @@ Map<String, dynamic> _$$_PractitionerRoleAvailableTimeToJson(
   return val;
 }
 
-_$_PractitionerRoleNotAvailable _$$_PractitionerRoleNotAvailableFromJson(
+_$PractitionerRoleNotAvailableImpl _$$PractitionerRoleNotAvailableImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PractitionerRoleNotAvailable(
+    _$PractitionerRoleNotAvailableImpl(
       description: json['description'] as String?,
       descriptionElement: json['_description'] == null
           ? null
@@ -1169,8 +1177,8 @@ _$_PractitionerRoleNotAvailable _$$_PractitionerRoleNotAvailableFromJson(
           : Period.fromJson(json['during'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PractitionerRoleNotAvailableToJson(
-    _$_PractitionerRoleNotAvailable instance) {
+Map<String, dynamic> _$$PractitionerRoleNotAvailableImplToJson(
+    _$PractitionerRoleNotAvailableImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1185,8 +1193,8 @@ Map<String, dynamic> _$$_PractitionerRoleNotAvailableToJson(
   return val;
 }
 
-_$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
-    _$_RelatedPerson(
+_$RelatedPersonImpl _$$RelatedPersonImplFromJson(Map<String, dynamic> json) =>
+    _$RelatedPersonImpl(
       resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.RelatedPerson) ??
@@ -1259,7 +1267,7 @@ _$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['period'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_RelatedPersonToJson(_$_RelatedPerson instance) {
+Map<String, dynamic> _$$RelatedPersonImplToJson(_$RelatedPersonImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Stu3ResourceTypeEnumMap[instance.resourceType]!,
   };

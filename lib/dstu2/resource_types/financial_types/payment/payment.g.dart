@@ -6,8 +6,8 @@ part of 'payment.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
-    _$_PaymentNotice(
+_$PaymentNoticeImpl _$$PaymentNoticeImplFromJson(Map<String, dynamic> json) =>
+    _$PaymentNoticeImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.PaymentNotice) ??
@@ -74,7 +74,7 @@ _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
           Coding.fromJson(json['paymentStatus'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
+Map<String, dynamic> _$$PaymentNoticeImplToJson(_$PaymentNoticeImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -211,9 +211,9 @@ const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
+_$PaymentReconciliationImpl _$$PaymentReconciliationImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PaymentReconciliation(
+    _$PaymentReconciliationImpl(
       resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.PaymentReconciliation) ??
@@ -301,8 +301,8 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_PaymentReconciliationToJson(
-    _$_PaymentReconciliation instance) {
+Map<String, dynamic> _$$PaymentReconciliationImplToJson(
+    _$PaymentReconciliationImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -355,9 +355,9 @@ const _$PaymentReconciliationOutcomeEnumMap = {
   PaymentReconciliationOutcome.unknown: 'unknown',
 };
 
-_$_PaymentReconciliationDetail _$$_PaymentReconciliationDetailFromJson(
+_$PaymentReconciliationDetailImpl _$$PaymentReconciliationDetailImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PaymentReconciliationDetail(
+    _$PaymentReconciliationDetailImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -387,8 +387,8 @@ _$_PaymentReconciliationDetail _$$_PaymentReconciliationDetailFromJson(
           : Quantity.fromJson(json['amount'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PaymentReconciliationDetailToJson(
-    _$_PaymentReconciliationDetail instance) {
+Map<String, dynamic> _$$PaymentReconciliationDetailImplToJson(
+    _$PaymentReconciliationDetailImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -413,9 +413,9 @@ Map<String, dynamic> _$$_PaymentReconciliationDetailToJson(
   return val;
 }
 
-_$_PaymentReconciliationNote _$$_PaymentReconciliationNoteFromJson(
+_$PaymentReconciliationNoteImpl _$$PaymentReconciliationNoteImplFromJson(
         Map<String, dynamic> json) =>
-    _$_PaymentReconciliationNote(
+    _$PaymentReconciliationNoteImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -435,8 +435,8 @@ _$_PaymentReconciliationNote _$$_PaymentReconciliationNoteFromJson(
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_PaymentReconciliationNoteToJson(
-    _$_PaymentReconciliationNote instance) {
+Map<String, dynamic> _$$PaymentReconciliationNoteImplToJson(
+    _$PaymentReconciliationNoteImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

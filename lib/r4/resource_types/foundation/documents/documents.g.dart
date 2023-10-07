@@ -6,8 +6,8 @@ part of 'documents.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_CatalogEntry _$$_CatalogEntryFromJson(Map<String, dynamic> json) =>
-    _$_CatalogEntry(
+_$CatalogEntryImpl _$$CatalogEntryImplFromJson(Map<String, dynamic> json) =>
+    _$CatalogEntryImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CatalogEntry) ??
@@ -93,7 +93,7 @@ _$_CatalogEntry _$$_CatalogEntryFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_CatalogEntryToJson(_$_CatalogEntry instance) {
+Map<String, dynamic> _$$CatalogEntryImplToJson(_$CatalogEntryImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -288,9 +288,9 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_CatalogEntryRelatedEntry _$$_CatalogEntryRelatedEntryFromJson(
+_$CatalogEntryRelatedEntryImpl _$$CatalogEntryRelatedEntryImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CatalogEntryRelatedEntry(
+    _$CatalogEntryRelatedEntryImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -307,8 +307,8 @@ _$_CatalogEntryRelatedEntry _$$_CatalogEntryRelatedEntryFromJson(
       item: Reference.fromJson(json['item'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CatalogEntryRelatedEntryToJson(
-    _$_CatalogEntryRelatedEntry instance) {
+Map<String, dynamic> _$$CatalogEntryRelatedEntryImplToJson(
+    _$CatalogEntryRelatedEntryImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -328,8 +328,8 @@ Map<String, dynamic> _$$_CatalogEntryRelatedEntryToJson(
   return val;
 }
 
-_$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
-    _$_Composition(
+_$CompositionImpl _$$CompositionImplFromJson(Map<String, dynamic> json) =>
+    _$CompositionImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Composition) ??
@@ -413,7 +413,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_CompositionToJson(_$_Composition instance) {
+Map<String, dynamic> _$$CompositionImplToJson(_$CompositionImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -460,9 +460,9 @@ Map<String, dynamic> _$$_CompositionToJson(_$_Composition instance) {
   return val;
 }
 
-_$_CompositionAttester _$$_CompositionAttesterFromJson(
+_$CompositionAttesterImpl _$$CompositionAttesterImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CompositionAttester(
+    _$CompositionAttesterImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -483,8 +483,8 @@ _$_CompositionAttester _$$_CompositionAttesterFromJson(
           : Reference.fromJson(json['party'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CompositionAttesterToJson(
-    _$_CompositionAttester instance) {
+Map<String, dynamic> _$$CompositionAttesterImplToJson(
+    _$CompositionAttesterImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -506,9 +506,9 @@ Map<String, dynamic> _$$_CompositionAttesterToJson(
   return val;
 }
 
-_$_CompositionRelatesTo _$$_CompositionRelatesToFromJson(
+_$CompositionRelatesToImpl _$$CompositionRelatesToImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CompositionRelatesTo(
+    _$CompositionRelatesToImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -529,8 +529,8 @@ _$_CompositionRelatesTo _$$_CompositionRelatesToFromJson(
           : Reference.fromJson(json['targetReference'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_CompositionRelatesToToJson(
-    _$_CompositionRelatesTo instance) {
+Map<String, dynamic> _$$CompositionRelatesToImplToJson(
+    _$CompositionRelatesToImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -551,8 +551,9 @@ Map<String, dynamic> _$$_CompositionRelatesToToJson(
   return val;
 }
 
-_$_CompositionEvent _$$_CompositionEventFromJson(Map<String, dynamic> json) =>
-    _$_CompositionEvent(
+_$CompositionEventImpl _$$CompositionEventImplFromJson(
+        Map<String, dynamic> json) =>
+    _$CompositionEventImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -571,7 +572,8 @@ _$_CompositionEvent _$$_CompositionEventFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_CompositionEventToJson(_$_CompositionEvent instance) {
+Map<String, dynamic> _$$CompositionEventImplToJson(
+    _$CompositionEventImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -591,9 +593,9 @@ Map<String, dynamic> _$$_CompositionEventToJson(_$_CompositionEvent instance) {
   return val;
 }
 
-_$_CompositionSection _$$_CompositionSectionFromJson(
+_$CompositionSectionImpl _$$CompositionSectionImplFromJson(
         Map<String, dynamic> json) =>
-    _$_CompositionSection(
+    _$CompositionSectionImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -636,8 +638,8 @@ _$_CompositionSection _$$_CompositionSectionFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_CompositionSectionToJson(
-    _$_CompositionSection instance) {
+Map<String, dynamic> _$$CompositionSectionImplToJson(
+    _$CompositionSectionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -666,8 +668,9 @@ Map<String, dynamic> _$$_CompositionSectionToJson(
   return val;
 }
 
-_$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
-    _$_DocumentManifest(
+_$DocumentManifestImpl _$$DocumentManifestImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DocumentManifestImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.DocumentManifest) ??
@@ -746,7 +749,8 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_DocumentManifestToJson(_$_DocumentManifest instance) {
+Map<String, dynamic> _$$DocumentManifestImplToJson(
+    _$DocumentManifestImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -791,9 +795,9 @@ Map<String, dynamic> _$$_DocumentManifestToJson(_$_DocumentManifest instance) {
   return val;
 }
 
-_$_DocumentManifestRelated _$$_DocumentManifestRelatedFromJson(
+_$DocumentManifestRelatedImpl _$$DocumentManifestRelatedImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DocumentManifestRelated(
+    _$DocumentManifestRelatedImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -809,8 +813,8 @@ _$_DocumentManifestRelated _$$_DocumentManifestRelatedFromJson(
           : Reference.fromJson(json['ref'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DocumentManifestRelatedToJson(
-    _$_DocumentManifestRelated instance) {
+Map<String, dynamic> _$$DocumentManifestRelatedImplToJson(
+    _$DocumentManifestRelatedImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -829,8 +833,9 @@ Map<String, dynamic> _$$_DocumentManifestRelatedToJson(
   return val;
 }
 
-_$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
-    _$_DocumentReference(
+_$DocumentReferenceImpl _$$DocumentReferenceImplFromJson(
+        Map<String, dynamic> json) =>
+    _$DocumentReferenceImpl(
       resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.DocumentReference) ??
@@ -923,8 +928,8 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
               json['context'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DocumentReferenceToJson(
-    _$_DocumentReference instance) {
+Map<String, dynamic> _$$DocumentReferenceImplToJson(
+    _$DocumentReferenceImpl instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType]!,
   };
@@ -974,9 +979,9 @@ Map<String, dynamic> _$$_DocumentReferenceToJson(
   return val;
 }
 
-_$_DocumentReferenceRelatesTo _$$_DocumentReferenceRelatesToFromJson(
+_$DocumentReferenceRelatesToImpl _$$DocumentReferenceRelatesToImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DocumentReferenceRelatesTo(
+    _$DocumentReferenceRelatesToImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -991,8 +996,8 @@ _$_DocumentReferenceRelatesTo _$$_DocumentReferenceRelatesToFromJson(
       target: Reference.fromJson(json['target'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DocumentReferenceRelatesToToJson(
-    _$_DocumentReferenceRelatesTo instance) {
+Map<String, dynamic> _$$DocumentReferenceRelatesToImplToJson(
+    _$DocumentReferenceRelatesToImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1012,9 +1017,9 @@ Map<String, dynamic> _$$_DocumentReferenceRelatesToToJson(
   return val;
 }
 
-_$_DocumentReferenceContent _$$_DocumentReferenceContentFromJson(
+_$DocumentReferenceContentImpl _$$DocumentReferenceContentImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DocumentReferenceContent(
+    _$DocumentReferenceContentImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1029,8 +1034,8 @@ _$_DocumentReferenceContent _$$_DocumentReferenceContentFromJson(
           : Coding.fromJson(json['format'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_DocumentReferenceContentToJson(
-    _$_DocumentReferenceContent instance) {
+Map<String, dynamic> _$$DocumentReferenceContentImplToJson(
+    _$DocumentReferenceContentImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1049,9 +1054,9 @@ Map<String, dynamic> _$$_DocumentReferenceContentToJson(
   return val;
 }
 
-_$_DocumentReferenceContext _$$_DocumentReferenceContextFromJson(
+_$DocumentReferenceContextImpl _$$DocumentReferenceContextImplFromJson(
         Map<String, dynamic> json) =>
-    _$_DocumentReferenceContext(
+    _$DocumentReferenceContextImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1085,8 +1090,8 @@ _$_DocumentReferenceContext _$$_DocumentReferenceContextFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_DocumentReferenceContextToJson(
-    _$_DocumentReferenceContext instance) {
+Map<String, dynamic> _$$DocumentReferenceContextImplToJson(
+    _$DocumentReferenceContextImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

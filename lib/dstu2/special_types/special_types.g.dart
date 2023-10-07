@@ -6,7 +6,8 @@ part of 'special_types.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_FhirMeta _$$_FhirMetaFromJson(Map<String, dynamic> json) => _$_FhirMeta(
+_$FhirMetaImpl _$$FhirMetaImplFromJson(Map<String, dynamic> json) =>
+    _$FhirMetaImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -35,7 +36,7 @@ _$_FhirMeta _$$_FhirMetaFromJson(Map<String, dynamic> json) => _$_FhirMeta(
           .toList(),
     );
 
-Map<String, dynamic> _$$_FhirMetaToJson(_$_FhirMeta instance) {
+Map<String, dynamic> _$$FhirMetaImplToJson(_$FhirMetaImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -58,7 +59,8 @@ Map<String, dynamic> _$$_FhirMetaToJson(_$_FhirMeta instance) {
   return val;
 }
 
-_$_Reference _$$_ReferenceFromJson(Map<String, dynamic> json) => _$_Reference(
+_$ReferenceImpl _$$ReferenceImplFromJson(Map<String, dynamic> json) =>
+    _$ReferenceImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -76,7 +78,7 @@ _$_Reference _$$_ReferenceFromJson(Map<String, dynamic> json) => _$_Reference(
           : Element.fromJson(json['_display'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ReferenceToJson(_$_Reference instance) {
+Map<String, dynamic> _$$ReferenceImplToJson(_$ReferenceImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -96,8 +98,9 @@ Map<String, dynamic> _$$_ReferenceToJson(_$_Reference instance) {
   return val;
 }
 
-_$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
-    _$_ElementDefinition(
+_$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$ElementDefinitionImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1150,8 +1153,8 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           .toList(),
     );
 
-Map<String, dynamic> _$$_ElementDefinitionToJson(
-    _$_ElementDefinition instance) {
+Map<String, dynamic> _$$ElementDefinitionImplToJson(
+    _$ElementDefinitionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1541,7 +1544,8 @@ Map<String, dynamic> _$$_ElementDefinitionToJson(
   return val;
 }
 
-_$_Narrative _$$_NarrativeFromJson(Map<String, dynamic> json) => _$_Narrative(
+_$NarrativeImpl _$$NarrativeImplFromJson(Map<String, dynamic> json) =>
+    _$NarrativeImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1557,7 +1561,7 @@ _$_Narrative _$$_NarrativeFromJson(Map<String, dynamic> json) => _$_Narrative(
       div: json['div'] as String,
     );
 
-Map<String, dynamic> _$$_NarrativeToJson(_$_Narrative instance) {
+Map<String, dynamic> _$$NarrativeImplToJson(_$NarrativeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1584,9 +1588,9 @@ const _$NarrativeStatusEnumMap = {
   NarrativeStatus.unknown: 'unknown',
 };
 
-_$_ElementDefinitionSlicing _$$_ElementDefinitionSlicingFromJson(
+_$ElementDefinitionSlicingImpl _$$ElementDefinitionSlicingImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ElementDefinitionSlicing(
+    _$ElementDefinitionSlicingImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1611,8 +1615,8 @@ _$_ElementDefinitionSlicing _$$_ElementDefinitionSlicingFromJson(
           : Element.fromJson(json['_rules'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ElementDefinitionSlicingToJson(
-    _$_ElementDefinitionSlicing instance) {
+Map<String, dynamic> _$$ElementDefinitionSlicingImplToJson(
+    _$ElementDefinitionSlicingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1641,9 +1645,9 @@ const _$SlicingRulesEnumMap = {
   SlicingRules.unknown: 'unknown',
 };
 
-_$_ElementDefinitionBase _$$_ElementDefinitionBaseFromJson(
+_$ElementDefinitionBaseImpl _$$ElementDefinitionBaseImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ElementDefinitionBase(
+    _$ElementDefinitionBaseImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1662,8 +1666,8 @@ _$_ElementDefinitionBase _$$_ElementDefinitionBaseFromJson(
           : Element.fromJson(json['_max'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ElementDefinitionBaseToJson(
-    _$_ElementDefinitionBase instance) {
+Map<String, dynamic> _$$ElementDefinitionBaseImplToJson(
+    _$ElementDefinitionBaseImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1684,9 +1688,9 @@ Map<String, dynamic> _$$_ElementDefinitionBaseToJson(
   return val;
 }
 
-_$_ElementDefinitionType _$$_ElementDefinitionTypeFromJson(
+_$ElementDefinitionTypeImpl _$$ElementDefinitionTypeImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ElementDefinitionType(
+    _$ElementDefinitionTypeImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1708,8 +1712,8 @@ _$_ElementDefinitionType _$$_ElementDefinitionTypeFromJson(
           .toList(),
     );
 
-Map<String, dynamic> _$$_ElementDefinitionTypeToJson(
-    _$_ElementDefinitionType instance) {
+Map<String, dynamic> _$$ElementDefinitionTypeImplToJson(
+    _$ElementDefinitionTypeImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1738,15 +1742,16 @@ const _$TypeAggregationEnumMap = {
   TypeAggregation.unknown: 'unknown',
 };
 
-_$_TypeCodeExtension _$$_TypeCodeExtensionFromJson(Map<String, dynamic> json) =>
-    _$_TypeCodeExtension(
+_$TypeCodeExtensionImpl _$$TypeCodeExtensionImplFromJson(
+        Map<String, dynamic> json) =>
+    _$TypeCodeExtensionImpl(
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
-Map<String, dynamic> _$$_TypeCodeExtensionToJson(
-    _$_TypeCodeExtension instance) {
+Map<String, dynamic> _$$TypeCodeExtensionImplToJson(
+    _$TypeCodeExtensionImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1760,9 +1765,9 @@ Map<String, dynamic> _$$_TypeCodeExtensionToJson(
   return val;
 }
 
-_$_ElementDefinitionConstraint _$$_ElementDefinitionConstraintFromJson(
+_$ElementDefinitionConstraintImpl _$$ElementDefinitionConstraintImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ElementDefinitionConstraint(
+    _$ElementDefinitionConstraintImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1790,8 +1795,8 @@ _$_ElementDefinitionConstraint _$$_ElementDefinitionConstraintFromJson(
           : Element.fromJson(json['_xpath'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ElementDefinitionConstraintToJson(
-    _$_ElementDefinitionConstraint instance) {
+Map<String, dynamic> _$$ElementDefinitionConstraintImplToJson(
+    _$ElementDefinitionConstraintImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1822,13 +1827,13 @@ const _$ConstraintSeverityEnumMap = {
   ConstraintSeverity.unknown: 'unknown',
 };
 
-_$_ElementDefinitionBinding _$$_ElementDefinitionBindingFromJson(
+_$ElementDefinitionBindingImpl _$$ElementDefinitionBindingImplFromJson(
     Map<String, dynamic> json) {
   $checkKeys(
     json,
     requiredKeys: const ['strength'],
   );
-  return _$_ElementDefinitionBinding(
+  return _$ElementDefinitionBindingImpl(
     fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1852,8 +1857,8 @@ _$_ElementDefinitionBinding _$$_ElementDefinitionBindingFromJson(
   );
 }
 
-Map<String, dynamic> _$$_ElementDefinitionBindingToJson(
-    _$_ElementDefinitionBinding instance) {
+Map<String, dynamic> _$$ElementDefinitionBindingImplToJson(
+    _$ElementDefinitionBindingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -1883,9 +1888,9 @@ const _$ElementDefinitionBindingStrengthEnumMap = {
   ElementDefinitionBindingStrength.unknown: 'unknown',
 };
 
-_$_ElementDefinitionMapping _$$_ElementDefinitionMappingFromJson(
+_$ElementDefinitionMappingImpl _$$ElementDefinitionMappingImplFromJson(
         Map<String, dynamic> json) =>
-    _$_ElementDefinitionMapping(
+    _$ElementDefinitionMappingImpl(
       fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
@@ -1908,8 +1913,8 @@ _$_ElementDefinitionMapping _$$_ElementDefinitionMappingFromJson(
           : Element.fromJson(json['_map'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$_ElementDefinitionMappingToJson(
-    _$_ElementDefinitionMapping instance) {
+Map<String, dynamic> _$$ElementDefinitionMappingImplToJson(
+    _$ElementDefinitionMappingImpl instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
