@@ -8892,6 +8892,47 @@ class InsurancePlanContact with _$InsurancePlanContact {
       name: name == null
           ? HumanName(period: period)
           : name!.updatePeriod(period));
+
+  InsurancePlanContact updateAddressUse(AddressUse use) => address == null
+      ? copyWith(address: Address(use: use))
+      : copyWith(address: address!.updateUse(use));
+
+  InsurancePlanContact updateAddressType(AddressType type) => address == null
+      ? copyWith(address: Address(type: type))
+      : copyWith(address: address!.updateType(type));
+
+  InsurancePlanContact updateAddressText(String text) => address == null
+      ? copyWith(address: Address(text: text))
+      : copyWith(address: address!.updateText(text));
+
+  InsurancePlanContact updateAddressLine(List<String> line) => address == null
+      ? copyWith(address: Address(line: line))
+      : copyWith(address: address!.updateLine(line));
+
+  InsurancePlanContact updateAddressCity(String city) => address == null
+      ? copyWith(address: Address(city: city))
+      : copyWith(address: address!.updateCity(city));
+
+  InsurancePlanContact updateAddressDistrict(String district) => address == null
+      ? copyWith(address: Address(district: district))
+      : copyWith(address: address!.updateDistrict(district));
+
+  InsurancePlanContact updateAddressState(String state) => address == null
+      ? copyWith(address: Address(state: state))
+      : copyWith(address: address!.updateState(state));
+
+  InsurancePlanContact updateAddressPostalCode(String postalCode) =>
+      address == null
+          ? copyWith(address: Address(postalCode: postalCode))
+          : copyWith(address: address!.updatePostalCode(postalCode));
+
+  InsurancePlanContact updateAddressCountry(String country) => address == null
+      ? copyWith(address: Address(country: country))
+      : copyWith(address: address!.updateCountry(country));
+
+  InsurancePlanContact updateAddressPeriod(Period period) => address == null
+      ? copyWith(address: Address(period: period))
+      : copyWith(address: address!.updatePeriod(period));
 }
 
 /// [InsurancePlanCoverage] Details of a Health Insurance product/plan

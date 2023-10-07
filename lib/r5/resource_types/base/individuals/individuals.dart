@@ -1359,7 +1359,7 @@ class PatientContact with _$PatientContact {
   /// data as a String and not a Map
   String toJsonString() => jsonEncode(toJson());
 
-    PatientContact updateHumanNameUse(HumanNameUse use) =>
+  PatientContact updateHumanNameUse(HumanNameUse use) =>
       copyWith(name: name == null ? HumanName(use: use) : name!.updateUse(use));
 
   PatientContact updateHumanNameText(String text) => copyWith(
@@ -1388,6 +1388,45 @@ class PatientContact with _$PatientContact {
           ? HumanName(period: period)
           : name!.updatePeriod(period));
 
+  PatientContact updateAddressUse(AddressUse use) => address == null
+      ? copyWith(address: Address(use: use))
+      : copyWith(address: address!.updateUse(use));
+
+  PatientContact updateAddressType(AddressType type) => address == null
+      ? copyWith(address: Address(type: type))
+      : copyWith(address: address!.updateType(type));
+
+  PatientContact updateAddressText(String text) => address == null
+      ? copyWith(address: Address(text: text))
+      : copyWith(address: address!.updateText(text));
+
+  PatientContact updateAddressLine(List<String> line) => address == null
+      ? copyWith(address: Address(line: line))
+      : copyWith(address: address!.updateLine(line));
+
+  PatientContact updateAddressCity(String city) => address == null
+      ? copyWith(address: Address(city: city))
+      : copyWith(address: address!.updateCity(city));
+
+  PatientContact updateAddressDistrict(String district) => address == null
+      ? copyWith(address: Address(district: district))
+      : copyWith(address: address!.updateDistrict(district));
+
+  PatientContact updateAddressState(String state) => address == null
+      ? copyWith(address: Address(state: state))
+      : copyWith(address: address!.updateState(state));
+
+  PatientContact updateAddressPostalCode(String postalCode) => address == null
+      ? copyWith(address: Address(postalCode: postalCode))
+      : copyWith(address: address!.updatePostalCode(postalCode));
+
+  PatientContact updateAddressCountry(String country) => address == null
+      ? copyWith(address: Address(country: country))
+      : copyWith(address: address!.updateCountry(country));
+
+  PatientContact updateAddressPeriod(Period period) => address == null
+      ? copyWith(address: Address(period: period))
+      : copyWith(address: address!.updatePeriod(period));
 }
 
 /// [PatientCommunication] Demographics and other administrative information

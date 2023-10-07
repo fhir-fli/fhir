@@ -421,6 +421,46 @@ class PatientContact with _$PatientContact {
       name: name == null
           ? HumanName(period: period)
           : name!.updatePeriod(period));
+
+  PatientContact updateAddressUse(AddressUse use) => address == null
+      ? copyWith(address: Address(use: use))
+      : copyWith(address: address!.updateUse(use));
+
+  PatientContact updateAddressType(AddressType type) => address == null
+      ? copyWith(address: Address(type: type))
+      : copyWith(address: address!.updateType(type));
+
+  PatientContact updateAddressText(String text) => address == null
+      ? copyWith(address: Address(text: text))
+      : copyWith(address: address!.updateText(text));
+
+  PatientContact updateAddressLine(List<String> line) => address == null
+      ? copyWith(address: Address(line: line))
+      : copyWith(address: address!.updateLine(line));
+
+  PatientContact updateAddressCity(String city) => address == null
+      ? copyWith(address: Address(city: city))
+      : copyWith(address: address!.updateCity(city));
+
+  PatientContact updateAddressDistrict(String district) => address == null
+      ? copyWith(address: Address(district: district))
+      : copyWith(address: address!.updateDistrict(district));
+
+  PatientContact updateAddressState(String state) => address == null
+      ? copyWith(address: Address(state: state))
+      : copyWith(address: address!.updateState(state));
+
+  PatientContact updateAddressPostalCode(String postalCode) => address == null
+      ? copyWith(address: Address(postalCode: postalCode))
+      : copyWith(address: address!.updatePostalCode(postalCode));
+
+  PatientContact updateAddressCountry(String country) => address == null
+      ? copyWith(address: Address(country: country))
+      : copyWith(address: address!.updateCountry(country));
+
+  PatientContact updateAddressPeriod(Period period) => address == null
+      ? copyWith(address: Address(period: period))
+      : copyWith(address: address!.updatePeriod(period));
 }
 
 @freezed
@@ -659,6 +699,149 @@ class Practitioner with Resource, _$Practitioner {
       name: name == null
           ? HumanName(period: period)
           : name!.updatePeriod(period));
+
+  Practitioner updateAddressUse(AddressUse use, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(use: use)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(use: use)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(use: use),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Practitioner updateAddressType(AddressType type, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(type: type)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(type: type)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(type: type),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Practitioner updateAddressText(String text, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(text: text)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(text: text)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(text: text),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Practitioner updateAddressLine(List<String> line, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(line: line)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(line: line)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(line: line),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Practitioner updateAddressCity(String city, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(city: city)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(city: city)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(city: city),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Practitioner updateAddressDistrict(String district, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(district: district)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(district: district)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(district: district),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Practitioner updateAddressState(String state, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(state: state)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(state: state)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(state: state),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Practitioner updateAddressPostalCode(String postalCode, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(postalCode: postalCode)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(postalCode: postalCode)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(postalCode: postalCode),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Practitioner updateAddressCountry(String country, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(country: country)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(country: country)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(country: country),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Practitioner updateAddressPeriod(Period period, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(period: period)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(period: period)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(period: period),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
 }
 
 @freezed

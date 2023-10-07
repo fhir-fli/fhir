@@ -81,6 +81,46 @@ class Location with Resource, _$Location {
   /// data as a String and not a Map
   @override
   String toJsonString() => jsonEncode(toJson());
+
+  Location updateAddressUse(AddressUse use) => address == null
+      ? copyWith(address: Address(use: use))
+      : copyWith(address: address!.updateUse(use));
+
+  Location updateAddressType(AddressType type) => address == null
+      ? copyWith(address: Address(type: type))
+      : copyWith(address: address!.updateType(type));
+
+  Location updateAddressText(String text) => address == null
+      ? copyWith(address: Address(text: text))
+      : copyWith(address: address!.updateText(text));
+
+  Location updateAddressLine(List<String> line) => address == null
+      ? copyWith(address: Address(line: line))
+      : copyWith(address: address!.updateLine(line));
+
+  Location updateAddressCity(String city) => address == null
+      ? copyWith(address: Address(city: city))
+      : copyWith(address: address!.updateCity(city));
+
+  Location updateAddressDistrict(String district) => address == null
+      ? copyWith(address: Address(district: district))
+      : copyWith(address: address!.updateDistrict(district));
+
+  Location updateAddressState(String state) => address == null
+      ? copyWith(address: Address(state: state))
+      : copyWith(address: address!.updateState(state));
+
+  Location updateAddressPostalCode(String postalCode) => address == null
+      ? copyWith(address: Address(postalCode: postalCode))
+      : copyWith(address: address!.updatePostalCode(postalCode));
+
+  Location updateAddressCountry(String country) => address == null
+      ? copyWith(address: Address(country: country))
+      : copyWith(address: address!.updateCountry(country));
+
+  Location updateAddressPeriod(Period period) => address == null
+      ? copyWith(address: Address(period: period))
+      : copyWith(address: address!.updatePeriod(period));
 }
 
 @freezed

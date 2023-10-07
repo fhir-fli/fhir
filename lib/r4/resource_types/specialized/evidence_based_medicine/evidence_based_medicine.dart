@@ -2255,6 +2255,149 @@ class CitationEntry with _$CitationEntry {
       name: name == null
           ? HumanName(period: period)
           : name!.updatePeriod(period));
+
+  CitationEntry updateAddressUse(AddressUse use, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(use: use)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(use: use)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(use: use),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  CitationEntry updateAddressType(AddressType type, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(type: type)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(type: type)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(type: type),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  CitationEntry updateAddressText(String text, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(text: text)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(text: text)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(text: text),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  CitationEntry updateAddressLine(List<String> line, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(line: line)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(line: line)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(line: line),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  CitationEntry updateAddressCity(String city, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(city: city)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(city: city)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(city: city),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  CitationEntry updateAddressDistrict(String district, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(district: district)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(district: district)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(district: district),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  CitationEntry updateAddressState(String state, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(state: state)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(state: state)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(state: state),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  CitationEntry updateAddressPostalCode(String postalCode, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(postalCode: postalCode)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(postalCode: postalCode)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(postalCode: postalCode),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  CitationEntry updateAddressCountry(String country, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(country: country)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(country: country)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(country: country),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  CitationEntry updateAddressPeriod(Period period, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(period: period)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(period: period)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(period: period),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
 }
 
 /// [CitationAffiliationInfo] The Citation Resource enables reference to any

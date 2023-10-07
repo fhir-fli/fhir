@@ -676,6 +676,46 @@ class Location with Resource, _$Location {
   /// data as a String and not a Map
   @override
   String toJsonString() => jsonEncode(toJson());
+
+  Location updateAddressUse(AddressUse use) => address == null
+      ? copyWith(address: Address(use: use))
+      : copyWith(address: address!.updateUse(use));
+
+  Location updateAddressType(AddressType type) => address == null
+      ? copyWith(address: Address(type: type))
+      : copyWith(address: address!.updateType(type));
+
+  Location updateAddressText(String text) => address == null
+      ? copyWith(address: Address(text: text))
+      : copyWith(address: address!.updateText(text));
+
+  Location updateAddressLine(List<String> line) => address == null
+      ? copyWith(address: Address(line: line))
+      : copyWith(address: address!.updateLine(line));
+
+  Location updateAddressCity(String city) => address == null
+      ? copyWith(address: Address(city: city))
+      : copyWith(address: address!.updateCity(city));
+
+  Location updateAddressDistrict(String district) => address == null
+      ? copyWith(address: Address(district: district))
+      : copyWith(address: address!.updateDistrict(district));
+
+  Location updateAddressState(String state) => address == null
+      ? copyWith(address: Address(state: state))
+      : copyWith(address: address!.updateState(state));
+
+  Location updateAddressPostalCode(String postalCode) => address == null
+      ? copyWith(address: Address(postalCode: postalCode))
+      : copyWith(address: address!.updatePostalCode(postalCode));
+
+  Location updateAddressCountry(String country) => address == null
+      ? copyWith(address: Address(country: country))
+      : copyWith(address: address!.updateCountry(country));
+
+  Location updateAddressPeriod(Period period) => address == null
+      ? copyWith(address: Address(period: period))
+      : copyWith(address: address!.updatePeriod(period));
 }
 
 @freezed
@@ -789,6 +829,149 @@ class Organization with Resource, _$Organization {
   /// data as a String and not a Map
   @override
   String toJsonString() => jsonEncode(toJson());
+
+  Organization updateAddressUse(AddressUse use, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(use: use)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(use: use)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(use: use),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Organization updateAddressType(AddressType type, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(type: type)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(type: type)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(type: type),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Organization updateAddressText(String text, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(text: text)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(text: text)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(text: text),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Organization updateAddressLine(List<String> line, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(line: line)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(line: line)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(line: line),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Organization updateAddressCity(String city, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(city: city)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(city: city)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(city: city),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Organization updateAddressDistrict(String district, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(district: district)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(district: district)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(district: district),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Organization updateAddressState(String state, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(state: state)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(state: state)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(state: state),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Organization updateAddressPostalCode(String postalCode, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(postalCode: postalCode)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(postalCode: postalCode)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(postalCode: postalCode),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Organization updateAddressCountry(String country, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(country: country)]);
+    } else if (index >= address!.length) {
+      return copyWith(
+          address: <Address>[...address!, Address(country: country)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(country: country),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Organization updateAddressPeriod(Period period, [int index = 0]) {
+    if (address == null || address!.isEmpty) {
+      return copyWith(address: <Address>[Address(period: period)]);
+    } else if (index >= address!.length) {
+      return copyWith(address: <Address>[...address!, Address(period: period)]);
+    } else {
+      return copyWith(address: <Address>[
+        ...address!.sublist(0, index),
+        address![index].copyWith(period: period),
+        ...address!.sublist(index + 1)
+      ]);
+    }
+  }
 }
 
 @freezed
@@ -863,6 +1046,47 @@ class OrganizationContact with _$OrganizationContact {
       name: name == null
           ? HumanName(period: period)
           : name!.updatePeriod(period));
+
+  OrganizationContact updateAddressUse(AddressUse use) => address == null
+      ? copyWith(address: Address(use: use))
+      : copyWith(address: address!.updateUse(use));
+
+  OrganizationContact updateAddressType(AddressType type) => address == null
+      ? copyWith(address: Address(type: type))
+      : copyWith(address: address!.updateType(type));
+
+  OrganizationContact updateAddressText(String text) => address == null
+      ? copyWith(address: Address(text: text))
+      : copyWith(address: address!.updateText(text));
+
+  OrganizationContact updateAddressLine(List<String> line) => address == null
+      ? copyWith(address: Address(line: line))
+      : copyWith(address: address!.updateLine(line));
+
+  OrganizationContact updateAddressCity(String city) => address == null
+      ? copyWith(address: Address(city: city))
+      : copyWith(address: address!.updateCity(city));
+
+  OrganizationContact updateAddressDistrict(String district) => address == null
+      ? copyWith(address: Address(district: district))
+      : copyWith(address: address!.updateDistrict(district));
+
+  OrganizationContact updateAddressState(String state) => address == null
+      ? copyWith(address: Address(state: state))
+      : copyWith(address: address!.updateState(state));
+
+  OrganizationContact updateAddressPostalCode(String postalCode) =>
+      address == null
+          ? copyWith(address: Address(postalCode: postalCode))
+          : copyWith(address: address!.updatePostalCode(postalCode));
+
+  OrganizationContact updateAddressCountry(String country) => address == null
+      ? copyWith(address: Address(country: country))
+      : copyWith(address: address!.updateCountry(country));
+
+  OrganizationContact updateAddressPeriod(Period period) => address == null
+      ? copyWith(address: Address(period: period))
+      : copyWith(address: address!.updatePeriod(period));
 }
 
 @freezed
