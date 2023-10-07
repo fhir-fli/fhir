@@ -144,6 +144,83 @@ class ValueSetContact with _$ValueSetContact {
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
   String toJsonString() => jsonEncode(toJson());
+
+  ValueSetContact updateContactPointSystem(ContactPointSystem system,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(system: system),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ValueSetContact updateContactPointValue(String value, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(value: value),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ValueSetContact updateContactPointUse(ContactPointUse use, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(use: use),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ValueSetContact updateContactPointRank(FhirPositiveInt rank,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(rank: rank),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ValueSetContact updateContactPointPeriod(Period period, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(period: period),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
 }
 
 @freezed
@@ -797,6 +874,84 @@ class ConceptMapContact with _$ConceptMapContact {
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
   String toJsonString() => jsonEncode(toJson());
+
+  ConceptMapContact updateContactPointSystem(ContactPointSystem system,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(system: system),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ConceptMapContact updateContactPointValue(String value, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(value: value),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ConceptMapContact updateContactPointUse(ContactPointUse use,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(use: use),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ConceptMapContact updateContactPointRank(FhirPositiveInt rank,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(rank: rank),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  ConceptMapContact updateContactPointPeriod(Period period, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(period: period),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
 }
 
 @freezed
@@ -1068,6 +1223,84 @@ class NamingSystemContact with _$NamingSystemContact {
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
   String toJsonString() => jsonEncode(toJson());
+
+  NamingSystemContact updateContactPointSystem(ContactPointSystem system,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(system: system),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  NamingSystemContact updateContactPointValue(String value, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(value: value),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  NamingSystemContact updateContactPointUse(ContactPointUse use,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(use: use),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  NamingSystemContact updateContactPointRank(FhirPositiveInt rank,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(rank: rank),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  NamingSystemContact updateContactPointPeriod(Period period, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(period: period),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
 }
 
 @freezed

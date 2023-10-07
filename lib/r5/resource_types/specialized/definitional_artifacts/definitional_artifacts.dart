@@ -3155,6 +3155,83 @@ class DeviceDefinition with Resource, _$DeviceDefinition {
   /// data as a String and not a Map
   @override
   String toJsonString() => jsonEncode(toJson());
+
+  DeviceDefinition updateContactPointSystem(ContactPointSystem system,
+      [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(system: system),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  DeviceDefinition updateContactPointValue(String value, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(value: value),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  DeviceDefinition updateContactPointUse(ContactPointUse use, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(use: use),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  DeviceDefinition updateContactPointRank(FhirPositiveInt rank,
+      [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(rank: rank),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  DeviceDefinition updateContactPointPeriod(Period period, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(period: period),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
 }
 
 /// [DeviceDefinitionUdiDeviceIdentifier] The characteristics, operational

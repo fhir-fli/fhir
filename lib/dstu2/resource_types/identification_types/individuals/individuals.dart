@@ -198,6 +198,81 @@ class Patient with Resource, _$Patient {
     }
   }
 
+  Patient updateContactPointSystem(ContactPointSystem system, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(system: system),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateContactPointValue(String value, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(value: value),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateContactPointUse(ContactPointUse use, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(use: use),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateContactPointRank(FhirPositiveInt rank, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(rank: rank),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Patient updateContactPointPeriod(Period period, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(period: period),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
   Patient updateAddressUse(AddressUse use, [int index = 0]) {
     if (address == null || address!.isEmpty) {
       return copyWith(address: <Address>[Address(use: use)]);
@@ -421,6 +496,82 @@ class PatientContact with _$PatientContact {
       name: name == null
           ? HumanName(period: period)
           : name!.updatePeriod(period));
+
+  PatientContact updateContactPointSystem(ContactPointSystem system,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(system: system),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  PatientContact updateContactPointValue(String value, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(value: value),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  PatientContact updateContactPointUse(ContactPointUse use, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(use: use),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  PatientContact updateContactPointRank(FhirPositiveInt rank, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(rank: rank),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  PatientContact updateContactPointPeriod(Period period, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(period: period),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
 
   PatientContact updateAddressUse(AddressUse use) => address == null
       ? copyWith(address: Address(use: use))
@@ -699,6 +850,82 @@ class Practitioner with Resource, _$Practitioner {
       name: name == null
           ? HumanName(period: period)
           : name!.updatePeriod(period));
+
+  Practitioner updateContactPointSystem(ContactPointSystem system,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(system: system),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Practitioner updateContactPointValue(String value, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(value: value),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Practitioner updateContactPointUse(ContactPointUse use, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(use: use),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Practitioner updateContactPointRank(FhirPositiveInt rank, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(rank: rank),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Practitioner updateContactPointPeriod(Period period, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(period: period),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
 
   Practitioner updateAddressUse(AddressUse use, [int index = 0]) {
     if (address == null || address!.isEmpty) {
@@ -1038,6 +1265,82 @@ class RelatedPerson with Resource, _$RelatedPerson {
       name: name == null
           ? HumanName(period: period)
           : name!.updatePeriod(period));
+
+  RelatedPerson updateContactPointSystem(ContactPointSystem system,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(system: system),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  RelatedPerson updateContactPointValue(String value, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(value: value),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  RelatedPerson updateContactPointUse(ContactPointUse use, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(use: use),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  RelatedPerson updateContactPointRank(FhirPositiveInt rank, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(rank: rank),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  RelatedPerson updateContactPointPeriod(Period period, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(period: period),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
 
   RelatedPerson updateAddressUse(AddressUse use, [int index = 0]) {
     if (address == null || address!.isEmpty) {

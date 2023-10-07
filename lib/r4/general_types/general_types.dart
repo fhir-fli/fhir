@@ -2438,6 +2438,17 @@ class ContactPoint with _$ContactPoint {
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
   String toJsonString() => jsonEncode(toJson());
+
+  ContactPoint updateSystem(ContactPointSystem system) =>
+      copyWith(system: system);
+
+  ContactPoint updateValue(String value) => copyWith(value: value);
+
+  ContactPoint updateUse(ContactPointUse use) => copyWith(use: use);
+
+  ContactPoint updateRank(FhirPositiveInt rank) => copyWith(rank: rank);
+
+  ContactPoint updatePeriod(Period period) => copyWith(period: period);
 }
 
 /// [Timing] Specifies an event that may occur multiple times. Timing

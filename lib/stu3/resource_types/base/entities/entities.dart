@@ -89,6 +89,81 @@ class Device with Resource, _$Device {
   /// data as a String and not a Map
   @override
   String toJsonString() => jsonEncode(toJson());
+
+  Device updateContactPointSystem(ContactPointSystem system, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(system: system),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Device updateContactPointValue(String value, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(value: value),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Device updateContactPointUse(ContactPointUse use, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(use: use),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Device updateContactPointRank(FhirDecimal rank, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(rank: rank),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Device updateContactPointPeriod(Period period, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(period: period),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
 }
 
 @freezed
@@ -423,6 +498,82 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
   /// data as a String and not a Map
   @override
   String toJsonString() => jsonEncode(toJson());
+
+  FhirEndpoint updateContactPointSystem(ContactPointSystem system,
+      [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(system: system),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  FhirEndpoint updateContactPointValue(String value, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(value: value),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  FhirEndpoint updateContactPointUse(ContactPointUse use, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(use: use),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  FhirEndpoint updateContactPointRank(FhirDecimal rank, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(rank: rank),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  FhirEndpoint updateContactPointPeriod(Period period, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(period: period),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
 }
 
 @freezed
@@ -509,6 +660,83 @@ class HealthcareService with Resource, _$HealthcareService {
   /// data as a String and not a Map
   @override
   String toJsonString() => jsonEncode(toJson());
+
+  HealthcareService updateContactPointSystem(ContactPointSystem system,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(system: system),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  HealthcareService updateContactPointValue(String value, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(value: value),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  HealthcareService updateContactPointUse(ContactPointUse use,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(use: use),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  HealthcareService updateContactPointRank(FhirDecimal rank, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(rank: rank),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  HealthcareService updateContactPointPeriod(Period period, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(period: period),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
 }
 
 @freezed
@@ -677,6 +905,82 @@ class Location with Resource, _$Location {
   @override
   String toJsonString() => jsonEncode(toJson());
 
+  Location updateContactPointSystem(ContactPointSystem system,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(system: system),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Location updateContactPointValue(String value, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(value: value),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Location updateContactPointUse(ContactPointUse use, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(use: use),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Location updateContactPointRank(FhirDecimal rank, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(rank: rank),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Location updateContactPointPeriod(Period period, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(period: period),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
   Location updateAddressUse(AddressUse use) => address == null
       ? copyWith(address: Address(use: use))
       : copyWith(address: address!.updateUse(use));
@@ -829,6 +1133,82 @@ class Organization with Resource, _$Organization {
   /// data as a String and not a Map
   @override
   String toJsonString() => jsonEncode(toJson());
+
+  Organization updateContactPointSystem(ContactPointSystem system,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(system: system),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Organization updateContactPointValue(String value, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(value: value),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Organization updateContactPointUse(ContactPointUse use, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(use: use),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Organization updateContactPointRank(FhirDecimal rank, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(rank: rank),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Organization updateContactPointPeriod(Period period, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(period: period),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
 
   Organization updateAddressUse(AddressUse use, [int index = 0]) {
     if (address == null || address!.isEmpty) {
@@ -1046,6 +1426,84 @@ class OrganizationContact with _$OrganizationContact {
       name: name == null
           ? HumanName(period: period)
           : name!.updatePeriod(period));
+
+  OrganizationContact updateContactPointSystem(ContactPointSystem system,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(system: system),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  OrganizationContact updateContactPointValue(String value, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(value: value),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  OrganizationContact updateContactPointUse(ContactPointUse use,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(use: use),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  OrganizationContact updateContactPointRank(FhirDecimal rank,
+      [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(rank: rank),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  OrganizationContact updateContactPointPeriod(Period period, [int index = 0]) {
+    if (telecom == null || telecom!.isEmpty) {
+      return copyWith(telecom: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= telecom!.length) {
+      return copyWith(
+          telecom: <ContactPoint>[...telecom!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(telecom: <ContactPoint>[
+        ...telecom!.sublist(0, index),
+        telecom![index].copyWith(period: period),
+        ...telecom!.sublist(index + 1)
+      ]);
+    }
+  }
 
   OrganizationContact updateAddressUse(AddressUse use) => address == null
       ? copyWith(address: Address(use: use))

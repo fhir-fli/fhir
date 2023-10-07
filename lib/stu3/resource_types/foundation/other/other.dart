@@ -811,6 +811,41 @@ class MessageHeaderSource with _$MessageHeaderSource {
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
   String toJsonString() => jsonEncode(toJson());
+
+  MessageHeaderSource updateContactPointSystem(
+    ContactPointSystem system,
+  ) =>
+      contact == null
+          ? copyWith(contact: ContactPoint(system: system))
+          : copyWith(contact: contact!.copyWith(system: system));
+
+  MessageHeaderSource updateContactPointValue(
+    String value,
+  ) =>
+      contact == null
+          ? copyWith(contact: ContactPoint(value: value))
+          : copyWith(contact: contact!.copyWith(value: value));
+
+  MessageHeaderSource updateContactPointUse(
+    ContactPointUse use,
+  ) =>
+      contact == null
+          ? copyWith(contact: ContactPoint(use: use))
+          : copyWith(contact: contact!.copyWith(use: use));
+
+  MessageHeaderSource updateContactPointRank(
+    FhirDecimal rank,
+  ) =>
+      contact == null
+          ? copyWith(contact: ContactPoint(rank: rank))
+          : copyWith(contact: contact!.copyWith(rank: rank));
+
+  MessageHeaderSource updateContactPointPeriod(
+    Period period,
+  ) =>
+      contact == null
+          ? copyWith(contact: ContactPoint(period: period))
+          : copyWith(contact: contact!.copyWith(period: period));
 }
 
 @freezed
@@ -1201,6 +1236,82 @@ class Subscription with Resource, _$Subscription {
   /// data as a String and not a Map
   @override
   String toJsonString() => jsonEncode(toJson());
+
+  Subscription updateContactPointSystem(ContactPointSystem system,
+      [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(system: system)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(system: system)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(system: system),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Subscription updateContactPointValue(String value, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(value: value)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(value: value)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(value: value),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Subscription updateContactPointUse(ContactPointUse use, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(use: use)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(use: use)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(use: use),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Subscription updateContactPointRank(FhirDecimal rank, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(rank: rank)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(rank: rank)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(rank: rank),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
+
+  Subscription updateContactPointPeriod(Period period, [int index = 0]) {
+    if (contact == null || contact!.isEmpty) {
+      return copyWith(contact: <ContactPoint>[ContactPoint(period: period)]);
+    } else if (index >= contact!.length) {
+      return copyWith(
+          contact: <ContactPoint>[...contact!, ContactPoint(period: period)]);
+    } else {
+      return copyWith(contact: <ContactPoint>[
+        ...contact!.sublist(0, index),
+        contact![index].copyWith(period: period),
+        ...contact!.sublist(index + 1)
+      ]);
+    }
+  }
 }
 
 @freezed
