@@ -9,10 +9,9 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'comparator.dart';
-import 'primitive_type_exceptions.dart';
+import 'primitive_types.dart';
 
-class FhirTime {
+class FhirTime  implements FhirPrimitiveBase{
   const FhirTime._(this._valueString, this._valueTime, this._isValid);
 
   factory FhirTime(dynamic inValue) => inValue is String &&

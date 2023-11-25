@@ -9,9 +9,9 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'primitive_type_exceptions.dart';
+import 'primitive_types.dart';
 
-class FhirInteger64 {
+class FhirInteger64 implements FhirPrimitiveBase {
   const FhirInteger64._(this.valueString, this.valueNumber, this.isValid);
 
   factory FhirInteger64(dynamic inValue) {

@@ -9,9 +9,9 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'primitive_type_exceptions.dart';
+import 'primitive_types.dart';
 
-class FhirCanonical {
+class FhirCanonical implements FhirPrimitiveBase {
   const FhirCanonical._(this._valueString, this._valueCanonical, this._isValid);
 
   factory FhirCanonical(dynamic inValue) {

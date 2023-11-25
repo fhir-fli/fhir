@@ -9,9 +9,9 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'primitive_type_exceptions.dart';
+import 'primitive_types.dart';
 
-class FhirCode {
+class FhirCode implements FhirPrimitiveBase {
   const FhirCode._(this._valueString, this._valueCode, this._isValid);
 
   /// Construct a [FhirCode] constant at compile time

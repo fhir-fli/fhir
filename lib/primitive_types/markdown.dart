@@ -9,9 +9,9 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'primitive_type_exceptions.dart';
+import 'primitive_types.dart';
 
-class FhirMarkdown {
+class FhirMarkdown implements FhirPrimitiveBase {
   const FhirMarkdown._(this._valueString, this._valueMarkdown, this._isValid);
 
   factory FhirMarkdown(dynamic inValue) =>

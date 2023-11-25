@@ -9,9 +9,9 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'primitive_type_exceptions.dart';
+import 'primitive_types.dart';
 
-class FhirBase64Binary {
+class FhirBase64Binary implements FhirPrimitiveBase {
   const FhirBase64Binary._(
       this._valueString, this._valueBase64Binary, this._isValid);
 

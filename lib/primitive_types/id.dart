@@ -10,14 +10,14 @@ import 'package:uuid/uuid.dart' as uuid;
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'primitive_type_exceptions.dart';
+import 'primitive_types.dart';
 
 /// returns the same resource with a new ID (even if there is already an ID present)
 FhirId newId() => FhirId(const uuid.Uuid().v4());
 
 String newIdString() => const uuid.Uuid().v4();
 
-class FhirId {
+class FhirId implements FhirPrimitiveBase {
   const FhirId._(this._valueString, this._valueId, this._isValid);
 
   factory FhirId(dynamic inValue) =>

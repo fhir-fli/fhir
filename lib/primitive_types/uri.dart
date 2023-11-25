@@ -9,9 +9,9 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'primitive_type_exceptions.dart';
+import 'primitive_types.dart';
 
-class FhirUri {
+class FhirUri  implements FhirPrimitiveBase{
   const FhirUri._(this._valueString, this._valueUri, this._isValid);
 
   factory FhirUri(dynamic inValue) {

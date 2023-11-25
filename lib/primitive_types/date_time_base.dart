@@ -3,7 +3,7 @@
 // Project imports:
 import 'primitive_types.dart';
 
-abstract class FhirDateTimeBase {
+abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   const FhirDateTimeBase(
       this.valueString, this.valueDateTime, this.isValid, this.parseError);
 

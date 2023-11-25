@@ -7,6 +7,7 @@ export 'date.dart';
 export 'date_time.dart';
 export 'date_time_base.dart';
 export 'decimal.dart';
+export 'fhir_primitive_base.dart';
 export 'id.dart';
 export 'instant.dart';
 export 'integer.dart';

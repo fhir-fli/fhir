@@ -9,11 +9,9 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'primitive_type_exceptions.dart';
+import 'primitive_types.dart';
 
-//
-
-class FhirBoolean {
+class FhirBoolean implements FhirPrimitiveBase {
   const FhirBoolean._(this._valueString, this._valueBoolean, this._isValid,
       this._isTrueBoolean);
 
