@@ -49,6 +49,25 @@ class FhirDate extends FhirDateTimeBase {
         dateString.substring(0, len), dateTime, true, precision, null);
   }
 
+  factory FhirDate.fromUnits(
+      {required Object year, dynamic month, dynamic day}) {
+    if (int.tryParse(year.toString()) == null) {
+      throw CannotBeConstructed<FhirDate>(
+          'Date cannot be constructed from $year:$month:$day');
+    } else {
+      final int yearInt = int.parse(year.toString());
+      final int? monthInt = month == null ? null : int.parse(month.toString());
+      final int? dayInt = day == null ? null : int.parse(day.toString());
+      return FhirDate.fromDateTime(
+          DateTime(yearInt, monthInt ?? 1, dayInt ?? 1),
+          monthInt == null
+              ? DatePrecision.YYYY
+              : dayInt == null
+                  ? DatePrecision.YYYYMM
+                  : DatePrecision.YYYYMMDD);
+    }
+  }
+
   factory FhirDate.fromJson(dynamic json) => FhirDate(json);
 
   factory FhirDate.fromYaml(dynamic yaml) => yaml is String
@@ -61,6 +80,9 @@ class FhirDate extends FhirDateTimeBase {
   final DatePrecision _precision;
 
   DatePrecision get precision => _precision;
+  int? get year => value?.year;
+  int? get month => value?.month;
+  int? get day => value?.day;
 
   static final RegExp _dateYYYYExp =
       RegExp(r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$');

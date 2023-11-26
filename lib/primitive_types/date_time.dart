@@ -19,6 +19,7 @@ enum DateTimePrecision {
   INVALID,
 }
 
+// TODO(Dokotela): implement time zone offset
 class FhirDateTime extends FhirDateTimeBase {
   const FhirDateTime._(String valueString, DateTime? valueDateTime,
       bool isValid, this._precision, Exception? parseError)
@@ -80,6 +81,28 @@ class FhirDateTime extends FhirDateTimeBase {
     }
   }
 
+  // TODO (Dokotela): implement precision
+  factory FhirDateTime.fromUnits(
+      {int? year,
+      int? month,
+      int? day,
+      int? hour,
+      int? minute,
+      int? second,
+      int? millisecond,
+      int? microsecond}) {
+    final DateTime dateTime = DateTime(
+        year ?? 1,
+        month ?? 1,
+        day ?? 1,
+        hour ?? 0,
+        minute ?? 0,
+        second ?? 0,
+        millisecond ?? 0,
+        microsecond ?? 0);
+    return FhirDateTime.fromDateTime(dateTime);
+  }
+
   factory FhirDateTime.fromJson(dynamic json) => FhirDateTime(json);
 
   factory FhirDateTime.fromYaml(dynamic yaml) => yaml is String
@@ -92,6 +115,14 @@ class FhirDateTime extends FhirDateTimeBase {
   final DateTimePrecision _precision;
 
   DateTimePrecision get precision => _precision;
+  int? get year => value?.year;
+  int? get month => value?.month;
+  int? get day => value?.day;
+  int? get hour => value?.hour;
+  int? get minute => value?.minute;
+  int? get second => value?.second;
+  int? get millisecond => value?.millisecond;
+  Duration? get timezoneOffset => value?.timeZoneOffset;
 
   static final RegExp _dateTimeYYYYExp =
       RegExp(r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$');

@@ -11,7 +11,7 @@ import 'package:yaml/yaml.dart';
 // Project imports:
 import 'primitive_types.dart';
 
-class FhirTime  implements FhirPrimitiveBase{
+class FhirTime implements FhirPrimitiveBase {
   const FhirTime._(this._valueString, this._valueTime, this._isValid);
 
   factory FhirTime(dynamic inValue) => inValue is String &&
@@ -19,6 +19,18 @@ class FhirTime  implements FhirPrimitiveBase{
               .hasMatch(inValue)
       ? FhirTime._(inValue, inValue, true)
       : FhirTime._(inValue.toString(), null, false);
+
+  factory FhirTime.fromUnits(
+          {dynamic hour,
+          dynamic minute,
+          dynamic second,
+          dynamic millisecond}) =>
+      FhirTime(
+        '${hour.toString().padLeft(2, '0')}'
+        ':${minute.toString().padLeft(2, '0')}'
+        ':${second.toString().padLeft(2, '0')}'
+        '.${millisecond.toString().padLeft(3, '0')}',
+      );
 
   factory FhirTime.fromJson(dynamic json) => FhirTime(json);
 
@@ -37,6 +49,18 @@ class FhirTime  implements FhirPrimitiveBase{
   @override
   int get hashCode => _valueString.hashCode;
   String? get value => _valueTime;
+  int? get hour => _valueTime?.split(':')[0] == null
+      ? null
+      : int.tryParse(_valueTime!.split(':')[0]);
+  int? get minute => _valueTime?.split(':')[1] == null
+      ? null
+      : int.tryParse(_valueTime!.split(':')[1]);
+  int? get second => _valueTime?.split(':')[2] == null
+      ? null
+      : int.tryParse(_valueTime!.split(':')[2].split('.')[0]);
+  int? get millisecond => _valueTime?.split(':')[2] == null
+      ? null
+      : int.tryParse(_valueTime!.split(':')[2].split('.')[1]);
 
   @override
   String toString() => _valueString;

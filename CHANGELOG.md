@@ -1,5 +1,9 @@
 # fhir
 
+## [0.11.5]
+* updated dependencies
+* Added base type for primitives (I think I need it for CQL)
+
 ## [0.11.4]
 
 * updated dependencies
