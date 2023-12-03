@@ -5,23 +5,39 @@ import 'primitive_types.dart';
 
 abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   const FhirDateTimeBase(
-      this.valueString, this.valueDateTime, this.isValid, this.parseError);
+    this.valueString,
+    this.valueDateTime,
+    this.isValid,
+    this.precision,
+    this.parseError,
+  );
 
   final String valueString;
   final bool isValid;
   final DateTime? valueDateTime;
+  final DateTimePrecision precision;
   final Exception? parseError;
 
   @override
   int get hashCode => valueString.hashCode;
   DateTime? get value => valueDateTime;
-
   String? get iso8601String => valueDateTime?.toIso8601String();
+
+  int? get year => value?.year;
+  int? get month => value?.month;
+  int? get day => value?.day;
 
   @override
   String toString() => valueString;
   String toJson() => valueString;
   String toYaml() => valueString;
+
+  InvalidTypes<FhirDateTimeBase> comparisonError(
+          Comparator comparator, Object o) =>
+      InvalidTypes<FhirDateTimeBase>('Two values were passed to the date time '
+          '"$comparator" comparison operator, but there was an error comparing them.\n'
+          'Argument 1: $value (${value.runtimeType})\n'
+          'Argument 2: $o (${o.runtimeType})');
 
   /// Comparison method for FhirDateTimes
   bool _compare(Comparator comparator, Object o) {
@@ -41,17 +57,23 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       }
     }
 
+    final FhirDateTimeBase lhs = FhirDateTime(this);
+
     /// create a right-hand-side value
-    final FhirDateTimeBase? rhs = o is FhirDateTimeBase
-        ? o
-        : o is String
+    final FhirDateTimeBase? rhs =
+        o is FhirDateTimeBase || o is DateTime || o is String
             ? FhirDateTime(o)
             : null;
 
     /// If compared Object is null, is invalid, or if this is invalid, we don't
     /// continue to try the comparison
-    if (rhs == null || !rhs.isValid || !isValid) {
-      if (comparator == Comparator.eq && isValid) {
+    if (rhs == null) {
+      return false;
+    } else if (!rhs.isValid ||
+        !lhs.isValid ||
+        rhs.precision == DateTimePrecision.invalid ||
+        lhs.precision == DateTimePrecision.invalid) {
+      if (comparator == Comparator.eq) {
         /// if this is valid rhs is null or invalid, so they are not equal
         return false;
       } else {
@@ -64,201 +86,166 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
             'Argument 1: $value (${value.runtimeType}): Valid - $isValid\n'
             'Argument 2: $o (${o.runtimeType}): Valid - false}');
       }
-    }
+    } else {
+      final DateTimePrecision lhsPrecision = lhs.precision;
+      final DateTimePrecision rhsPrecision = rhs.precision;
+      final DateTime lhsDateTime = lhs.valueDateTime!;
+      final DateTime rhsDateTime = rhs.valueDateTime!;
 
-    /// Because dates really suck to compare, there's a bunch of extra overhead
-    /// to consider. The first is about precisions. We have to remember that
-    /// with TimeZone offsets, we can actually have 3 hyphens in a date
-    /// (2020-01-01T12:01:01-05:00)
-    int lhsDatePrecision = '-'.allMatches(toString()).length;
-    lhsDatePrecision = lhsDatePrecision > 2 ? 3 : lhsDatePrecision + 1;
-    int rhsDatePrecision = '-'.allMatches(o.toString()).length;
-    rhsDatePrecision = rhsDatePrecision > 2 ? 3 : rhsDatePrecision + 1;
-
-    /// Likewise we can have 3 semi-colons (2020-01-01T12:01:01-05:00)
-    int lhsTimePrecision = ':'.allMatches(toString()).length;
-    lhsTimePrecision = lhsTimePrecision > 2 ? 3 : lhsTimePrecision + 1;
-    int rhsTimePrecision = ':'.allMatches(o.toString()).length;
-    rhsTimePrecision = rhsTimePrecision > 2 ? 3 : rhsTimePrecision + 1;
-
-    /// if the precisions for the dates and times are unequal, the whole value
-    /// is also unequal
-    if (comparator == Comparator.eq &&
-        (lhsDatePrecision != rhsDatePrecision ||
-            lhsTimePrecision != rhsTimePrecision)) {
-      return false;
-    }
-
-    /// At this point both values are FhirDateTimes and are both valid. We first
-    /// take their iso8601String to account for any timezones
-    final List<String> lhsList = iso8601String!.replaceAll('Z', '').split('T');
-    final List<String> rhsList =
-        rhs.iso8601String!.replaceAll('Z', '').split('T');
-    final List<String> lhsDate = lhsList.first.split('-');
-    final List<String> rhsDate = rhsList.first.split('-');
-    final List<String> lhsTime = lhsList.last.split(':');
-    final List<String> rhsTime = rhsList.last.split(':');
-
-    /// NOTE: this differs from the official FHIR (or at least FHIRPath) spec.
-    /// Officially if they are not defined to the same level of precision it's
-    /// an error, or at least an empty return value in FHIRPath. However, we
-    /// compare the precisions we have that are the same, if any of those differ
-    /// we go ahead and return a valid boolean, otherwise we throw an error.
-    ///
-    /// 2020-01-01T12:01:01 < 2022
-    /// The above would always be true (assuming the 2022 is correct) even if
-    /// the 2022 was a more precise date
-
-    bool? comparePrecisionValue(
-        Comparator comparator, String lhsValue, String rhsValue) {
-      switch (comparator) {
-        case Comparator.eq:
-
-          /// if at any point, the two precisions are unequal, this is false
-          if (num.parse(lhsValue) != num.parse(rhsValue)) {
-            return false;
-          }
-          break;
-        case Comparator.gt:
-
-          /// if at any point this is less than the Object precision,
-          /// this is false
-          if (num.parse(lhsValue) < num.parse(rhsValue)) {
-            return false;
-          } else
-
-          /// if at any point this is greater than the Object precision,
-          /// this is true
-          if (num.parse(lhsValue) > num.parse(rhsValue)) {
-            return true;
-          }
-          break;
-        case Comparator.gte:
-
-          /// if at any point this is less than the Object precision,
-          /// this is false
-          if (num.parse(lhsValue) < num.parse(rhsValue)) {
-            return false;
-          } else
-
-          /// if at any point this is greater than the Object precision,
-          /// this is true
-          if (num.parse(lhsValue) > num.parse(rhsValue)) {
-            return true;
-          }
-          break;
-        case Comparator.lt:
-
-          /// if at any point this is less than the Object precision,
-          /// this is true
-          if (num.parse(lhsValue) < num.parse(rhsValue)) {
-            return true;
-          } else
-
-          /// if at any point this is greater than the Object precision,
-          /// this is false
-          if (num.parse(lhsValue) > num.parse(rhsValue)) {
-            return false;
-          }
-          break;
-        case Comparator.lte:
-
-          /// if at any point this is less than the Object precision,
-          /// this is true
-          if (num.parse(lhsValue) < num.parse(rhsValue)) {
-            return true;
-          } else
-
-          /// if at any point this is greater than the Object precision,
-          /// this is false
-          if (num.parse(lhsValue) > num.parse(rhsValue)) {
-            return false;
-          }
-          break;
+      bool? compareByPrecision(
+          Comparator comparator, int value1, int value2, bool isPrecision) {
+        switch (comparator) {
+          case Comparator.eq:
+            {
+              if (value1 != value2) {
+                return false;
+              } else if (value1 == value2 && isPrecision) {
+                return true;
+              }
+            }
+          case Comparator.gt:
+            {
+              if (value1 > value2) {
+                return true;
+              } else if (value1 < value2) {
+                return false;
+              }
+            }
+          case Comparator.gte:
+            {
+              if (value1 < value2) {
+                return false;
+              } else if (value1 >= value2 && isPrecision) {
+                return true;
+              }
+            }
+          case Comparator.lt:
+            {
+              if (value1 < value2) {
+                return true;
+              } else if (value1 > value2) {
+                return false;
+              }
+            }
+          case Comparator.lte:
+            {
+              if (value1 > value2) {
+                return false;
+              } else if (value1 <= value2 && isPrecision) {
+                return true;
+              }
+            }
+        }
+        return null;
       }
-      return null;
-    }
 
-    /// We pick the shorter of the two lists
-    final int datePrecision = lhsDatePrecision > rhsDatePrecision
-        ? rhsDatePrecision
-        : lhsDatePrecision;
-
-    /// and compare what we can
-    for (int i = 0; i < datePrecision; i++) {
-      final bool? comparedValue =
-          comparePrecisionValue(comparator, lhsDate[i], rhsDate[i]);
-      if (comparedValue != null) {
-        return comparedValue;
+      final int lhsYear = lhsDateTime.year;
+      final int rhsYear = rhsDateTime.year;
+      final bool yearPrecision = lhsPrecision == DateTimePrecision.yyyy ||
+          rhsPrecision == DateTimePrecision.yyyy;
+      bool? result =
+          compareByPrecision(comparator, lhsYear, rhsYear, yearPrecision);
+      if (result != null) {
+        return result;
       }
-    }
 
-    /// At this stage all the Precisions (for date) are equal that we can
-    /// compare, but if the precisions are not equal, then we don't continue
-    /// the comparison and throw an error
-    if (lhsDatePrecision != rhsDatePrecision) {
-      throw UnequalPrecision<FhirDateTimeBase>(
-          'Two values were passed to the date time '
-          '"$comparator" comparison operator, '
-          'they did not have the same precision\n'
-          'Argument 1: $value\nArgument 2: $o ');
-    }
+      final int lhsMonth = lhsDateTime.month;
+      final int rhsMonth = rhsDateTime.month;
+      final bool monthPrecision = lhsPrecision == DateTimePrecision.yyyy_MM ||
+          rhsPrecision == DateTimePrecision.yyyy_MM;
+      result =
+          compareByPrecision(comparator, lhsMonth, rhsMonth, monthPrecision);
+      if (result != null) {
+        return result;
+      }
 
-    /// We pick the shorter of the two lists
-    final int timePrecision = lhsTimePrecision > rhsTimePrecision
-        ? rhsTimePrecision
-        : lhsTimePrecision;
+      final int lhsDay = lhsDateTime.day;
+      final int rhsDay = rhsDateTime.day;
+      final bool dayPrecision = lhsPrecision == DateTimePrecision.yyyy_MM_dd ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd ||
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_Z ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_Z ||
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_ZZ ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_ZZ;
+      result = compareByPrecision(comparator, lhsDay, rhsDay, dayPrecision);
+      if (result != null) {
+        return result;
+      }
 
-    /// And compare what we can
-    for (int i = 0; i < timePrecision; i++) {
-      final bool? comparedValue =
-          comparePrecisionValue(comparator, lhsTime[i], rhsTime[i]);
-      if (comparedValue != null) {
-        return comparedValue;
+      final int lhsHour = lhsDateTime.hour;
+      final int rhsHour = rhsDateTime.hour;
+      final bool hourPrecision =
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH ||
+              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH ||
+              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_Z ||
+              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_Z ||
+              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HHZZ ||
+              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HHZZ;
+      result = compareByPrecision(comparator, lhsHour, rhsHour, hourPrecision);
+      if (result != null) {
+        return result;
+      }
+
+      final int lhsMinute = lhsDateTime.minute;
+      final int rhsMinute = rhsDateTime.minute;
+      final bool minutePrecision =
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm ||
+              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm ||
+              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z ||
+              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z ||
+              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ ||
+              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ;
+      result =
+          compareByPrecision(comparator, lhsMinute, rhsMinute, minutePrecision);
+      if (result != null) {
+        return result;
+      }
+
+      final int lhsSecond = lhsDateTime.second;
+      final int rhsSecond = rhsDateTime.second;
+      final bool secondPrecision =
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss ||
+              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss ||
+              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z ||
+              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z ||
+              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ ||
+              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ;
+      result =
+          compareByPrecision(comparator, lhsSecond, rhsSecond, secondPrecision);
+      if (result != null) {
+        return result;
+      }
+
+      final int lhsMillisecond = lhsDateTime.millisecond;
+      final int rhsMillisecond = rhsDateTime.millisecond;
+      final bool millisecondPrecision =
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS ||
+              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS ||
+              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z ||
+              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z ||
+              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ ||
+              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ ||
+              lhsPrecision == DateTimePrecision.full ||
+              rhsPrecision == DateTimePrecision.full;
+      result = compareByPrecision(
+          comparator, lhsMillisecond, rhsMillisecond, millisecondPrecision);
+      if (result != null) {
+        return result;
       }
     }
-
-    /// Once again, all the Precisions (for Time) are equal that we can compare
-    /// but if the precisions aren't equal, then we throw an error
-    if (lhsTimePrecision != rhsTimePrecision) {
-      throw UnequalPrecision<FhirDateTimeBase>(
-          'Two values were passed to the date time '
-          '"$comparator" comparison operator, '
-          'they did not have the same precision\n'
-          'Argument 1: $value\nArgument 2: $o ');
-    }
-
-    /// If, however, they are equal, then it means that by this stage we have
-    /// two equal values, and decide the return value based on the comparator
     switch (comparator) {
-      /// if we make it here, it means that we found no unequal precisions, so
-      /// this is true
       case Comparator.eq:
         return true;
-
-      /// if we make it here, it means that all precisions were equal, so this
-      /// is false
       case Comparator.gt:
         return false;
-
-      /// if we make it here, it means that all precisions were equal, so this
-      /// is true
       case Comparator.gte:
         return true;
-
-      /// if we make it here, it means that all precisions were equal, so this
-      /// is false
       case Comparator.lt:
         return false;
-
-      /// if we make it here, it means that all precisions were equal, so this
-      /// is true
       case Comparator.lte:
         return true;
     }
   }
-
-  // TODO(Dokotela): may need to fix for precision
 
   @override
   bool operator ==(Object o) => _compare(Comparator.eq, o);
@@ -270,4 +257,18 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   bool operator <(Object o) => _compare(Comparator.lt, o);
 
   bool operator <=(Object o) => _compare(Comparator.lte, o);
+
+  bool isBefore(FhirDateTimeBase other) => _compare(Comparator.lt, other);
+
+  bool isAfter(FhirDateTimeBase other) => _compare(Comparator.gt, other);
+
+  bool isSameOrBefore(FhirDateTimeBase other) =>
+      _compare(Comparator.lte, other);
+
+  bool isSameOrAfter(FhirDateTimeBase other) => _compare(Comparator.gte, other);
+
+  bool isAtSameMomentAs(FhirDateTimeBase other) =>
+      _compare(Comparator.eq, other);
+
+  bool isEqual(FhirDateTimeBase other) => _compare(Comparator.eq, other);
 }

@@ -7,22 +7,29 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'date_time_base.dart';
-import 'primitive_type_exceptions.dart';
+import 'primitive_types.dart';
 
 class FhirInstant extends FhirDateTimeBase {
   const FhirInstant._(
-      super.valueString, super.valueDateTime, super.isValid, super.parseError);
+    super.valueString,
+    super.valueDateTime,
+    super.isValid,
+    super.precision,
+    super.parseError,
+  );
 
   factory FhirInstant(dynamic inValue) {
     if (inValue is DateTime) {
-      return FhirInstant._(inValue.toIso8601String(), inValue, true, null);
+      return FhirInstant._(inValue.toIso8601String(), inValue, true,
+          DateTimePrecision.full, null);
     } else if (inValue is String) {
       try {
         final DateTime dateTimeValue = _parseDateTime(inValue);
-        return FhirInstant._(inValue, dateTimeValue, true, null);
+        return FhirInstant._(
+            inValue, dateTimeValue, true, DateTimePrecision.full, null);
       } on FormatException catch (e) {
-        return FhirInstant._(inValue, null, false, e);
+        return FhirInstant._(
+            inValue, null, false, DateTimePrecision.invalid, e);
       }
     } else {
       throw CannotBeConstructed<dynamic>(
@@ -31,7 +38,8 @@ class FhirInstant extends FhirDateTimeBase {
   }
 
   factory FhirInstant.fromDateTime(DateTime dateTime) {
-    return FhirInstant._(dateTime.toIso8601String(), dateTime, true, null);
+    return FhirInstant._(dateTime.toIso8601String(), dateTime, true,
+        DateTimePrecision.full, null);
   }
 
   factory FhirInstant.fromJson(dynamic json) => FhirInstant(json);

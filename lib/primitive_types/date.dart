@@ -7,32 +7,27 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import 'date_time_base.dart';
-import 'primitive_type_exceptions.dart';
+import 'primitive_types.dart';
 
-enum DatePrecision {
-  YYYY,
-  YYYYMM,
-  YYYYMMDD,
-  INVALID,
-}
-
-// TODO(Dokotela): Does not accept 'YYYY-MM'
 class FhirDate extends FhirDateTimeBase {
-  const FhirDate._(String valueString, DateTime? valueDateTime, bool isValid,
-      this._precision, Exception? parseError)
-      : super(valueString, valueDateTime, isValid, parseError);
+  const FhirDate._(
+    super.valueString,
+    super.valueDateTime,
+    super.isValid,
+    super.precision, [
+    super.parseError,
+  ]);
 
+  /// Accepts all values as part of the constructor
   factory FhirDate(dynamic inValue) {
+    /// if it's a DateTime already, then it's valid
     if (inValue is DateTime) {
       return FhirDate.fromDateTime(inValue);
     } else if (inValue is String) {
       try {
-        final DateTime dateTimeValue = _parseDate(inValue);
-        return FhirDate._(
-            inValue, dateTimeValue, true, _getPrecision(inValue), null);
+        return FhirDate.fromString(inValue);
       } on FormatException catch (e) {
-        return FhirDate._(inValue, null, false, DatePrecision.INVALID, e);
+        return FhirDate._(inValue, null, false, DateTimePrecision.invalid, e);
       }
     } else {
       throw CannotBeConstructed<FhirDate>(
@@ -40,31 +35,67 @@ class FhirDate extends FhirDateTimeBase {
     }
   }
 
-  factory FhirDate.fromDateTime(DateTime dateTime,
-      [DatePrecision precision = DatePrecision.YYYYMMDD]) {
-    final String dateString = dateTime.toIso8601String();
-    final int len = <int>[4, 7, 10][precision.index];
-
-    return FhirDate._(
-        dateString.substring(0, len), dateTime, true, precision, null);
+  factory FhirDate.fromDateTime(
+    DateTime dateTime, [
+    DateTimePrecision precision = DateTimePrecision.yyyy_MM_dd,
+  ]) {
+    final String dateString = precision.convert(dateTime);
+    return FhirDate._(dateString, dateTime, true, precision);
   }
 
-  factory FhirDate.fromUnits(
-      {required Object year, dynamic month, dynamic day}) {
+  factory FhirDate.fromString(String inValue) {
+    /// if the String matches, then it's a valid FHIR Date
+    if (dateTimeYYYYMMDDExp.hasMatch(inValue)) {
+      /// If it's only 4 characters long and matches the year regex, it's a year
+      if (inValue.length == 4 && dateTimeYYYYExp.hasMatch(inValue)) {
+        /// We put a placeholder in for the month and day in this case
+        return FhirDate._(inValue, DateTime.parse('$inValue-01-01'), true,
+            DateTimePrecision.yyyy);
+      } else if (inValue.length == 7 && dateTimeYYYYMMExp.hasMatch(inValue)) {
+        /// We put a placeholder in for the day in this case
+        return FhirDate._(inValue, DateTime.parse('$inValue-01'), true,
+            DateTimePrecision.yyyy_MM);
+      } else {
+        /// Otherwise it should be a full year, month, day
+        return FhirDate._(inValue, DateTime.parse(inValue), true,
+            DateTimePrecision.yyyy_MM_dd);
+      }
+    } else {
+      return FhirDate._(
+          inValue,
+          null,
+          false,
+          DateTimePrecision.invalid,
+          PrimitiveTypeFormatException<FhirDate>(
+              'FormatException: "$inValue" is not a Date, as defined by: '
+              'https://www.hl7.org/fhir/datatypes.html#date'));
+    }
+  }
+
+  /// For this factory constructor we require it to contain at least a year
+  factory FhirDate.fromUnits({
+    required Object year,
+    dynamic month,
+    dynamic day,
+  }) {
     if (int.tryParse(year.toString()) == null) {
       throw CannotBeConstructed<FhirDate>(
           'Date cannot be constructed from $year:$month:$day');
     } else {
+      /// We parse out the year and try to get a month and a day
       final int yearInt = int.parse(year.toString());
       final int? monthInt = month == null ? null : int.parse(month.toString());
       final int? dayInt = day == null ? null : int.parse(day.toString());
+
+      /// If there is no month, we don't use the day either, and we just use
+      /// the year. If there is a month, but no day, we use the year and month.
       return FhirDate.fromDateTime(
           DateTime(yearInt, monthInt ?? 1, dayInt ?? 1),
           monthInt == null
-              ? DatePrecision.YYYY
+              ? DateTimePrecision.yyyy
               : dayInt == null
-                  ? DatePrecision.YYYYMM
-                  : DatePrecision.YYYYMMDD);
+                  ? DateTimePrecision.yyyy_MM
+                  : DateTimePrecision.yyyy_MM_dd);
     }
   }
 
@@ -76,65 +107,4 @@ class FhirDate extends FhirDateTimeBase {
           ? FhirDate.fromJson(jsonDecode(jsonEncode(yaml)))
           : throw YamlFormatException<FhirDate>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
-
-  final DatePrecision _precision;
-
-  DatePrecision get precision => _precision;
-  int? get year => value?.year;
-  int? get month => value?.month;
-  int? get day => value?.day;
-
-  static final RegExp _dateYYYYExp =
-      RegExp(r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$');
-  static final RegExp _dateYYYYMMExp = RegExp(
-      r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])$');
-  static final RegExp _dateYYYYMMDDExp = RegExp(
-      r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1]))?)?');
-
-  static DateTime _parseDate(String value) {
-    if (value.length <= 7) {
-      return _parsePartialDate(value);
-    } else {
-      try {
-        if (_dateYYYYMMDDExp.hasMatch(value)) {
-          return DateTime.parse(value);
-        } else {
-          throw const FormatException();
-        }
-      } on FormatException {
-        throw PrimitiveTypeFormatException<FhirDate>(
-            'FormatException: "$value" is not a Date, as defined by: '
-            'https://www.hl7.org/fhir/datatypes.html#date');
-      }
-    }
-  }
-
-  static DateTime _parsePartialDate(String value) {
-    if (_dateYYYYExp.hasMatch(value)) {
-      return DateTime(int.parse(value));
-    } else if (_dateYYYYMMExp.hasMatch(value)) {
-      final int year = int.parse(value.split('-')[0]);
-      final int month = int.parse(value.split('-')[1]);
-      return DateTime(year, month);
-    } else {
-      throw PrimitiveTypeFormatException<FhirDate>(
-          'FormatException: "$value" is not a Date, as defined by: '
-          'https://www.hl7.org/fhir/datatypes.html#date');
-    }
-  }
-
-  static DatePrecision _getPrecision(String value) {
-    switch (value.length) {
-      case 4:
-        return DatePrecision.YYYY;
-      case 7:
-        return DatePrecision.YYYYMM;
-      case 10:
-        return DatePrecision.YYYYMMDD;
-      default:
-        throw PrimitiveTypeFormatException<FhirDate>(
-            'FormatException: "$value" is not a Date, as defined by: '
-            'https://www.hl7.org/fhir/datatypes.html#date');
-    }
-  }
 }

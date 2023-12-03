@@ -6,6 +6,7 @@ export 'comparator.dart';
 export 'date.dart';
 export 'date_time.dart';
 export 'date_time_base.dart';
+export 'date_time_precision.dart';
 export 'decimal.dart';
 export 'fhir_primitive_base.dart';
 export 'id.dart';
