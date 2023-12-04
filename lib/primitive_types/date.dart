@@ -107,4 +107,32 @@ class FhirDate extends FhirDateTimeBase {
           ? FhirDate.fromJson(jsonDecode(jsonEncode(yaml)))
           : throw YamlFormatException<FhirDate>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+
+  @override
+  FhirDate add(Duration o) {
+    final int newYear = (year ?? 1) + (o is ExtendedDuration ? o.inYears : 0);
+    final int newMonth =
+        (month ?? 1) + (o is ExtendedDuration ? o.inMonths : 0);
+    final int newDay = (day ?? 1) + (o is ExtendedDuration ? o.inDays : 0);
+    return _calculateByPrecision(newYear, newMonth, newDay);
+  }
+
+  @override
+  FhirDate subtract(Duration o) {
+    final int newYear = (year ?? 1) - (o is ExtendedDuration ? o.inYears : 0);
+    final int newMonth =
+        (month ?? 1) - (o is ExtendedDuration ? o.inMonths : 0);
+    final int newDay = (day ?? 1) - (o is ExtendedDuration ? o.inDays : 0);
+    return _calculateByPrecision(newYear, newMonth, newDay);
+  }
+
+  FhirDate _calculateByPrecision(int newYear, int newMonth, int newDay) {
+    if (precision == DateTimePrecision.yyyy) {
+      return FhirDate.fromUnits(year: newYear);
+    } else if (precision == DateTimePrecision.yyyy_MM) {
+      return FhirDate.fromUnits(year: newYear, month: newMonth);
+    } else {
+      return FhirDate.fromUnits(year: newYear, month: newMonth, day: newDay);
+    }
+  }
 }

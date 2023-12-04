@@ -271,4 +271,12 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       _compare(Comparator.eq, other);
 
   bool isEqual(FhirDateTimeBase other) => _compare(Comparator.eq, other);
+
+  FhirDateTimeBase add(Duration o);
+
+  FhirDateTimeBase subtract(Duration o);
+
+  FhirDateTimeBase operator +(Duration o) => add(o);
+
+  FhirDateTimeBase operator -(Duration o) => subtract(o);
 }

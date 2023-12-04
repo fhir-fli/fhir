@@ -92,6 +92,93 @@ class FhirDateTime extends FhirDateTimeBase {
           : throw YamlFormatException<FhirDateTime>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
+  @override
+  FhirDateTime add(Duration o) {
+    final int newYear = (year ?? 1) + (o is ExtendedDuration ? o.inYears : 0);
+    final int newMonth =
+        (month ?? 1) + (o is ExtendedDuration ? o.inMonths : 0);
+    final int newDay = (day ?? 1) + (o is ExtendedDuration ? o.inDays : 0);
+    final int newHour = (hour ?? 0) + o.inHours;
+    final int newMinute = (minute ?? 0) + o.inMinutes;
+    final int newSecond = (second ?? 0) + o.inSeconds;
+    final int newMillisecond = (millisecond ?? 0) + o.inMilliseconds;
+    return _calculateByPrecision(newYear, newMonth, newDay, newHour, newMinute,
+        newSecond, newMillisecond);
+  }
+
+  @override
+  FhirDateTime subtract(Duration o) {
+    final int newYear = (year ?? 1) - (o is ExtendedDuration ? o.inYears : 0);
+    final int newMonth =
+        (month ?? 1) - (o is ExtendedDuration ? o.inMonths : 0);
+    final int newDay = (day ?? 1) - (o is ExtendedDuration ? o.inDays : 0);
+    final int newHour = (hour ?? 0) - o.inHours;
+    final int newMinute = (minute ?? 0) - o.inMinutes;
+    final int newSecond = (second ?? 0) - o.inSeconds;
+    final int newMillisecond = (millisecond ?? 0) - o.inMilliseconds;
+    return _calculateByPrecision(newYear, newMonth, newDay, newHour, newMinute,
+        newSecond, newMillisecond);
+  }
+
+  FhirDateTime _calculateByPrecision(int newYear, int newMonth, int newDay,
+      int newHour, int newMinute, int newSecond, int newMillisecond) {
+    if (precision == DateTimePrecision.yyyy) {
+      return FhirDateTime.fromUnits(year: newYear, precision: precision);
+    } else if (precision == DateTimePrecision.yyyy_MM) {
+      return FhirDateTime.fromUnits(
+          year: newYear, month: newMonth, precision: precision);
+    } else if (precision == DateTimePrecision.yyyy_MM_dd ||
+        precision == DateTimePrecision.yyyy_MM_dd_T_Z ||
+        precision == DateTimePrecision.yyyy_MM_dd_T_ZZ) {
+      return FhirDateTime.fromUnits(
+          year: newYear, month: newMonth, day: newDay, precision: precision);
+    } else if (precision == DateTimePrecision.yyyy_MM_dd_T_HH ||
+        precision == DateTimePrecision.yyyy_MM_dd_T_HH_Z ||
+        precision == DateTimePrecision.yyyy_MM_dd_T_HHZZ) {
+      return FhirDateTime.fromUnits(
+          year: newYear,
+          month: newMonth,
+          day: newDay,
+          hour: newHour,
+          precision: precision);
+    } else if (precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm ||
+        precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z ||
+        precision == DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ) {
+      return FhirDateTime.fromUnits(
+          year: newYear,
+          month: newMonth,
+          day: newDay,
+          hour: newHour,
+          minute: newMinute,
+          precision: precision);
+    } else if (precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss ||
+        precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z ||
+        precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ) {
+      return FhirDateTime.fromUnits(
+          year: newYear,
+          month: newMonth,
+          day: newDay,
+          hour: newHour,
+          minute: newMinute,
+          second: newSecond);
+    } else if (precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS ||
+        precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z ||
+        precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ ||
+        precision == DateTimePrecision.full) {
+      return FhirDateTime.fromUnits(
+          year: newYear,
+          month: newMonth,
+          day: newDay,
+          hour: newHour,
+          minute: newMinute,
+          second: newSecond,
+          millisecond: newMillisecond);
+    } else {
+      throw CannotBeConstructed<FhirDateTime>(
+          'DateTime cannot be added to as it has an invalid Precision: $precision');
+    }
+  }
+
   int? get hour => value?.hour;
   int? get minute => value?.minute;
   int? get second => value?.second;

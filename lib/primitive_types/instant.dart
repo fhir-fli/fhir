@@ -68,4 +68,32 @@ class FhirInstant extends FhirDateTimeBase {
           'https://www.hl7.org/fhir/datatypes.html#instant');
     }
   }
+
+  @override
+  FhirInstant add(Duration o) => FhirInstant.fromDateTime(DateTime(
+        value!.year +
+            (this is ExtendedDuration ? (o as ExtendedDuration).years : 0),
+        value!.month +
+            (this is ExtendedDuration ? (o as ExtendedDuration).months : 0),
+        value!.day + o.inDays,
+        value!.hour + o.inHours,
+        value!.minute + o.inMinutes,
+        value!.second + o.inSeconds,
+        value!.millisecond + o.inMilliseconds,
+        value!.microsecond + o.inMicroseconds,
+      ));
+
+  @override
+  FhirInstant subtract(Duration o) => FhirInstant.fromDateTime(DateTime(
+        value!.year -
+            (this is ExtendedDuration ? (o as ExtendedDuration).years : 0),
+        value!.month -
+            (this is ExtendedDuration ? (o as ExtendedDuration).months : 0),
+        value!.day - o.inDays,
+        value!.hour - o.inHours,
+        value!.minute - o.inMinutes,
+        value!.second - o.inSeconds,
+        value!.millisecond - o.inMilliseconds,
+        value!.microsecond - o.inMicroseconds,
+      ));
 }
