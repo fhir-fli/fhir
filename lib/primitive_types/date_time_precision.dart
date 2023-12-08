@@ -158,9 +158,92 @@ extension DateTimePrecisionExtension on DateTimePrecision {
         return dateTime.toString();
     }
   }
+
+  DateTime? parse(String string) {
+    try {
+      switch (this) {
+        case DateTimePrecision.yyyy:
+          return DateTime.tryParse(string.substring(0, 4));
+        case DateTimePrecision.yyyy_MM:
+          return DateTime.tryParse(string.substring(0, 7));
+        case DateTimePrecision.yyyy_MM_dd:
+          return DateTime.tryParse(string.substring(0, 10));
+        case DateTimePrecision.yyyy_MM_dd_T_Z:
+          return DateTime.tryParse('${string.substring(0, 10)}T00:00:00Z');
+        case DateTimePrecision.yyyy_MM_dd_T_ZZ:
+          return DateTime.tryParse(
+              '${string.substring(0, 10)}T00:00:00${string.substring(10)}');
+        case DateTimePrecision.yyyy_MM_dd_T_HH:
+          return DateTime.tryParse(string.substring(0, 13));
+        case DateTimePrecision.yyyy_MM_dd_T_HH_Z:
+          return DateTime.tryParse('${string.substring(0, 13)}:00:00Z');
+        case DateTimePrecision.yyyy_MM_dd_T_HHZZ:
+          return DateTime.tryParse(
+              '${string.substring(0, 13)}:00:00${string.substring(13)}');
+        case DateTimePrecision.yyyy_MM_dd_T_HH_mm:
+          return DateTime.tryParse(string.substring(0, 16));
+        case DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z:
+          return DateTime.tryParse('${string.substring(0, 16)}:00Z');
+        case DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ:
+          return DateTime.tryParse(
+              '${string.substring(0, 16)}:00${string.substring(16)}');
+        case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss:
+          return DateTime.tryParse(string.substring(0, 19));
+        case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z:
+          return DateTime.tryParse('${string.substring(0, 19)}Z');
+        case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ:
+          return DateTime.tryParse(
+              '${string.substring(0, 19)}${string.substring(19)}');
+        case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS:
+          return DateTime.tryParse(string.substring(0, 23));
+        case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z:
+          return DateTime.tryParse('${string.substring(0, 23)}Z');
+        case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ:
+          return DateTime.tryParse(
+              '${string.substring(0, 23)}${string.substring(23)}');
+        case DateTimePrecision.full:
+          return DateTime.tryParse(string);
+        case DateTimePrecision.invalid:
+          return null;
+      }
+    } catch (e) {
+      return null; // Return null for any parsing errors
+    }
+  }
+
+  String unit() {
+    if (this == DateTimePrecision.yyyy) {
+      return 'year';
+    } else if (this == DateTimePrecision.yyyy_MM) {
+      return 'month';
+    } else if (this == DateTimePrecision.yyyy_MM_dd ||
+        this == DateTimePrecision.yyyy_MM_dd_T_Z ||
+        this == DateTimePrecision.yyyy_MM_dd_T_ZZ) {
+      return 'day';
+    } else if (this == DateTimePrecision.yyyy_MM_dd_T_HH ||
+        this == DateTimePrecision.yyyy_MM_dd_T_HH_Z ||
+        this == DateTimePrecision.yyyy_MM_dd_T_HHZZ) {
+      return 'hour';
+    } else if (this == DateTimePrecision.yyyy_MM_dd_T_HH_mm ||
+        this == DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z ||
+        this == DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ) {
+      return 'minute';
+    } else if (this == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss ||
+        this == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z ||
+        this == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ) {
+      return 'second';
+    } else if (this == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS ||
+        this == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z ||
+        this == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ ||
+        this == DateTimePrecision.full) {
+      return 'millisecond';
+    } else {
+      return 'invalid';
+    }
+  }
 }
 
-DateTimePrecision getPrecision(String inValue) {
+DateTimePrecision precisionFromDateTimeString(String inValue) {
   if (RegExp(r'^\d{4}$').hasMatch(inValue)) {
     return DateTimePrecision.yyyy;
   } else if (RegExp(r'^\d{4}-\d{2}$').hasMatch(inValue)) {

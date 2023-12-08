@@ -31,6 +31,37 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   String toString() => valueString;
   String toJson() => valueString;
   String toYaml() => valueString;
+  String toStringWithTimezone() {
+    if (<DateTimePrecision>[
+      DateTimePrecision.yyyy_MM_dd_T_HH,
+      DateTimePrecision.yyyy_MM_dd_T_HH_Z,
+      DateTimePrecision.yyyy_MM_dd_T_HHZZ,
+      DateTimePrecision.yyyy_MM_dd_T_HH_mm,
+      DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
+      DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
+      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+      DateTimePrecision.full,
+    ].contains(precision)) {
+      final int? timeZoneOffset = value?.timeZoneOffset.inHours;
+      final String timeZoneString = timeZoneOffset != null
+          ? timeZoneOffset < 0
+              ? '-${timeZoneOffset.abs().toString().padLeft(2, '0')}:00'
+              : '+${timeZoneOffset.abs().toString().padLeft(2, '0')}:00'
+          : '';
+      if (timeZoneString != '') {
+        return '$valueString$timeZoneString';
+      } else {
+        return valueString;
+      }
+    } else {
+      return valueString;
+    }
+  }
 
   InvalidTypes<FhirDateTimeBase> comparisonError(
           Comparator comparator, Object o) =>
@@ -57,6 +88,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       }
     }
 
+    /// create a left-hand-side value
     final FhirDateTimeBase lhs = FhirDateTime(this);
 
     /// create a right-hand-side value

@@ -45,10 +45,17 @@ class FhirDateTime extends FhirDateTimeBase {
     // TODO(Dokotela): Consider if this is appropriate
     inValue = inValue.replaceAll('"', '');
     final String tinValue = inValue.replaceFirst(' ', 'T');
-    final DateTimePrecision precision = getPrecision(tinValue);
+    final DateTimePrecision precision = precisionFromDateTimeString(tinValue);
     final DateTime? finalDateTime = DateTime.tryParse(inValue) ??
         DateTime.tryParse(tinValue) ??
-        DateTime.tryParse(inValue.replaceAll('T', ' '));
+        DateTime.tryParse(inValue.replaceAll('T', ' ')) ??
+        (precision != DateTimePrecision.invalid
+            ? tinValue.length == 4
+                ? DateTime.parse('$tinValue-01-01')
+                : tinValue.length == 7
+                    ? DateTime.parse('$tinValue-01')
+                    : null
+            : null);
     return FhirDateTime._(
       inValue,
       precision != DateTimePrecision.invalid ? finalDateTime : null,
