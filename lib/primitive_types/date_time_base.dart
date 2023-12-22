@@ -28,7 +28,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   int? get day => value?.day;
 
   @override
-  String toString() => valueString;
+  String toString() => toStringWithTimezone();
   String toJson() => valueString;
   String toYaml() => valueString;
   String toStringWithTimezone() {
@@ -147,6 +147,8 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
             {
               if (value1 < value2) {
                 return false;
+              } else if (value1 > value2) {
+                return true;
               } else if (value1 >= value2 && isPrecision) {
                 return true;
               }
@@ -163,7 +165,9 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
             {
               if (value1 > value2) {
                 return false;
-              } else if (value1 <= value2 && isPrecision) {
+              } else if (value1 < value2) {
+                return true;
+              } else if (value1 == value2 && isPrecision) {
                 return true;
               }
             }

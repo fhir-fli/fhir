@@ -25,6 +25,8 @@ class FhirDateTime extends FhirDateTimeBase {
       return FhirDateTime.fromDateTime(inValue);
     } else if (inValue is String) {
       return FhirDateTime.fromString(inValue);
+    } else if (inValue is FhirInstant) {
+      return FhirDateTime.fromDateTime(inValue.valueDateTime!);
     }
     if (inValue is FhirDate) {
       return FhirDateTime._(inValue.valueString, inValue.valueDateTime,

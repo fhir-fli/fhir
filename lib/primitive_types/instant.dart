@@ -96,4 +96,11 @@ class FhirInstant extends FhirDateTimeBase {
         value!.millisecond - o.inMilliseconds,
         value!.microsecond - o.inMicroseconds,
       ));
+
+  int? get hour => value?.hour;
+  int? get minute => value?.minute;
+  int? get second => value?.second;
+  int? get millisecond => value?.millisecond;
+  Duration? get timezoneOffset => value?.timeZoneOffset;
+  String? get timeZoneName => value?.timeZoneName;
 }
