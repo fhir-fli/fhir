@@ -3,6 +3,7 @@
 ## [0.11.5-dev2]
 
 * Fixed but in Timezones as pointed out by [nimeshgarag](https://github.com/nimeshgarg)
+* Also XML is broken again, I'll have to decide if I care enough to try and fix it
 
 ## [0.11.5-dev1]
 

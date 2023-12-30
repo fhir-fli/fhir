@@ -44,8 +44,12 @@ class FhirDateTime extends FhirDateTimeBase {
       FhirDateTime._(precision.convert(dateTime), dateTime, true, precision);
 
   factory FhirDateTime.fromString(String inValue) {
+    final String valueString = inValue;
     // TODO(Dokotela): Consider if this is appropriate
     inValue = inValue.replaceAll('"', '');
+    if (inValue.endsWith('T')) {
+      inValue = inValue.substring(0, inValue.length - 1);
+    }
     final String tinValue = inValue.replaceFirst(' ', 'T');
     final DateTimePrecision precision = precisionFromDateTimeString(tinValue);
     final DateTime? finalDateTime = DateTime.tryParse(inValue) ??
@@ -59,7 +63,7 @@ class FhirDateTime extends FhirDateTimeBase {
                     : null
             : null);
     return FhirDateTime._(
-      inValue,
+      valueString,
       precision != DateTimePrecision.invalid ? finalDateTime : null,
       precision != DateTimePrecision.invalid && finalDateTime != null,
       precision,
