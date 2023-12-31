@@ -28,40 +28,40 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   int? get day => value?.day;
 
   @override
-  String toString() => toStringWithTimezone();
+  String toString() => valueString;
   String toJson() => valueString;
   String toYaml() => valueString;
-  String toStringWithTimezone() {
-    if (<DateTimePrecision>[
-      DateTimePrecision.yyyy_MM_dd_T_HH,
-      DateTimePrecision.yyyy_MM_dd_T_HH_Z,
-      DateTimePrecision.yyyy_MM_dd_T_HHZZ,
-      DateTimePrecision.yyyy_MM_dd_T_HH_mm,
-      DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
-      DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
-      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
-      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
-      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-      DateTimePrecision.full,
-    ].contains(precision)) {
-      final int? timeZoneOffset = value?.timeZoneOffset.inHours;
-      final String timeZoneString = timeZoneOffset != null
-          ? timeZoneOffset < 0
-              ? '-${timeZoneOffset.abs().toString().padLeft(2, '0')}:00'
-              : '+${timeZoneOffset.abs().toString().padLeft(2, '0')}:00'
-          : '';
-      if (timeZoneString != '') {
-        return '$valueString$timeZoneString';
-      } else {
-        return valueString;
-      }
-    } else {
-      return valueString;
-    }
-  }
+  // String toStringWithTimezone() {
+  //   if (<DateTimePrecision>[
+  //     DateTimePrecision.yyyy_MM_dd_T_HH,
+  //     DateTimePrecision.yyyy_MM_dd_T_HH_Z,
+  //     DateTimePrecision.yyyy_MM_dd_T_HHZZ,
+  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm,
+  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
+  //     DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
+  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+  //     DateTimePrecision.full,
+  //   ].contains(precision)) {
+  //     final int? timeZoneOffset = value?.timeZoneOffset.inHours;
+  //     final String timeZoneString = timeZoneOffset != null
+  //         ? timeZoneOffset < 0
+  //             ? '-${timeZoneOffset.abs().toString().padLeft(2, '0')}:00'
+  //             : '+${timeZoneOffset.abs().toString().padLeft(2, '0')}:00'
+  //         : '';
+  //     if (timeZoneString != '') {
+  //       return valueString;
+  //     } else {
+  //       return valueString;
+  //     }
+  //   } else {
+  //     return valueString;
+  //   }
+  // }
 
   InvalidTypes<FhirDateTimeBase> comparisonError(
           Comparator comparator, Object o) =>
@@ -121,8 +121,10 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     } else {
       final DateTimePrecision lhsPrecision = lhs.precision;
       final DateTimePrecision rhsPrecision = rhs.precision;
-      final DateTime lhsDateTime = lhs.valueDateTime!;
-      final DateTime rhsDateTime = rhs.valueDateTime!;
+      DateTime lhsDateTime = lhs.valueDateTime!;
+      DateTime rhsDateTime = rhs.valueDateTime!;
+      lhsDateTime = lhsDateTime.toUtc();
+      rhsDateTime = rhsDateTime.toUtc();
 
       bool? compareByPrecision(
           Comparator comparator, int value1, int value2, bool isPrecision) {
