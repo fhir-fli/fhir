@@ -880,7 +880,7 @@ class _$AppointmentImpl extends _Appointment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AppointmentImpl &&
@@ -1439,7 +1439,7 @@ class _$AppointmentParticipantImpl extends _AppointmentParticipant {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AppointmentParticipantImpl &&
@@ -2241,7 +2241,7 @@ class _$AppointmentResponseImpl extends _AppointmentResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AppointmentResponseImpl &&
@@ -2976,7 +2976,7 @@ class _$ScheduleImpl extends _Schedule {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ScheduleImpl &&
@@ -3803,7 +3803,7 @@ class _$SlotImpl extends _Slot {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SlotImpl &&

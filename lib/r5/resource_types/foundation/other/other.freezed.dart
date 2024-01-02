@@ -728,7 +728,7 @@ class _$BasicImpl extends _Basic {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BasicImpl &&
@@ -1634,7 +1634,7 @@ class _$BinaryImpl extends _Binary {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BinaryImpl &&
@@ -2702,7 +2702,7 @@ class _$BundleImpl extends _Bundle {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleImpl &&
@@ -3308,7 +3308,7 @@ class _$BundleLinkImpl extends _BundleLink {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleLinkImpl &&
@@ -3906,7 +3906,7 @@ class _$BundleEntryImpl extends _BundleEntry {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleEntryImpl &&
@@ -4407,7 +4407,7 @@ class _$BundleSearchImpl extends _BundleSearch {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleSearchImpl &&
@@ -5121,7 +5121,7 @@ class _$BundleRequestImpl extends _BundleRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleRequestImpl &&
@@ -5808,7 +5808,7 @@ class _$BundleResponseImpl extends _BundleResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleResponseImpl &&
@@ -6621,7 +6621,7 @@ class _$LinkageImpl extends _Linkage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LinkageImpl &&
@@ -7142,7 +7142,7 @@ class _$LinkageItemImpl extends _LinkageItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LinkageItemImpl &&
@@ -8186,7 +8186,7 @@ class _$MessageHeaderImpl extends _MessageHeader {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MessageHeaderImpl &&
@@ -8924,7 +8924,7 @@ class _$MessageHeaderDestinationImpl extends _MessageHeaderDestination {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MessageHeaderDestinationImpl &&
@@ -9599,7 +9599,7 @@ class _$MessageHeaderSourceImpl extends _MessageHeaderSource {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MessageHeaderSourceImpl &&
@@ -10127,7 +10127,7 @@ class _$MessageHeaderResponseImpl extends _MessageHeaderResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MessageHeaderResponseImpl &&
@@ -10795,7 +10795,7 @@ class _$OperationOutcomeImpl extends _OperationOutcome {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OperationOutcomeImpl &&
@@ -11574,7 +11574,7 @@ class _$OperationOutcomeIssueImpl extends _OperationOutcomeIssue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OperationOutcomeIssueImpl &&
@@ -12313,7 +12313,7 @@ class _$ParametersImpl extends _Parameters {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ParametersImpl &&
@@ -15199,7 +15199,7 @@ class _$ParametersParameterImpl extends _ParametersParameter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ParametersParameterImpl &&
@@ -17262,7 +17262,7 @@ class _$SubscriptionImpl extends _Subscription {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionImpl &&
@@ -18204,7 +18204,7 @@ class _$SubscriptionFilterByImpl extends _SubscriptionFilterBy {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionFilterByImpl &&
@@ -18732,7 +18732,7 @@ class _$SubscriptionParameterImpl extends _SubscriptionParameter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionParameterImpl &&
@@ -19687,7 +19687,7 @@ class _$SubscriptionStatusImpl extends _SubscriptionStatus {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionStatusImpl &&
@@ -20385,7 +20385,7 @@ class _$SubscriptionStatusNotificationEventImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionStatusNotificationEventImpl &&
@@ -22386,7 +22386,7 @@ class _$SubscriptionTopicImpl extends _SubscriptionTopic {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionTopicImpl &&
@@ -23499,7 +23499,7 @@ class _$SubscriptionTopicResourceTriggerImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionTopicResourceTriggerImpl &&
@@ -24233,7 +24233,7 @@ class _$SubscriptionTopicQueryCriteriaImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionTopicQueryCriteriaImpl &&
@@ -24822,7 +24822,7 @@ class _$SubscriptionTopicEventTriggerImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionTopicEventTriggerImpl &&
@@ -25575,7 +25575,7 @@ class _$SubscriptionTopicCanFilterByImpl extends _SubscriptionTopicCanFilterBy {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionTopicCanFilterByImpl &&
@@ -26232,7 +26232,7 @@ class _$SubscriptionTopicNotificationShapeImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionTopicNotificationShapeImpl &&

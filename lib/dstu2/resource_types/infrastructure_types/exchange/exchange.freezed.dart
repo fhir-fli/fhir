@@ -703,7 +703,7 @@ class _$MessageHeaderImpl extends _MessageHeader {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MessageHeaderImpl &&
@@ -1171,7 +1171,7 @@ class _$MessageHeaderResponseImpl extends _MessageHeaderResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MessageHeaderResponseImpl &&
@@ -1647,7 +1647,7 @@ class _$MessageHeaderSourceImpl extends _MessageHeaderSource {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MessageHeaderSourceImpl &&
@@ -2054,7 +2054,7 @@ class _$MessageHeaderDestinationImpl extends _MessageHeaderDestination {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MessageHeaderDestinationImpl &&
@@ -2581,7 +2581,7 @@ class _$OperationOutcomeImpl extends _OperationOutcome {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OperationOutcomeImpl &&
@@ -2976,7 +2976,7 @@ class _$OperationOutcomeIssueImpl extends _OperationOutcomeIssue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OperationOutcomeIssueImpl &&
@@ -3471,7 +3471,7 @@ class _$ParametersImpl extends _Parameters {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ParametersImpl &&
@@ -4735,7 +4735,7 @@ class _$ParametersParameterImpl extends _ParametersParameter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ParametersParameterImpl &&
@@ -5738,7 +5738,7 @@ class _$SubscriptionImpl extends _Subscription {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionImpl &&
@@ -6280,7 +6280,7 @@ class _$SubscriptionChannelImpl extends _SubscriptionChannel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionChannelImpl &&

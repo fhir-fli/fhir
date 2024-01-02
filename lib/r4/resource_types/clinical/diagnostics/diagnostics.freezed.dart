@@ -843,7 +843,7 @@ class _$BodyStructureImpl extends _BodyStructure {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BodyStructureImpl &&
@@ -2374,7 +2374,7 @@ class _$DiagnosticReportImpl extends _DiagnosticReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DiagnosticReportImpl &&
@@ -3071,7 +3071,7 @@ class _$DiagnosticReportMediaImpl extends _DiagnosticReportMedia {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DiagnosticReportMediaImpl &&
@@ -4505,7 +4505,7 @@ class _$ImagingStudyImpl extends _ImagingStudy {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ImagingStudyImpl &&
@@ -5663,7 +5663,7 @@ class _$ImagingStudySeriesImpl extends _ImagingStudySeries {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ImagingStudySeriesImpl &&
@@ -6195,7 +6195,7 @@ class _$ImagingStudyPerformerImpl extends _ImagingStudyPerformer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ImagingStudyPerformerImpl &&
@@ -6720,7 +6720,7 @@ class _$ImagingStudyInstanceImpl extends _ImagingStudyInstance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ImagingStudyInstanceImpl &&
@@ -8363,7 +8363,7 @@ class _$MediaImpl extends _Media {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MediaImpl &&
@@ -9972,7 +9972,7 @@ class _$MolecularSequenceImpl extends _MolecularSequence {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MolecularSequenceImpl &&
@@ -11036,7 +11036,7 @@ class _$MolecularSequenceReferenceSeqImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MolecularSequenceReferenceSeqImpl &&
@@ -11857,7 +11857,7 @@ class _$MolecularSequenceVariantImpl extends _MolecularSequenceVariant {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MolecularSequenceVariantImpl &&
@@ -13093,7 +13093,7 @@ class _$MolecularSequenceQualityImpl extends _MolecularSequenceQuality {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MolecularSequenceQualityImpl &&
@@ -14086,7 +14086,7 @@ class _$MolecularSequenceRocImpl extends _MolecularSequenceRoc {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MolecularSequenceRocImpl &&
@@ -14879,7 +14879,7 @@ class _$MolecularSequenceRepositoryImpl extends _MolecularSequenceRepository {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MolecularSequenceRepositoryImpl &&
@@ -15525,7 +15525,7 @@ class _$MolecularSequenceStructureVariantImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MolecularSequenceStructureVariantImpl &&
@@ -16019,7 +16019,7 @@ class _$MolecularSequenceOuterImpl extends _MolecularSequenceOuter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MolecularSequenceOuterImpl &&
@@ -16489,7 +16489,7 @@ class _$MolecularSequenceInnerImpl extends _MolecularSequenceInner {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MolecularSequenceInnerImpl &&
@@ -18704,7 +18704,7 @@ class _$ObservationImpl extends _Observation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ObservationImpl &&
@@ -19783,7 +19783,7 @@ class _$ObservationReferenceRangeImpl extends _ObservationReferenceRange {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ObservationReferenceRangeImpl &&
@@ -20816,7 +20816,7 @@ class _$ObservationComponentImpl extends _ObservationComponent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ObservationComponentImpl &&
@@ -22063,7 +22063,7 @@ class _$QuestionnaireResponseImpl extends _QuestionnaireResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$QuestionnaireResponseImpl &&
@@ -22820,7 +22820,7 @@ class _$QuestionnaireResponseItemImpl extends _QuestionnaireResponseItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$QuestionnaireResponseItemImpl &&
@@ -23855,7 +23855,7 @@ class _$QuestionnaireResponseAnswerImpl extends _QuestionnaireResponseAnswer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$QuestionnaireResponseAnswerImpl &&
@@ -25129,7 +25129,7 @@ class _$SpecimenImpl extends _Specimen {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SpecimenImpl &&
@@ -26005,7 +26005,7 @@ class _$SpecimenCollectionImpl extends _SpecimenCollection {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SpecimenCollectionImpl &&
@@ -26629,7 +26629,7 @@ class _$SpecimenProcessingImpl extends _SpecimenProcessing {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SpecimenProcessingImpl &&
@@ -27279,7 +27279,7 @@ class _$SpecimenContainerImpl extends _SpecimenContainer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SpecimenContainerImpl &&

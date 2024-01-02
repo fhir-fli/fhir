@@ -645,7 +645,7 @@ class _$OrderImpl extends _Order {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OrderImpl &&
@@ -1053,7 +1053,7 @@ class _$OrderWhenImpl extends _OrderWhen {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OrderWhenImpl &&
@@ -1705,7 +1705,7 @@ class _$OrderResponseImpl extends _OrderResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OrderResponseImpl &&
@@ -2719,7 +2719,7 @@ class _$CommunicationRequestImpl extends _CommunicationRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommunicationRequestImpl &&
@@ -3214,7 +3214,7 @@ class _$CommunicationRequestPayloadImpl extends _CommunicationRequestPayload {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommunicationRequestPayloadImpl &&
@@ -4138,7 +4138,7 @@ class _$DeviceUseRequestImpl extends _DeviceUseRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceUseRequestImpl &&
@@ -5132,7 +5132,7 @@ class _$DeviceUseStatementImpl extends _DeviceUseStatement {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceUseStatementImpl &&

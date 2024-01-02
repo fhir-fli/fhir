@@ -862,7 +862,7 @@ class _$TestReportImpl extends _TestReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestReportImpl &&
@@ -1320,7 +1320,7 @@ class _$TestReportParticipantImpl extends _TestReportParticipant {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestReportParticipantImpl &&
@@ -1494,7 +1494,7 @@ class _$TestReportSetupImpl extends _TestReportSetup {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestReportSetupImpl &&
@@ -1687,7 +1687,7 @@ class _$TestReportActionImpl extends _TestReportAction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestReportActionImpl &&
@@ -1970,7 +1970,7 @@ class _$TestReportOperationImpl extends _TestReportOperation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestReportOperationImpl &&
@@ -2274,7 +2274,7 @@ class _$TestReportAssertImpl extends _TestReportAssert {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestReportAssertImpl &&
@@ -2551,7 +2551,7 @@ class _$TestReportTestImpl extends _TestReportTest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestReportTestImpl &&
@@ -2765,7 +2765,7 @@ class _$TestReportAction1Impl extends _TestReportAction1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestReportAction1Impl &&
@@ -2919,7 +2919,7 @@ class _$TestReportTeardownImpl extends _TestReportTeardown {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestReportTeardownImpl &&
@@ -3073,7 +3073,7 @@ class _$TestReportAction2Impl extends _TestReportAction2 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestReportAction2Impl &&
@@ -4438,7 +4438,7 @@ class _$TestScriptImpl extends _TestScript {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptImpl &&
@@ -4932,7 +4932,7 @@ class _$TestScriptOriginImpl extends _TestScriptOrigin {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptOriginImpl &&
@@ -5151,7 +5151,7 @@ class _$TestScriptDestinationImpl extends _TestScriptDestination {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptDestinationImpl &&
@@ -5334,7 +5334,7 @@ class _$TestScriptMetadataImpl extends _TestScriptMetadata {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptMetadataImpl &&
@@ -5570,7 +5570,7 @@ class _$TestScriptLinkImpl extends _TestScriptLink {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptLinkImpl &&
@@ -6048,7 +6048,7 @@ class _$TestScriptCapabilityImpl extends _TestScriptCapability {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptCapabilityImpl &&
@@ -6387,7 +6387,7 @@ class _$TestScriptFixtureImpl extends _TestScriptFixture {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptFixtureImpl &&
@@ -6932,7 +6932,7 @@ class _$TestScriptVariableImpl extends _TestScriptVariable {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptVariableImpl &&
@@ -7206,7 +7206,7 @@ class _$TestScriptRuleImpl extends _TestScriptRule {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptRuleImpl &&
@@ -7439,7 +7439,7 @@ class _$TestScriptParamImpl extends _TestScriptParam {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptParamImpl &&
@@ -7630,7 +7630,7 @@ class _$TestScriptRulesetImpl extends _TestScriptRuleset {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptRulesetImpl &&
@@ -7838,7 +7838,7 @@ class _$TestScriptRule1Impl extends _TestScriptRule1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptRule1Impl &&
@@ -8076,7 +8076,7 @@ class _$TestScriptParam1Impl extends _TestScriptParam1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptParam1Impl &&
@@ -8240,7 +8240,7 @@ class _$TestScriptSetupImpl extends _TestScriptSetup {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptSetupImpl &&
@@ -8433,7 +8433,7 @@ class _$TestScriptActionImpl extends _TestScriptAction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptActionImpl &&
@@ -9313,7 +9313,7 @@ class _$TestScriptOperationImpl extends _TestScriptOperation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptOperationImpl &&
@@ -9734,7 +9734,7 @@ class _$TestScriptRequestHeaderImpl extends _TestScriptRequestHeader {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptRequestHeaderImpl &&
@@ -11036,7 +11036,7 @@ class _$TestScriptAssertImpl extends _TestScriptAssert {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptAssertImpl &&
@@ -11519,7 +11519,7 @@ class _$TestScriptRule2Impl extends _TestScriptRule2 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptRule2Impl &&
@@ -11757,7 +11757,7 @@ class _$TestScriptParam2Impl extends _TestScriptParam2 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptParam2Impl &&
@@ -11977,7 +11977,7 @@ class _$TestScriptRuleset1Impl extends _TestScriptRuleset1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptRuleset1Impl &&
@@ -12191,7 +12191,7 @@ class _$TestScriptRule3Impl extends _TestScriptRule3 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptRule3Impl &&
@@ -12429,7 +12429,7 @@ class _$TestScriptParam3Impl extends _TestScriptParam3 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptParam3Impl &&
@@ -12696,7 +12696,7 @@ class _$TestScriptTestImpl extends _TestScriptTest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptTestImpl &&
@@ -12910,7 +12910,7 @@ class _$TestScriptAction1Impl extends _TestScriptAction1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptAction1Impl &&
@@ -13064,7 +13064,7 @@ class _$TestScriptTeardownImpl extends _TestScriptTeardown {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptTeardownImpl &&
@@ -13218,7 +13218,7 @@ class _$TestScriptAction2Impl extends _TestScriptAction2 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TestScriptAction2Impl &&

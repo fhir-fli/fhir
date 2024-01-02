@@ -1349,7 +1349,7 @@ class _$CompositionImpl extends _Composition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CompositionImpl &&
@@ -2092,7 +2092,7 @@ class _$CompositionAttesterImpl extends _CompositionAttester {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CompositionAttesterImpl &&
@@ -2516,7 +2516,7 @@ class _$CompositionEventImpl extends _CompositionEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CompositionEventImpl &&
@@ -3209,7 +3209,7 @@ class _$CompositionSectionImpl extends _CompositionSection {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CompositionSectionImpl &&
@@ -4860,7 +4860,7 @@ class _$DocumentReferenceImpl extends _DocumentReference {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DocumentReferenceImpl &&
@@ -5638,7 +5638,7 @@ class _$DocumentReferenceAttesterImpl extends _DocumentReferenceAttester {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DocumentReferenceAttesterImpl &&
@@ -6049,7 +6049,7 @@ class _$DocumentReferenceRelatesToImpl extends _DocumentReferenceRelatesTo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DocumentReferenceRelatesToImpl &&
@@ -6449,7 +6449,7 @@ class _$DocumentReferenceContentImpl extends _DocumentReferenceContent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DocumentReferenceContentImpl &&
@@ -6934,7 +6934,7 @@ class _$DocumentReferenceProfileImpl extends _DocumentReferenceProfile {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DocumentReferenceProfileImpl &&

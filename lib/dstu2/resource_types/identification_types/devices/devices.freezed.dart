@@ -933,7 +933,7 @@ class _$DeviceImpl extends _Device {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceImpl &&
@@ -1829,7 +1829,7 @@ class _$DeviceComponentImpl extends _DeviceComponent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceComponentImpl &&
@@ -2252,7 +2252,7 @@ class _$DeviceComponentProductionSpecificationImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceComponentProductionSpecificationImpl &&
@@ -3082,7 +3082,7 @@ class _$DeviceMetricImpl extends _DeviceMetric {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceMetricImpl &&
@@ -3597,7 +3597,7 @@ class _$DeviceMetricCalibrationImpl extends _DeviceMetricCalibration {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceMetricCalibrationImpl &&

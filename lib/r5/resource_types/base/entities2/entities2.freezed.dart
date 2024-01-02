@@ -1052,7 +1052,7 @@ class _$BiologicallyDerivedProductImpl extends _BiologicallyDerivedProduct {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BiologicallyDerivedProductImpl &&
@@ -1764,7 +1764,7 @@ class _$BiologicallyDerivedProductCollectionImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BiologicallyDerivedProductCollectionImpl &&
@@ -2550,7 +2550,7 @@ class _$BiologicallyDerivedProductPropertyImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BiologicallyDerivedProductPropertyImpl &&
@@ -3923,7 +3923,7 @@ class _$BiologicallyDerivedProductDispenseImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BiologicallyDerivedProductDispenseImpl &&
@@ -4584,7 +4584,7 @@ class _$BiologicallyDerivedProductDispensePerformerImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BiologicallyDerivedProductDispensePerformerImpl &&
@@ -6583,7 +6583,7 @@ class _$DeviceImpl extends _Device {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceImpl &&
@@ -7740,7 +7740,7 @@ class _$DeviceUdiCarrierImpl extends _DeviceUdiCarrier {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceUdiCarrierImpl &&
@@ -8352,7 +8352,7 @@ class _$DeviceNameImpl extends _DeviceName {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceNameImpl &&
@@ -8899,7 +8899,7 @@ class _$DeviceVersionImpl extends _DeviceVersion {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceVersionImpl &&
@@ -9392,7 +9392,7 @@ class _$DeviceConformsToImpl extends _DeviceConformsTo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceConformsToImpl &&
@@ -10100,7 +10100,7 @@ class _$DevicePropertyImpl extends _DeviceProperty {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DevicePropertyImpl &&
@@ -11214,7 +11214,7 @@ class _$DeviceMetricImpl extends _DeviceMetric {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceMetricImpl &&
@@ -11908,7 +11908,7 @@ class _$DeviceMetricCalibrationImpl extends _DeviceMetricCalibration {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceMetricCalibrationImpl &&
@@ -12920,7 +12920,7 @@ class _$NutritionProductImpl extends _NutritionProduct {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NutritionProductImpl &&
@@ -13483,7 +13483,7 @@ class _$NutritionProductNutrientImpl extends _NutritionProductNutrient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NutritionProductNutrientImpl &&
@@ -13876,7 +13876,7 @@ class _$NutritionProductIngredientImpl extends _NutritionProductIngredient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NutritionProductIngredientImpl &&
@@ -14532,7 +14532,7 @@ class _$NutritionProductCharacteristicImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NutritionProductCharacteristicImpl &&
@@ -15283,7 +15283,7 @@ class _$NutritionProductInstanceImpl extends _NutritionProductInstance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NutritionProductInstanceImpl &&
@@ -16381,7 +16381,7 @@ class _$SubstanceImpl extends _Substance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubstanceImpl &&
@@ -17002,7 +17002,7 @@ class _$SubstanceIngredientImpl extends _SubstanceIngredient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubstanceIngredientImpl &&

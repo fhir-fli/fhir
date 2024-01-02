@@ -1390,7 +1390,7 @@ class _$CoverageImpl extends _Coverage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageImpl &&
@@ -2112,7 +2112,7 @@ class _$CoveragePaymentByImpl extends _CoveragePaymentBy {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoveragePaymentByImpl &&
@@ -2576,7 +2576,7 @@ class _$CoverageClassImpl extends _CoverageClass {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageClassImpl &&
@@ -3211,7 +3211,7 @@ class _$CoverageCostToBeneficiaryImpl extends _CoverageCostToBeneficiary {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageCostToBeneficiaryImpl &&
@@ -3653,7 +3653,7 @@ class _$CoverageExceptionImpl extends _CoverageException {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageExceptionImpl &&
@@ -4947,7 +4947,7 @@ class _$CoverageEligibilityRequestImpl extends _CoverageEligibilityRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageEligibilityRequestImpl &&
@@ -5658,7 +5658,7 @@ class _$CoverageEligibilityRequestEventImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageEligibilityRequestEventImpl &&
@@ -6169,7 +6169,7 @@ class _$CoverageEligibilityRequestSupportingInfoImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageEligibilityRequestSupportingInfoImpl &&
@@ -6699,7 +6699,7 @@ class _$CoverageEligibilityRequestInsuranceImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageEligibilityRequestInsuranceImpl &&
@@ -7463,7 +7463,7 @@ class _$CoverageEligibilityRequestItemImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageEligibilityRequestItemImpl &&
@@ -7959,7 +7959,7 @@ class _$CoverageEligibilityRequestDiagnosisImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageEligibilityRequestDiagnosisImpl &&
@@ -9357,7 +9357,7 @@ class _$CoverageEligibilityResponseImpl extends _CoverageEligibilityResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageEligibilityResponseImpl &&
@@ -10101,7 +10101,7 @@ class _$CoverageEligibilityResponseEventImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageEligibilityResponseEventImpl &&
@@ -10627,7 +10627,7 @@ class _$CoverageEligibilityResponseInsuranceImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageEligibilityResponseInsuranceImpl &&
@@ -11620,7 +11620,7 @@ class _$CoverageEligibilityResponseItemImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageEligibilityResponseItemImpl &&
@@ -12460,7 +12460,7 @@ class _$CoverageEligibilityResponseBenefitImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageEligibilityResponseBenefitImpl &&
@@ -12989,7 +12989,7 @@ class _$CoverageEligibilityResponseErrorImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CoverageEligibilityResponseErrorImpl &&
@@ -13914,7 +13914,7 @@ class _$EnrollmentRequestImpl extends _EnrollmentRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EnrollmentRequestImpl &&
@@ -15046,7 +15046,7 @@ class _$EnrollmentResponseImpl extends _EnrollmentResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EnrollmentResponseImpl &&

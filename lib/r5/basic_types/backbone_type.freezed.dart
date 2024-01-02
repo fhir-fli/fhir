@@ -244,7 +244,7 @@ class _$BackboneTypeImpl extends _BackboneType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BackboneTypeImpl &&

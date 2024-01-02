@@ -832,7 +832,7 @@ class _$LocationImpl extends _Location {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LocationImpl &&
@@ -1348,7 +1348,7 @@ class _$LocationPositionImpl extends _LocationPosition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LocationPositionImpl &&
@@ -2004,7 +2004,7 @@ class _$SubstanceImpl extends _Substance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubstanceImpl &&
@@ -2428,7 +2428,7 @@ class _$SubstanceInstanceImpl extends _SubstanceInstance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubstanceInstanceImpl &&
@@ -2727,7 +2727,7 @@ class _$SubstanceIngredientImpl extends _SubstanceIngredient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubstanceIngredientImpl &&
@@ -3512,7 +3512,7 @@ class _$PersonImpl extends _Person {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PersonImpl &&
@@ -3940,7 +3940,7 @@ class _$PersonLinkImpl extends _PersonLink {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PersonLinkImpl &&
@@ -4929,7 +4929,7 @@ class _$ContractImpl extends _Contract {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ContractImpl &&
@@ -5361,7 +5361,7 @@ class _$ContractActorImpl extends _ContractActor {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ContractActorImpl &&
@@ -5948,7 +5948,7 @@ class _$ContractValuedItemImpl extends _ContractValuedItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ContractValuedItemImpl &&
@@ -6315,7 +6315,7 @@ class _$ContractSignerImpl extends _ContractSigner {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ContractSignerImpl &&
@@ -6926,7 +6926,7 @@ class _$ContractTermImpl extends _ContractTerm {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ContractTermImpl &&
@@ -7270,7 +7270,7 @@ class _$ContractTermActorImpl extends _ContractTermActor {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ContractTermActorImpl &&
@@ -7559,7 +7559,7 @@ class _$ContractFriendlyImpl extends _ContractFriendly {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ContractFriendlyImpl &&
@@ -7850,7 +7850,7 @@ class _$ContractLegalImpl extends _ContractLegal {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ContractLegalImpl &&
@@ -8139,7 +8139,7 @@ class _$ContractRuleImpl extends _ContractRule {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ContractRuleImpl &&

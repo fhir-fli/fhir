@@ -1849,7 +1849,7 @@ class _$CodeSystemImpl extends _CodeSystem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CodeSystemImpl &&
@@ -2873,7 +2873,7 @@ class _$CodeSystemFilterImpl extends _CodeSystemFilter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CodeSystemFilterImpl &&
@@ -3490,7 +3490,7 @@ class _$CodeSystemPropertyImpl extends _CodeSystemProperty {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CodeSystemPropertyImpl &&
@@ -4153,7 +4153,7 @@ class _$CodeSystemConceptImpl extends _CodeSystemConcept {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CodeSystemConceptImpl &&
@@ -4692,7 +4692,7 @@ class _$CodeSystemDesignationImpl extends _CodeSystemDesignation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CodeSystemDesignationImpl &&
@@ -5473,7 +5473,7 @@ class _$CodeSystemProperty1Impl extends _CodeSystemProperty1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CodeSystemProperty1Impl &&
@@ -7291,7 +7291,7 @@ class _$ConceptMapImpl extends _ConceptMap {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConceptMapImpl &&
@@ -8316,7 +8316,7 @@ class _$ConceptMapGroupImpl extends _ConceptMapGroup {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConceptMapGroupImpl &&
@@ -8857,7 +8857,7 @@ class _$ConceptMapElementImpl extends _ConceptMapElement {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConceptMapElementImpl &&
@@ -9520,7 +9520,7 @@ class _$ConceptMapTargetImpl extends _ConceptMapTarget {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConceptMapTargetImpl &&
@@ -10122,7 +10122,7 @@ class _$ConceptMapDependsOnImpl extends _ConceptMapDependsOn {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConceptMapDependsOnImpl &&
@@ -10701,7 +10701,7 @@ class _$ConceptMapUnmappedImpl extends _ConceptMapUnmapped {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConceptMapUnmappedImpl &&
@@ -12013,7 +12013,7 @@ class _$NamingSystemImpl extends _NamingSystem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NamingSystemImpl &&
@@ -12865,7 +12865,7 @@ class _$NamingSystemUniqueIdImpl extends _NamingSystemUniqueId {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NamingSystemUniqueIdImpl &&
@@ -14773,7 +14773,7 @@ class _$TerminologyCapabilitiesImpl extends _TerminologyCapabilities {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TerminologyCapabilitiesImpl &&
@@ -15640,7 +15640,7 @@ class _$TerminologyCapabilitiesSoftwareImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TerminologyCapabilitiesSoftwareImpl &&
@@ -16109,7 +16109,7 @@ class _$TerminologyCapabilitiesImplementationImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TerminologyCapabilitiesImplementationImpl &&
@@ -16576,7 +16576,7 @@ class _$TerminologyCapabilitiesCodeSystemImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TerminologyCapabilitiesCodeSystemImpl &&
@@ -17259,7 +17259,7 @@ class _$TerminologyCapabilitiesVersionImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TerminologyCapabilitiesVersionImpl &&
@@ -17788,7 +17788,7 @@ class _$TerminologyCapabilitiesFilterImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TerminologyCapabilitiesFilterImpl &&
@@ -18398,7 +18398,7 @@ class _$TerminologyCapabilitiesExpansionImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TerminologyCapabilitiesExpansionImpl &&
@@ -18907,7 +18907,7 @@ class _$TerminologyCapabilitiesParameterImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TerminologyCapabilitiesParameterImpl &&
@@ -19319,7 +19319,7 @@ class _$TerminologyCapabilitiesValidateCodeImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TerminologyCapabilitiesValidateCodeImpl &&
@@ -19714,7 +19714,7 @@ class _$TerminologyCapabilitiesTranslationImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TerminologyCapabilitiesTranslationImpl &&
@@ -20108,7 +20108,7 @@ class _$TerminologyCapabilitiesClosureImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TerminologyCapabilitiesClosureImpl &&
@@ -21684,7 +21684,7 @@ class _$ValueSetImpl extends _ValueSet {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ValueSetImpl &&
@@ -22552,7 +22552,7 @@ class _$ValueSetComposeImpl extends _ValueSetCompose {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ValueSetComposeImpl &&
@@ -23142,7 +23142,7 @@ class _$ValueSetIncludeImpl extends _ValueSetInclude {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ValueSetIncludeImpl &&
@@ -23664,7 +23664,7 @@ class _$ValueSetConceptImpl extends _ValueSetConcept {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ValueSetConceptImpl &&
@@ -24163,7 +24163,7 @@ class _$ValueSetDesignationImpl extends _ValueSetDesignation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ValueSetDesignationImpl &&
@@ -24693,7 +24693,7 @@ class _$ValueSetFilterImpl extends _ValueSetFilter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ValueSetFilterImpl &&
@@ -25372,7 +25372,7 @@ class _$ValueSetExpansionImpl extends _ValueSetExpansion {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ValueSetExpansionImpl &&
@@ -26232,7 +26232,7 @@ class _$ValueSetParameterImpl extends _ValueSetParameter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ValueSetParameterImpl &&
@@ -27120,7 +27120,7 @@ class _$ValueSetContainsImpl extends _ValueSetContains {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ValueSetContainsImpl &&

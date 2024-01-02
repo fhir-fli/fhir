@@ -1912,7 +1912,7 @@ class _$MeasureImpl extends _Measure {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MeasureImpl &&
@@ -2648,7 +2648,7 @@ class _$MeasureGroupImpl extends _MeasureGroup {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MeasureGroupImpl &&
@@ -3025,7 +3025,7 @@ class _$MeasurePopulationImpl extends _MeasurePopulation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MeasurePopulationImpl &&
@@ -3322,7 +3322,7 @@ class _$MeasureStratifierImpl extends _MeasureStratifier {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MeasureStratifierImpl &&
@@ -3634,7 +3634,7 @@ class _$MeasureSupplementalDataImpl extends _MeasureSupplementalData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MeasureSupplementalDataImpl &&
@@ -4443,7 +4443,7 @@ class _$MeasureReportImpl extends _MeasureReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MeasureReportImpl &&
@@ -4845,7 +4845,7 @@ class _$MeasureReportGroupImpl extends _MeasureReportGroup {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MeasureReportGroupImpl &&
@@ -5150,7 +5150,7 @@ class _$MeasureReportPopulationImpl extends _MeasureReportPopulation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MeasureReportPopulationImpl &&
@@ -5355,7 +5355,7 @@ class _$MeasureReportStratifierImpl extends _MeasureReportStratifier {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MeasureReportStratifierImpl &&
@@ -5616,7 +5616,7 @@ class _$MeasureReportStratumImpl extends _MeasureReportStratum {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MeasureReportStratumImpl &&
@@ -5922,7 +5922,7 @@ class _$MeasureReportPopulation1Impl extends _MeasureReportPopulation1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MeasureReportPopulation1Impl &&

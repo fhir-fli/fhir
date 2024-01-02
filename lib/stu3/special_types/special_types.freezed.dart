@@ -165,7 +165,7 @@ class _$NarrativeImpl extends _Narrative {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$NarrativeImpl &&
@@ -431,7 +431,7 @@ class _$ReferenceImpl extends _Reference {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ReferenceImpl &&
@@ -781,7 +781,7 @@ class _$FhirMetaImpl extends _FhirMeta {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirMetaImpl &&
@@ -8960,7 +8960,7 @@ class _$ElementDefinitionImpl extends _ElementDefinition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ElementDefinitionImpl &&
@@ -10879,7 +10879,7 @@ class _$ElementDefinitionSlicingImpl extends _ElementDefinitionSlicing {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ElementDefinitionSlicingImpl &&
@@ -11157,7 +11157,7 @@ class _$ElementDefinitionDiscriminatorImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ElementDefinitionDiscriminatorImpl &&
@@ -11458,7 +11458,7 @@ class _$ElementDefinitionBaseImpl extends _ElementDefinitionBase {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ElementDefinitionBaseImpl &&
@@ -11897,7 +11897,7 @@ class _$ElementDefinitionTypeImpl extends _ElementDefinitionType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ElementDefinitionTypeImpl &&
@@ -14111,7 +14111,7 @@ class _$ElementDefinitionExampleImpl extends _ElementDefinitionExample {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ElementDefinitionExampleImpl &&
@@ -15006,7 +15006,7 @@ class _$ElementDefinitionConstraintImpl extends _ElementDefinitionConstraint {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ElementDefinitionConstraintImpl &&
@@ -15432,7 +15432,7 @@ class _$ElementDefinitionBindingImpl extends _ElementDefinitionBinding {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ElementDefinitionBindingImpl &&
@@ -15811,7 +15811,7 @@ class _$ElementDefinitionMappingImpl extends _ElementDefinitionMapping {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ElementDefinitionMappingImpl &&
@@ -16605,7 +16605,7 @@ class _$DosageImpl extends _Dosage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DosageImpl &&

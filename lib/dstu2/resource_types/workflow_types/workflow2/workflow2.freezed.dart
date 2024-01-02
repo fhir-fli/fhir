@@ -814,7 +814,7 @@ class _$ProcessRequestImpl extends _ProcessRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProcessRequestImpl &&
@@ -1190,7 +1190,7 @@ class _$ProcessRequestItemImpl extends _ProcessRequestItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProcessRequestItemImpl &&
@@ -1991,7 +1991,7 @@ class _$ProcessResponseImpl extends _ProcessResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProcessResponseImpl &&
@@ -2384,7 +2384,7 @@ class _$ProcessResponseNotesImpl extends _ProcessResponseNotes {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProcessResponseNotesImpl &&
@@ -3180,7 +3180,7 @@ class _$SupplyRequestImpl extends _SupplyRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SupplyRequestImpl &&
@@ -3583,7 +3583,7 @@ class _$SupplyRequestWhenImpl extends _SupplyRequestWhen {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SupplyRequestWhenImpl &&
@@ -4376,7 +4376,7 @@ class _$SupplyDeliveryImpl extends _SupplyDelivery {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SupplyDeliveryImpl &&

@@ -1599,7 +1599,7 @@ class _$AdverseEventImpl extends _AdverseEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdverseEventImpl &&
@@ -2360,7 +2360,7 @@ class _$AdverseEventParticipantImpl extends _AdverseEventParticipant {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdverseEventParticipantImpl &&
@@ -2807,7 +2807,7 @@ class _$AdverseEventSuspectEntityImpl extends _AdverseEventSuspectEntity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdverseEventSuspectEntityImpl &&
@@ -3262,7 +3262,7 @@ class _$AdverseEventCausalityImpl extends _AdverseEventCausality {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdverseEventCausalityImpl &&
@@ -3682,7 +3682,7 @@ class _$AdverseEventContributingFactorImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdverseEventContributingFactorImpl &&
@@ -4097,7 +4097,7 @@ class _$AdverseEventPreventiveActionImpl extends _AdverseEventPreventiveAction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdverseEventPreventiveActionImpl &&
@@ -4512,7 +4512,7 @@ class _$AdverseEventMitigatingActionImpl extends _AdverseEventMitigatingAction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdverseEventMitigatingActionImpl &&
@@ -4958,7 +4958,7 @@ class _$AdverseEventSupportingInfoImpl extends _AdverseEventSupportingInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AdverseEventSupportingInfoImpl &&
@@ -6453,7 +6453,7 @@ class _$AllergyIntoleranceImpl extends _AllergyIntolerance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AllergyIntoleranceImpl &&
@@ -7170,7 +7170,7 @@ class _$AllergyIntoleranceParticipantImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AllergyIntoleranceParticipantImpl &&
@@ -7840,7 +7840,7 @@ class _$AllergyIntoleranceReactionImpl extends _AllergyIntoleranceReaction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AllergyIntoleranceReactionImpl &&
@@ -9391,7 +9391,7 @@ class _$ClinicalImpressionImpl extends _ClinicalImpression {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClinicalImpressionImpl &&
@@ -10118,7 +10118,7 @@ class _$ClinicalImpressionFindingImpl extends _ClinicalImpressionFinding {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClinicalImpressionFindingImpl &&
@@ -11754,7 +11754,7 @@ class _$ConditionImpl extends _Condition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConditionImpl &&
@@ -12502,7 +12502,7 @@ class _$ConditionParticipantImpl extends _ConditionParticipant {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConditionParticipantImpl &&
@@ -12940,7 +12940,7 @@ class _$ConditionStageImpl extends _ConditionStage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConditionStageImpl &&
@@ -14221,7 +14221,7 @@ class _$DetectedIssueImpl extends _DetectedIssue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DetectedIssueImpl &&
@@ -14860,7 +14860,7 @@ class _$DetectedIssueEvidenceImpl extends _DetectedIssueEvidence {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DetectedIssueEvidenceImpl &&
@@ -15358,7 +15358,7 @@ class _$DetectedIssueMitigationImpl extends _DetectedIssueMitigation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DetectedIssueMitigationImpl &&
@@ -17250,7 +17250,7 @@ class _$FamilyMemberHistoryImpl extends _FamilyMemberHistory {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FamilyMemberHistoryImpl &&
@@ -18074,7 +18074,7 @@ class _$FamilyMemberHistoryParticipantImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FamilyMemberHistoryParticipantImpl &&
@@ -18761,7 +18761,7 @@ class _$FamilyMemberHistoryConditionImpl extends _FamilyMemberHistoryCondition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FamilyMemberHistoryConditionImpl &&
@@ -19600,7 +19600,7 @@ class _$FamilyMemberHistoryProcedureImpl extends _FamilyMemberHistoryProcedure {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FamilyMemberHistoryProcedureImpl &&
@@ -21773,7 +21773,7 @@ class _$ProcedureImpl extends _Procedure {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProcedureImpl &&
@@ -22710,7 +22710,7 @@ class _$ProcedurePerformerImpl extends _ProcedurePerformer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProcedurePerformerImpl &&
@@ -23125,7 +23125,7 @@ class _$ProcedureFocalDeviceImpl extends _ProcedureFocalDevice {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProcedureFocalDeviceImpl &&

@@ -1424,7 +1424,7 @@ class _$CommunicationImpl extends _Communication {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommunicationImpl &&
@@ -2167,7 +2167,7 @@ class _$CommunicationPayloadImpl extends _CommunicationPayload {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommunicationPayloadImpl &&
@@ -3763,7 +3763,7 @@ class _$CommunicationRequestImpl extends _CommunicationRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommunicationRequestImpl &&
@@ -4545,7 +4545,7 @@ class _$CommunicationRequestPayloadImpl extends _CommunicationRequestPayload {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CommunicationRequestPayloadImpl &&
@@ -5470,7 +5470,7 @@ class _$DeviceAssociationImpl extends _DeviceAssociation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceAssociationImpl &&
@@ -6047,7 +6047,7 @@ class _$DeviceAssociationOperationImpl extends _DeviceAssociationOperation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceAssociationOperationImpl &&
@@ -7489,7 +7489,7 @@ class _$DeviceDispenseImpl extends _DeviceDispense {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceDispenseImpl &&
@@ -8180,7 +8180,7 @@ class _$DeviceDispensePerformerImpl extends _DeviceDispensePerformer {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceDispensePerformerImpl &&
@@ -10040,7 +10040,7 @@ class _$DeviceRequestImpl extends _DeviceRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceRequestImpl &&
@@ -10990,7 +10990,7 @@ class _$DeviceRequestParameterImpl extends _DeviceRequestParameter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceRequestParameterImpl &&
@@ -12380,7 +12380,7 @@ class _$DeviceUsageImpl extends _DeviceUsage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceUsageImpl &&
@@ -13028,7 +13028,7 @@ class _$DeviceUsageAdherenceImpl extends _DeviceUsageAdherence {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DeviceUsageAdherenceImpl &&
@@ -14361,7 +14361,7 @@ class _$GuidanceResponseImpl extends _GuidanceResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GuidanceResponseImpl &&
@@ -15747,7 +15747,7 @@ class _$InventoryItemImpl extends _InventoryItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InventoryItemImpl &&
@@ -16415,7 +16415,7 @@ class _$InventoryItemNameImpl extends _InventoryItemName {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InventoryItemNameImpl &&
@@ -16842,7 +16842,7 @@ class _$InventoryItemResponsibleOrganizationImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InventoryItemResponsibleOrganizationImpl &&
@@ -17296,7 +17296,7 @@ class _$InventoryItemDescriptionImpl extends _InventoryItemDescription {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InventoryItemDescriptionImpl &&
@@ -17755,7 +17755,7 @@ class _$InventoryItemAssociationImpl extends _InventoryItemAssociation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InventoryItemAssociationImpl &&
@@ -18724,7 +18724,7 @@ class _$InventoryItemCharacteristicImpl extends _InventoryItemCharacteristic {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InventoryItemCharacteristicImpl &&
@@ -19424,7 +19424,7 @@ class _$InventoryItemInstanceImpl extends _InventoryItemInstance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InventoryItemInstanceImpl &&
@@ -20503,7 +20503,7 @@ class _$InventoryReportImpl extends _InventoryReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InventoryReportImpl &&
@@ -21184,7 +21184,7 @@ class _$InventoryReportInventoryListingImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InventoryReportInventoryListingImpl &&
@@ -21642,7 +21642,7 @@ class _$InventoryReportItemImpl extends _InventoryReportItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InventoryReportItemImpl &&
@@ -22767,7 +22767,7 @@ class _$SupplyDeliveryImpl extends _SupplyDelivery {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SupplyDeliveryImpl &&
@@ -23420,7 +23420,7 @@ class _$SupplyDeliverySuppliedItemImpl extends _SupplyDeliverySuppliedItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SupplyDeliverySuppliedItemImpl &&
@@ -24761,7 +24761,7 @@ class _$SupplyRequestImpl extends _SupplyRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SupplyRequestImpl &&
@@ -25551,7 +25551,7 @@ class _$SupplyRequestParameterImpl extends _SupplyRequestParameter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SupplyRequestParameterImpl &&

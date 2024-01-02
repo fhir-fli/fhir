@@ -928,7 +928,7 @@ class _$ConformanceImpl extends _Conformance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceImpl &&
@@ -2098,7 +2098,7 @@ class _$CapabilityStatementImpl extends _CapabilityStatement {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CapabilityStatementImpl &&
@@ -2552,7 +2552,7 @@ class _$ConformanceContactImpl extends _ConformanceContact {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceContactImpl &&
@@ -2825,7 +2825,7 @@ class _$ConformanceSoftwareImpl extends _ConformanceSoftware {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceSoftwareImpl &&
@@ -3093,7 +3093,7 @@ class _$ConformanceImplementationImpl extends _ConformanceImplementation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceImplementationImpl &&
@@ -3594,7 +3594,7 @@ class _$ConformanceRestImpl extends _ConformanceRest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceRestImpl &&
@@ -3987,7 +3987,7 @@ class _$ConformanceMessagingImpl extends _ConformanceMessaging {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceMessagingImpl &&
@@ -4323,7 +4323,7 @@ class _$ConformanceDocumentImpl extends _ConformanceDocument {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceDocumentImpl &&
@@ -4685,7 +4685,7 @@ class _$ConformanceRestSecurityImpl extends _ConformanceRestSecurity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceRestSecurityImpl &&
@@ -5352,7 +5352,7 @@ class _$ConformanceRestResourceImpl extends _ConformanceRestResource {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceRestResourceImpl &&
@@ -5730,7 +5730,7 @@ class _$ConformanceResourceInteractionImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceResourceInteractionImpl &&
@@ -6038,7 +6038,7 @@ class _$ConformanceRestOperationImpl extends _ConformanceRestOperation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceRestOperationImpl &&
@@ -6357,7 +6357,7 @@ class _$ConformanceMessagingEndpointImpl extends _ConformanceMessagingEndpoint {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceMessagingEndpointImpl &&
@@ -6783,7 +6783,7 @@ class _$ConformanceMessagingEventImpl extends _ConformanceMessagingEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceMessagingEventImpl &&
@@ -7123,7 +7123,7 @@ class _$ConformanceSecurityCertificateImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceSecurityCertificateImpl &&
@@ -7403,7 +7403,7 @@ class _$ConformanceRestInteractionImpl extends _ConformanceRestInteraction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceRestInteractionImpl &&
@@ -7807,7 +7807,7 @@ class _$ConformanceResourceSearchParamImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConformanceResourceSearchParamImpl &&
@@ -8657,7 +8657,7 @@ class _$OperationDefinitionImpl extends _OperationDefinition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OperationDefinitionImpl &&
@@ -9084,7 +9084,7 @@ class _$OperationDefinitionContactImpl extends _OperationDefinitionContact {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OperationDefinitionContactImpl &&
@@ -9535,7 +9535,7 @@ class _$OperationDefinitionParameterImpl extends _OperationDefinitionParameter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OperationDefinitionParameterImpl &&
@@ -9907,7 +9907,7 @@ class _$OperationDefinitionParameterBindingImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OperationDefinitionParameterBindingImpl &&
@@ -10685,7 +10685,7 @@ class _$SearchParameterImpl extends _SearchParameter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SearchParameterImpl &&
@@ -11095,7 +11095,7 @@ class _$SearchParameterContactImpl extends _SearchParameterContact {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SearchParameterContactImpl &&

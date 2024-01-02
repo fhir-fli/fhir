@@ -835,7 +835,7 @@ class _$MediaImpl extends _Media {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MediaImpl &&
@@ -1495,7 +1495,7 @@ class _$BinaryImpl extends _Binary {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BinaryImpl &&
@@ -2186,7 +2186,7 @@ class _$BundleImpl extends _Bundle {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleImpl &&
@@ -2625,7 +2625,7 @@ class _$BundleLinkImpl extends _BundleLink {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleLinkImpl &&
@@ -3083,7 +3083,7 @@ class _$BundleEntryImpl extends _BundleEntry {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleEntryImpl &&
@@ -3472,7 +3472,7 @@ class _$BundleEntrySearchImpl extends _BundleEntrySearch {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleEntrySearchImpl &&
@@ -4045,7 +4045,7 @@ class _$BundleEntryRequestImpl extends _BundleEntryRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleEntryRequestImpl &&
@@ -4570,7 +4570,7 @@ class _$BundleEntryResponseImpl extends _BundleEntryResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleEntryResponseImpl &&
@@ -5229,7 +5229,7 @@ class _$BasicImpl extends _Basic {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BasicImpl &&

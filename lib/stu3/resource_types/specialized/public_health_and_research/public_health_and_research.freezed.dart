@@ -993,7 +993,7 @@ class _$ResearchStudyImpl extends _ResearchStudy {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResearchStudyImpl &&
@@ -1451,7 +1451,7 @@ class _$ResearchStudyArmImpl extends _ResearchStudyArm {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResearchStudyArmImpl &&
@@ -2193,7 +2193,7 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResearchSubjectImpl &&

@@ -537,7 +537,7 @@ class _$MedicationImpl extends _Medication {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationImpl &&
@@ -943,7 +943,7 @@ class _$MedicationProductImpl extends _MedicationProduct {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationProductImpl &&
@@ -1249,7 +1249,7 @@ class _$MedicationProductIngredientImpl extends _MedicationProductIngredient {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationProductIngredientImpl &&
@@ -1580,7 +1580,7 @@ class _$MedicationProductBatchImpl extends _MedicationProductBatch {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationProductBatchImpl &&
@@ -1907,7 +1907,7 @@ class _$MedicationPackageImpl extends _MedicationPackage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationPackageImpl &&
@@ -2205,7 +2205,7 @@ class _$MedicationPackageContentImpl extends _MedicationPackageContent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationPackageContentImpl &&
@@ -3158,7 +3158,7 @@ class _$MedicationOrderImpl extends _MedicationOrder {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationOrderImpl &&
@@ -3959,7 +3959,7 @@ class _$MedicationOrderDosageInstructionImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationOrderDosageInstructionImpl &&
@@ -4444,7 +4444,7 @@ class _$MedicationOrderDispenseRequestImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationOrderDispenseRequestImpl &&
@@ -4768,7 +4768,7 @@ class _$MedicationOrderSubstitutionImpl extends _MedicationOrderSubstitution {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationOrderSubstitutionImpl &&
@@ -5718,7 +5718,7 @@ class _$MedicationAdministrationImpl extends _MedicationAdministration {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationAdministrationImpl &&
@@ -6383,7 +6383,7 @@ class _$MedicationAdministrationDosageImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationAdministrationDosageImpl &&
@@ -7439,7 +7439,7 @@ class _$MedicationDispenseImpl extends _MedicationDispense {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationDispenseImpl &&
@@ -8254,7 +8254,7 @@ class _$MedicationDispenseDosageInstructionImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationDispenseDosageInstructionImpl &&
@@ -8643,7 +8643,7 @@ class _$MedicationDispenseSubstitutionImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationDispenseSubstitutionImpl &&
@@ -9611,7 +9611,7 @@ class _$MedicationStatementImpl extends _MedicationStatement {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationStatementImpl &&
@@ -10388,7 +10388,7 @@ class _$MedicationStatementDosageImpl extends _MedicationStatementDosage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MedicationStatementDosageImpl &&
@@ -11540,7 +11540,7 @@ class _$ImmunizationImpl extends _Immunization {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ImmunizationImpl &&
@@ -12009,7 +12009,7 @@ class _$ImmunizationExplanationImpl extends _ImmunizationExplanation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ImmunizationExplanationImpl &&
@@ -12368,7 +12368,7 @@ class _$ImmunizationReactionImpl extends _ImmunizationReaction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ImmunizationReactionImpl &&
@@ -12838,7 +12838,7 @@ class _$ImmunizationVaccinationProtocolImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ImmunizationVaccinationProtocolImpl &&
@@ -13425,7 +13425,7 @@ class _$ImmunizationRecommendationImpl extends _ImmunizationRecommendation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ImmunizationRecommendationImpl &&
@@ -13934,7 +13934,7 @@ class _$ImmunizationRecommendationRecommendationImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ImmunizationRecommendationRecommendationImpl &&
@@ -14316,7 +14316,7 @@ class _$ImmunizationRecommendationRecommendationDateCriterionImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other
@@ -14685,7 +14685,7 @@ class _$ImmunizationRecommendationRecommendationProtocolImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ImmunizationRecommendationRecommendationProtocolImpl &&

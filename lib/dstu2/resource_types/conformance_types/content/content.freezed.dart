@@ -1337,7 +1337,7 @@ class _$StructureDefinitionImpl extends _StructureDefinition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StructureDefinitionImpl &&
@@ -1894,7 +1894,7 @@ class _$StructureDefinitionContactImpl extends _StructureDefinitionContact {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StructureDefinitionContactImpl &&
@@ -2351,7 +2351,7 @@ class _$StructureDefinitionMappingImpl extends _StructureDefinitionMapping {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StructureDefinitionMappingImpl &&
@@ -2654,7 +2654,7 @@ class _$StructureDefinitionSnapshotImpl extends _StructureDefinitionSnapshot {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StructureDefinitionSnapshotImpl &&
@@ -2907,7 +2907,7 @@ class _$StructureDefinitionDifferentialImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$StructureDefinitionDifferentialImpl &&
@@ -3632,7 +3632,7 @@ class _$DataElementImpl extends _DataElement {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DataElementImpl &&
@@ -4023,7 +4023,7 @@ class _$DataElementContactImpl extends _DataElementContact {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DataElementContactImpl &&
@@ -4473,7 +4473,7 @@ class _$DataElementMappingImpl extends _DataElementMapping {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DataElementMappingImpl &&

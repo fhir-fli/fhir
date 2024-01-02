@@ -1102,7 +1102,7 @@ class _$AppointmentImpl extends _Appointment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AppointmentImpl &&
@@ -1635,7 +1635,7 @@ class _$AppointmentParticipantImpl extends _AppointmentParticipant {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AppointmentParticipantImpl &&
@@ -2400,7 +2400,7 @@ class _$AppointmentResponseImpl extends _AppointmentResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AppointmentResponseImpl &&
@@ -3558,7 +3558,7 @@ class _$ProcessRequestImpl extends _ProcessRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProcessRequestImpl &&
@@ -3938,7 +3938,7 @@ class _$ProcessRequestItemImpl extends _ProcessRequestItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProcessRequestItemImpl &&
@@ -4807,7 +4807,7 @@ class _$ProcessResponseImpl extends _ProcessResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProcessResponseImpl &&
@@ -5187,7 +5187,7 @@ class _$ProcessResponseProcessNoteImpl extends _ProcessResponseProcessNote {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProcessResponseProcessNoteImpl &&
@@ -6156,7 +6156,7 @@ class _$RequestGroupImpl extends _RequestGroup {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RequestGroupImpl &&
@@ -7302,7 +7302,7 @@ class _$RequestGroupActionImpl extends _RequestGroupAction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RequestGroupActionImpl &&
@@ -7835,7 +7835,7 @@ class _$RequestGroupConditionImpl extends _RequestGroupCondition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RequestGroupConditionImpl &&
@@ -8178,7 +8178,7 @@ class _$RequestGroupRelatedActionImpl extends _RequestGroupRelatedAction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RequestGroupRelatedActionImpl &&
@@ -8889,7 +8889,7 @@ class _$ScheduleImpl extends _Schedule {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ScheduleImpl &&
@@ -9851,7 +9851,7 @@ class _$SlotImpl extends _Slot {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SlotImpl &&
@@ -11388,7 +11388,7 @@ class _$TaskImpl extends _Task {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TaskImpl &&
@@ -11844,7 +11844,7 @@ class _$TaskRequesterImpl extends _TaskRequester {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TaskRequesterImpl &&
@@ -12081,7 +12081,7 @@ class _$TaskRestrictionImpl extends _TaskRestriction {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TaskRestrictionImpl &&
@@ -14216,7 +14216,7 @@ class _$TaskInputImpl extends _TaskInput {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TaskInputImpl &&
@@ -16741,7 +16741,7 @@ class _$TaskOutputImpl extends _TaskOutput {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TaskOutputImpl &&

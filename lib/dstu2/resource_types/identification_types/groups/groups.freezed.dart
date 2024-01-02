@@ -656,7 +656,7 @@ class _$OrganizationImpl extends _Organization {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OrganizationImpl &&
@@ -1129,7 +1129,7 @@ class _$OrganizationContactImpl extends _OrganizationContact {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OrganizationContactImpl &&
@@ -2257,7 +2257,7 @@ class _$HealthcareServiceImpl extends _HealthcareService {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HealthcareServiceImpl &&
@@ -2753,7 +2753,7 @@ class _$HealthcareServiceServiceTypeImpl extends _HealthcareServiceServiceType {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HealthcareServiceServiceTypeImpl &&
@@ -3200,7 +3200,7 @@ class _$HealthcareServiceAvailableTimeImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HealthcareServiceAvailableTimeImpl &&
@@ -3565,7 +3565,7 @@ class _$HealthcareServiceNotAvailableImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$HealthcareServiceNotAvailableImpl &&
@@ -4330,7 +4330,7 @@ class _$FhirGroupImpl extends _FhirGroup {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirGroupImpl &&
@@ -4894,7 +4894,7 @@ class _$GroupCharacteristicImpl extends _GroupCharacteristic {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GroupCharacteristicImpl &&
@@ -5264,7 +5264,7 @@ class _$GroupMemberImpl extends _GroupMember {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GroupMemberImpl &&

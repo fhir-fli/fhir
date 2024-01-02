@@ -875,7 +875,7 @@ class _$CompositionImpl extends _Composition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CompositionImpl &&
@@ -1389,7 +1389,7 @@ class _$CompositionAttesterImpl extends _CompositionAttester {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CompositionAttesterImpl &&
@@ -1715,7 +1715,7 @@ class _$CompositionEventImpl extends _CompositionEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CompositionEventImpl &&
@@ -2247,7 +2247,7 @@ class _$CompositionSectionImpl extends _CompositionSection {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CompositionSectionImpl &&
@@ -3170,7 +3170,7 @@ class _$DocumentManifestImpl extends _DocumentManifest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DocumentManifestImpl &&
@@ -3605,7 +3605,7 @@ class _$DocumentManifestContentImpl extends _DocumentManifestContent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DocumentManifestContentImpl &&
@@ -3901,7 +3901,7 @@ class _$DocumentManifestRelatedImpl extends _DocumentManifestRelated {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DocumentManifestRelatedImpl &&
@@ -4893,7 +4893,7 @@ class _$DocumentReferenceImpl extends _DocumentReference {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DocumentReferenceImpl &&
@@ -5369,7 +5369,7 @@ class _$DocumentReferenceRelatesToImpl extends _DocumentReferenceRelatesTo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DocumentReferenceRelatesToImpl &&
@@ -5661,7 +5661,7 @@ class _$DocumentReferenceContentImpl extends _DocumentReferenceContent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DocumentReferenceContentImpl &&
@@ -6099,7 +6099,7 @@ class _$DocumentReferenceContextImpl extends _DocumentReferenceContext {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DocumentReferenceContextImpl &&
@@ -6427,7 +6427,7 @@ class _$DocumentReferenceContextRelatedImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DocumentReferenceContextRelatedImpl &&
@@ -7333,7 +7333,7 @@ class _$FhirListImpl extends _FhirList {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirListImpl &&
@@ -7889,7 +7889,7 @@ class _$FhirListEntryImpl extends _FhirListEntry {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirListEntryImpl &&

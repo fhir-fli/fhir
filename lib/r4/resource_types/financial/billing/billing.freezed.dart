@@ -1530,7 +1530,7 @@ class _$ClaimImpl extends _Claim {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimImpl &&
@@ -2280,7 +2280,7 @@ class _$ClaimRelatedImpl extends _ClaimRelated {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimRelatedImpl &&
@@ -2677,7 +2677,7 @@ class _$ClaimPayeeImpl extends _ClaimPayee {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimPayeeImpl &&
@@ -3218,7 +3218,7 @@ class _$ClaimCareTeamImpl extends _ClaimCareTeam {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimCareTeamImpl &&
@@ -4080,7 +4080,7 @@ class _$ClaimSupportingInfoImpl extends _ClaimSupportingInfo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimSupportingInfoImpl &&
@@ -4761,7 +4761,7 @@ class _$ClaimDiagnosisImpl extends _ClaimDiagnosis {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimDiagnosisImpl &&
@@ -5379,7 +5379,7 @@ class _$ClaimProcedureImpl extends _ClaimProcedure {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimProcedureImpl &&
@@ -6110,7 +6110,7 @@ class _$ClaimInsuranceImpl extends _ClaimInsurance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimInsuranceImpl &&
@@ -6688,7 +6688,7 @@ class _$ClaimAccidentImpl extends _ClaimAccident {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimAccidentImpl &&
@@ -8068,7 +8068,7 @@ class _$ClaimItemImpl extends _ClaimItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimItemImpl &&
@@ -9105,7 +9105,7 @@ class _$ClaimDetailImpl extends _ClaimDetail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimDetailImpl &&
@@ -9964,7 +9964,7 @@ class _$ClaimSubDetailImpl extends _ClaimSubDetail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimSubDetailImpl &&
@@ -11745,7 +11745,7 @@ class _$ClaimResponseImpl extends _ClaimResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimResponseImpl &&
@@ -12604,7 +12604,7 @@ class _$ClaimResponseItemImpl extends _ClaimResponseItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimResponseItemImpl &&
@@ -13138,7 +13138,7 @@ class _$ClaimResponseAdjudicationImpl extends _ClaimResponseAdjudication {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimResponseAdjudicationImpl &&
@@ -13672,7 +13672,7 @@ class _$ClaimResponseDetailImpl extends _ClaimResponseDetail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimResponseDetailImpl &&
@@ -14191,7 +14191,7 @@ class _$ClaimResponseSubDetailImpl extends _ClaimResponseSubDetail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimResponseSubDetailImpl &&
@@ -15448,7 +15448,7 @@ class _$ClaimResponseAddItemImpl extends _ClaimResponseAddItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimResponseAddItemImpl &&
@@ -16362,7 +16362,7 @@ class _$ClaimResponseDetail1Impl extends _ClaimResponseDetail1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimResponseDetail1Impl &&
@@ -17110,7 +17110,7 @@ class _$ClaimResponseSubDetail1Impl extends _ClaimResponseSubDetail1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimResponseSubDetail1Impl &&
@@ -17576,7 +17576,7 @@ class _$ClaimResponseTotalImpl extends _ClaimResponseTotal {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimResponseTotalImpl &&
@@ -18132,7 +18132,7 @@ class _$ClaimResponsePaymentImpl extends _ClaimResponsePayment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimResponsePaymentImpl &&
@@ -18707,7 +18707,7 @@ class _$ClaimResponseProcessNoteImpl extends _ClaimResponseProcessNote {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimResponseProcessNoteImpl &&
@@ -19327,7 +19327,7 @@ class _$ClaimResponseInsuranceImpl extends _ClaimResponseInsurance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimResponseInsuranceImpl &&
@@ -19925,7 +19925,7 @@ class _$ClaimResponseErrorImpl extends _ClaimResponseError {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ClaimResponseErrorImpl &&
@@ -21242,7 +21242,7 @@ class _$InvoiceImpl extends _Invoice {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InvoiceImpl &&
@@ -21872,7 +21872,7 @@ class _$InvoiceParticipantImpl extends _InvoiceParticipant {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InvoiceParticipantImpl &&
@@ -22382,7 +22382,7 @@ class _$InvoiceLineItemImpl extends _InvoiceLineItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InvoiceLineItemImpl &&
@@ -22934,7 +22934,7 @@ class _$InvoicePriceComponentImpl extends _InvoicePriceComponent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$InvoicePriceComponentImpl &&

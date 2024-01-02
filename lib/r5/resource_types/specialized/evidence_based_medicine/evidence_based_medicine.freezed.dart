@@ -1285,7 +1285,7 @@ class _$ArtifactAssessmentImpl extends _ArtifactAssessment {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ArtifactAssessmentImpl &&
@@ -2366,7 +2366,7 @@ class _$ArtifactAssessmentContentImpl extends _ArtifactAssessmentContent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ArtifactAssessmentContentImpl &&
@@ -4623,7 +4623,7 @@ class _$CitationImpl extends _Citation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationImpl &&
@@ -5545,7 +5545,7 @@ class _$CitationSummaryImpl extends _CitationSummary {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationSummaryImpl &&
@@ -5949,7 +5949,7 @@ class _$CitationClassificationImpl extends _CitationClassification {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationClassificationImpl &&
@@ -6397,7 +6397,7 @@ class _$CitationStatusDateImpl extends _CitationStatusDate {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationStatusDateImpl &&
@@ -7275,7 +7275,7 @@ class _$CitationCitedArtifactImpl extends _CitationCitedArtifact {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationCitedArtifactImpl &&
@@ -7815,7 +7815,7 @@ class _$CitationVersionImpl extends _CitationVersion {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationVersionImpl &&
@@ -8268,7 +8268,7 @@ class _$CitationStatusDate1Impl extends _CitationStatusDate1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationStatusDate1Impl &&
@@ -8731,7 +8731,7 @@ class _$CitationTitleImpl extends _CitationTitle {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationTitleImpl &&
@@ -9256,7 +9256,7 @@ class _$CitationAbstractImpl extends _CitationAbstract {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationAbstractImpl &&
@@ -9742,7 +9742,7 @@ class _$CitationPartImpl extends _CitationPart {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationPartImpl &&
@@ -10483,7 +10483,7 @@ class _$CitationRelatesToImpl extends _CitationRelatesTo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationRelatesToImpl &&
@@ -11751,7 +11751,7 @@ class _$CitationPublicationFormImpl extends _CitationPublicationForm {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationPublicationFormImpl &&
@@ -12536,7 +12536,7 @@ class _$CitationPublishedInImpl extends _CitationPublishedIn {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationPublishedInImpl &&
@@ -12996,7 +12996,7 @@ class _$CitationWebLocationImpl extends _CitationWebLocation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationWebLocationImpl &&
@@ -13433,7 +13433,7 @@ class _$CitationClassification1Impl extends _CitationClassification1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationClassification1Impl &&
@@ -13897,7 +13897,7 @@ class _$CitationContributorshipImpl extends _CitationContributorship {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationContributorshipImpl &&
@@ -14590,7 +14590,7 @@ class _$CitationEntryImpl extends _CitationEntry {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationEntryImpl &&
@@ -15098,7 +15098,7 @@ class _$CitationContributionInstanceImpl extends _CitationContributionInstance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationContributionInstanceImpl &&
@@ -15605,7 +15605,7 @@ class _$CitationSummary1Impl extends _CitationSummary1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$CitationSummary1Impl &&
@@ -17951,7 +17951,7 @@ class _$EvidenceImpl extends _Evidence {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceImpl &&
@@ -19062,7 +19062,7 @@ class _$EvidenceVariableDefinitionImpl extends _EvidenceVariableDefinition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceVariableDefinitionImpl &&
@@ -19859,7 +19859,7 @@ class _$EvidenceStatisticImpl extends _EvidenceStatistic {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceStatisticImpl &&
@@ -20558,7 +20558,7 @@ class _$EvidenceSampleSizeImpl extends _EvidenceSampleSize {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceSampleSizeImpl &&
@@ -21247,7 +21247,7 @@ class _$EvidenceAttributeEstimateImpl extends _EvidenceAttributeEstimate {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceAttributeEstimateImpl &&
@@ -21775,7 +21775,7 @@ class _$EvidenceModelCharacteristicImpl extends _EvidenceModelCharacteristic {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceModelCharacteristicImpl &&
@@ -24062,7 +24062,7 @@ class _$EvidenceVariableImpl extends _EvidenceVariable {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceVariableImpl &&
@@ -25179,7 +25179,7 @@ class _$EvidenceCertaintyImpl extends _EvidenceCertainty {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceCertaintyImpl &&
@@ -27496,7 +27496,7 @@ class _$EvidenceReportImpl extends _EvidenceReport {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceReportImpl &&
@@ -28422,7 +28422,7 @@ class _$EvidenceReportSubjectImpl extends _EvidenceReportSubject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceReportSubjectImpl &&
@@ -29077,7 +29077,7 @@ class _$EvidenceReportCharacteristicImpl extends _EvidenceReportCharacteristic {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceReportCharacteristicImpl &&
@@ -29564,7 +29564,7 @@ class _$EvidenceReportRelatesToImpl extends _EvidenceReportRelatesTo {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceReportRelatesToImpl &&
@@ -30084,7 +30084,7 @@ class _$EvidenceReportTargetImpl extends _EvidenceReportTarget {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceReportTargetImpl &&
@@ -30927,7 +30927,7 @@ class _$EvidenceReportSectionImpl extends _EvidenceReportSection {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceReportSectionImpl &&
@@ -32029,7 +32029,7 @@ class _$EvidenceVariableCharacteristicImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceVariableCharacteristicImpl &&
@@ -32930,7 +32930,7 @@ class _$EvidenceVariableDefinitionByTypeAndValueImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceVariableDefinitionByTypeAndValueImpl &&
@@ -33505,7 +33505,7 @@ class _$EvidenceVariableDefinitionByCombinationImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceVariableDefinitionByCombinationImpl &&
@@ -34229,7 +34229,7 @@ class _$EvidenceVariableTimeFromEventImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceVariableTimeFromEventImpl &&
@@ -34805,7 +34805,7 @@ class _$EvidenceVariableCategoryImpl extends _EvidenceVariableCategory {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$EvidenceVariableCategoryImpl &&

@@ -557,7 +557,7 @@ class _$BasicImpl extends _Basic {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BasicImpl &&
@@ -1211,7 +1211,7 @@ class _$BinaryImpl extends _Binary {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BinaryImpl &&
@@ -1944,7 +1944,7 @@ class _$BundleImpl extends _Bundle {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleImpl &&
@@ -2288,7 +2288,7 @@ class _$BundleLinkImpl extends _BundleLink {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleLinkImpl &&
@@ -2617,7 +2617,7 @@ class _$BundleEntryImpl extends _BundleEntry {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleEntryImpl &&
@@ -2879,7 +2879,7 @@ class _$BundleSearchImpl extends _BundleSearch {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleSearchImpl &&
@@ -3319,7 +3319,7 @@ class _$BundleRequestImpl extends _BundleRequest {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleRequestImpl &&
@@ -3732,7 +3732,7 @@ class _$BundleResponseImpl extends _BundleResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$BundleResponseImpl &&
@@ -4308,7 +4308,7 @@ class _$LinkageImpl extends _Linkage {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LinkageImpl &&
@@ -4605,7 +4605,7 @@ class _$LinkageItemImpl extends _LinkageItem {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$LinkageItemImpl &&
@@ -5707,7 +5707,7 @@ class _$MediaImpl extends _Media {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MediaImpl &&
@@ -6720,7 +6720,7 @@ class _$MessageHeaderImpl extends _MessageHeader {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MessageHeaderImpl &&
@@ -7127,7 +7127,7 @@ class _$MessageHeaderDestinationImpl extends _MessageHeaderDestination {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MessageHeaderDestinationImpl &&
@@ -7506,7 +7506,7 @@ class _$MessageHeaderSourceImpl extends _MessageHeaderSource {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MessageHeaderSourceImpl &&
@@ -7821,7 +7821,7 @@ class _$MessageHeaderResponseImpl extends _MessageHeaderResponse {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MessageHeaderResponseImpl &&
@@ -8290,7 +8290,7 @@ class _$OperationOutcomeImpl extends _OperationOutcome {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OperationOutcomeImpl &&
@@ -8784,7 +8784,7 @@ class _$OperationOutcomeIssueImpl extends _OperationOutcomeIssue {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$OperationOutcomeIssueImpl &&
@@ -9300,7 +9300,7 @@ class _$ParametersImpl extends _Parameters {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ParametersImpl &&
@@ -11560,7 +11560,7 @@ class _$ParametersParameterImpl extends _ParametersParameter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ParametersParameterImpl &&
@@ -12731,7 +12731,7 @@ class _$SubscriptionImpl extends _Subscription {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionImpl &&
@@ -13206,7 +13206,7 @@ class _$SubscriptionChannelImpl extends _SubscriptionChannel {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$SubscriptionChannelImpl &&

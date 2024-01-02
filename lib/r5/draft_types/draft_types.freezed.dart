@@ -505,7 +505,7 @@ class _$PopulationImpl extends _Population {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PopulationImpl &&
@@ -1197,7 +1197,7 @@ class _$ProductShelfLifeImpl extends _ProductShelfLife {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProductShelfLifeImpl &&
@@ -1976,7 +1976,7 @@ class _$MarketingStatusImpl extends _MarketingStatus {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MarketingStatusImpl &&

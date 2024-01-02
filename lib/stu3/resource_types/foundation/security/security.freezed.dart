@@ -745,7 +745,7 @@ class _$AuditEventImpl extends _AuditEvent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AuditEventImpl &&
@@ -1430,7 +1430,7 @@ class _$AuditEventAgentImpl extends _AuditEventAgent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AuditEventAgentImpl &&
@@ -1741,7 +1741,7 @@ class _$AuditEventNetworkImpl extends _AuditEventNetwork {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AuditEventNetworkImpl &&
@@ -1988,7 +1988,7 @@ class _$AuditEventSourceImpl extends _AuditEventSource {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AuditEventSourceImpl &&
@@ -2484,7 +2484,7 @@ class _$AuditEventEntityImpl extends _AuditEventEntity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AuditEventEntityImpl &&
@@ -2784,7 +2784,7 @@ class _$AuditEventDetailImpl extends _AuditEventDetail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AuditEventDetailImpl &&
@@ -3833,7 +3833,7 @@ class _$ConsentImpl extends _Consent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConsentImpl &&
@@ -4212,7 +4212,7 @@ class _$ConsentActorImpl extends _ConsentActor {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConsentActorImpl &&
@@ -4443,7 +4443,7 @@ class _$ConsentPolicyImpl extends _ConsentPolicy {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConsentPolicyImpl &&
@@ -4665,7 +4665,7 @@ class _$ConsentDataImpl extends _ConsentData {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConsentDataImpl &&
@@ -5092,7 +5092,7 @@ class _$ConsentExceptImpl extends _ConsentExcept {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConsentExceptImpl &&
@@ -5325,7 +5325,7 @@ class _$ConsentActor1Impl extends _ConsentActor1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConsentActor1Impl &&
@@ -5534,7 +5534,7 @@ class _$ConsentData1Impl extends _ConsentData1 {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ConsentData1Impl &&
@@ -6284,7 +6284,7 @@ class _$ProvenanceImpl extends _Provenance {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProvenanceImpl &&
@@ -6769,7 +6769,7 @@ class _$ProvenanceAgentImpl extends _ProvenanceAgent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProvenanceAgentImpl &&
@@ -7127,7 +7127,7 @@ class _$ProvenanceEntityImpl extends _ProvenanceEntity {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProvenanceEntityImpl &&

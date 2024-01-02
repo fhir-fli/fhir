@@ -263,7 +263,7 @@ class _$ContactDetailImpl extends _ContactDetail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ContactDetailImpl &&
@@ -719,7 +719,7 @@ class _$ExtendedContactDetailImpl extends _ExtendedContactDetail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ExtendedContactDetailImpl &&
@@ -1422,7 +1422,7 @@ class _$VirtualServiceDetailImpl extends _VirtualServiceDetail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$VirtualServiceDetailImpl &&
@@ -1838,7 +1838,7 @@ class _$AvailabilityImpl extends _Availability {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AvailabilityImpl &&
@@ -2388,7 +2388,7 @@ class _$AvailabilityAvailableTimeImpl extends _AvailabilityAvailableTime {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AvailabilityAvailableTimeImpl &&
@@ -2874,7 +2874,7 @@ class _$AvailabilityNotAvailableTimeImpl extends _AvailabilityNotAvailableTime {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AvailabilityNotAvailableTimeImpl &&
@@ -3330,7 +3330,7 @@ class _$MonetaryComponentImpl extends _MonetaryComponent {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MonetaryComponentImpl &&
@@ -3748,7 +3748,7 @@ class _$ContributorImpl extends _Contributor {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ContributorImpl &&
@@ -4479,7 +4479,7 @@ class _$DataRequirementImpl extends _DataRequirement {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DataRequirementImpl &&
@@ -5103,7 +5103,7 @@ class _$DataRequirementCodeFilterImpl extends _DataRequirementCodeFilter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DataRequirementCodeFilterImpl &&
@@ -5782,7 +5782,7 @@ class _$DataRequirementDateFilterImpl extends _DataRequirementDateFilter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DataRequirementDateFilterImpl &&
@@ -6516,7 +6516,7 @@ class _$DataRequirementValueFilterImpl extends _DataRequirementValueFilter {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DataRequirementValueFilterImpl &&
@@ -7044,7 +7044,7 @@ class _$DataRequirementSortImpl extends _DataRequirementSort {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$DataRequirementSortImpl &&
@@ -7696,7 +7696,7 @@ class _$ParameterDefinitionImpl extends _ParameterDefinition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ParameterDefinitionImpl &&
@@ -8509,7 +8509,7 @@ class _$RelatedArtifactImpl extends _RelatedArtifact {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$RelatedArtifactImpl &&
@@ -9317,7 +9317,7 @@ class _$TriggerDefinitionImpl extends _TriggerDefinition {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TriggerDefinitionImpl &&
@@ -9847,7 +9847,7 @@ class _$UsageContextImpl extends _UsageContext {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$UsageContextImpl &&
@@ -10404,7 +10404,7 @@ class _$FhirExpressionImpl extends _FhirExpression {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$FhirExpressionImpl &&

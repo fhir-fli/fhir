@@ -755,7 +755,7 @@ class _$PaymentNoticeImpl extends _PaymentNotice {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PaymentNoticeImpl &&
@@ -1804,7 +1804,7 @@ class _$PaymentReconciliationImpl extends _PaymentReconciliation {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PaymentReconciliationImpl &&
@@ -2343,7 +2343,7 @@ class _$PaymentReconciliationDetailImpl extends _PaymentReconciliationDetail {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PaymentReconciliationDetailImpl &&
@@ -2593,7 +2593,7 @@ class _$PaymentReconciliationProcessNoteImpl
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PaymentReconciliationProcessNoteImpl &&
