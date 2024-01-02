@@ -22,8 +22,18 @@ class FhirDateTime extends FhirDateTimeBase {
     if (inValue is FhirDateTime) {
       return inValue;
     } else if (inValue is DateTime) {
-      return FhirDateTime.fromDateTime(inValue);
+      return FhirDateTime.fromString(inValue.toString());
     } else if (inValue is String) {
+      if (inValue.startsWith('"') ||
+          inValue.startsWith("'") ||
+          inValue.startsWith('`')) {
+        inValue = inValue.substring(1);
+      }
+      if (inValue.endsWith('"') ||
+          inValue.endsWith("'") ||
+          inValue.endsWith('`')) {
+        inValue = inValue.substring(0, inValue.length - 1);
+      }
       return FhirDateTime.fromString(inValue);
     } else if (inValue is FhirInstant) {
       return FhirDateTime.fromDateTime(inValue.valueDateTime!);
@@ -71,7 +81,7 @@ class FhirDateTime extends FhirDateTimeBase {
   }
 
   factory FhirDateTime.fromUnits({
-    int? year,
+    required int year,
     int? month,
     int? day,
     int? hour,
@@ -81,20 +91,98 @@ class FhirDateTime extends FhirDateTimeBase {
     int? microsecond,
     DateTimePrecision? precision,
     int? timezoneOffset,
-  }) =>
-      FhirDateTime.fromDateTime(
-        DateTime(
-          year ?? 1,
-          month ?? 1,
-          day ?? 1,
-          hour ?? 0,
-          minute ?? 0,
-          second ?? 0,
-          millisecond ?? 0,
-          microsecond ?? 0,
-        ),
-        precision ?? DateTimePrecision.full,
+  }) {
+    /// Create a DateTime object, if there's no timezoneOffset, we create it in
+    /// the local time zone, otherwise in UTC because we're going to have to
+    /// do some calculations to adjust the time
+    final DateTime dateTime = timezoneOffset == null
+        ? DateTime(
+            year,
+            month ?? 1,
+            day ?? 1,
+            hour ?? 0,
+            minute ?? 0,
+            second ?? 0,
+            millisecond ?? 0,
+            microsecond ?? 0,
+          )
+        : DateTime.utc(
+            year,
+            month ?? 1,
+            day ?? 1,
+
+            /// If the hour is null, we ignore it, otherwise, subtract the
+            /// amount of the timezoneOffset - we're going to add it back later
+            hour == null ? 0 : hour - timezoneOffset,
+            minute ?? 0,
+            second ?? 0,
+            millisecond ?? 0,
+            microsecond ?? 0,
+          );
+
+    /// If there's a set precision, use it, otherwise calculate the precision
+    precision ??= timezoneOffset == null
+        ? month == null
+            ? DateTimePrecision.yyyy
+            : day == null
+                ? DateTimePrecision.yyyy_MM
+                : hour == null
+                    ? DateTimePrecision.yyyy_MM_dd
+                    : minute == null
+                        ? DateTimePrecision.yyyy_MM_dd_T_HH
+                        : second == null
+                            ? DateTimePrecision.yyyy_MM_dd_T_HH_mm
+                            : millisecond == null
+                                ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss
+                                : microsecond == null
+                                    ? DateTimePrecision
+                                        .yyyy_MM_dd_T_HH_mm_ss_SSS
+                                    : DateTimePrecision.full
+        : month == null
+            ? DateTimePrecision.yyyy
+            : day == null
+                ? DateTimePrecision.yyyy_MM
+                : hour == null
+                    ? DateTimePrecision.yyyy_MM_dd_T_ZZ
+                    : minute == null
+                        ? DateTimePrecision.yyyy_MM_dd_T_HHZZ
+                        : second == null
+                            ? DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ
+                            : millisecond == null
+                                ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ
+                                : microsecond == null
+                                    ? DateTimePrecision
+                                        .yyyy_MM_dd_T_HH_mm_ss_SSSZZ
+                                    : DateTimePrecision.full;
+
+    /// If the precision doesn't include a timezone, we don't need to bother
+    /// with the calculation
+    if (<DateTimePrecision>[
+      DateTimePrecision.yyyy,
+      DateTimePrecision.yyyy_MM,
+      DateTimePrecision.yyyy_MM_dd,
+      DateTimePrecision.yyyy_MM_dd_T_HH,
+      DateTimePrecision.yyyy_MM_dd_T_HH_mm,
+      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+    ].contains(precision)) {
+      return FhirDateTime.fromDateTime(
+        dateTime,
+        precision,
       );
+    }
+
+    // Adjust the UTC DateTime by the timezone offset
+    final DateTime localDateTime = timezoneOffset != null
+        ? dateTime.add(Duration(hours: timezoneOffset))
+        : dateTime;
+
+    // Return the FhirDateTime with the adjusted time
+    return FhirDateTime.fromDateTime(
+      localDateTime,
+      precision,
+    );
+  }
 
   factory FhirDateTime.fromJson(dynamic json) => FhirDateTime(json);
 

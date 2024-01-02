@@ -28,40 +28,74 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   int? get day => value?.day;
 
   @override
-  String toString() => valueString;
-  String toJson() => valueString;
-  String toYaml() => valueString;
-  // String toStringWithTimezone() {
-  //   if (<DateTimePrecision>[
-  //     DateTimePrecision.yyyy_MM_dd_T_HH,
-  //     DateTimePrecision.yyyy_MM_dd_T_HH_Z,
-  //     DateTimePrecision.yyyy_MM_dd_T_HHZZ,
-  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm,
-  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
-  //     DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
-  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
-  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
-  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-  //     DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-  //     DateTimePrecision.full,
-  //   ].contains(precision)) {
-  //     final int? timeZoneOffset = value?.timeZoneOffset.inHours;
-  //     final String timeZoneString = timeZoneOffset != null
-  //         ? timeZoneOffset < 0
-  //             ? '-${timeZoneOffset.abs().toString().padLeft(2, '0')}:00'
-  //             : '+${timeZoneOffset.abs().toString().padLeft(2, '0')}:00'
-  //         : '';
-  //     if (timeZoneString != '') {
-  //       return valueString;
-  //     } else {
-  //       return valueString;
-  //     }
-  //   } else {
-  //     return valueString;
-  //   }
-  // }
+  String toString() {
+    print(toStringWithTimezone());
+    return toStringWithTimezone();
+  }
+
+  String toJson() => toStringWithTimezone();
+  String toYaml() => toStringWithTimezone();
+  String toStringWithTimezone() {
+    final String formattedYear = year.toString().padLeft(4, '0');
+    final String formattedMonth = month.toString().padLeft(2, '0');
+    final String formattedDay = day.toString().padLeft(2, '0');
+    final String formattedHour = value?.hour.toString().padLeft(2, '0') ?? '00';
+    final String formattedMinute =
+        value?.minute.toString().padLeft(2, '0') ?? '00';
+    final String formattedSecond =
+        value?.second.toString().padLeft(2, '0') ?? '00';
+    final String formattedMilliseconds =
+        value?.millisecond.toString().padLeft(3, '0').substring(0, 3) ?? '000';
+
+    String timezoneOffset =
+        (value?.timeZoneOffset.isNegative ?? false) ? '-' : '+';
+    timezoneOffset +=
+        '${value?.timeZoneOffset.inHours.abs().toString().padLeft(2, '0')}:${value?.timeZoneOffset.inMinutes.remainder(60).abs().toString().padLeft(2, '0')}';
+
+    switch (precision) {
+      case DateTimePrecision.yyyy:
+        return formattedYear;
+
+      case DateTimePrecision.yyyy_MM:
+        return '$formattedYear-$formattedMonth';
+
+      case DateTimePrecision.yyyy_MM_dd:
+        return '$formattedYear-$formattedMonth-$formattedDay';
+
+      case DateTimePrecision.yyyy_MM_dd_T_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z:
+        return '$formattedYear-$formattedMonth-${formattedDay}T$formattedHour:$formattedMinute:$formattedSecond.${formattedMilliseconds}Z';
+
+      case DateTimePrecision.yyyy_MM_dd_T_ZZ:
+      case DateTimePrecision.yyyy_MM_dd_T_HHZZ:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ:
+        return '$formattedYear-$formattedMonth-${formattedDay}T$formattedHour:$formattedMinute:$formattedSecond.$formattedMilliseconds$timezoneOffset';
+
+      case DateTimePrecision.yyyy_MM_dd_T_HH:
+        return '$formattedYear-$formattedMonth-${formattedDay}T$formattedHour';
+
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm:
+        return '$formattedYear-$formattedMonth-${formattedDay}T$formattedHour:$formattedMinute';
+
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss:
+        return '$formattedYear-$formattedMonth-${formattedDay}T$formattedHour:$formattedMinute:$formattedSecond';
+
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS:
+        return '$formattedYear-$formattedMonth-${formattedDay}T$formattedHour:$formattedMinute:$formattedSecond.$formattedMilliseconds';
+
+      case DateTimePrecision.full:
+        // Assuming full includes the complete date, time, milliseconds, and timezone offset
+        return '$formattedYear-$formattedMonth-${formattedDay}T$formattedHour:$formattedMinute:$formattedSecond.$formattedMilliseconds$timezoneOffset';
+
+      case DateTimePrecision.invalid:
+        return valueString; // Assuming valueString is defined elsewhere
+    }
+  }
 
   InvalidTypes<FhirDateTimeBase> comparisonError(
           Comparator comparator, Object o) =>
