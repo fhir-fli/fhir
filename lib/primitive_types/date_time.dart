@@ -14,175 +14,39 @@ class FhirDateTime extends FhirDateTimeBase {
     super.valueString,
     super.valueDateTime,
     super.isValid,
-    super.precision, [
+    super.precision,
+    super.input, [
     super.parseError,
   ]);
 
-  factory FhirDateTime(dynamic inValue) {
-    if (inValue is FhirDateTime) {
-      return inValue;
-    } else if (inValue is DateTime) {
-      return FhirDateTime.fromString(inValue.toString());
-    } else if (inValue is String) {
-      if (inValue.startsWith('"') ||
-          inValue.startsWith("'") ||
-          inValue.startsWith('`')) {
-        inValue = inValue.substring(1);
-      }
-      if (inValue.endsWith('"') ||
-          inValue.endsWith("'") ||
-          inValue.endsWith('`')) {
-        inValue = inValue.substring(0, inValue.length - 1);
-      }
-      return FhirDateTime.fromString(inValue);
-    } else if (inValue is FhirInstant) {
-      return FhirDateTime.fromDateTime(inValue.valueDateTime!);
-    }
-    if (inValue is FhirDate) {
-      return FhirDateTime._(inValue.valueString, inValue.valueDateTime,
-          inValue.isValid, inValue.precision, inValue.parseError);
-    } else {
-      throw CannotBeConstructed<FhirDateTime>(
-          "FhirDateTime cannot be constructed from '$inValue' (unsupported type).");
-    }
-  }
-
-  factory FhirDateTime.fromDateTime(
-    DateTime dateTime, [
-    DateTimePrecision precision = DateTimePrecision.full,
-  ]) =>
-      FhirDateTime._(precision.convert(dateTime), dateTime, true, precision);
-
-  factory FhirDateTime.fromString(String inValue) {
-    final String valueString = inValue;
-    // TODO(Dokotela): Consider if this is appropriate
-    inValue = inValue.replaceAll('"', '');
-    if (inValue.endsWith('T')) {
-      inValue = inValue.substring(0, inValue.length - 1);
-    }
-    final String tinValue = inValue.replaceFirst(' ', 'T');
-    final DateTimePrecision precision = precisionFromDateTimeString(tinValue);
-    final DateTime? finalDateTime = DateTime.tryParse(inValue) ??
-        DateTime.tryParse(tinValue) ??
-        DateTime.tryParse(inValue.replaceAll('T', ' ')) ??
-        (precision != DateTimePrecision.invalid
-            ? tinValue.length == 4
-                ? DateTime.parse('$tinValue-01-01')
-                : tinValue.length == 7
-                    ? DateTime.parse('$tinValue-01')
-                    : null
-            : null);
-    return FhirDateTime._(
-      valueString,
-      precision != DateTimePrecision.invalid ? finalDateTime : null,
-      precision != DateTimePrecision.invalid && finalDateTime != null,
-      precision,
-    );
-  }
-
-  factory FhirDateTime.fromUnits({
-    required int year,
-    int? month,
-    int? day,
-    int? hour,
-    int? minute,
-    int? second,
-    int? millisecond,
-    int? microsecond,
-    DateTimePrecision? precision,
-    int? timezoneOffset,
-  }) {
-    /// Create a DateTime object, if there's no timezoneOffset, we create it in
-    /// the local time zone, otherwise in UTC because we're going to have to
-    /// do some calculations to adjust the time
-    final DateTime dateTime = timezoneOffset == null
-        ? DateTime(
-            year,
-            month ?? 1,
-            day ?? 1,
-            hour ?? 0,
-            minute ?? 0,
-            second ?? 0,
-            millisecond ?? 0,
-            microsecond ?? 0,
-          )
-        : DateTime.utc(
-            year,
-            month ?? 1,
-            day ?? 1,
-
-            /// If the hour is null, we ignore it, otherwise, subtract the
-            /// amount of the timezoneOffset - we're going to add it back later
-            hour == null ? 0 : hour - timezoneOffset,
-            minute ?? 0,
-            second ?? 0,
-            millisecond ?? 0,
-            microsecond ?? 0,
-          );
-
-    /// If there's a set precision, use it, otherwise calculate the precision
-    precision ??= timezoneOffset == null
-        ? month == null
-            ? DateTimePrecision.yyyy
-            : day == null
-                ? DateTimePrecision.yyyy_MM
-                : hour == null
-                    ? DateTimePrecision.yyyy_MM_dd
-                    : minute == null
-                        ? DateTimePrecision.yyyy_MM_dd_T_HH
-                        : second == null
-                            ? DateTimePrecision.yyyy_MM_dd_T_HH_mm
-                            : millisecond == null
-                                ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss
-                                : microsecond == null
-                                    ? DateTimePrecision
-                                        .yyyy_MM_dd_T_HH_mm_ss_SSS
-                                    : DateTimePrecision.full
-        : month == null
-            ? DateTimePrecision.yyyy
-            : day == null
-                ? DateTimePrecision.yyyy_MM
-                : hour == null
-                    ? DateTimePrecision.yyyy_MM_dd_T_ZZ
-                    : minute == null
-                        ? DateTimePrecision.yyyy_MM_dd_T_HHZZ
-                        : second == null
-                            ? DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ
-                            : millisecond == null
-                                ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ
-                                : microsecond == null
-                                    ? DateTimePrecision
-                                        .yyyy_MM_dd_T_HH_mm_ss_SSSZZ
-                                    : DateTimePrecision.full;
-
-    /// If the precision doesn't include a timezone, we don't need to bother
-    /// with the calculation
-    if (<DateTimePrecision>[
-      DateTimePrecision.yyyy,
-      DateTimePrecision.yyyy_MM,
-      DateTimePrecision.yyyy_MM_dd,
-      DateTimePrecision.yyyy_MM_dd_T_HH,
-      DateTimePrecision.yyyy_MM_dd_T_HH_mm,
-      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
-      DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
-    ].contains(precision)) {
-      return FhirDateTime.fromDateTime(
-        dateTime,
+  factory FhirDateTime.fromDateTimeBase(
+    String valueString,
+    DateTime? valueDateTime,
+    bool isValid,
+    DateTimePrecision precision,
+    dynamic input,
+    Exception? parseError,
+  ) =>
+      FhirDateTime._(
+        valueString,
+        valueDateTime,
+        isValid,
         precision,
+        input,
+        parseError,
       );
-    }
 
-    // Adjust the UTC DateTime by the timezone offset
-    final DateTime localDateTime = timezoneOffset != null
-        ? dateTime.add(Duration(hours: timezoneOffset))
-        : dateTime;
+  factory FhirDateTime(dynamic json) =>
+      FhirDateTimeBase.constructor<FhirDateTime>(json) as FhirDateTime;
 
-    // Return the FhirDateTime with the adjusted time
-    return FhirDateTime.fromDateTime(
-      localDateTime,
-      precision,
-    );
-  }
+  factory FhirDateTime.fromDateTime(DateTime dateTime) =>
+      FhirDateTimeBase.fromString<FhirDateTime>(
+        inValue: dateTime.toIso8601String(),
+        precision: DateTimePrecision.dateTime,
+        input: dateTime,
+      ) as FhirDateTime;
+
+  factory FhirDateTime.fromString(String inValue) => FhirDateTime(inValue);
 
   factory FhirDateTime.fromJson(dynamic json) => FhirDateTime(json);
 
@@ -193,97 +57,42 @@ class FhirDateTime extends FhirDateTimeBase {
           : throw YamlFormatException<FhirDateTime>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  @override
-  FhirDateTime add(Duration o) {
-    final int newYear = (year ?? 1) + (o is ExtendedDuration ? o.inYears : 0);
-    final int newMonth =
-        (month ?? 1) + (o is ExtendedDuration ? o.inMonths : 0);
-    final int newDay = (day ?? 1) + (o is ExtendedDuration ? o.inDays : 0);
-    final int newHour = (hour ?? 0) + o.inHours;
-    final int newMinute = (minute ?? 0) + o.inMinutes;
-    final int newSecond = (second ?? 0) + o.inSeconds;
-    final int newMillisecond = (millisecond ?? 0) + o.inMilliseconds;
-    return _calculateByPrecision(newYear, newMonth, newDay, newHour, newMinute,
-        newSecond, newMillisecond);
-  }
+  factory FhirDateTime.fromUnits({
+    required int year,
+    int? month,
+    int? day,
+    int? hour,
+    int? minute,
+    int? second,
+    int? millisecond,
+    int? microsecond,
+    int? timezoneOffset,
+    bool? isUTC,
+  }) =>
+      FhirDateTimeBase.fromUnits<FhirDateTime>(
+        year: year,
+        month: month,
+        day: day,
+        hour: hour,
+        minute: minute,
+        second: second,
+        millisecond: millisecond,
+        microsecond: microsecond,
+        timezoneOffset: timezoneOffset,
+        isUTC: isUTC ?? timezoneOffset != null,
+      ) as FhirDateTime;
+
+  FhirDateTime add(Duration other) =>
+      FhirDateTimeBase.add<FhirDateTime>(this, other) as FhirDateTime;
+
+  FhirDateTime subtract<T>(Duration other) =>
+      FhirDateTimeBase.subtract<FhirDateTime>(this, other) as FhirDateTime;
 
   @override
-  FhirDateTime subtract(Duration o) {
-    final int newYear = (year ?? 1) - (o is ExtendedDuration ? o.inYears : 0);
-    final int newMonth =
-        (month ?? 1) - (o is ExtendedDuration ? o.inMonths : 0);
-    final int newDay = (day ?? 1) - (o is ExtendedDuration ? o.inDays : 0);
-    final int newHour = (hour ?? 0) - o.inHours;
-    final int newMinute = (minute ?? 0) - o.inMinutes;
-    final int newSecond = (second ?? 0) - o.inSeconds;
-    final int newMillisecond = (millisecond ?? 0) - o.inMilliseconds;
-    return _calculateByPrecision(newYear, newMonth, newDay, newHour, newMinute,
-        newSecond, newMillisecond);
-  }
+  FhirDateTime operator +(Duration other) =>
+      FhirDateTimeBase.add<FhirDateTime>(this, other) as FhirDateTime;
 
-  FhirDateTime _calculateByPrecision(int newYear, int newMonth, int newDay,
-      int newHour, int newMinute, int newSecond, int newMillisecond) {
-    if (precision == DateTimePrecision.yyyy) {
-      return FhirDateTime.fromUnits(year: newYear, precision: precision);
-    } else if (precision == DateTimePrecision.yyyy_MM) {
-      return FhirDateTime.fromUnits(
-          year: newYear, month: newMonth, precision: precision);
-    } else if (precision == DateTimePrecision.yyyy_MM_dd ||
-        precision == DateTimePrecision.yyyy_MM_dd_T_Z ||
-        precision == DateTimePrecision.yyyy_MM_dd_T_ZZ) {
-      return FhirDateTime.fromUnits(
-          year: newYear, month: newMonth, day: newDay, precision: precision);
-    } else if (precision == DateTimePrecision.yyyy_MM_dd_T_HH ||
-        precision == DateTimePrecision.yyyy_MM_dd_T_HH_Z ||
-        precision == DateTimePrecision.yyyy_MM_dd_T_HHZZ) {
-      return FhirDateTime.fromUnits(
-          year: newYear,
-          month: newMonth,
-          day: newDay,
-          hour: newHour,
-          precision: precision);
-    } else if (precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm ||
-        precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z ||
-        precision == DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ) {
-      return FhirDateTime.fromUnits(
-          year: newYear,
-          month: newMonth,
-          day: newDay,
-          hour: newHour,
-          minute: newMinute,
-          precision: precision);
-    } else if (precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss ||
-        precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z ||
-        precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ) {
-      return FhirDateTime.fromUnits(
-          year: newYear,
-          month: newMonth,
-          day: newDay,
-          hour: newHour,
-          minute: newMinute,
-          second: newSecond);
-    } else if (precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS ||
-        precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z ||
-        precision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ ||
-        precision == DateTimePrecision.full) {
-      return FhirDateTime.fromUnits(
-          year: newYear,
-          month: newMonth,
-          day: newDay,
-          hour: newHour,
-          minute: newMinute,
-          second: newSecond,
-          millisecond: newMillisecond);
-    } else {
-      throw CannotBeConstructed<FhirDateTime>(
-          'DateTime cannot be added to as it has an invalid Precision: $precision');
-    }
-  }
-
-  int? get hour => value?.hour;
-  int? get minute => value?.minute;
-  int? get second => value?.second;
-  int? get millisecond => value?.millisecond;
-  Duration? get timezoneOffset => value?.timeZoneOffset;
-  String? get timeZoneName => value?.timeZoneName;
+  @override
+  FhirDateTime operator -(Duration other) =>
+      FhirDateTimeBase.subtract<FhirDateTime>(this, other) as FhirDateTime;
 }

@@ -3,6 +3,8 @@
 ## [0.11.5-dev3]
 
 * still trying to fix [datetimes](https://github.com/fhir-fli/fhir/issues/1)
+* Kind of overhauled FhirDateTimeBase, FhirDate, FhirDateTime, and FhirInstant
+* updated readme with expected output from FhirDateTimeBases
 
 ## [0.11.5-dev2]
 

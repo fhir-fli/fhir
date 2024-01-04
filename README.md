@@ -4,14 +4,10 @@ A Dart/Flutter package for working with FHIR® resources. FHIR® is the register
 
 It contains packages for the 3 released FHIR versions:
 
+- [R5 v5.0.0](https://hl7.org/fhir/)
 - [R4 v4.3.0 - FHIR Release #4B](https://hl7.org/fhir/R4B/)
 - [Stu3 v3.0.2 - FHIR Release 3 (STU) with 2 technical errata (Permanent Home)](https://hl7.org/fhir/STU3/)
 - [Dstu2 v1.0.2 - DSTU 2 (Official version) with 1 technical errata (Permanent home)](https://hl7.org/fhir/DSTU2/)
-
-As well as the R5 (constantly in flux as it's actively being balloted):
-
-- [R5 v5.0.0-snapshot3 - FHIR Release #5 Connectathon 32 Base](https://hl7.org/fhir/2021May/)
-- This most recent version of R5 had a number of test Resources it didn't handle properly. I'm ignoring it for now because, as I said, it's still changing. I will ensure everything works before R5 is released (supposedly in May 2023)
 
 ## Say Hello
 
@@ -23,11 +19,13 @@ As well as the R5 (constantly in flux as it's actively being balloted):
 
 ### Has also created his own awesome Flutter package, faiadashu ([pub.dev](https://pub.dev/packages/faiadashu), [github](https://github.com/tiloc/faiadashu)), so check it out
 
-### FYI
+### FYIs & Questions
 
-- Also, I doubt anyone cares, but the Yaml parser doesn't tolerate an empty map as mart of a list
+- Also, I doubt anyone cares, but the Yaml parser doesn't tolerate an empty map as part of a list
 - I'm also considering adding assertions for R5 (if anyone cares one way or another about this, let me know)
 - Lists that include a null value throw an error currently, I could fix it, but that would require setting all lists to be able to contain nulls, and that seems like a pain in the ass for everyone involved. So for now at least, I'm going to leave it
+- I had added in an XML parser, but it's broken again. If anyone needs it let me know, but otherwise I may ignore it. (just request the json from the server)
+- Does anyone prefer enums to Codes? In R4B lots of what were enums they changed to codes (I assume to allow more flexibility, since many of the code sets are not strictly required), but if it's easier, I can change them back to enums.
 
 ## How To Use
 
@@ -35,7 +33,7 @@ In order to use this package in your app, you must include the following in your
 
 ```yaml
 dependencies:
-  fhir: ^0.9.0
+  fhir: ^0.11.4
 ```
 
 Or if you want to include the most recent unreleased version from Github
@@ -43,7 +41,7 @@ Or if you want to include the most recent unreleased version from Github
 ```yaml
 fhir:
   git:
-    url: git://github.com/MayJuun/fhir/tree/dev/fhir
+    url: git://github.com/fhir-fli/fhir
 ```
 
 Then, in any file where you're going to be using it, simply import it like this:
@@ -67,12 +65,11 @@ To do something like create a patient, you can do the following:
 
 ```dart
 var newPatient = Patient(
-  resourceType: 'Patient',
   name: [
     HumanName(family: 'LastName', given: ['FirstName'])
   ],
   birthDate: Date('2020-01-01'),
-  gender: PatientGender.female,
+  gender: Code('female'),
 );
 ```
 
@@ -103,16 +100,21 @@ This demonstration is using an older version of our Packages, but most of it sti
 
 ## Primitive Values
 
-Primitive values are [these](https://www.hl7.org/fhir/datatypes.html), things like instant, string, integer, etc. Howevever, because FHIR has some definitions of how they define some of these values that differ from Dart, I've made all of them (except String) and primitiveObject. This has a couple of useful things (and one or two annoying ones). In order to make something like an integer, you have to write it like this: ```Integer(128)``` or ```Integer('128)```. Yes, a little annoying, but it prevents inappropriate formatting, especially for things like dates that are a lot trickier. You can, however, check equality without this. For instance, ```Integer(128) == 128``` will evaluate to true.
+Primitive values are [these](https://www.hl7.org/fhir/datatypes.html), things like instant, string, integer, etc. Howevever, because FHIR has some definitions of how they define some of these values that differ from Dart, I've made all of them (except String) and primitiveObject. This has a couple of useful things (and one or two annoying ones). In order to make something like an integer, you have to write it like this: ```FhirInteger(128)``` or ```FhirInteger('128)```. Yes, a little annoying, but it prevents inappropriate formatting, especially for things like dates that are a lot trickier. You can, however, check equality without this. For instance, ```FhirInteger(128) == 128``` will evaluate to true.
 
 **NEW NUMBERS** With the most recent release, I have changed the numbers slightly. Previously you could specify numbers as a String, and it would allow this. But technically, according to the FHIR spec, it should really only allow numbers, not Strings. So now, Double, Integer, Integer64, PositiveInt, UnsignedInt will ONLY allow actual numbers.
 
-As I was saying, dates are tricker. For ```Date or DateTime``` you're allowed to use values of 2020, 2020-06, or 2020-06-01 (written of course ```Date('2020-06-01')```). For ```Instant and DateTime``` you're also allowed to specify hours, minutes, seconds, milliseconds. For ```Instant``` at least hour, minute and second is required. So, the way I've decided to deal with dates is to first turn them into Strings. I then see if they are a Date with the isDate function. If they are, I check if they're more or less than 10 characters. If they're less than 10 characters, I store however many characters they are, and return this number when I print it out. If they're more than 10 characters, I check if there's a space in the 10 position and replaces it with a ```"T"``` (because FHIR doesn't allow ```2017-01-01 00:00:00.000Z``` but will allow ```2017-01-01T00:00:00.000Z```.) I then parse it to a DateTime and then I change it to UTC. This is also how I return the value. ***THIS IS IMPORTANT*** because it means that if you specify anything with an hour, minute, second or millisecond, whether or not you assign it a timezone, this package will still change it and output it in UTC. This is mostly because I think that makes it easier to do any calculations with, because all times are going to be in UTC. Then, all you have to do is change it to the local timezone when you display it (if you want to).
+As I was saying, dates are trickier. For ```FhirDate or FhirDateTime``` you're allowed to use values of 2020, 2020-06, or 2020-06-01 (written of course ```FhirDate('2020-06-01')```). For ```FhirInstant and FhirDateTime``` you're also allowed to specify hours, minutes, seconds, milliseconds. For ```FhirInstant``` at least hour, minute and second is required. Yes, it's very annoying. There are also some restrictions like ```FhirInstant``` can only have 3 decimal places for seconds, but FhirDateTime can have more. Anyway, I've tackled them the best I can. Here are 2 examples with the output of various methods based on class:
 
-Thus
-input: ```FhirDateTime('2015-02-07T13:28:17-05:00')```, output: ```2015-02-07T18:28:17.000Z```  
-input: ```FhirDateTime('2015-02-07T13:28:17')```, output: ```2015-02-07T13:28:17.000``` - you're technically supposed to have a time zone when you specify more than a simple date  
-input: ```FhirDateTime('2017-01-01T00:00:00.000Z')```, output: ```2017-01-01T00:00:00.000Z```
+* Top is Input "2020-12-13T11:20:00.721470+10:00"
+* Bottom is Input "2020-12-13
+
+| Method | FhirDateTime | FhirDate | FhirInstant |
+|-|-|-|-|
+|valueString<br>value<br>valueDateTime<br>iso8601String<br>toString()<br>toStringWithTimeZone()<br>toJson()<br>toYaml()<br>|2020-12-13T01:20:00.721470Z<br>2020-12-13 01:20:00.721470Z<br>2020-12-13 01:20:00.721470Z<br>2020-12-13T01:20:00.721470Z<br>2020-12-13T01:20:00.721Z<br>2020-12-13T01:20:00.721Z<br>2020-12-13T11:20:00.721470+10:00<br>2020-12-13T11:20:00.721470+10:00<br>|2020-12-13<br>2020-12-13 01:20:00.721470Z<br>2020-12-13 01:20:00.721470Z<br>2020-12-13T01:20:00.721470Z<br>2020-12-13<br>2020-12-13<br>2020-12-13T11:20:00.721470+10:00<br>2020-12-13T11:20:00.721470+10:00<br>|2020-12-13T01:20:00.721470Z<br>2020-12-13 01:20:00.721470Z<br>2020-12-13 01:20:00.721470Z<br>2020-12-13T01:20:00.721470Z<br>2020-12-13T01:20:00.721Z<br>2020-12-13T01:20:00.721Z<br>2020-12-13T11:20:00.721470+10:00<br>2020-12-13T11:20:00.721470+10:00<br>|
+|valueString<br>value<br>valueDateTime<br>iso8601String<br>toString()<br>toStringWithTimeZone()<br>toJson()<br>toYaml()<br>|2020-12-13<br>2020-12-13 00:00:00.000<br>2020-12-13 00:00:00.000<br>2020-12-13T00:00:00.000<br>2020-12-13<br>2020-12-13<br>2020-12-13<br>2020-12-13<br>|2020-12-13<br>null<br>null<br>null<br><br><br>2020-12-13<br>2020-12-13<br>|2020-12-13<br>2020-12-13 00:00:00.000<br>2020-12-13 00:00:00.000<br>2020-12-13T00:00:00.000<br>2020-12-13<br>2020-12-13<br>2020-12-13<br>2020-12-13<br>|
+
+* NOTE: An important take away point. There is a field called input. This stores the exact object you pass to the FhirDateTimeBase when you create the object. So if you need it, it's there. For the toJson() and toYaml() methods, it takes this value and runs toString() on it directly. This way you'll still get a (possibly improperly formatted) String to serialize. Otherwise, you might get a dart DateTime in your serialization, and that's not always valid depending on what you're doing.
 
 UPDATE: [Hooray for user input!](https://github.com/fhir-fli/fhir/issues/13#issuecomment-771186955). Working with primitives has been nagging at me for a while now, and this gave me the impetus to try and fix it. It MOSTLY shouldn't effect anyone's code. It's still going to serialize/deserialize in the same way. The difference is that now you can get the value from the field without having to fold it (I love [Dartz](https://pub.dev/packages/dartz), but I don't think I was using it the best way for these). Now, however, you can do this:
 
@@ -160,7 +162,7 @@ Missing "part 'resource.g.dart';".
 - Variables: lower camel case.
 - File names: snake case.
 - FHIR nested classes (including enums) listed under the primary class
-- There are a number of FHIR fields that are reserved words in Dart. For these, I have added a '_' to the end of the field. (note that this does not change the json format, as when that happens the @JsonKey has been added to the field like so:
+- There are a number of FHIR fields that are reserved words in Dart. For these, I have added a '_' to the end of the field. (note that this does not change the json format), as when that happens the @JsonKey has been added to the field like so:
 
 ```dart
 @JsonKey(name: 'extension') List<FhirExtension> extension_,
@@ -175,7 +177,8 @@ Missing "part 'resource.g.dart';".
   - if the id is more than 2 words and NOT a primitive type ("id": "TestScript.setup.action.operation.requestHeader"), the type is the first, next to last and last word combined with upper camel case, and the field is the last word: ```TestScriptOperationRequestHeader requestHeader```
 - Many of the element fields I have included because they are included as part of the test resources. I could not find a full list online, so there may still be some element fields that I have missed.
 
-### FHIR datatypes (these are R4 (which is what everyone should be using, but since EHR vendors are doing everything they can to not share data, I am also working on stu3 and dstu2 as well)
+### FHIR datatypes 
+- these are R4 (R5 is very similar)
 
 | PrimitiveTypes | GeneralTypes    | MetadataTypes       | SpecialTypes      | DraftTypes         |
 | -------------- | --------------- | ------------------- | ----------------- | ------------------ |
