@@ -104,7 +104,33 @@ Primitive values are [these](https://www.hl7.org/fhir/datatypes.html), things li
 
 **NEW NUMBERS** With the most recent release, I have changed the numbers slightly. Previously you could specify numbers as a String, and it would allow this. But technically, according to the FHIR spec, it should really only allow numbers, not Strings. So now, Double, Integer, Integer64, PositiveInt, UnsignedInt will ONLY allow actual numbers.
 
-As I was saying, dates are trickier. For ```FhirDate or FhirDateTime``` you're allowed to use values of 2020, 2020-06, or 2020-06-01 (written of course ```FhirDate('2020-06-01')```). For ```FhirInstant and FhirDateTime``` you're also allowed to specify hours, minutes, seconds, milliseconds. For ```FhirInstant``` at least hour, minute and second is required. Yes, it's very annoying. There are also some restrictions like ```FhirInstant``` can only have 3 decimal places for seconds, but FhirDateTime can have more. Anyway, I've tackled them the best I can. Here are 2 examples with the output of various methods based on class:
+### Dates and Times
+
+As I was saying, dates are trickier. [XKCD Agrees!](https://xkcd.com/2867/). Part of the problem is that I allow multiple types to be passed into a constructor, a String, a dart DateTime, or another type of FhirDateTimeBase (```FhirDate```, ```FhirDateTime```, and ```FhirInstant```). There are also multiple constructors, the unnamed constructor, fromJson, fromYaml, and fromUnits. Then there are also multiple ways to get the output, toJson, toYaml, toString, and then members including valueString, valueDateTime, and input. For all types, input will give you the original input that was input, no matter what it was.
+
+#### toJson and toYaml
+- In order to maintain input and output (especially with serialization), toJson and toYaml will also produce the input in string form. So whatever is passed in, the string version of that will be returned.
+
+#### fromString
+As long as it is a valid string for that class
+
+
+#### FhirDate
+
+- FhirDate(yyyy);
+  final dateyyyyDateTime = FhirDate(yyyyDateTime);
+  final dateyyyyDateTimeFromString = FhirDate(yyyyDateTimeFromString);
+  final dateyyyyFromString = FhirDate.fromString(yyyy);
+  final dateyyyyFromDateTime =
+      FhirDate.fromDateTime(yyyyDateTime, DateTimePrecision.yyyy);
+  final dateyyyyFromJson = FhirDate.fromJson(yyyy);
+  final dateyyyyDateTimeFromJson = FhirDate.fromJson(yyyyDateTime);
+  final dateyyyyDateTimeFromStringFromJson =
+      FhirDate.fromJson(yyyyDateTimeFromString);
+  final dateyyyyFromUnits = FhirDate.fromUnits(year: 2012);
+  final dateyyyyFromYaml = FhirDate.fromYaml(yyyy);
+
+ you're allowed to use values of 2020, 2020-06, or 2020-06-01 (written of course ```FhirDate('2020-06-01')```). For ```FhirInstant and FhirDateTime``` you're also allowed to specify hours, minutes, seconds, milliseconds. For ```FhirInstant``` at least hour, minute and second is required. Yes, it's very annoying. There are also some restrictions like ```FhirInstant``` can only have 3 decimal places for seconds, but FhirDateTime can have more. Anyway, I've tackled them the best I can. Here are 2 examples with the output of various methods based on class:
 
 * Top is Input "2020-12-13T11:20:00.721470+10:00"
 * Bottom is Input "2020-12-13

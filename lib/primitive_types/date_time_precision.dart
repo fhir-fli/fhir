@@ -322,7 +322,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
       case DateTimePrecision.dateTime:
         return dateTime.toString();
       case DateTimePrecision.instant:
-        return dateTime.toUtc().toIso8601String();
+        return dateTime.toIso8601String();
       case DateTimePrecision.invalid:
         return dateTime.toString();
     }

@@ -43,8 +43,8 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
 
   @override
   String toString() => valueString;
-  String toJson() => input.toString();
-  String toYaml() => input.toString();
+  String toJson() => isValid ? valueString : input.toString();
+  String toYaml() => isValid ? valueString : input.toString();
 
   /// ***********************************************************************
   ///
@@ -97,186 +97,136 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
 
   /// Trying to consolidate dynamic constructors into a single factory, that
   /// has now turned into a static method, but functions the same way
-  static FhirDateTimeBase constructor<T>(dynamic inValue) {
-    /// If it's a string
-    if (inValue is String) {
-      return fromString<T>(inValue: inValue, input: inValue);
+  static FhirDateTimeBase constructor<T>(dynamic inValue,
+      [DateTimePrecision? precision]) {
+    String? exception;
 
-      /// If it's a DateTime
-    } else if (inValue is DateTime) {
-      return fromString<T>(inValue: inValue.toIso8601String(), input: inValue);
+    String cleanInput(String inValue) {
+      /// Clean the string if needed
+      inValue = inValue.trim();
+      if (inValue.startsWith('"') ||
+          inValue.startsWith("'") ||
+          inValue.startsWith('`')) {
+        inValue = inValue.substring(1);
+      }
+      if (inValue.endsWith('"') ||
+          inValue.endsWith("'") ||
+          inValue.endsWith('`')) {
+        inValue = inValue.substring(0, inValue.length - 1);
+      }
+      return inValue;
     }
 
-    /// If it's a FhirDateTime
-    else if (inValue is FhirDateTimeBase) {
-      /// If the runtimeTypes are equal (FhirInstant, FhirDateTime, FhirDate)
-      /// return the value
-      if (inValue.runtimeType == T) {
-        return inValue;
+    /// Standardize inputString
+    String inputString;
+    if (inValue is String) {
+      inputString = cleanInput(inValue);
+    } else if (inValue is DateTime) {
+      inputString = inValue.toIso8601String();
+    } else if (inValue is FhirDateTimeBase && inValue.isValid) {
+      inputString = inValue.valueDateTime!.toIso8601String();
+    } else {
+      inputString = cleanInput(inValue.toString());
+      exception =
+          "$T cannot be constructed from '$inValue' (unsupported type).";
+    }
 
-        /// If we're trying to convert a valid FhirInstant or FhirDate into a
-        /// FhirDateTime, this should be valid
-        ///
-      } else if ((inValue is FhirInstant || inValue is FhirDate) &&
-          inValue.isValid &&
-          T == FhirDateTime) {
-        return fromString<T>(
-            inValue: inValue.valueDateTime!.toIso8601String(),
-            precision: inValue.precision,
-            input: inValue);
+    /// Get the precision from the inputString if not already specified
+    precision ??= precisionFromDateTimeString(inputString);
 
-        /// If it's a valid FhirInstant, we can concatenate it to turn it into
-        /// a valid FhirDate
-      } else if (inValue is FhirInstant && inValue.isValid && T == FhirDate) {
-        return fromString<T>(
-            inValue: inValue.valueDateTime!.toIso8601String(),
-            precision: DateTimePrecision.yyyy_MM_dd,
-            input: inValue);
-
-        /// If it's a valid FhirDateTime, we can truncate it to turn it into
-        /// a valid FhirDate
-      } else if (inValue is FhirDateTime && inValue.isValid && T == FhirDate) {
-        /// If it's a short FhirDateTime, we can just use the precision that it
-        /// already has
-        if (inValue.precision == DateTimePrecision.yyyy ||
-            inValue.precision == DateTimePrecision.yyyy_MM) {
-          return fromString<T>(
-              inValue: inValue.valueDateTime!.toIso8601String(),
-              precision: inValue.precision,
-              input: inValue);
-
-          /// If it's longer than months, and it's valid, we can truncate it
-        } else if (inValue.precision != DateTimePrecision.invalid) {
-          return fromString<T>(
-              inValue: inValue.valueDateTime!.toIso8601String(),
-              precision: DateTimePrecision.yyyy_MM_dd,
-              input: inValue);
-        }
-
-        /// Otherwise, if it's a valid FhirDateTime, and this is a FhirInstant
-        /// and the Precision is such that we can make a valid instant (which
-        /// includes specifying to at least the seconds precision and also
-        /// having a timezone), then we can return a FhirInstant
-      } else if (inValue is FhirDateTime &&
-          inValue.isValid &&
-          T == FhirInstant &&
-          <DateTimePrecision>[
-            DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-            DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-            DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-            DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-            DateTimePrecision.instant,
-          ].contains(inValue.precision)) {
-        return fromString<T>(
-            inValue: inValue.valueDateTime!.toIso8601String(),
-            precision: inValue.precision,
-            input: inValue);
+    /// If we're dealing with a dateTime, we need to be sure the precision is
+    /// valid. If the dateTime is more than it's supposed to be, we truncate
+    /// the rest.
+    if (T == FhirDate &&
+        !<DateTimePrecision>[
+          DateTimePrecision.yyyy,
+          DateTimePrecision.yyyy_MM,
+          DateTimePrecision.yyyy_MM_dd,
+          DateTimePrecision.invalid
+        ].contains(precision)) {
+      precision = DateTimePrecision.yyyy_MM_dd;
+    } else if (T == FhirInstant) {
+      if (!<DateTimePrecision>[
+        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+        DateTimePrecision.instant
+      ].contains(precision)) {
+        precision = DateTimePrecision.instant;
+      } else {
+        precision = DateTimePrecision.invalid;
       }
     }
+    if (precision == DateTimePrecision.invalid) {
+      exception = "'$inValue' does not have a valid precision for $T";
+    }
+
+    /// Define a DateTime object for the input
+    final DateTime? dateTime = precision.stringToDateTime(inputString);
+
+    if (dateTime == null) {
+      exception =
+          "'$inValue' does not create a valid DateTime for the precision $precision for $T";
+    }
+    print('INPUT: $inValue');
+    print('PRECISION: $precision');
+    print('INPUT STRING: $inputString');
+
+    /// Instants can only be 3 decimal places for seconds, so we truncate the
+    /// rest if it specifies more than that
+    inputString = (precision == DateTimePrecision.instant &&
+                ((dateTime?.millisecond.toString().length ?? 0) > 3 ||
+                    (dateTime?.millisecond ?? 0) != 0)) ||
+
+            /// Especially if it's from a DateTime, we need to get rid of the
+            /// excess units
+            (T == FhirDate)
+        ? precision.dateTimeToString(dateTime!)
+        : inputString;
+
     return T == FhirInstant
         ? FhirInstant.fromDateTimeBase(
-            inValue.toString(),
-            null,
-            false,
-            DateTimePrecision.invalid,
+            inputString,
+            dateTime,
+            dateTime != null &&
+                exception == null &&
+                precision != DateTimePrecision.invalid,
+            precision,
             inValue,
-            PrimitiveTypeFormatException<FhirInstant>(
-                "$T cannot be constructed from '$inValue' (unsupported type)."))
+            exception == null
+                ? null
+                : PrimitiveTypeFormatException<FhirInstant>(exception))
         : T == FhirDateTime
-            ? FhirInstant.fromDateTimeBase(
-                inValue.toString(),
-                null,
-                false,
-                DateTimePrecision.invalid,
+            ? FhirDateTime.fromDateTimeBase(
+                inputString,
+                dateTime,
+                dateTime != null &&
+                    exception == null &&
+                    precision != DateTimePrecision.invalid,
+                precision,
                 inValue,
-                PrimitiveTypeFormatException<FhirInstant>(
-                    "$T cannot be constructed from '$inValue' (unsupported type)."))
+                exception == null
+                    ? null
+                    : PrimitiveTypeFormatException<FhirDateTime>(exception))
             : T == FhirDate
-                ? FhirInstant.fromDateTimeBase(
-                    inValue.toString(),
-                    null,
-                    false,
-                    DateTimePrecision.invalid,
+                ? FhirDate.fromDateTimeBase(
+                    inputString,
+                    dateTime,
+                    dateTime != null &&
+                        exception == null &&
+                        precision != DateTimePrecision.invalid,
+                    precision,
                     inValue,
-                    PrimitiveTypeFormatException<FhirInstant>(
-                        "$T cannot be constructed from '$inValue' (unsupported type)."))
+                    exception == null
+                        ? null
+                        : PrimitiveTypeFormatException<FhirDate>(exception))
                 : throw CannotBeConstructed<T>(
                     "$T cannot be constructed from '$inValue' (unsupported type).");
   }
 
-  static FhirDateTimeBase fromString<T>({
-    required String inValue,
-    required dynamic input,
-    DateTimePrecision? precision,
-  }) {
-    /// Clean the string if needed
-    inValue = inValue.trim();
-    if (inValue.startsWith('"') ||
-        inValue.startsWith("'") ||
-        inValue.startsWith('`')) {
-      inValue = inValue.substring(1);
-    }
-    if (inValue.endsWith('"') ||
-        inValue.endsWith("'") ||
-        inValue.endsWith('`')) {
-      inValue = inValue.substring(0, inValue.length - 1);
-    }
-
-    /// Assign a precision if one has not been already specified
-    precision ??= precisionFromDateTimeString(inValue);
-
-    final DateTime? dateTime = precision.stringToDateTime(inValue);
-    if (T == FhirDateTime) {
-      return FhirDateTime.fromDateTimeBase(
-        precision.isValidDateTimePrecision && dateTime != null
-            ? precision.dateTimeToString(dateTime)
-            : inValue,
-        precision.isValidDateTimePrecision && dateTime != null
-            ? dateTime
-            : null,
-        precision.isValidDateTimePrecision && dateTime != null,
-        precision,
-        input,
-        null,
-      );
-    } else if (T == FhirDate) {
-      if (!precision.isValidDatePrecision) {
-        if (precision != DateTimePrecision.invalid) {
-          precision = DateTimePrecision.yyyy_MM_dd;
-        }
-      }
-
-      return FhirDate.fromDateTimeBase(
-        precision.isValidDatePrecision && dateTime != null
-            ? precision.dateTimeToString(dateTime)
-            : inValue,
-        precision.isValidDatePrecision && dateTime != null ? dateTime : null,
-        precision.isValidDatePrecision && dateTime != null,
-        precision,
-        input,
-        null,
-      );
-    } else if (T == FhirInstant) {
-      if (precision == DateTimePrecision.dateTime) {
-        precision = DateTimePrecision.instant;
-      }
-      return FhirInstant.fromDateTimeBase(
-        precision.isValidInstantPrecision && dateTime != null
-            ? precision.dateTimeToString(dateTime)
-            : inValue,
-        precision.isValidInstantPrecision && dateTime != null ? dateTime : null,
-        precision.isValidInstantPrecision && dateTime != null,
-        precision,
-        input,
-        null,
-      );
-    } else {
-      throw CannotBeConstructed<T>(
-          "$T cannot be constructed from '$inValue' (unsupported type).");
-    }
-  }
-
-  FhirDateTimeBase fromJson<T>(String json) => constructor<T>(json);
+  FhirDateTimeBase fromJson<T>(String json, [DateTimePrecision? precision]) =>
+      constructor<T>(json, precision);
 
   static FhirDateTimeBase fromUnits<T>({
     required int year,
@@ -329,8 +279,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       } else {
         precision = DateTimePrecision.yyyy_MM_dd;
       }
-    }
-    if (T == FhirDateTime) {
+    } else if (T == FhirDateTime) {
       if (month == null) {
         precision = DateTimePrecision.yyyy;
       } else if (day == null) {
@@ -348,13 +297,8 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     final DateTime localDateTime = timezoneOffset != null
         ? dateTime.add(Duration(hours: timezoneOffset))
         : dateTime;
-
     // Return the FhirDateTime with the adjusted time
-    return fromString(
-      inValue: localDateTime.toString(),
-      precision: precision,
-      input: dateTime,
-    );
+    return constructor<T>(localDateTime, precision);
   }
 
   InvalidTypes<FhirDateTimeBase> comparisonError(
@@ -608,10 +552,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       newSecond,
       newMillisecond,
     );
-    return fromString<T>(
-        inValue: newDateTime.toString(),
-        precision: fhirDateTimeBase.precision,
-        input: newDateTime);
+    return constructor<T>(newDateTime, fhirDateTimeBase.precision);
   }
 
   static FhirDateTimeBase subtract<T>(
@@ -636,10 +577,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       newSecond,
       newMillisecond,
     );
-    return fromString<T>(
-        inValue: newDateTime.toString(),
-        precision: fhirDateTimeBase.precision,
-        input: newDateTime);
+    return constructor<T>(newDateTime, fhirDateTimeBase.precision);
   }
 
   @override

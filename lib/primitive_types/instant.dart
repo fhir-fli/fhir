@@ -36,23 +36,23 @@ class FhirInstant extends FhirDateTimeBase {
         parseError,
       );
 
-  factory FhirInstant(dynamic json) =>
-      FhirDateTimeBase.constructor<FhirInstant>(json) as FhirInstant;
+  factory FhirInstant(dynamic json, [DateTimePrecision? precision]) =>
+      FhirDateTimeBase.constructor<FhirInstant>(json, precision) as FhirInstant;
 
-  factory FhirInstant.fromDateTime(DateTime dateTime) =>
-      FhirDateTimeBase.fromString<FhirInstant>(
-          inValue: dateTime.toIso8601String(),
-          precision: DateTimePrecision.instant,
-          input: dateTime) as FhirInstant;
+  factory FhirInstant.fromDateTime(DateTime dateTime,
+          [DateTimePrecision? precision]) =>
+      FhirInstant(dateTime, precision);
 
-  factory FhirInstant.fromString(String inValue) => FhirInstant(inValue);
+  factory FhirInstant.fromString(String inValue,
+          [DateTimePrecision? precision]) =>
+      FhirInstant(inValue, precision);
 
-  factory FhirInstant.fromJson(dynamic json) => FhirInstant(json);
+  factory FhirInstant.fromJson(dynamic json, [DateTimePrecision? precision]) =>
+      FhirInstant(json, precision);
 
-  factory FhirInstant.fromYaml(dynamic yaml) => yaml is String
-      ? FhirInstant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? FhirInstant.fromJson(jsonDecode(jsonEncode(yaml)))
+  factory FhirInstant.fromYaml(dynamic yaml, [DateTimePrecision? precision]) =>
+      yaml is String || yaml is YamlMap
+          ? FhirInstant(jsonDecode(jsonEncode(yaml)), precision)
           : throw YamlFormatException<FhirInstant>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
