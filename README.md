@@ -106,10 +106,23 @@ Primitive values are [these](https://www.hl7.org/fhir/datatypes.html), things li
 
 ### Dates and Times
 
-As I was saying, dates are trickier. [XKCD Agrees!](https://xkcd.com/2867/). Part of the problem is that I allow multiple types to be passed into a constructor, a String, a dart DateTime, or another type of FhirDateTimeBase (```FhirDate```, ```FhirDateTime```, and ```FhirInstant```). There are also multiple constructors, the unnamed constructor, fromJson, fromYaml, and fromUnits. Then there are also multiple ways to get the output, toJson, toYaml, toString, and then members including valueString, valueDateTime, and input. For all types, input will give you the original input that was input, no matter what it was.
+As I was saying, dates are trickier. [XKCD Agrees!](https://xkcd.com/2867/). Part of the problem is that I allow multiple types to be passed into a constructor, a String, a dart DateTime, or another type of FhirDateTimeBase (```FhirDate```, ```FhirDateTime```, and ```FhirInstant```). There are also multiple constructors, the unnamed constructor, fromJson, fromYaml, and fromUnits. Then there are also multiple ways to get the output, toJson, toYaml, toString, and then members including valueString, valueDateTime, and input. I'm trying to clarify what gives what.
 
-#### toJson and toYaml
-- In order to maintain input and output (especially with serialization), toJson and toYaml will also produce the input in string form. So whatever is passed in, the string version of that will be returned.
+#### valueString and toString()
+- These will give you the same value. That value will be an OPINIONATED String version of whatever the input is, appropriate for the Class. 
+- If FhirDate is given '2020-01-01T00:00:00.000Z' as the input, this will return '2020-01-01'
+- If FhirInstant is given '2020-01-01T00:00:00.11111-04:00' as the input, this will return '2020-01-01T00:00:00.111-04:00'
+ 
+
+#### input, toJson(), toYaml()
+- In order to provide the user with expected input and output, especially with serialization (even if formatted incorrectly), toJson() and toYaml() will also produce the input IN STRING FORM. I did this because a Dart DateTime class is not viable json. The input will always return the actual object that was used, regardless of what kidn of object it is.
+
+#### value, valueDateTime, valueDateTimeString, toIso8601String()
+- These are all based around the Dart DateTime class. Again, in order to try and stay true to user input, and because we can be more flexible than the FHIR official spec, if you enter more units than are appropriate, this will still allow you to store them. 
+- If FhirDate is given '2020-01-01T00:00:00.11111Z' as the input, it will store 111 milliseconds, and 11 microseconds, and UTC as part of the DateTime.
+- value and valueDateTime will provide the same value.
+- valueDateTimeString will provide valueDateTime.toString()
+- toIso8601String() will provide valueDateTime.toIso8601String()
 
 #### fromString
 As long as it is a valid string for that class

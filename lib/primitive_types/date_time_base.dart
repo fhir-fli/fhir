@@ -5,14 +5,15 @@ import 'primitive_types.dart';
 
 abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   ///
-  /// Basic class members
   ///
   /// [valueString] this will return a formatted String appropriate for the
-  /// class. This means that it will change input in an opionated way towards
+  /// class. This means that it will change input in an OPINIONATED way towards
   /// something appropriate if possible. For example:
   ///
-  /// If FhirDate has the value of '2020-01-01T00:00:00.000Z' as the input,
-  /// then the [valueString] will return '2020-01-01'
+  /// FhirDate is given '2020-01-01T00:00:00.000Z' as the input, this will
+  /// return '2020-01-01'
+  /// FhirInstant is given '2020-01-01T00:00:00.11111-04:00' as the input,
+  /// this will return '2020-01-01T00:00:00.111-04:00'
   final String valueString;
 
   /// [isValid] this will return whether or not the valueDateTime is valid
@@ -20,7 +21,13 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
 
   /// [valueDateTime] this will return a Dart DateTime value of the
   /// FhirDateTimeBase, note, it will often include units not actually present
-  /// in the input. DateTimes always contain minutes, seconds, etc.
+  /// in the input. DateTimes always contain minutes, seconds, etc. Also, if
+  /// a user enters more units than is valid for a Class, it will STILL BE
+  /// INCLUDED in the valueDateTime.
+  ///
+  /// FhirDate is given '2020-01-01T00:00:00.11111Z' as the input, it will
+  /// store 111 milliseconds, and 11 microseconds, and UTC as part of the
+  /// DateTime.
   final DateTime? valueDateTime;
 
   /// [precision] this will return the precision of the FhirDateTimeBase
@@ -37,14 +44,51 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   final dynamic input;
 
   @override
-  int get hashCode => valueString.hashCode;
-  DateTime? get value => valueDateTime;
-  String? get iso8601String => valueDateTime?.toIso8601String();
 
+  /// Trying to be true to user input, hash is now based on string of input
+  int get hashCode => input.toString().hashCode;
+
+  /// [value] this will return a Dart DateTime value of the
+  /// FhirDateTimeBase, note, it will often include units not actually present
+  /// in the input. DateTimes always contain minutes, seconds, etc. Also, if
+  /// a user enters more units than is valid for a Class, it will STILL BE
+  /// INCLUDED in the valueDateTime.
+  ///
+  /// FhirDate is given '2020-01-01T00:00:00.11111Z' as the input, it will
+  /// store 111 milliseconds, and 11 microseconds, and UTC as part of the
+  /// DateTime.
+  ///
+  /// Refers to the [valueDateTime]
+  DateTime? get value => valueDateTime;
+
+  /// [valueString] this will return a formatted String appropriate for the
+  /// class. This means that it will change input in an OPINIONATED way towards
+  /// something appropriate if possible. For example:
+  ///
+  /// FhirDate is given '2020-01-01T00:00:00.000Z' as the input, this will
+  /// return '2020-01-01'
+  /// FhirInstant is given '2020-01-01T00:00:00.11111-04:00' as the input,
+  /// this will return '2020-01-01T00:00:00.111-04:00'
   @override
   String toString() => valueString;
-  String toJson() => isValid ? valueString : input.toString();
-  String toYaml() => isValid ? valueString : input.toString();
+
+  /// [iso8601String()] this will return a Dart DateTime value of the
+  /// FhirDateTimeBase, but in an Iso8601 format.
+  ///
+  /// It is the equivalent to calling [valueDateTime].toIso8601String()
+  String? toIso8601String() => valueDateTime?.toIso8601String();
+
+  /// In order to provide the user with expected input and output, especially
+  /// with serialization (even if formatted incorrectly), toJson() will produce
+  /// the input IN STRING FORM. I did this because a Dart DateTime class is not
+  /// viable json.
+  String toJson() => input.toString();
+
+  /// In order to provide the user with expected input and output, especially
+  /// with serialization (even if formatted incorrectly), toYaml() will produce
+  /// the input IN STRING FORM. I did this because a Dart DateTime class is not
+  /// viable json (it may be viable Yaml, but this keeps things clear, I think).
+  String toYaml() => input.toString();
 
   /// ***********************************************************************
   ///
@@ -97,8 +141,11 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
 
   /// Trying to consolidate dynamic constructors into a single factory, that
   /// has now turned into a static method, but functions the same way
-  static FhirDateTimeBase constructor<T>(dynamic inValue,
-      [DateTimePrecision? precision]) {
+  static FhirDateTimeBase constructor<T>(
+    dynamic inValue, [
+    DateTimePrecision? precision,
+    bool baseInputOnPrecision = false,
+  ]) {
     String? exception;
 
     String cleanInput(String inValue) {
@@ -117,12 +164,15 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       return inValue;
     }
 
+    DateTime? dateTime;
+
     /// Standardize inputString
     String inputString;
     if (inValue is String) {
       inputString = cleanInput(inValue);
     } else if (inValue is DateTime) {
       inputString = inValue.toIso8601String();
+      dateTime = inValue;
     } else if (inValue is FhirDateTimeBase && inValue.isValid) {
       inputString = inValue.valueDateTime!.toIso8601String();
     } else {
@@ -131,47 +181,55 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
           "$T cannot be constructed from '$inValue' (unsupported type).";
     }
 
-    /// Get the precision from the inputString if not already specified
-    precision ??= precisionFromDateTimeString(inputString);
+    if (precision != null) {
+      dateTime ??= inValue is DateTime
+          ? inValue
+          : precision.stringToDateTime(inputString);
+    } else {
+      /// Get the precision from the inputString if not already specified
+      precision ??= precisionFromDateTimeString(inputString);
 
-    /// If we're dealing with a dateTime, we need to be sure the precision is
-    /// valid. If the dateTime is more than it's supposed to be, we truncate
-    /// the rest.
-    if (T == FhirDate &&
-        !<DateTimePrecision>[
-          DateTimePrecision.yyyy,
-          DateTimePrecision.yyyy_MM,
-          DateTimePrecision.yyyy_MM_dd,
-          DateTimePrecision.invalid
+      /// Define a DateTime object for the input
+      dateTime = precision.stringToDateTime(inputString);
+
+      /// If we're dealing with a dateTime, we need to be sure the precision is
+      /// valid. If the dateTime is more than it's supposed to be, we truncate
+      /// the rest.
+      if (T == FhirDate &&
+          !<DateTimePrecision>[
+            DateTimePrecision.yyyy,
+            DateTimePrecision.yyyy_MM,
+            DateTimePrecision.yyyy_MM_dd,
+            DateTimePrecision.invalid
+          ].contains(precision)) {
+        precision = DateTimePrecision.yyyy_MM_dd;
+      } else if (T == FhirInstant) {
+        if (!<DateTimePrecision>[
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+          DateTimePrecision.instant
         ].contains(precision)) {
-      precision = DateTimePrecision.yyyy_MM_dd;
-    } else if (T == FhirInstant) {
-      if (!<DateTimePrecision>[
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-        DateTimePrecision.instant
-      ].contains(precision)) {
-        precision = DateTimePrecision.instant;
-      } else {
-        precision = DateTimePrecision.invalid;
+          precision = DateTimePrecision.instant;
+        } else {
+          precision = DateTimePrecision.invalid;
+        }
+      }
+      if (precision == DateTimePrecision.invalid) {
+        exception = "'$inValue' does not have a valid precision for $T";
       }
     }
-    if (precision == DateTimePrecision.invalid) {
-      exception = "'$inValue' does not have a valid precision for $T";
-    }
-
-    /// Define a DateTime object for the input
-    final DateTime? dateTime = precision.stringToDateTime(inputString);
 
     if (dateTime == null) {
       exception =
           "'$inValue' does not create a valid DateTime for the precision $precision for $T";
     }
-    print('INPUT: $inValue');
-    print('PRECISION: $precision');
-    print('INPUT STRING: $inputString');
+
+    print('inputString: $inputString');
+    print('dateTime: $dateTime');
+    print('precision: $precision');
+    print('exception: $exception');
 
     /// Instants can only be 3 decimal places for seconds, so we truncate the
     /// rest if it specifies more than that
@@ -182,7 +240,9 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
             /// Especially if it's from a DateTime, we need to get rid of the
             /// excess units
             (T == FhirDate)
-        ? precision.dateTimeToString(dateTime!)
+        ? dateTime == null
+            ? inputString
+            : precision.dateTimeToString(dateTime)
         : inputString;
 
     return T == FhirInstant
@@ -193,7 +253,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                 exception == null &&
                 precision != DateTimePrecision.invalid,
             precision,
-            inValue,
+            baseInputOnPrecision ? inputString : inValue,
             exception == null
                 ? null
                 : PrimitiveTypeFormatException<FhirInstant>(exception))
@@ -205,7 +265,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                     exception == null &&
                     precision != DateTimePrecision.invalid,
                 precision,
-                inValue,
+                baseInputOnPrecision ? inputString : inValue,
                 exception == null
                     ? null
                     : PrimitiveTypeFormatException<FhirDateTime>(exception))
@@ -217,7 +277,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                         exception == null &&
                         precision != DateTimePrecision.invalid,
                     precision,
-                    inValue,
+                    baseInputOnPrecision ? inputString : inValue,
                     exception == null
                         ? null
                         : PrimitiveTypeFormatException<FhirDate>(exception))
@@ -286,8 +346,14 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
         precision = DateTimePrecision.yyyy_MM;
       } else if (hour == null) {
         precision = DateTimePrecision.yyyy_MM_dd;
-      } else {
+      } else if (minute == null) {
         precision = DateTimePrecision.yyyy_MM_dd_T_HH;
+      } else if (second == null) {
+        precision = DateTimePrecision.yyyy_MM_dd_T_HH_mm;
+      } else if (millisecond == null) {
+        precision = DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss;
+      } else {
+        precision = DateTimePrecision.dateTime;
       }
     } else {
       precision = DateTimePrecision.instant;
@@ -297,8 +363,9 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     final DateTime localDateTime = timezoneOffset != null
         ? dateTime.add(Duration(hours: timezoneOffset))
         : dateTime;
+
     // Return the FhirDateTime with the adjusted time
-    return constructor<T>(localDateTime, precision);
+    return constructor<T>(localDateTime, precision, true);
   }
 
   InvalidTypes<FhirDateTimeBase> comparisonError(
