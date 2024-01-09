@@ -37,8 +37,7 @@ class FhirDate extends FhirDateTimeBase {
       );
 
   factory FhirDate(dynamic json, [DateTimePrecision? precision]) =>
-      FhirDateTimeBase.constructor<FhirDate>(json, precision, precision != null)
-          as FhirDate;
+      FhirDateTimeBase.constructor<FhirDate>(json, precision) as FhirDate;
 
   factory FhirDate.fromDateTime(DateTime dateTime,
           [DateTimePrecision? precision]) =>

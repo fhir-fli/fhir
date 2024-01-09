@@ -201,13 +201,6 @@ extension DateTimePrecisionExtension on DateTimePrecision {
       ].contains(this);
 
   String dateTimeToString<T>(DateTime dateTime) {
-    if (T == FhirDate && !isValidDatePrecision) {
-      return '';
-    } else if (this is FhirInstant && !isValidInstantPrecision) {
-      return '';
-    } else if (this is FhirDateTime && !isValidDateTimePrecision) {
-      return '';
-    }
     switch (this) {
       case DateTimePrecision.yyyy:
         return dateTime.year.toString();
@@ -221,7 +214,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
       case DateTimePrecision.yyyy_MM_dd_T_Z:
         return '${dateTime.year.toString().padLeft(4, '0')}-'
             '${dateTime.month.toString().padLeft(2, '0')}-'
-            '${dateTime.day.toString().padLeft(2, '0')}T';
+            '${dateTime.day.toString().padLeft(2, '0')}TZ';
       case DateTimePrecision.yyyy_MM_dd_T_ZZ:
         return '${dateTime.year.toString().padLeft(4, '0')}-'
             '${dateTime.month.toString().padLeft(2, '0')}-'
@@ -340,15 +333,55 @@ extension DateTimePrecisionExtension on DateTimePrecision {
         case DateTimePrecision.yyyy_MM_dd_T_Z:
           return DateTime.tryParse('${string.substring(0, 10)}T00:00:00Z');
         case DateTimePrecision.yyyy_MM_dd_T_ZZ:
-          return DateTime.tryParse(
-              '${string.substring(0, 10)}T00:00:00${string.substring(10)}');
+          {
+            final DateTime? dateTime =
+                DateTime.tryParse('${string.substring(0, 10)}T00:00:00');
+            final DateTime? localDateTime = dateTime?.toLocal();
+            final Duration? localOffset = localDateTime?.timeZoneOffset;
+            final int actualOffset = (localOffset?.inHours ?? 0) +
+                (int.tryParse(string.split(':').first) ?? 0);
+            final DateTime? actualDateTime =
+                localDateTime?.add(Duration(hours: actualOffset));
+            return actualDateTime == null
+                ? null
+                : DateTime(
+                    actualDateTime.year,
+                    actualDateTime.month,
+                    actualDateTime.day,
+                    actualDateTime.hour - actualOffset,
+                    actualDateTime.minute,
+                    actualDateTime.second,
+                    actualDateTime.millisecond,
+                    actualDateTime.microsecond);
+          }
         case DateTimePrecision.yyyy_MM_dd_T_HH:
           return DateTime.tryParse(string.substring(0, 13));
         case DateTimePrecision.yyyy_MM_dd_T_HH_Z:
           return DateTime.tryParse('${string.substring(0, 13)}:00:00Z');
         case DateTimePrecision.yyyy_MM_dd_T_HHZZ:
-          return DateTime.tryParse(
-              '${string.substring(0, 13)}:00:00${string.substring(13)}');
+          {
+            {
+              final DateTime? dateTime = DateTime.tryParse(
+                  '${string.substring(0, 13)}:00:00${string.substring(13)}');
+              final DateTime? localDateTime = dateTime?.toLocal();
+              final Duration? localOffset = localDateTime?.timeZoneOffset;
+              final int actualOffset = (localOffset?.inHours ?? 0) +
+                  (int.tryParse(string.split(':').first) ?? 0);
+              final DateTime? actualDateTime =
+                  localDateTime?.add(Duration(hours: actualOffset));
+              return actualDateTime == null
+                  ? null
+                  : DateTime(
+                      actualDateTime.year,
+                      actualDateTime.month,
+                      actualDateTime.day,
+                      actualDateTime.hour - actualOffset,
+                      actualDateTime.minute,
+                      actualDateTime.second,
+                      actualDateTime.millisecond,
+                      actualDateTime.microsecond);
+            }
+          }
         case DateTimePrecision.yyyy_MM_dd_T_HH_mm:
           return DateTime.tryParse(string.substring(0, 16));
         case DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z:

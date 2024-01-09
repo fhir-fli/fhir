@@ -139,15 +139,18 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     this.parseError,
   ]);
 
+  static const DateTimePrecision _datePrecision = DateTimePrecision.yyyy_MM_dd;
+  static const DateTimePrecision _instantPrecision = DateTimePrecision.instant;
+  static const DateTimePrecision _dateTimePrecision =
+      DateTimePrecision.dateTime;
+
   /// Trying to consolidate dynamic constructors into a single factory, that
-  /// has now turned into a static method, but functions the same way
+  /// has now turned into a static method, but functions the same way. The input
+  /// can be a String, a dart DateTime, a FhirDateTimeBase, or an other.
   static FhirDateTimeBase constructor<T>(
     dynamic inValue, [
     DateTimePrecision? precision,
-    bool baseInputOnPrecision = false,
   ]) {
-    String? exception;
-
     String cleanInput(String inValue) {
       /// Clean the string if needed
       inValue = inValue.trim();
@@ -165,119 +168,114 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     }
 
     DateTime? dateTime;
+    String? exception;
+    String? input;
+    dynamic output;
 
-    /// Standardize inputString
-    String inputString;
+    /// If no precision was specified, we assume the inValue was what
+    /// the user desired, and will pass that as an output
+    if (precision == null) {
+      output = inValue;
+    }
+
+    /// If the user's input is a String
     if (inValue is String) {
-      inputString = cleanInput(inValue);
-    } else if (inValue is DateTime) {
-      inputString = inValue.toIso8601String();
+      /// Clean the string if needed
+      final String cleanString = cleanInput(inValue);
+
+      /// Obtain the precision from the input String
+      precision ??= precisionFromDateTimeString(cleanString);
+
+      /// Obtin the DateTime from the precision and the input String
+      dateTime = precision.stringToDateTime(cleanString);
+    }
+
+    /// Otherwise if it's a dateTime, we take the dateTime, and assume the
+    /// generic precision for that DateTime Type
+    else if (inValue is DateTime) {
       dateTime = inValue;
-    } else if (inValue is FhirDateTimeBase && inValue.isValid) {
-      inputString = inValue.valueDateTime!.toIso8601String();
+      precision ??= T == FhirDate
+          ? _datePrecision
+          : T == FhirInstant
+              ? _instantPrecision
+              : _dateTimePrecision;
+    }
+
+    /// If it's a FhirDateTimeBase, we do something similarly
+    else if (inValue is FhirDateTimeBase) {
+      dateTime = inValue.valueDateTime;
+      precision ??= inValue.precision == DateTimePrecision.invalid
+          ? T == FhirDate
+              ? _datePrecision
+              : T == FhirInstant
+                  ? _instantPrecision
+                  : _dateTimePrecision
+          : inValue.precision;
     } else {
-      inputString = cleanInput(inValue.toString());
       exception =
           "$T cannot be constructed from '$inValue' (unsupported type).";
     }
 
-    if (precision != null) {
-      dateTime ??= inValue is DateTime
-          ? inValue
-          : precision.stringToDateTime(inputString);
-    } else {
-      /// Get the precision from the inputString if not already specified
-      precision ??= precisionFromDateTimeString(inputString);
+    /// We again try and stay true to the user's wishes. The output, as long
+    /// as there is a dateTime to use, is converted to a String with the
+    /// specified precision, otherwise, we just use the inValue supplied
+    /// by the user
+    output ??=
+        dateTime == null ? inValue : precision?.dateTimeToString(dateTime);
 
-      /// Define a DateTime object for the input
-      dateTime = precision.stringToDateTime(inputString);
-
-      /// If we're dealing with a dateTime, we need to be sure the precision is
-      /// valid. If the dateTime is more than it's supposed to be, we truncate
-      /// the rest.
-      if (T == FhirDate &&
-          !<DateTimePrecision>[
-            DateTimePrecision.yyyy,
-            DateTimePrecision.yyyy_MM,
-            DateTimePrecision.yyyy_MM_dd,
-            DateTimePrecision.invalid
-          ].contains(precision)) {
-        precision = DateTimePrecision.yyyy_MM_dd;
-      } else if (T == FhirInstant) {
-        if (!<DateTimePrecision>[
-          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
-          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
-          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
-          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
-          DateTimePrecision.instant
-        ].contains(precision)) {
-          precision = DateTimePrecision.instant;
-        } else {
-          precision = DateTimePrecision.invalid;
-        }
-      }
-      if (precision == DateTimePrecision.invalid) {
-        exception = "'$inValue' does not have a valid precision for $T";
-      }
+    /// If we're working with a DateTime, but the input precision isn'd valid
+    /// we change the input String to a valid dateTime String. This shows for
+    /// valueString and toString().
+    if (T == FhirDate) {
+      input = dateTime == null
+          ? inValue.toString()
+          : precision?.isValidDatePrecision ?? false
+              ? precision!.dateTimeToString(dateTime)
+              : _datePrecision.dateTimeToString(dateTime);
     }
 
-    if (dateTime == null) {
-      exception =
-          "'$inValue' does not create a valid DateTime for the precision $precision for $T";
+    /// Same for instant
+    else if (T == FhirInstant) {
+      input = dateTime == null
+          ? inValue.toString()
+          : precision?.isValidInstantPrecision ?? false
+              ? precision!.dateTimeToString(dateTime)
+              : _instantPrecision.dateTimeToString(dateTime);
     }
-
-    print('inputString: $inputString');
-    print('dateTime: $dateTime');
-    print('precision: $precision');
-    print('exception: $exception');
-
-    /// Instants can only be 3 decimal places for seconds, so we truncate the
-    /// rest if it specifies more than that
-    inputString = (precision == DateTimePrecision.instant &&
-                ((dateTime?.millisecond.toString().length ?? 0) > 3 ||
-                    (dateTime?.millisecond ?? 0) != 0)) ||
-
-            /// Especially if it's from a DateTime, we need to get rid of the
-            /// excess units
-            (T == FhirDate)
-        ? dateTime == null
-            ? inputString
-            : precision.dateTimeToString(dateTime)
-        : inputString;
 
     return T == FhirInstant
         ? FhirInstant.fromDateTimeBase(
-            inputString,
+            input ?? inValue.toString(),
             dateTime,
             dateTime != null &&
                 exception == null &&
                 precision != DateTimePrecision.invalid,
-            precision,
-            baseInputOnPrecision ? inputString : inValue,
+            precision ?? DateTimePrecision.invalid,
+            output ?? inValue,
             exception == null
                 ? null
                 : PrimitiveTypeFormatException<FhirInstant>(exception))
         : T == FhirDateTime
             ? FhirDateTime.fromDateTimeBase(
-                inputString,
+                input ?? inValue.toString(),
                 dateTime,
                 dateTime != null &&
                     exception == null &&
                     precision != DateTimePrecision.invalid,
-                precision,
-                baseInputOnPrecision ? inputString : inValue,
+                precision ?? DateTimePrecision.invalid,
+                output ?? inValue,
                 exception == null
                     ? null
                     : PrimitiveTypeFormatException<FhirDateTime>(exception))
             : T == FhirDate
                 ? FhirDate.fromDateTimeBase(
-                    inputString,
+                    input ?? inValue.toString(),
                     dateTime,
                     dateTime != null &&
                         exception == null &&
                         precision != DateTimePrecision.invalid,
-                    precision,
-                    baseInputOnPrecision ? inputString : inValue,
+                    precision ?? DateTimePrecision.invalid,
+                    output ?? inValue,
                     exception == null
                         ? null
                         : PrimitiveTypeFormatException<FhirDate>(exception))
@@ -303,8 +301,21 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     /// Create a DateTime object, if there's no timezoneOffset, we create it in
     /// the local time zone. , otherwise in UTC because we're going to have to
     /// do some calculations to adjust the time
-    final DateTime dateTime = timezoneOffset == null || !isUTC
-        ? DateTime(
+    final DateTime dateTime = isUTC || timezoneOffset != null
+        ? DateTime.utc(
+            year,
+            month ?? 1,
+            day ?? 1,
+
+            /// If the hour is null, we ignore it, otherwise, subtract the
+            /// amount of the timezoneOffset - we're going to add it back later
+            hour == null ? 0 : hour - (timezoneOffset ?? 0),
+            minute ?? 0,
+            second ?? 0,
+            millisecond ?? 0,
+            microsecond ?? 0,
+          )
+        : DateTime(
             year,
             month ?? 1,
             day ?? 1,
@@ -313,50 +324,44 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
             second ?? 0,
             millisecond ?? 0,
             microsecond ?? 0,
-          )
-        : DateTime.utc(
-            year,
-            month ?? 1,
-            day ?? 1,
-
-            /// If the hour is null, we ignore it, otherwise, subtract the
-            /// amount of the timezoneOffset - we're going to add it back later
-            hour == null ? 0 : hour - timezoneOffset,
-            minute ?? 0,
-            second ?? 0,
-            millisecond ?? 0,
-            microsecond ?? 0,
           );
+    print('2 ${dateTime.isUtc}');
 
     /// For units we're going to define precisions automatically
     DateTimePrecision precision;
 
-    if (T == FhirDate) {
-      if (month == null) {
-        precision = DateTimePrecision.yyyy;
-      } else if (day == null) {
-        precision = DateTimePrecision.yyyy_MM;
-      } else {
-        precision = DateTimePrecision.yyyy_MM_dd;
-      }
-    } else if (T == FhirDateTime) {
-      if (month == null) {
-        precision = DateTimePrecision.yyyy;
-      } else if (day == null) {
-        precision = DateTimePrecision.yyyy_MM;
-      } else if (hour == null) {
-        precision = DateTimePrecision.yyyy_MM_dd;
-      } else if (minute == null) {
-        precision = DateTimePrecision.yyyy_MM_dd_T_HH;
-      } else if (second == null) {
-        precision = DateTimePrecision.yyyy_MM_dd_T_HH_mm;
-      } else if (millisecond == null) {
-        precision = DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss;
-      } else {
-        precision = DateTimePrecision.dateTime;
-      }
-    } else {
+    if (month == null) {
+      precision = DateTimePrecision.yyyy;
+    } else if (day == null) {
+      precision = DateTimePrecision.yyyy_MM;
+    } else if (hour == null) {
+      precision = timezoneOffset == null
+          ? isUTC
+              ? DateTimePrecision.yyyy_MM_dd_T_Z
+              : DateTimePrecision.yyyy_MM_dd
+          : DateTimePrecision.yyyy_MM_dd_T_ZZ;
+    } else if (minute == null) {
+      precision = timezoneOffset == null
+          ? isUTC
+              ? DateTimePrecision.yyyy_MM_dd_T_HH_Z
+              : DateTimePrecision.yyyy_MM_dd_T_HH
+          : DateTimePrecision.yyyy_MM_dd_T_HHZZ;
+    } else if (second == null) {
+      precision = timezoneOffset == null
+          ? isUTC
+              ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z
+              : DateTimePrecision.yyyy_MM_dd_T_HH_mm
+          : DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ;
+    } else if (millisecond == null) {
+      precision = timezoneOffset == null
+          ? isUTC
+              ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z
+              : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss
+          : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ;
+    } else if (microsecond == null && millisecond.toString().length <= 3) {
       precision = DateTimePrecision.instant;
+    } else {
+      precision = DateTimePrecision.dateTime;
     }
 
     // Adjust the UTC DateTime by the timezone offset
@@ -365,7 +370,10 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
         : dateTime;
 
     // Return the FhirDateTime with the adjusted time
-    return constructor<T>(localDateTime, precision, true);
+    print(localDateTime);
+    print(precision);
+    print(localDateTime.isUtc);
+    return constructor<T>(localDateTime, precision);
   }
 
   InvalidTypes<FhirDateTimeBase> comparisonError(
