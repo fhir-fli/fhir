@@ -188,6 +188,8 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
 
       /// Obtin the DateTime from the precision and the input String
       dateTime = precision.stringToDateTime(cleanString);
+      print('dateTime: $dateTime');
+      print('precision: $precision');
     }
 
     /// Otherwise if it's a dateTime, we take the dateTime, and assume the

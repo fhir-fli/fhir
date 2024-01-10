@@ -394,8 +394,29 @@ extension DateTimePrecisionExtension on DateTimePrecision {
         case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z:
           return DateTime.tryParse('${string.substring(0, 19)}Z');
         case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ:
-          return DateTime.tryParse(
-              '${string.substring(0, 19)}${string.substring(19)}');
+          {
+            {
+              final DateTime? dateTime = DateTime.tryParse(
+                  '${string.substring(0, 19)}${string.substring(19)}');
+              final DateTime? localDateTime = dateTime?.toLocal();
+              final Duration? localOffset = localDateTime?.timeZoneOffset;
+              final int actualOffset = (localOffset?.inHours ?? 0) +
+                  (int.tryParse(string.split(':').first) ?? 0);
+              final DateTime? actualDateTime =
+                  localDateTime?.add(Duration(hours: actualOffset));
+              return actualDateTime == null
+                  ? null
+                  : DateTime(
+                      actualDateTime.year,
+                      actualDateTime.month,
+                      actualDateTime.day,
+                      actualDateTime.hour - actualOffset,
+                      actualDateTime.minute,
+                      actualDateTime.second,
+                      actualDateTime.millisecond,
+                      actualDateTime.microsecond);
+            }
+          }
         case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS:
           return DateTime.tryParse(string.substring(0, 23));
         case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z:
