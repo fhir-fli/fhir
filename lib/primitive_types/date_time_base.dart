@@ -188,8 +188,6 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
 
       /// Obtin the DateTime from the precision and the input String
       dateTime = precision.stringToDateTime(cleanString);
-      print('dateTime: $dateTime');
-      print('precision: $precision');
     }
 
     /// Otherwise if it's a dateTime, we take the dateTime, and assume the
@@ -201,6 +199,8 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
           : T == FhirInstant
               ? _instantPrecision
               : _dateTimePrecision;
+      // print('dateTime: $dateTime');
+      // print('precision: $precision');
     }
 
     /// If it's a FhirDateTimeBase, we do something similarly
@@ -244,6 +244,11 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
               ? precision!.dateTimeToString(dateTime)
               : _instantPrecision.dateTimeToString(dateTime);
     }
+
+    // print('input: $input');
+    // print('output: $output');
+    // print('dateTime: $dateTime');
+    // print('precision: $precision');
 
     return T == FhirInstant
         ? FhirInstant.fromDateTimeBase(
@@ -327,7 +332,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
             millisecond ?? 0,
             microsecond ?? 0,
           );
-    print('2 ${dateTime.isUtc}');
+    // print('2 ${dateTime.isUtc}');
 
     /// For units we're going to define precisions automatically
     DateTimePrecision precision;
@@ -372,9 +377,9 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
         : dateTime;
 
     // Return the FhirDateTime with the adjusted time
-    print(localDateTime);
-    print(precision);
-    print(localDateTime.isUtc);
+    // print(localDateTime);
+    // print(precision);
+    // print(localDateTime.isUtc);
     return constructor<T>(localDateTime, precision);
   }
 

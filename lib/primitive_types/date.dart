@@ -59,14 +59,12 @@ class FhirDate extends FhirDateTimeBase {
     required int year,
     int? month,
     int? day,
-    int? timezoneOffset,
     bool? isUtc,
   }) =>
       FhirDateTimeBase.fromUnits<FhirDate>(
           year: year,
           month: month,
           day: day,
-          timezoneOffset: timezoneOffset,
           isUTC: isUtc ?? false) as FhirDate;
 
   FhirDate add(Duration other) =>
