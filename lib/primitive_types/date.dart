@@ -10,31 +10,22 @@ import 'package:yaml/yaml.dart';
 import 'primitive_types.dart';
 
 class FhirDate extends FhirDateTimeBase {
-  const FhirDate._(
-    super.valueString,
-    super.valueDateTime,
-    super.isValid,
-    super.precision,
-    super.input, [
-    super.parseError,
-  ]);
-
-  factory FhirDate.fromDateTimeBase(
-    String valueString,
-    DateTime? valueDateTime,
-    bool isValid,
-    DateTimePrecision precision,
-    dynamic input,
-    Exception? parseError,
-  ) =>
-      FhirDate._(
-        valueString,
-        valueDateTime,
-        isValid,
-        precision,
-        input,
-        parseError,
-      );
+  const FhirDate.fromBase({
+    required super.isValid,
+    required super.precision,
+    required super.input,
+    required super.parseError,
+    required super.year,
+    required super.month,
+    required super.day,
+    required super.hour,
+    required super.minute,
+    required super.second,
+    required super.millisecond,
+    required super.microsecond,
+    required super.timezoneOffset,
+    required super.isUtc,
+  });
 
   factory FhirDate(dynamic json, [DateTimePrecision? precision]) =>
       FhirDateTimeBase.constructor<FhirDate>(json, precision) as FhirDate;
@@ -65,7 +56,7 @@ class FhirDate extends FhirDateTimeBase {
           year: year,
           month: month,
           day: day,
-          isUTC: isUtc ?? false) as FhirDate;
+          isUtc: isUtc ?? false) as FhirDate;
 
   FhirDate add(Duration other) =>
       FhirDateTimeBase.add<FhirDate>(this, other) as FhirDate;

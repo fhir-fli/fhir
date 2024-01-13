@@ -1,7 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'primitive_types.dart';
-
 enum DateTimePrecision {
   @JsonValue('yyyy') // '2012',
   yyyy,
@@ -49,12 +47,14 @@ extension DateTimePrecisionExtension on DateTimePrecision {
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
         DateTimePrecision.instant,
+        DateTimePrecision.invalid,
       ].contains(this);
 
   bool get isValidDatePrecision => <DateTimePrecision>[
         DateTimePrecision.yyyy,
         DateTimePrecision.yyyy_MM,
         DateTimePrecision.yyyy_MM_dd,
+        DateTimePrecision.invalid,
       ].contains(this);
 
   bool get isValidDateTimePrecision => <DateTimePrecision>[
@@ -77,6 +77,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
         DateTimePrecision.dateTime,
         DateTimePrecision.instant,
+        DateTimePrecision.invalid,
       ].contains(this);
 
   bool get hasYear => <DateTimePrecision>[
@@ -321,6 +322,99 @@ extension DateTimePrecisionExtension on DateTimePrecision {
     }
   }
 
+  static String _timezoneOffsetToString(int? offset) => (offset ?? 0) < 0
+      ? '-${offset.toString().padLeft(2, "0")}:00'
+      : '+${(offset ?? "00").toString().padLeft(2, "0")}:00';
+
+  DateTime dateTimeFromMap(Map<String, int?> map) {
+    final DateTime dateTime = DateTime(
+      map['year'] ?? 0,
+      hasMonth ? map['month'] ?? 0 : 1,
+      hasDay ? map['day'] ?? 0 : 1,
+      hasHours ? map['hour'] ?? 0 : 0,
+      hasMinutes ? map['minute'] ?? 0 : 0,
+      hasSeconds ? map['second'] ?? 0 : 0,
+      hasMilliseconds ? map['millisecond'] ?? 0 : 0,
+    );
+    final DateTime localDateTime = dateTime.toLocal();
+    final Duration localOffset = localDateTime.timeZoneOffset;
+    final int actualOffset = localOffset.inHours +
+        (int.tryParse(map['offset']?.toString() ?? '0') ?? 0);
+    final DateTime actualDateTime =
+        localDateTime.add(Duration(hours: actualOffset));
+    return DateTime(
+        actualDateTime.year,
+        actualDateTime.month,
+        actualDateTime.day,
+        actualDateTime.hour - actualOffset,
+        actualDateTime.minute,
+        actualDateTime.second,
+        actualDateTime.millisecond,
+        actualDateTime.microsecond);
+  }
+
+  String dateTimeMapToString<T>(Map<String, int?> map) {
+    final DateTime dateTime = DateTime(
+        map['year'] ?? 0,
+        map['month'] ?? 1,
+        map['day'] ?? 1,
+        map['hour'] ?? 0,
+        map['minute'] ?? 0,
+        map['second'] ?? 0,
+        map['millisecond'] ?? 0,
+        map['microsecond'] ?? 0);
+    final String year = dateTime.year.toString().padLeft(4, '0');
+    final String month = dateTime.month.toString().padLeft(2, '0');
+    final String day = dateTime.day.toString().padLeft(2, '0');
+    final String hour = dateTime.hour.toString().padLeft(2, '0');
+    final String minute = dateTime.minute.toString().padLeft(2, '0');
+    final String second = dateTime.second.toString().padLeft(2, '0');
+    final String millisecond = dateTime.second.toString().padLeft(3, '0');
+    final String offset = _timezoneOffsetToString(map['offset']);
+    switch (this) {
+      case DateTimePrecision.yyyy:
+        return year;
+      case DateTimePrecision.yyyy_MM:
+        return '$year-$month';
+      case DateTimePrecision.yyyy_MM_dd:
+        return '$year-$month-$day';
+      case DateTimePrecision.yyyy_MM_dd_T_Z:
+        return '$year-$month-${day}TZ';
+      case DateTimePrecision.yyyy_MM_dd_T_ZZ:
+        return '$year-$month-${day}T$offset';
+      case DateTimePrecision.yyyy_MM_dd_T_HH:
+        return '$year-$month-${day}T$hour';
+      case DateTimePrecision.yyyy_MM_dd_T_HH_Z:
+        return '$year-$month-${day}T${hour}Z';
+      case DateTimePrecision.yyyy_MM_dd_T_HHZZ:
+        return '$year-$month-${day}T$hour$offset';
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm:
+        return '$year-$month-${day}T$hour:$minute';
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z:
+        return '$year-$month-${day}T$hour:${minute}Z';
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ:
+        return '$year-$month-${day}T$hour:$minute$offset';
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss:
+        return '$year-$month-${day}T$hour:$minute:$second';
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z:
+        return '$year-$month-${day}T$hour:$minute:${second}Z';
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ:
+        return '$year-$month-${day}T$hour:$minute:$second$offset';
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS:
+        return '$year-$month-${day}T$hour:$minute:$second.$millisecond';
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z:
+        return '$year-$month-${day}T$hour:$minute:$second.${millisecond}Z';
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ:
+        return '$year-$month-${day}T$hour:$minute:$second.$millisecond$offset';
+      case DateTimePrecision.dateTime:
+        return '$year-$month-${day}T$hour:$minute:$second.$millisecond$offset';
+      case DateTimePrecision.instant:
+        return '$year-$month-${day}T$hour:$minute:$second.$millisecond$offset';
+      case DateTimePrecision.invalid:
+        return '';
+    }
+  }
+
   DateTime? stringToDateTime(String string) {
     try {
       switch (this) {
@@ -553,29 +647,67 @@ DateTimePrecision precisionFromDateTimeString(String inValue) {
     return DateTimePrecision.yyyy;
   } else if (instantExp.hasMatch(inValue)) {
     return DateTimePrecision.instant;
-  } else if (dateTimeFULLExp.hasMatch(inValue)) {
+  } else if (dateTimeExp.hasMatch(inValue)) {
     return DateTimePrecision.dateTime;
   } else {
     return DateTimePrecision.invalid;
   }
 }
 
-/// For reference purposes from the [FHIR spec](https://build.fhir.org/datatypes.html#date)
-final RegExp dateTimeYYYYExp =
-    RegExp(r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$');
-
-/// For reference purposes from the [FHIR spec](https://build.fhir.org/datatypes.html#date)
-final RegExp dateTimeYYYYMMExp = RegExp(
-    r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])$');
-
-/// For reference purposes from the [FHIR spec](https://build.fhir.org/datatypes.html#date)
-final RegExp dateTimeYYYYMMDDExp = RegExp(
-    r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1]))?)?');
+// /// For reference purposes from the [FHIR spec](https://build.fhir.org/datatypes.html#date)
+final RegExp dateExp = RegExp(
+    r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(?<month>0[1-9]|1[0-2])(-(?<day>0[1-9]|[1-2][0-9]|3[0-1]))?)?');
 
 /// [DateTime](https://build.fhir.org/datatypes.html#dateTime)
-final RegExp dateTimeFULLExp = RegExp(
-    r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?');
+final RegExp dateTimeExp = RegExp(
+    r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(?<month>0[1-9]|1[0-2])(-(?<day>0[1-9]|[1-2][0-9]|3[0-1])(T(?<hour>[01][0-9]|2[0-3]):(?<minute>[0-5][0-9]):(?<second>[0-5][0-9]|60)(\.(?<millimicrosecond>[0-9]{1,9}))?)?)?(?<timezone>Z|(\+|-)(?<tzhour>0[0-9]|1[0-3]):(?<tzminute>[0-5][0-9]|14:00)?)?)?');
 
 /// [Instant](https://build.fhir.org/datatypes.html#instant)
 final RegExp instantExp = RegExp(
-    r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]{1,9})?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))');
+    r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(?<month>0[1-9]|1[0-2])-(?<day>0[1-9]|[1-2][0-9]|3[0-1])T(?<hour>[01][0-9]|2[0-3]):(?<minute>[0-5][0-9]):(?<second>[0-5][0-9]|60)(\.(?<millimicrosecond>[0-9]{1,9}))?(?<timezone>Z|(\+|-)(?<tzhour>0[0-9]|1[0-3]):(?<tzminute>[0-5][0-9]|14:00))');
+
+Map<String, int?> formatDateTimeString<T>(String dateTimeString) {
+  final RegExpMatch? dateTimeRegExp = dateTimeExp.firstMatch(dateTimeString);
+  return <String, int?>{
+    'year': int.tryParse(dateTimeRegExp?.namedGroup('year') ?? ''),
+    'month': int.tryParse(dateTimeRegExp?.namedGroup('month') ?? ''),
+    'day': int.tryParse(dateTimeRegExp?.namedGroup('day') ?? ''),
+    'hour': int.tryParse(dateTimeRegExp?.namedGroup('hour') ?? ''),
+    'minute': int.tryParse(dateTimeRegExp?.namedGroup('minute') ?? ''),
+    'second': int.tryParse(dateTimeRegExp?.namedGroup('second') ?? ''),
+    'millisecond':
+        int.tryParse(dateTimeRegExp?.namedGroup('millimicrosecond') ?? ''),
+    'timeZoneOffset': int.tryParse(dateTimeRegExp?.namedGroup('tzhour') ?? ''),
+    'isUtc': dateTimeString.contains('Z') ? 0 : 1,
+  };
+}
+
+DateTimePrecision precisionFromMap(Map<String, int?> map) {
+  if (map['month'] == null) {
+    return DateTimePrecision.yyyy;
+  } else if (map['day'] == null) {
+    return DateTimePrecision.yyyy_MM;
+  } else if (map['hour'] == null) {
+    return map['isUtc'] == 1
+        ? DateTimePrecision.yyyy_MM_dd
+        : DateTimePrecision.yyyy_MM_dd_T_Z;
+  } else if (map['minute'] == null) {
+    return map['isUtc'] == 1
+        ? DateTimePrecision.yyyy_MM_dd_T_HH
+        : DateTimePrecision.yyyy_MM_dd_T_HH_Z;
+  } else if (map['second'] == null) {
+    return map['isUtc'] == 1
+        ? DateTimePrecision.yyyy_MM_dd_T_HH_mm
+        : DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z;
+  } else if (map['millisecond'] == null) {
+    return map['isUtc'] == 1
+        ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss
+        : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z;
+  } else {
+    return DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS;
+  }
+}
+
+const DateTimePrecision datePrecision = DateTimePrecision.yyyy_MM_dd;
+const DateTimePrecision dateTimePrecision = DateTimePrecision.dateTime;
+const DateTimePrecision instantPrecision = DateTimePrecision.instant;

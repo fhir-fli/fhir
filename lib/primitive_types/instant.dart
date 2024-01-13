@@ -10,31 +10,22 @@ import 'package:yaml/yaml.dart';
 import 'primitive_types.dart';
 
 class FhirInstant extends FhirDateTimeBase {
-  const FhirInstant._(
-    super.valueString,
-    super.valueDateTime,
-    super.isValid,
-    super.precision,
-    super.input, [
-    super.parseError,
-  ]);
-
-  factory FhirInstant.fromDateTimeBase(
-    String valueString,
-    DateTime? valueDateTime,
-    bool isValid,
-    DateTimePrecision precision,
-    dynamic input,
-    Exception? parseError,
-  ) =>
-      FhirInstant._(
-        valueString,
-        valueDateTime,
-        isValid,
-        precision,
-        input,
-        parseError,
-      );
+  const FhirInstant.fromBase({
+    required super.isValid,
+    required super.precision,
+    required super.input,
+    required super.parseError,
+    required super.year,
+    required super.month,
+    required super.day,
+    required super.hour,
+    required super.minute,
+    required super.second,
+    required super.millisecond,
+    required super.microsecond,
+    required super.timezoneOffset,
+    required super.isUtc,
+  });
 
   factory FhirInstant(dynamic json, [DateTimePrecision? precision]) =>
       FhirDateTimeBase.constructor<FhirInstant>(json, precision) as FhirInstant;
@@ -66,7 +57,7 @@ class FhirInstant extends FhirDateTimeBase {
     int? millisecond,
     int? microsecond,
     required int timezoneOffset,
-    bool? isUTC,
+    bool? isUtc,
   }) =>
       FhirDateTimeBase.fromUnits<FhirInstant>(
         year: year,
@@ -78,7 +69,7 @@ class FhirInstant extends FhirDateTimeBase {
         millisecond: millisecond,
         microsecond: microsecond,
         timezoneOffset: timezoneOffset,
-        isUTC: isUTC ?? false,
+        isUtc: isUtc ?? false,
       ) as FhirInstant;
 
   FhirInstant add(Duration other) =>
