@@ -650,25 +650,24 @@ DateTimePrecision precisionFromDateTimeString(String inValue) {
   }
 }
 
-// /// For reference purposes from the [FHIR spec](https://build.fhir.org/datatypes.html#date)
+/// For reference purposes from the [FHIR spec](https://build.fhir.org/datatypes.html#date)
 final RegExp dateExp = RegExp(
     r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(?<month>0[1-9]|1[0-2])(-(?<day>0[1-9]|[1-2][0-9]|3[0-1]))?)?');
 
 /// [DateTime](https://build.fhir.org/datatypes.html#dateTime)
 final RegExp dateTimeExp = RegExp(
-    r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(?<month>0[1-9]|1[0-2])?)(-(?<day>0[1-9]|[1-2][0-9]|3[0-1])?)([T ](?<hour>[01][0-9]|2[0-3])?)(:(?<minute>[0-5][0-9])?)(:(?<second>[0-5][0-9]|60)?)(\.(?<millimicrosecond>[0-9]{1,9})?)( (?<timezone>Z|(\+|-))(?<tzhour>0[0-9]|1[0-3]):(?<tzminute>[0-5][0-9]|14:00)?)');
+    r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(?<month>-(0[1-9]|1[0-2]))(?<day>-(0[1-9]|[1-2][0-9]|3[0-1]))(?<time>(T(?<hour>[01][0-9]|2[0-3]):(?<minute>[0-5][0-9]):(?<second>[0-5][0-9]|60)(\.(?<fraction>[0-9]{1,9}))?)?)(?<timezone>Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)?)');
 
 /// [Instant](https://build.fhir.org/datatypes.html#instant)
 final RegExp instantExp = RegExp(
     r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(?<month>0[1-9]|1[0-2])-(?<day>0[1-9]|[1-2][0-9]|3[0-1])T(?<hour>[01][0-9]|2[0-3]):(?<minute>[0-5][0-9]):(?<second>[0-5][0-9]|60)(\.(?<millimicrosecond>[0-9]{1,9}))?(?<timezone>Z|(\+|-)(?<tzhour>0[0-9]|1[0-3]):(?<tzminute>[0-5][0-9]|14:00))');
 
 Map<String, int?> formatDateTimeString<T>(String dateTimeString) {
+  dateTimeString = '2019-08-01T10:00';
   print(dateTimeString);
   final RegExpMatch? dateTimeRegExp = dateTimeExp.firstMatch(dateTimeString);
-  for (int i = 0; i < (dateTimeRegExp?.groupCount ?? 0); i++) {
-    print(
-        '${dateTimeRegExp?.groupNames.elementAt(i)} ${dateTimeRegExp?.group(i)}');
-  }
+  final String? fractionString = dateTimeRegExp?.namedGroup('fraction');
+  print('groupNames: ${dateTimeRegExp?.groupNames}');
   return <String, int?>{
     'year': int.tryParse(dateTimeRegExp?.namedGroup('year') ?? ''),
     'month': int.tryParse(dateTimeRegExp?.namedGroup('month') ?? ''),
@@ -676,10 +675,23 @@ Map<String, int?> formatDateTimeString<T>(String dateTimeString) {
     'hour': int.tryParse(dateTimeRegExp?.namedGroup('hour') ?? ''),
     'minute': int.tryParse(dateTimeRegExp?.namedGroup('minute') ?? ''),
     'second': int.tryParse(dateTimeRegExp?.namedGroup('second') ?? ''),
-    'millisecond':
-        int.tryParse(dateTimeRegExp?.namedGroup('millimicrosecond') ?? ''),
-    'timeZoneOffset': int.tryParse(dateTimeRegExp?.namedGroup('tzhour') ?? ''),
-    'isUtc': dateTimeString.contains('Z') ? 0 : 1,
+    'millisecond': fractionString == null
+        ? null
+        : fractionString.length >= 3
+            ? int.tryParse(fractionString.substring(0, 3))
+            : int.tryParse(fractionString),
+    'microsecond': fractionString == null
+        ? null
+        : fractionString.length > 3
+            ? fractionString.length <= 6
+                ? int.tryParse(
+                    fractionString.substring(3, fractionString.length))
+                : int.tryParse(fractionString.substring(3, 6))
+            : null,
+    'timeZoneOffset':
+        stringToTimeZoneOffset(dateTimeRegExp?.namedGroup('timezone')),
+    'isUtc':
+        (dateTimeRegExp?.namedGroup('hour')?.contains('Z') ?? false) ? 0 : 1,
   };
 }
 
@@ -726,3 +738,20 @@ const DateTimePrecision instantPrecision = DateTimePrecision.instant;
 String timeZoneOffsetToString(int? offset) => (offset ?? 0) < 0
     ? '-${offset.toString().padLeft(2, "0")}:00'
     : '+${(offset ?? "00").toString().padLeft(2, "0")}:00';
+
+int stringToTimeZoneOffset(String? offset) {
+  if (offset == null) {
+    return 0;
+  } else {
+    bool? positive;
+    if (offset.startsWith('+')) {
+      positive = true;
+      offset = offset.substring(1);
+    } else if (offset.startsWith('-')) {
+      positive = false;
+      offset = offset.substring(1);
+    }
+    positive ??= true;
+    return (int.tryParse(offset.split(':').first) ?? 0) * (positive ? 1 : -1);
+  }
+}

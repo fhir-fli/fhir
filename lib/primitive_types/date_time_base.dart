@@ -168,6 +168,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     dynamic inValue, [
     DateTimePrecision? precision,
   ]) {
+    print(inValue);
     String? input;
     String? exception;
     Map<String, int?>? dateTimeMap;
