@@ -23,7 +23,7 @@ class FhirDate extends FhirDateTimeBase {
     required super.second,
     required super.millisecond,
     required super.microsecond,
-    required super.timezoneOffset,
+    required super.timeZoneOffset,
     required super.isUtc,
   });
 

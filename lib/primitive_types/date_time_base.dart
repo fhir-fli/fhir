@@ -16,7 +16,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   final int second;
   final int millisecond;
   final int microsecond;
-  final int timezoneOffset;
+  final int timeZoneOffset;
   final bool isUtc;
 
   @override
@@ -28,7 +28,6 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   String toString() => _string;
 
   String get _string {
-    print(this is FhirDateTime);
     return this is FhirInstant
         ? precision.isValidInstantPrecision
             ? precision.dateTimeMapToString(toMap())
@@ -56,7 +55,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
         'second': second,
         'millisecond': millisecond,
         'microsecond': microsecond,
-        'timezoneOffset': timezoneOffset,
+        'timeZoneOffset': timeZoneOffset,
         'isUtc': isUtc ? 0 : 1,
       };
 
@@ -73,7 +72,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     required this.second,
     required this.millisecond,
     required this.microsecond,
-    required this.timezoneOffset,
+    required this.timeZoneOffset,
     required this.isUtc,
   });
 
@@ -98,8 +97,6 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     String? exception,
     dynamic output,
   ) {
-    print('dateTimeMap: $dateTimeMap');
-    print('precision: $precision');
     return T == FhirInstant
         ? FhirInstant.fromBase(
             isValid: (precision?.isValidInstantPrecision ?? false) &&
@@ -117,7 +114,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
             second: dateTimeMap?['second'] ?? 0,
             millisecond: dateTimeMap?['millisecond'] ?? 0,
             microsecond: dateTimeMap?['microsecond'] ?? 0,
-            timezoneOffset: dateTimeMap?['timezoneOffset'] ?? 0,
+            timeZoneOffset: dateTimeMap?['timeZoneOffset'] ?? 0,
             isUtc: dateTimeMap?['isUtc'] == 0,
           )
         : T == FhirDateTime
@@ -137,12 +134,12 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                 second: dateTimeMap?['second'] ?? 0,
                 millisecond: dateTimeMap?['millisecond'] ?? 0,
                 microsecond: dateTimeMap?['microsecond'] ?? 0,
-                timezoneOffset: dateTimeMap?['timezoneOffset'] ?? 0,
+                timeZoneOffset: dateTimeMap?['timeZoneOffset'] ?? 0,
                 isUtc: dateTimeMap?['isUtc'] == 0,
               )
             : T == FhirDate
                 ? FhirDate.fromBase(
-                    isValid: (precision?.isValidInstantPrecision ?? false) &&
+                    isValid: (precision?.isValidDatePrecision ?? false) &&
                         precision != DateTimePrecision.invalid,
                     precision: precision ?? DateTimePrecision.invalid,
                     input: output,
@@ -157,7 +154,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                     second: dateTimeMap?['second'] ?? 0,
                     millisecond: dateTimeMap?['millisecond'] ?? 0,
                     microsecond: dateTimeMap?['microsecond'] ?? 0,
-                    timezoneOffset: dateTimeMap?['timezoneOffset'] ?? 0,
+                    timeZoneOffset: dateTimeMap?['timeZoneOffset'] ?? 0,
                     isUtc: dateTimeMap?['isUtc'] == 0,
                   )
                 : throw CannotBeConstructed<T>(
@@ -179,8 +176,13 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       input = _cleanInput(inValue);
     } else if (inValue is DateTime) {
       input = inValue.toIso8601String();
+      if (inValue.isUtc) {
+        input += 'Z';
+      } else {
+        input += timeZoneOffsetToString(inValue.timeZoneOffset.inHours);
+      }
     } else if (inValue is FhirDateTimeBase) {
-      input = inValue.valueDateTime?.toIso8601String();
+      return constructor<T>(inValue.input, precision);
     } else {
       exception =
           "$T cannot be constructed from '$inValue' (unsupported type).";
@@ -198,6 +200,8 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       }
     }
 
+    print(dateTimeMap);
+
     return _constructor<T>(
         dateTimeMap, precision, exception, output ?? inValue);
   }
@@ -214,7 +218,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     int? second,
     int? millisecond,
     int? microsecond,
-    int? timezoneOffset,
+    int? timeZoneOffset,
     required bool isUtc,
   }) {
     final Map<String, int?> dateTimeMap = <String, int?>{
@@ -226,7 +230,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       'second': second,
       'millisecond': millisecond,
       'microsecond': microsecond,
-      'timezoneOffset': timezoneOffset,
+      'timeZoneOffset': timeZoneOffset,
       'isUtc': isUtc ? 0 : 1,
     };
 
@@ -266,13 +270,12 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     }
 
     /// create a left-hand-side value
-    final FhirDateTimeBase lhs =
-        FhirDateTimeBase.constructor<FhirDateTime>(this);
+    final FhirDateTime lhs = constructor<FhirDateTime>(this) as FhirDateTime;
 
     /// create a right-hand-side value
-    final FhirDateTimeBase? rhs =
+    final FhirDateTime? rhs =
         o is FhirDateTimeBase || o is DateTime || o is String
-            ? FhirDateTimeBase.constructor<FhirDateTime>(o)
+            ? constructor<FhirDateTime>(o) as FhirDateTime
             : null;
 
     /// If compared Object is null, is invalid, or if this is invalid, we don't
@@ -299,10 +302,6 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     } else {
       final DateTimePrecision lhsPrecision = lhs.precision;
       final DateTimePrecision rhsPrecision = rhs.precision;
-      DateTime lhsDateTime = lhs.valueDateTime!;
-      DateTime rhsDateTime = rhs.valueDateTime!;
-      lhsDateTime = lhsDateTime.toUtc();
-      rhsDateTime = rhsDateTime.toUtc();
 
       bool? compareByPrecision(
           Comparator comparator, int value1, int value2, bool isPrecision) {
@@ -359,98 +358,104 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
         return null;
       }
 
-      final int lhsYear = lhsDateTime.year;
-      final int rhsYear = rhsDateTime.year;
-      final bool yearPrecision = lhsPrecision == DateTimePrecision.yyyy ||
+      bool precision = lhsPrecision == DateTimePrecision.yyyy ||
           rhsPrecision == DateTimePrecision.yyyy;
       bool? result =
-          compareByPrecision(comparator, lhsYear, rhsYear, yearPrecision);
+          compareByPrecision(comparator, lhs.year, rhs.year, precision);
       if (result != null) {
         return result;
       }
-
-      final int lhsMonth = lhsDateTime.month;
-      final int rhsMonth = rhsDateTime.month;
-      final bool monthPrecision = lhsPrecision == DateTimePrecision.yyyy_MM ||
+      precision = lhsPrecision == DateTimePrecision.yyyy_MM ||
           rhsPrecision == DateTimePrecision.yyyy_MM;
-      result =
-          compareByPrecision(comparator, lhsMonth, rhsMonth, monthPrecision);
+      result = compareByPrecision(comparator, lhs.month, rhs.month, precision);
       if (result != null) {
         return result;
       }
 
-      final int lhsDay = lhsDateTime.day;
-      final int rhsDay = rhsDateTime.day;
-      final bool dayPrecision = lhsPrecision == DateTimePrecision.yyyy_MM_dd ||
+      int lhsDay = lhs.day;
+      int lhsHour = lhs.hour - lhs.timeZoneOffset;
+      int rhsDay = lhs.day;
+      int rhsHour = rhs.hour - rhs.timeZoneOffset;
+
+      if (lhsHour > 24) {
+        lhsDay++;
+      } else if (lhsHour < 0) {
+        lhsDay--;
+      }
+      if (rhsHour > 24) {
+        rhsDay++;
+      } else if (rhsHour < 0) {
+        rhsDay--;
+      }
+      precision = lhsPrecision == DateTimePrecision.yyyy_MM_dd ||
           rhsPrecision == DateTimePrecision.yyyy_MM_dd ||
           lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_Z ||
           rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_Z ||
           lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_ZZ ||
           rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_ZZ;
-      result = compareByPrecision(comparator, lhsDay, rhsDay, dayPrecision);
+      result = compareByPrecision(comparator, lhsDay, rhsDay, precision);
       if (result != null) {
         return result;
       }
 
-      final int lhsHour = lhsDateTime.hour;
-      final int rhsHour = rhsDateTime.hour;
-      final bool hourPrecision =
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH ||
-              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH ||
-              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_Z ||
-              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_Z ||
-              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HHZZ ||
-              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HHZZ;
-      result = compareByPrecision(comparator, lhsHour, rhsHour, hourPrecision);
+      if (lhsHour > 24) {
+        lhsHour = lhsHour - 24;
+      } else if (lhsHour < 0) {
+        lhsHour = lhsHour + 24;
+      }
+
+      if (rhsHour > 24) {
+        rhsHour = rhsHour - 24;
+      } else if (rhsHour < 0) {
+        rhsHour = rhsHour + 24;
+      }
+
+      precision = lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH ||
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_Z ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_Z ||
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HHZZ ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HHZZ;
+      result = compareByPrecision(comparator, lhsHour, rhsHour, precision);
       if (result != null) {
         return result;
       }
 
-      final int lhsMinute = lhsDateTime.minute;
-      final int rhsMinute = rhsDateTime.minute;
-      final bool minutePrecision =
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm ||
-              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm ||
-              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z ||
-              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z ||
-              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ ||
-              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ;
+      precision = lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm ||
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z ||
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ;
       result =
-          compareByPrecision(comparator, lhsMinute, rhsMinute, minutePrecision);
+          compareByPrecision(comparator, lhs.minute, rhs.minute, precision);
       if (result != null) {
         return result;
       }
-
-      final int lhsSecond = lhsDateTime.second;
-      final int rhsSecond = rhsDateTime.second;
-      final bool secondPrecision =
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss ||
-              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss ||
-              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z ||
-              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z ||
-              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ ||
-              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ;
+      precision = lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss ||
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z ||
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ;
       result =
-          compareByPrecision(comparator, lhsSecond, rhsSecond, secondPrecision);
+          compareByPrecision(comparator, lhs.second, rhs.second, precision);
       if (result != null) {
         return result;
       }
 
-      final int lhsMillisecond = lhsDateTime.millisecond;
-      final int rhsMillisecond = rhsDateTime.millisecond;
-      final bool millisecondPrecision =
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS ||
-              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS ||
-              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z ||
-              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z ||
-              lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ ||
-              rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ ||
-              lhsPrecision == DateTimePrecision.dateTime ||
-              rhsPrecision == DateTimePrecision.dateTime ||
-              lhsPrecision == DateTimePrecision.instant ||
-              rhsPrecision == DateTimePrecision.instant;
+      precision = lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS ||
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z ||
+          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ ||
+          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ ||
+          lhsPrecision == DateTimePrecision.dateTime ||
+          rhsPrecision == DateTimePrecision.dateTime ||
+          lhsPrecision == DateTimePrecision.instant ||
+          rhsPrecision == DateTimePrecision.instant;
       result = compareByPrecision(
-          comparator, lhsMillisecond, rhsMillisecond, millisecondPrecision);
+          comparator, lhs.millisecond, rhs.millisecond, precision);
       if (result != null) {
         return result;
       }
