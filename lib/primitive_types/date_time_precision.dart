@@ -120,6 +120,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
         DateTimePrecision.instant,
+        DateTimePrecision.dateTime,
       ].contains(this);
 
   bool get hasDay => <DateTimePrecision>[
@@ -139,6 +140,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
         DateTimePrecision.instant,
+        DateTimePrecision.dateTime,
       ].contains(this);
 
   bool get hasHours => <DateTimePrecision>[
@@ -155,6 +157,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
         DateTimePrecision.instant,
+        DateTimePrecision.dateTime,
       ].contains(this);
 
   bool get hasMinutes => <DateTimePrecision>[
@@ -168,6 +171,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
         DateTimePrecision.instant,
+        DateTimePrecision.dateTime,
       ].contains(this);
 
   bool get hasSeconds => <DateTimePrecision>[
@@ -178,6 +182,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
         DateTimePrecision.instant,
+        DateTimePrecision.dateTime,
       ].contains(this);
 
   bool get hasMilliseconds => <DateTimePrecision>[
@@ -185,6 +190,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
         DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
         DateTimePrecision.instant,
+        DateTimePrecision.dateTime,
       ].contains(this);
 
   bool get hasTimezoneOffset => <DateTimePrecision>[
@@ -323,6 +329,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
   }
 
   DateTime dateTimeFromMap(Map<String, int?> map) {
+    print('dateTimeFromMap: $map');
     final DateTime dateTime = DateTime(
       map['year'] ?? 0,
       hasMonth ? map['month'] ?? 0 : 1,
@@ -331,6 +338,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
       hasMinutes ? map['minute'] ?? 0 : 0,
       hasSeconds ? map['second'] ?? 0 : 0,
       hasMilliseconds ? map['millisecond'] ?? 0 : 0,
+      this == DateTimePrecision.dateTime ? map['microsecond'] ?? 0 : 0,
     );
     final DateTime localDateTime = dateTime.toLocal();
     final Duration localOffset = localDateTime.timeZoneOffset;
@@ -350,6 +358,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
   }
 
   String dateTimeMapToString<T>(Map<String, int?> map) {
+    print('dateTimeMapToString: $map');
     final DateTime dateTime = DateTime(
         map['year'] ?? 0,
         map['month'] ?? 1,
@@ -365,7 +374,8 @@ extension DateTimePrecisionExtension on DateTimePrecision {
     final String hour = dateTime.hour.toString().padLeft(2, '0');
     final String minute = dateTime.minute.toString().padLeft(2, '0');
     final String second = dateTime.second.toString().padLeft(2, '0');
-    final String millisecond = dateTime.second.toString().padLeft(3, '0');
+    final String millisecond = dateTime.millisecond.toString().padLeft(3, '0');
+    final String microsecond = dateTime.microsecond.toString().padLeft(3, '0');
     final String offset = timeZoneOffsetToString(map['timeZoneOffset']);
     switch (this) {
       case DateTimePrecision.yyyy:
@@ -403,7 +413,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
       case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ:
         return '$year-$month-${day}T$hour:$minute:$second.$millisecond$offset';
       case DateTimePrecision.dateTime:
-        return '$year-$month-${day}T$hour:$minute:$second.$millisecond$offset';
+        return '$year-$month-${day}T$hour:$minute:$second.$millisecond$microsecond$offset';
       case DateTimePrecision.instant:
         return '$year-$month-${day}T$hour:$minute:$second.$millisecond$offset';
       case DateTimePrecision.invalid:
@@ -656,18 +666,17 @@ final RegExp dateExp = RegExp(
 
 /// [DateTime](https://build.fhir.org/datatypes.html#dateTime)
 final RegExp dateTimeExp = RegExp(
-    r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(?<month>-(0[1-9]|1[0-2]))(?<day>-(0[1-9]|[1-2][0-9]|3[0-1]))(?<time>(T(?<hour>[01][0-9]|2[0-3]):(?<minute>[0-5][0-9]):(?<second>[0-5][0-9]|60)(\.(?<fraction>[0-9]{1,9}))?)?)(?<timezone>Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)?)');
+    r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(?<month>0[1-9]|1[0-2])(-(?<day>0[1-9]|[1-2][0-9]|3[0-1])(T(?<hour>[01][0-9]|2[0-3]):(?<minute>[0-5][0-9]):(?<second>[0-5][0-9]|60)(\.(?<fraction>[0-9]{1,9}))?)?)?(?<timezone>Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)?)?)?');
 
 /// [Instant](https://build.fhir.org/datatypes.html#instant)
 final RegExp instantExp = RegExp(
     r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(?<month>0[1-9]|1[0-2])-(?<day>0[1-9]|[1-2][0-9]|3[0-1])T(?<hour>[01][0-9]|2[0-3]):(?<minute>[0-5][0-9]):(?<second>[0-5][0-9]|60)(\.(?<millimicrosecond>[0-9]{1,9}))?(?<timezone>Z|(\+|-)(?<tzhour>0[0-9]|1[0-3]):(?<tzminute>[0-5][0-9]|14:00))');
 
 Map<String, int?> formatDateTimeString<T>(String dateTimeString) {
-  dateTimeString = '2019-08-01T10:00';
-  print(dateTimeString);
+  print('formatDateTimeString: $dateTimeString');
   final RegExpMatch? dateTimeRegExp = dateTimeExp.firstMatch(dateTimeString);
   final String? fractionString = dateTimeRegExp?.namedGroup('fraction');
-  print('groupNames: ${dateTimeRegExp?.groupNames}');
+  // print('groupNames: ${dateTimeRegExp?.groupNames}');
   return <String, int?>{
     'year': int.tryParse(dateTimeRegExp?.namedGroup('year') ?? ''),
     'month': int.tryParse(dateTimeRegExp?.namedGroup('month') ?? ''),
@@ -722,12 +731,14 @@ DateTimePrecision precisionFromMap(Map<String, int?> map) {
             ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss
             : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ
         : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z;
-  } else {
+  } else if (map['microsecond'] == null) {
     return map['isUtc'] == 1
         ? map['timeZoneOffset'] == null
             ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS
             : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ
         : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z;
+  } else {
+    return DateTimePrecision.dateTime;
   }
 }
 
@@ -736,12 +747,12 @@ const DateTimePrecision dateTimePrecision = DateTimePrecision.dateTime;
 const DateTimePrecision instantPrecision = DateTimePrecision.instant;
 
 String timeZoneOffsetToString(int? offset) => (offset ?? 0) < 0
-    ? '-${offset.toString().padLeft(2, "0")}:00'
+    ? '-${offset.toString().substring(1).padLeft(2, "0")}:00'
     : '+${(offset ?? "00").toString().padLeft(2, "0")}:00';
 
-int stringToTimeZoneOffset(String? offset) {
+int? stringToTimeZoneOffset(String? offset) {
   if (offset == null) {
-    return 0;
+    return null;
   } else {
     bool? positive;
     if (offset.startsWith('+')) {

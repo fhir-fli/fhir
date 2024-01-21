@@ -3,9 +3,6 @@
 // Dart imports:
 import 'dart:convert';
 
-// Package imports:
-import 'package:yaml/yaml.dart';
-
 // Project imports:
 import 'primitive_types.dart';
 
@@ -27,25 +24,22 @@ class FhirInstant extends FhirDateTimeBase {
     required super.isUtc,
   });
 
-  factory FhirInstant(dynamic json, [DateTimePrecision? precision]) =>
+  factory FhirInstant._(dynamic json, [DateTimePrecision? precision]) =>
       FhirDateTimeBase.constructor<FhirInstant>(json, precision) as FhirInstant;
 
   factory FhirInstant.fromDateTime(DateTime dateTime,
           [DateTimePrecision? precision]) =>
-      FhirInstant(dateTime, precision);
+      FhirInstant._(dateTime, precision);
 
   factory FhirInstant.fromString(String inValue,
           [DateTimePrecision? precision]) =>
-      FhirInstant(inValue, precision);
+      FhirInstant._(inValue, precision);
 
-  factory FhirInstant.fromJson(dynamic json, [DateTimePrecision? precision]) =>
-      FhirInstant(json, precision);
+  factory FhirInstant.fromJson(String json, [DateTimePrecision? precision]) =>
+      FhirInstant._(json, precision);
 
-  factory FhirInstant.fromYaml(dynamic yaml, [DateTimePrecision? precision]) =>
-      yaml is String || yaml is YamlMap
-          ? FhirInstant(jsonDecode(jsonEncode(yaml)), precision)
-          : throw YamlFormatException<FhirInstant>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory FhirInstant.fromYaml(String yaml, [DateTimePrecision? precision]) =>
+      FhirInstant._(jsonDecode(jsonEncode(yaml)), precision);
 
   factory FhirInstant.fromUnits({
     required int year,

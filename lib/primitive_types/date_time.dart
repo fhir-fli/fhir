@@ -3,9 +3,6 @@
 // Dart imports:
 import 'dart:convert';
 
-// Package imports:
-import 'package:yaml/yaml.dart';
-
 // Project imports:
 import 'primitive_types.dart';
 
@@ -27,26 +24,23 @@ class FhirDateTime extends FhirDateTimeBase {
     required super.isUtc,
   });
 
-  factory FhirDateTime(dynamic json, [DateTimePrecision? precision]) =>
+  factory FhirDateTime._(dynamic json, [DateTimePrecision? precision]) =>
       FhirDateTimeBase.constructor<FhirDateTime>(json, precision)
           as FhirDateTime;
 
   factory FhirDateTime.fromDateTime(DateTime dateTime,
           [DateTimePrecision? precision]) =>
-      FhirDateTime(dateTime, precision);
+      FhirDateTime._(dateTime, precision);
 
   factory FhirDateTime.fromString(String inValue,
           [DateTimePrecision? precision]) =>
-      FhirDateTime(inValue, precision);
+      FhirDateTime._(inValue, precision);
 
-  factory FhirDateTime.fromJson(dynamic json, [DateTimePrecision? precision]) =>
-      FhirDateTime(json, precision);
+  factory FhirDateTime.fromJson(String json, [DateTimePrecision? precision]) =>
+      FhirDateTime._(json, precision);
 
-  factory FhirDateTime.fromYaml(dynamic yaml, [DateTimePrecision? precision]) =>
-      yaml is String || yaml is YamlMap
-          ? FhirDateTime(jsonDecode(jsonEncode(yaml)), precision)
-          : throw YamlFormatException<FhirDateTime>(
-              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
+  factory FhirDateTime.fromYaml(String yaml, [DateTimePrecision? precision]) =>
+      FhirDateTime._(jsonDecode(jsonEncode(yaml)), precision);
 
   factory FhirDateTime.fromUnits({
     required int year,

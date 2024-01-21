@@ -168,7 +168,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     dynamic inValue, [
     DateTimePrecision? precision,
   ]) {
-    print(inValue);
+    // print(inValue);
     String? input;
     String? exception;
     Map<String, int?>? dateTimeMap;
@@ -179,8 +179,10 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       input = inValue.toIso8601String();
       if (inValue.isUtc) {
         input += 'Z';
-      } else {
+      } else if (inValue.timeZoneOffset.inHours != 0) {
         input += timeZoneOffsetToString(inValue.timeZoneOffset.inHours);
+      } else {
+        precision ??= DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS;
       }
     } else if (inValue is FhirDateTimeBase) {
       return constructor<T>(inValue.input, precision);
@@ -193,6 +195,8 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     if (input != null) {
       dateTimeMap = formatDateTimeString(input);
     }
+    print('input: $input');
+    print(dateTimeMap);
     if (dateTimeMap != null) {
       if (precision == null) {
         precision ??= precisionFromMap(dateTimeMap);
@@ -201,8 +205,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       }
     }
 
-    print(dateTimeMap);
-
+    print('precision: $precision');
     return _constructor<T>(
         dateTimeMap, precision, exception, output ?? inValue);
   }
