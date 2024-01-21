@@ -64,7 +64,7 @@ class FhirDateTime extends FhirDateTimeBase {
         millisecond: millisecond,
         microsecond: microsecond,
         timeZoneOffset: timeZoneOffset,
-        isUtc: isUtc ?? timeZoneOffset != null,
+        isUtc: isUtc ?? false,
       ) as FhirDateTime;
 
   FhirDateTime add(Duration other) =>

@@ -359,6 +359,7 @@ extension DateTimePrecisionExtension on DateTimePrecision {
 
   String dateTimeMapToString<T>(Map<String, int?> map) {
     print('dateTimeMapToString: $map');
+    print('precision: $this');
     final DateTime dateTime = DateTime(
         map['year'] ?? 0,
         map['month'] ?? 1,
@@ -676,6 +677,9 @@ Map<String, int?> formatDateTimeString<T>(String dateTimeString) {
   print('formatDateTimeString: $dateTimeString');
   final RegExpMatch? dateTimeRegExp = dateTimeExp.firstMatch(dateTimeString);
   final String? fractionString = dateTimeRegExp?.namedGroup('fraction');
+  dateTimeRegExp?.groupNames.toList().forEach((String element) {
+    print(dateTimeRegExp.namedGroup(element));
+  });
   // print('groupNames: ${dateTimeRegExp?.groupNames}');
   return <String, int?>{
     'year': int.tryParse(dateTimeRegExp?.namedGroup('year') ?? ''),
@@ -699,8 +703,9 @@ Map<String, int?> formatDateTimeString<T>(String dateTimeString) {
             : null,
     'timeZoneOffset':
         stringToTimeZoneOffset(dateTimeRegExp?.namedGroup('timezone')),
-    'isUtc':
-        (dateTimeRegExp?.namedGroup('hour')?.contains('Z') ?? false) ? 0 : 1,
+    'isUtc': (dateTimeRegExp?.namedGroup('timezone')?.contains('Z') ?? false)
+        ? 0
+        : 1,
   };
 }
 

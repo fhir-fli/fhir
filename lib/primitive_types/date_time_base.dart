@@ -197,9 +197,10 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     }
     print('input: $input');
     print(dateTimeMap);
+    print('precision1: $precision');
     if (dateTimeMap != null) {
       if (precision == null) {
-        precision ??= precisionFromMap(dateTimeMap);
+        precision = precisionFromMap(dateTimeMap);
       } else {
         output = precision.dateTimeMapToString(dateTimeMap);
       }
