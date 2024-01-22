@@ -28,6 +28,10 @@ class FhirDateTime extends FhirDateTimeBase {
       FhirDateTimeBase.constructor<FhirDateTime>(json, precision)
           as FhirDateTime;
 
+  factory FhirDateTime.fromFhirDateTimeBase(FhirDateTimeBase dateTime,
+          [DateTimePrecision? precision]) =>
+      FhirDateTime._(dateTime, precision);
+
   factory FhirDateTime.fromDateTime(DateTime dateTime,
           [DateTimePrecision? precision]) =>
       FhirDateTime._(dateTime, precision);

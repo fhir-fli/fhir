@@ -329,7 +329,6 @@ extension DateTimePrecisionExtension on DateTimePrecision {
   }
 
   DateTime dateTimeFromMap(Map<String, int?> map) {
-    print('dateTimeFromMap: $map');
     final DateTime dateTime = DateTime(
       map['year'] ?? 0,
       hasMonth ? map['month'] ?? 0 : 1,
@@ -667,7 +666,7 @@ final RegExp dateExp = RegExp(
 
 /// [DateTime](https://build.fhir.org/datatypes.html#dateTime)
 final RegExp dateTimeExp = RegExp(
-    r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(?<month>0[1-9]|1[0-2])(-(?<day>0[1-9]|[1-2][0-9]|3[0-1])(T(?<hour>[01][0-9]|2[0-3]):(?<minute>[0-5][0-9]):(?<second>[0-5][0-9]|60)(\.(?<fraction>[0-9]{1,9}))?)?)?(?<timezone>Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)?)?)?');
+    r'(?<year>[0-9]{4})(-(?<month>0[1-9]|1[0-2])(-(?<day>0[1-9]|[1-2][0-9]|3[0-1])(T((?<hour>[01][0-9]|2[0-3])(:(?<minute>[0-5][0-9])(:(?<second>[0-5][0-9]|60)(\.(?<fraction>[0-9]+))?)?)?)?(?<timezone>Z|(\+|-)([0-1][0-9]|2[0-3])(:[0-5][0-9])?)?)?)?)?');
 
 /// [Instant](https://build.fhir.org/datatypes.html#instant)
 final RegExp instantExp = RegExp(
@@ -677,10 +676,6 @@ Map<String, int?> formatDateTimeString<T>(String dateTimeString) {
   print('formatDateTimeString: $dateTimeString');
   final RegExpMatch? dateTimeRegExp = dateTimeExp.firstMatch(dateTimeString);
   final String? fractionString = dateTimeRegExp?.namedGroup('fraction');
-  dateTimeRegExp?.groupNames.toList().forEach((String element) {
-    print(dateTimeRegExp.namedGroup(element));
-  });
-  // print('groupNames: ${dateTimeRegExp?.groupNames}');
   return <String, int?>{
     'year': int.tryParse(dateTimeRegExp?.namedGroup('year') ?? ''),
     'month': int.tryParse(dateTimeRegExp?.namedGroup('month') ?? ''),
@@ -722,7 +717,9 @@ DateTimePrecision precisionFromMap(Map<String, int?> map) {
         : DateTimePrecision.yyyy_MM_dd_T_Z;
   } else if (map['minute'] == null) {
     return map['isUtc'] == 1
-        ? DateTimePrecision.yyyy_MM_dd_T_HH
+        ? map['timeZoneOffset'] == null
+            ? DateTimePrecision.yyyy_MM_dd_T_HH
+            : DateTimePrecision.yyyy_MM_dd_T_HHZZ
         : DateTimePrecision.yyyy_MM_dd_T_HH_Z;
   } else if (map['second'] == null) {
     return map['isUtc'] == 1
