@@ -67,7 +67,9 @@ _$CapabilityStatementImpl _$$CapabilityStatementImplFromJson(
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -398,7 +400,7 @@ _$CapabilityStatementSoftwareImpl _$$CapabilityStatementSoftwareImplFromJson(
           : Element.fromJson(json['_version'] as Map<String, dynamic>),
       releaseDate: json['releaseDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['releaseDate']),
+          : FhirDateTime.fromJson(json['releaseDate'] as String),
       releaseDateElement: json['_releaseDate'] == null
           ? null
           : Element.fromJson(json['_releaseDate'] as Map<String, dynamic>),
@@ -1193,7 +1195,9 @@ _$CompartmentDefinitionImpl _$$CompartmentDefinitionImplFromJson(
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1402,7 +1406,9 @@ _$ExampleScenarioImpl _$$ExampleScenarioImplFromJson(
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2031,7 +2037,9 @@ _$GraphDefinitionImpl _$$GraphDefinitionImplFromJson(
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2369,7 +2377,9 @@ _$ImplementationGuideImpl _$$ImplementationGuideImplFromJson(
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -3149,7 +3159,9 @@ _$MessageDefinitionImpl _$$MessageDefinitionImplFromJson(
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -3449,7 +3461,9 @@ _$OperationDefinitionImpl _$$OperationDefinitionImplFromJson(
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -3891,7 +3905,9 @@ _$SearchParameterImpl _$$SearchParameterImplFromJson(
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -4175,7 +4191,9 @@ _$StructureDefinitionImpl _$$StructureDefinitionImplFromJson(
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -4575,7 +4593,9 @@ _$StructureMapImpl _$$StructureMapImplFromJson(Map<String, dynamic> json) =>
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -4966,13 +4986,13 @@ _$StructureMapSourceImpl _$$StructureMapSourceImplFromJson(
           : Element.fromJson(json['_defaultValueCode'] as Map<String, dynamic>),
       defaultValueDate: json['defaultValueDate'] == null
           ? null
-          : FhirDate.fromJson(json['defaultValueDate']),
+          : FhirDate.fromJson(json['defaultValueDate'] as String),
       defaultValueDateElement: json['_defaultValueDate'] == null
           ? null
           : Element.fromJson(json['_defaultValueDate'] as Map<String, dynamic>),
       defaultValueDateTime: json['defaultValueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['defaultValueDateTime']),
+          : FhirDateTime.fromJson(json['defaultValueDateTime'] as String),
       defaultValueDateTimeElement: json['_defaultValueDateTime'] == null
           ? null
           : Element.fromJson(
@@ -4992,7 +5012,7 @@ _$StructureMapSourceImpl _$$StructureMapSourceImplFromJson(
           : Element.fromJson(json['_defaultValueId'] as Map<String, dynamic>),
       defaultValueInstant: json['defaultValueInstant'] == null
           ? null
-          : FhirInstant.fromJson(json['defaultValueInstant']),
+          : FhirInstant.fromJson(json['defaultValueInstant'] as String),
       defaultValueInstantElement: json['_defaultValueInstant'] == null
           ? null
           : Element.fromJson(

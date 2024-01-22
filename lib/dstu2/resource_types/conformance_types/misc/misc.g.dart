@@ -76,7 +76,9 @@ _$ImplementationGuideImpl _$$ImplementationGuideImplFromJson(
         ?.map((e) =>
             ImplementationGuideContact.fromJson(e as Map<String, dynamic>))
         .toList(),
-    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -634,7 +636,9 @@ _$TestScriptImpl _$$TestScriptImplFromJson(Map<String, dynamic> json) =>
       contact: (json['contact'] as List<dynamic>?)
           ?.map((e) => TestScriptContact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),

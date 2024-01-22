@@ -55,7 +55,9 @@ _$CompositionImpl _$$CompositionImplFromJson(Map<String, dynamic> json) =>
       encounter: json['encounter'] == null
           ? null
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDate.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),

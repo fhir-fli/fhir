@@ -288,7 +288,7 @@ _$MedicationProductBatchImpl _$$MedicationProductBatchImplFromJson(
           : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
       expirationDate: json['expirationDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['expirationDate']),
+          : FhirDateTime.fromJson(json['expirationDate'] as String),
       expirationDateElement: json['_expirationDate'] == null
           ? null
           : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
@@ -435,7 +435,7 @@ _$MedicationOrderImpl _$$MedicationOrderImplFromJson(
           .toList(),
       dateWritten: json['dateWritten'] == null
           ? null
-          : FhirDateTime.fromJson(json['dateWritten']),
+          : FhirDateTime.fromJson(json['dateWritten'] as String),
       status: $enumDecodeNullable(
           _$MedicationOrderStatusEnumMap, json['status'],
           unknownValue: MedicationOrderStatus.unknown),
@@ -444,7 +444,7 @@ _$MedicationOrderImpl _$$MedicationOrderImplFromJson(
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       dateEnded: json['dateEnded'] == null
           ? null
-          : FhirDateTime.fromJson(json['dateEnded']),
+          : FhirDateTime.fromJson(json['dateEnded'] as String),
       reasonEnded: json['reasonEnded'] == null
           ? null
           : CodeableConcept.fromJson(
@@ -809,7 +809,7 @@ _$MedicationAdministrationImpl _$$MedicationAdministrationImplFromJson(
         .toList(),
     effectiveTimeDateTime: json['effectiveTimeDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['effectiveTimeDateTime']),
+        : FhirDateTime.fromJson(json['effectiveTimeDateTime'] as String),
     effectiveDateTimeElement: json['_effectiveDateTime'] == null
         ? null
         : Element.fromJson(json['_effectiveDateTime'] as Map<String, dynamic>),
@@ -1036,13 +1036,13 @@ _$MedicationDispenseImpl _$$MedicationDispenseImplFromJson(
               json['medicationReference'] as Map<String, dynamic>),
       whenPrepared: json['whenPrepared'] == null
           ? null
-          : FhirDateTime.fromJson(json['whenPrepared']),
+          : FhirDateTime.fromJson(json['whenPrepared'] as String),
       whenPreparedElement: json['_whenPrepared'] == null
           ? null
           : Element.fromJson(json['_whenPrepared'] as Map<String, dynamic>),
       whenHandedOver: json['whenHandedOver'] == null
           ? null
-          : FhirDateTime.fromJson(json['whenHandedOver']),
+          : FhirDateTime.fromJson(json['whenHandedOver'] as String),
       whenHandedOverElement: json['_whenHandedOver'] == null
           ? null
           : Element.fromJson(json['_whenHandedOver'] as Map<String, dynamic>),
@@ -1305,7 +1305,7 @@ _$MedicationStatementImpl _$$MedicationStatementImplFromJson(
         : Reference.fromJson(json['informationSource'] as Map<String, dynamic>),
     dateAsserted: json['dateAsserted'] == null
         ? null
-        : FhirDateTime.fromJson(json['dateAsserted']),
+        : FhirDateTime.fromJson(json['dateAsserted'] as String),
     dateAssertedElement: json['_dateAsserted'] == null
         ? null
         : Element.fromJson(json['_dateAsserted'] as Map<String, dynamic>),
@@ -1330,7 +1330,7 @@ _$MedicationStatementImpl _$$MedicationStatementImplFromJson(
             json['reasonForUseReference'] as Map<String, dynamic>),
     effectiveDateTime: json['effectiveDateTime'] == null
         ? null
-        : FhirDateTime.fromJson(json['effectiveDateTime']),
+        : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
     effectiveDateTimeElement: json['_effectiveDateTime'] == null
         ? null
         : Element.fromJson(json['_effectiveDateTime'] as Map<String, dynamic>),
@@ -1543,7 +1543,9 @@ _$ImmunizationImpl _$$ImmunizationImplFromJson(Map<String, dynamic> json) =>
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       vaccineCode:
           CodeableConcept.fromJson(json['vaccineCode'] as Map<String, dynamic>),
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
@@ -1570,7 +1572,7 @@ _$ImmunizationImpl _$$ImmunizationImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
       expirationDate: json['expirationDate'] == null
           ? null
-          : FhirDate.fromJson(json['expirationDate']),
+          : FhirDate.fromJson(json['expirationDate'] as String),
       expirationDateElement: json['_expirationDate'] == null
           ? null
           : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
@@ -1710,7 +1712,9 @@ _$ImmunizationReactionImpl _$$ImmunizationReactionImplFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1903,7 +1907,7 @@ _$ImmunizationRecommendationRecommendationImpl
           modifierExtension: (json['modifierExtension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
-          date: FhirDateTime.fromJson(json['date']),
+          date: FhirDateTime.fromJson(json['date'] as String),
           vaccineCode: CodeableConcept.fromJson(
               json['vaccineCode'] as Map<String, dynamic>),
           doseNumber: json['doseNumber'] == null
@@ -1972,7 +1976,7 @@ _$ImmunizationRecommendationRecommendationDateCriterionImpl
               : FhirExtension.fromJson(
                   json['modifier'] as Map<String, dynamic>),
           code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-          value: FhirDateTime.fromJson(json['value']),
+          value: FhirDateTime.fromJson(json['value'] as String),
           valueElement: json['_value'] == null
               ? null
               : Element.fromJson(json['_value'] as Map<String, dynamic>),

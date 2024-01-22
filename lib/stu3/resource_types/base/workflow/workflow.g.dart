@@ -989,7 +989,7 @@ _$RequestGroupActionImpl _$$RequestGroupActionImplFromJson(
           .toList(),
       timingDateTime: json['timingDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['timingDateTime']),
+          : FhirDateTime.fromJson(json['timingDateTime'] as String),
       timingDateTimeElement: json['_timingDateTime'] == null
           ? null
           : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
@@ -1719,13 +1719,13 @@ _$TaskInputImpl _$$TaskInputImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
       valueDate: json['valueDate'] == null
           ? null
-          : FhirDate.fromJson(json['valueDate']),
+          : FhirDate.fromJson(json['valueDate'] as String),
       valueDateElement: json['_valueDate'] == null
           ? null
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['valueDateTime']),
+          : FhirDateTime.fromJson(json['valueDateTime'] as String),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -2028,13 +2028,13 @@ _$TaskOutputImpl _$$TaskOutputImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
       valueDate: json['valueDate'] == null
           ? null
-          : FhirDate.fromJson(json['valueDate']),
+          : FhirDate.fromJson(json['valueDate'] as String),
       valueDateElement: json['_valueDate'] == null
           ? null
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['valueDateTime']),
+          : FhirDateTime.fromJson(json['valueDateTime'] as String),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),

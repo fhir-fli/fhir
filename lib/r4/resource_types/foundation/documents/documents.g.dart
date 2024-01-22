@@ -69,13 +69,13 @@ _$CatalogEntryImpl _$$CatalogEntryImplFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['validityPeriod'] as Map<String, dynamic>),
       validTo: json['validTo'] == null
           ? null
-          : FhirDateTime.fromJson(json['validTo']),
+          : FhirDateTime.fromJson(json['validTo'] as String),
       validToElement: json['_validTo'] == null
           ? null
           : Element.fromJson(json['_validTo'] as Map<String, dynamic>),
       lastUpdated: json['lastUpdated'] == null
           ? null
-          : FhirDateTime.fromJson(json['lastUpdated']),
+          : FhirDateTime.fromJson(json['lastUpdated'] as String),
       lastUpdatedElement: json['_lastUpdated'] == null
           ? null
           : Element.fromJson(json['_lastUpdated'] as Map<String, dynamic>),
@@ -379,7 +379,9 @@ _$CompositionImpl _$$CompositionImplFromJson(Map<String, dynamic> json) =>
       encounter: json['encounter'] == null
           ? null
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -474,7 +476,9 @@ _$CompositionAttesterImpl _$$CompositionAttesterImplFromJson(
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
-      time: json['time'] == null ? null : FhirDateTime.fromJson(json['time']),
+      time: json['time'] == null
+          ? null
+          : FhirDateTime.fromJson(json['time'] as String),
       timeElement: json['_time'] == null
           ? null
           : Element.fromJson(json['_time'] as Map<String, dynamic>),
@@ -722,7 +726,7 @@ _$DocumentManifestImpl _$$DocumentManifestImplFromJson(
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -894,7 +898,9 @@ _$DocumentReferenceImpl _$$DocumentReferenceImplFromJson(
       subject: json['subject'] == null
           ? null
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirInstant.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirInstant.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),

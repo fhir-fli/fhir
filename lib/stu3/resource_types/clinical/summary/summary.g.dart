@@ -54,7 +54,9 @@ _$AdverseEventImpl _$$AdverseEventImplFromJson(Map<String, dynamic> json) =>
       subject: json['subject'] == null
           ? null
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDate.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -409,7 +411,7 @@ _$AllergyIntoleranceImpl _$$AllergyIntoleranceImplFromJson(
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
       onsetDateTime: json['onsetDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['onsetDateTime']),
+          : FhirDateTime.fromJson(json['onsetDateTime'] as String),
       onsetDateTimeElement: json['_onsetDateTime'] == null
           ? null
           : Element.fromJson(json['_onsetDateTime'] as Map<String, dynamic>),
@@ -428,7 +430,7 @@ _$AllergyIntoleranceImpl _$$AllergyIntoleranceImplFromJson(
           : Element.fromJson(json['_onsetString'] as Map<String, dynamic>),
       assertedDate: json['assertedDate'] == null
           ? null
-          : FhirDate.fromJson(json['assertedDate']),
+          : FhirDate.fromJson(json['assertedDate'] as String),
       assertedDateElement: json['_assertedDate'] == null
           ? null
           : Element.fromJson(json['_assertedDate'] as Map<String, dynamic>),
@@ -673,7 +675,7 @@ _$ClinicalImpressionImpl _$$ClinicalImpressionImplFromJson(
           : Reference.fromJson(json['context'] as Map<String, dynamic>),
       effectiveDateTime: json['effectiveDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['effectiveDateTime']),
+          : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
       effectiveDateTimeElement: json['_effectiveDateTime'] == null
           ? null
           : Element.fromJson(
@@ -681,7 +683,9 @@ _$ClinicalImpressionImpl _$$ClinicalImpressionImplFromJson(
       effectivePeriod: json['effectivePeriod'] == null
           ? null
           : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDate.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -918,7 +922,7 @@ _$ConditionImpl _$$ConditionImplFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['context'] as Map<String, dynamic>),
       onsetDateTime: json['onsetDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['onsetDateTime']),
+          : FhirDateTime.fromJson(json['onsetDateTime'] as String),
       onsetDateTimeElement: json['_onsetDateTime'] == null
           ? null
           : Element.fromJson(json['_onsetDateTime'] as Map<String, dynamic>),
@@ -937,7 +941,7 @@ _$ConditionImpl _$$ConditionImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_onsetString'] as Map<String, dynamic>),
       abatementDateTime: json['abatementDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['abatementDateTime']),
+          : FhirDateTime.fromJson(json['abatementDateTime'] as String),
       abatementDateTimeElement: json['_abatementDateTime'] == null
           ? null
           : Element.fromJson(
@@ -963,7 +967,7 @@ _$ConditionImpl _$$ConditionImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_abatementString'] as Map<String, dynamic>),
       assertedDate: json['assertedDate'] == null
           ? null
-          : FhirDate.fromJson(json['assertedDate']),
+          : FhirDate.fromJson(json['assertedDate'] as String),
       assertedDateElement: json['_assertedDate'] == null
           ? null
           : Element.fromJson(json['_assertedDate'] as Map<String, dynamic>),
@@ -1158,7 +1162,9 @@ _$DetectedIssueImpl _$$DetectedIssueImplFromJson(Map<String, dynamic> json) =>
       patient: json['patient'] == null
           ? null
           : Reference.fromJson(json['patient'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDate.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1238,7 +1244,9 @@ _$DetectedIssueMitigationImpl _$$DetectedIssueMitigationImplFromJson(
         Map<String, dynamic> json) =>
     _$DetectedIssueMitigationImpl(
       action: CodeableConcept.fromJson(json['action'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDate.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1322,7 +1330,9 @@ _$FamilyMemberHistoryImpl _$$FamilyMemberHistoryImplFromJson(
           : CodeableConcept.fromJson(
               json['notDoneReason'] as Map<String, dynamic>),
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDate.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1340,8 +1350,9 @@ _$FamilyMemberHistoryImpl _$$FamilyMemberHistoryImplFromJson(
       bornPeriod: json['bornPeriod'] == null
           ? null
           : Period.fromJson(json['bornPeriod'] as Map<String, dynamic>),
-      bornDate:
-          json['bornDate'] == null ? null : FhirDate.fromJson(json['bornDate']),
+      bornDate: json['bornDate'] == null
+          ? null
+          : FhirDate.fromJson(json['bornDate'] as String),
       bornDateElement: json['_bornDate'] == null
           ? null
           : Element.fromJson(json['_bornDate'] as Map<String, dynamic>),
@@ -1379,7 +1390,7 @@ _$FamilyMemberHistoryImpl _$$FamilyMemberHistoryImplFromJson(
           : Range.fromJson(json['deceasedRange'] as Map<String, dynamic>),
       deceasedDate: json['deceasedDate'] == null
           ? null
-          : FhirDate.fromJson(json['deceasedDate']),
+          : FhirDate.fromJson(json['deceasedDate'] as String),
       deceasedDateElement: json['_deceasedDate'] == null
           ? null
           : Element.fromJson(json['_deceasedDate'] as Map<String, dynamic>),
@@ -1607,7 +1618,7 @@ _$ProcedureImpl _$$ProcedureImplFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['context'] as Map<String, dynamic>),
       performedDateTime: json['performedDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['performedDateTime']),
+          : FhirDateTime.fromJson(json['performedDateTime'] as String),
       performedDateTimeElement: json['_performedDateTime'] == null
           ? null
           : Element.fromJson(

@@ -766,7 +766,7 @@ _$MediaImpl _$$MediaImplFromJson(Map<String, dynamic> json) => _$MediaImpl(
           : Reference.fromJson(json['context'] as Map<String, dynamic>),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurrenceDateTime']),
+          : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -1395,13 +1395,13 @@ _$ParametersParameterImpl _$$ParametersParameterImplFromJson(
           : Element.fromJson(json['_valueUri'] as Map<String, dynamic>),
       valueDate: json['valueDate'] == null
           ? null
-          : FhirDate.fromJson(json['valueDate']),
+          : FhirDate.fromJson(json['valueDate'] as String),
       valueDateElement: json['_valueDate'] == null
           ? null
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['valueDateTime']),
+          : FhirDateTime.fromJson(json['valueDateTime'] as String),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),

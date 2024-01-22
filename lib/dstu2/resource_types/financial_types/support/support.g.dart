@@ -276,7 +276,7 @@ _$EligibilityRequestImpl _$$EligibilityRequestImplFromJson(
           : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -387,7 +387,7 @@ _$EligibilityResponseImpl _$$EligibilityResponseImplFromJson(
           : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -498,7 +498,7 @@ _$EnrollmentRequestImpl _$$EnrollmentRequestImplFromJson(
           : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -616,7 +616,7 @@ _$EnrollmentResponseImpl _$$EnrollmentResponseImplFromJson(
           : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),

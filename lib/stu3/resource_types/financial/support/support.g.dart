@@ -407,7 +407,7 @@ _$EligibilityRequestImpl _$$EligibilityRequestImplFromJson(
           : Reference.fromJson(json['patient'] as Map<String, dynamic>),
       servicedDate: json['servicedDate'] == null
           ? null
-          : FhirDate.fromJson(json['servicedDate']),
+          : FhirDate.fromJson(json['servicedDate'] as String),
       servicedDateElement: json['_servicedDate'] == null
           ? null
           : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),

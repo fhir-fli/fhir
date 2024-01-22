@@ -19,7 +19,9 @@ _$AnnotationImpl _$$AnnotationImplFromJson(Map<String, dynamic> json) =>
       authorStringElement: json['_authorString'] == null
           ? null
           : Element.fromJson(json['_authorString'] as Map<String, dynamic>),
-      time: json['time'] == null ? null : FhirDateTime.fromJson(json['time']),
+      time: json['time'] == null
+          ? null
+          : FhirDateTime.fromJson(json['time'] as String),
       timeElement: json['_time'] == null
           ? null
           : Element.fromJson(json['_time'] as Map<String, dynamic>),
@@ -92,7 +94,7 @@ _$AttachmentImpl _$$AttachmentImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
       creation: json['creation'] == null
           ? null
-          : FhirDateTime.fromJson(json['creation']),
+          : FhirDateTime.fromJson(json['creation'] as String),
       creationElement: json['_creation'] == null
           ? null
           : Element.fromJson(json['_creation'] as Map<String, dynamic>),
@@ -697,12 +699,15 @@ _$PeriodImpl _$$PeriodImplFromJson(Map<String, dynamic> json) => _$PeriodImpl(
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      start:
-          json['start'] == null ? null : FhirDateTime.fromJson(json['start']),
+      start: json['start'] == null
+          ? null
+          : FhirDateTime.fromJson(json['start'] as String),
       startElement: json['_start'] == null
           ? null
           : Element.fromJson(json['_start'] as Map<String, dynamic>),
-      end: json['end'] == null ? null : FhirDateTime.fromJson(json['end']),
+      end: json['end'] == null
+          ? null
+          : FhirDateTime.fromJson(json['end'] as String),
       endElement: json['_end'] == null
           ? null
           : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -889,7 +894,9 @@ _$SignatureImpl _$$SignatureImplFromJson(Map<String, dynamic> json) =>
       type: (json['type'] as List<dynamic>?)
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
-      when: json['when'] == null ? null : FhirInstant.fromJson(json['when']),
+      when: json['when'] == null
+          ? null
+          : FhirInstant.fromJson(json['when'] as String),
       whenElement: json['_when'] == null
           ? null
           : Element.fromJson(json['_when'] as Map<String, dynamic>),
@@ -1197,7 +1204,7 @@ _$TimingImpl _$$TimingImplFromJson(Map<String, dynamic> json) => _$TimingImpl(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       event: (json['event'] as List<dynamic>?)
-          ?.map(FhirDateTime.fromJson)
+          ?.map((e) => FhirDateTime.fromJson(e as String))
           .toList(),
       eventElement: (json['_event'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))

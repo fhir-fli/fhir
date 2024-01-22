@@ -286,7 +286,7 @@ _$DataRequirementDateFilterImpl _$$DataRequirementDateFilterImplFromJson(
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['valueDateTime']),
+          : FhirDateTime.fromJson(json['valueDateTime'] as String),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -396,13 +396,13 @@ _$TriggerDefinitionImpl _$$TriggerDefinitionImplFromJson(
               json['eventTimingReference'] as Map<String, dynamic>),
       eventTimingDate: json['eventTimingDate'] == null
           ? null
-          : FhirDate.fromJson(json['eventTimingDate']),
+          : FhirDate.fromJson(json['eventTimingDate'] as String),
       eventTimingDateElement: json['_eventTimingDate'] == null
           ? null
           : Element.fromJson(json['_eventTimingDate'] as Map<String, dynamic>),
       eventTimingDateTime: json['eventTimingDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['eventTimingDateTime']),
+          : FhirDateTime.fromJson(json['eventTimingDateTime'] as String),
       eventTimingDateTimeElement: json['_eventTimingDateTime'] == null
           ? null
           : Element.fromJson(

@@ -48,7 +48,7 @@ _$BasicImpl _$$BasicImplFromJson(Map<String, dynamic> json) => _$BasicImpl(
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -377,7 +377,7 @@ _$BundleImpl _$$BundleImplFromJson(Map<String, dynamic> json) => _$BundleImpl(
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
       timestamp: json['timestamp'] == null
           ? null
-          : FhirInstant.fromJson(json['timestamp']),
+          : FhirInstant.fromJson(json['timestamp'] as String),
       timestampElement: json['_timestamp'] == null
           ? null
           : Element.fromJson(json['_timestamp'] as Map<String, dynamic>),
@@ -598,7 +598,7 @@ _$BundleRequestImpl _$$BundleRequestImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_ifNoneMatch'] as Map<String, dynamic>),
       ifModifiedSince: json['ifModifiedSince'] == null
           ? null
-          : FhirInstant.fromJson(json['ifModifiedSince']),
+          : FhirInstant.fromJson(json['ifModifiedSince'] as String),
       ifModifiedSinceElement: json['_ifModifiedSince'] == null
           ? null
           : Element.fromJson(json['_ifModifiedSince'] as Map<String, dynamic>),
@@ -665,7 +665,7 @@ _$BundleResponseImpl _$$BundleResponseImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_etag'] as Map<String, dynamic>),
       lastModified: json['lastModified'] == null
           ? null
-          : FhirInstant.fromJson(json['lastModified']),
+          : FhirInstant.fromJson(json['lastModified'] as String),
       lastModifiedElement: json['_lastModified'] == null
           ? null
           : Element.fromJson(json['_lastModified'] as Map<String, dynamic>),
@@ -1342,13 +1342,13 @@ _$ParametersParameterImpl _$$ParametersParameterImplFromJson(
           : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
       valueDate: json['valueDate'] == null
           ? null
-          : FhirDate.fromJson(json['valueDate']),
+          : FhirDate.fromJson(json['valueDate'] as String),
       valueDateElement: json['_valueDate'] == null
           ? null
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['valueDateTime']),
+          : FhirDateTime.fromJson(json['valueDateTime'] as String),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -1365,7 +1365,7 @@ _$ParametersParameterImpl _$$ParametersParameterImplFromJson(
           : Element.fromJson(json['_valueId'] as Map<String, dynamic>),
       valueInstant: json['valueInstant'] == null
           ? null
-          : FhirInstant.fromJson(json['valueInstant']),
+          : FhirInstant.fromJson(json['valueInstant'] as String),
       valueInstantElement: json['_valueInstant'] == null
           ? null
           : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),
@@ -1707,7 +1707,9 @@ _$SubscriptionImpl _$$SubscriptionImplFromJson(Map<String, dynamic> json) =>
       contact: (json['contact'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      end: json['end'] == null ? null : FhirInstant.fromJson(json['end']),
+      end: json['end'] == null
+          ? null
+          : FhirInstant.fromJson(json['end'] as String),
       endElement: json['_end'] == null
           ? null
           : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -2049,7 +2051,7 @@ _$SubscriptionStatusNotificationEventImpl
               : Element.fromJson(json['_eventNumber'] as Map<String, dynamic>),
           timestamp: json['timestamp'] == null
               ? null
-              : FhirInstant.fromJson(json['timestamp']),
+              : FhirInstant.fromJson(json['timestamp'] as String),
           timestampElement: json['_timestamp'] == null
               ? null
               : Element.fromJson(json['_timestamp'] as Map<String, dynamic>),
@@ -2159,7 +2161,9 @@ _$SubscriptionTopicImpl _$$SubscriptionTopicImplFromJson(
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2203,13 +2207,13 @@ _$SubscriptionTopicImpl _$$SubscriptionTopicImplFromJson(
           .toList(),
       approvalDate: json['approvalDate'] == null
           ? null
-          : FhirDate.fromJson(json['approvalDate']),
+          : FhirDate.fromJson(json['approvalDate'] as String),
       approvalDateElement: json['_approvalDate'] == null
           ? null
           : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
       lastReviewDate: json['lastReviewDate'] == null
           ? null
-          : FhirDate.fromJson(json['lastReviewDate']),
+          : FhirDate.fromJson(json['lastReviewDate'] as String),
       lastReviewDateElement: json['_lastReviewDate'] == null
           ? null
           : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),

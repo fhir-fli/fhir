@@ -43,13 +43,13 @@ _$FhirExtensionImpl _$$FhirExtensionImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_valueCode'] as Map<String, dynamic>),
       valueDate: json['valueDate'] == null
           ? null
-          : FhirDate.fromJson(json['valueDate']),
+          : FhirDate.fromJson(json['valueDate'] as String),
       valueDateElement: json['_valueDate'] == null
           ? null
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['valueDateTime']),
+          : FhirDateTime.fromJson(json['valueDateTime'] as String),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -66,7 +66,7 @@ _$FhirExtensionImpl _$$FhirExtensionImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_valueId'] as Map<String, dynamic>),
       valueInstant: json['valueInstant'] == null
           ? null
-          : FhirInstant.fromJson(json['valueInstant']),
+          : FhirInstant.fromJson(json['valueInstant'] as String),
       valueInstantElement: json['_valueInstant'] == null
           ? null
           : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),

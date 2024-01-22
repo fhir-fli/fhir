@@ -43,7 +43,7 @@ _$CompositionImpl _$$CompositionImplFromJson(Map<String, dynamic> json) =>
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      date: FhirDateTime.fromJson(json['date']),
+      date: FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -254,7 +254,9 @@ _$CompositionAttesterImpl _$$CompositionAttesterImplFromJson(
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
-      time: json['time'] == null ? null : FhirDateTime.fromJson(json['time']),
+      time: json['time'] == null
+          ? null
+          : FhirDateTime.fromJson(json['time'] as String),
       timeElement: json['_time'] == null
           ? null
           : Element.fromJson(json['_time'] as Map<String, dynamic>),
@@ -471,7 +473,7 @@ _$DocumentManifestImpl _$$DocumentManifestImplFromJson(
           .toList(),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -687,8 +689,8 @@ _$DocumentReferenceImpl _$$DocumentReferenceImplFromJson(
           : Reference.fromJson(json['authenticator'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
-      indexed: FhirInstant.fromJson(json['indexed']),
+          : FhirDateTime.fromJson(json['created'] as String),
+      indexed: FhirInstant.fromJson(json['indexed'] as String),
       status: $enumDecode(_$DocumentReferenceStatusEnumMap, json['status'],
           unknownValue: DocumentReferenceStatus.unknown),
       statusElement: json['_status'] == null
@@ -1021,7 +1023,9 @@ _$FhirListImpl _$$FhirListImplFromJson(Map<String, dynamic> json) =>
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1123,7 +1127,9 @@ _$FhirListEntryImpl _$$FhirListEntryImplFromJson(Map<String, dynamic> json) =>
       deletedElement: json['_deleted'] == null
           ? null
           : Element.fromJson(json['_deleted'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),

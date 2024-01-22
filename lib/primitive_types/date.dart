@@ -34,7 +34,7 @@ class FhirDate extends FhirDateTimeBase {
   factory FhirDate.fromString(String inValue, [DateTimePrecision? precision]) =>
       FhirDate._(inValue, precision);
 
-  factory FhirDate.fromJson(String json, [DateTimePrecision? precision]) =>
+  factory FhirDate.fromJson(String json, {DateTimePrecision? precision}) =>
       FhirDate._(json, precision);
 
   factory FhirDate.fromYaml(String yaml, [DateTimePrecision? precision]) =>

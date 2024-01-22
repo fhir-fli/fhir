@@ -65,7 +65,7 @@ _$ExplanationOfBenefitImpl _$$ExplanationOfBenefitImplFromJson(
           : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),

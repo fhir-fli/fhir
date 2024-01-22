@@ -788,13 +788,15 @@ _$CommunicationImpl _$$CommunicationImplFromJson(Map<String, dynamic> json) =>
       encounter: json['encounter'] == null
           ? null
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      sent: json['sent'] == null ? null : FhirDateTime.fromJson(json['sent']),
+      sent: json['sent'] == null
+          ? null
+          : FhirDateTime.fromJson(json['sent'] as String),
       sentElement: json['_sent'] == null
           ? null
           : Element.fromJson(json['_sent'] as Map<String, dynamic>),
       received: json['received'] == null
           ? null
-          : FhirDateTime.fromJson(json['received']),
+          : FhirDateTime.fromJson(json['received'] as String),
       receivedElement: json['_received'] == null
           ? null
           : Element.fromJson(json['_received'] as Map<String, dynamic>),

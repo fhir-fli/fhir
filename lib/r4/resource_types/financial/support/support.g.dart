@@ -480,7 +480,7 @@ _$CoverageEligibilityRequestImpl _$$CoverageEligibilityRequestImplFromJson(
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
       servicedDate: json['servicedDate'] == null
           ? null
-          : FhirDate.fromJson(json['servicedDate']),
+          : FhirDate.fromJson(json['servicedDate'] as String),
       servicedDateElement: json['_servicedDate'] == null
           ? null
           : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -489,7 +489,7 @@ _$CoverageEligibilityRequestImpl _$$CoverageEligibilityRequestImplFromJson(
           : Period.fromJson(json['servicedPeriod'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -843,7 +843,7 @@ _$CoverageEligibilityResponseImpl _$$CoverageEligibilityResponseImplFromJson(
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
       servicedDate: json['servicedDate'] == null
           ? null
-          : FhirDate.fromJson(json['servicedDate']),
+          : FhirDate.fromJson(json['servicedDate'] as String),
       servicedDateElement: json['_servicedDate'] == null
           ? null
           : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
@@ -852,7 +852,7 @@ _$CoverageEligibilityResponseImpl _$$CoverageEligibilityResponseImplFromJson(
           : Period.fromJson(json['servicedPeriod'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1254,7 +1254,7 @@ _$EnrollmentRequestImpl _$$EnrollmentRequestImplFromJson(
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1366,7 +1366,7 @@ _$EnrollmentResponseImpl _$$EnrollmentResponseImplFromJson(
           : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),

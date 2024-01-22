@@ -59,12 +59,13 @@ _$DeviceImpl _$$DeviceImplFromJson(Map<String, dynamic> json) => _$DeviceImpl(
       version: json['version'] as String?,
       manufactureDate: json['manufactureDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['manufactureDate']),
+          : FhirDateTime.fromJson(json['manufactureDate'] as String),
       manufactureDateElement: json['_manufactureDate'] == null
           ? null
           : Element.fromJson(json['_manufactureDate'] as Map<String, dynamic>),
-      expiry:
-          json['expiry'] == null ? null : FhirDateTime.fromJson(json['expiry']),
+      expiry: json['expiry'] == null
+          ? null
+          : FhirDateTime.fromJson(json['expiry'] as String),
       udi: json['udi'] as String?,
       udiElement: json['_udi'] == null
           ? null
@@ -284,7 +285,8 @@ _$DeviceComponentImpl _$$DeviceComponentImplFromJson(
       type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       identifier:
           Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      lastSystemChange: FhirInstant.fromJson(json['lastSystemChange']),
+      lastSystemChange:
+          FhirInstant.fromJson(json['lastSystemChange'] as String),
       source: json['source'] == null
           ? null
           : Reference.fromJson(json['source'] as Map<String, dynamic>),
@@ -576,7 +578,9 @@ _$DeviceMetricCalibrationImpl _$$DeviceMetricCalibrationImplFromJson(
       stateElement: json['_state'] == null
           ? null
           : Element.fromJson(json['_state'] as Map<String, dynamic>),
-      time: json['time'] == null ? null : FhirInstant.fromJson(json['time']),
+      time: json['time'] == null
+          ? null
+          : FhirInstant.fromJson(json['time'] as String),
       timeElement: json['_time'] == null
           ? null
           : Element.fromJson(json['_time'] as Map<String, dynamic>),

@@ -55,7 +55,9 @@ _$QuestionnaireImpl _$$QuestionnaireImplFromJson(Map<String, dynamic> json) =>
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -443,7 +445,7 @@ _$QuestionnaireResponseImpl _$$QuestionnaireResponseImplFromJson(
         : Reference.fromJson(json['author'] as Map<String, dynamic>),
     authored: json['authored'] == null
         ? null
-        : FhirDateTime.fromJson(json['authored']),
+        : FhirDateTime.fromJson(json['authored'] as String),
     authoredElement: json['_authored'] == null
         ? null
         : Element.fromJson(json['_authored'] as Map<String, dynamic>),
@@ -651,20 +653,20 @@ _$QuestionnaireResponseQuestionAnswerImpl
               : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
           valueDate: json['valueDate'] == null
               ? null
-              : FhirDate.fromJson(json['valueDate']),
+              : FhirDate.fromJson(json['valueDate'] as String),
           valueDateElement: json['_valueDate'] == null
               ? null
               : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
           valueDateTime: json['valueDateTime'] == null
               ? null
-              : FhirDateTime.fromJson(json['valueDateTime']),
+              : FhirDateTime.fromJson(json['valueDateTime'] as String),
           valueDateTimeElement: json['_valueDateTime'] == null
               ? null
               : Element.fromJson(
                   json['_valueDateTime'] as Map<String, dynamic>),
           valueInstant: json['valueInstant'] == null
               ? null
-              : FhirInstant.fromJson(json['valueInstant']),
+              : FhirInstant.fromJson(json['valueInstant'] as String),
           valueInstantElement: json['_valueInstant'] == null
               ? null
               : Element.fromJson(json['_valueInstant'] as Map<String, dynamic>),
@@ -787,7 +789,7 @@ _$ProvenanceImpl _$$ProvenanceImplFromJson(Map<String, dynamic> json) =>
       period: json['period'] == null
           ? null
           : Period.fromJson(json['period'] as Map<String, dynamic>),
-      recorded: FhirInstant.fromJson(json['recorded']),
+      recorded: FhirInstant.fromJson(json['recorded'] as String),
       recordedElement: json['_recorded'] == null
           ? null
           : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
@@ -1095,7 +1097,7 @@ _$AuditEventEventImpl _$$AuditEventEventImplFromJson(
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
       action: json['action'] == null ? null : FhirCode.fromJson(json['action']),
-      dateTime: FhirInstant.fromJson(json['dateTime']),
+      dateTime: FhirInstant.fromJson(json['dateTime'] as String),
       outcome:
           json['outcome'] == null ? null : FhirCode.fromJson(json['outcome']),
       outcomeDesc: json['outcomeDesc'] as String?,

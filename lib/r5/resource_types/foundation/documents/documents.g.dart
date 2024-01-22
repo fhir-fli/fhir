@@ -65,7 +65,9 @@ _$CompositionImpl _$$CompositionImplFromJson(Map<String, dynamic> json) =>
       encounter: json['encounter'] == null
           ? null
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -332,7 +334,9 @@ _$CompositionAttesterImpl _$$CompositionAttesterImplFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       mode: CodeableConcept.fromJson(json['mode'] as Map<String, dynamic>),
-      time: json['time'] == null ? null : FhirDateTime.fromJson(json['time']),
+      time: json['time'] == null
+          ? null
+          : FhirDateTime.fromJson(json['time'] as String),
       timeElement: json['_time'] == null
           ? null
           : Element.fromJson(json['_time'] as Map<String, dynamic>),
@@ -557,7 +561,9 @@ _$DocumentReferenceImpl _$$DocumentReferenceImplFromJson(
       period: json['period'] == null
           ? null
           : Period.fromJson(json['period'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirInstant.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirInstant.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -660,7 +666,9 @@ _$DocumentReferenceAttesterImpl _$$DocumentReferenceAttesterImplFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       mode: CodeableConcept.fromJson(json['mode'] as Map<String, dynamic>),
-      time: json['time'] == null ? null : FhirDateTime.fromJson(json['time']),
+      time: json['time'] == null
+          ? null
+          : FhirDateTime.fromJson(json['time'] as String),
       timeElement: json['_time'] == null
           ? null
           : Element.fromJson(json['_time'] as Map<String, dynamic>),

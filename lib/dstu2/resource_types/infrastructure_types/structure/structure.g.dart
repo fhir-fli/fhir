@@ -600,7 +600,7 @@ _$BundleEntryRequestImpl _$$BundleEntryRequestImplFromJson(
           : Element.fromJson(json['_ifNoneMatch'] as Map<String, dynamic>),
       ifModifiedSince: json['ifModifiedSince'] == null
           ? null
-          : FhirInstant.fromJson(json['ifModifiedSince']),
+          : FhirInstant.fromJson(json['ifModifiedSince'] as String),
       ifModifiedSinceElement: json['_ifModifiedSince'] == null
           ? null
           : Element.fromJson(json['_ifModifiedSince'] as Map<String, dynamic>),
@@ -681,7 +681,7 @@ _$BundleEntryResponseImpl _$$BundleEntryResponseImplFromJson(
           : Element.fromJson(json['_etag'] as Map<String, dynamic>),
       lastModified: json['lastModified'] == null
           ? null
-          : FhirInstant.fromJson(json['lastModified']),
+          : FhirInstant.fromJson(json['lastModified'] as String),
       lastModifiedElement: json['_lastModified'] == null
           ? null
           : Element.fromJson(json['_lastModified'] as Map<String, dynamic>),
@@ -757,8 +757,9 @@ _$BasicImpl _$$BasicImplFromJson(Map<String, dynamic> json) => _$BasicImpl(
       author: json['author'] == null
           ? null
           : Reference.fromJson(json['author'] as Map<String, dynamic>),
-      created:
-          json['created'] == null ? null : FhirDate.fromJson(json['created']),
+      created: json['created'] == null
+          ? null
+          : FhirDate.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),

@@ -69,7 +69,9 @@ _$MeasureImpl _$$MeasureImplFromJson(Map<String, dynamic> json) =>
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDate.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -91,13 +93,13 @@ _$MeasureImpl _$$MeasureImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_usage'] as Map<String, dynamic>),
       approvalDate: json['approvalDate'] == null
           ? null
-          : FhirDate.fromJson(json['approvalDate']),
+          : FhirDate.fromJson(json['approvalDate'] as String),
       approvalDateElement: json['_approvalDate'] == null
           ? null
           : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
       lastReviewDate: json['lastReviewDate'] == null
           ? null
-          : FhirDate.fromJson(json['lastReviewDate']),
+          : FhirDate.fromJson(json['lastReviewDate'] as String),
       lastReviewDateElement: json['_lastReviewDate'] == null
           ? null
           : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -622,7 +624,9 @@ _$MeasureReportImpl _$$MeasureReportImplFromJson(Map<String, dynamic> json) =>
       patient: json['patient'] == null
           ? null
           : Reference.fromJson(json['patient'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDate.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),

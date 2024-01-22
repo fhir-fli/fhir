@@ -62,13 +62,13 @@ _$DeviceImpl _$$DeviceImplFromJson(Map<String, dynamic> json) => _$DeviceImpl(
           : Element.fromJson(json['_manufacturer'] as Map<String, dynamic>),
       manufactureDate: json['manufactureDate'] == null
           ? null
-          : FhirDate.fromJson(json['manufactureDate']),
+          : FhirDate.fromJson(json['manufactureDate'] as String),
       manufactureDateElement: json['_manufactureDate'] == null
           ? null
           : Element.fromJson(json['_manufactureDate'] as Map<String, dynamic>),
       expirationDate: json['expirationDate'] == null
           ? null
-          : FhirDate.fromJson(json['expirationDate']),
+          : FhirDate.fromJson(json['expirationDate'] as String),
       expirationDateElement: json['_expirationDate'] == null
           ? null
           : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),

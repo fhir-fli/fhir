@@ -88,7 +88,9 @@ _$ActivityDefinitionImpl _$$ActivityDefinitionImplFromJson(
       subjectCanonicalElement: json['_subjectCanonical'] == null
           ? null
           : Element.fromJson(json['_subjectCanonical'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -129,13 +131,13 @@ _$ActivityDefinitionImpl _$$ActivityDefinitionImplFromJson(
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
       approvalDate: json['approvalDate'] == null
           ? null
-          : FhirDate.fromJson(json['approvalDate']),
+          : FhirDate.fromJson(json['approvalDate'] as String),
       approvalDateElement: json['_approvalDate'] == null
           ? null
           : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
       lastReviewDate: json['lastReviewDate'] == null
           ? null
-          : FhirDate.fromJson(json['lastReviewDate']),
+          : FhirDate.fromJson(json['lastReviewDate'] as String),
       lastReviewDateElement: json['_lastReviewDate'] == null
           ? null
           : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -193,7 +195,7 @@ _$ActivityDefinitionImpl _$$ActivityDefinitionImplFromJson(
           : Timing.fromJson(json['timingTiming'] as Map<String, dynamic>),
       timingDateTime: json['timingDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['timingDateTime']),
+          : FhirDateTime.fromJson(json['timingDateTime'] as String),
       timingDateTimeElement: json['_timingDateTime'] == null
           ? null
           : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
@@ -1127,7 +1129,9 @@ _$EventDefinitionImpl _$$EventDefinitionImplFromJson(
           ? null
           : Reference.fromJson(
               json['subjectReference'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1168,13 +1172,13 @@ _$EventDefinitionImpl _$$EventDefinitionImplFromJson(
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
       approvalDate: json['approvalDate'] == null
           ? null
-          : FhirDate.fromJson(json['approvalDate']),
+          : FhirDate.fromJson(json['approvalDate'] as String),
       approvalDateElement: json['_approvalDate'] == null
           ? null
           : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
       lastReviewDate: json['lastReviewDate'] == null
           ? null
-          : FhirDate.fromJson(json['lastReviewDate']),
+          : FhirDate.fromJson(json['lastReviewDate'] as String),
       lastReviewDateElement: json['_lastReviewDate'] == null
           ? null
           : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -1639,7 +1643,9 @@ _$PlanDefinitionImpl _$$PlanDefinitionImplFromJson(Map<String, dynamic> json) =>
       subjectCanonicalElement: json['_subjectCanonical'] == null
           ? null
           : Element.fromJson(json['_subjectCanonical'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1680,13 +1686,13 @@ _$PlanDefinitionImpl _$$PlanDefinitionImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
       approvalDate: json['approvalDate'] == null
           ? null
-          : FhirDate.fromJson(json['approvalDate']),
+          : FhirDate.fromJson(json['approvalDate'] as String),
       approvalDateElement: json['_approvalDate'] == null
           ? null
           : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
       lastReviewDate: json['lastReviewDate'] == null
           ? null
-          : FhirDate.fromJson(json['lastReviewDate']),
+          : FhirDate.fromJson(json['lastReviewDate'] as String),
       lastReviewDateElement: json['_lastReviewDate'] == null
           ? null
           : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -1994,7 +2000,7 @@ _$PlanDefinitionActionImpl _$$PlanDefinitionActionImplFromJson(
           .toList(),
       timingDateTime: json['timingDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['timingDateTime']),
+          : FhirDateTime.fromJson(json['timingDateTime'] as String),
       timingDateTimeElement: json['_timingDateTime'] == null
           ? null
           : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
@@ -2404,7 +2410,9 @@ _$QuestionnaireImpl _$$QuestionnaireImplFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2441,13 +2449,13 @@ _$QuestionnaireImpl _$$QuestionnaireImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
       approvalDate: json['approvalDate'] == null
           ? null
-          : FhirDate.fromJson(json['approvalDate']),
+          : FhirDate.fromJson(json['approvalDate'] as String),
       approvalDateElement: json['_approvalDate'] == null
           ? null
           : Element.fromJson(json['_approvalDate'] as Map<String, dynamic>),
       lastReviewDate: json['lastReviewDate'] == null
           ? null
-          : FhirDate.fromJson(json['lastReviewDate']),
+          : FhirDate.fromJson(json['lastReviewDate'] as String),
       lastReviewDateElement: json['_lastReviewDate'] == null
           ? null
           : Element.fromJson(json['_lastReviewDate'] as Map<String, dynamic>),
@@ -2700,13 +2708,13 @@ _$QuestionnaireEnableWhenImpl _$$QuestionnaireEnableWhenImplFromJson(
           : Element.fromJson(json['_answerInteger'] as Map<String, dynamic>),
       answerDate: json['answerDate'] == null
           ? null
-          : FhirDate.fromJson(json['answerDate']),
+          : FhirDate.fromJson(json['answerDate'] as String),
       answerDateElement: json['_answerDate'] == null
           ? null
           : Element.fromJson(json['_answerDate'] as Map<String, dynamic>),
       answerDateTime: json['answerDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['answerDateTime']),
+          : FhirDateTime.fromJson(json['answerDateTime'] as String),
       answerDateTimeElement: json['_answerDateTime'] == null
           ? null
           : Element.fromJson(json['_answerDateTime'] as Map<String, dynamic>),
@@ -2788,7 +2796,7 @@ _$QuestionnaireAnswerOptionImpl _$$QuestionnaireAnswerOptionImplFromJson(
           : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
       valueDate: json['valueDate'] == null
           ? null
-          : FhirDate.fromJson(json['valueDate']),
+          : FhirDate.fromJson(json['valueDate'] as String),
       valueDateElement: json['_valueDate'] == null
           ? null
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -2876,13 +2884,13 @@ _$QuestionnaireInitialImpl _$$QuestionnaireInitialImplFromJson(
           : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
       valueDate: json['valueDate'] == null
           ? null
-          : FhirDate.fromJson(json['valueDate']),
+          : FhirDate.fromJson(json['valueDate'] as String),
       valueDateElement: json['_valueDate'] == null
           ? null
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['valueDateTime']),
+          : FhirDateTime.fromJson(json['valueDateTime'] as String),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),

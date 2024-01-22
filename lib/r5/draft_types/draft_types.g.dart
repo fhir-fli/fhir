@@ -131,7 +131,7 @@ _$MarketingStatusImpl _$$MarketingStatusImplFromJson(
           : Period.fromJson(json['dateRange'] as Map<String, dynamic>),
       restoreDate: json['restoreDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['restoreDate']),
+          : FhirDateTime.fromJson(json['restoreDate'] as String),
       restoreDateElement: json['_restoreDate'] == null
           ? null
           : Element.fromJson(json['_restoreDate'] as Map<String, dynamic>),

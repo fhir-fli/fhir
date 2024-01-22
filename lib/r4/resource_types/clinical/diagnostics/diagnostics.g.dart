@@ -309,7 +309,7 @@ _$DiagnosticReportImpl _$$DiagnosticReportImplFromJson(
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       effectiveDateTime: json['effectiveDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['effectiveDateTime']),
+          : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
       effectiveDateTimeElement: json['_effectiveDateTime'] == null
           ? null
           : Element.fromJson(
@@ -317,8 +317,9 @@ _$DiagnosticReportImpl _$$DiagnosticReportImplFromJson(
       effectivePeriod: json['effectivePeriod'] == null
           ? null
           : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-      issued:
-          json['issued'] == null ? null : FhirInstant.fromJson(json['issued']),
+      issued: json['issued'] == null
+          ? null
+          : FhirInstant.fromJson(json['issued'] as String),
       issuedElement: json['_issued'] == null
           ? null
           : Element.fromJson(json['_issued'] as Map<String, dynamic>),
@@ -499,7 +500,7 @@ _$ImagingStudyImpl _$$ImagingStudyImplFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       started: json['started'] == null
           ? null
-          : FhirDateTime.fromJson(json['started']),
+          : FhirDateTime.fromJson(json['started'] as String),
       startedElement: json['_started'] == null
           ? null
           : Element.fromJson(json['_started'] as Map<String, dynamic>),
@@ -660,7 +661,7 @@ _$ImagingStudySeriesImpl _$$ImagingStudySeriesImplFromJson(
           .toList(),
       started: json['started'] == null
           ? null
-          : FhirDateTime.fromJson(json['started']),
+          : FhirDateTime.fromJson(json['started'] as String),
       startedElement: json['_started'] == null
           ? null
           : Element.fromJson(json['_started'] as Map<String, dynamic>),
@@ -861,15 +862,16 @@ _$MediaImpl _$$MediaImplFromJson(Map<String, dynamic> json) => _$MediaImpl(
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       createdDateTime: json['createdDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['createdDateTime']),
+          : FhirDateTime.fromJson(json['createdDateTime'] as String),
       createdDateTimeElement: json['_createdDateTime'] == null
           ? null
           : Element.fromJson(json['_createdDateTime'] as Map<String, dynamic>),
       createdPeriod: json['createdPeriod'] == null
           ? null
           : Period.fromJson(json['createdPeriod'] as Map<String, dynamic>),
-      issued:
-          json['issued'] == null ? null : FhirInstant.fromJson(json['issued']),
+      issued: json['issued'] == null
+          ? null
+          : FhirInstant.fromJson(json['issued'] as String),
       issuedElement: json['_issued'] == null
           ? null
           : Element.fromJson(json['_issued'] as Map<String, dynamic>),
@@ -1779,7 +1781,7 @@ _$ObservationImpl _$$ObservationImplFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       effectiveDateTime: json['effectiveDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['effectiveDateTime']),
+          : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
       effectiveDateTimeElement: json['_effectiveDateTime'] == null
           ? null
           : Element.fromJson(
@@ -1792,12 +1794,13 @@ _$ObservationImpl _$$ObservationImplFromJson(Map<String, dynamic> json) =>
           : Timing.fromJson(json['effectiveTiming'] as Map<String, dynamic>),
       effectiveInstant: json['effectiveInstant'] == null
           ? null
-          : FhirInstant.fromJson(json['effectiveInstant']),
+          : FhirInstant.fromJson(json['effectiveInstant'] as String),
       effectiveInstantElement: json['_effectiveInstant'] == null
           ? null
           : Element.fromJson(json['_effectiveInstant'] as Map<String, dynamic>),
-      issued:
-          json['issued'] == null ? null : FhirInstant.fromJson(json['issued']),
+      issued: json['issued'] == null
+          ? null
+          : FhirInstant.fromJson(json['issued'] as String),
       issuedElement: json['_issued'] == null
           ? null
           : Element.fromJson(json['_issued'] as Map<String, dynamic>),
@@ -1845,7 +1848,7 @@ _$ObservationImpl _$$ObservationImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['valueDateTime']),
+          : FhirDateTime.fromJson(json['valueDateTime'] as String),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -2079,7 +2082,7 @@ _$ObservationComponentImpl _$$ObservationComponentImplFromJson(
           : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['valueDateTime']),
+          : FhirDateTime.fromJson(json['valueDateTime'] as String),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -2201,7 +2204,7 @@ _$QuestionnaireResponseImpl _$$QuestionnaireResponseImplFromJson(
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       authored: json['authored'] == null
           ? null
-          : FhirDateTime.fromJson(json['authored']),
+          : FhirDateTime.fromJson(json['authored'] as String),
       authoredElement: json['_authored'] == null
           ? null
           : Element.fromJson(json['_authored'] as Map<String, dynamic>),
@@ -2349,13 +2352,13 @@ _$QuestionnaireResponseAnswerImpl _$$QuestionnaireResponseAnswerImplFromJson(
           : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
       valueDate: json['valueDate'] == null
           ? null
-          : FhirDate.fromJson(json['valueDate']),
+          : FhirDate.fromJson(json['valueDate'] as String),
       valueDateElement: json['_valueDate'] == null
           ? null
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['valueDateTime']),
+          : FhirDateTime.fromJson(json['valueDateTime'] as String),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -2485,7 +2488,7 @@ _$SpecimenImpl _$$SpecimenImplFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
       receivedTime: json['receivedTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['receivedTime']),
+          : FhirDateTime.fromJson(json['receivedTime'] as String),
       receivedTimeElement: json['_receivedTime'] == null
           ? null
           : Element.fromJson(json['_receivedTime'] as Map<String, dynamic>),
@@ -2574,7 +2577,7 @@ _$SpecimenCollectionImpl _$$SpecimenCollectionImplFromJson(
           : Reference.fromJson(json['collector'] as Map<String, dynamic>),
       collectedDateTime: json['collectedDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['collectedDateTime']),
+          : FhirDateTime.fromJson(json['collectedDateTime'] as String),
       collectedDateTimeElement: json['_collectedDateTime'] == null
           ? null
           : Element.fromJson(
@@ -2657,7 +2660,7 @@ _$SpecimenProcessingImpl _$$SpecimenProcessingImplFromJson(
           .toList(),
       timeDateTime: json['timeDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['timeDateTime']),
+          : FhirDateTime.fromJson(json['timeDateTime'] as String),
       timeDateTimeElement: json['_timeDateTime'] == null
           ? null
           : Element.fromJson(json['_timeDateTime'] as Map<String, dynamic>),

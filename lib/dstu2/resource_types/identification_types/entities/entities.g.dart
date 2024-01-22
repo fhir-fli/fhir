@@ -393,8 +393,9 @@ _$SubstanceInstanceImpl _$$SubstanceInstanceImplFromJson(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      expiry:
-          json['expiry'] == null ? null : FhirDateTime.fromJson(json['expiry']),
+      expiry: json['expiry'] == null
+          ? null
+          : FhirDateTime.fromJson(json['expiry'] as String),
       expiryElement: json['_expiry'] == null
           ? null
           : Element.fromJson(json['_expiry'] as Map<String, dynamic>),
@@ -510,7 +511,7 @@ _$PersonImpl _$$PersonImplFromJson(Map<String, dynamic> json) => _$PersonImpl(
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
       birthDate: json['birthDate'] == null
           ? null
-          : FhirDate.fromJson(json['birthDate']),
+          : FhirDate.fromJson(json['birthDate'] as String),
       birthDateElement: json['_birthDate'] == null
           ? null
           : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
@@ -664,8 +665,9 @@ _$ContractImpl _$$ContractImplFromJson(Map<String, dynamic> json) =>
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      issued:
-          json['issued'] == null ? null : FhirDateTime.fromJson(json['issued']),
+      issued: json['issued'] == null
+          ? null
+          : FhirDateTime.fromJson(json['issued'] as String),
       issuedElement: json['_issued'] == null
           ? null
           : Element.fromJson(json['_issued'] as Map<String, dynamic>),
@@ -830,7 +832,7 @@ _$ContractValuedItemImpl _$$ContractValuedItemImplFromJson(
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
       effectiveTime: json['effectiveTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['effectiveTime']),
+          : FhirDateTime.fromJson(json['effectiveTime'] as String),
       effectiveTimeElement: json['_effectiveTime'] == null
           ? null
           : Element.fromJson(json['_effectiveTime'] as Map<String, dynamic>),
@@ -939,8 +941,9 @@ _$ContractTermImpl _$$ContractTermImplFromJson(Map<String, dynamic> json) =>
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      issued:
-          json['issued'] == null ? null : FhirDateTime.fromJson(json['issued']),
+      issued: json['issued'] == null
+          ? null
+          : FhirDateTime.fromJson(json['issued'] as String),
       issuedElement: json['_issued'] == null
           ? null
           : Element.fromJson(json['_issued'] as Map<String, dynamic>),

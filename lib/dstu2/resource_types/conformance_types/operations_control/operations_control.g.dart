@@ -55,7 +55,7 @@ _$ConformanceImpl _$$ConformanceImplFromJson(Map<String, dynamic> json) =>
       contact: (json['contact'] as List<dynamic>?)
           ?.map((e) => ConformanceContact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: FhirDateTime.fromJson(json['date']),
+      date: FhirDateTime.fromJson(json['date'] as String),
       description: json['description'] as String?,
       requirements: json['requirements'] as String?,
       copyright: json['copyright'] as String?,
@@ -331,7 +331,7 @@ _$CapabilityStatementImpl _$$CapabilityStatementImplFromJson(
       contact: (json['contact'] as List<dynamic>?)
           ?.map((e) => ConformanceContact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: FhirDateTime.fromJson(json['date']),
+      date: FhirDateTime.fromJson(json['date'] as String),
       description: json['description'] as String?,
       requirements: json['requirements'] as String?,
       copyright: json['copyright'] as String?,
@@ -477,7 +477,7 @@ _$ConformanceSoftwareImpl _$$ConformanceSoftwareImplFromJson(
       version: json['version'] as String?,
       releaseDate: json['releaseDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['releaseDate']),
+          : FhirDateTime.fromJson(json['releaseDate'] as String),
     );
 
 Map<String, dynamic> _$$ConformanceSoftwareImplToJson(
@@ -1304,7 +1304,9 @@ _$OperationDefinitionImpl _$$OperationDefinitionImplFromJson(
         ?.map((e) =>
             OperationDefinitionContact.fromJson(e as Map<String, dynamic>))
         .toList(),
-    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     description: json['description'] as String?,
     requirements: json['requirements'] as String?,
     idempotent: json['idempotent'] == null
@@ -1594,7 +1596,9 @@ _$SearchParameterImpl _$$SearchParameterImplFromJson(
           ?.map(
               (e) => SearchParameterContact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       requirements: json['requirements'] as String?,
       requirementsElement: json['_requirements'] == null
           ? null

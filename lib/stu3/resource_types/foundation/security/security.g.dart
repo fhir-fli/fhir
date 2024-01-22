@@ -542,7 +542,7 @@ _$ConsentImpl _$$ConsentImplFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['period'] as Map<String, dynamic>),
       dateTime: json['dateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['dateTime']),
+          : FhirDateTime.fromJson(json['dateTime'] as String),
       dateTimeElement: json['_dateTime'] == null
           ? null
           : Element.fromJson(json['_dateTime'] as Map<String, dynamic>),

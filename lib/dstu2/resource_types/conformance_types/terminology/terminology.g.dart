@@ -76,13 +76,15 @@ _$ValueSetImpl _$$ValueSetImplFromJson(Map<String, dynamic> json) =>
       contact: (json['contact'] as List<dynamic>?)
           ?.map((e) => ValueSetContact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
       lockedDate: json['lockedDate'] == null
           ? null
-          : FhirDate.fromJson(json['lockedDate']),
+          : FhirDate.fromJson(json['lockedDate'] as String),
       lockedDateElement: json['_lockedDate'] == null
           ? null
           : Element.fromJson(json['_lockedDate'] as Map<String, dynamic>),
@@ -728,7 +730,7 @@ _$ValueSetExpansionImpl _$$ValueSetExpansionImplFromJson(
       identifierElement: json['_identifier'] == null
           ? null
           : Element.fromJson(json['_identifier'] as Map<String, dynamic>),
-      timestamp: FhirDateTime.fromJson(json['timestamp']),
+      timestamp: FhirDateTime.fromJson(json['timestamp'] as String),
       timestampElement: json['_timestamp'] == null
           ? null
           : Element.fromJson(json['_timestamp'] as Map<String, dynamic>),
@@ -1004,7 +1006,9 @@ _$ConceptMapImpl _$$ConceptMapImplFromJson(Map<String, dynamic> json) =>
       contact: (json['contact'] as List<dynamic>?)
           ?.map((e) => ConceptMapContact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       description: json['description'] as String?,
       descriptionElement: json['_description'] == null
           ? null
@@ -1360,7 +1364,7 @@ _$NamingSystemImpl _$$NamingSystemImplFromJson(Map<String, dynamic> json) =>
       responsibleElement: json['_responsible'] == null
           ? null
           : Element.fromJson(json['_responsible'] as Map<String, dynamic>),
-      date: FhirDateTime.fromJson(json['date']),
+      date: FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),

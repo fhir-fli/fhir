@@ -296,7 +296,7 @@ _$BiologicallyDerivedProductCollectionImpl
               : Reference.fromJson(json['source'] as Map<String, dynamic>),
           collectedDateTime: json['collectedDateTime'] == null
               ? null
-              : FhirDateTime.fromJson(json['collectedDateTime']),
+              : FhirDateTime.fromJson(json['collectedDateTime'] as String),
           collectedDateTimeElement: json['_collectedDateTime'] == null
               ? null
               : Element.fromJson(
@@ -355,7 +355,7 @@ _$BiologicallyDerivedProductProcessingImpl
               : Reference.fromJson(json['additive'] as Map<String, dynamic>),
           timeDateTime: json['timeDateTime'] == null
               ? null
-              : FhirDateTime.fromJson(json['timeDateTime']),
+              : FhirDateTime.fromJson(json['timeDateTime'] as String),
           timeDateTimeElement: json['_timeDateTime'] == null
               ? null
               : Element.fromJson(json['_timeDateTime'] as Map<String, dynamic>),
@@ -406,7 +406,7 @@ _$BiologicallyDerivedProductManipulationImpl
               : Element.fromJson(json['_description'] as Map<String, dynamic>),
           timeDateTime: json['timeDateTime'] == null
               ? null
-              : FhirDateTime.fromJson(json['timeDateTime']),
+              : FhirDateTime.fromJson(json['timeDateTime'] as String),
           timeDateTimeElement: json['_timeDateTime'] == null
               ? null
               : Element.fromJson(json['_timeDateTime'] as Map<String, dynamic>),
@@ -554,13 +554,13 @@ _$DeviceImpl _$$DeviceImplFromJson(Map<String, dynamic> json) => _$DeviceImpl(
           : Element.fromJson(json['_manufacturer'] as Map<String, dynamic>),
       manufactureDate: json['manufactureDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['manufactureDate']),
+          : FhirDateTime.fromJson(json['manufactureDate'] as String),
       manufactureDateElement: json['_manufactureDate'] == null
           ? null
           : Element.fromJson(json['_manufactureDate'] as Map<String, dynamic>),
       expirationDate: json['expirationDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['expirationDate']),
+          : FhirDateTime.fromJson(json['expirationDate'] as String),
       expirationDateElement: json['_expirationDate'] == null
           ? null
           : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
@@ -1060,7 +1060,9 @@ _$DeviceMetricCalibrationImpl _$$DeviceMetricCalibrationImplFromJson(
       stateElement: json['_state'] == null
           ? null
           : Element.fromJson(json['_state'] as Map<String, dynamic>),
-      time: json['time'] == null ? null : FhirInstant.fromJson(json['time']),
+      time: json['time'] == null
+          ? null
+          : FhirInstant.fromJson(json['time'] as String),
       timeElement: json['_time'] == null
           ? null
           : Element.fromJson(json['_time'] as Map<String, dynamic>),
@@ -1375,13 +1377,15 @@ _$NutritionProductInstanceImpl _$$NutritionProductInstanceImplFromJson(
       lotNumberElement: json['_lotNumber'] == null
           ? null
           : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
-      expiry:
-          json['expiry'] == null ? null : FhirDateTime.fromJson(json['expiry']),
+      expiry: json['expiry'] == null
+          ? null
+          : FhirDateTime.fromJson(json['expiry'] as String),
       expiryElement: json['_expiry'] == null
           ? null
           : Element.fromJson(json['_expiry'] as Map<String, dynamic>),
-      useBy:
-          json['useBy'] == null ? null : FhirDateTime.fromJson(json['useBy']),
+      useBy: json['useBy'] == null
+          ? null
+          : FhirDateTime.fromJson(json['useBy'] as String),
       useByElement: json['_useBy'] == null
           ? null
           : Element.fromJson(json['_useBy'] as Map<String, dynamic>),
@@ -1529,8 +1533,9 @@ _$SubstanceInstanceImpl _$$SubstanceInstanceImplFromJson(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      expiry:
-          json['expiry'] == null ? null : FhirDateTime.fromJson(json['expiry']),
+      expiry: json['expiry'] == null
+          ? null
+          : FhirDateTime.fromJson(json['expiry'] as String),
       expiryElement: json['_expiry'] == null
           ? null
           : Element.fromJson(json['_expiry'] as Map<String, dynamic>),

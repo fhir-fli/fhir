@@ -59,7 +59,9 @@ _$ImmunizationImpl _$$ImmunizationImplFromJson(Map<String, dynamic> json) =>
       encounter: json['encounter'] == null
           ? null
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDate.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -85,7 +87,7 @@ _$ImmunizationImpl _$$ImmunizationImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
       expirationDate: json['expirationDate'] == null
           ? null
-          : FhirDate.fromJson(json['expirationDate']),
+          : FhirDate.fromJson(json['expirationDate'] as String),
       expirationDateElement: json['_expirationDate'] == null
           ? null
           : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
@@ -349,7 +351,9 @@ Map<String, dynamic> _$$ImmunizationExplanationImplToJson(
 _$ImmunizationReactionImpl _$$ImmunizationReactionImplFromJson(
         Map<String, dynamic> json) =>
     _$ImmunizationReactionImpl(
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDate.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -526,7 +530,9 @@ _$ImmunizationRecommendationRecommendationImpl
     _$$ImmunizationRecommendationRecommendationImplFromJson(
             Map<String, dynamic> json) =>
         _$ImmunizationRecommendationRecommendationImpl(
-          date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+          date: json['date'] == null
+              ? null
+              : FhirDate.fromJson(json['date'] as String),
           dateElement: json['_date'] == null
               ? null
               : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -888,7 +894,7 @@ _$MedicationBatchImpl _$$MedicationBatchImplFromJson(
           : Element.fromJson(json['_lotNumber'] as Map<String, dynamic>),
       expirationDate: json['expirationDate'] == null
           ? null
-          : FhirDate.fromJson(json['expirationDate']),
+          : FhirDate.fromJson(json['expirationDate'] as String),
       expirationDateElement: json['_expirationDate'] == null
           ? null
           : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
@@ -980,7 +986,7 @@ _$MedicationAdministrationImpl _$$MedicationAdministrationImplFromJson(
           .toList(),
       effectiveDateTime: json['effectiveDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['effectiveDateTime']),
+          : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
       effectiveDateTimeElement: json['_effectiveDateTime'] == null
           ? null
           : Element.fromJson(
@@ -1833,7 +1839,7 @@ _$MedicationStatementImpl _$$MedicationStatementImplFromJson(
               json['medicationReference'] as Map<String, dynamic>),
       effectiveDateTime: json['effectiveDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['effectiveDateTime']),
+          : FhirDateTime.fromJson(json['effectiveDateTime'] as String),
       effectiveDateTimeElement: json['_effectiveDateTime'] == null
           ? null
           : Element.fromJson(
@@ -1843,7 +1849,7 @@ _$MedicationStatementImpl _$$MedicationStatementImplFromJson(
           : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
       dateAsserted: json['dateAsserted'] == null
           ? null
-          : FhirDate.fromJson(json['dateAsserted']),
+          : FhirDate.fromJson(json['dateAsserted'] as String),
       dateAssertedElement: json['_dateAsserted'] == null
           ? null
           : Element.fromJson(json['_dateAsserted'] as Map<String, dynamic>),

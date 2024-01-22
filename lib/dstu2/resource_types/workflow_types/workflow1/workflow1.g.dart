@@ -42,7 +42,9 @@ _$OrderImpl _$$OrderImplFromJson(Map<String, dynamic> json) => _$OrderImpl(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       subject: json['subject'] == null
           ? null
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -281,7 +283,9 @@ _$OrderResponseImpl _$$OrderResponseImplFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
       request: Reference.fromJson(json['request'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       who: json['who'] == null
           ? null
           : Reference.fromJson(json['who'] as Map<String, dynamic>),
@@ -415,7 +419,7 @@ _$CommunicationRequestImpl _$$CommunicationRequestImplFromJson(
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       scheduledDateTime: json['scheduledDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['scheduledDateTime']),
+          : FhirDateTime.fromJson(json['scheduledDateTime'] as String),
       scheduledPeriod: json['scheduledPeriod'] == null
           ? null
           : Period.fromJson(json['scheduledPeriod'] as Map<String, dynamic>),
@@ -424,7 +428,7 @@ _$CommunicationRequestImpl _$$CommunicationRequestImplFromJson(
           .toList(),
       requestedOn: json['requestedOn'] == null
           ? null
-          : FhirDateTime.fromJson(json['requestedOn']),
+          : FhirDateTime.fromJson(json['requestedOn'] as String),
       subject: json['subject'] == null
           ? null
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
@@ -608,10 +612,10 @@ _$DeviceUseRequestImpl _$$DeviceUseRequestImplFromJson(
           .toList(),
       orderedOn: json['orderedOn'] == null
           ? null
-          : FhirDateTime.fromJson(json['orderedOn']),
+          : FhirDateTime.fromJson(json['orderedOn'] as String),
       recordedOn: json['recordedOn'] == null
           ? null
-          : FhirDateTime.fromJson(json['recordedOn']),
+          : FhirDateTime.fromJson(json['recordedOn'] as String),
       subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
       timingTiming: json['timingTiming'] == null
           ? null
@@ -621,7 +625,7 @@ _$DeviceUseRequestImpl _$$DeviceUseRequestImplFromJson(
           : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
       timingDateTime: json['timingDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['timingDateTime']),
+          : FhirDateTime.fromJson(json['timingDateTime'] as String),
       priority: $enumDecodeNullable(
           _$DeviceUseRequestPriorityEnumMap, json['priority'],
           unknownValue: DeviceUseRequestPriority.unknown),
@@ -760,7 +764,7 @@ _$DeviceUseStatementImpl _$$DeviceUseStatementImplFromJson(
           (json['notes'] as List<dynamic>?)?.map((e) => e as String).toList(),
       recordedOn: json['recordedOn'] == null
           ? null
-          : FhirDateTime.fromJson(json['recordedOn']),
+          : FhirDateTime.fromJson(json['recordedOn'] as String),
       recordedOnElement: json['_recordedOn'] == null
           ? null
           : Element.fromJson(json['_recordedOn'] as Map<String, dynamic>),
@@ -773,7 +777,7 @@ _$DeviceUseStatementImpl _$$DeviceUseStatementImplFromJson(
           : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
       timingDateTime: json['timingDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['timingDateTime']),
+          : FhirDateTime.fromJson(json['timingDateTime'] as String),
       timingDateTimeElement: json['_timingDateTime'] == null
           ? null
           : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),

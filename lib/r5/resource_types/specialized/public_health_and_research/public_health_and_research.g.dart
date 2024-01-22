@@ -71,7 +71,9 @@ _$ResearchStudyImpl _$$ResearchStudyImplFromJson(Map<String, dynamic> json) =>
       relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -891,13 +893,13 @@ _$ResearchSubjectProgressImpl _$$ResearchSubjectProgressImplFromJson(
           : CodeableConcept.fromJson(json['reason'] as Map<String, dynamic>),
       startDate: json['startDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['startDate']),
+          : FhirDateTime.fromJson(json['startDate'] as String),
       startDateElement: json['_startDate'] == null
           ? null
           : Element.fromJson(json['_startDate'] as Map<String, dynamic>),
       endDate: json['endDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['endDate']),
+          : FhirDateTime.fromJson(json['endDate'] as String),
       endDateElement: json['_endDate'] == null
           ? null
           : Element.fromJson(json['_endDate'] as Map<String, dynamic>),

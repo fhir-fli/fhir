@@ -321,7 +321,7 @@ _$AdministrableProductDefinitionPropertyImpl
                   json['valueQuantity'] as Map<String, dynamic>),
           valueDate: json['valueDate'] == null
               ? null
-              : FhirDate.fromJson(json['valueDate']),
+              : FhirDate.fromJson(json['valueDate'] as String),
           valueDateElement: json['_valueDate'] == null
               ? null
               : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -1511,7 +1511,7 @@ _$ManufacturedItemDefinitionPropertyImpl
                   json['valueQuantity'] as Map<String, dynamic>),
           valueDate: json['valueDate'] == null
               ? null
-              : FhirDate.fromJson(json['valueDate']),
+              : FhirDate.fromJson(json['valueDate'] as String),
           valueDateElement: json['_valueDate'] == null
               ? null
               : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -1727,7 +1727,7 @@ _$MedicinalProductDefinitionImpl _$$MedicinalProductDefinitionImplFromJson(
           : CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
       statusDate: json['statusDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['statusDate']),
+          : FhirDateTime.fromJson(json['statusDate'] as String),
       statusDateElement: json['_statusDate'] == null
           ? null
           : Element.fromJson(json['_statusDate'] as Map<String, dynamic>),
@@ -2187,7 +2187,7 @@ _$MedicinalProductDefinitionCharacteristicImpl
               : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
           valueDate: json['valueDate'] == null
               ? null
-              : FhirDate.fromJson(json['valueDate']),
+              : FhirDate.fromJson(json['valueDate'] as String),
           valueDateElement: json['_valueDate'] == null
               ? null
               : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -2286,7 +2286,7 @@ _$PackagedProductDefinitionImpl _$$PackagedProductDefinitionImplFromJson(
           : CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
       statusDate: json['statusDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['statusDate']),
+          : FhirDateTime.fromJson(json['statusDate'] as String),
       statusDateElement: json['_statusDate'] == null
           ? null
           : Element.fromJson(json['_statusDate'] as Map<String, dynamic>),
@@ -2540,7 +2540,7 @@ _$PackagedProductDefinitionPropertyImpl
                   json['valueQuantity'] as Map<String, dynamic>),
           valueDate: json['valueDate'] == null
               ? null
-              : FhirDate.fromJson(json['valueDate']),
+              : FhirDate.fromJson(json['valueDate'] as String),
           valueDateElement: json['_valueDate'] == null
               ? null
               : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -2678,7 +2678,7 @@ _$RegulatedAuthorizationImpl _$$RegulatedAuthorizationImplFromJson(
           : CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
       statusDate: json['statusDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['statusDate']),
+          : FhirDateTime.fromJson(json['statusDate'] as String),
       statusDateElement: json['_statusDate'] == null
           ? null
           : Element.fromJson(json['_statusDate'] as Map<String, dynamic>),
@@ -2782,7 +2782,7 @@ _$RegulatedAuthorizationCaseImpl _$$RegulatedAuthorizationCaseImplFromJson(
           : Period.fromJson(json['datePeriod'] as Map<String, dynamic>),
       dateDateTime: json['dateDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['dateDateTime']),
+          : FhirDateTime.fromJson(json['dateDateTime'] as String),
       dateDateTimeElement: json['_dateDateTime'] == null
           ? null
           : Element.fromJson(json['_dateDateTime'] as Map<String, dynamic>),
@@ -3149,7 +3149,7 @@ _$SubstanceDefinitionPropertyImpl _$$SubstanceDefinitionPropertyImplFromJson(
           : Quantity.fromJson(json['valueQuantity'] as Map<String, dynamic>),
       valueDate: json['valueDate'] == null
           ? null
-          : FhirDate.fromJson(json['valueDate']),
+          : FhirDate.fromJson(json['valueDate'] as String),
       valueDateElement: json['_valueDate'] == null
           ? null
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
@@ -3377,7 +3377,7 @@ _$SubstanceDefinitionCodeImpl _$$SubstanceDefinitionCodeImplFromJson(
           : CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
       statusDate: json['statusDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['statusDate']),
+          : FhirDateTime.fromJson(json['statusDate'] as String),
       statusDateElement: json['_statusDate'] == null
           ? null
           : Element.fromJson(json['_statusDate'] as Map<String, dynamic>),
@@ -3514,7 +3514,9 @@ _$SubstanceDefinitionOfficialImpl _$$SubstanceDefinitionOfficialImplFromJson(
       status: json['status'] == null
           ? null
           : CodeableConcept.fromJson(json['status'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),

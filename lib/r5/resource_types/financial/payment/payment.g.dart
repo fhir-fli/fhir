@@ -55,7 +55,7 @@ _$PaymentNoticeImpl _$$PaymentNoticeImplFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['response'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -67,7 +67,7 @@ _$PaymentNoticeImpl _$$PaymentNoticeImplFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['payment'] as Map<String, dynamic>),
       paymentDate: json['paymentDate'] == null
           ? null
-          : FhirDate.fromJson(json['paymentDate']),
+          : FhirDate.fromJson(json['paymentDate'] as String),
       paymentDateElement: json['_paymentDate'] == null
           ? null
           : Element.fromJson(json['_paymentDate'] as Map<String, dynamic>),
@@ -339,7 +339,7 @@ _$PaymentReconciliationImpl _$$PaymentReconciliationImplFromJson(
           : Period.fromJson(json['period'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -368,7 +368,9 @@ _$PaymentReconciliationImpl _$$PaymentReconciliationImplFromJson(
       dispositionElement: json['_disposition'] == null
           ? null
           : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDate.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -388,7 +390,7 @@ _$PaymentReconciliationImpl _$$PaymentReconciliationImplFromJson(
           : Element.fromJson(json['_accountNumber'] as Map<String, dynamic>),
       expirationDate: json['expirationDate'] == null
           ? null
-          : FhirDate.fromJson(json['expirationDate']),
+          : FhirDate.fromJson(json['expirationDate'] as String),
       expirationDateElement: json['_expirationDate'] == null
           ? null
           : Element.fromJson(json['_expirationDate'] as Map<String, dynamic>),
@@ -550,7 +552,9 @@ _$PaymentReconciliationAllocationImpl
           response: json['response'] == null
               ? null
               : Reference.fromJson(json['response'] as Map<String, dynamic>),
-          date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+          date: json['date'] == null
+              ? null
+              : FhirDate.fromJson(json['date'] as String),
           dateElement: json['_date'] == null
               ? null
               : Element.fromJson(json['_date'] as Map<String, dynamic>),

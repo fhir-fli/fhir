@@ -22,7 +22,7 @@ _$FhirMetaImpl _$$FhirMetaImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_versionId'] as Map<String, dynamic>),
       lastUpdated: json['lastUpdated'] == null
           ? null
-          : FhirInstant.fromJson(json['lastUpdated']),
+          : FhirInstant.fromJson(json['lastUpdated'] as String),
       lastUpdatedElement: json['_lastUpdated'] == null
           ? null
           : Element.fromJson(json['_lastUpdated'] as Map<String, dynamic>),
@@ -198,7 +198,7 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
               json['_defaultValueBase64Binary'] as Map<String, dynamic>),
       defaultValueInstant: json['defaultValueInstant'] == null
           ? null
-          : FhirInstant.fromJson(json['defaultValueInstant']),
+          : FhirInstant.fromJson(json['defaultValueInstant'] as String),
       defaultValueInstantElement: json['_defaultValueInstant'] == null
           ? null
           : Element.fromJson(
@@ -216,13 +216,13 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
           : Element.fromJson(json['_defaultValueUri'] as Map<String, dynamic>),
       defaultValueDate: json['defaultValueDate'] == null
           ? null
-          : FhirDate.fromJson(json['defaultValueDate']),
+          : FhirDate.fromJson(json['defaultValueDate'] as String),
       defaultValueDateElement: json['_defaultValueDate'] == null
           ? null
           : Element.fromJson(json['_defaultValueDate'] as Map<String, dynamic>),
       defaultValueDateTime: json['defaultValueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['defaultValueDateTime']),
+          : FhirDateTime.fromJson(json['defaultValueDateTime'] as String),
       defaultValueDateTimeElement: json['_defaultValueDateTime'] == null
           ? null
           : Element.fromJson(
@@ -368,7 +368,7 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
               json['_fixedBase64Binary'] as Map<String, dynamic>),
       fixedInstant: json['fixedInstant'] == null
           ? null
-          : FhirInstant.fromJson(json['fixedInstant']),
+          : FhirInstant.fromJson(json['fixedInstant'] as String),
       fixedInstantElement: json['_fixedInstant'] == null
           ? null
           : Element.fromJson(json['_fixedInstant'] as Map<String, dynamic>),
@@ -383,13 +383,13 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
           : Element.fromJson(json['_fixedUri'] as Map<String, dynamic>),
       fixedDate: json['fixedDate'] == null
           ? null
-          : FhirDate.fromJson(json['fixedDate']),
+          : FhirDate.fromJson(json['fixedDate'] as String),
       fixedDateElement: json['_fixedDate'] == null
           ? null
           : Element.fromJson(json['_fixedDate'] as Map<String, dynamic>),
       fixedDateTime: json['fixedDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['fixedDateTime']),
+          : FhirDateTime.fromJson(json['fixedDateTime'] as String),
       fixedDateTimeElement: json['_fixedDateTime'] == null
           ? null
           : Element.fromJson(json['_fixedDateTime'] as Map<String, dynamic>),
@@ -511,7 +511,7 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
               json['_patternBase64Binary'] as Map<String, dynamic>),
       patternInstant: json['patternInstant'] == null
           ? null
-          : FhirInstant.fromJson(json['patternInstant']),
+          : FhirInstant.fromJson(json['patternInstant'] as String),
       patternInstantElement: json['_patternInstant'] == null
           ? null
           : Element.fromJson(json['_patternInstant'] as Map<String, dynamic>),
@@ -527,13 +527,13 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
           : Element.fromJson(json['_patternUri'] as Map<String, dynamic>),
       patternDate: json['patternDate'] == null
           ? null
-          : FhirDate.fromJson(json['patternDate']),
+          : FhirDate.fromJson(json['patternDate'] as String),
       patternDateElement: json['_patternDate'] == null
           ? null
           : Element.fromJson(json['_patternDate'] as Map<String, dynamic>),
       patternDateTime: json['patternDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['patternDateTime']),
+          : FhirDateTime.fromJson(json['patternDateTime'] as String),
       patternDateTimeElement: json['_patternDateTime'] == null
           ? null
           : Element.fromJson(json['_patternDateTime'] as Map<String, dynamic>),
@@ -667,7 +667,7 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
               json['_exampleBase64Binary'] as Map<String, dynamic>),
       exampleInstant: json['exampleInstant'] == null
           ? null
-          : FhirInstant.fromJson(json['exampleInstant']),
+          : FhirInstant.fromJson(json['exampleInstant'] as String),
       exampleInstantElement: json['_exampleInstant'] == null
           ? null
           : Element.fromJson(json['_exampleInstant'] as Map<String, dynamic>),
@@ -683,13 +683,13 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
           : Element.fromJson(json['_exampleUri'] as Map<String, dynamic>),
       exampleDate: json['exampleDate'] == null
           ? null
-          : FhirDate.fromJson(json['exampleDate']),
+          : FhirDate.fromJson(json['exampleDate'] as String),
       exampleDateElement: json['_exampleDate'] == null
           ? null
           : Element.fromJson(json['_exampleDate'] as Map<String, dynamic>),
       exampleDateTime: json['exampleDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['exampleDateTime']),
+          : FhirDateTime.fromJson(json['exampleDateTime'] as String),
       exampleDateTimeElement: json['_exampleDateTime'] == null
           ? null
           : Element.fromJson(json['_exampleDateTime'] as Map<String, dynamic>),
@@ -823,7 +823,7 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
               json['_minValueBase64Binary'] as Map<String, dynamic>),
       minValueInstant: json['minValueInstant'] == null
           ? null
-          : FhirInstant.fromJson(json['minValueInstant']),
+          : FhirInstant.fromJson(json['minValueInstant'] as String),
       minValueInstantElement: json['_minValueInstant'] == null
           ? null
           : Element.fromJson(json['_minValueInstant'] as Map<String, dynamic>),
@@ -839,13 +839,13 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
           : Element.fromJson(json['_minValueUri'] as Map<String, dynamic>),
       minValueDate: json['minValueDate'] == null
           ? null
-          : FhirDate.fromJson(json['minValueDate']),
+          : FhirDate.fromJson(json['minValueDate'] as String),
       minValueDateElement: json['_minValueDate'] == null
           ? null
           : Element.fromJson(json['_minValueDate'] as Map<String, dynamic>),
       minValueDateTime: json['minValueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['minValueDateTime']),
+          : FhirDateTime.fromJson(json['minValueDateTime'] as String),
       minValueDateTimeElement: json['_minValueDateTime'] == null
           ? null
           : Element.fromJson(json['_minValueDateTime'] as Map<String, dynamic>),
@@ -980,7 +980,7 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
               json['_maxValueBase64Binary'] as Map<String, dynamic>),
       maxValueInstant: json['maxValueInstant'] == null
           ? null
-          : FhirInstant.fromJson(json['maxValueInstant']),
+          : FhirInstant.fromJson(json['maxValueInstant'] as String),
       maxValueInstantElement: json['_maxValueInstant'] == null
           ? null
           : Element.fromJson(json['_maxValueInstant'] as Map<String, dynamic>),
@@ -996,13 +996,13 @@ _$ElementDefinitionImpl _$$ElementDefinitionImplFromJson(
           : Element.fromJson(json['_maxValueUri'] as Map<String, dynamic>),
       maxValueDate: json['maxValueDate'] == null
           ? null
-          : FhirDate.fromJson(json['maxValueDate']),
+          : FhirDate.fromJson(json['maxValueDate'] as String),
       maxValueDateElement: json['_maxValueDate'] == null
           ? null
           : Element.fromJson(json['_maxValueDate'] as Map<String, dynamic>),
       maxValueDateTime: json['maxValueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['maxValueDateTime']),
+          : FhirDateTime.fromJson(json['maxValueDateTime'] as String),
       maxValueDateTimeElement: json['_maxValueDateTime'] == null
           ? null
           : Element.fromJson(json['_maxValueDateTime'] as Map<String, dynamic>),

@@ -594,7 +594,9 @@ _$TestScriptImpl _$$TestScriptImplFromJson(Map<String, dynamic> json) =>
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDate.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -1455,7 +1457,7 @@ _$TestScriptAssertImpl _$$TestScriptAssertImplFromJson(
           : Element.fromJson(json['_sourceId'] as Map<String, dynamic>),
       validateProfileId: json['validateProfileId'] == null
           ? null
-          : FhirDate.fromJson(json['validateProfileId']),
+          : FhirDate.fromJson(json['validateProfileId'] as String),
       validateProfileIdElement: json['_validateProfileId'] == null
           ? null
           : Element.fromJson(

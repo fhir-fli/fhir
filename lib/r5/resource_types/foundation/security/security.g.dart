@@ -58,13 +58,13 @@ _$AuditEventImpl _$$AuditEventImplFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['occurredPeriod'] as Map<String, dynamic>),
       occurredDateTime: json['occurredDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurredDateTime']),
+          : FhirDateTime.fromJson(json['occurredDateTime'] as String),
       occurredDateTimeElement: json['_occurredDateTime'] == null
           ? null
           : Element.fromJson(json['_occurredDateTime'] as Map<String, dynamic>),
       recorded: json['recorded'] == null
           ? null
-          : FhirInstant.fromJson(json['recorded']),
+          : FhirInstant.fromJson(json['recorded'] as String),
       recordedElement: json['_recorded'] == null
           ? null
           : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
@@ -569,7 +569,7 @@ _$AuditEventDetailImpl _$$AuditEventDetailImplFromJson(
           : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['valueDateTime']),
+          : FhirDateTime.fromJson(json['valueDateTime'] as String),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -669,7 +669,9 @@ _$ConsentImpl _$$ConsentImplFromJson(Map<String, dynamic> json) =>
       subject: json['subject'] == null
           ? null
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDate.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDate.fromJson(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -840,7 +842,7 @@ _$ConsentVerificationImpl _$$ConsentVerificationImplFromJson(
           ? null
           : Reference.fromJson(json['verifiedWith'] as Map<String, dynamic>),
       verificationDate: (json['verificationDate'] as List<dynamic>?)
-          ?.map(FhirDateTime.fromJson)
+          ?.map((e) => FhirDateTime.fromJson(e as String))
           .toList(),
       verificationDateElement: (json['_verificationDate'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -1070,8 +1072,9 @@ _$PermissionImpl _$$PermissionImplFromJson(Map<String, dynamic> json) =>
       asserter: json['asserter'] == null
           ? null
           : Reference.fromJson(json['asserter'] as Map<String, dynamic>),
-      date:
-          (json['date'] as List<dynamic>?)?.map(FhirDateTime.fromJson).toList(),
+      date: (json['date'] as List<dynamic>?)
+          ?.map((e) => FhirDateTime.fromJson(e as String))
+          .toList(),
       dateElement: (json['_date'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1383,13 +1386,13 @@ _$ProvenanceImpl _$$ProvenanceImplFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['occurredPeriod'] as Map<String, dynamic>),
       occurredDateTime: json['occurredDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurredDateTime']),
+          : FhirDateTime.fromJson(json['occurredDateTime'] as String),
       occurredDateTimeElement: json['_occurredDateTime'] == null
           ? null
           : Element.fromJson(json['_occurredDateTime'] as Map<String, dynamic>),
       recorded: json['recorded'] == null
           ? null
-          : FhirInstant.fromJson(json['recorded']),
+          : FhirInstant.fromJson(json['recorded'] as String),
       recordedElement: json['_recorded'] == null
           ? null
           : Element.fromJson(json['_recorded'] as Map<String, dynamic>),

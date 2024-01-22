@@ -53,7 +53,7 @@ _$ProcessRequestImpl _$$ProcessRequestImplFromJson(Map<String, dynamic> json) =>
           : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       target: json['target'] == null
           ? null
           : Reference.fromJson(json['target'] as Map<String, dynamic>),
@@ -321,7 +321,7 @@ _$ProcessResponseImpl _$$ProcessResponseImplFromJson(
           : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       organization: json['organization'] == null
           ? null
           : Reference.fromJson(json['organization'] as Map<String, dynamic>),
@@ -461,7 +461,9 @@ _$SupplyRequestImpl _$$SupplyRequestImplFromJson(Map<String, dynamic> json) =>
       source: json['source'] == null
           ? null
           : Reference.fromJson(json['source'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
@@ -637,7 +639,9 @@ _$SupplyDeliveryImpl _$$SupplyDeliveryImplFromJson(Map<String, dynamic> json) =>
       whenPrepared: json['whenPrepared'] == null
           ? null
           : Period.fromJson(json['whenPrepared'] as Map<String, dynamic>),
-      time: json['time'] == null ? null : FhirDateTime.fromJson(json['time']),
+      time: json['time'] == null
+          ? null
+          : FhirDateTime.fromJson(json['time'] as String),
       destination: json['destination'] == null
           ? null
           : Reference.fromJson(json['destination'] as Map<String, dynamic>),

@@ -390,7 +390,7 @@ _$PatientImpl _$$PatientImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
       birthDate: json['birthDate'] == null
           ? null
-          : FhirDate.fromJson(json['birthDate']),
+          : FhirDate.fromJson(json['birthDate'] as String),
       birthDateElement: json['_birthDate'] == null
           ? null
           : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
@@ -402,7 +402,7 @@ _$PatientImpl _$$PatientImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_deceasedBoolean'] as Map<String, dynamic>),
       deceasedDateTime: json['deceasedDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['deceasedDateTime']),
+          : FhirDateTime.fromJson(json['deceasedDateTime'] as String),
       deceasedDateTimeElement: json['_deceasedDateTime'] == null
           ? null
           : Element.fromJson(json['_deceasedDateTime'] as Map<String, dynamic>),
@@ -712,7 +712,7 @@ _$PersonImpl _$$PersonImplFromJson(Map<String, dynamic> json) => _$PersonImpl(
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
       birthDate: json['birthDate'] == null
           ? null
-          : FhirDate.fromJson(json['birthDate']),
+          : FhirDate.fromJson(json['birthDate'] as String),
       birthDateElement: json['_birthDate'] == null
           ? null
           : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
@@ -875,7 +875,7 @@ _$PractitionerImpl _$$PractitionerImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
       birthDate: json['birthDate'] == null
           ? null
-          : FhirDate.fromJson(json['birthDate']),
+          : FhirDate.fromJson(json['birthDate'] as String),
       birthDateElement: json['_birthDate'] == null
           ? null
           : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),
@@ -1252,7 +1252,7 @@ _$RelatedPersonImpl _$$RelatedPersonImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_gender'] as Map<String, dynamic>),
       birthDate: json['birthDate'] == null
           ? null
-          : FhirDate.fromJson(json['birthDate']),
+          : FhirDate.fromJson(json['birthDate'] as String),
       birthDateElement: json['_birthDate'] == null
           ? null
           : Element.fromJson(json['_birthDate'] as Map<String, dynamic>),

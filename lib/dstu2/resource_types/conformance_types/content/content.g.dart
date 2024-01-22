@@ -83,7 +83,9 @@ _$StructureDefinitionImpl _$$StructureDefinitionImplFromJson(
         ?.map((e) =>
             StructureDefinitionContact.fromJson(e as Map<String, dynamic>))
         .toList(),
-    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+    date: json['date'] == null
+        ? null
+        : FhirDateTime.fromJson(json['date'] as String),
     dateElement: json['_date'] == null
         ? null
         : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -541,7 +543,9 @@ _$DataElementImpl _$$DataElementImplFromJson(Map<String, dynamic> json) =>
       contact: (json['contact'] as List<dynamic>?)
           ?.map((e) => DataElementContact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date: json['date'] == null
+          ? null
+          : FhirDateTime.fromJson(json['date'] as String),
       useContext: (json['useContext'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),

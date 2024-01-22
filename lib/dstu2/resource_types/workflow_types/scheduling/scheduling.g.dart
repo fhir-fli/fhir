@@ -64,11 +64,15 @@ _$AppointmentImpl _$$AppointmentImplFromJson(Map<String, dynamic> json) =>
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      start: json['start'] == null ? null : FhirInstant.fromJson(json['start']),
+      start: json['start'] == null
+          ? null
+          : FhirInstant.fromJson(json['start'] as String),
       startElement: json['_start'] == null
           ? null
           : Element.fromJson(json['_start'] as Map<String, dynamic>),
-      end: json['end'] == null ? null : FhirInstant.fromJson(json['end']),
+      end: json['end'] == null
+          ? null
+          : FhirInstant.fromJson(json['end'] as String),
       endElement: json['_end'] == null
           ? null
           : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -359,11 +363,15 @@ _$AppointmentResponseImpl _$$AppointmentResponseImplFromJson(
         .toList(),
     appointment:
         Reference.fromJson(json['appointment'] as Map<String, dynamic>),
-    start: json['start'] == null ? null : FhirInstant.fromJson(json['start']),
+    start: json['start'] == null
+        ? null
+        : FhirInstant.fromJson(json['start'] as String),
     startElement: json['_start'] == null
         ? null
         : Element.fromJson(json['_start'] as Map<String, dynamic>),
-    end: json['end'] == null ? null : FhirInstant.fromJson(json['end']),
+    end: json['end'] == null
+        ? null
+        : FhirInstant.fromJson(json['end'] as String),
     endElement: json['_end'] == null
         ? null
         : Element.fromJson(json['_end'] as Map<String, dynamic>),
@@ -567,11 +575,11 @@ _$SlotImpl _$$SlotImplFromJson(Map<String, dynamic> json) => _$SlotImpl(
       schedule: Reference.fromJson(json['schedule'] as Map<String, dynamic>),
       freeBusyType: $enumDecode(_$SlotFreeBusyTypeEnumMap, json['freeBusyType'],
           unknownValue: SlotFreeBusyType.unknown),
-      start: FhirInstant.fromJson(json['start']),
+      start: FhirInstant.fromJson(json['start'] as String),
       startElement: json['_start'] == null
           ? null
           : Element.fromJson(json['_start'] as Map<String, dynamic>),
-      end: FhirInstant.fromJson(json['end']),
+      end: FhirInstant.fromJson(json['end'] as String),
       endElement: json['_end'] == null
           ? null
           : Element.fromJson(json['_end'] as Map<String, dynamic>),

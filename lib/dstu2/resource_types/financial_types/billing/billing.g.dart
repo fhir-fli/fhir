@@ -271,7 +271,7 @@ _$ClaimImpl _$$ClaimImplFromJson(Map<String, dynamic> json) => _$ClaimImpl(
           : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -328,8 +328,9 @@ _$ClaimImpl _$$ClaimImplFromJson(Map<String, dynamic> json) => _$ClaimImpl(
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
       school: json['school'] as String?,
-      accident:
-          json['accident'] == null ? null : FhirDate.fromJson(json['accident']),
+      accident: json['accident'] == null
+          ? null
+          : FhirDate.fromJson(json['accident'] as String),
       accidentType: json['accidentType'] == null
           ? null
           : Coding.fromJson(json['accidentType'] as Map<String, dynamic>),
@@ -587,7 +588,7 @@ _$ClaimItemImpl _$$ClaimItemImplFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_servicedDate'] as Map<String, dynamic>),
       serviceDate: json['serviceDate'] == null
           ? null
-          : FhirDate.fromJson(json['serviceDate']),
+          : FhirDate.fromJson(json['serviceDate'] as String),
       quantity: json['quantity'] == null
           ? null
           : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -815,7 +816,7 @@ _$ClaimItemProsthesisImpl _$$ClaimItemProsthesisImplFromJson(
           : FhirBoolean.fromJson(json['initial']),
       priorDate: json['priorDate'] == null
           ? null
-          : FhirDate.fromJson(json['priorDate']),
+          : FhirDate.fromJson(json['priorDate'] as String),
       priorMaterial: json['priorMaterial'] == null
           ? null
           : Coding.fromJson(json['priorMaterial'] as Map<String, dynamic>),
@@ -858,7 +859,7 @@ _$ClaimMissingTeethImpl _$$ClaimMissingTeethImplFromJson(
           : Coding.fromJson(json['reason'] as Map<String, dynamic>),
       extractionDate: json['extractionDate'] == null
           ? null
-          : FhirDate.fromJson(json['extractionDate']),
+          : FhirDate.fromJson(json['extractionDate'] as String),
     );
 
 Map<String, dynamic> _$$ClaimMissingTeethImplToJson(
@@ -930,7 +931,7 @@ _$ClaimResponseImpl _$$ClaimResponseImplFromJson(Map<String, dynamic> json) =>
           : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : FhirDateTime.fromJson(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -986,7 +987,7 @@ _$ClaimResponseImpl _$$ClaimResponseImplFromJson(Map<String, dynamic> json) =>
               json['paymentAdjustmentReason'] as Map<String, dynamic>),
       paymentDate: json['paymentDate'] == null
           ? null
-          : FhirDate.fromJson(json['paymentDate']),
+          : FhirDate.fromJson(json['paymentDate'] as String),
       paymentDateElement: json['_paymentDate'] == null
           ? null
           : Element.fromJson(json['_paymentDate'] as Map<String, dynamic>),

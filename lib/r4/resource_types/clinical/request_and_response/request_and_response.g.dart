@@ -93,13 +93,15 @@ _$CommunicationImpl _$$CommunicationImplFromJson(Map<String, dynamic> json) =>
       encounter: json['encounter'] == null
           ? null
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      sent: json['sent'] == null ? null : FhirDateTime.fromJson(json['sent']),
+      sent: json['sent'] == null
+          ? null
+          : FhirDateTime.fromJson(json['sent'] as String),
       sentElement: json['_sent'] == null
           ? null
           : Element.fromJson(json['_sent'] as Map<String, dynamic>),
       received: json['received'] == null
           ? null
-          : FhirDateTime.fromJson(json['received']),
+          : FhirDateTime.fromJson(json['received'] as String),
       receivedElement: json['_received'] == null
           ? null
           : Element.fromJson(json['_received'] as Map<String, dynamic>),
@@ -465,7 +467,7 @@ _$CommunicationRequestImpl _$$CommunicationRequestImplFromJson(
           .toList(),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurrenceDateTime']),
+          : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -475,7 +477,7 @@ _$CommunicationRequestImpl _$$CommunicationRequestImplFromJson(
           : Period.fromJson(json['occurrencePeriod'] as Map<String, dynamic>),
       authoredOn: json['authoredOn'] == null
           ? null
-          : FhirDateTime.fromJson(json['authoredOn']),
+          : FhirDateTime.fromJson(json['authoredOn'] as String),
       authoredOnElement: json['_authoredOn'] == null
           ? null
           : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
@@ -693,7 +695,7 @@ _$DeviceRequestImpl _$$DeviceRequestImplFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurrenceDateTime']),
+          : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -706,7 +708,7 @@ _$DeviceRequestImpl _$$DeviceRequestImplFromJson(Map<String, dynamic> json) =>
           : Timing.fromJson(json['occurrenceTiming'] as Map<String, dynamic>),
       authoredOn: json['authoredOn'] == null
           ? null
-          : FhirDateTime.fromJson(json['authoredOn']),
+          : FhirDateTime.fromJson(json['authoredOn'] as String),
       authoredOnElement: json['_authoredOn'] == null
           ? null
           : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
@@ -924,13 +926,13 @@ _$DeviceUseStatementImpl _$$DeviceUseStatementImplFromJson(
           : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
       timingDateTime: json['timingDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['timingDateTime']),
+          : FhirDateTime.fromJson(json['timingDateTime'] as String),
       timingDateTimeElement: json['_timingDateTime'] == null
           ? null
           : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
       recordedOn: json['recordedOn'] == null
           ? null
-          : FhirDateTime.fromJson(json['recordedOn']),
+          : FhirDateTime.fromJson(json['recordedOn'] as String),
       recordedOnElement: json['_recordedOn'] == null
           ? null
           : Element.fromJson(json['_recordedOn'] as Map<String, dynamic>),
@@ -1072,7 +1074,7 @@ _$GuidanceResponseImpl _$$GuidanceResponseImplFromJson(
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurrenceDateTime']),
+          : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -1219,7 +1221,7 @@ _$SupplyDeliveryImpl _$$SupplyDeliveryImplFromJson(Map<String, dynamic> json) =>
               json['suppliedItem'] as Map<String, dynamic>),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurrenceDateTime']),
+          : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -1392,7 +1394,7 @@ _$SupplyRequestImpl _$$SupplyRequestImplFromJson(Map<String, dynamic> json) =>
           .toList(),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurrenceDateTime']),
+          : FhirDateTime.fromJson(json['occurrenceDateTime'] as String),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -1405,7 +1407,7 @@ _$SupplyRequestImpl _$$SupplyRequestImplFromJson(Map<String, dynamic> json) =>
           : Timing.fromJson(json['occurrenceTiming'] as Map<String, dynamic>),
       authoredOn: json['authoredOn'] == null
           ? null
-          : FhirDateTime.fromJson(json['authoredOn']),
+          : FhirDateTime.fromJson(json['authoredOn'] as String),
       authoredOnElement: json['_authoredOn'] == null
           ? null
           : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
