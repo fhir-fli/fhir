@@ -253,6 +253,63 @@ class FhirTime implements FhirPrimitiveBase {
     }
   }
 
+  FhirTime plus(
+      {int hours = 0, int minutes = 0, int seconds = 0, int milliseconds = 0}) {
+    int newMilliseconds = (millisecond ?? 0) + milliseconds;
+    int newSeconds = (second ?? 0) + seconds + (newMilliseconds ~/ 1000);
+    newMilliseconds = newMilliseconds % 1000;
+    int newMinutes = (minute ?? 0) + minutes + (newSeconds ~/ 60);
+    newSeconds = newSeconds % 60;
+    int newHours = (hour ?? 0) + hours + (newMinutes ~/ 60);
+    newMinutes = newMinutes % 60;
+    newHours = newHours % 24;
+    return FhirTime.fromUnits(
+      hour: newHours,
+      minute: newMinutes,
+      second: newSeconds,
+      millisecond: newMilliseconds,
+    );
+  }
+
+  FhirTime subtract(
+      {int hours = 0, int minutes = 0, int seconds = 0, int milliseconds = 0}) {
+    int newMilliseconds = (millisecond ?? 0) - milliseconds;
+    int newSeconds = (second ?? 0) - seconds;
+    int newMinutes = (minute ?? 0) - minutes;
+    int newHours = (hour ?? 0) - hours;
+
+    // Handle underflow for milliseconds
+    while (newMilliseconds < 0) {
+      newMilliseconds += 1000;
+      newSeconds--;
+    }
+
+    // Handle underflow for seconds
+    while (newSeconds < 0) {
+      newSeconds += 60;
+      newMinutes--;
+    }
+
+    // Handle underflow for minutes
+    while (newMinutes < 0) {
+      newMinutes += 60;
+      newHours--;
+    }
+
+    // Handle underflow for hours
+    while (newHours < 0) {
+      newHours += 24;
+    }
+    newHours = newHours % 24; // Ensure hours wrap around a 24-hour clock
+
+    return FhirTime.fromUnits(
+      hour: newHours,
+      minute: newMinutes,
+      second: newSeconds,
+      millisecond: newMilliseconds,
+    );
+  }
+
   // TODO(Dokotela): may need to fix for precision
 
   @override

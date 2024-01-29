@@ -70,17 +70,17 @@ class FhirInstant extends FhirDateTimeBase {
         isUtc: isUtc ?? false,
       ) as FhirInstant;
 
-  FhirInstant add(Duration other) =>
-      FhirDateTimeBase.add<FhirInstant>(this, other) as FhirInstant;
+  FhirInstant plus(ExtendedDuration other) =>
+      FhirDateTimeBase.plus<FhirInstant>(this, other) as FhirInstant;
 
-  FhirInstant subtract<T>(Duration other) =>
+  FhirInstant subtract<T>(ExtendedDuration other) =>
       FhirDateTimeBase.subtract<FhirInstant>(this, other) as FhirInstant;
 
   @override
-  FhirInstant operator +(Duration other) =>
-      FhirDateTimeBase.add<FhirInstant>(this, other) as FhirInstant;
+  FhirInstant operator +(ExtendedDuration other) =>
+      FhirDateTimeBase.plus<FhirInstant>(this, other) as FhirInstant;
 
   @override
-  FhirInstant operator -(Duration other) =>
+  FhirInstant operator -(ExtendedDuration other) =>
       FhirDateTimeBase.subtract<FhirInstant>(this, other) as FhirInstant;
 }

@@ -71,17 +71,17 @@ class FhirDateTime extends FhirDateTimeBase {
         isUtc: isUtc ?? false,
       ) as FhirDateTime;
 
-  FhirDateTime add(Duration other) =>
-      FhirDateTimeBase.add<FhirDateTime>(this, other) as FhirDateTime;
+  FhirDateTime plus(ExtendedDuration other) =>
+      FhirDateTimeBase.plus<FhirDateTime>(this, other) as FhirDateTime;
 
-  FhirDateTime subtract<T>(Duration other) =>
+  FhirDateTime subtract<T>(ExtendedDuration other) =>
       FhirDateTimeBase.subtract<FhirDateTime>(this, other) as FhirDateTime;
 
   @override
-  FhirDateTime operator +(Duration other) =>
-      FhirDateTimeBase.add<FhirDateTime>(this, other) as FhirDateTime;
+  FhirDateTime operator +(ExtendedDuration other) =>
+      FhirDateTimeBase.plus<FhirDateTime>(this, other) as FhirDateTime;
 
   @override
-  FhirDateTime operator -(Duration other) =>
+  FhirDateTime operator -(ExtendedDuration other) =>
       FhirDateTimeBase.subtract<FhirDateTime>(this, other) as FhirDateTime;
 }

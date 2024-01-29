@@ -168,7 +168,6 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     dynamic inValue, [
     DateTimePrecision? precision,
   ]) {
-    // print(inValue);
     String? input;
     String? exception;
     Map<String, int?>? dateTimeMap;
@@ -195,9 +194,6 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     if (input != null) {
       dateTimeMap = formatDateTimeString(input);
     }
-    print('input: $input');
-    print(dateTimeMap);
-    print('precision1: $precision');
     if (dateTimeMap != null) {
       if (precision == null) {
         precision = precisionFromMap(dateTimeMap);
@@ -206,7 +202,6 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       }
     }
 
-    print('precision: $precision');
     return _constructor<T>(
         dateTimeMap, precision, exception, output ?? inValue);
   }
@@ -225,6 +220,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     int? microsecond,
     int? timeZoneOffset,
     required bool isUtc,
+    DateTimePrecision? precision,
   }) {
     final Map<String, int?> dateTimeMap = <String, int?>{
       'year': year,
@@ -239,7 +235,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       'isUtc': isUtc ? 0 : 1,
     };
 
-    final DateTimePrecision precision = precisionFromMap(dateTimeMap);
+    precision ??= precisionFromMap(dateTimeMap);
 
     return _constructor<T>(
       dateTimeMap,
@@ -257,7 +253,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
           'Argument 2: $o (${o.runtimeType})');
 
   /// Comparison method for FhirDateTimes
-  bool _compare(Comparator comparator, Object o) {
+  bool? _compare(Comparator comparator, Object o) {
     /// first, easy check if they're identical
     if (identical(this, o)) {
       switch (comparator) {
@@ -307,15 +303,19 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     } else {
       final DateTimePrecision lhsPrecision = lhs.precision;
       final DateTimePrecision rhsPrecision = rhs.precision;
+      final bool equivalentPrecisions =
+          lhsPrecision.isEquivalentTo(rhsPrecision);
 
       bool? compareByPrecision(
-          Comparator comparator, int value1, int value2, bool isPrecision) {
+          Comparator comparator, num value1, num value2, bool isPrecision) {
         switch (comparator) {
           case Comparator.eq:
             {
               if (value1 != value2) {
                 return false;
-              } else if (value1 == value2 && isPrecision) {
+              } else if (value1 == value2 &&
+                  isPrecision &&
+                  equivalentPrecisions) {
                 return true;
               }
             }
@@ -335,7 +335,9 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                 return false;
               } else if (value1 > value2) {
                 return true;
-              } else if (value1 >= value2 && isPrecision) {
+              } else if (value1 >= value2 &&
+                  isPrecision &&
+                  equivalentPrecisions) {
                 return true;
               }
             }
@@ -355,7 +357,9 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                 return false;
               } else if (value1 < value2) {
                 return true;
-              } else if (value1 == value2 && isPrecision) {
+              } else if (value1 == value2 &&
+                  isPrecision &&
+                  equivalentPrecisions) {
                 return true;
               }
             }
@@ -363,196 +367,181 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
         return null;
       }
 
-      bool precision = lhsPrecision == DateTimePrecision.yyyy ||
-          rhsPrecision == DateTimePrecision.yyyy;
+      bool precision =
+          lhsPrecision.yearsPrecision || rhsPrecision.yearsPrecision;
       bool? result =
           compareByPrecision(comparator, lhs.year, rhs.year, precision);
       if (result != null) {
         return result;
       }
-      precision = lhsPrecision == DateTimePrecision.yyyy_MM ||
-          rhsPrecision == DateTimePrecision.yyyy_MM;
-      result = compareByPrecision(comparator, lhs.month, rhs.month, precision);
-      if (result != null) {
-        return result;
-      }
+      if (!precision) {
+        precision =
+            lhsPrecision.monthsPrecision || rhsPrecision.monthsPrecision;
+        result =
+            compareByPrecision(comparator, lhs.month, rhs.month, precision);
+        if (result != null) {
+          return result;
+        }
+        if (!precision) {
+          int lhsDay = lhs.day;
+          int lhsHour = lhs.hour - lhs.timeZoneOffset;
+          int rhsDay = lhs.day;
+          int rhsHour = rhs.hour - rhs.timeZoneOffset;
 
-      int lhsDay = lhs.day;
-      int lhsHour = lhs.hour - lhs.timeZoneOffset;
-      int rhsDay = lhs.day;
-      int rhsHour = rhs.hour - rhs.timeZoneOffset;
+          if (lhsHour > 24) {
+            lhsDay++;
+          } else if (lhsHour < 0) {
+            lhsDay--;
+          }
+          if (rhsHour > 24) {
+            rhsDay++;
+          } else if (rhsHour < 0) {
+            rhsDay--;
+          }
 
-      if (lhsHour > 24) {
-        lhsDay++;
-      } else if (lhsHour < 0) {
-        lhsDay--;
-      }
-      if (rhsHour > 24) {
-        rhsDay++;
-      } else if (rhsHour < 0) {
-        rhsDay--;
-      }
-      precision = lhsPrecision == DateTimePrecision.yyyy_MM_dd ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd ||
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_Z ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_Z ||
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_ZZ ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_ZZ;
-      result = compareByPrecision(comparator, lhsDay, rhsDay, precision);
-      if (result != null) {
-        return result;
-      }
+          precision = lhsPrecision.daysPrecision || rhsPrecision.daysPrecision;
+          result = compareByPrecision(comparator, lhsDay, rhsDay, precision);
+          if (result != null) {
+            return result;
+          }
+          if (!precision) {
+            if (lhsHour > 24) {
+              lhsHour = lhsHour - 24;
+            } else if (lhsHour < 0) {
+              lhsHour = lhsHour + 24;
+            }
 
-      if (lhsHour > 24) {
-        lhsHour = lhsHour - 24;
-      } else if (lhsHour < 0) {
-        lhsHour = lhsHour + 24;
-      }
+            if (rhsHour > 24) {
+              rhsHour = rhsHour - 24;
+            } else if (rhsHour < 0) {
+              rhsHour = rhsHour + 24;
+            }
 
-      if (rhsHour > 24) {
-        rhsHour = rhsHour - 24;
-      } else if (rhsHour < 0) {
-        rhsHour = rhsHour + 24;
-      }
+            precision =
+                lhsPrecision.hoursPrecision || rhsPrecision.hoursPrecision;
+            result =
+                compareByPrecision(comparator, lhsHour, rhsHour, precision);
+            if (result != null) {
+              return result;
+            }
 
-      precision = lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH ||
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_Z ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_Z ||
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HHZZ ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HHZZ;
-      result = compareByPrecision(comparator, lhsHour, rhsHour, precision);
-      if (result != null) {
-        return result;
-      }
+            if (!precision) {
+              precision = lhsPrecision.minutesPrecision ||
+                  rhsPrecision.minutesPrecision;
+              result = compareByPrecision(
+                  comparator, lhs.minute, rhs.minute, precision);
+              if (result != null) {
+                return result;
+              }
 
-      precision = lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm ||
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z ||
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ;
-      result =
-          compareByPrecision(comparator, lhs.minute, rhs.minute, precision);
-      if (result != null) {
-        return result;
-      }
-      precision = lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss ||
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z ||
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ;
-      result =
-          compareByPrecision(comparator, lhs.second, rhs.second, precision);
-      if (result != null) {
-        return result;
-      }
-
-      precision = lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS ||
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z ||
-          lhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ ||
-          rhsPrecision == DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ ||
-          lhsPrecision == DateTimePrecision.dateTime ||
-          rhsPrecision == DateTimePrecision.dateTime ||
-          lhsPrecision == DateTimePrecision.instant ||
-          rhsPrecision == DateTimePrecision.instant;
-      result = compareByPrecision(
-          comparator, lhs.millisecond, rhs.millisecond, precision);
-      if (result != null) {
-        return result;
+              if (!precision) {
+                precision = lhsPrecision.secondsPrecision ||
+                    rhsPrecision.secondsPrecision;
+                final num lhsSecond = num.parse(
+                    '${lhs.second}.${lhs.millisecond.toString().padLeft(3, '0')}');
+                final num rhsSecond = num.parse(
+                    '${rhs.second}.${rhs.millisecond.toString().padLeft(3, '0')}');
+                result = compareByPrecision(
+                    comparator, lhsSecond, rhsSecond, precision);
+                if (result != null) {
+                  return result;
+                }
+              }
+            }
+          }
+        }
       }
     }
     switch (comparator) {
       case Comparator.eq:
-        return true;
+        return lhs.precision.isEquivalentTo(rhs.precision) ? true : null;
       case Comparator.gt:
-        return false;
+        return lhs.precision.isEquivalentTo(rhs.precision) ? false : null;
       case Comparator.gte:
-        return true;
+        return lhs.precision.isEquivalentTo(rhs.precision) ? true : null;
       case Comparator.lt:
-        return false;
+        return lhs.precision.isEquivalentTo(rhs.precision) ? false : null;
       case Comparator.lte:
-        return true;
+        return lhs.precision.isEquivalentTo(rhs.precision) ? true : null;
     }
   }
 
-  static FhirDateTimeBase add<T>(
-      FhirDateTimeBase fhirDateTimeBase, Duration o) {
-    final int newYear =
-        fhirDateTimeBase.year + (o is ExtendedDuration ? o.inYears : 0);
-    final int newMonth =
-        fhirDateTimeBase.month + (o is ExtendedDuration ? o.inMonths : 0);
-    final int newDay =
-        fhirDateTimeBase.day + (o is ExtendedDuration ? o.inDays : 0);
-    final int newHour = fhirDateTimeBase.hour + o.inHours;
-    final int newMinute = fhirDateTimeBase.minute + o.inMinutes;
-    final int newSecond = fhirDateTimeBase.second + o.inSeconds;
-    final int newMillisecond = fhirDateTimeBase.millisecond + o.inMilliseconds;
-    final DateTime newDateTime = DateTime(
-      newYear,
-      newMonth,
-      newDay,
-      newHour,
-      newMinute,
-      newSecond,
-      newMillisecond,
+  static FhirDateTimeBase fromMathUnits<T>(
+          DateTime dateTime, FhirDateTimeBase fhirDateTimeBase) =>
+      fromUnits<T>(
+        year: dateTime.year,
+        month: dateTime.month,
+        day: dateTime.day,
+        hour: dateTime.hour,
+        minute: dateTime.minute,
+        second: dateTime.second,
+        millisecond: dateTime.millisecond,
+        microsecond: dateTime.microsecond,
+        timeZoneOffset: fhirDateTimeBase.timeZoneOffset,
+        isUtc: fhirDateTimeBase.isUtc,
+        precision: fhirDateTimeBase.precision,
+      );
+
+  static FhirDateTimeBase plus<T>(
+      FhirDateTimeBase fhirDateTimeBase, ExtendedDuration o) {
+    // Adjust years and months first
+    final DateTime dateTime = DateTime(
+      fhirDateTimeBase.year + o.years,
+      fhirDateTimeBase.month + o.months,
+      fhirDateTimeBase.day + o.days,
+      fhirDateTimeBase.hour + o.hours,
+      fhirDateTimeBase.minute + o.minutes,
+      fhirDateTimeBase.second + o.seconds,
+      fhirDateTimeBase.millisecond + o.milliseconds,
+      fhirDateTimeBase.microsecond + o.microseconds,
     );
-    return constructor<T>(newDateTime, fhirDateTimeBase.precision);
+
+    return fromMathUnits<T>(dateTime, fhirDateTimeBase);
   }
 
   static FhirDateTimeBase subtract<T>(
-      FhirDateTimeBase fhirDateTimeBase, Duration o) {
-    final int newYear =
-        fhirDateTimeBase.year - (o is ExtendedDuration ? o.inYears : 0);
-    final int newMonth =
-        fhirDateTimeBase.month - (o is ExtendedDuration ? o.inMonths : 0);
-    final int newDay =
-        fhirDateTimeBase.day - (o is ExtendedDuration ? o.inDays : 0);
-    final int newHour = fhirDateTimeBase.hour - o.inHours;
-    final int newMinute = fhirDateTimeBase.minute - o.inMinutes;
-    final int newSecond = fhirDateTimeBase.second - o.inSeconds;
-    final int newMillisecond = fhirDateTimeBase.millisecond - o.inMilliseconds;
-    final DateTime newDateTime = DateTime(
-      newYear,
-      newMonth,
-      newDay,
-      newHour,
-      newMinute,
-      newSecond,
-      newMillisecond,
+      FhirDateTimeBase fhirDateTimeBase, ExtendedDuration o) {
+    final DateTime dateTime = DateTime(
+      fhirDateTimeBase.year - o.years,
+      fhirDateTimeBase.month - o.months,
+      fhirDateTimeBase.day - o.days,
+      fhirDateTimeBase.hour - o.hours,
+      fhirDateTimeBase.minute - o.minutes,
+      fhirDateTimeBase.second - o.seconds,
+      fhirDateTimeBase.millisecond - o.milliseconds,
+      fhirDateTimeBase.microsecond - o.microseconds,
     );
-    return constructor<T>(newDateTime, fhirDateTimeBase.precision);
+
+    return fromMathUnits<T>(dateTime, fhirDateTimeBase);
   }
 
   @override
-  bool operator ==(Object other) => _compare(Comparator.eq, other);
+  bool operator ==(Object other) => _compare(Comparator.eq, other) ?? false;
 
-  bool operator >(Object other) => _compare(Comparator.gt, other);
+  bool? operator >(Object other) => _compare(Comparator.gt, other);
 
-  bool operator >=(Object other) => _compare(Comparator.gte, other);
+  bool? operator >=(Object other) => _compare(Comparator.gte, other);
 
-  bool operator <(Object other) => _compare(Comparator.lt, other);
+  bool? operator <(Object other) => _compare(Comparator.lt, other);
 
-  bool operator <=(Object other) => _compare(Comparator.lte, other);
+  bool? operator <=(Object other) => _compare(Comparator.lte, other);
 
-  bool isBefore(FhirDateTimeBase other) => _compare(Comparator.lt, other);
+  bool? isBefore(FhirDateTimeBase other) => _compare(Comparator.lt, other);
 
-  bool isAfter(FhirDateTimeBase other) => _compare(Comparator.gt, other);
+  bool? isAfter(FhirDateTimeBase other) => _compare(Comparator.gt, other);
 
-  bool isSameOrBefore(FhirDateTimeBase other) =>
+  bool? isSameOrBefore(FhirDateTimeBase other) =>
       _compare(Comparator.lte, other);
 
-  bool isSameOrAfter(FhirDateTimeBase other) => _compare(Comparator.gte, other);
+  bool? isSameOrAfter(FhirDateTimeBase other) =>
+      _compare(Comparator.gte, other);
 
-  bool isAtSameMomentAs(FhirDateTimeBase other) =>
+  bool? isAtSameMomentAs(FhirDateTimeBase other) =>
       _compare(Comparator.eq, other);
 
-  bool isEqual(FhirDateTimeBase other) => _compare(Comparator.eq, other);
+  bool? isEqual(FhirDateTimeBase other) => _compare(Comparator.eq, other);
 
-  FhirDateTimeBase operator +(Duration other);
+  FhirDateTimeBase operator +(ExtendedDuration other);
 
-  FhirDateTimeBase operator -(Duration other);
+  FhirDateTimeBase operator -(ExtendedDuration other);
 }

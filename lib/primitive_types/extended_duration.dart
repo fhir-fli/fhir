@@ -1,27 +1,88 @@
-class ExtendedDuration extends Duration {
+// ignore_for_file: sort_constructors_first
+
+class ExtendedDuration {
+  int years;
+  int months;
+  int weeks;
+  int days;
+  int hours;
+  int minutes;
+  int seconds;
+  int milliseconds;
+  int microseconds;
+
   ExtendedDuration({
     this.years = 0,
     this.months = 0,
-    int? weeks,
-    int? days,
-    super.hours,
-    super.minutes,
-    super.seconds,
-    super.milliseconds,
-    super.microseconds,
-  }) : super(days: (days ?? 0) + ((weeks ?? 0) * 7));
+    this.weeks = 0,
+    this.days = 0,
+    this.hours = 0,
+    this.minutes = 0,
+    this.seconds = 0,
+    this.milliseconds = 0,
+    this.microseconds = 0,
+  }) {
+    // Microseconds to Milliseconds
+    milliseconds += microseconds ~/ 1000;
+    microseconds %= 1000;
 
-  ExtendedDuration.fromDuration(Duration duration)
-      : years = 0,
-        months = 0,
-        super(
-          days: duration.inDays,
-          hours: duration.inHours % 24,
-          minutes: duration.inMinutes % 60,
-          seconds: duration.inSeconds % 60,
-          milliseconds: duration.inMilliseconds % 1000,
-          microseconds: duration.inMicroseconds % 1000,
-        );
+    // Milliseconds to Seconds
+    seconds += milliseconds ~/ 1000;
+    milliseconds %= 1000;
+
+    // Seconds to Minutes
+    minutes += seconds ~/ 60;
+    seconds %= 60;
+
+    // Minutes to Hours
+    hours += minutes ~/ 60;
+    minutes %= 60;
+
+    // Hours to Days
+    days += hours ~/ 24;
+    hours %= 24;
+
+    // Days to Weeks
+    weeks += days ~/ 7;
+    days %= 7;
+
+    // Weeks to Months
+    months += weeks ~/ 4;
+    weeks %= 4;
+
+    // Months to Years
+    years += months ~/ 12;
+    months %= 12;
+  }
+
+  factory ExtendedDuration.fromDuration(Duration duration) {
+    int microseconds = duration.inMicroseconds;
+    int milliseconds = microseconds ~/ 1000;
+    microseconds %= 1000;
+
+    int seconds = milliseconds ~/ 1000;
+    milliseconds %= 1000;
+
+    int minutes = seconds ~/ 60;
+    seconds %= 60;
+
+    final int hours = minutes ~/ 60;
+    minutes %= 60;
+
+    final int totalDays = duration.inDays;
+    final int years = totalDays ~/ 365;
+    final int remainingDays = totalDays % 365;
+
+    return ExtendedDuration(
+      years: years,
+      days: remainingDays,
+      hours: hours,
+      minutes: minutes,
+      seconds: seconds,
+      milliseconds: milliseconds,
+      microseconds: microseconds,
+    );
+  }
 
   factory ExtendedDuration.fromString(String value) {
     int years = 0;
@@ -92,18 +153,20 @@ class ExtendedDuration extends Duration {
   static final RegExp secondRegex = RegExp(r'(\d+)\s*second(s)?');
   static final RegExp millisecondRegex = RegExp(r'(\d+)\s*millisecond(s)?');
 
-  final int years;
-  final int months;
+  @override
+  String toString() => <String>[
+        if (years != 0) '$years years',
+        if (months != 0) '$months months',
+        if (weeks != 0) '$weeks weeks',
+        if (days != 0) '$days days',
+        if (hours != 0) '$hours hours',
+        if (minutes != 0) '$minutes minutes',
+        if (seconds != 0) '$seconds seconds',
+        if (milliseconds != 0) '$milliseconds milliseconds',
+        if (microseconds != 0) '$microseconds microseconds',
+      ].join(', ');
+}
 
-  int get inYears => years;
-  int get inMonths => months;
-
-  Duration get duration => Duration(
-        days: inDays,
-        hours: inHours % 24,
-        minutes: inMinutes % 60,
-        seconds: inSeconds % 60,
-        milliseconds: inMilliseconds % 1000,
-        microseconds: inMicroseconds % 1000,
-      );
+extension DurationExtension on Duration {
+  ExtendedDuration toExtendedDuration() => ExtendedDuration.fromDuration(this);
 }

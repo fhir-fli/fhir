@@ -207,6 +207,47 @@ extension DateTimePrecisionExtension on DateTimePrecision {
         DateTimePrecision.instant,
       ].contains(this);
 
+  bool get yearsPrecision => DateTimePrecision.yyyy == this;
+
+  bool get monthsPrecision => DateTimePrecision.yyyy_MM == this;
+
+  bool get daysPrecision => <DateTimePrecision>[
+        DateTimePrecision.yyyy_MM_dd,
+        DateTimePrecision.yyyy_MM_dd_T_Z,
+        DateTimePrecision.yyyy_MM_dd_T_ZZ,
+      ].contains(this);
+
+  bool get hoursPrecision => <DateTimePrecision>[
+        DateTimePrecision.yyyy_MM_dd_T_HH,
+        DateTimePrecision.yyyy_MM_dd_T_HH_Z,
+        DateTimePrecision.yyyy_MM_dd_T_HHZZ,
+      ].contains(this);
+
+  bool get minutesPrecision => <DateTimePrecision>[
+        DateTimePrecision.yyyy_MM_dd_T_HH_mm,
+        DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
+        DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
+      ].contains(this);
+
+  bool get secondsPrecision => <DateTimePrecision>[
+        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+        DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+        DateTimePrecision.dateTime,
+        DateTimePrecision.instant,
+      ].contains(this);
+
+  bool isEquivalentTo(DateTimePrecision precision) =>
+      (yearsPrecision && precision.yearsPrecision) ||
+      (monthsPrecision && precision.monthsPrecision) ||
+      (daysPrecision && precision.daysPrecision) ||
+      (hoursPrecision && precision.hoursPrecision) ||
+      (minutesPrecision && precision.minutesPrecision) ||
+      (secondsPrecision && precision.secondsPrecision);
+
   String dateTimeToString<T>(DateTime dateTime) {
     switch (this) {
       case DateTimePrecision.yyyy:
@@ -328,6 +369,65 @@ extension DateTimePrecisionExtension on DateTimePrecision {
     }
   }
 
+  bool isEquallyPrecise(DateTimePrecision precision) {
+    switch (this) {
+      case DateTimePrecision.yyyy:
+        return precision == DateTimePrecision.yyyy;
+
+      case DateTimePrecision.yyyy_MM:
+        return precision == DateTimePrecision.yyyy_MM;
+
+      case DateTimePrecision.yyyy_MM_dd:
+      case DateTimePrecision.yyyy_MM_dd_T_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_ZZ:
+        return <DateTimePrecision>[
+          DateTimePrecision.yyyy_MM_dd,
+          DateTimePrecision.yyyy_MM_dd_T_Z,
+          DateTimePrecision.yyyy_MM_dd_T_ZZ,
+        ].contains(precision);
+
+      case DateTimePrecision.yyyy_MM_dd_T_HH:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_HHZZ:
+        return <DateTimePrecision>[
+          DateTimePrecision.yyyy_MM_dd_T_HH,
+          DateTimePrecision.yyyy_MM_dd_T_HH_Z,
+          DateTimePrecision.yyyy_MM_dd_T_HHZZ,
+        ].contains(precision);
+
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ:
+        return <DateTimePrecision>[
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
+        ].contains(precision);
+
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ:
+      case DateTimePrecision.dateTime:
+      case DateTimePrecision.instant:
+        return <DateTimePrecision>[
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+          DateTimePrecision.dateTime,
+          DateTimePrecision.instant,
+        ].contains(precision);
+
+      case DateTimePrecision.invalid:
+        return precision == DateTimePrecision.invalid;
+    }
+  }
+
   DateTime dateTimeFromMap(Map<String, int?> map) {
     final DateTime dateTime = DateTime(
       map['year'] ?? 0,
@@ -357,8 +457,6 @@ extension DateTimePrecisionExtension on DateTimePrecision {
   }
 
   String dateTimeMapToString<T>(Map<String, int?> map) {
-    print('dateTimeMapToString: $map');
-    print('precision: $this');
     final DateTime dateTime = DateTime(
         map['year'] ?? 0,
         map['month'] ?? 1,
@@ -673,7 +771,6 @@ final RegExp instantExp = RegExp(
     r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(?<month>0[1-9]|1[0-2])-(?<day>0[1-9]|[1-2][0-9]|3[0-1])T(?<hour>[01][0-9]|2[0-3]):(?<minute>[0-5][0-9]):(?<second>[0-5][0-9]|60)(\.(?<millimicrosecond>[0-9]{1,9}))?(?<timezone>Z|(\+|-)(?<tzhour>0[0-9]|1[0-3]):(?<tzminute>[0-5][0-9]|14:00))');
 
 Map<String, int?> formatDateTimeString<T>(String dateTimeString) {
-  print('formatDateTimeString: $dateTimeString');
   final RegExpMatch? dateTimeRegExp = dateTimeExp.firstMatch(dateTimeString);
   final String? fractionString = dateTimeRegExp?.namedGroup('fraction');
   return <String, int?>{
