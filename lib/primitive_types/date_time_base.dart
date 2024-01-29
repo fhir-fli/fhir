@@ -96,11 +96,13 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     DateTimePrecision? precision,
     String? exception,
     dynamic output,
+    bool regexpValid,
   ) {
     return T == FhirInstant
         ? FhirInstant.fromBase(
             isValid: (precision?.isValidInstantPrecision ?? false) &&
-                precision != DateTimePrecision.invalid,
+                precision != DateTimePrecision.invalid &&
+                regexpValid,
             precision: precision ?? DateTimePrecision.invalid,
             input: output,
             parseError: exception == null
@@ -120,7 +122,8 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
         : T == FhirDateTime
             ? FhirDateTime.fromBase(
                 isValid: (precision?.isValidDateTimePrecision ?? false) &&
-                    precision != DateTimePrecision.invalid,
+                    precision != DateTimePrecision.invalid &&
+                    regexpValid,
                 precision: precision ?? DateTimePrecision.invalid,
                 input: output,
                 parseError: exception == null
@@ -140,7 +143,8 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
             : T == FhirDate
                 ? FhirDate.fromBase(
                     isValid: (precision?.isValidDatePrecision ?? false) &&
-                        precision != DateTimePrecision.invalid,
+                        precision != DateTimePrecision.invalid &&
+                        regexpValid,
                     precision: precision ?? DateTimePrecision.invalid,
                     input: output,
                     parseError: exception == null
@@ -171,9 +175,21 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     String? input;
     String? exception;
     Map<String, int?>? dateTimeMap;
+    bool regexpValid = true;
 
     if (inValue is String) {
       input = _cleanInput(inValue);
+      if (input
+          .replaceAll(
+              T == FhirDateTime
+                  ? dateTimeExp
+                  : T == FhirInstant
+                      ? instantExp
+                      : dateExp,
+              '')
+          .isNotEmpty) {
+        regexpValid = false;
+      }
     } else if (inValue is DateTime) {
       input = inValue.toIso8601String();
       if (inValue.isUtc) {
@@ -203,7 +219,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     }
 
     return _constructor<T>(
-        dateTimeMap, precision, exception, output ?? inValue);
+        dateTimeMap, precision, exception, output ?? inValue, regexpValid);
   }
 
   FhirDateTimeBase fromJson<T>(String json, [DateTimePrecision? precision]) =>
@@ -242,6 +258,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       precision,
       null,
       precision.dateTimeMapToString(dateTimeMap),
+      true,
     );
   }
 
