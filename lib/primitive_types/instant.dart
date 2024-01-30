@@ -33,7 +33,7 @@ class FhirInstant extends FhirDateTimeBase {
 
   factory FhirInstant.fromDateTime(DateTime dateTime,
           [DateTimePrecision? precision]) =>
-      FhirInstant._(dateTime, precision);
+      FhirInstant._(dateTime, precision ?? DateTimePrecision.instant);
 
   factory FhirInstant.fromString(String inValue,
           [DateTimePrecision? precision]) =>

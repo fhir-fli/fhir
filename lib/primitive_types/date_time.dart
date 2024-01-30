@@ -34,7 +34,12 @@ class FhirDateTime extends FhirDateTimeBase {
 
   factory FhirDateTime.fromDateTime(DateTime dateTime,
           [DateTimePrecision? precision]) =>
-      FhirDateTime._(dateTime, precision);
+      FhirDateTime._(
+          dateTime,
+          precision ??
+              (dateTime.isUtc
+                  ? DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z
+                  : DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ));
 
   factory FhirDateTime.fromString(String inValue,
           [DateTimePrecision? precision]) =>
