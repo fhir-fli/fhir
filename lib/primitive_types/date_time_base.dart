@@ -21,8 +21,8 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
 
   @override
   int get hashCode => input.toString().hashCode;
-  DateTime? get value => valueDateTime;
-  DateTime? get valueDateTime => precision.dateTimeFromMap(toMap());
+  DateTime get value => valueDateTime;
+  DateTime get valueDateTime => precision.dateTimeFromMap(toMap());
   String get valueString => _string;
   @override
   String toString() => _string;
@@ -43,7 +43,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                 : precision.dateTimeMapToString(toMap());
   }
 
-  String? toIso8601String() => valueDateTime?.toIso8601String();
+  String toIso8601String() => valueDateTime.toIso8601String();
   String toJson() => input.toString();
   String toYaml() => input.toString();
   Map<String, int> toMap() => <String, int>{
