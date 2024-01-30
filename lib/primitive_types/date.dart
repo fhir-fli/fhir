@@ -33,7 +33,7 @@ class FhirDate extends FhirDateTimeBase {
 
   factory FhirDate.fromDateTime(DateTime dateTime,
           [DateTimePrecision? precision]) =>
-      FhirDate._(dateTime, precision);
+      FhirDate._(dateTime, precision ?? DateTimePrecision.yyyy_MM_dd);
 
   factory FhirDate.fromString(String inValue, [DateTimePrecision? precision]) =>
       FhirDate._(inValue, precision);
