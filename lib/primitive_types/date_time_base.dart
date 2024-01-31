@@ -323,11 +323,12 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       final DateTimePrecision rhsPrecision = rhs.precision;
       final bool equivalentPrecisions =
           lhsPrecision.isEquivalentTo(rhsPrecision);
-      print('lhsPrecision: $lhsPrecision, rhsPrecision: $rhsPrecision');
-      print('lhs: $lhs, rhs: $rhs');
 
       bool? compareByPrecision(
           Comparator comparator, num value1, num value2, bool isPrecision) {
+        print(comparator);
+        print(value1);
+        print(value2);
         switch (comparator) {
           case Comparator.eq:
             {
@@ -401,7 +402,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
         if (!precision) {
           int lhsDay = lhs.day;
           int lhsHour = lhs.hour - lhs.timeZoneOffset;
-          int rhsDay = lhs.day;
+          int rhsDay = rhs.day;
           int rhsHour = rhs.hour - rhs.timeZoneOffset;
 
           if (lhsHour > 24) {
