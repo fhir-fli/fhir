@@ -4,8 +4,11 @@
 import 'dart:convert';
 
 // Project imports:
+import 'package:freezed_annotation/freezed_annotation.dart';
+
 import 'primitive_types.dart';
 
+@immutable
 class FhirDate extends FhirDateTimeBase {
   const FhirDate.fromBase({
     required super.isValid,
@@ -55,6 +58,24 @@ class FhirDate extends FhirDateTimeBase {
           month: month,
           day: day,
           isUtc: isUtc ?? false) as FhirDate;
+
+  @override
+  bool operator ==(Object other) => isEqual(other) ?? false;
+
+  @override
+  int get hashCode =>
+      input.hashCode ^
+      parseError.hashCode ^
+      year.hashCode ^
+      month.hashCode ^
+      day.hashCode ^
+      hour.hashCode ^
+      minute.hashCode ^
+      second.hashCode ^
+      millisecond.hashCode ^
+      microsecond.hashCode ^
+      timeZoneOffset.hashCode ^
+      isUtc.hashCode;
 
   FhirDate plus(ExtendedDuration other) =>
       FhirDateTimeBase.plus<FhirDate>(this, other) as FhirDate;

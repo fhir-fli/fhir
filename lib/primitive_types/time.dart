@@ -138,7 +138,6 @@ class FhirTime implements FhirPrimitiveBase {
           if (num.parse(lhsValue) != num.parse(rhsValue)) {
             return false;
           }
-          break;
         case Comparator.gt:
 
           /// if at any point this is less than the Object precision,
@@ -152,7 +151,6 @@ class FhirTime implements FhirPrimitiveBase {
           if (num.parse(lhsValue) > num.parse(rhsValue)) {
             return true;
           }
-          break;
         case Comparator.gte:
 
           /// if at any point this is less than the Object precision,
@@ -166,7 +164,6 @@ class FhirTime implements FhirPrimitiveBase {
           if (num.parse(lhsValue) > num.parse(rhsValue)) {
             return true;
           }
-          break;
         case Comparator.lt:
 
           /// if at any point this is less than the Object precision,
@@ -180,7 +177,6 @@ class FhirTime implements FhirPrimitiveBase {
           if (num.parse(lhsValue) > num.parse(rhsValue)) {
             return false;
           }
-          break;
         case Comparator.lte:
 
           /// if at any point this is less than the Object precision,
@@ -194,7 +190,6 @@ class FhirTime implements FhirPrimitiveBase {
           if (num.parse(lhsValue) > num.parse(rhsValue)) {
             return false;
           }
-          break;
       }
       return null;
     }

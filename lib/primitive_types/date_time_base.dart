@@ -30,17 +30,17 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   String get _string {
     return this is FhirInstant
         ? precision.isValidInstantPrecision
-            ? precision.dateTimeMapToString(toMap())
-            : instantPrecision.dateTimeMapToString(toMap())
+            ? precision.dateTimeMapToString<FhirInstant>(toMap())
+            : instantPrecision.dateTimeMapToString<FhirInstant>(toMap())
         : this is FhirDateTime
             ? precision.isValidDateTimePrecision
-                ? precision.dateTimeMapToString(toMap())
-                : dateTimePrecision.dateTimeMapToString(toMap())
+                ? precision.dateTimeMapToString<FhirDateTime>(toMap())
+                : dateTimePrecision.dateTimeMapToString<FhirDateTime>(toMap())
             : this is FhirDate
                 ? precision.isValidDatePrecision
-                    ? precision.dateTimeMapToString(toMap())
-                    : datePrecision.dateTimeMapToString(toMap())
-                : precision.dateTimeMapToString(toMap());
+                    ? precision.dateTimeMapToString<FhirDate>(toMap())
+                    : datePrecision.dateTimeMapToString<FhirDate>(toMap())
+                : precision.dateTimeMapToString<FhirDateTimeBase>(toMap());
   }
 
   String toIso8601String() => valueDateTime.toIso8601String();
@@ -179,15 +179,16 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
 
     if (inValue is String) {
       input = _cleanInput(inValue);
-      if (input
-          .replaceAll(
-              T == FhirDateTime
-                  ? dateTimeExp
-                  : T == FhirInstant
-                      ? instantExp
-                      : dateExp,
-              '')
-          .isNotEmpty) {
+      final String replaced = input.replaceAll(
+          T == FhirDateTime
+              ? dateTimeExp
+              : T == FhirInstant
+                  ? instantExp
+                  : dateExp,
+          '');
+      if (replaced.isNotEmpty &&
+          replaced != 'T' &&
+          replaced.trim().isNotEmpty) {
         regexpValid = false;
       }
     } else if (inValue is DateTime) {
@@ -208,13 +209,13 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
 
     String? output;
     if (input != null) {
-      dateTimeMap = formatDateTimeString(input);
+      dateTimeMap = formatDateTimeString<T>(input);
     }
     if (dateTimeMap != null) {
       if (precision == null) {
         precision = precisionFromMap(dateTimeMap);
       } else {
-        output = precision.dateTimeMapToString(dateTimeMap);
+        output = precision.dateTimeMapToString<T>(dateTimeMap);
       }
     }
 
@@ -257,7 +258,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       dateTimeMap,
       precision,
       null,
-      precision.dateTimeMapToString(dateTimeMap),
+      precision.dateTimeMapToString<T>(dateTimeMap),
       true,
     );
   }
@@ -322,6 +323,8 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       final DateTimePrecision rhsPrecision = rhs.precision;
       final bool equivalentPrecisions =
           lhsPrecision.isEquivalentTo(rhsPrecision);
+      print('lhsPrecision: $lhsPrecision, rhsPrecision: $rhsPrecision');
+      print('lhs: $lhs, rhs: $rhs');
 
       bool? compareByPrecision(
           Comparator comparator, num value1, num value2, bool isPrecision) {
@@ -336,7 +339,6 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                 return true;
               }
             }
-            break;
           case Comparator.gt:
             {
               if (value1 > value2) {
@@ -345,7 +347,6 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                 return false;
               }
             }
-            break;
           case Comparator.gte:
             {
               if (value1 < value2) {
@@ -358,7 +359,6 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                 return true;
               }
             }
-            break;
           case Comparator.lt:
             {
               if (value1 < value2) {
@@ -367,7 +367,6 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                 return false;
               }
             }
-            break;
           case Comparator.lte:
             {
               if (value1 > value2) {
@@ -418,6 +417,10 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
 
           precision = lhsPrecision.daysPrecision || rhsPrecision.daysPrecision;
           result = compareByPrecision(comparator, lhsDay, rhsDay, precision);
+
+          print('precision: $precision, result: $result');
+          print('lhs: $lhs, rhs: $rhs');
+
           if (result != null) {
             return result;
           }
@@ -469,6 +472,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
         }
       }
     }
+
     switch (comparator) {
       case Comparator.eq:
         return lhs.precision.isEquivalentTo(rhs.precision) ? true : null;
@@ -556,7 +560,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   bool? isAtSameMomentAs(FhirDateTimeBase other) =>
       _compare(Comparator.eq, other);
 
-  bool? isEqual(FhirDateTimeBase other) => _compare(Comparator.eq, other);
+  bool? isEqual(Object other) => _compare(Comparator.eq, other);
 
   FhirDateTimeBase operator +(ExtendedDuration other);
 
