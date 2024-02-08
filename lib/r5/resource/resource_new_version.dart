@@ -10,12 +10,12 @@ FhirMeta _updateFhirMetaVersion(FhirMeta? oldFhirMeta) {
           : int.parse(oldFhirMeta.versionId.toString()) + 1;
   if (oldFhirMeta == null) {
     return FhirMeta(
-      lastUpdated: FhirInstant.fromDateTime(DateTime.now().toUtc()),
+      lastUpdated: FhirInstant(DateTime.now().toUtc()),
       versionId: FhirId(version.toString()),
     );
   } else {
     return oldFhirMeta.copyWith(
-      lastUpdated: FhirInstant.fromDateTime(DateTime.now().toUtc()),
+      lastUpdated: FhirInstant(DateTime.now().toUtc()),
       versionId: FhirId(version.toString()),
     );
   }

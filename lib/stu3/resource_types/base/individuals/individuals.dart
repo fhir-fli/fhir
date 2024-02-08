@@ -256,8 +256,7 @@ class Patient with Resource, _$Patient {
   @override
   String toJsonString() => jsonEncode(toJson());
 
-  Patient updateDob(DateTime newDob) =>
-      copyWith(birthDate: FhirDate.fromDateTime(newDob));
+  Patient updateDob(DateTime newDob) => copyWith(birthDate: FhirDate(newDob));
 
   Patient updateSexAtBirth(PatientGender sexAtBirth) =>
       copyWith(gender: sexAtBirth);

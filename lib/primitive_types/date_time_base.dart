@@ -187,7 +187,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                   : dateExp,
           '');
       if (replaced.isNotEmpty &&
-          replaced != 'T' &&
+          (replaced != 'T' || (T == FhirDate && replaced == 'T')) &&
           replaced.trim().isNotEmpty) {
         regexpValid = false;
       }

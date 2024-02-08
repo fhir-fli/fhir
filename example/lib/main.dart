@@ -13,7 +13,7 @@ void main() {
     ],
     address: const <Address>[Address(postalCode: '12345')],
     gender: FhirCode('male'),
-    birthDate: FhirDate.fromDateTime(DateTime(3071, 04, 25)),
+    birthDate: FhirDate(DateTime(3071, 04, 25)),
   );
 
   print(patient.toYaml());
@@ -61,7 +61,7 @@ void main() {
       text: 'Homeless (finding)',
     ),
     onsetPeriod: Period(
-      start: FhirDateTime.fromDateTime(
+      start: FhirDateTime(
         DateTime(
           DateTime.now().year - 1,
           DateTime.now().month,
@@ -109,7 +109,7 @@ void main() {
       text: 'Food insecurity risk [HVS]',
     ),
     effectivePeriod: Period(
-      start: FhirDateTime.fromDateTime(
+      start: FhirDateTime(
         DateTime(
           DateTime.now().year - 1,
           DateTime.now().month,
