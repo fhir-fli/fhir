@@ -1,5 +1,10 @@
 # fhir
 
+## [0.11.5-dev4]
+
+* Put constructors for dateTimes back the way they were
+* added asString to ResourceType enums 
+
 ## [0.11.5-dev3]
 
 * still trying to fix [datetimes](https://github.com/fhir-fli/fhir/issues/1)

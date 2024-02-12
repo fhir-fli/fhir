@@ -326,9 +326,6 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
 
       bool? compareByPrecision(
           Comparator comparator, num value1, num value2, bool isPrecision) {
-        print(comparator);
-        print(value1);
-        print(value2);
         switch (comparator) {
           case Comparator.eq:
             {
@@ -418,9 +415,6 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
 
           precision = lhsPrecision.daysPrecision || rhsPrecision.daysPrecision;
           result = compareByPrecision(comparator, lhsDay, rhsDay, precision);
-
-          print('precision: $precision, result: $result');
-          print('lhs: $lhs, rhs: $rhs');
 
           if (result != null) {
             return result;
