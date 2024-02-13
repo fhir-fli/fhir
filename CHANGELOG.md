@@ -1,9 +1,10 @@
 # fhir
 
-## [0.11.5-dev4]
+## [0.12.0]
 
 * Put constructors for dateTimes back the way they were
 * added asString to ResourceType enums 
+* Tired of dev versions
 
 ## [0.11.5-dev3]
 
