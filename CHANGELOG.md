@@ -1,5 +1,9 @@
 # fhir
 
+## [0.12.1]
+
+* Changed some equalities with FhirTime
+
 ## [0.12.0]
 
 * Put constructors for dateTimes back the way they were
