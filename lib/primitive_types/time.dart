@@ -21,16 +21,19 @@ class FhirTime implements FhirPrimitiveBase {
       : FhirTime._(inValue.toString(), null, false);
 
   factory FhirTime.fromUnits(
-          {dynamic hour,
-          dynamic minute,
-          dynamic second,
-          dynamic millisecond}) =>
-      FhirTime(
-        '${hour.toString().padLeft(2, '0')}'
-        ':${minute.toString().padLeft(2, '0')}'
-        ':${second.toString().padLeft(2, '0')}'
-        '.${millisecond.toString().padLeft(3, '0')}',
-      );
+      {dynamic hour, dynamic minute, dynamic second, dynamic millisecond}) {
+    String? timeString = hour?.toString().padLeft(2, '0');
+    if (timeString != null && minute != null) {
+      timeString += ':${minute.toString().padLeft(2, '0')}';
+      if (second != null) {
+        timeString += ':${second.toString().padLeft(2, '0')}';
+        if (millisecond != null) {
+          timeString += '.${millisecond.toString().padLeft(3, '0')}';
+        }
+      }
+    }
+    return timeString == null ? FhirTime('') : FhirTime(timeString);
+  }
 
   factory FhirTime.fromJson(dynamic json) => FhirTime(json);
 
@@ -192,6 +195,7 @@ class FhirTime implements FhirPrimitiveBase {
 
     /// And compare what we can
     for (int i = 0; i < timePrecision; i++) {
+      print('lhs: ${lhsTime[i]} rhs: ${rhsTime[i]}');
       final bool? comparedValue =
           comparePrecisionValue(comparator, lhsTime[i], rhsTime[i]);
       if (comparedValue != null) {
