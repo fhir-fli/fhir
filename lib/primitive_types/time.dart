@@ -68,7 +68,7 @@ class FhirTime implements FhirPrimitiveBase {
   String toYaml() => _valueString;
 
   /// Comparison method for FhirDateTimes
-  bool _compare(Comparator comparator, Object o) {
+  bool? _compare(Comparator comparator, Object o) {
     /// first, easy check if they're identical
     if (identical(this, o)) {
       switch (comparator) {
@@ -109,22 +109,14 @@ class FhirTime implements FhirPrimitiveBase {
       }
     }
 
-    /// Because dates really suck to compare, there's a bunch of extra overhead
-    /// to consider. The first is about precisions, we check the number of
-    /// semi-colons to calculate the precision (T12:01:01-05:00)
-    int lhsTimePrecision = ':'.allMatches(toString()).length;
-    lhsTimePrecision = lhsTimePrecision > 2 ? 3 : lhsTimePrecision + 1;
-    int rhsTimePrecision = ':'.allMatches(o.toString()).length;
-    rhsTimePrecision = rhsTimePrecision > 2 ? 3 : rhsTimePrecision + 1;
-
+    /// Make our lists of the precisions of the two FhirDateTimes
     final List<String> lhsTime = toString().split(':');
     final List<String> rhsTime = o.toString().split(':');
 
-    /// NOTE: this differs from the official FHIR (or at least FHIRPath) spec.
-    /// Officially if they are not defined to the same level of precision it's
-    /// an error, or at least an empty return value in FHIRPath. However, we
-    /// compare the precisions we have that are the same, if any of those differ
-    /// we go ahead and return a valid boolean, otherwise we throw an error.
+    /// NOTE: The comparison happens according to precision. We go through each
+    /// level of precision (hour, minute, and second.millisecond) and compare.
+    /// If the precision is equal, we move to the next level. If don't already
+    /// have an answer by then, we return null.
     ///
     /// T12:01:01 < T17:00
     /// The above would always be true, even if the 17:00 is more precise
@@ -195,9 +187,8 @@ class FhirTime implements FhirPrimitiveBase {
     }
 
     /// We pick the shorter of the two lists
-    final int timePrecision = lhsTimePrecision > rhsTimePrecision
-        ? rhsTimePrecision
-        : lhsTimePrecision;
+    final int timePrecision =
+        lhsTime.length > rhsTime.length ? rhsTime.length : lhsTime.length;
 
     /// And compare what we can
     for (int i = 0; i < timePrecision; i++) {
@@ -210,12 +201,8 @@ class FhirTime implements FhirPrimitiveBase {
 
     /// Once again, all the Precisions (for Time) are equal that we can compare
     /// but if the precisions aren't equal, then we throw an error
-    if (lhsTimePrecision != rhsTimePrecision) {
-      throw UnequalPrecision<FhirTime>(
-          'Two values were passed to the date time '
-          '"$comparator" comparison operator, '
-          'they did not have the same precision\n'
-          'Argument 1: $value\nArgument 2: $o ');
+    if (lhsTime.length != rhsTime.length) {
+      return null;
     }
 
     /// If, however, they are equal, then it means that by this stage we have
@@ -306,13 +293,15 @@ class FhirTime implements FhirPrimitiveBase {
   }
 
   @override
-  bool operator ==(Object o) => _compare(Comparator.eq, o);
+  bool operator ==(Object o) => _compare(Comparator.eq, o) ?? false;
 
-  bool operator >(Object o) => _compare(Comparator.gt, o);
+  bool? isEqual(Object o) => _compare(Comparator.eq, o);
 
-  bool operator >=(Object o) => _compare(Comparator.gte, o);
+  bool? operator >(Object o) => _compare(Comparator.gt, o);
 
-  bool operator <(Object o) => _compare(Comparator.lt, o);
+  bool? operator >=(Object o) => _compare(Comparator.gte, o);
 
-  bool operator <=(Object o) => _compare(Comparator.lte, o);
+  bool? operator <(Object o) => _compare(Comparator.lt, o);
+
+  bool? operator <=(Object o) => _compare(Comparator.lte, o);
 }
