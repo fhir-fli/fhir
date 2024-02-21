@@ -47,6 +47,7 @@ class FhirDecimal extends FhirNumber {
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
   final bool isInt;
+  @override
   double? get value => valueNumber as double?;
 
   @override

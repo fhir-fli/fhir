@@ -41,5 +41,6 @@ class FhirUnsignedInt extends FhirNumber {
           : throw YamlFormatException<FhirUnsignedInt>(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
+  @override
   int? get value => valueNumber as int?;
 }

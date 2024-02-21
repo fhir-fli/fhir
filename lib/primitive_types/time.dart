@@ -195,7 +195,6 @@ class FhirTime implements FhirPrimitiveBase {
 
     /// And compare what we can
     for (int i = 0; i < timePrecision; i++) {
-      print('lhs: ${lhsTime[i]} rhs: ${rhsTime[i]}');
       final bool? comparedValue =
           comparePrecisionValue(comparator, lhsTime[i], rhsTime[i]);
       if (comparedValue != null) {
