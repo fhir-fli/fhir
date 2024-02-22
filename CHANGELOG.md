@@ -3,6 +3,7 @@
 ## [0.12.1]
 
 * Changed some equalities with FhirTime
+* Added partial timezones for FhirDateTime, FhirInstant
 
 ## [0.12.0]
 
