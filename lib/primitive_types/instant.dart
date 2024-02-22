@@ -49,7 +49,7 @@ class FhirInstant extends FhirDateTimeBase {
     required int second,
     int? millisecond,
     int? microsecond,
-    required int timeZoneOffset,
+    required num timeZoneOffset,
     bool? isUtc,
   }) =>
       FhirDateTimeBase.fromUnits<FhirInstant>(

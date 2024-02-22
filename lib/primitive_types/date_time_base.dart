@@ -16,7 +16,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   final int second;
   final int millisecond;
   final int microsecond;
-  final int timeZoneOffset;
+  final num timeZoneOffset;
   final bool isUtc;
 
   @override
@@ -46,7 +46,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   String toIso8601String() => valueDateTime.toIso8601String();
   String toJson() => input.toString();
   String toYaml() => input.toString();
-  Map<String, int> toMap() => <String, int>{
+  Map<String, num> toMap() => <String, num>{
         'year': year,
         'month': month,
         'day': day,
@@ -92,7 +92,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   }
 
   static FhirDateTimeBase _constructor<T>(
-    Map<String, int?>? dateTimeMap,
+    Map<String, num?>? dateTimeMap,
     DateTimePrecision? precision,
     String? exception,
     dynamic output,
@@ -108,14 +108,14 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
             parseError: exception == null
                 ? null
                 : PrimitiveTypeFormatException<FhirInstant>(exception),
-            year: dateTimeMap?['year'] ?? 1,
-            month: dateTimeMap?['month'] ?? 1,
-            day: dateTimeMap?['day'] ?? 1,
-            hour: dateTimeMap?['hour'] ?? 0,
-            minute: dateTimeMap?['minute'] ?? 0,
-            second: dateTimeMap?['second'] ?? 0,
-            millisecond: dateTimeMap?['millisecond'] ?? 0,
-            microsecond: dateTimeMap?['microsecond'] ?? 0,
+            year: dateTimeMap?['year'] as int? ?? 1,
+            month: dateTimeMap?['month'] as int? ?? 1,
+            day: dateTimeMap?['day'] as int? ?? 1,
+            hour: dateTimeMap?['hour'] as int? ?? 0,
+            minute: dateTimeMap?['minute'] as int? ?? 0,
+            second: dateTimeMap?['second'] as int? ?? 0,
+            millisecond: dateTimeMap?['millisecond'] as int? ?? 0,
+            microsecond: dateTimeMap?['microsecond'] as int? ?? 0,
             timeZoneOffset: dateTimeMap?['timeZoneOffset'] ?? 0,
             isUtc: dateTimeMap?['isUtc'] == 0,
           )
@@ -129,14 +129,14 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                 parseError: exception == null
                     ? null
                     : PrimitiveTypeFormatException<FhirInstant>(exception),
-                year: dateTimeMap?['year'] ?? 1,
-                month: dateTimeMap?['month'] ?? 1,
-                day: dateTimeMap?['day'] ?? 1,
-                hour: dateTimeMap?['hour'] ?? 0,
-                minute: dateTimeMap?['minute'] ?? 0,
-                second: dateTimeMap?['second'] ?? 0,
-                millisecond: dateTimeMap?['millisecond'] ?? 0,
-                microsecond: dateTimeMap?['microsecond'] ?? 0,
+                year: dateTimeMap?['year'] as int? ?? 1,
+                month: dateTimeMap?['month'] as int? ?? 1,
+                day: dateTimeMap?['day'] as int? ?? 1,
+                hour: dateTimeMap?['hour'] as int? ?? 0,
+                minute: dateTimeMap?['minute'] as int? ?? 0,
+                second: dateTimeMap?['second'] as int? ?? 0,
+                millisecond: dateTimeMap?['millisecond'] as int? ?? 0,
+                microsecond: dateTimeMap?['microsecond'] as int? ?? 0,
                 timeZoneOffset: dateTimeMap?['timeZoneOffset'] ?? 0,
                 isUtc: dateTimeMap?['isUtc'] == 0,
               )
@@ -150,14 +150,14 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
                     parseError: exception == null
                         ? null
                         : PrimitiveTypeFormatException<FhirInstant>(exception),
-                    year: dateTimeMap?['year'] ?? 1,
-                    month: dateTimeMap?['month'] ?? 1,
-                    day: dateTimeMap?['day'] ?? 1,
-                    hour: dateTimeMap?['hour'] ?? 0,
-                    minute: dateTimeMap?['minute'] ?? 0,
-                    second: dateTimeMap?['second'] ?? 0,
-                    millisecond: dateTimeMap?['millisecond'] ?? 0,
-                    microsecond: dateTimeMap?['microsecond'] ?? 0,
+                    year: dateTimeMap?['year'] as int? ?? 1,
+                    month: dateTimeMap?['month'] as int? ?? 1,
+                    day: dateTimeMap?['day'] as int? ?? 1,
+                    hour: dateTimeMap?['hour'] as int? ?? 0,
+                    minute: dateTimeMap?['minute'] as int? ?? 0,
+                    second: dateTimeMap?['second'] as int? ?? 0,
+                    millisecond: dateTimeMap?['millisecond'] as int? ?? 0,
+                    microsecond: dateTimeMap?['microsecond'] as int? ?? 0,
                     timeZoneOffset: dateTimeMap?['timeZoneOffset'] ?? 0,
                     isUtc: dateTimeMap?['isUtc'] == 0,
                   )
@@ -174,7 +174,7 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
   ]) {
     String? input;
     String? exception;
-    Map<String, int?>? dateTimeMap;
+    Map<String, num?>? dateTimeMap;
     bool regexpValid = true;
 
     if (inValue is String) {
@@ -196,7 +196,8 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
       if (inValue.isUtc) {
         input += 'Z';
       } else if (inValue.timeZoneOffset.inHours != 0) {
-        input += timeZoneOffsetToString(inValue.timeZoneOffset.inHours);
+        input +=
+            timeZoneOffsetToString(inValue.timeZoneOffset.inHours.toDouble());
       } else {
         precision ??= DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS;
       }
@@ -235,11 +236,11 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
     int? second,
     int? millisecond,
     int? microsecond,
-    int? timeZoneOffset,
+    num? timeZoneOffset,
     required bool isUtc,
     DateTimePrecision? precision,
   }) {
-    final Map<String, int?> dateTimeMap = <String, int?>{
+    final Map<String, num?> dateTimeMap = <String, num?>{
       'year': year,
       'month': month,
       'day': day,
@@ -398,9 +399,9 @@ abstract class FhirDateTimeBase implements FhirPrimitiveBase {
         }
         if (!precision) {
           int lhsDay = lhs.day;
-          int lhsHour = lhs.hour - lhs.timeZoneOffset;
+          num lhsHour = lhs.hour - lhs.timeZoneOffset;
           int rhsDay = rhs.day;
-          int rhsHour = rhs.hour - rhs.timeZoneOffset;
+          num rhsHour = rhs.hour - rhs.timeZoneOffset;
 
           if (lhsHour > 24) {
             lhsDay++;

@@ -428,16 +428,16 @@ extension DateTimePrecisionExtension on DateTimePrecision {
     }
   }
 
-  DateTime dateTimeFromMap(Map<String, int?> map) {
+  DateTime dateTimeFromMap(Map<String, num?> map) {
     final DateTime dateTime = DateTime(
-      map['year'] ?? 0,
-      hasMonth ? map['month'] ?? 0 : 1,
-      hasDay ? map['day'] ?? 0 : 1,
-      hasHours ? map['hour'] ?? 0 : 0,
-      hasMinutes ? map['minute'] ?? 0 : 0,
-      hasSeconds ? map['second'] ?? 0 : 0,
-      hasMilliseconds ? map['millisecond'] ?? 0 : 0,
-      this == DateTimePrecision.dateTime ? map['microsecond'] ?? 0 : 0,
+      map['year'] as int? ?? 0,
+      hasMonth ? map['month'] as int? ?? 0 : 1,
+      hasDay ? map['day'] as int? ?? 0 : 1,
+      hasHours ? map['hour'] as int? ?? 0 : 0,
+      hasMinutes ? map['minute'] as int? ?? 0 : 0,
+      hasSeconds ? map['second'] as int? ?? 0 : 0,
+      hasMilliseconds ? map['millisecond'] as int? ?? 0 : 0,
+      this == DateTimePrecision.dateTime ? map['microsecond'] as int? ?? 0 : 0,
     );
     final DateTime localDateTime = dateTime.toLocal();
     final Duration localOffset = localDateTime.timeZoneOffset;
@@ -456,16 +456,16 @@ extension DateTimePrecisionExtension on DateTimePrecision {
         actualDateTime.microsecond);
   }
 
-  String dateTimeMapToString<T>(Map<String, int?> map) {
+  String dateTimeMapToString<T>(Map<String, num?> map) {
     final DateTime dateTime = DateTime(
-        map['year'] ?? 0,
-        map['month'] ?? 1,
-        map['day'] ?? 1,
-        map['hour'] ?? 0,
-        map['minute'] ?? 0,
-        map['second'] ?? 0,
-        map['millisecond'] ?? 0,
-        map['microsecond'] ?? 0);
+        map['year'] as int? ?? 0,
+        map['month'] as int? ?? 1,
+        map['day'] as int? ?? 1,
+        map['hour'] as int? ?? 0,
+        map['minute'] as int? ?? 0,
+        map['second'] as int? ?? 0,
+        map['millisecond'] as int? ?? 0,
+        map['microsecond'] as int? ?? 0);
     final String year = dateTime.year.toString().padLeft(4, '0');
     final String month = dateTime.month.toString().padLeft(2, '0');
     final String day = dateTime.day.toString().padLeft(2, '0');
@@ -474,7 +474,8 @@ extension DateTimePrecisionExtension on DateTimePrecision {
     final String second = dateTime.second.toString().padLeft(2, '0');
     final String millisecond = dateTime.millisecond.toString().padLeft(3, '0');
     final String microsecond = dateTime.microsecond.toString().padLeft(3, '0');
-    final String offset = timeZoneOffsetToString(map['timeZoneOffset']);
+    final String offset =
+        timeZoneOffsetToString(map['timeZoneOffset']?.toDouble());
     switch (this) {
       case DateTimePrecision.yyyy:
         return year;
@@ -770,10 +771,10 @@ final RegExp dateTimeExp = RegExp(
 final RegExp instantExp = RegExp(
     r'(?<year>[0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(?<month>0[1-9]|1[0-2])-(?<day>0[1-9]|[1-2][0-9]|3[0-1])T(?<hour>[01][0-9]|2[0-3]):(?<minute>[0-5][0-9]):(?<second>[0-5][0-9]|60)(\.(?<millimicrosecond>[0-9]{1,9}))?(?<timezone>Z|(\+|-)(?<tzhour>0[0-9]|1[0-3]):(?<tzminute>[0-5][0-9]|14:00))');
 
-Map<String, int?> formatDateTimeString<T>(String dateTimeString) {
+Map<String, num?> formatDateTimeString<T>(String dateTimeString) {
   final RegExpMatch? dateTimeRegExp = dateTimeExp.firstMatch(dateTimeString);
   final String? fractionString = dateTimeRegExp?.namedGroup('fraction');
-  return <String, int?>{
+  return <String, num?>{
     'year': int.tryParse(dateTimeRegExp?.namedGroup('year') ?? ''),
     'month': int.tryParse(dateTimeRegExp?.namedGroup('month') ?? ''),
     'day': int.tryParse(dateTimeRegExp?.namedGroup('day') ?? ''),
@@ -801,7 +802,7 @@ Map<String, int?> formatDateTimeString<T>(String dateTimeString) {
   };
 }
 
-DateTimePrecision precisionFromMap(Map<String, int?> map) {
+DateTimePrecision precisionFromMap(Map<String, num?> map) {
   if (map['month'] == null) {
     return DateTimePrecision.yyyy;
   } else if (map['day'] == null) {
@@ -845,23 +846,32 @@ const DateTimePrecision datePrecision = DateTimePrecision.yyyy_MM_dd;
 const DateTimePrecision dateTimePrecision = DateTimePrecision.dateTime;
 const DateTimePrecision instantPrecision = DateTimePrecision.instant;
 
-String timeZoneOffsetToString(int? offset) => (offset ?? 0) < 0
-    ? '-${offset.toString().substring(1).padLeft(2, "0")}:00'
-    : '+${(offset ?? "00").toString().padLeft(2, "0")}:00';
+String timeZoneOffsetToString(double? offset) {
+  final int offsetHours = offset?.toInt() ?? 0; // Extract hours from offset
+  final double offsetMinutes =
+      (offset ?? 0) % 1 * 60; // Extract remaining minutes from offset
 
-int? stringToTimeZoneOffset(String? offset) {
+  final String hoursString = offsetHours.abs().toString().padLeft(2, '0');
+  final String minutesString =
+      offsetMinutes.abs().toInt().toString().padLeft(2, '0');
+
+  return '${offset != null && offset < 0 ? '-' : '+'}$hoursString:$minutesString';
+}
+
+double? stringToTimeZoneOffset(String? offset) {
   if (offset == null) {
     return null;
-  } else {
-    bool? positive;
-    if (offset.startsWith('+')) {
-      positive = true;
-      offset = offset.substring(1);
-    } else if (offset.startsWith('-')) {
-      positive = false;
-      offset = offset.substring(1);
-    }
-    positive ??= true;
-    return (int.tryParse(offset.split(':').first) ?? 0) * (positive ? 1 : -1);
   }
+
+  final bool positive = !offset.startsWith('-');
+  final List<String> parts = offset.substring(1).split(':');
+  if (parts.length != 2) {
+    return null; // Return null if the format is not as expected
+  }
+
+  final int hours = int.tryParse(parts[0]) ?? 0;
+  final int minutes = int.tryParse(parts[1]) ?? 0;
+  final double totalOffset = hours + minutes / 60.0;
+
+  return positive ? totalOffset : -totalOffset;
 }
