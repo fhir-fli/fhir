@@ -55,13 +55,17 @@ class FhirTime implements FhirPrimitiveBase {
   int? get hour => _valueTime?.split(':')[0] == null
       ? null
       : int.tryParse(_valueTime!.split(':')[0]);
-  int? get minute => _valueTime?.split(':')[1] == null
+  int? get minute => (_valueTime?.split(':').length ?? 0) <= 1 ||
+          _valueTime?.split(':')[1] == null
       ? null
       : int.tryParse(_valueTime!.split(':')[1]);
-  int? get second => _valueTime?.split(':')[2] == null
+  int? get second => (_valueTime?.split(':').length ?? 0) <= 2 ||
+          _valueTime?.split(':')[2] == null
       ? null
       : int.tryParse(_valueTime!.split(':')[2].split('.')[0]);
-  int? get millisecond => _valueTime?.split(':')[2] == null
+  int? get millisecond => (_valueTime?.split(':').length ?? 0) <= 2 ||
+          _valueTime?.split(':')[2] == null ||
+          _valueTime!.split(':')[2].split('.').length <= 1
       ? null
       : int.tryParse(_valueTime!.split(':')[2].split('.')[1]);
 
