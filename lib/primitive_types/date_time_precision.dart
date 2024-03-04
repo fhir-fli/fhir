@@ -685,6 +685,65 @@ extension DateTimePrecisionExtension on DateTimePrecision {
       return 'invalid';
     }
   }
+
+  bool hasSamePrecisionAs(DateTimePrecision precision) {
+    switch (this) {
+      case DateTimePrecision.yyyy:
+        return precision == DateTimePrecision.yyyy;
+
+      case DateTimePrecision.yyyy_MM:
+        return precision == DateTimePrecision.yyyy_MM;
+
+      case DateTimePrecision.yyyy_MM_dd:
+      case DateTimePrecision.yyyy_MM_dd_T_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_ZZ:
+        return <DateTimePrecision>[
+          DateTimePrecision.yyyy_MM_dd,
+          DateTimePrecision.yyyy_MM_dd_T_Z,
+          DateTimePrecision.yyyy_MM_dd_T_ZZ,
+        ].contains(precision);
+
+      case DateTimePrecision.yyyy_MM_dd_T_HH:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_HHZZ:
+        return <DateTimePrecision>[
+          DateTimePrecision.yyyy_MM_dd_T_HH,
+          DateTimePrecision.yyyy_MM_dd_T_HH_Z,
+          DateTimePrecision.yyyy_MM_dd_T_HHZZ,
+        ].contains(precision);
+
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ:
+        return <DateTimePrecision>[
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_Z,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mmZZ,
+        ].contains(precision);
+
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z:
+      case DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ:
+      case DateTimePrecision.dateTime:
+      case DateTimePrecision.instant:
+        return <DateTimePrecision>[
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_Z,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ssZZ,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSS_Z,
+          DateTimePrecision.yyyy_MM_dd_T_HH_mm_ss_SSSZZ,
+          DateTimePrecision.dateTime,
+          DateTimePrecision.instant,
+        ].contains(precision);
+
+      case DateTimePrecision.invalid:
+        return precision == DateTimePrecision.invalid;
+    }
+  }
 }
 
 DateTimePrecision precisionFromDateTimeString(String inValue) {
