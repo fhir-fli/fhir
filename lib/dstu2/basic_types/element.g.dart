@@ -15,6 +15,8 @@ _$ElementImpl _$$ElementImplFromJson(Map<String, dynamic> json) =>
       fhirComments: (json['fhir_comments'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
+      line: json['line'] as int?,
+      col: json['col'] as int?,
     );
 
 Map<String, dynamic> _$$ElementImplToJson(_$ElementImpl instance) {
@@ -30,5 +32,7 @@ Map<String, dynamic> _$$ElementImplToJson(_$ElementImpl instance) {
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('fhir_comments', instance.fhirComments);
+  writeNotNull('line', instance.line);
+  writeNotNull('col', instance.col);
   return val;
 }

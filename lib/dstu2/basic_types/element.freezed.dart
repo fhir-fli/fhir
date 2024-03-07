@@ -26,6 +26,8 @@ mixin _$Element {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments => throw _privateConstructorUsedError;
+  int? get line => throw _privateConstructorUsedError;
+  int? get col => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -40,7 +42,9 @@ abstract class $ElementCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments});
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      int? line,
+      int? col});
 }
 
 /// @nodoc
@@ -59,6 +63,8 @@ class _$ElementCopyWithImpl<$Res, $Val extends Element>
     Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
+    Object? line = freezed,
+    Object? col = freezed,
   }) {
     return _then(_value.copyWith(
       fhirId: freezed == fhirId
@@ -73,6 +79,14 @@ class _$ElementCopyWithImpl<$Res, $Val extends Element>
           ? _value.fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      line: freezed == line
+          ? _value.line
+          : line // ignore: cast_nullable_to_non_nullable
+              as int?,
+      col: freezed == col
+          ? _value.col
+          : col // ignore: cast_nullable_to_non_nullable
+              as int?,
     ) as $Val);
   }
 }
@@ -87,7 +101,9 @@ abstract class _$$ElementImplCopyWith<$Res> implements $ElementCopyWith<$Res> {
   $Res call(
       {@JsonKey(name: 'id') FhirId? fhirId,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') List<String>? fhirComments});
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+      int? line,
+      int? col});
 }
 
 /// @nodoc
@@ -104,6 +120,8 @@ class __$$ElementImplCopyWithImpl<$Res>
     Object? fhirId = freezed,
     Object? extension_ = freezed,
     Object? fhirComments = freezed,
+    Object? line = freezed,
+    Object? col = freezed,
   }) {
     return _then(_$ElementImpl(
       fhirId: freezed == fhirId
@@ -118,6 +136,14 @@ class __$$ElementImplCopyWithImpl<$Res>
           ? _value._fhirComments
           : fhirComments // ignore: cast_nullable_to_non_nullable
               as List<String>?,
+      line: freezed == line
+          ? _value.line
+          : line // ignore: cast_nullable_to_non_nullable
+              as int?,
+      col: freezed == col
+          ? _value.col
+          : col // ignore: cast_nullable_to_non_nullable
+              as int?,
     ));
   }
 }
@@ -128,7 +154,9 @@ class _$ElementImpl extends _Element {
   const _$ElementImpl(
       {@JsonKey(name: 'id') this.fhirId,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments})
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      this.line,
+      this.col})
       : _extension_ = extension_,
         _fhirComments = fhirComments,
         super._();
@@ -162,8 +190,13 @@ class _$ElementImpl extends _Element {
   }
 
   @override
+  final int? line;
+  @override
+  final int? col;
+
+  @override
   String toString() {
-    return 'Element(fhirId: $fhirId, extension_: $extension_, fhirComments: $fhirComments)';
+    return 'Element(fhirId: $fhirId, extension_: $extension_, fhirComments: $fhirComments, line: $line, col: $col)';
   }
 
   @override
@@ -175,7 +208,9 @@ class _$ElementImpl extends _Element {
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
-                .equals(other._fhirComments, _fhirComments));
+                .equals(other._fhirComments, _fhirComments) &&
+            (identical(other.line, line) || other.line == line) &&
+            (identical(other.col, col) || other.col == col));
   }
 
   @JsonKey(ignore: true)
@@ -184,7 +219,9 @@ class _$ElementImpl extends _Element {
       runtimeType,
       fhirId,
       const DeepCollectionEquality().hash(_extension_),
-      const DeepCollectionEquality().hash(_fhirComments));
+      const DeepCollectionEquality().hash(_fhirComments),
+      line,
+      col);
 
   @JsonKey(ignore: true)
   @override
@@ -202,10 +239,11 @@ class _$ElementImpl extends _Element {
 
 abstract class _Element extends Element {
   const factory _Element(
-          {@JsonKey(name: 'id') final FhirId? fhirId,
-          @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
-          @JsonKey(name: 'fhir_comments') final List<String>? fhirComments}) =
-      _$ElementImpl;
+      {@JsonKey(name: 'id') final FhirId? fhirId,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') final List<String>? fhirComments,
+      final int? line,
+      final int? col}) = _$ElementImpl;
   const _Element._() : super._();
 
   factory _Element.fromJson(Map<String, dynamic> json) = _$ElementImpl.fromJson;
@@ -219,6 +257,10 @@ abstract class _Element extends Element {
   @override
   @JsonKey(name: 'fhir_comments')
   List<String>? get fhirComments;
+  @override
+  int? get line;
+  @override
+  int? get col;
   @override
   @JsonKey(ignore: true)
   _$$ElementImplCopyWith<_$ElementImpl> get copyWith =>

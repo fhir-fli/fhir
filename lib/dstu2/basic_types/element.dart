@@ -20,6 +20,8 @@ class Element with _$Element {
     @JsonKey(name: 'id') FhirId? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    int? line,
+    int? col,
   }) = _Element;
 
   /// Produces a Yaml formatted String version of the object

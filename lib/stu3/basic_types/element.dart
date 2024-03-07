@@ -19,6 +19,8 @@ class Element with _$Element {
   const factory Element({
     @JsonKey(name: 'id') String? fhirId,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    int? line,
+    int? col,
   }) = _Element;
 
   /// Produces a Yaml formatted String version of the object
