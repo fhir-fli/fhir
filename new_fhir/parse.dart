@@ -5,7 +5,7 @@ import 'types.dart';
 
 Future<void> main() async {
   final Map<String, dynamic> longString =
-      jsonDecode(await File('fhir.schema5.json').readAsString())
+      jsonDecode(await File('fhir.schema6.json').readAsString())
           as Map<String, dynamic>;
   final Map<String, dynamic> definitions =
       longString['definitions'] as Map<String, dynamic>;
@@ -110,9 +110,9 @@ Future<void> main() async {
         if (entryKey == 'resourceType' && allTypes.keys.contains(activeKey)) {
           currentClass += '/// [$entryKey] ${entryValue['description']}\n';
           currentClass +=
-              '@Default(R5ResourceType.${activeKey == "List" ? "FhirList" : activeKey}) '
-              '@JsonKey(unknownEnumValue: R5ResourceType.${activeKey == "List" ? "FhirList" : activeKey})';
-          currentClass += '\nR5ResourceType resourceType,\n';
+              '@Default(R6ResourceType.${activeKey == "List" ? "FhirList" : activeKey}) '
+              '@JsonKey(unknownEnumValue: R6ResourceType.${activeKey == "List" ? "FhirList" : activeKey})';
+          currentClass += '\nR6ResourceType resourceType,\n';
         } else {
           String fieldName = getFieldName(entryKey);
           fieldName = '$fieldName${reserved.contains(fieldName) ? "_" : ""}';
@@ -325,7 +325,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import '../../r5.dart';
+import '../../r6.dart';
 
 part '$key.enums.dart';
 part '$key.freezed.dart';
@@ -334,7 +334,7 @@ part '$key.g.dart';\n\n${typeMap[key]}\n''';
           fileString = fileString.replaceAll(key, replaceStrings[key]!);
         }
         // fileString = formatComments(fileString);
-        await File('../lib/r5/$key/$key.dart').writeAsString(fileString);
+        await File('../lib/r6/$key/$key.dart').writeAsString(fileString);
       } else {
         ///
         /// Partial map of resourceStrings from the Map initially defined for this
@@ -371,7 +371,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
 
 // Project imports:
-import '../../../../r5.dart';
+import '../../../../r6.dart';
 
 part '$subKey.freezed.dart';
 part '$subKey.g.dart';\n\n${(resourceTypeMap[resourceKey] as Map<String, dynamic>)[subKey]}\n''';
@@ -380,7 +380,7 @@ part '$subKey.g.dart';\n\n${(resourceTypeMap[resourceKey] as Map<String, dynamic
             }
             // fileString = formatComments(fileString);
             await File(
-                    '../lib/r5/resource_types/$resourceKey/$subKey/$subKey.dart')
+                    '../lib/r6/resource_types/$resourceKey/$subKey/$subKey.dart')
                 .writeAsString(fileString);
           }
         }

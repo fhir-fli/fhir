@@ -5,7 +5,7 @@ import 'parse.dart';
 
 Future<void> main() async {
   final Map<String, dynamic> longString =
-      jsonDecode(await File('fhir.schema5.json').readAsString())
+      jsonDecode(await File('fhir.schema6.json').readAsString())
           as Map<String, dynamic>;
   final Map<String, dynamic> definitions =
       longString['definitions'] as Map<String, dynamic>;
