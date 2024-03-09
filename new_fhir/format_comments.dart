@@ -18,22 +18,19 @@ Future<void> main() async {
       final List<String> stringList = fileString.split('\n');
 
       for (final String string in stringList) {
-        print(string);
         if (string.startsWith(comment)) {
           if (string.length <= 80) {
             newStrings.add(string);
           } else {
             String oldString = string.replaceFirst(comment, '');
             while ((oldString.length + comment.length) > 80) {
-              print(oldString);
-              print(oldString.length + comment.length);
               final String first = oldString.substring(0, 80 - comment.length);
               int spaceIndex = first.lastIndexOf(' ');
               spaceIndex = spaceIndex == -1 || spaceIndex < 5
                   ? oldString.indexOf(' ')
                   : spaceIndex;
               spaceIndex = spaceIndex < 5 ? oldString.length : spaceIndex;
-              if (spaceIndex != -1) {
+              if (spaceIndex != -1 && spaceIndex != 0) {
                 newStrings.add('$comment${oldString.substring(0, spaceIndex)}');
                 oldString = oldString.substring(spaceIndex);
               } else {
@@ -55,7 +52,7 @@ Future<void> main() async {
               spaceIndex = spaceIndex == -1 || spaceIndex < 5
                   ? oldString.indexOf(' ')
                   : spaceIndex;
-              if (spaceIndex != -1) {
+              if (spaceIndex != -1 && spaceIndex != 0) {
                 newStrings.add(
                     '$startingComment${oldString.substring(0, spaceIndex)}');
                 oldString = oldString.substring(spaceIndex);

@@ -289,6 +289,7 @@ Future<void> main() async {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
+  @override
   String toJsonString() => jsonEncode(toJson());
 }''';
 
@@ -362,6 +363,8 @@ part '$key.g.dart';\n\n${typeMap[key]}\n''';
           for (final String subKey
               in (resourceTypeMap[resourceKey] as Map<String, dynamic>).keys) {
             String fileString = '''
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+
 // Dart imports:
 import 'dart:convert';
 
