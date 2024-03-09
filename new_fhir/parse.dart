@@ -417,6 +417,8 @@ const Map<String, String> primitiveTypes = <String, String>{
   'uuid': 'FhirUuid',
   'Duration': 'FhirDuration',
   'xhtml': 'FhirMarkdown',
+  'Meta': 'FhirMeta',
+  'Expression': 'FhirExpression',
 };
 
 const List<String> reserved = <String>[
