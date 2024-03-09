@@ -7,6 +7,7 @@ Future<void> main() async {
       .map((FileSystemEntity event) => event.path)
       .toList();
   for (final String file in fileList) {
+    print(file);
     final List<String> newStrings = <String>[];
     if (!file.contains('freezed') &&
         !file.contains('.g.') &&
@@ -17,12 +18,15 @@ Future<void> main() async {
       final List<String> stringList = fileString.split('\n');
 
       for (final String string in stringList) {
+        print(string);
         if (string.startsWith(comment)) {
           if (string.length <= 80) {
             newStrings.add(string);
           } else {
             String oldString = string.replaceFirst(comment, '');
             while ((oldString.length + comment.length) > 80) {
+              print(oldString);
+              print(oldString.length + comment.length);
               final String first = oldString.substring(0, 80 - comment.length);
               int spaceIndex = first.lastIndexOf(' ');
               spaceIndex = spaceIndex == -1 || spaceIndex < 5
