@@ -4,10 +4,12 @@ import 'dart:io';
 import 'parse.dart';
 
 Future<void> main() async {
-  final longString = jsonDecode(await File('fhir.schema.json').readAsString())
-      as Map<String, dynamic>;
-  final definitions = longString['definitions'] as Map<String, dynamic>;
-  var fileString = '''
+  final Map<String, dynamic> longString =
+      jsonDecode(await File('fhir.schema5.json').readAsString())
+          as Map<String, dynamic>;
+  final Map<String, dynamic> definitions =
+      longString['definitions'] as Map<String, dynamic>;
+  String fileString = '''
 class FhirField {
   const FhirField(this.isList, this.type);
   final bool isList;
@@ -17,7 +19,7 @@ class FhirField {
 /// Because I don't want to root around in StructureDefinitions just to see
 /// what kind of an object something is or if it's a list, I'm using this
 final fhirFieldMap = {\n''';
-  for (final key in definitions.keys) {
+  for (final String key in definitions.keys) {
     if (!primitiveTypes.keys.contains(key) &&
         key != 'Base' &&
         key != 'DateType' &&
@@ -26,15 +28,16 @@ final fhirFieldMap = {\n''';
         key != 'ResourceList' &&
         key != 'DataType') {
       fileString += "'${removeUnderscore(key)}': {\n";
-      final properties = (definitions[key]
+      final Map<String, dynamic>? properties = (definitions[key]
           as Map<String, dynamic>)['properties'] as Map<String, dynamic>?;
       if (properties != null) {
-        for (final field in properties.keys) {
+        for (final String field in properties.keys) {
           if (field != 'resourceType') {
-            final fieldName = getFieldName(field);
+            final String fieldName = getFieldName(field);
             fileString += "'$fieldName': const FhirField(";
-            final fieldValue = properties[field] as Map<String, dynamic>;
-            final isArray = (fieldValue['type'] as String?) == 'array';
+            final Map<String, dynamic> fieldValue =
+                properties[field] as Map<String, dynamic>;
+            final bool isArray = (fieldValue['type'] as String?) == 'array';
             fileString += isArray ? 'true, ' : 'false, ';
             String? type;
             if (fieldValue.keys.contains(r'$ref')) {
@@ -48,7 +51,7 @@ final fhirFieldMap = {\n''';
                 final ref = (items as Map<String, dynamic>)[r'$ref'];
                 if (ref == null) {
                   if (items[r'enum'] != null) {
-                    final newName =
+                    final String newName =
                         '$key${fieldName.substring(0, 1).toUpperCase()}'
                         '${fieldName.substring(1)}';
                     type = removeUnderscore(newName);
@@ -62,8 +65,9 @@ final fhirFieldMap = {\n''';
             }
             if (type == null) {
               if (fieldValue.keys.contains('pattern')) {
-                final primitiveIndex = primitiveTypes.keys.toList().indexWhere(
-                    (element) =>
+                final int primitiveIndex = primitiveTypes.keys
+                    .toList()
+                    .indexWhere((String element) =>
                         field.toLowerCase().endsWith(element.toLowerCase()));
                 if (primitiveIndex == -1) {
                   fileString += "'String'),\n";
@@ -84,8 +88,9 @@ final fhirFieldMap = {\n''';
                 }
               }
             } else {
-              final primitiveIndex = primitiveTypes.keys.toList().indexWhere(
-                  (element) =>
+              final int primitiveIndex = primitiveTypes.keys
+                  .toList()
+                  .indexWhere((String element) =>
                       type!.toLowerCase().endsWith(element.toLowerCase()));
               if (primitiveIndex == -1) {
                 fileString +=
