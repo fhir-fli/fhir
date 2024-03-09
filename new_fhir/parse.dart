@@ -272,7 +272,7 @@ Future<void> main() async {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory $className.fromJson(Map<String, dynamic> json, [    SerializationManager? serializationManager,]) =>
+  factory $className.fromJson(Map<String, dynamic> json) =>
       _\$${className}FromJson(json);
 
   /// Acts like a constructor, returns a [$className], accepts a
