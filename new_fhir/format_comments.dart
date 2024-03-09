@@ -1,7 +1,7 @@
 import 'dart:io';
 
 Future<void> main() async {
-  final Directory dir = Directory('.');
+  final Directory dir = Directory('../r5');
   final List<String> fileList = await dir
       .list(recursive: true)
       .map((FileSystemEntity event) => event.path)
