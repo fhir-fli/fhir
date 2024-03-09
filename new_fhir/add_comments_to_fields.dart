@@ -1,66 +1,71 @@
 import 'dart:io';
 
 Future<void> main() async {
-  final dir = Directory('.');
-  final fileList = await dir.list().map((event) => event.path).toList();
-  for (final file in fileList) {
-    final newStrings = <String>[];
-    if (!file.contains('freezed') &&
-        !file.contains('.g.') &&
-        !file.contains('enum') &&
-        !file.contains('comment.dart')) {
-      final fileString = await File(file).readAsString();
-      final stringList = fileString.split('\n');
-      final commentList = <String>[];
-      bool include = false;
-      for (final line in stringList) {
-        if (include && line.startsWith('  /// ')) {
-          commentList.add(line);
+  final Directory dir = Directory('.');
+  final List<String> fileList =
+      await dir.list().map((FileSystemEntity event) => event.path).toList();
+  for (final String file in fileList) {
+    if (await File(file).exists()) {
+      final List<String> newStrings = <String>[];
+      if (!file.contains('freezed') &&
+          !file.contains('.g.') &&
+          !file.contains('enum') &&
+          !file.contains('comment.dart')) {
+        final String fileString = await File(file).readAsString();
+        final List<String> stringList = fileString.split('\n');
+        final List<String> commentList = <String>[];
+        bool include = false;
+        for (final String line in stringList) {
+          if (include && line.startsWith('  /// ')) {
+            commentList.add(line);
+          }
+          if (line.endsWith('._();')) {
+            include = true;
+          }
+          if (line.startsWith('  factory ')) {
+            include = false;
+          }
         }
-        if (line.endsWith('._();')) {
-          include = true;
-        }
-        if (line.startsWith('  factory ')) {
-          include = false;
-        }
-      }
-      include = false;
-      final RegExp exp = RegExp(r'(?<=/// \[).*?(?=\])');
-      for (final line in stringList) {
-        while (commentList.isNotEmpty &&
-            (exp.firstMatch(commentList.first)?[0] == null ||
-                (exp.firstMatch(commentList.first)?[0]?[0] ==
-                    exp.firstMatch(commentList.first)?[0]?[0].toUpperCase()))) {
-          commentList.removeAt(0);
-        }
-        if (line.startsWith('  }) = ')) {
-          include = false;
-        }
-        if (include) {
-          if (commentList.isNotEmpty) {
-            final match = exp.firstMatch(commentList.first)?[0];
-            print(match);
-            if (line.endsWith(' $match,') || line.endsWith(' ${match}_,')) {
-              newStrings.add(commentList.first);
-              commentList.removeAt(0);
-
-              while (commentList.isNotEmpty &&
-                  !commentList.first.startsWith('  /// [')) {
+        include = false;
+        final RegExp exp = RegExp(r'(?<=/// \[).*?(?=\])');
+        for (final String line in stringList) {
+          while (commentList.isNotEmpty &&
+              (exp.firstMatch(commentList.first)?[0] == null ||
+                  (exp.firstMatch(commentList.first)?[0]?[0] ==
+                      exp
+                          .firstMatch(commentList.first)?[0]?[0]
+                          .toUpperCase()))) {
+            commentList.removeAt(0);
+          }
+          if (line.startsWith('  }) = ')) {
+            include = false;
+          }
+          if (include) {
+            if (commentList.isNotEmpty) {
+              final String? match = exp.firstMatch(commentList.first)?[0];
+              print(match);
+              if (line.endsWith(' $match,') || line.endsWith(' ${match}_,')) {
                 newStrings.add(commentList.first);
                 commentList.removeAt(0);
+
+                while (commentList.isNotEmpty &&
+                    !commentList.first.startsWith('  /// [')) {
+                  newStrings.add(commentList.first);
+                  commentList.removeAt(0);
+                }
               }
             }
           }
-        }
-        if (line.startsWith('  factory ') &&
-            !line.contains('.fromYaml') &&
-            !line.contains('.fromJson')) {
-          include = true;
-        }
+          if (line.startsWith('  factory ') &&
+              !line.contains('.fromYaml') &&
+              !line.contains('.fromJson')) {
+            include = true;
+          }
 
-        newStrings.add(line);
+          newStrings.add(line);
+        }
+        await File(file).writeAsString(newStrings.join('\n'));
       }
-      await File(file).writeAsString(newStrings.join('\n'));
     }
   }
 }
