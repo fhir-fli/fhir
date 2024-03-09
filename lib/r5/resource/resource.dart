@@ -30,8 +30,7 @@ part 'resource_utils.dart';
 @JsonSerializable()
 abstract mixin class Resource {
   R5ResourceType? get resourceType;
-  FhirId? get fhirId;
-  int? get dbId;
+  FhirId? get id;
   FhirMeta? get meta;
   FhirUri? get implicitRules;
   Element? get implicitRulesElement;
@@ -90,7 +89,7 @@ abstract mixin class Resource {
     }
 
     writeNotNull('resourceType', resourceType);
-    writeNotNull('id', fhirId?.toJson());
+    writeNotNull('id', id?.toJson());
     writeNotNull('meta', meta?.toJson());
     writeNotNull('implicitRules', implicitRules?.toJson());
     writeNotNull('_implicitRules', implicitRulesElement?.toJson());
@@ -116,40 +115,14 @@ abstract mixin class Resource {
       type: resourceTypeString == null ? null : FhirUri(resourceTypeString));
 
   /// Local Reference for this Resource, form is "ResourceType/Id"
-  String get path => '$resourceTypeString/$fhirId';
+  String get path => '$resourceTypeString/$id';
 
   /// returns the same resource with a new ID if there is no current ID
-  Resource newIdIfNoId() => fhirId == null ? _newId(this) : this;
+  Resource newIdIfNoId() => id == null ? _newId(this) : this;
 
   /// returns the same resource with a new ID (even if there is already an ID
   /// present)
   Resource newId() => _newId(this);
-
-  /// The normal toJson ignores the dbId, and produces the fhirId as the id
-  /// However, if you're going to use this as a database entry, you have to
-  /// switch those two ids
-  Map<String, dynamic> toDbJson() {
-    final json = toJson();
-
-    /// Again, for the database, the primary id is an integer, normally stored as dbId
-    json['id'] = dbId;
-
-    /// The fhirId, usually stored in json as id, in the database is going to be fhirId
-    json['fhirId'] = fhirId;
-    return json;
-  }
-
-  /// Likewise, if you're using one of those DBs, then you may need to get that
-  /// resource back, and so we'll need to switch those IDs back before we
-  /// turn them into a Dart class again
-  static Resource fromDbJson(Map<String, dynamic> json) {
-    /// Set the dbId to the current Id (integer from the database)
-    json['dbId'] = json['id'];
-
-    /// Classic json format where the fhirId is stored as id
-    json['id'] = json['fhirId'];
-    return Resource.fromJson(json);
-  }
 
   /// Updates the [meta] field of this Resource, updates the meta.lastUpdated
   /// field, adds 1 to the version number

@@ -257,7 +257,6 @@ Future<void> main() async {
   }) = _$className;
 
   /// Produces a Yaml formatted String version of the object
-  ${resourceTypes.keys.contains(mapKey) ? "@override" : ""}
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -289,7 +288,6 @@ Future<void> main() async {
 
   /// Another convenience method because more and more I'm transmitting FHIR
   /// data as a String and not a Map
-  @override
   String toJsonString() => jsonEncode(toJson());
 }''';
 

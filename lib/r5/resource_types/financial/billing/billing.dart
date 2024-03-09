@@ -18,27 +18,27 @@ part 'billing.g.dart';
 ///  an insurer for reimbursement.
 @freezed
 class Claim with Resource, _$Claim {
-  /// [Claim] A provider issued list of professional services and products
-  ///  which have been provided, or are to be provided, to a patient which is
-  ///  sent to an insurer for reimbursement.
+  /// [Claim] A provider issued list of professional services and products which
+  ///  have been provided, or are to be provided, to a patient which is sent to
+  ///  an insurer for reimbursement.
   const Claim._();
 
-  /// [Claim] A provider issued list of professional services and products
-  ///  which have been provided, or are to be provided, to a patient which is
-  ///  sent to an insurer for reimbursement.
+  /// [Claim] A provider issued list of professional services and products which
+  ///  have been provided, or are to be provided, to a patient which is sent to
+  ///  an insurer for reimbursement.
   ///
   /// [resourceType] This is a Claim resource
   ///
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is
-  ///  maintained by the infrastructure. Changes to the content might not
-  ///  always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is maintained
+  ///  by the infrastructure. Changes to the content might not always be
+  ///  associated with version changes to the resource.
   ///
   /// [implicitRules] A reference to a set of rules that were followed when the
-  ///  resource was constructed, and which must be understood when processing
-  ///  the content. Often, this is a reference to an implementation guide that
+  ///  resource was constructed, and which must be understood when processing the
+  ///  content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
   /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -50,36 +50,35 @@ class Claim with Resource, _$Claim {
   /// [text] A human-readable narrative that contains a summary of the resource
   ///  and can be used to represent the content of the resource to a human. The
   ///  narrative need not encode all the structured data, but is required to
-  ///  contain sufficient detail to make it "clinically safe" for a human to
-  ///  just read the narrative. Resource definitions may define what content
-  ///  should be represented in the narrative to ensure clinical safety.
+  ///  contain sufficient detail to make it "clinically safe" for a human to just
+  ///  read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart
-  ///  from the resource that contains them - they cannot be identified
-  ///  independently, nor can they have their own independent transaction
-  ///  scope. This is allowed to be a Parameters resource if and only if it is
-  ///  referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart from
+  ///  the resource that contains them - they cannot be identified independently,
+  ///  nor can they have their own independent transaction scope. This is allowed
+  ///  to be a Parameters resource if and only if it is referenced by a resource
+  ///  that provides context/meaning.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the resource. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
-  ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the resource and that modifies
-  ///  the understanding of the element that contains it and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the resource. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
   ///  applied to the definition and use of extensions. Though any implementer
-  ///  is allowed to define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension. Applications
-  ///  processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the resource and that modifies the
+  ///  understanding of the element that contains it and/or the understanding of
+  ///  the containing element's descendants. Usually modifier elements provide
+  ///  negation or qualification. To make the use of extensions safe and
+  ///  managable, there is a strict set of governance applied to the definition
+  ///  and use of extensions. Though any implementer is allowed to define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [identifier] A unique identifier assigned to this claim.
   ///
@@ -94,15 +93,15 @@ class Claim with Resource, _$Claim {
   ///  professional.
   ///
   /// [subType] A finer grained suite of claim type codes which may convey
-  ///  additional information such as Inpatient vs Outpatient and/or a
-  ///  specialty service.
+  ///  additional information such as Inpatient vs Outpatient and/or a specialty
+  ///  service.
   ///
   /// [use] A code to indicate whether the nature of the request is: Claim - A
   ///  request to an Insurer to adjudicate the supplied charges for health care
   ///  goods and services under the identified policy and to pay the determined
   ///  Benefit amount, if any; Preauthorization - A request to an Insurer to
-  ///  adjudicate the supplied proposed future charges for health care goods
-  ///  and services under the identified policy and to approve the services and
+  ///  adjudicate the supplied proposed future charges for health care goods and
+  ///  services under the identified policy and to approve the services and
   ///  provide the expected benefit amounts and potentially to reserve funds to
   ///  pay the benefits when Claims for the indicated services are later
   ///  submitted; or, Pre-determination - A request to an Insurer to adjudicate
@@ -112,9 +111,9 @@ class Claim with Resource, _$Claim {
   ///
   /// [useElement] ("_use") Extensions for use
   ///
-  /// [patient] The party to whom the professional services and/or products
-  ///  have been supplied or are being considered and for whom actual or
-  ///  forecast reimbursement is sought.
+  /// [patient] The party to whom the professional services and/or products have
+  ///  been supplied or are being considered and for whom actual or forecast
+  ///  reimbursement is sought.
   ///
   /// [billablePeriod] The period for which charges are being submitted.
   ///
@@ -130,8 +129,8 @@ class Claim with Resource, _$Claim {
   /// [provider] The provider which is responsible for the claim,
   ///  predetermination or preauthorization.
   ///
-  /// [priority] The provider-required urgency of processing the request.
-  ///  Typical values include: stat, normal, deferred.
+  /// [priority] The provider-required urgency of processing the request. Typical
+  ///  values include: stat, normal, deferred.
   ///
   /// [fundsReserve] A code to indicate whether and for whom funds are to be
   ///  reserved for future claims.
@@ -141,8 +140,8 @@ class Claim with Resource, _$Claim {
   ///
   /// [prescription] Prescription is the document/authorization given to the
   ///  claim author for them to provide products and services for which
-  ///  consideration (reimbursement) is sought. Could be a RX for medications,
-  ///  an 'order' for oxygen or wheelchair or physiotherapy treatments.
+  ///  consideration (reimbursement) is sought. Could be a RX for medications, an
+  ///  'order' for oxygen or wheelchair or physiotherapy treatments.
   ///
   /// [originalPrescription] Original prescription which has been superseded by
   ///  this prescription to support the dispensing of pharmacy services,
@@ -151,27 +150,26 @@ class Claim with Resource, _$Claim {
   /// [payee] The party to be reimbursed for cost of the products and services
   ///  according to the terms of the policy.
   ///
-  /// [referral] The referral information received by the claim author, it is
-  ///  not to be used when the author generates a referral for a patient. A
-  ///  copy of that referral may be provided as supporting information. Some
-  ///  insurers require proof of referral to pay for services or to pay
-  ///  specialist rates for services.
+  /// [referral] The referral information received by the claim author, it is not
+  ///  to be used when the author generates a referral for a patient. A copy of
+  ///  that referral may be provided as supporting information. Some insurers
+  ///  require proof of referral to pay for services or to pay specialist rates
+  ///  for services.
   ///
   /// [encounter] Healthcare encounters related to this claim.
   ///
   /// [facility] Facility where the services were provided.
   ///
-  /// [diagnosisRelatedGroup] A package billing code or bundle code used to
-  ///  group products and services to a particular health condition (such as
-  ///  heart attack) which is based on a predetermined grouping code system.
+  /// [diagnosisRelatedGroup] A package billing code or bundle code used to group
+  ///  products and services to a particular health condition (such as heart
+  ///  attack) which is based on a predetermined grouping code system.
   ///
   /// [event] Information code for an event with a corresponding date or period.
   ///
   /// [careTeam] The members of the team who provided the products and services.
   ///
-  /// [supportingInfo] Additional information codes regarding exceptions,
-  ///  special considerations, the condition, situation, prior or concurrent
-  ///  issues.
+  /// [supportingInfo] Additional information codes regarding exceptions, special
+  ///  considerations, the condition, situation, prior or concurrent issues.
   ///
   /// [diagnosis] Information about diagnoses relevant to the claim items.
   ///
@@ -181,8 +179,8 @@ class Claim with Resource, _$Claim {
   /// [insurance] Financial instruments for reimbursement for the health care
   ///  products and services specified on the claim.
   ///
-  /// [accident] Details of an accident which resulted in injuries which
-  ///  required the products and services listed in the claim.
+  /// [accident] Details of an accident which resulted in injuries which required
+  ///  the products and services listed in the claim.
   ///
   /// [patientPaid] The amount paid by the patient, in total at the claim claim
   ///  level or specifically for the item and detail level, to the provider for
@@ -198,22 +196,20 @@ class Claim with Resource, _$Claim {
     @Default(R5ResourceType.Claim)
     @JsonKey(unknownEnumValue: R5ResourceType.Claim)
     R5ResourceType resourceType,
-    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
-    /// [id] The logical id of the resource, as used in the URL for the
-    ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    ///  Once assigned, this value never changes.
+    FhirId? id,
 
-    /// [meta] The metadata about the resource. This is content that is
-    ///  maintained by the infrastructure. Changes to the content might not
-    ///  always be associated with version changes to the resource.
+    /// [meta] The metadata about the resource. This is content that is maintained
+    ///  by the infrastructure. Changes to the content might not always be
+    ///  associated with version changes to the resource.
     FhirMeta? meta,
 
-    /// [implicitRules] A reference to a set of rules that were followed when
-    ///  the resource was constructed, and which must be understood when
-    ///  processing the content. Often, this is a reference to an
-    ///  implementation guide that defines the special rules along with other
-    ///  profiles etc.
+    /// [implicitRules] A reference to a set of rules that were followed when the
+    ///  resource was constructed, and which must be understood when processing the
+    ///  content. Often, this is a reference to an implementation guide that
+    ///  defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -225,44 +221,41 @@ class Claim with Resource, _$Claim {
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
-    /// [text] A human-readable narrative that contains a summary of the
-    ///  resource and can be used to represent the content of the resource to a
-    ///  human. The narrative need not encode all the structured data, but is
-    ///  required to contain sufficient detail to make it "clinically safe" for
-    ///  a human to just read the narrative. Resource definitions may define
-    ///  what content should be represented in the narrative to ensure clinical
-    ///  safety.
+    /// [text] A human-readable narrative that contains a summary of the resource
+    ///  and can be used to represent the content of the resource to a human. The
+    ///  narrative need not encode all the structured data, but is required to
+    ///  contain sufficient detail to make it "clinically safe" for a human to just
+    ///  read the narrative. Resource definitions may define what content should be
+    ///  represented in the narrative to ensure clinical safety.
     Narrative? text,
 
-    /// [contained] These resources do not have an independent existence apart
-    ///  from the resource that contains them - they cannot be identified
-    ///  independently, nor can they have their own independent transaction
-    ///  scope. This is allowed to be a Parameters resource if and only if it
-    ///  is referenced by a resource that provides context/meaning.
+    /// [contained] These resources do not have an independent existence apart from
+    ///  the resource that contains them - they cannot be identified independently,
+    ///  nor can they have their own independent transaction scope. This is allowed
+    ///  to be a Parameters resource if and only if it is referenced by a resource
+    ///  that provides context/meaning.
     List<Resource>? contained,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the resource.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the resource. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the resource and that
-    ///  modifies the understanding of the element that contains it and/or the
-    ///  understanding of the containing element's descendants. Usually
-    ///  modifier elements provide negation or qualification. To make the use
-    ///  of extensions safe and managable, there is a strict set of governance
-    ///  applied to the definition and use of extensions. Though any
-    ///  implementer is allowed to define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension. Applications processing a resource are required to check
-    ///  for modifier extensions.Modifier extensions SHALL NOT change the
-    ///  meaning of any elements on Resource or DomainResource (including
-    ///  cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the resource and that modifies the
+    ///  understanding of the element that contains it and/or the understanding of
+    ///  the containing element's descendants. Usually modifier elements provide
+    ///  negation or qualification. To make the use of extensions safe and
+    ///  managable, there is a strict set of governance applied to the definition
+    ///  and use of extensions. Though any implementer is allowed to define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier assigned to this claim.
@@ -278,35 +271,35 @@ class Claim with Resource, _$Claim {
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
-    /// [type] The category of claim, e.g. oral, pharmacy, vision,
-    ///  institutional, professional.
+    /// [type] The category of claim, e.g. oral, pharmacy, vision, institutional,
+    ///  professional.
     required CodeableConcept type,
 
     /// [subType] A finer grained suite of claim type codes which may convey
-    ///  additional information such as Inpatient vs Outpatient and/or a
-    ///  specialty service.
+    ///  additional information such as Inpatient vs Outpatient and/or a specialty
+    ///  service.
     CodeableConcept? subType,
 
-    /// [use] A code to indicate whether the nature of the request is: Claim -
-    ///  A request to an Insurer to adjudicate the supplied charges for health
-    ///  care goods and services under the identified policy and to pay the
-    ///  determined Benefit amount, if any; Preauthorization - A request to an
-    ///  Insurer to adjudicate the supplied proposed future charges for health
-    ///  care goods and services under the identified policy and to approve the
-    ///  services and provide the expected benefit amounts and potentially to
-    ///  reserve funds to pay the benefits when Claims for the indicated
-    ///  services are later submitted; or, Pre-determination - A request to an
-    ///  Insurer to adjudicate the supplied 'what if' charges for health care
-    ///  goods and services under the identified policy and report back what
-    ///  the Benefit payable would be had the services actually been provided.
+    /// [use] A code to indicate whether the nature of the request is: Claim - A
+    ///  request to an Insurer to adjudicate the supplied charges for health care
+    ///  goods and services under the identified policy and to pay the determined
+    ///  Benefit amount, if any; Preauthorization - A request to an Insurer to
+    ///  adjudicate the supplied proposed future charges for health care goods and
+    ///  services under the identified policy and to approve the services and
+    ///  provide the expected benefit amounts and potentially to reserve funds to
+    ///  pay the benefits when Claims for the indicated services are later
+    ///  submitted; or, Pre-determination - A request to an Insurer to adjudicate
+    ///  the supplied 'what if' charges for health care goods and services under
+    ///  the identified policy and report back what the Benefit payable would be
+    ///  had the services actually been provided.
     FhirCode? use,
 
     /// [useElement] ("_use") Extensions for use
     @JsonKey(name: '_use') Element? useElement,
 
-    /// [patient] The party to whom the professional services and/or products
-    ///  have been supplied or are being considered and for whom actual or
-    ///  forecast reimbursement is sought.
+    /// [patient] The party to whom the professional services and/or products have
+    ///  been supplied or are being considered and for whom actual or forecast
+    ///  reimbursement is sought.
     required Reference patient,
 
     /// [billablePeriod] The period for which charges are being submitted.
@@ -329,8 +322,8 @@ class Claim with Resource, _$Claim {
     ///  predetermination or preauthorization.
     Reference? provider,
 
-    /// [priority] The provider-required urgency of processing the request.
-    ///  Typical values include: stat, normal, deferred.
+    /// [priority] The provider-required urgency of processing the request. Typical
+    ///  values include: stat, normal, deferred.
     CodeableConcept? priority,
 
     /// [fundsReserve] A code to indicate whether and for whom funds are to be
@@ -343,25 +336,24 @@ class Claim with Resource, _$Claim {
 
     /// [prescription] Prescription is the document/authorization given to the
     ///  claim author for them to provide products and services for which
-    ///  consideration (reimbursement) is sought. Could be a RX for
-    ///  medications, an 'order' for oxygen or wheelchair or physiotherapy
-    ///  treatments.
+    ///  consideration (reimbursement) is sought. Could be a RX for medications, an
+    ///  'order' for oxygen or wheelchair or physiotherapy treatments.
     Reference? prescription,
 
-    /// [originalPrescription] Original prescription which has been superseded
-    ///  by this prescription to support the dispensing of pharmacy services,
+    /// [originalPrescription] Original prescription which has been superseded by
+    ///  this prescription to support the dispensing of pharmacy services,
     ///  medications or products.
     Reference? originalPrescription,
 
-    /// [payee] The party to be reimbursed for cost of the products and
-    ///  services according to the terms of the policy.
+    /// [payee] The party to be reimbursed for cost of the products and services
+    ///  according to the terms of the policy.
     ClaimPayee? payee,
 
-    /// [referral] The referral information received by the claim author, it is
-    ///  not to be used when the author generates a referral for a patient. A
-    ///  copy of that referral may be provided as supporting information. Some
-    ///  insurers require proof of referral to pay for services or to pay
-    ///  specialist rates for services.
+    /// [referral] The referral information received by the claim author, it is not
+    ///  to be used when the author generates a referral for a patient. A copy of
+    ///  that referral may be provided as supporting information. Some insurers
+    ///  require proof of referral to pay for services or to pay specialist rates
+    ///  for services.
     Reference? referral,
 
     /// [encounter] Healthcare encounters related to this claim.
@@ -370,22 +362,19 @@ class Claim with Resource, _$Claim {
     /// [facility] Facility where the services were provided.
     Reference? facility,
 
-    /// [diagnosisRelatedGroup] A package billing code or bundle code used to
-    ///  group products and services to a particular health condition (such as
-    ///  heart attack) which is based on a predetermined grouping code system.
+    /// [diagnosisRelatedGroup] A package billing code or bundle code used to group
+    ///  products and services to a particular health condition (such as heart
+    ///  attack) which is based on a predetermined grouping code system.
     CodeableConcept? diagnosisRelatedGroup,
 
-    /// [event] Information code for an event with a corresponding date or
-    ///  period.
+    /// [event] Information code for an event with a corresponding date or period.
     List<ClaimEvent>? event,
 
-    /// [careTeam] The members of the team who provided the products and
-    ///  services.
+    /// [careTeam] The members of the team who provided the products and services.
     List<ClaimCareTeam>? careTeam,
 
-    /// [supportingInfo] Additional information codes regarding exceptions,
-    ///  special considerations, the condition, situation, prior or concurrent
-    ///  issues.
+    /// [supportingInfo] Additional information codes regarding exceptions, special
+    ///  considerations, the condition, situation, prior or concurrent issues.
     List<ClaimSupportingInfo>? supportingInfo,
 
     /// [diagnosis] Information about diagnoses relevant to the claim items.
@@ -399,17 +388,17 @@ class Claim with Resource, _$Claim {
     ///  products and services specified on the claim.
     List<ClaimInsurance>? insurance,
 
-    /// [accident] Details of an accident which resulted in injuries which
-    ///  required the products and services listed in the claim.
+    /// [accident] Details of an accident which resulted in injuries which required
+    ///  the products and services listed in the claim.
     ClaimAccident? accident,
 
-    /// [patientPaid] The amount paid by the patient, in total at the claim
-    ///  claim level or specifically for the item and detail level, to the
-    ///  provider for goods and services.
+    /// [patientPaid] The amount paid by the patient, in total at the claim claim
+    ///  level or specifically for the item and detail level, to the provider for
+    ///  goods and services.
     Money? patientPaid,
 
-    /// [item] A claim line. Either a simple  product or service or a 'group'
-    ///  of details which can each be a simple items or groups of sub-details.
+    /// [item] A claim line. Either a simple  product or service or a 'group' of
+    ///  details which can each be a simple items or groups of sub-details.
     List<ClaimItem>? item,
 
     /// [total] The total value of the all the items in the claim.
@@ -456,38 +445,37 @@ class Claim with Resource, _$Claim {
 ///  sent to an insurer for reimbursement.
 @freezed
 class ClaimRelated with _$ClaimRelated {
-  /// [ClaimRelated] A provider issued list of professional services and
-  ///  products which have been provided, or are to be provided, to a patient
-  ///  which is sent to an insurer for reimbursement.
+  /// [ClaimRelated] A provider issued list of professional services and products
+  ///  which have been provided, or are to be provided, to a patient which is
+  ///  sent to an insurer for reimbursement.
   const ClaimRelated._();
 
-  /// [ClaimRelated] A provider issued list of professional services and
-  ///  products which have been provided, or are to be provided, to a patient
-  ///  which is sent to an insurer for reimbursement.
+  /// [ClaimRelated] A provider issued list of professional services and products
+  ///  which have been provided, or are to be provided, to a patient which is
+  ///  sent to an insurer for reimbursement.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [claim] Reference to a related claim.
   ///
@@ -497,32 +485,30 @@ class ClaimRelated with _$ClaimRelated {
   ///  which this particular claim pertains.
   ///
   const factory ClaimRelated({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [claim] Reference to a related claim.
@@ -531,8 +517,8 @@ class ClaimRelated with _$ClaimRelated {
     /// [relationship] A code to convey how the claims are related.
     CodeableConcept? relationship,
 
-    /// [reference] An alternate organizational reference to the case or file
-    ///  to which this particular claim pertains.
+    /// [reference] An alternate organizational reference to the case or file to
+    ///  which this particular claim pertains.
     Identifier? reference,
   }) = _ClaimRelated;
 
@@ -585,29 +571,28 @@ class ClaimPayee with _$ClaimPayee {
   ///  which have been provided, or are to be provided, to a patient which is
   ///  sent to an insurer for reimbursement.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [type] Type of Party to be reimbursed: subscriber, provider, other.
   ///
@@ -615,32 +600,30 @@ class ClaimPayee with _$ClaimPayee {
   ///  will be made.
   ///
   const factory ClaimPayee({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [type] Type of Party to be reimbursed: subscriber, provider, other.
@@ -700,29 +683,28 @@ class ClaimEvent with _$ClaimEvent {
   ///  which have been provided, or are to be provided, to a patient which is
   ///  sent to an insurer for reimbursement.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [type] A coded event such as when a service is expected or a card printed.
   ///
@@ -735,40 +717,37 @@ class ClaimEvent with _$ClaimEvent {
   ///  event occurred or is expectd to occur.
   ///
   const factory ClaimEvent({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [type] A coded event such as when a service is expected or a card
-    ///  printed.
+    /// [type] A coded event such as when a service is expected or a card printed.
     required CodeableConcept type,
 
-    /// [whenDateTime] A date or period in the past or future indicating when
-    ///  the event occurred or is expectd to occur.
+    /// [whenDateTime] A date or period in the past or future indicating when the
+    ///  event occurred or is expectd to occur.
     FhirDateTime? whenDateTime,
 
     /// [whenDateTimeElement] ("_whenDateTime") Extensions for whenDateTime
@@ -828,29 +807,28 @@ class ClaimCareTeam with _$ClaimCareTeam {
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [sequence] A number to uniquely identify care team entries.
   ///
@@ -863,39 +841,37 @@ class ClaimCareTeam with _$ClaimCareTeam {
   ///
   /// [responsibleElement] ("_responsible") Extensions for responsible
   ///
-  /// [role] The lead, assisting or supervising practitioner and their
-  ///  discipline if a multidisciplinary team.
+  /// [role] The lead, assisting or supervising practitioner and their discipline
+  ///  if a multidisciplinary team.
   ///
   /// [specialty] The specialization of the practitioner or provider which is
   ///  applicable for this service.
   ///
   const factory ClaimCareTeam({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify care team entries.
@@ -907,15 +883,15 @@ class ClaimCareTeam with _$ClaimCareTeam {
     /// [provider] Member of the team who provided the product or service.
     required Reference provider,
 
-    /// [responsible] The party who is billing and/or responsible for the
-    ///  claimed products or services.
+    /// [responsible] The party who is billing and/or responsible for the claimed
+    ///  products or services.
     FhirBoolean? responsible,
 
     /// [responsibleElement] ("_responsible") Extensions for responsible
     @JsonKey(name: '_responsible') Element? responsibleElement,
 
-    /// [role] The lead, assisting or supervising practitioner and their
-    ///  discipline if a multidisciplinary team.
+    /// [role] The lead, assisting or supervising practitioner and their discipline
+    ///  if a multidisciplinary team.
     CodeableConcept? role,
 
     /// [specialty] The specialization of the practitioner or provider which is
@@ -972,29 +948,28 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [sequence] A number to uniquely identify supporting information entries.
   ///
@@ -1013,15 +988,15 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
   ///
   /// [timingPeriod] The date when or period to which this information refers.
   ///
-  /// [valueBoolean] Additional data or information such as resources,
-  ///  documents, images etc. including references to the data or the actual
-  ///  inclusion of the data.
+  /// [valueBoolean] Additional data or information such as resources, documents,
+  ///  images etc. including references to the data or the actual inclusion of
+  ///  the data.
   ///
   /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
   ///
-  /// [valueString] Additional data or information such as resources,
-  ///  documents, images etc. including references to the data or the actual
-  ///  inclusion of the data.
+  /// [valueString] Additional data or information such as resources, documents,
+  ///  images etc. including references to the data or the actual inclusion of
+  ///  the data.
   ///
   /// [valueStringElement] ("_valueString") Extensions for valueString
   ///
@@ -1045,32 +1020,30 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
   ///  required in addition to the content.
   ///
   const factory ClaimSupportingInfo({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify supporting information entries.
@@ -1097,17 +1070,17 @@ class ClaimSupportingInfo with _$ClaimSupportingInfo {
     /// [timingPeriod] The date when or period to which this information refers.
     Period? timingPeriod,
 
-    /// [valueBoolean] Additional data or information such as resources,
-    ///  documents, images etc. including references to the data or the actual
-    ///  inclusion of the data.
+    /// [valueBoolean] Additional data or information such as resources, documents,
+    ///  images etc. including references to the data or the actual inclusion of
+    ///  the data.
     FhirBoolean? valueBoolean,
 
     /// [valueBooleanElement] ("_valueBoolean") Extensions for valueBoolean
     @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
 
-    /// [valueString] Additional data or information such as resources,
-    ///  documents, images etc. including references to the data or the actual
-    ///  inclusion of the data.
+    /// [valueString] Additional data or information such as resources, documents,
+    ///  images etc. including references to the data or the actual inclusion of
+    ///  the data.
     String? valueString,
 
     /// [valueStringElement] ("_valueString") Extensions for valueString
@@ -1187,72 +1160,69 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [sequence] A number to uniquely identify diagnosis entries.
   ///
   /// [sequenceElement] ("_sequence") Extensions for sequence
   ///
-  /// [diagnosisCodeableConcept] The nature of illness or problem in a coded
-  ///  form or as a reference to an external defined Condition.
+  /// [diagnosisCodeableConcept] The nature of illness or problem in a coded form
+  ///  or as a reference to an external defined Condition.
   ///
-  /// [diagnosisReference] The nature of illness or problem in a coded form or
-  ///  as a reference to an external defined Condition.
+  /// [diagnosisReference] The nature of illness or problem in a coded form or as
+  ///  a reference to an external defined Condition.
   ///
   /// [type] When the condition was observed or the relative ranking.
   ///
-  /// [onAdmission] Indication of whether the diagnosis was present on
-  ///  admission to a facility.
+  /// [onAdmission] Indication of whether the diagnosis was present on admission
+  ///  to a facility.
   ///
   const factory ClaimDiagnosis({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify diagnosis entries.
@@ -1261,19 +1231,19 @@ class ClaimDiagnosis with _$ClaimDiagnosis {
     /// [sequenceElement] ("_sequence") Extensions for sequence
     @JsonKey(name: '_sequence') Element? sequenceElement,
 
-    /// [diagnosisCodeableConcept] The nature of illness or problem in a coded
-    ///  form or as a reference to an external defined Condition.
+    /// [diagnosisCodeableConcept] The nature of illness or problem in a coded form
+    ///  or as a reference to an external defined Condition.
     CodeableConcept? diagnosisCodeableConcept,
 
-    /// [diagnosisReference] The nature of illness or problem in a coded form
-    ///  or as a reference to an external defined Condition.
+    /// [diagnosisReference] The nature of illness or problem in a coded form or as
+    ///  a reference to an external defined Condition.
     Reference? diagnosisReference,
 
     /// [type] When the condition was observed or the relative ranking.
     List<CodeableConcept>? type,
 
-    /// [onAdmission] Indication of whether the diagnosis was present on
-    ///  admission to a facility.
+    /// [onAdmission] Indication of whether the diagnosis was present on admission
+    ///  to a facility.
     CodeableConcept? onAdmission,
   }) = _ClaimDiagnosis;
 
@@ -1326,29 +1296,28 @@ class ClaimProcedure with _$ClaimProcedure {
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [sequence] A number to uniquely identify procedure entries.
   ///
@@ -1369,32 +1338,30 @@ class ClaimProcedure with _$ClaimProcedure {
   /// [udi] Unique Device Identifiers associated with this line item.
   ///
   const factory ClaimProcedure({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify procedure entries.
@@ -1412,12 +1379,12 @@ class ClaimProcedure with _$ClaimProcedure {
     /// [dateElement] ("_date") Extensions for date
     @JsonKey(name: '_date') Element? dateElement,
 
-    /// [procedureCodeableConcept] The code or reference to a Procedure
-    ///  resource which identifies the clinical intervention performed.
+    /// [procedureCodeableConcept] The code or reference to a Procedure resource
+    ///  which identifies the clinical intervention performed.
     CodeableConcept? procedureCodeableConcept,
 
-    /// [procedureReference] The code or reference to a Procedure resource
-    ///  which identifies the clinical intervention performed.
+    /// [procedureReference] The code or reference to a Procedure resource which
+    ///  identifies the clinical intervention performed.
     Reference? procedureReference,
 
     /// [udi] Unique Device Identifiers associated with this line item.
@@ -1473,29 +1440,28 @@ class ClaimInsurance with _$ClaimInsurance {
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [sequence] A number to uniquely identify insurance entries and provide a
   ///  sequence of coverages to convey coordination of benefit order.
@@ -1507,13 +1473,13 @@ class ClaimInsurance with _$ClaimInsurance {
   ///
   /// [focalElement] ("_focal") Extensions for focal
   ///
-  /// [identifier] The business identifier to be used when the claim is sent
-  ///  for adjudication against this insurance policy.
+  /// [identifier] The business identifier to be used when the claim is sent for
+  ///  adjudication against this insurance policy.
   ///
   /// [coverage] Reference to the insurance card level information contained in
-  ///  the Coverage resource. The coverage issuing insurer will use these
-  ///  details to locate the patient's actual coverage within the insurer's
-  ///  information system.
+  ///  the Coverage resource. The coverage issuing insurer will use these details
+  ///  to locate the patient's actual coverage within the insurer's information
+  ///  system.
   ///
   /// [businessArrangement] A business agreement number established between the
   ///  provider and the insurer for special business processing purposes.
@@ -1522,8 +1488,8 @@ class ClaimInsurance with _$ClaimInsurance {
   ///  businessArrangement
   ///
   /// [preAuthRef] Reference numbers previously provided by the insurer to the
-  ///  provider to be quoted on subsequent claims containing services or
-  ///  products related to the prior authorization.
+  ///  provider to be quoted on subsequent claims containing services or products
+  ///  related to the prior authorization.
   ///
   /// [preAuthRefElement] ("_preAuthRef") Extensions for preAuthRef
   ///
@@ -1531,36 +1497,34 @@ class ClaimInsurance with _$ClaimInsurance {
   ///  Coverage specified in this insurance.
   ///
   const factory ClaimInsurance({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [sequence] A number to uniquely identify insurance entries and provide
-    ///  a sequence of coverages to convey coordination of benefit order.
+    /// [sequence] A number to uniquely identify insurance entries and provide a
+    ///  sequence of coverages to convey coordination of benefit order.
     FhirPositiveInt? sequence,
 
     /// [sequenceElement] ("_sequence") Extensions for sequence
@@ -1573,34 +1537,34 @@ class ClaimInsurance with _$ClaimInsurance {
     /// [focalElement] ("_focal") Extensions for focal
     @JsonKey(name: '_focal') Element? focalElement,
 
-    /// [identifier] The business identifier to be used when the claim is sent
-    ///  for adjudication against this insurance policy.
+    /// [identifier] The business identifier to be used when the claim is sent for
+    ///  adjudication against this insurance policy.
     Identifier? identifier,
 
-    /// [coverage] Reference to the insurance card level information contained
-    ///  in the Coverage resource. The coverage issuing insurer will use these
-    ///  details to locate the patient's actual coverage within the insurer's
-    ///  information system.
+    /// [coverage] Reference to the insurance card level information contained in
+    ///  the Coverage resource. The coverage issuing insurer will use these details
+    ///  to locate the patient's actual coverage within the insurer's information
+    ///  system.
     required Reference coverage,
 
-    /// [businessArrangement] A business agreement number established between
-    ///  the provider and the insurer for special business processing purposes.
+    /// [businessArrangement] A business agreement number established between the
+    ///  provider and the insurer for special business processing purposes.
     String? businessArrangement,
 
     /// [businessArrangementElement] ("_businessArrangement") Extensions for
     ///  businessArrangement
     @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
 
-    /// [preAuthRef] Reference numbers previously provided by the insurer to
-    ///  the provider to be quoted on subsequent claims containing services or
-    ///  products related to the prior authorization.
+    /// [preAuthRef] Reference numbers previously provided by the insurer to the
+    ///  provider to be quoted on subsequent claims containing services or products
+    ///  related to the prior authorization.
     List<String>? preAuthRef,
 
     /// [preAuthRefElement] ("_preAuthRef") Extensions for preAuthRef
     @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement,
 
-    /// [claimResponse] The result of the adjudication of the line items for
-    ///  the Coverage specified in this insurance.
+    /// [claimResponse] The result of the adjudication of the line items for the
+    ///  Coverage specified in this insurance.
     Reference? claimResponse,
   }) = _ClaimInsurance;
 
@@ -1653,29 +1617,28 @@ class ClaimAccident with _$ClaimAccident {
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [date] Date of an accident event  related to the products and services
   ///  contained in the claim.
@@ -1691,32 +1654,30 @@ class ClaimAccident with _$ClaimAccident {
   /// [locationReference] The physical location of the accident event.
   ///
   const factory ClaimAccident({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [date] Date of an accident event  related to the products and services
@@ -1787,29 +1748,28 @@ class ClaimItem with _$ClaimItem {
   ///  which have been provided, or are to be provided, to a patient which is
   ///  sent to an insurer for reimbursement.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [sequence] A number to uniquely identify item entries.
   ///
@@ -1845,19 +1805,19 @@ class ClaimItem with _$ClaimItem {
   /// [category] Code to identify the general type of benefits under which
   ///  products and services are provided.
   ///
-  /// [productOrService] When the value is a group code then this item collects
-  ///  a set of related item details, otherwise this contains the product,
-  ///  service, drug or other billing code for the item. This element may be
-  ///  the start of a range of .productOrService codes used in conjunction with
+  /// [productOrService] When the value is a group code then this item collects a
+  ///  set of related item details, otherwise this contains the product, service,
+  ///  drug or other billing code for the item. This element may be the start of
+  ///  a range of .productOrService codes used in conjunction with
   ///  .productOrServiceEnd or it may be a solo element where
   ///  .productOrServiceEnd is not used.
   ///
-  /// [productOrServiceEnd] This contains the end of a range of product,
-  ///  service, drug or other billing codes for the item. This element is not
-  ///  used when the .productOrService is a group code. This value may only be
-  ///  present when a .productOfService code has been provided to convey the
-  ///  start of the range. Typically this value may be used only with
-  ///  preauthorizations and not with claims.
+  /// [productOrServiceEnd] This contains the end of a range of product, service,
+  ///  drug or other billing codes for the item. This element is not used when
+  ///  the .productOrService is a group code. This value may only be present when
+  ///  a .productOfService code has been provided to convey the start of the
+  ///  range. Typically this value may be used only with preauthorizations and
+  ///  not with claims.
   ///
   /// [request] Request or Referral for Goods or Service to be rendered.
   ///
@@ -1866,8 +1826,8 @@ class ClaimItem with _$ClaimItem {
   ///
   /// [programCode] Identifies the program under which this may be recovered.
   ///
-  /// [servicedDate] The date or dates when the service or product was
-  ///  supplied, performed or completed.
+  /// [servicedDate] The date or dates when the service or product was supplied,
+  ///  performed or completed.
   ///
   /// [servicedDateElement] ("_servicedDate") Extensions for servicedDate
   ///
@@ -1886,14 +1846,14 @@ class ClaimItem with _$ClaimItem {
   ///
   /// [quantity] The number of repetitions of a service or product.
   ///
-  /// [unitPrice] If the item is not a group then this is the fee for the
-  ///  product or service, otherwise this is the total of the fees for the
-  ///  details of the group.
+  /// [unitPrice] If the item is not a group then this is the fee for the product
+  ///  or service, otherwise this is the total of the fees for the details of the
+  ///  group.
   ///
-  /// [factor] A real number that represents a multiplier used in determining
-  ///  the overall value of services delivered and/or goods received. The
-  ///  concept of a Factor allows for a discount or surcharge multiplier to be
-  ///  applied to a monetary amount.
+  /// [factor] A real number that represents a multiplier used in determining the
+  ///  overall value of services delivered and/or goods received. The concept of
+  ///  a Factor allows for a discount or surcharge multiplier to be applied to a
+  ///  monetary amount.
   ///
   /// [factorElement] ("_factor") Extensions for factor
   ///
@@ -1912,32 +1872,30 @@ class ClaimItem with _$ClaimItem {
   ///  'group' of sub-details which are simple items.
   ///
   const factory ClaimItem({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify item entries.
@@ -1982,28 +1940,28 @@ class ClaimItem with _$ClaimItem {
     @JsonKey(name: '_informationSequence')
     List<Element>? informationSequenceElement,
 
-    /// [revenue] The type of revenue or cost center providing the product
-    ///  and/or service.
+    /// [revenue] The type of revenue or cost center providing the product and/or
+    ///  service.
     CodeableConcept? revenue,
 
     /// [category] Code to identify the general type of benefits under which
     ///  products and services are provided.
     CodeableConcept? category,
 
-    /// [productOrService] When the value is a group code then this item
-    ///  collects a set of related item details, otherwise this contains the
-    ///  product, service, drug or other billing code for the item. This
-    ///  element may be the start of a range of .productOrService codes used in
-    ///  conjunction with .productOrServiceEnd or it may be a solo element
-    ///  where .productOrServiceEnd is not used.
+    /// [productOrService] When the value is a group code then this item collects a
+    ///  set of related item details, otherwise this contains the product, service,
+    ///  drug or other billing code for the item. This element may be the start of
+    ///  a range of .productOrService codes used in conjunction with
+    ///  .productOrServiceEnd or it may be a solo element where
+    ///  .productOrServiceEnd is not used.
     CodeableConcept? productOrService,
 
-    /// [productOrServiceEnd] This contains the end of a range of product,
-    ///  service, drug or other billing codes for the item. This element is not
-    ///  used when the .productOrService is a group code. This value may only
-    ///  be present when a .productOfService code has been provided to convey
-    ///  the start of the range. Typically this value may be used only with
-    ///  preauthorizations and not with claims.
+    /// [productOrServiceEnd] This contains the end of a range of product, service,
+    ///  drug or other billing codes for the item. This element is not used when
+    ///  the .productOrService is a group code. This value may only be present when
+    ///  a .productOfService code has been provided to convey the start of the
+    ///  range. Typically this value may be used only with preauthorizations and
+    ///  not with claims.
     CodeableConcept? productOrServiceEnd,
 
     /// [request] Request or Referral for Goods or Service to be rendered.
@@ -2016,8 +1974,8 @@ class ClaimItem with _$ClaimItem {
     /// [programCode] Identifies the program under which this may be recovered.
     List<CodeableConcept>? programCode,
 
-    /// [servicedDate] The date or dates when the service or product was
-    ///  supplied, performed or completed.
+    /// [servicedDate] The date or dates when the service or product was supplied,
+    ///  performed or completed.
     FhirDate? servicedDate,
 
     /// [servicedDateElement] ("_servicedDate") Extensions for servicedDate
@@ -2036,23 +1994,23 @@ class ClaimItem with _$ClaimItem {
     /// [locationReference] Where the product or service was provided.
     Reference? locationReference,
 
-    /// [patientPaid] The amount paid by the patient, in total at the claim
-    ///  claim level or specifically for the item and detail level, to the
-    ///  provider for goods and services.
+    /// [patientPaid] The amount paid by the patient, in total at the claim claim
+    ///  level or specifically for the item and detail level, to the provider for
+    ///  goods and services.
     Money? patientPaid,
 
     /// [quantity] The number of repetitions of a service or product.
     Quantity? quantity,
 
-    /// [unitPrice] If the item is not a group then this is the fee for the
-    ///  product or service, otherwise this is the total of the fees for the
-    ///  details of the group.
+    /// [unitPrice] If the item is not a group then this is the fee for the product
+    ///  or service, otherwise this is the total of the fees for the details of the
+    ///  group.
     Money? unitPrice,
 
-    /// [factor] A real number that represents a multiplier used in determining
-    ///  the overall value of services delivered and/or goods received. The
-    ///  concept of a Factor allows for a discount or surcharge multiplier to
-    ///  be applied to a monetary amount.
+    /// [factor] A real number that represents a multiplier used in determining the
+    ///  overall value of services delivered and/or goods received. The concept of
+    ///  a Factor allows for a discount or surcharge multiplier to be applied to a
+    ///  monetary amount.
     FhirDecimal? factor,
 
     /// [factorElement] ("_factor") Extensions for factor
@@ -2074,8 +2032,8 @@ class ClaimItem with _$ClaimItem {
     /// [encounter] Healthcare encounters related to this claim.
     List<Reference>? encounter,
 
-    /// [detail] A claim detail line. Either a simple (a product or service) or
-    ///  a 'group' of sub-details which are simple items.
+    /// [detail] A claim detail line. Either a simple (a product or service) or a
+    ///  'group' of sub-details which are simple items.
     List<ClaimDetail>? detail,
   }) = _ClaimItem;
 
@@ -2128,29 +2086,28 @@ class ClaimBodySite with _$ClaimBodySite {
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [site] Physical service site on the patient (limb, tooth, etc.).
   ///
@@ -2158,39 +2115,37 @@ class ClaimBodySite with _$ClaimBodySite {
   ///  surface(s).
   ///
   const factory ClaimBodySite({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [site] Physical service site on the patient (limb, tooth, etc.).
     required List<CodeableReference> site,
 
-    /// [subSite] A region or surface of the bodySite, e.g. limb region or
-    ///  tooth surface(s).
+    /// [subSite] A region or surface of the bodySite, e.g. limb region or tooth
+    ///  surface(s).
     List<CodeableConcept>? subSite,
   }) = _ClaimBodySite;
 
@@ -2234,38 +2189,37 @@ class ClaimBodySite with _$ClaimBodySite {
 ///  sent to an insurer for reimbursement.
 @freezed
 class ClaimDetail with _$ClaimDetail {
-  /// [ClaimDetail] A provider issued list of professional services and
-  ///  products which have been provided, or are to be provided, to a patient
-  ///  which is sent to an insurer for reimbursement.
+  /// [ClaimDetail] A provider issued list of professional services and products
+  ///  which have been provided, or are to be provided, to a patient which is
+  ///  sent to an insurer for reimbursement.
   const ClaimDetail._();
 
-  /// [ClaimDetail] A provider issued list of professional services and
-  ///  products which have been provided, or are to be provided, to a patient
-  ///  which is sent to an insurer for reimbursement.
+  /// [ClaimDetail] A provider issued list of professional services and products
+  ///  which have been provided, or are to be provided, to a patient which is
+  ///  sent to an insurer for reimbursement.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [sequence] A number to uniquely identify item entries.
   ///
@@ -2280,19 +2234,19 @@ class ClaimDetail with _$ClaimDetail {
   /// [category] Code to identify the general type of benefits under which
   ///  products and services are provided.
   ///
-  /// [productOrService] When the value is a group code then this item collects
-  ///  a set of related item details, otherwise this contains the product,
-  ///  service, drug or other billing code for the item. This element may be
-  ///  the start of a range of .productOrService codes used in conjunction with
+  /// [productOrService] When the value is a group code then this item collects a
+  ///  set of related item details, otherwise this contains the product, service,
+  ///  drug or other billing code for the item. This element may be the start of
+  ///  a range of .productOrService codes used in conjunction with
   ///  .productOrServiceEnd or it may be a solo element where
   ///  .productOrServiceEnd is not used.
   ///
-  /// [productOrServiceEnd] This contains the end of a range of product,
-  ///  service, drug or other billing codes for the item. This element is not
-  ///  used when the .productOrService is a group code. This value may only be
-  ///  present when a .productOfService code has been provided to convey the
-  ///  start of the range. Typically this value may be used only with
-  ///  preauthorizations and not with claims.
+  /// [productOrServiceEnd] This contains the end of a range of product, service,
+  ///  drug or other billing codes for the item. This element is not used when
+  ///  the .productOrService is a group code. This value may only be present when
+  ///  a .productOfService code has been provided to convey the start of the
+  ///  range. Typically this value may be used only with preauthorizations and
+  ///  not with claims.
   ///
   /// [modifier] Item typification or modifiers codes to convey additional
   ///  context for the product or service.
@@ -2305,14 +2259,14 @@ class ClaimDetail with _$ClaimDetail {
   ///
   /// [quantity] The number of repetitions of a service or product.
   ///
-  /// [unitPrice] If the item is not a group then this is the fee for the
-  ///  product or service, otherwise this is the total of the fees for the
-  ///  details of the group.
+  /// [unitPrice] If the item is not a group then this is the fee for the product
+  ///  or service, otherwise this is the total of the fees for the details of the
+  ///  group.
   ///
-  /// [factor] A real number that represents a multiplier used in determining
-  ///  the overall value of services delivered and/or goods received. The
-  ///  concept of a Factor allows for a discount or surcharge multiplier to be
-  ///  applied to a monetary amount.
+  /// [factor] A real number that represents a multiplier used in determining the
+  ///  overall value of services delivered and/or goods received. The concept of
+  ///  a Factor allows for a discount or surcharge multiplier to be applied to a
+  ///  monetary amount.
   ///
   /// [factorElement] ("_factor") Extensions for factor
   ///
@@ -2323,36 +2277,34 @@ class ClaimDetail with _$ClaimDetail {
   ///
   /// [udi] Unique Device Identifiers associated with this line item.
   ///
-  /// [subDetail] A claim detail line. Either a simple (a product or service)
-  ///  or a 'group' of sub-details which are simple items.
+  /// [subDetail] A claim detail line. Either a simple (a product or service) or
+  ///  a 'group' of sub-details which are simple items.
   ///
   const factory ClaimDetail({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify item entries.
@@ -2365,28 +2317,28 @@ class ClaimDetail with _$ClaimDetail {
     ///  jurisdiction level or between trading partners.
     List<Identifier>? traceNumber,
 
-    /// [revenue] The type of revenue or cost center providing the product
-    ///  and/or service.
+    /// [revenue] The type of revenue or cost center providing the product and/or
+    ///  service.
     CodeableConcept? revenue,
 
     /// [category] Code to identify the general type of benefits under which
     ///  products and services are provided.
     CodeableConcept? category,
 
-    /// [productOrService] When the value is a group code then this item
-    ///  collects a set of related item details, otherwise this contains the
-    ///  product, service, drug or other billing code for the item. This
-    ///  element may be the start of a range of .productOrService codes used in
-    ///  conjunction with .productOrServiceEnd or it may be a solo element
-    ///  where .productOrServiceEnd is not used.
+    /// [productOrService] When the value is a group code then this item collects a
+    ///  set of related item details, otherwise this contains the product, service,
+    ///  drug or other billing code for the item. This element may be the start of
+    ///  a range of .productOrService codes used in conjunction with
+    ///  .productOrServiceEnd or it may be a solo element where
+    ///  .productOrServiceEnd is not used.
     CodeableConcept? productOrService,
 
-    /// [productOrServiceEnd] This contains the end of a range of product,
-    ///  service, drug or other billing codes for the item. This element is not
-    ///  used when the .productOrService is a group code. This value may only
-    ///  be present when a .productOfService code has been provided to convey
-    ///  the start of the range. Typically this value may be used only with
-    ///  preauthorizations and not with claims.
+    /// [productOrServiceEnd] This contains the end of a range of product, service,
+    ///  drug or other billing codes for the item. This element is not used when
+    ///  the .productOrService is a group code. This value may only be present when
+    ///  a .productOfService code has been provided to convey the start of the
+    ///  range. Typically this value may be used only with preauthorizations and
+    ///  not with claims.
     CodeableConcept? productOrServiceEnd,
 
     /// [modifier] Item typification or modifiers codes to convey additional
@@ -2396,23 +2348,23 @@ class ClaimDetail with _$ClaimDetail {
     /// [programCode] Identifies the program under which this may be recovered.
     List<CodeableConcept>? programCode,
 
-    /// [patientPaid] The amount paid by the patient, in total at the claim
-    ///  claim level or specifically for the item and detail level, to the
-    ///  provider for goods and services.
+    /// [patientPaid] The amount paid by the patient, in total at the claim claim
+    ///  level or specifically for the item and detail level, to the provider for
+    ///  goods and services.
     Money? patientPaid,
 
     /// [quantity] The number of repetitions of a service or product.
     Quantity? quantity,
 
-    /// [unitPrice] If the item is not a group then this is the fee for the
-    ///  product or service, otherwise this is the total of the fees for the
-    ///  details of the group.
+    /// [unitPrice] If the item is not a group then this is the fee for the product
+    ///  or service, otherwise this is the total of the fees for the details of the
+    ///  group.
     Money? unitPrice,
 
-    /// [factor] A real number that represents a multiplier used in determining
-    ///  the overall value of services delivered and/or goods received. The
-    ///  concept of a Factor allows for a discount or surcharge multiplier to
-    ///  be applied to a monetary amount.
+    /// [factor] A real number that represents a multiplier used in determining the
+    ///  overall value of services delivered and/or goods received. The concept of
+    ///  a Factor allows for a discount or surcharge multiplier to be applied to a
+    ///  monetary amount.
     FhirDecimal? factor,
 
     /// [factorElement] ("_factor") Extensions for factor
@@ -2428,8 +2380,8 @@ class ClaimDetail with _$ClaimDetail {
     /// [udi] Unique Device Identifiers associated with this line item.
     List<Reference>? udi,
 
-    /// [subDetail] A claim detail line. Either a simple (a product or service)
-    ///  or a 'group' of sub-details which are simple items.
+    /// [subDetail] A claim detail line. Either a simple (a product or service) or
+    ///  a 'group' of sub-details which are simple items.
     List<ClaimSubDetail>? subDetail,
   }) = _ClaimDetail;
 
@@ -2482,29 +2434,28 @@ class ClaimSubDetail with _$ClaimSubDetail {
   ///  products which have been provided, or are to be provided, to a patient
   ///  which is sent to an insurer for reimbursement.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [sequence] A number to uniquely identify item entries.
   ///
@@ -2519,19 +2470,19 @@ class ClaimSubDetail with _$ClaimSubDetail {
   /// [category] Code to identify the general type of benefits under which
   ///  products and services are provided.
   ///
-  /// [productOrService] When the value is a group code then this item collects
-  ///  a set of related item details, otherwise this contains the product,
-  ///  service, drug or other billing code for the item. This element may be
-  ///  the start of a range of .productOrService codes used in conjunction with
+  /// [productOrService] When the value is a group code then this item collects a
+  ///  set of related item details, otherwise this contains the product, service,
+  ///  drug or other billing code for the item. This element may be the start of
+  ///  a range of .productOrService codes used in conjunction with
   ///  .productOrServiceEnd or it may be a solo element where
   ///  .productOrServiceEnd is not used.
   ///
-  /// [productOrServiceEnd] This contains the end of a range of product,
-  ///  service, drug or other billing codes for the item. This element is not
-  ///  used when the .productOrService is a group code. This value may only be
-  ///  present when a .productOfService code has been provided to convey the
-  ///  start of the range. Typically this value may be used only with
-  ///  preauthorizations and not with claims.
+  /// [productOrServiceEnd] This contains the end of a range of product, service,
+  ///  drug or other billing codes for the item. This element is not used when
+  ///  the .productOrService is a group code. This value may only be present when
+  ///  a .productOfService code has been provided to convey the start of the
+  ///  range. Typically this value may be used only with preauthorizations and
+  ///  not with claims.
   ///
   /// [modifier] Item typification or modifiers codes to convey additional
   ///  context for the product or service.
@@ -2544,14 +2495,14 @@ class ClaimSubDetail with _$ClaimSubDetail {
   ///
   /// [quantity] The number of repetitions of a service or product.
   ///
-  /// [unitPrice] If the item is not a group then this is the fee for the
-  ///  product or service, otherwise this is the total of the fees for the
-  ///  details of the group.
+  /// [unitPrice] If the item is not a group then this is the fee for the product
+  ///  or service, otherwise this is the total of the fees for the details of the
+  ///  group.
   ///
-  /// [factor] A real number that represents a multiplier used in determining
-  ///  the overall value of services delivered and/or goods received. The
-  ///  concept of a Factor allows for a discount or surcharge multiplier to be
-  ///  applied to a monetary amount.
+  /// [factor] A real number that represents a multiplier used in determining the
+  ///  overall value of services delivered and/or goods received. The concept of
+  ///  a Factor allows for a discount or surcharge multiplier to be applied to a
+  ///  monetary amount.
   ///
   /// [factorElement] ("_factor") Extensions for factor
   ///
@@ -2563,32 +2514,30 @@ class ClaimSubDetail with _$ClaimSubDetail {
   /// [udi] Unique Device Identifiers associated with this line item.
   ///
   const factory ClaimSubDetail({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] A number to uniquely identify item entries.
@@ -2601,28 +2550,28 @@ class ClaimSubDetail with _$ClaimSubDetail {
     ///  jurisdiction level or between trading partners.
     List<Identifier>? traceNumber,
 
-    /// [revenue] The type of revenue or cost center providing the product
-    ///  and/or service.
+    /// [revenue] The type of revenue or cost center providing the product and/or
+    ///  service.
     CodeableConcept? revenue,
 
     /// [category] Code to identify the general type of benefits under which
     ///  products and services are provided.
     CodeableConcept? category,
 
-    /// [productOrService] When the value is a group code then this item
-    ///  collects a set of related item details, otherwise this contains the
-    ///  product, service, drug or other billing code for the item. This
-    ///  element may be the start of a range of .productOrService codes used in
-    ///  conjunction with .productOrServiceEnd or it may be a solo element
-    ///  where .productOrServiceEnd is not used.
+    /// [productOrService] When the value is a group code then this item collects a
+    ///  set of related item details, otherwise this contains the product, service,
+    ///  drug or other billing code for the item. This element may be the start of
+    ///  a range of .productOrService codes used in conjunction with
+    ///  .productOrServiceEnd or it may be a solo element where
+    ///  .productOrServiceEnd is not used.
     CodeableConcept? productOrService,
 
-    /// [productOrServiceEnd] This contains the end of a range of product,
-    ///  service, drug or other billing codes for the item. This element is not
-    ///  used when the .productOrService is a group code. This value may only
-    ///  be present when a .productOfService code has been provided to convey
-    ///  the start of the range. Typically this value may be used only with
-    ///  preauthorizations and not with claims.
+    /// [productOrServiceEnd] This contains the end of a range of product, service,
+    ///  drug or other billing codes for the item. This element is not used when
+    ///  the .productOrService is a group code. This value may only be present when
+    ///  a .productOfService code has been provided to convey the start of the
+    ///  range. Typically this value may be used only with preauthorizations and
+    ///  not with claims.
     CodeableConcept? productOrServiceEnd,
 
     /// [modifier] Item typification or modifiers codes to convey additional
@@ -2632,23 +2581,23 @@ class ClaimSubDetail with _$ClaimSubDetail {
     /// [programCode] Identifies the program under which this may be recovered.
     List<CodeableConcept>? programCode,
 
-    /// [patientPaid] The amount paid by the patient, in total at the claim
-    ///  claim level or specifically for the item and detail level, to the
-    ///  provider for goods and services.
+    /// [patientPaid] The amount paid by the patient, in total at the claim claim
+    ///  level or specifically for the item and detail level, to the provider for
+    ///  goods and services.
     Money? patientPaid,
 
     /// [quantity] The number of repetitions of a service or product.
     Quantity? quantity,
 
-    /// [unitPrice] If the item is not a group then this is the fee for the
-    ///  product or service, otherwise this is the total of the fees for the
-    ///  details of the group.
+    /// [unitPrice] If the item is not a group then this is the fee for the product
+    ///  or service, otherwise this is the total of the fees for the details of the
+    ///  group.
     Money? unitPrice,
 
-    /// [factor] A real number that represents a multiplier used in determining
-    ///  the overall value of services delivered and/or goods received. The
-    ///  concept of a Factor allows for a discount or surcharge multiplier to
-    ///  be applied to a monetary amount.
+    /// [factor] A real number that represents a multiplier used in determining the
+    ///  overall value of services delivered and/or goods received. The concept of
+    ///  a Factor allows for a discount or surcharge multiplier to be applied to a
+    ///  monetary amount.
     FhirDecimal? factor,
 
     /// [factorElement] ("_factor") Extensions for factor
@@ -2657,8 +2606,8 @@ class ClaimSubDetail with _$ClaimSubDetail {
     /// [tax] The total of taxes applicable for this product or service.
     Money? tax,
 
-    /// [net] The total amount claimed for line item.detail.subDetail. Net =
-    ///  unit price * quantity * factor.
+    /// [net] The total amount claimed for line item.detail.subDetail. Net = unit
+    ///  price * quantity * factor.
     Money? net,
 
     /// [udi] Unique Device Identifiers associated with this line item.
@@ -2716,13 +2665,13 @@ class ClaimResponse with Resource, _$ClaimResponse {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is
-  ///  maintained by the infrastructure. Changes to the content might not
-  ///  always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is maintained
+  ///  by the infrastructure. Changes to the content might not always be
+  ///  associated with version changes to the resource.
   ///
   /// [implicitRules] A reference to a set of rules that were followed when the
-  ///  resource was constructed, and which must be understood when processing
-  ///  the content. Often, this is a reference to an implementation guide that
+  ///  resource was constructed, and which must be understood when processing the
+  ///  content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
   /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -2734,36 +2683,35 @@ class ClaimResponse with Resource, _$ClaimResponse {
   /// [text] A human-readable narrative that contains a summary of the resource
   ///  and can be used to represent the content of the resource to a human. The
   ///  narrative need not encode all the structured data, but is required to
-  ///  contain sufficient detail to make it "clinically safe" for a human to
-  ///  just read the narrative. Resource definitions may define what content
-  ///  should be represented in the narrative to ensure clinical safety.
+  ///  contain sufficient detail to make it "clinically safe" for a human to just
+  ///  read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart
-  ///  from the resource that contains them - they cannot be identified
-  ///  independently, nor can they have their own independent transaction
-  ///  scope. This is allowed to be a Parameters resource if and only if it is
-  ///  referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart from
+  ///  the resource that contains them - they cannot be identified independently,
+  ///  nor can they have their own independent transaction scope. This is allowed
+  ///  to be a Parameters resource if and only if it is referenced by a resource
+  ///  that provides context/meaning.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the resource. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
-  ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the resource and that modifies
-  ///  the understanding of the element that contains it and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the resource. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
   ///  applied to the definition and use of extensions. Though any implementer
-  ///  is allowed to define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension. Applications
-  ///  processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the resource and that modifies the
+  ///  understanding of the element that contains it and/or the understanding of
+  ///  the containing element's descendants. Usually modifier elements provide
+  ///  negation or qualification. To make the use of extensions safe and
+  ///  managable, there is a strict set of governance applied to the definition
+  ///  and use of extensions. Though any implementer is allowed to define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [identifier] A unique identifier assigned to this claim response.
   ///
@@ -2775,19 +2723,19 @@ class ClaimResponse with Resource, _$ClaimResponse {
   /// [statusElement] ("_status") Extensions for status
   ///
   /// [type] A finer grained suite of claim type codes which may convey
-  ///  additional information such as Inpatient vs Outpatient and/or a
-  ///  specialty service.
+  ///  additional information such as Inpatient vs Outpatient and/or a specialty
+  ///  service.
   ///
   /// [subType] A finer grained suite of claim type codes which may convey
-  ///  additional information such as Inpatient vs Outpatient and/or a
-  ///  specialty service.
+  ///  additional information such as Inpatient vs Outpatient and/or a specialty
+  ///  service.
   ///
   /// [use] A code to indicate whether the nature of the request is: Claim - A
   ///  request to an Insurer to adjudicate the supplied charges for health care
   ///  goods and services under the identified policy and to pay the determined
   ///  Benefit amount, if any; Preauthorization - A request to an Insurer to
-  ///  adjudicate the supplied proposed future charges for health care goods
-  ///  and services under the identified policy and to approve the services and
+  ///  adjudicate the supplied proposed future charges for health care goods and
+  ///  services under the identified policy and to approve the services and
   ///  provide the expected benefit amounts and potentially to reserve funds to
   ///  pay the benefits when Claims for the indicated services are later
   ///  submitted; or, Pre-determination - A request to an Insurer to adjudicate
@@ -2797,9 +2745,9 @@ class ClaimResponse with Resource, _$ClaimResponse {
   ///
   /// [useElement] ("_use") Extensions for use
   ///
-  /// [patient] The party to whom the professional services and/or products
-  ///  have been supplied or are being considered and for whom actual for
-  ///  facast reimbursement is sought.
+  /// [patient] The party to whom the professional services and/or products have
+  ///  been supplied or are being considered and for whom actual for facast
+  ///  reimbursement is sought.
   ///
   /// [created] The date this resource was created.
   ///
@@ -2831,8 +2779,7 @@ class ClaimResponse with Resource, _$ClaimResponse {
   ///
   /// [preAuthRefElement] ("_preAuthRef") Extensions for preAuthRef
   ///
-  /// [preAuthPeriod] The time frame during which this authorization is
-  ///  effective.
+  /// [preAuthPeriod] The time frame during which this authorization is effective.
   ///
   /// [event] Information code for an event with a corresponding date or period.
   ///
@@ -2840,12 +2787,12 @@ class ClaimResponse with Resource, _$ClaimResponse {
   ///
   /// [encounter] Healthcare encounters related to this claim.
   ///
-  /// [diagnosisRelatedGroup] A package billing code or bundle code used to
-  ///  group products and services to a particular health condition (such as
-  ///  heart attack) which is based on a predetermined grouping code system.
+  /// [diagnosisRelatedGroup] A package billing code or bundle code used to group
+  ///  products and services to a particular health condition (such as heart
+  ///  attack) which is based on a predetermined grouping code system.
   ///
-  /// [item] A claim line. Either a simple (a product or service) or a 'group'
-  ///  of details which can also be a simple items or groups of sub-details.
+  /// [item] A claim line. Either a simple (a product or service) or a 'group' of
+  ///  details which can also be a simple items or groups of sub-details.
   ///
   /// [addItem] The first-tier service adjudications for payor added product or
   ///  service lines.
@@ -2862,8 +2809,8 @@ class ClaimResponse with Resource, _$ClaimResponse {
   ///
   /// [formCode] A code for the form to be used for printing the content.
   ///
-  /// [form] The actual form, by reference or inclusion, for printing the
-  ///  content or an EOB.
+  /// [form] The actual form, by reference or inclusion, for printing the content
+  ///  or an EOB.
   ///
   /// [processNote] A note that describes or explains adjudication results in a
   ///  human readable form.
@@ -2881,22 +2828,20 @@ class ClaimResponse with Resource, _$ClaimResponse {
     @Default(R5ResourceType.ClaimResponse)
     @JsonKey(unknownEnumValue: R5ResourceType.ClaimResponse)
     R5ResourceType resourceType,
-    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
-    /// [id] The logical id of the resource, as used in the URL for the
-    ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    ///  Once assigned, this value never changes.
+    FhirId? id,
 
-    /// [meta] The metadata about the resource. This is content that is
-    ///  maintained by the infrastructure. Changes to the content might not
-    ///  always be associated with version changes to the resource.
+    /// [meta] The metadata about the resource. This is content that is maintained
+    ///  by the infrastructure. Changes to the content might not always be
+    ///  associated with version changes to the resource.
     FhirMeta? meta,
 
-    /// [implicitRules] A reference to a set of rules that were followed when
-    ///  the resource was constructed, and which must be understood when
-    ///  processing the content. Often, this is a reference to an
-    ///  implementation guide that defines the special rules along with other
-    ///  profiles etc.
+    /// [implicitRules] A reference to a set of rules that were followed when the
+    ///  resource was constructed, and which must be understood when processing the
+    ///  content. Often, this is a reference to an implementation guide that
+    ///  defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -2908,44 +2853,41 @@ class ClaimResponse with Resource, _$ClaimResponse {
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
-    /// [text] A human-readable narrative that contains a summary of the
-    ///  resource and can be used to represent the content of the resource to a
-    ///  human. The narrative need not encode all the structured data, but is
-    ///  required to contain sufficient detail to make it "clinically safe" for
-    ///  a human to just read the narrative. Resource definitions may define
-    ///  what content should be represented in the narrative to ensure clinical
-    ///  safety.
+    /// [text] A human-readable narrative that contains a summary of the resource
+    ///  and can be used to represent the content of the resource to a human. The
+    ///  narrative need not encode all the structured data, but is required to
+    ///  contain sufficient detail to make it "clinically safe" for a human to just
+    ///  read the narrative. Resource definitions may define what content should be
+    ///  represented in the narrative to ensure clinical safety.
     Narrative? text,
 
-    /// [contained] These resources do not have an independent existence apart
-    ///  from the resource that contains them - they cannot be identified
-    ///  independently, nor can they have their own independent transaction
-    ///  scope. This is allowed to be a Parameters resource if and only if it
-    ///  is referenced by a resource that provides context/meaning.
+    /// [contained] These resources do not have an independent existence apart from
+    ///  the resource that contains them - they cannot be identified independently,
+    ///  nor can they have their own independent transaction scope. This is allowed
+    ///  to be a Parameters resource if and only if it is referenced by a resource
+    ///  that provides context/meaning.
     List<Resource>? contained,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the resource.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the resource. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the resource and that
-    ///  modifies the understanding of the element that contains it and/or the
-    ///  understanding of the containing element's descendants. Usually
-    ///  modifier elements provide negation or qualification. To make the use
-    ///  of extensions safe and managable, there is a strict set of governance
-    ///  applied to the definition and use of extensions. Though any
-    ///  implementer is allowed to define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension. Applications processing a resource are required to check
-    ///  for modifier extensions.Modifier extensions SHALL NOT change the
-    ///  meaning of any elements on Resource or DomainResource (including
-    ///  cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the resource and that modifies the
+    ///  understanding of the element that contains it and/or the understanding of
+    ///  the containing element's descendants. Usually modifier elements provide
+    ///  negation or qualification. To make the use of extensions safe and
+    ///  managable, there is a strict set of governance applied to the definition
+    ///  and use of extensions. Though any implementer is allowed to define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [identifier] A unique identifier assigned to this claim response.
@@ -2962,35 +2904,35 @@ class ClaimResponse with Resource, _$ClaimResponse {
     @JsonKey(name: '_status') Element? statusElement,
 
     /// [type] A finer grained suite of claim type codes which may convey
-    ///  additional information such as Inpatient vs Outpatient and/or a
-    ///  specialty service.
+    ///  additional information such as Inpatient vs Outpatient and/or a specialty
+    ///  service.
     required CodeableConcept type,
 
     /// [subType] A finer grained suite of claim type codes which may convey
-    ///  additional information such as Inpatient vs Outpatient and/or a
-    ///  specialty service.
+    ///  additional information such as Inpatient vs Outpatient and/or a specialty
+    ///  service.
     CodeableConcept? subType,
 
-    /// [use] A code to indicate whether the nature of the request is: Claim -
-    ///  A request to an Insurer to adjudicate the supplied charges for health
-    ///  care goods and services under the identified policy and to pay the
-    ///  determined Benefit amount, if any; Preauthorization - A request to an
-    ///  Insurer to adjudicate the supplied proposed future charges for health
-    ///  care goods and services under the identified policy and to approve the
-    ///  services and provide the expected benefit amounts and potentially to
-    ///  reserve funds to pay the benefits when Claims for the indicated
-    ///  services are later submitted; or, Pre-determination - A request to an
-    ///  Insurer to adjudicate the supplied 'what if' charges for health care
-    ///  goods and services under the identified policy and report back what
-    ///  the Benefit payable would be had the services actually been provided.
+    /// [use] A code to indicate whether the nature of the request is: Claim - A
+    ///  request to an Insurer to adjudicate the supplied charges for health care
+    ///  goods and services under the identified policy and to pay the determined
+    ///  Benefit amount, if any; Preauthorization - A request to an Insurer to
+    ///  adjudicate the supplied proposed future charges for health care goods and
+    ///  services under the identified policy and to approve the services and
+    ///  provide the expected benefit amounts and potentially to reserve funds to
+    ///  pay the benefits when Claims for the indicated services are later
+    ///  submitted; or, Pre-determination - A request to an Insurer to adjudicate
+    ///  the supplied 'what if' charges for health care goods and services under
+    ///  the identified policy and report back what the Benefit payable would be
+    ///  had the services actually been provided.
     FhirCode? use,
 
     /// [useElement] ("_use") Extensions for use
     @JsonKey(name: '_use') Element? useElement,
 
-    /// [patient] The party to whom the professional services and/or products
-    ///  have been supplied or are being considered and for whom actual for
-    ///  facast reimbursement is sought.
+    /// [patient] The party to whom the professional services and/or products have
+    ///  been supplied or are being considered and for whom actual for facast
+    ///  reimbursement is sought.
     required Reference patient,
 
     /// [created] The date this resource was created.
@@ -3010,15 +2952,15 @@ class ClaimResponse with Resource, _$ClaimResponse {
     /// [request] Original request resource reference.
     Reference? request,
 
-    /// [outcome] The outcome of the claim, predetermination, or
-    ///  preauthorization processing.
+    /// [outcome] The outcome of the claim, predetermination, or preauthorization
+    ///  processing.
     FhirCode? outcome,
 
     /// [outcomeElement] ("_outcome") Extensions for outcome
     @JsonKey(name: '_outcome') Element? outcomeElement,
 
-    /// [decision] The result of the claim, predetermination, or
-    ///  preauthorization adjudication.
+    /// [decision] The result of the claim, predetermination, or preauthorization
+    ///  adjudication.
     CodeableConcept? decision,
 
     /// [disposition] A human readable description of the status of the
@@ -3035,12 +2977,10 @@ class ClaimResponse with Resource, _$ClaimResponse {
     /// [preAuthRefElement] ("_preAuthRef") Extensions for preAuthRef
     @JsonKey(name: '_preAuthRef') Element? preAuthRefElement,
 
-    /// [preAuthPeriod] The time frame during which this authorization is
-    ///  effective.
+    /// [preAuthPeriod] The time frame during which this authorization is effective.
     Period? preAuthPeriod,
 
-    /// [event] Information code for an event with a corresponding date or
-    ///  period.
+    /// [event] Information code for an event with a corresponding date or period.
     List<ClaimResponseEvent>? event,
 
     /// [payeeType] Type of Party to be reimbursed: subscriber, provider, other.
@@ -3049,22 +2989,21 @@ class ClaimResponse with Resource, _$ClaimResponse {
     /// [encounter] Healthcare encounters related to this claim.
     List<Reference>? encounter,
 
-    /// [diagnosisRelatedGroup] A package billing code or bundle code used to
-    ///  group products and services to a particular health condition (such as
-    ///  heart attack) which is based on a predetermined grouping code system.
+    /// [diagnosisRelatedGroup] A package billing code or bundle code used to group
+    ///  products and services to a particular health condition (such as heart
+    ///  attack) which is based on a predetermined grouping code system.
     CodeableConcept? diagnosisRelatedGroup,
 
-    /// [item] A claim line. Either a simple (a product or service) or a
-    ///  'group' of details which can also be a simple items or groups of
-    ///  sub-details.
+    /// [item] A claim line. Either a simple (a product or service) or a 'group' of
+    ///  details which can also be a simple items or groups of sub-details.
     List<ClaimResponseItem>? item,
 
-    /// [addItem] The first-tier service adjudications for payor added product
-    ///  or service lines.
+    /// [addItem] The first-tier service adjudications for payor added product or
+    ///  service lines.
     List<ClaimResponseAddItem>? addItem,
 
-    /// [adjudication] The adjudication results which are presented at the
-    ///  header level rather than at the line-item or add-item levels.
+    /// [adjudication] The adjudication results which are presented at the header
+    ///  level rather than at the line-item or add-item levels.
     List<ClaimResponseAdjudication>? adjudication,
 
     /// [total] Categorized monetary totals for the adjudication.
@@ -3073,20 +3012,19 @@ class ClaimResponse with Resource, _$ClaimResponse {
     /// [payment] Payment details for the adjudication of the claim.
     ClaimResponsePayment? payment,
 
-    /// [fundsReserve] A code, used only on a response to a preauthorization,
-    ///  to indicate whether the benefits payable have been reserved and for
-    ///  whom.
+    /// [fundsReserve] A code, used only on a response to a preauthorization, to
+    ///  indicate whether the benefits payable have been reserved and for whom.
     CodeableConcept? fundsReserve,
 
     /// [formCode] A code for the form to be used for printing the content.
     CodeableConcept? formCode,
 
-    /// [form] The actual form, by reference or inclusion, for printing the
-    ///  content or an EOB.
+    /// [form] The actual form, by reference or inclusion, for printing the content
+    ///  or an EOB.
     Attachment? form,
 
-    /// [processNote] A note that describes or explains adjudication results in
-    ///  a human readable form.
+    /// [processNote] A note that describes or explains adjudication results in a
+    ///  human readable form.
     List<ClaimResponseProcessNote>? processNote,
 
     /// [communicationRequest] Request for additional supporting or authorizing
@@ -3149,29 +3087,28 @@ class ClaimResponseEvent with _$ClaimResponseEvent {
   /// [ClaimResponseEvent] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [type] A coded event such as when a service is expected or a card printed.
   ///
@@ -3184,40 +3121,37 @@ class ClaimResponseEvent with _$ClaimResponseEvent {
   ///  event occurred or is expectd to occur.
   ///
   const factory ClaimResponseEvent({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [type] A coded event such as when a service is expected or a card
-    ///  printed.
+    /// [type] A coded event such as when a service is expected or a card printed.
     required CodeableConcept type,
 
-    /// [whenDateTime] A date or period in the past or future indicating when
-    ///  the event occurred or is expectd to occur.
+    /// [whenDateTime] A date or period in the past or future indicating when the
+    ///  event occurred or is expectd to occur.
     FhirDateTime? whenDateTime,
 
     /// [whenDateTimeElement] ("_whenDateTime") Extensions for whenDateTime
@@ -3274,29 +3208,28 @@ class ClaimResponseItem with _$ClaimResponseItem {
   /// [ClaimResponseItem] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [itemSequence] A number to uniquely reference the claim item entries.
   ///
@@ -3310,44 +3243,41 @@ class ClaimResponseItem with _$ClaimResponseItem {
   ///
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
   ///
-  /// [reviewOutcome] The high-level results of the adjudication if
-  ///  adjudication has been performed.
+  /// [reviewOutcome] The high-level results of the adjudication if adjudication
+  ///  has been performed.
   ///
   /// [adjudication] If this item is a group then the values here are a summary
-  ///  of the adjudication of the detail items. If this item is a simple
-  ///  product or service then this is the result of the adjudication of this
-  ///  item.
+  ///  of the adjudication of the detail items. If this item is a simple product
+  ///  or service then this is the result of the adjudication of this item.
   ///
   /// [detail] A claim detail. Either a simple (a product or service) or a
   ///  'group' of sub-details which are simple items.
   ///
   const factory ClaimResponseItem({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [itemSequence] A number to uniquely reference the claim item entries.
@@ -3367,14 +3297,13 @@ class ClaimResponseItem with _$ClaimResponseItem {
     /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
 
-    /// [reviewOutcome] The high-level results of the adjudication if
-    ///  adjudication has been performed.
+    /// [reviewOutcome] The high-level results of the adjudication if adjudication
+    ///  has been performed.
     ClaimResponseReviewOutcome? reviewOutcome,
 
-    /// [adjudication] If this item is a group then the values here are a
-    ///  summary of the adjudication of the detail items. If this item is a
-    ///  simple product or service then this is the result of the adjudication
-    ///  of this item.
+    /// [adjudication] If this item is a group then the values here are a summary
+    ///  of the adjudication of the detail items. If this item is a simple product
+    ///  or service then this is the result of the adjudication of this item.
     List<ClaimResponseAdjudication>? adjudication,
 
     /// [detail] A claim detail. Either a simple (a product or service) or a
@@ -3428,29 +3357,28 @@ class ClaimResponseReviewOutcome with _$ClaimResponseReviewOutcome {
   /// [ClaimResponseReviewOutcome] This resource provides the adjudication
   ///  details from the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [decision] The result of the claim, predetermination, or preauthorization
   ///  adjudication.
@@ -3463,40 +3391,37 @@ class ClaimResponseReviewOutcome with _$ClaimResponseReviewOutcome {
   ///
   /// [preAuthRefElement] ("_preAuthRef") Extensions for preAuthRef
   ///
-  /// [preAuthPeriod] The time frame during which this authorization is
-  ///  effective.
+  /// [preAuthPeriod] The time frame during which this authorization is effective.
   ///
   const factory ClaimResponseReviewOutcome({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [decision] The result of the claim, predetermination, or
-    ///  preauthorization adjudication.
+    /// [decision] The result of the claim, predetermination, or preauthorization
+    ///  adjudication.
     CodeableConcept? decision,
 
     /// [reason] The reasons for the result of the claim, predetermination, or
@@ -3510,8 +3435,7 @@ class ClaimResponseReviewOutcome with _$ClaimResponseReviewOutcome {
     /// [preAuthRefElement] ("_preAuthRef") Extensions for preAuthRef
     @JsonKey(name: '_preAuthRef') Element? preAuthRefElement,
 
-    /// [preAuthPeriod] The time frame during which this authorization is
-    ///  effective.
+    /// [preAuthPeriod] The time frame during which this authorization is effective.
     Period? preAuthPeriod,
   }) = _ClaimResponseReviewOutcome;
 
@@ -3554,45 +3478,44 @@ class ClaimResponseReviewOutcome with _$ClaimResponseReviewOutcome {
 ///  from the processing of a Claim resource.
 @freezed
 class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
-  /// [ClaimResponseAdjudication] This resource provides the adjudication
-  ///  details from the processing of a Claim resource.
+  /// [ClaimResponseAdjudication] This resource provides the adjudication details
+  ///  from the processing of a Claim resource.
   const ClaimResponseAdjudication._();
 
-  /// [ClaimResponseAdjudication] This resource provides the adjudication
-  ///  details from the processing of a Claim resource.
+  /// [ClaimResponseAdjudication] This resource provides the adjudication details
+  ///  from the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [category] A code to indicate the information type of this adjudication
-  ///  record. Information types may include the value submitted, maximum
-  ///  values or percentages allowed or payable under the plan, amounts that:
-  ///  the patient is responsible for in aggregate or pertaining to this item;
+  ///  record. Information types may include the value submitted, maximum values
+  ///  or percentages allowed or payable under the plan, amounts that: the
+  ///  patient is responsible for in aggregate or pertaining to this item;
   ///  amounts paid by other coverages; and, the benefit payable for this item.
   ///
-  /// [reason] A code supporting the understanding of the adjudication result
-  ///  and explaining variance from expected amount.
+  /// [reason] A code supporting the understanding of the adjudication result and
+  ///  explaining variance from expected amount.
   ///
   /// [amount] Monetary amount associated with the category.
   ///
@@ -3600,44 +3523,41 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
   ///  exclusive to the amount element above.
   ///
   const factory ClaimResponseAdjudication({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [category] A code to indicate the information type of this adjudication
-    ///  record. Information types may include the value submitted, maximum
-    ///  values or percentages allowed or payable under the plan, amounts that:
-    ///  the patient is responsible for in aggregate or pertaining to this
-    ///  item; amounts paid by other coverages; and, the benefit payable for
-    ///  this item.
+    ///  record. Information types may include the value submitted, maximum values
+    ///  or percentages allowed or payable under the plan, amounts that: the
+    ///  patient is responsible for in aggregate or pertaining to this item;
+    ///  amounts paid by other coverages; and, the benefit payable for this item.
     required CodeableConcept category,
 
-    /// [reason] A code supporting the understanding of the adjudication result
-    ///  and explaining variance from expected amount.
+    /// [reason] A code supporting the understanding of the adjudication result and
+    ///  explaining variance from expected amount.
     CodeableConcept? reason,
 
     /// [amount] Monetary amount associated with the category.
@@ -3687,36 +3607,35 @@ class ClaimResponseAdjudication with _$ClaimResponseAdjudication {
 ///  the processing of a Claim resource.
 @freezed
 class ClaimResponseDetail with _$ClaimResponseDetail {
-  /// [ClaimResponseDetail] This resource provides the adjudication details
-  ///  from the processing of a Claim resource.
+  /// [ClaimResponseDetail] This resource provides the adjudication details from
+  ///  the processing of a Claim resource.
   const ClaimResponseDetail._();
 
-  /// [ClaimResponseDetail] This resource provides the adjudication details
-  ///  from the processing of a Claim resource.
+  /// [ClaimResponseDetail] This resource provides the adjudication details from
+  ///  the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [detailSequence] A number to uniquely reference the claim detail entry.
   ///
@@ -3730,47 +3649,44 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
   ///
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
   ///
-  /// [reviewOutcome] The high-level results of the adjudication if
-  ///  adjudication has been performed.
+  /// [reviewOutcome] The high-level results of the adjudication if adjudication
+  ///  has been performed.
   ///
   /// [adjudication] The adjudication results.
   ///
   /// [subDetail] A sub-detail adjudication of a simple product or service.
   ///
   const factory ClaimResponseDetail({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [detailSequence] A number to uniquely reference the claim detail entry.
     FhirPositiveInt? detailSequence,
 
-    /// [detailSequenceElement] ("_detailSequence") Extensions for
-    ///  detailSequence
+    /// [detailSequenceElement] ("_detailSequence") Extensions for detailSequence
     @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
 
     /// [traceNumber] Trace number for tracking purposes. May be defined at the
@@ -3784,8 +3700,8 @@ class ClaimResponseDetail with _$ClaimResponseDetail {
     /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
 
-    /// [reviewOutcome] The high-level results of the adjudication if
-    ///  adjudication has been performed.
+    /// [reviewOutcome] The high-level results of the adjudication if adjudication
+    ///  has been performed.
     ClaimResponseReviewOutcome? reviewOutcome,
 
     /// [adjudication] The adjudication results.
@@ -3841,29 +3757,28 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   /// [ClaimResponseSubDetail] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [subDetailSequence] A number to uniquely reference the claim sub-detail
   ///  entry.
@@ -3879,38 +3794,36 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
   ///
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
   ///
-  /// [reviewOutcome] The high-level results of the adjudication if
-  ///  adjudication has been performed.
+  /// [reviewOutcome] The high-level results of the adjudication if adjudication
+  ///  has been performed.
   ///
   /// [adjudication] The adjudication results.
   ///
   const factory ClaimResponseSubDetail({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [subDetailSequence] A number to uniquely reference the claim sub-detail
@@ -3932,8 +3845,8 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
     /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
 
-    /// [reviewOutcome] The high-level results of the adjudication if
-    ///  adjudication has been performed.
+    /// [reviewOutcome] The high-level results of the adjudication if adjudication
+    ///  has been performed.
     ClaimResponseReviewOutcome? reviewOutcome,
 
     /// [adjudication] The adjudication results.
@@ -3979,36 +3892,35 @@ class ClaimResponseSubDetail with _$ClaimResponseSubDetail {
 ///  the processing of a Claim resource.
 @freezed
 class ClaimResponseAddItem with _$ClaimResponseAddItem {
-  /// [ClaimResponseAddItem] This resource provides the adjudication details
-  ///  from the processing of a Claim resource.
+  /// [ClaimResponseAddItem] This resource provides the adjudication details from
+  ///  the processing of a Claim resource.
   const ClaimResponseAddItem._();
 
-  /// [ClaimResponseAddItem] This resource provides the adjudication details
-  ///  from the processing of a Claim resource.
+  /// [ClaimResponseAddItem] This resource provides the adjudication details from
+  ///  the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [itemSequence] Claim items which this service line is intended to replace.
   ///
@@ -4034,19 +3946,19 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
   /// [revenue] The type of revenue or cost center providing the product and/or
   ///  service.
   ///
-  /// [productOrService] When the value is a group code then this item collects
-  ///  a set of related item details, otherwise this contains the product,
-  ///  service, drug or other billing code for the item. This element may be
-  ///  the start of a range of .productOrService codes used in conjunction with
+  /// [productOrService] When the value is a group code then this item collects a
+  ///  set of related item details, otherwise this contains the product, service,
+  ///  drug or other billing code for the item. This element may be the start of
+  ///  a range of .productOrService codes used in conjunction with
   ///  .productOrServiceEnd or it may be a solo element where
   ///  .productOrServiceEnd is not used.
   ///
-  /// [productOrServiceEnd] This contains the end of a range of product,
-  ///  service, drug or other billing codes for the item. This element is not
-  ///  used when the .productOrService is a group code. This value may only be
-  ///  present when a .productOfService code has been provided to convey the
-  ///  start of the range. Typically this value may be used only with
-  ///  preauthorizations and not with claims.
+  /// [productOrServiceEnd] This contains the end of a range of product, service,
+  ///  drug or other billing codes for the item. This element is not used when
+  ///  the .productOrService is a group code. This value may only be present when
+  ///  a .productOfService code has been provided to convey the start of the
+  ///  range. Typically this value may be used only with preauthorizations and
+  ///  not with claims.
   ///
   /// [request] Request or Referral for Goods or Service to be rendered.
   ///
@@ -4055,8 +3967,8 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
   ///
   /// [programCode] Identifies the program under which this may be recovered.
   ///
-  /// [servicedDate] The date or dates when the service or product was
-  ///  supplied, performed or completed.
+  /// [servicedDate] The date or dates when the service or product was supplied,
+  ///  performed or completed.
   ///
   /// [servicedDateElement] ("_servicedDate") Extensions for servicedDate
   ///
@@ -4071,21 +3983,21 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
   ///
   /// [quantity] The number of repetitions of a service or product.
   ///
-  /// [unitPrice] If the item is not a group then this is the fee for the
-  ///  product or service, otherwise this is the total of the fees for the
-  ///  details of the group.
+  /// [unitPrice] If the item is not a group then this is the fee for the product
+  ///  or service, otherwise this is the total of the fees for the details of the
+  ///  group.
   ///
-  /// [factor] A real number that represents a multiplier used in determining
-  ///  the overall value of services delivered and/or goods received. The
-  ///  concept of a Factor allows for a discount or surcharge multiplier to be
-  ///  applied to a monetary amount.
+  /// [factor] A real number that represents a multiplier used in determining the
+  ///  overall value of services delivered and/or goods received. The concept of
+  ///  a Factor allows for a discount or surcharge multiplier to be applied to a
+  ///  monetary amount.
   ///
   /// [factorElement] ("_factor") Extensions for factor
   ///
   /// [tax] The total of taxes applicable for this product or service.
   ///
-  /// [net] The total amount claimed for the group (if a grouper) or the
-  ///  addItem. Net = unit price * quantity * factor.
+  /// [net] The total amount claimed for the group (if a grouper) or the addItem.
+  ///  Net = unit price * quantity * factor.
   ///
   /// [bodySite] Physical location where the service is performed or applies.
   ///
@@ -4094,55 +4006,51 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
   ///
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
   ///
-  /// [reviewOutcome] The high-level results of the adjudication if
-  ///  adjudication has been performed.
+  /// [reviewOutcome] The high-level results of the adjudication if adjudication
+  ///  has been performed.
   ///
   /// [adjudication] The adjudication results.
   ///
   /// [detail] The second-tier service adjudications for payor added services.
   ///
   const factory ClaimResponseAddItem({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [itemSequence] Claim items which this service line is intended to
-    ///  replace.
+    /// [itemSequence] Claim items which this service line is intended to replace.
     List<FhirPositiveInt>? itemSequence,
 
     /// [itemSequenceElement] ("_itemSequence") Extensions for itemSequence
     @JsonKey(name: '_itemSequence') List<Element>? itemSequenceElement,
 
-    /// [detailSequence] The sequence number of the details within the claim
-    ///  item which this line is intended to replace.
+    /// [detailSequence] The sequence number of the details within the claim item
+    ///  which this line is intended to replace.
     List<FhirPositiveInt>? detailSequence,
 
-    /// [detailSequenceElement] ("_detailSequence") Extensions for
-    ///  detailSequence
+    /// [detailSequenceElement] ("_detailSequence") Extensions for detailSequence
     @JsonKey(name: '_detailSequence') List<Element>? detailSequenceElement,
 
     /// [subdetailSequence] The sequence number of the sub-details within the
@@ -4158,28 +4066,28 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
     ///  jurisdiction level or between trading partners.
     List<Identifier>? traceNumber,
 
-    /// [provider] The providers who are authorized for the services rendered
-    ///  to the patient.
+    /// [provider] The providers who are authorized for the services rendered to
+    ///  the patient.
     List<Reference>? provider,
 
-    /// [revenue] The type of revenue or cost center providing the product
-    ///  and/or service.
+    /// [revenue] The type of revenue or cost center providing the product and/or
+    ///  service.
     CodeableConcept? revenue,
 
-    /// [productOrService] When the value is a group code then this item
-    ///  collects a set of related item details, otherwise this contains the
-    ///  product, service, drug or other billing code for the item. This
-    ///  element may be the start of a range of .productOrService codes used in
-    ///  conjunction with .productOrServiceEnd or it may be a solo element
-    ///  where .productOrServiceEnd is not used.
+    /// [productOrService] When the value is a group code then this item collects a
+    ///  set of related item details, otherwise this contains the product, service,
+    ///  drug or other billing code for the item. This element may be the start of
+    ///  a range of .productOrService codes used in conjunction with
+    ///  .productOrServiceEnd or it may be a solo element where
+    ///  .productOrServiceEnd is not used.
     CodeableConcept? productOrService,
 
-    /// [productOrServiceEnd] This contains the end of a range of product,
-    ///  service, drug or other billing codes for the item. This element is not
-    ///  used when the .productOrService is a group code. This value may only
-    ///  be present when a .productOfService code has been provided to convey
-    ///  the start of the range. Typically this value may be used only with
-    ///  preauthorizations and not with claims.
+    /// [productOrServiceEnd] This contains the end of a range of product, service,
+    ///  drug or other billing codes for the item. This element is not used when
+    ///  the .productOrService is a group code. This value may only be present when
+    ///  a .productOfService code has been provided to convey the start of the
+    ///  range. Typically this value may be used only with preauthorizations and
+    ///  not with claims.
     CodeableConcept? productOrServiceEnd,
 
     /// [request] Request or Referral for Goods or Service to be rendered.
@@ -4192,8 +4100,8 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
     /// [programCode] Identifies the program under which this may be recovered.
     List<CodeableConcept>? programCode,
 
-    /// [servicedDate] The date or dates when the service or product was
-    ///  supplied, performed or completed.
+    /// [servicedDate] The date or dates when the service or product was supplied,
+    ///  performed or completed.
     FhirDate? servicedDate,
 
     /// [servicedDateElement] ("_servicedDate") Extensions for servicedDate
@@ -4215,15 +4123,15 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
     /// [quantity] The number of repetitions of a service or product.
     Quantity? quantity,
 
-    /// [unitPrice] If the item is not a group then this is the fee for the
-    ///  product or service, otherwise this is the total of the fees for the
-    ///  details of the group.
+    /// [unitPrice] If the item is not a group then this is the fee for the product
+    ///  or service, otherwise this is the total of the fees for the details of the
+    ///  group.
     Money? unitPrice,
 
-    /// [factor] A real number that represents a multiplier used in determining
-    ///  the overall value of services delivered and/or goods received. The
-    ///  concept of a Factor allows for a discount or surcharge multiplier to
-    ///  be applied to a monetary amount.
+    /// [factor] A real number that represents a multiplier used in determining the
+    ///  overall value of services delivered and/or goods received. The concept of
+    ///  a Factor allows for a discount or surcharge multiplier to be applied to a
+    ///  monetary amount.
     FhirDecimal? factor,
 
     /// [factorElement] ("_factor") Extensions for factor
@@ -4232,8 +4140,8 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
     /// [tax] The total of taxes applicable for this product or service.
     Money? tax,
 
-    /// [net] The total amount claimed for the group (if a grouper) or the
-    ///  addItem. Net = unit price * quantity * factor.
+    /// [net] The total amount claimed for the group (if a grouper) or the addItem.
+    ///  Net = unit price * quantity * factor.
     Money? net,
 
     /// [bodySite] Physical location where the service is performed or applies.
@@ -4246,8 +4154,8 @@ class ClaimResponseAddItem with _$ClaimResponseAddItem {
     /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
 
-    /// [reviewOutcome] The high-level results of the adjudication if
-    ///  adjudication has been performed.
+    /// [reviewOutcome] The high-level results of the adjudication if adjudication
+    ///  has been performed.
     ClaimResponseReviewOutcome? reviewOutcome,
 
     /// [adjudication] The adjudication results.
@@ -4303,29 +4211,28 @@ class ClaimResponseBodySite with _$ClaimResponseBodySite {
   /// [ClaimResponseBodySite] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [site] Physical service site on the patient (limb, tooth, etc.).
   ///
@@ -4333,39 +4240,37 @@ class ClaimResponseBodySite with _$ClaimResponseBodySite {
   ///  surface(s).
   ///
   const factory ClaimResponseBodySite({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [site] Physical service site on the patient (limb, tooth, etc.).
     required List<CodeableReference> site,
 
-    /// [subSite] A region or surface of the bodySite, e.g. limb region or
-    ///  tooth surface(s).
+    /// [subSite] A region or surface of the bodySite, e.g. limb region or tooth
+    ///  surface(s).
     List<CodeableConcept>? subSite,
   }) = _ClaimResponseBodySite;
 
@@ -4408,36 +4313,35 @@ class ClaimResponseBodySite with _$ClaimResponseBodySite {
 ///  the processing of a Claim resource.
 @freezed
 class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
-  /// [ClaimResponseDetail1] This resource provides the adjudication details
-  ///  from the processing of a Claim resource.
+  /// [ClaimResponseDetail1] This resource provides the adjudication details from
+  ///  the processing of a Claim resource.
   const ClaimResponseDetail1._();
 
-  /// [ClaimResponseDetail1] This resource provides the adjudication details
-  ///  from the processing of a Claim resource.
+  /// [ClaimResponseDetail1] This resource provides the adjudication details from
+  ///  the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [traceNumber] Trace number for tracking purposes. May be defined at the
   ///  jurisdiction level or between trading partners.
@@ -4445,33 +4349,33 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
   /// [revenue] The type of revenue or cost center providing the product and/or
   ///  service.
   ///
-  /// [productOrService] When the value is a group code then this item collects
-  ///  a set of related item details, otherwise this contains the product,
-  ///  service, drug or other billing code for the item. This element may be
-  ///  the start of a range of .productOrService codes used in conjunction with
+  /// [productOrService] When the value is a group code then this item collects a
+  ///  set of related item details, otherwise this contains the product, service,
+  ///  drug or other billing code for the item. This element may be the start of
+  ///  a range of .productOrService codes used in conjunction with
   ///  .productOrServiceEnd or it may be a solo element where
   ///  .productOrServiceEnd is not used.
   ///
-  /// [productOrServiceEnd] This contains the end of a range of product,
-  ///  service, drug or other billing codes for the item. This element is not
-  ///  used when the .productOrService is a group code. This value may only be
-  ///  present when a .productOfService code has been provided to convey the
-  ///  start of the range. Typically this value may be used only with
-  ///  preauthorizations and not with claims.
+  /// [productOrServiceEnd] This contains the end of a range of product, service,
+  ///  drug or other billing codes for the item. This element is not used when
+  ///  the .productOrService is a group code. This value may only be present when
+  ///  a .productOfService code has been provided to convey the start of the
+  ///  range. Typically this value may be used only with preauthorizations and
+  ///  not with claims.
   ///
   /// [modifier] Item typification or modifiers codes to convey additional
   ///  context for the product or service.
   ///
   /// [quantity] The number of repetitions of a service or product.
   ///
-  /// [unitPrice] If the item is not a group then this is the fee for the
-  ///  product or service, otherwise this is the total of the fees for the
-  ///  details of the group.
+  /// [unitPrice] If the item is not a group then this is the fee for the product
+  ///  or service, otherwise this is the total of the fees for the details of the
+  ///  group.
   ///
-  /// [factor] A real number that represents a multiplier used in determining
-  ///  the overall value of services delivered and/or goods received. The
-  ///  concept of a Factor allows for a discount or surcharge multiplier to be
-  ///  applied to a monetary amount.
+  /// [factor] A real number that represents a multiplier used in determining the
+  ///  overall value of services delivered and/or goods received. The concept of
+  ///  a Factor allows for a discount or surcharge multiplier to be applied to a
+  ///  monetary amount.
   ///
   /// [factorElement] ("_factor") Extensions for factor
   ///
@@ -4485,64 +4389,62 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
   ///
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
   ///
-  /// [reviewOutcome] The high-level results of the adjudication if
-  ///  adjudication has been performed.
+  /// [reviewOutcome] The high-level results of the adjudication if adjudication
+  ///  has been performed.
   ///
   /// [adjudication] The adjudication results.
   ///
   /// [subDetail] The third-tier service adjudications for payor added services.
   ///
   const factory ClaimResponseDetail1({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [traceNumber] Trace number for tracking purposes. May be defined at the
     ///  jurisdiction level or between trading partners.
     List<Identifier>? traceNumber,
 
-    /// [revenue] The type of revenue or cost center providing the product
-    ///  and/or service.
+    /// [revenue] The type of revenue or cost center providing the product and/or
+    ///  service.
     CodeableConcept? revenue,
 
-    /// [productOrService] When the value is a group code then this item
-    ///  collects a set of related item details, otherwise this contains the
-    ///  product, service, drug or other billing code for the item. This
-    ///  element may be the start of a range of .productOrService codes used in
-    ///  conjunction with .productOrServiceEnd or it may be a solo element
-    ///  where .productOrServiceEnd is not used.
+    /// [productOrService] When the value is a group code then this item collects a
+    ///  set of related item details, otherwise this contains the product, service,
+    ///  drug or other billing code for the item. This element may be the start of
+    ///  a range of .productOrService codes used in conjunction with
+    ///  .productOrServiceEnd or it may be a solo element where
+    ///  .productOrServiceEnd is not used.
     CodeableConcept? productOrService,
 
-    /// [productOrServiceEnd] This contains the end of a range of product,
-    ///  service, drug or other billing codes for the item. This element is not
-    ///  used when the .productOrService is a group code. This value may only
-    ///  be present when a .productOfService code has been provided to convey
-    ///  the start of the range. Typically this value may be used only with
-    ///  preauthorizations and not with claims.
+    /// [productOrServiceEnd] This contains the end of a range of product, service,
+    ///  drug or other billing codes for the item. This element is not used when
+    ///  the .productOrService is a group code. This value may only be present when
+    ///  a .productOfService code has been provided to convey the start of the
+    ///  range. Typically this value may be used only with preauthorizations and
+    ///  not with claims.
     CodeableConcept? productOrServiceEnd,
 
     /// [modifier] Item typification or modifiers codes to convey additional
@@ -4552,15 +4454,15 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
     /// [quantity] The number of repetitions of a service or product.
     Quantity? quantity,
 
-    /// [unitPrice] If the item is not a group then this is the fee for the
-    ///  product or service, otherwise this is the total of the fees for the
-    ///  details of the group.
+    /// [unitPrice] If the item is not a group then this is the fee for the product
+    ///  or service, otherwise this is the total of the fees for the details of the
+    ///  group.
     Money? unitPrice,
 
-    /// [factor] A real number that represents a multiplier used in determining
-    ///  the overall value of services delivered and/or goods received. The
-    ///  concept of a Factor allows for a discount or surcharge multiplier to
-    ///  be applied to a monetary amount.
+    /// [factor] A real number that represents a multiplier used in determining the
+    ///  overall value of services delivered and/or goods received. The concept of
+    ///  a Factor allows for a discount or surcharge multiplier to be applied to a
+    ///  monetary amount.
     FhirDecimal? factor,
 
     /// [factorElement] ("_factor") Extensions for factor
@@ -4580,15 +4482,14 @@ class ClaimResponseDetail1 with _$ClaimResponseDetail1 {
     /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
 
-    /// [reviewOutcome] The high-level results of the adjudication if
-    ///  adjudication has been performed.
+    /// [reviewOutcome] The high-level results of the adjudication if adjudication
+    ///  has been performed.
     ClaimResponseReviewOutcome? reviewOutcome,
 
     /// [adjudication] The adjudication results.
     List<ClaimResponseAdjudication>? adjudication,
 
-    /// [subDetail] The third-tier service adjudications for payor added
-    ///  services.
+    /// [subDetail] The third-tier service adjudications for payor added services.
     List<ClaimResponseSubDetail1>? subDetail,
   }) = _ClaimResponseDetail1;
 
@@ -4638,29 +4539,28 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
   /// [ClaimResponseSubDetail1] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [traceNumber] Trace number for tracking purposes. May be defined at the
   ///  jurisdiction level or between trading partners.
@@ -4668,102 +4568,100 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
   /// [revenue] The type of revenue or cost center providing the product and/or
   ///  service.
   ///
-  /// [productOrService] When the value is a group code then this item collects
-  ///  a set of related item details, otherwise this contains the product,
-  ///  service, drug or other billing code for the item. This element may be
-  ///  the start of a range of .productOrService codes used in conjunction with
+  /// [productOrService] When the value is a group code then this item collects a
+  ///  set of related item details, otherwise this contains the product, service,
+  ///  drug or other billing code for the item. This element may be the start of
+  ///  a range of .productOrService codes used in conjunction with
   ///  .productOrServiceEnd or it may be a solo element where
   ///  .productOrServiceEnd is not used.
   ///
-  /// [productOrServiceEnd] This contains the end of a range of product,
-  ///  service, drug or other billing codes for the item. This element is not
-  ///  used when the .productOrService is a group code. This value may only be
-  ///  present when a .productOfService code has been provided to convey the
-  ///  start of the range. Typically this value may be used only with
-  ///  preauthorizations and not with claims.
+  /// [productOrServiceEnd] This contains the end of a range of product, service,
+  ///  drug or other billing codes for the item. This element is not used when
+  ///  the .productOrService is a group code. This value may only be present when
+  ///  a .productOfService code has been provided to convey the start of the
+  ///  range. Typically this value may be used only with preauthorizations and
+  ///  not with claims.
   ///
   /// [modifier] Item typification or modifiers codes to convey additional
   ///  context for the product or service.
   ///
   /// [quantity] The number of repetitions of a service or product.
   ///
-  /// [unitPrice] If the item is not a group then this is the fee for the
-  ///  product or service, otherwise this is the total of the fees for the
-  ///  details of the group.
+  /// [unitPrice] If the item is not a group then this is the fee for the product
+  ///  or service, otherwise this is the total of the fees for the details of the
+  ///  group.
   ///
-  /// [factor] A real number that represents a multiplier used in determining
-  ///  the overall value of services delivered and/or goods received. The
-  ///  concept of a Factor allows for a discount or surcharge multiplier to be
-  ///  applied to a monetary amount.
+  /// [factor] A real number that represents a multiplier used in determining the
+  ///  overall value of services delivered and/or goods received. The concept of
+  ///  a Factor allows for a discount or surcharge multiplier to be applied to a
+  ///  monetary amount.
   ///
   /// [factorElement] ("_factor") Extensions for factor
   ///
   /// [tax] The total of taxes applicable for this product or service.
   ///
-  /// [net] The total amount claimed for the addItem.detail.subDetail. Net =
-  ///  unit price * quantity * factor.
+  /// [net] The total amount claimed for the addItem.detail.subDetail. Net = unit
+  ///  price * quantity * factor.
   ///
   /// [noteNumber] The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   ///
   /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
   ///
-  /// [reviewOutcome] The high-level results of the adjudication if
-  ///  adjudication has been performed.
+  /// [reviewOutcome] The high-level results of the adjudication if adjudication
+  ///  has been performed.
   ///
   /// [adjudication] The adjudication results.
   ///
   const factory ClaimResponseSubDetail1({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [traceNumber] Trace number for tracking purposes. May be defined at the
     ///  jurisdiction level or between trading partners.
     List<Identifier>? traceNumber,
 
-    /// [revenue] The type of revenue or cost center providing the product
-    ///  and/or service.
+    /// [revenue] The type of revenue or cost center providing the product and/or
+    ///  service.
     CodeableConcept? revenue,
 
-    /// [productOrService] When the value is a group code then this item
-    ///  collects a set of related item details, otherwise this contains the
-    ///  product, service, drug or other billing code for the item. This
-    ///  element may be the start of a range of .productOrService codes used in
-    ///  conjunction with .productOrServiceEnd or it may be a solo element
-    ///  where .productOrServiceEnd is not used.
+    /// [productOrService] When the value is a group code then this item collects a
+    ///  set of related item details, otherwise this contains the product, service,
+    ///  drug or other billing code for the item. This element may be the start of
+    ///  a range of .productOrService codes used in conjunction with
+    ///  .productOrServiceEnd or it may be a solo element where
+    ///  .productOrServiceEnd is not used.
     CodeableConcept? productOrService,
 
-    /// [productOrServiceEnd] This contains the end of a range of product,
-    ///  service, drug or other billing codes for the item. This element is not
-    ///  used when the .productOrService is a group code. This value may only
-    ///  be present when a .productOfService code has been provided to convey
-    ///  the start of the range. Typically this value may be used only with
-    ///  preauthorizations and not with claims.
+    /// [productOrServiceEnd] This contains the end of a range of product, service,
+    ///  drug or other billing codes for the item. This element is not used when
+    ///  the .productOrService is a group code. This value may only be present when
+    ///  a .productOfService code has been provided to convey the start of the
+    ///  range. Typically this value may be used only with preauthorizations and
+    ///  not with claims.
     CodeableConcept? productOrServiceEnd,
 
     /// [modifier] Item typification or modifiers codes to convey additional
@@ -4773,15 +4671,15 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
     /// [quantity] The number of repetitions of a service or product.
     Quantity? quantity,
 
-    /// [unitPrice] If the item is not a group then this is the fee for the
-    ///  product or service, otherwise this is the total of the fees for the
-    ///  details of the group.
+    /// [unitPrice] If the item is not a group then this is the fee for the product
+    ///  or service, otherwise this is the total of the fees for the details of the
+    ///  group.
     Money? unitPrice,
 
-    /// [factor] A real number that represents a multiplier used in determining
-    ///  the overall value of services delivered and/or goods received. The
-    ///  concept of a Factor allows for a discount or surcharge multiplier to
-    ///  be applied to a monetary amount.
+    /// [factor] A real number that represents a multiplier used in determining the
+    ///  overall value of services delivered and/or goods received. The concept of
+    ///  a Factor allows for a discount or surcharge multiplier to be applied to a
+    ///  monetary amount.
     FhirDecimal? factor,
 
     /// [factorElement] ("_factor") Extensions for factor
@@ -4790,8 +4688,8 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
     /// [tax] The total of taxes applicable for this product or service.
     Money? tax,
 
-    /// [net] The total amount claimed for the addItem.detail.subDetail. Net =
-    ///  unit price * quantity * factor.
+    /// [net] The total amount claimed for the addItem.detail.subDetail. Net = unit
+    ///  price * quantity * factor.
     Money? net,
 
     /// [noteNumber] The numbers associated with notes below which apply to the
@@ -4801,8 +4699,8 @@ class ClaimResponseSubDetail1 with _$ClaimResponseSubDetail1 {
     /// [noteNumberElement] ("_noteNumber") Extensions for noteNumber
     @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
 
-    /// [reviewOutcome] The high-level results of the adjudication if
-    ///  adjudication has been performed.
+    /// [reviewOutcome] The high-level results of the adjudication if adjudication
+    ///  has been performed.
     ClaimResponseReviewOutcome? reviewOutcome,
 
     /// [adjudication] The adjudication results.
@@ -4855,73 +4753,69 @@ class ClaimResponseTotal with _$ClaimResponseTotal {
   /// [ClaimResponseTotal] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [category] A code to indicate the information type of this adjudication
-  ///  record. Information types may include: the value submitted, maximum
-  ///  values or percentages allowed or payable under the plan, amounts that
-  ///  the patient is responsible for in aggregate or pertaining to this item,
-  ///  amounts paid by other coverages, and the benefit payable for this item.
+  ///  record. Information types may include: the value submitted, maximum values
+  ///  or percentages allowed or payable under the plan, amounts that the patient
+  ///  is responsible for in aggregate or pertaining to this item, amounts paid
+  ///  by other coverages, and the benefit payable for this item.
   ///
   /// [amount] Monetary total amount associated with the category.
   ///
   const factory ClaimResponseTotal({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [category] A code to indicate the information type of this adjudication
-    ///  record. Information types may include: the value submitted, maximum
-    ///  values or percentages allowed or payable under the plan, amounts that
-    ///  the patient is responsible for in aggregate or pertaining to this
-    ///  item, amounts paid by other coverages, and the benefit payable for
-    ///  this item.
+    ///  record. Information types may include: the value submitted, maximum values
+    ///  or percentages allowed or payable under the plan, amounts that the patient
+    ///  is responsible for in aggregate or pertaining to this item, amounts paid
+    ///  by other coverages, and the benefit payable for this item.
     required CodeableConcept category,
 
     /// [amount] Monetary total amount associated with the category.
@@ -4967,39 +4861,38 @@ class ClaimResponseTotal with _$ClaimResponseTotal {
 ///  the processing of a Claim resource.
 @freezed
 class ClaimResponsePayment with _$ClaimResponsePayment {
-  /// [ClaimResponsePayment] This resource provides the adjudication details
-  ///  from the processing of a Claim resource.
+  /// [ClaimResponsePayment] This resource provides the adjudication details from
+  ///  the processing of a Claim resource.
   const ClaimResponsePayment._();
 
-  /// [ClaimResponsePayment] This resource provides the adjudication details
-  ///  from the processing of a Claim resource.
+  /// [ClaimResponsePayment] This resource provides the adjudication details from
+  ///  the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
-  /// [type] Whether this represents partial or complete payment of the
-  ///  benefits payable.
+  /// [type] Whether this represents partial or complete payment of the benefits
+  ///  payable.
   ///
   /// [adjustment] Total amount of all adjustments to this payment included in
   ///  this transaction which are not related to this claim's adjudication.
@@ -5016,47 +4909,45 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
   /// [identifier] Issuer's unique identifier for the payment instrument.
   ///
   const factory ClaimResponsePayment({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [type] Whether this represents partial or complete payment of the
-    ///  benefits payable.
+    /// [type] Whether this represents partial or complete payment of the benefits
+    ///  payable.
     required CodeableConcept type,
 
-    /// [adjustment] Total amount of all adjustments to this payment included
-    ///  in this transaction which are not related to this claim's adjudication.
+    /// [adjustment] Total amount of all adjustments to this payment included in
+    ///  this transaction which are not related to this claim's adjudication.
     Money? adjustment,
 
     /// [adjustmentReason] Reason for the payment adjustment.
     CodeableConcept? adjustmentReason,
 
-    /// [date] Estimated date the payment will be issued or the actual issue
-    ///  date of payment.
+    /// [date] Estimated date the payment will be issued or the actual issue date
+    ///  of payment.
     FhirDate? date,
 
     /// [dateElement] ("_date") Extensions for date
@@ -5108,36 +4999,35 @@ class ClaimResponsePayment with _$ClaimResponsePayment {
 ///  from the processing of a Claim resource.
 @freezed
 class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
-  /// [ClaimResponseProcessNote] This resource provides the adjudication
-  ///  details from the processing of a Claim resource.
+  /// [ClaimResponseProcessNote] This resource provides the adjudication details
+  ///  from the processing of a Claim resource.
   const ClaimResponseProcessNote._();
 
-  /// [ClaimResponseProcessNote] This resource provides the adjudication
-  ///  details from the processing of a Claim resource.
+  /// [ClaimResponseProcessNote] This resource provides the adjudication details
+  ///  from the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [number] A number to uniquely identify a note entry.
   ///
@@ -5152,32 +5042,30 @@ class ClaimResponseProcessNote with _$ClaimResponseProcessNote {
   /// [language] A code to define the language used in the text of the note.
   ///
   const factory ClaimResponseProcessNote({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [number] A number to uniquely identify a note entry.
@@ -5245,29 +5133,28 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
   /// [ClaimResponseInsurance] This resource provides the adjudication details
   ///  from the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [sequence] A number to uniquely identify insurance entries and provide a
   ///  sequence of coverages to convey coordination of benefit order.
@@ -5280,9 +5167,9 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
   /// [focalElement] ("_focal") Extensions for focal
   ///
   /// [coverage] Reference to the insurance card level information contained in
-  ///  the Coverage resource. The coverage issuing insurer will use these
-  ///  details to locate the patient's actual coverage within the insurer's
-  ///  information system.
+  ///  the Coverage resource. The coverage issuing insurer will use these details
+  ///  to locate the patient's actual coverage within the insurer's information
+  ///  system.
   ///
   /// [businessArrangement] A business agreement number established between the
   ///  provider and the insurer for special business processing purposes.
@@ -5294,36 +5181,34 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
   ///  Coverage specified in this insurance.
   ///
   const factory ClaimResponseInsurance({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [sequence] A number to uniquely identify insurance entries and provide
-    ///  a sequence of coverages to convey coordination of benefit order.
+    /// [sequence] A number to uniquely identify insurance entries and provide a
+    ///  sequence of coverages to convey coordination of benefit order.
     FhirPositiveInt? sequence,
 
     /// [sequenceElement] ("_sequence") Extensions for sequence
@@ -5336,22 +5221,22 @@ class ClaimResponseInsurance with _$ClaimResponseInsurance {
     /// [focalElement] ("_focal") Extensions for focal
     @JsonKey(name: '_focal') Element? focalElement,
 
-    /// [coverage] Reference to the insurance card level information contained
-    ///  in the Coverage resource. The coverage issuing insurer will use these
-    ///  details to locate the patient's actual coverage within the insurer's
-    ///  information system.
+    /// [coverage] Reference to the insurance card level information contained in
+    ///  the Coverage resource. The coverage issuing insurer will use these details
+    ///  to locate the patient's actual coverage within the insurer's information
+    ///  system.
     required Reference coverage,
 
-    /// [businessArrangement] A business agreement number established between
-    ///  the provider and the insurer for special business processing purposes.
+    /// [businessArrangement] A business agreement number established between the
+    ///  provider and the insurer for special business processing purposes.
     String? businessArrangement,
 
     /// [businessArrangementElement] ("_businessArrangement") Extensions for
     ///  businessArrangement
     @JsonKey(name: '_businessArrangement') Element? businessArrangementElement,
 
-    /// [claimResponse] The result of the adjudication of the line items for
-    ///  the Coverage specified in this insurance.
+    /// [claimResponse] The result of the adjudication of the line items for the
+    ///  Coverage specified in this insurance.
     Reference? claimResponse,
   }) = _ClaimResponseInsurance;
 
@@ -5401,33 +5286,32 @@ class ClaimResponseError with _$ClaimResponseError {
   /// [ClaimResponseError] This resource provides the adjudication details from
   ///  the processing of a Claim resource.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [itemSequence] The sequence number of the line item submitted which
-  ///  contains the error. This value is omitted when the error occurs outside
-  ///  of the item structure.
+  ///  contains the error. This value is omitted when the error occurs outside of
+  ///  the item structure.
   ///
   /// [itemSequenceElement] ("_itemSequence") Extensions for itemSequence
   ///
@@ -5437,9 +5321,9 @@ class ClaimResponseError with _$ClaimResponseError {
   ///
   /// [detailSequenceElement] ("_detailSequence") Extensions for detailSequence
   ///
-  /// [subDetailSequence] The sequence number of the sub-detail within the
-  ///  detail within the line item submitted which contains the error. This
-  ///  value is omitted when the error occurs outside of the item structure.
+  /// [subDetailSequence] The sequence number of the sub-detail within the detail
+  ///  within the line item submitted which contains the error. This value is
+  ///  omitted when the error occurs outside of the item structure.
   ///
   /// [subDetailSequenceElement] ("_subDetailSequence") Extensions for
   ///  subDetailSequence
@@ -5447,76 +5331,73 @@ class ClaimResponseError with _$ClaimResponseError {
   /// [code] An error code, from a specified code system, which details why the
   ///  claim could not be adjudicated.
   ///
-  /// [expression] A [simple subset of FHIRPath](fhirpath.html#simple) limited
-  ///  to element names, repetition indicators and the default child accessor
-  ///  that identifies one of the elements in the resource that caused this
-  ///  issue to be raised.
+  /// [expression] A [simple subset of FHIRPath](fhirpath.html#simple) limited to
+  ///  element names, repetition indicators and the default child accessor that
+  ///  identifies one of the elements in the resource that caused this issue to
+  ///  be raised.
   ///
   /// [expressionElement] ("_expression") Extensions for expression
   ///
   const factory ClaimResponseError({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [itemSequence] The sequence number of the line item submitted which
-    ///  contains the error. This value is omitted when the error occurs
-    ///  outside of the item structure.
+    ///  contains the error. This value is omitted when the error occurs outside of
+    ///  the item structure.
     FhirPositiveInt? itemSequence,
 
     /// [itemSequenceElement] ("_itemSequence") Extensions for itemSequence
     @JsonKey(name: '_itemSequence') Element? itemSequenceElement,
 
     /// [detailSequence] The sequence number of the detail within the line item
-    ///  submitted which contains the error. This value is omitted when the
-    ///  error occurs outside of the item structure.
+    ///  submitted which contains the error. This value is omitted when the error
+    ///  occurs outside of the item structure.
     FhirPositiveInt? detailSequence,
 
-    /// [detailSequenceElement] ("_detailSequence") Extensions for
-    ///  detailSequence
+    /// [detailSequenceElement] ("_detailSequence") Extensions for detailSequence
     @JsonKey(name: '_detailSequence') Element? detailSequenceElement,
 
-    /// [subDetailSequence] The sequence number of the sub-detail within the
-    ///  detail within the line item submitted which contains the error. This
-    ///  value is omitted when the error occurs outside of the item structure.
+    /// [subDetailSequence] The sequence number of the sub-detail within the detail
+    ///  within the line item submitted which contains the error. This value is
+    ///  omitted when the error occurs outside of the item structure.
     FhirPositiveInt? subDetailSequence,
 
     /// [subDetailSequenceElement] ("_subDetailSequence") Extensions for
     ///  subDetailSequence
     @JsonKey(name: '_subDetailSequence') Element? subDetailSequenceElement,
 
-    /// [code] An error code, from a specified code system, which details why
-    ///  the claim could not be adjudicated.
+    /// [code] An error code, from a specified code system, which details why the
+    ///  claim could not be adjudicated.
     required CodeableConcept code,
 
-    /// [expression] A [simple subset of FHIRPath](fhirpath.html#simple)
-    ///  limited to element names, repetition indicators and the default child
-    ///  accessor that identifies one of the elements in the resource that
-    ///  caused this issue to be raised.
+    /// [expression] A [simple subset of FHIRPath](fhirpath.html#simple) limited to
+    ///  element names, repetition indicators and the default child accessor that
+    ///  identifies one of the elements in the resource that caused this issue to
+    ///  be raised.
     List<String>? expression,
 
     /// [expressionElement] ("_expression") Extensions for expression
@@ -5574,13 +5455,13 @@ class Invoice with Resource, _$Invoice {
   /// [id] The logical id of the resource, as used in the URL for the resource.
   ///  Once assigned, this value never changes.
   ///
-  /// [meta] The metadata about the resource. This is content that is
-  ///  maintained by the infrastructure. Changes to the content might not
-  ///  always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is maintained
+  ///  by the infrastructure. Changes to the content might not always be
+  ///  associated with version changes to the resource.
   ///
   /// [implicitRules] A reference to a set of rules that were followed when the
-  ///  resource was constructed, and which must be understood when processing
-  ///  the content. Often, this is a reference to an implementation guide that
+  ///  resource was constructed, and which must be understood when processing the
+  ///  content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
   /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -5592,36 +5473,35 @@ class Invoice with Resource, _$Invoice {
   /// [text] A human-readable narrative that contains a summary of the resource
   ///  and can be used to represent the content of the resource to a human. The
   ///  narrative need not encode all the structured data, but is required to
-  ///  contain sufficient detail to make it "clinically safe" for a human to
-  ///  just read the narrative. Resource definitions may define what content
-  ///  should be represented in the narrative to ensure clinical safety.
+  ///  contain sufficient detail to make it "clinically safe" for a human to just
+  ///  read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   ///
-  /// [contained] These resources do not have an independent existence apart
-  ///  from the resource that contains them - they cannot be identified
-  ///  independently, nor can they have their own independent transaction
-  ///  scope. This is allowed to be a Parameters resource if and only if it is
-  ///  referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart from
+  ///  the resource that contains them - they cannot be identified independently,
+  ///  nor can they have their own independent transaction scope. This is allowed
+  ///  to be a Parameters resource if and only if it is referenced by a resource
+  ///  that provides context/meaning.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the resource. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
-  ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the resource and that modifies
-  ///  the understanding of the element that contains it and/or the
-  ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the resource. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
   ///  applied to the definition and use of extensions. Though any implementer
-  ///  is allowed to define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension. Applications
-  ///  processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
+  ///
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the resource and that modifies the
+  ///  understanding of the element that contains it and/or the understanding of
+  ///  the containing element's descendants. Usually modifier elements provide
+  ///  negation or qualification. To make the use of extensions safe and
+  ///  managable, there is a strict set of governance applied to the definition
+  ///  and use of extensions. Though any implementer is allowed to define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [identifier] Identifier of this Invoice, often used for reference in
   ///  correspondence about this invoice or for tracking of payments.
@@ -5633,8 +5513,7 @@ class Invoice with Resource, _$Invoice {
   /// [cancelledReason] In case of Invoice cancellation a reason must be given
   ///  (entered in error, superseded by corrected invoice etc.).
   ///
-  /// [cancelledReasonElement] ("_cancelledReason") Extensions for
-  ///  cancelledReason
+  /// [cancelledReasonElement] ("_cancelledReason") Extensions for cancelledReason
   ///
   /// [type] Type of Invoice depending on domain, realm an usage (e.g.
   ///  internal/external, dental, preliminary).
@@ -5670,18 +5549,17 @@ class Invoice with Resource, _$Invoice {
   ///  rendered. Details such.ofType(date), code and amount are found in the
   ///  referenced ChargeItem resource.
   ///
-  /// [totalPriceComponent] The total amount for the Invoice may be calculated
-  ///  as the sum of the line items with surcharges/deductions that apply in
-  ///  certain conditions.  The priceComponent element can be used to offer
-  ///  transparency to the recipient of the Invoice of how the total price was
-  ///  calculated.
+  /// [totalPriceComponent] The total amount for the Invoice may be calculated as
+  ///  the sum of the line items with surcharges/deductions that apply in certain
+  ///  conditions.  The priceComponent element can be used to offer transparency
+  ///  to the recipient of the Invoice of how the total price was calculated.
   ///
   /// [totalNet] Invoice total , taxes excluded.
   ///
   /// [totalGross] Invoice total, tax included.
   ///
-  /// [paymentTerms] Payment details such as banking details, period of
-  ///  payment, deductibles, methods of payment.
+  /// [paymentTerms] Payment details such as banking details, period of payment,
+  ///  deductibles, methods of payment.
   ///
   /// [paymentTermsElement] ("_paymentTerms") Extensions for paymentTerms
   ///
@@ -5693,22 +5571,20 @@ class Invoice with Resource, _$Invoice {
     @Default(R5ResourceType.Invoice)
     @JsonKey(unknownEnumValue: R5ResourceType.Invoice)
     R5ResourceType resourceType,
-    @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
 
-    /// [id] The logical id of the resource, as used in the URL for the
-    ///  resource. Once assigned, this value never changes.
-    @JsonKey(name: 'id') FhirId? fhirId,
+    /// [id] The logical id of the resource, as used in the URL for the resource.
+    ///  Once assigned, this value never changes.
+    FhirId? id,
 
-    /// [meta] The metadata about the resource. This is content that is
-    ///  maintained by the infrastructure. Changes to the content might not
-    ///  always be associated with version changes to the resource.
+    /// [meta] The metadata about the resource. This is content that is maintained
+    ///  by the infrastructure. Changes to the content might not always be
+    ///  associated with version changes to the resource.
     FhirMeta? meta,
 
-    /// [implicitRules] A reference to a set of rules that were followed when
-    ///  the resource was constructed, and which must be understood when
-    ///  processing the content. Often, this is a reference to an
-    ///  implementation guide that defines the special rules along with other
-    ///  profiles etc.
+    /// [implicitRules] A reference to a set of rules that were followed when the
+    ///  resource was constructed, and which must be understood when processing the
+    ///  content. Often, this is a reference to an implementation guide that
+    ///  defines the special rules along with other profiles etc.
     FhirUri? implicitRules,
 
     /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -5720,44 +5596,41 @@ class Invoice with Resource, _$Invoice {
     /// [languageElement] ("_language") Extensions for language
     @JsonKey(name: '_language') Element? languageElement,
 
-    /// [text] A human-readable narrative that contains a summary of the
-    ///  resource and can be used to represent the content of the resource to a
-    ///  human. The narrative need not encode all the structured data, but is
-    ///  required to contain sufficient detail to make it "clinically safe" for
-    ///  a human to just read the narrative. Resource definitions may define
-    ///  what content should be represented in the narrative to ensure clinical
-    ///  safety.
+    /// [text] A human-readable narrative that contains a summary of the resource
+    ///  and can be used to represent the content of the resource to a human. The
+    ///  narrative need not encode all the structured data, but is required to
+    ///  contain sufficient detail to make it "clinically safe" for a human to just
+    ///  read the narrative. Resource definitions may define what content should be
+    ///  represented in the narrative to ensure clinical safety.
     Narrative? text,
 
-    /// [contained] These resources do not have an independent existence apart
-    ///  from the resource that contains them - they cannot be identified
-    ///  independently, nor can they have their own independent transaction
-    ///  scope. This is allowed to be a Parameters resource if and only if it
-    ///  is referenced by a resource that provides context/meaning.
+    /// [contained] These resources do not have an independent existence apart from
+    ///  the resource that contains them - they cannot be identified independently,
+    ///  nor can they have their own independent transaction scope. This is allowed
+    ///  to be a Parameters resource if and only if it is referenced by a resource
+    ///  that provides context/meaning.
     List<Resource>? contained,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the resource.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the resource. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the resource and that
-    ///  modifies the understanding of the element that contains it and/or the
-    ///  understanding of the containing element's descendants. Usually
-    ///  modifier elements provide negation or qualification. To make the use
-    ///  of extensions safe and managable, there is a strict set of governance
-    ///  applied to the definition and use of extensions. Though any
-    ///  implementer is allowed to define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension. Applications processing a resource are required to check
-    ///  for modifier extensions.Modifier extensions SHALL NOT change the
-    ///  meaning of any elements on Resource or DomainResource (including
-    ///  cannot change the meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the resource and that modifies the
+    ///  understanding of the element that contains it and/or the understanding of
+    ///  the containing element's descendants. Usually modifier elements provide
+    ///  negation or qualification. To make the use of extensions safe and
+    ///  managable, there is a strict set of governance applied to the definition
+    ///  and use of extensions. Though any implementer is allowed to define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [identifier] Identifier of this Invoice, often used for reference in
@@ -5770,12 +5643,11 @@ class Invoice with Resource, _$Invoice {
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
 
-    /// [cancelledReason] In case of Invoice cancellation a reason must be
-    ///  given (entered in error, superseded by corrected invoice etc.).
+    /// [cancelledReason] In case of Invoice cancellation a reason must be given
+    ///  (entered in error, superseded by corrected invoice etc.).
     String? cancelledReason,
 
-    /// [cancelledReasonElement] ("_cancelledReason") Extensions for
-    ///  cancelledReason
+    /// [cancelledReasonElement] ("_cancelledReason") Extensions for cancelledReason
     @JsonKey(name: '_cancelledReason') Element? cancelledReasonElement,
 
     /// [type] Type of Invoice depending on domain, realm an usage (e.g.
@@ -5826,11 +5698,10 @@ class Invoice with Resource, _$Invoice {
     ///  referenced ChargeItem resource.
     List<InvoiceLineItem>? lineItem,
 
-    /// [totalPriceComponent] The total amount for the Invoice may be
-    ///  calculated as the sum of the line items with surcharges/deductions
-    ///  that apply in certain conditions.  The priceComponent element can be
-    ///  used to offer transparency to the recipient of the Invoice of how the
-    ///  total price was calculated.
+    /// [totalPriceComponent] The total amount for the Invoice may be calculated as
+    ///  the sum of the line items with surcharges/deductions that apply in certain
+    ///  conditions.  The priceComponent element can be used to offer transparency
+    ///  to the recipient of the Invoice of how the total price was calculated.
     List<MonetaryComponent>? totalPriceComponent,
 
     /// [totalNet] Invoice total , taxes excluded.
@@ -5839,8 +5710,8 @@ class Invoice with Resource, _$Invoice {
     /// [totalGross] Invoice total, tax included.
     Money? totalGross,
 
-    /// [paymentTerms] Payment details such as banking details, period of
-    ///  payment, deductibles, methods of payment.
+    /// [paymentTerms] Payment details such as banking details, period of payment,
+    ///  deductibles, methods of payment.
     FhirMarkdown? paymentTerms,
 
     /// [paymentTermsElement] ("_paymentTerms") Extensions for paymentTerms
@@ -5899,73 +5770,70 @@ class InvoiceParticipant with _$InvoiceParticipant {
   /// [InvoiceParticipant] Invoice containing collected ChargeItems from an
   ///  Account with calculated individual and total price for Billing purpose.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [role] Describes the type of involvement (e.g. transcriptionist, creator
-  ///  etc.). If the invoice has been created automatically, the Participant
-  ///  may be a billing engine or another kind of device.
+  ///  etc.). If the invoice has been created automatically, the Participant may
+  ///  be a billing engine or another kind of device.
   ///
-  /// [actor] The device, practitioner, etc. who performed or participated in
-  ///  the service.
+  /// [actor] The device, practitioner, etc. who performed or participated in the
+  ///  service.
   ///
   const factory InvoiceParticipant({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
-    /// [role] Describes the type of involvement (e.g. transcriptionist,
-    ///  creator etc.). If the invoice has been created automatically, the
-    ///  Participant may be a billing engine or another kind of device.
+    /// [role] Describes the type of involvement (e.g. transcriptionist, creator
+    ///  etc.). If the invoice has been created automatically, the Participant may
+    ///  be a billing engine or another kind of device.
     CodeableConcept? role,
 
-    /// [actor] The device, practitioner, etc. who performed or participated in
-    ///  the service.
+    /// [actor] The device, practitioner, etc. who performed or participated in the
+    ///  service.
     required Reference actor,
   }) = _InvoiceParticipant;
 
@@ -6008,36 +5876,35 @@ class InvoiceParticipant with _$InvoiceParticipant {
 ///  with calculated individual and total price for Billing purpose.
 @freezed
 class InvoiceLineItem with _$InvoiceLineItem {
-  /// [InvoiceLineItem] Invoice containing collected ChargeItems from an
-  ///  Account with calculated individual and total price for Billing purpose.
+  /// [InvoiceLineItem] Invoice containing collected ChargeItems from an Account
+  ///  with calculated individual and total price for Billing purpose.
   const InvoiceLineItem._();
 
-  /// [InvoiceLineItem] Invoice containing collected ChargeItems from an
-  ///  Account with calculated individual and total price for Billing purpose.
+  /// [InvoiceLineItem] Invoice containing collected ChargeItems from an Account
+  ///  with calculated individual and total price for Billing purpose.
   ///
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   ///
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element. To
-  ///  make the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements that
-  ///  SHALL be met as part of the definition of the extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   ///
-  /// [modifierExtension] May be used to represent additional information that
-  ///  is not part of the basic definition of the element and that modifies the
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
   ///  understanding of the element in which it is contained and/or the
   ///  understanding of the containing element's descendants. Usually modifier
-  ///  elements provide negation or qualification. To make the use of
-  ///  extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any implementer
-  ///  can define an extension, there is a set of requirements that SHALL be
-  ///  met as part of the definition of the extension. Applications processing
-  ///  a resource are required to check for modifier extensions.Modifier
-  ///  extensions SHALL NOT change the meaning of any elements on Resource or
-  ///  DomainResource (including cannot change the meaning of modifierExtension
-  ///  itself).
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   ///
   /// [sequence] Sequence in which the items appear on the invoice.
   ///
@@ -6052,14 +5919,14 @@ class InvoiceLineItem with _$InvoiceLineItem {
   ///  completed.
   ///
   /// [chargeItemReference] The ChargeItem contains information such as the
-  ///  billing code, date, amount etc. If no further details are required for
-  ///  the lineItem, inline billing codes can be added using the
-  ///  CodeableConcept data type instead of the Reference.
+  ///  billing code, date, amount etc. If no further details are required for the
+  ///  lineItem, inline billing codes can be added using the CodeableConcept data
+  ///  type instead of the Reference.
   ///
-  /// [chargeItemCodeableConcept] The ChargeItem contains information such as
-  ///  the billing code, date, amount etc. If no further details are required
-  ///  for the lineItem, inline billing codes can be added using the
-  ///  CodeableConcept data type instead of the Reference.
+  /// [chargeItemCodeableConcept] The ChargeItem contains information such as the
+  ///  billing code, date, amount etc. If no further details are required for the
+  ///  lineItem, inline billing codes can be added using the CodeableConcept data
+  ///  type instead of the Reference.
   ///
   /// [priceComponent] The price for a ChargeItem may be calculated as a base
   ///  price with surcharges/deductions that apply in certain conditions. A
@@ -6069,32 +5936,30 @@ class InvoiceLineItem with _$InvoiceLineItem {
   ///  recipient of the Invoice as to how the prices have been calculated.
   ///
   const factory InvoiceLineItem({
-    /// [id] Unique id for the element within a resource (for internal
-    ///  references). This may be any string value that does not contain spaces.
-    @JsonKey(name: 'id') String? fhirId,
+    /// [id] Unique id for the element within a resource (for internal references).
+    ///  This may be any string value that does not contain spaces.
+    String? id,
 
-    /// [extension_] ("extension") May be used to represent additional
-    ///  information that is not part of the basic definition of the element.
-    ///  To make the use of extensions safe and managable, there is a strict
-    ///  set of governance applied to the definition and use of extensions.
-    ///  Though any implementer can define an extension, there is a set of
-    ///  requirements that SHALL be met as part of the definition of the
-    ///  extension.
+    /// [extension_] ("extension") May be used to represent additional information
+    ///  that is not part of the basic definition of the element. To make the use
+    ///  of extensions safe and managable, there is a strict set of governance
+    ///  applied to the definition and use of extensions. Though any implementer
+    ///  can define an extension, there is a set of requirements that SHALL be met
+    ///  as part of the definition of the extension.
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
 
-    /// [modifierExtension] May be used to represent additional information
-    ///  that is not part of the basic definition of the element and that
-    ///  modifies the understanding of the element in which it is contained
-    ///  and/or the understanding of the containing element's descendants.
-    ///  Usually modifier elements provide negation or qualification. To make
-    ///  the use of extensions safe and managable, there is a strict set of
-    ///  governance applied to the definition and use of extensions. Though any
-    ///  implementer can define an extension, there is a set of requirements
-    ///  that SHALL be met as part of the definition of the extension.
-    ///  Applications processing a resource are required to check for modifier
-    ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-    ///  elements on Resource or DomainResource (including cannot change the
-    ///  meaning of modifierExtension itself).
+    /// [modifierExtension] May be used to represent additional information that is
+    ///  not part of the basic definition of the element and that modifies the
+    ///  understanding of the element in which it is contained and/or the
+    ///  understanding of the containing element's descendants. Usually modifier
+    ///  elements provide negation or qualification. To make the use of extensions
+    ///  safe and managable, there is a strict set of governance applied to the
+    ///  definition and use of extensions. Though any implementer can define an
+    ///  extension, there is a set of requirements that SHALL be met as part of the
+    ///  definition of the extension. Applications processing a resource are
+    ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+    ///  change the meaning of any elements on Resource or DomainResource
+    ///  (including cannot change the meaning of modifierExtension itself).
     List<FhirExtension>? modifierExtension,
 
     /// [sequence] Sequence in which the items appear on the invoice.
@@ -6115,24 +5980,23 @@ class InvoiceLineItem with _$InvoiceLineItem {
     Period? servicedPeriod,
 
     /// [chargeItemReference] The ChargeItem contains information such as the
-    ///  billing code, date, amount etc. If no further details are required for
-    ///  the lineItem, inline billing codes can be added using the
-    ///  CodeableConcept data type instead of the Reference.
+    ///  billing code, date, amount etc. If no further details are required for the
+    ///  lineItem, inline billing codes can be added using the CodeableConcept data
+    ///  type instead of the Reference.
     Reference? chargeItemReference,
 
-    /// [chargeItemCodeableConcept] The ChargeItem contains information such as
-    ///  the billing code, date, amount etc. If no further details are required
-    ///  for the lineItem, inline billing codes can be added using the
-    ///  CodeableConcept data type instead of the Reference.
+    /// [chargeItemCodeableConcept] The ChargeItem contains information such as the
+    ///  billing code, date, amount etc. If no further details are required for the
+    ///  lineItem, inline billing codes can be added using the CodeableConcept data
+    ///  type instead of the Reference.
     CodeableConcept? chargeItemCodeableConcept,
 
     /// [priceComponent] The price for a ChargeItem may be calculated as a base
     ///  price with surcharges/deductions that apply in certain conditions. A
     ///  ChargeItemDefinition resource that defines the prices, factors and
-    ///  conditions that apply to a billing code is currently under
-    ///  development. The priceComponent element can be used to offer
-    ///  transparency to the recipient of the Invoice as to how the prices have
-    ///  been calculated.
+    ///  conditions that apply to a billing code is currently under development.
+    ///  The priceComponent element can be used to offer transparency to the
+    ///  recipient of the Invoice as to how the prices have been calculated.
     List<MonetaryComponent>? priceComponent,
   }) = _InvoiceLineItem;
 

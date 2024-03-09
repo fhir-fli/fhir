@@ -12,8 +12,7 @@ _$CommunicationImpl _$$CommunicationImplFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Communication) ??
           R5ResourceType.Communication,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -132,7 +131,7 @@ Map<String, dynamic> _$$CommunicationImplToJson(_$CommunicationImpl instance) {
     }
   }
 
-  writeNotNull('id', instance.fhirId?.toJson());
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -347,7 +346,7 @@ const _$R5ResourceTypeEnumMap = {
 _$CommunicationPayloadImpl _$$CommunicationPayloadImplFromJson(
         Map<String, dynamic> json) =>
     _$CommunicationPayloadImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -378,7 +377,7 @@ Map<String, dynamic> _$$CommunicationPayloadImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -397,8 +396,7 @@ _$CommunicationRequestImpl _$$CommunicationRequestImplFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.CommunicationRequest) ??
           R5ResourceType.CommunicationRequest,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -525,7 +523,7 @@ Map<String, dynamic> _$$CommunicationRequestImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId?.toJson());
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -577,7 +575,7 @@ Map<String, dynamic> _$$CommunicationRequestImplToJson(
 _$CommunicationRequestPayloadImpl _$$CommunicationRequestPayloadImplFromJson(
         Map<String, dynamic> json) =>
     _$CommunicationRequestPayloadImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -608,7 +606,7 @@ Map<String, dynamic> _$$CommunicationRequestPayloadImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -627,8 +625,7 @@ _$DeviceAssociationImpl _$$DeviceAssociationImplFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DeviceAssociation) ??
           R5ResourceType.DeviceAssociation,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -693,7 +690,7 @@ Map<String, dynamic> _$$DeviceAssociationImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId?.toJson());
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -724,7 +721,7 @@ Map<String, dynamic> _$$DeviceAssociationImplToJson(
 _$DeviceAssociationOperationImpl _$$DeviceAssociationOperationImplFromJson(
         Map<String, dynamic> json) =>
     _$DeviceAssociationOperationImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -750,7 +747,7 @@ Map<String, dynamic> _$$DeviceAssociationOperationImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -767,8 +764,7 @@ _$DeviceDispenseImpl _$$DeviceDispenseImplFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DeviceDispense) ??
           R5ResourceType.DeviceDispense,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -881,7 +877,7 @@ Map<String, dynamic> _$$DeviceDispenseImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId?.toJson());
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -929,7 +925,7 @@ Map<String, dynamic> _$$DeviceDispenseImplToJson(
 _$DeviceDispensePerformerImpl _$$DeviceDispensePerformerImplFromJson(
         Map<String, dynamic> json) =>
     _$DeviceDispensePerformerImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -952,7 +948,7 @@ Map<String, dynamic> _$$DeviceDispensePerformerImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -968,8 +964,7 @@ _$DeviceRequestImpl _$$DeviceRequestImplFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DeviceRequest) ??
           R5ResourceType.DeviceRequest,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1116,7 +1111,7 @@ Map<String, dynamic> _$$DeviceRequestImplToJson(_$DeviceRequestImpl instance) {
     }
   }
 
-  writeNotNull('id', instance.fhirId?.toJson());
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -1181,7 +1176,7 @@ Map<String, dynamic> _$$DeviceRequestImplToJson(_$DeviceRequestImpl instance) {
 _$DeviceRequestParameterImpl _$$DeviceRequestParameterImplFromJson(
         Map<String, dynamic> json) =>
     _$DeviceRequestParameterImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1219,7 +1214,7 @@ Map<String, dynamic> _$$DeviceRequestParameterImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1239,8 +1234,7 @@ _$DeviceUsageImpl _$$DeviceUsageImplFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DeviceUsage) ??
           R5ResourceType.DeviceUsage,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1345,7 +1339,7 @@ Map<String, dynamic> _$$DeviceUsageImplToJson(_$DeviceUsageImpl instance) {
     }
   }
 
-  writeNotNull('id', instance.fhirId?.toJson());
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -1389,7 +1383,7 @@ Map<String, dynamic> _$$DeviceUsageImplToJson(_$DeviceUsageImpl instance) {
 _$DeviceUsageAdherenceImpl _$$DeviceUsageAdherenceImplFromJson(
         Map<String, dynamic> json) =>
     _$DeviceUsageAdherenceImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1412,7 +1406,7 @@ Map<String, dynamic> _$$DeviceUsageAdherenceImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1429,8 +1423,7 @@ _$GuidanceResponseImpl _$$GuidanceResponseImplFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.GuidanceResponse) ??
           R5ResourceType.GuidanceResponse,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1534,7 +1527,7 @@ Map<String, dynamic> _$$GuidanceResponseImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId?.toJson());
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -1580,8 +1573,7 @@ _$InventoryItemImpl _$$InventoryItemImplFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.InventoryItem) ??
           R5ResourceType.InventoryItem,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -1671,7 +1663,7 @@ Map<String, dynamic> _$$InventoryItemImplToJson(_$InventoryItemImpl instance) {
     }
   }
 
-  writeNotNull('id', instance.fhirId?.toJson());
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -1710,7 +1702,7 @@ Map<String, dynamic> _$$InventoryItemImplToJson(_$InventoryItemImpl instance) {
 _$InventoryItemNameImpl _$$InventoryItemNameImplFromJson(
         Map<String, dynamic> json) =>
     _$InventoryItemNameImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1739,7 +1731,7 @@ Map<String, dynamic> _$$InventoryItemNameImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1756,7 +1748,7 @@ _$InventoryItemResponsibleOrganizationImpl
     _$$InventoryItemResponsibleOrganizationImplFromJson(
             Map<String, dynamic> json) =>
         _$InventoryItemResponsibleOrganizationImpl(
-          fhirId: json['id'] as String?,
+          id: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -1778,7 +1770,7 @@ Map<String, dynamic> _$$InventoryItemResponsibleOrganizationImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1791,7 +1783,7 @@ Map<String, dynamic> _$$InventoryItemResponsibleOrganizationImplToJson(
 _$InventoryItemDescriptionImpl _$$InventoryItemDescriptionImplFromJson(
         Map<String, dynamic> json) =>
     _$InventoryItemDescriptionImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1819,7 +1811,7 @@ Map<String, dynamic> _$$InventoryItemDescriptionImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1834,7 +1826,7 @@ Map<String, dynamic> _$$InventoryItemDescriptionImplToJson(
 _$InventoryItemAssociationImpl _$$InventoryItemAssociationImplFromJson(
         Map<String, dynamic> json) =>
     _$InventoryItemAssociationImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1858,7 +1850,7 @@ Map<String, dynamic> _$$InventoryItemAssociationImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1872,7 +1864,7 @@ Map<String, dynamic> _$$InventoryItemAssociationImplToJson(
 _$InventoryItemCharacteristicImpl _$$InventoryItemCharacteristicImplFromJson(
         Map<String, dynamic> json) =>
     _$InventoryItemCharacteristicImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1950,7 +1942,7 @@ Map<String, dynamic> _$$InventoryItemCharacteristicImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -1981,7 +1973,7 @@ Map<String, dynamic> _$$InventoryItemCharacteristicImplToJson(
 _$InventoryItemInstanceImpl _$$InventoryItemInstanceImplFromJson(
         Map<String, dynamic> json) =>
     _$InventoryItemInstanceImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2019,7 +2011,7 @@ Map<String, dynamic> _$$InventoryItemInstanceImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2042,8 +2034,7 @@ _$InventoryReportImpl _$$InventoryReportImplFromJson(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.InventoryReport) ??
           R5ResourceType.InventoryReport,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2124,7 +2115,7 @@ Map<String, dynamic> _$$InventoryReportImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId?.toJson());
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -2158,7 +2149,7 @@ Map<String, dynamic> _$$InventoryReportImplToJson(
 _$InventoryReportInventoryListingImpl
     _$$InventoryReportInventoryListingImplFromJson(Map<String, dynamic> json) =>
         _$InventoryReportInventoryListingImpl(
-          fhirId: json['id'] as String?,
+          id: json['id'] as String?,
           extension_: (json['extension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
@@ -2195,7 +2186,7 @@ Map<String, dynamic> _$$InventoryReportInventoryListingImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2211,7 +2202,7 @@ Map<String, dynamic> _$$InventoryReportInventoryListingImplToJson(
 _$InventoryReportItemImpl _$$InventoryReportItemImplFromJson(
         Map<String, dynamic> json) =>
     _$InventoryReportItemImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2235,7 +2226,7 @@ Map<String, dynamic> _$$InventoryReportItemImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2252,8 +2243,7 @@ _$SupplyDeliveryImpl _$$SupplyDeliveryImplFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SupplyDelivery) ??
           R5ResourceType.SupplyDelivery,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2339,7 +2329,7 @@ Map<String, dynamic> _$$SupplyDeliveryImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId?.toJson());
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -2376,7 +2366,7 @@ Map<String, dynamic> _$$SupplyDeliveryImplToJson(
 _$SupplyDeliverySuppliedItemImpl _$$SupplyDeliverySuppliedItemImplFromJson(
         Map<String, dynamic> json) =>
     _$SupplyDeliverySuppliedItemImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2405,7 +2395,7 @@ Map<String, dynamic> _$$SupplyDeliverySuppliedItemImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
@@ -2422,8 +2412,7 @@ _$SupplyRequestImpl _$$SupplyRequestImplFromJson(Map<String, dynamic> json) =>
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SupplyRequest) ??
           R5ResourceType.SupplyRequest,
-      dbId: json['dbId'] as int?,
-      fhirId: json['id'] == null ? null : FhirId.fromJson(json['id']),
+      id: json['id'] == null ? null : FhirId.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
           : FhirMeta.fromJson(json['meta'] as Map<String, dynamic>),
@@ -2524,7 +2513,7 @@ Map<String, dynamic> _$$SupplyRequestImplToJson(_$SupplyRequestImpl instance) {
     }
   }
 
-  writeNotNull('id', instance.fhirId?.toJson());
+  writeNotNull('id', instance.id?.toJson());
   writeNotNull('meta', instance.meta?.toJson());
   writeNotNull('implicitRules', instance.implicitRules?.toJson());
   writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
@@ -2568,7 +2557,7 @@ Map<String, dynamic> _$$SupplyRequestImplToJson(_$SupplyRequestImpl instance) {
 _$SupplyRequestParameterImpl _$$SupplyRequestParameterImplFromJson(
         Map<String, dynamic> json) =>
     _$SupplyRequestParameterImpl(
-      fhirId: json['id'] as String?,
+      id: json['id'] as String?,
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -2606,7 +2595,7 @@ Map<String, dynamic> _$$SupplyRequestParameterImplToJson(
     }
   }
 
-  writeNotNull('id', instance.fhirId);
+  writeNotNull('id', instance.id);
   writeNotNull(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',

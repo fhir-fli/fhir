@@ -23,24 +23,20 @@ mixin _$ResearchStudy {
   /// [resourceType] This is a ResearchStudy resource
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeFromJson: true, includeToJson: false)
-  int? get dbId => throw _privateConstructorUsedError;
 
-  /// [id] The logical id of the resource, as used in the URL for the
-  ///  resource. Once assigned, this value never changes.
-  @JsonKey(name: 'id')
-  FhirId? get fhirId => throw _privateConstructorUsedError;
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  FhirId? get id => throw _privateConstructorUsedError;
 
-  /// [meta] The metadata about the resource. This is content that is
-  ///  maintained by the infrastructure. Changes to the content might not
-  ///  always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is maintained
+  ///  by the infrastructure. Changes to the content might not always be
+  ///  associated with version changes to the resource.
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
-  /// [implicitRules] A reference to a set of rules that were followed when
-  ///  the resource was constructed, and which must be understood when
-  ///  processing the content. Often, this is a reference to an
-  ///  implementation guide that defines the special rules along with other
-  ///  profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing the
+  ///  content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -54,45 +50,42 @@ mixin _$ResearchStudy {
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
 
-  /// [text] A human-readable narrative that contains a summary of the
-  ///  resource and can be used to represent the content of the resource to a
-  ///  human. The narrative need not encode all the structured data, but is
-  ///  required to contain sufficient detail to make it "clinically safe" for
-  ///  a human to just read the narrative. Resource definitions may define
-  ///  what content should be represented in the narrative to ensure clinical
-  ///  safety.
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to just
+  ///  read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
 
-  /// [contained] These resources do not have an independent existence apart
-  ///  from the resource that contains them - they cannot be identified
-  ///  independently, nor can they have their own independent transaction
-  ///  scope. This is allowed to be a Parameters resource if and only if it
-  ///  is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart from
+  ///  the resource that contains them - they cannot be identified independently,
+  ///  nor can they have their own independent transaction scope. This is allowed
+  ///  to be a Parameters resource if and only if it is referenced by a resource
+  ///  that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the resource.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the resource. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the resource and that
-  ///  modifies the understanding of the element that contains it and/or the
-  ///  understanding of the containing element's descendants. Usually
-  ///  modifier elements provide negation or qualification. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any
-  ///  implementer is allowed to define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension. Applications processing a resource are required to check
-  ///  for modifier extensions.Modifier extensions SHALL NOT change the
-  ///  meaning of any elements on Resource or DomainResource (including
-  ///  cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the resource and that modifies the
+  ///  understanding of the element that contains it and/or the understanding of
+  ///  the containing element's descendants. Usually modifier elements provide
+  ///  negation or qualification. To make the use of extensions safe and
+  ///  managable, there is a strict set of governance applied to the definition
+  ///  and use of extensions. Though any implementer is allowed to define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -104,8 +97,8 @@ mixin _$ResearchStudy {
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
 
-  /// [identifier] Identifiers assigned to this research study by the sponsor
-  ///  or other systems.
+  /// [identifier] Identifiers assigned to this research study by the sponsor or
+  ///  other systems.
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [version] The business version for the study record.
@@ -140,20 +133,19 @@ mixin _$ResearchStudy {
   ///  component or step.
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
-  /// [relatedArtifact] Citations, references, URLs and other related
-  ///  documents.  When using relatedArtifact to share URLs, the
-  ///  relatedArtifact.type will often be set to one of "documentation" or
-  ///  "supported-with" and the URL value will often be in
-  ///  relatedArtifact.document.url but another possible location is
-  ///  relatedArtifact.resource when it is a canonical URL.
+  /// [relatedArtifact] Citations, references, URLs and other related documents.
+  ///  When using relatedArtifact to share URLs, the relatedArtifact.type will
+  ///  often be set to one of "documentation" or "supported-with" and the URL
+  ///  value will often be in relatedArtifact.document.url but another possible
+  ///  location is relatedArtifact.resource when it is a canonical URL.
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
 
-  /// [date] The date (and optionally time) when the ResearchStudy Resource
-  ///  was last significantly changed. The date must change when the business
-  ///  version changes and it must change if the status code changes. In
-  ///  addition, it should change when the substantive content of the
-  ///  ResearchStudy Resource changes.
+  /// [date] The date (and optionally time) when the ResearchStudy Resource was
+  ///  last significantly changed. The date must change when the business version
+  ///  changes and it must change if the status code changes. In addition, it
+  ///  should change when the substantive content of the ResearchStudy Resource
+  ///  changes.
   FhirDateTime? get date => throw _privateConstructorUsedError;
 
   /// [dateElement] ("_date") Extensions for date
@@ -167,18 +159,17 @@ mixin _$ResearchStudy {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
-  /// [primaryPurposeType] The type of study based upon the intent of the
-  ///  study activities. A classification of the intent of the study.
+  /// [primaryPurposeType] The type of study based upon the intent of the study
+  ///  activities. A classification of the intent of the study.
   CodeableConcept? get primaryPurposeType => throw _privateConstructorUsedError;
 
-  /// [phase] The stage in the progression of a therapy from initial
-  ///  experimental use in humans in clinical trials to post-market
-  ///  evaluation.
+  /// [phase] The stage in the progression of a therapy from initial experimental
+  ///  use in humans in clinical trials to post-market evaluation.
   CodeableConcept? get phase => throw _privateConstructorUsedError;
 
-  /// [studyDesign] Codes categorizing the type of study such as
-  ///  investigational vs. observational, type of blinding, type of
-  ///  randomization, safety vs. efficacy, etc.
+  /// [studyDesign] Codes categorizing the type of study such as investigational
+  ///  vs. observational, type of blinding, type of randomization, safety vs.
+  ///  efficacy, etc.
   List<CodeableConcept>? get studyDesign => throw _privateConstructorUsedError;
 
   /// [focus] The medication(s), food(s), therapy(ies), device(s) or other
@@ -186,10 +177,10 @@ mixin _$ResearchStudy {
   ///  information about.
   List<CodeableReference>? get focus => throw _privateConstructorUsedError;
 
-  /// [condition] The condition that is the focus of the study.  For example,
-  ///  In a study to examine risk factors for Lupus, might have as an
-  ///  inclusion criterion "healthy volunteer", but the target condition code
-  ///  would be a Lupus SNOMED code.
+  /// [condition] The condition that is the focus of the study.  For example, In
+  ///  a study to examine risk factors for Lupus, might have as an inclusion
+  ///  criterion "healthy volunteer", but the target condition code would be a
+  ///  Lupus SNOMED code.
   List<CodeableConcept>? get condition => throw _privateConstructorUsedError;
 
   /// [keyword] Key terms to aid in searching for or filtering the study.
@@ -207,16 +198,16 @@ mixin _$ResearchStudy {
   @JsonKey(name: '_descriptionSummary')
   Element? get descriptionSummaryElement => throw _privateConstructorUsedError;
 
-  /// [description] A detailed and human-readable narrative of the study.
-  ///  E.g., study abstract.
+  /// [description] A detailed and human-readable narrative of the study. E.g.,
+  ///  study abstract.
   FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
-  /// [period] Identifies the start date and the expected (or actual,
-  ///  depending on status) end date for the study.
+  /// [period] Identifies the start date and the expected (or actual, depending
+  ///  on status) end date for the study.
   Period? get period => throw _privateConstructorUsedError;
 
   /// [site] A facility in which study activities are conducted.
@@ -226,12 +217,11 @@ mixin _$ResearchStudy {
   ///  participants.
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
-  /// [classifier] Additional grouping mechanism or categorization of a
-  ///  research study. Example: FDA regulated device, FDA regulated drug, MPG
-  ///  Paragraph 23b (a German legal requirement), IRB-exempt, etc.
-  ///  Implementation Note: do not use the classifier element to support
-  ///  existing semantics that are already supported thru explicit elements
-  ///  in the resource.
+  /// [classifier] Additional grouping mechanism or categorization of a research
+  ///  study. Example: FDA regulated device, FDA regulated drug, MPG Paragraph
+  ///  23b (a German legal requirement), IRB-exempt, etc. Implementation Note: do
+  ///  not use the classifier element to support existing semantics that are
+  ///  already supported thru explicit elements in the resource.
   List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
 
   /// [associatedParty] Sponsors, collaborators, and other parties.
@@ -242,19 +232,19 @@ mixin _$ResearchStudy {
   List<ResearchStudyProgressStatus>? get progressStatus =>
       throw _privateConstructorUsedError;
 
-  /// [whyStopped] A description and/or code explaining the premature
-  ///  termination of the study.
+  /// [whyStopped] A description and/or code explaining the premature termination
+  ///  of the study.
   CodeableConcept? get whyStopped => throw _privateConstructorUsedError;
 
   /// [recruitment] Target or actual group of participants enrolled in study.
   ResearchStudyRecruitment? get recruitment =>
       throw _privateConstructorUsedError;
 
-  /// [comparisonGroup] Describes an expected event or sequence of events for
-  ///  one of the subjects of a study. E.g. for a living subject: exposure to
-  ///  drug A, wash-out, exposure to drug B, wash-out, follow-up. E.g. for a
-  ///  stability study: {store sample from lot A at 25 degrees for 1 month},
-  ///  {store sample from lot A at 40 degrees for 1 month}.
+  /// [comparisonGroup] Describes an expected event or sequence of events for one
+  ///  of the subjects of a study. E.g. for a living subject: exposure to drug A,
+  ///  wash-out, exposure to drug B, wash-out, follow-up. E.g. for a stability
+  ///  study: {store sample from lot A at 25 degrees for 1 month}, {store sample
+  ///  from lot A at 40 degrees for 1 month}.
   List<ResearchStudyComparisonGroup>? get comparisonGroup =>
       throw _privateConstructorUsedError;
 
@@ -267,13 +257,13 @@ mixin _$ResearchStudy {
   /// [outcomeMeasure] An "outcome measure", "endpoint", "effect measure" or
   ///  "measure of effect" is a specific measurement or observation used to
   ///  quantify the effect of experimental variables on the participants in a
-  ///  study, or for observational studies, to describe patterns of diseases
-  ///  or traits or associations with exposures, risk factors or treatment.
+  ///  study, or for observational studies, to describe patterns of diseases or
+  ///  traits or associations with exposures, risk factors or treatment.
   List<ResearchStudyOutcomeMeasure>? get outcomeMeasure =>
       throw _privateConstructorUsedError;
 
-  /// [result] Link to one or more sets of results generated by the study.
-  ///  Could also link to a research registry holding the results such as
+  /// [result] Link to one or more sets of results generated by the study.  Could
+  ///  also link to a research registry holding the results such as
   ///  ClinicalTrials.gov.
   List<Reference>? get result => throw _privateConstructorUsedError;
 
@@ -292,8 +282,7 @@ abstract class $ResearchStudyCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
       R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
-      @JsonKey(name: 'id') FhirId? fhirId,
+      FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -377,8 +366,7 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
@@ -434,13 +422,9 @@ class _$ResearchStudyCopyWithImpl<$Res, $Val extends ResearchStudy>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -858,8 +842,7 @@ abstract class _$$ResearchStudyImplCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
       R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
-      @JsonKey(name: 'id') FhirId? fhirId,
+      FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -958,8 +941,7 @@ class __$$ResearchStudyImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
@@ -1015,13 +997,9 @@ class __$$ResearchStudyImplCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -1229,8 +1207,7 @@ class _$ResearchStudyImpl extends _ResearchStudy {
   const _$ResearchStudyImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
       this.resourceType = R5ResourceType.ResearchStudy,
-      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
-      @JsonKey(name: 'id') this.fhirId,
+      this.id,
       this.meta,
       this.implicitRules,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
@@ -1311,27 +1288,22 @@ class _$ResearchStudyImpl extends _ResearchStudy {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeFromJson: true, includeToJson: false)
-  final int? dbId;
 
-  /// [id] The logical id of the resource, as used in the URL for the
-  ///  resource. Once assigned, this value never changes.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   @override
-  @JsonKey(name: 'id')
-  final FhirId? fhirId;
+  final FhirId? id;
 
-  /// [meta] The metadata about the resource. This is content that is
-  ///  maintained by the infrastructure. Changes to the content might not
-  ///  always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is maintained
+  ///  by the infrastructure. Changes to the content might not always be
+  ///  associated with version changes to the resource.
   @override
   final FhirMeta? meta;
 
-  /// [implicitRules] A reference to a set of rules that were followed when
-  ///  the resource was constructed, and which must be understood when
-  ///  processing the content. Often, this is a reference to an
-  ///  implementation guide that defines the special rules along with other
-  ///  profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing the
+  ///  content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
 
@@ -1349,28 +1321,27 @@ class _$ResearchStudyImpl extends _ResearchStudy {
   @JsonKey(name: '_language')
   final Element? languageElement;
 
-  /// [text] A human-readable narrative that contains a summary of the
-  ///  resource and can be used to represent the content of the resource to a
-  ///  human. The narrative need not encode all the structured data, but is
-  ///  required to contain sufficient detail to make it "clinically safe" for
-  ///  a human to just read the narrative. Resource definitions may define
-  ///  what content should be represented in the narrative to ensure clinical
-  ///  safety.
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to just
+  ///  read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
 
-  /// [contained] These resources do not have an independent existence apart
-  ///  from the resource that contains them - they cannot be identified
-  ///  independently, nor can they have their own independent transaction
-  ///  scope. This is allowed to be a Parameters resource if and only if it
-  ///  is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart from
+  ///  the resource that contains them - they cannot be identified independently,
+  ///  nor can they have their own independent transaction scope. This is allowed
+  ///  to be a Parameters resource if and only if it is referenced by a resource
+  ///  that provides context/meaning.
   final List<Resource>? _contained;
 
-  /// [contained] These resources do not have an independent existence apart
-  ///  from the resource that contains them - they cannot be identified
-  ///  independently, nor can they have their own independent transaction
-  ///  scope. This is allowed to be a Parameters resource if and only if it
-  ///  is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart from
+  ///  the resource that contains them - they cannot be identified independently,
+  ///  nor can they have their own independent transaction scope. This is allowed
+  ///  to be a Parameters resource if and only if it is referenced by a resource
+  ///  that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -1380,22 +1351,20 @@ class _$ResearchStudyImpl extends _ResearchStudy {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the resource.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the resource. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the resource.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the resource. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -1406,34 +1375,32 @@ class _$ResearchStudyImpl extends _ResearchStudy {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the resource and that
-  ///  modifies the understanding of the element that contains it and/or the
-  ///  understanding of the containing element's descendants. Usually
-  ///  modifier elements provide negation or qualification. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any
-  ///  implementer is allowed to define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension. Applications processing a resource are required to check
-  ///  for modifier extensions.Modifier extensions SHALL NOT change the
-  ///  meaning of any elements on Resource or DomainResource (including
-  ///  cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the resource and that modifies the
+  ///  understanding of the element that contains it and/or the understanding of
+  ///  the containing element's descendants. Usually modifier elements provide
+  ///  negation or qualification. To make the use of extensions safe and
+  ///  managable, there is a strict set of governance applied to the definition
+  ///  and use of extensions. Though any implementer is allowed to define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the resource and that
-  ///  modifies the understanding of the element that contains it and/or the
-  ///  understanding of the containing element's descendants. Usually
-  ///  modifier elements provide negation or qualification. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any
-  ///  implementer is allowed to define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension. Applications processing a resource are required to check
-  ///  for modifier extensions.Modifier extensions SHALL NOT change the
-  ///  meaning of any elements on Resource or DomainResource (including
-  ///  cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the resource and that modifies the
+  ///  understanding of the element that contains it and/or the understanding of
+  ///  the containing element's descendants. Usually modifier elements provide
+  ///  negation or qualification. To make the use of extensions safe and
+  ///  managable, there is a strict set of governance applied to the definition
+  ///  and use of extensions. Though any implementer is allowed to define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -1454,12 +1421,12 @@ class _$ResearchStudyImpl extends _ResearchStudy {
   @JsonKey(name: '_url')
   final Element? urlElement;
 
-  /// [identifier] Identifiers assigned to this research study by the sponsor
-  ///  or other systems.
+  /// [identifier] Identifiers assigned to this research study by the sponsor or
+  ///  other systems.
   final List<Identifier>? _identifier;
 
-  /// [identifier] Identifiers assigned to this research study by the sponsor
-  ///  or other systems.
+  /// [identifier] Identifiers assigned to this research study by the sponsor or
+  ///  other systems.
   @override
   List<Identifier>? get identifier {
     final value = _identifier;
@@ -1539,20 +1506,18 @@ class _$ResearchStudyImpl extends _ResearchStudy {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [relatedArtifact] Citations, references, URLs and other related
-  ///  documents.  When using relatedArtifact to share URLs, the
-  ///  relatedArtifact.type will often be set to one of "documentation" or
-  ///  "supported-with" and the URL value will often be in
-  ///  relatedArtifact.document.url but another possible location is
-  ///  relatedArtifact.resource when it is a canonical URL.
+  /// [relatedArtifact] Citations, references, URLs and other related documents.
+  ///  When using relatedArtifact to share URLs, the relatedArtifact.type will
+  ///  often be set to one of "documentation" or "supported-with" and the URL
+  ///  value will often be in relatedArtifact.document.url but another possible
+  ///  location is relatedArtifact.resource when it is a canonical URL.
   final List<RelatedArtifact>? _relatedArtifact;
 
-  /// [relatedArtifact] Citations, references, URLs and other related
-  ///  documents.  When using relatedArtifact to share URLs, the
-  ///  relatedArtifact.type will often be set to one of "documentation" or
-  ///  "supported-with" and the URL value will often be in
-  ///  relatedArtifact.document.url but another possible location is
-  ///  relatedArtifact.resource when it is a canonical URL.
+  /// [relatedArtifact] Citations, references, URLs and other related documents.
+  ///  When using relatedArtifact to share URLs, the relatedArtifact.type will
+  ///  often be set to one of "documentation" or "supported-with" and the URL
+  ///  value will often be in relatedArtifact.document.url but another possible
+  ///  location is relatedArtifact.resource when it is a canonical URL.
   @override
   List<RelatedArtifact>? get relatedArtifact {
     final value = _relatedArtifact;
@@ -1562,11 +1527,11 @@ class _$ResearchStudyImpl extends _ResearchStudy {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [date] The date (and optionally time) when the ResearchStudy Resource
-  ///  was last significantly changed. The date must change when the business
-  ///  version changes and it must change if the status code changes. In
-  ///  addition, it should change when the substantive content of the
-  ///  ResearchStudy Resource changes.
+  /// [date] The date (and optionally time) when the ResearchStudy Resource was
+  ///  last significantly changed. The date must change when the business version
+  ///  changes and it must change if the status code changes. In addition, it
+  ///  should change when the substantive content of the ResearchStudy Resource
+  ///  changes.
   @override
   final FhirDateTime? date;
 
@@ -1584,25 +1549,24 @@ class _$ResearchStudyImpl extends _ResearchStudy {
   @JsonKey(name: '_status')
   final Element? statusElement;
 
-  /// [primaryPurposeType] The type of study based upon the intent of the
-  ///  study activities. A classification of the intent of the study.
+  /// [primaryPurposeType] The type of study based upon the intent of the study
+  ///  activities. A classification of the intent of the study.
   @override
   final CodeableConcept? primaryPurposeType;
 
-  /// [phase] The stage in the progression of a therapy from initial
-  ///  experimental use in humans in clinical trials to post-market
-  ///  evaluation.
+  /// [phase] The stage in the progression of a therapy from initial experimental
+  ///  use in humans in clinical trials to post-market evaluation.
   @override
   final CodeableConcept? phase;
 
-  /// [studyDesign] Codes categorizing the type of study such as
-  ///  investigational vs. observational, type of blinding, type of
-  ///  randomization, safety vs. efficacy, etc.
+  /// [studyDesign] Codes categorizing the type of study such as investigational
+  ///  vs. observational, type of blinding, type of randomization, safety vs.
+  ///  efficacy, etc.
   final List<CodeableConcept>? _studyDesign;
 
-  /// [studyDesign] Codes categorizing the type of study such as
-  ///  investigational vs. observational, type of blinding, type of
-  ///  randomization, safety vs. efficacy, etc.
+  /// [studyDesign] Codes categorizing the type of study such as investigational
+  ///  vs. observational, type of blinding, type of randomization, safety vs.
+  ///  efficacy, etc.
   @override
   List<CodeableConcept>? get studyDesign {
     final value = _studyDesign;
@@ -1629,16 +1593,16 @@ class _$ResearchStudyImpl extends _ResearchStudy {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [condition] The condition that is the focus of the study.  For example,
-  ///  In a study to examine risk factors for Lupus, might have as an
-  ///  inclusion criterion "healthy volunteer", but the target condition code
-  ///  would be a Lupus SNOMED code.
+  /// [condition] The condition that is the focus of the study.  For example, In
+  ///  a study to examine risk factors for Lupus, might have as an inclusion
+  ///  criterion "healthy volunteer", but the target condition code would be a
+  ///  Lupus SNOMED code.
   final List<CodeableConcept>? _condition;
 
-  /// [condition] The condition that is the focus of the study.  For example,
-  ///  In a study to examine risk factors for Lupus, might have as an
-  ///  inclusion criterion "healthy volunteer", but the target condition code
-  ///  would be a Lupus SNOMED code.
+  /// [condition] The condition that is the focus of the study.  For example, In
+  ///  a study to examine risk factors for Lupus, might have as an inclusion
+  ///  criterion "healthy volunteer", but the target condition code would be a
+  ///  Lupus SNOMED code.
   @override
   List<CodeableConcept>? get condition {
     final value = _condition;
@@ -1686,8 +1650,8 @@ class _$ResearchStudyImpl extends _ResearchStudy {
   @JsonKey(name: '_descriptionSummary')
   final Element? descriptionSummaryElement;
 
-  /// [description] A detailed and human-readable narrative of the study.
-  ///  E.g., study abstract.
+  /// [description] A detailed and human-readable narrative of the study. E.g.,
+  ///  study abstract.
   @override
   final FhirMarkdown? description;
 
@@ -1696,8 +1660,8 @@ class _$ResearchStudyImpl extends _ResearchStudy {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
 
-  /// [period] Identifies the start date and the expected (or actual,
-  ///  depending on status) end date for the study.
+  /// [period] Identifies the start date and the expected (or actual, depending
+  ///  on status) end date for the study.
   @override
   final Period? period;
 
@@ -1729,20 +1693,18 @@ class _$ResearchStudyImpl extends _ResearchStudy {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [classifier] Additional grouping mechanism or categorization of a
-  ///  research study. Example: FDA regulated device, FDA regulated drug, MPG
-  ///  Paragraph 23b (a German legal requirement), IRB-exempt, etc.
-  ///  Implementation Note: do not use the classifier element to support
-  ///  existing semantics that are already supported thru explicit elements
-  ///  in the resource.
+  /// [classifier] Additional grouping mechanism or categorization of a research
+  ///  study. Example: FDA regulated device, FDA regulated drug, MPG Paragraph
+  ///  23b (a German legal requirement), IRB-exempt, etc. Implementation Note: do
+  ///  not use the classifier element to support existing semantics that are
+  ///  already supported thru explicit elements in the resource.
   final List<CodeableConcept>? _classifier;
 
-  /// [classifier] Additional grouping mechanism or categorization of a
-  ///  research study. Example: FDA regulated device, FDA regulated drug, MPG
-  ///  Paragraph 23b (a German legal requirement), IRB-exempt, etc.
-  ///  Implementation Note: do not use the classifier element to support
-  ///  existing semantics that are already supported thru explicit elements
-  ///  in the resource.
+  /// [classifier] Additional grouping mechanism or categorization of a research
+  ///  study. Example: FDA regulated device, FDA regulated drug, MPG Paragraph
+  ///  23b (a German legal requirement), IRB-exempt, etc. Implementation Note: do
+  ///  not use the classifier element to support existing semantics that are
+  ///  already supported thru explicit elements in the resource.
   @override
   List<CodeableConcept>? get classifier {
     final value = _classifier;
@@ -1778,8 +1740,8 @@ class _$ResearchStudyImpl extends _ResearchStudy {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [whyStopped] A description and/or code explaining the premature
-  ///  termination of the study.
+  /// [whyStopped] A description and/or code explaining the premature termination
+  ///  of the study.
   @override
   final CodeableConcept? whyStopped;
 
@@ -1787,18 +1749,18 @@ class _$ResearchStudyImpl extends _ResearchStudy {
   @override
   final ResearchStudyRecruitment? recruitment;
 
-  /// [comparisonGroup] Describes an expected event or sequence of events for
-  ///  one of the subjects of a study. E.g. for a living subject: exposure to
-  ///  drug A, wash-out, exposure to drug B, wash-out, follow-up. E.g. for a
-  ///  stability study: {store sample from lot A at 25 degrees for 1 month},
-  ///  {store sample from lot A at 40 degrees for 1 month}.
+  /// [comparisonGroup] Describes an expected event or sequence of events for one
+  ///  of the subjects of a study. E.g. for a living subject: exposure to drug A,
+  ///  wash-out, exposure to drug B, wash-out, follow-up. E.g. for a stability
+  ///  study: {store sample from lot A at 25 degrees for 1 month}, {store sample
+  ///  from lot A at 40 degrees for 1 month}.
   final List<ResearchStudyComparisonGroup>? _comparisonGroup;
 
-  /// [comparisonGroup] Describes an expected event or sequence of events for
-  ///  one of the subjects of a study. E.g. for a living subject: exposure to
-  ///  drug A, wash-out, exposure to drug B, wash-out, follow-up. E.g. for a
-  ///  stability study: {store sample from lot A at 25 degrees for 1 month},
-  ///  {store sample from lot A at 40 degrees for 1 month}.
+  /// [comparisonGroup] Describes an expected event or sequence of events for one
+  ///  of the subjects of a study. E.g. for a living subject: exposure to drug A,
+  ///  wash-out, exposure to drug B, wash-out, follow-up. E.g. for a stability
+  ///  study: {store sample from lot A at 25 degrees for 1 month}, {store sample
+  ///  from lot A at 40 degrees for 1 month}.
   @override
   List<ResearchStudyComparisonGroup>? get comparisonGroup {
     final value = _comparisonGroup;
@@ -1828,15 +1790,15 @@ class _$ResearchStudyImpl extends _ResearchStudy {
   /// [outcomeMeasure] An "outcome measure", "endpoint", "effect measure" or
   ///  "measure of effect" is a specific measurement or observation used to
   ///  quantify the effect of experimental variables on the participants in a
-  ///  study, or for observational studies, to describe patterns of diseases
-  ///  or traits or associations with exposures, risk factors or treatment.
+  ///  study, or for observational studies, to describe patterns of diseases or
+  ///  traits or associations with exposures, risk factors or treatment.
   final List<ResearchStudyOutcomeMeasure>? _outcomeMeasure;
 
   /// [outcomeMeasure] An "outcome measure", "endpoint", "effect measure" or
   ///  "measure of effect" is a specific measurement or observation used to
   ///  quantify the effect of experimental variables on the participants in a
-  ///  study, or for observational studies, to describe patterns of diseases
-  ///  or traits or associations with exposures, risk factors or treatment.
+  ///  study, or for observational studies, to describe patterns of diseases or
+  ///  traits or associations with exposures, risk factors or treatment.
   @override
   List<ResearchStudyOutcomeMeasure>? get outcomeMeasure {
     final value = _outcomeMeasure;
@@ -1846,13 +1808,13 @@ class _$ResearchStudyImpl extends _ResearchStudy {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [result] Link to one or more sets of results generated by the study.
-  ///  Could also link to a research registry holding the results such as
+  /// [result] Link to one or more sets of results generated by the study.  Could
+  ///  also link to a research registry holding the results such as
   ///  ClinicalTrials.gov.
   final List<Reference>? _result;
 
-  /// [result] Link to one or more sets of results generated by the study.
-  ///  Could also link to a research registry holding the results such as
+  /// [result] Link to one or more sets of results generated by the study.  Could
+  ///  also link to a research registry holding the results such as
   ///  ClinicalTrials.gov.
   @override
   List<Reference>? get result {
@@ -1865,7 +1827,7 @@ class _$ResearchStudyImpl extends _ResearchStudy {
 
   @override
   String toString() {
-    return 'ResearchStudy(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, label: $label, protocol: $protocol, partOf: $partOf, relatedArtifact: $relatedArtifact, date: $date, dateElement: $dateElement, status: $status, statusElement: $statusElement, primaryPurposeType: $primaryPurposeType, phase: $phase, studyDesign: $studyDesign, focus: $focus, condition: $condition, keyword: $keyword, region: $region, descriptionSummary: $descriptionSummary, descriptionSummaryElement: $descriptionSummaryElement, description: $description, descriptionElement: $descriptionElement, period: $period, site: $site, note: $note, classifier: $classifier, associatedParty: $associatedParty, progressStatus: $progressStatus, whyStopped: $whyStopped, recruitment: $recruitment, comparisonGroup: $comparisonGroup, objective: $objective, outcomeMeasure: $outcomeMeasure, result: $result)';
+    return 'ResearchStudy(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, label: $label, protocol: $protocol, partOf: $partOf, relatedArtifact: $relatedArtifact, date: $date, dateElement: $dateElement, status: $status, statusElement: $statusElement, primaryPurposeType: $primaryPurposeType, phase: $phase, studyDesign: $studyDesign, focus: $focus, condition: $condition, keyword: $keyword, region: $region, descriptionSummary: $descriptionSummary, descriptionSummaryElement: $descriptionSummaryElement, description: $description, descriptionElement: $descriptionElement, period: $period, site: $site, note: $note, classifier: $classifier, associatedParty: $associatedParty, progressStatus: $progressStatus, whyStopped: $whyStopped, recruitment: $recruitment, comparisonGroup: $comparisonGroup, objective: $objective, outcomeMeasure: $outcomeMeasure, result: $result)';
   }
 
   @override
@@ -1875,8 +1837,7 @@ class _$ResearchStudyImpl extends _ResearchStudy {
             other is _$ResearchStudyImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
-            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
@@ -1964,8 +1925,7 @@ class _$ResearchStudyImpl extends _ResearchStudy {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
-        fhirId,
+        id,
         meta,
         implicitRules,
         implicitRulesElement,
@@ -2035,8 +1995,7 @@ abstract class _ResearchStudy extends ResearchStudy {
   const factory _ResearchStudy(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
       final R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
-      @JsonKey(name: 'id') final FhirId? fhirId,
+      final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
@@ -2098,27 +2057,22 @@ abstract class _ResearchStudy extends ResearchStudy {
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
   R5ResourceType get resourceType;
   @override
-  @JsonKey(includeFromJson: true, includeToJson: false)
-  int? get dbId;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  FhirId? get id;
   @override
 
-  /// [id] The logical id of the resource, as used in the URL for the
-  ///  resource. Once assigned, this value never changes.
-  @JsonKey(name: 'id')
-  FhirId? get fhirId;
-  @override
-
-  /// [meta] The metadata about the resource. This is content that is
-  ///  maintained by the infrastructure. Changes to the content might not
-  ///  always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is maintained
+  ///  by the infrastructure. Changes to the content might not always be
+  ///  associated with version changes to the resource.
   FhirMeta? get meta;
   @override
 
-  /// [implicitRules] A reference to a set of rules that were followed when
-  ///  the resource was constructed, and which must be understood when
-  ///  processing the content. Often, this is a reference to an
-  ///  implementation guide that defines the special rules along with other
-  ///  profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing the
+  ///  content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
 
@@ -2136,48 +2090,45 @@ abstract class _ResearchStudy extends ResearchStudy {
   Element? get languageElement;
   @override
 
-  /// [text] A human-readable narrative that contains a summary of the
-  ///  resource and can be used to represent the content of the resource to a
-  ///  human. The narrative need not encode all the structured data, but is
-  ///  required to contain sufficient detail to make it "clinically safe" for
-  ///  a human to just read the narrative. Resource definitions may define
-  ///  what content should be represented in the narrative to ensure clinical
-  ///  safety.
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to just
+  ///  read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
 
-  /// [contained] These resources do not have an independent existence apart
-  ///  from the resource that contains them - they cannot be identified
-  ///  independently, nor can they have their own independent transaction
-  ///  scope. This is allowed to be a Parameters resource if and only if it
-  ///  is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart from
+  ///  the resource that contains them - they cannot be identified independently,
+  ///  nor can they have their own independent transaction scope. This is allowed
+  ///  to be a Parameters resource if and only if it is referenced by a resource
+  ///  that provides context/meaning.
   List<Resource>? get contained;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the resource.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the resource. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the resource and that
-  ///  modifies the understanding of the element that contains it and/or the
-  ///  understanding of the containing element's descendants. Usually
-  ///  modifier elements provide negation or qualification. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any
-  ///  implementer is allowed to define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension. Applications processing a resource are required to check
-  ///  for modifier extensions.Modifier extensions SHALL NOT change the
-  ///  meaning of any elements on Resource or DomainResource (including
-  ///  cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the resource and that modifies the
+  ///  understanding of the element that contains it and/or the understanding of
+  ///  the containing element's descendants. Usually modifier elements provide
+  ///  negation or qualification. To make the use of extensions safe and
+  ///  managable, there is a strict set of governance applied to the definition
+  ///  and use of extensions. Though any implementer is allowed to define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -2191,8 +2142,8 @@ abstract class _ResearchStudy extends ResearchStudy {
   Element? get urlElement;
   @override
 
-  /// [identifier] Identifiers assigned to this research study by the sponsor
-  ///  or other systems.
+  /// [identifier] Identifiers assigned to this research study by the sponsor or
+  ///  other systems.
   List<Identifier>? get identifier;
   @override
 
@@ -2237,20 +2188,19 @@ abstract class _ResearchStudy extends ResearchStudy {
   List<Reference>? get partOf;
   @override
 
-  /// [relatedArtifact] Citations, references, URLs and other related
-  ///  documents.  When using relatedArtifact to share URLs, the
-  ///  relatedArtifact.type will often be set to one of "documentation" or
-  ///  "supported-with" and the URL value will often be in
-  ///  relatedArtifact.document.url but another possible location is
-  ///  relatedArtifact.resource when it is a canonical URL.
+  /// [relatedArtifact] Citations, references, URLs and other related documents.
+  ///  When using relatedArtifact to share URLs, the relatedArtifact.type will
+  ///  often be set to one of "documentation" or "supported-with" and the URL
+  ///  value will often be in relatedArtifact.document.url but another possible
+  ///  location is relatedArtifact.resource when it is a canonical URL.
   List<RelatedArtifact>? get relatedArtifact;
   @override
 
-  /// [date] The date (and optionally time) when the ResearchStudy Resource
-  ///  was last significantly changed. The date must change when the business
-  ///  version changes and it must change if the status code changes. In
-  ///  addition, it should change when the substantive content of the
-  ///  ResearchStudy Resource changes.
+  /// [date] The date (and optionally time) when the ResearchStudy Resource was
+  ///  last significantly changed. The date must change when the business version
+  ///  changes and it must change if the status code changes. In addition, it
+  ///  should change when the substantive content of the ResearchStudy Resource
+  ///  changes.
   FhirDateTime? get date;
   @override
 
@@ -2268,20 +2218,19 @@ abstract class _ResearchStudy extends ResearchStudy {
   Element? get statusElement;
   @override
 
-  /// [primaryPurposeType] The type of study based upon the intent of the
-  ///  study activities. A classification of the intent of the study.
+  /// [primaryPurposeType] The type of study based upon the intent of the study
+  ///  activities. A classification of the intent of the study.
   CodeableConcept? get primaryPurposeType;
   @override
 
-  /// [phase] The stage in the progression of a therapy from initial
-  ///  experimental use in humans in clinical trials to post-market
-  ///  evaluation.
+  /// [phase] The stage in the progression of a therapy from initial experimental
+  ///  use in humans in clinical trials to post-market evaluation.
   CodeableConcept? get phase;
   @override
 
-  /// [studyDesign] Codes categorizing the type of study such as
-  ///  investigational vs. observational, type of blinding, type of
-  ///  randomization, safety vs. efficacy, etc.
+  /// [studyDesign] Codes categorizing the type of study such as investigational
+  ///  vs. observational, type of blinding, type of randomization, safety vs.
+  ///  efficacy, etc.
   List<CodeableConcept>? get studyDesign;
   @override
 
@@ -2291,10 +2240,10 @@ abstract class _ResearchStudy extends ResearchStudy {
   List<CodeableReference>? get focus;
   @override
 
-  /// [condition] The condition that is the focus of the study.  For example,
-  ///  In a study to examine risk factors for Lupus, might have as an
-  ///  inclusion criterion "healthy volunteer", but the target condition code
-  ///  would be a Lupus SNOMED code.
+  /// [condition] The condition that is the focus of the study.  For example, In
+  ///  a study to examine risk factors for Lupus, might have as an inclusion
+  ///  criterion "healthy volunteer", but the target condition code would be a
+  ///  Lupus SNOMED code.
   List<CodeableConcept>? get condition;
   @override
 
@@ -2317,8 +2266,8 @@ abstract class _ResearchStudy extends ResearchStudy {
   Element? get descriptionSummaryElement;
   @override
 
-  /// [description] A detailed and human-readable narrative of the study.
-  ///  E.g., study abstract.
+  /// [description] A detailed and human-readable narrative of the study. E.g.,
+  ///  study abstract.
   FhirMarkdown? get description;
   @override
 
@@ -2327,8 +2276,8 @@ abstract class _ResearchStudy extends ResearchStudy {
   Element? get descriptionElement;
   @override
 
-  /// [period] Identifies the start date and the expected (or actual,
-  ///  depending on status) end date for the study.
+  /// [period] Identifies the start date and the expected (or actual, depending
+  ///  on status) end date for the study.
   Period? get period;
   @override
 
@@ -2341,12 +2290,11 @@ abstract class _ResearchStudy extends ResearchStudy {
   List<Annotation>? get note;
   @override
 
-  /// [classifier] Additional grouping mechanism or categorization of a
-  ///  research study. Example: FDA regulated device, FDA regulated drug, MPG
-  ///  Paragraph 23b (a German legal requirement), IRB-exempt, etc.
-  ///  Implementation Note: do not use the classifier element to support
-  ///  existing semantics that are already supported thru explicit elements
-  ///  in the resource.
+  /// [classifier] Additional grouping mechanism or categorization of a research
+  ///  study. Example: FDA regulated device, FDA regulated drug, MPG Paragraph
+  ///  23b (a German legal requirement), IRB-exempt, etc. Implementation Note: do
+  ///  not use the classifier element to support existing semantics that are
+  ///  already supported thru explicit elements in the resource.
   List<CodeableConcept>? get classifier;
   @override
 
@@ -2358,8 +2306,8 @@ abstract class _ResearchStudy extends ResearchStudy {
   List<ResearchStudyProgressStatus>? get progressStatus;
   @override
 
-  /// [whyStopped] A description and/or code explaining the premature
-  ///  termination of the study.
+  /// [whyStopped] A description and/or code explaining the premature termination
+  ///  of the study.
   CodeableConcept? get whyStopped;
   @override
 
@@ -2367,11 +2315,11 @@ abstract class _ResearchStudy extends ResearchStudy {
   ResearchStudyRecruitment? get recruitment;
   @override
 
-  /// [comparisonGroup] Describes an expected event or sequence of events for
-  ///  one of the subjects of a study. E.g. for a living subject: exposure to
-  ///  drug A, wash-out, exposure to drug B, wash-out, follow-up. E.g. for a
-  ///  stability study: {store sample from lot A at 25 degrees for 1 month},
-  ///  {store sample from lot A at 40 degrees for 1 month}.
+  /// [comparisonGroup] Describes an expected event or sequence of events for one
+  ///  of the subjects of a study. E.g. for a living subject: exposure to drug A,
+  ///  wash-out, exposure to drug B, wash-out, follow-up. E.g. for a stability
+  ///  study: {store sample from lot A at 25 degrees for 1 month}, {store sample
+  ///  from lot A at 40 degrees for 1 month}.
   List<ResearchStudyComparisonGroup>? get comparisonGroup;
   @override
 
@@ -2384,13 +2332,13 @@ abstract class _ResearchStudy extends ResearchStudy {
   /// [outcomeMeasure] An "outcome measure", "endpoint", "effect measure" or
   ///  "measure of effect" is a specific measurement or observation used to
   ///  quantify the effect of experimental variables on the participants in a
-  ///  study, or for observational studies, to describe patterns of diseases
-  ///  or traits or associations with exposures, risk factors or treatment.
+  ///  study, or for observational studies, to describe patterns of diseases or
+  ///  traits or associations with exposures, risk factors or treatment.
   List<ResearchStudyOutcomeMeasure>? get outcomeMeasure;
   @override
 
-  /// [result] Link to one or more sets of results generated by the study.
-  ///  Could also link to a research registry holding the results such as
+  /// [result] Link to one or more sets of results generated by the study.  Could
+  ///  also link to a research registry holding the results such as
   ///  ClinicalTrials.gov.
   List<Reference>? get result;
   @override
@@ -2405,34 +2353,31 @@ ResearchStudyLabel _$ResearchStudyLabelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ResearchStudyLabel {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId => throw _privateConstructorUsedError;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -2459,7 +2404,7 @@ abstract class $ResearchStudyLabelCopyWith<$Res> {
       _$ResearchStudyLabelCopyWithImpl<$Res, ResearchStudyLabel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? type,
@@ -2483,7 +2428,7 @@ class _$ResearchStudyLabelCopyWithImpl<$Res, $Val extends ResearchStudyLabel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? type = freezed,
@@ -2491,9 +2436,9 @@ class _$ResearchStudyLabelCopyWithImpl<$Res, $Val extends ResearchStudyLabel>
     Object? valueElement = freezed,
   }) {
     return _then(_value.copyWith(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -2552,7 +2497,7 @@ abstract class _$$ResearchStudyLabelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? type,
@@ -2576,7 +2521,7 @@ class __$$ResearchStudyLabelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? type = freezed,
@@ -2584,9 +2529,9 @@ class __$$ResearchStudyLabelImplCopyWithImpl<$Res>
     Object? valueElement = freezed,
   }) {
     return _then(_$ResearchStudyLabelImpl(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -2616,7 +2561,7 @@ class __$$ResearchStudyLabelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ResearchStudyLabelImpl extends _ResearchStudyLabel {
   const _$ResearchStudyLabelImpl(
-      {@JsonKey(name: 'id') this.fhirId,
+      {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.type,
@@ -2629,28 +2574,25 @@ class _$ResearchStudyLabelImpl extends _ResearchStudyLabel {
   factory _$ResearchStudyLabelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ResearchStudyLabelImplFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   @override
-  @JsonKey(name: 'id')
-  final String? fhirId;
+  final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -2661,34 +2603,32 @@ class _$ResearchStudyLabelImpl extends _ResearchStudyLabel {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -2714,7 +2654,7 @@ class _$ResearchStudyLabelImpl extends _ResearchStudyLabel {
 
   @override
   String toString() {
-    return 'ResearchStudyLabel(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, value: $value, valueElement: $valueElement)';
+    return 'ResearchStudyLabel(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, value: $value, valueElement: $valueElement)';
   }
 
   @override
@@ -2722,7 +2662,7 @@ class _$ResearchStudyLabelImpl extends _ResearchStudyLabel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResearchStudyLabelImpl &&
-            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -2737,7 +2677,7 @@ class _$ResearchStudyLabelImpl extends _ResearchStudyLabel {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      fhirId,
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       type,
@@ -2761,7 +2701,7 @@ class _$ResearchStudyLabelImpl extends _ResearchStudyLabel {
 
 abstract class _ResearchStudyLabel extends ResearchStudyLabel {
   const factory _ResearchStudyLabel(
-          {@JsonKey(name: 'id') final String? fhirId,
+          {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? type,
@@ -2775,36 +2715,33 @@ abstract class _ResearchStudyLabel extends ResearchStudyLabel {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -2832,34 +2769,31 @@ ResearchStudyAssociatedParty _$ResearchStudyAssociatedPartyFromJson(
 
 /// @nodoc
 mixin _$ResearchStudyAssociatedParty {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId => throw _privateConstructorUsedError;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -2873,8 +2807,8 @@ mixin _$ResearchStudyAssociatedParty {
   /// [role] Type of association.
   CodeableConcept get role => throw _privateConstructorUsedError;
 
-  /// [period] Identifies the start date and the end date of the associated
-  ///  party in the role.
+  /// [period] Identifies the start date and the end date of the associated party
+  ///  in the role.
   List<Period>? get period => throw _privateConstructorUsedError;
 
   /// [classifier] A categorization other than role for the associated party.
@@ -2899,7 +2833,7 @@ abstract class $ResearchStudyAssociatedPartyCopyWith<$Res> {
           ResearchStudyAssociatedParty>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -2928,7 +2862,7 @@ class _$ResearchStudyAssociatedPartyCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = freezed,
@@ -2939,9 +2873,9 @@ class _$ResearchStudyAssociatedPartyCopyWithImpl<$Res,
     Object? party = freezed,
   }) {
     return _then(_value.copyWith(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -3021,7 +2955,7 @@ abstract class _$$ResearchStudyAssociatedPartyImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -3052,7 +2986,7 @@ class __$$ResearchStudyAssociatedPartyImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = freezed,
@@ -3063,9 +2997,9 @@ class __$$ResearchStudyAssociatedPartyImplCopyWithImpl<$Res>
     Object? party = freezed,
   }) {
     return _then(_$ResearchStudyAssociatedPartyImpl(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -3107,7 +3041,7 @@ class __$$ResearchStudyAssociatedPartyImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ResearchStudyAssociatedPartyImpl extends _ResearchStudyAssociatedParty {
   const _$ResearchStudyAssociatedPartyImpl(
-      {@JsonKey(name: 'id') this.fhirId,
+      {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.name,
@@ -3126,28 +3060,25 @@ class _$ResearchStudyAssociatedPartyImpl extends _ResearchStudyAssociatedParty {
           Map<String, dynamic> json) =>
       _$$ResearchStudyAssociatedPartyImplFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   @override
-  @JsonKey(name: 'id')
-  final String? fhirId;
+  final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -3158,34 +3089,32 @@ class _$ResearchStudyAssociatedPartyImpl extends _ResearchStudyAssociatedParty {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -3209,12 +3138,12 @@ class _$ResearchStudyAssociatedPartyImpl extends _ResearchStudyAssociatedParty {
   @override
   final CodeableConcept role;
 
-  /// [period] Identifies the start date and the end date of the associated
-  ///  party in the role.
+  /// [period] Identifies the start date and the end date of the associated party
+  ///  in the role.
   final List<Period>? _period;
 
-  /// [period] Identifies the start date and the end date of the associated
-  ///  party in the role.
+  /// [period] Identifies the start date and the end date of the associated party
+  ///  in the role.
   @override
   List<Period>? get period {
     final value = _period;
@@ -3244,7 +3173,7 @@ class _$ResearchStudyAssociatedPartyImpl extends _ResearchStudyAssociatedParty {
 
   @override
   String toString() {
-    return 'ResearchStudyAssociatedParty(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, role: $role, period: $period, classifier: $classifier, party: $party)';
+    return 'ResearchStudyAssociatedParty(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, role: $role, period: $period, classifier: $classifier, party: $party)';
   }
 
   @override
@@ -3252,7 +3181,7 @@ class _$ResearchStudyAssociatedPartyImpl extends _ResearchStudyAssociatedParty {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResearchStudyAssociatedPartyImpl &&
-            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -3271,7 +3200,7 @@ class _$ResearchStudyAssociatedPartyImpl extends _ResearchStudyAssociatedParty {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      fhirId,
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       name,
@@ -3300,7 +3229,7 @@ class _$ResearchStudyAssociatedPartyImpl extends _ResearchStudyAssociatedParty {
 abstract class _ResearchStudyAssociatedParty
     extends ResearchStudyAssociatedParty {
   const factory _ResearchStudyAssociatedParty(
-      {@JsonKey(name: 'id') final String? fhirId,
+      {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
@@ -3316,36 +3245,33 @@ abstract class _ResearchStudyAssociatedParty
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -3362,8 +3288,8 @@ abstract class _ResearchStudyAssociatedParty
   CodeableConcept get role;
   @override
 
-  /// [period] Identifies the start date and the end date of the associated
-  ///  party in the role.
+  /// [period] Identifies the start date and the end date of the associated party
+  ///  in the role.
   List<Period>? get period;
   @override
 
@@ -3388,43 +3314,40 @@ ResearchStudyProgressStatus _$ResearchStudyProgressStatusFromJson(
 
 /// @nodoc
 mixin _$ResearchStudyProgressStatus {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId => throw _privateConstructorUsedError;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
   /// [state] Label for status or state (e.g. recruitment status).
   CodeableConcept get state => throw _privateConstructorUsedError;
 
-  /// [actual] An indication of whether or not the date is a known date when
-  ///  the state changed or will change. A value of true indicates a known
-  ///  date. A value of false indicates an estimated date.
+  /// [actual] An indication of whether or not the date is a known date when the
+  ///  state changed or will change. A value of true indicates a known date. A
+  ///  value of false indicates an estimated date.
   FhirBoolean? get actual => throw _privateConstructorUsedError;
 
   /// [actualElement] ("_actual") Extensions for actual
@@ -3449,7 +3372,7 @@ abstract class $ResearchStudyProgressStatusCopyWith<$Res> {
           ResearchStudyProgressStatus>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept state,
@@ -3476,7 +3399,7 @@ class _$ResearchStudyProgressStatusCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? state = null,
@@ -3485,9 +3408,9 @@ class _$ResearchStudyProgressStatusCopyWithImpl<$Res,
     Object? period = freezed,
   }) {
     return _then(_value.copyWith(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -3559,7 +3482,7 @@ abstract class _$$ResearchStudyProgressStatusImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept state,
@@ -3588,7 +3511,7 @@ class __$$ResearchStudyProgressStatusImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? state = null,
@@ -3597,9 +3520,9 @@ class __$$ResearchStudyProgressStatusImplCopyWithImpl<$Res>
     Object? period = freezed,
   }) {
     return _then(_$ResearchStudyProgressStatusImpl(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -3633,7 +3556,7 @@ class __$$ResearchStudyProgressStatusImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ResearchStudyProgressStatusImpl extends _ResearchStudyProgressStatus {
   const _$ResearchStudyProgressStatusImpl(
-      {@JsonKey(name: 'id') this.fhirId,
+      {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required this.state,
@@ -3648,28 +3571,25 @@ class _$ResearchStudyProgressStatusImpl extends _ResearchStudyProgressStatus {
           Map<String, dynamic> json) =>
       _$$ResearchStudyProgressStatusImplFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   @override
-  @JsonKey(name: 'id')
-  final String? fhirId;
+  final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -3680,34 +3600,32 @@ class _$ResearchStudyProgressStatusImpl extends _ResearchStudyProgressStatus {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -3722,9 +3640,9 @@ class _$ResearchStudyProgressStatusImpl extends _ResearchStudyProgressStatus {
   @override
   final CodeableConcept state;
 
-  /// [actual] An indication of whether or not the date is a known date when
-  ///  the state changed or will change. A value of true indicates a known
-  ///  date. A value of false indicates an estimated date.
+  /// [actual] An indication of whether or not the date is a known date when the
+  ///  state changed or will change. A value of true indicates a known date. A
+  ///  value of false indicates an estimated date.
   @override
   final FhirBoolean? actual;
 
@@ -3739,7 +3657,7 @@ class _$ResearchStudyProgressStatusImpl extends _ResearchStudyProgressStatus {
 
   @override
   String toString() {
-    return 'ResearchStudyProgressStatus(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, state: $state, actual: $actual, actualElement: $actualElement, period: $period)';
+    return 'ResearchStudyProgressStatus(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, state: $state, actual: $actual, actualElement: $actualElement, period: $period)';
   }
 
   @override
@@ -3747,7 +3665,7 @@ class _$ResearchStudyProgressStatusImpl extends _ResearchStudyProgressStatus {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResearchStudyProgressStatusImpl &&
-            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -3763,7 +3681,7 @@ class _$ResearchStudyProgressStatusImpl extends _ResearchStudyProgressStatus {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      fhirId,
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       state,
@@ -3789,7 +3707,7 @@ class _$ResearchStudyProgressStatusImpl extends _ResearchStudyProgressStatus {
 abstract class _ResearchStudyProgressStatus
     extends ResearchStudyProgressStatus {
   const factory _ResearchStudyProgressStatus(
-      {@JsonKey(name: 'id') final String? fhirId,
+      {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final CodeableConcept state,
@@ -3803,36 +3721,33 @@ abstract class _ResearchStudyProgressStatus
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -3840,9 +3755,9 @@ abstract class _ResearchStudyProgressStatus
   CodeableConcept get state;
   @override
 
-  /// [actual] An indication of whether or not the date is a known date when
-  ///  the state changed or will change. A value of true indicates a known
-  ///  date. A value of false indicates an estimated date.
+  /// [actual] An indication of whether or not the date is a known date when the
+  ///  state changed or will change. A value of true indicates a known date. A
+  ///  value of false indicates an estimated date.
   FhirBoolean? get actual;
   @override
 
@@ -3866,34 +3781,31 @@ ResearchStudyRecruitment _$ResearchStudyRecruitmentFromJson(
 
 /// @nodoc
 mixin _$ResearchStudyRecruitment {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId => throw _privateConstructorUsedError;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -3930,7 +3842,7 @@ abstract class $ResearchStudyRecruitmentCopyWith<$Res> {
       _$ResearchStudyRecruitmentCopyWithImpl<$Res, ResearchStudyRecruitment>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUnsignedInt? targetNumber,
@@ -3960,7 +3872,7 @@ class _$ResearchStudyRecruitmentCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? targetNumber = freezed,
@@ -3971,9 +3883,9 @@ class _$ResearchStudyRecruitmentCopyWithImpl<$Res,
     Object? actualGroup = freezed,
   }) {
     return _then(_value.copyWith(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -4069,7 +3981,7 @@ abstract class _$$ResearchStudyRecruitmentImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUnsignedInt? targetNumber,
@@ -4102,7 +4014,7 @@ class __$$ResearchStudyRecruitmentImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? targetNumber = freezed,
@@ -4113,9 +4025,9 @@ class __$$ResearchStudyRecruitmentImplCopyWithImpl<$Res>
     Object? actualGroup = freezed,
   }) {
     return _then(_$ResearchStudyRecruitmentImpl(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -4157,7 +4069,7 @@ class __$$ResearchStudyRecruitmentImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ResearchStudyRecruitmentImpl extends _ResearchStudyRecruitment {
   const _$ResearchStudyRecruitmentImpl(
-      {@JsonKey(name: 'id') this.fhirId,
+      {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.targetNumber,
@@ -4173,28 +4085,25 @@ class _$ResearchStudyRecruitmentImpl extends _ResearchStudyRecruitment {
   factory _$ResearchStudyRecruitmentImpl.fromJson(Map<String, dynamic> json) =>
       _$$ResearchStudyRecruitmentImplFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   @override
-  @JsonKey(name: 'id')
-  final String? fhirId;
+  final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -4205,34 +4114,32 @@ class _$ResearchStudyRecruitmentImpl extends _ResearchStudyRecruitment {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -4271,7 +4178,7 @@ class _$ResearchStudyRecruitmentImpl extends _ResearchStudyRecruitment {
 
   @override
   String toString() {
-    return 'ResearchStudyRecruitment(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, targetNumber: $targetNumber, targetNumberElement: $targetNumberElement, actualNumber: $actualNumber, actualNumberElement: $actualNumberElement, eligibility: $eligibility, actualGroup: $actualGroup)';
+    return 'ResearchStudyRecruitment(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, targetNumber: $targetNumber, targetNumberElement: $targetNumberElement, actualNumber: $actualNumber, actualNumberElement: $actualNumberElement, eligibility: $eligibility, actualGroup: $actualGroup)';
   }
 
   @override
@@ -4279,7 +4186,7 @@ class _$ResearchStudyRecruitmentImpl extends _ResearchStudyRecruitment {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResearchStudyRecruitmentImpl &&
-            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -4302,7 +4209,7 @@ class _$ResearchStudyRecruitmentImpl extends _ResearchStudyRecruitment {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      fhirId,
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       targetNumber,
@@ -4329,7 +4236,7 @@ class _$ResearchStudyRecruitmentImpl extends _ResearchStudyRecruitment {
 
 abstract class _ResearchStudyRecruitment extends ResearchStudyRecruitment {
   const factory _ResearchStudyRecruitment(
-      {@JsonKey(name: 'id') final String? fhirId,
+      {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirUnsignedInt? targetNumber,
@@ -4345,36 +4252,33 @@ abstract class _ResearchStudyRecruitment extends ResearchStudyRecruitment {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -4415,55 +4319,51 @@ ResearchStudyComparisonGroup _$ResearchStudyComparisonGroupFromJson(
 
 /// @nodoc
 mixin _$ResearchStudyComparisonGroup {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId => throw _privateConstructorUsedError;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
-  /// [linkId] Allows the comparisonGroup for the study and the
-  ///  comparisonGroup for the subject to be linked easily.
+  /// [linkId] Allows the comparisonGroup for the study and the comparisonGroup
+  ///  for the subject to be linked easily.
   FhirId? get linkId => throw _privateConstructorUsedError;
 
   /// [linkIdElement] ("_linkId") Extensions for linkId
   @JsonKey(name: '_linkId')
   Element? get linkIdElement => throw _privateConstructorUsedError;
 
-  /// [name] Unique, human-readable label for this comparisonGroup of the
-  ///  study.
+  /// [name] Unique, human-readable label for this comparisonGroup of the study.
   String? get name => throw _privateConstructorUsedError;
 
   /// [nameElement] ("_name") Extensions for name
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
 
-  /// [type] Categorization of study comparisonGroup, e.g. experimental,
-  ///  active comparator, placebo comparater.
+  /// [type] Categorization of study comparisonGroup, e.g. experimental, active
+  ///  comparator, placebo comparater.
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [description] A succinct description of the path through the study that
@@ -4474,8 +4374,8 @@ mixin _$ResearchStudyComparisonGroup {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
 
-  /// [intendedExposure] Interventions or exposures in this comparisonGroup
-  ///  or cohort.
+  /// [intendedExposure] Interventions or exposures in this comparisonGroup or
+  ///  cohort.
   List<Reference>? get intendedExposure => throw _privateConstructorUsedError;
 
   /// [observedGroup] Group of participants who were enrolled in study
@@ -4497,7 +4397,7 @@ abstract class $ResearchStudyComparisonGroupCopyWith<$Res> {
           ResearchStudyComparisonGroup>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirId? linkId,
@@ -4531,7 +4431,7 @@ class _$ResearchStudyComparisonGroupCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? linkId = freezed,
@@ -4545,9 +4445,9 @@ class _$ResearchStudyComparisonGroupCopyWithImpl<$Res,
     Object? observedGroup = freezed,
   }) {
     return _then(_value.copyWith(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -4667,7 +4567,7 @@ abstract class _$$ResearchStudyComparisonGroupImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirId? linkId,
@@ -4705,7 +4605,7 @@ class __$$ResearchStudyComparisonGroupImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? linkId = freezed,
@@ -4719,9 +4619,9 @@ class __$$ResearchStudyComparisonGroupImplCopyWithImpl<$Res>
     Object? observedGroup = freezed,
   }) {
     return _then(_$ResearchStudyComparisonGroupImpl(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -4775,7 +4675,7 @@ class __$$ResearchStudyComparisonGroupImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ResearchStudyComparisonGroupImpl extends _ResearchStudyComparisonGroup {
   const _$ResearchStudyComparisonGroupImpl(
-      {@JsonKey(name: 'id') this.fhirId,
+      {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.linkId,
@@ -4796,28 +4696,25 @@ class _$ResearchStudyComparisonGroupImpl extends _ResearchStudyComparisonGroup {
           Map<String, dynamic> json) =>
       _$$ResearchStudyComparisonGroupImplFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   @override
-  @JsonKey(name: 'id')
-  final String? fhirId;
+  final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -4828,34 +4725,32 @@ class _$ResearchStudyComparisonGroupImpl extends _ResearchStudyComparisonGroup {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -4866,8 +4761,8 @@ class _$ResearchStudyComparisonGroupImpl extends _ResearchStudyComparisonGroup {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [linkId] Allows the comparisonGroup for the study and the
-  ///  comparisonGroup for the subject to be linked easily.
+  /// [linkId] Allows the comparisonGroup for the study and the comparisonGroup
+  ///  for the subject to be linked easily.
   @override
   final FhirId? linkId;
 
@@ -4876,8 +4771,7 @@ class _$ResearchStudyComparisonGroupImpl extends _ResearchStudyComparisonGroup {
   @JsonKey(name: '_linkId')
   final Element? linkIdElement;
 
-  /// [name] Unique, human-readable label for this comparisonGroup of the
-  ///  study.
+  /// [name] Unique, human-readable label for this comparisonGroup of the study.
   @override
   final String? name;
 
@@ -4886,8 +4780,8 @@ class _$ResearchStudyComparisonGroupImpl extends _ResearchStudyComparisonGroup {
   @JsonKey(name: '_name')
   final Element? nameElement;
 
-  /// [type] Categorization of study comparisonGroup, e.g. experimental,
-  ///  active comparator, placebo comparater.
+  /// [type] Categorization of study comparisonGroup, e.g. experimental, active
+  ///  comparator, placebo comparater.
   @override
   final CodeableConcept? type;
 
@@ -4901,12 +4795,12 @@ class _$ResearchStudyComparisonGroupImpl extends _ResearchStudyComparisonGroup {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
 
-  /// [intendedExposure] Interventions or exposures in this comparisonGroup
-  ///  or cohort.
+  /// [intendedExposure] Interventions or exposures in this comparisonGroup or
+  ///  cohort.
   final List<Reference>? _intendedExposure;
 
-  /// [intendedExposure] Interventions or exposures in this comparisonGroup
-  ///  or cohort.
+  /// [intendedExposure] Interventions or exposures in this comparisonGroup or
+  ///  cohort.
   @override
   List<Reference>? get intendedExposure {
     final value = _intendedExposure;
@@ -4924,7 +4818,7 @@ class _$ResearchStudyComparisonGroupImpl extends _ResearchStudyComparisonGroup {
 
   @override
   String toString() {
-    return 'ResearchStudyComparisonGroup(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, linkId: $linkId, linkIdElement: $linkIdElement, name: $name, nameElement: $nameElement, type: $type, description: $description, descriptionElement: $descriptionElement, intendedExposure: $intendedExposure, observedGroup: $observedGroup)';
+    return 'ResearchStudyComparisonGroup(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, linkId: $linkId, linkIdElement: $linkIdElement, name: $name, nameElement: $nameElement, type: $type, description: $description, descriptionElement: $descriptionElement, intendedExposure: $intendedExposure, observedGroup: $observedGroup)';
   }
 
   @override
@@ -4932,7 +4826,7 @@ class _$ResearchStudyComparisonGroupImpl extends _ResearchStudyComparisonGroup {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResearchStudyComparisonGroupImpl &&
-            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -4958,7 +4852,7 @@ class _$ResearchStudyComparisonGroupImpl extends _ResearchStudyComparisonGroup {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      fhirId,
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       linkId,
@@ -4990,7 +4884,7 @@ class _$ResearchStudyComparisonGroupImpl extends _ResearchStudyComparisonGroup {
 abstract class _ResearchStudyComparisonGroup
     extends ResearchStudyComparisonGroup {
   const factory _ResearchStudyComparisonGroup(
-      {@JsonKey(name: 'id') final String? fhirId,
+      {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final FhirId? linkId,
@@ -5009,41 +4903,38 @@ abstract class _ResearchStudyComparisonGroup
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
 
-  /// [linkId] Allows the comparisonGroup for the study and the
-  ///  comparisonGroup for the subject to be linked easily.
+  /// [linkId] Allows the comparisonGroup for the study and the comparisonGroup
+  ///  for the subject to be linked easily.
   FhirId? get linkId;
   @override
 
@@ -5052,8 +4943,7 @@ abstract class _ResearchStudyComparisonGroup
   Element? get linkIdElement;
   @override
 
-  /// [name] Unique, human-readable label for this comparisonGroup of the
-  ///  study.
+  /// [name] Unique, human-readable label for this comparisonGroup of the study.
   String? get name;
   @override
 
@@ -5062,8 +4952,8 @@ abstract class _ResearchStudyComparisonGroup
   Element? get nameElement;
   @override
 
-  /// [type] Categorization of study comparisonGroup, e.g. experimental,
-  ///  active comparator, placebo comparater.
+  /// [type] Categorization of study comparisonGroup, e.g. experimental, active
+  ///  comparator, placebo comparater.
   CodeableConcept? get type;
   @override
 
@@ -5077,8 +4967,8 @@ abstract class _ResearchStudyComparisonGroup
   Element? get descriptionElement;
   @override
 
-  /// [intendedExposure] Interventions or exposures in this comparisonGroup
-  ///  or cohort.
+  /// [intendedExposure] Interventions or exposures in this comparisonGroup or
+  ///  cohort.
   List<Reference>? get intendedExposure;
   @override
 
@@ -5099,34 +4989,31 @@ ResearchStudyObjective _$ResearchStudyObjectiveFromJson(
 
 /// @nodoc
 mixin _$ResearchStudyObjective {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId => throw _privateConstructorUsedError;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -5140,9 +5027,9 @@ mixin _$ResearchStudyObjective {
   /// [type] The kind of study objective.
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
-  /// [description] Free text description of the objective of the study.
-  ///  This is what the study is trying to achieve rather than how it is
-  ///  going to achieve it (see ResearchStudy.description).
+  /// [description] Free text description of the objective of the study.  This is
+  ///  what the study is trying to achieve rather than how it is going to achieve
+  ///  it (see ResearchStudy.description).
   FhirMarkdown? get description => throw _privateConstructorUsedError;
 
   /// [descriptionElement] ("_description") Extensions for description
@@ -5162,7 +5049,7 @@ abstract class $ResearchStudyObjectiveCopyWith<$Res> {
       _$ResearchStudyObjectiveCopyWithImpl<$Res, ResearchStudyObjective>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -5190,7 +5077,7 @@ class _$ResearchStudyObjectiveCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = freezed,
@@ -5200,9 +5087,9 @@ class _$ResearchStudyObjectiveCopyWithImpl<$Res,
     Object? descriptionElement = freezed,
   }) {
     return _then(_value.copyWith(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -5282,7 +5169,7 @@ abstract class _$$ResearchStudyObjectiveImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -5312,7 +5199,7 @@ class __$$ResearchStudyObjectiveImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = freezed,
@@ -5322,9 +5209,9 @@ class __$$ResearchStudyObjectiveImplCopyWithImpl<$Res>
     Object? descriptionElement = freezed,
   }) {
     return _then(_$ResearchStudyObjectiveImpl(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -5362,7 +5249,7 @@ class __$$ResearchStudyObjectiveImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ResearchStudyObjectiveImpl extends _ResearchStudyObjective {
   const _$ResearchStudyObjectiveImpl(
-      {@JsonKey(name: 'id') this.fhirId,
+      {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.name,
@@ -5377,28 +5264,25 @@ class _$ResearchStudyObjectiveImpl extends _ResearchStudyObjective {
   factory _$ResearchStudyObjectiveImpl.fromJson(Map<String, dynamic> json) =>
       _$$ResearchStudyObjectiveImplFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   @override
-  @JsonKey(name: 'id')
-  final String? fhirId;
+  final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -5409,34 +5293,32 @@ class _$ResearchStudyObjectiveImpl extends _ResearchStudyObjective {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -5460,9 +5342,9 @@ class _$ResearchStudyObjectiveImpl extends _ResearchStudyObjective {
   @override
   final CodeableConcept? type;
 
-  /// [description] Free text description of the objective of the study.
-  ///  This is what the study is trying to achieve rather than how it is
-  ///  going to achieve it (see ResearchStudy.description).
+  /// [description] Free text description of the objective of the study.  This is
+  ///  what the study is trying to achieve rather than how it is going to achieve
+  ///  it (see ResearchStudy.description).
   @override
   final FhirMarkdown? description;
 
@@ -5473,7 +5355,7 @@ class _$ResearchStudyObjectiveImpl extends _ResearchStudyObjective {
 
   @override
   String toString() {
-    return 'ResearchStudyObjective(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, type: $type, description: $description, descriptionElement: $descriptionElement)';
+    return 'ResearchStudyObjective(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, type: $type, description: $description, descriptionElement: $descriptionElement)';
   }
 
   @override
@@ -5481,7 +5363,7 @@ class _$ResearchStudyObjectiveImpl extends _ResearchStudyObjective {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResearchStudyObjectiveImpl &&
-            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -5500,7 +5382,7 @@ class _$ResearchStudyObjectiveImpl extends _ResearchStudyObjective {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      fhirId,
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       name,
@@ -5526,7 +5408,7 @@ class _$ResearchStudyObjectiveImpl extends _ResearchStudyObjective {
 
 abstract class _ResearchStudyObjective extends ResearchStudyObjective {
   const factory _ResearchStudyObjective(
-          {@JsonKey(name: 'id') final String? fhirId,
+          {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final String? name,
@@ -5542,36 +5424,33 @@ abstract class _ResearchStudyObjective extends ResearchStudyObjective {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -5588,9 +5467,9 @@ abstract class _ResearchStudyObjective extends ResearchStudyObjective {
   CodeableConcept? get type;
   @override
 
-  /// [description] Free text description of the objective of the study.
-  ///  This is what the study is trying to achieve rather than how it is
-  ///  going to achieve it (see ResearchStudy.description).
+  /// [description] Free text description of the objective of the study.  This is
+  ///  what the study is trying to achieve rather than how it is going to achieve
+  ///  it (see ResearchStudy.description).
   FhirMarkdown? get description;
   @override
 
@@ -5610,34 +5489,31 @@ ResearchStudyOutcomeMeasure _$ResearchStudyOutcomeMeasureFromJson(
 
 /// @nodoc
 mixin _$ResearchStudyOutcomeMeasure {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId => throw _privateConstructorUsedError;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -5648,8 +5524,8 @@ mixin _$ResearchStudyOutcomeMeasure {
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
 
-  /// [type] The parameter or characteristic being assessed as one of the
-  ///  values by which the study is assessed.
+  /// [type] The parameter or characteristic being assessed as one of the values
+  ///  by which the study is assessed.
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
 
   /// [description] Description of the outcome.
@@ -5677,7 +5553,7 @@ abstract class $ResearchStudyOutcomeMeasureCopyWith<$Res> {
           ResearchStudyOutcomeMeasure>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -5706,7 +5582,7 @@ class _$ResearchStudyOutcomeMeasureCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = freezed,
@@ -5717,9 +5593,9 @@ class _$ResearchStudyOutcomeMeasureCopyWithImpl<$Res,
     Object? reference = freezed,
   }) {
     return _then(_value.copyWith(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -5803,7 +5679,7 @@ abstract class _$$ResearchStudyOutcomeMeasureImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
@@ -5834,7 +5710,7 @@ class __$$ResearchStudyOutcomeMeasureImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? name = freezed,
@@ -5845,9 +5721,9 @@ class __$$ResearchStudyOutcomeMeasureImplCopyWithImpl<$Res>
     Object? reference = freezed,
   }) {
     return _then(_$ResearchStudyOutcomeMeasureImpl(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -5889,7 +5765,7 @@ class __$$ResearchStudyOutcomeMeasureImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ResearchStudyOutcomeMeasureImpl extends _ResearchStudyOutcomeMeasure {
   const _$ResearchStudyOutcomeMeasureImpl(
-      {@JsonKey(name: 'id') this.fhirId,
+      {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.name,
@@ -5907,28 +5783,25 @@ class _$ResearchStudyOutcomeMeasureImpl extends _ResearchStudyOutcomeMeasure {
           Map<String, dynamic> json) =>
       _$$ResearchStudyOutcomeMeasureImplFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   @override
-  @JsonKey(name: 'id')
-  final String? fhirId;
+  final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -5939,34 +5812,32 @@ class _$ResearchStudyOutcomeMeasureImpl extends _ResearchStudyOutcomeMeasure {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -5986,12 +5857,12 @@ class _$ResearchStudyOutcomeMeasureImpl extends _ResearchStudyOutcomeMeasure {
   @JsonKey(name: '_name')
   final Element? nameElement;
 
-  /// [type] The parameter or characteristic being assessed as one of the
-  ///  values by which the study is assessed.
+  /// [type] The parameter or characteristic being assessed as one of the values
+  ///  by which the study is assessed.
   final List<CodeableConcept>? _type;
 
-  /// [type] The parameter or characteristic being assessed as one of the
-  ///  values by which the study is assessed.
+  /// [type] The parameter or characteristic being assessed as one of the values
+  ///  by which the study is assessed.
   @override
   List<CodeableConcept>? get type {
     final value = _type;
@@ -6016,7 +5887,7 @@ class _$ResearchStudyOutcomeMeasureImpl extends _ResearchStudyOutcomeMeasure {
 
   @override
   String toString() {
-    return 'ResearchStudyOutcomeMeasure(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, type: $type, description: $description, descriptionElement: $descriptionElement, reference: $reference)';
+    return 'ResearchStudyOutcomeMeasure(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, type: $type, description: $description, descriptionElement: $descriptionElement, reference: $reference)';
   }
 
   @override
@@ -6024,7 +5895,7 @@ class _$ResearchStudyOutcomeMeasureImpl extends _ResearchStudyOutcomeMeasure {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResearchStudyOutcomeMeasureImpl &&
-            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -6045,7 +5916,7 @@ class _$ResearchStudyOutcomeMeasureImpl extends _ResearchStudyOutcomeMeasure {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      fhirId,
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       name,
@@ -6073,7 +5944,7 @@ class _$ResearchStudyOutcomeMeasureImpl extends _ResearchStudyOutcomeMeasure {
 abstract class _ResearchStudyOutcomeMeasure
     extends ResearchStudyOutcomeMeasure {
   const factory _ResearchStudyOutcomeMeasure(
-      {@JsonKey(name: 'id') final String? fhirId,
+      {final String? id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final String? name,
@@ -6089,36 +5960,33 @@ abstract class _ResearchStudyOutcomeMeasure
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -6131,8 +5999,8 @@ abstract class _ResearchStudyOutcomeMeasure
   Element? get nameElement;
   @override
 
-  /// [type] The parameter or characteristic being assessed as one of the
-  ///  values by which the study is assessed.
+  /// [type] The parameter or characteristic being assessed as one of the values
+  ///  by which the study is assessed.
   List<CodeableConcept>? get type;
   @override
 
@@ -6162,24 +6030,20 @@ mixin _$ResearchSubject {
   /// [resourceType] This is a ResearchSubject resource
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
-  @JsonKey(includeFromJson: true, includeToJson: false)
-  int? get dbId => throw _privateConstructorUsedError;
 
-  /// [id] The logical id of the resource, as used in the URL for the
-  ///  resource. Once assigned, this value never changes.
-  @JsonKey(name: 'id')
-  FhirId? get fhirId => throw _privateConstructorUsedError;
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  FhirId? get id => throw _privateConstructorUsedError;
 
-  /// [meta] The metadata about the resource. This is content that is
-  ///  maintained by the infrastructure. Changes to the content might not
-  ///  always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is maintained
+  ///  by the infrastructure. Changes to the content might not always be
+  ///  associated with version changes to the resource.
   FhirMeta? get meta => throw _privateConstructorUsedError;
 
-  /// [implicitRules] A reference to a set of rules that were followed when
-  ///  the resource was constructed, and which must be understood when
-  ///  processing the content. Often, this is a reference to an
-  ///  implementation guide that defines the special rules along with other
-  ///  profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing the
+  ///  content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules => throw _privateConstructorUsedError;
 
   /// [implicitRulesElement] ("_implicitRules") Extensions for implicitRules
@@ -6193,45 +6057,42 @@ mixin _$ResearchSubject {
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
 
-  /// [text] A human-readable narrative that contains a summary of the
-  ///  resource and can be used to represent the content of the resource to a
-  ///  human. The narrative need not encode all the structured data, but is
-  ///  required to contain sufficient detail to make it "clinically safe" for
-  ///  a human to just read the narrative. Resource definitions may define
-  ///  what content should be represented in the narrative to ensure clinical
-  ///  safety.
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to just
+  ///  read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text => throw _privateConstructorUsedError;
 
-  /// [contained] These resources do not have an independent existence apart
-  ///  from the resource that contains them - they cannot be identified
-  ///  independently, nor can they have their own independent transaction
-  ///  scope. This is allowed to be a Parameters resource if and only if it
-  ///  is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart from
+  ///  the resource that contains them - they cannot be identified independently,
+  ///  nor can they have their own independent transaction scope. This is allowed
+  ///  to be a Parameters resource if and only if it is referenced by a resource
+  ///  that provides context/meaning.
   List<Resource>? get contained => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the resource.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the resource. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the resource and that
-  ///  modifies the understanding of the element that contains it and/or the
-  ///  understanding of the containing element's descendants. Usually
-  ///  modifier elements provide negation or qualification. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any
-  ///  implementer is allowed to define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension. Applications processing a resource are required to check
-  ///  for modifier extensions.Modifier extensions SHALL NOT change the
-  ///  meaning of any elements on Resource or DomainResource (including
-  ///  cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the resource and that modifies the
+  ///  understanding of the element that contains it and/or the understanding of
+  ///  the containing element's descendants. Usually modifier elements provide
+  ///  negation or qualification. To make the use of extensions safe and
+  ///  managable, there is a strict set of governance applied to the definition
+  ///  and use of extensions. Though any implementer is allowed to define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
@@ -6245,28 +6106,28 @@ mixin _$ResearchSubject {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
 
-  /// [progress] The current state (status) of the subject and resons for
-  ///  status change where appropriate.
+  /// [progress] The current state (status) of the subject and resons for status
+  ///  change where appropriate.
   List<ResearchSubjectProgress>? get progress =>
       throw _privateConstructorUsedError;
 
-  /// [period] The dates the subject began and ended their participation in
-  ///  the study.
+  /// [period] The dates the subject began and ended their participation in the
+  ///  study.
   Period? get period => throw _privateConstructorUsedError;
 
   /// [study] Reference to the study the subject is participating in.
   Reference get study => throw _privateConstructorUsedError;
 
-  /// [subject] The record of the person, animal or other entity involved in
-  ///  the study.
+  /// [subject] The record of the person, animal or other entity involved in the
+  ///  study.
   Reference get subject => throw _privateConstructorUsedError;
 
-  /// [assignedComparisonGroup] The name of the arm in the study the subject
-  ///  is expected to follow as part of this study.
+  /// [assignedComparisonGroup] The name of the arm in the study the subject is
+  ///  expected to follow as part of this study.
   FhirId? get assignedComparisonGroup => throw _privateConstructorUsedError;
 
-  /// [assignedComparisonGroupElement] ("_assignedComparisonGroup")
-  ///  Extensions for assignedComparisonGroup
+  /// [assignedComparisonGroupElement] ("_assignedComparisonGroup") Extensions
+  ///  for assignedComparisonGroup
   @JsonKey(name: '_assignedComparisonGroup')
   Element? get assignedComparisonGroupElement =>
       throw _privateConstructorUsedError;
@@ -6275,14 +6136,14 @@ mixin _$ResearchSubject {
   ///  actually followed as part of this study.
   FhirId? get actualComparisonGroup => throw _privateConstructorUsedError;
 
-  /// [actualComparisonGroupElement] ("_actualComparisonGroup") Extensions
-  ///  for actualComparisonGroup
+  /// [actualComparisonGroupElement] ("_actualComparisonGroup") Extensions for
+  ///  actualComparisonGroup
   @JsonKey(name: '_actualComparisonGroup')
   Element? get actualComparisonGroupElement =>
       throw _privateConstructorUsedError;
 
-  /// [consent] A record of the patient's informed agreement to participate
-  ///  in the study.
+  /// [consent] A record of the patient's informed agreement to participate in
+  ///  the study.
   List<Reference>? get consent => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -6300,8 +6161,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
       R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
-      @JsonKey(name: 'id') FhirId? fhirId,
+      FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -6352,8 +6212,7 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
@@ -6381,13 +6240,9 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -6604,8 +6459,7 @@ abstract class _$$ResearchSubjectImplCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
       R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false) int? dbId,
-      @JsonKey(name: 'id') FhirId? fhirId,
+      FhirId? id,
       FhirMeta? meta,
       FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
@@ -6664,8 +6518,7 @@ class __$$ResearchSubjectImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? resourceType = null,
-    Object? dbId = freezed,
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? meta = freezed,
     Object? implicitRules = freezed,
     Object? implicitRulesElement = freezed,
@@ -6693,13 +6546,9 @@ class __$$ResearchSubjectImplCopyWithImpl<$Res>
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
               as R5ResourceType,
-      dbId: freezed == dbId
-          ? _value.dbId
-          : dbId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as FhirId?,
       meta: freezed == meta
           ? _value.meta
@@ -6795,8 +6644,7 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
   const _$ResearchSubjectImpl(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
       this.resourceType = R5ResourceType.ResearchSubject,
-      @JsonKey(includeFromJson: true, includeToJson: false) this.dbId,
-      @JsonKey(name: 'id') this.fhirId,
+      this.id,
       this.meta,
       this.implicitRules,
       @JsonKey(name: '_implicitRules') this.implicitRulesElement,
@@ -6835,27 +6683,22 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
   final R5ResourceType resourceType;
-  @override
-  @JsonKey(includeFromJson: true, includeToJson: false)
-  final int? dbId;
 
-  /// [id] The logical id of the resource, as used in the URL for the
-  ///  resource. Once assigned, this value never changes.
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
   @override
-  @JsonKey(name: 'id')
-  final FhirId? fhirId;
+  final FhirId? id;
 
-  /// [meta] The metadata about the resource. This is content that is
-  ///  maintained by the infrastructure. Changes to the content might not
-  ///  always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is maintained
+  ///  by the infrastructure. Changes to the content might not always be
+  ///  associated with version changes to the resource.
   @override
   final FhirMeta? meta;
 
-  /// [implicitRules] A reference to a set of rules that were followed when
-  ///  the resource was constructed, and which must be understood when
-  ///  processing the content. Often, this is a reference to an
-  ///  implementation guide that defines the special rules along with other
-  ///  profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing the
+  ///  content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   @override
   final FhirUri? implicitRules;
 
@@ -6873,28 +6716,27 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
   @JsonKey(name: '_language')
   final Element? languageElement;
 
-  /// [text] A human-readable narrative that contains a summary of the
-  ///  resource and can be used to represent the content of the resource to a
-  ///  human. The narrative need not encode all the structured data, but is
-  ///  required to contain sufficient detail to make it "clinically safe" for
-  ///  a human to just read the narrative. Resource definitions may define
-  ///  what content should be represented in the narrative to ensure clinical
-  ///  safety.
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to just
+  ///  read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   @override
   final Narrative? text;
 
-  /// [contained] These resources do not have an independent existence apart
-  ///  from the resource that contains them - they cannot be identified
-  ///  independently, nor can they have their own independent transaction
-  ///  scope. This is allowed to be a Parameters resource if and only if it
-  ///  is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart from
+  ///  the resource that contains them - they cannot be identified independently,
+  ///  nor can they have their own independent transaction scope. This is allowed
+  ///  to be a Parameters resource if and only if it is referenced by a resource
+  ///  that provides context/meaning.
   final List<Resource>? _contained;
 
-  /// [contained] These resources do not have an independent existence apart
-  ///  from the resource that contains them - they cannot be identified
-  ///  independently, nor can they have their own independent transaction
-  ///  scope. This is allowed to be a Parameters resource if and only if it
-  ///  is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart from
+  ///  the resource that contains them - they cannot be identified independently,
+  ///  nor can they have their own independent transaction scope. This is allowed
+  ///  to be a Parameters resource if and only if it is referenced by a resource
+  ///  that provides context/meaning.
   @override
   List<Resource>? get contained {
     final value = _contained;
@@ -6904,22 +6746,20 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the resource.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the resource. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the resource.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the resource. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -6930,34 +6770,32 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the resource and that
-  ///  modifies the understanding of the element that contains it and/or the
-  ///  understanding of the containing element's descendants. Usually
-  ///  modifier elements provide negation or qualification. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any
-  ///  implementer is allowed to define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension. Applications processing a resource are required to check
-  ///  for modifier extensions.Modifier extensions SHALL NOT change the
-  ///  meaning of any elements on Resource or DomainResource (including
-  ///  cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the resource and that modifies the
+  ///  understanding of the element that contains it and/or the understanding of
+  ///  the containing element's descendants. Usually modifier elements provide
+  ///  negation or qualification. To make the use of extensions safe and
+  ///  managable, there is a strict set of governance applied to the definition
+  ///  and use of extensions. Though any implementer is allowed to define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the resource and that
-  ///  modifies the understanding of the element that contains it and/or the
-  ///  understanding of the containing element's descendants. Usually
-  ///  modifier elements provide negation or qualification. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any
-  ///  implementer is allowed to define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension. Applications processing a resource are required to check
-  ///  for modifier extensions.Modifier extensions SHALL NOT change the
-  ///  meaning of any elements on Resource or DomainResource (including
-  ///  cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the resource and that modifies the
+  ///  understanding of the element that contains it and/or the understanding of
+  ///  the containing element's descendants. Usually modifier elements provide
+  ///  negation or qualification. To make the use of extensions safe and
+  ///  managable, there is a strict set of governance applied to the definition
+  ///  and use of extensions. Though any implementer is allowed to define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -6990,12 +6828,12 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
   @JsonKey(name: '_status')
   final Element? statusElement;
 
-  /// [progress] The current state (status) of the subject and resons for
-  ///  status change where appropriate.
+  /// [progress] The current state (status) of the subject and resons for status
+  ///  change where appropriate.
   final List<ResearchSubjectProgress>? _progress;
 
-  /// [progress] The current state (status) of the subject and resons for
-  ///  status change where appropriate.
+  /// [progress] The current state (status) of the subject and resons for status
+  ///  change where appropriate.
   @override
   List<ResearchSubjectProgress>? get progress {
     final value = _progress;
@@ -7005,8 +6843,8 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [period] The dates the subject began and ended their participation in
-  ///  the study.
+  /// [period] The dates the subject began and ended their participation in the
+  ///  study.
   @override
   final Period? period;
 
@@ -7014,18 +6852,18 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
   @override
   final Reference study;
 
-  /// [subject] The record of the person, animal or other entity involved in
-  ///  the study.
+  /// [subject] The record of the person, animal or other entity involved in the
+  ///  study.
   @override
   final Reference subject;
 
-  /// [assignedComparisonGroup] The name of the arm in the study the subject
-  ///  is expected to follow as part of this study.
+  /// [assignedComparisonGroup] The name of the arm in the study the subject is
+  ///  expected to follow as part of this study.
   @override
   final FhirId? assignedComparisonGroup;
 
-  /// [assignedComparisonGroupElement] ("_assignedComparisonGroup")
-  ///  Extensions for assignedComparisonGroup
+  /// [assignedComparisonGroupElement] ("_assignedComparisonGroup") Extensions
+  ///  for assignedComparisonGroup
   @override
   @JsonKey(name: '_assignedComparisonGroup')
   final Element? assignedComparisonGroupElement;
@@ -7035,18 +6873,18 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
   @override
   final FhirId? actualComparisonGroup;
 
-  /// [actualComparisonGroupElement] ("_actualComparisonGroup") Extensions
-  ///  for actualComparisonGroup
+  /// [actualComparisonGroupElement] ("_actualComparisonGroup") Extensions for
+  ///  actualComparisonGroup
   @override
   @JsonKey(name: '_actualComparisonGroup')
   final Element? actualComparisonGroupElement;
 
-  /// [consent] A record of the patient's informed agreement to participate
-  ///  in the study.
+  /// [consent] A record of the patient's informed agreement to participate in
+  ///  the study.
   final List<Reference>? _consent;
 
-  /// [consent] A record of the patient's informed agreement to participate
-  ///  in the study.
+  /// [consent] A record of the patient's informed agreement to participate in
+  ///  the study.
   @override
   List<Reference>? get consent {
     final value = _consent;
@@ -7058,7 +6896,7 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
 
   @override
   String toString() {
-    return 'ResearchSubject(resourceType: $resourceType, dbId: $dbId, fhirId: $fhirId, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, progress: $progress, period: $period, study: $study, subject: $subject, assignedComparisonGroup: $assignedComparisonGroup, assignedComparisonGroupElement: $assignedComparisonGroupElement, actualComparisonGroup: $actualComparisonGroup, actualComparisonGroupElement: $actualComparisonGroupElement, consent: $consent)';
+    return 'ResearchSubject(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, progress: $progress, period: $period, study: $study, subject: $subject, assignedComparisonGroup: $assignedComparisonGroup, assignedComparisonGroupElement: $assignedComparisonGroupElement, actualComparisonGroup: $actualComparisonGroup, actualComparisonGroupElement: $actualComparisonGroupElement, consent: $consent)';
   }
 
   @override
@@ -7068,8 +6906,7 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
             other is _$ResearchSubjectImpl &&
             (identical(other.resourceType, resourceType) ||
                 other.resourceType == resourceType) &&
-            (identical(other.dbId, dbId) || other.dbId == dbId) &&
-            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
+            (identical(other.id, id) || other.id == id) &&
             (identical(other.meta, meta) || other.meta == meta) &&
             (identical(other.implicitRules, implicitRules) ||
                 other.implicitRules == implicitRules) &&
@@ -7116,8 +6953,7 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
   int get hashCode => Object.hashAll([
         runtimeType,
         resourceType,
-        dbId,
-        fhirId,
+        id,
         meta,
         implicitRules,
         implicitRulesElement,
@@ -7160,8 +6996,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   const factory _ResearchSubject(
       {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
       final R5ResourceType resourceType,
-      @JsonKey(includeFromJson: true, includeToJson: false) final int? dbId,
-      @JsonKey(name: 'id') final FhirId? fhirId,
+      final FhirId? id,
       final FhirMeta? meta,
       final FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
@@ -7196,27 +7031,22 @@ abstract class _ResearchSubject extends ResearchSubject {
   @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
   R5ResourceType get resourceType;
   @override
-  @JsonKey(includeFromJson: true, includeToJson: false)
-  int? get dbId;
+
+  /// [id] The logical id of the resource, as used in the URL for the resource.
+  ///  Once assigned, this value never changes.
+  FhirId? get id;
   @override
 
-  /// [id] The logical id of the resource, as used in the URL for the
-  ///  resource. Once assigned, this value never changes.
-  @JsonKey(name: 'id')
-  FhirId? get fhirId;
-  @override
-
-  /// [meta] The metadata about the resource. This is content that is
-  ///  maintained by the infrastructure. Changes to the content might not
-  ///  always be associated with version changes to the resource.
+  /// [meta] The metadata about the resource. This is content that is maintained
+  ///  by the infrastructure. Changes to the content might not always be
+  ///  associated with version changes to the resource.
   FhirMeta? get meta;
   @override
 
-  /// [implicitRules] A reference to a set of rules that were followed when
-  ///  the resource was constructed, and which must be understood when
-  ///  processing the content. Often, this is a reference to an
-  ///  implementation guide that defines the special rules along with other
-  ///  profiles etc.
+  /// [implicitRules] A reference to a set of rules that were followed when the
+  ///  resource was constructed, and which must be understood when processing the
+  ///  content. Often, this is a reference to an implementation guide that
+  ///  defines the special rules along with other profiles etc.
   FhirUri? get implicitRules;
   @override
 
@@ -7234,48 +7064,45 @@ abstract class _ResearchSubject extends ResearchSubject {
   Element? get languageElement;
   @override
 
-  /// [text] A human-readable narrative that contains a summary of the
-  ///  resource and can be used to represent the content of the resource to a
-  ///  human. The narrative need not encode all the structured data, but is
-  ///  required to contain sufficient detail to make it "clinically safe" for
-  ///  a human to just read the narrative. Resource definitions may define
-  ///  what content should be represented in the narrative to ensure clinical
-  ///  safety.
+  /// [text] A human-readable narrative that contains a summary of the resource
+  ///  and can be used to represent the content of the resource to a human. The
+  ///  narrative need not encode all the structured data, but is required to
+  ///  contain sufficient detail to make it "clinically safe" for a human to just
+  ///  read the narrative. Resource definitions may define what content should be
+  ///  represented in the narrative to ensure clinical safety.
   Narrative? get text;
   @override
 
-  /// [contained] These resources do not have an independent existence apart
-  ///  from the resource that contains them - they cannot be identified
-  ///  independently, nor can they have their own independent transaction
-  ///  scope. This is allowed to be a Parameters resource if and only if it
-  ///  is referenced by a resource that provides context/meaning.
+  /// [contained] These resources do not have an independent existence apart from
+  ///  the resource that contains them - they cannot be identified independently,
+  ///  nor can they have their own independent transaction scope. This is allowed
+  ///  to be a Parameters resource if and only if it is referenced by a resource
+  ///  that provides context/meaning.
   List<Resource>? get contained;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the resource.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the resource. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the resource and that
-  ///  modifies the understanding of the element that contains it and/or the
-  ///  understanding of the containing element's descendants. Usually
-  ///  modifier elements provide negation or qualification. To make the use
-  ///  of extensions safe and managable, there is a strict set of governance
-  ///  applied to the definition and use of extensions. Though any
-  ///  implementer is allowed to define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension. Applications processing a resource are required to check
-  ///  for modifier extensions.Modifier extensions SHALL NOT change the
-  ///  meaning of any elements on Resource or DomainResource (including
-  ///  cannot change the meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the resource and that modifies the
+  ///  understanding of the element that contains it and/or the understanding of
+  ///  the containing element's descendants. Usually modifier elements provide
+  ///  negation or qualification. To make the use of extensions safe and
+  ///  managable, there is a strict set of governance applied to the definition
+  ///  and use of extensions. Though any implementer is allowed to define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
 
@@ -7292,13 +7119,13 @@ abstract class _ResearchSubject extends ResearchSubject {
   Element? get statusElement;
   @override
 
-  /// [progress] The current state (status) of the subject and resons for
-  ///  status change where appropriate.
+  /// [progress] The current state (status) of the subject and resons for status
+  ///  change where appropriate.
   List<ResearchSubjectProgress>? get progress;
   @override
 
-  /// [period] The dates the subject began and ended their participation in
-  ///  the study.
+  /// [period] The dates the subject began and ended their participation in the
+  ///  study.
   Period? get period;
   @override
 
@@ -7306,18 +7133,18 @@ abstract class _ResearchSubject extends ResearchSubject {
   Reference get study;
   @override
 
-  /// [subject] The record of the person, animal or other entity involved in
-  ///  the study.
+  /// [subject] The record of the person, animal or other entity involved in the
+  ///  study.
   Reference get subject;
   @override
 
-  /// [assignedComparisonGroup] The name of the arm in the study the subject
-  ///  is expected to follow as part of this study.
+  /// [assignedComparisonGroup] The name of the arm in the study the subject is
+  ///  expected to follow as part of this study.
   FhirId? get assignedComparisonGroup;
   @override
 
-  /// [assignedComparisonGroupElement] ("_assignedComparisonGroup")
-  ///  Extensions for assignedComparisonGroup
+  /// [assignedComparisonGroupElement] ("_assignedComparisonGroup") Extensions
+  ///  for assignedComparisonGroup
   @JsonKey(name: '_assignedComparisonGroup')
   Element? get assignedComparisonGroupElement;
   @override
@@ -7327,14 +7154,14 @@ abstract class _ResearchSubject extends ResearchSubject {
   FhirId? get actualComparisonGroup;
   @override
 
-  /// [actualComparisonGroupElement] ("_actualComparisonGroup") Extensions
-  ///  for actualComparisonGroup
+  /// [actualComparisonGroupElement] ("_actualComparisonGroup") Extensions for
+  ///  actualComparisonGroup
   @JsonKey(name: '_actualComparisonGroup')
   Element? get actualComparisonGroupElement;
   @override
 
-  /// [consent] A record of the patient's informed agreement to participate
-  ///  in the study.
+  /// [consent] A record of the patient's informed agreement to participate in
+  ///  the study.
   List<Reference>? get consent;
   @override
   @JsonKey(ignore: true)
@@ -7349,39 +7176,36 @@ ResearchSubjectProgress _$ResearchSubjectProgressFromJson(
 
 /// @nodoc
 mixin _$ResearchSubjectProgress {
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId => throw _privateConstructorUsedError;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id => throw _privateConstructorUsedError;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
-  /// [type] Identifies the aspect of the subject's journey that the state
-  ///  refers to.
+  /// [type] Identifies the aspect of the subject's journey that the state refers
+  ///  to.
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
   /// [subjectState] The current state of the subject.
@@ -7390,8 +7214,8 @@ mixin _$ResearchSubjectProgress {
   /// [milestone] The milestones the subject has passed through.
   CodeableConcept? get milestone => throw _privateConstructorUsedError;
 
-  /// [reason] The reason for the state change.  If coded it should follow
-  ///  the formal subject state model.
+  /// [reason] The reason for the state change.  If coded it should follow the
+  ///  formal subject state model.
   CodeableConcept? get reason => throw _privateConstructorUsedError;
 
   /// [startDate] The date when the new status started.
@@ -7421,7 +7245,7 @@ abstract class $ResearchSubjectProgressCopyWith<$Res> {
       _$ResearchSubjectProgressCopyWithImpl<$Res, ResearchSubjectProgress>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? type,
@@ -7455,7 +7279,7 @@ class _$ResearchSubjectProgressCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? type = freezed,
@@ -7468,9 +7292,9 @@ class _$ResearchSubjectProgressCopyWithImpl<$Res,
     Object? endDateElement = freezed,
   }) {
     return _then(_value.copyWith(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value.extension_
@@ -7598,7 +7422,7 @@ abstract class _$$ResearchSubjectProgressImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? fhirId,
+      {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? type,
@@ -7637,7 +7461,7 @@ class __$$ResearchSubjectProgressImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? fhirId = freezed,
+    Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
     Object? type = freezed,
@@ -7650,9 +7474,9 @@ class __$$ResearchSubjectProgressImplCopyWithImpl<$Res>
     Object? endDateElement = freezed,
   }) {
     return _then(_$ResearchSubjectProgressImpl(
-      fhirId: freezed == fhirId
-          ? _value.fhirId
-          : fhirId // ignore: cast_nullable_to_non_nullable
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
               as String?,
       extension_: freezed == extension_
           ? _value._extension_
@@ -7702,7 +7526,7 @@ class __$$ResearchSubjectProgressImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ResearchSubjectProgressImpl extends _ResearchSubjectProgress {
   const _$ResearchSubjectProgressImpl(
-      {@JsonKey(name: 'id') this.fhirId,
+      {this.id,
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       this.type,
@@ -7720,28 +7544,25 @@ class _$ResearchSubjectProgressImpl extends _ResearchSubjectProgress {
   factory _$ResearchSubjectProgressImpl.fromJson(Map<String, dynamic> json) =>
       _$$ResearchSubjectProgressImplFromJson(json);
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
   @override
-  @JsonKey(name: 'id')
-  final String? fhirId;
+  final String? id;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   final List<FhirExtension>? _extension_;
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @override
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ {
@@ -7752,34 +7573,32 @@ class _$ResearchSubjectProgressImpl extends _ResearchSubjectProgress {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   final List<FhirExtension>? _modifierExtension;
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   @override
   List<FhirExtension>? get modifierExtension {
     final value = _modifierExtension;
@@ -7790,8 +7609,8 @@ class _$ResearchSubjectProgressImpl extends _ResearchSubjectProgress {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [type] Identifies the aspect of the subject's journey that the state
-  ///  refers to.
+  /// [type] Identifies the aspect of the subject's journey that the state refers
+  ///  to.
   @override
   final CodeableConcept? type;
 
@@ -7803,8 +7622,8 @@ class _$ResearchSubjectProgressImpl extends _ResearchSubjectProgress {
   @override
   final CodeableConcept? milestone;
 
-  /// [reason] The reason for the state change.  If coded it should follow
-  ///  the formal subject state model.
+  /// [reason] The reason for the state change.  If coded it should follow the
+  ///  formal subject state model.
   @override
   final CodeableConcept? reason;
 
@@ -7828,7 +7647,7 @@ class _$ResearchSubjectProgressImpl extends _ResearchSubjectProgress {
 
   @override
   String toString() {
-    return 'ResearchSubjectProgress(fhirId: $fhirId, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, subjectState: $subjectState, milestone: $milestone, reason: $reason, startDate: $startDate, startDateElement: $startDateElement, endDate: $endDate, endDateElement: $endDateElement)';
+    return 'ResearchSubjectProgress(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, subjectState: $subjectState, milestone: $milestone, reason: $reason, startDate: $startDate, startDateElement: $startDateElement, endDate: $endDate, endDateElement: $endDateElement)';
   }
 
   @override
@@ -7836,7 +7655,7 @@ class _$ResearchSubjectProgressImpl extends _ResearchSubjectProgress {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ResearchSubjectProgressImpl &&
-            (identical(other.fhirId, fhirId) || other.fhirId == fhirId) &&
+            (identical(other.id, id) || other.id == id) &&
             const DeepCollectionEquality()
                 .equals(other._extension_, _extension_) &&
             const DeepCollectionEquality()
@@ -7860,7 +7679,7 @@ class _$ResearchSubjectProgressImpl extends _ResearchSubjectProgress {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      fhirId,
+      id,
       const DeepCollectionEquality().hash(_extension_),
       const DeepCollectionEquality().hash(_modifierExtension),
       type,
@@ -7889,7 +7708,7 @@ class _$ResearchSubjectProgressImpl extends _ResearchSubjectProgress {
 
 abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
   const factory _ResearchSubjectProgress(
-          {@JsonKey(name: 'id') final String? fhirId,
+          {final String? id,
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? type,
@@ -7908,41 +7727,38 @@ abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
 
   @override
 
-  /// [id] Unique id for the element within a resource (for internal
-  ///  references). This may be any string value that does not contain spaces.
-  @JsonKey(name: 'id')
-  String? get fhirId;
+  /// [id] Unique id for the element within a resource (for internal references).
+  ///  This may be any string value that does not contain spaces.
+  String? get id;
   @override
 
-  /// [extension_] ("extension") May be used to represent additional
-  ///  information that is not part of the basic definition of the element.
-  ///  To make the use of extensions safe and managable, there is a strict
-  ///  set of governance applied to the definition and use of extensions.
-  ///  Though any implementer can define an extension, there is a set of
-  ///  requirements that SHALL be met as part of the definition of the
-  ///  extension.
+  /// [extension_] ("extension") May be used to represent additional information
+  ///  that is not part of the basic definition of the element. To make the use
+  ///  of extensions safe and managable, there is a strict set of governance
+  ///  applied to the definition and use of extensions. Though any implementer
+  ///  can define an extension, there is a set of requirements that SHALL be met
+  ///  as part of the definition of the extension.
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
 
-  /// [modifierExtension] May be used to represent additional information
-  ///  that is not part of the basic definition of the element and that
-  ///  modifies the understanding of the element in which it is contained
-  ///  and/or the understanding of the containing element's descendants.
-  ///  Usually modifier elements provide negation or qualification. To make
-  ///  the use of extensions safe and managable, there is a strict set of
-  ///  governance applied to the definition and use of extensions. Though any
-  ///  implementer can define an extension, there is a set of requirements
-  ///  that SHALL be met as part of the definition of the extension.
-  ///  Applications processing a resource are required to check for modifier
-  ///  extensions.Modifier extensions SHALL NOT change the meaning of any
-  ///  elements on Resource or DomainResource (including cannot change the
-  ///  meaning of modifierExtension itself).
+  /// [modifierExtension] May be used to represent additional information that is
+  ///  not part of the basic definition of the element and that modifies the
+  ///  understanding of the element in which it is contained and/or the
+  ///  understanding of the containing element's descendants. Usually modifier
+  ///  elements provide negation or qualification. To make the use of extensions
+  ///  safe and managable, there is a strict set of governance applied to the
+  ///  definition and use of extensions. Though any implementer can define an
+  ///  extension, there is a set of requirements that SHALL be met as part of the
+  ///  definition of the extension. Applications processing a resource are
+  ///  required to check for modifier extensions.Modifier extensions SHALL NOT
+  ///  change the meaning of any elements on Resource or DomainResource
+  ///  (including cannot change the meaning of modifierExtension itself).
   List<FhirExtension>? get modifierExtension;
   @override
 
-  /// [type] Identifies the aspect of the subject's journey that the state
-  ///  refers to.
+  /// [type] Identifies the aspect of the subject's journey that the state refers
+  ///  to.
   CodeableConcept? get type;
   @override
 
@@ -7954,8 +7770,8 @@ abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
   CodeableConcept? get milestone;
   @override
 
-  /// [reason] The reason for the state change.  If coded it should follow
-  ///  the formal subject state model.
+  /// [reason] The reason for the state change.  If coded it should follow the
+  ///  formal subject state model.
   CodeableConcept? get reason;
   @override
 

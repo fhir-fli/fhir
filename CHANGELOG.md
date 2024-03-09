@@ -5,6 +5,7 @@
 * Changed some equalities with FhirTime
 * Added partial timezones for FhirDateTime, FhirInstant
 * Added precision comparison for DateTimePrecision
+* Updated R5
 
 ## [0.12.0]
 
