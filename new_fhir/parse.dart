@@ -94,7 +94,7 @@ Future<void> main() async {
 
         currentClass += '/// $fieldName ${entryValue['description']}\n///\n';
       }
-      currentClass += 'factory $className({\n';
+      currentClass += 'const factory $className({\n';
 
       /// Now we're going to look through the 'properties' values again, and
       /// use all of the information there not just the comments.
@@ -278,7 +278,7 @@ Future<void> main() async {
   /// Acts like a constructor, returns a [$className], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory $className.fromJsonString(String source) {
-    final json = jsonDecode(source);
+    final dynamic json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
       return _\$${className}FromJson(json);
     } else {
@@ -316,6 +316,8 @@ Future<void> main() async {
         key != 'draft_types') {
       if (typeMap[key] is String) {
         String fileString = '''
+// ignore_for_file: invalid_annotation_target, sort_unnamed_constructors_first, sort_constructors_first, prefer_mixin
+
 // Dart imports:
 import 'dart:convert';
 
