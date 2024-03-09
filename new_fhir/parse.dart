@@ -77,7 +77,7 @@ Future<void> main() async {
           ? 'class $className with Resource, _\$$className {\n'
           : 'class $className with _\$$className {\n';
       currentClass += '/// [$className] ${classMap['description']}\n';
-      currentClass += '$className._();\n';
+      currentClass += 'const $className._();\n';
       currentClass += '/// [$className] ${classMap['description']}\n///\n';
 
       /// Look through the 'properties' values, and copy all of the
