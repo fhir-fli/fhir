@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'other.freezed.dart';
 part 'other.g.dart';
+part 'other.enums.dart';
 
 /// [Basic] Basic is used for handling concepts not yet defined in FHIR,
 ///  narrative-only resources that don't map to an existing resource, and

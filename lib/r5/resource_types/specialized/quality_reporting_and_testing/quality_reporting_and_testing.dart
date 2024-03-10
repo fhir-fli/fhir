@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'quality_reporting_and_testing.freezed.dart';
 part 'quality_reporting_and_testing.g.dart';
+part 'quality_reporting_and_testing.enums.dart';
 
 /// [Measure] The Measure resource provides the definition of a quality measure.
 @freezed
@@ -435,7 +436,7 @@ class Measure with Resource, _$Measure {
 
     /// [status] The status of this measure. Enables tracking the life-cycle of the
     ///  content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,

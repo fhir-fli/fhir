@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'conformance.freezed.dart';
 part 'conformance.g.dart';
+part 'conformance.enums.dart';
 
 /// [CapabilityStatement] A Capability Statement documents a set of
 ///  capabilities (behaviors) of a FHIR Server or Client for a particular
@@ -372,7 +373,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
 
     /// [status] The status of this capability statement. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -2898,7 +2899,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
 
     /// [status] The status of this compartment definition. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -3492,7 +3493,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
 
     /// [status] The status of this graph definition. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -4442,7 +4443,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
 
     /// [status] The status of this implementation guide. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -6514,7 +6515,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
 
     /// [status] The status of this message definition. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -8468,7 +8469,7 @@ class SearchParameter with Resource, _$SearchParameter {
 
     /// [status] The status of this search parameter. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -9160,7 +9161,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
 
     /// [status] The status of this structure definition. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,

@@ -155,7 +155,7 @@ mixin _$Measure {
 
   /// [status] The status of this measure. Enables tracking the life-cycle of the
   ///  content.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  PublicationStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -461,7 +461,7 @@ abstract class $MeasureCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -752,7 +752,7 @@ class _$MeasureCopyWithImpl<$Res, $Val extends Measure>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1461,7 +1461,7 @@ abstract class _$$MeasureImplCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1786,7 +1786,7 @@ class __$$MeasureImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2353,7 +2353,7 @@ class _$MeasureImpl extends _Measure {
   /// [status] The status of this measure. Enables tracking the life-cycle of the
   ///  content.
   @override
-  final FhirCode? status;
+  final PublicationStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -3080,7 +3080,7 @@ abstract class _Measure extends Measure {
       @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final FhirCode? status,
+      final PublicationStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
@@ -3302,7 +3302,7 @@ abstract class _Measure extends Measure {
 
   /// [status] The status of this measure. Enables tracking the life-cycle of the
   ///  content.
-  FhirCode? get status;
+  PublicationStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status

@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'entities2.freezed.dart';
 part 'entities2.g.dart';
+part 'entities2.enums.dart';
 
 /// [BiologicallyDerivedProduct] This resource reflects an instance of a
 ///  biologically derived product. A material substance originating from a
@@ -800,7 +801,7 @@ class BiologicallyDerivedProductDispense
     List<Reference>? partOf,
 
     /// [status] A code specifying the state of the dispense event.
-    FhirCode? status,
+    BiologicallyDerivedProductStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,

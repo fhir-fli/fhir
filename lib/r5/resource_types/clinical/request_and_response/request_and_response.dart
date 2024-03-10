@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'request_and_response.freezed.dart';
 part 'request_and_response.g.dart';
+part 'request_and_response.enums.dart';
 
 /// [Communication] A clinical or business level record of information being
 ///  transmitted or shared; e.g. an alert that was sent to a responsible

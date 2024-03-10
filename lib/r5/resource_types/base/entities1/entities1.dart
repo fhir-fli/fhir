@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'entities1.freezed.dart';
 part 'entities1.g.dart';
+part 'entities1.enums.dart';
 
 /// [FhirEndpoint] The technical details of an endpoint that can be used for
 ///  electronic services, such as for web services providing XDS.b, a REST
@@ -202,7 +203,7 @@ class FhirEndpoint with Resource, _$FhirEndpoint {
 
     /// [status] The endpoint status represents the general expected availability
     ///  of an endpoint.
-    FhirCode? status,
+    EndpointStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1103,7 +1104,7 @@ class Location with Resource, _$Location {
     ///  resource, not the current value which may be covered by the
     ///  operationStatus, or by a schedule/slots if they are configured for the
     ///  location.
-    FhirCode? status,
+    LocationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,

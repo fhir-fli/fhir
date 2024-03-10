@@ -153,7 +153,7 @@ mixin _$CapabilityStatement {
 
   /// [status] The status of this capability statement. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  PublicationStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -364,7 +364,7 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -596,7 +596,7 @@ class _$CapabilityStatementCopyWithImpl<$Res, $Val extends CapabilityStatement>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1047,7 +1047,7 @@ abstract class _$$CapabilityStatementImplCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1299,7 +1299,7 @@ class __$$CapabilityStatementImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1753,7 +1753,7 @@ class _$CapabilityStatementImpl extends _CapabilityStatement {
   /// [status] The status of this capability statement. Enables tracking the
   ///  life-cycle of the content.
   @override
-  final FhirCode? status;
+  final PublicationStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -2330,7 +2330,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final FhirCode? status,
+      final PublicationStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
@@ -2530,7 +2530,7 @@ abstract class _CapabilityStatement extends CapabilityStatement {
 
   /// [status] The status of this capability statement. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status;
+  PublicationStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -10725,7 +10725,7 @@ mixin _$CompartmentDefinition {
 
   /// [status] The status of this compartment definition. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  PublicationStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -10865,7 +10865,7 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -11070,7 +11070,7 @@ class _$CompartmentDefinitionCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11444,7 +11444,7 @@ abstract class _$$CompartmentDefinitionImplCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -11667,7 +11667,7 @@ class __$$CompartmentDefinitionImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12044,7 +12044,7 @@ class _$CompartmentDefinitionImpl extends _CompartmentDefinition {
   /// [status] The status of this compartment definition. Enables tracking the
   ///  life-cycle of the content.
   @override
-  final FhirCode? status;
+  final PublicationStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -12399,7 +12399,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
       @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final FhirCode? status,
+      final PublicationStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
@@ -12585,7 +12585,7 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
 
   /// [status] The status of this compartment definition. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status;
+  PublicationStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -13555,7 +13555,7 @@ mixin _$GraphDefinition {
 
   /// [status] The status of this graph definition. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  PublicationStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -13690,7 +13690,7 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -13891,7 +13891,7 @@ class _$GraphDefinitionCopyWithImpl<$Res, $Val extends GraphDefinition>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -14248,7 +14248,7 @@ abstract class _$$GraphDefinitionImplCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -14466,7 +14466,7 @@ class __$$GraphDefinitionImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -14839,7 +14839,7 @@ class _$GraphDefinitionImpl extends _GraphDefinition {
   /// [status] The status of this graph definition. Enables tracking the
   ///  life-cycle of the content.
   @override
-  final FhirCode? status;
+  final PublicationStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -15195,7 +15195,7 @@ abstract class _GraphDefinition extends GraphDefinition {
       @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final FhirCode? status,
+      final PublicationStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
@@ -15379,7 +15379,7 @@ abstract class _GraphDefinition extends GraphDefinition {
 
   /// [status] The status of this graph definition. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status;
+  PublicationStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -17805,7 +17805,7 @@ mixin _$ImplementationGuide {
 
   /// [status] The status of this implementation guide. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  PublicationStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -17977,7 +17977,7 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -18193,7 +18193,7 @@ class _$ImplementationGuideCopyWithImpl<$Res, $Val extends ImplementationGuide>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -18612,7 +18612,7 @@ abstract class _$$ImplementationGuideImplCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -18848,7 +18848,7 @@ class __$$ImplementationGuideImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -19253,7 +19253,7 @@ class _$ImplementationGuideImpl extends _ImplementationGuide {
   /// [status] The status of this implementation guide. Enables tracking the
   ///  life-cycle of the content.
   @override
-  final FhirCode? status;
+  final PublicationStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -19689,7 +19689,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final FhirCode? status,
+      final PublicationStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
@@ -19879,7 +19879,7 @@ abstract class _ImplementationGuide extends ImplementationGuide {
 
   /// [status] The status of this implementation guide. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status;
+  PublicationStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -26360,7 +26360,7 @@ mixin _$MessageDefinition {
 
   /// [status] The status of this message definition. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  PublicationStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -26536,7 +26536,7 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -26758,7 +26758,7 @@ class _$MessageDefinitionCopyWithImpl<$Res, $Val extends MessageDefinition>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -27187,7 +27187,7 @@ abstract class _$$MessageDefinitionImplCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -27429,7 +27429,7 @@ class __$$MessageDefinitionImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -27844,7 +27844,7 @@ class _$MessageDefinitionImpl extends _MessageDefinition {
   /// [status] The status of this message definition. Enables tracking the
   ///  life-cycle of the content.
   @override
-  final FhirCode? status;
+  final PublicationStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -28292,7 +28292,7 @@ abstract class _MessageDefinition extends MessageDefinition {
       @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final FhirCode? status,
+      final PublicationStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
@@ -28481,7 +28481,7 @@ abstract class _MessageDefinition extends MessageDefinition {
 
   /// [status] The status of this message definition. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status;
+  PublicationStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -35062,7 +35062,7 @@ mixin _$SearchParameter {
 
   /// [status] The status of this search parameter. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  PublicationStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -35295,7 +35295,7 @@ abstract class $SearchParameterCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -35546,7 +35546,7 @@ class _$SearchParameterCopyWithImpl<$Res, $Val extends SearchParameter>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -36063,7 +36063,7 @@ abstract class _$$SearchParameterImplCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -36337,7 +36337,7 @@ class __$$SearchParameterImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -36828,7 +36828,7 @@ class _$SearchParameterImpl extends _SearchParameter {
   /// [status] The status of this search parameter. Enables tracking the
   ///  life-cycle of the content.
   @override
-  final FhirCode? status;
+  final PublicationStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -37438,7 +37438,7 @@ abstract class _SearchParameter extends SearchParameter {
       @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final FhirCode? status,
+      final PublicationStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
@@ -37643,7 +37643,7 @@ abstract class _SearchParameter extends SearchParameter {
 
   /// [status] The status of this search parameter. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status;
+  PublicationStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -38440,7 +38440,7 @@ mixin _$StructureDefinition {
 
   /// [status] The status of this structure definition. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  PublicationStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -38656,7 +38656,7 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -38892,7 +38892,7 @@ class _$StructureDefinitionCopyWithImpl<$Res, $Val extends StructureDefinition>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -39379,7 +39379,7 @@ abstract class _$$StructureDefinitionImplCopyWith<$Res>
       @JsonKey(name: '_name') Element? nameElement,
       String? title,
       @JsonKey(name: '_title') Element? titleElement,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       FhirBoolean? experimental,
       @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -39638,7 +39638,7 @@ class __$$StructureDefinitionImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -40087,7 +40087,7 @@ class _$StructureDefinitionImpl extends _StructureDefinition {
   /// [status] The status of this structure definition. Enables tracking the
   ///  life-cycle of the content.
   @override
-  final FhirCode? status;
+  final PublicationStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -40602,7 +40602,7 @@ abstract class _StructureDefinition extends StructureDefinition {
       @JsonKey(name: '_name') final Element? nameElement,
       final String? title,
       @JsonKey(name: '_title') final Element? titleElement,
-      final FhirCode? status,
+      final PublicationStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final FhirBoolean? experimental,
       @JsonKey(name: '_experimental') final Element? experimentalElement,
@@ -40804,7 +40804,7 @@ abstract class _StructureDefinition extends StructureDefinition {
 
   /// [status] The status of this structure definition. Enables tracking the
   ///  life-cycle of the content.
-  FhirCode? get status;
+  PublicationStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status

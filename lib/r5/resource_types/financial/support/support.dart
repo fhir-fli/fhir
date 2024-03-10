@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'support.freezed.dart';
 part 'support.g.dart';
+part 'support.enums.dart';
 
 /// [Coverage] Financial instrument which may be used to reimburse or pay for
 ///  health care products and services. Includes both insurance and

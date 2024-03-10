@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'billing.freezed.dart';
 part 'billing.g.dart';
+part 'billing.enums.dart';
 
 /// [Claim] A provider issued list of professional services and products which
 ///  have been provided, or are to be provided, to a patient which is sent to

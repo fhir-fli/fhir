@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'public_health_and_research.freezed.dart';
 part 'public_health_and_research.g.dart';
+part 'public_health_and_research.enums.dart';
 
 /// [ResearchStudy] A scientific study of nature that sometimes includes
 ///  processes involved in health and disease. For example, clinical trials are
@@ -1633,7 +1634,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
     List<Identifier>? identifier,
 
     /// [status] The publication state of the resource (not of the subject).
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,

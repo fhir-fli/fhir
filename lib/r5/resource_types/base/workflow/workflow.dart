@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'workflow.freezed.dart';
 part 'workflow.g.dart';
+part 'workflow.enums.dart';
 
 /// [Appointment] A booking of a healthcare event among patient(s),
 ///  practitioner(s), related person(s) and/or device(s) for a specific

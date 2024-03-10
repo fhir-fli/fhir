@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'individuals.freezed.dart';
 part 'individuals.g.dart';
+part 'individuals.enums.dart';
 
 /// [FhirGroup] Represents a defined collection of entities that may be discussed
 ///  or acted upon collectively but which are not expected to act collectively,

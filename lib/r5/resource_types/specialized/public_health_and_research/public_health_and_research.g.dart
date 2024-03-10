@@ -789,7 +789,7 @@ _$ResearchSubjectImpl _$$ResearchSubjectImplFromJson(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$PublicationStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -848,7 +848,7 @@ Map<String, dynamic> _$$ResearchSubjectImplToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$PublicationStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('progress', instance.progress?.map((e) => e.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
@@ -865,6 +865,13 @@ Map<String, dynamic> _$$ResearchSubjectImplToJson(
   writeNotNull('consent', instance.consent?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$PublicationStatusEnumMap = {
+  PublicationStatus.draft: 'draft',
+  PublicationStatus.active: 'active',
+  PublicationStatus.retired: 'retired',
+  PublicationStatus.unknown: 'unknown',
+};
 
 _$ResearchSubjectProgressImpl _$$ResearchSubjectProgressImplFromJson(
         Map<String, dynamic> json) =>

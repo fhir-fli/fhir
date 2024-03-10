@@ -47,7 +47,7 @@ _$AdministrableProductDefinitionImpl
               ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
               .toList(),
           status:
-              json['status'] == null ? null : FhirCode.fromJson(json['status']),
+              $enumDecodeNullable(_$PublicationStatusEnumMap, json['status']),
           statusElement: json['_status'] == null
               ? null
               : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -116,7 +116,7 @@ Map<String, dynamic> _$$AdministrableProductDefinitionImplToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$PublicationStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('formOf', instance.formOf?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -296,6 +296,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ValueSet: 'ValueSet',
   R5ResourceType.VerificationResult: 'VerificationResult',
   R5ResourceType.VisionPrescription: 'VisionPrescription',
+};
+
+const _$PublicationStatusEnumMap = {
+  PublicationStatus.draft: 'draft',
+  PublicationStatus.active: 'active',
+  PublicationStatus.retired: 'retired',
+  PublicationStatus.unknown: 'unknown',
 };
 
 _$AdministrableProductDefinitionPropertyImpl

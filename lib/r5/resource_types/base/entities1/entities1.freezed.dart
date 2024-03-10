@@ -95,7 +95,7 @@ mixin _$FhirEndpoint {
 
   /// [status] The endpoint status represents the general expected availability
   ///  of an endpoint.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  EndpointStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -185,7 +185,7 @@ abstract class $FhirEndpointCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      EndpointStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept> connectionType,
       String? name,
@@ -308,7 +308,7 @@ class _$FhirEndpointCopyWithImpl<$Res, $Val extends FhirEndpoint>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as EndpointStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -515,7 +515,7 @@ abstract class _$$FhirEndpointImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      EndpointStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<CodeableConcept> connectionType,
       String? name,
@@ -646,7 +646,7 @@ class __$$FhirEndpointImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as EndpointStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -904,7 +904,7 @@ class _$FhirEndpointImpl extends _FhirEndpoint {
   /// [status] The endpoint status represents the general expected availability
   ///  of an endpoint.
   @override
-  final FhirCode? status;
+  final EndpointStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -1159,7 +1159,7 @@ abstract class _FhirEndpoint extends FhirEndpoint {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final List<Identifier>? identifier,
-          final FhirCode? status,
+          final EndpointStatus? status,
           @JsonKey(name: '_status') final Element? statusElement,
           required final List<CodeableConcept> connectionType,
           final String? name,
@@ -1269,7 +1269,7 @@ abstract class _FhirEndpoint extends FhirEndpoint {
 
   /// [status] The endpoint status represents the general expected availability
   ///  of an endpoint.
-  FhirCode? get status;
+  EndpointStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status
@@ -4101,7 +4101,7 @@ mixin _$Location {
   ///  resource, not the current value which may be covered by the
   ///  operationStatus, or by a schedule/slots if they are configured for the
   ///  location.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  LocationStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -4214,7 +4214,7 @@ abstract class $LocationCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      LocationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       Coding? operationalStatus,
       String? name,
@@ -4353,7 +4353,7 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as LocationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4632,7 +4632,7 @@ abstract class _$$LocationImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      LocationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       Coding? operationalStatus,
       String? name,
@@ -4783,7 +4783,7 @@ class __$$LocationImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as LocationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5073,7 +5073,7 @@ class _$LocationImpl extends _Location {
   ///  operationStatus, or by a schedule/slots if they are configured for the
   ///  location.
   @override
-  final FhirCode? status;
+  final LocationStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -5393,7 +5393,7 @@ abstract class _Location extends Location {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final FhirCode? status,
+      final LocationStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final Coding? operationalStatus,
       final String? name,
@@ -5509,7 +5509,7 @@ abstract class _Location extends Location {
   ///  resource, not the current value which may be covered by the
   ///  operationStatus, or by a schedule/slots if they are configured for the
   ///  location.
-  FhirCode? get status;
+  LocationStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status

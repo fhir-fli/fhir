@@ -6100,7 +6100,7 @@ mixin _$ResearchSubject {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
 
   /// [status] The publication state of the resource (not of the subject).
-  FhirCode? get status => throw _privateConstructorUsedError;
+  PublicationStatus? get status => throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -6172,7 +6172,7 @@ abstract class $ResearchSubjectCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<ResearchSubjectProgress>? progress,
       Period? period,
@@ -6287,7 +6287,7 @@ class _$ResearchSubjectCopyWithImpl<$Res, $Val extends ResearchSubject>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6470,7 +6470,7 @@ abstract class _$$ResearchSubjectImplCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      FhirCode? status,
+      PublicationStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       List<ResearchSubjectProgress>? progress,
       Period? period,
@@ -6593,7 +6593,7 @@ class __$$ResearchSubjectImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as PublicationStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6821,7 +6821,7 @@ class _$ResearchSubjectImpl extends _ResearchSubject {
 
   /// [status] The publication state of the resource (not of the subject).
   @override
-  final FhirCode? status;
+  final PublicationStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -7007,7 +7007,7 @@ abstract class _ResearchSubject extends ResearchSubject {
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final List<Identifier>? identifier,
-      final FhirCode? status,
+      final PublicationStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final List<ResearchSubjectProgress>? progress,
       final Period? period,
@@ -7111,7 +7111,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
 
   /// [status] The publication state of the resource (not of the subject).
-  FhirCode? get status;
+  PublicationStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status

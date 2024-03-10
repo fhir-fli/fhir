@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'diagnostics.freezed.dart';
 part 'diagnostics.g.dart';
+part 'diagnostics.enums.dart';
 
 /// [BodyStructure] Record details about an anatomical structure.  This
 ///  resource may be used when a coded concept does not provide the necessary

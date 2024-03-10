@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'medication_definition.freezed.dart';
 part 'medication_definition.g.dart';
+part 'medication_definition.enums.dart';
 
 /// [AdministrableProductDefinition] A medicinal product in the final form
 ///  which is suitable for administering to a patient (after any mixing of
@@ -217,7 +218,7 @@ class AdministrableProductDefinition
 
     /// [status] The status of this administrable product. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,

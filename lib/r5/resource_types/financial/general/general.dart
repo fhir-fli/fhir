@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'general.freezed.dart';
 part 'general.g.dart';
+part 'general.enums.dart';
 
 /// [Account] A financial tool for tracking value accrued for a particular
 ///  purpose.  In the healthcare field, used to track charges for a patient,

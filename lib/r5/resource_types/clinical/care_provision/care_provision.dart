@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';
+part 'care_provision.enums.dart';
 
 /// [CarePlan] Describes the intention of how one or more practitioners intend
 ///  to deliver care for a particular patient, group or community for a period

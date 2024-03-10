@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'payment.freezed.dart';
 part 'payment.g.dart';
+part 'payment.enums.dart';
 
 /// [PaymentNotice] This resource provides the status of the payment for goods
 ///  and services rendered, and the request and response resource references.

@@ -2757,7 +2757,8 @@ mixin _$BiologicallyDerivedProductDispense {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
 
   /// [status] A code specifying the state of the dispense event.
-  FhirCode? get status => throw _privateConstructorUsedError;
+  BiologicallyDerivedProductStatus? get status =>
+      throw _privateConstructorUsedError;
 
   /// [statusElement] ("_status") Extensions for status
   @JsonKey(name: '_status')
@@ -2852,7 +2853,7 @@ abstract class $BiologicallyDerivedProductDispenseCopyWith<$Res> {
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      FhirCode? status,
+      BiologicallyDerivedProductStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? originRelationshipType,
       Reference product,
@@ -2993,7 +2994,7 @@ class _$BiologicallyDerivedProductDispenseCopyWithImpl<$Res,
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as BiologicallyDerivedProductStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3261,7 +3262,7 @@ abstract class _$$BiologicallyDerivedProductDispenseImplCopyWith<$Res>
       List<Identifier>? identifier,
       List<Reference>? basedOn,
       List<Reference>? partOf,
-      FhirCode? status,
+      BiologicallyDerivedProductStatus? status,
       @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? originRelationshipType,
       Reference product,
@@ -3416,7 +3417,7 @@ class __$$BiologicallyDerivedProductDispenseImplCopyWithImpl<$Res>
       status: freezed == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as FhirCode?,
+              as BiologicallyDerivedProductStatus?,
       statusElement: freezed == statusElement
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3711,7 +3712,7 @@ class _$BiologicallyDerivedProductDispenseImpl
 
   /// [status] A code specifying the state of the dispense event.
   @override
-  final FhirCode? status;
+  final BiologicallyDerivedProductStatus? status;
 
   /// [statusElement] ("_status") Extensions for status
   @override
@@ -3944,7 +3945,7 @@ abstract class _BiologicallyDerivedProductDispense
       final List<Identifier>? identifier,
       final List<Reference>? basedOn,
       final List<Reference>? partOf,
-      final FhirCode? status,
+      final BiologicallyDerivedProductStatus? status,
       @JsonKey(name: '_status') final Element? statusElement,
       final CodeableConcept? originRelationshipType,
       required final Reference product,
@@ -4066,7 +4067,7 @@ abstract class _BiologicallyDerivedProductDispense
   @override
 
   /// [status] A code specifying the state of the dispense event.
-  FhirCode? get status;
+  BiologicallyDerivedProductStatus? get status;
   @override
 
   /// [statusElement] ("_status") Extensions for status

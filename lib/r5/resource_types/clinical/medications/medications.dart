@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'medications.freezed.dart';
 part 'medications.g.dart';
+part 'medications.enums.dart';
 
 /// [FormularyItem] This resource describes a product or service that is
 ///  available through a program and includes the conditions and constraints of

@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'evidence_based_medicine.freezed.dart';
 part 'evidence_based_medicine.g.dart';
+part 'evidence_based_medicine.enums.dart';
 
 /// [ArtifactAssessment] This Resource provides one or more comments,
 ///  classifiers or ratings about a Resource and supports attribution and
@@ -6902,7 +6903,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
 
     /// [status] The status of this evidence variable. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,

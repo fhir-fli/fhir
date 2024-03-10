@@ -2997,7 +2997,7 @@ _$EvidenceVariableImpl _$$EvidenceVariableImplFromJson(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$PublicationStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -3148,7 +3148,7 @@ Map<String, dynamic> _$$EvidenceVariableImplToJson(
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$PublicationStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -3193,6 +3193,13 @@ Map<String, dynamic> _$$EvidenceVariableImplToJson(
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$PublicationStatusEnumMap = {
+  PublicationStatus.draft: 'draft',
+  PublicationStatus.active: 'active',
+  PublicationStatus.retired: 'retired',
+  PublicationStatus.unknown: 'unknown',
+};
 
 _$EvidenceVariableCharacteristicImpl
     _$$EvidenceVariableCharacteristicImplFromJson(Map<String, dynamic> json) =>

@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'summary.freezed.dart';
 part 'summary.g.dart';
+part 'summary.enums.dart';
 
 /// [AdverseEvent] An event (i.e. any change to current patient status) that
 ///  may be related to unintended effects on a patient or research participant.

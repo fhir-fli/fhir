@@ -483,8 +483,8 @@ _$BiologicallyDerivedProductDispenseImpl
           partOf: (json['partOf'] as List<dynamic>?)
               ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
               .toList(),
-          status:
-              json['status'] == null ? null : FhirCode.fromJson(json['status']),
+          status: $enumDecodeNullable(
+              _$BiologicallyDerivedProductStatusEnumMap, json['status']),
           statusElement: json['_status'] == null
               ? null
               : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -563,7 +563,8 @@ Map<String, dynamic> _$$BiologicallyDerivedProductDispenseImplToJson(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull(
+      'status', _$BiologicallyDerivedProductStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull(
       'originRelationshipType', instance.originRelationshipType?.toJson());
@@ -584,6 +585,11 @@ Map<String, dynamic> _$$BiologicallyDerivedProductDispenseImplToJson(
   writeNotNull('_usageInstruction', instance.usageInstructionElement?.toJson());
   return val;
 }
+
+const _$BiologicallyDerivedProductStatusEnumMap = {
+  BiologicallyDerivedProductStatus.available: 'available',
+  BiologicallyDerivedProductStatus.unavailable: 'unavailable',
+};
 
 _$BiologicallyDerivedProductDispensePerformerImpl
     _$$BiologicallyDerivedProductDispensePerformerImplFromJson(

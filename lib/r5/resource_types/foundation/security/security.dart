@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'security.freezed.dart';
 part 'security.g.dart';
+part 'security.enums.dart';
 
 /// [AuditEvent] A record of an event relevant for purposes such as operations,
 ///  privacy, security, maintenance, and performance analysis.

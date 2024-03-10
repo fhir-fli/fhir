@@ -38702,7 +38702,7 @@ mixin _$SubstancePolymer {
   List<CodeableConcept>? get copolymerConnectivity =>
       throw _privateConstructorUsedError;
 
-  /// [modification] Todo - this is intended to connect to a repeating full
+  /// [modification] FhirTodo - this is intended to connect to a repeating full
   ///  modification structure, also used by Protein and Nucleic Acid . String
   ///  is just a placeholder.
   String? get modification => throw _privateConstructorUsedError;
@@ -38711,7 +38711,7 @@ mixin _$SubstancePolymer {
   @JsonKey(name: '_modification')
   Element? get modificationElement => throw _privateConstructorUsedError;
 
-  /// [monomerSet] Todo.
+  /// [monomerSet] FhirTodo.
   List<SubstancePolymerMonomerSet>? get monomerSet =>
       throw _privateConstructorUsedError;
 
@@ -39333,7 +39333,7 @@ class _$SubstancePolymerImpl extends _SubstancePolymer {
     return EqualUnmodifiableListView(value);
   }
 
-  /// [modification] Todo - this is intended to connect to a repeating full
+  /// [modification] FhirTodo - this is intended to connect to a repeating full
   ///  modification structure, also used by Protein and Nucleic Acid . String
   ///  is just a placeholder.
   @override
@@ -39344,10 +39344,10 @@ class _$SubstancePolymerImpl extends _SubstancePolymer {
   @JsonKey(name: '_modification')
   final Element? modificationElement;
 
-  /// [monomerSet] Todo.
+  /// [monomerSet] FhirTodo.
   final List<SubstancePolymerMonomerSet>? _monomerSet;
 
-  /// [monomerSet] Todo.
+  /// [monomerSet] FhirTodo.
   @override
   List<SubstancePolymerMonomerSet>? get monomerSet {
     final value = _monomerSet;
@@ -39589,7 +39589,7 @@ abstract class _SubstancePolymer extends SubstancePolymer {
   List<CodeableConcept>? get copolymerConnectivity;
   @override
 
-  /// [modification] Todo - this is intended to connect to a repeating full
+  /// [modification] FhirTodo - this is intended to connect to a repeating full
   ///  modification structure, also used by Protein and Nucleic Acid . String
   ///  is just a placeholder.
   String? get modification;
@@ -39600,7 +39600,7 @@ abstract class _SubstancePolymer extends SubstancePolymer {
   Element? get modificationElement;
   @override
 
-  /// [monomerSet] Todo.
+  /// [monomerSet] FhirTodo.
   List<SubstancePolymerMonomerSet>? get monomerSet;
   @override
 
@@ -44722,22 +44722,22 @@ mixin _$SubstanceReferenceInformation {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
-  /// [comment] Todo.
+  /// [comment] FhirTodo.
   String? get comment => throw _privateConstructorUsedError;
 
   /// [commentElement] ("_comment") Extensions for comment
   @JsonKey(name: '_comment')
   Element? get commentElement => throw _privateConstructorUsedError;
 
-  /// [gene] Todo.
+  /// [gene] FhirTodo.
   List<SubstanceReferenceInformationGene>? get gene =>
       throw _privateConstructorUsedError;
 
-  /// [geneElement] Todo.
+  /// [geneElement] FhirTodo.
   List<SubstanceReferenceInformationGeneElement>? get geneElement =>
       throw _privateConstructorUsedError;
 
-  /// [target] Todo.
+  /// [target] FhirTodo.
   List<SubstanceReferenceInformationTarget>? get target =>
       throw _privateConstructorUsedError;
 
@@ -45247,7 +45247,7 @@ class _$SubstanceReferenceInformationImpl
     return EqualUnmodifiableListView(value);
   }
 
-  /// [comment] Todo.
+  /// [comment] FhirTodo.
   @override
   final String? comment;
 
@@ -45256,10 +45256,10 @@ class _$SubstanceReferenceInformationImpl
   @JsonKey(name: '_comment')
   final Element? commentElement;
 
-  /// [gene] Todo.
+  /// [gene] FhirTodo.
   final List<SubstanceReferenceInformationGene>? _gene;
 
-  /// [gene] Todo.
+  /// [gene] FhirTodo.
   @override
   List<SubstanceReferenceInformationGene>? get gene {
     final value = _gene;
@@ -45269,10 +45269,10 @@ class _$SubstanceReferenceInformationImpl
     return EqualUnmodifiableListView(value);
   }
 
-  /// [geneElement] Todo.
+  /// [geneElement] FhirTodo.
   final List<SubstanceReferenceInformationGeneElement>? _geneElement;
 
-  /// [geneElement] Todo.
+  /// [geneElement] FhirTodo.
   @override
   List<SubstanceReferenceInformationGeneElement>? get geneElement {
     final value = _geneElement;
@@ -45282,10 +45282,10 @@ class _$SubstanceReferenceInformationImpl
     return EqualUnmodifiableListView(value);
   }
 
-  /// [target] Todo.
+  /// [target] FhirTodo.
   final List<SubstanceReferenceInformationTarget>? _target;
 
-  /// [target] Todo.
+  /// [target] FhirTodo.
   @override
   List<SubstanceReferenceInformationTarget>? get target {
     final value = _target;
@@ -45482,7 +45482,7 @@ abstract class _SubstanceReferenceInformation
   List<FhirExtension>? get modifierExtension;
   @override
 
-  /// [comment] Todo.
+  /// [comment] FhirTodo.
   String? get comment;
   @override
 
@@ -45491,15 +45491,15 @@ abstract class _SubstanceReferenceInformation
   Element? get commentElement;
   @override
 
-  /// [gene] Todo.
+  /// [gene] FhirTodo.
   List<SubstanceReferenceInformationGene>? get gene;
   @override
 
-  /// [geneElement] Todo.
+  /// [geneElement] FhirTodo.
   List<SubstanceReferenceInformationGeneElement>? get geneElement;
   @override
 
-  /// [target] Todo.
+  /// [target] FhirTodo.
   List<SubstanceReferenceInformationTarget>? get target;
   @override
   @JsonKey(ignore: true)
@@ -45545,13 +45545,13 @@ mixin _$SubstanceReferenceInformationGene {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
-  /// [geneSequenceOrigin] Todo.
+  /// [geneSequenceOrigin] FhirTodo.
   CodeableConcept? get geneSequenceOrigin => throw _privateConstructorUsedError;
 
-  /// [gene] Todo.
+  /// [gene] FhirTodo.
   CodeableConcept? get gene => throw _privateConstructorUsedError;
 
-  /// [source] Todo.
+  /// [source] FhirTodo.
   List<Reference>? get source => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -45815,18 +45815,18 @@ class _$SubstanceReferenceInformationGeneImpl
     return EqualUnmodifiableListView(value);
   }
 
-  /// [geneSequenceOrigin] Todo.
+  /// [geneSequenceOrigin] FhirTodo.
   @override
   final CodeableConcept? geneSequenceOrigin;
 
-  /// [gene] Todo.
+  /// [gene] FhirTodo.
   @override
   final CodeableConcept? gene;
 
-  /// [source] Todo.
+  /// [source] FhirTodo.
   final List<Reference>? _source;
 
-  /// [source] Todo.
+  /// [source] FhirTodo.
   @override
   List<Reference>? get source {
     final value = _source;
@@ -45933,15 +45933,15 @@ abstract class _SubstanceReferenceInformationGene
   List<FhirExtension>? get modifierExtension;
   @override
 
-  /// [geneSequenceOrigin] Todo.
+  /// [geneSequenceOrigin] FhirTodo.
   CodeableConcept? get geneSequenceOrigin;
   @override
 
-  /// [gene] Todo.
+  /// [gene] FhirTodo.
   CodeableConcept? get gene;
   @override
 
-  /// [source] Todo.
+  /// [source] FhirTodo.
   List<Reference>? get source;
   @override
   @JsonKey(ignore: true)
@@ -45988,13 +45988,13 @@ mixin _$SubstanceReferenceInformationGeneElement {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
-  /// [type] Todo.
+  /// [type] FhirTodo.
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
-  /// [element] Todo.
+  /// [element] FhirTodo.
   Identifier? get element => throw _privateConstructorUsedError;
 
-  /// [source] Todo.
+  /// [source] FhirTodo.
   List<Reference>? get source => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -46260,18 +46260,18 @@ class _$SubstanceReferenceInformationGeneElementImpl
     return EqualUnmodifiableListView(value);
   }
 
-  /// [type] Todo.
+  /// [type] FhirTodo.
   @override
   final CodeableConcept? type;
 
-  /// [element] Todo.
+  /// [element] FhirTodo.
   @override
   final Identifier? element;
 
-  /// [source] Todo.
+  /// [source] FhirTodo.
   final List<Reference>? _source;
 
-  /// [source] Todo.
+  /// [source] FhirTodo.
   @override
   List<Reference>? get source {
     final value = _source;
@@ -46379,15 +46379,15 @@ abstract class _SubstanceReferenceInformationGeneElement
   List<FhirExtension>? get modifierExtension;
   @override
 
-  /// [type] Todo.
+  /// [type] FhirTodo.
   CodeableConcept? get type;
   @override
 
-  /// [element] Todo.
+  /// [element] FhirTodo.
   Identifier? get element;
   @override
 
-  /// [source] Todo.
+  /// [source] FhirTodo.
   List<Reference>? get source;
   @override
   @JsonKey(ignore: true)
@@ -46433,38 +46433,38 @@ mixin _$SubstanceReferenceInformationTarget {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
 
-  /// [target] Todo.
+  /// [target] FhirTodo.
   Identifier? get target => throw _privateConstructorUsedError;
 
-  /// [type] Todo.
+  /// [type] FhirTodo.
   CodeableConcept? get type => throw _privateConstructorUsedError;
 
-  /// [interaction] Todo.
+  /// [interaction] FhirTodo.
   CodeableConcept? get interaction => throw _privateConstructorUsedError;
 
-  /// [organism] Todo.
+  /// [organism] FhirTodo.
   CodeableConcept? get organism => throw _privateConstructorUsedError;
 
-  /// [organismType] Todo.
+  /// [organismType] FhirTodo.
   CodeableConcept? get organismType => throw _privateConstructorUsedError;
 
-  /// [amountQuantity] Todo.
+  /// [amountQuantity] FhirTodo.
   Quantity? get amountQuantity => throw _privateConstructorUsedError;
 
-  /// [amountRange] Todo.
+  /// [amountRange] FhirTodo.
   Range? get amountRange => throw _privateConstructorUsedError;
 
-  /// [amountString] Todo.
+  /// [amountString] FhirTodo.
   String? get amountString => throw _privateConstructorUsedError;
 
   /// [amountStringElement] ("_amountString") Extensions for amountString
   @JsonKey(name: '_amountString')
   Element? get amountStringElement => throw _privateConstructorUsedError;
 
-  /// [amountType] Todo.
+  /// [amountType] FhirTodo.
   CodeableConcept? get amountType => throw _privateConstructorUsedError;
 
-  /// [source] Todo.
+  /// [source] FhirTodo.
   List<Reference>? get source => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -46938,35 +46938,35 @@ class _$SubstanceReferenceInformationTargetImpl
     return EqualUnmodifiableListView(value);
   }
 
-  /// [target] Todo.
+  /// [target] FhirTodo.
   @override
   final Identifier? target;
 
-  /// [type] Todo.
+  /// [type] FhirTodo.
   @override
   final CodeableConcept? type;
 
-  /// [interaction] Todo.
+  /// [interaction] FhirTodo.
   @override
   final CodeableConcept? interaction;
 
-  /// [organism] Todo.
+  /// [organism] FhirTodo.
   @override
   final CodeableConcept? organism;
 
-  /// [organismType] Todo.
+  /// [organismType] FhirTodo.
   @override
   final CodeableConcept? organismType;
 
-  /// [amountQuantity] Todo.
+  /// [amountQuantity] FhirTodo.
   @override
   final Quantity? amountQuantity;
 
-  /// [amountRange] Todo.
+  /// [amountRange] FhirTodo.
   @override
   final Range? amountRange;
 
-  /// [amountString] Todo.
+  /// [amountString] FhirTodo.
   @override
   final String? amountString;
 
@@ -46975,14 +46975,14 @@ class _$SubstanceReferenceInformationTargetImpl
   @JsonKey(name: '_amountString')
   final Element? amountStringElement;
 
-  /// [amountType] Todo.
+  /// [amountType] FhirTodo.
   @override
   final CodeableConcept? amountType;
 
-  /// [source] Todo.
+  /// [source] FhirTodo.
   final List<Reference>? _source;
 
-  /// [source] Todo.
+  /// [source] FhirTodo.
   @override
   List<Reference>? get source {
     final value = _source;
@@ -47121,35 +47121,35 @@ abstract class _SubstanceReferenceInformationTarget
   List<FhirExtension>? get modifierExtension;
   @override
 
-  /// [target] Todo.
+  /// [target] FhirTodo.
   Identifier? get target;
   @override
 
-  /// [type] Todo.
+  /// [type] FhirTodo.
   CodeableConcept? get type;
   @override
 
-  /// [interaction] Todo.
+  /// [interaction] FhirTodo.
   CodeableConcept? get interaction;
   @override
 
-  /// [organism] Todo.
+  /// [organism] FhirTodo.
   CodeableConcept? get organism;
   @override
 
-  /// [organismType] Todo.
+  /// [organismType] FhirTodo.
   CodeableConcept? get organismType;
   @override
 
-  /// [amountQuantity] Todo.
+  /// [amountQuantity] FhirTodo.
   Quantity? get amountQuantity;
   @override
 
-  /// [amountRange] Todo.
+  /// [amountRange] FhirTodo.
   Range? get amountRange;
   @override
 
-  /// [amountString] Todo.
+  /// [amountString] FhirTodo.
   String? get amountString;
   @override
 
@@ -47158,11 +47158,11 @@ abstract class _SubstanceReferenceInformationTarget
   Element? get amountStringElement;
   @override
 
-  /// [amountType] Todo.
+  /// [amountType] FhirTodo.
   CodeableConcept? get amountType;
   @override
 
-  /// [source] Todo.
+  /// [source] FhirTodo.
   List<Reference>? get source;
   @override
   @JsonKey(ignore: true)

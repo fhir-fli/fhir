@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'management.freezed.dart';
 part 'management.g.dart';
+part 'management.enums.dart';
 
 /// [Encounter] An interaction between a patient and healthcare provider(s) for
 ///  the purpose of providing healthcare service(s) or assessing the health

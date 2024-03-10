@@ -42,7 +42,7 @@ _$FhirEndpointImpl _$$FhirEndpointImplFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$EndpointStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -111,7 +111,7 @@ Map<String, dynamic> _$$FhirEndpointImplToJson(_$FhirEndpointImpl instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EndpointStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   val['connectionType'] =
       instance.connectionType.map((e) => e.toJson()).toList();
@@ -294,6 +294,14 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ValueSet: 'ValueSet',
   R5ResourceType.VerificationResult: 'VerificationResult',
   R5ResourceType.VisionPrescription: 'VisionPrescription',
+};
+
+const _$EndpointStatusEnumMap = {
+  EndpointStatus.active: 'active',
+  EndpointStatus.suspended: 'suspended',
+  EndpointStatus.error: 'error',
+  EndpointStatus.off: 'off',
+  EndpointStatus.enteredinerror: 'entered-in-error',
 };
 
 _$EndpointPayloadImpl _$$EndpointPayloadImplFromJson(
@@ -603,7 +611,7 @@ _$LocationImpl _$$LocationImplFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : FhirCode.fromJson(json['status']),
+      status: $enumDecodeNullable(_$LocationStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -692,7 +700,7 @@ Map<String, dynamic> _$$LocationImplToJson(_$LocationImpl instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$LocationStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('operationalStatus', instance.operationalStatus?.toJson());
   writeNotNull('name', instance.name);
@@ -720,6 +728,12 @@ Map<String, dynamic> _$$LocationImplToJson(_$LocationImpl instance) {
   writeNotNull('endpoint', instance.endpoint?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$LocationStatusEnumMap = {
+  LocationStatus.active: 'active',
+  LocationStatus.suspended: 'suspended',
+  LocationStatus.inactive: 'inactive',
+};
 
 _$LocationPositionImpl _$$LocationPositionImplFromJson(
         Map<String, dynamic> json) =>

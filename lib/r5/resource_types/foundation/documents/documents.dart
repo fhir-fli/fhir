@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'documents.freezed.dart';
 part 'documents.g.dart';
+part 'documents.enums.dart';
 
 /// [Composition] A set of healthcare-related information that is assembled
 ///  together into a single logical package that provides a single coherent

@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'definitional_artifacts.freezed.dart';
 part 'definitional_artifacts.g.dart';
+part 'definitional_artifacts.enums.dart';
 
 /// [ActivityDefinition] This resource allows for the definition of some
 ///  activity to be performed, independent of a particular patient,
@@ -482,7 +483,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
 
     /// [status] The status of this activity definition. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1388,7 +1389,7 @@ class ActorDefinition with Resource, _$ActorDefinition {
 
     /// [status] The status of this actor definition. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -1900,7 +1901,7 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
 
     /// [status] The status of this condition definition. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -5485,7 +5486,7 @@ class EventDefinition with Resource, _$EventDefinition {
 
     /// [status] The status of this event definition. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -5963,7 +5964,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
 
     /// [status] The status of this example scenario. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
@@ -8667,7 +8668,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
 
     /// [status] The status of this plan definition. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,

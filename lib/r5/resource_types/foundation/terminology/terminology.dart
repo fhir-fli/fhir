@@ -12,6 +12,7 @@ import '../../../../r5.dart';
 
 part 'terminology.freezed.dart';
 part 'terminology.g.dart';
+part 'terminology.enums.dart';
 
 /// [CodeSystem] The CodeSystem resource is used to declare the existence of
 ///  and describe a code system or code system supplement and its key
@@ -4330,7 +4331,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
 
     /// [status] The status of this terminology capabilities. Enables tracking the
     ///  life-cycle of the content.
-    FhirCode? status,
+    PublicationStatus? status,
 
     /// [statusElement] ("_status") Extensions for status
     @JsonKey(name: '_status') Element? statusElement,
